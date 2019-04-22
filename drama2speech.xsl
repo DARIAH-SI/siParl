@@ -7,8 +7,6 @@
     version="2.0">
     
     <!-- izhodiščni dokument je vsakokratni drama/*-list.xml (mogoče naredim skupni seznam datotek?) -->
-    <!-- Za neavtorizirane govore (unauthorised and authorised interventions) uporabi @decls s kazalko na ustrezen del teiHeader -->
-    <!-- V teiCorpus/teiHeader dodaj za chairpersons še <particDesc><personGrp xml:id="chair"> -->
     
     <xsl:output method="xml" indent="yes"/>
     
@@ -233,6 +231,27 @@
                                 </respStmt>
                             </xsl:for-each-group>
                         </titleStmt>
+                        <extent>
+                            <xsl:variable name="count-files" select="count(ref)"/>
+                            <measure unit="file" quantity="{$count-files}">
+                                <xsl:text>Število TEI datotek: </xsl:text>
+                                <xsl:value-of select="$count-files"/>
+                            </measure>
+                            <!-- Štetje besed -->
+                            <xsl:variable name="counting">
+                                <xsl:for-each select="ref">
+                                    <string>
+                                        <xsl:apply-templates select="document(.)/tei:TEI/tei:text/tei:body"/>
+                                    </string>
+                                </xsl:for-each>
+                            </xsl:variable>
+                            <xsl:variable name="compoundString" select="normalize-space(string-join($counting/tei:string,' '))"/>
+                            <xsl:variable name="count-words" select="count(tokenize($compoundString,'\W+')[. != ''])"/>
+                            <measure unit="word" quantity="{$count-words}">
+                                <xsl:text>Število besed zapisnikov sej: </xsl:text>
+                                <xsl:value-of select="$count-words"/>
+                            </measure>
+                        </extent>
                         <publicationStmt>
                             <publisher>
                                 <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
@@ -308,11 +327,15 @@
                                     </listOrg>
                                 </xsl:if>
                             </org>
-                            <listPerson>
+                            <listPerson type="speaker">
                                 <head xml:lang="sl">Seznam govornikov</head>
                                 <head xml:lang="en">List of speakers</head>
                                 <xsl:for-each select="document($source-speaker-document)/tei:TEI/tei:text/tei:body/tei:listPerson/tei:person">
-                                    <xsl:copy-of select="." copy-namespaces="no"/>
+                                    <person xml:id="{$corpus-label}.{@xml:id}">
+                                        <xsl:for-each select="*">
+                                            <xsl:copy-of select="." copy-namespaces="no"/>
+                                        </xsl:for-each>
+                                    </person>
                                 </xsl:for-each>
                             </listPerson>
                         </particDesc>
@@ -351,6 +374,7 @@
         <xsl:variable name="var3">
             <xsl:apply-templates select="$var2" mode="pass3"/>
         </xsl:variable>
+        
         <xsl:variable name="var4">
             <xsl:apply-templates select="$var3" mode="pass4"/>
         </xsl:variable>
@@ -363,8 +387,22 @@
         <xsl:variable name="var7">
             <xsl:apply-templates select="$var6" mode="pass7"/>
         </xsl:variable>
+        
+        <xsl:variable name="var8">
+            <xsl:apply-templates select="$var7" mode="pass8"/>
+        </xsl:variable>
+        <xsl:variable name="var9">
+            <xsl:apply-templates select="$var8" mode="pass9"/>
+        </xsl:variable>
+        <xsl:variable name="var10">
+            <xsl:apply-templates select="$var9" mode="pass10"/>
+        </xsl:variable>
+        <xsl:variable name="var11">
+            <xsl:apply-templates select="$var10" mode="pass11"/>
+        </xsl:variable>
+        
         <!-- kopiram zadnjo variablo z vsebino celotnega dokumenta -->
-        <xsl:copy-of select="$var7" copy-namespaces="no"/>
+        <xsl:copy-of select="$var11" copy-namespaces="no"/>
     </xsl:template>
     
     <xsl:template match="@* | node()" mode="pass1">
@@ -424,7 +462,7 @@
     </xsl:template>
     
     <xsl:template match="tei:sp" mode="pass1">
-        <u who="#{tokenize(@who,':')[2]}">
+        <u who="#{tokenize(@who,':')[1]}.{tokenize(@who,':')[2]}">
             <xsl:apply-templates mode="pass1"/>
         </u>
     </xsl:template>
@@ -440,9 +478,12 @@
         <xsl:variable name="num">
             <xsl:number count="tei:sp/tei:p" level="any"/>
         </xsl:variable>
-        <seg xml:id="{$document-name-id}.p{$num}">
-            <xsl:apply-templates mode="pass1"/>
-        </seg>
+        <!-- samo odstavki, ki niso prazni -->
+        <xsl:if test="string-length(normalize-space(.)) != 0">
+            <seg xml:id="{$document-name-id}.p{$num}">
+                <xsl:apply-templates mode="pass1"/>
+            </seg>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="tei:sp/tei:p/tei:title[1]" mode="pass1">
@@ -698,12 +739,7 @@
         <xsl:apply-templates mode="pass3"/>
     </xsl:template>
     
-   <!-- odstranim @n in mu dam enoten @reason -->
-   <xsl:template match="tei:gap" mode="pass3">
-       <gap reason="inaudible"/>
-   </xsl:template>
-    
-    <!-- stage v note, ga še prečistim -->
+    <!-- stage v note -->
     <xsl:template match="tei:stage" mode="pass3">
         <note>
             <xsl:apply-templates select="@*" mode="pass3"/>
@@ -711,24 +747,157 @@
         </note>
     </xsl:template>
     
-    <!-- zamenjam seg/@xml:id, ki so prej veljali za p, z novimi za seg -->
+    <!-- Razdelim bivše p (sedaj u/seg) elemente -->
+    <!-- 1. The use of the identity rule to copy every node as-is. -->
     <xsl:template match="@* | node()" mode="pass4">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()" mode="pass4"/>
         </xsl:copy>
     </xsl:template>
+    <!-- 2. The overriding of the identity rule with templates for processing only specific nodes -->
+    <xsl:template match="/*" mode="pass4">
+        <TEI>
+            <xsl:apply-templates select="@*" mode="pass4"/>
+            <!-- ?????? Zakaj se mi tukaj pri teiHeader in text pojavijo deklaracija xmlns:xi="http://www.w3.org/2001/XInclude" ????? -->
+            <xsl:apply-templates mode="pass4"/>
+        </TEI>
+    </xsl:template>
+    <!-- 3. Using 1. and 2. above. -->
+    <xsl:template match="tei:u/tei:seg[tei:note or tei:gap]/text()" mode="pass4">
+        <seg><xsl:copy-of select="."/></seg>
+    </xsl:template>
     
-    <xsl:template match="tei:u/tei:seg" mode="pass4">
+    
+    <!-- prečistim razdeljene elemente -->
+    <xsl:template match="@* | node()" mode="pass5">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()" mode="pass5"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="tei:u/tei:seg[not(tei:seg)]" mode="pass5">
+        <seg>
+            <xsl:apply-templates select="@*" mode="pass5"/>
+            <xsl:value-of select="normalize-space(.)"/>
+        </seg>
+    </xsl:template>
+    
+    <xsl:template match="tei:u/tei:seg[tei:seg]" mode="pass5">
+        <seg>
+            <xsl:apply-templates select="@*" mode="pass5"/>
+            <xsl:for-each-group select="*" group-adjacent="boolean(self::tei:note)">
+                <xsl:choose>
+                    <xsl:when test="current-grouping-key()">
+                        <xsl:apply-templates select="." mode="pass5"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <seg>
+                            <xsl:for-each select="current-group()">
+                                <xsl:choose>
+                                    <xsl:when test="self::tei:gap">
+                                        <xsl:apply-templates select="." mode="pass5"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:choose>
+                                            <xsl:when test="string-length(normalize-space(.)) = 0">
+                                                <!-- ne procesiram segmentov, ki imajo samo presledke -->
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:apply-templates select="." mode="pass5"/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:for-each>
+                        </seg>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each-group>
+        </seg>
+    </xsl:template>
+    
+    
+    <xsl:template match="@* | node()" mode="pass6">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()" mode="pass6"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <!-- odstranim odvečne parent seg elemente -->
+    <xsl:template match="tei:u/tei:seg[tei:seg]" mode="pass6">
+        <xsl:apply-templates mode="pass6"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:u/tei:seg/tei:seg[tei:gap or tei:seg]" mode="pass6">
+        <xsl:choose>
+            <xsl:when test="tei:gap and not(tei:seg)">
+                <!-- Zelo čudno: če sem spodaj dal samo copy-of select ., potem je v naslednjem pass7 ta gap postal note/@n (in nimam pojma, zakaj se je to zgodilo ... -->
+                <!--<xsl:copy-of select="."/>-->
+                <gap n="{tei:gap/@n}"/>
+            </xsl:when>
+            <xsl:when test="not(tei:gap) and tei:seg">
+                <seg ana="{parent::tei:seg/@ana}">
+                    <xsl:value-of select="normalize-space(.)"/>
+                </seg>
+            </xsl:when>
+            <xsl:when test="tei:gap and tei:seg">
+                <seg ana="{parent::tei:seg/@ana}">
+                    <xsl:for-each select="tei:*">
+                        <xsl:choose>
+                            <xsl:when test="self::tei:gap">
+                                <!-- če gap sledi takoj predhodnemu gap elementu, ga ne procesiram -->
+                                <xsl:if test="not(preceding-sibling::tei:*[1][self::tei:gap])">
+                                    <xsl:choose>
+                                        <xsl:when test="position() = 1">
+                                            <xsl:copy-of select="."/>
+                                            <xsl:text> </xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="position() = last()">
+                                            <xsl:text> </xsl:text>
+                                            <xsl:copy-of select="."/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> </xsl:text>
+                                            <xsl:copy-of select="."/>
+                                            <xsl:text> </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
+                </seg>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message>Pass 6: tei:u/tei:seg/tei:seg[tei:gap or tei:seg]: unknown combination of elements (file id <xsl:value-of select="ancestor::tei:TEI/@xml:id"/>)</xsl:message>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- zamenjam seg/@xml:id, ki so prej veljali za p, z novimi za seg -->
+    <xsl:template match="@* | node()" mode="pass7">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()" mode="pass7"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="tei:u/tei:seg" mode="pass7">
         <xsl:variable name="document-name-id" select="ancestor::tei:TEI/@xml:id"/>
         <xsl:variable name="num">
             <xsl:number count="tei:u/tei:seg" level="any"/>
         </xsl:variable>
-        <seg xml:id="{$document-name-id}.seg{$num}" ana="{@ana}">
-            <xsl:apply-templates mode="pass4"/>
-        </seg>
+        <!-- samo segmenti besedil, ki niso prazni -->
+        <xsl:if test="string-length(normalize-space(.)) != 0">
+            <seg xml:id="{$document-name-id}.seg{$num}" ana="{@ana}">
+                <xsl:apply-templates mode="pass7"/>
+            </seg>
+        </xsl:if>
     </xsl:template>
     
-    <xsl:template match="tei:u" mode="pass4">
+    <xsl:template match="tei:u" mode="pass7">
         <xsl:variable name="speaker" select="tokenize(tei:note[@type='speaker'],' ')[1]"/>
         <xsl:variable name="chair">
                 <item>P0DPREDSEDNIK</item>
@@ -885,23 +1054,23 @@
                     <xsl:otherwise>#regular</xsl:otherwise>
                 </xsl:choose>
             </xsl:attribute>
-            <xsl:apply-templates mode="pass4"/>
+            <xsl:apply-templates mode="pass7"/>
         </u>
     </xsl:template>
     
     <!-- uredim povezave na kazala -->
-    <xsl:template match="@* | node()" mode="pass5">
+    <xsl:template match="@* | node()" mode="pass8">
         <xsl:copy>
-            <xsl:apply-templates select="@* | node()" mode="pass5"/>
+            <xsl:apply-templates select="@* | node()" mode="pass8"/>
         </xsl:copy>
     </xsl:template>
     
     <!-- naredim povezavo iz kazal na tei:seg/@xml:id -->
-    <xsl:template match="tei:abstract/tei:list[@type='agenda']/tei:item" mode="pass5">
+    <xsl:template match="tei:abstract/tei:list[@type='agenda']/tei:item" mode="pass8">
         <item xml:id="{@xml:id}">
             <xsl:variable name="connection" select="@corresp"/>
             <xsl:variable name="id" select="@xml:id"/>
-            <xsl:apply-templates mode="pass5"/>
+            <xsl:apply-templates mode="pass8"/>
             <!-- additional ptr elements -->
             <xsl:choose>
                 <xsl:when test="string-length($connection) = 0">
@@ -919,39 +1088,73 @@
     </xsl:template>
     
     <!-- odstranim začasni @ana atribut -->
-    <xsl:template match="tei:seg" mode="pass5">
+    <xsl:template match="tei:seg" mode="pass8">
         <seg xml:id="{@xml:id}">
-            <xsl:apply-templates mode="pass5"/>
+            <xsl:apply-templates mode="pass8"/>
         </seg>
     </xsl:template>
     
-    <!-- odstranim kazala (Pred dnevnim redom), ki nimajo povezav preko corresp -->
-    <xsl:template match="@* | node()" mode="pass6">
+    <xsl:template match="@* | node()" mode="pass9">
         <xsl:copy>
-            <xsl:apply-templates select="@* | node()" mode="pass6"/>
+            <xsl:apply-templates select="@* | node()" mode="pass9"/>
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="tei:abstract/tei:list[@type='agenda']/tei:item[not(tei:ptr)]" mode="pass6">
+    <xsl:template match="tei:note" mode="pass9">
+        <note>
+            <xsl:apply-templates select="@*" mode="pass9"/>
+            <xsl:analyze-string select="normalize-space(.)" regex="^(\(|/)(.*)(\)|/)$">
+                <xsl:matching-substring>
+                    <xsl:value-of select="normalize-space(regex-group(2))"/>
+                </xsl:matching-substring>
+                <xsl:non-matching-substring>
+                    <xsl:value-of select="normalize-space(.)"/>
+                </xsl:non-matching-substring>
+            </xsl:analyze-string>
+        </note>
+    </xsl:template>
+    
+    <xsl:template match="tei:gap" mode="pass9">
+        <gap reason="inaudible"/>
+    </xsl:template>
+    
+    <!-- odstranim kazala (Pred dnevnim redom), ki nimajo povezav preko corresp -->
+    <xsl:template match="tei:abstract/tei:list[@type='agenda']/tei:item[not(tei:ptr)]" mode="pass9">
         <!-- ne procesiram -->
     </xsl:template>
     <!-- odstranim tudi prazna kazala -->
-    <xsl:template match="tei:abstract[tei:list[@type='agenda']/tei:item[not(tei:ptr)]][not(tei:list[@type='agenda']/tei:item[2])]" mode="pass6">
+    <xsl:template match="tei:abstract[tei:list[@type='agenda']/tei:item[not(tei:ptr)]][not(tei:list[@type='agenda']/tei:item[2])]" mode="pass9">
         <!-- ne procesiram -->
     </xsl:template>
     
-    <!-- čisto na koncu še preštejem vse elemente: dodaj temu ustrezen nov mode -->
-    <xsl:template match="@* | node()" mode="pass7">
+    <xsl:template match="@* | node()" mode="pass10">
         <xsl:copy>
-            <xsl:apply-templates select="@* | node()" mode="pass7"/>
+            <xsl:apply-templates select="@* | node()" mode="pass10"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <!-- premaknem u/note[@type='speaker'] pred u -->
+    <xsl:template match="tei:u" mode="pass10">
+        <xsl:apply-templates select="tei:note[@type='speaker']" mode="pass10"/>
+        <u>
+            <xsl:apply-templates select="@*" mode="pass10"/>
+            <xsl:apply-templates select="*[not(self::tei:note[@type='speaker'] or (position() = last() and self::tei:note[@type='time']))]" mode="pass10"/>
+        </u>
+        <xsl:apply-templates select="*[position() = last()][self::tei:note[@type='time']]" mode="pass10"/>
+    </xsl:template>
+    
+    <!-- čisto na koncu še preštejem vse elemente: dodaj temu ustrezen nov mode -->
+    <xsl:template match="@* | node()" mode="pass11">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()" mode="pass11"/>
         </xsl:copy>
     </xsl:template>
     
     <xsl:key name="elements" match="*[ancestor-or-self::tei:text]" use="name()"/>
     
-    <xsl:template match="tei:fileDesc" mode="pass7">
+    <xsl:template match="tei:fileDesc" mode="pass11">
         <fileDesc>
-            <xsl:apply-templates mode="pass7"/>
+            <xsl:apply-templates mode="pass11"/>
         </fileDesc>
         <encodingDesc>
             <tagsDecl>
