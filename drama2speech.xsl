@@ -1133,7 +1133,7 @@
         </xsl:copy>
     </xsl:template>
     
-    <!-- premaknem u/note[@type='speaker'] pred u -->
+    <!-- premaknem u/note[@type='speaker'] pred u in u/note[@type='time'] za dotični u -->
     <xsl:template match="tei:u" mode="pass10">
         <xsl:apply-templates select="tei:note[@type='speaker']" mode="pass10"/>
         <u>
@@ -1143,7 +1143,7 @@
         <xsl:apply-templates select="*[position() = last()][self::tei:note[@type='time']]" mode="pass10"/>
     </xsl:template>
     
-    <!-- čisto na koncu še preštejem vse elemente: dodaj temu ustrezen nov mode -->
+    <!-- čisto na koncu še preštejem vse elemente -->
     <xsl:template match="@* | node()" mode="pass11">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()" mode="pass11"/>
