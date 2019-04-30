@@ -1,0 +1,320 @@
+/* ------------------
+  Manjšo popravki
+--------------------- */
+
+a {
+  color: #8e130b;
+  text-decoration: underline;
+}
+a:hover, a:focus {
+    color: #5f0d07; 
+    }
+
+a.person, a.place, a.organization, a.bibliography {
+    color: #222222;
+    text-decoration: none; 
+    border-bottom: 1px dashed #999;
+    }
+
+button, .button { 
+    background-color: #8e130b;
+    text-decoration: none;
+    }
+button:hover, button:focus, .button:hover, .button:focus {
+    background-color: #5f0d07; 
+    }
+    
+.menu .active > a {
+    color: #FFFFFF;
+    background: #8e130b;
+    }
+.menu-icon { 
+    background-color: #333333;
+    }
+.menu-icon:hover { 
+    background-color: #333333;
+    }
+
+.title-bar {
+  background: #333333;
+  }
+.title-bar ul li > a {
+  color: #FFFFFF;
+  text-decoration: none;
+  }
+
+.title-bar-right {
+    text-align: left;
+}
+
+div.title-bar-left > a {
+  color: #FFFFFF;
+  text-decoration: none;
+  }
+
+.title-bar .menu {
+  background: #333333;
+  }
+.title-bar ul li:hover {
+  background-color: #1a1a1a;
+  }
+  
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-color: #FFFFFF transparent transparent;
+ }
+.dropdown.menu > li.is-dropdown-submenu-parent > .menu > li.is-dropdown-submenu-parent > a::after {
+  border-color: transparent transparent transparent #FFFFFF;
+ }
+
+.is-drilldown-submenu-parent > a::after {
+  border-color: transparent transparent transparent #FFFFFF;
+  }
+.js-drilldown-back > a::before {
+  border-color: transparent #FFFFFF transparent transparent;
+  }
+
+.is-dropdown-submenu {
+  min-width: 400px;
+  }
+
+th {
+    border:3px solid #333333;
+}
+td {
+    border:1px solid #333333;
+}
+
+/* -----------------
+   Definition list
+--------------------*/
+
+dl {
+  margin: 0 0 0.25em;
+  padding: 0.5625em 1.25em 0 0.5625em;
+  border-left: 1px solid #dddddd;
+  }
+
+dl dt {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 0.945em;
+   }
+
+dl dd dl {
+  margin-left: 1.5em;
+  margin-bottom: 0;
+  }
+
+dt, dd { 
+  display: inline;
+  margin: 0;
+   }
+
+/*
+dt:after { 
+  content: ':';
+  }
+
+dt:before {
+  content: '\D\A  - ';
+  white-space: pre;
+  }
+dt:first-child:before {
+  content: ' - ';
+  }
+*/
+
+dd + dt::before {
+  content: "\A";
+  white-space: pre;
+}
+dt {
+  font-weight: bold;
+}
+dt + dt::before {
+  content: "\007C" " ";
+}
+dt + dd::before {
+  content: "\003A" " ";
+}
+dd + dd::before {
+  content: "\007C" " ";
+}
+
+dl.border dt {
+  margin-bottom: 0.0em;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.845em;
+  list-style-type: circle; }
+dl.border dd {
+  margin-bottom: 0.75em;
+  width:200px;
+  border-style:solid;
+  border-width:0.2px; }
+
+/* -----------------------------------------
+   dodani
+----------------------------------------- */
+
+caption { font-style: italic;
+          text-align: left;
+          margin-bottom: 0.4em;
+          width: 100%; }
+
+sub.citation { color: #7f7f7f;
+               font-size: 11px;
+               border-style:solid;
+               border-width:thin;
+               margin-left:2px;
+               padding-left:4px; }
+
+img { margin-top: 3px; }
+
+.glavaNaslov { font-size: 1.687em; }
+.glava { margin-bottom: 7px; margin-top: 21px; }
+.naslovnicaAvtor { text-align: center; font-size: 1.437em;}
+.naslovnicaBesedilo { text-align: center; font-size: 1.375em;}
+.podnaslov { text-align: center; font-size: 1.687em;}
+.note-aside {
+    font-size: 0.875em;
+    line-height: 1.00;
+    font-style: italic; }
+.CIP-obroba { 
+  margin-top:30px;
+  margin-bottom:30px;
+  margin-right:200px;
+  margin-left:0px;
+  border-style:solid;
+  border-width:0.2px;
+  padding:10px; }
+
+.subtitle {
+  color: #8a8a8a;
+  font-size: 80%;}
+
+/* ------------------
+ Novi dodani po prehodu na tei stylesheets
+---------------------- */
+span.numberParagraph:before{
+      content:"[";
+}
+span.numberParagraph:after{
+      content:"] ";
+}
+span.numberParagraph{
+      font-size:smaller;
+      color:grey;
+}
+
+span.headingNumber{
+    font-size:smaller;
+    color:grey;
+}
+
+h2{
+    text-align:center;
+}
+
+figure{
+    text-align:center;
+}
+
+a sup:before{
+    content:"[";
+}
+a sup:after{
+    content:"]";
+}
+
+div.notes{
+    border-top:1pt solid black;
+}
+div.noteHeading{
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    line-height: 1.4;
+    font-weight: bold;
+    font-size: 140%;
+    
+}
+div.noteHeading:after{
+    content:":";
+}
+
+a.back-to-top {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* literal code: from tei.css; 
+*  dodam overflow-x:auto za primere, ko so izpisane kode preširoke za manjše zaslone (jih scrolla levo in desno);
+*  dodam text-align: left; zaradi primerov, ko damo kodo egXML v figure element
+*/
+
+div.cdata{
+    white-space:pre;
+    clear:both;
+}
+
+pre,
+div.pre,
+div.pre_eg,
+pre.eg,
+div.eg{
+    clear:both;
+    margin-top:1em;
+    margin-bottom:1em;
+    border-top-width:4px;
+    border-bottom-width:4px;
+    border-left-width:2px;
+    border-right-width:2px;
+    border-style:solid;
+    padding-top:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    color:#000000;
+    line-height:1.1em;
+    font-family:monospace;
+    font-size:10pt;
+    white-space:pre;
+    overflow-x: auto;
+    text-align: left;
+}
+
+div.egXML_valid{
+    background-color:#f7f9f6;
+    border-color:#c5d8bb;
+}
+div.egXML_feasible{
+    background-color:#fff9f3;
+    border-color:#ffe1ad;
+}
+div.egXML_invalid{
+    border-color:#ffe7e8;
+    background-color:#fdbbac;
+}
+/* moji barvni dodatki */
+span.element {
+    color: #000096 !important;
+    font-weight: bold !important;
+}
+span.attribute {
+    color: #f5844c !important;
+}
+span.attributevalue {
+    color: #993300 !important;
+}
+span.comment{
+    color: #006400 !important;
+}
+
+
