@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+      <teiHeader>
+            <fileDesc>
+                  <titleStmt>
+                        <title xml:lang="sl">Shema TEI za korpus siParl v repozitoriju CLARIN.SI</title>
+                        <title xml:lang="en">The TEI Schema for siParl corpus in CLARIN.SI repository</title>
+                        <author>
+                              <name>Andrej Pančur</name>
+                              <email>andrej.pancur@inz.si</email>
+                        </author>
+                        <author>
+                              <name>Tomaž Erjavec</name>
+                              <email>tomaz.ejavec@ijs.si</email>
+                        </author>
+                        <funder>
+                              <name xml:lang="sl">Javna agencija za raziskovalno dejavnost Republike Slovenije</name>
+                              <name xml:lang="en">Slovenian Research Agency</name>
+                        </funder>
+                  </titleStmt>
+                  <editionStmt>
+                        <edition>1.0</edition>
+                  </editionStmt>
+                  <publicationStmt>
+                        <publisher>
+                              <name xml:lang="sl">Inštitut za novejšo zgodovino</name>
+                              <name xml:lang="en">Institute of Contemporary History</name>
+                        </publisher>
+                        <distributor>DARIAH-SI</distributor>
+                        <distributor>CLARIN.SI</distributor>
+                        <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+                        <availability status="free">
+                              <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+                              <p xml:lang="en">This work is licensed under the <ref
+                                          target="http://creativecommons.org/licenses/by/4.0/"
+                                          >Creative Commons Attribution 4.0 International
+                                          License</ref>.</p>
+                              <p xml:lang="sl">To delo je ponujeno pod <ref
+                                          target="http://creativecommons.org/licenses/by/4.0/"
+                                          >Creative Commons Priznanje avtorstva 4.0 mednarodna
+                                          licenca</ref>.</p>
+                        </availability>
+                        <date when="2019"/>
+                  </publicationStmt>
+                  <sourceDesc>
+                        <p xml:lang="sl">Originalno digitalno besedilo.</p>
+                        <p xml:lang="en">Born digital.</p>
+                  </sourceDesc>
+            </fileDesc>
+      </teiHeader>
+      <text>
+            <body>
+                  <head>siParl Corpus in CLARIN.SI Repository</head>
+                  <p>This TEI customization file specifies the schema for the siParl (Proceedings
+                        of the Slovenian Parliament) corpus in CLARIN.SI repository.</p>
+                  <schemaSpec ident="tei_siParl-clarin" start="TEI teiCorpus">
+                        <!-- required modules -->
+                        <moduleRef key="tei"/>
+                        <moduleRef key="header"/>
+                        <moduleRef key="core"/>
+                        <moduleRef key="textstructure" include="TEI back body div front text docDate"/>
+                        <!-- optional modules -->
+                        <moduleRef key="analysis" include="c pc s w"/>
+                        <moduleRef key="namesdates"/>
+                        <moduleRef key="spoken" include="incident kinesic u vocal writing"/>
+                        <moduleRef key="corpus" include="locale particDesc setting settingDesc"/>
+                        <elementSpec ident="list" mode="change" module="core">
+                              <attList>
+                                    <attDef ident="type" mode="replace" usage="rec">
+                                          <valList type="closed">
+                                                <valItem ident="agenda">
+                                                      <desc xml:lang="sl">Dnevni red seje</desc>
+                                                      <desc xml:lang="en">The agenda of the session</desc>
+                                                </valItem>
+                                          </valList>
+                                    </attDef>
+                              </attList>
+                        </elementSpec>
+                        <elementSpec ident="head" mode="change" module="core">
+                              <attList>
+                                    <attDef ident="type" mode="replace" usage="rec">
+                                          <valList type="closed">
+                                                <valItem ident="session">
+                                                      <desc xml:lang="sl">Podatki o seji</desc>
+                                                      <desc xml:lang="en">Session information</desc>
+                                                </valItem>
+                                          </valList>
+                                    </attDef>
+                              </attList>
+                        </elementSpec>
+                        <elementSpec ident="note" mode="change" module="core">
+                              <attList>
+                                    <attDef ident="type" mode="replace" usage="rec">
+                                          <valList type="closed">
+                                                <valItem ident="date">
+                                                      <desc xml:lang="sl">datum seje</desc>
+                                                      <desc xml:lang="en">date of the session</desc>
+                                                </valItem>
+                                                <valItem ident="chairman">
+                                                      <desc xml:lang="sl">predsedujoči zasedanja</desc>
+                                                      <desc xml:lang="en">chairman of a meeting</desc>
+                                                </valItem>
+                                                <valItem ident="speaker">
+                                                  <desc xml:lang="sl">ime in morebiten opis govornika</desc>
+                                                  <desc xml:lang="en">the name and possible description of a speaker</desc>
+                                                </valItem>
+                                                <valItem ident="time">
+                                                  <desc xml:lang="sl">datum in čas začetka in konca debate</desc>
+                                                  <desc xml:lang="en">the date and time of the beginning and end of the debate</desc>
+                                                </valItem>
+                                          </valList>
+                                    </attDef>
+                              </attList>
+                        </elementSpec>
+                        <moduleRef key="iso-fs"
+                              except="bicond binary cond default fDecl fDescr fsConstraints fsDecl fsDescr fsdDecl fsdLink if iff numeric string then vAlt vColl vDefault vLabel vMerge vNot vRange"
+                        />
+                  </schemaSpec>
+            </body>
+      </text>
+</TEI>
