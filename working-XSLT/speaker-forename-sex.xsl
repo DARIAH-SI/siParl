@@ -24,6 +24,7 @@
         <ime type="unisex">Andrea</ime>
         <ime>Dragiša</ime>
         <ime>Elija</ime>
+        <ime>Geza</ime>
         <ime>Grega</ime>
         <ime type="unisex">Ivica</ime>
         <ime>Jaka</ime>
