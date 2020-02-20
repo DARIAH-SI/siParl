@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 13. zasedanje</title>
             <meeting n="13"
-                     corresp="#VsiZbor.1991-05-09.z013-01.DruzPolZb #VsiZbor.1991-05-09.z013-01.ZbObc #VsiZbor.1991-05-09.z013-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="11"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="8"/>
                <tagUsage gi="seg" occurs="57"/>
             </namespace>
@@ -154,23 +145,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-05-09.z013-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-05-09.z013-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-05-09.z013-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -181,21 +155,25 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">13. zasedanje</head>
             <docDate>9. maj 1991</docDate>
             <note type="chairman">Sejo je vodil Jože Zupančič, predsednik Zbora združenega dela</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 12.45 uri.</note>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg1">Drage poslanke, poslanci, dragi gostje, cenjeni novinarji! Pričenjam skupno zasedanje vseh treh zborov Skupščine Republike Slovenije. Danes bomo tu poslušali samo uvodne obrazložitve k aktom, ki jih bomo sprejemali v tem mesecu, in sicer bomo poslušali UVODNA RAZMIŠLJANJA IN TOLMAČENJA V ZVEZI S TREMI DELOVNIMI PODROČJI.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg2">Najprej iz mednarodnih odnosov, potem iz naših državljanskih in kasneje še kreditno-monetarnih. Najprej bi dal besedo gospodu dr. Dimitriju Ruplu.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SSK11.RupelDimitrij1946" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg3">Spoštovani gospod predsednik, spoštovane poslanke in poslanci! Okvir zakonodaje, ki bo postavila samostojnost in suverenost Republike Slovenije na področju denarnega sistema oz. v okviru postavitve lastnega denarnega sistema z Narodno banko Slovenije kot samostojno centralno emisijsko banko Republike Slovenije, sodi tudi postavitev lastnega samostojnega deviznega sistema.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg4">Za samostojno ureditev deviznega poslovanja, ki predstavlja osnovni segment deviznega sistema, je potrebno sprejeti zakon o deviznem poslovanju. Prejeli ste ga v obliki predloga za izdajo zakona in osnutka zakona. Pri tem na začetku želim poudariti, da je vsebina tega zakona vsebinsko in konceptualno povezana z rešitvami v drugih zakonih, ki skupaj predstavljajo ureditev denarnega in deviznega sistema Republike Slovenije kot samostojne države. To poudarjam zato, da bi opozoril, da je potrebno pri obravnavi posameznih temeljnih rešitev, ki imajo značaj elementov koncepta upoštevati temeljne rešitve zakona o Narodni banki Slovenije v zakonu o bankah in zakonu o kreditnih razmerjih s tujino. To pomeni naslednje:</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg5">Če bi v enem od teh zakonov spreminjali temeljne rešitve, bi se zrušile tudi konceptualne rešitve v drugih zakonih. Rešitve v osnutku zakona o deviznem poslovanju temeljijo na predpostavki, da so sistemske rešitve in tekoča ekonomska politika na področju ekonomskih odnosov s tujino tržne. Subjekti o poslih s tujino v celoti odgovarjajo za svoje obveznosti do tujine in nimajo možnosti, da bi jih prenesli na državo. Država je odgovorna le za obveznosti, ki jih bo sama ustvarila ali sporazumno prevzela od federacije.</seg>
@@ -215,11 +193,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg19">No, v nadaljevanje naj opozorim samo na osnovne značilnosti zakona, pri čemer moram reči predvsem naslednje. Carinska uprava Republike Slovenije je upravni organ v sestavi Republiškega sekretariata za finance. Carinarnice so njeni področni organi, carinske izpostave in referati pa njihove organizacijske enote. Carinsko upravo Republike Slovenije vodi direktor, carinarnico pa upravnik. V okviru poglavja o delovnih razmerjih posebno pozornost posvečamo urejanju razorejanja delavcev. Razlogi za to so v veliki teritorialni razpršenosti carinarnic, njihovih organizacijskih enot in je treba omogočiti upravniku oz. direktorju, da z razporeditvijo delavcev bodisi trajno, bodisi začasno zagotovi nemoteno delo carinske službe. Med disciplinskimi kršitvami zakon opredeljuje le dodatne kršitve, glede na tiste, ki so opredeljeni v zakonu o delavcih v državnih organih. V prehodnih in končnih določbah osnutek zakona ureja pravice in obveznosti delavcev v organih carinske službe, ki so ob uveljavitvi zakona zaposleni na območju Republike Slovenije. Z uveljavitvijo tega zakona pa bodo ti delavci postali delavci carinske uprave Republike Slovenije, razen, če bodo sami odklonili. Sistematizacija delovnih mest za carinarnice ostaja nespremenjena. Posebno pozornost pa namenjamo tudi strokovnemu izobraževanju delavcev. Določeno je, kot boste videli, prehodno obdobje za pridobitev potrdil o znanju slovenskega jezika. S tem sem podal uvodne besede za te tri zakone, ki je zanje zadolžen Sekretariat za mednarodno sodelovanje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg20">Hvala lepa, gospod dr. Rupel. Tu poslušamo samo obrazložitve. Prosim, gospod Igor Bavčar.</seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SSK11.BavcarIgor1955" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg21">Spoštovane poslanke, spoštovani poslanci, gospe in gospodje, cenjeno predsedstvo! Pred seboj imate komplet predpisov s področja notranjih zadev, ki sodijo v sklop 12 osamosvojitvenih zakonov. Gre za:</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg22">- zakon o državljanstvu Republike Slovenije,</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg23">- zakon o prehajanju čez državno mejo in varovanju državne meje,</seg>
@@ -240,11 +218,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg38">V prehodnih določbah predlaganih predpisov je natančneje določen način, na katerega bo Republika Slovenija prevzela efektivno oblast na teh področjih. Razumljivo je in skladno s stališči tega organa, slovenskega parlamenta, da si bomo prizadevali za sporazumno razreševanje vseh tistih vprašanj, ki jih ni malo in katerih razreševanje ne bo povsod enostavno, ki jih sprožamo s predlaganimi zakoni. V interesu vseh je, da bi ta vprašanja razrešili sporazumno. Toda,naj rečem tudi to, pripravljeni so na razmere, ko bi bilo potrebno posamezne rešitve izsiljevati enostransko. Ne želimo si tega, ne bomo na ta način delovali,res pa je potrebno povedati, da se tudi ne bomo ustavili, če bo to potrebno storiti. Predlagam, da osnutke sprejmete, vaše predloge pa bomo upoštevali v nadaljnjih fazah. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg39">Hvala lepa, gospod Bavčar. Še gospod Stanko Debeljak. Poslušamo samo informacijo za naše boljše delo, v zborih. Prosim tudi vse poslance, da ne odhajate. Gospod predsednik Bučar je predlagal, da bi imeli čisto kratko skupno sejo še po tem skupnem zasedanju.</seg>
             </u>
             <note type="speaker">MAG. STANKO DEBELJAK:</note>
-            <u who="#SSK11.DebeljakStanko" ana="#regular">
+            <u who="#DebeljakStanko">
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg40">Spoštovane delegatke, spoštovani delegati! V skladu z obveznostmi iz zakona o plebiscitu je Izvršni svet Skupščine Republike Slovenije pripravil paket zakonov s področja denarnega in bančnega sistema, s katerimi prevzema Republika Slovenija v svojo pristojnost urejanje področij in razmerij, ki so jih doslej v skladu z zvezno ustavo urejali organi federacije. S temi zakoni, v skladu z razvojnim potrebami Republike Slovenije in tržno naravnanimi ekonomskimi rešitvami bo omogočeno pospešeno vključevanje slovenskega gospodarstva v evropski gospodarski prostor in hkrati zagotavljajo delovanje samostojne Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg41">Predlagani zakoni prevzemajo iz dosedanje zakonodaje le pozitivne rešitve in uvajajo vrsto sprememb, ki jih Republika Slovenija v rednih postopkih sprejemanja obstoječih zakonov na zvezni ravni ni mogla uveljaviti. Seveda pa so bile pri pripravi zakonov upoštevane tudi izkušnje sodobnih tržnih sistemov. Vse te ideje so v zakonih upoštevane tako, da bo omogočeno, poleg nemotenega prehoda v samostojnost, tudi postopen prehod iz administrativno planskega sistema v tržni sistem. Zakoni so rezultat pospešenega in poglobljenega dela na zaokrožitvi celotnega finančnega področja, ki bo omogočal prenos denarne in finančne suverenosti na Republiko Slovenijo, krati pa dolgoročno zagotavljal stabilnost gospodarskega razvoja.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg42">Dovolite mi, da na kratko predstavim zakon o Narodni banki Slovenije, zakon o bankah in hranilnicah, zakon o agenciji Republike Slovenije, za zavarovanje depozitov in zakon o predsanaciji, sanaciji, stečaju in likvidaciji bank in hranilnic. Ta zakon, zakon o sanaciji bank, bo Izvršni svet poslal v Skupščino v naslednjem tednu.</seg>
@@ -263,11 +241,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg55">V razmerah globoke finančne krize objektivno ne bi bilo realno pristopiti k reševanju krize slovenskega bančnega sistema tako, da bankam prepuščamo, da same uvedejo in izvajajo postopek svoje sanacije. Ta pristop je vprašljiv zaradi garancij za prihranke in depozite na tekočih in deviznih računih občanov in garanciji za zunanje kredite. Po drugi strani pa niti sanacije banke, ki naj bi reševala finančne probleme posameznih bank, ni mogoče šteti za pravilen pristop temu problemu, saj lahko samo organizirana sanacija bank, ki bi potekala po enakih pravnih pravilih, zagotovi sanacijo celotnega bančnega sistema. Sanacijski postopek je predviden tako, da se lahko opravi kot sanacija vseh bank in hranilnic, ali pa kot sanacija posamičnih bank oziroma hranilnic. Iz navedenih razlogov in ker predloga za izdajo zakona z osnutkom zakona o sanaciji bank niste sprejeli, predlagam Skupščini, da obravnava zakon o predsanaciji in sanaciji stečajev in likvidaciji bank in hranilnic v Republiki Sloveniji na prihodnjih sejah odborov in zborov Skupščine Republike Slovenije. Mislim samo ta zadnji zakon, ostale tri zakone, pa da obravnavate danes, kar je že v teku. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg56">Hvala lepa gospod Debeljak. Preden zaključim, bi povedal še dvoje obvestil in eno opravičilo. Prvo, skupna seja, ki se bo nadaljevala, bo res kratka, ker gre samo za imenovanje enega od funkcionarjev. To, kar včeraj nismo storili. In drugič, takoj po tem zasedanju bomo tudi nadaljevali s sejami zborov. In sedaj to opravičilo. Res je, da danes vemo vsi trije predsedniki zborov, da to skupno zasedanje ni bilo čisto pravno formalno po poslovniku, ampak glede na to, da gre tu za informacijo, za paket zakonov, in da se bomo mi lažje odločali za sprejem tudi dnevnega reda in dela naprej, se nam je zdelo pomembno in potrebno, da te obrazložitve skupaj poslušamo. In zato prosim, da tisti, ki se jezite, vzamete to opravičilo na znanje. Hvala lepa za danes.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-05-09.z013-01.seg57">Gospod predsedujoči, prosim, da se zabeleži v zapisniku vse, kar ste rekli glede sklica današnjega skupnega zasedanja.</seg>
             </u>
             <note type="time">Seja je bila končana 9. maja 1991 ob 13.30 uri.</note>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Izredna-15-1997-09-30"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">15. izredna seja (30. 9. 1997)</title>
-            <meeting n="15"
-                     corresp="#SDZ2-Izredna-15-1997-09-30.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="15" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">15. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|E51A1FBB2DE011D9C1256529004132A0</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=E51A1FBB2DE011D9C1256529004132A0</idno>
-                  <imprint>
-                     <date when="1997-09-30">(30. september, 1., 2. .... oktober 1997)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>15. izredna seja (30. 9. 1997)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1997-09-30"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=E51A1FBB2DE011D9C1256529004132A0</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="155"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="107"/>
                <tagUsage gi="seg" occurs="275"/>
                <tagUsage gi="gap" occurs="9"/>
@@ -372,25 +357,21 @@
                <date when="1997-09-30" ana="#parl.sitting">30. 9. 1997</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Izredna-15-1997-09-30.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">15. izredna seja</head>
-            <docDate>(30. september, 1., 2. .... oktober 1997)</docDate>
             <note type="chairman">Sejo so vodili Janez Podobnik, predsednik Državnega zbora, Eda Okretič-Salmič, podpredsednica Državnega zbora, Andrej Gerenčer, podpredsednik Državnega zbora in Miroslav Luci, podpredsednik Državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.19 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg1">Spoštovane kolegice in kolegi, gospe in gospodje! Pričenjam 15. izredno sejo Državnega zbora Republike Slovenije, ki sem jo sklical na podlagi prvega in drugega odstavka 51. člena ter 54. člena poslovnika državnega zbora.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg2">Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Mirko Zamernik do 11. ure, Ivan Kebrič do 11. ure, Jelko Kacin, Jurija Malovrha vidim med nami, Zmago Jelinčič, Rudolf Petan za dopoldanski del seje in Leon Gostiša. Ugotovimo sklepčnost!</seg>
                <note>65 prisotnih.</note>
@@ -405,51 +386,51 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg11">Gospod Ivo Hvalica. Prosim.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg12">Hvala lepa gospod predsednik. Spoštovani kolegi. 3. točka dnevnega reda, predlagam umik, dokler ne dobimo mnenja vlade. Mislim, da sem bil zelo jasen. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg13">Hvala lepa gospodu Hvalici. Želi besedo poročevalec matičnega telesa. Gospod Rejc, prosim. Se opravičujem, najprej bi moral dati besedo predlagatelju te točke, ampak gospoda Bavčarja ne vidim v dvorani, tako dajem besedo Rejcu. Če pa pride gospod Bavčar, dajem tudi njemu besedo. Prosim? Tako je, tudi gospod Potrč je predlagatelj. Prosim. Imate proceduralni predlog?</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg14">Proceduralni, ja.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg15">Poglejte, ker je gospod Hvalica v bistvu dal predlog, ki bi lahko bil razumljen tudi kot proceduralno, predlagam, da se najprej odločimo o njegovem predlogu, da se umakne 3. točka z dnevnega reda 15. izredne seje državnega zbora. Prosim, gospod Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg16">Dovolite, gospod predsednik, da pojasnim tudi druge razloge za to, da se pač Državni zbor mora odločiti o nečem. Dobili ste, gospod predsednik, pismo razlaščencev 19.9., in tudi mi smo ga dobili, v katerem vas opozarjajo, da sta dva zakona v postopku, ki se prekrivata. Naj vas spomnimo, spoštovane gospe in gospodje, da EPA 1644 , kjer je objavljena sprememba dopolnitve zakona o denacionalizaciji, in EPA 34 /2, kjer je sprememba dopolnitve zakona o poslovnih prostorih in poslovnih stavbah, govorita o isti in podobni temi. Oba sta bila predlagana v državni zbor po hitrem postopku, oba zakona sta bila sprejeta z našo odločitvijo, da gresta v normalni postopek, v redni postopek in sedaj je tu vprašanje. Menim, da je prav, da Sekretariat za zakonodajo in pravne zadeve da mnenje o obeh, v skladu s 174. členom in četrtim odstavkom poslovnika, ki govori o tem, ali je to enaka tematika ali pa podobna tematika. Namreč, oba zakona govorita o vlaganjih v poslovne prostore in kako ta vlaganja zakonsko rešiti. To velja za zakon o denacionalizaciji in zakon o poslovnih prostorih. Prosim, da to zadevo vzamemo kot tako in da je tu sedaj vprašanje. Oba zakona pa sta v drugem postopku, v prvem sta bila, s tem, da menim, da mora vodstvo na osnovi mnenja Sekretariata za zakonodajo in pravne zadeve odločiti, kako je s tema dvema zakonoma. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg17">Hvala lepa, gospod Rejc. Točno ste povzeli tudi stališče enega od združenj, torej združenja razlaščencev, ki so podobno stališče, kot ste ga vi zdaj posredovali, posredovali tudi meni kot predsedniku državnega zbora. Če sem vas prav razumel, ste vprašanje naslovili na Sekretariat. Torej, bom potem tudi predlagal, da dobi besedo gospod Baškovič. Zdaj je tudi gospod Bavčar prišel, tukaj je tudi gospod Potrč. Kdo želi besedo? Gospod Bavčar, potem pa gospod Potrč. Gospod Bavčar je prvopodpisani.</seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SDZ2.BavčarIgor" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg18">Mi vztrajamo kot predlagatelji na tej točki dnevnega reda in nasprotujemo predlogu, da se ga umakne z dnevnega reda. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg19">Hvala lepa. Želi gospod Potrč dopolniti stališče gospoda Bavčarja? Prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg20">Hvala lepa. Vsi razlogi, ki so bili navedeni, zadevajo vlado in zadevajo delo v našem državnem zboru. Skrajno neodgovorno je, da vlada od julija meseca, ko je bil predlog pripravljen, ni mogla oblikovati stališča. Mi smo kot eden od predlagateljev pred dobrim tednom dni celo na Omizju v svojstvu ministra za pravosodje slišali, da ima vlada stališča in jaz sem bil silno vesel, ker sem ugotovil, da končno stališča so in sem vsak dan čakal, kdaj jih bomo dobili v državni zbor. Mi smo takrat slišali, da sta gospod Bavčar kot prvopodpisani predlagatelj in gospod Marušič v imenu Ljudske stranke povedala, da so stališča Slovenske ljudske stranke in LDS usklajena. Torej tudi tukaj ni nobenih razlogov, da ne bi lahko stališča vlade potem dobili, ker mi smo bili tu že mnogokrat obveščeni, da če se stranki dogovorita, potem stvar sploh ni treba, da gre na vlado, da že zadostuje, da je nekaj napisano v koalicijskem sporazumu ali dogovorjeno. Zato vztrajam, da to ne more biti razlog, zaradi katerega bi točko dnevnega reda umaknili. Obratno, biti mora na dnevnem redu in prisiliti moramo vlado, da končno pove tisto, kar je pač neprijetno povedati.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg21">Vsebinska razloga, da vztrajamo pri tej točki, sta dva.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg22">Prvo je vprašanje realne možnosti opraviti to proceduro. Mi trdimo, da je do konca oktobra, ko preneha veljati sporazum med dr. Drnovškom in dr. Rodetom in ki zadeva poseg v zakon o denacionalizaciji, ni mogoče opraviti, če se ne odločamo na tej seji o drugi obravnavi. Še tako bo težko.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg23">Drugi vsebinski razlog je še bolj pomemben. Jaz sem že zadnjič na izredni seji o interpelaciji že mimogrede rekel. Jaz razumem in dajem prav vsem tistim, ki opozarjajo, da je razprava o denacionalizaciji pozna. Res je pozna. Samo vsak dan kasneje je še bolj pozna in enkrat jo moramo opraviti, biti pripravljeni o tem diskutirati in reči, spoznali smo, da je na določenih točkah zakon nesprejemljiv, spoznali smo, da se desettisočim delajo nove krivice, spoznali smo, da bo to državo stal več, kot smo pričakovali, ko smo zakon sprejemali, in zato je potreben sprememb, ali pa dajmo ugotoviti, ne, kljub temu na nobene spremembe ne pristajamo. Samo to korajžo moramo zbrati, ne pa dragi gospodje, da vedno znova odlašate z obravnavo tega vprašanja in za to navajate upravičene, v glavnem pa popolnoma neupravičene razloge, ker vam je neprijetno, da bi pred državljani povedali, da ga niste pripravljeni spremeniti in vsebinsko poseči v to materijo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg24">Hvala lepa gospod Potrč. Smo v fazi postopka, torej predloga, da se umakne ena od točk dnevnega reda in po naši praksi, tudi po poslovniku, sedaj sprašujem, ali želi besedo predstavnik Sekretarjata zakonodajo in pravne zadeve? Gospod Baškovič. Prosil bi vas tudi, če odgovorite na vprašanje, ki ga je podal poslanec gospod Rejc.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg25">V imenu poslanske skupine ni razprave poslancev. Kasneje. Prosim gospod Baškovič.</seg>
             </u>
             <note type="speaker">MILAN BAŠKOVIČ:</note>
-            <u who="#SDZ2.BaškovičMilan" ana="#regular">
+            <u who="#BaškovičMilan">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg26">Glede vprašanja, ki ga je postavil poslanec gospod Rejc. Moral bi prvo pojasniti, da Sekretariat za zakonodajo ni tisti, ki tolmači poslovnik v tem smislu ali je v proceduri nek zakon, ki ga izključuje drugi zakon. To je stvar, ki jo ocenjuje vodstvo državnega zbora takrat, ko se posamezen projekt zakona pojavi v proceduri, ko je vložen. Če je v državni zbor prišel zakon o spremembah zakona o denacionalizaciji in je potem prišel neki zakon z drugega področja, se tudi v tem primeru takoj preizkusi ta situacija.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg27">Naš sekretariat se vplete v ta postopek samo, če je pozvan ali pa če bi sam nekako po uradni dolžnosti zaznal to situacijo in opozoril predsedstvo državnega zbora na to situacijo.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg28">V tem primeru bi samo svoje mnenje vendarle povedal, čeprav pravim, da to ni naša naloga. Zakon, ki je pred nami in je sedaj na dnevnem redu, to je zakon o denacionalizaciji, o njegovih dopolnitvah in spremembah <gap reason="inaudible"/> Ponovno sem ga pogledal. Nikjer se ne dotika poslovnih prostorov. Niti v eni postavki ne najdem poslovnih prostorov in njihove usode. Je zelo omejen in preprosto te materije v zakonu ni. Če se to pojavlja v amandmajih, je to druga stvar in se bo moralo takrat ocenjevati, ali sodi ali ne sodi. V zakonu, kot je predložen, ni nobene postavke, ki bi zadevala poslovne prostore.</seg>
@@ -458,55 +439,55 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg31">Zakon o poslovnih stavbah govori o razmerjih, ki zajemajo poslovne prostore na splošno, v vseh odnosih in se ne dotika posebej teh situacij iz denacionalizacije. Če je treba kaj urediti specifično iz teh razmerij, je potem vprašanje, kje. Mi smo rekli, če je kaj, kar zadeva direktno materijo denacionalizacije in teh razmerij, ki samo iz teh razmerij izhajajo, potem je treba to rešiti v tem zakonu. Bi bilo bolj naravno. Ocenjujem osebno, da te koeksistence preprosto ni, ker se ta zakon v to ne spušča. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg32">Hvala lepa gospodu Baškoviču. Želi besedo, da se umakne 3. točka dnevnega reda, predstavnik vlade?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg33">Gospod Rejc, predlagam, da nastopite v imenu poslanskih skupin. Po poslovniku je to sicer edino možno. Torej prehajamo na besede predstavnikov poslanskih skupin glede predloga, da se umakne 3. točka z dnevnega reda. Gospod Rejc v imenu poslanske skupine SKD.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg34">Spoštovani gospod predsednik, gospe in gospodje! V imenu SKD-ja ugovarjam tudi temu pojasnjevanju, kot ga je dal gospod Baškovič, iz preprostega razloga, ker je potrebno prebrati 17.a člen, ki je dodan v tem zakonu o poslovnih prostorih in tam točno govori o tej isti temi , ki pomeni, da se mora upoštevati vlaganje v nepremičnine bivšemu solastniku itn., in to se upošteva v najemnini ali pa, da se pač vrne, da denacionalizirani opravičenec vrne ta obseg vlaganja oziroma, da se ta zadeva upošteva pri lastninskih razmerjih. To je pa obdelano v zakonu o spremembah in dopolnitvah zakona o denacionalizaciji, zato bi bilo prav, da se malo bolj natančno te stvari preberejo.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg35">Da sem pa ugovarjal že prej na to, da bi ne šlo to na dnevni red, pa zaradi tega. Meni je vseeno, kdo o tem odloča. Vemo pa, da je 20. septembra bila pošta v hiši in da bi se lahko pravni strokovnjaki usedli in ugotovili, kaj je in kaj ni in prebrali ustrezno zakonodajo. Te iste tri točke se pojavljajo v obeh zakonih in mislim, da je potrebno znati samo slovensko, pa se vidi, da je to skoraj enak tekst. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg36">Hvala lepa. V imenu poslanske skupine Združene liste socialnih demokratov, gospod Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg37">Hvala lepa gospod predsednik. Spoštovane kolegice in kolegi! V poslanski skupini nasprotujemo, da se ta predlog zakona umakne z dnevnega reda.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg38">Naša poslanska skupina 5 let dopoveduje in poskuša v tem Državnem zboru in v javnosti dokazati, da je razprava o nekaterih nesprejemljivih rešitvah zakona o denacionalizaciji nujna in da so nekatere spremembe nujne. Veseli smo, da je po dolgem dokazovanju to sprejela tudi Liberalna demokracija, in da je gospod Bavčar, ki je prvopodpisani, pripravil predlog sprememb in dopolnitev zakona. Veseli smo, da danes tudi javnost mnogo drugače kot pa pred petimi leti to stvar zaznava. Danes ni več nobena tabu tema razpravljati tudi o denacionalizaciji. Pred dvema, tremi leti je še bila. Danes se dobro ve, da ta zakon povzroča nove krivice 10 - tisočim. Nihče temu ne upa ugovarjati. Danes se ve, da je vrednostna razlika med oceno, ki bi jo naj plačala denacionalizacija ob zakonu, in tista, ki jo bo plačala država danes, enkratna ali celo dvakratna. In to, drage gospe in gospodje, ne samo zaradi pomot ob izračunu in ne samo zaradi velikih številk nacionalizacije, ampak predvsem tudi zato, ker se želi vračati nekaj, kar vrednostno ni bilo nacionalizirano. Ne upošteva se namreč, da se vrača tudi vse, kar je bilo po zakonu povečana vrednost v času, ko je bilo premoženje družbeno in se vrača, ne glede na to, da se je ta vrednost povečala do 1/3 in to ne glede na to, kakšna je absolutna vrednost. Pri 10 - tisoč markah vrednosti se vrača 3 tisoč mark, pri 10 milijonih se vračajo 3 milijoni mark in to se v ničemer ne upošteva. Tukaj je tisto, zaradi česar prihaja do velikih razlik. Do velikih razlik prihaja, ker se ne upoštevajo vlaganja v gozdove, tudi v gozdne ceste. Do velikih razlik prihaja, ker se ne upoštevajo vlaganja najemnikov, stanovalcev in tu so tiste razlike v milijonih mark ali pa v milijardah mark, ne pa to, kakšna je bila vrednost. Vse, kar je zahteva po zavračanju odločanja, pomeni nepripravljenost soočiti se s problemi. Jaz bom ponovil našo trditev, ki smo jo nekajkrat povedali. Spoštujemo različne poglede, ne nasprotujemo, da nekdo želi oceniti zakon, drugi tega ni pripravljen. Vendar, imejte korajžo dovoliti, da se enkrat razprava v tem državnem zboru opravi in nehajmo biti, to govorim tistim, ki temu nasprotujejo, toliko dvolični, da pri vsaki razpravi pravimo: Ne, ne smemo razpravljati. Ko se drugič odpre problem, rečemo: Gospodje, to je vendar prepozno. Pri tem smo pa imeli 4, 5 let čas odločiti se za razpravo, pa smo vedno znova predlagali: Ne, razprava ni potrebna ali pa ni možna. To enostavno ni korektno.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg39">Kar zadeva poslovnih prostorov, in povezave z zakonom. Tudi na tej točki, gospe in gospodje, se kaže naša ali nekaterih dvoličnost. Kadar pridemo do tega zakona, dobim odgovor, da to vendar ni mogoče reševati v zakonu o poslovnih stavbah in prostorih, to je treba rešiti v zakonu o denacionalizaciji. Kadar govorimo o denacionalizaciji, pravite, da, tu ni mogoče zaradi tega, ker se že obravnava v zakonu o poslovnih stavbah in prostorih. Dajmo videti vsebino, ta zakon o denacionalizaciji tudi tretira nekatera vprašanja o poslovnih prostorih in tista, ki jih tretira, se lahko tretirajo tudi v tem zakonu, ne pa seveda vsega drugega. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg40">Hvala lepa, gospod Potrč. V imenu poslanske skupine LDS, gospod Tone Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg41">Spoštovani! Nesporno je, da smo se julija meseca ob razpravi o zakonu o moratoriju dogovorili, da bomo septembra nadaljevali z razpravo o spremembah zakona o denacionalizaciji. Gre preprosto za to, da so vsi ali pa iz vseh poslanskih skupin poslanci ugotavljali, da so določene težave pri izvajanju denacionalizacije in predvsem tudi z zakonom o izvrševanju kazenskih sankcij in da to moramo čim prej uvrstiti na dnevni red ter začeti probleme razreševati. Liberalni demokraciji je v interesu, da to poglavje čimprej zapre, torej da se denacionalizacija izvede tako, kot bo pač z zakonom določeno do konca in neha to vprašanje obremenjevati vsakodnevno v politično dogajanje v Sloveniji. Vemo, da bo še veliko napornih usklajevanj tudi z Rimskokatoliško cerkvijo, s katero je bil podpisan sporazum o urejanju medsebojnih odnosov s tega področja, pa kljub temu menimo, da je skrajni čas, da to damo na dnevni red državnega zbora in da vprašanja razrešimo, zato bomo podprli oziroma nasprotovali umiku te točke iz dnevnega reda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg42">Hvala lepa gospodu Anderliču. Gospod Delak v imenu poslanske skupine Demokratične stranke upokojencev.</seg>
             </u>
             <note type="speaker">ANTON DELAK:</note>
-            <u who="#SDZ2.DelakAnton" ana="#regular">
+            <u who="#DelakAnton">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg43">Hvala lepa za besedo. Spoštovani državni zbor! Moram povedati mnenje naše poslanske skupine, da bomo nasprotovali temu, da se točka umakne z dnevnega reda.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg44">Hočem povedati samo to, da smo v naši poslanski skupini že dvakrat podpisali zahtevo, da se ta zadeva da na dnevni red oziroma trikrat smo podpisali to zahtevo in zaradi tega mislimo, da to na vsak način mora biti na dnevnem redu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg45">Hvala lepa. Želi še kdo besedo v imenu poslanskih skupin?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg46">Ali predlagatelj umika dodatno <gap reason="inaudible"/> Se opravičujem, gospod Hvalica, v imenu poslanske skupine Socialdemokratov.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg47">Hvala lepa. Gospod predsednik! Svoj predlog lahko podkrepim tudi na podlagi tretjega odstavka 72. člena, ki celo pravi: "Predsedujoči prekine delo državnega zbora, če se ugotovi, da seja ni sklepčna, če so potrebna posvetovanja, če je treba dobiti mnenja delovnih teles ali vlade in v drugih primerih, kadar tako sklene državni zbor." Torej, prosil bi, da moj predlog daste na glasovanje. Sicer pa imate tudi možnost, da če bo to na dnevnem redu, da na podlagi citiranega tretjega odstavka 72. člena poslovnika prekinete razpravo o tej točki. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg48">Hvala lepa. Preden bi glasovali o predlogu, bi rad povedal naslednje. V preteklem mesecu sem dobil pobudo treh predsednikov, vodij poslanskih skupin, gospoda Zagožna, gospoda Anderliča in gospoda Delaka, da se ta točka uvrsti na dnevni red. Prav tako sem pred tem dobil tudi pobudo več poslancev Združene liste in še nekaterih drugih poslancev, da se druga obravnava zakona o denacionalizaciji po možnosti uvrsti na dnevni red ene izrednih sej še v mesecu septembru. Te pobudnike sem tudi pisno obvestil, da bom predlagal, da bi bila ta točka dnevnega reda hkrati z obravnavo državnega proračuna in danes se to tudi dogaja.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg49">Prav tako pa bi rad na kratko odgovoril tudi na stališče oziroma pobudo gospoda Rejca. Tukaj ima tudi predsednik po poslovniku odgovorno vlogo. V preteklem tednu sem tudi sprejel predstavnike tega društva, ki so zapisali podobno stališče, in jim povedal, da bom njihovo pobudo proučil in če bi bilo karkoli, bi obvestil tudi državni zbor. Mi smo pogledali vse gradivo v zvezi z obema zakonoma in smo bili potem zelo pozorni tudi na stališče sekretariata, ki ga je pripravilo za predlog zakona o dopolnitvah zakona o poslovnih stavbah in poslovnih prostorih, ko je šlo za prvo obravnavo. Državni zbor je ta zakon junija letos sprejel v prvi obravnavi in kot 4. točko napisal: prouči in ustrezno upošteva naj se mnenje sekretariata državnega zbora. Sekretariat pravi tudi naslednje: če pa bi šlo le za izjemno posebno ureditev vlaganja v poslovne stavbe oziroma prostore v razmerah nekdanje družbene lastnine pred denacionalizacijo, pa bi bilo potrebno tako rešitev jasno in drugače zapisati in bi sistemsko prej sodila v zakon o denacionalizaciji kot pa v sistemski zakon o poslovnih stavbah in poslovnih prostorih, kar smo v prejšnjih mnenjih že omenili. Torej ta dilema glede prepletanja te problematike je stara, je bila že večkrat prisotna in v skladu z poslovnikom bi bilo za pričakovati, da bi predlagatelji ta zakon <gap reason="inaudible"/> , za drugo obravnavo bi ne bilo torej nobenih določb več, ki bi se dotikale denacionalizacije.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg50">Le-te, če smiselno so, sodijo v zakon o denacionalizaciji. S tem sem dal tudi odgovor na vprašanje glede uvrstitve oziroma dodelitve teh dveh zakonov. Jaz bi še vprašal, ali je gospod Hvalica govoril tudi kot predlagatelj umika ali v imenu poslanske skupine?</seg>
@@ -524,11 +505,11 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg57">Gospod Šuklje, prosim.</seg>
             </u>
             <note type="speaker">BORUT ŠUKLJE:</note>
-            <u who="#SDZ2.ŠukljeBorut" ana="#regular">
+            <u who="#ŠukljeBorut">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg58">Spoštovani gospod predsednik, gospe in gospodje poslanci. V imenu vlade predlagam razširitev dnevnega reda z umikom predloga zakona o kmetijsko-gozdarski zbornicah, druga obravnava EPA 585 , ki ga je Vlada Republike Slovenije predložila državnemu zboru z dopisom 0,2306/94. Prosim gospod predsednik, da ta zakon umaknemo iz dnevnega reda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg59">Predlagate, da se uvrsti točka, v kateri bi umaknili ta zakon z dnevnega reda. Hvala lepa. Prosil bi tudi, da vlada pisno predlaga ta predlog. Želi poročevalec matičnega delovnega telesa besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg60">Želi besedo predstavnik Sekretariata za zakonodajo in pravne zadeve?</seg>
@@ -536,45 +517,45 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg61">Predstavnik vlade je že nastopil. Želijo besedo predstavniki poslanskih skupin? Gospod Mozetič, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg62">Hvala lepa gospod predsednik za besedo. Jaz bi prosil, čisto proceduralno, da vlada vloži pisni predlog, tako kot ste vi že predlagali, da obrazloži, zakaj predlaga razširitev te točke, to je prvič. Ne vem, ali je možno na tak način razširiti in tudi naj obrazloži zakaj predlaga umik, da bomo vedeli o čem bomo odločali.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg63">Jaz se bojim, da ta vlada dela tako iz trenutka v trenutek, kar ji v tistem trenutku, ko se seja tukaj začne, pride na pamet, pošlje gor nekega svojega uradnika, ki tukaj govori v imenu vlade in predlaga določene točke, uvršča na dnevni red. Jaz mislim, da bi enkrat ta parlament kljub temu, čeprav vem, da ne bo, 57 glasov tukaj vlada ima, tako da ni problem, da karkoli tukaj dela. Vendar prosim, delajmo po poslovniku. Vsaj to delajmo, vsaj po poslovniku delajmo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg64">Hvala gospod Mozetič. V imenu poslanske skupine Združene liste, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg65">Hvala lepa. Dodatno k temu, kar je povedal gospod Mozetič, menim, da mora vlada posebej obrazložiti, zakaj so od sklica in kje so od sklica do danes nastopili posebni razlogi, da ni mogla že predlagati, da bi to na sklic dnevnega reda prišlo, ampak da je v teh treh dneh se nekaj posebnega zgodilo. Mislim, da je to tudi eden od elementov, ki ga mora vsak predlagatelj, pa tudi predsednik, ki vodi sejo Državnega zbora, upoštevati, drugače bomo pač spremenili prakso in na novo zvedeli, da nam to pri izrednih sejah ni treba delati, kar pa jaz mislim, da ni točno.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg66">Drugo. Nemogoče je, da odločamo o taki stvari brez pisnega predloga. Jaz bom potem, ko bo pisni predlog prišel, prosil, da se nam da pavza in da lahko o tej odločitvi oziroma obrazložitvi razmislimo, ali so res kakšni posebni razlogi, da do tega pride, nastopili, ali ne. Predlagam pa vladi, da to rajši umakne, ker sicer bo brez potrebe ona tokrat zavlačevala delo državnega zbora. Mi pa imamo najbrž pravico, ob tem, da vemo, da smo julija to vprašanje imeli na dnevnem redu, da nas takrat vlada ni prepričala in da ta državni zbor ni sprejel umika tega prvotnega predloga, da tokrat ponovno o tem resno razmislimo in vsaj preberemo tisto obrazložitev, ki jo bo vlada dala.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg67">In zadnje. Najbrž ni v posebno čast vladi, da o dovolj pomembnem zakonu razmišlja na način, kakor razmišlja v primeru kmetijsko-gozdarskih zbornic, da je to stvar, ki jo vsaka vlada in vsak minister postavi malo drugače, da se najprej ugotovi vsakokrat, da je to stvar, ki jo je treba v tisti sekundi sprejeti, mi smo take situacije že sprejeli, kasneje pa leto ali dve stoji in se na tej točki nič ne dogaja. Potem se zopet ugotovi, da je treba takoj sprejeti in jaz se bojim, ker je bilo tako že najavljeno. Prosil bi, da generalni sekretar vlade to tudi pove, ali misli vlada potem z novim zakonom priti ali ne, ali pa umika sploh to problematiko in ali misli z novim zakonom, kot je bilo najavljeno, priti po hitrem postopku, kar je seveda spet popolnoma neprincipialno, smo pa pri tej vladi navajeni, ker dolgo časa potrebuje, da se koalicija uskladi, ko se pa uskladi, pa misli, da je situacija opravljena in da Državni zbor ni več potreben, razen za to, da se glasovanje opravi. Prosim torej za pisni predlog, za oceno predsednika, ali je takšen predlog sploh mogoč ali ne, za razmislek generalnega sekretarja, da ta predlog umakne. Povem pa, ko bomo pisni predlog dobili, bomo zahtevali njegovo oceno in razmislek, ali lahko zanj glasujemo ali ne. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg68">Hvala lepa, gospod Potrč. V imenu poslanske skupine LDS gospod Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg69">Poslanska skupina Liberalne demokracije bo podprla uvrstitev te točke na dnevni red, kajti ni se potrebno prav posebej naprezati, da bi se spomnili, da se je vlada tega predlagateljstva odpovedala v juliju mesecu, ko smo glasovali že o tem predlogu in vsi tisti, ki smo na tekočem z dopisi, ki jih predsednik državnega zbora posreduje poslanskim skupinam, vemo, da je temu tako in vlada se je julija meseca po tistem, ko smo že glasovali o tem predlogu, pa ni uspel takrat, predlagateljstvu odpovedala, nastopila je nova situacija in to je treba seveda v proceduri izpeljati korektno in mislim, da je korektno, da uvrstimo na dnevni red predlog za umik, da bi s tem naredili prostor novemu zakonu. Zagotovo v Sloveniji bomo dobili zakon o kmetijsko-gozdarskih zbornicah oziroma ga bo parlament moral sprejeti, če bo hotel svojo zakonodajo urediti primerljivo z drugimi evropskimi državami. Kot sem jaz seznanjen, kar ne dvomim, da je poznano tudi drugim v državnem zboru, da čaka predlog zakona o kmetijsko-gozdarskih zbornicah, ki ga je ta vlada predlagala v proceduro, in zaradi znanih proceduralnih zapletov, ki nastanejo vedno takrat, ko je več predlogov v proceduri. Na tem mestu pač želim reči tudi to, da je ta zakon, ki se ga umika, vendarle zakon, predlog zakona iz prejšnjega sklica in da očitno ta praksa, da vlečemo nekatere zakone, ki so doživeli del procedure na koncu enega mandata v drugi mandat, da ni najboljša in da bi mogoče veljalo za v bodoče razmišljati tudi o tem, da bi se poslovnik na tej točki spremenil. Poslanska skupina Liberalne demokracije bo iz vsebinskih razlogov, ker vlada ni več predlagatelj tega zakona, ker se je predlagateljstva odpovedala, glasovala za to, da se to uvrsti na dnevni red in da se omogoči normalno obravnavo naslednjega zakona s to vsebino. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg70">Hvala lepa. Želi besedo še katera od poslanskih skupin?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg71">Preden bi vprašal predlagatelja, če želi dodatno obrazložiti svoj predlog, bi rad povedal glede vloge predsednika oziroma predsedujočega. 54. člen poslovnika med drugim govori tudi o tem, da se dnevni red izredne seje lahko predlaga tudi na sami seji, seveda to naj ne bi bila praksa, ampak če so kakšne take potrebe, tudi gradivo za izredno sejo se lahko predloži poslancem tudi na sami seji. Vsekakor tudi to nikakor naj ne bi postajala praksa. Če bi jaz dobil s strani vlade predlog za zadnjo točko dnevnega reda, bi ga lahko skupaj z obrazložitvijo že uvrstil na dnevni red te seje. Toda, ker pa to, kar je bilo predlagano, ni v nasprotju s poslovnikom, bi predlagal naslednje, da pač za 15 minut prekinemo sejo, da dobimo pisni predlog in da se potem seveda, če bodo poslanske skupine želele, da se tudi opredelijo do tega predloga, bodo dobile tudi pavzo. To je edino korektno stališče. Pred tem sprašujem, ali želi predlagatelj dodatno obrazložiti svoj predlog. Gospod But, državni sekretar za kmetijstvo. Prosim.</seg>
             </u>
             <note type="speaker">FRANC BUT:</note>
-            <u who="#SDZ2.ButFranc" ana="#regular">
+            <u who="#ButFranc">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg72">Hvala lepa. Gre pravzaprav za predlog umika ravno iz naslova, ker je nov zakon pripravljen in ga je potrebno kasneje tudi seveda v ustreznem postopku speljati skozi parlament. Gre za dva različna koncepta. Ministrstvo kot predlagatelj meni, da je koncept, ki ga je ministrstvo pripravilo v novem zakonu, bolj primeren in bolj skladen s potrebami in interesi slovenskega kmetijstva na eni strani, gozdarstva in ribištva, ter na drugi strani, da je bolj skladen z Evropsko unijo. Gre pa tudi za zakon, ki je izredno pomemben del tako imenovane infrastrukture, brez katere Slovenija ne more pripraviti svojega kmetijstva na skupni trg in brez katerega tudi ne more ustrezno kasneje koristiti ustreznih strukturnih fondov. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg73">Hvala magistru Franciju Butu. S tem bi jaz sejo prekinil. Nadaljujemo jo ob 11.15, do takrat pa pričakujemo pisno stališče oziroma predlog vlade. Hvala.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 11.00 uri in se je nadaljevala ob 11.26 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg74">Spoštovane kolegice in kolgi! Nadaljujemo s sprejemanjem dnevnega reda 15. izredne seje. Ugotovimo sklepčnost!</seg>
                <note>53 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg75">Ugotavljam, da je državni zbor sklepčen in lahko odloča.</seg>
@@ -584,16 +565,16 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg79">Prav tako smo vam posredovali tudi njihov prvotni predlog, da se iz predhodnega sklica 7. seje državnega zbora za 22.7. umakne obravnava predloga zakona o kmetijsko-gozdarskih zbornicah. To je bilo takrat, da smo ga potem lahko uvrstili na dnevni red. In obrazložitev. Vlada predlaga, da so argumenti za uvrstitev te točke na dnevni red zapisani v predlogu zakona o kmetijsko-gozdarski zbornici, ki ga je vlada sprejela 17. julija in ga poslala v državni zbor 23. julija. Torej v tem gradivu vlada tudi argumentira, zakaj je potrebno umakniti zakon o kmetijsko-gozdarsko zbornici, druga obravnava, iz procedure in potem po njihovem stališču obravnavati nov zakon, ki je vložen v proceduro. Ker smo v zagati glede gradiva in ker je prej ena od poslanskih skupin napovedala, da bi v predglasovanju o razširitvi dnevnega reda reda tudi eventualno pač izkoristila poslovniško možnost za posvetovanje po poslanskih skupinah, sprašujem, če pri tem vztraja. V tem času boste tudi vsi dobili seveda tudi to gradivo, da boste čimprej prišli do dnevnega reda. Gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg80">Gospod predsednik, hvala lepa. Naša poslanska skupina vztraja, predlagamo pol ure odmora, če je res nekaj strani. Prosil bi pa, da se nam ta odmor šteje od trenutka, ko bomo dobili gradivo. Ta moment ga še vedno nimamo, čeprav je gospod generalni sekretar vlade rekel, da ga je predložil. Verjetno je v razmnoževanju. Torej, od takrat naprej, ko dobimo gradivo, pol ure, ker bi radi ocenili, ali obstojajo razlogi, da spremenimo stališče, ki smo ga ob zadnjem glasovanju julija imeli. Julija smo namreč glasovali proti umiku, zdaj bi se radi odločili, ali vztrajamo pri istem stališču, ali ga spremenimo. Nam je razumljivo, da vsak ne potrebuje o tem razmišljati. LDS je recimo že vedela, da bo vlada prišla in se je najbrž odločila, da bo spremenila stališče, ker je tudi mnogo poslancev LDS julija glasovalo proti umiku. Nam pa prosim, da to možnost daste zdaj, da bomo vsaj približno enakopravni. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg81">Torej, ker bo v kratkem razmnoženo gradivo, odrejam odmor, ki ga je zaprosila poslanska skupina Združene liste. Sejo nadaljujemo ob 12.10 uri.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 11.31 uri in se je nadaljevala ob 12.18 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg82">Spoštovane kolegice in kolegi! Nadaljujemo s sprejemanjem dnevnega reda 15. izredne seje. Ugotovimo sklepčnost!</seg>
                <note>60 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg83">Ugotavljam, da je državni zbor sklepčen in lahko odloča.</seg>
@@ -602,7 +583,7 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg85">Prosim, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg86">Hvala lepa. Spoštovane kolegice in kolegi! Najprej bi rad ugotovil, da je tokrat Vlada Republike Slovenije kriva za zavlačevanje dela državnega zbora. Zelo pogosto nam namreč rada očita, da smo neracionalni in da v državnem zboru zavlačujemo, seveda predvsem po krivdi opozicije. Tokrat je verjetno nesporno, da smo uro in pol zamudili izključno zaradi vlade, ki je prvič danes prišla s svojim predlogom, ni vedela, da ga mora pisno pripraviti, ni ga pravočasno predložila poslancem itn., da ne bi našteval.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg87">Kar pa zadeva vsebino predloga, bi rad povedal naslednje. V poslanski skupini smo pisno gradivo, ki smo ga dobili, proučili. Ne vidimo razlogov, da bi spremenili svoje stališče, zato bomo predlogu za umik nasprotovali.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg88">Kakšni so naši razlogi za to? Prvič. Vlada ni za umik predložila nobenih novih razlogov. Obratno, lahko bi celo rekel, da jih sploh ni predložila, ker namreč vse, kar je predložila, je predložila samo pismo, z dne 30.9.1997, po katerem predlaga, da se ponovno obravnava umik predloga o kmetijsko-gozdarskih zbornica, druga obravnava, ki smo vam ga poslali z dopisom št. 023-006/94-2/3-8 z dne 17.6.1996. Predsednik državnega zbora oziroma generalna sekretarka sta bila toliko ljubezniva, da sta poslankam in poslancem državnega zbora razmnožila tisti dopis z julija meseca, v katerem je vlada navedla, zakaj julija meseca meni, da bi bilo prav, da se obravnava umik. Vlada je torej toliko, da rečem, malomarna, da niti nobenega novega razloga za umik ni navedla.</seg>
@@ -612,61 +593,61 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg92">Drugo. Kot razlog za hitri postopek in s tem tudi za umik je zapisano, da naj bi volitve v svet zbornice bile izvedene z volitvami, skupno z volitvami predsednika države v letošnjem letu. Volitve predsednika države so razpisane, in sicer bodo 23. novembra. Vse, kar v tem zakonu piše, je dokaz, da do 30. novembra, tudi če bi želeli, vse po zakonu pripravljeno za volitve ne more biti. Če želite, vam začnem brati člene. V prehodnih določbah v 40. členu piše: "Prve volitve v svet zbornice se opravijo najpozneje v 1 letu po uveljavitvi tega zakona." Predlagatelj je sam ugotovil, da je glede na relativno komplicirano strukturo zbornice in glede na to, da je treba veliko opravil opraviti, predno bodo volitve možne <gap reason="inaudible"/> Veste, da gresta dve skupini članov, neposredni posamezniki in pravne osebe, in da je potrebno tam ugotavljati po kriterijih tudi katastrskega dohodka in podobno, kdo sploh je član in kdo ni, da je nemogoče v 40 dneh take volitve, prvič, popraviti, ker je potrebno mnogo teh opravil napraviti. Minister bo moral kar veliko navodil, kako naj se to naredi in pripravi, še izdati. Govoriti danes, 30. oktobra, o tem, da bi bilo mogoče 23. novembra opraviti volitve, je <gap reason="inaudible"/> Tisti, ki to trdi, pač ni prebral svojega lastnega zakona. Da ne govorim o tem, da tudi formalno, če ne bi bilo teh predpostopkov, pravi 30. člen: "Od dneva razpisa volitev do dneva glasovanja ne sme preteči manj kot 40 dni." Danes, kolegice in kolegi, odločamo ali pa bomo odločali o umiku zakona. Kasneje mora biti nov zakon predložen na dnevni red in razen, če misli vlada in gospod predsednik državnega zbora zaradi tega zakona čez en teden dni spet sklicati naslednjo izredno sejo državnega zbora, da bi o izrednih potrebah države odločali, 40 dni od sprejema zakona ne bo, ker mi bi zakon potem normalno morali konec oktobra obravnavati na redni seji in če ga tudi sprejmemo po hitrem postopku - kar bo nesprejemljivo sicer zame - potem je več kot 40 dni do 23. novembra. Skratka, ta argument, dragi gospodje, berite sami, kaj pišete v tekstu zakona in kaj pišete v obrazložitvah, da ne boste skrajno smešni pred tem državnim zborom, ker nič drugega kot smešni niste, ko take stvari postavljate. Trdim torej, da za predlog, ki ga je dala vlada, ni nobenih argumentov, vladna koalicija pa ima dovolj glasov. Odločali bodo ti glasovi proti vsakemu pametnemu argumentu, kar se ne bo zgodilo prvič. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg93">Hvala lepa, gospod Potrč. Jaz bi samo pojasnil eno vprašanje, ki se dotika samega gradiva oziroma vprašanja o predlagateljstvu. Danes smo razmnožili tudi stališče vlade, ki je bilo poslano 31.7., ki je prišlo v državni zbor 31.7., ste ga prejeli. Upam, da ste ga prejeli, kjer pač piše, da vlada ostane predlagatelj predloga zakona o kmetijsko-gozdarskih zbornicah. Torej o ostalih stvareh, o katerih je razpravljal gospod Potrč, jaz pač ne bi komentiral. Z glasovanjem se boste, poslanke in poslanci, odločili in lahko tudi pritrdili njegovemu stališču. Mislim, da zdaj smo tudi izčrpali poslovniško možnost za razprave. Tako dajem na glasovanje predlog, da se razširi <gap reason="inaudible"/> Proceduralni predlog imate? Gospod Mozetič. Proceduralni ugovor. Prosim.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg94">Hvala lepa, gospod predsednik. Jaz bom samo nekaj stvari na kratko povedal. Poglejte, to gre spet za tipičen primer zlorabe poslovnika, ki se dogaja, odkar je ta državni zbor začel v novi sestavi zasedati, precej pogosto. 180. člen jasno govori: Predlagatelj predloga zakona lahko predlaga umik zakona do konca druge obravnave. To je predlagatelj naredil. Ta predlog ni bil izglasovan. Potem piše: <gap reason="inaudible"/> če državni zbor zavrne predlog, se lahko predlagatelj odpove vlogi predlagatelja. Kaj pa se dogaja, naprej tudi jasno piše v poslovniku. Sedaj pa, v čem je ta zloraba. Nikjer sicer ne piše, da ne more nekdo dvakrat umikati predloga, to je res. V čem se dogaja sedaj zloraba? Predlagatelj pravi, ne jaz ostajam predlagatelj, ne umikam tega kar pravim, se ne odpovem vlogi predlagatelja in pride ponovno na sejo s predlogom, za umik istega predloga z istimi argumenti, ki jih je imel že prvič, ko je ta državni zbor rekel: "Ne sprejemamo predloga za umik." To je tipična čista 100% zloraba poslovnika s strani predlagatelja. Predlagatelju lahko oziroma njemu ne zamerim, predlagatelj lahko poskuša vse, vendar mi postajamo smešni. Tukaj se ne strinjam z gospodom Potrčem, da se vlada smeši s tem predlogom, mi se bomo osmešili, ker bomo to zadevo sprejeli oziroma tisti, ki jo boste sprejeli, ampak na koncu bo rečeno, državni zbor je enostavno nasedel na čudovito finto, ki jo je naredil predlagatelj oziroma vlada. To je kot prvo.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg95">Drugič. Tudi sama uvrstitev na dnevni red te točke je nemogoča. Poglejte kaj poslovnik piše v 51. členu: "Izredna seja se skliče zunaj rednih zasedanj državnega zbora in v času rednih zasedanj, kadar ni pogojev za redno sejo". Kakšna je ta izredna seja, danes vsi vemo. To ni izredna seja v tem smislu, kot so bile običajne, to je seja vezana na sprejem državnega proračuna. Ne glede na to, isti člen piše: "V zahtevi za sklic izredne seje morajo biti navedeni razlogi za njen sklic." To so bili, razlogi za sklic izredne seje, ki se veže na proračun. Potem je bilo rečeno, da se lahko na izredni seji to enostavno spreminja. Ampak to ni res! 54. člen piše: "Izredno sejo lahko skliče predsednik državnega zbora tudi v krajšem roku, kakor je določeno v 52. členu, dnevni red izredne seje lahko predlaga tudi na sami seji". Kdo? Predsednik državnega zbora, če predsednik državnega zbora predlaga dnevni red tako, kot ga je predlagala vlada, potem bomo o njem glasovali. Nič ne govori o širitvi, kar ne pomeni, da niso možne, vendar skladno s poslovnikom, tako kot je določeno v paragrafih, ki govori o širitvi dnevnega reda. Tam pa piše: "Državni zbor lahko odloča o širitvi dnevnega reda, le če so razlogi zanjo nastali po sklicu seje." To pa ni nastalo po sklicu seje.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg96">Prosim, ponovno prosim, da se držimo poslovnika in da se kljub temu, da imate absolutno večino v tem parlamentu, držite določb, ki smo jih sprejeli. Oprostite,sicer nismo pravna država, sicer smo to, kar sem že večkrat rekel, despotska parlamentarna, sicer demokracija, ampak despotska, ker despotizem pomeni to, da nekdo ni vezan na lastne zakone in lastna pravila. Vi nočete biti vezani na lastna pravila, ki smo jih lepo sprejeli z dvotretjinsko večino. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg97">Hvala lepa gospodu Mozetiču. Kar se tiče prve opazke oziroma stališča, glede zlorabe poslovnika, ob dejstvu, da ko se predlagatelj ni odpovedal predlagateljstvu, v tem primeru vlada, ni tega zakona za umik z dnevnega reda in ko ta predlog za umik ni bil sprejet in potem vlada prihaja ponovno s predlogom, s tako točko dnevnega reda, vsekakor je to lahko dilema. Kot predsednik državnega zbora se bom tudi obrnil na Komisijo za poslovnik, da bi taka dilema v bodoče bila razčiščena in da ne bi prihajalo do takih situacij.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg98">Proceduralno, gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg99">Spoštovani gospod predsednik, poslanke in poslanci! Predlagam, gospod predsednik, glede na to, kar ste pravkar dejali, da se tej možnosti ne odpoveste sedaj, ampak da jo pri priči izkoristite. Komisija za poslovnik naj pove, ali smo res dobili material, na podlagi katerega lahko odločamo. Vsaj zase lahko trdim, da sem o tem materialu, o teh argumentih enkrat že odločal in ne morem o istem papirju odločati še enkrat. Prosim, da se to preveri. Bodimo zakoniti in verodostojni, če ne bo šel ugled te države še naprej dol.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg100">Hvala lepa, gospod Peterle. Med samo sejo državnega zbora poslovnik pač tolmači predsedujoči. Jaz tolmačim poslovnik tako, da se gradivo za izredno sejo lahko predloži poslancem tudi na sami seji, le-to je bilo predloženo. Ne spuščam se pa v ocene te drže vlade, da je to storila ob tem primeru, ker bi lahko bistveno drugače pač pripravila predlog za to točko dnevnega reda in teh vprašanj sploh ne bi bilo. Komisija za poslovnik se bo sestala, seveda potrebuje za svoje delo premislek, da se potem odloči. Ne more se Komisija za poslovnik sestati sedaj takoj in o taki zadevi odločati. Tudi ni bila praksa o takih zadevah, ker se pač odloča splošno, ne o konkretnih zadevah. Njena odločitev ima pa potem tudi seveda zavezujočo normo v bistvu poslovnika državnega zbora. Proceduralni govor, dr. Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg101">V celoti se strinjam s tem, kar je predsednik povedal glede vloge Komisije za poslovnik, ker drugače bi na hitro odločala in postala organ nad našim kolegijem, nad vodstvom zbora. Mi moramo te stvari, kot veste sklicujemo na en mesec, na dva meseca, sem temeljito proučil in veljajo za naprej, ne za konkretne spore, drugače bomo postali arbitrarna komisija, ki presoja odgovornost vodstva državnega zbora za uveljavljanje poslovnika. To pa po našem veljavnem poslovniku ni naša funkcija. Enostavno nismo za to pristojni.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg102">Oglasil sem se pa zaradi druge stvari, ki pa mislim, da je med tistimi, ki poslovnik poznamo, in to seveda govorim kot poslanec, ne kot predsednik Komisije za poslovnik, bolj ali manj nesporna. To je stvar, na katero je gospod Mozetič na koncu opozoril, in sicer gre za to, da bi razlogi za razširitev dnevnega reda morali nastati po sklicu seje. Ne glede na to, ali gre za redno ali gre za izredno sejo, razlogi za to, da se zdaj naknadno razširja dnevni red, morajo biti po skicu seje. Če gre za redno sejo ali za izredno sejo, mora nekaj nastati naknadno, ko je bila že sklicana. V tem je izredna določba, navedel jo je četrti odstavek 64. člena veljavnega poslovnika. In tukaj se mi zdi, da če bi danes šli v to razširitev, da bi zelo direktno kršili poslovnik. Takšno je moje osebno mnenje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg103">Sprašujem vlado, ali vztraja na razširitvi točke dnevnega reda! Gospod Smrkolj, minister za kmetijstvo. Zdaj bomo skozi proceduralno pač razpravo peljali naprej. Prosim, gospod Smrkolj. Prosil pa bi, da ne bi izkoriščali te možnosti glede proceduralnih razprav.</seg>
             </u>
             <note type="speaker">CIRIL SMRKOLJ:</note>
-            <u who="#SDZ2.SmrkoljCiril" ana="#regular">
+            <u who="#SmrkoljCiril">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg104">Z ozirom na predlog vlada vztraja na razširitvi dnevnega reda. Jaz moram povedati, da je izredno pomembno, da se postopek za ustanovitev kmetijske gozdarske zbornice nujno pelje čimprej. Tudi tisti državni razlogi, ki tu nastajajo, jaz moram povedati, gospodje, da smo mi edina država, ki smo bili povabljeni v ta krog ob Češki, Madžarski in pa Poljski, ki nimamo kmetijsko gozdarske zbornice. In bo problem ob pogajanjih v Bruslju, ko ta stanovski, nevladni del ne bo za področje kmetijstva dobro organiziran. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg105">Hvala, gospod Smrkolj. Proceduralno ima ima tudi gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg106">Hvala lepa. Ker ne smem več o proceduralnem predlogu diskutirati z argumenti gospoda ministra, bi bil nekorekten in bi me vi lahko prekinili, samo naslednje. Gospod predsednik, jaz bi prosil, da v zvezi s prvim odstavkom 54. člena, ki se glasi: "Izredno sejo lahko skliče predsednik državnega zbora tudi v krajšem roku, kakor je določen v 52. členu. Dnevni red izredne seje lahko predlaga tudi na sami seji.", poveste, prvič, ali lahko to popolnoma nedvoumno besedilo vi razlagate kakorkoli drugače, kot piše. Piše pa izrecno, da samo predsednik lahko predlaga na sami seji razširitev. To je prvo. In drugo, če boste rekli, da ne, ker pač tako piše, potem vas sprašujem, ali ste vi predlagatelj razširitve te točke dnevnega reda, ker vlada ne more biti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg107">Hvala lepa, gospod Potrč. Torej, če me spomin ne vara, so bile kar nekajkrat do sedaj v tem sklicu in v prejšnjem sklicu predlagane razširitve dnevnega reda tudi na izrednih sejah državnega zbora. In seveda, če me spomin ne vara, so bili predlagatelji tako poslanci kot vlada in takrat ponavadi ni bilo predlagano in se ni potiskalo predsednika državnega zbora v situacijo, da mora on prevzeti predlagateljstvo. To je moj odgovor. Gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg108">Hvala lepa. Gospod predsednik, brez zamere, vem, da gre za sitnobo, ampak enostavno drugače v tem državnem zboru več delati ni mogoče. Jaz vas nisem vprašal za to, kako se vi spominjate preteklega dela, ampak sem vas vprašal za to, kako razlagate prvi odstavek 52.</seg>
                <note>54.?</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg109">člena poslovnika. Ta razlaga namreč je v vaši pristojnosti in vsak od nas ima po vaši razlagi samo pravico reči, molčati in se strinjati ali pa zahtevati, da o tej razlagi glasuje državni zbor. In prosil bi, da pač pravico in obveznost - za oboje gre - ki jo imate, jasno poveste, ne pa, kaj bi lahko bilo, ali pa, kaj je bilo. Ker tudi, če je kdaj bilo, pa je bilo napačno, potem najbrž je prav, da popravimo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg110">Ja, hvala lepa. Jaz sem pravzaprav po mojem pokazal zelo veliko širino, da se o tej točki skozi to vprašanje procedure razpravlja že pol ure, tako da sem bil zelo odprt do vaših stališč in do vaših pogledov, v skladu s 70. členom poslovnika, kjer pač piše, da če poslanec ni zadovoljen s pojasnilom, odloči državni zbor o vprašanju brez razprave in brez obrazložitve glasu. Da ne bo nesporazuma, bi dal torej mojo razlago, da lahko dodatno točko na izredni seji predlaga tudi vlada, kot sem jaz tolmačil, na glasovanje. Če bo državni zbor tako odločil, bomo o tem glasovali, sicer pa ne. Brez razprave in brez obrazložitve glasu. Ugotovimo sklepčnost!</seg>
                <note>77 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg111">Torej na glasovanje dajem razlago poslovnika državnega zbora, kot sem jo sam interpretiral ob tem vprašanju, torej, da lahko vlada predlaga razširitev dnevnega reda izredne seje.</seg>
@@ -678,84 +659,84 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg115">Na glasovanje dajem <gap reason="inaudible"/> Proceduralni predlog ima gospod Mozetič.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg116">Hvala lepa. Torej ne bom razpravljal v tem smislu, kot je gospod Smrkolj. Zakon o zbornici je že 2 leti v proceduri, minister, gospod Smrkolj, ste pa že od marca meseca, lahko bi tudi že ves zakon sprejeli.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg117">Predlagam še eno glasovanje. Da se glasuje še o enem stališču, ki je implicitno sedaj sprejeto. Glede na to, da ste se odločili, da vlada lahko predlaga, morate sprejeti še stališče, jaz nasprotujem temu, ampak se odločiti, ali za tak primer ne velja 4. odstavek 64. člena, kjer piše, da je možna razširitev samo, če so razlogi nastali po sklicu.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg118">Razlogi pa niso nastali v tem primeru po sklicu, kar pomeni, da bi bila ta razširitev v nasprotju s tem členom, s tem odstavkom.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg119">Predlagate, da se glasuje o čem?</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg120">Ugovarjam, gospod predsednik. Ugovarjal sem že prej in sem navedel to delo, kar ga sedaj opravljate, kot kršitev poslovnika. Vi očitno smatrate, da ni in smatrate, da vlada lahko, tudi če ni razlogov, predlaga širitev. Pravim da ne, in če vi vztrajate na svojem stališču, predlagam, da o tem glasuje državni zbor.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg121">Jaz seveda nisem o teh stvareh niti govoril niti komentiral. Predstavniki vlade so povedali svoje stališče in glede na njihova stališča se boste opredelili pri glasovanju. Tako je. O teh stvareh je spregovoril predstavnik vlade. Če je bil nezadovoljiv in neargumentiran in neprepričljiv, boste to pokazali s svojim glasovanjem. Drugače bomo dali pa še to na glasovanje. Razumel sem, da sem s svojim glasovanjem, ki sem ga dal prej, s svojim tolmačenjem, da je ta zadeva bila izglasovana.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg122">Oprostite, gospod predsednik. Prejšnje tolmačenje je bilo samo to, da lahko tudi vlada predlaga razširitev, ker sicer je jasna določba 54. člena, da predsednik lahko določi oziroma predlog dnevnega reda tudi na seji. Določitev dnevnega reda z vaše strani bi bil tudi predlog, da se razširi dnevni red. To, kar niste naredil. Sedaj je še vprašanje proceduralno čisto jasno, ali morajo razlogi nastati po sklicu ali ne. Jaz pravim, da morajo nastati po sklicu, tako kot piše v poslovniku. Jaz berem poslovnik, je zelo jasen, zelo natančen.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg123">Torej vi ugovarjate tolmačenju, da so nastali razlogi po sklicu seje. Predstavniki vlade so o tem že govorili. Če so neprepričljivi, se boste odločili na glasovanju. Tega ne bom dal na glasovanje. Glasujte.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg124">Torej na glasovanje dajem predlog, da se razširi dnevni red 15. izredne seje s točko, kot jo predlaga vlada. Ugotavljamo prisotnost! Če imate proceduralni predlog, sicer ne.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg125">Gospod Potrč ima proceduralni predlog.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg126">Gospod predsednik! Prosim, da se glasuje o naslednjem sklepu: Ali v primeru predloga razširitve na izredni seji ni treba upoštevati četrtega odstavka 64. člena poslovnika. In prosim, da se o tem glasuje. Ker, vi ste povedali takoj na začetku razprave, da v primeru izredne seje to ni potrebno. Lahko gremo gledati stenogram, ker je bil to moj prvi ugovor. In prosim, da se o tem glasuje. Ker, ali so nastali ali ne, brez zamere, o tem ste doslej vedno predsednik oziroma predsedujoči odločali. In povedali: "Oprostite, o tem predlogu ne smemo glasovati zaradi tega, ker niso izpolnjeni formalni poslovniški pogoji." To se je, če pa zdaj jaz komentiram prakso, dogodilo vedno, kadar je nekdo prišel na seji in ni povedal, da so razlogi nastopili po samem sklicu. Vi ste tisti, ker če namreč četrti odstavek 64. člena velja, morate vi povedati, da so razlogi nastopili po seji ali ne. In če niso, ne smete dati tega na glasovanje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg127">Gospod Potrč, hvala lepa. Ponovno vas opozarjam, da je beseda praksa na številnih izrednih sejah drugačna. Mislim, da ste bili tudi vi kdaj predlagatelj kakšnega dodatnega dnevnega reda izredne seje. Seveda, in takrat nihče ni dal na glasovanje te zadeve na tak način, kot jo sedaj postavljate. Če pa želite, se bo državni zbor torej opredelil do tega vprašanja. Torej, na glasovanje dajem predlog za razširitev dnevnega reda, kot jo predlaga Vlada Republike Slovenije. Proceduralno? Gospod Bavčar ima proceduralni predlog. Kako boste glasovali za razširitev dnevnega reda? Prosim, gospod Bavčar. Za obrazložitev glasu. Ni proceduralno, za razširitev. Prosim. Samo trenutek, da pogledamo v poslovnik. Se opravičujem, gospod Bavčar. Se opravičujem. Gospod Bavčar, se opravičujem, ni možna obrazložitev glasu. Gospod Mozetič.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg128">Spoštovani gospod predsednik, drage kolegice, spoštovani kolegi! Jaz se sicer opravičujem, ampak moram to povedati, da se čudim vladi, da s takim proceduralnimi zadevami in predlogi tukaj zavlačuje to sejo. Vendar glede na to, da hočete na tak način to peljati, jaz prosim za 20 minut pavze, da se posvetujemo, da preštudiramo še enkrat zadevo, ker pri tako očitnih kršitvah poslovnika na tak način in ne, da bi zadevo dobro še enkrat proučili, ne bomo sodelovali. 20 minut pavze prosim.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg129">Hvala lepa. Poslanska skupina SKD prosi za pavzo. Sejo nadaljujemo ob 14.30.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 12.47 uri in se je nadaljevala ob 14.38 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg130">Spoštovane kolegice in kolegi! Nadaljujemo s sprejemanjem dnevnega reda 15. izredne seje. Za popoldanski del so se dodatno opravičili: Franc Čebulj, Josip Bajc in Ciril Pucko za pričetek popoldanskega nadaljevanja seje. Ugotovimo sklepčnost!</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg131">Se opravičujem, gospod Bajc. Očitno je napaka. Ugotovimo sklepčnost!</seg>
                <note>61 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg132">Želi predstavnik poslanske skupine SKD, ki je zaprosila za odmor, besedo? Prosim, gospod Mozetič.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg133">Hvala, gospod predsednik. Drage kolegice, spoštovani kolegi! Stvar ni tako enostavna, kot izgleda. Kljub temu, da smo prej, mislim, da dosti argumentirano povedali, da se očitno današnji dan krši poslovnik v vsaj treh točkah, se ta zadeva pelje naprej.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg134">V naši poslanski skupini smo se zato odločili, da pri glasovanju o širitvi dnevnega reda pri tej točki, zato ker gre za očitno kršitev, in ker nočemo enostavno sodelovati pri takem delu, kjer se prav pohodi poslovniško določilo, bomo pri tej točki, ko bomo glasovali o širitvi dnevnega reda, ko bo dana ta točka, in če bo dana na glasovanje, bomo šli ven iz dvorane, nas ne bo tukaj notri. In pričakujem, da bodo vsi tisti, ki jim je kaj do tega, da se končno začnejo poslovniška določila, ki jih je parlament sprejel z dvotretjinsko večino, dvotretjinsko večino, spoštovati, tudi pridružili in bomo glasovanje spremljali iz preddverja.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg135">Dejstvo pa je še drugo; sicer sedaj vlade praktično ni več tukaj, ampak s takšnim načinom, s takšnimi predlogi, kot je danes prihajala pri dnevnem redu, enostavno kaže na to, kakšen odnos ima do parlamenta. To je prvič, ker posiljuje parlament in v tem primeru je v bistvu predsednik parlamenta najbolj, ne bom rekel odgovoren, ampak najbolj pod pritiskom, kaj narediti, ampak pod pritiskom vlade, da mora sprejemati določene odločitve in razlage, ki so tudi po, sem prepričan, po njegovem prepričanju napačne. Vendar vlada to dela, ampak mi smo izgubili dve, tri uri zaradi tega, kar kaže tudi na to, da vladi ni veliko do tega, da bi se resno lotili resnih stvari. Ena od teh resnih stvari, čeprav je že neresna, ker je oktober, je proračun za letošnje leto. In tudi, kar zadeva samo to točko, mislim, da, in bojim se, bojim se, upam da ni tako, ampak bojim se, da je spet tukaj določena trgovina - ti meni, jaz tebi - in da sta vsaj dve točki, če ne kakšna več, na tem dnevnem redu točna posledica te trgovine. Jaz tebi eno točko, ti meni drugo točko in veselo koalicija gre pot naprej. Torej mi bomo pri točki, če bo šla na glasovanje širitev dnevnega reda s to predlagano točko, bomo šli iz dvorane. Če bo sprejeta na dnevni red, bomo pri dnevnem redu glasovali proti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg136">Hvala lepa, gospod Mozetič. Kot sem že prej povedal, smo ponovno pogledali vse sklice izrednih sej v tem mandatu in tudi v prejšnjem mandatu in v podrobnem pregledu smo zasledili, da je bilo večje število točk dnevnega reda uvrščenih na podoben način, kot je danes predlagana.</seg>
                <note>Glas iz dvorane</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg137">. Tudi nekateri poslanci in poslanke državnega zbora, večino pa vlada. Tako je. In zato se bomo tudi v tem primeru obrnil na Komisijo za poslovnik, ker mislim, da bi s takšno prakso morali prenehati, da je bilo tolmačenje zelo jasno, da v bodoče ne bo prihajalo do takšnih zapletov.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg138">Sicer pa bi dal predlog na glasovanje, kot je bil že prej podan, pred zaprosilom za odmor torej, da se razširi ta izredna seja s točko, kot jo je predlagala vlada. Bom pa pisno se obrnil na Komisijo za poslovnik. Proceduralno, gospod Hvalica. Prosim.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg139">Hvala lepa. Gospod predsednik, spoštovani! Če bo prišlo do glasovanja o tem predlogu razširitve, tudi socialdemokrati torej obstruiramo glasovanje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg140">Hvala lepa. Proceduralni predlog, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg141">Hvala lepa. Jaz sem v imenu poslanske skupine že uvodoma povedal, da ta koalicija nima nobenega argumenta, ima pa večino. Če jo ima, naj jo zagotovi in naj to izglasuje brez naše prisotnosti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg142">Hvala lepa. Torej na glasovanje dajem predlog vlade, da se 15. izredna seja razširi s točko, kot jo je predlagala. Ugotovimo sklepčnost!</seg>
                <note>42 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg143">Ponovili bomo glasovanje. Prosim za mir! Ugotovimo sklepčnost!</seg>
@@ -764,7 +745,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 14.44 uri in se je nadaljevala ob 15.00 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg145">Kolegi in kolegice, nadaljujemo s sejo. Ugotavljamo prisotnost! Najprej bomo ugotovili prisotnost, potem bomo ponovno glasovali o predlogu za razširitev dnevnega reda.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg146">Ugotavljamo prisotnost!</seg>
                <note>50 prisotnih.</note>
@@ -779,7 +760,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 15.03 uri in se je nadaljevala ob 15.23 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg153">Kolegice in kolegi, nadaljujemo sejo. Ugotavljamo sklepčnost za glasovanje o predlogu vlade za razširitev 15. izredne seje državnega zbora. Ugotavljamo prisotnost!</seg>
                <note>45 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg154">Ugotavljam, da državni zbor ni sklepčen.</seg>
@@ -787,7 +768,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 15.25 uri in se je nadaljevala ob 16.12 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg156">Kolegice in kolegi! Nadaljujemo 15. izredno sejo Državnega zbora oziroma s sprejemanjem dnevnega reda 15. izredne seje Državnega zbora. Ugotovimo sklepčnost!</seg>
                <note>53 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg157">Ugotavljam, da je državni zbor sklepčen in lahko odloča.</seg>
@@ -821,7 +802,7 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg174">Kot sem že v uvodu seje povedal, sem poleg predstavnikov vlade na sejo vabil tudi druge predlagatelje proračuna, od Urada predsednika Republike Slovenije, Državnega sveta, Ustavnega sodišča, Računskega sodišča in varuha človekovih pravic, prav tako tudi guvernerja Banke Slovenije, generalnega direktorja Zavoda za pokojninsko in invalidsko zavarovanje in generalnega direktorja Zavoda za zdravstveno zavarovanje Slovenije. Če bodo želeli, bodo vsi ti lahko dobili besedo v splošni razpravi. Želi predstavnik vlade dodatno obrazložiti predlog proračuna. Besedo dajem mag. Mitju Gaspariju, podpredsednika gospoda Lucija pa prosim, če prevzame vodenje seje. Prosim.</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ2.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg175">Gospod predsednik, spoštovane poslanke, spoštovani poslanci! Glede na to, da je en del diskusije o državnem proračunu za leto 1997 bil opravljen že ob interpelaciji in da se je precej tem ob tem tudi že izčrpalo, in glede na to, da so odbori državnega zbora obravnavali osnutek državnega proračuna za leto 1997, bi želel samo na kratko odgovoriti, morda posredno, na nekatera vprašanja, ki so se pojavljala v tej diskusiji. Sicer pa mislim, da je bolj pametno, da poslušamo diskusijo v splošnem delu poslancev in odgovorimo potem na poslanska vprašanja oziroma pripombe, ker bomo na ta način, prvič, privarčevali čas in bolj konkretno lahko razpravljali o konkretnih posameznih zadevah v okviru državnega proračuna. Torej, glede samih okvirov in pa načina priprave oziroma rezultata v tej pripravi proračuna ne bi več govoril, ker je bilo o tem veliko povedanega.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg176">Drugič, tako kot je bilo nekajkrat že rečeno, je sprejem državnega proračuna kljub njegovi pozni razpravi še vedno aktualen, in to se je pokazalo v razlikah med številkami, ki veljajo za začasno financiranje državnih financ in pa sprejetim državnim proračunom, ko bo sprejet. Torej, gre za znatne finančne učinke, ki seveda imajo svoje posledice tudi v okviru tistih uporabnikov državnega proračuna, ki v državnem proračunu ta sredstva po zakonu uporabljajo.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg177">Drugič, glede na to, da so odbori razpravljali in ugotovili nekatere probleme, bi rad poudaril samo nekaj teh problemov. Prvič, uporabniki državnega proračuna, ki niso ministrstva oziroma organi v sestavi vlade. Zakaj je vlada v tem trenutku posegla na način, kot je, v določanje oziroma predlog določitve obsega sredstev za posamezne zunajvladne proračunske uporabnike, in zakaj smatra, da s tem ni prekoračila svojih, bom rekel, pooblastil oziroma zakaj ni storila nekaj, kar je bilo v nasprotju s sprejemanjem državnega proračuna?</seg>
@@ -833,29 +814,29 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg183">Pri tem bi rad še poudaril, da bomo seveda pri izvajanju proračuna za leto 1997 upoštevali vse tiste zakonske okvire, ki bodo določeni z zakonom o izvrševanju proračuna za leto 1997, in da bo vlada na osnovi razprav v državnem zboru preverila pripombe in pa sugestije in predlagala ustrezne amandmaje v okviru procedure, ki nam je še na voljo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg184">Hvala lepa gospodu ministru za dodatno obrazložitev. Želijo besedo predstavniki delovnih teles državnega zbora? Proceduralno. Izvolite.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg185">Hvala lepa. Spoštovani gospod predsednik, spoštovane poslanke in poslanci, spoštovani predstavniki vlade! Dodatno k temu, kar je minister Gaspari doslej pojasnil v zvezi s predlogom proračuna za leto 1997, predlagam, da dopolni svoje pojasnjevanje vsaj še v dveh točkah, in sicer glede, da bi vsem pojasnil, preden sploh začnemo razpravo o predlogu proračuna za leto 1997, da pojasni načela, po katerih je pravzaprav proračun sestavljen oziroma da pojasni način evidentiranja in knjigovodskega izkazovanja poslovnih dogodkov v samem proračunu. To pa predlagam zato, ker se je že v razpravi ob interpelaciji tukaj razvila razprava o tem, kako je evidentiran obrambni tolar in kako ni evidentiran, ali je ta izkazan pregledno, na pravi način ali ni.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg186">Drugi razlog mojega predloga je ta, da se je ob razpravi na delovnem telesu ugotavljalo tudi to, da vlada v proračun nekaj vključuje, nekaj ne vključuje, da pa takšno ravnanje ne izhaja iz zakona o izvrševanju proračuna; v mislih imam npr. kupnine po ZLPP, ki znašajo vsaj 10 milijard slovenskih tolarjev in v samem proračunu niso izkazane, so le prikazane v posebni tabeli. Seveda pa zahteva pojasnilo tudi dejstvo, ki izhaja iz podatkov, ki smo jih dobili poslanci na klop danes. To pa je pregled realizacije za leto 1997 po proračunskih porabnikih. Kolikor sem uspel te podatke pogledati in jih primerjati s tistimi, ki so objavljeni v Poročevalcu, v sklopu predloga proračuna za leto 1997, in ki bi se med seboj mogli ujemati do zadnjega tolarja, vidim kar opazne razlike. In sicer, če gledam realizacijo proračuna v Poročevalcu št. 41 na strani 7, potem je tukaj podatek, da so bili proračunski odhodki v letu 1996 - 596 milijard. Če pa gledam ta pregled realizacije, ki smo ga dobili na klop danes na strani 5, pa je pod glavo "proračun 1996" znesek 646. Ne vem, od kod je lahko razlika v realizaciji proračuna kar debelih 50 milijard. Zato je to prva točka, o kateri bi prosil za podrobno pojasnilo, da sploh lahko vodimo nadaljnjo razpravo.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg187">Drugo. Jaz sem ob razpravi o proračunu izrazil dvom, da na podlagi veljavnega zakona o financiranju javne porabe in zakona o začasnem financiranju vlada ni mogla oziroma ne bi smela sprejeti uredbe o začasnem financiranju potreb iz proračuna do konca leta 1997, v višini 710 milijard, temveč manj, minister Gaspari.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg188">Kolega Špiletič oprosti, ampak da ne bomo zašli v razpravo. Kaj predlagaš proceduralno? Prosim.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg189">Zato bi ministru Gaspariju predlagal, da pojasni tudi način izračuna, kako je vlada prišla do zneska 710 milijard. Jaz sem ga namreč zaprosil, da poda pisno pojasnilo, ker je sam dejal, da potrebuje za razlago tablo, te pa v parlamentu ni bilo, danes tudi ni table in ga ponovno prosim za pisno pojasnilo, če je to nemogoče pojasniti izza te govornice. Mislim, da sta to dva nujna predpogoja za nadaljnjo razpravo o predlogu proračuna za leto 1997. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg190">Hvala lepa, kolega Špiletič. Želje za dodatno obrazložitev proračuna in dvom zakona o financiranju javne porabe. Gospod minister, želite dodatno razpravljati? Gospod minister, želite? Želite pojasniti ali ne?</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ2.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg191">Hvala lepa. Ne glede na to, da to ne more vplivati na stvarno odločanje o proračunu, bom seveda odgovoril na ta vprašanja, ker ni razlogov, da ne bi še enkrat pojasnil.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg192">Načela sestave proračuna so opredeljena v zakonu o izvrševanju proračuna, zakonu o javnem financiranju in v podzakonskih aktih, ki jih je sprejelo ministrstvo za finance na podlagi samega zakona. O tem lahko podrobneje obrazloži več državna sekretarka v ministrstvu za finance, ki pokriva področje računovodstva. O načelih samega zakona lahko govori državni sekretar, ki pokriva področje proračuna, da ne bi sedaj tukaj razlagal vseh dokumentov z natančnimi naslovi, ki opredeljujejo način knjiženja in odnosa do posameznih vrst poslovnih dogodkov, ki se pri izvrševanju proračuna dogajajo.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg193">Drugič. Temeljni razvojni programi na področju vojske. To je bilo že nekajkrat pojasnjeno tudi v času oziroma v razpravi o interpelaciji proti vladi je ta tema prišla tudi v razpravo. Jaz bi še enkrat povedal to, kar mislim, da je bilo takrat tudi korektno povedano.</seg>
@@ -868,30 +849,30 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg200">To smo že enkrat, in to pred nekaj dnevi v poznih nočnih urah se pogovarjali. Jaz bi vas zaprosil, da pogledate dokument. Zagotovitev sredstev za potrebe Republike Slovenije v obdobju začasnega financiranja v letu 1997, EPA 105 , II hitri postopek, kjer je v obrazložitvi tega dokumenta tudi razlaga, kako smo prišli lahko do 709 milijard. V polletju je lahko prišlo do 354 milijard, kar je polovica tega zneska, ki ste ga vi omenili, tako da smo znesku, ki je bil sicer možen po dveh kvartalih prvega polletja, dodali tistih 28 milijard, ki jih je omogočil zakon o začasnem financiranju državne porabe v letu 1997. Natančna razlaga je v tem tekstu in sem pripravljen, če bo potrebno, ne sicer tu na govornici, ampak z vami še posebej to še enkrat pogledati in preračunati, ker je račun, vam jamčim, korekten. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg201">Hvala lepa gospodu ministru Gaspariju. Imam občutek, da smo zašli v splošno razpravo. Zato predlagam, da gremo naprej po vrsti. Besedo imajo predstavniki delovnih teles državnega zbora. Gospod Kopač.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOPAČ:</note>
-            <u who="#SDZ2.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg202">Hvala za besedo. Odbor za finance je tako kot vrsta drugih odborov obravnaval predlog proračuna in se ob tem seznanil tudi s praktično vsemi poročili drugih delovnih teles. Pred seboj smo imeli proračunski memorandum, poročilo o delu vlade v letu 1996, obrazložitev proračuna po uporabnikih in obrazložitev proračuna, ki so jo posredovala dodatna posamezna ministrstva.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg203">Žal vsi ti dokumenti niso bili deležni pravzaprav nobene obravnave. Sama razprava na odboru pa je bila zelo pestra. Uvodoma je potrebno poudariti glavne značilnosti tega predloga proračuna, predstavljene in kritizirane na odboru. Letos je prvič izkazan primanjkljaj v višini 0,9% bruto domačega proizvoda. Nedvoumno je, da je primanjkljaj posledica zakonskih obveznosti, ki so bile sprejete v preteklih letih, s posebno intenzivnostjo v lanskem predvolilnem letu. Zaradi tega je primanjkljaj izrazito strukturne narave, kar je moč v bodoče odpraviti samo s spremembo zakonov s selektivnim krčenjem pravic. Struktura proračunskih prihodkov, če gremo na prihodkovno stran, se je pomembno spremenila v zadnjih letih, predvsem se zmanjšujejo neposredne obdavčitve delovne sile. Zmanjšujejo se prispevki za socialno varnost, breme financiranja socialnih izdatkov pa prehaja na račun davkov. Zmanjšujejo se sredstva od carin in zmanjševala se bodo tudi v bodoče zaradi uveljavitve pridružitvenega sporazuma in tudi nekaterih drugih sporazumov z drugimi državami, ne z Evropsko unijo. Povečuje se delež davkov od dobička pravnih oseb, ki pa je v primerjavi z drugimi državami še vedno izrazito nizek zaradi izrazito nizke efektivne davčne stopnje pri obdavčitvi dobička podjetij v Sloveniji. Povečujejo se prihodki z naslova davka na izplačane plače in ta prihodek je delno nadomestil znižane prispevke za pokojninsko in invalidsko zavarovanje, ki so se v lanskem letu v korist zmanjševanju obremenitve delovne sile v podjetjih za pospeševanje konkurenčnosti gospodarstva skupno znižali za 6,7% točk, torej prispevki za socialno varnost. Tako ta obremenitev s prispevki za socialno varnost znaša 38%, kar je približno na ravni nekaterih drugih, sicer najbolj s tovrstnimi izdatki obremenjenih evropskih držav.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg204">Z letošnjim letom se končuje dodatni vir javnih financ iz naslova kupnin za prodajo družbenega premoženja. Bil je pomemben dodatni vir. Predstavljal je več kot 0,3% bruto domačega proizvoda in tega vira žal v bodoče ne bo več. Javna poraba po predlogu proračuna naj bi letos realno porasla in se povečala bolj kot bruto domači proizvod, pri čemer je glavni vzrok povečan transfer iz državnega proračuna v Zavod za pokojninsko in invalidsko zavarovanje, ki je izgubil v lanskem letu del svojih prihodkov z že prej omenjenim znižanjem prispevkov za socialno varnost v korist povečanja konkurenčnosti slovenskega gospodarstva. Razprava je bila pestra, takšna kot bo verjetno tudi na sami seji zbora. Predstavniki vlade so bili deležni očitkov, da gre le za poračun in ne proračun, da je tak proračun, kakršen je, slaba popotnica pogajanjem z Evropsko unijo, da je težko sprejemljiva realna rast proračuna, da ni dane zadostne podpore izvoznemu gospodarstvu in naložbam itn. Po drugi strani pa je bilo v zagovor temu izrečenih tudi vrsta trditev oziroma resnic, kot jih je videla druga stran. To je na primer, da je proračunski primanjkljaj posledica zatečenega stanja za plačilo obveznosti, nastalih v preteklih letih, da je proračun razvojno naravnan, saj vključuje izdatke za financiranje obveznosti sanacije bank, vnovčenih jamstev, transfer sredstev ZPIZ-u itn., kar vse je bilo namenjeno razbremenitvi slovenskega gospodarstva, pri čemer je potrebno posebej poudariti, da je sredstev, ki pomenijo neposredno subvencioniranje oziroma posredno subvencioniranje gospodarstva v državnem proračunu za 3,2% bruto domačega proizvoda. Če pa temu pridodamo še transfere v ZPIZ, ki so tako veliki zaradi znižanja prispevkov za socialno varnost, pa je skupaj, torej tovrstnega posrednega subvencioniranja gospodarstva za okoli 7,5% bruto domačega proizvoda.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg205">Naslednja trpka resnica je dejstvo, da se variabilni del državnega proračuna iz leta v leto zmanjšuje. Na odboru je bilo rečeno, da bo zanimivo prisluhniti državnemu zboru tedaj, ko bo potekala razprava o zmanjševanju pravic iz naslova, na primer zakona o družinskih prejemkih, pokojninske zakonodaje, delovnih razmerij, zakona o zaposlovanju in zavarovanju za primer brezposelnosti in iz naslova drugih zakonov, s čimer bi lahko pridobili sredstva za razvojno komponento proračuna. To je kratek povzetek razprave na odboru, ki je bila usmerjena tako v za kot v proti. Po končani razpravi je odbor z glasovanjem, ker je bilo 6 članov odbora za, 5 pa proti, sprejel sklep, da Državnemu zboru predlaga, da nadaljuje postopek sprejemanja predloga proračuna Republike Slovenije za leto 1997 v skladu s poslovnikom državnega zbora. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg206">Hvala lepa mag. Janezu Kopaču, predsedniku Odbora za finance in monetarno politiko. Želi še kak predstavnik delovnih teles besedo? Izvolite, gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg207">Spoštovani! Komisijo za evropske zadeve je zanimalo, kako je obdelana evropska dimenzija proračuna in s skrbjo ugotovila, tako preko več razpravljavcev kot s sklepom, ki smo ga na koncu sprejeli, da ta razsežnost proračuna ni enotno metodološko pripravljena in proračun s tega vidika ni pregleden, zato predlaga vladi naše države, da za naslednjo fazo poskrbi za enoten metodološki pristop in za preglednost proračuna. Gre za to, da bi bilo dobro, da ta država ve, koliko bo letos dala za vse naše aktivnosti pri približevanju k Evropski zvezi, koliko to pomeni v denarju in kaj to pomeni pri zaposlitvah. Mislim, da se to da narediti, to kar smo pa videli oziroma imamo na razpolago, pa nam kaže, da nekatera ministrstva imajo posebne oziroma, po domače rečeno, evropske postavke, drugi ministri pa tega nimajo. Sedaj ne vemo, ali bodo eni tudi delali na evropskem planu, ker delati morajo vsi, ali so bili eni pač tako pametni, da so to posebej postavili, pa so mogoče kaj več dobili. Naša komisija želi in pričakuje, da bo vlada do naslednje faze obravnave poskrbela za enotno metodologije in za preglednost te dimenzije proračuna. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg208">Hvala lepa. Odbor za zdravstvo delo družino in socialno politika, gospa Majda Ana Zbačnik-Kregelj, izvolite.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg209">Pozdravljeni! Poročilo Odbora Državnega zbora Republike Slovenije za zdravstvo, delo, družino in socialno politiko.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg210">Odbor je bil ob obravnavi predloga proračuna seznanjen s poročilom o delu Vlade Republike Slovenije iz leta 1996 in s proračunskim memorandumom za leto 1997.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg211">Predstavnica ministrstva za zdravstvo je predstavila predlog proračuna za tisti del, ki se nanaša na ministrstvo. Predlog proračuna namenja v globalnem Ministrstvu za zdravstvo le malo več sredstev kot v preteklem letu, indeks 114. Za programske naloge, med katerimi imajo največji del investicije in investicijsko vzdrževanje, so predlagana sredstva v višini 4,4 milijarde SIT. Med ta sredstva je vključeno tudi izvajanje ustanoviteljskih pristojnosti vlade preko Ministrstva za zdravstvo, vzdrževanje in izpopolnjevanje obstoječe mreže javne zdravstvene službe na sekundarni in terciarni ravni. V proračunu za leto 1997 so upoštevane tudi nekatere nove naloge in obveznosti, ki izhajajo iz novo sprejetih zakonov, kot tudi iz sprejetih sklepov Vlade Republike Slovenije.</seg>
@@ -902,21 +883,21 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg216">Na področju dela so bila vzpostavljena vprašanja o novi delovni pravni zakonodaji, rasti plač in neustreznemu sistemu dela in nagrajevanju v javnih službah, posebno v državni upravi in število zaposlenih; reformi pokojninskega sistema, nove zakonodaje, poteku reforme in porabi sredstev za obvezno pokojninsko zavarovanje in pravic, ki bodo iz tega zavarovanja izhajala. Spremljajoče gradivo je glede stališča, transparentnosti in preglednosti po posameznih postavkah slabo pripravljeno, saj iz postavk ni razvidno, v kakšen namen gredo sredstva, ni ustreznega kazala. Na nekatera postavljena vprašanja je minister odgovoril na sami seji odbora, vendar so člani odbora tudi pri proračunu Ministrstva za delo, družino in socialne zadeve za posamezne postavke zaprosili za pisno obrazložitev in specifikacijo porabljenih sredstev, namenu porabe, seznamu porabnikov, ki so ta sredstva prejeli. Ob razpravi je bilo izpostavljeno tudi vprašanje samega sprejemanja proračuna, saj se proračun za leto 1997 sprejema v času, ko bi Državni zbor Republike Slovenije moral razpravljati o proračunu za leto 1998. V zvezi s tem je bilo postavljeno vprašanje izvajanja proračuna do konca leta 1997. Člane odbora je pa tudi zanimalo, ali bo proračun za 1998 predložen v roku, ki ga določa poslovnik državnega zbora Republike Slovenije. Po končani razpravi so člani odbora sprejeli naslednji sklep. Odbor za zdravstvo, delo, družino in socialno politiko se je seznanil s predlogom proračuna Republike Slovenije za leto 1997. Odbor predlaga, da se postopek sprejema državnega proračuna za leto 1997 nadaljuje v skladu s poslovnikom državnega zbora, s potekom razprave pa v svojem poročilu seznani Državni zbor. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg217">Hvala lepa gospe Majdi Zbačnik. Spoštovane poslanke in poslanci, poročilo smo dobili. Jaz bi predlagal, imate pa vso pravice, da daste poročilo v taki obliki, kot je, da daste neki sumare, tisto, kar bi želeli dopolniti. Lahko pa tudi ravnate drugače. Predlagal bi, da gremo v tisto, kar bi želeli poudariti. Prijavil se je gospod Jakob Presečnik, gospod Jože Zagožen, gospod Janez Mežan, gospod Sovič, gospod Rejc, gospa Pozsonec. Predajam besedo gospodu Jakobu Presečniku, predsedniku Odbora za infrastrukturo.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ2.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg218">Gospod podpredsednik, kolegice in kolegi, spoštovana vlada in ostali! Hvala za besedo. Jaz bom popolnoma na kratko samo nekaj besed povedal ob dejstvu, da je odbor sicer menil, da je predloženi predlog proračuna Republike Slovenije za leto 1997 primeren za nadaljnji postopek sprejemanja. Poudaril bi samo dve, tri stvari iz tega poročila in iz razprave na samem odboru. Pri razpravi o proračunu v okviru Ministrstva za promet in zveze, bi dal naslednje pojasnilo, da so člani odbora imeli največ pripomb prav na linearno indeksiranje obsega proračunskih sredstev ministrstva, kar močno ogroža redno vzdrževanje prometne infrastrukture, njeno obnavljanje in nadaljnjo uresničevanje obeh, pred dvema letoma sprejetih nacionalnih programov, avtocestnega in železniškega. Pri tem je posebej opozoril na dodatni sklep, kjer odbor na podlagi predstavljenih podatkov ocenjuje, da obseg sredstev, namenjenih v letošnjem proračunu za vzdrževanje in obnovo državnega cestnega omrežja, ne bo zadoščal, saj pri tem predlagatelj k sredstvom direkcije Republike Slovenije za ceste ni prištel sredstev, opredeljenih pri tem posebnem zakonu za obnovo po zadnji zimi poškodovanih cest. Odbor zato vlado naproša, da do nadalnje faze obravnave letošnjega proračuna predlaga ustrezno rešitev. V okviru sredstev Ministrstva za okolje in prostor pa bi poudaril predvsem dve stvari. Prvo je področje komunalne dejavnosti, kjer smo menili, da so sredstva za sofinanciranje investicij v komunalni dejavnosti izrazito premajhna, ker menimo, da gre za tista sredstva, ki so na terenu potem najbolj oplemenitena. Potem pa še področje vodnega gospodarstva, kjer letos investicijskih sredstev praktično ni in je zagotavljanje varnosti vodnega sveta in vodnega gospodarstva praktično v letošnjem letu popolnoma zanemarjeno. S tem v zvezi smo sprejeli dodatni sklep, da naj vlada predvsem pri proračunu za leto 1998, v okviru možnosti pa še za leto 1997, zagotovi sanacijo ekoloških problemov zaščite in varstva narave ter zaščite in varstva voda na celotnem območju države, saj dosedanje izkušnje kažejo, da je redno investicijsko vzdrževanje cenejše od interventnega reševanja nastalih posledic.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg219">In pa še na eno stvar smo opozorili, da je potrebno tudi misliti na uresničevanje sprejetega programa za izvedbo koncepta ravnanja z odpadki. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg220">Hvala lepa gospodu Jakobu Presečniku, predsedniku Odbora za infrastrukturo.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg221">Naslednji prijavljeni je gospod Jože Zagožen, predsednik Odbora za gospodarstvo.</seg>
             </u>
             <note type="speaker">DR. JOŽE ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženJože" ana="#regular">
+            <u who="#ZagoženJože">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg222">Spoštovane kolegice in kolegi, spoštovani predstavniki vlade! V razpravi na seji Odbora za gospodarstvo, so člani odbora poudarili, da je predloženi proračun za gospodarstvo izredno neugoden, saj si v primerjavi s prejšnjim letom povečuje nominalno za 21,4%, kar ob upoštevanju inflacije pomeni 11,3% realno povečanje. Realni porast proračuna je tako trikrat večji od predvidene gospodarske rasti, kar je z vidika gospodarstva nesprejemljivo. Po mnenju gospodarstvenikov bi se proračun moral povečati skladno z gospodarsko rastjo, kar pomeni največ 12% nominalno povečanje. Posebej zaskrbljujoče pa je dejstvo, da se povečuje tisti delež proračuna, ki ne prispeva k razvoju gospodarstva. Proračun je tako preveč potrošnjo in premalo razvojno naravnan. Med gospodarstveniki so zlasti kritični izvozniki, ki so se letos soočali z relativnim tečajem nemške marke in s stalnim prisotnim problemom podkapitaliziranosti. Zato je zanje tako potrošnjo naravnan proračun še posebej nesprejemljiv. Javna poraba se zvišuje. Ugotovimo tudi lahko, da dejansko skoraj presega 50% bruto domačega proizvoda, če upoštevamo še vso izvenproračunsko porabo; razne paradržavne sklade in agencije. Zaskrbljujoče je tudi dejstvo, da bo predloženi proračun s predvidenim primanjkljajem osnova za pripravo proračuna za leto 1998, tako da do bistvenih premikov v smeri bolj razvojno naravnanega proračuna tudi v prihodnjem letu ne moremo pričakovati.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg223">Nadalje je bilo v razpravi poudarjeno še naslednje. Med proračunskim memurandumom za leto 1997 in predlogom proračuna je mogoče opaziti velik razkorak, saj se memoranduma s tako pripravljenim proračunom ne zagotavlja. Rast našega bruto domačega proizvoda zaostaja za rastjo v primerljivih državah in na splošno se delež sredstev, ki jih državni proračun namenja za razvojne spodbude že od leta 1993 konstantno zmanjšuje. Delež ministrstva za gospodarske dejavnosti se je v strukturi proračunskih odhodkov tako zmanjšal od 2% na 1,5%, delež Ministrstva za ekonomske odnose in razvoj od 1,9 na 1%, delež Ministrstva za delo, družino in socialne zadeve od 24 na 18%, delež Ministrstva za znanost in tehnologijo od 3,3 na 2,5%. Struktura proračunske porabe se torej razvija v korist potrošnje in v škodo razvoja.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg224">Nezadostni in prepozni so ukrepi za spodbujanje izvoza. Z dokapitalizacijo Slovenske izvozne družbe je sicer predvideno nekaj sredstev, vendar 1 leto prepozno. Odsotni so drugi ukrepi za spodbujanje izvoznega dela slovenskega gospodarstva. Sredstva za namene aktivne politike zaposlovanja se realno ne povečujejo, čeprav se brezposelnost ne zmanjšuje, gospodarska rast pa ne omogoča novega zaposlovanja. Opaziti je mogoče tudi odsotnost ukrepov za zagotavljanje novih delovnih mest. Pri sredstvih, ki so namenjena prestrukturiranju gospodarstva je v predlogu proračuna predvidena dokapitalizacija Slovenska razvojne družbe, pozitivne premike je mogoče opaziti pri sredstvih, namenjenih tehnološkemu razvoju, drugih sredstev za prestrukturiranje gospodarstva pa ni opaziti. V zvezi s sredstvi za tehnološki razvoj je bilo poudarjeno, da je potrebno poskrbeti za ustrezno povezavo med znanstveno sfero in proizvodnjo, da bi povečanje sredstev za tehnološki razvoj tudi dejansko prispevalo k hitrejšemu gospodarskemu razvoju.</seg>
@@ -924,11 +905,11 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg226">Na koncu je Odbor za gospodarstvo po končani razpravi sprejel sklep: "Odbor za gospodarstvo se je seznanil s predlogom proračuna za to leto in odbor bo državnemu zboru predlagal, da s pripombami, ki so bile dane, da to gradivo v razpravo." Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg227">Hvala, gospod Zagožen. Naslednji je gospod Janez Mežan iz Odbora za šolstvo, kulturo in šport.</seg>
             </u>
             <note type="speaker">JANEZ MEŽAN:</note>
-            <u who="#SDZ2.MežanJanez" ana="#regular">
+            <u who="#MežanJanez">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg228">Spoštovani gospod podpredsednik, poslanke in poslanci, spoštovani predstavniki vlade! Tudi Odbor za kulturo, šolstvo in šport je kar nekaj ur razpravljal o predlogu proračuna za letošnje leto. Ne bi na dolgo predstavljal poročila, bi pa na kratko predstavil tiste bistvene poudarke, ki so bili pri razpravi na odboru posebej poudarjeni. Na področju šolstva so člani odbora v široki razpravi izrazili nezadovoljstvo nad prepoznim sprejemanjem proračuna za leto 1997 in nad nepreglednostjo proračunskih postavk, zlasti tistih, ki se nanašajo na investicijo v šolski prostor. Vsi so se zavzemali za nadaljevanje investicij v šolstvo, zlasti še, ker je bil prisoten občutek, da investicijam pojema sapa. S tem v zvezi so bila na predstavnike vlade naslovljena številna vprašanja in tudi kritike, ki jih mogoče strniti v naslednjih pet alinei.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg229">Prvič. Kako se realizirajo programi iz zakona o zagotavljanju sredstev za nekatere nujne razvojne programe Republike Slovenije v vzgoji in izobraževanju in kateri programi oziroma projekti bodo še izvedeni.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg230">Drugič. Kako poteka sofinanciranje države v izgradnjo osnovnošolskega prostora, po kakšnem principu se ta sredstva dodeljujejo občinam in kolikšna sredstva za vlaganje v osnovnošolski prostor so namenjena znotraj postavke Ministrstva za finance, 7.505 - dopolnilna sredstva občinam.</seg>
@@ -939,11 +920,11 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg235">Na področju kulture je bilo v razpravi poudarjeno, da je potrebno na podlagi zakona uresničevanja javnega interesa na področju kulture čimprej sprejeti nacionalni kulturni program, ki naj bi bil podlaga za ovrednotenje in financiranje posameznih dejavnosti na področju kulture. Člani odbora so v razpravi opozorili tudi na neustrezno vrednotenje nekaterih postavk v proračunu, katerim bi bilo treba v nadaljnji razpravi o predlogu proračuna nameniti posebno pozornost. Te postavke se nanašajo predvsem na naslednja področja. Prvič, investicijsko vzdrževanje na področju javnih zavodov. Drugič, ohranjanje in vzdrževanje naše premične in nepremične kulturne dediščine. Tretjič, izvajanje štipendiranja. Naslednjič, kulturne potrebe naših zamejcev in Slovencev po svetu. Naslednjič, kulturno dejavnost narodnih skupnosti. Naslednjič, muzejsko dejavnost. In zadnjič, ljubiteljsko kulturno dejavnost. Odbor predlaga, da se postopek sprejemanja državnega proračuna v državnem zboru nadaljuje v skladu s poslovnikom. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg236">Hvala lepa gospodu Mežanu. Naslednji je gospod Sovič z Odbora za znanost in tehnologijo. Izvolite.</seg>
             </u>
             <note type="speaker">BORIS SOVIč:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg237">Cenjene dame, spoštovani! Naš odbor je obravnaval predlog proračuna Republike Slovenije za leto 1997, obravnaval pa je tudi poročilo o delu vlade in mislimo, da bi to tudi sicer morala biti praksa, da se pred ali pa hkrati s sprejemanjem proračuna seveda temeljito oceni tudi delo vlade v preteklem obdobju. Uvodoma je na našem odboru minister za znanost in tehnologijo, dr. Lojze Marinček, ugotovil, da je bil proračun tega ministrstva močno okleščen. Od prvotno predvidenih 24,6 milijarde tolarjev je v končni fazi po usklajevanjih v vladi ostalo približno 19 milijard 750 milijonov tolarjev. Rad bi povedal, da ta znesek, 24,6 milijarde, ni poljubno definiran znesek ministrstva, ampak temelji na nacionalnem raziskovalnem programu, ki ga je ta državni zbor sprejel. Pripravili smo podatke, ki zelo jasno kažejo, da se pravzaprav vlada pri sestavljanju tega proračuna ni zavedala dejstva, da je dolžna respektirati nacionalni raziskovalni program, ki ga je državni zbor sprejel. Vlada bi seveda imela možnost tudi drugače, da bi preprosto ocenila, da tega programa ne more izvajati in bi potem seveda predlagala rebalans ali pa korekcijo tega programa. Ne enega ne drugega vlada ni storila, zato je potrebno opozoriti na to, da se ta razkorak še kar naprej nadaljuje, med nacionalnim raziskovalnim programom in med proračunom oziroma sredstvi, ki jih ta zagotavlja za področje znanost in tehnologije. Samo za primer. Po nacionalnem raziskovalnem programu bi za leto 1997 moral delež sredstev za znanost in tehnologijo v proračunu znašati 0,89%, znaša pa 0,7%. V letošnjem letu proračun v bistvu dosega približno tri četrtine tistih sredstev, ki bi jih po nacionalnem raziskovalnem programu morali zagotavljati za področja znanosti in tehnologije. Ta primanjkljaj znaša približno 5,3 milijarde. Še naprej se nadaljuje trend zmanjševanja sredstev za področje znanost in tehnologije, medtem ko je v letih 1993 do 1995 delež proračuna bil nad 3%, je v letošnjem letu 2,7%, tako da se v letošnjem letu kvečjemu ohranja nivo sredstev, ki je bil v lanskem letu po nekaterih podatkih, po drugih podatkih pa se celo nekaj zmanjša. Tudi na način se na nek način ne zmanjšuje ta razkorak, ki je nastal in ki resno ogroža funkcioniranje slovenske znanosti.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg238">Mi smo kot zainteresirano delovno telo, mimogrede, nismo še dobili odločitve glede matičnosti, mi upamo, da bo matičnost ponovno dodeljena našemu odboru, kar se regionalnega razvoja tiče, seveda analizirali tudi te podatke in ugotovili, da tudi tukaj beležimo negativne trende. Sredstva za spodbujanje razvoja demografsko ogroženih območjih v Sloveniji v zadnjih letih sistematično in konstantno, žal, padajo. Tudi v letošnjem letu bodo porasla manj, kot bruto domači proizvod, in sicer bodo realno pravzaprav padla za 4%.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg239">Mi smo na podlagi vseh teh podatkov po eni zelo kritični razpravi, znotraj katere pa moram reči, da smo si člani Odbora za znanost in tehnologijo in predstavniki ministrstva bili enotni, pripravili vrsto sklepov.</seg>
@@ -954,29 +935,29 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg244">To so na kratko, spoštovani, stališča, ki jih je Odbor za znanost in tehnologijo sprejel, sprejel v želji, da bi vlada vendarle spoštovala tiste temeljne postavke, na katerih temelji demokracija, to je, da vlada respektira parlament. Če parlament sprejme nacionalni raziskovalni program, potem pričakujemo od vlade, ali da ga v celoti respektira ali pa parlament obvesti o razlogih, zakaj ga ne more in predlaga seveda ukrepe za spremembo. Ne eno ne drugo se žal ni zgodilo in mislim, da je to obžalovanja vredno dejstvo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg245">Hvala lepa gospodu Soviču. Naslednji prijavljeni je gospod Izidor Rejc, Komisija za nadzor lastninskega preoblikovanja. Izvolite.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg246">Hvala lepa za besedo gospod podpredsednik, gospe in gospodje. Tudi Komisija za nadzor lastninskega preoblikovanja in privatizacije je imela svojo sejo na zadnji dan po programu državnega zbora. Vendar kot slišim in vidim, ste imeli vsi več sreče kot mi. Namreč, na sami seji nismo imeli nobenega poročevalca in tistega, ki bi lahko odgovarjal na vprašanja.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg247">Tisti dan je bilo več sej, tri so bile. Komisija za enake možnosti in če se ne motim Odbor za znanost in tehnologijo. Ni tu nobenega opravičila, vendar je komisija svoje delo opravila in se bo vključila v proces urejevanja problemov, ki se nanašajo bodisi na agencije, sklade, zagotovitev sredstev za denacionalizacijo in za certifikate, tako da bomo v drugem delu naše razprave oziroma sprejemanja proračuna to delo opravili. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg248">Hvala lepa gospodu Rejcu. Naslednja je prijavljena gospa Maria Pozsonec, Komisija za narodne skupnosti.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SDZ2.PozsonecMaria" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg249">Hvala lepa za besedo. Spoštovani. Kot je razvidno iz poročila Komisije Državnega zbora Republike Slovenije za narodnosti, sredstva, predvidena za uresničevanje narodnostne pravice, določene v ustavi, nikakor niso predvidena v zadovoljivi višini. Saj predstavljeni predlog proračuna ne sledi niti formalno zagotovljenemu ustavnopravnemu in zakonskemu položaju narodnih skupnosti in ne zagotavlja uresničevanja in izvajanja njihovih pravic v zakonsko predvideni meri in obsegu.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg250">V proračunu za leto 1996 je bil obseg sredstev, ki so bila namenjena narodnima skupnostima minimalen. Ta obseg se je v predlogu proračuna za leto 1997 še skrčil, tudi nominalno in realno. V celotnem proračunu redko kje vidimo negativni indeks, pri nas pa je, in sicer pri postavki za delovanje narodne skupnosti in tudi v uradu za narodnosti je pri plačah indeks okoli 80%. Takšen proračun ne zagotavlja preživetja za narodne skupnosti in za njihove ustanove, kaj šele za njihov razvoj. Tudi tarnanje za več denarja, pri tem se na žalost pojavi vprašanje, kaj je bil cilj vlade v tem delu proračuna. Varčevanje sigurno ne, ker se tu ne da varčevati. Če seštejete vse postavke, potem je denarja, namenjenega narodnostnima skupnostima v odnosu z drugimi postavkami bore malo. Vlada torej ne omogoča z zakonom in z ustavo zagotovljenih narodnostnih pravic. Zakaj so potem pozitivni zakoni na področju narodnostne zaščite, za okras pred Evropo? Ker ne najdemo razlage za znižanje proračuna pri narodnih skupnostih in ker Ministrstvo za finance ni smatralo za potrebno, da na seji Komisije za narodnosti to obelodani, saj se kljub povabilu niso udeležili naše seje, sprašujem vlado, zakaj je negativni indeks. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg251">Hvala lepa. Naslednji je na vrsti Feri Horvat, Odbor za nadzor proračuna.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg252">Hvala za besedo gospod podpredsednik. Spoštovane kolegice in kolegi, spoštovani predstavniki in predstavnice vlade, predstavnice in predstavniki medijev! Upam, da ne boste zamerili, da glede na to, da ste dobili poročilo odbora v materialu, da ne bom podrobno predstavljal celotne razprave, ki je bila na odboru. Ta razprava je bila dosti temeljita, dosti obširna, ampak vam predstavim tisto, kar je bistveno, to so sklepi odbora.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg253">Odbor ugotavlja, da pozen sprejem proračuna bistveno omejuje in zmanjšuje možnost nadzora nad proračunom za leto 1997, zlasti v dveh segmentih. Tisti, ki je bistven, primerjava proračuna in potem uresničevanja, ko se ugotavlja namenskost uporabe in pa seveda tudi gospodarnost uporabe proračunskih sredstev.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg254">Drugič. V sistemskem zakonu o proračunski porabi, ki ga vlada pripravlja in pričakujemo, da ga bo kmalu predložila Državnemu zboru, naj vlada posebej natančno opredeli vlogo in pomen nevladnih uporabnikov. O tem je že minister Gaspari uvodoma govoril, in sicer v tem smislu, da ti tako imenovani avtonomni porabniki dajo svoje predloge. Seveda je normalno, da da vlada glede na nujne določene enotne kriterije, tako v vladnih kot v drugih državnih ustanovah, ki jih je potrebno upoštevati pri proračunu, svoj vpogled, vendar potem državni zbor seveda sam odloči o končnih predlogih proračuna za te porabnike. V tej zvezi smo se razumljivo kot Odbor za nadzor proračuna posebej zadržali tudi v razpravi o predlogu proračuna za Računsko sodišče in smo priporočali vladi, da upošteva, da je to nova ustanova in da je potrebno spoštovati ustavne in zakonske obveznosti, ki so pred to ustanovo, da se lahko organizira tako, da bo svojo funkcijo tudi učinkovito opravljala.</seg>
@@ -984,22 +965,22 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg256">Končno je odbor sprejel sklep, s katerim je pozval Ministrstvo za finance, naj do seje državnega zbora, to je današnje seje, poda informacijo o dosedanji porabi proračuna v letošnjem letu po posameznih postavkah. Enak sklep je sprejel tudi matični odbor, Odbor za finance, in kot vidimo iz obsežnega materiala, smo to informacijo tudi dobili. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg257">Hvala lepa gospod Hrovat. Naslednji je gospod Rudi Petan, Odbor za obrambo.</seg>
             </u>
             <note type="speaker">RUDOLF PETAN:</note>
-            <u who="#SDZ2.PetanRudolf" ana="#regular">
+            <u who="#PetanRudolf">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg258">Spoštovani podpredsednik, spoštovane kolegice in kolegi, spoštovani člani vlade! Tudi Odbor za obrambo je razpravljal, zato jaz poročila ne bi čital, ker ste ga dobili na mizo. Bi pa opozoril na tiste stvari, za katere se mi zdi pomembno, da se še posebej opozori in na katere so bili pozorni tudi člani odbora v svoji razpravi in katerim bi bilo potrebno dati poseben poudarek.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg259">Ena od teh je, da člani odbora ugotavljajo, da je predlog proračuna Republike Slovenije za leto 1997, pa zdaj pustimo ob strani, da je prišel s tričetrtletno zamudo, v obliki, kot je bila podana, izredno nepregleden in netransparenten. Odbor nadalje tudi ugotavlja, da bi v letu 1997 in v prihodnjih letih bilo potrebno vložiti vse napore za izvedbo aktivnosti, ki izhajajo iz zakona o obrambi ter bilateralnih in multilateralnih sporazumov v funkciji približevanja Republike Slovenije zvezi Nato. Glede na to, da se je vlada v vseh dokumentih opredelila, da je to prioritetna funkcija, seveda tudi v Državnem zboru smo o tem razpravljali in se opredelili. Iz tega smo pač izhajali, da bo tem naporom potrebno nameniti tudi ustrezno finančno ovrednotenost in ustrezna finančna sredstva. Kakšna bodo, to mora seveda pripraviti vlada. Letošnji predlog, žal, jih nekako ne predvideva. Še več, opaziti je celo krčenje nekaterih ključnih postavk, kar daje vtis, da se naša dejanska pripravljenost na vključitev v zvezo Nato omejuje zgolj na verbalno raven. Člani odbora so bili enotni, da v okviru posameznih proračunskih postavk Ministrstva za obrambo ni dopusten trend realnega zmanjševanja vrednosti sredstev, namenjenih zaščiti in reševanju, se pravi civilne obrambe, za katero v naši državi niti nimamo izdelane doktrine in so pod proračunsko postavko 19.12 Uprava Republike Slovenije za zaščito in reševanje. Člani odbora so se tudi strinjali, da naj vlada in pa seveda Ministrstvo za obrambo v prihodnje vsebine gradiv, za katera v skladu z veljavnimi predpisi ni potrebno, da so označeni z vrsto in stopnjo zaupnosti, ne označuje kot takih. Na primer, predlog obrazložitve proračuna Ministrstva za obrambo na področju proračunske postavke številke 19.12 Uprava Republike Slovenije za zaščito in reševanje in številka 19.13 Inšpektorat Republike Slovenije za varstvo pred naravnimi in drugimi nesrečami. Tu menimo, da ni nobene potrebe, da se da stopnja "zaupno". Sprejet je bil tudi sklep, da Odbor Državnega zbora za obrambo predlaga Državnemu zboru, da naj po opravljeni splošni razpravi se postopek sprejemanja proračuna nadaljuje. Dodatni sklep: Odbor Državnega zbora za obrambo predlaga Ministrstvu za obrambo, da pripravi za nadaljnjo obravnavo preglednejši predlog obrazložitve dela proračuna, iz katerega bo razvidna skupna poraba proračunskih sredstev vseh posameznih porabnikov proračuna v okviru Ministrstva za obrambo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg260">Hvala lepa, gospod Petan. To je bil predzadnji razpravljavec. Prosim?</seg>
                <note>Glas iz ozadja.</note>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg261">Se želiš še prijaviti? Če ne, predajam besedo gospodu Viliju Trofeniku, Komisija za lokalno samoupravo.</seg>
             </u>
             <note type="speaker">VILI TROFENIK:</note>
-            <u who="#SDZ2.TrofenikVili" ana="#regular">
+            <u who="#TrofenikVili">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg262">Hvala za besedo. Spoštovani zbor! Komisija za lokalno samoupravo je obravnavala predlog državnega proračuna, ki ga je pripravila vlada za leto 1997 in ga poskušala oceniti z vidika ustreznosti proračuna za zagotavljanje finančnih sredstev za delovanje lokalnih skupnosti oziroma občin. V bogati razpravi, ki bi jo lahko razdelili na dva dela, in sicer del razprave je bil posvečen dejansko proračunu, drugi del razprave pa predvsem nerazčiščenim sistemskim rešitvam na tem področju glede financiranja javne porabe v občinah. Komisija je v razpravi ugotovila, da je nevzdržna predpostavka, da se v letošnjem proračunu predpostavlja, da bi odhodki občin rasli nekoliko počasneje, kot raste domači bruto proizvod, če vemo, da proračun raste bistveno hitreje.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg263">Nadalje je komisija izpostavila, da poleg težav, ki jih predstavlja zapoznelost sprejemanja proračuna za letošnje leto, še dodatno otežujejo pomanjkanje oziroma odsotnost kriterijev za sofinanciranje oziroma financiranje javne porabe v občinah, v skladu z 20. členom zakona o financiranju občin, katerih še predlagatelj ni pripravil oziroma ni dostavil niti v razpravo državnemu zboru, še manj pa prizadetim lokalnim skupnostim.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg264">V razpravi je nadalje bilo opozorjeno oziroma poudarjeno, da je nevzdržna situacija, da se zaradi nenehnega spreminjanja pristojnosti med državo in lokalnimi skupnostmi tudi izgublja primerljivost sredstev, ki se namenjajo za financiranje na lokalni ravni oziroma na državni. Tak primer je, kot je bil prenos v zadnjem letu na področju šolstva in še nekje drugje, zamegljuje primerljivost in seveda glede na situacijo, da je v povprečju 4,5% družbenega proizvoda namenjenega za delovanje lokalnih skupnosti, kar je daleč od nekaterih evropskih standardov.</seg>
@@ -1008,26 +989,26 @@
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg267">Drugič, da komisija ugotavlja, da je stanje v občinah, glede na zapoznelo sprejemanje državnega proračuna in odsotnost kriterijev v skladu z 20. členom zakona o financiranju lokalnih skupnosti, nevzdržno in zato poziva vlado, da v najkrajšem možnem času pošlje državnemu zboru v obravnavo merila za oblikovanje javne porabe v občinah za leto 1997. Tretjič, komisija naproša vlado, da pozove ministrstva, ki so razpisala javne natečaje za sofinanciranje investicij oziroma programov v lokalnih skupnosti iz državnega proračuna, da posredujejo podatke o prispelih vlogah in potrebnih sredstvih, ki ustrezajo razpisanim pogojem za realizacijo teh projektov v okviru državnega proračuna v letu 1997. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg268">Hvala lepa gospodu Viliju Trofeniku, ki pa ni bil zadnji. Prijavila sta se še dva. Besedo ima gospod Potočnik, predsednik Odbora za kmetijstvo, gozdarstvo in prehrano.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg269">Spoštovane dame in gospodje, lepo pozdravljeni! Sicer nisem mislil razpravljati, ker je poročilo relativno dobro napisano, vendar glede na to, da so skoraj vsi predsedniki in predsednice delovnih teles nastopali, bi potem mogoče zgledalo, da to področje, ki ga naš odbor pokriva, to je področje kmetijstva, gozdarstva in prehrane, da nekako ni pomembno, sem rekel, da se moram oglasiti.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg270">Mogoče bi kdo mislil, da je bilo v odboru veliko vzhičenje, ko smo ugotovili, da je pač od vseh teh ministrstev največje relativno povečanje proračuna, in sicer za 41% v primerjavi z lanskim letom in da tako znaša okoli 24 milijard. Seveda, opozorjeno je bilo, da je to še vedno premalo zaradi proračunske politike na tem področju v zadnjih letih. To znaša zdaj okoli 3,2% proračuna. Vemo pa že, da smo bili pred leti ža na 4,5% in da je ta delež v primerjavi z Evropsko skupnostjo tudi precej nižji. Za subvencije je letos namenjenih 11,5 milijarde tolarjev, to je v primerjavi z lanskim letom, ko je bilo nekaj čez 6, kar veliko povečanje. Seveda so pa člani odbora opozorili tudi na to, da gre relativno visok delež tega, bi rekel kmetijskega proračuna, za službe. Mi imamo službe, ki jih seveda po zakonu imamo in jih po zakonu moramo tudi plačati. Tako gre za javno gozdarsko službo, ki pač deluje v smislu širšega javnega interesa, ne samo v smislu kmetijstva ali pa gozdarstva, za to službo gre 2,6 milijarde, kontrola proizvodnosti v govedoreji 916 milijonov približno, svetovalna služba 1,5 milijarde, recimo za veterinarsko službo v državi Sloveniji 3 milijarde. Nazadnje je odbor sprejel sklep, da je proračun primerna podlaga za nadaljnjo obravnavo. V razpravi je bilo podanih še več pripomb na posamezne postavke, o katerih pač ne bi sedaj tukaj razglabljal, ker je to vse natančno opisano v poročilu. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg271">Hvala lepa, gospod Potočnik. Naslednji je gospod Jože Možgan, Komisija za vprašanje invalidov.</seg>
             </u>
             <note type="speaker">JOŽE MOŽGAN:</note>
-            <u who="#SDZ2.MožganJože" ana="#regular">
+            <u who="#MožganJože">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg272">Hvala lepa, gospod predsednik. Invalidi so v življenju navajeni veliko trpeti in potrpeti in verjetno predlagatelj proračuna to njihovo lastnost dobro pozna, zato je pač proračun za njih tak, kakršen je.Ker predlagatelj pozna njihovo lastnost, oni so navajeni potrpeti, so jasno zadovoljni s tem proračunom v glavnih postavkah, srečo pa imajo, da svoje posebne socialne programe za izravnavo svojih življenjskih možnosti in delovanja napajajo iz drugih virov. To so predvsem loterijska sredstva. Rad bi opozoril, da smo bili malce razočarani na komisiji, ker se na seji ni pojavil predstavnik Ministrstva za šolstvo, niti predstavnik Ministrstva za finance. Glavni problemi so bili na področju težje zaposljivih oseb in investicijske postavke.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg273">Izpostavil bi predvsem pri investicijskih postavkah Zavod za varstvo in usposabljanje Dr. Marjana Borštnarja v Dornavi, potem investicijsko postavko Zavoda v Stari gori pri Gorici, problem investicije v Centru slepih in slabovidnih v Škofji Loki in nekaj manjša investicija v Zavodu za usposabljanje Janeza Levca v Ljubljani.</seg>
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg274">Poleg tega smo še opazili, da so se zmanjšala sredstva za bivanjske skupnosti invalidov. To so bili v glavnem naši prigovori, drugače pa smatramo, da je predlog proračuna ustrezno pripravljen in predlagamo postopek sprejemanja proračuna v skladu s poslovnikom. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Izredna-15-1997-09-30.seg275">Hvala lepa kolega Možgan. Mislim, da smo izčrpali predsednike komisij in odborov. Tako je! Besedo bi lahko imel, če želi, še predstavnik Sekretariata za zakonodajo in pravne zadeve, vendar ga ni tukaj. S tem mislim, da je en sklop današnje razprave zaključen. Ker nam je ostalo še dobrih 10 minut do 18.00 ure, ko zaključujemo, bi želeli zadržati neko nit in jutri nadaljevati z besedo predstavnikov poslanskih skupin. Zato predlagam, da danes zaključimo in začnemo jutri z vodji poslanskih skupin.</seg>
             </u>
             <note type="time">SEJA JE BILA PREKINJENA 30. SEPTEMBRA 1997 OB 17.48 URI.</note>

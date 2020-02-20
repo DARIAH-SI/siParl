@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ3-Redna-23-2003-02-24"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">23. redna seja (24. 2. 2003)</title>
-            <meeting n="23"
-                     corresp="#SDZ3-Redna-23-2003-02-24.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="23" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="3" corresp="#DZ" ana="#parl.term #DZ.3">3. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">23. seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|FCD0D6BF422A8BA4C1256CDE004EF2AC</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=sz&amp;uid=FCD0D6BF422A8BA4C1256CDE004EF2AC</idno>
-                  <imprint>
-                     <date when="2003-02-24">(24. februar 2003)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>23. redna seja (24. 2. 2003)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="2003-02-24"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=sz&amp;uid=FCD0D6BF422A8BA4C1256CDE004EF2AC</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="180"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="164"/>
                <tagUsage gi="seg" occurs="375"/>
                <tagUsage gi="gap" occurs="10"/>
@@ -469,23 +454,21 @@
                <date when="2003-02-24" ana="#parl.sitting">24. 2. 2003</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ3-Redna-23-2003-02-24.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">23. seja</head>
-            <docDate>(24. februar 2003)</docDate>
             <note type="chairman">Sejo je vodil Borut Pahor, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.02 uri.</note>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg1">Spoštovane kolegice in dragi kolegi! Ura je minuto čez 14.00, začeli bomo 23. sejo državnega zbora Republike Slovenije. Sklical sem jo na podlagi prvega odstavka 57. člena poslovnika.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg2">Najprej vas bom obvestil, katere kolegice in kolegi zaradi drugih obveznosti niso navzoči na seji. To so kolegi: Battelli, Čebulj, Čeligoj, Fabjan, Germič, Horvat, Jakič, Janša, Juri, Kangler, mag. Kramberger, Lavrinc, Partljič, Peterle, mag. Potrata, kolegi Pucko, Pukšič, Tanko, Terčon, Trofenik, Veber, mag. Vizjak, kolegica Oražmova in kolega Zlobec Lukič, za pričetek seje sta se opravičila kolegaAleksander Merlo in Jožef Špindler - kolega Merlo je tukaj. Za vse ostale pa velja, kot sem jih navedel.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg3">Tudi na to sejo sem povabil predsednika vlade Republike Slovenije k 1. točki dnevnega reda, k vsem ostalim točkam dnevnega reda predstavnike vlade Republike Slovenije, varuha človekovih pravic k 15. točki, predstavnika sodnega sveta in skupščine zavoda za zdravstveno zavarovanje k 21. točki. Vse, ki ste že na seji, še enkrat lepo pozdravljam!</seg>
@@ -493,13 +476,13 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg5">Poslanska skupina Socialdemokratske stranke državnemu zboru predlaga, da se z dnevnega reda umakne predlog zakona o ratifikaciji pogodbe med vlado Republike Slovenije in vlado Republike Hrvaške o ureditvi statusnih in drugih pravnih razmerij, povezanih z vlaganjem v NEK, njenim izkoriščanjem in razgradnjo in skupno izjavo o podpisu pogodbe med vlado Republike Slovenije in vlado Republike Hrvaške o ureditvi statusnih in drugih pravnih razmerij, povezanih z vlaganji v NEK, njenim izkoriščanjem in razgradnjo. Tak predlog je, kot rečeno, dala poslanska skupina Socialdemokratske stranke in sprašujem, ali želi kdo od predlagateljev to obrazložiti. Prosim, kolega Kelemina, za predlagatelja. Tri minute.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ3.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg6">Hvala lepa za besedo. Spoštovani predsednik in spoštovani vsi skupaj, lepo pozdravljeni! Socialdemokratska stranka ne podpira ratifikacije pogodbe med Slovenijo in Hrvaško v zvezi z nuklearno elektrarno, kajti menimo, da je ta pogodba slaba, škodljiva in tudi neuresničljiva v praksi. To ni samo naše mnenje, ki se je oblikovalo skozi zgodovino, lahko rečemo, sprejemanja tega dokumenta, ampak je to mnenje tudi društva jedrskih strokovnjakov Slovenije oziroma na splošno jedrskih strokovnjakov. Tudi pravnastroka je stališča, da je ta pogodba slaba in škodljiva za Slovenijo. Tudi sklad za razgradnjo v Krškem je takega mnenja, tudi Posavje je takega mnenja, predvsem njegovi ljudje, ne glede na to, kar ste se vi v zadnjem času dogovorili.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg7">Skratka, mi smo trdno prepričani, da v kolikor boste danes potrdili to ratifikacijo te pogodbe, s tem še vedno ta pogodba ostane slaba in za Slovenijo škodljiva. Ne bomo navajali, ker smo že stokrat povedali, kje so tiste točke, v katerih je dejansko ta predlog pogodbe škodljiv za Slovenijo. Ampak tukaj se najprej postavlja predvsem politično vprašanje, kaj bo Slovenija s tem dobila, če bo ratificirala to pogodbo. To je temeljno vprašanje. In naše trdno prepričanje v Socialdemokratski stranki je, da ne bo dobila nič oziroma da bo izgubila velik del suverenosti nad tem objektom in da bo tudi zaradi tega na splošno gospodarska situacija in gospodarska škoda na tem področju izredno velika. Mi se zavedamo stiske oblasti, kajti vemo, da je odklop bila napačna poteza, leta 1998, in da bodo zaradi tega tudi določene konsekvence s hrvaške strani. Mi smo trdno prepričani, da je Hrvaška zelo temeljito preštudirala določbe te pogodbe, in da, v kolikor bi te določbe, v tej pogodbi, bile za njo tako slabe, kot govorijo oni v saboru, te pogodbe ne bi nikoli ratificirali. To je dejstvo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg8">In tudi vnaprej se ve, da gre samo za politične posledice in pa tudi, seveda, za gospodarske, zato naša poslanska skupina enostavno ne more podpreti ratifikacije in se bolj zavzemamo za to, ne glede na to, da je slovenska vlada storila veliko napako z odklopom, zaradi česar bo Slovenija trpela določene posledice, tudi finančne posledice, to je dejstvo. Mi se vseeno zavzemamo za to, da se ta zadeva transparentno razčisti, če ne drugače, pa z arbitražo na mednarodnem gospodarskem sodišču ali kjerkoli že. Skratka, kot povedano, predlagamo umik te točke z dnevnega reda in tudi najavljamo nepodprtje ratifikacije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg9">Hvala lepa. Želijo besedo predstavniki poslanskih skupin? Ugotavljam, da nihče. Potem menim, da ni potrebe po dodatni obrazložitvi oziroma utemeljitvi predloga, tako da bo državni zbor odločal o predlogu za umik. Gre za predlog umika točke, ki zadeva Nuklearko Krško in ratifikacijo pogodbe med Slovenijo in Hrvaško.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg10">Na glasovanje bom torej dal predlog, da se ta točka umakne z dnevnega reda. Glasujemo o predlogu za umik. Ugovor bo spoštovan, prekinil sem glasovanje. Tukaj je bil ugovor, češ da glasovalna naprava ne dela, dal jo je kolega Rupar - za dve minuti bom prekinil sejo in prosim službe, da preverijo. Zdaj je v redu. Ima še kdo ugovor, preden ponovimo glasovanje. Ali je z glasovalnimi napravami vse v redu, lahko državni zbor odloči? Ugovorov, da glasujemo, ni. Tako, da dajem ponovno predlog za umik te točke z dnevnega reda na glasovanje. Glasujemo. Glasujemo o predlogu za umik te točke z dnevnega reda. Prosim za mir v dvorani! 53 navzočih, 17 za in 33 proti.</seg>
                <note>Za je glasovalo 17.</note>
@@ -508,19 +491,19 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg13">Prehajamo na obravnavo in odločanje o predlogu poslanskih kolegov Petana in Jerovška, predlagateljev predloga zakona, da se z dnevnega reda umakne predlog zakona o statusu Slovencev brez slovenskega državljanstva v prvi obravnavi. Želi kdo od predlagateljev besedo? Kolega Jerovšek.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg14">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi! Po sklicu 23. seje, ko je bil predlog zakona že uvrščen na dnevni red seje, sva bila seznanjena s kolegom Petanom, da bo komisija državnega zbora za odnose s Slovenci v zamejstvu in po svetu pristopila k pripravi sistemskega zakona, ki bo urejal to področje. Gre za izredno pomemben zakon, ki je bil v parlamentarno proceduro vložen že leta 1998. In ta zakon ureja vrsto in obseg posebnih pravic in ugodnosti, ki jih uživajo Slovenci, ki imajo status Slovenca brez državljanstva, ter pridobitev in izgubo tega statusa. Po nekaterih podatkih gre za 360.000 takih oseb, zato vas ni potrebno prepričevati, kako pomembna je materija tega zakona, in je na neki način že žalostno, da ni bil prej uvrščen v zakonodajno proceduro in izglasovan. Vendar, ker pa komisija, takšna imamo zagotovila, zelo resna dela pri pripravi bolj sistemskega zakona, želimo z umikom te točke z dnevnega reda in pozneje tudi iz procedure sprostiti pot, da bo zakon,ki ureja status Slovencev brez slovenskega državljanstva in še druge pravice in tudi status teh državljanov, čimprej sprejet. Pač predlagamo umik te točke z dnevnega reda. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg15">Želijo besedo predstavniki poslanskih skupin? Prosim, kolega Barovič za poslansko skupino Slovenske nacionalne stranke.</seg>
             </u>
             <note type="speaker">BOGDAN BAROVIČ:</note>
-            <u who="#SDZ3.BarovičBogdan" ana="#regular">
+            <u who="#BarovičBogdan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg16">Hvala lepa. Čeprav veste, da je za našo poslansko skupino, poslansko skupino Slovenske nacionalne stranke to zelo pereče vprašanje, se mi pri prebiranju in pri osnovni analizi zakona, katerega avtor je, mislim da gospod Janez Podobnik, zdi, da bil ta zakon primeren za obravnavo danes. Zato spoštovanim kolegicam in kolegom povem, da pač ne bom podprl predloga, da se to umakne. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg17">Želi še katera poslanska skupina pojasniti stališča?</seg>
                <note>Nobena.</note>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg18">Potem to razpravo zaključujem. Prešli bomo na glasovanje. Gre za predlog za umik predloga zakona o statusu Slovencev brez slovenskega državljanstva z dnevnega reda. Glasujemo. Glasujemo o predlogu za umik. Prosim za pozornost, smo sredi glasovanja. Navzočih je 55 kolegic in kolegov, 45 jih je bilo za in 8 proti.</seg>
@@ -535,14 +518,14 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 14.15 uri in se je nadaljevala ob 15.02 uri.</note>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg25">Kolegice in kolegi, ministrice in ministri. Prosim, če zasedete svoja mesta. Nadaljevali bomo sejo. Ali lahko prosim za mir in red v dvorani? Prosim za mir v dvorani. Zasedite, prosim, svoja mesta. Ura je 15.01. Nadaljevali bomo sejo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg26">Kot rečeno, smo pri 1. TOČKI - VPRAŠANJA POSLANK IN POSLANCEV. Nekatere ministrice in ministri so opravičili svojo odsotnost. To so dr. Gaber, minister za šolstvo, znanost in šport, dr. Grizold, minister za obrambo, mag. Kovač, ministrica brez resorja, odgovorna za strukturno politiko in regionalni razvoj, dr. Janez Potočnik, minister brez resorja, odgovoren za evropske zadeve, in generalni sekretar vlade gospod Mirko Bandelj.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg27">Pri vprašanjih poslank in poslancev bomo v skladu s poslovnikom začeli točko dnevnega reda tako, da bomo na osnovi 244. člena poslovnika slišali vprašanja iz vrst opozicije, na katera bo odgovarjal predsednik vlade, mag. Rop, ki ga med nami lepo pozdravljam. In kasneje ministrice in ministri, na vprašanja kolegic in kolegov. Spomnim naj, da poslanec lahko postavi največ dve vprašanji, za kar so mu na voljo 3 minute za vprašanje in ministrom 5 minut za odgovor. Poslanke in poslanci lahko vprašanje dopolnijo, za to imajo 2 minuti časa, vlada pa 3 minute za dodatni odgovor.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg28">Prosim, da najprej dr. Miha Brejc zastavi vprašanje predsedniku vlade mag. Ropu.</seg>
             </u>
             <note type="speaker">DR. MIHA BREJC:</note>
-            <u who="#SDZ3.BrejcMihael" ana="#regular">
+            <u who="#BrejcMihael">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg29">Hvala lepa. Gospod predsednik vlade! Poslanske skupine Liberalne demokracije, Združene liste, DeSUS-a in Ljudske stranke, to se pravi vladne koalicije, so vložile predlog ustavnega zakona o dopolnitvah 90. člena ustave. In v četrtem odstavku tega predloga je zapisano: "Referenduma ni dopustno razpisati, če ustavno sodišče ugotovi, da bi z referendumsko odločitvijo bile prizadete človekove pravice oziroma temeljne svoboščine ali druge ustavne vrednote oziroma bi zaradi referendumske odločitve, nastale težko popravljive posledice za delovanje države."</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg30">Mene zanima:</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg31">Kaj to pomeni? Kako vlada gleda na to formulacijo "težko popravljive posledice za delovanje države"?</seg>
@@ -553,92 +536,92 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg36">Drugič recimo, kaj je z dodatkom za rekreacijo. Slišimo, da dodatka za rekreacijo ne bo več oziroma da je na spisku tistih postavk, ki naj bi se ukinile. Drugi dodatki, znižanje pokojninske osnove. In seveda, tu moramo še omeniti davčno zakonodajo, za katero prav tako obstajajo napovedi, da se bo spremenila. Mislimo zlasti na močno obdavčenje nepremičnin, na obdavčenje obresti in na kapitalske dobičke. Prosim za odgovor.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg37">Hvala lepa za vprašanje, dr. Brejc. Prosim, mag. Rop, predsednik vlade, beseda je vaša.</seg>
             </u>
             <note type="speaker">MAG. ANTON ROP:</note>
-            <u who="#SDZ3.RopAnton" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg38">Prav lepo pozdravljeni vsi skupaj! Gospod poslanec, najlepša hvala za vprašanje. Vaše vprašanje se nanaša na spremembe 90. člena ustave. Ustavna komisija je v zvezi s tem členom že zavzela stališče, skratka odprla postopek za spremembe 90. člena in tudi zavzela nekatera stališča oziroma usmeritve. Vsekakor pa je za pričakovati, da bo v nadaljevanju v zvezi z 90. členom še diskusija, tako znotraj ustavne komisije, seveda tudi znotraj strokovne skupine. Ko govorimo o 90. členu, bi zatorej zelo jasno rad povedal, da tako, kar se tiče vlade, pa tudi koalicije, nedvomno je zelo jasno stališče, da se s spremembami ne želi spreminjati ali celo zmanjševati doseženi standard neposredne demokracije v Sloveniji. Vi, gospod poslanec, seveda zelo dobro veste, da je Slovenija po mednarodnih ocenah, vsaj kar se tiče tega standarda, ocene referendumske prakse, pa tudi samega sistema pri samem vrhu med evropskimi državami in je med državami, pred njo sta samo Liechtenstein in Švica, potem pa je Slovenija v naslednji skupini, v kateri so Italija in pa tudi Latvija, vse ostale imajo nižji standard.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg39">Torej, temeljni problemi, ki jih vidimo v 90. členu, so nedvomno tisti, ki so povezani z blokado zakonodajnega postopka, visokimi stroški izvajanja referendumov, z načinom izvajanja referendumov v smislu zelo jasnih vprašanj, ki se obravnavajo v okviru referenduma. Skratka, da vendarle tisti, ki na referendumu odločajo, vedo, o čem odločajo,in da odločajo o tistih stvareh, o katerih in za katere je smiselno, da odločajo. Da ne odločajo o strokovno zapletenih zadevah, da ne odločajo o zadevah, za katere je nedvomno, da sta pristojna, da odločita in prevzameta odgovornost tako vlada kot ne nazadnje tudi državni zbor. Torej, to so temeljni cilji in to so temeljni smotri sprememb in, kot vi zelo dobro veste, so v tem kontekstu predlagane rešitve v smeri zakonodajnih referendumov in v smeri substitucije predhodnega zakonodajnega referenduma. Vendar so to predlogi, o katerih se bo še diskutiralo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg40">Kar se tiče predlaganih omejitev pri referendumskih odločanjih, kar vas, očitno, seveda daleč najbolj zanima, in to je popolnoma razumljivo, bi rad poudaril, da je v predlogu, ki je bil obravnavan na ustavni komisiji in ki je bil prediskutiran in tudi sprejet, bila predlagana rešitev, da je ustavno sodišče torej tisto, ki presodi, kdaj referendum ni dopusten zaradi posledic, torej ne parlament ne vlada ne politična večina, trenutna, ampak ustavno sodišče. Mislim, da je v tem kontekstu vaša skrb odveč.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg41">Vsekakor bi pa rad zelo jasno povedal, da kar se tiče konkretnih sprememb, o katerih ste govorili, vsaj kar se tiče pokojninskega zakona, velja, da so to teme, za katere je potrebno vedno širše soglasje, je potrebno predhodno usklajevanje, ne samo med političnimi strankami, ampak tudi socialnimi partnerji. In v tem kontekstu bo ravnala vlada, bo ravnala koalicija, in menim, da je vprašanje, mislim, da v tem tako kratkem roku ni možno v Sloveniji pripraviti korenitejših sprememb pokojninske zakonodaje. Je pa popolnoma jasno, in s tem se ukvarja celotna Evropa v tem momentu, tudi na naslednjem vrhu Evrope bodo diskutirali točno o demografskih vprašanjih in problemih Evrope in sistemov v vseh evropskih državah, v tem kontekstu tudi o problemih tako zdravstvene reforme kot tudi pokojninske reforme. In, seveda, rok in čas, ki je pred celotno Evropo in tudi Slovenijo, je približno 2008, 2010, to je čas, v katerem pride do upokojevanja tako imenovane "babyboom" generacije in takrat bodo potrebne tovrstne rešitve. Sam si seveda ne predstavljam, daleč od tega, da lahko takšne rešitve rešujemo na ta način, da bi delali kakršnekoli take ali podobne spremembe v 90. členu ustave, ampak bodo za to potrebni zelo temeljiti razgovori v družbi in iskanje nacionalnega konsenza.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg42">Hvala lepa. Dopolnilno vprašanje, kolega dr. Brejc.</seg>
             </u>
             <note type="speaker">DR. MIHA BREJC:</note>
-            <u who="#SDZ3.BrejcMihael" ana="#regular">
+            <u who="#BrejcMihael">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg43">Zahvaljujem se za odgovore, čeprav niso bili popolni. Namreč, meni je jasno, kakšna je vloga ustavnega sodišča, vendar sprašujem:</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg44">Kakšno je stališče vlade oziroma kako vlada razume to formulacijo "v težko poopravljivih okoliščinah"? Naštel sem dva konkretna zakona in bi želel slišati konkreten odgovor, ali bo vlada upokojencem vzela regres ali, kako se reče, dodatek za rekreacijo, ali bo znižala pokojninsko osnovo in tako naprej. To so vprašanja, ki ljudi zelo zanimajo, in v poslanskih pisarnah imamo polno takih vprašanj kar naprej. Enako mislim tudi za obresti. Poglejte, obresti so rezultat nekoga, ki varčuje; ti s ti, ki varčuje in s tem koristi našemu skupnemu gospodarstvu, bi rekel, ker je več denarja na voljo, bo zdaj kaznovan s tem, da bo plačal obresti; potem nepremičnine, in tako naprej in tako naprej, teh vprašanj je zelo veliko. Pričakoval bi, da bo gospod p redsednik vlade jasno rekel, "ja, obdavčili bomo nepremičnine, vzeli bomo to, vzeli bomo ono", ne pa s primerjavo z različnimi evropskimi situacijami, ki jih sam tudi dobro poznam - zavedam se, da je to resen problem, sem tudi seveda prebral vse, kar je b i lo o tem napisanega, še posebej, kar je govoril gospod finančni minister, pa seveda njegova državna sekretarka, ki je imela nekoliko drugačno mnenje, ko gre za obresti, ki jih je treba obdavčiti, in kapitalske dobičke, ki jih ni treba menda. Ampak veste, g ospod predsednik vlade, meni je zelo všeč, ko govorite, da je Slovenija v vrhu Evrope po mnogih kriterijih. Jaz bi si želel, da bi bila Slovenija v vrhu tudi takrat, ko gre za plače in pokojnine.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg45">Gospod predsednik, prosim.</seg>
             </u>
             <note type="speaker">MAG. ANTON ROP:</note>
-            <u who="#SDZ3.RopAnton" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg46">Najlepša hvala za dodatno vprašanje. To se seveda ne nanaša na 90. člen, ampak konkretno na nekatere zakonske rešitve v pokojninski zakonodaji in pa v davčni zakonodaji. Torej, lahko zelo jasno povem in sem zadovoljen, da lahko povem, da ne planiramo in ne bomo upokojencem vzeli regres, upokojenci bodo imeli regres in so ga imeli in jim bomo zagotovili regres. Tisto, kar smo razmišljali in če smo kdaj razmišljali, smo o tem, da bi morda transformirali regres v 13 pokojnino in bi na ta način dinamiko izplačevanja pokojnin uskladili s tisto dinamiko, ki velja pri plačah. O tem je tekla diskusija, vendar je to popolnoma druga diskusija, ki bo tekla na drugo temo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg47">Kar se tiče obdavčevanja dobičkov in obresti, veljajo tiste rešitve oziroma o njih diskutiramo in jih pripravljamo, ki se nanašajo na obdavčevanje obresti in pa kapitalskih dobičkov, ki so ekstremni, ki so veliki in se ne nanašajo na navadne državljane, ki imajo normalne prihranke, ki imajo pokojnine ali plače v banki, ampak se nanaša na obresti, na ogromne vsote, ki pravzaprav predstavljajo posebne vrste rentarstva in v teh primerih v vseh državah, primerljivih v Evropi, take obresti obdavčujejo. Tak primer je na primer Nemčija in večkrat sem jaz o tem tudi že javno govoril.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg48">Tako da, kar se tega tiče, ni potrebno biti posebej v skrbeh. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg49">Hvala lepa. Naslednje vprašanje bo predsedniku vlade zastavil kolega Igor Štemberger. Prosim, imate besedo.</seg>
             </u>
             <note type="speaker">IGOR ŠTEMBERGER:</note>
-            <u who="#SDZ3.ŠtembergerIgor" ana="#regular">
+            <u who="#ŠtembergerIgor">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg50">Hvala za besedo. Predsednika vlade sprašujem za mnenje o Vilniuški izjavi:</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg51">Ali boste zaradi pristopa Slovenije k njej ukrepali zoper zunanjega ministra dr. Dimitrija Rupla oziroma ali ga boste zamenjali? Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg52">Predsednik vlade, prosim, imate besedo.</seg>
             </u>
             <note type="speaker">MAG. ANTON ROP:</note>
-            <u who="#SDZ3.RopAnton" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg53">Najlepša hvala za vprašanje, gospod poslanec.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg54">Torej, v zvezi z Vilniuško izjavo sem v preteklih dnevih in tednih že kar nekajkrat javno spregovoril in pojasnil zelo jasno stališča slovenske vlade. Najprej, kar se tiče Vilniuške izjave, je to izjava, ki so k njej pristopili zunanji ministri, to je izjava, o kateri - in to prav tako drži in to je bilo tudi povedano na odboru, ko ste obravnavali to temo - je teklo posvetovanje zunanjega ministra tako z menoj kot tudi še z nekaterimi drugimi v Republiki Sloveniji. Gre za izjavo, ki jo je potrebno jasno razumeti in tudi interpretirati v smislu celotne izjave, ki je bila sprejeta na vladi Republike Slovenije in v kateri smo sprejeli celovito stališče v zvezi z iraško krizo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg55">V tem celovitem stališču v zvezi z iraško krizo smo zelo jasno povedali, da vlada Republike Slovenije ocenjuje in meni, da je potrebno storiti vse, kar je možno, da pride do mirne rešitve iraške krize. Da je potrebno kompletno iraško krizo in problematiko reševati v okviru Varnostnega sveta ob sodelovanju vseh članic Varnostnega sveta, pri čemer smo posebej pozvali tudi članice Evropske unije, ki sodelujejo v Varnostnem svetu, da storijo vse, da bi prišlo do konvergence interesov oziroma pogledov in da bi na koncu prišli do te mirne rešitve. Da pa je treba tudi vse potrebno storiti, da pride do razorožitve iraškega režima. Pravzaprav v tem kontekstu je potrditev pravilnosti naših odločitev, potrditev pravilnosti politike, ki smo jo vodili v tem času, posebna izjava Evropske unije, h kateri pa smo pristopili kot vlada in h kateri sem tudi sam kot predsednik vlade javno in jasno tudi v Bruslju pristopil. V tej izjavi Evropske unije se jasno, nedvoumno poudarja, na eni strani vse to, kar sem prej govoril, na drugi strani pa tudi priznanje Združenim državam Amerike za vse, kar so storili in storile za to, da bi prišlo do razorožitve iraške krize. In temeljna pot je Varnostni svet in pa mirna rešitev.In za to se bomo tudi vnaprej zavzemali. Jaz sem trdno prepričan, da je seveda tudi minister Rupel zelo jasno že večkrat povedal, da je na tej poti in da bo skupaj s celotno vlado storil vse, da bo takšno stališče tudi jasno v Evropi.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg56">Sicer pa se v zvezi z iraško krizo, kot veste, vsak dan razvijajo novi dogodki in naša zunanja politika bo na te dogodke ustrezno in promptno odgovarjala. Vilniuška izjava je pravzaprav nekaj, kar je že preteklost, glede na vse tisto, kar se je dogajalo, nekaj, kar je že zdavnaj nadgrajeno s skupnimi stališči vseh članic Evropske unije in vseh kandidatk za vstop v Evropsko unijo in vseh kandidatk, pravzaprav, tudi za vstop v Nato. Najlepša hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg57">Dopolnilno vprašanje. Prosim, kolega Štemberger.</seg>
             </u>
             <note type="speaker">IGOR ŠTEMBERGER:</note>
-            <u who="#SDZ3.ŠtembergerIgor" ana="#regular">
+            <u who="#ŠtembergerIgor">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg58">Glejte, z vašim odgovorom me niste prepričali niti mi niste jasno odgovorili, ali ga boste zamenjali ali ne.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg59">Menimo, da so stališča vlade, ki ste jih sprejeli, v nasprotju z Vilniuško izjavo. Mi smo še vedno mnenja, da je zunanji minister s svojimi dejanji naredil veliko zunanjepolitično škodo naši državi. In zato vabim vse poslance in poslanke, da s svojim podpisom k interpelaciji pripomorejo <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg60">
                   <gap reason="inaudible"/> to ni predmet <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">IGOR ŠTEMBERGER:</note>
-            <u who="#SDZ3.ŠtembergerIgor" ana="#regular">
+            <u who="#ŠtembergerIgor">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg61">
                   <gap reason="inaudible"/> k razpravi o delovni odgovornosti zoper zunanjega ministra Rupla.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg62">To ni predmet vprašanja. Prosim.</seg>
             </u>
             <note type="speaker">MAG. ANTON ROP:</note>
-            <u who="#SDZ3.RopAnton" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg63">Spoštovani poslanec. Dovolite, da vendarle pokomentiram to vašo oceno v zvezi z Vilniuško izjavo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg64">Jaz sem ravno te dni imel priliko, da sem prisostvoval sedmemu evropskemu forumu v Avstriji, kjer smo zelo veliko diskutirali tudi o iraški krizi in tudi o načinu reševanja problemov in načinu, kako pravzaprav relativno različna stališča članic Evropske unije približati in prispevati k mirni rešitvi. Lahko povem, da je pravzaprav Vilniuška izjava nekaj, o čemer se ne diskutira posebej in tudi ne predstavlja posebnega problema. Jaz sem seveda tam lahko z velikim zadovoljstvom pojasnil, kakšna so stališča Slovenije. In ta so, lahko rečem evropska in so tista stališča, ki podpirajo predvsem mirno rešitev.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg65">V tem kontekstu vam moram, seveda, tudi zelo jasno povedati, da ne bom predlagal razrešitve ministra Rupla. Drugače pa nimam pristojnosti, da bi ga sam razrešil, imam pristojnost, da predlagam, vendar tega ne bom storil, ker menim, da minister Rupel lahko uspešno opravlja svoje delo v funkciji in za zunanjo politiko, ki jo je vlada Republike Slovenije, pa ne nazadnje tudi koalicijska pogodba, zelo jasno začrtala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg66">Hvala lepa, predsednik vlade. Zadnje vprašanje v okviru te seje vam bo danes zastavil kolega dr. Bajuk. Imate besedo, kolega dr. Bajuk.</seg>
             </u>
             <note type="speaker">DR. ANDREJ BAJUK:</note>
-            <u who="#SDZ3.BajukAndrej" ana="#regular">
+            <u who="#BajukAndrej">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg67">Hvala lepa za besedo. Spoštovani! Podatkov glede SIB banke, ki so doslej že javno objavljeni, vključno s podatki vlade o odgovoru na poslansko vprašanje kolega Janeza Janše iz aprila leta 2002 je toliko, da bi lahko danes začeli izredno sejo, ki bi imela naslov Obravnava politične ter posledično materialne in kazenske odgovornosti za nepregledno poslovanje in spreminjanje lastništva banke SIB najpomembnejših institucij slovenske države, ministrstvaza finance pod vodstvom mag. Gasparija in Ropa, Vlade Republike Slovenije in Banke Slovenije. Banka SIB še zdaleč ni samo zadeva Mestne občine Ljubljana. Najprej je zadeva Vlade Republike Slovenije in Banke Slovenije.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg68">Naj v dokaz navedem za javnost najnujnejše podatke. Aprila leta 1990 v zadnjih tednih Šinigojeve vlade je bila SIB banka ustanovljena z večinskim lastništvom države. Ker je kasneje uprava banke, gospod Klemenčič, ugovarjala višini lastništva države, je bil leta 1998 sklenjen sporazum, potrjen v juniju 1999. leta, s katerimi je Republika Slovenija opredelila svoj večinski delež v višini 36,9% in se strinjala le z 20% glasovalno pravico, čeprav ni dobila preferenčnih, temveč le navadne delnice. Ni želela imeti glasovalne pravice. Tej se je odrekla, da bi se lahko odrekla tudi odgovornosti. Aprila leta 2000, 14. aprila, je vlada z menjalno pogodbo del svojega deleža prenesla na kapitalsko družbo in Slovensko odškodninsko družbo. V letu 2001 je finančno ministrstvo pod vašim vodstvom še preostalidelež države, 21,6%, preneslo državnemu Prvemu pokojninskemu skladu, s katerim upravlja gospod Lenič. Do konca leta 2001, 27. decembra 2001 so bili v nadzornem svetu kot predstavniki državnega kapitala ljudje, ki jih je imenovala vlada Republike Slovenije Danes v nadzornem svetu SIB banke z bivšim neposrednim deležem države 37% upravljajo predstavniki SOD-a in KAD-a, prvega pokojninskega sklada, ki so vsi v 100% lasti države. Izguba banke SIB, izkazana v letu 2002, to je v času, ko je njen lastnik že bilaEnergetika, je posledica očitno prikrite izgube preteklih let, do katerih so nadzor nad upravo Banke SIB skupno z gospodom Klemenčičem imeli najvišji predstavniki vlade in Banke Slovenije.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg69">Moje vprašanje:</seg>
@@ -647,11 +630,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg72">Kako dolgo še se bo vladajoča koalicija na državni in lokalni ravni norčevala iz državljanov? Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg73">Hvala lepa za vprašanje. Prosim, gospod predsednik vlade, imate besedo.</seg>
             </u>
             <note type="speaker">MAG. ANTON ROP:</note>
-            <u who="#SDZ3.RopAnton" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg74">Spoštovani gospod poslanec! Država Republika Slovenija nikoli ni imela večinskega deleža v Slovenski investicijski banki. Sami ste povedali, da je bil ta delež 37 oziroma 40% in da je v letu 2000 ta delež bil 21,65%.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg75">Strategija prejšnje vlade, pa tudi te vlade, opredeljena v strategiji gospodarskega razvoja in strategiji do finančnega sistema in pa bank in podjetij, je bila vseskozi jasna. Strategija je bila, da se umika iz državnih podjetij in da se umika tudi iz bank. In v tem kontekstu smo že večkrat tukaj diskutirali in jaz sem prepričan, da je ta strategija bila prava, da je bila dobra in to se kaže v primeru Nove Ljubljanske banke, kjer se danes kaže, in lahko slišimo od največjih kritikov privatizacije Nove Ljubljanske banke, da se je v Novi Ljubljanski banki toliko spremenilo v tem času po privatizaciji, kot se prej v desetih letih ni. Slovenska investicijska banka je ena najmanjših bank v Sloveniji, njen delež je 0,96%, niti en odstotek bilančne vsote vseh slovenskih bank ni, zato je bil jasen pristop države in vlade, in mislim, da je bil pravilen, da se umakne iz te banke.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg76">Dejstvo je, da je večinski in kontrolni delež Slovenske investicijske banke pridobila Energetika Holding oziroma prek nje Mesto Ljubljana. Mesto Ljubljana upravlja s Holdingom in posredno tudi z Energetiko. Zato je prav - zato je prav, trdim - da tudi to prevzame odgovornost za to, da v zvezi z nastalo situacijo poskuša ustrezno odreagirati. Pri tem bi rad zelo jasno povedal, da ne trdim, da ni potrebno ugotoviti odgovornosti tistih, ki so poslovali v Slovenski investicijski banki, tistih, ki so poslovali v Energetiki in v Holdingu, in ne nazadnje vseh tistih, ki so posredovali pri konkretnih transakcijah. Zato upam, da bo večina tistih sklepov, ki jih je Mesto Ljubljana, mestni svet sprejel, držala in da bodo tudi izvedeni. Sam ocenjujem, da je kar nekaj institucij, in je daleč od tega, da bi bila tu vlada in Banka Slovenije edina, ki bi morala odreagirati, predvsem je popolnoma jasno, da mora odreagirati Mesto Ljubljana - Mesto Ljubljana je sprejelo sklepe in upam, da se bodo realizirali. Za razliko od tistih institucij, ki so bile do sedaj navedene, menim, da je treba ustrezno vlogo dati tudi inštitutu za revizijo, ki je navsezadnje pristojen za dajanje licenc revizijskim hišam, in treba je dati pobudo tudi njemu - upam, da bo državno tožilstvo storilo vse tisto, kar je potrebno, in dokumentacijo ima.</seg>
@@ -659,71 +642,71 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg78">Vlada Republike Slovenije bo v tem kontekstu, seveda v okviru svojih pristojnosti, sodelovala z vsemi institucijami, zlasti v okviru pristojnosti, ki jih ima v povezavi s posameznimi uradi oziroma institucijami, nad katerimi ima kakršnokoli pooblastilo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg79">Dopolnilno vprašanje, dr. Bajuk.</seg>
             </u>
             <note type="speaker">DR. ANDREJ BAJUK:</note>
-            <u who="#SDZ3.BajukAndrej" ana="#regular">
+            <u who="#BajukAndrej">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg80">Gospod predsednik vlade, iz vašega odgovora mi je jasno, da vladi, Liberalni demokraciji in Združeni listi ni jasno, kaj se dogaja, ali pa še vedno predpostavlja, da slovenska javnost ne razume bistva dogajanj v Slovenski investicijski banki. Prepričan sem v nasprotno, da javnost in še posebej meščani mesta Ljubljane dobro vedo, da celotna slovenska politična oblast prikriva, da so v banki SIB v preteklih letih odobravali, dajali posojila vedoč, da jih določeni prejemniki, ki jih je dr. Arhar pred kratkim označil za slamnate može, ne bodo nikoli vrnili, po doslej znanih podatkih vsaj za nekaj 5 milijard tolarjev. To bi bilo na primer več kot dovolj za takojšnjo dokončanje Onkološkega instituta ali za izgradnjo nove univerzitetne knjižnice, ali da bo še bolj razumljivo, nad 10 km dolgo strnjeno kolono novih Cliov. Popravljalno dejanje, s katerim boste lahko slovensko javnost prepričali o nasprotnem, je le naslednje. Doseči boste morali razveljavitev nezakonitega nakupa banke SIB s strani Energetike, tako da boste izvršitev tega dejanja zahtevali od direktorja agencije za trg vrednostnih papirjev, dr. Nevena Boraka, od generalne državne tožilke gospe Zdenke Cerar in ostalih organov pregona. S tem dejanjem boste lahko vrnili denar Energetiki, državi, vladi Republike Slovenije pa ga boste vrnili le tako, da boste morali razkriti komitentente banke SIB, ki niso vračali posojil, ter od urada za preprečevanje pranja denarja zahtevati izsleditev pravih prejemkov teh posojil.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg81">Če menite, gospod predsednik, da je državljane potolažil gospod dr. Rekar včeraj na valu 202 z besedami, da je bilo na Daljnem zahodu še huje, boste seveda nadaljevali sedanjo politiko. Njegovo tolažbo je bilo mogoče razumeti kot naslednje sporočilo: Na Daljnem zahodu je bilo še težje. Tam je dobil zlati rudnik tisti, ki je streljal prvi. Hvala lepa.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg82">Ali ste pripravljeni takšen pristop načeti? Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg83">Gospod predsednik vlade, imate besedo za dopolnilni odgovor.</seg>
             </u>
             <note type="speaker">MAG. ANTON ROP:</note>
-            <u who="#SDZ3.RopAnton" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg84">V zvezi s tem, to je bil bolj vaš komentar, bi rekel, da je zelo jasno nedvomno sporočilo tudi vlade Republike Slovenije in tudi mene, da je potrebno storiti vse za to, da se ugotovi, ali obstajajo tovrstni komitenti, ali obstajajo tovrstne transakcije, ali obstajajo notranje informacije, ki so potekale med različnimi akterji same transakcije, na osnovi katerih je kdorkoli dobil premoženjsko korist ali si prilastil del tega, o čemer ste govorili.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg85">Jaz ocenjujem, da so te institucije, ki so bile tukaj javno navedene, ki so izpostavljene, dovolj usposobljene, da bodo zadevi prišle do dna. In jaz sem prepričan, da bomo o tej zadevi še govorili in sem prepričan, da bo seveda tudi sama revizija na koncu ugotovila nepravilnosti in mislim, da moramo vsi skupaj storiti vse za to, da bi bili tisti, ki so odgovorni na koncu za to, kar se je zgodilo, tudi ustrezno sankcionirani. Vendar jaz na pamet ocen ne bi dajal, za to so institucije, o katerih sem govoril, in vlada, kot sem povedal, bo v okviru svojih pristojnosti skrbela in poskrbela za to, da bodo te institucije opravile svoje delo in seveda prišle do rezultatov in jaz verjamem, da bomo takrat vsi skupaj tudi zelo jasno seznanjeni z njimi in jaz sem seveda tudi prepričan, da slovenska javnost upravičeno to zahteva. Mi se tega zavedamo in zato bomo seveda podprli tovrstne aktivnosti, ki bi seveda privedle stvar do dna. Hvala</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg86">Hvala lepa. Prosim, dr. Bajuk.</seg>
             </u>
             <note type="speaker">DR. ANDREJ BAJUK:</note>
-            <u who="#SDZ3.BajukAndrej" ana="#regular">
+            <u who="#BajukAndrej">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg87">Proceduralno, gospod predsednik. Na podlagi drugega odstavka 246. člena, ker nisem zadovoljen z odgovorom, predlagam, da državni zbor sklene, da bo na naslednji seji opravil razpravo o odgovoru vlade ali predsednika vlade glede tega vprašanja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg88">O tem bo jutri v popoldanskem delu odločil državni zbor brez razprave. Prosim.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg89">Gospod predsednik, predlagam, da se o predlogu, ki ga je podal gospod Bajuk, glasuje takoj. To pa iz razlogov, ta nova praksa v parlamentu, po novem poslovniku, je prikrivanje pred javnostjo. Gospod Bajuk in vsa slovenska javnost ve, da gre za milijardno korupcijo v SIB banki. In tudi, recimo, na SRD - kar bom potem v svojem poslanskem vprašanju povedal - gre za iste osebe. Gospod Rekar, ki tu "zdravi", je na SRD odobraval stomilijonske pogodbe za nagrade. Da se opravi to glasovanje takoj, da naj pred kamerami ljudje izvedo, kdo je za to, da se opravi ta diskusija, da pridemo temu do dna, ker če bomo jutri glasovali, bo ista zgodba kot vedno, ko ne bo izglasovano. Nočem, da se bodo gospodje tu skrivali pred javnostjo. Opravimo to glasovanje, po poslovniku je to možno, in nimamo kaj odlašati. To je nemogoča praksa, da o tako jasnem predlogu odlašamo, čez dva dni, čez tri dni.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg90">Hvala lepa, kolega Jerovšek. Rad bi pojasnil najprej, ta poslovniška možnost, da predsednik ali predsedujoči odloči, kdaj bo glasovanje, obstaja. Naj povem, da razlogi za to, da smo pred časom sprejeli to prakso, niso v tem, da bi se kdorkoli izogibal vednosti javnosti o glasovanju. Šlo je za vprašanje, ali lahko med postavljanjem poslanskih vprašanj, ne samo takrat, ko nanje odgovarja predsednik vlade, temveč tudi,ko odgovarjajo ministri in ministrice, državni zbor odloči. Vemo, da je takrat stopnja sklepčnosti nižja. Menili smo, da je koristneje, da s tem počakamo do naslednjega dne, in tako smo doslej tudi ravnali. Seja bo jutri, tako kot sicer, javna in javnost bo izvedela o tem, kako državni zbor glasuje. Prosim.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg91">Gospod predsednik, jutri ne bo glasovanja pred kamerami, pred javnostjo. Danes so oči slovenske javnosti uprte v parlament, v vprašanja predsedniku vlade, v njegove poslance. Zahtevam, da se o mojem predlogu glasuje sedaj.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg92">Prav. Potem bo državni zbor <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg93">Potem pa naj javnost ve, kdo prikriva javnosti argumente.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg94">Potem bo državni zbor najprej odločal o tem, da danes odločimo o tem vprašanju. Predlagam kljub vsemu, da ne bi začeli s prakso, ko bi lahko kadarkoli med poslanskimi vprašanji in pobudami kdorkoli od poslank in poslancev takoj zahteval odločanje, ker poznamo probleme, ki so s tem povezani, in niso vezani na politično stališče do konkretnega predloga. Mislim, da je ta praksa boljša.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg95">Prosim, zdaj bom vprašal državni zbor, da se bo ta odločil, ali glasujemo o tem predlogu takoj ali jutri. Ne bi rad, da bi sprejeli danes odločitev, da vedno med poslanskimi vprašanji in pobudami avtomatično glasujemo; ne nazadnje nas je praksa naučila, da je odložitev boljša. Mislim pa, da bi bilo dobro, da se tudi na kolegiju naslednjič dogovorimo glede prakse - prosim, kolega Jerovšek - da razčistimo to vprašanje. Zdaj bom torej vaš predlog, da takoj odločimo o tem, dal na glasovanje. Gre torej za predlog, da o predlogu kolega dr. Bajuka, da državni zbor razpravlja na naslednji seji o odgovoru predsednika vlade, odločimo takoj.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg96">Kdo je za to ali proti, da o tem odločimo takoj? Prosim? Ugovor na glasovanje? Prosim, kolega Petan, dvignili ste še, ko je naprava <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">RUDOLF PETAN:</note>
-            <u who="#SDZ3.PetanRudolf" ana="#regular">
+            <u who="#PetanRudolf">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg97">Se opravičujem, ampak <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg98">Tako kot vedno bom tudi zdaj ravnal. Če poslanec dvigne roko v času glasovanja, ugovor spoštujem, sicer pa ne. Ali še kdo ugovarja, da njegova glasovalna naprava ne deluje brezhibno, kajti glasovanje bomo ponovili?</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg99">Še enkrat bom vprašal državni zbor, ali se strinja s predlogom, da o predlogu dr. Bajuka glasujemo takoj. Prosim. 54 navzočih, 22 za in 32 proti.</seg>
                <note>Za je glasovalo 22.</note>
@@ -732,24 +715,24 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg102">Naslednje vprašanje bo zastavila kolegica Maria Pozsonec.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SDZ3.PozsonecMaria" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg103">Hvala lepa, gospod predsednik. Vsem prisotnim lep pozdrav. Ministra za delo, družino in socialne zadeve dr. Vlada Dimovskega sprašujem:</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg104">Na kakšen način in v kolikšnem obsegu se bodo v letu 2003 usklajevali socialni prejemki in pokojnine? Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg105">Prosim, gospod Dimovski.</seg>
             </u>
             <note type="speaker">DR. VLADO DIMOVSKI:</note>
-            <u who="#SDZ3.DimovskiVlado" ana="#regular">
+            <u who="#DimovskiVlado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg106">Spoštovana poslanka, hvala lepa za vprašanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg107">Bolj na glas.</seg>
             </u>
             <note type="speaker">DR. VLADO DIMOVSKI:</note>
-            <u who="#SDZ3.DimovskiVlado" ana="#regular">
+            <u who="#DimovskiVlado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg108">Hvala lepa za vprašanje. Se opravičujem, imam malo problemov z grlom.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg109">Ta vprašanja, ki se nanašajo oziroma odgovor na vaše vprašanje, je predvsem vprašanje usklajevanj. In sicer prvega od teh, to se pravi socialnih prejemkov, določa zakon o socialnem varstvu, in sicer, da se vsi prejemki iz tega naslova usklajujejo s prvim drugim in na osnovi indeksa življenjskih stroškov. Ta stopnja rasti, s katero se potem uskladi osnovni znesek minimalnega dohodka, ki je določen kot tisti, kot neka osnovna kategorija v zakonu o socialnem varstvu, je znašala 7,2%. Ker ste me že vprašali konkretno, na kakšen način in v kakšnem obsegu se bodo od višine minimalnega dohodka, do katerega je potem možno pridobiti socialno pomoč, znašajo, bom nekaj podatkov tukaj kar navedel, hkrati vam bom pa dostavil, seveda, celotni odgovor, zato da boste lahko konkretno s številkami imeli možnost pogledati, na kakšen način bodo ta usklajevanja potekala.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg110">In sicer naj navedem, da za samsko in prvo odraslo osebo v družini bo ta višina minimalnega dohodka znašala nekaj več kot 43 tisoč tolarjev. Potem za vsako naslednjo odraslo osebo v družini nekaj več kot 30 tisoč tolarjev. Skratka, tukaj je še kar nekaj kategorij, tako da ne bi tukaj z vsemi temi številkami operiral, vam bomo odgovor na to vprašanje dostavili pisno.</seg>
@@ -757,27 +740,27 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg112">Naslednji rok, ker ste me vprašali za letošnje leto, je v zakonu predviden rok za uskladitev pokojnin v mesecu septembru. Če pa seveda ne bo pozitivne razlike med plačami in pokojninami, potem ta uskladitev poteka vsak naslednji mesec, to se pravi lahko se izvrši v oktobru. Če ne, potem ta razlika v vsakem naslednjem mesecu do konca leta. Tako da je bistveno sedaj to razmerje oziroma v stopnjah rasti gibanja plač in pokojnin. Naj povem še enkrat, da je to na osnovi statističnih podatkov, ki jih objavlja Statistični urad Republike Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg113">Dopolnilno vprašanje, kolegica Pozsonec.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SDZ3.PozsonecMaria" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg114">Hvala lepa. Hvala lepa za odgovor, sicer sem jaz upala na več konkretnih podatkov, recimo družinska pokojnina, potem kmečka pokojnina itd.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg115">Prosim, minister Dimovski.</seg>
             </u>
             <note type="speaker">DR. VLADO DIMOVSKI:</note>
-            <u who="#SDZ3.DimovskiVlado" ana="#regular">
+            <u who="#DimovskiVlado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg116">Hvala lepa še enkrat. To vprašanje, ker gre za celo vrsto prejemkov, vključno z nekaterimi, ki jih na področju socialnih prejemkov nisem omenil, kot je recimo minimalni dohodek za otroka, ki znaša 13, nekaj več kot 13 tisoč tolarjev, potem povišanje za enostarševsko družino, dodatek za najemnino itd., vključno z vsemi vašimi vprašanji, ki so nanašajo na posebne tipe pokojnin, vam bomo seveda dostavili pisno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg117">Kolegica Ana Marija Tisovic bo postavila vprašanje ministru za notranje zadeve. Imate besedo.</seg>
             </u>
             <note type="speaker">MARIJA ANA TISOVIC:</note>
-            <u who="#SDZ3.TisovicMarijaAna" ana="#regular">
+            <u who="#TisovicMarijaAna">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg118">Hvala lepa za besedo, gospod predsednik. Pozdravljeni predstavniki vlade, kolegice in kolegi! Postavila bi vprašanje gospodu Bohincu, ministru za notranje zadeve:</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg119">Vemo, da nobena država ni imuna proti korupciji, proti gospodarskemu kriminalu, o tem se pri nas zadnje čase ogromno pogovarjamo. Ko pogledamo statistične podatke za leta nazaj, ugotavljamo, da je vedno več teh kriminalnih dejanj odkritih, sprašujemo se lahko tudi, ali je to zaradi tega, ker gospodarski kriminal narašča, ali pa zato, ker službe imajo večji efekt pri svojem delu.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg120">Zato sprašujem gospoda ministra:</seg>
@@ -788,11 +771,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg125">Namreč, ljudje se pogovarjamo to - eden, ko oropa pošto ali banko, pa dobi 10 milijonov ali pa nekaj takega, ta bo dobil kazen od 1-5 let, medtem ko tam ko gredo milijarde, pa ne vemo, ali je bil kdo kaznovan ali ne.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg126">Prosim, minister za notranje zadeve.</seg>
             </u>
             <note type="speaker">DR. RADO BOHINC:</note>
-            <u who="#SDZ3.BohincRado" ana="#regular">
+            <u who="#BohincRado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg127">Najprej se zahvaljujem za to na moč aktualno vprašanje.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg128">Strinjam se z vami, da je v zadnjem času upravičeno govora o gospodarskem kriminalu kot fenomenu posttranzicijskega obdobja. Delno smo k temu prispevali tudi mi, zavedajoč se, da mora na tem področju država, kar pomeni tudi naše ministrstvo in generalna policijska uprava storiti več prav v smereh, kot ste jih med drugim tudi vi nakazali. Zato pripravljamo za razpravo na vladi, predvidoma že v naslednjem tednu, obširnejšo analizo te problematike, s predlogi nekaterih precej konkretnih ukrepov za preseganje ne prav zavidljivega stanja na področju obvladovanja gospodarskega kriminala.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg129">Pred tem naj vam pa povem, da to nezavidljivo stanje ni od danes ali včeraj ali izpred dveh let, ampak da lahko tako rečemo kar od začetka 90. let. Vsa statistika, ki smo jo zbrali, kaže na to, da je v privatizacijskem tranzicijskem obdobju bila vrsta zelo specifičnih kaznivih dejanj s področja poslovnih goljufij, zlorabe položaja in lastninskega preoblikovanja, da je policija prijavila kar 490 ovadb v tem obdobju zoper 649 osumljencev oziroma 908 kaznivih dejanj s tega področja. Skratka, bilo je opravljeno dovolj obsežno delo, pa vendarle lahko ocenimo, da organi pregona in pravosodja v tem obdobju storilcem kaznivih dejanj na področju poslovnih goljufij in lastninske privatizacije niso bili v zadostni meri kos.</seg>
@@ -804,27 +787,27 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg135">Glede prvega vprašanja še naslednje. Oblikovana bo koordinacijska medresorska skupina, ki bo koordinirala vse te aktivnosti. Glede drugega vprašanja samo še to, slovenski kazenski zakonik je tem področju dober, ni ga treba spreminjati. Pač pa močno podpiram spremembe zakona o kazenskem postopku, ki dajejo več pooblastil policiji v dokaznih postopkih s tega področja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg136">Hvala lepa. Prosim, dopolnilno vprašanje, kolegica Marija Ana Tisovic.</seg>
             </u>
             <note type="speaker">MARIJA ANA TISOVIC:</note>
-            <u who="#SDZ3.TisovicMarijaAna" ana="#regular">
+            <u who="#TisovicMarijaAna">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg137">Hvala lepa. Z vašim odgovorom sem v glavnem zadovoljna, vendar me pa zanima, ali imate dovolj sredstev, da ne bo potem rečeno "nismo imeli dovolj finančnih sredstev, da bi lahko ves ta program, ki je zelo v redu, izpolnili". Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg138">Dopolnilni odgovor, gospod minister.</seg>
             </u>
             <note type="speaker">DR. RADO BOHINC:</note>
-            <u who="#SDZ3.BohincRado" ana="#regular">
+            <u who="#BohincRado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg139">Se zahvaljujem za precizacijo vprašanja. Sredstev seveda ni nikoli dovolj. Naj povem, da je bila leta 1997 sprejeta dobra strategija boja zoper gospodarski kriminal, ki je predvidela 189,5 milijonov dodatnih sredstev za kriminalistično policijo. Strategija je bila sprejeta, dodatnega denarja ni bilo. Seveda bomo storili vse, da s prerazporeditvami znotraj proračuna policije in ministrstva za notranje zadeve, pa tudi znotraj možnosti, ki so v državnem proračunu, poiščemo nova sredstva za programe, o katerih sem govoril - za večji razvoj strok na tem področju, za dodatna usposabljanja in tudi za večji angažma ekspertov s tega področja.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg140">Hvala lepa. Naslednje vprašanje bo ministrici za gospodarstvo in ministru za obrambo zastavil kolega Rokavec. Naj povem, da kolega <gap reason="inaudible"/> Prosim? A, kolega Barovič, se opravičujem! Se vam iskreno opravičujem. Ministru za pravosodje boste postavili vprašanje, potem pa kolega Rokavec. Prosim.</seg>
             </u>
             <note type="speaker">BOGDAN BAROVIČ:</note>
-            <u who="#SDZ3.BarovičBogdan" ana="#regular">
+            <u who="#BarovičBogdan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg141">Hvala lepa, gospod predsednik. Spoštovani ministrici, spoštovani ministri! Občina Trbovlje je skupaj z ostalima dvema zasavskima občinama leta 1999 ministrstvu za pravosodje in državnemu zboru dala zakonsko pobudo za ustanovitev okrožnega sodišča v Trbovljah, ki naj bi bilo krajevno pristojno za območje občin Radeče, Hrastnik, Trbovlje, Zagorje in Litija.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg142">Utemeljitev: Temeljno sodišče v Ljubljani, Enota Trbovlje, je bilo v preteklosti po pripadu zadev, in je še danes, druga največja enota v okviru takrat temeljnega sodišča v Ljubljani, takoj za enoto Ljubljana. Od uveljavitve zakona o sodiščih, ki je začelveljati s 1. januarjem 1995, so številne pristojnosti prešle na okrožno sodišče v Ljubljani, kjer se še danes vrstijo veliki zaostanki. Ti zaostanki so med drugim povzročili težave pri zapiranju poglavij države Republike Slovenije ob vstopanju v Evropsko unijo. S temi zaostanki je ministrstvo za pravosodje izsililo program Herkules, s temi ali zaradi teh zaostankov je na matičnem delovnem telesu v ministrstvu za pravosodje bilo pridobljeno dodatno nagrajevanje za posamezne sodnike.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg143">Po drugi strani pa je to ministrstvo delo vzelo sodnikom in drugim delavcem, ki so v preteklosti razbremenjevali in tekoče opravljali svoje delo, konkretno, v Trbovljah. Zakon o sodiščih iz leta 1995 je na primer ustanovil Okrožno sodišče v Krškem in v Slovenj Gradcu, spet primerjava in utemeljitev, ki pred tem nista imeli niti sedeža enote temeljnega sodišča, niti sedeža javnega pravobranilca. Če primerjamo število prebivalcev na območjih Krškega, Slovenj Gradca in Trbovelj, ima Trbovlje danes največje število prebivalcev, ki bi ga Okrožno sodišče pokrivalo, okrog skoraj 71.000, Krško 70.000, Slovenj Gradec 58.000. V Trbovljah je poslopje, ki bi ga z nadzidavo in minimalnimi sredstvi usposobili za izvrševanje vseh pristojnosti okrožnega sodišča, vključno z gospodarskim oddelkom. Zustanovitvijo okrožnega sodišča v Trbovljah bi omogočili prebivalcem tekoče in lažje uveljavljanje pravic na sodiščih na območju, ki ga je že pokrivalo temeljno sodišče.</seg>
@@ -834,11 +817,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg147">Četrtič: Kdo bo plačeval že tako revnim prebivalcem Trbovelj vožnjo v Ljubljano, dopuste in stroške, ki jih imajo, ker ne morejo iskati pravice tam, kjer bi jih lahko po vseh zakonskih in ekonomskih pokazateljih? Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg148">Hvala. Prosim ministra za odgovore.</seg>
             </u>
             <note type="speaker">MAG. IVAN BIZJAK:</note>
-            <u who="#SDZ3.BizjakIvan" ana="#regular">
+            <u who="#BizjakIvan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg149">Spoštovani gospod poslanec, spoštovani predsedujoči! Res je, kar ste navedli, da se je ministrstvo že v preteklosti ukvarjalo z vprašanji mreže okrožnih sodišč, seveda v prvi vrsti ob sami sodni reformi pred letom 1995. Takrat je bilo dejansko predmet tehtanja tudi vprašanje, ali naj bo ustanovljeno približno za to območje, ki ga navajate, tudi okrožno sodišče s sedežem, takrat po mojih informacijah, bodisi v Trbovljah ali v Litiji.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg150">Takrat do takšne odločitve očitno tudi na osnovi opravljenih analiz ni prišlo. V kasnejšem obdobju se je, tudi pred kratkim, ponovno analiziralo tudi ob sodelovanju tujih ekspertov obstoječo mrežo sodišč. Ugotovitve tako tujih ekspertov kot naših lastnih analiz so takšne, da je obstoječa mreža sodišč kvečjemu preveč razvejana, zlasti kar zadeva nivo okrajnih sodišč. Enako pa velja tudi, da na nivoju okrožnih sodišč ne ugotavljamo potrebe, da bi širili število teh sodišč. Na to kažejo vsi strokovni vidiki, ko gre za število zadev, ko gre za velikost območja in ko gre za gledanje na racionalnost poslovanja. Z vseh teh vidikov ni nekega razloga za ustanovitev dodatnih in tudi tega konkretnega dodatnega sodišča. Eventualno bi takšen ponovni razmislek bil primeren, ko bi prišlo do neke jasne, enovite členitve Slovenije, ker trenutno imamo različna okrožja različno postavljena in znotraj tega seveda bi bil primeren tudi razmislek o ustreznosti sedanjih sodnih okrožij. Sicer pa moram zatrditi, da ministrstvo ni naklonjeno kakršnikoli nadaljnji drobitvi sodnega sistema, da temu torej načeloma nasprotujemo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg151">Tudi obstoječa manjša okrožna sodišča se soočajo z nekaterimi težavami, ki izvirajo zlasti iz njihove velikosti. Predvsem bi omenil težave z večjo specializacijo, ki je glede nekaterih zadev še kako potrebna.</seg>
@@ -847,30 +830,30 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg154">Če sklenem, ministrstvo ni naklonjeno ustanavljanju novih sodišč katerekoli stopnje. Seveda pa glede ustreznosti sedanjih okrožij, tudi glede na podatke, ki ste jih zdaj navajali, bi bil primeren čas za ponovno proučitev takrat, ko se bo ta geografska členitev Slovenije na nek način ustalila in ko bi bilo tudi prav, da se okrožja na različnih področjih delovanja države čim bolj poenotijo, kar zadeva samo območje. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg155">Hvala, gospod minister. Želite postaviti dodatno vprašanje? Prosim.</seg>
             </u>
             <note type="speaker">BOGDAN BAROVIČ:</note>
-            <u who="#SDZ3.BarovičBogdan" ana="#regular">
+            <u who="#BarovičBogdan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg156">Gospod minister, hvala lepa. Vendar bom zelo konkretno še enkrat vprašal. Nanizal sem nekaj podatkov in ne bi želel, da me kolegi iz Slovenj Gradca ali pa iz Krškega napačno razumejo. Dal sem jih samo za primerjavo. Sam si želim in jim privoščim, da imajo svoje okrožno sodišče, da svojim ljudem olajšajo delo, da iščejo pravico tam, kjer so. Ti podatki so absolutno primerljivi - število ljudi, število zadev, vrsta zadev, vse je identično Trbovljam, le da je v Trbovljah ta trenutek, žal, socialna situacija takšna, da si - pa če vzamete to za demagogijo ali pač ne - marsikdo ne more privoščiti, če pride, tudi ločitve, ki so na primer lahko posledica socialnih stisk. Marsikje zaradi socialnih stisk pride do ločitev in marsikdo si te ločitve, po katere pravdni postopek mora v Ljubljano,res ne more privoščiti, pa to ni demagogija.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg157">Zato sprašujem: Ali so možnosti, da v ministrstvu za pravosodje proučite in izenačite neke pogoje, ki dajejo možnost za uvrstitev sodišč na stopnjo okrožnih, okrajnih in tako naprej. Podatki so identični, podatki so primerljivi, podatki dokazujejo, da je upravičenost zahteve za vzpostavitev okrožnega sodišča v Trbovljah dana.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg158">Samo to me zanima, ali je možno, da to proučite in da z reorganizacijo pomagate spet nekemu novemu toku, pa čeprav zaposlovanja v državni upravi, k ponovni obuditvi in zmanjšanju stroškov. Ali je sploh kakšna možnost, da se o tem razmisli? Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg159">Hvala. Prosim še za ta del odgovora.</seg>
             </u>
             <note type="speaker">MAG. IVAN BIZJAK:</note>
-            <u who="#SDZ3.BizjakIvan" ana="#regular">
+            <u who="#BizjakIvan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg160">V vsakem resnem vprašanju je vedno možno razmišljati. Sam seveda ne podcenjujem vaših argumentov, ki jih navajate, vendar je usmeritev ministrstva, da v sedanjem mandatu, v mandatu sedanje vlade, ne uvaja novih reform sodnega sistema. Veliko bolj pomembno se nam zdi, da vse sile usmerimo v odpravljanje sodnih zaostankov. Šele neko povsem normalno stanje v sodstvu bi bilo lahko izhodišče za neke morebitne nove reforme, za bolj optimalno organizacijsko členitev slovenskega sodstva.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg161">Še enkrat rečem, načeloma nasprotujemo spremembam, nameravamo pa, tudi na osnovi tega, kar ste navedli, tudi na osnovi tistega, kar računam, da bomo lahko našli glede že opravljenih tovrstnih analiz ponovno preveriti nekatera dejstva, da bi videli, ali so recimo tudi za neko malo bolj oddaljeno bodočnost kakršnikoli resni razlogi za spremembe v organizaciji sodišč, in če so, na katerih vse območjih v Sloveniji.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg162">Hvala. Naslednje vprašanje bo postavil kolega Franci Rokavec ministrici za gospodarstvo in ministru za obrambo. Za njim pa Bogomir Vnučec. Prosim.</seg>
             </u>
             <note type="speaker">FRANCI ROKAVEC:</note>
-            <u who="#SDZ3.RokavecFranci" ana="#regular">
+            <u who="#RokavecFranci">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg163">Hvala za besedo, gospod predsedujoči. Spoštovane ministrice, gospod minister, poslanke in poslanci!</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg164">Prvo vprašanje zastavljam ministrici dr. Petrinovi: Kaj bo storila vlada Republike Slovenije za rešitev problematike v usnjarski industriji?</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg165">Dejstvo je, konkretno v obratu Industrija usnja Vrhnika, obrat Šmartno, da je bila v decembru mesecu lanskega leta na začasni, prisilni dopust poslana večina celotnega kolektiva, ki šteje 328 zaposlenih. Vsi ti ljudje so v tem trenutku brez dela. Vemo, da gre za vprašanje ne samo 328 ljudi oziroma njihovih družin, ampak je posledično s tem vprašanjem povezano neposredno okoli 1 000 ljudi in pa celo širše območje.</seg>
@@ -883,11 +866,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg172">Zato bi še enkrat želel, da se takoj vzpostavi kontakt z obema lokalnima skupnostma in najde ustrezna rešitev. Oba občinska sveta sta predlagala revizijo te odločitve in zato tudi opravičeno pričakujemo najprej pogovor, potem pa tudi smiselno boljšo rešitev. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg173">Hvala za vprašanje. Najprej bo na prvo vprašanje odgovorila ministrica za gospodarstvo dr. Tea Petrin.</seg>
             </u>
             <note type="speaker">DR. TEA PETRIN:</note>
-            <u who="#SDZ3.PetrinTea" ana="#regular">
+            <u who="#PetrinTeaTerezija">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg174">Hvala. Vsem prisotnim lep pozdrav. Spoštovani poslanec, spoštovani predsedujoči! Rada bi vas obvestila, da je vlada Republike Slovenije že na svoji seji 19. decembra 1999 sprejela program prilagajanja slovenske usnjarske in obutvene industrije pogojem notranjega trga Evropske unije v obdobju 2000 do vključno leta 2003.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg175">Ministrstvo za gospodarstvo že od začetka leta 2000 izvaja ta program prestrukturiranja oziroma prilagajanja slovenske usnjarske industrije pogojem notranjega trga Evropski uniji. Ta program je bil namreč tudi potrjen v evropski komisiji in tudi redno poročamo, kako se ta progam izvaja.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg176">Čemu so bile namenjene te spodbude? Predvsem povečanju konkurenčne sposobnosti podjetij v tej industriji, in sicer je bilo dogovorjeno, da so najpomembnejše ali pa najbolj potrebne razvojne spodbude na področju trženja, tehnološke prenove in pa na področju razvoja človeških virov. Ta program ni usmerjen v finančno prestrukturiranje v ožjem smislu, temveč je pripravljen kot program razvojnih spodbud, zato tudi odgovornost za razvojne odločitve nosijo seveda sodelujoča podjetja in ne država. Mi jim dajemo seveda pomoč. V izvajanje tega programa je bilo do sedaj vključenih več kot 75% podjetij iz te panoge, tako po številu zaposlenih kot tudi po prihodku.</seg>
@@ -896,28 +879,28 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg179">Kar se tiče podjetja, moram reči, da ne glede na ta zakon, pa prestrukturiranje podjetja IU Vrhnika že poteka na osnovi programa prestrukturiranja, in sicer v pripravi je aneks k pogodbi o poroštvu Republike Slovenije in konverzija terjatev Republike Slovenije do družbe IUV d.d. Zakaj konverzija? Konverzija zaradi tega, ker bi s tem omogočili pridobitev delnic oziroma delniškega paketa, ki bi bil večji od 50% kapitala, kar bi omogočilo pridobiti strateškega partnerja. Ves ta program prestrukturiranja teče skupaj s podjetjem. Prav tako se v finančno sanacijo vključuje država prek poroštev. In zakaj so poroštva pomembna? Pri poroštvih država jamči do 80% zneska kredita, z aneksi k poroštvenim pogodbam pa se obrestna mera zniža na TOM + 5%. Poleg tega bo k finančnemu prestrukturiranju veliko pripomoglo tudi to, da družba namerava odprodati poslovno nepotrebno premoženje. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg180">Hvala. Na drugo vprašanje bi naj odgovoril minister za obrambo, ki je opravičeno odsoten, zato v skladu z 247. členom poslovnika sledi v 30 dneh pismeni odgovor. Dajem vam besedo, kolega Rokavec.</seg>
             </u>
             <note type="speaker">FRANCI ROKAVEC:</note>
-            <u who="#SDZ3.RokavecFranci" ana="#regular">
+            <u who="#RokavecFranci">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg181">Hvala za besedo. Moram reči, da je bil odgovor gospe ministrice dejansko zelo izčrpen, vendar se kljub vsemu zastavlja temeljno vprašanje.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg182">Vemo, da je bil pred nekaj leti ukinjen obrat Štore, prav iste firme, Industrije usnja Vrhnika. Ja, se opravičujem, obrat Šoštanj. Sedaj je zelo velika skrb in negotovost v Šmartnem pri Litiji, zato bi dejansko želel, ker sta to edina dva segmenta usnjarske industrije v Sloveniji, da vlada dejansko prouči vse možnosti, tako proračunske kot tudi zakonodajne, da se reši in obdrži ta usnjarska industrija. In drugo, to je pa zadeva v zvezi z ministrstvom za obrambo in pa mojim vprašanjem. Jaz bi, gospod predsedujoči, predlagal, da se izkoristi 247. člen tega poslovnika in se na naslednji seji zagotovi ustni odgovor na to moje vprašanje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg183">Hvala za dodatno vprašanje ministrici za gospodarstvo. Drugo pa velja v skladu z 247. členom in bomo na naslednji seji zagotovili ta odgovor. Ministrica Petrinova, prosim še za ta del odgovora.</seg>
             </u>
             <note type="speaker">DR. TEA PETRIN:</note>
-            <u who="#SDZ3.PetrinTea" ana="#regular">
+            <u who="#PetrinTeaTerezija">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg184">Hvala lepa. Pa ne samo v pojasnilo. Delimo isto mnenje. To podjetje je že naredilo določene napore v procesu prestrukturiranja, predvsem v pridobivanju tehnološke izboljšave, designa, trženja in podobno. Zaradi tega bomo seveda podprli te napore vodstva, ravno zdaj se bodo oglasili tudi na ministrstvu za gospodarstvo, da vidimo, katere so še možnosti na podlagi tega zakona o pomoči podjetjem v težavah. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg185">Hvala tudi vam. Sedaj bi imel besedo Bogomir Vnučec, vendar ga ni. Zato bomo šli na naslednjega spraševalca. Ivan Kebrič bo postavil vprašanje ministru za finance. Prosim, kolega Kebrič, imate besedo. Jože Tanko namreč ni navzoč.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ3.KebričIvan" ana="#regular">
+            <u who="#KebričIvan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg186">Hvala za besedo. Spoštovani navzoči! Spoštovani gospod minister, upošteval sem želenih 60 dni, to je čas, da ste se vpeljali v novo funkcijo, zato vam to poslansko vprašanje postavljam šele danes.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg187">Ne le glede na nezaupanje in dvom upokojencev, ampak tudi številnih drugih, v objavljene podatke Urada za statistiko Republike Slovenije v zvezi z gibanjem plač in življenjskih stroškov, je vprašanje, kako Urad za statistiko Republike Slovenije zajema plače in kaj sploh so izkazane plače.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg188">Po kakšnem vzorcu Urad za statistiko Republike Slovenije ugotavlja gibanje plač in nato izračunava mesečna povprečja bruto in neto plače? Ali so v teh bruto plačah, sprašujem vas, zajeti vsi zaslužki zaposlenih za svoje opravljeno delo? Znano je, da določena podjetja izplačujejo del zaslužkov kar enostavno z boni. Zakaj uporabljam izraz "zaslužek" in ne le "plača"? Zato, ker je od plače potrebno plačati davke in prispevke, zaslužek ali njegov del pa je možno delavcu dati tudi na drug način.</seg>
@@ -926,11 +909,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg191">Prosim vas, da vi kot odgovorni minister za finance pojasnite, ne samo meni, nam poslancem, ampak vsej javnosti, kakšen vzorec je vzet za gibanje plač? Ali so potrebne za pravilno zajemanje vseh prejemkov na račun dela in plačilo davkov in prispevkov morebiti kakršnekoli spremembe tozadevne zakonodaje?</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg192">Hvala. Prosim, če izključite mikrofon. Gospod minister, imate besedo za odgovor. Prosim.</seg>
             </u>
             <note type="speaker">DR. DUŠAN MRAMOR:</note>
-            <u who="#SDZ3.MramorDušan" ana="#regular">
+            <u who="#MramorDušan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg193">Hvala lepa za vprašanje. Sicer se večina vprašanj nanaša na drugega ministra, ker je zakon v pristojnosti ministrstva za delo, družino in socialne zadeve. Ne glede na to sem pridobil vse informacije od urada za statistiko, kako zajemajo plače in seveda tisti del, ki se nanaša na ministrstvo za finance. Bom odgovoril.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg194">V zvezi z metodologijo statističnega spremljanja plač bi želel povedati to, da statistični urad že vrsto let spremlja plače v podjetjih, družbah in organizacijah, razen v zasebnih podjetjih z enim ali dvema zaposlenima osebama. Se pravi, v tem okviru zajame 600.000 zaposlenih, približno 22.000 enot je teh podjetij, in z vidika prejemanja plače gre za približno 88% vseh zaposlenih.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg195">Kaj se zajema? V plače so zajeti izplačani prejemki zaposlenih oseb za delo v polnem delovnem času in delovnem času, krajšem in daljšem od polnega, zajema vse druge prejemke, ki se oblikujejo na tej osnovi, nadomestilo za letni dopust, plačani dopust do 7 dni, za državne praznike, bolniške odsotnosti do 30 dni, za strokovno izobraževanje, zastoje pri delu brez krivde zaposlenih oseb, plačane odsotnosti in podobno, za ostala izplačila plač za obdobje zadnjih 12 mesecev in nadomestila plač za predhodne mesece, prejemke za minulo delo, stimulativne dodatke, nagrade, premije ter prejemke po periodičnem obračunu in zaključnem računu za opazovani mesec. To se vse šteje v plače. Če pa so izplačila izplačana iz sredstev skupne porabe oziroma materialnih stroškov, na primer regres, nadomestilo za prevoz in prehrano, boni, dnevnice, kilometrine, izplačila v obliki vrednostnih papirjev, potem jih ne upošteva statistika v zneskih plač.</seg>
@@ -938,41 +921,41 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg197">V zvezi z vašim vprašanjem glede obdavčenja in s tem pritoka davkov in prispevkov v tri blagajne, bi želel povedati, da v skladu z zakonom o dohodnini se za osnovo za davek od osebnih prejemkov iz delovnega razmerja šteje plača, nadomestilo plače in drugi prejemki iz delovnega razmerja, in sicer izplačani v denarju, bonih ali naravi, vključno s povračili stroškov in drugimi prejemki, če presegajo določeno višino, ter prejemki v obliki stimulacij in bonitet. To se pravi, tudi boni in ostale oblike so zajeti v dohodnino. V skladu s predpisi, ki določajo prispevke za socialno varnost, pa je podobno zajemanje relativno celovito. Tako bi rekel, da čisto splošna ocena je, da se upoštevajo vsi prejemki iz delovnega razmerja, ne glede na to, v kakšni obliki so. Je pa res, da v zadnjem obdobju opažamo trend, da se zavezanci v vedno večji meri prilagajajo davčnim in drugim obremenitvam ter se selijo iz davčno bolj obremenjenih oblik dohodkov v manj obremenjene oblike dohodkov. S tem v zvezi pripravljamo sedaj spremembo zakona o dohodnini, ki naj bi temeljil na drugačnem konceptu glede na sedanji sistem, da to ne bi bilo mogoče. Podobna problematika je pa značilna tudi za področje prispevkov za socialno varnost, kjer bodo prav tako potrebne določene spremembe v teh področnih zakonih. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg198">Hvala ministru za odgovor. Kolega Kebrič želi postaviti še dodatno vprašanje. Prosim.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ3.KebričIvan" ana="#regular">
+            <u who="#KebričIvan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg199">Z vašim odgovorom nisem popolnoma zadovoljen, zato vam postavljam dodatno vprašanje. Morda sem vas napak razumel, ker najprej ste dejali, da boni niso kot plača, potem ste pa dejali, da so zajeti v dohodnino oziroma prijavo za dohodnino.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg200">Moje dodatno vprašanje je naslednje. Prepričan sem, da vam je poznano, da mnogi samostojni podjetniki, bodisi z enim zaposlenim ali pa celo brez, izplačujejo minimalne plače, ob tem pa si zagotavljajo dodatno pokojnino z maksimalno dovoljenim plačilom v drugi steber, torej neobdavčeno inbrez plačila prispevkov, torej to ni bruto plača in v gibanju plač ni zajeto. Ob kopičenju bogastva jim seveda ni mar za osnovno pokojnino, morda pa bodo predvidenih zadnjih 18 let res izplačevali sebi višje plače, da bi jim bila zagotovljena višja pokojninska osnova. Poseben problem je tudi, da taka podjetja v glavnem delajo z delavci po pogodbah, saj so dajatve pogodb znatno nižje od dajatev za redno zaposlene.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg201">Sprašujem vas: Kako boste ukrepali v teh primerih, saj morate biti skupaj z ministrom za gospodarstvo, ministrom za delo, družino in socialne zadeve zainteresirani za čim večjo zaposlenost in redno izplačevanje tako plač ter na njihovi osnovi davkov in prispevkov?</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg202">Hvala. Gospod minister, prosim še za ta odgovor.</seg>
             </u>
             <note type="speaker">DR. DUŠAN MRAMOR:</note>
-            <u who="#SDZ3.MramorDušan" ana="#regular">
+            <u who="#MramorDušan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg203">Hvala lepa. Se popolnoma strinjam. Mislim, da sem na vaše vprašanje že odgovoril. Dejal sem, da opažamo v zadnjem času trend, da se selijo zavezanci iz bolj davčno obremenjenih v manj davčno obremenjene dohodke. S tem v zvezi pripravljamo, kot sem rekel, nov zakon o dohodnini, ki naj bi zgrajen na novem konceptu, ki naj bi to preprečeval. Ravno tako sem tudi rekel, da bi bilo treba na teh področnih zakonih za prispevke za pokojninsko in zdravstveno varstvo v bistvu na podoben način stvari urediti. S tem se strinjam z vami.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg204">Glede bonov. Točno ste povzeli, da v plači niso zajeti, ker so pač plačilo iz materialnih stroškov, medtem ko v dohodnini pa so zajeti, je ta razlika med njimi.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg205">Hvala lepa. Kolega Kebrič, ni več dodatnega vprašanja.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ3.KebričIvan" ana="#regular">
+            <u who="#KebričIvan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg206">Zadeva predlog sklepa. Na podlagi drugega odstavka 246. člena poslovnika državnega zbora Republike Slovenije</seg>
                <note>Uradni list Republike Slovenije, št. 35/2 iz leta 2002</note>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg207">, predlagam, da državni zbor na svoji naslednji seji opravi razpravo o odgovoru ministra za finance na moje poslansko vprašanje. Bistveno je to, kar je dejal, da pripravljajo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg208">Mislim, da je za državni zbor, za vse poslance, še kako nujno potrebno, da smo seznanjeni z zadevami, kaj se dogaja in kako se odloča na ekonomsko-socialnem svetu, kjer so trije partnerji, delodajalci, delojemalci in seveda vlada, ko razpravljajo o plačah, o gibanju plač, pa tudi o teh bonih, o katerih je bilo govora, pri čemer ne delim mnenja z vami, da so ti boni del zaslužka, ki se izogne plačilu prispevkov in se obračuna brez prispevkov, brez davkov. Dejansko pa podjetja to izkoriščajo, da se izognejo, da bi temu dali plače. To je za zaposlene še kako potrebno, saj bo s tem višja pokojninska osnova. Prosim, da o tem sklepuglasujemo po običajnem postopku jutri.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg209">Hvala za proceduralni predlog. O tem predlogu bomo v skladu z drugimi glasovanji opravili odločanje na jutrišnjem delu seje. Nadaljujemo s poslanskimi vprašanji. Med mojim seznamom in vrstnim redom poslanskih vprašanj in s koregiranjem pred sejo so neke razlike, se za nje opravičujem, ker nisem bil prej seznanjen z njimi. Kolega Tanko je odsoten, zato bi bil na vrsti kolega Peter Levič, prej pozvani Bogomir Vnučec pa na 15 mestu. Se opravičujem za to zamenjavo, nič ni tako kritičnega še. Peter Levič ima besedo. Prosim.</seg>
             </u>
             <note type="speaker">PETER LEVIČ:</note>
-            <u who="#SDZ3.LevičPeter" ana="#regular">
+            <u who="#LevičPeter">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg210">Hvala lepa, gospod predsednik. Malo smo izgleda imeli nek nesporazum. Vprašanje postavljam ministrstvu za delo, družino in socialne zadeve, gospodu Dimovskemu.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg211">Še pred časom, leta 2002 smo slišali, da se znotraj vašega ministrstva pripravlja poseben program o družinski politiki in zakonodaji, ki naj bi povišal nizko rodnost v Sloveniji in preprečil nadaljnja zmanjšanja števila rojstev otrok, ki je v zadnjih dveh desetletij upadlo iz 30 tisoč na 17 tisoč 500.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg212">Vsi smo enotni, da je družina osnovna celica družbe in vendar ob obljubljanju programa oziroma ukrepov za povišanje števila družin in rojstev še ni. Z raziskavo Ekonomsko-socialni položaj mladih družin v Sloveniji strokovnjaki ugotavljajo, da je manjše število rojstev pogojeno s tako objektivnimi kot s subjektivnimi razlogi.</seg>
@@ -982,11 +965,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg216">Skladno s tem vas sprašujem: Kdaj boste pripravili obljubljen nacionalni program za družino? Obljuba je bila, da bo program izdelan in predstavljen v začetku leta 2003 ter da bo ta program vseboval ukrepe tako na področju stanovanjske, šolske, zdravstvene in socialne politike. Kdaj bo program pripravljen in kdaj ga bomo začeli izvajati? Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg217">Hvala za vprašanje. Prosim ministra dr. Dimovskega za odgovor.</seg>
             </u>
             <note type="speaker">DR. VLADO DIMOVSKI:</note>
-            <u who="#SDZ3.DimovskiVlado" ana="#regular">
+            <u who="#DimovskiVlado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg218">Hvala lepa za to vprašanje. Kot ste že v samem vprašanju povedali, gre za zelo kompleksen predmet raziskovanja oziroma kompleksen predmet, s katerim se že kar nekaj časa ukvarjamo tudi na ministrstvu.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg219">Delim vašo skrb, kar se tiče natalitete v Sloveniji, ker dejansko je to vprašanje povezano s celotnim spektrom tudi prihodnosti in prihodnjega razvoja. Kar se tiče samega vprašanje rodnosti, je to zelo kompleksen problem, ki zadeva sociološke, politične, ekonomske, ideološke in druge dejavnike. Zaradi te kopmpleksnosti smo se tudi odločili, da bi to vprašanje, ki ni bilo natančno, vsaj v zadnjem obdobju ni bilo raziskovano, bi poskušali predvsem s pomočjo stroke ugotoviti, kaj so zdaj tista osnovna vprašanja, ki bi jih morali na nek način vgraditi v nacionalni program za družino.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg220">Mi smo takoj v začetku leta 2001 pristopili k CRP-u oziroma inicirali CRP program, ki naj bi ta vprašanja dodatno razdelal. Tukaj je cel sklop raziskav, ki se postopoma zaključujejo in ki že dajejo nekatere prve rezultate, ki smo jih tudi javno že objavili in so bili tudi v medijih predstavljeni kot prvi deli raziskav znotraj tega CRP-ja. Rezultati analiz, kiso na področju družine, kažejo pravzaprav to vprašanje v nekoliko drugačni luči, kot smo ga bili vajeni do sedaj. Predstavljajo predvsem razloge, zakaj se mladi ne odločajo za otroke, v prvi vrsti ekonomske razloge, hkrati pa je tudi prvič v teh raziskavah bila predstavljena višja kakovost življenja mladih, svoboda, potovanja, kariera in tako naprej, ki naj bi tudi vplivala na odločitev mladih in pa družin za otroke. Ugotovljena so bila tudi nekatera nova tveganja in negotovosti, kar se tiče zaposlitve in kariere. So pa tudi raziskovalci fakultete za družbene vede ugotovili, da gre po subjektivnih mnenjih anketirancev za tako imenovano preveč odgovorno starševstvo. Govori, da, recimo, otrok zahteva večprocentno angažiranost in tako naprej, kar so navedli kot enega izmed razlogov, zakaj se mladi pravzaprav ne odločajo, in pa tudi, da tako rečem, prepričanje v vsemogočnost medicine.</seg>
@@ -996,12 +979,12 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg224">Naj pa povem, da raziskovalci menijo, da bi neka usmeritev pri tem nacionalnem programu bila tako imenovana skrb za otroka in pa odločitev za prvega otroka. To naj bi predstavljalo konkretni napotek pri oblikovanju tega nacionalnega programa za družino in verjamem, da bomo v relativno kratkem času z osnutkom oziroma predlogom tega nacionalnega programa za družino prišli v javnost in bo potem možno o njem veliko več govoriti in diskutirati.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg225">Hvala, minister. Gremo naprej. Medtem sem bil opozorjen, da je poslanski kolega Jože Tanko odsoten zaradi bolezni, torej opravičeno, da ne bi bilo kakšnega dvoumnega mišljenja.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg226">Mag. Janez Drobnič bo naslednji, ki bo postavil vprašanje ministru za delo, družino in socialne zadeve in ministru za šolstvo, znanost in šport. Prosim.</seg>
             </u>
             <note type="speaker">MAG. JANEZ DROBNIČ:</note>
-            <u who="#SDZ3.DrobničJanez" ana="#regular">
+            <u who="#DrobničJanez">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg227">Hvala lepa za besedo, gospod predsedujoči.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg228">Gospod minister! Za vprašanje, ki ga naslavljam, sem dobil pravzaprav idejo iz mesečnih informacij, ki jih izdaja republiški zavod za zaposlovanje. Poglejmo, kako naj bi se to glasilo. Nanaša se na vprašanje usposabljanja in priprave na zaposlitev, ki ga izvaja zavod za zaposlovanje.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg229">V letu 2002 so se programi izobraževanja in usposabljanja zmanjšali za 32%, glede na prejšnje leto, v javna dela je bilo vključenih 2.000 oseb manj, samozaposlovanje 43% manj, v program tako imenovani 5.000, kar pomeni izobraževanje in pridobivanje dodatnih znanj za brezposelne, ki se vključujejo v trg dela, pa je ta številka dosegla samo 3.900. Vemo, da se ta program imenuje po številu vključenih. Na hearingu ste omenjali, da se bo ta program bistveno povečal in da bo ta številka 5.000 zagotovo presežena.</seg>
@@ -1010,42 +993,42 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg232">Povejte mi prosim razloge, zakaj se je zgodilo takšno stanje oziroma zakaj takšno zmanjšanje programov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg233">Hvala za vprašanje. Ministra prosim za odgovor.</seg>
             </u>
             <note type="speaker">DR. VLADO DIMOVSKI:</note>
-            <u who="#SDZ3.DimovskiVlado" ana="#regular">
+            <u who="#DimovskiVlado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg234">Najprej bi povprašal o izvoru teh podatkov, ker glede na vaše vprašanje sem tudi sam pridobil te podatke. Kaže, da pravzaprav program 5000 je imel na začetku leta načrtovanih 4.700, dejanskih vključitev pa je bilo 5.200. To se pravi, da je indeks 109. To je konkreten program znotraj programa vključevanja in zaposlitev. Kaže tudi, da v končnem, ko govorimo o celotnih sredstvih, ko govorimo samo za program usposabljanja in izobraževanja, je praktično indeks 99,8, kar pomeni, da je bilo načrtovanje teh sredstev, bi rekel, in dejansko izvrševanje teh sredstev skorajda 100%, tako kot je bilo na začetku zamišljeno. Je pa seveda znotraj leta potrebno, in to pa moderna politika zaposlovanja zagotovo ima, se prilagajati trendom na trgu dela. Prilagajanje na trgu dela pomeni, da se predvsem odpravljajo strukturna neskladja. Če pogledate potem celotne podatke dolgotrajne zaposlenosti, zaposlenosti mladih, zaposlenosti žensk in tako naprej, pa podatki kažejo na to, da seti deleži oziroma te strukture spreminjajo in da v nekaterih segmentih dohajamo oziroma se na nek način izenačujemo s strukturami Evropske unije. Naj pri tej politiki povem, da je glavni cilj poskušati s sredstvi, ki so na razpolago v aktivni politiki zaposlovanja, vplivati predvsem na tako imenovani štiristebrni sistem, povečevanje zaposljivosti, ki naj bi vodilo predvsem mlade v vključevanje v zaposlitve. V tem smislu je aktivna politika zaposlovanja tista, ki naj na nek način omogoči večjo stopnjo zaposljivosti predvsem mladim, da bi se lažje vključili potem v proizvodni proces. Bom pa z veseljem pripravil ta odgovor tudi z vsemi številkami, ki vam jih bomo potem v pismeni obliki tudi posredovali.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg235">Hvala. Še dodatno vprašanje, kolega Drobnič.</seg>
             </u>
             <note type="speaker">MAG. JANEZ DROBNIČ:</note>
-            <u who="#SDZ3.DrobničJanez" ana="#regular">
+            <u who="#DrobničJanez">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg236">Hvala lepa. Gospod minister, se boste pač morali pogovoriti s tistimi vašimi službami, da bodo potem pisale drugačne podatke. V tej informaciji, to je uradna informacija, piše to, kar sem vam povedal. Zato nima smisla, da postavljam še kakršnokoli vprašanje na to temo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg237">Edino tole bi vas še vprašal. Če ni doseženega takšnega cilja izobraževanja in usposabljanja, pa tudi ne porabe denarnih nadomestil in denarnih pomoči, potem je denar nekje ostal. In vas bom vprašal: Za kaj ste porabili ta denar, če je ostal?</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg238">Zdaj pa še tisto drugo vprašanje, ki sem ga bil dolžan postaviti - upam, da mi boste dali v kvoto vprašanja, ker ga nisem izkoristil na začetku. To vprašanje se pa nanaša na ministra za šolstvo in šport, je pa povezano tudi s tem vprašanjem.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg239">Raziskave so pokazale, da kar 70% odraslih med 56. in 65. letom starosti ne dosega funkcionalne pismenosti, ki je potrebna za normalno vključevanje v sodobno družbo. To je strašljiv podatek za Slovenijo. Ko govorimo o neki družbi znanja, prihodnosti in ne vem kaj še vse, to popolnoma podre to sliko uspešnosti te države. Na spletni strani ministrstva za šolstvo pa je v uvodu napisan ta program takole: "Le s širjenjem možnosti za izobraževanje se bomo približali tistemu delu sveta, ki izobraževanje šteje med temeljne človekove pravice in se zaveda, da je pridobljeno znanje najzanesljivejše zavarovanje pred brezposelnostjo. Čedalje večjemu številu mladih in odraslih, ki želijo po srednji šoli izobraževanje nadaljevati, je bilo treba prilagoditi izobraževalno ponudbo. Zgledovali smo se po razvitem svetu in se odločili za razvejane študijske poti. Eno teorija, eno napovedovanje, eno spletne strani, praksa drugače. Kako to pojasniti slovenskim državljanom? Hvala lepa za dodatni odgovor.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg240">Hvala. Najprej bi pozval ministra, če še želi odgovoriti na to dodatno vprašanje.</seg>
             </u>
             <note type="speaker">DR. VLADO DIMOVSKI:</note>
-            <u who="#SDZ3.DimovskiVlado" ana="#regular">
+            <u who="#DimovskiVlado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg241">Mislim, da bo to zadrego rešilo pisno poročilo, ki sem ga že prej obljubil in tudi, kar se tiče nadomestil. Tako bo iz tega razvidno, kakšna so bila sredstva, zakaj so bila porabljena in v katerih programih.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg242">Hvala. Na vaše drugo vprašanje, mag. Drobnič pa po 247. členu poslovnika sledi odgovor v 30-ih dneh. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg243">Naslednje vprašanje bo postavila poslanka Sonja Areh Lavrič. Prosim.</seg>
             </u>
             <note type="speaker">SONJA AREH LAVRIČ:</note>
-            <u who="#SDZ3.ArehLavričSonja" ana="#regular">
+            <u who="#ArehLavričSonja">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg244">Hvala, gospod predsedujoči! Spoštovani ministri, spoštovane poslanke, poslanci! Koroška regija, ki je statistično gledana ena izmed najrevnejših regij v Sloveniji, se poleg gospodarske krize, neurejene infrastrukture, velike brezposelnosti in s tem posledično izseljevanjem mladih izobraženih strokovnjakov iz regije srečuje tudi s težavami s pitno vodo. Vodovodi se gradijo prepočasi, zahtevajo preobsežna finančna sredstva vaških skupnosti, ki jih le-te brez pomoči države s težavo zagotovijo. Na neurejenost tega področja ne le v koroški regiji, pač pa na širšem območju Slovenije, kaže tudi vse več informacij, ki se v zadnjem času pojavljajo v medijih. Naj omenim na kratko, "zaudarjajoča", rjava voda iz pip in podobno. Strah, da se bo pitna voda v Sloveniji v predhodnem obdobju še poslabšala, je upravičen.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg245">Ministra za okolje in prostor zato sprašujem, kako je v Sloveniji urejeno področje ravnanja s pitno vodo. V občini Slovenj Gradec na primer, velja odlok, po katerem se fekalije ne smejo uporabljati v naravi oziroma za polivanje kmetijskih zemljišč v času od 15. novembra do 15. marca.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg246">Ali morda obstaja podobno zakonsko določilo, ki bo to področje urejalo na nivoju celotne Slovenije?</seg>
@@ -1055,11 +1038,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg250">Dejstvo je, da bomo posledice prekomernega onesnaževanja in s tem slabega ravnanja s pitno vodo čutili vsi. Zato je potrebno zakonsko urediti strožja merila pri ravnanju z odpadno vodo, ustrezno posodobiti mrežo pitne vode ter kršitelje ustrezno sankcionirati. Zavedamo se moramo, da le države, ki bodo imele zdravo pitno vodo, bodo bogate države. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg251">Hvala lepa. Dajem besedo ministru za okolje, prostor in energijo.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOPAČ:</note>
-            <u who="#SDZ3.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg252">Hvala lepa. Povsem se strinjam z vami, spoštovana gospa poslanka, da bodo samo države, ki bodo imele zdravo pitno vodo, lahko rekle zase, da so države blagostanja. Ampak, v Sloveniji sistem varovanja pitne vode oziroma skrbi za pitno vodo funkcionira, funkcionira dobro, že mnogo let, imamo pa v resnici tudi kje kakšno težavo. Sektor varovanja voda je pravzaprav razdeljen po svojih pristojnostih med tri resorje: ministrstvo za okolje, ministrstvo za zdravje in ministrstvo za kmetijstvo, gozdarstvo in prehrano.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg253">Za kvalitetno in za zdravstveno neoporečno pitno vodo, to kar je bilo pravzaprav vaše osrednje vprašanje, je zadolženo ministrstvo za zdravje, kmetijski sektor pa je zadolžen za okoljsko prijazno kmetovanje in obvladovanje vseh vrst emisij, ki bi zaradi kmetijske dejavnosti poslabšale stanje okolja, zlasti pitne vode. Ministrstvo za okolje, prostor in energijo pa je zadolženo za varovanje vodotokov in pa podzemnih voda, ki so v glavnem v večini Sloveniji tudi vir pitne vode.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg254">Konkretno, vaše vprašanje se je nanašalo na vnos gnojnic oziroma gnojevke, se reče uradno, v tla. Ta režim v Sloveniji ureja uredba o vnosu nevarnih snovi in rastlinskih hranil v tla, ki je bila sprejeta že leta 1996. S to uredbo so določene količine dovoljenih vnosov različnih snovi v tla, določene so mejne vrednosti, posebej pa so dovoljene letne količine na območjih varstvenih pasov za zajem pitne vode. V tem aktu, ki je vseslovenski, ki ni samo občinski, kot ta, ki ste ga omenili, je predvideno naslednje: da je prepovedano gnojenje z gnojevko ali z gnojnico na tleh, ki so nasičena z vodo, na tleh, ki so prekrita s snežno odejo, na tleh oziroma na velikih strminah, kjer gnojevka odteka po površini. Gnojenje je nasploh prepovedano na vseh zmrznjenih tleh in pa na vseh vodnih zemljiščih. To je splošna prepoved. Na vseh drugih kmetijskih zemljiščih, ki že tako ali tako niso zajete v tem, kar sem do zdaj povedal, pa so, torej na drugih kmetijskih zemljiščih, ki so brez zelene odeje, je nasploh prepovedano gnojenje z gnojevko od 15. novembra do 15. februarja. V tem konkretnem občinskem predpisu, ki ste ga omenili, je pač napisano do 15. marca, državni predpis govori o 15. februarju Gnojenje z gnojevko je nasploh na območju cele države prepovedano na vseh stavbnih zemljiščih, na vseh nerodovitnih zemljiščih in to je pravzaprav vse.</seg>
@@ -1069,11 +1052,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg258">Sicer pa, naj omenim še to, da je s 1. januarjem letos v Sloveniji začel veljati strožji, evropski predpis o dovoljenih količinah pesticidov v pitni vodi - to je sicer druga problematika, ni povezana z gnojnico oziroma z gnojevko - in da sistem nadzora funkcionira in zaenkrat ne vidimo kakšnih alarmantnih primerov - kjerkoli. Razen, kot sem rekel, sem in tja občasno na teh malih vaških vodovodih. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg259">Hvala mag. Janez Kopač. Želite še kakšno dodatno vprašanje? Ne. Hvala lepa. Ministru za notranje zadeve bo postavil vprašanje poslanski kolega Branko Kelemina. Prosim.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ3.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg260">Hvala lepa za besedo. Spoštovani gospod minister, zadnjič vas ni bilo, pa vam nisem mogel postaviti vprašanja. Zadeva je še vedno aktualna.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg261">Sicer bom pa nadaljeval tam, kjer je končala moja poslanka kolegica Marija Ana Tisovic. Vi ste že delno odgovorili na to vprašanje, vendar ga sam želim osvetliti z druge dimenzije. In sicer bom povedal tako, kakor sem zadnjič nameraval, da so strokovnjaki, ne jaz osebno, ampak strokovnjaki s področja kriminologije ugotovili, da so se rezultati odkrivanja in preganjanja gospodarskega kriminala v Sloveniji katastrofalni. O tem smo veliko govorili in se vse s tem strinjamo. Razlogi za to so, tako navajajo poznavalci, predvsem v neustrezni kadrovski strukturi na vseh nivojih organov pregona gospodarskega kriminala</seg>
                <note>policiji, tožilstvu, sodstvu</note>
@@ -1083,11 +1066,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg265">Zakaj oblast zavestno dopušča takšno stanje? Kdaj mislite spremeniti zakonodajo, ki bo ustrezna evropski in ki bo preprečila gospodarski kriminal v Sloveniji? Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg266">Hvala. Dr. Rado Bohinc, minister za notranje zadeve, imate besedo. Prosim.</seg>
             </u>
             <note type="speaker">DR. RADO BOHINC:</note>
-            <u who="#SDZ3.BohincRado" ana="#regular">
+            <u who="#BohincRado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg267">Hvala lepa za to vprašanje, čeprav najavljeno je bilo vprašanje o kriminaliteti in kriminalistični policiji nasploh, vi pa ste se, če sem prav razumel, sedaj osredotočili zgolj na gospodarsko kriminaliteto, o čemer sem poprej že govoril, pa bi samo poglobil še nekaj odgovorov v zvezi z gospodarsko kriminaliteto in to postavil nekoliko širši kontekst.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg268">Kar zadeva kriminalistično policijo in njenega delovanja v Sloveniji, moram povedati, da so standardi njenega delovanja mednarodno primerljivi tako po načinu delovanja kot tudi po stopnji preiskanosti oziroma po njenih rezultatih, zato bi moral izraziti nestrinjanje z oceno sedaj, pa ne vem, ali je vaša ali ste koga citirali o tem, da se rezultati na področju odkrivanja kaznivih dejanj katastrofalni.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg269">Ta ocena enostavno ni točna. Točno je, da stopnja preiskanosti kaznivih dejanj splošne kriminalitete nam statistično gledano raste, še posebej je na področju organiziranega kriminala in na področju klasičnega in premoženjskega kriminala stopnja preiskanosti v zadnjem času celo nad evropskim povečanjem - tu bi vas moral s statistiko vendar demantirati, pa ne verjamem, da ste imeli to v mislih. Če pa ste imeli v mislih samo gospodarski kriminal, potem moram pa izraziti strinjanje s tem, tako kot sem ga izrazil že po prej: s tem, da to ni vprašanje - kot pravim - tega obdobja, ampak se kriza obvladovanje gospodarske kriminalitete vleče že vsaj eno desetletje, začenši od postopka privatizacije, in tudi sedaj, ko vstopamo v posttranzicijsko obdobje, ko ne obvladujemo oziroma nismo v celoti kos novim ponavljajočim se zapletenim oblikam gospodarskega kriminala.</seg>
@@ -1096,86 +1079,86 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg272">Glede tega vprašanja smo neusklajeni z večino evropskih zakonodaj in je prav, da čim prej ZKP v tem delu spremenimo in to bo zagotovo prispevalo k povečanju učinkovitosti in tudi racionalnosti policijskega dela; upoštevanja njenega dela v dokaznih postopkih pred sodiščem. Seveda pa bomo delo na področju boja zoper gospodarski kriminal naslonili tudi na nastajajočo strategijo. Imamo strategijo boja zoper gospodarski kriminal iz leta 1997, ki se ni uresničila zaradi tega, ker ni bila finančno podprta; sedaj se pripravlja nova in tudi nacionalni program - hvala vam lepa, da ste se ga spomnili - boja zoper kriminaliteto, ki ga bomo predložili državnemu zboru še pred koncem letošnjega prvega polletja. Kakšno leto delamo že na tem nacionalnem programu, ki bi imel morda tam 10, 12 separatnih področij za različne vrste kriminalitet, med drugim tudi gospodarsko kriminaliteto, in to bo podlaga za aktivnost koordinacijske skupine, ki jo bo vlada ustanovila iz vrst tožilcev, institucij s področja pranja denarja, korupcije, davčnih, carinskih in podobnih institucij, da bodo lahko uskladili svoja dejanja, predvsem pa uskladili tudi razvoj kadrov s tega področja, da bo trg kadrov na tem področju konkurenčen. Priložnost je pa tudi v novem sistemu plač v javnem sektorju, da odpravimo nesorazmerja med sorodnimi profili, kot je kriminalist specialist, preiskovalni sodnik, tožilec in davčni inšpektor, in bi preprečili prehod in nelojalnokonkurenco različnih institucij: to, kar je zaradi disparitet v plačah danes eden od razlogov za fluktuacijo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg273">Hvala. Še dodatno vprašanje, kolega Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ3.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg274">S komentarjem, seveda: "Saj ni res, pa je!" Namreč, gospod minister, razumem, da gre za neko dolgo obdobje, podedovano tako rekoč, v vaš mandat. Ampak, za božjo voljo, tu gre za kontinuiteto! Ne morete se izgovarjati 20 let zato, ker ste vi samo dve leti zdaj minister, da neko področje ostaja neurejeno. Gre za politični aspekt! Namerno, načrtno se zakonodaja in celoten postopek po ZKP in tudi po kazenskem zakoniku ter drugih dokumentih ne izvaja oziroma je sprejeta zakonodaja takšna, da dejansko nekoga ni mogoče prijeti. In kadri, o katerih govorite, odhajajo tudi zato, ker niso plačani, tudi zato. Pogovarjal sem se z določenimi strokovnjaki s tega področja in so mi povedali, da pod takimi pogoji, za tak denar ne morejo delati, in gredo v druge službe. In vi ne naredite na tem področju popolnomaničesar in oblast to podpira, seveda tisti, ki zadaj za tem stojijo, ki imajo od tega korist - to je pa liberalistični način razmišljanja. In, lepo vas prosim, upam, da ste si prebrali članek od 14. decembra, čeprav velikokrat govorite, "kaj bomo časopisebrali". Ne, novinarji pomagajo razgaljati te stvari in tu je natančno opisano, kje je srž problema. In lepo vas prosim, za božjo voljo, dajte na področju zakonodaje nekaj napraviti, ker to, kar se pri nas dogaja na področju gospodarskega kriminala, je resnično nevzdržno, nevzdržno! In če mislite seveda še naprej nadaljevati s takim sistemom in liberalistično omogočati, da se bo ta kriminal nadaljeval, potem povejte to slovenski javnosti, da bodo tudi drugi, ki do danes še niso bili udeleženi v tem, se poslužili teh ukrepov. Skratka, to je nevzdržno in tu morate nekaj narediti.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg275">Hvala. Prosim še za ta del odgovora, minister.</seg>
             </u>
             <note type="speaker">DR. RADO BOHINC:</note>
-            <u who="#SDZ3.BohincRado" ana="#regular">
+            <u who="#BohincRado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg276">Naše delovanje na tem področju, ki je zelo aktivno usmerjeno zoper vse vzroke zaostajanja na področju boja zoper gospodarski kriminal, nima nikakršnih političnih razsežnosti, nikakršnih političnih ozadij. Nasprotno! Mi smo predložili novelo oziroma nov zakon o plačah v javnem sektorju v lanskem letu, ki ga je državni zbor sprejel, in tazakon je ena od priložnosti, da se odpravijo disparitete, ki so v škodo določeni vrst; policijskih specialistov tudi na področju gospodarskega kriminala. To je priložnost, da se v letošnjem letu stori. Mi smo tudi predložili, v kratkem bo na parlamentarnih klopeh, novelo, zakona o policiji, ki je tudi v funkciji uspešnejšega boja na tem področju. Približno 70 členov zakona o policiji se spreminja. In, kot ste slišali, to je pa pristojnost kolege in je tudi v postopku novela zakona o kazenskem postopku. Težko bi torej sprejel oceno, da se ne spopadamo s problemi, da ne predlagamo zakonodaje, žal se pa moram strinjati z oceno, da je to eno podedovano področje, ki je bilo razvojno precej zanemarjeno in se ga je treba zelo resno lotiti.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg277">Hvala. Kolega Bojan Kontič se je odpovedal vprašanju, zato dajem besedo Bogomirju Vnučcu, ki bo postavil vprašanje ministru za promet. Prosim.</seg>
             </u>
             <note type="speaker">BOGOMIR VNUČEC:</note>
-            <u who="#SDZ3.VnučecBogomir" ana="#regular">
+            <u who="#VnučecBogomir">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg278">Hvala za besedo, gospod podpredsednik. Spoštovane kolegice in kolegi! Ministra za promet sprašujem sledeče.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg279">Kdaj bo zakonsko omogočeno, da bodo lahko tudi zasebniki opravljali reševanje na cestah in v gorah s helikopterji? Spodbudila me je k temu vprašanju nesreča, ki se je zgodila pred nekaj tedni, za katero smo vsi že slišali, in sicer, ker sta se ponesrečila dva madžarska turista v gorah, neprimerno opremljena, helikopter z Brnika zaradi slabih vremenskih razmer ni mogel vzleteti, zato se je v reševanje teh dveh ponesrečencev odpravila enota oziroma skupina gorskih reševalcev iz Mojstrane. Pri tem jih je zasul snežni plaz in eden izmed njih je tudi umrl, na žalost, zaradi tega, ker helikopter Brnika ni mogel vzleteti, lahko rečemo, da je posledično prišlo do tega tragičnega dogodka. Na prošnjo čisto na osebni ravni se je pa naslednji dan zasebni helikopter, čeprav ni registriran za to dejavnost odpravil na pot z letališča Lesce, kjer pa so vremenske razmere bistveno drugačne kot na Brniku.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg280">Zato sprašujem: Kdaj bo zakon omogočil tudi zasebnikom, ker v zadnjem času smo priča, da se določeni uspešni gospodarstveniki in uspešni v drugih poklicih odločajo za nakup tovrstnih plovil, ki so - lahko rečem - tudi tehnično in tudi drugače boljši, kot jih ima naša policija - vsaj nekateri - in ni nobenih razlogov, da bi jim ne omogočili tudi te vrste dejavnosti. Predvsem z vidika tako konkurenčnosti kot tudi cene, saj so tovrstni poleti cenejši. Primer oskrbovanja planinskih postojank jasno kaže na to, da so ti zasebniki veliko cenejši kot policija. Po drugi strani bi pa policijo tudi razbremenili in bi njihova flota bila potem na razpolago njihovi osnovni primarni dejavnosti.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg281">Mogoče vprašanje ni strogo namenjeno ministru za promet, vendar glede na to, da v okviru ministrstva obstaja urad za letalstvo, se mi zdi smiselno, da bi mi na to vprašanje odgovoril minister za promet. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg282">Hvala. Prosim ministra Jakoba Presečnika, za odgovor.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ3.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg283">Hvala lepa za vprašanje. Na koncu ste seveda pravilno ugotovili, da vprašanje, ki je postavljeno oziroma odgovor na to vprašanje ni v pristojnosti ministrstva za promet. Podobno vprašanje je že bilo enkrat v tem državnem zboru postavljeno, na njega je takrat odgovarjalo ministrstvo za zdravje. Menim, da je tudi danes treba vprašanje nasloviti na to ministrstvo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg284">Pri tem bi poudaril to, da ministrstvo za promet oziroma organ v sestavi, njegov organ v sestavi, to je uprava Republike Slovenije za civilno letalstvo, da je to pristojni upravni organ za izdajo posebnega dovoljenja za opravljanje dejavnosti reševanja s helikopterji, s katerimi pravna ali fizična oseba dokazuje, da izpolnjuje pogoje glede strokovnega osebja in potrebne organiziranosti in da lahko zagotavlja varno delovanje zrakoplovov na področju letalskega reševanja s helikopterji. Medtem ko organizacija reševanja tako v gorah kot na cestah s helikopterjem ni v pristojnosti ministrstva za promet, ampak ministrstva za zdravje.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg285">Zato bom to vprašanje naslovil tudi sam osebno direktno na ministrstvo za zdravje in bomo tudi s sodelovanjem med resorjema - in še mogoče drugimi resorji tudi, kot so obramba in notranje zadeve - vam odgovoriti na to vprašanje v predpisanem roku. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg286">Hvala. Še dodatno vprašanje. Prosim.</seg>
             </u>
             <note type="speaker">BOGOMIR VNUČEC:</note>
-            <u who="#SDZ3.VnučecBogomir" ana="#regular">
+            <u who="#VnučecBogomir">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg287">Hvala za besedo. Spoštovani gospod minister! Namenoma sem omenil to, kar sem povedal, ker se mi zdi, glede na to, da je uprava za letalstvo sestavni del ministrstva, bi bilo prav, ne samo za ta primer, ampak za vse druge tudi - se pravi, ko se izpostavi neko vprašanje - da se ve, da potem, če obstaja nekje urad, uprava, agencija, da potem ta krovna rešuje problem, ker ta problem, tako kot ste sami ugotovili, ni nov.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg288">Bistveni problem, ki sem ga hotel omeniti, je pa v tem, da je policija stacionirana na Brniku, nesreče se pa dogajajo v slabem vremenu. In v slabem vremenu je na Brniku vedno megla. Na drugih letališčih pa te ni, vsaj v tem pogledu, kar se vremenskih pogojev tiče. Seveda na vreme ne moremo vplivati, v 90%. Zasebniki pa so razpršeni po celi Sloveniji. Tako, mislim, da bi bilo veliko lažje, pa ne samo iz pridobitne dejavnosti teh zasebnikov, ampak čisto zaradi tega, da potem ne prihaja do čisto osebnih kontaktov in pa na ravni nekih poznanstev, ampak da je to lahko organizirano brez neke škode, tako za tistega, ki se poda v tako akcijo, ker konec koncev tvega tudi lastno življenje, vsaj v tem zadnjem primeru je bilo tako.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg289">Tako bi apeliral tu na ministra, da če se še nič ne dela na tem, da ta urad za letalstvo pa sproži to pobudo in da se tukaj zakonodaja prilagodi temu, po drugi strani pa tudi, da vemo, da je to reševanje brezplačno za tiste udeležence in da se tudi, recimo; tisti, ki povzročijo tako akcijo zaradi lastne neprevidnosti, da jo tudi plačajo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg290">Hvala. Želite še odgovoriti na to? Prosim.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ3.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg291">Mislim, da sem že prej dovolj pojasnil. Urad za letalstvo kot organ v sestavi ministrstva za promet z ustreznim dokumentom potrjuje tiste zrakoplove in tista vozila, ki so primerna tudi za reševanje ali za kakšno drugo dejavnost. Vendar, ponovno poudarjam, da za organizacijo reševanja pa so pristojni v naši državi drugi. In zato sem rekel, da bomo pripravili skupni odgovor. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg292">Hvala. Poslanska kolegica Silva Črnugelj, odslej mag. Silva Črnugelj, bo postavila vprašanje ministru za zdravje. Prosim.</seg>
             </u>
             <note type="speaker">SILVA ČRNUGELJ:</note>
-            <u who="#SDZ3.ČrnugeljSilva" ana="#regular">
+            <u who="#ČrnugeljSilva">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg293">Glede na to, da ministra za zdravje, dr. Kebra, ni, in glede na določilo 247. člena poslovnika državnega zbora, bom to vprašanje preložila na naslednjo sejo, ker ga nameravam ministru zastaviti ustno.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg294">Drugače je pa storjena računalniška napaka glede mojega naziva - samo toliko v informacijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg295">Sem mislil čestitati. Hvala lepa. Torej, vprašanje prenesemo na naslednjo sejo. Dr. Jožef Bernik je naslednji za vprašanje ministru za pravosodje. Prosim.</seg>
             </u>
             <note type="speaker">DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#regular">
+            <u who="#BernikJožef">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg296">Hvala lepa, gospod predsedujoči. Gospoda ministra, kolegice in kolegi! Moje vprašanje ne bo posebno dolgo niti komplicirano, gre pa za naslednje, da se v javnosti pojavljajo podatki - ne vem, kako točni so - o tem, da je že prišlo in da še prihaja do velikih napak v sodnih odločbah in potem tudi velikih odškodnin, ki jih mora država plačevati zaradi slabega poslovanja sodišč in morda tudi državnih tožilcev - policije pa morda ne toliko, kot razumem. Torej, gre za to, da, če pravilno razumem, je bilo od 292 prvostopenjskih sodb v letu 2002 vsaj 54% ali približno 158, če pravilno razumem, primerov razveljavljenih in da so bile to tožbe, vsaj tako se govori, tožbe sodišč, državnih tožilcev. Ne omenja se toliko, kolikor vem, policije. Seveda, odvetniki so pa uganka, kajti največji, bi rekel, primeri so prišli do tega, da so bili razveljavljeni in zdaj vsakdo lahko ugiba, zakaj, zaradi sposobnosti pravnikov ali kaj podobnega.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg297">Me pa zanima naslednje: Ali imate kakšne podatke o tem, kakšne odškodnine je bilo že treba plačevati, koliko jih še čaka? Se pravi, koliko jih je v zraku trenutno.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg298">Dalje: Kakšen nadzor in načrt za izboljšanje stanja imate? Kje je tu državna tožilka? Ali lahko podkurite pod njenim uradom kakšen ogenj, da se bo kaj premaknilo?</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg299">In končno tudi: Kaj delajo druge države, da se tega problema rešijo? Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg300">Hvala, dr. Bernik. Prosim za odgovor ministra za pravosodje.</seg>
             </u>
             <note type="speaker">MAG. IVAN BIZJAK:</note>
-            <u who="#SDZ3.BizjakIvan" ana="#regular">
+            <u who="#BizjakIvan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg301">Spoštovani gospod podpredsednik, spoštovani gospod poslanec! Najprej mogoče nekaj besed v zvezi z omenjenimi, kot ste rekli, velikimi napakami. Torej, res je, da je prišlo do nekaj precej odmevnih razveljavitev sodb, in to iz različnih razlogov, vse pa v povezavi s procesi, ki so že sicer bili precej v središču medijske pozornosti. Del teh razveljavitev se nanaša na odločbo ustavnega sodišča, ki je v lanskem letu odločilo, da določeni dokazi ne smejo biti v spisu in, še več, da sodnik, ki se je imel možnost seznaniti z nekaterimi nedovoljenimi dokazi, ne morejo odločati o zadevi, o katerih se je seznanil z njimi.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg302">Torej, nekaj razveljavitvenih sodb se nanaša ravno na take primere, pri čemer v nekaterih zadevah preprosto ni bilo mogoče več na prvi stopnji ukrepati drugače. O nekaterih drugih bi se morda dalo še nekatere postopke izpeljati drugače, če bi se dovolj zgodaj z vso pazljivostjo upoštevalo to odločbo. Hkrati pa želim vendar omeniti, da se ne nanašajo vse razveljavitve ravno na ta razlog, torej odločbo ustavnega sodišča. Tisto, kar sem razumel iz najave vprašanja, torej na tisto sem skušal pripraviti nekaj številk, za katere upam, da vsaj do neke mere osvetljujejo vprašanja, ki vas zanimajo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg303">Torej, gre za letne številke, številke na letni ravni, pri čemer, recimo, je osnovni podatek ta, da je državno tožilstvo v lanskem letu skupaj obravnavalo 43.112 ovadb. Od teh jih je rešilo 32217. Na prvi stopnji je bilo v tem letu, glede na obravnavano obdobje izrečenih 7.400 obsodilnih sodb, 867 oprostilnih ter 2 936 zavrnilnih sodb.Na odločbe prve stopnje je tožilstvo vložilo 1 208 pritožb, od tega je bilo 325-im ugodeno, 123 je bilo zavrnjenih, ostale pa so še v postopku. Iz teh številk se da na nek način sklepati, kako uspešno je tožilstvo v posameznih zadevah. V vsakem primeru pa lahko na hitro vidimo, da število obsodilnih sodb, vendar bistveno prekaša število oprostilnih sodb oziroma da je razmerje, tako v grobem, skoraj 1:10.</seg>
@@ -1183,41 +1166,41 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg305">Naj mimogrede še pripomnim, da opažam, da ima matični odbor državnega zbora prav kmalu na dnevnem redu tudi obravnavo skupnega poročila državnega tožilstva za leto 2001, in pričakujem, da bo na nekaj vprašanj mogoče možno odgovoriti tudi ob tisti obravnavi. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg306">Hvala, mag. Ivan Bizjak. Dr. Bernik bi želel postaviti dodatno vprašanje. Prosim.</seg>
             </u>
             <note type="speaker">DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#regular">
+            <u who="#BernikJožef">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg307">Hvala lepa za odgovor. Bi pa vprašal še naslednje: kakšna je vaša kompetenca tukaj, Kaj lahko naredite in kaj nameravate narediti? Vprašal pa bi tudi to: Ali je naše stanje primerljivo, recimo, z drugimi državami v Evropi? Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg308">Hvala lepa. In še, prosim, dopolnitev odgovora.</seg>
             </u>
             <note type="speaker">MAG. IVAN BIZJAK:</note>
-            <u who="#SDZ3.BizjakIvan" ana="#regular">
+            <u who="#BizjakIvan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg309">No, glejte, kar zadeva pristojnosti ministrstva za pravosodje, je tu temeljna pristojnost predlagati ustrezno zakonodajo. Danes je bilo tu že nekajkrat omenjeno, pa tudi v sredstvih obveščanja smo že predstavili spremembe zakona o kazenskem postopku, ki v prvi vrsti rešujejo tiste probleme, glede katerih je ustavno sodišče ugotovilo neskladje z ustavo. Seveda pa skušamo tudi z določenimi spremembami, zlasti v predkazenskem postopku, doseči, da bo ta čim bolj učinkovit, da bo usmerjanje tožilstva proti policiji učinkovitejše, da bo na ta način zbranega več ustreznega dokaznega gradiva, ki bo lahko potem tudi prispevalo k ustreznemu nadaljnjemu postopanju.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg310">Drugo, kar je, ministrstvo pripravlja celovito spremembo zakona o kazenskem postopku, za kar smo že v preteklem letu začeli določen raziskovalni projekt, ki naj da temeljite osnove za kar najboljšo ureditev, torej vključno z zbiranjem izkušenj pri različnih ureditvah in s tem pri iskanju ustreznih podlag za našo odločitev o tem, kateri sistem pravzaprav izbrati.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg311">Na drugi strani pa je treba reči, da je tudi kazenski postopek takšen, kjer se pravilnost odločitev na prvi stopnji preverja na instanci. In tudi v tem okviru je po naši oceni izjemno pomembno, da deluje sistem ocenjevanja sodnikovega dela, ki se dogaja znotraj samega sodstva, vendar s strani personalnih svetov višjih sodišč, ki imajo brez dvoma dober vpogled v to, kakšno je odločanje sodnikov eno stopnjo nižje. Torej, tovrstno, bi rekel, kvaliteto ocenjevanja, mislim, da je treba še izboljšati, čeprav še ni daleč tisti čas, ko se je pravzaprav pristojnost ocenjevanja spremenila tako, da zdaj pripada instančnemu sodišču. No, in na ta način, mislim, da se lahko odpravijo prepogoste napake.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg312">Na drugi strani je pa tudi res, da pogoste spremembe materialne in procesne zakonodaje vplivajo na to, da je takšnih postopkovnih napak lahko več, in je torej težiti k temu, da bi dosegli čim bolj stabilen pravni red, ki bo marsikakšno tovrstno napako potem vnaprej preprečil in dal veliko boljše možnosti za kvalitetno sodno odločanje.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg313">Hvala, gospod minister. Kolega Franc Sušnik bo postavil vprašanje ministru za finance in ministrici za regionalni razvoj, ki je sicer ni tukaj. Prosim.</seg>
             </u>
             <note type="speaker">FRANC SUŠNIK:</note>
-            <u who="#SDZ3.SušnikFranc" ana="#regular">
+            <u who="#SušnikFranc">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg314">Hvala lepa, gospod podpredsednik. Spoštovani gospod minister! V drugi polovici meseca februarja smo občine in poslanci v državni zbor dobili nov izračun primerne porabe in finančne izravnave. Vlada je ta izračun sprejela na svoji 8. redni seji 13. februarja 2003 in, kot sem že povedal,s tem seznanila vse, ki morajo biti seznanjeni. Iz priložene tabele je razvidno, da je pripadajoča finančna izravnava v višini 36 milijard 893 milijonov 421 tisoč SIT za 2,883 milijard nižja od pripadajoče finančne izravnave za leto 2003, ki jo je vlada sprejela na 91 korenspodenčni seji dne 10.10.2001 tudi s tem sklepom vlade smo bili seznanjeni župani. Prav ti sklep pa so bili osnova za pripravo in sprejem večine že sprejetih proračunov občin za leto 2003. Tako je bilo nesporno grobo kršeno bistveno načelo zakona o financiranju občin, ki naj bi zagotavljal, da bi bili podatki za izračun primerne porabe in pripadajoče finančne izravnave pripravljeni tako, da bi vsaka občina že pred začetkom proračunskega leta vedela, do kakšne sredstev bo opravičena iz državnega proračuna. S sprejetjem februarskega sklepa temu ni tako.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg315">S sklepom vlade opredeljena višina finančne izravnave za leto 2003 z dne 12.2.2003 v višini 26 milijard 893 milijonov pa je kar za cele 4 milijarde 127 milijonov tolarjev nižja od vsote, ki jo je državni zbor na predlog vlade Republike Slovenije dne 30.11.2001 v proračunu Republike Slovenije za leto 2003 namenil pod imenom "tekoči trensferi" drugim ravnem države za name finančne izravnave občinam in za cel milijon in 570 tisoč 258 tisoč, za celo milijardo 570 milijonov 258 tisoč tolarjev nižja od spremenjenega proračuna Republike Slovenije za leto 2003.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg316">Tukaj, bi rad še posebej poudaril, da smo na vsak način nasprotovali tudi temu znižanju primerne porabe oziroma finančnih izravnav ob sprejemu spremenjenega proračuna.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg317">Sedaj ministra sprašujem. Kakšni so razlogi za tako drastično zmanjševanje sredstev, namenjenih občinah, in to predvsem podeželskim občinam - tukaj je zajetih 165 občin - pri tem pa 28 predvsem mesnim občin ustvari in hkrati porabi nekaj manj kot 24 milijard presežkov prihodkov nad primerno porabo? Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg318">Prosim ministra za odgovor.</seg>
             </u>
             <note type="speaker">DR. DUŠAN MRAMOR:</note>
-            <u who="#SDZ3.MramorDušan" ana="#regular">
+            <u who="#MramorDušan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg319">Hvala lepa za vprašanje. Sedaj, skladno s določbami zakona o financiranju občin je predvsem ministrstvo za finance zadolženo za pripravo izračuna primerne porabe občin in določi obseg pripadajočih sredstev finančne izravnave tistim občinam, ki jim lastni prihodki ne zadoščajo za pokrivanje primerne porabe.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg320">Sedaj, vlada Republika Slovenija je tako na podlagi višine sredstev določenega zneska primerne porabe na prebivalca za leto 2002 in 2003 sprejela izračun primerne porabe občin za leto 2003 in zneske pripadajočih sredstev finančne izravnave za to proračunsko leto. Te prve podatke o pripadajoči finančni izravnavi so občine dobile že v oktobru leta 2001, ker takrat sta se pripravljala tudi proračun za 2002 in 2003, zadnji pa v februarju letošnjega leta, tako kot ste tudi navedli. Po prvotnem izračunu primerne porabe, to je bilo v oktobru leta 2001, in ocenjenih lastnih prihodkih občin v tem istem obdobju so bila ocenjena potrebna dopolnilna sredstva, ki naj bi se zagotavljala občinam v letu 2003, v večjem obsegu, kot so bila izračunana na podlagi podatkov ocenjenih prihodkih občin za leto 2001. Pri zadnjem izračunu pa so osnovo za oceno lastnih prihodkov občin predstavljala dejansko realizirana sredstva lastnih prihodkov občin po posameznih vrstah v obdobju od 1.1. do 31.12. leta 2002. Na podlagi novougotovljenih razmerij med odmerjeno dohodnino zavezancev, ki imajo stalno bivališče v občini, pa od odmerjenih odločbah za leto 2001 je za leto 2003 izračunan ključ dohodnine, po katerem se občinam tekoče razporejajo prihodki iz tega naslova.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg321">Ker je bilo ugotovljeno, da je dinamika realizacije prihodkov višja od prvotno ocenjene v oktobru 2001, tako prihaja do sprememb v višini potrebnih sredstev finančne izravnave, ki naj bi jih prejele posamezne občine.</seg>
@@ -1225,89 +1208,89 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg323">Zdaj pa primerjalni podatki o znesku primerne porabe na prebivalca za leto 2003 v primerjavi z 2002 jasno kažejo, da zaradi specifične zagotovitve dodatnih sredstev za področje kulture, stanovanjskega gospodarstva in komunalne dejavnosti primerna poraba na prebivalca raste z 8,3%, kar je višje, kot je ocenjena rast življenjskih stroškov za leto 2003. Tako ob upoštevanju teh podatkov posledično višje rastejo tudi sredstva izračunanega obsega primerne porabe občin. Prvotno izračunan obseg primerne porabe občin se tako ne spreminja. Občinam so se spremenila samo pripadajoča sredstva finančne izravnave zaradi novoocenjenih lastnih prihodkov.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg324">Hvala za odgovore. Zahtevate dopolnitev odgovora? Prosim.</seg>
             </u>
             <note type="speaker">FRANC SUŠNIK:</note>
-            <u who="#SDZ3.SušnikFranc" ana="#regular">
+            <u who="#SušnikFranc">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg325">Dejstvo je, vse to, kar ste povedali sicer drži, vendar smo mnenja, da je izračunani obseg finančne izravnave, kot sem že povedal, 4 milijarde nižji od prvotno sprejetega proračuna, 1,5 milijarde nižji od novega proračuna, predvsem posledica nerealno ocenjenih lastnih prihodkov. Dejstvo je, da je bilo s 1.1. ukinjena tudi sprememba namembnosti kot eden od virov občinskih proračunov z uveljavitvijo zakona o graditvi objektov, in evidentno je, da so lastni prihodki tudi nerealno ocenjeni v tistem povprečju, o katerem veste, o čem kaj govorim. Nesporno je, da so na ta način predvsem podeželske občine prikrajšane najmanj za 1,5 milijarde sredstev.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg326">Zaradi tega dodatno sprašujem, če je to že najava rebalansa proračuna. In: Kako se ta akt oziroma ta sklep sklada z večkrat deklarirano politiko vlade o zavzemanju za skladni regionalni razvoj?</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg327">Dejstvo je, da je 165 občin občin, s podeželja, z novim izračunom finančne izravnave, ki je posledica nerealno vrednotenih prihodkov - te občine so prikrajšane najmanj za 1,5 milijarde, če ne celo 29 več. Vsi v tem državnem zboru smo imeli možnost videti ta razdelilnik in tudi ugotovitve po občinah so take, da so kar 20 in 10, in ne vem, koliko še, milijonov posamezniki izgubili predvidene finančne izravnave. Zato bi rad, da bi mi še enkrat poskusili odgovoriti: Kaj vas je vodilo, oziroma kaj ste razmišljali,oziroma kakšni so argumenti za tako visoko oceno predvidenih lastnih prihodkov po 21. in 22. členu? Lepo prosim.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg328">Hvala. Prosim še za dopolnilni odgovor ministra.</seg>
             </u>
             <note type="speaker">DR. DUŠAN MRAMOR:</note>
-            <u who="#SDZ3.MramorDušan" ana="#regular">
+            <u who="#MramorDušan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg329">Rekel bi, da ne gre za kakšen začetek rebalansa, ampak gre enostavno samo za sledenje zakona, v katerem pač zakon določa, na podlagi katerih obdobij se ocenjuje lastne prihodke občin, in se seveda potem na osnovi poračuna zagotovi primerna poraba v posameznih občinah na višini, kot je predpisana. Še enkrat bi poudaril, da gre za povišanje za 8,3% primerne porabe za vsako občino, tako da tukaj ne vidimo razlog za skrb, ker bo šlo za realno povečanje glede na 5,1% predvideno stopnjo inflacije.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg330">Hvala. Na vrsti je kolega Samo Bevk za vprašanje ministru za finance. Prosim.</seg>
             </u>
             <note type="speaker">SAMO BEVK:</note>
-            <u who="#SDZ3.BevkSamo" ana="#regular">
+            <u who="#BevkSamo">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg331">Hvala za besedo, gospod podpredsednik. Spoštovani zbor! V zadnjih dveh letih sem vladi Republike Slovenije in ministrstvu za finance postavil tri poslanska vprašanja in eno pobudo za spremembe in dopolnitve zakona o financiranju občin. V odgovoru na prvo vprašanje mi je na 4. seji 20. marca 2001 takratni minister za finance, mag. Anton Rop, odgovoril, citiram, "da so izhodišča za spremembo zakona o financiranju občin že pripravljena in da bomo začeli intenzivno diskusijo v naslednjih desetih dnevih o posameznih izhodiščih za dokončno pripravo zakona tako znotraj vladne koalicije kot tudi državnega zbora." Čez slabo leto dni mi je na ponovljeni vprašanji na dveh sejah odgovarjala tudi državna sekretarka Helena Kamnar in zagotovila, da bo vlada do konca marca 2002 zakon sprejela ter ga poslala v parlamentarno proceduro. Kolikor vem, je vladna koalicija imenovala posebno delovno skupino, ki se je večkrat sestala in oblikovala izhodišča za spremembo zakona. Besedilo zakona pa je finančno ministrstvo tudi pripravilo, ni pa očitno politične volje, da bi ga vlada obravnavala, sprejela in poslala v državnozborsko proceduro. Vrsta slovenskih občin, kar nekaj jih je, med njimi tudi občina Idrija, kiso izrazito finančno prikrajšane zaradi zelo sporne formule za izračun pomembne porabe, ki ne upošteva specifične geografske posebnosti njihovega ozemlja in socialne ter starostne strukture prebivalstva. Zelo sporna so tudi določila 26. člena zakona o financiranju občin o državnem sofinanciranju občinskih investicij in katerih glavni kriterij je višina dohodnine na prebivalca. Nesprejemljivo je na primer določilo, da za investicijo v osnovnošolski prostor ter druge investicije kar 30 slovenskih občin s strani države dobi komaj 10% finančno participacijo. Ob predvidenih spremembah predpisov in zakonodaje na področju lokalne samouprave bi po mojem mnenju morali spremeniti tudi zakon o financiranju občin.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg332">Ministra za finance, dr. Dušana Mramorja, sprašujem: Kdaj se bo finančno ministrstvo lotilo tega projekta oziroma sprememb obstoječega zakona o financiranju občin?</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg333">Zanima me tudi stališče gospoda ministra do formule za izračun primerne porabe občin ter seveda njegovo stališče do problematike 26. člena zakona o financiranju občin, s katerim se je spopadlo tudi ustavno sodišče. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg334">Hvala. Prosim za odgovor ministra za finance.</seg>
             </u>
             <note type="speaker">DR. DUŠAN MRAMOR:</note>
-            <u who="#SDZ3.MramorDušan" ana="#regular">
+            <u who="#MramorDušan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg335">Hvala lepa za vprašanje. Prav imate, da ta zakon dolgo časa nastaja in da je delovna skupina, ki je bila ustanovljena, prišla, recimo, da se je poenotila pri vsebinskem pristopu k oblikovanju novega zakona, vendar končnega soglasja ni dosegla in zaradi tega je pred lokalnimi volitvami delo na tem dokumentu zastalo. Rekel bi, da je letos to v programu vlade, za leto 2003, kot ena od prednostnih nalog in naše ministrstvo je bilo tisto, ki je to tudi v program vlade predlagalo, tako da za tem predlogom seveda stojimo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg336">Glede izhodišč, ki so tu ključna, bi rekel, tu sem si zapisal šest takšnih ključnih točk, ki jih bo treba v tem zakonu doreči in doseči soglasje. Prvič, da se odpravi dosedanje nesorazmerje med prihodki občin, ki imajo na razpolago za financiranje osnovnih nalog - tako imamo danes na eni strani občine, ki realizirajo znatne prihodke nad primerno porabo, na drugi strani občine, ki jim je treba za ta namen zagotavljati znatna dodatna sredstva iz državnega proračuna. To je prvi problem. Drugi, da zaradi teh rešitev, ki bodo opredeljene v novem zakonu o dohodnini, bo treba pristopiti tudi k vsebinsko drugačni razdelitvi dohodnine po občinah. Tretja stvar, na novo bo treba definirati, kateri so dejanski prihodki občin, ki naj bi jih le-te imele udejanjene, in kateri bodo tisti lastni prihodki, ki se bodo upoštevali za pokrivanje primerne porabe. Četrto, zato ker so se pokazale določene pomanjkljivosti pri izračunu primerne porabe, bo treba ustrezno korigirati formulo za izračun primerne porabe. Petič, spremeniti ključ za dodelitev dodatnih sredstev, ki naj bi se zagotavljala občinam za sofinanciranje investicij, to je ta 26. člen. In šestič, treba bo proučiti možnosti za dodatno zadolževanje občin, če jim bodo to omogočili njihovi lastni prihodki.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg337">To bi bilo šest glavnih izhodišč, za katere mislim, da jih je treba zdaj dokončno doreči in potem dati zakon v parlamentarno proceduro. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg338">Hvala, gospod minister. Nadaljujemo, tudi kolega Ivan Mamić bo postavil vprašanje ministru za finance.</seg>
             </u>
             <note type="speaker">IVAN MAMIĆ:</note>
-            <u who="#SDZ3.MamićIvan" ana="#regular">
+            <u who="#MamićIvan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg339">Hvala lepa. Moje vprašanje je naslednje. Na nedavni tiskovni konferenci je minister za finance napovedal, da namerava doseči zmanjšanje in izboljšanje strukture javnofinančnih odhodkov, med drugim tudi z racionalizacijo javne uprave. Ena od postavk porabe javne uprave je tudi njen vozni park. To je namreč vprašanje, ki sem ga tudi na terenu dobil in večkrat me ljudje sprašujejo.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg340">Zanima me, kakšen in kako obsežen je ter ali je vključen v program racionalizacije in kako? Predvsem mislim na zamenjavo audijev z mercedesi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg341">Hvala za vprašanje. Prosim, še enkrat, minister za finance.</seg>
             </u>
             <note type="speaker">DR. DUŠAN MRAMOR:</note>
-            <u who="#SDZ3.MramorDušan" ana="#regular">
+            <u who="#MramorDušan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg342">Hvala lepa za vprašanje. Za vprašanje, kolikšen, kakšen in kako obsežen je ta avtopark, je po zakonu zadolžen servis skupnih služb Republike Slovenije. Vendar ne glede na to se strinjam, da je to pač eno področje, kjer je racionalizacija možna in potrebna. Prav zaradi tega je ob načrtu nabav in gradenj, ki ga je v skladu s proračunom sprejela vlada, bilo tudi sprejeto, da mora vsak proračunski uporabnik o nabavah osnovnih sredstev, med njimi so pomembna postavka nabave avtomobilov, na posebnem obrazcu tudi javiti zelo natančen popis posameznega osnovnega sredstva z vsemi podatki, iz katerega bo razvidno v bistvu poleg teh specifik tudi dosežena cena.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg343">To bomo transparentno objavili na internetnih straneh. S tem bomo naredili posreden pritisk na proračunske uporabnike, da se, bi rekel, transparentno vidi, kaj se nabavlja.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg344">Druga stvar, s centralizacijo evidenc in nabave bomo poskušali doseči bistveno boljše pogoje in seveda pregledali bomo ves vozni park, z oceno potrebnosti in šele potem odločali o nabavah avtomobilov pri posameznih proračunskih uporabnikih. Tako bomo na tem področju zagotovo pač to racionalizacijo poskušali uvesti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg345">Hvala. Še zahtevate dopolnitev odgovora?</seg>
             </u>
             <note type="speaker">IVAN MAMIĆ:</note>
-            <u who="#SDZ3.MamićIvan" ana="#regular">
+            <u who="#MamićIvan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg346">Omenil sem audia in mercedese. Kako je s temi stvarmi? Hvala.</seg>
             </u>
             <note type="speaker">DR. DUŠAN MRAMOR:</note>
-            <u who="#SDZ3.MramorDušan" ana="#regular">
+            <u who="#MramorDušan">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg347">Moram odgovoriti, da res ministrstvo za finance za to res ni pristojno, vendar vam lahko posredujemo od servisa skupnih služb odgovor na to vprašanje v pisni obliki.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg348">Hvala minister. Rudolf Petan bo postavil vprašanje ministru za notranje zadeve. Imate besedo.</seg>
             </u>
             <note type="speaker">RUDOLF PETAN:</note>
-            <u who="#SDZ3.PetanRudolf" ana="#regular">
+            <u who="#PetanRudolf">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg349">Hvala za besedo. Spoštovani ministri, ministrica, kolegice in kolegi.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg350">V medijih smo lahko zasledili kar nekaj polemik in ostrih člankov v zvezi z domnevnimi pomanjkljivostmi pri delu zbornice Republike Slovenije za zasebno varovanje, in to predvsem v zvezi s postopki za dodeljevanje licence za fizično in tehnično varovanje. Po teh informacijah je poslovanje zbornice preverjala tudi inšpekcija ministrstva za notranje zadeve. Po drugih informacijah pa se tudi pripravlja nov zakon o zasebnem varovanju, za katerega je bilo nekako že najavljeno, da bo že konec lanskega leta v decembru prišel v parlamentarni postopek, vendar do sedaj tega še ni, vsaj po informacijah, ki jih imamo, se še to ni zgodilo. Zato me zanima: Ali je inšpekcija ministrstva za notranje zadeve res opravila nadzor nad poslovanjem zbornice? In v zvezi s tem zakonom: Kdaj bo predložen v parlamentarni postopek? Ter: Ali bodo s tem zakonom dejansko odpravljeni domnevno sporni postopki na zbornici oziroma ali bodo rešitve res šle v tej smeri, da bodo rešene dileme v zvezi s pooblastili zasebnih varnostnikov in nadzor nad delovanjem te zbornice? Hvala za odgovor.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg351">Hvala za vprašanje. Dr. Rado Bohinc, minister za notranje zadeve, prosim za odgovor.</seg>
             </u>
             <note type="speaker">DR. RADO BOHINC:</note>
-            <u who="#SDZ3.BohincRado" ana="#regular">
+            <u who="#BohincRado">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg352">Se Zahvaljujem za to vprašanje. Točno je, kar gospod poslanec ugotavljate, da je v pripravi oziroma bolj rečeno - pripravljen nov zakon o zasebnem varovanju. V mesecu januarju je bilo opravljeno medresorsko usklajevanje.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg353">Prav danes pa na komisiji, na vladni službi za zakonodajo, tako da računam, da bo zakon šel v vladno proceduro ta ali naslednji teden. Ta zakon na novih osnovah ureja vprašanja, o katerih govorite. Precej bo spremenjen položaj te zbornice. Bistvo tega zakona je, na mnogo bolj učinkovit način, kot je bilo do sedaj, urediti vprašanje podeljevanja licenc pa tudi nadzora v tej zvezi in pa izobraževanja in nacionalnih poklicih kvalifikacij različnih kategorij zasebnega varovanja.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg354">Rad bi na vaše vprašanje, ali je bil izvršen nadzor, potrdil oziroma odgovoril pritrdilno. Upravna inšpekcija ministrstva za notranje zadeve je opravila nadzor nad poslovanjem zbornice 21.10.2002 in lahko povem, da so bili tudi sestavljeni zapisniki z ugotovitvami, ki kažejo na marsikatero nepravilnost v delovanju te zbornice.</seg>
@@ -1319,11 +1302,11 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg357">Naj ponovim, da je bilo ugotovljenih nekaj nepravilnosti v zvezi z vodenjem upravnih postopkov pri zbornici, ki se ne vodijo, vsaj po ugotovitvah iz zapisnika, korektno. Vložena je bila v dveh primerih pritožba na drugostopenjski organ. Reševanje te pritožbe je v teku oziroma vas bomo lahko obvestili o končnih odločitvah instance ministrstva za notranje zadeve, ko bodo te odločbe druge stopnje izdane. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg358">Hvala ministru za odgovor. Sedaj bi bila na vrsti poslanska kolegica Majda Zupan, pa ni navzoča, zato ima besedo gospod Jožef Jerovšek, ki bo postavil vprašanje ministrici za gospodarstvo.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg359">Hvala lepa, gospod predsedujoči. Spoštovani ministri in gospa ministrica, ki ji postavljam vprašanje. Moje vprašanje se nanaša na podobno razsipno in koruptivno ravnanje s financami v Slovenski razvojni družbi, kot je danes že bilo obravnavano v slučaju SIB banke tukaj v Ljubljani.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg360">Iz poročila računskega sodišča o poslovanju Slovenske razvojne družbe v letu 2001 je razvidno, da so med stroški materiala in storitev v letu 2001 predstavljali največji delež stroški po pogodbah za intelektualne in osebne storitve v znesku več kot 407 milijonov tolarjev, ki so se zelo povečali glede na leto 2000, kljub temu da so se sredstva in obveznosti Slovenske razvojne družbe v tem letu znižale za 45%, SRD se je praktično razpolovil, potrebe imajo pa stalno večje.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg361">Iz poročila računskega sodišča je razvidno, da je glavnina teh sredstev pristala v žepih tako imenovanih posvečenih vedno istih oseb, ki so med samo in z vodstvom SRD-a povezane po sistemu povezanih oseb. Na podlagi pogodb, podobnih, kot so bile v primeru razvpitih milijardnih nagrad za vodstvo Elana. Vemo, da je to vodstvo dobilo milijardo 400 nagrade, to je za 60 stanovanjskih hiš vrednosti. Tako je iz poročila razvidno, da si je vodstvo Elana preko družbe Korže d.o.o poleg že znane več kot milijardne nagrade zagotovilo še nadaljnjo pogodbo za svetovalne storitve v znesku najmanj 1.5 milijona nemških mark.</seg>
@@ -1333,44 +1316,44 @@
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg365">Kdo je nudil politično podporo očitnim pojavom nepotizma, klientelizma in koruptivnega ravnanja znotraj Slovenske razvojen družbe? Vsi menedžerji v Elanu in Tovarni vozil Maribor imajo namreč mesečne plače v višini nad 13.000 mark, poleg tega pa jim je Slovenska razvojna družba odobrila nagrade, ki gredo v stotine milijonov. Medtem pa imajo zaposleni v njihovih tovarnah mizerne plače.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg366">Hvala. Prosim ministrico za odgovor na vprašanja.</seg>
             </u>
             <note type="speaker">DR. TEA PETRIN:</note>
-            <u who="#SDZ3.PetrinTea" ana="#regular">
+            <u who="#PetrinTeaTerezija">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg367">Hvala lepa za vprašanje. Moram povedati, da tega poročila ministrstvo za gospodarstvo ni dobilo. Vse je razvidno iz samega dopisa računskega sodišča Republike Slovenije, da je bilo poročilo poslano Slovenski razvojni družbi d.d., dr. Marjanu Rekarju, Državnemu zboru Republike Slovenije.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg368">To, zakaj ga imam zdaj pred sabo, je pa, da smo ga prejeli skupaj s povabilom, da se udeležimo pododbora za privatizacijo odbora državnega zbora za gospodarstvo. Mi smo šele sedaj prejeli ta dokument.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg369">Lahko pa povem, da se bodo ti problemi zmanjšali oziroma pričakujemo, da jih ne bo, ker kot veste, je SRD v likvidaciji. Sklep o likvidaciji je bil sprejet julija leta 2002 in seveda s tem sklepom ima likvidacijski upravitelj bistveno manjše pristojnosti v primerjavi z upravo. Seveda ne sme začenjati novih poslov, lahko samo likvidira posle, to se pravi, predvsem poplača upnike in podobno. Če pa bi že bilo potrebno kakšen posel na novo skleniti zaradi postopka likvidacije, pa brez soglasja tega ne more.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg370">Hvala za odgovor. Ali zahtevate dopolnitev odgovora? Prosim.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg371">Hvala lepa. Da ministrstvo ni dobilo tega poročila računskega sodišča, gre za tri leta, ne verjamem, ker ste bili tudi vabljeni kot ministrstvo na sejo pododbora, kjer smo to obravnavali. To enostavno ni možno. To je največja sramota, kar je možno, da tak odgovor dobim. Vaši podrejeni vas morajo obvestiti o takih nepravilnostih. To je dejstvo in se tak izgovor ni možen. Takšne pogodbe se pa jasno ne morejo sklepati, brez, bi rekel, v sistemu roka roko umije. Da imajo nekaj od tega tudi tisti, ki jih pripravljajo, ki jih podpisujejo. Kolikor je meni znano, je nekatere te pogodbe gospod Rekar podpisoval, zdaj se pa gre pravičnika in sanatorja tam, kjer je podoben slučaj.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg372">Potem bi vprašal še to: Zakaj je slovenska razvojna družba v primeru Tovarne vozil Maribor pripeljala vodstvo iz Ljubljane? Ali zato, da je veliko denarja, navidezno plasiranega v Maribor, pritekalo na zasebne račune nazaj v Ljubljano?</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg373">Zanima me tudi, kateri posli v Tovarni vozil Maribor so potekali prek zasebnih firm vodilnih delavcev v TVM-u.</seg>
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg374">To, kar je v poročilu, je le vrh ledene gore. Očitno slovenska razvojna družba prek teh pogodb, kot je z Elanom, in očitno jih je še več, dosti več, ker računsko sodišče je pregledalo samo vzorčne primere, teh pogodb pa je očitno več, sproti zapravi vso kupnino, tisto, kar bi moralo iti v razvoj. To so takšne nagrade, recimo, tudi v tem primeru, ko bi iz te nagrade sto tekstilnih delavk dobilo plačo 200.000 mesečno bruto, kar bi bila za njih lepa plača. To je samo nagrada, plus mesečno 13 ali 15.000 nemških mark. Gospa ministrica, ali prevzemate politično odgovornost in boste odstopili? Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg375">Hvala. Ministrica, imate besedo.</seg>
             </u>
             <note type="speaker">DR. TEA PETRIN:</note>
-            <u who="#SDZ3.PetrinTea" ana="#regular">
+            <u who="#PetrinTeaTerezija">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg376">Hvala lepa. Ponovno moram reči, da nismo dobili tega gradiva, da imam tu gradivo, ki je bilo poslano na pododbor. Iz njega je točno razvidno, komu so poslali. Ponovno poudarjam, da slovenska razvojna družba ni organ v sestavi ministrstva za gospodarstvo, ampak je delniška družba in v skladu z ZGD-jem tudi posluje. Nadzorni svet bdi nad delovanjem, ne pa delničar kot vlada. Zaradi tega niso delavci na SRD bili meni podrejeni, tako kot morajo odgovarjati direktorji uradov in pa organov v sestavi. Zaradi tega, in to smo že večkrat povedali, res ne razumem, da je to tako težko razumeti. Več v zvezi s tem vprašanjem pač ne morem odgovoriti.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg377">Hvala. To vprašanje je končano. Kolega Alojz Sok bi bil na vrsti, pa ni navzoč. Zato še poslednji s seznama poslancev za vprašanja, France Cukjati. Prosim.</seg>
             </u>
             <note type="speaker">FRANCE CUKJATI:</note>
-            <u who="#SDZ3.CukjatiFrance" ana="#regular">
+            <u who="#CukjatiFrance">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg378">Glede na to, da sem imel pripravljena zelo tehtna aktualna vprašanja, zelo pomembna, in ker sem želel dobiti konkreten odgovor, pa gospoda ministra ni, bom vprašanje prestavil na naslednjo sejo.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#chair">
+            <u who="#PohorecValentin" ana="#chair">
                <seg xml:id="SDZ3-Redna-23-2003-02-24.seg379">Hvala. To so bila vprašanja poslank in poslancev. Predsedniku vlade, ministricam in ministrom se zahvaljujem za podane odgovore in sodelovanje na seji. S tem zaključujem to točko dnevnega reda in prekinjam sejo zbora, ki jo bomo nadaljevali jutri ob 10.00 uri.Hvala za sodelovanje in lahko noč!</seg>
             </u>
             <note type="time">SEJA JE BILA PREKINJENA 24. FEBRUARJA 2003 OB 18.03 URI.</note>

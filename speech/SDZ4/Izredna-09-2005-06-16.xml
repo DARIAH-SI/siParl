@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ4-Izredna-09-2005-06-16"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">9. izredna seja (16. 6. 2005)</title>
-            <meeting n="9"
-                     corresp="#SDZ4-Izredna-09-2005-06-16.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="9" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="4" corresp="#DZ" ana="#parl.term #DZ.4">4. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">9. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|308D79C571BB57E8C1257029002D3056</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=IV&amp;type=sz&amp;uid=308D79C571BB57E8C1257029002D3056</idno>
-                  <imprint>
-                     <date when="2005-06-16">(16. junij 2005)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>9. izredna seja (16. 6. 2005)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="2005-06-16"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=IV&amp;type=sz&amp;uid=308D79C571BB57E8C1257029002D3056</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="28"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="21"/>
                <tagUsage gi="seg" occurs="103"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -197,25 +182,21 @@
                <date when="2005-06-16" ana="#parl.sitting">16. 6. 2005</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ4-Izredna-09-2005-06-16.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">9. izredna seja</head>
-            <docDate>(16. junij 2005)</docDate>
             <note type="chairman">Sejo je vodil France Cukjati, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.37 uri.</note>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg1">Spoštovani! Pričenjam 9. izredno sejo državnega zbora Republike Slovenije, ki sem jo sklical na podlagi prvega odstavka 58. člena ter drugega odstavka 60. člena poslovnika državnega zbora.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg2">Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Anton Anderlič, mag. Milan Cvikl, Zmago Jelinčič Plemeniti, mag. Janez Kramberger, Breda Pečan, dr. Mitja Slavinec in mag. Anton Rop.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg3">Na sejo sem povabil predsednika vlade Republike Slovenije k 1. točki dnevnega reda ter predstavnike vlade Republike Slovenije. Vse prisotne lepo pozdravljam!</seg>
@@ -227,7 +208,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 14.40 uri in se je nadaljevala ob 14.51 uri.</note>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg9">Spoštovane poslanke in spoštovani poslanci! Prosim, da zasedete svoja mesta. Glasovali bomo tretjič. Še enkrat vas prosim, da preverite kartice.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg10">Glasovali bomo o določitvi dnevnega reda, kot je predlagan s sklicem izredne seje. Glasujemo. Navzočih je 70 poslank in poslancev, za je glasovalo 56, proti 8.</seg>
                <note>Za je glasovalo 56.</note>
@@ -238,13 +219,13 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 14.55 uri in se je nadaljevala ob 16.00 uri.</note>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg15">Spoštovane poslanke, spoštovani poslanci!</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg16">Prehajamo na 1. TOČKO DNEVNEGA REDA, to je na PREDLOG REBALANSA PRORAČUNA REPUBLIKE SLOVENIJE ZA LETO 2005.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg17">Obveščen sem, da je odbor za finance končal svoje delo in vsak čas bo tudi njihovo poročilo na klopeh. Predlog rebalansa proračuna je v obravnavo zboru predložila vlada Republike Slovenije. Besedo dajem ministru za finance dr. Andreju Bajuku, ki bo predstavil predlog rebalansa proračuna za leto 2005. Gospod minister, imate besedo.</seg>
             </u>
             <note type="speaker">DR. ANDREJ BAJUK:</note>
-            <u who="#SDZ4.BajukAndrej" ana="#regular">
+            <u who="#BajukAndrej">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg18">Hvala lepa, gospod predsednik. Spoštovane poslanke in poslanci! Rebalans proračuna za leto 2005, ki je pred vami, je bilo potrebno pripraviti zaradi novih makroekonomskih okvirov, predvsem pa zaradi odhodkov oziroma obveznosti, ki so že bile prevzete, pa v sprejetem proračunu, sedaj veljavnem, niso bile predvidene. Zakon o izvrševanju proračuna sicer omogoča prerazporejanje med posameznimi programi oziroma nameni, vendar je na žalost teh prevzetih obveznosti preveč. Bolj pravilen, predvsem pa bolj transparenten način popravljanja proračuna je rebalans.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg19">Na matičnem delovnem telesu in na seji komisije za nadzor proračuna in drugih javnih financ se je pojavil pomislek o zakonitosti vložitve rebalansa proračuna v državni zbor, saj je vlada pripravila rebalans brez prehodnih ukrepov, ki jih omogoča, vendar ne zahteva, 40. člen zakona o javnih financah. Vedeli smo, da ukrepi za uravnoteženje proračuna ne bi rešili problemov na odhodkovni strani, saj je bilo potrebno zagotoviti 70 milijard dodatnih odhodkov. Ocenili smo, da ni smiselno ustaviti prevzemanje obveznosti, podaljševati plačilnih rokov ali ustaviti prerazporejanja, saj noben od navedenih ukrepov ne bi rešil problema. Poleg tega, in to je ključnega pomena, pa nam zakon o izvrševanju proračuna za leti 2004 in 2005 v svojem 52. členu celo nalaga, da pripravimo rebalans proračuna za leto 2005, če je to glede na gospodarska gibanja nujno. Nova ocena proračunskih prihodkov je pokazala, da se bo v letu 2005 v državno blagajno nateklo za 63,9 milijard več prihodkov od prvotno načrtovanih v sprejetem proračunu 2005. Več je predvidenih tudi odhodkov, in sicer za 43,7 milijard, kar je na eni strani posledica nepredvidenih in nenačrtovanih 70 milijard več odhodkov, na drugi strani pa znižanja drugih odhodkov z ukrepi, ki jih je predvidela vlada. Najpomembnejše dejstvo o tem rebalansu pa je, da se proračunski primanjkljaj iz prvotno predvidenega v višini 1,7% BDP oziroma 112 milijard znižuje na 1,4% BDP oziroma 91,9 milijard. Izračun ciklične in strukturne komponente državnega proračuna kaže, da je strukturni primanjkljaj proračuna lani, ne samo proračuna temveč vseh treh blagajn, je znašel 1,4% bruto domačega proizvoda. Ob upoštevanju tega rebalansa za leto 2005 pa v proračunu ter ostalih treh blagajnah ta primanjkljaj znaša 1,15%, to je strukturni primanjkljaj. Vsi ti podatki o deficitu so predstavljeni na osnovi domače metodologije in so ga pripravile strokovne službe ministrstva za finance. Zavedati pa se moramo, da je potrebno evropski komisiji poročati po tako imenovani ESA 75 metodologiji. Kar je bilo v prejšnjem tednu v medijih večkrat objavljeno, da Evropska komisija ocenjuje, da bo naš primanjkljaj, tukaj pa gre za deficit širšega sektorja države, celo višji, kot smo ga napovedovali, moram danes izrabiti to priložnost in v tem prostoru povedati, da temu enostavno ni tako. V poročilu Evropske komisije je korektno zapisano, da je komisija za državni proračun upoštevala podatke iz sprejetega proračuna za leto 2005 in na žalost tega naši mediji niso omenjali, ta je pa predvideval višji deficit 1,7% od sedaj predlagana v tem rebalansu za 1,4% bruto domačega produkta.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg20">Slovenija je v zadnjem konvergenčnem programu, ki smo ga posredovali Evropski komisiji maja leta 2004 in tudi ponovno predložili v začetku leta 2005, predvidevala deficit širšega sektorja države v višini 2,1% bruto domačega produkta. Evropska komisija je na osnovi starih podatkov za državni proračun ocenila, da bo naš deficit znašal 2,2% v letu 2005. Prepričani smo, da bo komisija svoje ocene spremenila in popravila, ko bodo v svoje izračune vključili podatke o našem rebalansu, v kolikor bo ta tudi sprejet.</seg>
@@ -262,20 +243,20 @@
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg32">Spoštovani, drage poslanke in cenjeni poslanci! Vsekakor je rebalans proračuna za leto 2005 pripravljen v okvirih, ki omogočajo Sloveniji zasledovanje ciljev, postavljenih v konvergenčnem programu, še pomembneje pa je, da zasledujemo cilje, ki nas bodo pripeljali oziroma nam omogočili vstop v evro območje. Rebalans poračuna za letošnje leto je pripravljen tako, da bo omogočal izvrševanje proračuna brez omejevanja in velikega prerazporejanja. Je dobra osnova za pripravo proračunov za leto 2006 in 2007, ki ju na ministrstvu za finance že pripravljamo. V naslednjih dveh proračunih pa vsekakor morajo biti in tudi bodo vključene prioritete in programi nove vlade, saj je to naša zaveza, še posebej volivkam in volivcem in tudi vam, poslankam in poslancem v tem, državnem zboru. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg33">Hvala gospodu ministru. Predlog rebalansa proračuna je obravnaval tudi odbor za finance in monetarno politiko. Prosim predsednika odbora Bojana Starmana, da predstavi poročilo odbora. Izvolite.</seg>
             </u>
             <note type="speaker">BOJAN STARMAN:</note>
-            <u who="#SDZ4.StarmanBojan" ana="#regular">
+            <u who="#StarmanBojan">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg34">Hvala lepa za besedo, gospod predsednik. Lepo pozdravljam ministre in druge predstavnike vlade in seveda vse ostale tukaj prisotne. Odbor Državnega zbora Republike Slovenije za finance in monetarno politiko je na 5. seji dne 13.6.2005 in v nadaljevanju seje dne 14.6.2005 kot matično delovno telo obravnaval predlog rebalansa proračuna Republike Slovenije za leto 2005, ki ga je Državnemu zboru Republike Slovenije v obravnavo predložila Vlada Republike Slovenije. Na maratonski seji, ki je trajal skoraj 30 ur, je bilo na žalost veliko preveč časa porabljenega z namenom zavlačevanja seje kakor konstruktivnim diskusijam, kljub temu pa se je odbor opredelil tako do splošnega dela proračuna kakor do 77-ih amandmajev, ki smo jih obravnavali in nekatere potrdili, nekatere pa ne.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg35">V splošnem delu proračuna je bilo predvsem postavljeno vprašanje pravne podlage za ta rebalans poračuna, veliko smo o tem debatirali, pri amandmajih pa je bilo, kot sem že povedal, obravnavanih vseh 77 amandmajev, 6 od teh jih je odbor za finance in monetarno politiko tudi potrdil in predlagal državnemu zboru, da jih tudi sprejme. Sprejel je tudi dva dodatna sklepa. S tem zaključujem poročilo odbora. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg36">Hvala gospodu Starmanu. Sledi predstavitev stališč poslanskih skupin. V imenu Nove Slovenije bo govoril gospod Ciril Testen. Izvolite.</seg>
             </u>
             <note type="speaker">CIRIL TESTEN:</note>
-            <u who="#SDZ4.TestenCiril" ana="#regular">
+            <u who="#TestenCiril">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg37">Hvala za besedo, spoštovani predsednik. Spoštovani ministri s sodelavci, spoštovane poslanke in poslanci! Po mnenju poslanske skupine Nove Slovenije je rebalans proračuna za leto 2005 opravljen v tisto smer, kot je v trenutnih razmerah v Sloveniji najbolj potrebno, in ga tudi v naši poslanski skupini podpiramo. Prepričani smo, da je vlada prisluhnila predvsem na tistih področjih, ki bodo Sloveniji omogočila, da bo dosegla s koalicijsko pogodbo zastavljene cilje, kot so prevzem evra s 1.1.2007, vzpostavitev schengenske meje prav tako v letu 2007, stabilen gospodarski razvoj in tudi uravnoteženo javno porabo.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg38">Če se na začetku ustavimo najprej nekoliko pri prihodkih rebalansa proračuna za leto 2005, lahko ugotovimo, da so ti bistveno višji, kot so bili sprejeti pri pripravi dvoletnega proračuna v letu 2003, za kar 69,9 milijarde SIT. V primerjavi z realizacijo proračuna za leto 2004 pa so prihodki višji kar za 167,7 milijarde SIT. Priznati je sicer treba, da je bilo v letu 2003 težko planirati prihodke za leto 2005, še posebej zato, ker je med tem časom Slovenija vstopila v EU in je bilo nekatera gibanja, ki so vezana tudi na vstop, težko planirati. Verjamemo, da se bodo prihodkovne napovedi rebalansa uresničile, še posebej zato, ker imajo za izhodišče napovedi v mejah, ki so izdelane na osnovi spremljanja makroekonomskih gibanj.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg39">Nekoliko bolj nas v poslanski skupini Nove Slovenije skrbi realizacija tistih proračunskih prihodkov, ki so vezani na črpanje sredstev iz evropskih skladov. Jasno je namreč, da imamo na nekaterih področjih premalo pripravljenih programov, in jasno je tudi, da bodo potrebni veliki napori, da zastavljene prihodke iz Evropske unije dosežemo. Očitno je namreč, da smo bili kljub večkratnim opozorilom ob vstopu v Evropsko unijo za črpanje sredstev slabo pripravljeni. Posledica tega je, da smo v letu 2004 izkoristili samo približno 50% razpoložljivih sredstev. Ta problematika je še posebej pereča na lokalnih nivojih, kjer manjka poleg potrebnih sredstev tudi znanja za pripravo ustreznih projektov. Tu bi se po našem mnenju morali usposobiti in odigrati odločilno vlogo razvojni centri na tako imenovanih regijskih in tudi nižjih nivojih. Predstavniki bivše vlade imajo sicer prav, ko trdijo, da s tem ko niso izkoristili razpoložljivih sredstev, nismo nič dokončno izgubili. Je pa tudi res, da bo treba vsa neizkoriščena sredstva iz zaostalih in tekočih pravic izkoristiti do konca leta 2006, kar bo sedanji vladi povečalo obseg dela. Res je tudi, da je treba razpoložljiva sredstva čim prej izkoristiti, ker so vsak dan manj vredna in tudi koristno je, da je načrtovana investicija čim prej zgrajena.</seg>
@@ -289,11 +270,11 @@
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg47">Za konec bi rad v imenu poslanske skupine Nove Slovenije povedal samo še to, da nas je motila primerjava izhodiščnega proračuna z rebalansom proračuna za leto 2005. Proračun za leto 2005 je bil po našem mnenju spisek želja, v katerega so se vpisovale želje, ki pa očitno niso bile dosledno zapisane in zato so pri pripravi rebalansa povzročile veliko težav. Po našem mnenju je vsekakor bolj smiselno primerjati rebalans z realizacijo v predhodnem letu, samo na tak način lahko ocenimo, koliko so se razvojne možnosti glede na predhodne leto povečale. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg48">Hvala gospodu Testenu. V imenu Slovenske ljudske stranke bo govoril gospod Josip Bajc. Izvolite.</seg>
             </u>
             <note type="speaker">JOSIP BAJC:</note>
-            <u who="#SDZ4.BajcJosip" ana="#regular">
+            <u who="#BajcJosip">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg49">Hvala, gospod predsednik. Kolegice in kolegi, spoštovani ministri in predstavniki vlade, vsem skupaj en lep pozdrav na današnji dan, ko po večurnih zasedanjih posameznih matičnih delovnih teles, na katerih smo obravnavali predlog rebalansa proračuna, začenjamo tudi obravnavo rebalansa poračuna za leto 2005 na plenarnemu zasedanju tega državnega zbora.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg50">Pri Slovenski ljudski strani ocenjujemo, da je s predlaganim rebalansom proračuna za leto 2005 pripravljen glede na nove kazalce na prihodkovni strani proračuna kot tudi za kritje z zakonom sprejetih obveznosti, ki so nastale bodisi v letu 2003, 204 ali 2005, ki niso imele kritja v veljavnem proračunu za leto 2005.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg51">Ravno tako ocenjujemo, da je iz nekaterih postavk predlaganega rebalansa proračuna moč zaznati vključitev tudi nekaterih prednostnih nalog, ki si jih je vlada zastavila, da bi jih lahko realizirala še v letu 2005. Ugotavljamo tudi, da so opravljene in skladno z zakonom tudi urejene nekatere prerazporeditve, ki so posledica v lanskemu letu sprejetega spremenjenega zakona o vladi.</seg>
@@ -305,11 +286,11 @@
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg57">Da ne bi bil predlog. Ocenjujemo pri poslanski skupin Slovenske ljudske stranke, da se je glede na zakonske določbe, glede na prihodke in odhodke predlog rebalansa proračuna v največji možni meri približal tistemu, kar bomo lahko še v naslednjih devetih oziroma kolikor je še ostalo mesecev do konca letošnjega leta, in pričakujemo, da je rebalans proračuna dejansko pripravljen tako, da ministru za finance v oktobru mesecu ali novembru ne bo treba sprejeti sklepa o, recimo, prenehanju sprejemanja obveznosti proračuna za leto 2005, tako kot se je gospodu ministru Mramorju moralo zgoditi v letu 2004, pri čemer ne bi ocenjeval, ali je bilo napačno planiranje in sprejet proračun ali pa so bili kakšni odhodki, bom rekel, tako narejeni, da bi nekatere predvolilne obljube lahko zagotovili že v letu 2004.</seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg58">Hvala gospodu Bajcu. V imenu Slovenske nacionalne stranke bo govoril gospod Sašo Peče. Izvolite.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDZ4.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg59">Spoštovani prisotni! Žal mi je, da ne morem deliti navdušenja obeh govornikov pred menoj o vsebini omenjenih aktov, torej rebalansov kot najpomembnejših javnofinančnih aktov v naši državi. Prepričan pa sem, da bi bilo mnogo odgovorneje s strani vsakega slehernega, ki pride za to govornico, posebej kadar govorimo o tako pomembnih, še enkrat poudarjam, javnofinančnih aktih, da govorimo predvsem realno, ne pa, da s te govornice napihujemo neke zametke, poskuse uveljavitve oziroma vsebovanja programa posamezne politične stranke v rebalans, z drugimi besedami, v popravek proračuna Republike Slovenije. Po moji oceni smo predvsem dolžni do državljank in državljanov, da jim prikažemo realno sliko, kaj jih čaka v popravljenem obdobju leta 2005, ne pa, da jim s tega mesta govorimo o številkah oziroma da govorimo o besedah, ki pozneje niso odražene v številkah. In če z zagotovostjo lahko karkoli rečemo o tem proračunu, potem z zagotovostjo lahko rečemo, da je to proračun ali pa rebalans sprenevedanja, da je to eden izmed tistih učnih primerov, v katerih nastopa izjemno velika razlika med besedo in dejanjem. Dejstvo je, da se je okoli proračuna o njegovi razvojni naravnanosti, o njegovi investicijskih naravnanosti, o njegovi evropski naravnanosti izjemno veliko govorilo s strani predstavnikov vlade Republike Slovenije in s strani vladnih poslancev.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg60">Dovolite pa, da mogoče vi, gledalci, ali tisti, ki ga zanima javnofinančna slika v naši državi, lahko naleti tudi na drugačen pogled omenjenega proračuna, ki je danes pred nami. Vlada Republike Slovenije je nekajkrat izpostavila tako na matičnih delovnih telesih kot v pisni obrazložitvi rebalansa oziroma proračuna, saj v končni fazi je eno in isto, konkurenčnost kot enega izmed ciljev - dvigu konkurenčnosti. Seveda govorim o podjetništvu, o inovativnosti, skratka o razvojni naravnanosti kot temelju blagostanja. In ta akt, ki je danes pred nami, naj bi pripomogel k temu. O tem govori vlada, o tem nas prepričuje vlada, o tem nas boste verjetno prepričevali tudi vladni poslanci. Toda, tako kot sem rekel, dasi ravno v samem aktu, v njegovi vsebini, v kolikor pogledamo številke, ne samo tekstualni del, pa izkaže, da je zgodba popolnoma drugačna. Žal, meni je verjetno enako žal kot vam, ki ste pregledali proračun. Govoriti o javnih financah, ki spodbujajo rast BDP-ja prek obeh elementov, torej prek elementov podjetništva in konkurenčnosti ­- v tem proračunu tega ni. Ta proračun ne zasleduje teh dveh ciljev, ki pripomoreta k rasti BDP-ja. Po moji oceni se je predlagatelj proračuna seveda napačno lotil zadeve, ko je izključno in le izključno začel zasledovati nekaj izmed petih, ne vseh petih, ampak samo nekaj konvergenčnih kriterijev in jim podredil celotno blagostanje naše država, ob tem pa seveda začel in nadaljeval z zanemarjanjem svoje lastne države, torej Slovencev in Slovenk. Zaradi tega, ker je celotno javnofinančno situacijo v naši državi podredil zasledovanju dveh od petih konvergenčnih kriterijev.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg61">Veliko je bilo govora o podjetniškem sektorju. Zelo zanimiv izraz podjetniški sektor. Pa bom začel z drugim, tistim sektorjem na drugi strani, pa ga bom poimenoval sektor posameznikov. Sektor posameznikov je v proračunu oziroma v rebalansu po moji oceni, če vzamemo kriterij togosti oziroma elastičnosti, enak nuli. Tudi ta vlada nadaljuje z davčnimi prihodki na približno enak sistem, kot je prejšnja vlada. In kam nas je to pripeljalo? V izjemno veliko javno zadolžitev, v deficit v vseh blagajnah, kjer ima država prste zraven in pa seveda v zadolževanje vsakega slehernega posameznika, tudi tistega, ki še ni polnoleten, da vrednost zadolžitve njega, torej še ne polnoletnega otroka, prekaša oziroma gre krepko prek 800 tisoč slovenskih tolarjev, ker so pač slovenski politiki v preteklih desetih in nekaj letih s tako lahkoto, kot danes dva govornika pred menoj, sprejemali in potrjevali tako nekvalitetne javnofinančne zakone, kot je ta danes pred nami. Ampak ker vsi z lahkoto jemljete tovrstne proračunske akte, ker seveda individualno vsakega izmed nas to ne bo udarilo po žepu, vendar se skozi daljše časovno obdobje suma sumarum pozna škoda, ki jo povzroča lahkotnost sprejemanja tovrstnih aktov.</seg>
@@ -321,11 +302,11 @@
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg67">Če pogledamo sestavo proračunskih prihodkov, vidimo, da jo sestavljata dve poglavitni skupini, davčni prihodki in nedavčni prihodki, Davčni prihodki so tudi pod vlado, ki je v prejšnjem mandatu vedno nasprotovala omenjenemu razmerju, ki poteka 92, 96 proti 8 oziroma 4, je naredila isto potezo kot prejšnja vlada. Okostje proračuna je enako, kot je bilo v prejšnjih mandatih, pridobiti denar izključno oziroma v več kot 90% skozi tiste vire, katere državljani, naj si bodo v fizični ali pravni obliki morajo poravnati, kajti če ne poravnavajo, so podvrženi sankciji. Sankcije so različne oblike. Ena izmed teh je, da mu na kakršenkoli prijazen, kar je redko kdaj, ponavadi neprijazen način, fizično oziroma na silo vzamejo sredstva. Če pogledamo, da so se samo v obdobju sprejetega proračuna 2005 in do danes, torej predloga rebalansa, davčni prihodki povečali za 20 milijard slovenskih tolarjev, mislim, da je to dovolj grozljiv podatek. In če od tega pogledamo, da se davki na dohodek iz dobička povečujejo za 16 milijard 900, in če ekstremno pogleda drugače, da se domači davki na blago in storitve povečujejo prav tako za 880 milijonov, medtem ko se samo trošarine dvigujejo za preko 200 milijonov, mislim, da to na noben način ne more biti v ponos državnemu zboru in nihče izmed nas ne more reči, da je ta proračun razvojno naravnan. Po drugi strani, če pogledamo nedavčne prihodke, vidimo, da se ti povečujejo za 28 milijard. In zelo zanimiva je postavka "udeležba na dobičku in dohodki od premoženja", med katerimi so kasneje našteti v razredu 7, tudi prodaja državnega premoženja, vidimo, da se le-te povečujejo za 26 milijard. Iz tega mesta pa mislim, da je zelo smiselno spregovoriti tudi o razpravi, ki jo je včeraj na matičnem delovnem telesu sprožil moj poslanski kolega Srečko Prijatelj, in sicer o zakonskem pomanjkanju aktov, ki govorijo o načinu prodaje in poteku prodaje. Nam narekuje zakon o izvrševanju proračuna, katerega posledica ali pa vzrok, kakorkoli gledamo, je rebalans, da se opredeli tudi sistem prodaje. Včeraj ste spreminjali ZIPRO, zakon o izvrševanju proračuna, ni se ga spreminjalo v tistih členih, ki bi jih bilo nujno treba spremeniti, 80.č člen in 80.d člen oziroma na podlagi njiju narediti program prodaje, skozi katerega bi se odražalo povečanje nedavčnih prihodkov. In navkljub eksplicitno povedanemu predlogu sklepa s strani gospoda Srečka Prijatelja, ni bilo enega poslanca na matičnem delovnem telesu, ki bi zagovarjal transparentnost, ki smo jo predlagali v okviru poslanske skupine Slovenske nacionalne stranke. Gospodje in gospe, jaz drugega s tega mesta, kot da se nam včasih dozdeva, da ste neresni na tako zelo pomembnih področjih, kot so javne finance ali pa mogoče drugače rečeno, da si želite netransparentnosti, ne morem reči. Jaz sem, dokler ni prišel rebalans v državni proračun, upal, da bomo končno dobili na mizo drugačen način pobiranja finančnih sredstev od naših državljanov in državljank. Ampak ne, zgodba ostaja približno takšna, kot je bila v prejšnjih mandatih v prejšnjih letih. In kam nas je to pripeljalo? V to javnofinančno sliko, kot jo imamo danes, torej v zadolženost po prebivalcu, v zadolženost doma, v zadolženost pri komercialnih bankah, skratka v izjemno veliko zadolženost. Ob tem pa seveda vsi kot da namerno hočete pozabiti tisto osnovno, naj si bo ekonomsko, jaz bi celo rekel, ker je toliko znano, navadno človeško dejstvo, da če si enkrat nekaj sposodiš, je treba to tudi vrniti, vrniti je pa treba več, kot si sposodiš, zato bi bilo treba o tem razmisliti na ta način, da bi zavrnili tovrstni finančni predlog, kot nam ga je v sprejem ponudil dr. Bajuk, finančni minister. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg68">Hvala gospodu Pečetu. V imenu Demokratične stranke upokojencev Slovenije bo govoril gospod Vili Rezman. Prosim.</seg>
             </u>
             <note type="speaker">VILI REZMAN:</note>
-            <u who="#SDZ4.RezmanVili" ana="#regular">
+            <u who="#RezmanVili">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg69">Hvala lepa, gospod predsednik in lep pozdrav vsem. Jaz bom skušal kar se da kratko predstaviti naše stališče in tudi poanto vsega tega, kar bom govoril kar na začetku. Zagotovo je razprava o rebalansu pa tudi o proračunu ena izmed takšnih, ki zbuja veliko zanimanje, daje priložnost za polemične dispute, ampak daje tudi priložnost, zakaj še enkrat razmislimo in morebiti popravimo kakšna svoja stališča. Zato je poanta naših stališč v tem, da je vredno še enkrat razmisliti in ne kar vsega "anblock" zavrniti. Med vsemi 77-imi amandmaji zagotovo ni mogoče najti samih slabih. Tudi kakšen tak se najde, ki ga je vredno podpreti.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg70">Ni pričakovati seveda splošnega soglasja, zagotovo ne bomo vsi navdušeni, zagotovo bi kdo želel, da bi tudi kaj drugače izgledalo in zagotovo bodo stališča posamičnih strank pri posamičnih amandmajih pač oponentna, ampak tako je najbrž povsem ne samo običajno tudi normalno pri tovrstnih razpravah.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg71">Odbor za finance in monetarno politiko kot matično telo je obravnaval vse te amandmaje in pomembno je poudariti, da je bilo kar nekaj amandmajev tudi podprtih, vsaj odbor jih je podprl.</seg>
@@ -337,21 +318,21 @@
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg77">Sami bi sicer tudi želeli več, zlasti na področju sociale, na področju varstva okolja, na področju varstva starejših, na področju zaposlovanja in še kje, ampak vemo, da je treba navsezadnje v celoti proračun uskladiti. To, kar je sedaj na mizi, je tista uskladitev, ki je bila na vladni ravni možna. Koliko se da to še popraviti, bomo videli ob glasovanju ob posamičnih predlogih. Upam pa, to je naša sklepna misel in upanje, da državni zbor ne bo podrl vseh amandmajev, ki jih je odbor za finance in ministrstvo podprl. Je pa to možno in tudi precej verjetno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg78">Hvala gospodu Rezmanu. V imenu Slovenske demokratske stranke bo stališče predstavil gospod Bojan Starman. Izvolite.</seg>
             </u>
             <note type="speaker">BOJAN STARMAN:</note>
-            <u who="#SDZ4.StarmanBojan" ana="#regular">
+            <u who="#StarmanBojan">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg79">Hvala lepa za besedo, gospod predsednik. Spoštovani! Slovenska demokratska stranka bo predlog rebalansa za leto 2005 podprla predvsem iz razloga, ker smatramo, da je predlog rebalansa boljši, kot je obstoječi veljavni proračun za leto 2005. Ta proračun se je sprejemal decembra leta 2003 in sigurno je v planiranju za dve leti naprej prišlo do velikih in precejšnih odstopanjih na posameznih področjih, ki jih je seveda nujno potrebno uskladiti, če hočemo, da se bodo po posameznih ministrstvih, proračunskih porabnikih, lahko programi razvijali tako, kot so bili planirani in zastavljeni. Videli smo celo vrsto proračunskih postavk. Seveda smo imeli za to možnost, tudi ko smo dobili in ugotovili podatke za leto 2004 in za 2005, da na nekaterih postavkah bistveno primanjkuje denarja in bi bilo izvajanje onemogočeno na tak način in v okviru sprejetega proračuna za leto 2005. Zato mislim, da so to povsem korektne korekcije. Zavedamo se tega, da ta predlog rebalansa ni mogel slediti velikim novim spremembam. Smatramo, da je verjetno dobra osnova za pripravo proračuna za leto 2006 in 2007. Vsi skupaj pa se zavedamo, da je naša splošna javna poraba prevelika, da bo treba pripraviti določene sistemske ukrepe, da bomo zmanjšali obseg javne porabe. Če samo z nekaj številkami ponazorim situacijo, recimo, za leto 2005. Vemo, da je v tem letu predviden BDP 6.571 milijard tolarjev. Vemo, da danes razpravljamo o proračunu, ki nosi na porabi številko 1.774 milijard, na prihodkovni strani predvideva, ob določenih popravkih, 1.683 milijard prihodkov in tu nastopa negativna razlika 92 milijard tolarjev. Spomnimo se, da je bila v lanskem letu ta razlika realizirana v višini 85 milijard tolarjev in da je bilo v zadnjih petih letih kar veliko denarja porabljenega več, kot je bilo dejanskih prihodkov v tem obdobju. Posledica tega je bila, da se nekatere postavke, kot je javni dolg, zelo hitro povečujejo. Zadnji znani podatek, ki ga imamo je, da je tega 1.596 milijard tolarjev. Če se obrnem nazaj in pogledam v december leta 2004, je bila ta številka 1.013 milijard tolarjev. Če pogledamo poroštva države, so se nekje dvignila na 560 milijard tolarjev. Štiri leta nazaj so bila približno 270 milijard tolarjev. Tudi tu vidimo veliko povečanje. Zato se moramo nujno zavedati dejstva, da bo treba javno porabo zmanjšati. Ob teh 1.674 milijardah, ki jih hočemo letos porabiti, bomo morali temu prišteti še 892 milijard načrtovane porabe ZPIZ in 422 milijard načrtovane porabe zdravstvene blagajne, pa še tretja blagajna, to so občine, približno 330 milijard tolarjev. Ko to seštejemo in konsolidiramo, znese 45,6% našega skupnega narodnega dohodka, in to je absolutno, absolutno preveč. Če poskušam analizirati prihodkovno stran našega proračuna, se moramo zavedati, da bistveno preveč zajemamo na področju obdavčitev neposrednega dela. Če vzamemo vse postavke, praktično skoraj 60% vse javne porabe, vseh prihodkov za javno porabo ustvarjamo z obdavčitvami plač oziroma tistih, ki ustvarjajo v združenem delu. Tu je dohodnina, tu so prispevki za socialno varnost, tu je davek na plačilno listo. Če vse to seštejemo, vidimo, da je - če je, recimo, v lanskem letu 2.683 milijard bilo skoraj 60% nabranih iz tega namena skupne javne porabe. Zato mislim, da bo treba več sredstev zagotavljati iz drugih virov in na drug način. Pa tudi na odhodkovni strani naša struktura porabe mogoče ni komplementarna in primerljiva s tistimi demokracijami v evropskih državah, s katerimi se spogledujemo in jim želimo slediti. Zato mislim, da bi bilo treba na dolgi rok se odločiti, kam želimo z našo državo, kaj želimo podpirati, koliko bomo socialni, koliko bomo pa poskušali vplivati na to, da se bo konkurenčnost našega gospodarstva povečala in da bomo ustvarjali več in za to ustvarjali pogoje. Tu nekje nam ne gre ta zadeva dobro od rok. Vidimo, da ni tujih vlagateljev, vidimo, da se podjetja zapirajo in čas je, da se zavemo, da je nekaj hudo narobe in da se ni moremo privoščiti še v nadaljnjih letih, da praktično si lastimo in trošimo svojo substanco, ki bi jo morali porabiti za razvoj. Kljub temu pa mislimo v Slovenski demokratski stranki, da je ta proračun, ta rebalans nujno potreben in veliko boljše izhodišče, nujno potrebno izhodišče, kljub temu da bi si marsikaj želeli, da bi se tukaj spremenilo. Smatramo pa, da je čas sprejemanja tega rebalansa, če ne bilo volitev, bi bilo verjetno primernejše o tem razpravljati v lanskem letu, v lanskem maju. Tukaj je pa praktično pred nami še polovica proračunskega leta in upamo, da ga bomo enkrat zaključili na tak način, na osnovi realizacije teh načrtov, ki so tukaj napisani, ne pa, kot smo že nekaj let sledili, da so bile nekatere postavke, katere so z zakoni, ki podpirajo takšne, da jih je nujno potrebno izplačati, ne glede na to, kako se gibljejo prihodki v državnem proračunu. Mislim, da je bilo zavestno planiranje na takšnih postavkah manjše in je dejansko vedno prihajalo na koncu proračunskega leta do prerazporejanj iz investicijskega dela na račun plač. Samo podatek, leta 1994 smo recimo na investicijskem delu in investicijskih transferjih planirali po 93 približno milijard tolarjev. Realizacija na obeh teh blagajnah po vsaki posamezni je bila pa okrog 68 milijard tolarjev. Se pravi, imeli smo nekje napisano in se hvalili z razvojnim proračunom, ki je kazal na 185, 190 milijard sredstev, ki jih tem namenjamo, na koncu smo jih pa uspeli ravno zaradi tega, ker so na koncu investicije tiste, ki odpadejo, realizirati 135, 136 milijard tolarjev.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg80">Dotaknil bi se še ene postavke, ki je smela. Upam, da se bo v tem letu drealizrala, se bo pa za to treba dobro organizirati in res veliko naporov vložiti. Mi planiramo 115 milijard tolarjev prihodkov iz evropskih sredstev, ob 70 milijardah tolarjev izdatkov. To je stvar, ki je bistveno, bistveno drugačna kot se je dogodila v prejšnjem letu, ko vemo, da smo uspeli pridobiti 43 milijard prihodkov ob 40 milijardah odhodkov. Tukaj smo bistveno zaostajali, ker iz nekaterih, kot so kohezijskih in strukturni skladi, praktično nismo bili v stanju počrpati niti enega tolarja.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg81">Tako zelo upam, da se bo ta del programa uspel realizirati, da bomo uspeli zagotoviti in tudi izpeljati programe, kot so realizirani kot so planirani in zato z vsem tem, kar sem povedal, bomo ta predlog rebalansa podprli in upamo, da bomo ob razpravi o naslednjem proračunu za naslednje dve leti uspeli določiti nekatere bistvene strukturne premike na odhodkovni in na prihodkovni strani. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg82">Hvala, gospodu Starmanu. Stališče Liberalne demokracije Slovenije bo predstavil dr. Matej Lahovnik. Prosim.</seg>
             </u>
             <note type="speaker">DR. MATEJ LAHOVNIK:</note>
-            <u who="#SDZ4.LahovnikMatej" ana="#regular">
+            <u who="#LahovnikMatej">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg83">Hvala lepa. Spoštovane poslanke, poslanci, spoštovani gospod predsedujoči.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg84">Najprej mi dovolite, da izrazim iskreno obžalovanje, da danes z nami tukaj ni predsednika slovenske vlade. Danes govorimo o tem, kako bomo razdelili 1774 milijard tolarjev sredstev. Tukaj ni predsednika vlade, tukaj ni vseh ministrov, je kar nekaj državnih sekretarjev, ni pa niti slučajno vseh ministrov. To kaže seveda na nek način tudi na odnos do tega državnega zbora. na dejstvo, da menite, da je dovolj, da se na nekem koalicijskem srečanju dogovorite za to, kako boste razdelili denar, kasnejša razprava pa je tako ali tako nepomembna, ne glede na strokovne argumente tako stroke kot tudi na pripombe s strani opozicije.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg85">Dovolite mi seveda, da vas opozorim, da smo se vsi zavzemali pred zadnjimi državnozborskimi volitvami za krčenje javne porabe. Dejali smo, naš cilj je cenejša država. Javni odhodki v tem proračunu znašajo 1774 milijard. 45.6% bruto domačega proizvoda je skupna javna poraba, če upoštevamo skupno javno porabo. Imamo najdražjo državo, vsaj od osamosvojitve naprej, najdražjo državo. V primerjavi z lanskim proračunom se javni izdatki povečujejo za 127 milijard tolarjev, 63 tisoč 500 tolarjev na vsakega državljana in državljanko v Republiki Sloveniji. Sprašujem se, kdo bo plačal. Seveda je jasno, slovenski davkoplačevalci. Vlada s tem rebalansom tudi pravi, da bo v letošnjem letu pobrala za 65 milijard tolarjev več davkov, ob tem pa se soočamo v prvem četrtletju samo z 2.6% gospodarsko rastjo, ki je kar za 40% nižja, kot je bila lanska gospodarska rast. Seveda bi lahko razpravljali, zakaj temu tako. Seveda je popolnoma jasno, da ob tem kadrovskem "cunamiju", ki poteka v upravah in nadzornih svetih slovenskih podjetij je popolnoma jasno, da se v gospodarstvu več ukvarjajo s tem, kako se zavarovati pred tem kadrovskim "cunamijem", političnem "cunamijem", kot pa s strategijami poslovanja slovenskih podjetij. Ob tem imamo 2.6% gospodarsko rast, gospod minister za finance pa še vedno meni, da bo pobral za 65 milijard tolarjev višje davke. Sprašujem se, kako.</seg>
@@ -365,11 +346,11 @@
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg93">Če počasi zaključim, je že iz povedanega razvidno, da v Liberalni demokraciji Slovenije nikakor ne podpiramo predlaganega rebalansa. Ko smo vstopili v Evropsko unijo, smo dejali, da vstopamo v ligo prvakov. Da vstopamo tja zato, da se bo življenjski standard v Sloveniji dvignil. V strategiji razvoja Slovenije smo zapisali, da želimo do leta 2013 doseči in preseči razvitost Evropske unije; to smo zapisali. Seveda smo takrat govorili, da je pomembno, da v ligi prvakov daš veliko golov. Trenutne gospodarske razmere, lanska gospodarska rast je omogočala novi vladi, da bi dala vsaj kakšen gol. Pa je poslala žogo visoko čez vrata, nekam med oblake. In tam v oblakih je tudi ta rebalans proračuna. Prav tja tudi sodi, ker ne temelji na realnih predpostavkah. Nobelov nagrajenec Milton Friedman je nekoč zapisal: "V ekonomiji nobeno kosilo ni zastonj, vsako kosilo nekdo plača." Tudi za ta rebalans žal velja, da ga bo moral nekdo plačati. 127 milijard tolarjev večja poraba od lanske bo račun, ki bo izstavljen slovenskim davkoplačevalcem. Vsak, od novorojenčka do upokojenca, bo pač plačal 63.500 tolarjev za to koalicijsko mineštro, ki ji pravite rebalans proračuna. Zato v Liberalni demokraciji Slovenije utemeljeno ocenjujemo, da je rebalans proračuna, ki ga bomo tu obravnavali, proračun izgubljenih razvojnih priložnosti in je slab za Slovenijo. Zato ga seveda ne bomo podprli. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg94">Hvala, gospodu Lahovniku. Gospod minister, čeprav so bile navedbe poslanca Lahovnika glede vas take narave, da bi upravičevale repliko, vam, gospod minister, po poslovniku žal ne morem dati besede. V imenu poslanske skupine Socialnih demokratov bo govoril gospod Franc Horvat. Izvolite.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ4.HorvatFrancFeri" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg95">Hvala za besedo, gospod predsednik. Spoštovani minister za finance in tudi danes v vlogi predsednika vlade glede na funkcijo in pa predvsem na akt, ki ga obravnavamo spoštovani ministri, državni sekretarji, predstavniki vlade, spoštovane kolegice in kolegi in vsi ostali prisotni!</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg96">Predlog rebalansa proračuna za leto 2005 kot prvi proračunski akt nove vlade in sploh eden prvih pomembnejših aktov te vlade s področja gospodarstva ne obeta kaj posebno dobrega. Pri tem nič ne pomaga zadovoljstvo ministrskega zbora, ki je pospremilo odhod predloga rebalansa z Gregorčičeve na Šubičevo, prej nasprotno, to lahko zbuja še večjo skrb. Stari rek, da se dobro blago samo hvali, v tem primeru ne velja, šteli bodo rezultati in seveda potem predvsem zadovoljstvo državljank in državljanov.</seg>
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg97">Glede na to, da so pohvale že bile izrečene v uvodu gospoda ministra in pa tudi v predstavitvah mnenj oziroma stališčih predvsem pozicijskih poslanskih skupin, bodo moje pripombe oziroma stališča v imenu poslanske skupine Socialdemokratov bolj kritične. Meni je to že 13 ali 14 proračun in rebalans. Naj tiste, ki se jezijo na število amandmajev, potolažim, da je število 76 amandmajev na rebalans sorazmerno majhno. V preteklih letih je s strani opozicije, ki je sedaj v poziciji, bilo vloženih dosti več amandmajev. Pa to ni nič hudega, to je legitimno in legalno in pravica poslank in poslancev.</seg>
@@ -381,7 +362,7 @@
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg103">Prej ko smo sedeli v velikem salonu na seji odbora za finance, je nad Ljubljano predvsem nad parlamentom divjala nevihta, bili so temni oblaki, bliskalo je in grmelo in nekako se mi je vsiljevala prispodoba, kot da od zgoraj pošiljajo sporočilo ali opozarjajo, pazite, kaj delate s tem rebalansom. Sedaj se je stanje vremena umirilo, upam, da se bo tudi kmalu zjasnilo, in da lahko delim optimizem z gospodom ministrom, da bo proračun, ki ga je napovedal za prihodnje leto oziroma za prihodnji dve leti boljši in tudi bolj razvojno naravnan, želim pri tem veliko uspeha ministru in vladi in seveda vsem nam. Hvala lepa za pozornost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANCE CUKJATI:</note>
-            <u who="#SDZ4.CukjatiFrance" ana="#chair">
+            <u who="#CukjatiFrance" ana="#chair">
                <seg xml:id="SDZ4-Izredna-09-2005-06-16.seg104">Hvala, gospodu Horvatu. S tem smo končali s predstavitvami poslanskih skupin. Prekinjam 9. izredno sejo Državnega zbora Republike Slovenije, ki jo bomo nadaljevali jutri, to je 17. junija ob 15.30 uri oziroma pol ure po prekinitvi redne seje, ki se bo začela ob 10. uri z obravnavo zakona o registraciji istospolne partnerske skupnosti. Hvala lepa.</seg>
             </u>
             <note type="time">SEJA JE BILA PREKINJENA 16. JUNIJA 2005 OB 17.57 URI.</note>

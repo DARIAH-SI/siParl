@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 14. seja</title>
             <meeting n="14"
-                     corresp="#VsiZbor.1991-01-23.s014-01.DruzPolZb #VsiZbor.1991-01-23.s014-01.ZbObc #VsiZbor.1991-01-23.s014-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="83"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="48"/>
                <tagUsage gi="seg" occurs="146"/>
                <tagUsage gi="gap" occurs="2"/>
@@ -250,23 +241,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-01-23.s014-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-01-23.s014-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-01-23.s014-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -277,16 +251,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">14. seja</head>
             <docDate>23. januar 1991</docDate>
             <note type="chairman">Sejo je vodil: dr. France Bučar, predsednik Skupščine Republike Slovenije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 16.30 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg1">Začenjam 14. skupno sejo vseh zborov Skupščine Republike Slovenije, sklicano na podlagi 374. člena ustave in 134. člena poslovnika. Začenjamo z ugotavljanjem sklepčnosti in prosim najprej delegate Družbenopolitičnega zbora, da ugotovijo svojo navzočnost.</seg>
                <note>41 delegatov je navzočih.</note>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg2">Zbor občin, prosim.</seg>
@@ -297,62 +275,62 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg5">Predlog dnevnega reda ste prejeli skupaj s sklicem seje in dajem predlog dnevnega reda v obravnavo. Želi kdo besedo? Torej osebno moram obvestiti, da sem dobil predlog Družbenopolitičnega zbora, da se dnevni red razširi tudi z razpravo o gradivu, ki ga je predložil izvršni svet, in sicer ocena razmer po plebiscitu in program aktivnosti za izvedbo plebiscitnih nalog. Torej, če ne želi o dnevnem redu nihče razpravljati, dajem predlog tako razširjenega dnevnega reda na glasovanje. Prosim, ja.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg6">Spoštovani! V Družbenopolitičnem zboru smo predlagali, da na tem 1. zasedanju razpravljamo o možnih posledicah vojne v zalivu in o posledicah stanja v pribaltskih republikah. Predsednik Skupščine, dr. France Bučar je sicer rekel, da to ni v skladu s poslovnikom, jaz pa vendarle predlagam, ker gre za izredno aktualne zadeve, da to damo na dnevni red.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#regular">
+            <u who="#ZupancicJoze1936">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg7">Spoštovane poslanke in poslanci, v našem zboru smo se odločili, da tega ne bi obravnavali.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg8">Hvala lepa. Torej v vsakem primeru mislim, da v skladu s 349. členom ustave tega ne moremo dati na skupno sejo, ker pač ni v skladu z ustavo. Je pa možnost, da če se zbori strinjajo, da o tem razpravljajo na skupnem zasedanju vseh zborov, je pa možno, če se zbori s tem strinjajo. V kolikor, slišali smo, da se en zbor ne strinja. Če se bosta dva zbora, se še vedno lahko odločita, da o stvari skupaj poslušata informacijo o vprašanju in razpravljata tudi lahko še skupaj, torej glasujejo pa vsak zase, če bi prišlo do kakšnih sklepov. Torej, kolikor se bosta po tej končani seji ta dva zbora strinjala, potem lahko imata skupaj zasedanje o tej točki.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SSK11.PahorBorut1963" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg9">Spoštovani predsednik, kolegice in kolegi, opravičujem se svoji nevednosti, ampak sprašujem, po kateri poti pa bo moč priti do stališča Skupščine Republike Slovenije o tem, ali je Izvršni svet Republike Slovenije na svoji seji 13. januarja letošnjega leta presegel svoje pristojnosti s tem, ko je sprejel znan sklep o humanitarni pomoči protiiraški koaliciji v zalivski krizi. Vsekakor mislim, da se Skupščina Republike Slovenije do tega mora opredeliti in sprašujem, če danes tudi v kontekstu diskusije o zalivski krizi, ki je seveda širša, diskutirali, kako lahko Skupščina ugotovi, ali je šlo za prekoračitev pristojnosti ali ne. Vsekakor bi kot poslanec želel slišali mnenje Skupščine, in to uradno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg10">Mislim, da je ustavno določilo zelo jasno. Skupščina sprejema v določenih stvareh sklepe na skupni seji. Večino stvari sprejema enakopravno na posameznih zborih, so pa določene stvari, ki jih lahko posamezni zbor tudi samostojno sprejme. V tem primeru lahko ta dva zbora samostojno sprejemata posamezne sklepe, ne moreta pa sprejemati splošnih normativnih aktov.</seg>
             </u>
             <note type="speaker">VIKTORIJA POTOČNIK:</note>
-            <u who="#SSK11.PotocnikViktorija1957" ana="#regular">
+            <u who="#PotočnikViktorija">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg11">Spoštovano predsedstvo, spoštovani kolegi! Komisija za mirovno politiko, se opravičujem, nimate danes, tudi nisem kot delegat v svojem zboru dobila zelo podobno priporočilo, da se na skupnem zasedanju vsi trije zbori opredelijo tako do vprašanja zalivske krize in tudi odnosa oziroma ukrepov Izvršnega sveta Slovenije do tega vprašanja. Na zboru mi je bilo rečeno, ker sem podobno ponudo dala, da bo to danes popoldan na tem zasedanju in zato smatram in ocenjujem, da ne more biti sedaj tisto zgolj proceduralno vprašanje, na katerem se zapletamo. Strinjam se s tem, da uvrstimo tako vprašanje, to pa je moje osebno mnenje, zalivske krize in tudi vprašanje odnosov, ki se dogajajo v pribaltskih republikah in da Skupščina Republike Slovenije opredeli zelo jasna stališča do vseh teh dogajanj. Mislim, da naše vrtičkarstvo in bom rekla, zgolj zapiranje v lastne meje, ne pomenijo neko afirmacijo tudi do zelo podobnih vprašanj, političnih, ki se pojavljajo pri nas. Hvala.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg12">Jaz bi prosil za pojasnilo, kakšen je rok, da se na skupnem zasedanju razpravlja o predlogih ustavnih amandmajev. Mi smo za to skupno sejo dobili poročilo, predlog Komisije za ustavna vprašanja z dne 14.1.1991. Podpisal je predsednik dr. France Bučar. Mislim, da je normalno, da gre to v obravnavo. Mi smo pa zdaj na klop dobili še neke nove predloge ustavnih amandmajev, z datumom 23.1.1991. Sprašujem, ali je možno, da gre to danes na skupno zasedanje. Želim jasno tolmačenje, ali bomo danes razpravljali o predlogu ustavnega zakona o spremembah in dopolnitvah ustavnega zakona, to kar je bil dokument Komisije za ustavna vprašanja z dne 31.1.1991, ali se misli razpravljati tudi o dokumentu, ki nam je bil danes predložen na klop z datumom 23.1.1991. Če se misli drugo, potem moram reči, da sem odločno proti temu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg13">Hvala lepa. Zdaj ne vem, ali gre za nesporazum. Moram povedati, da gre za, danes že na dnevnem redu skupne seje samo dopolnjen predlog ustavnega zakona o spremembah in dopolnitvah ustavnega zakona za izvedbo ustavnega amandmaja 96. k Ustavi Republike Slovenije. Tu gre za ustavne zakone, s katerimi sistiramo določeno zvezno zakonodajo k 2. točki 96. amandmaja. In v tem pogledu je to ustavna komisija, ki neposredno formira, oblikuje predlog, ta predlog gre takoj v sprejem vseh zborov. Kar se pa tiče ostalih, tisti so šli v redno proceduro in po določeni lokaciji, ki jo zahteva zaradi javne razprave, bodo potem prišli nazaj kot osnutek na seje posameznih zborov. Danes imamo opravka samo s tem zakonom, nič drugega.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg14">Opozoriti vas moram samo še na sledeče. Zadnjič smo na seji 14. januarja razpravljali, ustavna komisija subkondicione, zato da ne bi danes zavlačevali seje, smo rekli, pogojno razpravljamo o teh stvareh, če bo na današnji seji med zbori prišlo do soglasja in sklep je bil, da se dajo vse stvari normalno v proceduro s potrebno lokacijo za javno razpravo, na to sejo, se pa da samo ta zakon, ki je itak predviden po 2. točki 96. amandmaja kot zakon, ki se spreminja neposredno brez posebne javne razprave.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg15">Želi še kdo razpravljati? Ja prosim.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SSK11.JuriAurelio1949" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg16">Bi se pridružil tistim predlogom delegatov, ki vztrajajo na tem, da se danes vendarle opredelimo do zalivske in pribaltske krize. Na zadnji, na prejšnji seji sem nekako ostal v predlogu, da bi pravočasno kot država Republike Slovenije preko svoje skupščine reagirali na to, kar se okoli nas dogaja. Svet se ruši s posledicami, ki bodo posredne ali neposredne, hude tudi za nas, mi pa nismo v stanju zaradi proceduralne ovire to situacijo oceniti in nekako tudi podpreti to, če se ne motim, so kar tri komisije naše skupščinske že obravnavale. Ustavna komisija, Komisija za mirovno politiko, Komisija za mednarodne odnose. Mislim, da tej zahtevi treba prisluhniti in da ne zamudimo še drugega vlaka, enega smo že zamudili. Zdaj stvari tečejo naprej, mi smo pa še vedno naprej tiho. Mislim, da če smo država, se kot država tudi moramo obnašati. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg17">Hvala lepa. Balažic.</seg>
             </u>
             <note type="speaker">MILAN BALAŽIC:</note>
-            <u who="#SSK11.BalazicMilan1958" ana="#regular">
+            <u who="#BalazicMilan1958">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg18">Spoštovano predsedstvo, spoštovani! Jaz bi imel pa zelo skromen predlog. Predlagam, da bi skupno sejo vseh zborov Skupščine Republike Slovenije začeli z minuto molka za vse padle, za vse žrtve zalivske vojne. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg19">Hvala lepa. Prosim.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg20">Jaz bi samo še enkrat rad pojasnil to, kar je bilo sicer že povedano. Nihče ne nasprotuje, saj Družbenopolitični zbor in Zbor občin sta sprejela, kakor jaz vem, na dnevni red to, da bi se razpravljalo o zalivski krizi. Problem je v tem, da je to tema skupnega zasedanja. En zbor tega ni dal na dnevni red. Ker so zdaj dnevni redi zborov neusklajeni, bo tako in tako potrebno usklajevanje dnevnih redov in posledica tega usklajevanja je še vedno, da se to da na dnevni red tudi v tistem tretjem zboru in da potem do skupne seje pride, do skupnega zasedanja.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg21">Dejstvo pa je, da to spada na skupno zasedanje in ne na skupno sejo. Samo hočem to povedati, da tudi proceduralno je možno, da se o tem še razpravlja, če je želja za to. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg22">Hvala lepa. Želi še kdo razpravljati? Torej, v kolikor ne želi nihče razpravljati, ugotavljam, da je sprejet predlagani dnevni red po glasovanju, da gre eventualno, v kolikor se bodo zbori strinjali, pozneje še vprašanje Zaliva itn. na skupno zasedanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg23">Kdo je za tak dnevni red?</seg>
                <note>152 delegatov.</note>
@@ -365,34 +343,34 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg28">Osnutke zapisnikov ste prejeli. Želi kdo razpravljati najprej o zapisniku 12. skupne seje? Ja, prosim!</seg>
             </u>
             <note type="speaker">FRANC GOLIJA:</note>
-            <u who="#SSK11.GolijaFranc" ana="#regular">
+            <u who="#GolijaFranc">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg29">Želim dati neke pripombe na slavnostno sejo. Mislim, da je to dvanajsta. Poslanci kluba Liberalne stranke posredujemo na zapisnik slavnostne seje skupne seje vseh treh zborov Skupščine Republike Slovenije z dne 26.12.1990 naslednje pripombe na zapisnik:</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg30">Na 3. strani osnutka zapisnika se mora namesto besedila, citiram: "Glede na aplavz, ki je sledil govoru Milana Kučana, je predsednik Skupščine ugotovil, da Skupščine Republike Slovenije sprejema izhodišča, navedena v govoru predsednika Predsedstva Republike kot primerna za nadaljnjo izdelavo programa za izvajanje mandata, ki ga je Skupščini Republike Slovenije dal plebiscit."</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg31">Besedilo pravilno glasi takole: "Glede na aplavz, ki je sledil govoru Milana Kučana, je predsednik Skupščine ugotovil, da se je Skupščina Republike Slovenije seznanila z izvajanji predsednika Predsedstva Republike Slovenije, da o tem očitno ni potrebna posebna razprava in je s to ugotovitvijo, ne da bi odprl razpravo v zvezi z govorom Milana Kučana, zaključil sejo vseh treh zborov Skupščine Republike Slovenije".</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg32">Kratka obrazložitev: V skladu z določili zakona o plebiscitu bi moral biti ob razglasitvi rezultatov plebiscita obravnavan program aktivnosti za njegovo uresničitev. Poseben program ni bil obravnavan in predložen. Izvajanj Milana Kučana pa v nobenem primeru ni mogoče šteti za nadomestilo takšnemu programu. Glede na to, da govor Milana Kučana ni bil predložen Skupščini kot morebitni program za uresničitev plebiscitarne odločitve, da o njem ni bilo niti razprave in tudi ne glasovanja, je očitno tudi v zapisniku prišlo do napačne interpretacije dogajanj v Skupščini. Menimo, da predlagana formulacija zapisnika odraža dejansko dogajanje na seji, s čimer so naše pripombe na zapisnik utemeljene.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg33">Hvala lepa! Torej vaše stališče je, če smem pravilno interpretirati, ne, ali je zapisnik napačno postavljen, ali da je bila ugotovitev predsednika napačna?</seg>
             </u>
             <note type="speaker">FRANC GOLIJA:</note>
-            <u who="#SSK11.GolijaFranc" ana="#regular">
+            <u who="#GolijaFranc">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg34">Naš predlog je, da je bila Skupščina seznanjena s programom predsednika</seg>
                <note>ni takoj vključen.</note>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg35">Naš predlog je v bistvu v tem, da je bila Skupščina seznanjena s programom in izvajanjem predsednika Kučana, ne pa da ta program sprejemamo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg36">No potem osebno ugovarjam tej pripombi, ker mislim, da je zapisnik pravilno narejen. Je pa lahko bila interpretacija predsednika napačna. To pa sprejemam. Prosim, Gros!</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg37">Najprej bi rad povedal, da ta slavnostna seja je vrinjena seja med 12. in 13. in je pomotoma na zapisniku 13. seje napisano 13. namesto 14. Na tej slavnostni seji bi pa moralo biti napisano 12. seja. Torej to je ena taka proceduralna napaka, bi rekel.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg38">Glede sporne zadeve bi pa povedal tole. Govora predsednika Kučana nismo prejeli v pismeni obliki. O govoru predsednika Kučana nismo glasovali. Seja je bila zaključena tako hitro, da delegati nismo mogli reagirati. Gospod predsednik Bučar naj mi oprosti, vendar vstal je od mize tako hitro, da jaz zadaj niti vstati nisem mogel tako hitro, da bi prišel dol.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg39">Povedal bi še to, da besede ni dobil niti predsednik vlade, ki bi moral dati program vlade po plebiscitu, in je bil navzoč v dvorani, moral bi pa dati program vlade po tisti 10. točki zakona o plebiscitu. Na koncu bi povedal še to, da so bile v govoru za nekatere poslance nesprejemljive trditve. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg40">Hvala lepa! Želi še kdo razpravljati? Torej, če ne želi nihče več razpravljati, dajem na glasovanje predlog poslanca Golije, da se zapisnik popravi v smislu, kot je predlagal.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg41">Kdo je za ta predlog?</seg>
                <note>93 delegatov.</note>
@@ -404,38 +382,38 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg45">Dobro, želi kdo razpravljati o zapisniku? Prosim, ja.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg46">To, kar je bilo zdaj izglasovano, je zelo čudno. Ali to pomeni, da potem vi odstopate od tistega, kar ste govorili? Ker, prosim, možno je samo to, da ostane to, kar je tu zapisano, to, kar ste vi govorili. Lahko pa se sprejme dopolnilo, da se Liberalna stranka s tem ne strinja.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg47">Jaz se popolnoma strinjam z vašim predlogom.</seg>
                <note>Smeh.</note>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg48">Samo moram ugotoviti, da se moram pač podrediti volji zbora. Če je zbor tako odločil, se bom pač podredil, čeprav smatram, da smatram, kot sem že uvodoma rekel, da je napisano pravilno, da lahko naslovite kritiko na predsednika, ki je vodil to skupno sejo, da jo je pač narobe vodil. To je druga stvar. Zapisnik je pa stvar zase, kajne?</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg49">Torej želi kdo razpravljati o zapisniku 13. seje? Ja, še 12. je treba, dobro je.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg50">Tovariš predsednik, eno dobronamerno opozorilo. Najbrž je treba dati zapisnik 12. ali 13. seje, kdo ima zdaj prav, na glasovanje. Ker mi smo prej glasovali samo o spremembi ene formulacije. Najbrž je treba dati na glasovanje in jaz imam pravico povedati, za kaj bom glasoval. Glasoval bom proti potrditvi zapisnika iz razloga, ker ta zapisnik pač ne odgovarja resnici, ki je bila na seji in to na slavnostni seji, ki jo vsi, brez zamere, kujemo v nebo. Hvala!</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg51">Dobro! Gros!</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg52">Jaz predlagam, da glasujemo še o mojem predlogu glede naslova 12., 13. in 14. seje, ker po naše je tista slavnostna seja po našem 13. seja, ona zadnja pa 14. seja. Ali popravimo, ali pa glasujemo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg53">Hvala lepa! Ja, tu jaz vam ne morem povedati številke pravilno. Prosil bi, da generalni sekretar lahko tukaj pojasni.</seg>
             </u>
             <note type="speaker">MARKO HERMAN:</note>
-            <u who="#SSK11.HermanMarko" ana="#regular">
+            <u who="#HermanMarko">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg54">12. in 13. seja sta bili sklicani kot taki. Slavnostna skupna seja je bila sklicana na podlagi zakona in izida plebiscita posebej in take posebne, zlasti slavnostne seje vodimo posebej kot take seje pod posebno število s tem, da ne prekinemo toka številk rednih, v rednih rokih sklicanih skupnih sej. Hvala!</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg55">Torej ugotavljam na podlagi tega pojasnila, da je numeracija za usvojitev teh zapisnikov pravilna, tako, kot sem jo prebral. Torej, želi še kdo razpravljati o zapisniku 12. seje? Če nihče ne želi razpravljati, dajem zapisnik na glasovanje. To je 12. seje!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg56">Kdo je za to, da se potrdi?</seg>
                <note>120 delegatov.</note>
@@ -467,12 +445,12 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg74">Torej, ta zakon je predložila in ga predlaga ustavna komisija. Gre v bistvu za recepcijo tistih zveznih predpisov oziroma za spremembo zveznih predpisov in delno recepcijo, v kolikor so bili sprejeti pred sprejetjem 96. amandmaja. Ustavna komisija sama ni imela k temu pripomb in ga je sprejela v predloženi obliki. Ali želi predstavnik izvršnega sveta? Prosim, Lojze Janko, republiški sekretar za zakonodajo.</seg>
             </u>
             <note type="speaker">LOJZE JANKO:</note>
-            <u who="#SSK11.JankoAlojz1943" ana="#regular">
+            <u who="#JankoAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg75">Spoštovani zbor! Izvršni svet je predložil ustrezno gradivo, ki je bilo v obliki delovnega osnutka objavljeno v skupščinskem Poročevalcu 11. januarja 1991. Zato je ustavna komisija določila predlog sprememb in dopolnitev ustavnega zakona, ki so v bistvu sedaj takšne, da v celoti ohranjajo tisto besedilo, ki je bilo objavljeno v skupščinskem Poročevalcu z nekaterimi redakcijskimi spremembami in dopolnitvijo 8.č člena, s katerim skušamo iz slovenskega pravnega prostora izključiti delovanje zakona o finančnem poslovanju v tistih primerih, ko gre za insolventnost podjetij, za tisti 60-dnevni rok, ko je po dosedanjem tolmačenju in po črki zakona bilo neobhodno nujno, da je tako podjetje šlo v stečaj. V 8.č členu je zdaj to v bistvu na novo opredeljeno in je tudi utemeljeno, zakaj Izvršni svet predlaga takšno rešitev. V celoti Izvršni svet meni, da gre tu za nujno in logično nadaljevanje izključevanja posameznih določb zveznih zakonov iz pravnega sistema Republike Slovenije, ker niso v skladu z novo republiško zakonodajo in ker niso sprejemljivi glede na novo nastale razmere v Republiki Sloveniji in ob uveljavljanju nove republiške zakonodaje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg76">Upam, da gre za zaključevanje takšnih posegov na ta način, ki sicer niso simpatični, so pa nujni. V imenu Izvršnega sveta predlagam, da predložene spremembe in dopolnitve ustavnega zakona sprejmete.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg77">Hvala lepa! Odpiram razpravo. Želi kdo besedo? Če ne želi besede nihče, prehajamo na glasovanje. Ker gre za ustavni zakon, je potrebna dvotretjinska večina vseh poslancev, zato bi še enkrat ugotovili navzočnost. Prosim delegate Družbenopolitičnega zbora.</seg>
                <note>66 delegatov.</note>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg78">Zbor občin.</seg>
@@ -510,7 +488,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg99">Ali želi predstavnik Izvršnega sveta besedo? Želi kdo razpravljati? Odpiram razpravo. Želi kdo razpravljati? Prosim, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg100">Spoštovano predsedstvo, spoštovane kolegice in kolegi! Predloženo gradivo lahko med drugim upravičeno ustvarja tudi naslednje vtise.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg101">1. Da slovenska vlada izvedbeno ni bila dovolj pripravljena na plebiscit in stanje po plebiscitu.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg102">2. Da v vladi niso bili kljub drugačnim izjavam pripravljeni scenariji aktivnosti za različne okoliščine izvajanja plebiscitne odločitve. Računala je, tako izgleda, seveda nerealno, da se bodo razmere razvijale na podlagi našega scenarija, ki smo si ga sami zamislili, ne pa, da imajo tudi drugi svoje scenarije, ki jih bodo poskušali uveljaviti.</seg>
@@ -528,15 +506,15 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg114">3. Predlagal bi, naj se poskuša oblikovati tudi konkretna stališča do načina in vsebine delovanja zveznih institucij v tem prehodnem obdobju, tako skupščine, Predsedstva SFRJ in Zveznega izvršnega sveta. Ocenjujem namreč, da je slabo, da imamo o tem tako različne, mnogokrat spreminjajoče se poglede, da imamo pravico različno tolmačiti skupščinske sklepe, dejansko pa se nam dogaja, da smo vsak dan znova zaradi česa presenečeni. Ne mislim, da bi tako dopolnjen program, ki bi dejansko moral biti vsebinski, ne pa samo formalno dopolnjen, kaj veliko pomagal, mislim pa da bi pomagal vsaj to, da bi imeli nekoliko konkretneje zapisane obveze in da bi postopoma začeli naloge, ki smo si jih na plebiscitu zastavili, tudi konkretno izvajati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg115">Besedo ima Borut Pahor.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SSK11.PahorBorut1963" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg116">Hvala za besedo. Še vedno sem prepričan, da so stvari, ki zahtevajo funkcionalni konsenz in ki silijo k funkcionalnemu konsenzu in kjer je dobro, da se doseže nacionalni konsenz. Ena izmed takih stvari je gotovo zunanjepolitična usmeritev in mislim, da je sedanja vlada mnogo naredila za promocijo Slovenije ne samo v evropski prostor, tudi sicer, mislim, da je premalo storila na ekonomskem področju, ampak pustimo sedaj analizo tega. Predlagam, da si vzamemo čas za to, da posvetimo eno izmed skupnih sej strateškim usmeritvam slovenske zunanje politike. Čas je dozorel, kliče k temu in predlagam, da to storimo čimprej, ker vlada v senci je s svojimi ljudmi, strokovnjaki in znanstveniki pripravljena konstruktivno sodelovati tako pri pripravi strateških usmeritev kakor tudi potem pri izvajanju. Hvala lepa.</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ:</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg117">Gospod predsednik, spoštovani zbore! V tem političnem trenutku se sprašujem, kakšen je namen izdajanja teh zakonov v času poteka intenzivnih razgovorov in argumentiranih razprav predstavnikov, in to najvišjih predstavnikov republik in narodov, med seboj in na ravni predsedstva Jugoslavije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg118">Ocenjujoč rezultate prvega kroga skupnih in posameznih razgovorov in srečanj, se ustvarja vtis, da bo prišlo do dogovora o novi Jugoslaviji in da se bodo posamezna vprašanja reševala na skupni ravni. V prid temu govori izjava najvišjih predstavnikov, da uporabim prijateljsko hrvaško besedo "čelnika" od predsednika Kučana, do predsednika BiH Izetbegovića. Pa tudi minister Rupel je v intervjuju za časopis Borbo dobesedno rekel "niti na pamet nam ne pride kakršnakoli odcepitev". Nenazadnje potrjuje to tudi izjava dr. Janeza Drnovška, ki je predlagal, da mi v slovenski skupščini, v Sloveniji, zamrznemo zadeve, ki se nanašajo na vprašanja obrambe - vojske. Tudi najnovejšo izjavo Predsedstva Republike Slovenije sem razumel, da je prišel čas, ko se moramo izogniti vsemu tistemu, kar bi poslabšalo situacijo in še bolj poglobilo krizo v Jugoslaviji.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg119">Ocenjujem, če bomo nadaljevali po tej poti, torej, da pišemo eno in govorimo drugo, t.j. delamo drugo, ne bomo naredili nič dobrega ne sebi, ne drugim. Hkrati pa kažemo dva obraza naše slovenske politike. Na eni strani taktično umirjamo situacijo in pridobivamo na času, na drugi strani pa zaključujemo procese odcepitve, da ne rečem razbijanja skupne domovine.</seg>
@@ -545,67 +523,67 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg122">Zato predlagam, da bodimo prvi in pripravimo neki predlog k umiritvi krizne situacije v Jugoslaviji. Predlagam amandma, da se zamrznejo vse aktivnosti iz točke 6, zadnje alinee, "vojaške obveznosti, obrambe in zaščite", to pomeni, da zamrznemo aktivnosti, ki urejajo vojaška vprašanja v Sloveniji in v Jugoslaviji do zaključka sporazuma o bodoči Jugoslaviji. Obenem vso energijo in sredstva pa usmerimo v reševanje perečih gospodarskih problemov Slovenije in osamosvajanja Slovenije na gospodarskem področju. Predlagam, da ta amandma sprejmete. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg123">Besedo ima Zvone Žagar.</seg>
             </u>
             <note type="speaker">ZVONE ŽAGAR:</note>
-            <u who="#SSK11.ZagarZvone" ana="#regular">
+            <u who="#ZagarZvone">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg124">Dame in gospodje! Nekaj vidikov o programu aktivnosti za izvedbo plebiscitnih ciljev s stališča gospodarstva. V 1. točki je omenjen sprejem nove ustave. Mislim, da nova ustava s stališča gospodarskih problemov ni bistvena. Čeprav jo je potrebno čimprej sprejeti, ker kot pravni akt gospodarstvu ne bo ničesar pomagala, ker gospodarstvu so potrebna dejanja.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg125">Naslednja zadeva, ki se mi zdi potrebna, je sicer tekoče poslovanje federacije na najnujnejši način organizirati. To podpiram. Glede prednosti, ki bi jih imel dogovor republik oziroma deklaracija o možnem bodočem sožitju v Jugoslaviji in hkrati osnutek pogodbe o konfederaciji oziroma o ekonomski skupnosti, je ravno tako kot prednost. Če ga pogledamo z gospodarskega stališča, ni po mojem mnenju na takem mestu, da bi lahko imel prednost, ker gospodarski tokovi tečejo iz drugih razlogov in sami od sebe, niso odvisni od nekih državnih organov ali konfederalnih ali kakšnih drugih. Namreč gospodarski tokovi imajo povsem druge zakonitosti. Poudarjam, vse to kar govorim, govorim z gospodarskega stališča.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg126">Naslednja stvar, kar podpiram, pa je oblikovanje in sprejem najnujnejše republiške zakonodaje na področju finančnega sistema. Pomeni vzpostavitev neodvisnega plačilnega sistema, lastni bančni denarni sistem, vzpostavitev centralne banke Slovenije in prevzem nadzora nad bančnim sistemom. To postane kot prednost, ker gospodarstvo vsak dan izgublja izredno velike vsote oziroma z drugimi besedami, se siromaši iz dneva v dan. Predlagam, da tukaj vlada posveti malo, da se temu vlada bolj posveti in na tem področju naredi bolj odločne korake.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg127">Najbolj bistvena zadeva pri celi stvari pa je, kako premagati recesijo. Temu se lahko reče tudi z drugimi besedami situacija, kjer ni nikakršne volje za investiranje. Namreč ta recesija ni ideološka zadeva in tudi ni odvisna od politične samostojnosti, ampak je odvisna predvsem od poslovne samostojnosti oziroma neke svobode duha oziroma volje do ustvarjanja. Ta zadeva pa ni odvisna od Skupščine oziroma od pravnih aktov, ki jih mi stalno sprejemamo in želimo z njimi nekaj premakniti, kar se sploh ne da. Torej osnovni problem za mene je recesija in ukrepi na finančnem področju, gledano z gospodarske strani. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg128">Hvala lepa. Gospa Pozsonec.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SSK11.PozsonecMaria1940" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg129">Spoštovani kolegi in kolegice! Rada bi spregovorila o negotovosti in strahu, ki preveva celo Slovenijo. To je strah od vojne. Ne glede na to, ali je s taktičnega vidika primerno o tem govoriti ali ne. Moram reči, da je za naš obstoj izrednega pomena to, da dosežemo svojo samostojnost in neodvisnost po mirni poti. Zaskrbljujoče pa je, da se čedalje glasneje rožlja z orožjem. Zato pozivam republiško vodstvo in to skupščino, da storita vse, kar je v njuni moči, da se ne bi zapletli v spopad na strani nobene koalicije, v nobenem zavezništvu. Ponavljam, v nobenem zavezništvu. Svojo samostojnost moramo doseči tako, da ne bomo prelili niti kaplje krvi, da ne bomo izgubili niti enega samega življenja. Najpomembnejša nam mora biti varnost naših državljanov, varnost državljanov Slovenije. To je veliko bolj pomembno kot kakršnokoli zavezništvo med republikami.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg130">Želi prosim še kdo besedo? Ja. Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg131">Spoštovani! Prvič, o bistvenih mednarodnih vprašanjih in strateški orientaciji ne more odločati Izvršni svet Slovenije, ampak mora o tem odločati Skupščina Republike Slovenije. Jaz bi prosil, da to sprejmemo tudi kot sklep. Nam se nenehno dogaja, da se ignorira skupščinska komisija za mednarodne odnose, da se njo poriva na vzporedni tir in da se vse bistvene stvari glede mednarodnih odnosov odločajo in izvajajo izključno samo v Izvršnem svetu. Mislim, da je to slabo za Izvršni svet, da je to slabo za Republiko Slovenijo. Ne gre tu za nobene obtoževanje, gre samo za to, da stvari postavimo na pravo mesto.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg132">Jaz ne poznam nobene parlamentarne zahodne demokracije, kjer bi bil parlament odrinjen od reševanja ključnih mednarodnih vprašanj.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg133">Drugo, v oceni Izvršnega sveta o razmerah po plebiscitu in programu aktivnosti na izvedbi plebiscitnih nalog je v točki 7 "oblikovanje pogajalskih ekip iz Republike Slovenije" pravilno rečeno - po mojem mnenju vsaj, da je treba, da Skupščina Republike Slovenije sodeluje v pogajanjih znotraj Jugoslavije in z vsemi drugimi subjekti sedanje Jugoslavije. Govori se o parlamentarnih delegacijah. Jaz bi prosil, da se to dopolni, da bodo te parlamentarne delegacije pluralno sestavljene. Mislim, da je to zelo pomembno, kajti, če se bo šlo samo na to, da bo en del strank zastopan v teh parlamentarnih delegacijah, potem je to slabo za naše pogajalske pozicije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg134">Kot tretje bi glede 9. točke "Začetek aktivnosti za včlanjevanje Republike Slovenije v mednarodne organizacije", kar seveda tretiram širše v smislu promocije Republike Slovenije, in prizadevanj za mednarodno priznanje Slovenije, predlagam, da Skupščina tudi danes zelo jasno sprejme sklep, da bodo na tem področju delovale delegacije Skupščine Slovenije v pluralni sestavi. Nam se nenehno dogaja to, da tudi tam, kjer gredo neke delegacije, v kolikor se predhodno posebej ne opozori, se ta delegacija formira zelo enostransko politično, samo iz določenih struktur. Mislim, da je to slabo. Če hočemo iti zavestno v široko mednarodno aktivnost, potem mislim, da je tu posebna vloga delegacij Skupščine Slovenije in te delegacije morajo biti pluralno sestavljene. Zato predlagam, da danes vendarle na teh točkah sprejmemo tudi konkretne sklepe.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg135">Hvala lepa. Prosim, izvolite.</seg>
             </u>
             <note type="speaker">MARJAN STARC:</note>
-            <u who="#SSK11.StarcMarjan1942" ana="#regular">
+            <u who="#StarcMarjan1942">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg136">Spoštovani kolegi, cenjeno predsedstvo! Jaz sem na hitro, ko smo danes dobili na mizo ta program aktivnosti, to pogledal in osebno, ker izhajam iz gospodarstva, dajem absolutno prioriteto gospodarskemu dogajanju. Mislim, da večina naših občanov in volivcev tudi tako te stvari doživlja. Vse to naše pravno in politično "krancljanje" je verjetno s to odločitvijo že<gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg137">Gospod poslanec, jaz vas tukaj ne slišim.</seg>
             </u>
             <note type="speaker">MARJAN STARC:</note>
-            <u who="#SSK11.StarcMarjan1942" ana="#regular">
+            <u who="#StarcMarjan1942">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg138">Ker je akutna ravno ekonomska komponenta in je v drugi točki tega gradiva posvečeno tej temi in na tretji strani 2. točke, citiram: "Izvršni svet se je ob upoštevanju finančnih sredstev in mednarodnih reakcij odločil za postopno uvajanje slovenske valute z njenim začetnim 100% pokritjem ter s tečajnim stimuliranjem izvoza, destimuliranjem uvoza in povečanjem likvidnosti gospodarstva. Samo tako je brez ustreznih deviznih rezerv mogoče zagotoviti stabilnost nove valute. Takšno uvajanje je tehnično pripravljeno, zakon o Narodni banki Slovenije in zakon o uvajanju vzporedne valute bosta 23.1.1991 poslana organom Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg139">Situacija je tako akutna, da se kriza tako hitro poglablja, tukaj je tudi naveden strahoten padec industrijske proizvodnje v decembru; ta padec, strmi padec upadanja ekonomske aktivnosti se nadaljuje pošastno v januarju in direktorji v podjetjih enostavno ne vemo, kako delati. Mi moramo sedaj imeti in mislim, da tudi država mora imeti, poleg davčne politike še monetarno politiko, in to je jedro vse zadeve, dokler imamo mi skupni jugoslovanski denar in monetarno politiko v Beogradu, ne moremo nič narediti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg140">Zato sem presenečen, če tu pravi, kje je ta predlog zakona, ki bi ga morali imeti danes na mizi, kot je tukaj navedeno, in bi jih morali danes obravnavati in po mojem mnenju danes tudi sprejeti. Prosim odgovor oziroma zahtevam, da to jutri dobimo na klop; obravnavamo in sprejmemo ta dva zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg141">Hvala lepa. Želi še kdo besedo? V tem pogledu moram glede na zadnjo intervencijo dati pojasnilo: Izvršni svet je za danes predložil osnutek zakona o Narodni banki in sem ga jaz že dodelil pristojni skupščinski komisiji za kreditno-monetarne odnose v obravnavanje in bo šel čisto po rednem postopku. Opozarjam še na to, da je ta zakon bil označen kot strogo zaupen akt in bo zaradi tega najprej dodeljen tej komisiji in pozneje čisto v proceduralnem postopku, kot bo procedura šla, tudi ostalim poslancem.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg142">V kolikor ne želi nihče več razpravljati, potem bi jaz to razpravo povzel v tem smislu, da se ta zbor strinja s sugestijami, ki so bile tukaj v razpravi dane in da to posredujemo Izvršnemu svetu v njegovo ravnanje. Poslanec Smole je predlagal dva čisto konkretna sklepa, s katerima mislim, da se vsi strinjamo, celo ne glede na to, da bi o njima posebej sklepali, ker to že skozi institucije Skupščine same sledi - jaz se z njim popolnoma strinjam, bi pa vendarle na to še posebej opozoril Izvršni svet. V kolikor nihče nima več v razpravi pripomb, potem <gap reason="inaudible"/> Ja, prosim, Janko Lojze iz Republiškega sekretariata za delo.</seg>
             </u>
             <note type="speaker">LOJZE JANKO:</note>
-            <u who="#SSK11.JankoAlojz1943" ana="#regular">
+            <u who="#JankoAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg143">Spoštovani zbor! Najprej moram povedati, da vsi ti dodatni predlogi, pomisleki, so takšne narave, da jih Izvršni svet šteje kot izjemno koristne in tehtne in jih bo v najkrajšem času proučil in seveda zadevo dopolnil in izpopolnil. Mislim da problemi, na katere so opozorili zlasti gospod Žagar in drugi, da je treba tej recesiji napraviti konec in da je treba določiti neke jasnejše ukrepe, so seveda še kako tehtni in za Izvršni svet v bistvu zavezujoči.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg144">Moram pa pri tem povedati, da tisto, kar pogrešate zdaj in ste menili, da sodi v program aktivnosti za izvedbo plebiscitnih ciljev, tega še nismo predložili. Namreč gre za ključno razvojno strateško usmeritev, za določitev predlogov tekoče ekonomske politike in razvojne politike z vsemi ukrepi, ki jih Izvršni svet mora predložiti kot politiko za leto 1991. Ob različnih razvojnih scenarijih, ob različnih predpostavkah in seveda na eni strani ob teh pogojih za tržno zasnovan gospodarski sistem prihaja Izvršni svet s socialnim programom oziroma predlogom socialne politike in vsa ta razprava, bo seveda razprava o osnutku republiškega proračuna za leto 1991, tako da tisto, na kar nismo danes odgovorili oziroma kar ni v programu zajeto, to pa je v glavnem resnično ta tako težko pričakovana tema.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg145">Namreč, predlog politike za leto 1991 in to dobite. Izvršni svet to intenzivno pripravlja, vsak dan trdno delamo in zdaj se glede na te različne scenarije, različne predpostavke pripravljajo ti dokumenti, ki bodo skupaj z osnutkom republiškega proračuna dani za skupščinsko zasedanje v februarju. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-23.s014-01.seg146">Hvala lepa. V kolikor ni več razprave, zaključujem to točko in je s tem tudi izčrpan dnevni red te skupne seje. V kolikor se bodo zbori odločili za skupno zasedanje po točki, kar se tiče zalivske vojne in problematike pribaltskih držav, prosim da se predstavniki najprej sestanejo in hvala lepa.</seg>
             </u>
             <note type="time">Seja je bila končana 23. januarja 1991 ob 17.40 uri.</note>

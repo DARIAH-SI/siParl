@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ1-Redna-13-1993-11-09"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">13. redna seja (9. 11. 1993)</title>
-            <meeting n="13"
-                     corresp="#SDZ1-Redna-13-1993-11-09.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="13" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="1" corresp="#DZ" ana="#parl.term #DZ.1">1. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,26 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje
                      avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">13. seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="session">99424B9ADCD17EFBC1257832004838D9</idno>
-                  <idno type="URI">99424B9ADCD17EFBC1257832004838D9</idno>
-                  <imprint>
-                     <date when="1993-11-09">(9., 10., 11. in 12. november 1993)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>13. redna seja (9. 11. 1993)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1993-11-09"/>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="176"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="120"/>
                <tagUsage gi="seg" occurs="562"/>
                <tagUsage gi="gap" occurs="6"/>
@@ -671,23 +655,21 @@
                <date when="1993-11-09" ana="#parl.sitting">9. 11. 1993</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ1-Redna-13-1993-11-09.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">13. seja</head>
-            <docDate>(9., 10., 11. in 12. november 1993)</docDate>
             <note type="chairman">Sejo so vodili: mag. Herman Rigelnik, predsednik Državnega zbora, Vladimir Topler, dr. Lev Kreft in Miroslav Mozetič, podpredsedniki Državnega zbora</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.04 uri</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg1">Spoštovane kolegice poslanke in kolegi poslanci, gospe in gospodje! Pričenjam 13. sejo Državnega zbora Republike Slovenije. Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Dušan Bavdek, dr. Lev Kreft za dopoldan, Drago Šiftar, Jana Primožič, Irena Oman za dopoldan, Miroslav Mozetič, dr. Leo Šešerko. Zadnji dan 12. seje Državnega zbora je koristno izkoristila naša kolegica gospa Vida Čadonič- Špelič in doktorirala ter mislim, da ji lahko v skupnem imenu čestitam.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg2">Prosim, da ugotovimo prisotnost v dvorani! Ugotavljam, da je navzočih 68 poslank in poslancev, tako je zbor sklepčen in lahko odloča. Na sejo sem vabil tudi predstavnike Vlade Republike Slovenije in jih lepo pozdravljam.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg3">Prehajamo na določitev dnevnega reda 13. seje Državnega zbora Republike Slovenije. Predlog dnevnega reda 13. seje Državnega zbora je bil pripravljen na podlagi posvetovanj kolegija predstavnika Državnega zbora, ki ste ga prejeli s sklicem seje 2.11.1993.</seg>
@@ -713,36 +695,36 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg17">Predlogov za umik posamezne točke z dnevnega reda ter predlogov za skrajšanje rokov, združitev obravnave ali obravnave zakona po hitrem postopku nismo prejeli. Ali želi v zvezi s tem kdo razpravljati? Gospod Sisinger.</seg>
             </u>
             <note type="speaker">IVAN SISINGER:</note>
-            <u who="#SDZ1.SisingerIvan" ana="#regular">
+            <u who="#SisingerIvan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg18">Spoštovani predsednik, poslanke in poslanci! Predlagam razširitev dnevnega reda z novo 6. točko. Skupina poslancev je 2.10.1993 predložila Državnemu zboru zahtevo za uvrstitev na dnevni red - obravnava problematike mariborskega gospodarstva. Ker je bilo na nek način zagotovljeno, da bo to vključeno v razširitev dnevnega reda na tem zasedanju, ki ga bomo začeli 9.11., predlagam, da se to uvrsti na dnevni red, da vlada pripravi poročilo, kaj se dogaja v Mariboru na področju gospodarstva in njenega prestrukturiranja, in da se k tej točki dnevnega reda povabi predstavnik Izvršnega sveta Maribora, predstavniki sindikata in predsednik Gospodarske zbornice.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg19">Hvala lepa, gospod Sisinger. Gospod Sisinger, obvestil bi vas, da bo to problematiko jutri obravnaval odbor za gospodarstvo. Vlada je to včeraj predložila, tako da bomo v okviru proračunskega memoranduma razpravljali tudi o tej točki dnevnega reda. Tako je predlagal kolegij predsednika Državnega zbora. Gospod Podobnik, prosim.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg20">Spoštovani! Podpiram predlog gospoda Sisingerja. Opozoril bi tudi to, da se je na osnovi tega predloga tudi kolegij predsednika Državnega zbora odločil - po informacijah, ki smo jih dobili - da bo to posebna točka dnevnega reda. Ne točka v okviru memoranduma, pač pa posebna točka dnevnega reda na  prihodnji seji, na zadnji seji je bilo to rečeno, torej na današnji seji in predlagam, da to uvrstimo kot točko dnevnega reda na današnjo sejo, pri čemer ne bi obravnavali - tudi mi smo zadnjič dali ta predlog - ne samo problematiko mariborskega gospodarstva, to je najbolj akutno v tem trenutku, pač v tem okviru tudi take in podobne probleme v drugih slovenskih okoljih.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg21">Mislim, da je nujno, da bi to obravnavali kot ločeno točko. Iz izkušenj lanskega leta vemo, da v okviru memoranduma ni možno priti do nobenih oprejemljivih sklepov ob obravnavi take tematike. Tudi lansko leto se je ob proračunskem memorandumu  obravnavala točka s podobno vsebino brez posebnih sklepov, sploh brez učinkovitih sklepov. Podpiram predlog, da to obravnavamo kot posebno točko.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg22">Gospod Podobnik, kolegij, ko je obravnaval to točko, predlaga Državnemu zboru, da se to obravnava v okviru proračunske razprave. Obravnava bo celovita tudi s tistim delom, ki ga je predlagala gospa Lukačeva. Tako je bilo dogovorjeno. Sklepe, ki jih bo predlagal odbor, bo Državni zbor tudi sprejel. Prosim, da delamo v skladu s tem predlogom. Prosim, gospod Sisinger.</seg>
             </u>
             <note type="speaker">IVAN SISINGER:</note>
-            <u who="#SDZ1.SisingerIvan" ana="#regular">
+            <u who="#SisingerIvan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg23">Spoštovani predsednik, poslanke in poslanci! S takim predlogom osebno ne morem soglašati, menim, da tudi večina poslancev ne. Če bo jutri odbor to obravnaval ali ne obravnaval, vendar menim, da problematike gospodarstva ni mogoče združevati z memorandumom, ki smo ga vsi nekajkrat prebrali, in predlagam, da o tem predlogu glasujemo, da se to uvrsti na dnevni red kot zadnja točka naše obravnave. Mislim, da ni mogoče drugače od tega odstopati. To je bilo poslancem Maribora zagotovljeno. Strinjam se pa s predlogom, ki je bil dodan, da obravnavamo tudi druge gospodarske probleme, če so podobni Mariboru.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg24">Prosim, gospa Lukačeva.</seg>
             </u>
             <note type="speaker">METKA KARNER-LUKAČ:</note>
-            <u who="#SDZ1.KarnerLukačMetka" ana="#regular">
+            <u who="#KarnerLukačMetka">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg25">Spoštovani gospod predsednik, spoštovani zbor! Predlagam, da bi to pomembno točko obravnavali kot samostojno točko, kajti situacija je tako urgentna in tako dolgoročno pomembna tudi za socialni mir in z narodno-gospodarskega vidika, da si ta točka vsekakor zasluži najmanj enodnevno razpravo, in sicer kot samostojna točka.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg26">Predlagam, da se dogovorimo in dajem na glasovanje, da to materijo, ki jo bomo dobili kot poročilo s strani odbora, uvrstimo kot 4.a točko in jo obravnavamo v okviru te seje.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg27">Prosim, da o tem predlogu glasujemo. Ugotovimo sklepčnost!</seg>
                <note>73 prisotnih.</note>
@@ -754,19 +736,19 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg31">Ker ni več predlogov, prehajamo na sprejem dnevnega reda v celoti. Glasovanje o predlogu dnevnega reda s predlaganimi razširitvami, kot ste ga prejeli in kot smo se dogovorili. Prosim, gospod Kopač.</seg>
             </u>
             <note type="speaker">JANEZ KOPAČ:</note>
-            <u who="#SDZ1.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg32">Hvala. Nimam dodatnega predloga za uvrstitev česa na dnevni red, predlagam pa, da to zadnjo točko, ki smo jo ravnokar uvrstili na dnevni red, obravnavamo na nadaljevanju te seje, na dan 1. januarja, kar mislim, da bi bilo simbolično in zelo pomembno, da smo se na prvi dan novega leta začeli ukvarjati s problematiko gospodarstva. Če pa to ne bo sprejeto, predlagam, da se s to točko pozabavamo to nedeljo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg33">Hvala lepa, gospod Kopač. Prosim, gospod Kopše.</seg>
             </u>
             <note type="speaker">JOŽEF KOPŠE:</note>
-            <u who="#SDZ1.KopšeJožef" ana="#regular">
+            <u who="#KopšeJožef">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg34">Kolegu Kopaču moram reči, da tak cinizem na račun Maribora, ki je v velikih težavah, ni potreben in ni primeren.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg35">Gospod Kopač, vaš predlog ne pride v poštev, ker je zbor že drugače odločil.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg36">Prehajamo na glasovanje o dnevnem redu v celoti. Za današnjo sejo predlagam dnevni red, kot ste ga prejeli s sklicem in z razširitvami.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg37">1. Ugotovitev prenehanja mandata poslancu dr. Ludviku Toplaku, ker je bil imenovan za rektorja Univerze v Mariboru.</seg>
@@ -788,7 +770,7 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg50">Prosim predsednika Vlade Republike Slovenije, dr. Janeza Drnovška, da poda UVODNO OBRAZLOZITEV K PRORAČUNSKEMU MEMORANDUMU ZA LETO 1994.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ1.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg51">Spoštovane poslanke in poslanci! Dovolite mi, da ob začetku proračunskih razprav za leto 1994 podam ocene gospodarskih gibanj do konca letošnjega leta in  predstavim ukrepe, ki jih vlada ponuja v proračunskem memorandumu za leto 1994.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg52">Gospodarska gibanja v Sloveniji se letos v glavnem ujemajo s pričakovanji, ki smo jih zapisali v proračunskem memorandumu za to leto. Na nekaterih področjih so sicer razlike, ponekod pozitivne, ponekod tudi negativne. Z nekaterimi rezultati smo lahko zadovoljni glede na sicer še vedno močne omejevalne faktorje razvoja in zaostrene gospodarske razmere doma ter recesijo v svetovnem gospodarstvu. Znamenja, da se gospodarska dejavnost izboljšuje, so se posebno izrazito pokazala v zadnjih mesecih. Po najnovejših ocenah bi se lahko v letu 1993 prvič po petih letih zgodilo, da bruto domači proizvod ne bi bil nižji kot prejšnje leto.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg53">Posebno vspodbudna je tudi letošnja realna rast investicij v osnovna sredstva, prva po dolgih letih investicijskega nazadovanja. Po upadanju v prvem poletju je industrijska proizvodnja začela v zadnjih mesecih naraščati, to je očitno tudi iz primerjav med leti. Prvič po štirih letih so bile namreč avgusta in septembra zabeležene pozitivne medletne stopnje rasti. Avgusta je proizvodnja presegla lansko za 1,5%, septembra pa za 1,4%. Zato se iz meseca v mesec popravlja tudi kumulativni rezultat. Ta po devetih mesecih zaostaja za lanskim primerljivim obsegom še za 4,7%. Sodeč po večjih naročilih za domači in tuji trg lahko tudi v prihodnjih mesecih pričakujemo zmerno rast industrijske proizvodnje.</seg>
@@ -834,7 +816,7 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg93">Spoštovane poslanke in poslanci! Upam, da smo vam ponudili ustrezen dokument, ki ga vaše razprave lahko še obogatijo tako, da bomo s skupnimi močmi ponudili Sloveniji tiste usmeritve in ukrepe, ki bodo najboljši možni odgovor na sedanje zapletene razmere. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg94">Slišali smo uvodno obrazložitev k proračunskemu memorandumu za leto 1994, za kar se predsedniku Drnovšku  zahvaljujem.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg95">Prehajamo na 1. TOČKO DNEVNEGA REDA, to je NA UGOTOVITEV PRENEHANJA MANDATA POSLANCU DR. LUDVIKU TOPLAKU, KER JE BIL IMENOVAN ZA REKTORJA UNIVERZE V MARIBORU.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg96">Poročilo mandatno-imunitetne komisije ste prejeli danes na klop. Želi poročevalec komisije besedo?</seg>
@@ -853,7 +835,7 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg104">Predloga zakona je za tretjo obravnavo pripravil Sekretariat za zakonodajo in pravne zadeve. Predlog zakona je obravnaval tudi Odbor za notranjo politiko in pravosodje kot matično delovno telo. Želi besedo predstavnik predlagateljev? Prosim, gospod Pukl ima besedo.</seg>
             </u>
             <note type="speaker">VITODRAG PUKL:</note>
-            <u who="#SDZ1.PuklVitodrag" ana="#regular">
+            <u who="#PuklVitodrag">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg105">Spoštovani gospod predsednik, spoštovani zbor. Pred vami je dokončno besedilo zakona o parlamentarni preiskavi, v katerem besedilu so upoštevani vsi amandmaji, ki so bili pri drugem branju izglasovani. Tako je tudi upoštevan izglasovan amandma drugega odstavka 4. člena, ki določa, da lahko po sklepu sodišča preiskovalna komisija začasno omeji tajnost pisem in drugih sredstev občevanja za mesec dni oziroma da se ta rok lahko tudi podaljša.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg106">Po mnenju Sekretariata za zakonodajo in pravne zadeve je Odbor za notranjo politiko in pravosodje vložil k temu tretjemu branju amandma, da se ta odstavek črta. Mi namreč menimo, da ustava dopušča tako omejitev osebnih svoboščin izključno in samo v kazenskih postopkih in v postopkih, kjer je ogrožena varnost države.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg107">Preiskovalna parlamentarna komisija ne vodi kazenskega postopka in v zadevah, kjer bi se lahko vodil kazenski postopek, to predlaga ustreznim organom pravosodja, da v zadevah, kjer je ogrožena varnost države, pa tudi ustreznim organom oziroma organom pravosodja, ki potem lahko predlagajo v teh postopkih ustrezno ravnanje, med drugim tudi to omejitev človekovih pravic.</seg>
@@ -865,7 +847,7 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg113">Zato menim - čeprav so nekatere kolegice in kolegi menili, da gre za nepotrebno zadevo, zlasti glede na zapetljaje, ki so se od začetka pri nas kazali - da gre za eno izmed zelo važnih, izredno važnih odločitev, ki daleč presegajo samo formalno urejanje poslovanja naših preiskovalnih komisij, ampak dejansko posegajo na varovanje politične demokracije in človekovih svoboščin. Začetne težave, ki so se pojavile, so posledica naših okoliščin, enako kot se pojavljajo težave, ko moramo sprejeti preko 150 zakonov, da jih prilagodimo ustavi, tako se naenkrat odpirajo v tem časovnem obdobju vprašanja, ki zahtevajo obravnavo po preiskovalnih komisijah in s tem se ustvarja vtis, da gre za pretirano komisijomanijo, kar ni res in je to posledica takega objektivnega stanja. Zato predlagam zboru, da zakon o parlamentarni preiskavi sprejme. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg114">Hvala gospodu Puklu za poročilo. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg115">Želi besedo predstavnik Vlade?</seg>
@@ -875,42 +857,42 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg117">Besedo dajem poslankam in poslancem. Kdo želi besedo? Gospod Podobnik Marjan.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg118">Spoštovani! Glede na Poslovnik Državnega zbora v tretji obravnavi mislim, da gre samo za vprašanje obravnave tistih členov, na katere so bili vloženi amandmaji, ki so bili ali niso bili sprejeti. Poslovniško, mislim, da je samo ta možnost. Ne bi se želel posebej dotikati posameznih členov, ker je bilo v predhodnih fazah o teh stvareh več kot dovolj povedanega.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg119">Rad bi načelno - glede na to, da je jasno, da bo zakon sprejet, in glede na to, da je jasno, da mi zakon rabimo, vendar ne tak zakon, kot bo sprejet. Mi bi rabili dober zakon o parlamentarni preiskavi in dober poslovnik o parlamentarni preiskavi. To, kar bomo sprejeli, bosta zakon in poslovnik, ki bosta - po eni strani - zaloputnila vrata medijem in slovenski javnosti, kar je prvi cilj tega zakona in poslovnika. Drugič sta zakon in poslovnik, ki omejujeta delovanje parlamentarnih preiskovalnih komisij. Zaradi tega mislim, da se bo ta učinek pokazal in bo po sprejetju teh dveh aktov - ki bi jih sicer, v dobri varianti nujno rabili - po sprejetju teh dveh aktov bodo tiste komisije, ki zdaj že delajo in tiste, ki bodo še ustanovljene, imele samo manjše možnosti za učinkovito delo in ne večje možnosti. Mimogrede, celo taki predlogi, kot so bili podani, torej, da imajo člani preiskovalne komisije možnost dobiti ustrezno strokovno svetovalno pomoč; taki predlogi so bili s parlamentarno večino tu zavrnjeni. To jasno kaže, da je enoten cilj, ki je lahko tudi legitimen cilj večine v parlamentu, da se čim bolj zmanjšajo možnosti posameznikov v preiskovalni komisiji. S tem, ko se zmanjšajo možnosti za delovanje posameznika, pa se zagotovi, da bo tudi sama komisija učinkovita le toliko, koliko to ustreza večini, ki v tem trenutku obstaja. To poudarjam zato, ker je pri prvi preiskovalni komisiji, ki je ustanovljena, evidentno, da so cilji in želje poslancev, ki v njej delamo, zelo različni. Zato bi bilo s tem, če bi zagotovili, da vsak ima ustrezno strokovno pomoč in da lahko dejansko intenzivno deluje na svojem področju, bi s tem omogočili, da bi se kljub različnim interesov vendarle postopki učinkovito razreševali. Tako bodo stvari formalno tekle tudi po sprejetju tega zakona. Dejansko bi še enkrat povedal, ni argumentov, ne v domači zakonodaji, ne v ustavi, na katero se je sklicevalo, ne v tuji zakonodaji za določene stvari, predvsem, ki izključujejo javnost. Dejstvo je, da mora biti v državnih skrivnostih, pomembnih za državno varnost, da je treba narediti določene restrikcije na tem področju.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg120">Drugo dejstvo je, da mi praktično operiramo skorajda samo še z zaupnimi dokumenti. Jaz osebno, lahko povem, da tisto, kar je bilo na moj naslov dano kot na člana preiskovalne komisije, glede na vse, kar sem dobil gradiva, je verjetno vsaj polovica strogo zaupnega, če upoštevam tudi 2.500 strani dokumentacije v zvezi z aferami, ki jih obravnava naša preiskovalna komisija. Mislim, da to ni prava pot, to potrjujejo tudi zadeve zadnjih dni in tednov, ki kažejo, kaj pomeni, če se stvari predolgo skrivajo. Odločiti se bo potrebno tudi o tem zakonu. Osebno bom za to, ker mislim, da ni bila pokazana volja, da bi se upoštevalo izkušnje sedanje edine preiskovalne komisije - pozitivnih izkušenj se ni upoštevalo v tem zakonu. Amandmajsko smo jih dali, zato bom glasoval proti temu zakonu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg121">Hvala, gospod Marjan Podobnik. Želi še kdo besedo? Prosim, gospod Pucko.</seg>
             </u>
             <note type="speaker">CIRIL PUCKO:</note>
-            <u who="#SDZ1.PuckoCiril" ana="#regular">
+            <u who="#PuckoCiril">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg122">Hvala lepa, gospod predsednik. Poslanke in poslanci! Cilji članov komisije so isti, različni so načini oziroma sistem dela. Sistem, kot ga ima gospod Podobnik, je ho-ruk sistem in upam, da bo s sprejemom tega zakona in poslovnika tega sistema konec. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg123">Hvala, gospod Pucko. Gospod Podobnik ima repliko.</seg>
             </u>
             <note type="speaker"> MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg124">Ko dajem repliko, moram reči, da me preseneča, da se je zdelo prav gospodu Pucku nujno, da odgovarja na trditve, za katere sem prepričan, da se večji del tudi sam strinja, pa jih iz različnih razlogov tu ne more potrditi, ker v osebnih pogovorih med sejo komisije in po sejah potrjuje prav te zadeve, o katerih sem zdaj sam govoril.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg125">Druga stvar, kar se tiče ho-ruk metode, preiskovalna komisija se je znašla sama v mnogih dilemah v prvih fazah svojega delovanja. Želja, na srečo večine v tej preiskovalni komisiji, je bila, da se čim več tu naredi. Res pa je - in to mislim, da bo vsak priznal - da to ni bila nikoli želja vseh. Posamezni člani komisije so se tudi z osebnim izjavljanjem javno opredeljevali proti željam, da se stvari intenzivno razčiščujejo, proti interesu večine, proti konkretnim predlogom, ki smo jih tam dali.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg126">Bojim se, da imamo zadnjo možnost, da kot parlament, kot Državni zbor odgovorno naredimo tiste stvari, ki jih niso bili pripravljeni narediti drugi organi, predvsem ne vlada. Zdaj jih je tudi vlada začenjala delati; državni zbor bi lahko tu, s tem, ko bi dal ustrezno podporo s temi zakoni. Preiskovalnim komisijam bi lahko veliko pripomogel. Tako pa ne bo pripomogel. Žal, v tem trenutku je še vedno moč tistih, ki lahko javno preprečujejo, da bi se stvari razčiščevale, dovolj velika. Jaz upam in verjamem, da bo ta moč vedno manjša, ker bodo znotraj strank, ker se ne bodo delale razlike levo - desno, ampak znotraj strank bo vedno več tistih, ki si bodo prizadevali za to, da se stvari pošteno pripeljejo do konca. Znotraj strank, sem trdno prepričan, ne glede na to, na kateri strani je kdo. Drugi rešitve tu ne vidim. Žal mi je, da zakon tega ne omogoča v tistih točkah, kjer zavestno zmanjšuje možnost članom komisije, da bi intenzivno in učinkovito delali.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg127">Hvala, gospod Marjan Podobnik. Besedo ima gospod Polajnar oziroma repliko.</seg>
             </u>
             <note type="speaker">IGNAC POLAJNAR:</note>
-            <u who="#SDZ1.PolajnarIgnac" ana="#regular">
+            <u who="#PolajnarIgnac">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg128">Hvala lepa, gospod predsednik. Spoštovane poslanke in poslanci! Moram se oglasiti, ker je bilo rečeno, da bomo s sprejemom tega zakona in poslovnika zaprli delovanje teh komisij pred javnostjo. Oprostite, ta trditev mi ni povsem razumljiva in bi prosil, da se razloži, kaj to pomeni. Ker poslovnik, tak kot je zdaj pred nami, v 15. členu lepo govori - dokazi se izvajajo na seji, ki je odprta za javnost. Moram reči, preiskovalna komisija za raziskavo povojnih množičnih pobojev je imela doslej tri seje, vse so bile odprte za javnost. Na zadnji smo se že pogovarjali o zelo vsebinskih stvareh, tako da na to moram opozoriti.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg129">Rekel bi še nekaj. V naši poslanski skupini smo vedeli, kaj pomeni preiskovalna komisija. Te stvari smo šli nekoliko študirati in se pozanimati, kako te stvari gredo. Še vedno trdimo, v tistih postopkih, ki jim lahko rečemo zbiranje dokaznega gradiva, bo moralo prihajati do tega, da bodo stvari nekaj časa nejavne. Navsezadnje bo šlo za zelo operativne dogovore v sami komisiji; tudi za dogovore s tistimi, ki bodo sodelovali kot strokovnjaki, za katere je bilo tudi rečeno, da tu ni bilo odločitve, da bi lahko pomagali posameznikom. Jaz se s tem ne strinjam. Vsaka komisija ima pravico povabiti strokovnjake, jih zaposliti. Drugo je pa vprašanje, koliko vsak poslanec lahko pridobi teh strokovnjakov oziroma jih zaposli. Opozoril bi - preiskovalna komisija je tako pomemben organ, da ne moremo govoriti o tem, da so tam pomembni posamezniki, ki nekaj preiskujejo, ampak pomembna je komisija, ki nekaj preiskuje. To mora biti temeljno izhodišče. Za to komisijo, ki nekaj preiskuje, če pač komisija deluje kot nek organizem, morajo biti dani pogoji, da ima strokovne svetovalce, sodelavce in tako naprej. Če pa nek posameznik želi osebnega svetovalca ali strokovnega sodelavca, je to njegova stvar, nihče mu tega ne more odreči. Samo nastaja vprašanje, o tem smo se veliko pogovarjali, na kakšen način naj se to plača. To je res drugo vprašanje. Kar iz tega sklepati: češ, nekdo ni zainteresiran, da se stvari ne razčistijo, na tak način se ne moremo pogovarjati. To še tega ne pomeni.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg130">Še nekaj je potrebno povedati, češ da se bodo zdaj stvari dokončno pokazale, kaj kdo želi in česa ne želi. Mi smo prepričani, da sta tako zakon in poslovnik dovolj dobra dokumenta. Če morda nista povsem dobra, se bo to pokazalo tekom dela preiskovalnih komisij in se lahko še popravita. Dejstvo pa je, če ju ne dobimo zdaj, potem te preiskovalne komisije, ki že so, tudi poslej ne bodo mogle normalno delovati s pooblastili, ki jih morajo imeti, če hočejo normalno delovati. To je to temeljno izhodišče. Te komisije nimajo pooblastil. Zaradi tega je prihajala v težave tudi ta komisija, ki raziskuje te gospodarske malverzacije in tako naprej. Važna so pooblastila.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg131">Zato smo za sprejem oziroma govorim v svojem imenu, sem za sprejem teh dveh dokumentov, ker bosta vendarle dajala ta pooblastila. Še enkrat, kar se tiče javnosti. Ta dva dokumenta javnosti ne izključujeta, če pa dobi preiskovalna komisija dokumente, ki so označeni z neko stopnjo zaupnosti, to ni krivda teh dveh papirjev, ampak se je treba o tem pogovarjati pogovarjati na drugih ravneh. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg132">Hvala, gospod Polajnar. Želi še kdo besedo? Če ne, prehajamo na obravnavo amandmajev, in sicer amandmaja Odbora za notranjo politiko in pravosodje; drugi odstavek 4. člena naj se črta. Kdo želi besedo?</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg133">Ker ne želi nihče besede, prehajamo na odločanje. Ugotovimo sklepčnost!</seg>
                <note>55 prisotnih.</note>
@@ -930,11 +912,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg142">Predlog poslovnika je za tretjo obravnavo pripravil Sekretariat za zakonodajo in pravne zadeve. Predlog poslovnika je obravnavala tudi Komisija za poslovnik kot matično delovno telo. Želi besedo predstavnik? Prosim, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ1.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg143">Gospod predsednik, spoštovane kolegice in kolegi! Matično delovno telo, Komisija za poslovnik, je ugotovila, da je Sekretariat za zakonodajo in pravne zadeve pripravil predlog za tretjo obravnavo v skladu z odločitvami Državnega zbora. Ob razpravi v drugi obravnavi zakona so bila pojasnjena temeljna izhodišča poslovnika in zagotovljena tudi njegova skladnost s sedaj že sprejetim zakonom. Temeljito so bile obravnavane različne dileme in pogledi na zakon in Državni zbor je s potrebno večino sprejel opredelitve, ki jih sedaj tudi poslovnik vključuje. V poslovniško predvidenih rokih na spremenjene člene poslovnika, kakor smo jih sprejeli v drugi obravnavi, amandmaji niso bili vloženi. Zaradi tega predlagam, da Državni zbor s potrebno 2/3 večino tudi poslovnik o parlamentarni preiskavi sprejme. Prepričan sem, da sta nam potrebna oba dokumenta, da bi lahko v našem skupnem interesu parlamentarne preiskovalne komisije uspešno delovale. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg144">Hvala gospodu Potrču. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg145">Želi besedo predstavnik vlade?</seg>
@@ -944,15 +926,15 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg148">Prosim, gospod Marjan Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg149">Predlagal bi, da bi se ob glasovanju oziroma po glasovanju o tem poslovniku opredelili še do dodatnega sklepa, ki bi ga predlagal - če je to poslovniško možno, da predlagam dodatni sklep v zvezi s poslovnikom o parlamentarni preiskavi.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg150">Če je v zvezi s poslovnikom, da.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg151">Je v zvezi s poslovnikom oziroma v zvezi z delovanjem parlamentarnih preiskovalnih komisij.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg152">Namreč, glede na to, da prizadevanja, da bi se omogočilo poslancem-članom preiskovalnih komisij uspešnejše delo s tem, ko bi se jim omogočilo angažiranje tistih svetovalcev, ki jim tako zaupajo, da bi lahko res pripomogli k delu, ki ga opravlja posamezen poslanec v preiskovalni komisiji, predlagam sklep, ki bi na drug način vsaj delno reševal to problematiko. Tu je vendarle treba povedati: to ni katera koli tematika; tu je osnovno vprašanje zaupanja in ne more biti svetovalec nekdo, če mu v osnovi ne zaupaš, da dela to, kar želiš ti kot poslanec uveljaviti, ampak da dela oziroma želi delovati v diametralno nasprotni smeri, četudi gre za čisto strokovna vprašanja. Tu pač gre za posebno tematiko, mislim, da nam je to jasno. S tem se pač ni uspelo.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg153">Predlagal bi zato dodaten sklep, ki bi se glasil nekako takole: "Glede na pomembnost problematike, ki jo obravnavajo preiskovalne parlamentarne komisije - sedaj govorim o teh dveh, ki sta sedaj ustanovljeni; če bodo druge in če bodo toliko pomembne ali ne, to je vprašanje, do katerega se sedaj ne morem opredeljevati, ker ne vem, kaj vse se bo zgodilo - naj se ugotovi možnost okrepitve preiskovalnih parlamentarnih komisij z ustreznimi svetovalci na račun prostih kapacitet</seg>
@@ -960,7 +942,7 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg154">oziroma manjših zaposlitev v tistih delovnih telesih, ki imajo - ne bom rekel manj zahtevno tematiko - ampak če se ugotovi v vodstvu državnega zbora, da obstajajo med sedaj zaposlenimi v državnem zboru tudi taki, ki niso polno zaposleni, naj se z ustrezno reorganizacijo zagotovi določena okrepitev parlamentarnih preiskovalnih komisij s svetovalci na račun tistih in tam, kjer so doslej bili neustrezno zaposleni." Torej ne gre za predlog novega zaposlovanja državnega zbora, pač pa za možnost, da se z ustrezno reorganizacijo to naredi. Če pa se ugotovi, da so vsi sedaj zaposleni v državnem zboru polno zaposleni, v celoti, če to pride od Sekretariata državnega zbora, potem pa bi v tem primeru seveda odstopil od tega predloga. Bi pa predlagal, da se vendarle to kot dodaten sklep danes sprejme. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg155">Gospod Podobnik, prosil bi vas, če mi pismeno posredujete ta dodaten sklep.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg156">Če ni več razprave, prehajamo na glasovanje o predlogu poslovnika. Ob tem vas želim posebej opozoriti, da se na podlagi 313. člena poslovnika Državnega zbora predlog poslovnika o parlamentarni preiskavi sprejema z 2/3 večino prisotnih poslancev. Ugotovimo sklepčnost!</seg>
                <note>60 prisotnih.</note>
@@ -972,104 +954,104 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg160">Gospod Podobnik bo sedaj prebral predlog dodatnega sklepa. Prosim.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg161">Glede na pomembnost problematike, ki jo obravnavajo do sedaj ustanovljene parlamentarne preiskovalne komisije, naj se ugotovi možnost take prerazporeditve v strokovnih službah državnega zbora, ki bi zagotovila angažiranje dodatnih svetovalcev v preiskovalnih komisijah brez dodatnih zaposlitev v državnem zboru.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg162">Kdo želi razpravljati o tem dodatnem sklepu? Prosim, gospod Polajnar.</seg>
             </u>
             <note type="speaker">IGNAC POLAJNAR:</note>
-            <u who="#SDZ1.PolajnarIgnac" ana="#regular">
+            <u who="#PolajnarIgnac">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg163">Hvala lepa. Sklep je po svoje simpatičen, da bi torej racionalizirali delo državnega zbora. Je pa dvorezen - opozarjam na to! Če ga sprejmemo, pomeni, da ti delavci sedaj nimajo kaj delati v državnem zboru in šele sedaj bodo zaposleni, ko bodo delali v preiskovalnih komisijah. Ne razumem pa tega sklepa v tem smislu: če so npr. doslej imeli dovolj dela ali pa tudi ne, pa bi sedaj imeli dovolj dela, in to so pa tisti pravi; prej pa je bilo ves čas govora, kako rabimo tiste, ki jim mi zaupamo, itn. in da moramo take ljudi dobiti. Rekel bi tole: res čisto zaradi poslovanja teh komisij, normalnega dela, sem prepričan, da bodo morale preiskovalne komisije zaposliti še kakšnega strokovnega sodelavca; pa ne zaradi tega, ker je nujno treba povečati ta aparat, ampak zaradi strokovnosti same. Kajti prepričan sem, da za vse te preiskovalne komisije, ti, ki so sedaj tukaj, niso vsi usposobljeni za to delo. Tako da se bodo morale tako ali tako komisije odločati o tem. In ko se bodo komisije odločile, sem prepričan, da bo državni zbor ali KVIAZ temu prisluhnil, če hočemo zagotoviti normalno delo preiskovalnih komisij. Tako da tukaj jaz ne vidim nevarnosti, da strokovnih sodelavcev ne bi bilo. Pravim pa, da je stvar dvorezna, ker, prvič, rečemo, da sedaj nimajo kaj delati; če pa tudi že res nimajo kaj delati, bodo pa ti kar avtomatsko prestavljeni v preiskovalne komisije, ne glede na to, ali so za to, recimo, zelo strokovno delo tudi usposobljeni. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg164">Hvala gospod Polajnar. Prosim, gospod Marjan Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg165">Ne gre za to, da kdo ne bi imel kaj delati. Gre za vprašanje različnih obremenitev, ki objektivno vedno obstajajo v vsaki organizaciji. Druga stvar: ta predlog gre na to, da te preiskovalne komisije dobijo - kot komisije, ne kot posameznik, kar ste pač zahtevali - svetovalce na osnovi predlogov različnih članov komisij, tiste, ki se na te stvari spoznajo. Torej lahko tudi izven sedanje organizacije. Gre pa za nek postopek, da se pri reorganizacijah, ko se nekje drugje pokaže neka nova zaposlitev oziroma neka prerazporeditev v državnem zboru - upokojitev ali podobno, ko se ta možnost pokaže, da se takrat zadeva izpelje v tem smislu, da ne pomeni dodatne obremenitve državnega zbora, pač pa, da je tu ustrezen sklep, ki omogoča, da se s tem postopkom okrepi strokovna služba preiskovalne komisije.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg166">Torej izrecno še enkrat poudarjam: gre za ljudi, ki se na to stvar spoznajo, ni pa to takojšnja možnost angažiranja; lahko se pokaže v roku meseca, dveh, treh možnost pri ustreznih prerazporeditvah - vendarle gre tu za dovolj veliko organizacijo in tudi za sodelovanje z drugimi organizacijami oziroma institucijo in se lahko ta stvar zagotovi.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg167">Jaz prosim, da to podprete. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg168">Hvala, gospod Podobnik. Gospod Polajnar - replika. Izvolite.</seg>
             </u>
             <note type="speaker">IGNAC POLAJNAR:</note>
-            <u who="#SDZ1.PolajnarIgnac" ana="#regular">
+            <u who="#PolajnarIgnac">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg169">Hvala. Strinjam se s to pobudo v tem smislu, da bi racionalizirali to strokovno ekipo, ki jo imamo sedaj v državnem zboru. Ampak opozarjam na dva profila teh, ki naj pomagajo preiskovalnim komisijam. Eni so ti strokovni sodelavci, kot so pravniki, ekonomisti in ne vem, kaj še vse lahko; drugo pa so tisti, ki jih bodo komisije morale nujno najeti kot, recimo, začasne strokovne sodelavce ali eksperte</seg>
                <note>kot se temu bolj učeno reče</note>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg170">, ki sploh ne bodo vezani na ta državni zbor, na zaposlovanje v tem državnem zboru, ampak bodo pogodbeno delali v teh preiskovalnih komisijah. Verjetno bi meni lahko tu pritrdil predsednik te naše preiskovalne komisije za poboje. Pri nas ne bo vprašanje, koliko pravnih strokovnjakov bomo še dobili, ali morda celo ekonomistov, bo pa vprašanje, koliko zgodovinarjev bomo morali povabiti k delu naše preiskovalne komisije, ko bomo ugotavljali dogajanja v povojnem obdobju. To bodo pa tisti, ki seveda nikakor niso vezani na zaposlovanje v Državnem zboru, ampak so zgolj eksperti.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg171">Malo se torej te stvari tukaj mešajo. Kot pravim, očitno je treba ločiti, da so eni ti, ki jih zares povabimo kot eksperte, drugo so pa ti strokovni sodelavci, ki pač delajo, ki so tu za normalno delovanje preiskovalnih komisij. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg172">Hvala, gospod Polajnar. Besedo ima gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg173">Hvala lepa. Jaz bom glasoval proti, in sicer iz preprostega razloga, ker niti gospod Podobnik ne ve točno, kaj želi.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg174">Hvala. Želi še kdo besedo? Gospod Marjan Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg175">Meni je žal, da moram replicirati na take zadeve in bom povedal direktno. Žal mi je, da vodi najmočnejšo poslansko skupino v tem parlamentu človek, ki je tak nihilist, da vsak resen predlog, ki ni pisan na njegovo kožo, skuša zbanalizirati. To je neresno, neodgovorno. Dajte vsebinsko problematizirati, če se vam zdi sporno. Mislim, da je bil moj predlog argumentiran. Dokazan je z vmesnim poročilom naše preiskovalne komisije s sedemdesetimi sklepi, ki so bili sprejeti na tej komisiji. Jaz sem ga resno dal tukaj. Sprejel sem dejstvo, da niste pripravljeni sprejeti, da bi posamezen poslanec lahko dobil svetovalno službo, ampak kot celotna komisija, moram reči, da me res čudi to, da se na tak način skuša doseči, da bo predlog padel, ker bo verjetno tudi res padel. Vendar ko boste ponovno ocenjevali delo preiskovalnih komisij, zavedajte se, da je tudi to element uspešnosti dela preiskovalne komisije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg176">Hvala lepa. Gospod Školč, replika.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg177">Hvala lepa za zmožnost, da repliciramo tudi v trenutku, ko ni čas za to. Meni je na nek način vseeno, kaj si gospod Podobnik misli o meni, ali sem nihilist ali nekaj drugega. To je njegova pravica. Tisto, zaradi česar sem jaz to rekel, je enostavno zaradi tega, ker je pač problem v tem, da se mora zbor opredeliti čisto do vsakega predloga, pa če je še tako bedast. Jaz seveda podpiram vse tiste predloge, ki so resni in ki so utemeljeni. Gospod Podobnik je tukaj štirikrat nastopil in od tega je povedal pet različnih variant. Treba se bo počasi navaditi. Jaz bom pač nesramen, kolikor je potrebno v tej točki, bi bil pripravljen podpreti sklep, kjer bi s posebnim sklepom gospodu Podobniku dodelil nekoga, ki bi pazil na jezik in formulacijo sklepov in tako naprej. To so druge zgodbe. Mi se moramo o vseh stvareh tukaj opredeljevati, zato je treba enostavno reagirati na stvari, ki ne zdržijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg178">Hvala lepa. Gospod Jagodnik.</seg>
             </u>
             <note type="speaker">JOŽE JAGODNIK:</note>
-            <u who="#SDZ1.JagodnikJože" ana="#regular">
+            <u who="#JagodnikJože">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg179">Spoštovani! Jaz ne vodim nobene skupine, pa tudi ne razumem tega predloga gospoda Podobnika. Enkrat želi svetovalce za dolarje, enkrat želi preiskovalce za tolarje. Preiskovalna komisija je seveda komisija kot vsaka druga; ena od štiriindvajsetih, kolikor jih imamo. V okviru poslovnika ima vsaka komisija možnost, da si pridobi sodelavce. Če je nekdo polovično zaposlen ali slabo zaposlen v tem državnem zboru, potem vsekakor preiskovalna komisija ni smetišče, kamor bi takega nezaposlenega odstavljali. Zato bom glasoval proti temu predlogu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg180">Hvala. Gospod Marjan Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg181">Samo repliko gospodu Jagodniku. Prav nobene dodatne finančne obremenitve ne bi bilo, če bi bil moj predlog sprejet, ker sem izrecno poudaril, da gre samo v primeru, da ne bo nobene dodatne zaposlitve v državnem zboru, pač ob ustreznih drugih kadrovskih spremembah - odpustu, upokojitvi, odhodu na druga delovna mesta, kakorkoli, če se pokaže taka možnost, da se takrat to stvar okrepi. Moram reči, da se ne strinjam, da je to komisija, vsaj kar se tiče preiskovalne komisije, kot katerakoli druga. To, na žalost, ni res. Dobro bi bilo, da bi bilo to res. Na žalost pa ni. Mislim, da to vsi vemo, saj vemo, kaj tam obravnavamo, saj vemo, kakšne posledice so imele zadeve, ki so se dogajale in prav bi bilo, da bi jim omogočili, da bi uspešno delali. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg182">Hvala. Besedo ima gospod Poljšak.</seg>
             </u>
             <note type="speaker">MARIJAN POLJŠAK:</note>
-            <u who="#SDZ1.PoljšakMarijan" ana="#regular">
+            <u who="#PoljšakMarijan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg183">Nima smisla, da se eni hecajo s tem, da se pogovarjamo o stvari, ki je premalo pomembna. Stvar je pomembna, ker tukaj, za tem odrom in za tem mikrofonom smo debatirali o stvareh, ki so bile mnogo manj pomembne. Če si predstavljamo državni zbor, je kot podjetje. Prvič, del podjetja je administrativno osebje, ki lahko vpliva na racionalizacijo in spremembe, in mi kot poslanci smo tudi člani podjetja in lahko vplivamo. To je bil čisto navaden predlog. Lahko tudi vodstvo zbora, ne administrativno, vpliva na to, da se stvari reorganizirajo, da boljše funkcionira. To je bil navaden predlog za boljše funkcioniranje. Ta predlog je utemeljen in je razumljiv, kdor se dela norca, kot gospod Školč, pa pravi, da ne razume. On dobro razume, samo je proti tej stvari iz principa, ker to predlaga gospod Podobnik. Glejmo na stvar kot funkcionalno in jo podprimo, čeprav je malenkostna. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg184">Hvala. Gospod Jelinčič.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ1.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg185">Hvala lepa. Lepo pozdravljeni! Prosil bi gospoda Poljšaka, da to zadnje ponovi, nisem dobro razumel.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg186">Gospa Jadranka Šturm- Kocjan.</seg>
             </u>
             <note type="speaker">JADRANKA ŠTURM-KOCJAN:</note>
-            <u who="#SDZ1.ŠturmKocjanJadranka" ana="#regular">
+            <u who="#ŠturmKocjanJadranka">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg187">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi! Gospodu Podobniku predlagam, da ta predlog naslovi na generalnega sekretarja Državnega zbora in on poskuša stvari čim bolj racionalno urediti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg188">Hvala, gospa Jadranka. Želi še kdo besedo? Če ne, dajem predlog dodatnega sklepa, ki ga je predlagal gospod Podobnik, na glasovanje. Ugotovimo sklepčnost!</seg>
                <note>64 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg189">Kdo je za?</seg>
@@ -1080,27 +1062,27 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg192">Gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg193">Spoštovani predsednik, spoštovane poslanke in poslanci! Na 12. seji je državni zbor imenoval preiskovalno komisijo, ki naj razišče afero z orožjem na mariborskem letališču. Ob tej priložnosti je druga skupina 33 poslancev zahtevala razširitev preiskave na trgovino z orožjem po julijski vojni 1991. Ugotavljam, da je bil sklep državnega zbora, ki je bil tak, da se tej preiskovalni komisiji, ki je bila imenovana, naloži dodatno delo, v nasprotju s 4. členom poslovnika, ki je bil ravnokar izglasovan.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg194">Naša poslanska skupina je tako stališče zastopala že na 12. seji. Jaz sem utemeljeval, da je sklep, ki ga je sprejel državni zbor v nasprotju z ustavno pravico tretjine poslancev, da zahtevajo določeno preiskavo. Če citiram samo en stavek, ali del stavka 4. člena, pravi tako: da je mogoče preiskavo tudi razširiti ali dopolniti, v kolikor je to v skladu s predmetom in namenom zahtevane parlamentarne preiskave in če temu ne nasprotuje predlagatelj zahteve za uvedbo parlamentarne preiskave. Predlogi za razširitev ali dopolnitev zahteve za uvedbo parlamentarne preiskave se usklajujejo s predstavnikom predlagatelja zahteve na kolegiju predsednika državnega zbora.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg195">Predlagam, da ne bi kršili poslovnika, in po mojem prepričanju tudi ustave, da do takega usklajevanja pride med predstavnikom predlagatelja prve zahteve za preiskavo, za katero je bila komisija izvoljena v kolegiju predsednika državnega zbora in da se ugotovi, ali se predlagatelj strinja oziroma ali ne nasprotuje razširitvi preiskave. V nasprotnem primeru menim, da je treba sklep zbora spremeniti, tako da bo v skladu s poslovnikom in v skladu z zahtevo 33 poslancev ustanoviti novo preiskovalno komisijo s tistim področjem dela, za kar je bila predlagana. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg196">Hvala lepa, gospod Zagožen. Gospod Zagožen, moram vam povedati, da je bil sklep sprejet na osnovi takrat veljavnih predpisov in da vaš predlog ni sprejemljiv. Prosim, gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg197">Dovolite, da na to odgovorim. Rekel sem, da je bil sprejet v skladu s takrat veljavnim začasnim poslovniškim sklepom, za katerega mislim, da je v nasprotju z ustavo in torej ta sklep ostaja neustaven. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg198">Hvala lepa. Lahko zadevo uredimo na Ustavnem sodišču.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg199">Prehajamo na 4. TOČKO DNEVNEGA REDA, to je na OBRAVNAVO PRORAČUNSKEGA MEMORANDUMA ZA LETO 1994.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg200">Proračunski memorandum za leto 1994 je v obravnavo zboru predložila Vlada Republike Slovenije. Uvodno besedo dr. Drnovška smo slišali, memorandum so obravnavala tudi delovna telesa Državnega zbora in podala poročilo oziroma mnenje Odbora za finance in kreditno-monetarno politiko kot matičnemu delovnemu telesu. Prosim poročevalca Odbora za finance in kreditno-monetarno politiko, da predstavi poročila odbora o memorandumu. Gospod Kopač ima besedo.</seg>
             </u>
             <note type="speaker">JANEZ KOPAČ:</note>
-            <u who="#SDZ1.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg201">Hvala za besedo. Odbor je obravnaval poročila sedmih delovnih teles Državnega zbora, ki so poslala svoja mnenja oziroma svoja poročila o obravnavi proračunskega memoranduma pravočasno in na podlagi njihovih poročil, nekatera od njih so bila bolj konkretna, nekatera so bila zelo splošna in oblikoval tudi vrsto amandmajev, ki so v pregledu amandmajev tudi navedena.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg202">Odbor na žalost ni uspel obravnavati treh poročil delovnih teles, ker so njihova poročila prišla že po roku, ki je veljal za to, da je sploh možno obravnavati vse te amandmaje oziroma vse te predloge.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg203">Odbor se je sam potem še naknadno opredeljeval do različnih amandmajev, ki so bili vloženi, vsega skupaj jih je okrog 160, natančna številka bo znana v nekaj prihodnjih minutah. No, in okrog teh 160 amandmajev se bo moral na podlagi mnenja vlade in na podlagi mnenja matičnega odbora opredeljevati tudi državni zbor. Sicer pa bi rad rekel za uvod v to razpravo samo nekaj kratkih besed.</seg>
@@ -1113,14 +1095,14 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg210">Teoretično je možno, da mi danes ali v teh dneh sprejmemo proračunski memorandum tak, kot je ponujen, ali morda s povsem nasprotujočimi si amandmaji in da je potem proračun sprejet, obravnavan in sprejet povsem v drugačni luči, s povsem drugačnimi številkami, kot so v tem proračunskem memorandumu. Nekdo bi lahko rekel, oboje je parlamentarni akt in pravica državnega zbora je, da spremeni tudi svoje mnenje oziroma svoje odločitve. To je seveda res, vendar menim, da bi vsaj za začetek življenja proračunskega memoranduma kot parlamentarnega akta bil to en dokaz, da ta zbor ni zadosti zrel, da odloča o denarju davkoplačevalcev, vendar jaz sem prepričan, da temu ni tako in zato gledam na razpravo o proračunskem memorandumu na njen izid z optimizmom in zaupanjem, da bo v okviru, kot je zastavljeno v memorandumu, potem sprejeta tudi vsa druga zakonodaja, ki mora biti za to, da se memorandum sploh izvede in da bo tudi predlog zakona o proračunu za leto 1994 sledil številkam, ki bodo izglasovane v tem memorandumu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg211">Preden dam besedo predstavnikom poslanskih skupin, samo to opozorilo.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg212">Skladno s 214. členom Poslovnika se o proračunskem memorandumu najprej opravi razprava in odločanje o amandmajih, potem pa zbor glasuje o sprejemu proračunskega memoranduma v celoti.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg213">Državni zbor bo razpravljal in odločal tudi o amandmajih, ki so bili vloženi v skladu s stališčem komisije za poslovnik do 12 ure 6. novembra 1993 na podlagi 121. člena poslovnika.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg214">Predmet je obravnavan na Državnem zboru, tekstualni del proračunskega memoranduma vključno s tabelami, ki so objavljene v Poročevalcu od 10 do 24 strani. Besedo dajem gospodu Igorju Bavčarju, poslanska skupina demokratov Demokratske stranke.</seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SDZ1.BavčarIgor" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg215">Gospe in gospodje! V kolikor toliko normalnih državah je proračun rutinska zadeva, saj predstavlja izvedbo siceršnjega vladnega programa ali programa koalicije v prihajajočem letu.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg216">Pretresi v vladajoči koaliciji, velika nasprotovanja glede samih prioritet proračunske porabe in politike za leto 1994, neznanke, s katerimi se še vedno srečujemo, manjka skoraj 30 zakonov, ki so potrebni za to, da lahko izvedemo načrtovani memorandum, pa kažejo, da vlada nima svoje politike, nima jasnega programa, ki bi šel čez gol seštevek strankarskih programov in želja strank vladajoče koalicije v jasno operacionalizacijo ciljev programa, ki ga Slovenija danes potrebuje.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg217">Lani je vlada našla pozitivne motivizacijske vzvode v lastninjenju, kar se je, in demokrati smo na to jasno opozorili v svoji diskusiji, izkazalo ne samo za napačno predvidevanje, ampak tudi kot vzrok novih konfliktov in kratkoročno celo vzrok za demotivizacijo ljudi in zaostajanja.</seg>
@@ -1135,11 +1117,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg226">Demokrati bomo, če ne bo z amandmaji in v razpravi ta dokument bistveno popravljen, glasovali proti memorandumu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg227">Hvala gospod Igor Bavčar. Gospod Janez Kocijančič, v imenu poslanske skupine Združene liste.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOCIJANČIČ:</note>
-            <u who="#SDZ1.KocijančičJanez" ana="#regular">
+            <u who="#KocijančičJanez">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg228">Spoštovani predsednik, kolegice in kolegi. V razpravah o proračunskem memorandumu in delitvi proračunskih sredstev za prihodnje leto je Združena lista in njeni poslanci pokazala aktiven in odgovoren odnos, saj se zavedamo, da gre za enega najpomembnejših dokumentov, ki jih sprejema naš ali pa kateri koli parlament.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg229">V osnovi podpiramo globalne usmeritve proračunskega memoranduma, in sicer nadaljevanje stabilizacijske politike, omejevanje javne porabe. Predlagani proračun pomeni zgornji rob, ki bi ga še vzdržalo slovensko gospodarstvo in predlagamo podporo trendom gospodarskega prebujanja, kar naj bi vodilo v novi ciklus rasti na osnovi neinflacijske rasti povpraševanja.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg230">Pri tem menimo, da je gospodarski preobrat možen le ob smeli industrijski in tehnološki politiki, ob podpori izvozu, ki je osnovni faktor dinamiziranja proizvodnje in gospodarske rasti. Zavzemamo se za aktivno politiko zaposlovanja. Pri tem smo z racionalizacijo socialnih transferjev, za odpravo zlorab, kontrolo, racionalizacijo pravic, preverjanje, vendar pa ne za krčenje socialnih pravic. In izražamo pomisleke zoper porast sredstev za obrambo, saj po našem mnenju v sedanjem gospodarskem položaju to ni opravičljivo in vzdržno in ne prenese primerjave z drugimi prioritetami.</seg>
@@ -1155,11 +1137,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg240">Brez aktivne politike in boja proti brezposelnosti, pa si stabilnih političnih razmer ne znamo predstavljati. Pred dnevi sem poslušal govor predsednika Švicarske  federacije Ogija, ki je dejal, da se gospodarsko okrevanje in preobrat začne v glavah. Upam, da bomo tudi sami prišli do te faze. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg241">Hvala gospod Janez Kocijančič. Besedo ima gospod Marjan Podobnik v imenu poslanske skupine Slovenske ljudske stranke.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg242">Spoštovani! Slovenska ljudska stranka ocenjuje, da proračunski memorandum za leto 1994 žal ni dokument, ki bi odgovarjal na temeljna vprašanja sedanjega trenutka in prihodnjih let, da sicer poskuša iskati rešitve v okviru tistih možnosti, žal pa tudi tiste politike, ki je take možnosti zagotovila, torej v okviru politike, ki se sedaj izvaja in v tem smislu je proračunski memorandum predvsem dokument nadaljevanja sedanje politike.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg243">Sedanje politike Slovenije - slovenske vlade pa je ni mogoče oceniti kot dobro in razen v točki "ohranjanja relativne stabilnosti tolarja" je seveda tudi ni mogoče oceniti kot uspešno. Osnovna zamera Slovenske ljudske stranke do tega dokumenta je, da ni prepričljiv. Prepričljivost pa je v situaciji, ko živimo v veliki pravni anarhiji in ko se manjša zaupanje v inštitucije sistema - v različne institucije - je temeljni pogoj, da je mogoče neko strategijo tudi izvajati. Proračunski memorandum ni prepričljiv ne v tem, kaj hoče, čeprav okvirno govori in kot sem že rekel, predvsem o nadaljevanju sedanje politike, ne v tem, kako hoče to izpeljati. Pozitivno mislim, da je potrebno oceniti manj v memorandumu, bolj v nastopnem govoru dr. Drnovška prvič jasno prepričanje, da je v procesu privatizacije enako pomembno kot intenzivnost, hitrost privatizacije tudi korektnost izvajanja v skladu z zakonodajo. To mislim, da je pomemben pozitiven premik in vlada bo očitno na tem področju skušala v prihodnosti narediti več kot doslej, ko je ogromno zamudila.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg244">Jaz bi na kratko nekaj stvari povedal, ko je gospod Drnovšek obrazložil ta memorandum že v začetku, torej tudi proračunski memorandum o tem govori - vprašanje plač in nanje vezani davki in prispevki, ki se za to seveda večajo, v večji meri kot je rast bruto družbenega proizvoda. Mi smo prepričani, da ni te dileme - večje plače in manj brezposelnih ali obratno. Če pristanemo, da je to alternativa, potem bo v vsakem primeru  rešitev slaba. V vsakem primeru. Ker obe alternativi sta slabi. Torej nižje plače in rast brezposelnosti.</seg>
@@ -1185,12 +1167,12 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg264">Za konec bi rekel samo še to, da kljub temu da je na včerajšnjem omizju prišlo do takega pogovora, ki ga tudi sam nisem pričakoval, kjer je bila tema memorandum. Pričakoval sem, da ima Vlada v tem trenutku argumente, čeprav drugačne, kot jih mi vemo, vendar teh argumentov ni bilo, zato bi bilo najbolje, in nekaterim so rekli, da bi šli kar domov. In ker vlada nima argumentov za stvari, ki jih izvaja in zato za tiste stvari, za katere nima argumentov, jih v memorandum ni dala, amandmaji in dodatni sklepi pa ne bodo sprejeti, bi želel, da bi predsednik Vlade in ministri odgovorili na vprašanja, ki bodo med proračunsko obravnavo postavljena. Mislim, da je to minimalna želja. Torej, da se ne bi ponovilo to kot lani, ko smo postavili dvajset vprašanj in na nobeno od temeljnih ni bilo odgovorjeno. Torej, da bi na te stvari odgovorili in vsaj s tem dali težo poslancem Državnega zbora, da imamo vsaj pravico postaviti vprašanja. Ne verjamem, da bi bilo možno ta proračun spremeniti na ta način, da bi zagotavljal dejansko neke korenite pozitivne spremembe in glede na to, da so temeljna vprašanja, temeljne dileme bile v fazi obravnave po delovnih telesih že zavrnjene - bom osebno - in tudi kot poslanska skupina Slovenske ljudske stranke bomo glasovali proti sprejetju takega proračunskega memoranduma, ob želji, da bo Vlada, ki bo imela tak proračunski memorandum - ne glede na to, da je ne bo zavezoval k bolj poštenemu delovanju, kot je bilo to doslej - v prihodnje vendarle delala bolj pošteno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg265">Hvala lepa gospodu Podobniku. Seveda bi tudi jaz podprl zahtevo gospoda Podobnika, da Vlada spremlja to razpravo in da tudi odgovarja na vprašanja, ki se med razpravo postavljajo, ker mislim, da je potem tudi razprava sama po sebi smiselna, kajti drugače bomo govorili sami sebi.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg266">Besedo ima gospod Zmago Jelinčič v imenu poslanske skupine Slovenske nacionalne stranke.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ1.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg267">Hvala lepa. Glede na referat gospoda predsednika dr. Drnovška sem imel občutek, da je gospodarski položaj v Republiki Sloveniji precej boljši kot v Združenih državah Amerike, boljši kot v Veliki Britaniji, Švici, Nemčiji in še marsikje. In vendar mislim, da ves ta referat temelji na nekakšnih premisah, ki nimajo veliko skupnega z realnim stanjem v Republiki Sloveniji. Ne bom se spuščal v široke debate, ker so predgovorci povedali že marsikaj od teh stvari, morda pa bom kakšno stvar kljub temu ponovil.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg268">Gospod Drnovšek je govoril o dvigu proizvodnje v Republiki Sloveniji, vendar ni omenil tistega bistvenega, zakaj je prišlo do dviga proizvodnje. Enostavno zaradi povečanega števila brezposelnih. Statistika je tista veda, ki lahko naredi iz napak in iz porazov skorajda zmago. In v tem primeru se je nekaj takega zgodilo v tem referatu. Izvoz se ni povečal; izvoz je nižji, kot je bil lansko leto. In ravno tako ne moremo govoriti o uvozu, ki naj bi bil večji, razen če menimo kot uvoz tudi dotok tistega denarja, ki je v veliki meri prišel v Republiko Slovenijo zaradi cenene prodaje slovenskega gospodarstva na zahod, tujcem</seg>
                <note>bi lahko rekli</note>
@@ -1205,11 +1187,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg277">Mislim, da bo potreben zelo trezen premislek ob glasovanju ob amandmajih k proračunskemu memorandumu in od njihovega sprejema bo tudi odvisen sprejem proračunskega memoranduma v celoti, vsaj kar se tiče Slovenske nacionalne stranke. Mislim, da glede na željo dr. Drnovška, da naj bo razprava dovolj umirjena, da te umirjenosti nisem presegel. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg278">Hvala lepa gospod Jelinčič. Gospod Izidor Rejc v imenu poslanske skupine Slovenskih krščanskih demokratov. Moram reči, da je tudi zagotovljeno dežurstvo Vlade, imam spisek, kateri so ministri, ki naj bi prisostvovali proračunski razpravi. Če teh ne bo tukaj, bom prekinil sejo čez četrt ure.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg279">Spoštovani predsednik, kolegice in kolegi, gospe in gospodje lepo vas pozdravljam! Mnenje Slovenskih krščanskih demokratov, ki smo  tudi poslušali in smo tudi temeljito obdelali in obdelovali memorandum za prihodnje leto. Seveda ne bom govoril o tem, kaj je s koalicijo, ker mislim, da bistveno sploh to ni potrebno ali pa ni pomembno. Pomembno je to, da se temeljito pripravimo za prihodnje leto in seveda, da nas ta memorandum, da spomni, kaj nas čaka ali kaj nas mora čakati in da se tega vsi zavemo. Mislim, da je to tako kot v podjetju, ki mora predvidevati vse mogoče stvari, isto je z Vlado in seveda z državo in Vlada vodi državo in če bo v podjetju seveda to, da bo novo lastninsko preoblikovanje prineslo tudi mnoge nove kadre, bo seveda tudi na Vladi, če ne bodo opravili svojega dela res odgovorno in kvalitetno, da se bo to moralo zgoditi. Gre se za to, da mora biti država čim bolj poceni, racionalna in seveda, da tudi to izrazi s svojim memorandumom oziroma s svojim pogledom na prihodnje leto.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg280">Mi smo, kar sem ugotovil iz gradiva, ki je prišlo na današnjo sejo, edini, ki smo nekako vstavili malo bolj trdi in optimistični ton prihodnjega leta. Seveda smo to delali tudi na posameznih usklajevanjih in vztrajali pri tem in kot se vidi, nam se gre za to, da se ta gospodarska rast naposled začne. Mi ne moremo pristati na to, da je to bdenje nekje spodaj v jami, pri katerem ne vemo, kaj se zunaj dogaja, skratka, da je to proces, v katerem se ta rast prične in seveda za to rast je potrebna določena volja. Mi smo slišali prej iz ust gospoda premiera, predsednika dr. Janeza Drnovška, da se za avgust, september nakazuje neke trende rasti. Seveda, ko se človek pogovarja z makroekonomisti, nekateri to potrjujejo, drugi seveda skomigajo. Vendar, kakor je vsak načrt podjetja - mislim načrt optimističnega pogleda za naprej, tako tudi mislim, da takšen mora biti memorandum, ki seveda je prvi dokument, ki spremlja proračun. To se pravi, ne gremo in ne smemo se tu iti samo tiste administracije, ki je seveda potrebna, da država normalno  funkcionira, ampak je treba vgraditi tiste elemente spodbude, dobre volje in poguma, ki to tudi pomenijo. Jaz mislim, da je tudi pri podjetjih tako, če se lotijo nekega posla, se posel izvrši, če gredo po svetu, potem se prodaja izvrši, če se joka, potem tega seveda ni. Dokaz temu, da je naš predlog, pri katerem vztrajamo, da je gospodarska rast bruto domačega proizvoda ne 1%, ki v bistvu ni nič, ker to je tako rekoč nič, da je to 3%. Menimo, da bodo tudi pogoji morali biti taki, ne glede na to, da bodo ti pogoji morda trdi ali pa morda, da bo treba malo več pameti zavrteti v glavi. Podobno kot v podjetjih je tudi seveda dolžnost Vlade in vseh ostalih, da s svojo dinamičnostjo in s svojo sposobnostjo dokažejo, da to državo vodijo in da jo vodimo uspehom naproti. To nam je konec koncev edina šansa, druge šanse pa res nimamo.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg281">Povedali smo tudi in tudi dali amandma, ki pravi, da bi tudi bruto domači proizvod, da bi bila javna poraba - odhodki, da bi bili nižji, kot je predvideno. To se pravi, manj kot  47,8%, ampak čisto okroglo 47%. Dokaz temu je tudi prva slovenska vlada, ki je leta 1991 imela odhodke nižje od prihodkov, ta razlika je bila 2,7 milijarde takratnega valutnega denarja. To se pravi, da so bili prihodki višji od odhodkov, se pravi, je bila vgrajena polna doza in seveda odgovornost s tem, da bo država čim bolj poceni, ali pa po drugi strani tudi bolj poceni zaradi tega, da bomo bolj konkurenčni. Veliko je v tekstu govora o tem, da moramo biti konkurenčni, vendar ta konkurenčnost je beseda na papirju, če seveda ni to izraženo z nečim, to pa se izrazi seveda v zmanjšani javni porabi. Vse tisto, kar predlagamo, mi bomo vztrajali v amandmanih, mislim, da je samo to je tista pot, po kateri lahko hodimo. To je konec koncev tudi del naše medsebojne pogodbe v koaliciji, da se pri javni porabi znižuje procentualni odnos do bruto domačega proizvoda. Dalje vemo, da smo pač v svojem pogledu in svojih amandmajih in seveda tudi v dogovorih izrazili predvsem na to, da mora biti ostrejše pobiranje prihodkov in davščin, ne zgolj na "šalterjih", kjer se človek temu ne more izogniti, ampak predvsem z drugimi prijemi, ki seveda prepočasi prihajajo v naš vsakdanj.</seg>
@@ -1226,11 +1208,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg292">In nenazadnje oziroma na koncu bom tudi povedal to, da smo se nedvomno opredelili do poseljenosti podeželja, do tega, da so približno enake možnosti življenja naših državljanov in da se zmanjšajo ekonomske in socialne razlike. Ta del našega amandmaja je bil zavrnjen, češ: mi bomo pripravili zakon s standardi, vendar eno je zakon, ki je lahko v debelem in povsem specifičen, druga pa je stvar, pristop naše gospodarske oziroma sploh industrijske, socialne, kulturne in vsakršne politike za ta področja. Menimo, da je povprečje, in to je edino možno. Lahko je dosti višje, če so seveda tisti spodnji pogoji za življenje dosti višji. Mislim, da bomo s tem dosegli bistveni premik in seveda vse to, kar sem povedal, bomo tudi v razpravi naprej in pa tudi pri glasovanju upoštevali in zagovarjali. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg293">Hvala lepa, gospod Rejc. Besedo ima dr. Peter Tancig v imenu poslanske skupine Zelenih - ekološko socialna stranka.</seg>
             </u>
             <note type="speaker">DR. PETER TANCIG:</note>
-            <u who="#SDZ1.TancigPeter" ana="#regular">
+            <u who="#TancigPeter">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg294">Spoštovani gospod predsednik, kolegice in kolegi! Dovolite, da se dotaknem samo nekaterih točk v imenu Poslanske skupine Zelenih - ekološko socialne stranke. Naj začnem od vrha navzdol, vsekakor se verjetno da strinjati s trditvijo, da v proračunskem memorandumu ni razvidna strategija regionalnega razvoja, za katero se sicer zavedam, da je neka mistična žival in ki jo že iščemo in kreiramo toliko časa, ampak je vse preveč podobna belemu samorogu. Dejansko zaradi te odsotnosti te vizije ali strategije, je pa vsaj po našem mnenju v memorandumu zajetih dosti preveliko število ciljev, ki skušajo dejansko na različnih področjih preseči dosedanjo stagnacijo gospodarstva in družbe v celoti, so pa neoperacionalizirani in tudi niso podprti s konkretnimi spodbujevalnimi oziroma usmerjevalnimi ukrepi.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg295">Osnovna značilnost memoranduma je, vsaj po našem mnenju, da temelji na izrazito monetaristično fiskalnem konceptu, ki je dejansko podrobno razdelan in podprt s predlogi zakonov, ki bi jih morali sprejeti oziroma spremeniti za uresničitev memoranduma. Vsekakor pa po našem mnenju in verjetno po normalnem gledanju na razvoj, izrazito manjkajo ostale politike, ki niso ne kvantificirane, ne insturmentalizirane in ne operacionalizirane. Seveda samo z monetaristično fiskalnim konceptom se ne da voditi ekonomije, kaj šele presturkturirati take, ki se nahajajo v položaju, kot je sedanja. Meni osebno, zaradi moje zgodovine,  izrazito manjka sklop ukrepov, direktnih in indirektnih za tehnološko prenovo slovenskega gospodarstva in vemo, da je tehnološka raven nekega gospodarstva bistven konkurenčni faktor za uspeh v trdi mednarodni tekmi.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg296">Ravno tako menimo, da ta memorandum temelji na nekaterih neuresničljivih predpostavkah. Prva predpostavka je ta, da je treba znižati plače. Danes nadzor nad plačami ni zagotovljen, ker vlada nima ustreznih mehanizmov, s katerimi bi to področje ustrezno obvladovali. Tule naj povem oziroma ponovno opozorim, da že četrto leto teče, ko še vedno nismo v stanju skleniti ustreznega sporazuma za plače v javnem sektorju, pri čemer seveda ne mislim samo na tako imenovane družbene dejavnosti, ampak na ves monopolni javni sektor. Treba je povedati, da v dejavnostih, ki so neposredno financirane iz proračuna, v tako imenovanih družbenih dejavnostih, smo precej pred časom, ko sem še sodeloval v vladi, uspeli priti do usklajenih plač. Seveda tukaj ni nobene mistike, dejansko je že Avstroogrska poznala tarifne razrede. Vedno znova se pa zlomi ob monopolih v javnih sektorjih, kjer so plače izredno raznolike. Mene kot bivšega ministra za znanost oziroma tedanjega ministra je seveda izredno bolelo, ker je, recimo, področje znanosti in raziskovanja imelo dosti nižje povprečje plač, kot se je npr. dogajalo v nekaterih monopolnih javnih sektorjih z dosti nižjo izobrazbeno strukturo.</seg>
@@ -1242,12 +1224,12 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg302">namesto predvidenih 2,1% za obrambo nameni 1,6% in da gre razlika 0,5% v kvalitetne - poudarjam, kvalitetne - se pravi preverljive aktivne zaposlovalne politike. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg303">Hvala lepa, gospod Peter Tancig. Besedo dajem poslankam in poslancem. Besedo ima najprej gospod Igor Omerza. Se opravičujem, gospod Omerza, pred vami bo spregovoril še gospod Jože Pučnik v imenu poslanske skupine.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg304">Prosim, gospod Pučnik.</seg>
             </u>
             <note type="speaker">DR. JOŽE PUČNIK:</note>
-            <u who="#SDZ1.PučnikJože" ana="#regular">
+            <u who="#PučnikJože">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg305">Spoštovani zbor! Samo o treh vprašanjih bi povedal nekaj besed.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg306">Prvo vprašanje, ki se vzbuja naši stranki ob tem memorandumu, je pravzaprav odnos do tistih akutnih točk slovenskega gospodarstva, od koder že leta, že dolga leta izvirajo največje izbire in od koder izvirajo še danes. Pravkar sem dobil na mizo poročilo Ministrstva za gospodarstvo in sem ga na hitro preletel; in številke, ki sem jih tam videl, potrjuje pravzaprav moj dosedanji vtis. Mi imamo vrsto alergičnih točk v našem gospodarstvu, kjer nimamo dovolj politične volje, da bi zavzeli stališče in zadevo postavili na realna tla. Čeprav je vedno nerodno omenjati na tem mestu podjetja, toda naj omenim vsaj te, vedno znova omenjane železarne. Kar se nam tukaj kaže za naslednje leto in verjetno še čez tri leta, je v bistvu ena sama agonija, ki hkrati dokazuje - po eni strani nesposobnost naše politike, naše Vlade, morda tudi tega parlamenta, in tudi političnih strank</seg>
                <note>če zelo poenostavim</note>
@@ -1263,11 +1245,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg316">Imamo podatke in pomisleke ob raznih postavkah. To jih imajo verjetno vse stranke in tudi posamezniki na zelo različen način. Stvar je v tem in tega se zavedamo. Mi rabimo proračun. Mislimo, da je to v osnovi pravilno zastavljeno in zato bomo to tudi podprli. Pri posameznih stvareh bo pa sigurno prihajalo še do zanimivih debat. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg317">Hvala gospodu Pučniku. Želi še kdo besedo od predstavnikov poslanskih skupin? Mislim, da ste že vsi izčrpali možnost. Besedo ima gospod Igor Omerza.</seg>
             </u>
             <note type="speaker">MAG. IGOR OMERZA:</note>
-            <u who="#SDZ1.OmerzaIgor" ana="#regular">
+            <u who="#OmerzaIgor">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg318">Hvala za besedo. Jaz proračun razumem zelo preprosto: kot borbo za razdelitev nekega kolača. Ni toliko važno, kako ta kolač v tem primeru nastane. Mi nekako že imamo okvir, v katerem se bomo gibali in seveda zdaj se vodi borba znotraj ministrstev in je jasno tudi proračunska razprava v tem smislu v vseh normalnih demokratičnih državah. Pri nas so še kakšni drugi problemi, zelo burni, drugače pa bomo verjetno prišli v stanje, ko bo v našem parlamentu dejansko to najbolj burna razprava v prihodnjih letih, ker se tukaj vendar deli toliko in toliko odstotkov družbenega bruto produkta in je pravzaprav to borba interesov. Jaz to zelo enostavno tako gledam, kdo bo dobil čim večji del kolača. Zato razumem vse te, ki startajo na ta kolač - saj to je legitimno - legalno, da si želijo čim večji kolač dobiti in kolikor jim pač uspe, jim pač uspe. Mi poslanci moramo samo to čim bolj objektivno oceniti.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg319">Jaz bi najprej omenil nek problem, ki našo stranko okupira že eno leto, ki pa je tudi zelo povezan s tem memorandumom in proračunom. Gre pa za zakon o odkupu terjatev od Iraka, Kube in Angole ter Zvezne direkcije za promet in rezerve izdelkov posebnega pomena, ki je bil sprejet lansko leto novembra in še vedno ostaja mrtva črka na papirju. In kljub jasnim zakonskim določilom, in sicer zakasnelemu sklepu Vlade z 2. julija 1992 o izdaji obveznic v skupnem znesku 307 milijonov ameriških dolarjev oziroma dejansko 30% manj, ker gre avtomatično za zakonski diskont.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg320">Če historično pogledamo ta nesrečni zakon, se bo videl mačehovski odnos Vlade do podjetij in še nekaterih drugih državnih institucij, predvsem Banke Sloveniji do podjetij, ki so tu prizadeta.</seg>
@@ -1288,28 +1270,28 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg333">ukvarjali še najmanj 10 let. To vam garantiram, tako kot sem tukaj. Seveda je pa treba reči - in to je pravilna ugotovitev včerajšnje komisije, da so bile vse dosedanje vlade in tudi seveda prejšnja skupščina in tudi ta Državni zbor, vsi nosimo delno soodgovornost. Eni več, eni manj, seveda najbolj pa tisti, ki so pred dvema letoma pripeljali Sacksa v Slovenijo in ga izkoristili za to, da so ustavili Mencingerjev koncept lastninjenja. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg334">Hvala gospodu Omerzi. Besedo ima gospod dr. Dimitrij Rupel. Replika. Se opravičujem. Gospod Izidor Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg335">Spoštovani predsednik in gospodje. Replika gospodu Igorju na tri stvari. In sicer to, da smo SKD vztrajali pri tem, da delniška družba - mislim, da smo tokra tudi povedali. Delniška družba je tista, ki ima na največjo mero in možnost kontrole. In tudi smo predlagali, da bi bilo to razmerje nadzornega sveta - in je seveda parlament to sprejel - 6:5, kar pomeni, da parlament lahko določi 6 članov nadzornega sveta, koga pa, se bomo pač še odločili. Mislim, da je to del sodobnega podjetništva, in jaz ne vem, zakaj bi se bal vsega tega. Sicer se sprašujem drugače. Kdo pa je do sedaj še kontroliral, razen v nekaj primerih, socialno porabo? Nekaj ministrstev. Tam, kjer sem bil jaz, pa še nekaj drugih, je bilo nekaj pregledanih, pa tudi vem, s čigavim naročilom. Točno vem, s katerim naročilom je bilo pregledano, vse ostalo je ostalo čisto tako. Kdo pa to pregleduje? Poglejte, kakšne so to milijarde! Poglejte, koliko sto milijard se je skozi nekaj let prevalile skozi te proračune. Prva stvar.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg336">Druga stvar. Ne morem si predstavljati, in ravno včeraj smo se to pogovarjali in tudi gospa direktorica, Romana Logar je povedala. Ne more sedaj pa biti v zraku neka psihoza, češ sedaj bo pa ta revizija zavrla lastninsko preoblikovanje. Ta revizija mora biti, ker je pogoj, da je ta proces tak, kot je. Za to smo se odločili in od 2.700 podjetij jih je vendarle prijavljenih dobra tretjina in se tudi vidi, da programi gredo skozi. Se pravi, tu ni treba gledati, kaj je in kaj ni oziroma da bo pa tudi to zavora lastninjenju. To mora iti skozi in konec. To nič ne govorimo, kaj bo tu zavrlo. To se je zgodilo in to moramo vztrajati, da bo tako in se zelo pridružujem tvojemu razmišljanju, gospod kolega Igor, da SDK res to opravi. Mi smo res tudi včeraj na komisiji trdno in nedvoumno povedali. To mora delati, tu bomo napravili vse, da bo to delo opravila, ker se bojim - in tudi osebno se bojim - s tem, če bi prišel nov zakon in razdelil to ekipo na tri dele, potem kdo bo kam šel in bo vsak zase odgovarjal. Se pravi, bojazen je, da bi ljudi, ki znajo revizijo opraviti, ne bilo. In tu bomo vztrajali, da je ta hiša neodvisna in seveda, da opravi svoje delo. Da pa je  Vlada - jaz nisem bil takrat zraven, zraven sem že bil, samo nisem bil tisti, ki sem odločal - da je Sacks prišel; samo Mencigerjev zakon je bil zelo zelo blizu jugoslovanskemu zakonu. In to je tisto glavno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg337">Hvala lepa. Gospod Frim, replika.</seg>
             </u>
             <note type="speaker">STANE FRIM:</note>
-            <u who="#SDZ1.FrimStane" ana="#regular">
+            <u who="#FrimStane">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg338">Hvala. Spoštovani. Repliciral bi gospodu Omerzi, ko se nekako čudi, kako to, da se sredstva oziroma da so sploh sredstva za izgradnjo avtocest v proračunu oziroma da se celo ta znesek povečuje. Gotovo je gospod Omerza pozabil, da smo v letošnjem letu sprejeli zakon o zagotovitvi namenskih sredstev za gradnjo avtocestnega omrežja v Republiki Sloveniji, in sicer 16%. Ta zakon govori, da bi za leto 1994 namenili za izgradnjo avtocest 16% drobnoprodajne cene bencina. Ta denar je sestavni del integralnega proračuna. V zakonu smo določili, naj bi ta denar šel potem iz proračuna na družbo, kar smo prav tako sprejeli tukaj, potrdili v parlamentu in če bi gospod Omerza napravil izračun, bi videl, da je ta denar celo nekoliko nižji, kot bi iz samega zakona izhajalo. Čudna je podpora, ko govori na eni strani, da so za projekt gradnje avtocest, po drugi strani bi pa odtegnil tako pomemben vir, kot je ta tako rekoč proračunski denar. Ko smo govorili o tem, družba ja ali ne, smo imeli v mislih predvsem to, da denar, ki bi se vsako leto zagotavljal v proračunu, ne bi bil dovolj za gradnjo avtocestnega omrežja. Torej mirno bi lahko odmislili ta plan, ki smo si ga nekje zadali, lahko bi v drugo tisočletje pomaknili celoten plan, če bi pričakovali samo proračunski denar. Šlo je za to, da dobimo k temu denarju iz proračuna tudi druge vire, to so pa lahko tuji krediti, so kapitalski vložki v družbo ali razpis preko obveznic ali kakorkoli in zato se mi zdi nemoralna trditev, po eni strani govoriti za to, da smo za izgradnjo avtocestne mreže v Sloveniji, po drugi strani pa odtegovati enega izmed pomembnih virov. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg339">Hvala gospod Frim. Besedo ima gospod Dimitrij Rupel.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SDZ1.RupelDimitrij" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg340">Spoštovani gospod predsednik, spoštovane kolegice in kolegi! Kolega Tancig je malo prej, danes dopoldne, uporabil besedo zaupanje in v resnici gre v politiki marsikdaj ali pa v pretežnem številu primerov za zaupanje in tudi pri današnji debati oziroma pri predmetu naše debate, to se pravi pri memorandumu, gre za zaupanje in jaz bom o tem zaupanju govoril vsaj v dveh smislih.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg341">Dovolite mi, da najprej rečem, da dam to stvar, kar se mene tiče, z dnevnega reda, nekaj o obrambi oziroma o stroških za obrambo. Jaz ne nasprotujem politiki, ki skuša predvideti ustrezna sredstva za obrambne sisteme in predvsem ne bi rad razprave o obrambni sposobnosti slovenske države ali, če hočete, razprave o obrambnem ministrstvu povezoval z osebnostjo ministra gospoda Janeza Janše, kar se v političnih debatah danes v Sloveniji zelo pogosto dogaja in kar je po moji sodbi napačno.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg342">Mislim, da so sestavljalci memoranduma, morebiti pa tudi nekateri v ministrstvu za obrambo, na nek način postavili naše zaupanje pred preizkušnjo na tej točki in želim od Vlade v zvezi s tem odgovor. Namreč res se sedaj lahko pogovarjamo, ali je treba sredstva za obrambo vrniti na raven 1,5 ali 1,6, ali jih je mogoče povečati na 2,1, in to so utemeljene razprave in jaz se ta hip še nisem odločil, ali bi bilo res pametno ta sredstva povečati. Ampak, jaz želim od Vlade odgovor na naslednje vprašanje: kolikšen delež proračuna predstavljajo sredstva, ki jih je obrambno ministrstvo dobilo kot neke vrste predujem na sukcesijsko maso. Mi vsi vemo, o čem govorimo! Gre za vojašnice, gre za stanovanja, gre navsezadnje za oborožitev in tako naprej. To so velika sredstva. Po moji sodbi, nisem nikdar tega izračunaval, so to zelo velika sredstva. Jaz zahtevam, da se izračuna, kolikšen del sredstev za obrambo predstavljajo sredstva, o katerih govorim. To se pravi: vojašnice, stanovanja, oborožitev.</seg>
@@ -1326,11 +1308,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg353">Na koncu moram ugotoviti, da sem izredno razočaran in izredno poparjen nad tem, kar je sklenil Kopačev odbor - tudi njega ni tukaj, me zelo žalosti, da moram v njegovi odsotnosti govoriti. Na enajsti strani je tam, na drugi polovici strani govora o tem, da je itak že davčna politika oziroma tisto, kar smo o davkih povedali v tem parlamentu, nekaj tako sijajnega, da ni treba nič spreminjati in nič popravljati. Vi veste, za kaj gre. Gre za to, da bi bile investicije v kulturo oproščene določenih davčnih obveznosti oziroma gre za neke olajšave za tiste, ki, recimo, imajo izdatke za kulturo, s čimer bi bilo mogoče pomagati temu sektorju. Tu piše, da pa seveda ni nobenih problemov v zvezi z vlaganjem v kulturo, šolanjem, športom ipd <gap reason="inaudible"/> Pa še kako so problemi s temi vlaganji! Sklicevanje, da je to urejeno pri davčni politiki, je seveda neresnica in tudi zaradi tega temu dokumentu ni mogoče zaupati in zaradi tega bom jaz glasoval proti njemu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg354">Hvala lepa gospod Rupel. Besedo ima gospa Danica Simšič.</seg>
             </u>
             <note type="speaker">DANICA SIMŠIČ:</note>
-            <u who="#SDZ1.SimšičDanica" ana="#regular">
+            <u who="#SimšičDanica">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg355">Hvala lepa za besedo. Gospod predsednik, spoštovane poslanke, spoštovani poslanci, spoštovani predstavniki Vlade! Zmešnjava oziroma nejasnost, o kateri je pri opredeljevanju socialne politike govoril kolega Rupel, pravzaprav ne čudi. Če posežemo tja, v tisto daljnje leto 1991, ko smo 28. decembra z objavo v Uradnem listu dobili ustavo Slovenije, je v njenem 2. členu zapisano, da je Slovenija pravna in socialna država. Prav o tem nameravam govoriti - o socialni in pravni državi, kakor jo dojema predloženi memorandum. Hkrati, ko smo torej v ustavo zapisali, da smo socialna država, in ta zapis je bilo razumeti kot socialdemokratski model, ko  se torej posameznik v stiski zanaša na državo, je v izhodiščih socialne politike zapisano, navajam: "Socialno varnost si mora v Sloveniji vsak posameznik zagotoviti zase in za svojo družino, v skladu s svojimi sposobnostmi." Torej sam. Prav na tej predpostavki, ki je temeljna značilnost liberalnega, da rečem kar liberalističnega modela, je grajena tudi socialna politika v predloženem memorandumu. V letu 1994 naj bi se zagotavljala socialna varnost šibkejših skupin prebivalstva. To v memorandumu res piše. Seveda pa v tem dokumentu ni zapisano, kaj socialno šibkejše skupine prebivalstva dejansko pomenijo in prav tako ni pojasnjeno, kaj je prag revščine, če vzamem za primer samo tisti del prebivalstva, od katerega si obravnavani memorandum obeta 6 milijard in 200 milijonov tolarjev. Gre seveda za upokojence, ki jih imamo po najnovejših podatkih že 460.179 in za katere je v memorandumu ne samo predlagano, ampak zahtevano podaljšanje izrednega stanja, torej podaljšanje interventne zakonodaje sprejete spomladi letošnjega leta. Ta sprememba interventne zakonodaje jim tudi v prihodnjem letu jemlje poračune, ki so opredeljeni v sistemskem zakonu in s tega vidika menim, da ta država ni v pravem pomenu besede - pravna. Kajti sistemski zakon imamo, ta zagotavlja pravno varnost državljanom, vendarle pa skušamo za to kategorijo, torej za 1/4 prebivalstva Slovenije podaljšati neko interventno zakonodajo, vzdrževati neko izredno stanje.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg356">Poleg tega pa iz duha memoranduma veje tudi podatek ali dejstvo, da se ta interventna zakonodaja utegne sprevreči v podaljšanje oziroma v čisto spremembo sistemske zakonodaje, ne glede na to, da so ljudje 20, 30 ali 40 let vplačevali določene prispevke. Na temelju teh so pričakovali določeno varnost, ki pa jim jo sedaj ta država ne zagotavlja. Moram reči, da mi je žal, da v tem trenutku ni tukaj gospoda premiera. Rada bi ga namreč spomnila na besede, ki jih je izrekel pred nepopolnimi osmimi meseci, ko smo bili ob sprejemanju zamrznitvene zakonodaje - naj spomnim, da je šlo za plače do konca julija in za pokojnine do konca letošnjega leta. Rekel je, navajam, da ne bo pomote: "Če bi vedel, da bo to ljudi tako prizadelo, bi jim pravočasno pojasnil, za kaj gre." Dopuščam, da premie takrat ni vedel, da bo ljudi tako prizadelo, toda, da danes, po nepolnih osmih mesecih tega ne ve in se tega ne zaveda - tega preprosto ne morem verjeti. Mislim pa, da - če mi je dovoljeno reči - bolj noče vedeti, kaj to pomeni. Rada bi se obrnila še na tisto, kar je rekel sinoči v omizju - morda se boste spomnili pri razpravi o upokojencih - da ne gre pri interventni zakonodaji za upokojence za nobeno iskanje nekih rezerv na račun določenega sloja prebivalstva. Če prihranek 6 milijard 200 milijonov ni iskanje in najdenje neke rezerve na račun nekega sloja prebivalstva, potem ne vem, kako naj temu drugače rečem. Ob tem pa moram poudariti, da gre za strokovno slabo rešitev, za nestrokovno rešitev in da gre v bistvu za politično rešitev nekega problema, ki pa je izredno nespretno reševana.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg357">Da se odmaknem od tega problema. Še ene kategorije se Vlada pri zagotavljanju proračunskega denarja prav neusmiljeno loteva. V tem pa imam v mislih invalide vojne, ki jim je predlagana nova zakonodaja zapisala pod točko 23 na 26. strani predloženega memoranduma "predlog oziroma osnovo, da vse pravice na temelju invalidnin, ki so doslej izhajale iz povprečne plače, naj bi po novem izhajale iz zajamčene plače", kar pomeni za 50% znižanje pravic varstva invalidov. To seveda velja tudi za vse invalide iz žrtve zadnje agresije na Slovenijo v letu 1991. Edini cilj, ki ga predlagana sprememba zasleduje, je, navajam: "znižanje potrebnega obsega sredstev za te namene." Ob tem je očitno zadnji odstavek 50. člena ustave, ki vojnim veteranom in žrtvam vojnega nasilja zagotavlja posebno varstvo, le mrtva črka na papirju. Ko že omenjam vojne veterane - v memorandumu je predvidena tudi revizija obstoječih pravic, ki bo zagotavljala zmanjšanje obsega za te namene. Zakaj govorim o reviziji obstoječih pravic? Zato, ker mi ni jasno, kaj si Vlada pod besedo "revizija", ki pravzaprav pomeni ponovna strokovna prevera nekih pravic ali neke ugodnosti, predstavlja. Če pravilno berem memorandum, potem moram reči, da si očitno razlaga besedo "revizija" kot zmanjšanje in krčitve.</seg>
@@ -1344,20 +1326,20 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg363">"že doslej veliko delovno obremenitev odraslih članov družine, še posebej žensk, in tako bo kakovost življenja, brez dodatnih sprememb, neizogibno padla. Še posebej pa bo padlo zdravstveno varstvo in kulturna raven - brez dodatnih sprememb". In ta dodatna sprememba je tista, za katero menim, da se je Državni zbor opredeljeval pri drugi obravnavi zakona o družinskih prejemkih - spodbuda družini, torej neposredno investiranje in vlaganje v družino. Moram reči, če taka opredelitev ne bo zajeta, če je ne bomo uspeli spraviti v memorandumsko besedilo, nam mora biti torej povsem jasno, da smo pod mejo revščine, pod tisti prag revščine, o katerem sem govorila prej in ki ni natančno opredeljen, je pa statistično ponazorljiv, potisnili več kot tretjino slovenskih družin. To pa se mi zdi v tem trenutku nesprejemljivo. In če je vladajoča koalicija pripravljena sprejeti odgovornost za to, naj jo. Sama moram reči, da si bom s kolegi v opoziciji prizadevala za drugačno usmeritev in če v teh prizadevanjih ne bom uspela, bom pač morala glasovati proti memorandumu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg364">Hvala, gospa Danica Simšič.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg365">Želim vam "dober tek"!</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 14.04 uri in se je nadaljevala ob 16.09 uri.</note>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg366">Spoštovane poslanke, spoštovani kolegi poslanci! Nadaljujemo s popoldanskim delom prvega dne zasedanja 13. seje Državnega zbora. Dodatnih opravičil odsotnosti s seje, s strani poslank in poslancev, nismo prejeli. Torej velja tisto, kar je bilo povedano dopoldan. Prosim, da ugotovimo navzočnost v dvorani, da bomo lahko sklepčni nadaljevali. Prosim, da potrdite svojo navzočnost s pritiskom na gumb.</seg>
                <note>56 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg367">Ugotavljam, da je zbor sklepčen in lahko nadaljujemo delo. Na sejo smo vabili predstavnike Vlade, ki jih lepo pozdravljam.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg368">Še vedno smo pri isti točki dnevnega reda - 4. TOČKI - PRORAČUNSKI MEMORANDUM in nadaljujemo z razpravo. Naslednji prijavljeni k razpravi je gospod Tone Peršak, za njim bo na vrsti gospod Ivan Sisinger.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg369">Spoštovane poslanke in spoštovani poslanci! Kazalo je že, da bo naše razpravljanje o proračunskem memorandumu brez posebnega smisla, saj smo v preteklih dneh nekajkrat slišali in brali, da so se stranke vladne koalicije v glavnem poenotile v svojih stališčih v tej zvezi in da bo potemtakem razprava v Državnem zboru zgolj nekakšen ceremonial brez prave vsebine, smisla in posledic.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg370">Parlament bi v takem primeru bil le orodje in maska za manevre vladne koalicije, namesto da bi bil dejanski prostor nastajanja politike za posamezna področja in arena, v kateri naj se v ustvarjalnem dialogu srečujejo nosilci različnih razvojnih političnih programov. Kasneje, tudi v sinočnji oddaji Omizje,se je izkazalo, in še zlasti v številu amandmajev, ki ste jih vložili poslanci koalicijskih strank, kaže, da dogovori v koaliciji najbrž niso tako dokončni, razen če nekateri ne nameravajo le pihati na duše volivcem, glasovati pa drugače. Kakorkoli že, tudi če bo ta razprava res imela le značaj nekakšne neobvezne folklorne prireditve, opravimo ta posel resno in času primerno.  </seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg371">Spoštovani! V prvem prizoru, prvega dejanja ene najboljših Shakespearovih tragedij, v "Coriolanu" razpravljajo o proračunskih zadevah in socialni politiki v Rimu rimski meščani in senator Menenia Gripa, sicer zgodovinska oseba. Meščani razjarjeno zahtevajo, naj jim senat kar razdeli žito iz državnih blagovnih rezerv. Bolj ko meščani zahtevajo, naj senat na strežaj odpre vrata državnih kašč, bolj slavni senator brani nekoliko restrektivno proračunsko politiko senata, zavzema se za preudarno in uravnoteženo proračunsko politiko v odnosu do vseh pomembnih segmentov družbe in očita meščanom, da vidijo samo svoje potrebe.</seg>
@@ -1369,11 +1351,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg377">Drugič. Ne gre samo za celovit in zaokrožen ter uravnotežen pogled na državo in njene potrebe. Gre tudi za poudarke znotraj celotne podobe. Vsekakor bi se bilo mogoče sprijazniti tudi s tem, če bi nas denimo Vlada skušala prepričati, da pač večina uporabnikov za zdaj mora biti zadovoljna z dosedanjim deležem sredstev ali celo za kak odstotek manjšim, ker namerava nekaj več vložiti v neko področje, od katerega se obeta izrazit razvojni zagon. Prepričan sem, da bi to morala biti vlaganja v izobraževanje, znanost, morda subvencioniranje novih tehnologij ali kaj podobnega, ne pa v prvi vrsti vzdrževanje klinično mrtvih izgubarjev pri navideznem življenju. Vendar te vrste poudarkov, razen nekaj malega pri besedilu, ki govori o šolstvu, ni. Po drugi strani pa novi zakon o dohodnini ne omogoča več davčnih olajšav za nadomeščanje za zastarele in ekološko neprimerne tehnologije za okolju manj nevarne ter celo ukinja namenske olajšave na račun nakupov umetnin in podobno. Prvotni namen Vlade pa je bil, kot vemo, da bi celo vlaganja, ki so že določena z zakonom, spet zmanjšala, čeravno ta vlaganja obetajo vsaj določene premike.  Na podlagi vsega tega, seveda tudi jaz, kot so že moji kolegi pred tem povedali, moram povedati, da če nekateri amandmaji, ki bi vsaj do neke mere izboljšali oziroma spremenili te ugotovitve, ne bom pač mogel glasovati za ta memorandum. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg378">Hvala lepa. Besedo ima gospod Ivan Sisinger, za njim bo na vrsti gospod Feri Horvat.</seg>
             </u>
             <note type="speaker">IVAN SISINGER:</note>
-            <u who="#SDZ1.SisingerIvan" ana="#regular">
+            <u who="#SisingerIvan">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg379">Spoštovani predsedujoči, poslanke in poslanci. Današnja razprava, ki se je začela po uvodnem govoru predsednika Vlade, me je v začetku te razprave že danes, moram uvodoma povedati, spravila v dilemo in razmišljanje. Ali ima sploh smisel vršiti dvodnevno razpravo v tem parlamentu o pomembnem dokumentu, kot je memorandumski dokument, s katerim je Vlada prišla pred Državni zbor, pred vse nas z jasnimi usmeritvami, vsaj po njenem stališču, da vodimo razpravo ob tem, ko pravzaprav en velik del Vlade ni prisoten tej razpravi in nas ne spremlja, sem zato se resnično želel že prej, v dopoldanski delu vprašati, kaj pravzaprav takšna razprava pomeni, ko si poslanci drug drugemu na tem parlamentu dopovedujemo, kaj naj storimo? To mi delamo že celi teden, deset dni, v številnih odborih, matičnih ali drugih zainteresiranih delovnih telesih, ko smo obravnavali te dokumente in memorandum in mislim, če kdo in če kdaj, potem bi morala biti Vlada prisotna tukaj ob razpravi memoranduma. Malokdaj lahko gledam, če gledam televizijo, da bi recimo v kateri koli od držav, pa naj bo to v Nemčiji, Avstriji ali kjer koli, govorili o razvoju svoje države, njenih vej in dejavnosti pa pravzaprav, kot da se to Vlade ne tiče. Če koga, potem bi morala ta razprava, da uvodoma prvo to povem, tikati se prav te Vlade, ker bo konec koncev od tega odvisno, tudi od nas poslancev, ali bomo v končni fazi memorandum v takšnem ali drugačnem smislu, po takšnih ali drugačnih predloženih amandmajih sprejeli, odločali bomo mi. Dokončno besedo bomo morali reči mi, vendar sem proti temu, da odločam o nečem in proti svojemu prepričanju, da pa se Vlade to več ne tiče in prenese odgovornost, kaj bomo naredili z memorandumom, kaj bomo izglasovali in sprejeli na Državni zbor. Proti temu sem. Proti takšni politiki sem in proti takšnemu sistemu Vlade sem, ker menim, če je to vladni dokument, potem mora za njih stati Vlada do konca, dokler ne bomo začeli z glasovanjem. Zato bi želel videti Vlado tukaj, ne pa dva, tri ministre, ki nas seveda poslušajo od jutra, ostali pa bodo seveda prišli ali pa seveda pozneje govorili.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg380">Zdaj pa, da preidem k temu, za kar sem sploh prijavo še dal. Moram povedati nekaj. Če se je kdaj dvignilo veliko prahu med slovenskimi upokojenci, se je to se zgodilo v letošnjem letu že drugič. Prvič, ko smo obravnavali interventni zakon v začetku leta in ko smo se nekateri poslanci z mano vred upirali interventnemu zakonu na področju upokojevanja, ker smo že takrat povedali, da ni potreben, pa je Vlada vztrajala na njem, da ga je treba za vsako ceno izglasovati. Žal je bil izglasovan. Vlada ni naredila te poteze, ki bi jo morala storiti, da bi celo predlagala, da preneha veljavnost interventnega zakona takrat, ko je prenehala zamrznitev plač, to je bilo s koncem junija in Vlada je imela vse možnosti in poteze, da jih naredi pošteno do slovenskih upokojencev in da pride pred Državni zbor in reče: Interventni zakon za plače je prenehal, zaživeli sta kolektivni pogodbi o plačah za gospodarstvo in negospodarstvo. Ne, vztrajalo se je: Zamrznitev usklajevanja pokojnin po interventnem zakonu mora ostati do konca leta l993. Dobro, tudi to je obveljalo. Vendar, spoštovane poslanke in poslanci, ne more pa več obveljati - to pa je v naši odgovornosti, odgovornosti parlamenta - ne more več ostati to, kar se v memorandumu ponuja, da mora interventni zakon veljati tudi v letu 1994, in prenesti odgovornost Vlade sedaj na Državni zbor in na nas poslance. Za takšen predlog v parlamentu nikoli ne morem glasovati in ga tudi nikdar več ne bom podpiral in ga tudi tokrat ne podpiram. Kajti, ni to žalitev mene kot poslanca? Če tako misli Vlada z menoj delati, da se bom jaz kot poslanec nenehno podrejal tako kot odgovarja Vladi, in ker to ne bo konec leta 1993, bomo interventni zakon kar prenesli v leto 1994. In ker v letu 1994 penzionisti še niso popolnoma, čisto reveži, siromaki, najnižja socialna kategorija, je treba interventni zakon podaljšati še kar v leto 1995, ker nimamo denarja, da bi jim vrnili dolgove že za nazaj. To je filozofija prvega razreda, s čimer se jaz ne morem soočiti.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg381">Tukaj moram Vladi povedati javno sledeče: kot sem prebral v Večeru - bom sedaj prebral, drage poslanke in poslanci, kako bi rada ta Vlada prenesla odgovornost pred temi 450.000 oziroma 460.000 upokojenci na nas, poslance Državnega zbora. Mislim in sem osebno globoko prepričan v vas, dovolj smo se že spoznali, da tega ne bomo mogli storiti, ko bomo glasovali o amandmajih. In bom tudi povedal, o katerem</seg>
@@ -1393,13 +1375,13 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg392">Jaz se vam zahvaljujem, da ste me pozorno poslušali, ampak verjemite mi, če bi vi dobili vsi skupaj, nekaj jih imate, toliko telegramov in pisem, kot sem jih jaz dobil te dni, sem bil že zlomljen. Ampak znova sem prišel k sebi, ker sem mislil. Ne, saj gre za naše upokojence in jaz moram v parlament. In jaz moram povedati tukaj, da tokrat pa je konec, tokrat ni mogoče z upokojenci tako delati in vas poslanci prosim, vsaj na tem primeru, ne pustimo, da pride do večje revščine, kot jo že imamo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg393">Hvala lepa. Besedo ima gospod Feri Horvat. Za njim bo na vrsti gospod Ciril Pucko, hkrati pa, ker ste pravkar dobili razdeljen pregled amandmajev, bi vas opozoril, pri skupini poslancev se med podpisniki navaja gospod Ivo Hvalica, ker je bil napačno prebran podpis. Gre za gospoda Miloša Pavlico.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg394">Torej vse pohvale in nasprotovanja, naj se od sedaj naprej usmerjajo na pravi naslov. Hvala lepa.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg395">Prosim, gospod Feri Horvat.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ1.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg396">Gospod podpredsednik, hvala za besedo. Spoštovane kolegice in kolegi. Moram reči, da me veseli, da se je razvnela tako temeljita razprava o tem dokumentu, za katerega smo se odločili, da ga bomo sprejemali kot samostojni akt, kljub temu da so bila tudi v tem zboru deljena mnenja, predvsem je pa Vlada menila, da to ni tak akt, ki bi ga bilo treba sprejemati, ampak da je to nek spremljevalni akt ali neki opomnik za proračun. Prepričan sem, da gre vendarle po osamosvojitvi Slovenije verjetno za prvi celovit dokument o tekoči razvojni politiki in to za eno daljšo časovno dimenzijo s projekcijami tja do leta 1997, in prav to dejstvo zasluži večjo pozornost.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg397">Moram reči, da me je nekako presenetilo oziroma da bi pričakoval več razprave, preden smo pričeli plenarno razpravo tukaj na tem zboru in pred odbori. Zlasti bi pričakoval o takem dokumentu več razprave v strokovnih krogih v gospodarstvu, v negospodarstvu in seveda tudi v politiki. Moj vtis je, kolikor je bilo razprav in kolikor so se tudi odslikavale preko medijev v zadnjem obdobju, da je bilo preveč politiziranja, preveč razprav in strankarskih okopov, namesto da bi bilo več ustvarjalnega dialoga in iskanja najboljših rešitev. V tem pogledu je bila sicer ena pozitivna sprememba v sinočnjem televizijskem razgovoru. Žal mi je, da ni bilo takih razgovorov več, razgovorov strankarskih veljakov, kjer bi lahko tudi predstavljali ustvarjalnost, sposobnost in seveda vizije, ki jih imajo. Nekdo je rekel, mislim, da je bila voditeljica sinočnje oddaje, da ta memorandum lahko zatrese tudi koalicijo. To pravzaprav tudi ni nič čudnega glede na pomen tega dokumenta, ki pomeni potem tudi osnovo ali uvod v sam proračun. Mislim pa, da niti ni tako bistveno, ali zatrese kakšno koalicijo ali gre kakšna stranka iz koalicije ven in da pride druga. Mislim, da je bolj bistveno to, kakšne rešitve bo dejansko ta dokument, skupaj s proračunom ponudil.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg398">Čeprav je to res, da je v teh razpravah in potem tudi v komentarjih v medijih bilo več debat namesto vsebinskih rešitev bolj okrog tega, kakšne bodo posledice za Vlado in za koalicijo, mislim, da v tem dokumentu zaslužijo podporo predvsem cilji in dolgoročne usmeritve, zlasti tiste, ki pomenijo ustvarjanje pogojev za gospodarsko rast na kakovostnih osnovah. Tu gre predvsem za zaokrožitev sistema, predvsem za gospodarski del in izgradnjo tistih institucij, ki še manjkajo za normalno delovanje tržne ekonomije. Mislim, da je to delo prioritetno in da ga je treba opraviti kljub obilici poslov, ki jih imamo na usklajevanju zakonov z ustavo v tem domu, da gre predvsem podpreti politiko nadaljnjega znižanja inflacije, za pospešitev lastninskega preoblikovanja, ki je dejstvo in tudi ena od ovir za hitrejše gospodarsko prestrukturiranje in za večjo učinkovitost. Gre za sanacijo bank, in s tem predvsem za gospodarsko povečanje kreditne dejavnosti in normalnejše obrestne mere, gre za znižanje deleža javne porabe v bruto domačem proizvodu, znižanje stroškov dela in zlasti obremenitve plač. In v tem smislu mislim, da kaže podpreti usmeritve fiskalne in dohodkovne politike in seveda tisto, kar v dosedanjih razpravah ni bilo sporno in se zdi, da tudi v tej plenarni razpravi ni, to je globalni obseg predlaganega proračuna in tudi primanjkljaj, ki je sprejemljiv in po mojem mnenju tudi neizbežen, če nočemo ob nakopičenih problemih iz preteklosti ogroziti nujnega razvoja.</seg>
@@ -1426,11 +1408,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg418">In zaključil bi s tem, da mislim, da je skrajni čas, da vso energijo in znanje in ves čas, ki ga imamo premalo, usmerimo v gospodarski in socialni napredek, v teme današnjega in jutrišnjega dne. Hitrejše in intenzivnejše odzivanje na dogajanja v Evropi in v svetu je tisto, od česar bo odvisno, kako bomo tudi uresničili ta memorandum in kako hitro bomo lahko tudi izšli iz gospodarske krize. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg419">Hvala lepa. Besedo ima gospod Ciril Pucko. Za njim bo na vrsti gospod Jožef Kocuvan.</seg>
             </u>
             <note type="speaker">CIRIL PUCKO:</note>
-            <u who="#SDZ1.PuckoCiril" ana="#regular">
+            <u who="#PuckoCiril">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg420">Hvala lepa gospod predsedujoči. Spoštovane dame in gospodje! V svoji razpravi bi se želel dotakniti predvsem dveh vprašanj. In sicer je prvo vprašanje višine deleža prihodkov in odhodkov javnega sektorja. Temu vprašanju je bil v vsej letošnji razpravi, tako ob proračunskem memorandumu za leto 1993, kot v vseh nastopih - tako predsednika Vlade kot posameznih ministrov - dan glavni poudarek. Zato je seveda potrebno, da v proračunskem memorandumu za leto 1994 poskušamo popraviti te deleže oziroma da jih poskušamo popraviti na raven iz priloge h koalicijski pogodbi. In v ta namen je vložen tudi amandma, s katerim bi že v letu 1994 naredili korak v smeri, da se približamo številkam, ki so zapisane v koalicijski pogodbi. Torej, da se delež odhodkov javnega sektorja v bruto domačem proizvodu v letu 1994 zniža na 47% in v letu 1997 na 43% bruto domačega proizvoda, in delež prihodkov javnega sektorja v bruto domačem proizvodu v letu 1994 na 46% in v letu 1997 na 42%.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg421">Spoštovane poslanke in poslanci! Želel bi vas spomniti na besede, ki jih je s tega mesta v januarju letošnjega leta izrekel takratni mandatar in sedanji predsednik Vlade dr. Janez Drnovšek, ko je predstavljal osnovne usmeritve gospodarske in socialne politike Vlade. Njegov glavni poudarek je bil dan znižanju celotnega obsega prihodkov že v letošnjem letu, se pravi v letu 1993, na 45,8% bruto domačega proizvoda, medtem ko naj bi odhodki ostali na ravni iz lanskega leta - to je 47,2%. Vemo, kje so trenutno oziroma kakšni bodo ti deleži. In lahko bi rekli: "Daleč je sonce!"</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg422">Proračunski memorandum 1994 je v bistvu kopija memoranduma za leto 1993, vsaj v tistem delu, ki je namenjen - gre pa približno za tretjino odhodkov proračuna - za pokrivanje napačnih odločitev zavoženih investicij in vseh drugih neumnosti, ki so bile storjene v preteklosti. Zato se sprašujem in sprašujem vas, ali bomo zmogli dovolj politične pripravljenosti in moči ugotoviti, kaj je vzrok oziroma kdo so krivci, seveda, če se razen socialističnega gospodarjenja lahko poiščejo in identificirajo. Bojim pa se, da bo tudi to eden izmed prispevkov k novejši slovenski zgodovini, storiti vse, da ja ne bi kdorkoli moral odgovarjati za napačne poteze v preteklosti.</seg>
@@ -1439,11 +1421,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg425">Končal bom z besedami oziroma se globoko strinjam z besedami gospoda Kocijančiča, ko je rekel, da je potrebno spremeniti miselnost. Postavljam le vprašanje: v čigavih glavah? Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg426">Hvala lepa. Besedo ima gospod Jožef Kocuvan. Za njim bo na vrsti gospod Franc Potočnik.</seg>
             </u>
             <note type="speaker">JOŽEF KOCUVAN:</note>
-            <u who="#SDZ1.KocuvanJožef" ana="#regular">
+            <u who="#KocuvanJožef">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg427">Spoštovani poslanci, poslanke, podpredsednik! Dovolite, da se v svoji obravnavi proračunskega memoranduma dotaknem dveh zadev, in sicer slovenske izvozne družbe in v tej povezavi tudi neplačanih terjatev do Iraka, Kube, Angole in Zvezne direkcije, vendar z nekoliko drugačnega vidika, kot se je tega dotaknil kolega Igor Omerza; ter prestrukturiranje Slovenskih železarn.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg428">V memorandumu za leto 1994 je opredeljeno, da bo slovenska izvozna družba na osnovi vložkov v osnovni kapital družbe in proračunskih sredstev vplačila namenila za večjo subvencioniranje obrestnih mer za izvozne kredite, za podaljšanje rokov kreditiranja investicijskih del v tujini, razširila pa bo tudi seznam izdelkov, pri katerih so izvozni krediti lahko predmet refinanciranja. Nikjer pa v tem poglavju ni omenjeno, da bo slovenska izvozna družba pričela z zavarovanjem izvoza pred nekomercialnimi riziki. Zakaj to poudarjam? Zato, ker je to memorandum za leto 1993 vseboval. Slovenska izvozna družba v tekočem letu na področju zavarovanja izvoza ni nič naredila, čeprav je memorandum predvidel zavarovanje izvoza pred nekomercialnimi riziki. Vlada mora zahtevati od družbe poročilo, kam je družba ta denar plasirala in ali ga je namensko uporabljala ter hkrati o tem obvestiti Državni zbor.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg429">In sedaj k diskusiji terjatev. Prav nemogoč je protest Kluba podjetnikov Liberalno demokratske stranke, Gospodarskega foruma Demokratske stranke in Slovenske nacionalne stranke, ki ga naslavlja Vladi, naj presodi odgovornost Banke Slovenije za škodo, povzročeno slovenskim podjetjem zaradi neizvajanja zakona o odkupu terjatev, vezanih na Irak, Kubo, Angolo in Zvezno direkcijo. Narodna banka Slovenije je v svojem zaključnem poročilu Komisije za ugotavljanje upravičenosti zahtevkov za odkup teh terjatev opozorila, da so bila ta plačila s komercialnega vidika popolnoma nezavarovana; ponavljam: popolnoma nezavarovana! Če bi ob nastanku teh terjatev slovenska izvozna družba že obstajala, bi se lahko marsičemu izognili. Tako pa akreditivi, npr. odprti za iraške posle, niso bili zavarovani pri nobeni tuji banki, kaj šele pri kakšni domači. Za malomarno poslovanje posameznih menedžerjev, ki so sedaj najbolj glasni, je kriva in odgovorna Banka Slovenije, ki je opozorila na pomanjkljivosti pri sklepanju poslov in ki je dosledno vztrajala in zahtevala pridobitev potrdil terjatev s strani tujega kupca dolžnika. Seveda to je pa nasprotje z nevesnim, malomarnim delom teh menegerjev, ki so povzročili škodo.</seg>
@@ -1457,11 +1439,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg437">Bilance stanja so v strukturi virov financiranja vidne izboljšave v smeri povečanja lastnih virov, vendar je pa zadolžitev Slovenskih železarn še vedno izredno velika. Obveznosti se celo povečujejo in so 4-krat večje od terjatev - v primerjavi z letom 1992 so bile samo 3-krat, kar pomeni nadaljevanje nelikvidnosti. Iz vsega tega sledi, kar podatki prepričljivo dokazujejo, da nadaljnje vlaganje v železarne pomeni pravi finančni samomor. Sprašujem, seveda finančne strokovnjake in analitike v Ministrstvu za gospodarske dejavnosti, ali ni cena še nadaljnjega vztrajanja pri sanaciji Slovenskih železarn iz proračuna, previsoka? Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg438">Hvala lepa. Besedo ima gospod Franc Potočnik. Za njim bo na vrsti gospa Metka Karner- Lukač.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ1.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg439">Spoštovane gospe in gospodje! O kmetijstvu je bilo danes zelo malo govora. Tudi v ekspozeju gospod Drnovška je le na kratko predstavljeno. Lepo bi bilo, če bi bilo res tako, kot je rekel gospod predsednik oziroma kot je napisal. Pa žal ni tako. Zveni preveč lepo, da bi bilo res. Kaj je med drugim gospod Drnovšek v svojem ekspozeju povedal? Ugodna cenovna razmerja in sprejeti pravilnik o kakovosti mleka so spodbudno vplivali na skupno in tržno kmetijsko proizvodnjo, ki v zadnjih mesecih raste, pa tudi na začetek prestrukturiranja v skladu z razvojnimi cilji. Jaz temu stavku ne morem verjeti. Mogoče me bodo predstavniki Vlade s konkretnimi podatki prepričali, ampak dvomim v to. V ekspozeju gre res samo za analizo obstoječega stanja, ki mu, kot sem že rekel, v celoti ne verjamem. Ni pa predsednik Vlade, dr. Drnovšek nakazal vizije te vlade za področje kmetijstva, za njegov obstoj in razvoj. Mi smo v tem parlamentu maja letos sprejeli strategijo razvoja slovenskega kmetijstva pravzaprav s konsenzom z veliko večino. Takrat sem ta dokument podprl, ob tem pa izrazil bojazen, da je to le mrtva črka na papirju.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg440">Proračunski memorandum kaže na to, da je bil moj dvom v dobronamernost Vlade takrat upravičen. Kaj pogrešam v memorandumu? V memorandumu niso predvideni tržni redi, niso predvidene zaščitne cene za osnovne zaščitne pridelke, ni predvidena uvozna zaščita in izvozne stimulacije, ki so osnovni temelj načrtovanja kmetijske politike oziroma razvoja slovenskega kmetijstva, če smo se že ob sprejemu strategije odločili za eko socialni model razvoja slovenskega kmetijstva.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg441">V memorandumu ni niti besede o razvoju zadružništva, čeprav zakon o zadrugah v 3. členu pravi, da je država dolžna podpirati razvoj zadružništva.</seg>
@@ -1470,11 +1452,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg444">Upam, da jih boste podprli, ker je sicer ta dokument, ki smo ga podprli, to je strategija slovenskega kmetijstva res mrtva črka na papirju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg445">Hvala lepa. Besedo ima gospa Metka Karner-Lukač. Za njo bo na vrsti gospa dr. Mateja Kožuh Novak.</seg>
             </u>
             <note type="speaker">METKA KARNER-LUKAČ:</note>
-            <u who="#SDZ1.KarnerLukačMetka" ana="#regular">
+            <u who="#KarnerLukačMetka">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg446">Ob tako bogati in živahni diskusiji mi je pravzaprav komaj še kaj ostalo. Vendar pa bi se v moji skromni diskusiji omejila le na tista področja, za katera menim, da bi jih bilo potrebno dodatno poudariti oziroma da še niso bila dovolj poudarjena. To je predvsem področje aktivne zaposlitvene politike, seveda v povezavi s planirano rastjo bruto družbenega proizvoda in oživljanjem gospodarstva, to je eno, nadalje samo dela socialnih transferjev in prav tako plač zaposlenih v državni upravi in pokojnine.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg447">Aktivno zaposlitveno politiko, kot sem rekla, gledam skupaj s politiko oživljanja gospodarstva. V 43 vrsticah, ki jih memorandum posveča tej zelo zaskrbljujoči problematiki, se ponavljajo stare poznane teze aktivne zaposlitvene politike. Memorandum ne vsebuje niti kančka inventivnosti in inovativnosti predlagatelja na tem področju. Menim, da je to področje gotovo najslabše rešeno med vsemi resorji. Vlada ostaja kar naprej pri znanem besedičenju, kot je, da bo razširila programe za iskalce prve zaposlitve in starejše delavce. Konkretno nič ne vemo, kateri so ti programi in koliko novih zaposlitev pričakujemo iz teh programov in kje so pravzaprav ta delovna mesta. Ali so ali niso - ne vemo. Verjetno bi morala biti nekje v gospodarstvu. Prav tako nič pove opredelitev, da je potrebno ohraniti in dopolniti programe, ki so neposredno vezani na ustvarjanje povpraševanja za znane posameznike. Kateri pa so ti posamezniki oziroma iz katerih področij izhajajo, ki imajo še sedaj neka povpraševanja? Ne vem. Morda Vlada to ve, zato bi bilo prav, da bi jih vsaj po "branžah" opredelila.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg448">Tretjič. Vlada napoveduje, kako bo preverila uvedene ukrepe zaposlitvene politike. Popolnoma nemogoče je preveriti ukrepe, če predhodno ne obstajajo jasno definirani cilji takih ukrepov in niso predvideni nikakršni scenariji, po katerih bi ocenjevali uspešnost rezultatov.</seg>
@@ -1502,11 +1484,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg470">Amandmajev sama nisem predlagala, in to ne iz razloga, da bi bila ravnodušna do tega, ampak zato, ker menim, da je to vaš dokument - koalicijskih strank, in ker vem - to se je pokazalo že pri zakonu o dohodnini - kakšna je vaša naravnanost -tudi tam sem predlagala pomembne amandmaje, pa nisem uspela. Danes me je potolažilo stališče upravnega odbora Gospodarske zbornice, kjer predlagajo popolnoma enake zadeve. To so bili razlogi, da jih nisem vložila. Bom pa z velikim veseljem podprla tisti amandma oziroma tiste amandmaje, ki predvidevajo večjo rast bruto družbenega proizvoda, in tiste, ki naj bi zaustavili trend novo nastajajoče brezposelnosti.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg471">Hvala lepa. Besedo ima gospa dr. Mateja Kožuh-Novak. Za njo bo na vrsti gospa Breda Pečan.</seg>
             </u>
             <note type="speaker">DR. MATEJA KOŽUH-NOVAK:</note>
-            <u who="#SDZ1.KožuhNovakMateja" ana="#regular">
+            <u who="#KožuhNovakMateja">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg472">Spoštovane kolegice in kolegi, prosim vas, da za nekaj minut pozabite na svojo strankarsko pripadnost in se spomnite, da smo bili kot posamezniki izbrani od slovenskega ljudstva, da nam je zaupalo, da bomo s preprosto slovensko pametjo znali odločati. Takrat, ko nam bodo strokovnjaki, včasih zaneseni ali dostikrat zaneseni od svojih ozkih strok predlagali ukrepe, ki bi temu ljudstvu, ki nas je izbralo, utegnilo škodovati. Jaz mislim, da je letošnji memorandum natančno tak dokument. Mislim, da je dobro pripravljen, da je skupek potreb. Ne dvomim, da nam je vse to, kar piše v memorandumu, potrebno. Trdim pa, da je naši pameti prepuščeno, da se odločimo, ali so prioritete, ki nam jih Vlada postavlja, prave prioritete. Ponovno poudarjam - sem sama strokovnjak na nekem področju - strokovnjaki dostikrat iz preproste želje svoje področje urediti, pozabljamo na druge potrebe.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg473">Mislim, da je postavljanje prioritet ključni problem letošnjega memoranduma. Kolegi, ki ste z menoj sedeli v raznim odborih, veste, da sem se odločno zavzemala, da naj bi se drugo leto ne povečevala sredstva za obrambo. Ne povečevala zaradi tega, ker nismo dobili nobene ocene, kot je rekel gospod Rupel, v kakšni nevarnosti smo, v kakšni nevarnosti pričakujemo, da bomo drugo leto. Ker nismo dobili ocene, kaj lahko branimo z orožjem, ki ga nameravamo kupiti, koliko časa se lahko branimo in koliko bi nastalo - to je že nekdo drug postavil pred časom v parlamentu - če bi plačali zračno obrambo sosedom, ki so za to že opremljeni. Trdim, da smo tako majhna država, da se absolutno ne smemo obnašati pri oboroževanju tako kot velike države. Včeraj sem govorila z 28 let staro delavko Rika. Eno od 1.300 ljudi, ki je pred enim letom, oktobra 1992, odšlo na čakanje. Zadnja plača - gre za 28 let staro samohranilko - ki jo je dobila, je bila sredi leta, za januar 15.000 tolarjev. Ostala je od oktobra lani na hrbtu svojih staršev, odrasla ženska z otrokom; če jih ne bi imela, ne vem, kako bi preživela. Sprašujem vas, kolegi, kako. Takih Rikov je veliko po svetu. Oktobra je prišla na zavod. Na zavodu so ji jasno povedali, da sredstev - bodisi za izobraževanje, kot smo slišali danes predsednika Vlade, pri nas gre predvsem za strukturno nezaposlenost, torej, da bi se lahko doizobrazila ženska s srednjo izobrazbo - ni. Sredstev ni, da bi lahko poizkusila s svojim poslom. Teh sredstev ni in tako, kot je proračun 1994 narejen, jih tudi drugo leto ne bo. Sprašujem se, kako bomo lahko šli na teren, kako bo šel moj kolega iz Ribnice h tem 1.300 delavcem in jim povedal: "Fantje, žal, denarja za aktivno pomoč pri vaši nezaposlenosti ni, ker smo ga porabili za nakup letal". Močno se sprašujem, če bodo ljudje to obrazložitev sprejeli.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg474">Vsi se dotikamo včerajšnje Okrogle mize. Med drugim je bilo tudi rečeno, da tisti, ki zagovarjamo druge prioritete, se odzivamo pretirano čustveno. Jaz mislim, da je čustvo, ki najbolj škodi človeštvu pohlep po oblasti in po denarju. Takih čustev videvam vsak dan na televiziji preveč. Ljudje, ki taka čustva izražajo, se ne jokajo in ne smejejo. Gledamo maske, brezizrazne maske, ki nam dajejo samo to vedeti, da jih ne Državni zbor, ne ljudstvo, popolnoma nič ne briga, da bodo delali tako, kot hočejo. Teh čustev se bojim. To so nevarna čustva. Ta čustva netijo vojne in ubijajo otroke. Kaj kupujemo s tem orožjem? Trdim, da varnosti ne, ker smo premajhni in imamo premalo denarja, da bi se lahko tako zaščitili, da bi se obranili agresorja. Trdim, da kupujemo samo petelinja peresa, da se skušamo kititi tako, da se bomo našopirili tako, da se bo petelin z druge strani meje ustrašil naše bojevitosti. Pozabljamo, da imajo ti petelini na naši južni meji dve leti prakse, da so vsak dan bolj kruti in da jih svet ves čas podpira v tem, da se splača osvajati. Zato mislim, da je izjemno pomembna obrambna politika, ki je pa v memorandumu ne zasledim: vzgoja diplomatov. Sprašujem Vlado, koliko sredstev je namenila v letu 1994 za pošiljanje mladih strokovnjakov v tujino, da bi se vrnili čez nekaj let kot izdelani ali pa vsaj naučeni diplomati. Koliko sredstev namenja Univerzi v Ljubljani, da bi začela s pospešenimi specializiranimi programi vzgoje diplomatov? To pa mislim, da je za majhno državo prava obramba. Pri tem sploh nisem proti obrambi z orožjem, vendar mora biti v obliki splošnega ljudskega odpora, da bomo vsi vedeli, kako ravnati, kadar pride, če bo prišla agresija.</seg>
@@ -1518,11 +1500,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg480">Na koncu bi rada še malo sarkastično rekla, da dajanje denarja za igračke odraslih ima tudi svoj vzgojni pomen. S tem bomo onemogočili našim mladim materam, da bodo kupovale te iste igračke, aviončke in puške in tanke otrokom in bomo morebiti dosegli, da bomo vzgojili nekaj manj novih generalov in nekaj manj vojakov. Žal pa matere, ki so vsak dan v stiski za preživetje, ne bodo znale vzgajati samostojnih ljudi. Vzgojile bodo hlapce. In s tako politiko ne bomo resnično ostali nič drugega kot hlapci razvitega sveta. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg481">Besedo ima gospa Breda Pečan, za njo je na vrsti gospod Miran Potrč.</seg>
             </u>
             <note type="speaker">BREDA PEČAN:</note>
-            <u who="#SDZ1.PečanBreda" ana="#regular">
+            <u who="#PečanBreda">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg482">Kolegice in kolegi! Rada bi povedala nekaj okrog aktivne zaposlovalne politike v primerjavi z investicijami v temeljne obrambne sisteme Slovenije, s tem da bi v uvodu najprej povedala, kar bom potem še enkrat ponovila, zato, da mi potem ne bi kdorkoli po nepotrebnem lepil kakršnihkoli etiket.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg483">Gre namreč za to, da niti osebno niti naša poslanska skupina ne zavračamo kakršnihkoli investicij v temeljne sisteme obrambne varnosti, temveč da želimo o tej odločitvi trezno in na dolgi rok najprej razpravljati, enakopravno razpravljati in se potem skupaj z vsemi vami odločati, za kakšno obliko in kakšen obseg obrambnega sistema se bomo odločili. Povedala pa bi to, ko del slovenskih politikov v javnosti razlaga svoj odnos do t.i. socialnih transferov in ga opredeljuje z znano dilemo "topovi ali maslo" - jaz bi temu raje rekla "topovi ali kruh" - da to dilemo imenujejo lažno, so</seg>
                <note>kot je to v politiki navada</note>
@@ -1542,11 +1524,11 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg494">Še to bi rekla. Zelo mi je bila všeč razprava gospoda Rupla in njegovih kolegov iz demokratske stranke. Sprašujem, kako to, da v državi Sloveniji Demokrati zastopajo socialdemokratski program. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg495">Besedo ima gospod Miran Potrč, za njim bo imel besedo gospod Franc Černelič.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ1.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg496">Hvala lepa. Spoštovane kolegice in kolegi. Državni zbor letos prvič sprejema, ne pa samo sprejema k znanju proračunski memorandum kot akt Vlade. Ker ga sprejemamo, bi vam dal v razmislek dve vprašanji glede same strukture proračunskega memoranduma, kakor nam ga je predlagala Vlada.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg497">Prvo, Vlada v proračunskemu memorandumu hkrati predlaga 12 tabel, ki po mojem skromnem znanju pravzaprav več ali manj pomenijo odločitev ob proračunskem memorandumu tudi odločitev o vseh bistvenih vprašanjih proračuna. Namesto, da bi danes odločali o temeljnih ciljih politike in samo o osnovnih proporcih prihodkov in odhodkov javne porabe in proračuna, bi s sprejemom vseh tabel dejansko odločili o proračunu.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg498">Jaz mislim, da tako glede na poslovnik ni mišljeno, ampak se ne bi formalno na poslovnik skliceval. Opozoril bi na vsebinska vprašanja, ki so pri tem pomembna. Osebno iz dosedanje razprave sodim, da bodo poslanci, ki smo ali so doslej razpravljali, verjetno tudi glasovali tako. Če bodo tako glasovali, predpostavljam, da bo zelo verjetno tekstualen del proračuna, kljub mnenju Vlade in mnenju matičnega odbora vključeval v besednem smislu tudi določene kvantifikacije politik, ki sicer ne bodo številčno opredeljene in spremenjene v tabelarnem pregledu, bodo pa, če bodo sprejete, pomenile neskladnost tekstualnega dela proračuna s tabelarnim pregledom.</seg>
@@ -1571,41 +1553,41 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg517">Moj zaključek iz tega je lahko sledeč: da ni dober pristop, da se poskuša pri takšnem obsegu amandmajev, tudi pri podpisnikih, razmišljati o rešitvi tega vprašanja na način, kakor je bil doslej običajen, da se zavrne vse, kar ne predlaga Vlada. Bojim se, da na ta način ne bo šlo in da je lahko posledica takšnega pristopa slaba, tudi nesprejem proračunskega memoranduma. Zato bi Vladi svetoval, da v času, ko razpravljamo, do začetka sprejemanja amandmajev le dovolj tenkočutno prisluhne vsem razpravam poslancev, da tudi sama oceni, kakšna je tehtnost argumentov, pa tudi realnost sprejema memoranduma in da potem, kar v skladu s poslovnikom lahko stori, oceni, ali ne bi sama vložila še kakšne dodatne amandmaje, ki bi, ne dobesedno tako, kot predlagamo poslanci, ampak na nek primernejši način zagotovila, da se doseže v Državnem zboru večje soglasje s predloženim memorandumom in da je ta lahko tudi sprejet. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg518">Hvala lepa. Preden dam besedo naslednjemu, gospodu Francu Černeliču, bi opozoril na dve ugotovitvi. Ali gre za repliko ali proceduralno, gospod Pregelj? Replika. Dobro, najprej bo dobil repliko gospod Pregelj. Želim pa povedati dve ugotovitvi: prva, da smo večkrat med razpravo nesklepčni, kar ne bi smeli biti. In druga, da od dosedanjih 14 govorcev, ki so govorili v sklopu razprav poslank in poslancev, 7 od teh ni več v dvorani. Kaj pomeni prvo dejstvo po poslovniku, vemo; kaj drugo, pa naj si vsak razlaga sam. Prosim, da vodje poslanskih skupin in sekretarji zagotovijo sklepčnost v dvorani!</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg519">Repliko ima gospod Žarko Pregelj. Prosim.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg520">Spoštovani! Repliko imam na uvodno izvajanje gospoda Potrča v zvezi s proceduralno obravnavo</seg>
                <note>bi lahko rekli</note>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg521">tega proračunskega memoranduma. Opažam, ali pa ga mogoče nisem tako razumel, kot je morda želel povedati - namreč predlagal je, da se pač ne upoštevajo priloge k proračunskemu memorandumu, ker bi to lahko pripeljalo do neskladja z besedilom in samimi prilogami - oziroma obratno. Osebno moram ugotoviti, da se memorandum sprejema v vseh treh fazah, in sicer na eni sami seji. To je iz poslovnika jasno razvidno in je treba tako tudi delati. Torej je tudi predvideno usklajevanje, v kolikor pride do neskladnosti posameznih sprejetih amandmajev. To je jasno iz poslovnika in tako je treba tudi to obravnavati, zato menim, da je lahko procedura popolnoma normalna. Vsekakor pa so te priloge potrebne in jih je potrebno obravnavati, kajti edino s pomočjo teh prilog je lahko ta memorandum sploh akt kot se spodobi za proračunski memorandum. Namreč, proračunski memorandum mora vsebovati tako proračunsko politiko, politiko javnih financ oziroma javne porabe, potem razvojno politiko, določati mora delež posameznih prihodkov in odhodkov in podobnega - in to je lahko narediti zgolj s pomočjo tistih tabel. Samo besedilo tega ne omogoča oziroma ni napisano tako, da bi dejansko omogočal sprejetje konsistentnega dokumenta.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg522">V kolikor sem prav razumel izvajanje, menim torej, da je možno memorandum sprejemati na podlagi poslovnika, tako da se opravi na isti seji splošna razprava, razprava in glasovanje o delih oziroma glasovanje o aktu v celoti. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg523">Repliko ima gospod Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ1.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg524">O tem, kako se bo sprejemal ali ne proračunski memorandum, bo pač - glede na veljavni poslovnik - odločal predsedujoči in bo tudi poslovnik tolmačil. Povedal bi rad samo dve stvari v zvezi s tem.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg525">Po 167. členu poslovnika vključuje proračunski memorandum tudi osnovne proporce prihodkov in izdatkov; jaz sem že uporabljal izraz "odhodkov", ker nas je gospod Kopač pravilno opozoril, da ta uporaba ni ustrezna. Kaj osnovni proporci so, je stvar opredelitve, med drugim tudi Državnega zbora. In jaz nisem govoril o tem, da ni nobene tabele, ampak da niso tabele, takšne kot so, temveč da vsebujejo samo osnovne proporce. Če bi tako bilo, trdim, da bi bil še vedno v skladu s poslovnikom.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg526">Kar pa zadeva način sprejemanja, je po moji razlagi stvar taka: poglavje X govori o aktih Državnega zbora. Ima pod arabsko nekaj podpoglavij; posebno podpoglavje o "zakonodajnem postopku" in posebno podpoglavje o "sprejemu državnega proračuna in zaključnega računa državnega proračuna". To so ločena podpoglavja, ki imajo vsako zase napisano celotno proceduro. In za proračunski memorandum je predvidena procedura v eni sami obravnavi. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg527">Hvala lepa. Ponovno replika, gospod Žaro Pregelj. Izvolite.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg528">Poslovnik ima tudi 229. člen in ravno ta 229. člen je podlaga sprejemanju proračunskega memoranduma. Kajti zgolj 214. člen ne pove ničesar oziroma odpre vrsto dilem; lahko jih kasneje razločim, mislim, da jih ne morem med repliko. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg529">Hvala lepa. Besedo ima gospod Franc Černelič. Za vami bo na vrsti gospod Janko Predan.</seg>
             </u>
             <note type="speaker">FRANC ČERNELIČ:</note>
-            <u who="#SDZ1.ČerneličFranc" ana="#regular">
+            <u who="#ČerneličFranc">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg530">Spoštovani, hvala lepa za besedo. Sam sem sodeloval v nekaj odborih, ki so temeljito pretresali pač predloženi memorandum in tudi sam sem ga temeljito prebral in predelal. Dejansko sem skušal že na odborih vplivati na nekatere stvari in vložil skupaj z ostalimi sodelavci 29 amandmajev, od tega je Vlada samo 4 potrdila, če lahko tako rečem. Torej verjetno bo od nas vseh skupaj odvisno, ali bo ostalih 25 ostalo še nepotrjenih ali pa vsaj nekateri od teh potrjeni in vneseni v proračunski memorandum. Pri razpravi želim reči to, da jemljem ta dokument kot predhodnico za sestavo proračuna, zato je potrebno tudi ob tem razmišljati, kako bo dejansko proračun v detajlih sestavljen.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg531">Pogrešam optimizem Vlade in seveda tudi utemeljitev tega optimizma, ki bi moral nekako biti bolj prisoten v samih tekstih, s tem da bi bile nakazane poti usmeritve in na koncu koncev tudi cena, če se moramo čemu odreči, če moramo kaj žrtvovati za dosego drugega cilja. Pravzaprav skoraj ni variant. Pogrešam jasno opredelitev obveznosti po doslej sprejetih sklepih in zakonih. Celota je pripravljena brez te opredelitve, kaj je obveznost že od prej in kaj pravzaprav lahko namenimo za naprej.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg532">Pogrešam jasno opredelitev obveznosti po načrtovani novi zakonodaji.</seg>
@@ -1627,37 +1609,37 @@
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg548">Podprl bom sprejetje memoranduma. Pričakujem pa, da bodo ministri na posameznem področju dejansko v proračunu upoštevali realne prioritete in dejansko v okviru tega, da smo se odločili, da se nekoliko zmanjša delež v sredstvih družbenega produkta, da bodo znali najti pravo mero in da bomo potem tudi mi poslanci, tako z dopolnitvami v memorandumu, z usmeritvami, kot tudi s sprejemom proračuna dejansko zagotovili neko pot, neko vizijo, neko svetlejšo, jasnejšo opredelitev, nek optimizem za leto 1994 in naprej. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg549">Hvala lepa. Repliko ima gospod Jožef Kopše. Prosim.</seg>
             </u>
             <note type="speaker">JOŽEF KOPŠE:</note>
-            <u who="#SDZ1.KopšeJožef" ana="#regular">
+            <u who="#KopšeJožef">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg550">Gospodu Černeliču bi repliciral na enem delu. Zelo zanimiv nagovor oziroma pojmovanje vsega tega. Vendar bi rekel, da se o vseh stvareh ne da samo po segmentih soditi. Med drugimi je omenil v Mariboru in na mariborskem področju in mariborski univerzi, ker je izpadlo, da smo kot z dosti kadra si sami krivi, da je Maribor in mariborsko področje tam, kjer je. Po moje, to je ozko gledano, gospod Černelič. Vse te stvari, ki se dogajajo pri nas, predvsem ta centralizacija oblasti, institucij,</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg551">centralizacija javnih podjetij v Ljubljani je naredila to, kar je prej že bilo narejeno. Se pravi uničila to, kar je bilo narejeno - decentralizacija. V Mariboru je ta primer. Ko smo decentralizirali takratno republiko Slovenijo, smo tudi ustanovili Univerzo v Mariboru, z namenom, da se ta marginalna področja izven Ljubljane razvijajo po nekem konceptu. Kaj se je sedaj pripetilo? Sedaj smo z zakonodajo, ki so jo tudi nekateri tukaj sprejemali, vsaj jaz ne, smo naredili to, da je ta kader v Mariboru res neuporaben, ker se nima več kje zaposliti. Posledica tega je tudi ta, da je v tem centru, v tej državi Ljubljana nastala negativna kadrovska selekcija. Ker ves kader, ki z univerze prihaja z margine, ljudje, ki študirajo tukaj, ostajajo in še jih je premalo za vse te institucije, javna podjetja in za vse to, kar v Ljubljani obstaja, da danes ne moreš dobiti niti enega sekretarja za 90.000 - mi ponavljamo četrti oglas v časopisih - v Ljubljani. V Mariboru pa je v istem času tega profila najmanj 500 ljudi na borzi dela. To je ta posledica. Tu si pa Maribor, razen svojih šestih ali sedmih poslancev, ne more čisto nič pomagati. Tu potrebujemo vašo pomoč. Predvsem je pomembna ta decentralizacija, da bo univerza in kader v Mariboru prišel do izraza.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg552">Mogoče bi šel malo nazaj v bližnjo zgodovino. V Mariboru smo zaradi te industrije, ki je nastala zaradi jugoslovanskih potreb po težki industriji, ustanovili zelo dobro evropsko tehniško fakulteto. Ves ta kader je danes v zraku, gospe in gospodje. Tako ozko gledanje, gospod Černelič, mislim da ni pravo, ker je treba pogledati tudi vzroke in posledice. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg553">Hvala lepa. Repliko ima gospod Tone Partljič.</seg>
             </u>
             <note type="speaker">TONE PARTLJIČ:</note>
-            <u who="#SDZ1.PartljičTone" ana="#regular">
+            <u who="#PartljičAnton">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg554">Če ne bi šlo po kasnejši uri in če ne bi bili tako zdelani, bi se morda vzdržal replike, bi v resnem delu podprl Jožeta Kopšeta. Veste, da smo se v Mariboru neštetokrat vprašali, kaj je z našo univerzo, ki producira tudi doktorje znanosti in marsikaj, ni pa efekta v mestu. Zlasti sta obe univerzi - ekonomska in tehnična tudi najmočnejši. Takšne odgovore smo si zadajali. V zadnjem času pa smo res mislili, da je najbrž subjektivni faktor, pa smo uvozili nekatere kadre z Dolenjskega, pa so dokončno "zafurali" zadeve. To je po tej plati.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg555">Po drugi plati je vprašanje <gap reason="inaudible"/> o kulturi sem hotel govoriti, pa izgleda, da nocoj ne bo več časa, in  sem vam pravzaprav hvaležen za ta del. Včasih vseeno grem v gledališče, edino gospo Omanovo sem enkrat tam srečal, pa sem se z njo hvalil. Drugače se mi zdi kar precejšen rezultat, vidim dosti poslancev ne pride do opere, do Operne kleti pa pridejo, če je to prva postaja, bo že dobro.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg556">Ali je bilo to povabilo za po seji? Besedo ima gospod dr. Janko Predan.</seg>
             </u>
             <note type="speaker">JANKO PREDAN:</note>
-            <u who="#SDZ1.PredanJanko" ana="#regular">
+            <u who="#PredanJanko">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg557">Spoštovani! Skušal bom do 19. ure končati svojo razpravo; tudi sicer sem običajno kratek in bom tudi tokrat. Ne bom razlagal nobenega dopolnila in tudi ponavljal ne bom že globoko izrečenih misli o proračunskem memorandumu, želim pa opozoriti na že znana dejstva, in sicer na nedavčne prihodke in te nedavčne prihodke vključiti v sistem zdravstva.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg558">Svetovna zdravstvena organizacija predlaga, da se za promocijo zdravja, za zdravstveno vzgojo in za nekatere druge preventivne dejavnosti pridobijo sredstva ali iz obdavčitev ali pa iz takse za proizvode, ki škodujejo zdravju ali zdravje ogrožajo. Tudi naš Plan zdravstvenega varstva do leta 2000 cilja na to.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg559">Proračunski memorandum uvaja novo obliko dohodka, novo obliko davka, in sicer "akcizo oziroma trošarino". Pobere se določen znesek od prodanega proizvoda oziroma enote prodanega proizvoda. Memorandum navaja trošarino na alkoholne pijače, tobačne izdelke in na naftne derivate. Ker iz trošarine ne more biti izločen poseben del npr. za zdravstveno preventivo, predlagam, da naj se uvede taksa na alkoholne pijače in tobačne izdelke in se sorazmerno višini takse zniža višina trošarine. Tako bi dobili pomembna sredstva za preventivne dejavnosti, npr. za preprečevanje bolezni odvisnosti, za neprestane aktivnosti v zvezi z infekcijo s HIV virusom - tu mislim na AIDS, in še nekatere druge, zlasti na zdravstveno vzgojo in zdravstveno prosveto.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg560">Skratka, predlagam sledeči sklep: "Vlada Republike Slovenije naj uvede in opredeli takse na alkoholne pijače in tobačne izdelke in ta sredstva nameni za nekatere preventivne dejavnosti v zdravstvenem varstvu." Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK DR. LEV KREFT:</note>
-            <u who="#SDZ1.KreftLev" ana="#chair">
+            <u who="#KreftLev1951" ana="#chair">
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg561">Hvala lepa. Imamo še 7 pisno prijavljenih k razpravi. Jutri bosta prva na vrsti gospod Maks Sušek in gospod Franc Zagožen. Nadaljevali bomo ob 10. uri; sejo bo vodil kolega dr. Vladimir Topler.</seg>
                <seg xml:id="SDZ1-Redna-13-1993-11-09.seg562">Za danes hvala lepa!</seg>
             </u>

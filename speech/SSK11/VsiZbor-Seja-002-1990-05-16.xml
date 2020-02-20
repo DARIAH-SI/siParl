@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 2. seja</title>
             <meeting n="2"
-                     corresp="#VsiZbor.1990-05-16.s002-01.DruzPolZb #VsiZbor.1990-05-16.s002-01.ZbObc #VsiZbor.1990-05-16.s002-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="241"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="181"/>
                <tagUsage gi="seg" occurs="426"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -548,23 +539,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1990-05-16.s002-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-05-16.s002-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-05-16.s002-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -575,16 +549,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">2. seja</head>
             <docDate>16. maj 1990</docDate>
             <note type="chairman">Sejo je vodil dr. France Bučar, predsednik skupščine</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.30 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg1">Začenjam 2. skupno sejo vseh zborov Skupščine Republike Slovenije, ki sem jo sklical na podlagi 364. člena Ustave Republike Slovenije in 134. člena poslovnika Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg2">Preden sploh preidemo na dnevni red, bi vas seznanil z brzojavko, ki sem jo dobil in ki se glasi: Opravičujem se za 2. sejo zborov Skupščine Republike Slovenije in opozarjam, da sklic ni v skladu z 31. členom poslovnika. Delegat 23. volilne enote za Zbor združenega dela Stanislav Brglez.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg3">Mislim, da o tem ugovoru ne bi razpravljali, ker ni niti vsebinsko niti formalno utemeljen.</seg>
@@ -601,26 +579,26 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg12">Želite razpravljati o dnevnem redu? Prosim.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg13">Spoštovano predsedstvo, spoštovani zbor! Sem poslanec Jože Arzenšek, iz 40. volilne enote zdravstvenega in socialnega področja, ki pokriva šest regij.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg14">Zadolžen sem, da izrazim nestrinjanje z načinom sklicevanja sej Skupščine Republike Slovenije kot njenega najvišjega organa. To so telegrami brez gradiva, ki - če že nič drugega, onemogoča kakršenkoli stik z bazo. Za današnjo sejo bi morali prejeti vsaj določene izhodiščne točke vladne politike v novi sestavi, kar je osnova, recimo, vsaj za pomanjkljivo odločanje o sami vladi.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg15">Termin, vsaj kar se mene tiče, smo poslanci najprej izvedeli iz sredstev javnega obveščanja, včeraj pa s telegramom. Sprašujem poslance, če je kdo od njih drugače obveščen. Prav tako predlagam, da se glasovalne naprave morajo popraviti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg16">Gospod Juri, izvolite.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg17">Pridružujem se kritiki prejšnjega govornika in predlagam dodatno točko dnevnemu redu, in sicer razpravo o eventualnem odgovoru ali resoluciji včeraj izrečenim grožnjam Predsedstva SFR Jugoslavije. Predlagam torej, naj se takoj konstituira mešana skupina delegatov, ki naj bi oblikovala kratko in jasno stališče o tistih točkah predsedniškega govora, ki bistveno posegajo v suverenost naše republike in tega parlamenta.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg18">Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">PETER BEKEŠ:</note>
-            <u who="#SSK11.BekesPeter1946" ana="#regular">
+            <u who="#BekesPeter1946">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg19">Spoštovani predsednik, spoštovane delegatke in delegati! Sicer sem se mislil oglasiti glede groženj predsednika predsedstva, pod točko predlogi in vprašanja delegatov, pa je kolega Juri odprl problem sedaj in menim, da sodi k temu. Zato podpiram njegov predlog, prav tako pa bi podal tudi svoj predlog.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg20">Naključje je hotelo, da smo se sestali dan po redni letni menjavi v kolektivnem vodstvu Jugoslavije in Predsedstvu SFRJ. Ni nepomembno, da je odhajajoči predsednik Slovenec bil izvoljen po predhodnem postopku, ki je v tistem času pomenil korak naprej v demokracijo. Morda je tudi to prispevalo k njegovemu političnemu načinu dela, s katerim je požel visoke ocene doma in v svetu. Ni nepomembno, da je morda bolj kot kdorkoli doslej prinesel naš maternji jezik, slovenščino, v svet in da se je hkrati uveljavil kot razgledan, kultiviran politik majhnega naroda s politično modrostjo. Zato predlagam, da se pridružimo slovenskemu javnemu mnenju z naslednjo izjavo:</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg21">"Skupščina Republike Slovenije izraža prepričanje, da bo Predsedstvo SFRJ svojo vlogo v prihodnje uspešno opravljalo samo v polnem priznavanju suverenosti jugoslovanskih narodov. Samo oni smejo in morajo odločati o tem, na kakšen način želijo združeno živeti v Jugoslaviji. Te pravice jim ne sme in ne more nihče odvzeti, niti Predsedstvo SFRJ niti njegov novi predsednik.</seg>
@@ -628,15 +606,15 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg23">Menim, da ta izjava, zlasti njen prvi odstavek, ni v nasprotju s predlogom kolege Juria in s tem želim tudi podpreti njegov predlog. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg24">Želi še kdo diskutirati? Potem vprašam oba predlagatelja dopolnitve dnevnega reda ali menite, da se njuna pobuda uvrsti kot posebno točko na dnevni red ali se lahko uvrsti, kot sem tudi sam menil prvotno, da se lahko uvrsti pod 4. točko - predlogi in vprašanja delegatov. Prosim.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg25">Predlagal sem kot posebno točko, ker menim, da bi bilo dobro, če bi takoj sestavili skupino, ki naj izoblikuje tak predlog. Zato menim, da bi bilo boljše, če bi bila to posebna točka.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg26">Hvala lepa. Torej je dopolnitev amandmajski predlog za dnevni red in dajem najprej na glasovanje ta predlog kot dopolnitev.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg27">Kdo je za to dopolnitev v taki obliki?</seg>
                <note>Večina.</note>
@@ -644,20 +622,20 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg29">Besedo ima Janez Janša.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg30">Spoštovano predsedstvo, spoštovani zbor! Predlagamo, da se doda dodatna točka k dnevnemu redu in hkrati predlagamo, da tekst za to točko pripravi skupina, sestavljena iz predstavnikov vseh strank, ki so zastopane v tem parlamentu. Tukaj imam predlog za šest strank iz Demosa in ga bom kar prebral, predlagam pa, da tudi ostale stranke predlagajo svoje predstavnike.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg31">Predlagamo: dr. Rajka Pirnata iz Slovenske demokratične zveze, Slavka Kmetiča iz Slovenske demokratske zveze, Marjana Podobnika iz SKZ, Franca Golija iz SOS, Naceta Polajnarja iz SKD in Lea Šešerka iz Stranke zelenih Slovenije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg32">Prosim. Predlagate še? Petra Bekeša, Franca Juria, Boruta Šukljeta in Vilijema Sekereša. Še kakšen predlog? Prosim.</seg>
             </u>
             <note type="speaker">DR. LEO ŠEŠERKO:</note>
-            <u who="#SSK11.SeserkoLeo1948" ana="#regular">
+            <u who="#ŠešerkoLeo">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg33">Spoštovano predsedstvo, spoštovani zbor! Zeleni bi predlagali dr. Božidarja Voljča v to skupino.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg34">Torej, če ni več predlogov, potem še enkrat preberem predloge.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg35">Demos predlaga dr. Rajka Pirnata, Slavka Kmetiča, Marjana Podobnika, Franca Golijo, Ignaca Polajnarja, dr. Božidarja Voljča, ostali pa Petra Bekeša, Franca Juria, Boruta Šukljeta in Vilijema Sekereša.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg36">Če se s tem predlogom strinjate, prosim, da dvignete roke. Hvala lepa.</seg>
@@ -680,7 +658,7 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg47">Glede na izpolnitev pogojev, ki jih predvidevata ustava in poslovnik, dajem besedo Lojzetu Peterletu, kandidatu za predsednika Izvršnega sveta Skupščine Republike Slovenije.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg48">Spoštovano predsedstvo, drage poslanke in poslanci, cenjeni gostje! Temelj moje odločitve za sprejetje mandatarstva je prepričanje, da moramo in smo sposobni stopiti v družbo suverenih narodov Evrope, katere del smo po geografiji, zgodovini in kulturi. V tem smislu razumem duha časa, pričakovanje državljanov Slovenije in številnih slovenskih skupnosti po vsem svetu. Do te naloge čutim osebno zavezo in v tem duhu razumem tudi odgovorno pripravljenost vseh kandidatov za novo vlado Republike Slovenije. Vem, da si ne nalagamo lahkega dela v prehodni dobi, ko staro in novo ne bosta tekmovala samo v kavalirstvu, ko beremo šele začetnico nove politične kulture, ko smo polni občutljivosti, neizraženih napetosti in tudi dvomov. Teža dneva pa nam ne zapira perspektive, izziv sprejemamo. Zavedamo se, da lahko samo v bistvenem nerazdeljena skupnost uresniči svoje temeljne projekte. Zato je potrebno med drugim zmanjšati pritisk preteklosti. Vlada bo storila v mejah svojih pristojnosti vse za popravo še popravljivih krivic, tako mrtvim kot živim. Za marsikoga se bodo spravna dejanja zgodila, žal, prepozno. Nikoli pa ni za narod prepozna resnica o njem samem. Za njegovo izčiščevanje in zorenje je nujna. Resnica nam ne bo narekovala preganjanja, pač pa odpuščanje in spravo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg49">Spoštovane poslanke in poslanci, ob tej priložnosti seveda ni mogoče podati podrobnejšega programa nove vlade. Tega bomo lahko ponudili po opravljeni inventuri, ko nam bo podrobneje jasno stanje po posameznih področjih. Zaradi vsega tega in zaradi običajev, ki sicer veljajo v parlamentarnih demokracijah, vam danes predstavljam le glavna izhodišča, nekatere temeljne usmeritve in nekatere glavne naloge, kakor jih vidi nova vlada. Zavedamo se namreč, da je ena od posledic delovanja sistema, ki ga spreminjamo, tudi velika nepreglednost gospodarskih, finančnih in drugih tokov, da prihaja tukaj do neodgovornega ravnanja in nezakonitega prisvajanja družbene lastnine, zato smo pri inventuri pripravljeni na presenečenja, kakor je, med drugim tako presenečenje, ki nas je doletelo prav na začetku, naše podjetje Elan.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg50">Sprehodil se bom sedaj skozi nekatera področja oziroma nekatera vprašanja, za katera menim, da so najbolj pomembna. Poudarek bom dal na gospodarskem vidiku, ker menimo, da je tukaj korenina naših možnosti in se bom zadržal na tem področju tudi dlje. Če bo kakšno področje zgolj omenjeno ali pa celo izpuščeno, to ne pomeni, da si vlada ne beli glave za tisto področje, da nima tukaj pripravljenih določenih osnutkov, ampak glede na značaj tega nastopa sem se pač moral zadržati samo v nekem okviru.</seg>
@@ -711,11 +689,11 @@
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg75">Hvala lepa. Glede na določbo 79. amandmaja k Ustavi Republike Slovenije predsednika Izvršnega sveta voli Skupščina Republike Slovenije na predlog Predsedstva Republike Slovenije, člane Izvršnega sveta pa na predlog kandidata, ki ga je Predsedstvo Republike Slovenije predlagalo za predsednika sveta in na podlagi mnenja Komisije za volitve in imenovanja. Prosim predsednika te komisije, da poda mnenje glede predlaganega člana Izvršnega sveta.</seg>
             </u>
             <note type="speaker">JANEZ LAMPRET:</note>
-            <u who="#SSK11.LampretJanez" ana="#regular">
+            <u who="#LampretJanez">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg76">Spoštovane poslanke, spoštovani poslanci! Komisija Skupščine Republike Slovenije za volitve imenovanja in administrativne zadeve je na 1. seji, dne 16.5.1990, v okviru svoje pristojnosti, določene z amandmajem 79 k Ustavi Republike Slovenije in 17. členom Poslovnika Skupščine Republike Slovenije razpravljala o predlogu kandidatov za predsednika in člane Izvršnega sveta Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg77">Mandatar za sestavo Izvršnega sveta Skupščine Republike Slovenije gospod Lojze Peterle, je Komisiji za volitve, imenovanja in administrativne zadeve predstavil predlog kandidatov za člane Izvršnega sveta Skupščine Republike Slovenije ter hkrati predstavil kandidate za predstojnike posameznih republiških upravnih organov.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg78">Komisija za volitve, imenovanja in administrativne zadeve je po razpravi sprejela mnenje, ki ga je podprla večina članov komisije, s katerim podpira predlog mandatarja za sestavo Izvršnega sveta Skupščine Republike Slovenije.</seg>
@@ -724,11 +702,11 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg81">Posamični člani komisije so menili, naj bi mandatar za sestavo Izvršnega sveta Skupščine Republike Slovenije na skupni seji zborov Skupščine Republike Slovenije podrobneje predstavil program Izvršnega sveta Skupščine Republike Slovenije in posamezne kandidate za člane Izvršnega sveta.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg82">Hvala lepa. Dajem v razpravo tak ekspoze mandatarja kakor tudi samo mnenje komisije. Želi kdo besedo?</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOCIJANČIČ:</note>
-            <u who="#SSK11.KocijancicJanez1941" ana="#regular">
+            <u who="#KocijančičJanez">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg83">Spoštovane delegatke in delegati? Rezultat prvih svobodnih in večstrankarskih volitev v republiki Sloveniji je nov parlament in tudi nova parlamentarna večina, ki jo sestavljajo stranke, združene v Demos. Prav je, da ta večina tudi sestavi novo vlado in da v skladu z demokratično izraženo voljo volivcev prevzame odgovornost za razreševanje političnih, gospodarskih in drugih vprašanj. Ta odgovornost ni lahka, nasprotno, je izredno težka in včasih tudi grenka. Verjemite mi, da se tega v ZKS - Stranki demokratične prenove na podlagi lastnih izkušenj dobro zavedamo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg84">Naša stranka je sicer stranka relativne večine v tem parlamentu, vendar ni izrazila interesa, da bi kateri od njenih članov prevzel mandatarstvo. ZKS - Stranka demokratične prenove pretendira na položaj konstruktivne opozicije, pri tem pa ne izključuje, da bi v prihodnosti ob bistveno spremenjenih okoliščinah postala ena od vladnih strank.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg85">V želji, da bi naša stranka lahko odigrala vlogo konstruktivne opozicije, se ne mislimo pretirano obregovati ob formalne pomanjkljivosti, ki jih pri začetku dela tega parlamenta in pripravljanju te vlade ni bilo malo.</seg>
@@ -744,29 +722,29 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg95">Pred novo vlado in pred slovenskim parlamentom so obsežne in izjemno odgovore naloge. V današnjih časih ni in ne bo lahko sestaviti uravnoteženega in hkrati učinkovitega programa, ki bo v interesu slovenskega ljudstva in vseh prebivalcev Slovenije, kar je, upam vsaj, cilj vseh parlamentarnih strank. Čas zahteva veliko stopnjo umirjenosti, modrosti in strpnosti, saj je to osnovna predpostavka funkcioniranja demokratičnih institucij. Pri tem je ZKS - SDP pripravljena prispevati svoj delež. Poslanski klub naše stranke je prepustil pri tajnem glasovanju o novi vladi svojim poslancem svobodno izbiro, da glasujejo zanjo, da se opredelijo proti njej ali pa se vzdržijo glasovanja. Če pa bo glasovanje o vladi poimensko in javno, pa se zaradi načelnega nasprotovanja taki metodi discipliniranja poslancev utegne naše stališče spremeniti.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg96">Hvala lepa. Želi še kdo razpravljati?</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg97">Spoštovani poslanci, spoštovano predsedstvo, sem Jože Školč, poslanec ZSMS - Liberalne stranke. Težko rečem, s kakšnimi občutki se srečujejo danes poslanci, ko morajo sprejeti odločitev o vladi. Zjutraj smo imeli poslanski klub in moram reči, da smo z velikim nelagodjem razpravljali, glede na to, da praktično, razen informacij, ki smo jih dobili na včerajšnjem enournem pogovoru v tej vladi in programu, pač nismo imeli. Tudi ne vem, s kakšnimi občutki se srečujejo poslanci Demosa, tisti, ki bodo morali brezrezervno take vrste vlado brez programa sprejeti. Vi veste, da liberalcev pač nikoli ne vodi slepa vera in v tem smislu bi mi radi, da dosti več vemo o programu vlade na posameznih resorjih in veste, da bi na tak način mi, več kot radi, to vlado spremili s popotnico, da ji zaupamo, da lahko zanjo glasujemo. Žal pač ni elementov, da bi se lahko odločali ne za ne proti. Tisto, kar bi rad tukaj povedal, je delno vsebovano tudi v protestih, ki jih je predsednik našega parlamenta označil za zgolj proceduralne narave. Seveda, onemogočajo pa vsebinsko delo. Jaz bi za našo skupino poslancev rekel, da se čutimo potisnjene ob zid, ko moramo take odločitve sprejemati, ne da bi imeli ustrezne podatke in da si želimo, da tega v nadalje več ne bi bilo. Zato bi kolegu Kocijančiču rekel, da ni res, da mislim, da ni dobro razumel predsednika skupščine gospoda Bučarja, ker če bi ga dobro razumel, potem bi vedel, da konec vojne narekuje take vrste postopke, kakor smo pač zdaj pred njimi, da sprejemamo mimo procedur itd. Tako da to je zagotovo ena od razsežnosti te izjave. Sam bi rekel, da vidim problem v tem, da standard dogovarjanja ali pa standard demokracije hudo pada. Mi smo v tistih mračnih časih naše družbe, sicer je tukaj en minister, ki je meni rekel, da sem že od plenic ven pri oblasti, tako da težko to zdaj utemeljujem, ampak v tistih časih smo imeli možnost vsaj sodelovati pri pripravi skupščinskih sej. Bili smo povabljeni na predsedstvo. Tokrat pač nismo bili in jaz bi s tega mesta pozval, da se nas vsaj v delo skupščine vključuje, če se nas že v druge ne.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg98">Tisto, kar bi rad tukaj predlagal kot eno naših pobud, ki pa je bila žal preslišana, čeravno smo jo najprej povedali na predsedstvu, potem smo jo spravili v javnost in smo jo tudi včeraj gospodu Peterletu povedali, to je naš predlog, kako bi se lahko vsaj o tistih vprašanjih, o katerih načelno govorimo vsi, da je soglasje, dogovorili za drugačen način dela.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg99">Naš predlog je bil, da skupščina poleg vlade imenuje tri parlamentarna telesa, v katera seveda pokliče tudi strokovnjake od zunaj, in če je potrebno, tudi izven naših meja, ki bodo reševala tri velika vprašanja, za katera vsi trdimo, da jih je treba reševati. Eno teh je ustava, drugo je transformiranje družbene lastnine in tretje je vprašanje položaja Slovenije v Jugoslaviji in v Evropi. Verjamem, da bi na ta način vladi in tudi Demosovi večini v veliki meri olajšali težko delo in predlagam predsedniku Bučarju, da se danes do teh predlogov opredelimo, da se imenuje oziroma da se pripravi do naslednjič te predloge, da se o njih prediskutira, čeravno je naš interes, da se ustanovi tudi četrta skupina, ki bi se ukvarjala s projektom demilitarizacije Slovenije. Nisem med tistimi, ki bi delil nauke vladi, kako naj dela ali ne dela. Vlada lahko dela, zaradi nas, tako rekoč kar hoče. Mi hočemo samo to, da imamo dostop do podatkov o tem, kaj dela in da o tem lahko razpravljamo tukaj v skupščini. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg100">Hvala lepa. Samo vprašanje. Ali želite, da se ti vaši predlogi vključijo v zadnjo točko kot predlogi delegatov, ali naj jih posebej obravnavamo v sklopu te razprave?</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg101">To boste vi presodili. Ampak, glede na to, da je vse odprto in da se na nek način nanaša na program problemov, ki jih je treba reševati, se mi zdi, da lahko pridemo do zaključkov tudi pod to točko dnevnega reda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg102">Če je prepuščeno v odločitev meni, potem bi ugotovil, da je smotrneje, da tudi to razpravo o teh predlogih vključimo v 4. točko - predlogi delegatov, glede na to, da sem informiran, da tudi nekateri drugi delegati že pripravljajo nastope s predlogi za različne komisije. Hvala lepa. Želi, prosim, še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">BORUT ŠUKLJE:</note>
-            <u who="#SSK11.SukljeBorut1958" ana="#regular">
+            <u who="#ŠukljeBorut">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg103">Spoštovano predsedstvo, poslanci in poslanke, kandidati za novo vlado! Ob že znanih dejstvih, ki smo jih tukaj pravkar slišali, da poslanci ob inauguraciji vlade nismo bili seznanjeni z njenim programom, moram povedati tudi to, da smo se s podrobno zadrego ob tem vprašanju srečali tudi v klubu poslancev Socialističen stranke. Seveda je res, da del nove vlade oziroma del ljudi, ki naj bi zasedli pomembne resorje v novi vladi, poznamo po njihovem javnem političnem ali publicističnem delu, vendar menim, da je to za ta namen premalo. Kljub temu, da se zavedamo vseh zadreg, ki so bile ob tem pa naj povem nekaj stvari, ob katerih bomo socialistični poslanci še kako pozorni oziroma bomo opozicija ali sodelovali s predlogi, ki jih bo pripravljala vlada.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg104">Vsi se zavedamo, da država Slovenija in družba, ki jo sestavljajo Slovenci in drugi državljani te države, lahko preživi v polnem pomenu le, če najde svojo specifično vlogo, torej še nezasedeno vlogo v evropskem združenju držav in družb. Zaradi tega bo naša vloga v skupščini v podpiranju vseh tistih prizadevanj, ki bodo vodile k samostojnosti Slovenije v konfederativni Jugoslaviji, v državi s konfederativno pogodbo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg105">Druga stvar, ki bi jo rad povedal, je ta, da bomo od nove vlade zahtevali in ji predlagali rešitev komunikacijske integracije Slovenije tako na ravni transporta ljudi in dobrin kot na ravni kroženja informacij, da bomo predlagali, da se namesto administrativne centralizacije in togega hierarhiziranja državnih služb zagovarja funkcionalna integracija ob maksimalnejše racionalni lokalni avtonomiji, se pravi namesto hierarhije bomo zagovarjali delitev dela med centralno oblastjo in regionalnimi in lokalnimi instancami te zagovarjali obnovo tradicionalnih dežel in mestnih uprav, kar naj bi zmanjšalo napetosti med regijami in lokalnimi skupnostmi ter med, če temu rečem v narekovajih, provinco in prestolnico.</seg>
@@ -776,11 +754,11 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg109">In peta stvar je vprašanje socialne države in vsega kar se v tem sklopu veže. To so osnovne stvari, ki bi jih danes želel povedati tu, saj bomo na teh vprašanjih socialistični poslanci vztrajali. Seveda pa želimo novi vladi uspešno delo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg110">Hvala lepa. Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg111">Dober dan in prijazen pozdrav vsem skupaj, predsedstvu, poslancem, kandidatom za novo vlado in drugim. Sem Jaša Zlobec, ZSMS - Liberalna stranka. Bom kratek, na noben govor se nisem pripravljal, ker sem za relevantne podatke zvedel danes zjutraj šele v časopisu. In bi prešel k popolnoma konkretnim predlogom in prosil, da se o tem predlogu razpravlja ali na koncu glasuje, namreč predlagam, mislim, da bi skupščina potegnila politično izredno modro potezo, če bi izglasovala preložitev današnjega glasovanja o novi vladi. Bom skušal povedati, zakaj mislim, da bi bilo to pametno dejanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg112">Vse politične stranke, razen tistih, ki so dandanes v opoziciji, so bile ustanovljene v lanskem letu dni. In logično je, da nimajo profiliranih in delovnih programov, zato prihaja ves čas do tega, ko smo ugotavljali, da so vsi programi vseh strank v parlamentu med sabo izjemno sorodni, podobni, predvsem pa dovolj abstraktni. Dokaz za to smo imeli tudi, ko smo poslušali ekspoze kolega Peterleta. Če bi glasovali o tem, ali se strinjamo ali ne, bi dobil velikansko večino v parlamentu. Vsi bi se strinjali. Ni pa to seveda konkreten program, namreč ne obljublja ne dobrega ne slabega, ampak je zaradi svoje abstraktnosti nejasen. Zato lahko vsi skupaj le ugibamo o dejanskih programskih profilih posameznih ministrov in ministrstev. Kajti tudi njihova strankarska pripadnost še ne pove ničesar. Še toliko bolj, ker so marsikateri med njimi bili člani drugih strank in človek ne ve, ko potegne črto, kaj dejansko mislijo. Enako lahko le ugibamo o pogledih posameznih strank in pri Demosu v celoti o posameznih sklopih, od gospodarstva do kulture. To ni kritika nikogar, to je samo dejansko stanje in enako velja tudi za stranke, ki so v opoziciji. In na osnovi teh dejstev, menim, da so to dejstva, bi prišel do nekaterih sklepov.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg113">Kot prvo, do zadnjega sem mislil, da bomo vsaj na skupščinske klopi dobili natančen podatek o vseh kandidatih za novo vlado, vso njihovo dosedanjo bibliografijo, dosedanjo pripadnost posameznim strankam, društvom in podobno. Obenem pa tudi kratko vizijo, kako si predstavljajo delo na svojem področju in kje vidijo tiste temeljne kamne, na katerih bi gradili svoje ministrstvo.</seg>
@@ -788,29 +766,29 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg115">In ne nazadnje moram priznati, da večine kandidatov osebno ne poznam, najbrž večine kandidatov ne poznajo tudi drugi poslanci, nekatere pa poznam zelo dobro, 11 jih poznam osebno, nekatere med njimi zelo dolgo časa in sem zelo spremljal njihovo delo, z veliko pozornostjo, simpatijo itd. Moram reči, da ravno tem, ki jih najbolj poznam, bi v taki komisiji še toliko raje zastavil kakšno vprašanje, ki se mi zdi, da bi bilo tudi pomembno, da bi slišali odgovor nanj, preden izvolimo člane nove vlade. In če bo vlada sestavila svoj program, kot smo prebrali v časopisu, v mesecu dni, ne vidim nobene posebne škode v tem, če se izvolitev vlade preloži za teden dni ali dva in se opravi to, kar sem predlagal, lahko tudi v drugačni obliki, ker moram priznati, da skakanje z zaprtimi očmi v vodo se mi nikoli ni zdela simpatična zadeva. In če smo že začeli z ničelne točke take radikalne in pomembne stvari, kot je parlamentarno življenje, menim, da si lahko privoščimo malo časa in izpeljemo postopek približno v tem smislu, kot sem predlagal. In da končam. Tokrat ne bom končal s svetopismskimi izreki, ker sem bil zadnjič okaran, ampak z rimskim ravno tako znamenitim izrekom: "Quidquid agis, prudenter agas et respice finem!" Karkoli delaš, to počni previdno in glej na konec. In jaz bi rad gledal na konec. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg116">Hvala lepa. Ker gre za povsem konkreten predlog, ki predstavlja amandma k našemu dnevnemu redu, dajem ta predlog pred nadaljnjo razpravo v razpravo. Želi kdo o njem razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">DR. DRAGO PLEŠIVČNIK:</note>
-            <u who="#SSK11.PlesivcnikDrago1929" ana="#regular">
+            <u who="#PlesivcnikDrago1929">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg117">Spoštovani predsednik, spoštovani zbor! Gotovo mi je ta skrivalnica pred objavo sestave vlade ne povsem razumljiva. Tudi jaz več kot polovico članov ne poznam, pa je to lahko moj problem. Če bi se lahko posvetoval z volivci, bi verjetno to težavo odpravili tam, kjer smo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg118">Razne stvari so bile s tem v zvezi že tu rečene, vendar problemi, ki jih želim izpostaviti, bi bili naslednji: tudi seznam, ki smo ga danes dobili, mi pravzaprav ne pove mnogo. Kakor sem se lahko sedaj posvetoval, pa je pravzaprav sestav tak, kot če bi razpravljali o kakem izvršnem svetu mesta Ljubljane.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg119">Verjamem, da je Ljubljana slovenska glava. Vseeno pa bi rad povedal, da živi tu dobra oziroma slaba četrtina Slovencev in da bi pri sestavljanju določenih teles mislili tudi na siceršnji organogram naše dežele. Mogoče je to za ta trenutek prepozno, vendar pa pri nadaljnjem sestavljanju organov skupščine ali vladnih teles na to ne bi smeli pozabljati. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg120">Hvala lepa, torej jaz bi samo ugotovil in še enkrat apeliral na poslanca Zlobca, mislim, da je njegov predlog pravzaprav v nasprotju z že sprejetim sklepom tega zbora; namreč, mi smo že glasovali o sprejetem dnevnem redu, ki vključuje volitev Izvršnega sveta. Zato menim, da je to spremljevalni predlog za dnevni red in dvomim, če lahko o tem še enkrat glasujemo glede nato, da smo to že izglasovali.</seg>
             </u>
             <note type="speaker">EDVARD OVEN:</note>
-            <u who="#SSK11.OvenEdvard1950" ana="#regular">
+            <u who="#OvenEdvard1950">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg121">Ne vem, če bi lahko karkoli pomagal pri zapletih ob imenovanju nove vlade. Predlagal bi, če bi lahko predlog, da se o predlogu delegata Jaše glasuje, dopolnili s sklepom, za katerega menim, da ne bi bil v nasprotju z že sprejetim dnevnim redom, da bi dobili na klop na naslednji seji življenjepise sedanjih kandidatov za člane in za predsednika Izvršnega sveta, z njihovimi programskimi pogledi za resorje, ki jih bodo vodili, s tem, da bi bilo nam kot poslancem potem omogočeno, da spremljamo njihovo delo in kako se držijo svojih planskih usmeritev in, ali lahko potem na vsako deviacijo tudi opozorimo in zahtevamo natančnejše obrazložitve. Se pravi, prejšnji predlog bi se dopolnil, da bi lahko skupščina sprejela sklep, da bi bile te pomanjkljivosti, če jih tako imenujem, odpravljene na naslednji seji, s tem da bi življenjepisne podatke dobili na mizo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg122">Hvala lepa. Predlog razumem ne kot predlog za spremembo današnjega dnevnega reda, ampak kot predlog, da se drugič da na razpolago temu zboru življenjepise članov vlade. Zato prosim mandatarja, če se s tem strinja in če to lahko zagotovi.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg123">Spoštovani! Najprej bi rad odgovoril na vprašanje, ki je bilo postavljeno s strani stranke ZKS - Stranke demokratične prenove, kar zadeva imena, zakaj so prišla tako pozno v javnost.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg124">Jaz sem mandatar uradno šele od sklepa Predsedstva Republike Slovenije, se pravi formalno sem lahko karkoli storil za javnost samo v zadnjih dveh dneh in že prej je bilo nekaj težav, ki so prišle na dan skozi medije, ko se je pač nepozorno pisalo o meni kot mandatarju in so bili že tudi javni glasovi, zakaj se sploh v javnosti pojavljam, ker še nisem mandatar. Vse, kar sem delal do tega sklepa, sem delal kot izbrani oziroma predlagani mandatar s strani Demosa, glede na pravila demokratične igre, kakršna se v normalnih demokracijah. Do javnosti sem lahko prišel tako rekoč šele zdaj, ko sem bil formalno predlagan. Menim, da je tako prav. Verjetno bi se osmešil, če bi prihajal z ekipo pred samim pogovorom oziroma pred samim formalnim sklepom. Trudil pa sem se za to, da ne bi po moji strani prišlo do zaviranja oziroma do zavlačevaja, namreč zelo pomembno se nam zdi, da dobi Slovenija vlado čim prej, prejšnji vladi je mandat potekel in vlada samo administrira, ne sprejema odločitev pomembnejše narave. Dnevni red se skoraj iz dneva v dan daljša za prvo sejo novega izvršnega sveta in menim, da je zelo pomembno, da to vlado čim prej izvolimo. V nekem smislu bi bilo mogoče meni lažje, če bi se o tem odločali čez en mesec, ker bi se lahko skliceval, da je procedura pač odložila odločanje in tudi po drugi strani bi se lahko zdelo neskromno od mene osebno, da si želim tako rekoč vlado čim prej.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg125">Menim, da je res v slovenskem interesu, da se o tej stvari razumno pomenimo in izrazimo svojo politično voljo. Osebno se ne nagibam k predlogu, da bi to odlagali. Glede predloga o življenjepisih bi povedal, da imam zbrane vse življenjepise za vseh 27 članov vlade, nekateri so dolgi tudi dve strani, kar bi pomenilo, če bi hoteli dati vse to na voljo poslancem 27 x 1 do 2 x 240 strani. Nekdo je zadnjič govoril o tem, da bi lahko nekoliko mislili tudi na drevesa. Sam res da nimam izkušenj z mandatarstvom, zato sem menil, da je tudi skromnost glede teh podatkov, modela na mestu. Vendar si lahko vsak, če bi ga zanimalo, ogleda te življenjepise v sekretariatu. Vsi predlagani ministri so pripravili za svoja področja kratke osnutke dela, kako si predstavljajo prioritete reševanja, katere ukrepe predlagajo, zato ni težav, da do naslednje seje te zadeve ne bi pripravili, čeprav menim, da bi bilo v nekem smislu to spet podvajanje dela. Menim, da je res treba, da bi bilo najbolj normalno, da se počaka na to sejo, kjer bo podan podrobnejši program.</seg>
@@ -818,37 +796,37 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg127">Res si pa ne bi upal delati natančnejšega programa na osnovi sedanjega vedenja o procesih, ki potekajo, po dejstvih, ki so vsak dan dogajajo. To inventuro moramo resno opraviti. Jaz bi se raje nagibal k temu, da imamo več časa kakor pa manj, nisem za gasilske zadeve, čeprav bo moral Izvršni svet že v tem času nekatere pomembne sklepe sprejemati v okviru dnevne politike oziroma reševanja tako rekoč dnevnih zadev. Menim, da je tak postopek normalen in če že govorimo o Evropi, mislim, da je tudi v Evropi ta zadeva normalna in ne vidim tukaj nobenih ovir ne pravih argumentov, da ne bi te stvari tudi mi počeli tako. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg128">Hvala lepa. Če želi še kdo na to temo razpravljati?</seg>
             </u>
             <note type="speaker">METKA MENCIN:</note>
-            <u who="#SSK11.MencinMetka" ana="#regular">
+            <u who="#MencinMetka">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg129">Spoštovane poslanke, spoštovani poslanci, spoštovano predsedstvo! To, o čemer bom govorila, se nanaša na sestavo vlade. Žal nisem dobila besede pred mandatarjem, bi pa opozorila na eno vprašanje, in sicer: predstavnice in predstavniki ZSMS - Liberalne stranke smo že ob obravnavi osnutka zakona o državni upravi in menim, da tudi med pogajanji z Demosom v zvezi z vladnim programom in sestavo vlade, predlagali tudi ustanovitev posebnega vladnega telesa, ki bi se ukvarjalo s položajem žensk. Vemo, da v obstoječem sistemu državne uprave ni mesta za žensko ministrstvo. To bi bilo možno spremeniti le s spremembami zakona o državni oziroma javni upravi. Zelo me veseli, da se je mandatar oziroma tisti, ki so pač sestavljali predlog za novo vlado, poslužili druge možne rešitve, kako zadolžiti v vladi ljudi tudi za tista vprašanja, za kakšna jih do zdaj ni bilo mogoče zadolžiti zaradi sestave sekretariatov in komitejev. In sicer s pomočjo instituta ministra brez listnice.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg130">Menim, da bi lahko imeli še ministrico brez listnice, ki bi se ukvarjala z vprašanji politične enakosti žensk, enakosti in enakovrednosti v sferi dela, možnosti žensk, da vstopijo v javnost kot enake in enakopravne in tako naprej. Menim, da mora v času velikih strukturnih sprememb, ki ženske že izrinjajo iz javne sfere v privatno, recimo, problem odpuščanja in zaposlovanja in konec koncev tudi sestava te skupščine, v kateri je samo 10% žensk, vlada vendarle nekaj narediti za to, da se vzpostavijo pogoji za enake možnosti posameznic in posameznikov za vstop in prehajanje iz ene sfere v drugo. Pogoje, da bodo mogle tudi ženske z ustavo zajamčeno enakopravnost tudi realizirati. Ministrica brez listnice bi se s temi nalogami lahko ukvarjala v povezavi s sedanjimi komiteji za delo, za zdravstvo in socialno varstvo, za vzgojo in izobraževanje pa še s katerim.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg131">Zanima me, ali ste pri sestavljanju vlade mislili tudi na to področje in na ta vprašanja, in če ste, zakaj se niste odločili za to, da bi bila v Izvršnem svetu tudi ženska, ki bi bila posebej zadolžena za to področje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg132">Hvala. Prosim.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg133">Na vaše vprašanje bom odgovoril tako. Prav obe ministrstvi, ki ste jih omenili, bosta vodili dve ženski; obe izredno sposobni, z občutkom za ženska vprašanja. To sta dr. Katja Boh in gospa Puharjeva. Menim, da sta to res tista dva komiteja, kjer bo ta problematika lahko prihajala najbolj do izraza in kjer bomo lahko tudi ukrepali. Osebno nisem nenaklonjen tej ideji, da bi imeli tudi posebno ministrstvo za to vprašanje in o tem lahko razpravljamo v okviru reorganizacije državne uprave. Menim pa, da operativno razmišljati o tem v tej rundi, se pravi pri sestavljanju te vlade, bi bilo zdaj nerodno, ker bi morali res glasovanje prestaviti za nekaj dni, če bi hoteli zdaj dobiti še ministrico za ta vprašanja in bi morali vso proceduro pravzaprav zavrteti na novo. Zato predlagam, da ne bi zdaj širili vlade po še bolj hitrih postopkih, ampak naj ta ideja ostane za razmislek pri sestavljanju nove vlade oziroma reorganizacije državne uprave. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg134">Hvala lepa. Besedo ima gospod Kreft.</seg>
             </u>
             <note type="speaker">DR. LEV KREFT:</note>
-            <u who="#SSK11.KreftLev1951" ana="#regular">
+            <u who="#KreftLev1951">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg135">Spoštovano predsedstvo, drage delegatke, spoštovani delegati! Sem Lev Kreft, delegat Družbenopolitičnega zbora z liste ZKS - Stranke demokratične prenove. Tudi sam se imam za "zelenega" in verjetno zato dvomim, da bi bila tudi v izbiri med kakšnim padcem vlade in padcem kakšnega drevesa v bodoče sklep o gradivih enak, kot je bil danes. Ker pa sem videl, kako se delegati opozicijskih strank trudijo olajšati delo bodočemu izvršnemu svetu, mu pomagati sestaviti program, ki ga še ni uspel predložiti, je skorajda nerodno, ker želim postaviti samo dve vprašanji predlaganemu mandatarju gospodu Peterletu, in sicer: prvič, ali predlog za angažiranje gospoda Janeza Janše kot republiškega sekretarja za ljudsko obrambo pomeni, da mandatar sprejema konfliktne situacije kot del svojega programa in programa Izvršnega sveta na področjih JLA in novinarstva; in drugo, ali mandatar predlaga angažiranje Igorja Bavčarja kot republiškega sekretarja za notranje zadeve zaradi njegove strokovne usposobljenosti in dosedanjega sodelovanja pri tej službi ali zaradi njegovega izpričanega občutka za pretehtano ravnanje in spoštovanje zakonitosti ali zaradi obojega. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg136">Hvala. Prosim.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg137">Za oba kandidata, ki sta bila omenjena, sem uporabil enake kriterije, kakor tudi pri vseh drugih: bil sem zelo pozoren tudi na vse, kar je v zvezi z njunima imenoma prihajalo s te ali z one strani. Z obema imam tudi nekaj osebne izkušnje pri sodelovanju, zlasti v okviru Odbora za varstvo človekovih pravic. Osebno menim, da sta vsak na svojem področju strokovnjaka, saj je njuna izobrazba izrazito povezana z resorji, za katera ju predlagam. V javnosti nisem doživel, pa tudi sicer ne srečal nobenega dokaza, ki bi lahko mojo izbiro oziroma moj predlog omajal bodisi glede njune strokovnosti bodisi glede njune morale.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg138">Moram reči, da sem bil nekajkrat presenečen, ker se je poskušalo brez argumentov načenjati njuno moralno in strokovno integriteto. Ta metoda mi ni domača in bi želel, da se je v tem prostoru, ki je na očeh vse slovenske javnosti, ne poslužujemo. Kar zadeva konflikte, sem prepričan, da v teh prehodnih časih, kot sem že rekel, gotovo ne bomo tekmovali samo v kavalirstvu. Kadar se godijo take dolgoročne družbene spremembe, kakor se godijo v našem prostoru, čeprav se zdijo na zunaj relativno blage in tudi to, kar se je zgodilo v parlamentu na dosedanjih zasedanjih, ne jemljem za nobeno tragiko, ampak za nekakšno šolo, v kateri se moramo vsi nekaj naučiti, ker lekcije iz parlamentiranja še nismo vzeli. Konflikti so vsakdanjost politične igre tudi v parlamentu, tudi na vladni ravni, jaz imam raje jasne konflikte kot vprašljive pritajenosti.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg139">Prav pri teh dveh ljudeh pa moram reči, da sem se učil premagovanja konfliktnosti. Če ne bi Igor Bavčar v vlogi, ki jo je imel kot nekakšen neformalen vodja Odbora za človekove pravice, zadržal svoje vloge na način, kot je to storil, bi bilo zelo vprašljivo, če bi mi tukaj sedeli skupaj in se tako pogovarjali. Podobno bi lahko za določene druge zadeve rekel za Janeza Janšo.</seg>
@@ -856,11 +834,11 @@
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg141">Hvala. Besedo ima poslanec Emil Milan Pintar.</seg>
             </u>
             <note type="speaker">EMIL MILAN PINTAR:</note>
-            <u who="#SSK11.PintarEmilMilan1944" ana="#regular">
+            <u who="#PintarEmilMilan1944">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg142">Spoštovano predsedstvo, spoštovani poslanci in poslanke! Osebno se strinjam z mandatarjevo mislijo, da moramo čim prej priti do nove vlade, da ne bi kazalo odlašati. Tudi menim, da je mandatar v prvem krogu, po mojem mnenju, nedvomno uspešno opravil nalogo. Na številnih področjih, zlasti na gospodarskem, je uspel pridobiti ljudi po strokovnem, ne pa po političnem načelu.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg143">Zavedam se, da je v tem trenutku med nami veliko pomislekov, vsaj nekateri od teh pomislekov izhajajo iz dejstva, da Slovenci spadamo v tiste narode, ki še niso uspeli oblikovati pozitivnega odnosa do oblasti, do vlade, ki še zmeraj ne morejo razumeti oblasti ali vlade kot svoje vlade ali naše vlade. Nedvoumno zato, ker smo v preteklosti, mislim seveda na preteklost precej dlje nazaj kot mesec ali leto, imeli pravzaprav neprestano oblast in vlado, ki ni bila naša. Še celo takrat, lansko leto, ko nas je ta oblast ali vlada obvarovala mitingaškega razodetja prave resnice, ki bi prišla z Balkana, smo to dejstvo ali to potezo naše vlade pozdravili nekako v zadregi, priznali smo jo v zadregi in pozabili smo jo prej, kot je to bilo mogoče. Osebno menim, da bi se morali znebiti tega vnaprejšnjega nezaupanja do mandatarja in do njegove liste, ki je verjetno prevelika, če gledamo z aspekta racionalnosti. Ne glede na to, koliko so posamezne personalne rešitve v tem trenutku ustrezne ali ne. Tisto, kar bi morali ceniti in oceniti, pa je sposobnost posameznega prihodnjega ministra, da uresničuje sprejeti vladni program. No, tu pa sem v težavi, na katero so nekateri že opozorili. Dejansko namreč nimamo nobenega realnega programa.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg144">Predvolilna kampanja je oblikovala, po mojem mnenju, nekakšno vrste nenaravno antikomunistično koalicijo in je bilo dovolj, da se napade frontalno. Ni pa bil niti na teh volitvah odločilen program, ker ga ni bilo in očitno je, da se dejanski program še ni oblikoval. Ko govorimo o tem, da pravega programa ni in tudi ni tisto, kar nam je mandatar tu sicer predstavil kot program. Cela vrsta njegovih misli je sprejemljivih, cela vrsta pa jih je tako pavšalno navrženih, da so sporne. Če sem dobro poslušal - nimam pa ničesar v rokah, to je navada, ki se je bomo morali počasi znebiti - padla beseda "precenjeni dinar". Med strokovnjaki teče diskusija, ali je jugoslovanski dinar precenjen ali je podcenjen in kako ga lahko ocenjujemo. Sam zato ne bi rad, da kar tako, brez argumentov sprejmemo vladno ugotovitev in vladni program, da je dinar precenjen; mogoče so stroški preveliki, pa ni dinar precenjen, kakor je bilo potem v naslednjem delu povedano. No, na to samo opozarjam.</seg>
@@ -870,31 +848,31 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg148">Glede na poslovnik naše skupščine seveda ne predlagam ponovno tajnega glasovanja, ker se mi zdi to brezupno, se bom pa glasovanja o tej vladi, zaradi tega formalnega razloga, vzdržal in s svojim vzdržanjem protestiral - ne proti vladi, ampak proti načinu, kako jo dobivamo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg149">Gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg150">Glede glasovanja bi rad v osebnem imenu povedal naslednje: nisem še slišal, da bi kdo danes hotel izkoristiti možnost, ki je v poslovniku bila sprejeta, da bi glasovali javno. Zato ne razumem, da je toliko vnaprejšnjih sklicevanj na nekaj, o čemer se nismo odločili. Osebno kot mandatar pa bi si želel, da bi se zaupanje tem predlogom izrazilo na tajen način.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg151">Hvala. Gospod Glavič.</seg>
             </u>
             <note type="speaker">DR. PETER GLAVIČ:</note>
-            <u who="#SSK11.GlavicPeter1940" ana="#regular">
+            <u who="#GlavicPeter1940">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg152">Spoštovano predsedstvo, spoštovani zbor! Ko je mandatar dokaj splošno navedel svoj program in program vlade, bi želel opozoriti na dve podrobnosti, ki zadevata ta splošna načela.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg153">Menim, da bi bilo napačno, če bi razumeli zlom realsocialističnih družb po svetu kot zlom razredne družbe. Menim, da gre za globlji vzrok, da gre za spremembe posledic proizvodnega načina, da gre za prehod v informativno in inovativno družbo, v kateri sta množična ustvarjalnost in s tem povezana svoboda, nujni pogoj in posledica tega, da lahko neka družba uspeva v konkurenčni borbi z drugimi sistemi. To ima silno močne implikacije, ne gre samo za gospodarstvo, o katerem je nekaj znamenj, da se vlada zaveda teh stvari, ampak gre tudi za konkurenčni boj med organizacijskimi tvorbami drugih vrst, zunaj gospodarstva, v regionalnem in tudi v drugih ozirih.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg154">Drugo temeljno načelo, na katerega bi rad opozoril, je to, da ni mogoče vnaprej predvidevati, kaj vse se bo dogajalo. Vendar bi morala vlada imeti trdna načela glede ravnanja v smislu evolucijske naravnanosti, kar vsebuje več elementov; naj naštejem med njimi samo odprtost, konkurenčnost, sposobnost rojevanja novega in odmiranja starega, svoboda, pravice posameznika itd.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg155">Zdi se mi, da bi te stvari vlada morala vnesti tudi v ta najbolj splošen model programa. Brez dvoma je, da smo mi danes tu soočeni z odločitvijo, ki po svoje temelji na premajhnem zbiru podatkov, na premajhnem številu informacij. Vendar razumemo težave, ki so objektivne narave in menim, da bi bilo prav, da jih skupščina tudi sprejme in seveda pokaže s tem potrebo po čimprejšnjem koncu tega brezvladja, ki tako in tako traja že predolgo. Zato se pridružujem sklepu, da mandatar imenuje trden rok, v katerem bo pripravil program vlade in posameznih resorjev in da skupščina sprejme sklep, da bo glasovala o zaupnici vladi in o zaupnici posameznim članom Izvršnega sveta po razpravi o teh načelih. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg156">Hvala lepa. Ker gre za konkreten predlog, prosim mandatarja, da pojasni svoja stališča.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg157">Spoštovani! Rad bi vas seznanil s tem, da sem se predvčerajšnjim oglasil pri sedanjem predsedniku Izvršnega sveta Dušanu Šinigoju. Pogovorila sva se o tem, kako bi lahko, če bo ta vlada izvoljena, potekala primopredaja poslov na Izvršnem svetu. On mi je zagotovil, da so vsi resorji pripravili poročila, iz katerih bo razvidno oziroma je razvidno, do kje so pri reševanju družbenih problemov prišli, kaj ostaja odprto, kaj so po njihovem mnenju prioritete, kaj nam svetujejo glede na svoje koncepte. Skratka, tu je pot odprta. Je normalna. Ne bo se zgodilo, da bi eni ministri odšli in drugi prišli v prazne prostore.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg158">Pripravljena je tudi analiza stanja in razvojnih možnosti Republike Slovenije, ki jo je pripravil Zavod za družbeno planiranje. Delno sem jo lahko že pogledal in moram povedati, da deluje zelo kakovostno, zelo strokovno pripravljena. Vlada je pripravila tudi sintezno poročilo o zadevah, s katerimi želi seznaniti naslednjo vlado. Dobili se bomo, nova vlada in del stare, če bomo izvoljeni, v petek na skupnem sestanku in se bomo o teh zadevah prijateljsko pogovorili in takrat tudi na kulturen način to primopredajo opravili. Moram reči, da mi je osebno žal, da gospoda Šinigoja ni tukaj med nami.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg159">Glede samega roka pa menim, da bi bilo le dobro vedeti, kaj bomo mi na tem pogovoru in na resorjih slišali in videli. Predlagal sem, da bi bil to enomesečni rok. Vendar je to zadnji domet. Če bom izvoljen, se bom potrudil, da bomo ta gradiva čim prej pripravili in da jih boste dobili pravočasno, kot je to v navadi. Vse, kar sem tu slišal s strani predstavnikov Stranke demokratične prenove ali socialistov ali liberalcev, kar zadeva vsebinske predloge, je v duhu tega, kar je vlada pripravljala oziroma so kandidati za ministre pripravljali v svojih osnutkih. Naj še to dodam, da sem delal štiri leta v državni upravi, kjer sem se včasih boril z neskončno dolgimi elaborati, kjer je zmeraj vse pisalo od do. Ves vlak problemov je bil zmeraj zapisan, začenši s samoupravljanjem in zaključujoč z varstvom okolja; treba je, bomo, moramo, morali bi in drugi pogojniki. Zato sem se tudi odločil, da ne grem z vsem spiskom problemov. Lahko bi si vzel nekaj ur več in bi vam eno uro dlje govoril in bi slišali v nekem smislu zadeve, ki ste jih že slišali, ki pa jih doslej nihče še ni naredil.</seg>
@@ -902,79 +880,79 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg160">Zato sem se pač oprl na nekatere temeljne zadeve, za katere menim, da so relativno konkretne in ne samo okvirne in te zadeve bodo naše prvo vodilo in naša prva obveznost. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg161">Hvala lepa. Prosim.</seg>
             </u>
             <note type="speaker">FRANC PERKO:</note>
-            <u who="#SSK11.PerkoFranc1942" ana="#regular">
+            <u who="#PerkoFranc1942">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg162">Tudi jaz bi želel, da bi vlado volili skupaj s programom, vendar vem, da to ne bo možno, da bo vlada danes izglasovana. Zato predlagam, da bi nam bilo vsem skupaj lažje, nekateri ste bolj pri virih informacij, nekateri pa manj, da bi od članov vlade: o biografiji, delu, programih v nekaj besedah le nekaj izvedeli danes, ne pa jutri iz sredstev javnega obveščanja. Meni bi bilo nerodno, da bom kot delegat prišel jutri domov in prebral v časopisu: ja ta je pa ta, oni je ta. Zato bi prosil, če je mogoče, da bi vsak član vlade v minuti predstavil sebe, videnje za naprej v nekaj točkah in da bi se predstavil, da bi ga tukaj videli, če je to sprejemljivo.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg163">Hvala.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg164">Ta aplavz sem razumel kot podporo temu predlogu. Osebno sem prav zato dvignil roko, da bi podal enak predlog. Vsi ministri so prisotni, tu smo, vaši smo in vsakega bi prosil, da svojo predstavitev res kratko opravi in pove svoje reference, če se dvorana s tem strinja. Menim, da je to tudi način, ki bo olajšal naše odločanje.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg165">Gospod Aksentijević.</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ:</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg166">Želja vseh nas v oboroženih silah je, da zmaga demokracija in svoboda, da vsak narod v naši skupni domovini SFR Jugoslaviji zbere vse sile in moči in gradi bogato življenje, vredno človeka 21. stoletja. Pri tem želimo iskreno pomagati tudi v tem domu - skupščini.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg167">Cenim gospoda kandidata Peterleta in menim, da je tudi njegova želja, da zbere najboljše ljudi v svojo - našo vlado. Večine kandidatov ne poznam, nekatere poznam ter menim, da so sposobni uresničiti program. Glede gospoda kandidata za ministra obrambe, poznam dobro njegovo "skico" iz Nove revije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg168">Kot strokovnjak - profesionalni vojak lahko rečem v tem zgodovinskem trenutku, geostrateškem in vojaško-političnem položaju, kakor za Evropo in Jugoslavijo, tako za Slovenijo, so zastavljeni cilji nerealni ter neuresničljivi in celo nevarni.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg169">Popolnoma se strinjam z mnenjem delegatov SKS - Stranke demokratične prenove, da postavljanje gospoda Janše na to funkcijo ima samo negativne posledice. Zato prosim, da predlog spremenite in predložite novega kandidata. Osnovna nerealnost vašega programa je izražena v diametralno nasprotnih ciljih, to je samostojnost vojske in znižanje stroškov za ljudsko obrambo v tem štiriletnem mandatu, kar je neuresničljivo, ker eno drugemu nasprotuje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg170">Hvala lepa. Gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg171">Zelo sem vesel, da se je oglasil gospod predstavnik naše armade. Že zadnjič sem mu želel izraziti moje spoštovanje, ker nas je nagovoril v slovenščini, kar v tem parlamentu ni bila vedno navada. Razumem njegove pomisleke, razumem jih glede na to, da prihaja, če naj tako rečem, z druge strani. Rad bi ob neki drugi priložnosti slišal podrobnejšo argumentacijo, zakaj so si ti cilji, ki si jih zastavljamo, v konfliktu. Sam sem nekako prepričan, da je možno, da si ti cilji niso v nasprotju in da je to pocenitev možno doseči. Kakor razmišljamo pri drugih področjih o uvajanju evropskih standardov, tako mislimo, da sedaj, v času, ko se svet razorožuje, ko se proračuni za vojne izdatke zmanjšujejo, ko koncept razrednega sovražnika ali kakšnega drugega nekako zapušča tudi naša tla, menim, da moramo storiti vse, da denar, ki gre, po našem mnenju, v preveliki množini za te potrebe, usmerimo za naša delovna mesta, ki so ogrožena, za naše družine, ki nimajo navadnih pogojev za delo, za ljudi v socialni stiski itn. Tukaj so številni problemi, ki jih je treba reševati, zato menim, da se včasih preveč odločamo za namene, ki nekako teh naših osnovnih potreb potem ne zadovoljujejo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg172">Zavedamo se, da je tak sistem, kakor je armada neke države, težko reformirati, težko uskladiti z novimi družbenimi cilji ali z novo razvojno ali družbeno ali dohodkovno paradigmo, vendar menim, da tudi pri nas prihaja do teh pogledov. Menim, da tudi dogajanje v sami armadi kaže na to, da želi armada stopati po povsem sodobnih poteh, ki so v navadi v armadah po svetu.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg173">In tukaj si seveda ne predstavljamo razvoja drugače, kakor da tudi tukaj uveljavimo evropske standarde. Naša država sme stati, če hočemo konkurirati oziroma se boriti z drugimi na ekonomskem ali na drugih področjih, pač samo toliko in toliko in v tem strošku v tej strukturi je pač treba normalizirati tudi strukturo za vojaške izdatke.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg174">Menim, da kandidat, ki smo ga predlagali, te zadeve obvlada in se zaveda realnih dimenzij. Strinjam se z vami, da so tukaj možne tudi nevarnosti. Mislim pa, da bo tem manj nevarnost, čim bolj bomo šli drug proti drugemu z jasnimi koncepti, z jasnimi argumenti - z argumenti stroke namesto z argumenti moči, ki jih v vašem nastopu nisem videl. Menim, da je bila vaša razprava zelo korektna.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg175">Hvala. Gospod Aksentijević.</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ:</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg176">Gospod predsednik, oprostite. Nimam navade dvakrat govoriti. Nisem na nasprotni strani, sem pripadnik oboroženih sil in del tudi slovenskega ljudstva. Sem pripadnik JLA, armade vseh narodov in narodnosti, ki je tudi slovenska armada. Ne silite nas na nasprotno stran. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg177">Gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg178">Se opravičujem, mislim, da sem rekel na drugi strani, mislim, nisem uporabil besede nasprotno. Vas ne vidim na nasprotni strani.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg179">Hvala. Gospod Juri.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg180">Spoštovane poslanke, spoštovani poslanci, bom kratek. V glavnem soglašam s tistimi mnenji, da se na podlagi podatkov in predlaganih ministrov ni moč danes objektivno opredeliti do vlade in do takega ohlapnega, zelo sprejemljivega okvira programa. celo nekaj rezerv bi imel tudi jaz v zvezi z nekaterimi mandatarji. Menim, da prav pri resorjih represije bi raje videl politično bolj nevtralne nadstrankarske strokovnjake, ampak to ne postavljam kot ŕpriorizem ali pogoj za razpravo na sami vladi. Čeprav se bom pri glasovanju, tako kot je že kolega Pintar rekel, vzdržal tudi sam, opozarjam, da če ne bomo danes dobili vlade, bomo še vedno v brezvladju in se kot skupščina, kot oblast tega ljudstva nahajamo pred perečimi problemi. Eden takih problemov je danes tudi objavljen v tisku, to je stavka tisočih delavcev tekstilnega sektorja, ki zahtevajo radikalne in hitre spremembe ne samo v zvezi z lastnim materialnim položajem, ampak gre za zahteve o spremembah davčnega in fiskalnega sistema. V tisku smo tudi lahko prebrali, da stavkajoči nimajo sogovornika; stare vlade de facto ni več, nove vlade nimamo, imamo pa skupščino in bi bilo pametno razmišljati o možnosti ponujanja sogovornika tudi v obliki posebne skupščinske skupine. Kar zadeva sam program, se tudi jaz pridružujem mnenju kolega Šukljeta, da pa, kako bomo tudi naš odnos do tega programa izoblikovali tudi tako da bomo ocenili, ali bo vlada zmožna reševati pereče probleme, razvojne probleme naših regij, ali bo zmožna zagotoviti policentrični razvoj. Upam, da od gospoda Peterleta, ki je geograf, nekaj takega lahko tudi pričakujemo. Ali bo znala takoj odgovoriti na konkretna vprašanja nerazvitosti in hitre pospešene depopulacije tolminskega hribovja, Istre, Brkinov, Haloz, Goriškega itd. Torej, naj se ta regionalni vidik in vloga regije v programu upošteva. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg181">Gospod Schwarzbartl.</seg>
             </u>
             <note type="speaker">MAG. ERVIN ANTON SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg182">Spoštovano predsedstvo, delegati! Pazljivo sem poslušal polemičarje, opazil sem tudi abstinenco Demosovih delegatov, verjetno ste to opazili tudi vi. Govorci so bili skoraj vsi iz vrst opozicije. Po moji presoji, kot organizatorja, kot človeka, ki se ukvarja s temi zadevami, menim, da je bila v vseh teh izvajanjih prisotna tista stara miselnost, da se vse prej detajlira, razdela, planira, programira, mogoče celo usmerja. Današnji čas v svetu zahteva fleksibilno prilagajanje, bolj viziji in nekim ciljem, kot pa čisto konkretnim ukrepom, ki naj bi jih vlada že sedaj in takoj ponudila nam in slovenskemu narodu. Kajti teh ukrepov, teh konkretnih nalog je toliko in so tako številne in se bodo tako spreminjale, da bi verjetno že danes zapisane in povedane jutri lahko nekdo demantiral ali pa jih spremenil. Zato menim, da se danes v modernem svetu takim pristopom izogibajo in želijo to nadomestiti z zelo kreativnim, ustvarjalnim in hitro se prilagajojočim delom. Menim, da programske obljube, kakršnekoli že so, lahko zavajajo. Imamo izkušnje. Veliko je programov, ki so nas tako ali drugače zavajali. Prizadevanja za novo drugačno cenim, žal pa samo konkretni rezultati štejejo. In kakšni so bili naši do sedaj, vemo. In iz kakšnih vrednot in iz kakšnih stališč so izhajali, smo čutili in jih spoznali. Dokopali smo se še do enega novega spoznanja demokracije, nekega nivoja pravim, ki nam omogoča menjavo vlade takrat, ko nam njeni rezultati ne ustrezajo, kadar nam njeni rezultati ne služijo v smislu tiste vizije - ki pa jo moramo poznati - temeljnih ciljev, ki smo si jih mogli zastaviti in smo jih tudi slišali ter sem jih vsaj jaz dokaj dobro razumel. Zato menim, da nam tudi življenjepisni podatki kaj bistveno ne bodo pomagali. Tudi naštevanje funkcij, kakšna je bila praksa do sedaj, ko sem o vseh delegatih, ki sem jih lahko volil, izvedel kje vse in katere položaje so zasedli in kakšne funkcije so opravljali, najbrž ne bodo veliko povedale. Konec koncev pa spreminjamo ta razmerja in danes je teh funkcionarjev relativno manj ali skorajda nič v teh novih okoljih in novih vladnih resorjih. Tudi mi ni to porok za neko uspešnost, da zvem na katerih funkcijah je nekdo bil ali pa kaj je delal. Pač pa bi budno spremljal, kot parlamentarec ali delegat, kako se bo karkoli odvijalo in kakšni bodo tisti rezultati vsakega posameznega resorja, ministra, pa ne samo tega ministra, ampak celotne njegove skupine, za katero on odgovarja in ki za njim stoji, da mu pripravlja nekatere stvari. Menim, da je nujno potrebno neke vrste zaupanja, da so izbrani modri in preudarni ljudje, ki jim moramo predvsem omogočiti, da se najprej izkažejo. Velikokrat se je dogajalo, da smo omogočili izkazovanje, žal pa potem nismo presekali napak, ki so se pojavljale. Zato bi podprl predstavitev, ko jo je kandidat za premiera predlagal, tisto enominutno, čeprav ne menim, da bomo iz tega zelo veliko potegnili in da potem po tisti predstavitvi poskušamo s tajnim glasovanjem zaključiti to relativno, že za mene vsaj, dolgo razpravo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg183">Hvala lepa. Preden dam v razpravo, bi si kot predsedujoči dovolil intervencijo. Gre torej za predlog, da se vsi kandidati za nov izvršni svet tukaj na kratko prezentirajo. Če se prezentirajo z eno- ali dveminutnim govorom, ki praktično vsebinsko ne more skoraj nič storiti, vsaj ne predstave. To pri samo dveminutnem govoru pomeni za vsakega najmanj eno uro izgube za nekaj, kar pravzaprav bistveno stvari ne osvetli. Zato dajem ta predlog najprej na glasovanje brez ugotavljanja navzočnosti. Če pa bi se pokazalo, da je marginalna razmejitev, potem pa bi najprej ugotavljal navzočnost. Prosim, da bi dali ta predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg184">Kdo je za ta predlog, da se ne gre na enominutno in dvominutno reprezentacijo?</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg185">Po videzu ugotavljam, da gre za pretežno večino in bi menil, da je ta predlog odklonjen. Je kdo proti?</seg>
@@ -985,72 +963,72 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg188">Prosim, da nadaljujemo razpravo.</seg>
             </u>
             <note type="speaker">DEJAN MURKO:</note>
-            <u who="#SSK11.MurkoDejan1967" ana="#regular">
+            <u who="#MurkoDejan1967">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg189">Spoštovani poslanci! Sem Murko Dejan, poslanec Univerze Maribor. Zelo sem presenečen ob spoznanju, da predloženi osnovni koncept, ki ga nam je danes predložil mandatar in predstavlja nekakšno osnovo za delo nove vlade - tisto temeljno, kot je sam poudaril, ne zajema tako pomembnega in problemsko poglobljenega področja, kot je univerzitetno izobraževanje. Menim, da zaobiti ali ignorirati to danes, ko bi bilo že včeraj prepozno, je dejstvo, ki bi ga bilo potrebno v kratkem popraviti, saj je to danes temeljni, a neomenjeni problem.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg190">Ni naključno tudi razmišljanje, da je podoba univerze in njenega pomena ter poslanstva danes že tako načeta in popačena, da je ta problem postal očitno nerazpoznaven in tudi ta trenutek in danes smo bili temu priče. Z razvojem univerze pa je vsekakor pogojen razvoj te družbe in razvoj univerze je odsev odnosa družbe do znanja in napredka. In ta odnos se bo moral spremeniti, dokončno bo potrebno urediti vprašanja, da bo danes komaj nezaznavnemu utripu univerze mogoče reči življenje. Nujno je treba zagotoviti trajen in stabilen vir financiranja, onemogočiti nasilno poseganje v univerzo od zunaj in preprečiti vzpostavitev teh posegov v centraliziranih notranjih birokratskih strukturah. Prav tako pa je potrebno nadaljevati delo pri oblikovanju zakona o univerzah, takšnega, ki bo omogočil univerzi nemoteno opravljanje njenega znanstveno razvojnega poslanstva in pa tudi neodvisnost brez posegov v avtonomijo strok. Moč univerze je v posredovanju znanj, zato je za sedanje in prihodnje rodove, za razvoj Slovenije to moč potrebno izkoristiti. Prvenstveno pa je za to potrebno omogočiti pogoje preživetja in avtonomen prostor za ustvarjalnost.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg191">Univerza Maribor se ni nikoli zapirala vase, vedno je bila pripravljena sodelovati in tudi danes želimo odpirati prostor za dialog in po svojih močeh in znanju pripomoči k premoščanju vsake ozkogledljivosti. In to v želji, da skupaj s tistimi, ki imajo danes v Sloveniji največje pristojnosti, vpliv in tudi odgovornost in ob edinem merilu strokovnosti, opravimo koristno delo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg192">Zato predlagamo prihodnji novi slovenski vladi, še posebej gospodu Peterletu in ministru za šolstvo gospodu Venclju, da nas, predstavnike Univerze Maribor, še pred podrobnim vladnim programom povabita na konstruktiven razgovor, kjer bi ju seznanili s problematiko in prizadevanji Univerze Maribor ter z našimi dosežki na področju oblikovanja zakona o univerzi, ki ga bo sprejel parlament Republike Slovenije in o prizadevanjih po realizaciji visokošolskega študija prava v Mariboru, za kar menimo, da bi morala pokazati izdaten interes tudi vlada. Vse to, po našem mnenju, ne more več čakati. Težave so prevelike, da bi jih bilo možno pozabiti, pripravljeni smo sodelovati, računamo pa na združitev moči in to predvsem zato, ker se moramo skupaj zavedati in že jutri kaj storiti za znanje, ki je naš razvoj in naše preživetje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg193">Hvala lepa. Prosim, besedo ima naslednji razpravljalec.</seg>
             </u>
             <note type="speaker">IVAN VODOPIVEC:</note>
-            <u who="#SSK11.VodopivecIvan" ana="#regular">
+            <u who="#VodopivecIvan">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg194">Spoštovani predsednik, spoštovani delegati! Bil sem med tistimi poslanci, ki na obeh sejah nismo poskušali, da bi postale seje dnevno-nočne seje. Imam občutek, da danes zopet gremo v tej smeri. Gospod Peterle je predstavil vlado, vsebinsko načelno in smo rekli, da mu želimo dobro. V gospodarstvu je težko, kot smo včeraj poslušali tekstilce, bi lahko železničarje ali rudarje in takšnih problemov je veliko. Tudi v negospodarstvu. Menim, da bi bil čas, da se ne izgubljamo vsak z nekim svojim prispevkom k programu, ampak, da se dogovorimo, da to vlado danes in relativno hitro podpremo, ona pripravi program čez en mesec, da bomo lahko o tem razpravljali. Če program ne bo po meri parlamenta, pa imamo inštrument, ki ga ima tudi zahodna demokracija, da izglasujemo nezaupnico vladi. Še enkrat poudarjam, da bi danes morali relativno hitro izvoliti vlado, kajti tekoči problemi se vsak dan kopičijo v občini in v krajini in ne čakajo. To brezvladje je nemogoče, zato ponovno pozivam, da bodimo konstruktivni. Hvala.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg195">Hvala. Gospod Šetinc.</seg>
             </u>
             <note type="speaker">MILE ŠETINC:</note>
-            <u who="#SSK11.SetincMile1956" ana="#regular">
+            <u who="#SetincMile1956">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg196">Lep pozdrav! Najprej samo opomba gospodu Schwarzbartlu in tovarišu od socialistov, imena se nisem prav zapomnil. Menim, da se bo treba navaditi na to, da je eno od - če lahko to besedo uporabim, ki je zajeta tudi v osnutku ustave, ker je verjetno lahko "sveto pravilo" parlamentarizma, da parlamentarna razprava ne more biti ovirana in omejevana s strani nikogar, dokler je v skladu s proceduro in poslovnikom in da v zahodnih parlamentih, kolikor mi je znano, poznajo tudi obstrukcijo na ta način, ko opozicijske stranke z neskončnim razpravljanjem poskušajo onemogočiti sprejetje ali pa zavleči sprejetje kakšnega zakona, ki jim ni všeč. S tem sicer nočem reči, da je to tak današnji namen, ker vem, da ga opozicija nima. Zato bi šel na zadnjo fazo razprave, namreč na sam način glasovanja tako o predsedniku, podpredsednikih in članih - kandidatih za novo vlado.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg197">Menim, da bi bilo treba tu spoštovati željo samega mandatarja, ki je sam rekel, da bi rad, da se o njih glasuje tajno. Razumel sem, kot da je mislil na vse funkcije in za vse člane vlade. Menim, da je tudi utemeljitev zelo preprosta, kot smo že slišali problem današnje seje, da smo imena vladnih ministrov zvedeli iz časopisja, nekateri pa včeraj popoldne, da kakšen posebej temeljit in konkreten program ni bil predlagan. Pa tudi če bi bil, pač ni bila mogoča priprava na razpravo o njem. Tudi o imenih, od katerih bi verjetno, če lahko govorim v imenu drugih neimenovanih poslancev, katere bi si večina od nas želela imeti v vsaki vladi, tudi tisti, ki bi jo, recimo, sestavljala kakšna stranka iz opozicije, pri nekaterih se pojavlja seveda dvom, pri kakšnih pa tudi presenečenja, kaj počne na tej listi. Ali tudi dodatni problem ali utemeljitev za tajno glasovanje. Namreč, to ni samo ena od vlad, ki se pač menja v nekem relativno utečenem političnem in ekonomskem sistemu, ko že iz imen strank, ki sestavljajo vlado in iz imen predlaganih ministrov lahko sklepaš o profilu programov in morda celo o verjetni uspešnosti nove vlade. V tej vladi je precej imen, ki jih iz razumljivih razlogov, za katere seveda ni kriv Demos, ni bilo mogoče na noben način preizkušati na kakršnihkoli pomembnejših družbenih oziroma političnih funkcijah. Zato bo vsak poslanec, ki bo glasoval o tej sestavi, potreboval neke vrste intimen razmislek. Namreč, ko se bo sam s seboj pogovarjal in ko se bo sam pri sebi odločil, ali naj tej vladi zaupa ali ne. Tu gre res za zaupnico, namreč ne v tistem smislu, ko zaupnica v bistvu pomeni samo neko tradicionalno poimenovanje določene racionalne odločitve. Torej, ne odločitve na osnovi strankarske pripadnosti in poznavanja programa ter biografije, ampak gre dejansko v tisto zaupanje v sumaničnem smislu, skratka v nekem smislu v bistvu iracionalno odločitev. In za tako odločitev pa je prav, da si vsak poišče svoj kotiček in v miru razmisli o svoji odločitvi.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg198">Čisto na koncu pa še to: ker je bil omenjen eden od kandidatov za vlado, Janez Janša in njegove strokovne in siceršnje sposobnosti. Ne želim, da bi bil videz, kako smo v skupščini samo monopolni bloki, ta polovica en blok, ta polovica drugi blok. Zlasti mi, liberalci, obožujemo različnosti pri drugih in pri sebi in si dovoljujemo tudi precejšnjo individualno svobodo. Zato bi rekel, kar se Janeza Janše tiče, da imam tudi jaz, in sem imel v vseh letih kar ga poznam, do njega ambivalentno stališče. Bil sem tudi kdaj v kakšnem konfliktu z njim, na primer na zadnji seji skupščine. Kar pa se tiče strokovne kompetence za obrambno področje, menim, da je v Sloveniji samo še en človek, ki bi mu bil po tej plati dorasel, vendar ta človek ni niti v Demosu niti, kolikor vem, ni nikoli kazal afinitet do ministrskega položaja. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg199">Hvala. Preden bi nadaljevali razpravo, bi si dovolil izreči apel zboru. Popolnoma jasno mi je, da jaz iz substancialnih razlogov danes ne morem zavrniti nobene razprave iz razloga, da ni v skladu z dnevnim redom. Kajti, o čemerkoli danes razpravljamo, je v skladu z dnevnim redom, ker gre za program vlade. Vendar bi apeliral, da skušamo razpravo omejiti resnično na zadeve, ki dejansko pripeljejo do realizacije smotra tega današnjega dnevnega reda.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#regular">
+            <u who="#ZupancicJoze1936">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg200">Spoštovani predsednik in spoštovani gospod Peterle! Prosim, mogoče malo nekonvencionalno, a samo dvoje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg201">Prvič, zaradi tega, ker bomo izredno veliko delali v skupščini. V Zboru združenega dela se bosta prepletala predvsem poslovni in sedaj še tudi strankarski interes. Zaradi kopice različnih interesov bo praktično prišlo do atomizacije in mogoče celo do blokad, katerim ne boste ne vi ne mi v zboru kos. Zato bi si drznil predlagati naslednje, ker to ni formalnost in mogoče tudi ne gre v okvir kakšnega poslovnika, da od vas osebno in od vašega Izvršnega sveta zahtevamo, ko boste pripravljali gradiva za seje zborov, prvič: kratke ocene; drugič, da bodo predlogi variantni; in tretjič, da bodo tudi učinki jasno izraženi, tako da bomo lahko poslanci v zborih kompetentno odločali. Da ne bomo mi v zborih delali nove politike. Če hočemo biti kakorkoli bolj aktivni, bolj ažurni in tudi v službi slovenskega naroda, potem ne smemo dobivati gradiva tako, kot so bila v preteklosti dana poslancem; mi smo imeli včasih to priložnost viseti na televiziji, šlo je za kile gradiv, ker bo potem tudi ta sedanja skupščina žal v prihodnje neaktivna.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg202">In drugo; trdno sem prepričan, da se tudi zavedate, da bo treba v Sloveniji zlomiti nekvalificirano in mojstrsko miselnost, ki je prežema praktično več kot 500.000 delavcev. Vem, da so to hude besede, vem tudi, da to različno raztolmačijo, toda nekvalificirana miselnost, uravnilovka in sociala, ki so pri nas praktično v glavi in v srcu in v želodcu vsakega človeka, so tako močne, da če ne bomo tega preprečili, bo prišlo do drugih blokad. In zaradi tega moramo dati prednost ljudem, ki veliko delajo, in zato moramo začeti dajati prednost tistim ljudem že v šolskih klopeh, ki izstopajo, ki so pridni, ki so "grebatorji", ravno tako je treba dati veljavo intelektualcem, ki so pridni, pošteni, z veliko znanja in veliko delavoljnosti. Priznanje gre tudi kmetu in vsem ostalim slojem, ki veliko delajo in se na moč trudijo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg203">Menim, da tega zaokreta v vašem predlogu ni bilo začutiti in brez njega verjetno tudi vaša vlada ne bo uspela. Zato bi si želel, da vključite to dvoje v vaš vladni program. Vam pa želim veliko sreče.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg204">Hvala lepa. Gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg205">Spoštovani gospod Zupančič, zelo sem vesel tega, kar ste povedali. Kar zadeva način delovanja vlade moram reči, da je taka tudi moja opcija oziroma moja predstava. Če rečem, da kot "zelen" po duši imam rad drevesa, s tem ne pomeni, da sovražim gradiva, ampak za gradiva se bomo trudili, da bodo jedrnata, jasna, pripravljena v variantah tam, kjer so variante smiselne. Za te zadeve sem se trudil že pri dosedanjem delu v državni upravi. Mislim, da je prav variantnosti manjkalo, manjkalo je tudi jasnih utemeljitev, manjkale so po navadi konsekvence, kaj se godi, če se odločimo za tak ali tak ukrep. Teh zadev se ni preigravalo po različnih scenarijih, pri zakonih pa menim, da se je po navadi pozabljalo na to, koliko bodo zadeve stale. Ko bo vlada predlagala zakone, odloke ali druge instrumente, bo pač opremljala vse te predloge tudi s finančnim vidikom.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg206">Še nekaj bi rad rekel glede razprave gospoda, ki je govoril o univerzi. Želel bi, ne mi zameriti, če ponovim začetne stavke, da pač v tem nastopu nisem mogel niti želel vseh tem načeti. Če bi rekel samo in tudi avtonomna univerza, ne bi spet nič novega in nič obvezujočega povedal. Če pa bi namenil tej tematiki pol strani, potem bi se lahko znašlo poleg še 240 predlogov za vse tisto, kar sem spustil.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg207">In če bi omenil Posočje, bi prišel nekdo iz Bele krajine in bi rekel, Črnomlja niste omenili. Zato sem namenoma naredil to cenzuro, da ne bi potem v nedogled govorili o zadevah in o širini, o vsem tem bo potem priložnost govoriti ob samem podrobnem programu. Strinjam se s predlagateljem, ki je rekel, da bi v tem smislu ne nadaljevali razprave.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg208">Če bo izvoljen izvršni svet ali pa katerikoli bi bil izvoljen, je dolžan delati po poslovniku, ki predpostavlja različne oblike dela, različne načine sprejemanja iniciativ njihovega preverjanja, pogovarjanja. Vrata Izvršnega sveta na Prešernovi bodo odprta, različna delovna telesa bodo imenovana. Jaz sem izrazito naklonjen upoštevanju različnosti oziroma regionalnega vidika, nihče ne bo tukaj zapostavljen. Saj tudi vlada ni samo ljubljanska, imamo podpredsednika iz Maribora, imamo dva ministra iz Kranja, enega iz Celja, tako da je v nekem smislu tudi po tej plati ta vidik upoštevan. Jaz sem odprt za vse predloge, ničesar ne bom ŕ priori zavračal, strokovne komisije bodo pač te predloge obravnavale in če je kdo prinesel danes s seboj predlog za to ali ono zadevo, bi mu predlagal, če in kadar bomo izvoljeni, da potem to zadevo naslovi na primerno mesto. Zagotavljam, da bo tam tudi obravnavana.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg209">Hvala. Gospod Bekeš.</seg>
             </u>
             <note type="speaker">PETER BEKEŠ:</note>
-            <u who="#SSK11.BekesPeter1946" ana="#regular">
+            <u who="#BekesPeter1946">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg210">Spoštovani predsednik, spoštovani delegati! Predlagal bi, da se sestane komisija, ki smo jo na začetku seje imenovali na predlog poslanca Jurija, da bomo lahko imeli normalno količino časa za pripravo izjave oziroma predloga, ki naj bi ga pripravili, da se ne bi seja skupščine zaradi dela te komisije, ko bodo ostale točke dnevnega reda opravljene, po nepotrebnem zavlačevala. Hvala</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR.</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg211">Tega predloga ne bi mogel sprejeti, ker moram skrbeti za sklepčnost tega zbora. Prosim.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SSK11.JuriAurelio1949" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg212">Aurelio Juri iz Kopra, v Zboru občin, sicer delegat ZKS - Stranke demokratične prenove. Kot konstruktivno opozicija bom tudi skušal biti konstruktiven s predlogom, da se držimo točk dnevnega reda, ki smo ga izglasovali, to je, da gremo čimprej na izvolitev mandatarjev oziroma predsednika in članov Izvršnega sveta. Jasno je, da se danes tudi prepletata dva načina razprave; prvi ob principu postajanja in izglasovanja te vlade, drugi pa o vsebini programa. Mislim, da čeprav so bili dani predlogi, kaj naj bi ta predlog vseboval, se bomo o programu opredeljevali, ko ga bomo imeli pred sabo. Zdaj bi se pridružil predlogom, ki so jih podali Pintar, Vodopivec, Juri in ostali, da potem, ko bo program izdelan, skušamo v tem programu tudi vabilo predsedniku Izvršnega sveta, če bo izvoljen, da upošteva te pripombe in da bomo na osnovi programa skušali obnoviti čim širše soglasje. Menim, da bo tudi to pomoč vladi, da bo lahko opravljala svoje naloge in da bo blokad čim manj.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg213">Sam pa na osnovi današnjih podanih predlogov in podatkov izražam svoje dvome. Jaz se ne bom, in to v javni izjavi opredeljeval za predsednika oziroma za člana predsedstva, ker nimam dovolj elementov. Menim, da moramo ta trenutek preseči in da preidemo na glasovanje. Verjetno bodo tudi pri posameznem tajnem glasovanju razmerja, ki so se že pojavila na prvi seji, to je čisto moje osebno mnenje, samo da gremo naprej, da se ne bomo ustavljali in da, ko se vrnemo, kot je bilo že rečeno h obravnavi programa, ko bo program dan. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg214">Hvala lepa. Želi še kdo razpravljati?</seg>
                <note>Nihče.</note>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg215">Preden zaključimo razpravo, bom najprej podal ugotovitve. Delegati so podali vrsto predlogov za različne komisije, vrsto predlogov, ki jih lahko vključimo v zadnjo točko dnevnega reda in vrsto predlogov, ki so bili neposredno naslovljeni na mandatarja. Menim, da o njih ni potrebno posebej glasovati in jih kar sprejemamo. Prav tako splošna soglasja, če se boste s tem strinjali, ker je temu primerna tudi izjava mandatarja. To povzemam kot ugotovitev. Ali kdo ugovarja?</seg>
@@ -1065,7 +1043,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 13.10 uri in se je nadaljevala ob 14.40 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg221">Preidemo na samo glasovanje. Najprej nekaj obvestil. Glasovali bomo s tremi glasovnicami. Bela je za mandatarja oziroma predsednika Izvršnega sveta, na drugi so tri imena za tri podpredsednike in s tretjo, ki je lista kot celota, za člane Izvršnega sveta. Torej glasujemo za listo kot celoto za ali proti. Glasovalna mesta bodo v preddverju te dvorane. Vsak zbor ima svoje mesto, kjer lahko oddate glasovnice. Prosim, da bi kar prešli na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg222">Nadaljujemo sejo in razglašam izide volitev. Najprej izidi o izvolitvi predsednika Izvršnega sveta Skupščine Republike Slovenije. Po pregledu oddanih glasovnic je volilna komisija ugotovila, da je bilo oddanih 220glasovnic, od tega je za predsednika glasovalo 184 glasov, neveljavnih glasovnic je bilo 36. Po pregledu veljavnih glasovnic je volilna komisija ugotovila, da je kandidat za predsednika Izvršnega sveta Skupščine Republike Slovenije Lojze Peterle dobil 184 glasov.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg223">Volilna komisija ugotavlja, da je glede na sedmi odstavek 26. člena začasnega poslovnika Skupščine Republike Slovenije za predsednika Izvršnega sveta Skupščine Republike Slovenije izvoljen Lojze Peterle, ker je zanj glasovala večina navzočih delegatov vseh zborov.</seg>
@@ -1081,7 +1059,7 @@
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg230">Spoštovane gospe poslanke in gospodje poslanci, spoštovano predsedstvo! Moram reči, da sem nekoliko "zmehčan" zaradi izida tega glasovanja, ker glede na naš začetek, ki v marsičem ni bil najbolj ugleden - se pravi glede na začetek tega našega novega parlamentiranja, nisem pričakoval take široke podpore in ta podpora mene osebno, podpredsednike in vse ostale člane prve demokratično postavljene slovenske vlade v tem stoletju zavezuje na poseben način. Mi se bomo trudili, da bomo držali besedo, o kateri sem danes dopoldan govoril. Rad bi še enkrat poudaril, da je naše temeljno izhodišče zakonitost, naš temeljni cilj polna suverenost slovenske države, z zdravim in konkretnim sosedstvom z vsemi našimi bližnjimi. Kar zadeva delo državne uprave in področij, kjer bo imela nova vlada pristojnosti, zagotavljam, da bo strokovnost oziroma kvaliteta in osebni prispevek tisto merilo, ki ga bomo najprej in v osnovi upoštevali in če se je komu zdelo, da je bilo premalo na to temo povedanega dopoldan, da je bilo premalo eksplicitno, bi rad povsem naravnost povedal, da ne želimo ene knjižice zamenjati z drugo ali z vsoto drugih, da pač naj bo ta tudi tak način kadriranja nekako zadeva preteklosti. Jasno pa je, da bo na nekaterih področjih, kjer so ti monopoli zelo očitni oziroma niso še preseženi, moralo priti do nekakšnega uravnoteženja, kakor je prišlo do tega uravnoteženja v parlamentu, kot sem ga skušal zastopati pri samem sestavljanju vlade in podobno. Jaz se vam iz srca zahvaljujem v svojem imenu in v imenu novih ministrov, dovolite, da jih kar tako imenujem, mi bomo poskušali biti vlada, ne samo izvršni svet. Ena od naših prvih zadev bo med drugim priprava reorganizacije državne uprave, kjer utegne priti tudi do zmanjšanja sedaj razširjenega števila članov vlade.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg231">Jaz se vam res iz srca zahvaljujem za zaupanje in upam, da bomo v duhu, ki mislim, da je bil danes zdrav, nadaljevali naše politično in operativno sodelovanje s predpostavko, da bo vsak ostajal v mejah svojih pristojnosti.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg232">Zdaj smo pač postavili tretji pol demokratično izbrane demokratične oblasti, zdaj ima Slovenija tudi svojo novo vlado. Hvala lepa.</seg>
@@ -1091,16 +1069,16 @@
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg235">Tovariš predsednik Izvršnega sveta je povedal, da bo opravil slovesno, novoizvoljeni Izvršni svet dal slovesno izjavo pred predsednikom Skupščine Republike Slovenije. Ta slovesnost se bo izvršila tukaj nasproti, zato odrejam za ta čas prekinitev seje in jo bomo nadaljevali potem, ko bo ta slovesnost opravljena. Hvala lepa.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 14.55 uri in se je nadaljevala ob 15.45 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg236">Prehajamo na 3. TOČKO DNEVNEGA REDA - PREDLOG RESOLUCIJE O LITVI, ESTONIJI IN LETONSKI, kar je usklajen predlog, ki ga je pripravila skupina delegatov, ki smo jih imenovali na prejšnji seji. Sestavljajo jo: Miran Potrč, Tone Peršak, mag. Spomenka Hribar, dr. Leo Šešerko, Matjaž Šinkovec, Vitomir Gros, dr. Rajko Pirnat, Jožef Školč, Franko Juri in Darja Lavtižar-Bebler. Predlog ste danes prejeli na klop, prosim, da predlog obrazložite.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg237">Sem Tone Peršak, Slovenska demokratična zveza, Demos.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg238">Bil sem član te usklajevalne skupine. Kot rečeno, ste usklajeni predlog dobili na klop, zato teksta ne bi bral. Ker pa ste zadnjič lahko prebrali tudi predlog za brzojavko baltskim parlamentom in predlog resolucije, bi povedal to, da je bila na tiste predloge izrečena vrsta pripomb in prav zato je bila imenovana skupna usklajevalna komisija, ki je predloge uskladila.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg239">Ker se bo najbrž pri vsakem od vas pojavilo nekaj vprašanj, zakaj je ostalo samo eno besedilo, zakaj je tekst tako kratek, kakor je in tako naprej, bi vendarle, čeprav nam bo to vzelo dve, tri minute časa, povedal, kako je teklo delo usklajevalne komisije.</seg>
@@ -1113,15 +1091,15 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg246">Meni osebno, če lahko dodam še to, se zdi še zlasti pomembno, da s tem predlogom, kakor je zdaj formuliran, zahtevamo zelo jasno odločitev Skupščine SFR Jugoslavije in na nek način silimo to skupščino v položaj, ko se bo morala jasno opredeliti glede pravice vseh narodov do samoodločbe, kar ima pa vendarle tudi nekaj notranjepolitičnega pomena. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg247">Hvala lepa.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg248">Spoštovano predsedstvo, spoštovane poslanke in poslanci, argumentacijo za in proti temu ste slišali. Če sem še bolj eksakten, je to zahtevo dalo Društvo slovenskih pisateljev že približno pred mesecem. Na klubu poslancev Demosa smo to obravnavali in smo hoteli predlagati kompromisno rešitev, nek modus vivendi, torej nekaj, o čemer bi lahko vsi glasovali. To pa zato, da ne bi bilo zopet delitve pri tako pomembnih stvareh, kot so oziroma gre za simboliko delitve na leve in desne. V Demosu se s tako formulacijo v bistvu strinjamo, vendar bi predlagali, da bi bili dve resoluciji, in sicer prvi odstavek bi bila resolucija, naslovljena na baltiške dežele, vse ostalo pa druga resolucija, ki bi jo poslali v Beograd. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg249">Torej, tu gre za amandma k predloženi resoluciji oziroma niti ne za amandma k predloženi resoluciji, ampak gre za to, da se poleg resolucije v tej obliki sprejme še ena resolucija, ki obsega samo prvi odstavek tu predložene.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg250">Ali želi kdo razpravljati o tem amandmaju?</seg>
                <note>Nihče.</note>
@@ -1135,35 +1113,35 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg256">Hvala lepa.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg257">Predlagal bi, da se kljub vsemu zmeraj šteje in da se odločitve sprejema, tako kakor velevajo ustava, zakon in poslovnik, drugače ne bo šlo in tega domačinskega vzdušja ne gre prenašati. Mi smo se navadili drug na drugega, kar pa še ne pomeni, da ne bi bilo treba za vsako odločitev natančno povedati, koliko delegatov je za, proti in vzdržanih. S tem, da bi, če se vračam nazaj, posegel tudi v prvo diskusijo. Ni mi jasno, zakaj je potrebno ločevati resolucije, ker je tem, ki so v Litvi, Letonski in Estoniji, povsem jasno, da je subjekt mednarodnega prava Jugoslavije in v tem smislu njim verjetno dosti več pomeni to, če vedo, da je znotraj Jugoslavije nek parlament, ki si prizadeva za priznavanje njihove samostojnosti, kot to, da jih priznava nekdo, ki navzven za to ni kompetenten. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg258">Hvala lepa. Torej, najprej moram ugotoviti, če ta zbor zahteva v vsakem primeru posebej ugotavljanje glasov, da smo k temu zavezani. Mislim pa, da je potrebna racionalnost vodenja postopka tudi v skupščini. Prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg259">Gospod predsednik, gospodje poslanci in poslanke, brez zamere, sam podpiram Školča. Ni na tem, da se mi odločamo, kako bomo glasovali ali ne. Za to obstaja poslovnik in najresneje prosim gospoda predsednika, da tako ravna. Če nismo sposobni delati po poslovniku, potem naj se odredi odmor, naj se ljudje navadijo, kako je treba delati. Nemogoče je delati tako. Že prvi del seje je bil tak. Mi imamo po poslovniku razpravo, razprava mora biti zaključena. Po zaključeni razpravi je predsedujoči dolžan vse predloge dati na glasovanje, razen, če posamezen delegat svoj predlog umakne. Nisem želel razpravljati, ker bi bil stalno občutek, da se hočem delati pametnega, po domače rečeno. Ampak nemogoče je, da se tako seje vodijo, ker se bomo jezili brez potrebe drug na drugega, bo pa, brez zamere, gospod predsednik, ki tako vodi seje, kriv za našo slabo voljo. Treba je delati po poslovniku in o predlogih odločati. Če ne želimo uporabljati teh naprav, naj, in to je zdaj moja pobuda, predsedstvo čim prej organizira nek način dela. Vem, da je nemogoče, da mi vedno ugotavljamo navzočnost. Zato se ne preštejemo. Vem, da je nemogoče, da bi predsednik moral 240 ali 220 ljudi za vsak sklep šteti. Jaz ga razumem. Ampak, potem je treba najti nek mehanizem, ki bo zagotovil normalno delo. Dokler ga ni, ne moremo po domače ugotavljati, smo za, smo proti, smo vzdržani. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg260">Hvala lepa. Dobro, jaz vzamem to na znanje, čeprav to ni kršitev poslovnika. Se pa popolnoma strinjam s predlogom in prosim, če zahtevate glasovanje, da se v vsakem primeru ugotovi točno glasovanje za ali proti. Prosim.</seg>
             </u>
             <note type="speaker">MAG. VIKTOR ŽAKELJ:</note>
-            <u who="#SSK11.ZakeljViktor" ana="#regular">
+            <u who="#ZakeljViktor">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg261">Spoštovani, prosil bi gospoda Tomšiča za ponoven premislek. Meni se zdi to zelo racionalno, da je resolucija enotna. Razumel sem ta vaš napor in skrb, vendar izhajajoč iz tega, komu je to namenjeno in glede na mednarodne razsežnosti, bi rekel, da je razvidnost in prepoznavnost za Litvo in za Letonsko in za Estonce po moje primernejša forma kot delitev te resolucije. Če nimate kakega tehtnega argumenta oziroma ga jaz morda ne vidim, potem bi tudi v izogib neplodnemu diskutiranju in nakazovanju vendar podprli integralnost tega teksta iz razloga, ki sem ga ravnokar navedel. Predvsem zato sem se oglasil. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg262">Hvala. Gospod Tomšič.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg263">Torej, kolega Žakelj, ne vem, zakaj bi sedaj to ponavljali. Popolnoma se strinjam, da je treba določiti, koliko za in koliko proti, kakšno tehniko bomo uporabljali. To je druga zadeva, vendar pa smo o tem amandmaju že glasovali in videlo se je, da je bila velika večina za. Zdi se mi, da ne moremo sedaj še enkrat glasovati za isto zadevo. Menim, da vsak od nas ve, za kaj tukaj gre. Mi dejansko prehitevamo nekaj, kar bomo šele lahko čez tri mesece ali morda še kasneje izrekli. Gre za simboliko, zato menim, da velike napake ne delamo. Glasovali pa smo pač že, a lahko se še enkrat, da ugotovimo, koliko je bilo vzdržanih, kar prej nismo ugotovili. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg264">Glede na intervencijo nekaterih poslancev kljub temu dajem zadevo na glasovanje s štetjem glasov.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg265">Torej, najprej ugotavljam prisotnost Družbenopolitičnega zbora. Kdo je prisoten?</seg>
                <note>58 prisotnih.</note>
@@ -1182,22 +1160,22 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg274">S tem, ker amandma vsebuje v bistvu tudi glasovanje o predlogu kot celoti, menim, da je s tem tudi ta resolucija sprejeta. Prav tako pa je sprejeta še dodatna resolucija, ki obsega samo prvi del te resolucije.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOCIJANČIČ:</note>
-            <u who="#SSK11.KocijancicJanez1941" ana="#regular">
+            <u who="#KocijančičJanez">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg275">Gospod predsednik! Menim, da smo glasovali o amandmaju in da nam ne morete, kot delegatom, odvzeti pravice, da glasujemo o resoluciji, kot je predložena. Verjetno bi imeli pravico zahtevati, da tudi o tem izrazimo svoje politično stališče.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg276">Hvala lepa. Želi kdo razpravljati o tej stvari?</seg>
                <note>Ne.</note>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg277">Potem dajem na glasovanje še enkrat obliko resolucije, tako kot je predložena, brez amandmajev. Tu gre za tipični supremat glasovanja. Če ga zahtevate, lahko glasujemo še enkrat.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg278">Kdo je za resolucijo v tej predloženi obliki?</seg>
             </u>
             <note type="speaker">FRANC PIVEC:</note>
-            <u who="#SSK11.PivecFranc1943" ana="#regular">
+            <u who="#PivecFranc1943">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg279">Gospod predsednik, če lahko samo z enim stavkom pojasnim. Če ne bi bilo tega zapleta na koncu, bi ugotovili, da smo vsi delegati za resolucijo; takšno, kot je bila predložena. Menim, da bi to imelo svojo težo in svoj pomen. Zaplet v načinu oblikovanja dveh resolucij je pa nekaj, kar je nastalo mimo tega. Menim, da je to pomembno, da ugotovimo in da bi omogočili, da do takega dejstva v skupščini pride. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg280">Torej, če je potrebno, dajem še enkrat na glasovanje resolucijo v predloženi obliki.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg281">Kdo je zanjo?</seg>
                <note>137 delegatov.</note>
@@ -1208,11 +1186,11 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg284">Ugotavljam, da je resolucija v predloženi obliki sprejeta.</seg>
             </u>
             <note type="speaker">BOGOMIR VAUPOTIČ:</note>
-            <u who="#SSK11.VaupoticBogomir1963" ana="#regular">
+            <u who="#VaupoticBogomir1963">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg285">Meni se pač zdi nevzdržno, da tako po nepotrebnem izgubljamo čas. Namreč, že prej, pri vseh teh odmorih, bi se najverjetneje dalo zagotoviti, da bi z delom nadaljevali že takrat. Predlagal bi, da te glasovalne naprave do naslednje seje skupščine preverijo, če funkcionirajo ali ne, in če funkcionirajo, da jih začnemo uporabljati. Kajti sedaj smo precej časa izgubili samo zaradi tega, ker smo preštevali dviganje rok. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg286">Prehajamo na NASLEDNJO TOČKO DNEVNEGA REDA - PREDLOGE IN VPRAŠANJA DELEGATOV.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg287">Skupina delegatov predstavnikov vseh parlamentarnih frakcij, ki je bila imenovana na skupni seji zborov, 16.5.1990, predlaga, da se na skupni seji Skupščine Republike Slovenije sprejme naslednjo IZJAVO SKUPŠČINE REPUBLIKE SLOVENIJE K NASTOPNEMU GOVORU DR. BORISAVA JOVIĆA, PREDSEDNIKA PREDSEDSTVA SFRJ, z dne 15.5.190. Torej še enkrat preberem. Menim, da ste vsi dobili na klop:</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg288">"Novi predsednik Predsedstva SFRJ Borisav Jović je v svojem nastopnem govoru izrekel trditve, ki so povsem nasprotne demokratičnim procesom in težnjam Slovenije k suverenosti. To se zlasti nanaša na izjavo o primarnosti sprejetja zvezne ustave pred republiškimi in prejšnji ideološki opredelitvi države, vztrajanje na federalni ureditvi, apriorni in nepristojni oceni neustavnosti uvajanja nacionalnih armad in tiskanja lastnega denarja. take izjave, ki so bile očitno namenjene Sloveniji in Hrvaški, omejujejo tudi pravice do samoodločbe drugih jugoslovanskih narodov in narodnosti.</seg>
@@ -1222,36 +1200,36 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg291">Torej, dajem predlog te izjave v razpravo. Kdo želi razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">ZVONE ŽAGAR:</note>
-            <u who="#SSK11.ZagarZvone" ana="#regular">
+            <u who="#ZagarZvone">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg292">Imel bi dva predloga. Najprej bi prosil gospoda predsednika, da drugič malo bolj gleda, kdo roko dviguje in da ne vodi prehitro sej. Želel sem se oglasiti že pri deklaraciji o Litvi. Sedaj bi samo na kratko povedal, da menim, da je deklaracija o neodvisnosti Litve, taka kot je bila predložena, dejansko deklaracija o odvisnosti Slovenije, predvsem v njenem drugem odstavku. Dal pa bi še en predlog. V imenu vseh tistih poslancev, ki nismo profesionalci, predlagam, da se razprave časovno omejijo na dve minuti. Ker pa imamo v parlamentu s tehniko, štetjem in merjenjem probleme, predlagam, da se v ta namen kupi malo večja peščena ura. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg293">Poslance bi moral opozoriti na to, da je razprava o resoluciji o Litvi že končana in razpravljamo sedaj o predlogu glede izjave Skupščine Republike Slovenije k nastopnemu govoru dr. Borisava Jovića in sprašujem, če je k temu vprašanju kakšna razprava. Prosim.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg294">Spoštovani poslanci in poslanke! Ob tej resoluciji bi prosil za bolj pricizno formulacijo v drugem odstavku: "take izjave, ki so bile očitne namenjene Sloveniji in Hrvaški<gap reason="inaudible"/>" Menim, da bi bilo bolje, če rečemo: "Predstavljajo tudi poskus omejevanja pravice do samoodločbe drugih jugoslovanskih narodov in narodnosti". To bi bilo natančneje. Predlagam, da mu ne vzamemo doktorata in napišemo dr. Borisav Jović. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg295">Torej, gre za amandma k drugem odstavku. Dajem ta amandma v razpravo. Prosim.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#regular">
+            <u who="#ZupancicJoze1936">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg296">Nimam amandmaja, pa bo verjetno kdo rekel, zakaj pa sploh hodiš potem gor k mikrofonu. Menim, da bi pri takšnih izjavah lahko bili bolj odločni in ne tako politično omaziljeni.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg297">Prosim, gospod Juri.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg298">V imenu skupine, ki je sestavljala to besedilo, naj povem samo, da je bilo usklajevanje nesporno in neproblematično. Takoj smo prišli do skupnih stališč in se ne bi strinjal s to zadnjo ugotovitvijo, da je tako politično ponižna. Besedilo je zelo jasno, osebno pa se strinjam s prejšnjim poslancem oziroma s tem amandmajem, da naj dodamo naziv doktorja in naj dodamo: "poskus omejevanja teh pravic", ker gre dejansko za tak poskus. Naj povem še to, da se je skupina sestala v prejšnjem odmoru malce improvizirano, da ni bil prisoten gospod Mehič, če se ne motim, ostali so bili navzoči, namesto poslanca Bekeša pa je bil iz stranke ZKS - Stranke demokratične prenove tovariš Balažič. Moram se tudi zahvaliti strokovni službi v imenu skupine, ker nam je takoj posredovala tiskano besedilo, original govora dr. Jovića. S tem je seveda pripomogla k hitrejšemu sestavljanju besedila. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg299">Hvala lepa. Želi še kdo razpravljati? Če ne, potem dajem najprej na glasovanje amandma glede drugega odstavka te izjave in da se pri imenu Borisava Jovića povsod uporablja naziv doktor. Upam, da se med tem časom prisotnost tega zbora ni spremenila, zato ne bi še enkrat šteli prisotnosti delegatov, pač pa bi prosil za glasovanje o tem amandmaju.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg300">Kdo je za ta amandma?</seg>
                <note>166 delegatov.</note>
@@ -1281,195 +1259,195 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg318">Prosim.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg319">Spoštovani predsednik, spoštovane delegatke in delegati! Že v predvolilni aktivnosti so bili številni apeli naših državljanov in opozorila na zaščito družbene lastnine in protesti zoper neodgovorno oškodovanje družbene lastnine. Že na prvi seji so prišle zahteve nekaterih delegatov, da bi nekaj storili v tej smeri in morebiti predlagali resolucijo. Da ne bi takrat obremenjevali že tako obremenjenega dnevnega reda, smo to zadevo predlagali, da se preloži na današnjo sejo. Zato predlagamo, da se danes sprejme samo poziv slovenski javnosti k zavarovanju družbenega premoženja, do naslednje seje se pripravi citirani odlok o imenovanju komisije za celovito preučitev pojavov, vzrokov in posledic oškodovanja družbene lastnine in na tej podlagi tudi imenuje komisija s pristojnostmi, določenimi v posebnem odloku, ki bi ga naj skupščina sprejela. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg320">V razpravo dajem ta predlog, in sicer poziv slovenski javnosti.</seg>
             </u>
             <note type="speaker">MAG. VIKTOR ŽAKELJ:</note>
-            <u who="#SSK11.ZakeljViktor" ana="#regular">
+            <u who="#ZakeljViktor">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg321">Spoštovani! Seveda globoko inšpektiram ta pojav, ki je evidenten, ki ga je nekako skušal dr. Toplak omeniti. Podpiram prizadevanja, da se zavaruje družbeno premoženje in da se vsi lastninski in drugi procesi, ki bodo tekli v različnih smereh, regulirajo pravno, organizirano in drugače. Torej, glede tega nimam nikakršnega pomisleka. Imam pa pomislek, namreč, ali je oportuno organizirati takšno ali drugačno skupino. Danes smo že oblikovali 27 - članski Izvršni svet, imamo tri zbore skupščine in vsak zbor ima ducat ali še več raznih komisij, podkomisij, svetov in odborov.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg322">Ne nazadnje imamo organe pregona, sodstva in takšne ali drugačne institucije. Zato se sprašujem, ali ne bi to pomenilo po nepotrebnem formiranje teles, zapletanje zadev, distribucije odgovornosti, ali je bolj oportuno - zato, sem se oglasil, da preverimo, če ne se direktno obrnemo na danes izvoljeni Izvršni svet in damo apel na pravosodne in organe pregona. Bojim se, če bomo stvari tako parcelizirali, da bomo spet zapadli v hiperorganiziranost, z vsemi posledicami, ki so v preteklosti znane. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg323">Torej vaš predlog je, da se ta poziv naslovi na Izvršni svet, ali kako drugače.</seg>
             </u>
             <note type="speaker">MAG. VIKTOR ŽAKELJ:</note>
-            <u who="#SSK11.ZakeljViktor" ana="#regular">
+            <u who="#ZakeljViktor">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg324">Moj predlog je naslednji, da to področje sodi v normalno funkcioniranje države in njenih organov, ne pa, da se za to ustanavljajo nove paralelne konstitucije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg325">Torej ste za to, da se ta poziv odkloni?</seg>
             </u>
             <note type="speaker">MAG. VIKTOR ŽAKELJ:</note>
-            <u who="#SSK11.ZakeljViktor" ana="#regular">
+            <u who="#ZakeljViktor">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg326">Kar zadeva poziv, po mojem ne more biti nobenega spora. Strinjam se, da se vsa stihijnost, ki smo ji zadnje čase priča, na nek način zajezi. Moja misel gre od tod naprej: kako to operativno, tehnično, državniško, če hočete tudi upravno regulirati, v tem drugem delu pa plediram, da za to zadolžimo obstoječe institucije, ki že funkcionirajo in da ne ustanavljamo posebnih skupščinskih in podobnih komisij. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg327">Hvala lepa. Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">MILE ŠETINC:</note>
-            <u who="#SSK11.SetincMile1956" ana="#regular">
+            <u who="#SetincMile1956">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg328">Sodim med zagovornike privatizacije, sem celo za radikalnejše oblike privatizacije. Vendar mi ni všeč način, kako smo dobili to pobudo na dnevni red, dobili smo jo brez vsakega pisnega materiala, brez kakršnihkoli usklajevanj. O tem nisem vedel ničesar. Na hitrico smo slišali besedo, ki ima precej zanimivih formulacij, nekaj pa takšnih, za katere se mi zdi, da jih ne bi izrekel na prvi pogled brez tega, da bi jih dobro preveril in bi za njim ne stale kompetentne inštitucije. To so, npr. krivda ljudi starega sistema, potreba po privatizaciji. Menim, da se bo ta skupščina dogovorila za obliko privatizacije, ampak zaenkrat takega sklepa še nimamo. Sam mandatar, gospod Peterle je za današnjo vlado, ko se je opravičeval in tudi sam priznal, da vlada nima še natančnega programa, se je skliceval na to, da nima dovolj podatkov in da mora narediti inventuro ter ugotoviti, kje so pomanjkljivosti, da bo vlada potem vedela, kaj mora narediti. Zato menim, da nima nobenega smisla, da bi skupščina ob tem, ko vlada sama še nima in se tudi izgovarja na to, da nima podatkov, da bi mi karkoli prejudicirali danes, najmanj še, da že danes ustanavljamo ali odločamo o ustanovitvi pravice preiskovalne komisije, ki vsaj po imenu, spominja na tisto znano komisijo ob procesu proti Janši, Borštnerju, Zavrlu in Tasiću.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg329">Prav tako osebno menim, mogoče je to stališče preveč cinično, ampak jaz vanj verjamem, da takšen javni poziv nima nikakršne realne vrednosti, da če jaz slišim za načine, kako se odvija ta divja privatizacija. Gre za izkoriščanje številnih pravnih lukenj v sedanjem sistemu, ki je pač hibrid stare dogovorne ekonomije in ne liberalizacije, ki jo je prinesla Markovićeva vlada, tako da ima večina teh divjih privatizacij verjetno ta hip relevantno pravno osnovo in je ta hip verjetno velik del teh ljudi, ki to počnejo, nemogoče preganjati. Namesto tega bi predlagal samo to, da bi v okviru današnje točke pozvali novo vlado, da čim prej zbere podatke o načinih potekanja privatizacije - kar pa je verjetno ena delikatnih zadev in ki jo je treba začeti najprej reševati - da čim prej zbere podatke in predlaga ukrepe. Če bomo v skupščini ugotovili, da je situacija na robu množičnega kriminala, nimam nič proti temu, da se tudi ustanovi posebna preiskovalna komisija in, če oceni, da je problem zelo urgenten, da ga predloži skupščini še pred vsemi tistimi podrobnimi programi, ki nas čakajo, kot so rekli, čez približno mesec dni. Vendar, ta hip, razen tega poziva vlade, ne moremo odločati o ničemer drugem, zlati pa ne o čem takem, kar bi bil lahko prejudic stvari, ki morajo izhajati iz temeljnih analiz. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg330">Hvala lepa. Besedo ima gospod Miran Potrč iz stranke ZKS - Stranke demokratičen prenove. Prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg331">Strinjam se z razpravo delegata Šetinca. Menim, da je točka dnevnega reda vprašanja, predlogi in pobude delegatov namenjena, da se vprašanja postavijo, pobude dajo, ne pa, da se prihaja s teksti k predsedniku, ki jih prebere in bi mi o njih morali odločati. Predlagal bi, da takšno prakso opustimo. Gre za resno stvar. Jaz bi vas samo rad obvestil, da se vsi zavedamo, tudi prejšnja skupščina je na dveh - treh sejah razpravljala o istem problemu. O tem obstaja dokumentacija različnih mnenj, tudi delegatskih odgovorov o popolnih pooblastilih pristojnih organov in drugih mnenj, da pristojni organi nimajo ustreznih pooblastil za takšno zavarovanje. Ne ustvarjati na prvi seji vtis, da gre za vsesplošno krajo. Ne trdim, da problem ne obstaja, samo menim, da bi bilo slabo, če bi delali tako na pamet. Besedilo pa se da razumeti tudi tako, vsaj jaz sem ga, ko sem ga slišal, z današnje seje, da bi dajali nek splošni poziv javnosti. Mi smo predlagali, da naj se delovna telesa čim prej oblikujejo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg332">Predsednika sem razumel, da predsedstvo to sprejema in da bo skupščino obvestilo, kateri so predlogi. Nimam nič proti, če skupaj ocenimo, da je potrebno tudi takšno delovno telo. Prav tako smo se dogovorili, da je treba pripraviti prioritetne naloge skupščine. Če bo po informacijah iz danes izvoljenega Izvršnega sveta predsedstvo naše skupščine ocenilo, da je to prioritetna naloga, nimam nič proti. Vendar, dobimo določene dokumente in gradivo, da se bomo lahko prepričali, ne pa neko besedilo, slabo in nerazumljivo prebrano, mi pa moramo o njem glasovati. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg333">Hvala lepa. Želi kdo razpravljati? Torej, imamo zdaj dva predloga, in sicer predlog poziva slovenski javnosti o zavarovanju družbenega premoženja, kot ga je predložila skupina iz Demosa in drugič alternativni predlog, da se vsebina tega poziva adresira kot sugestija Izvršnemu svetu, da stvar prouči in predlaga potrebne ukrepe.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg334">Ker gre za spremljevalni predlog k temu pozivu, bi zato dal najprej ta spremljevalni predlog na glasovanje. Če ne želi nihče več razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg335">Spoštovano predsedstvo, spoštovane kolegice in kolegi! Sem eden pobudnikov in oblikovalcev besedila pobude, ki jo je predlagala skupina Demosa. Izviram iz prakse in dnevno čutim problem neurejenih pravnih, moralnih, etičnih in drugih norm, ki razjedajo našo družbo. Menim, da bi ta parlament, za katerega vsi trdimo, da je prvi svobodni, demokratični, avtoritativni, lahko s svojim javnim pozivom preprečil v času do formiranja pravnih aktov vlade in morda tudi parlamenta, da ne bi prišlo do nadaljnjega odtoka kapitala v tujino, do sklepanja škodljivih pogodb, ki so na robu zakonitosti.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg336">Govorim o primeru portoroških hotelov, ki so zdaj pred tem, da jih pridobi skupina privatnikov, ki bo nadaljnjih 10 let upravljala z njimi. Formalno-pravno bi taka pogodba lahko bila tudi zakonita. Veliko vprašanje pa je, ali je etična in moralna in namen poziva in podpisnikov je, vplivati z avtoriteto parlamenta na sedanje stanje, ko so ogrožena zakonitost, pravna varnost, zlasti pa moralno-etična načela in odnos do družbene lastnine, ki nima lastnika, da prepreči vsak tak akt in vsak postopek, ki bi lahko še poslabšal stanje. Zato predlagam, da sprejmemo tekst tak, kot je bil predložen, ker ne vsebuje nobene formulacije, ki bi atakirala posameznike, naslavljala karkoli, kar ne bi bilo danes v javnosti neštetokrat poudarjeno, kar smo slišali tudi tukaj danes in da odložimo odločitev o tem, ali se bo oblikovala medparlamentarna skupina, ki bo nadzorovala nadaljnje zakonito delo državnih organov, ki so očitno zatajili. Zlasti mislim na pravobranilce samoupravljanja, javna tožilstva in tudi javna pravobranilstva, ki morajo po zakonu v določenih primerih preverjati in ocenjevati zakonitost tovrstnih pogodb. Ne gre samo za statusne zadeve, ki so najbolj kritične, saj vemo, da je naš zakon o podjetjih skrajno nedorečen predpis. Določbe, ki urejajo področje delniških družb, so izjemno pomanjkljive, prav tako imamo ogromno direktorjev, ki imajo tudi privatne firme iz dejavnosti, v kateri poslujejo kot direktorji. Menim, da je tudi ta poziv namenjen njim in da bi preprečili poslovanje s tako firmo. Hvala lepa.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg337">Hvala lepa. Gospod Potočnik.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SSK11.PotočnikFranc1955" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg338">Mislim, da se ta dva predloga, postavljanje apela javnosti in pa Izvršnemu svetu ne moreta izključevati. To zahtevo lahko sprejmemo, hkrati pa lahko sprejmemo tudi drugi predlog, ki pravi, da se Izvršnemu svetu naloži, da naj to čim prej, tako kot je bilo formulirano, tudi sprejme. Menim, da bomo dali to na glasovanje, pa mislim, da se to dvoje ne izključuje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg339">Hvala lepa. Želi še kdo razpravljati? Gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg340">Spoštovane poslanke, spoštovani poslanci! Začeti moram tam, kjer vedno začnem in kjer so pač pogoji za delo poslancev. Če bi hoteli, da pridemo do tega poziva, potem ne bom rekel, da ni treba misliti na vsako drevo, ampak počasi bo pa le treba dajati papirje tudi na mizo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg341">Zadnjič smo imeli izkušnje z resolucijo za Litvo, danes smo imeli izkušnjo z apelom, ki ga pošiljamo vezano na to, kar je dr. Jović včeraj govoril v Beogradu. Govorim samo o metodi, za začetek, da ne bo nesporazuma. Glede na to, da je bilo na začetku napovedano, da nameravamo uveljaviti svoj protest, vezan na nastop dr. Jovića včeraj v Beogradu, in kar je bilo sprejeto v dnevni red, smo relativno hitro prišli do skupnega besedila z enim samim amandmajem in v normalni proceduri to lahko sprejeli. Zdaj smo spet pred situacijo, da nam pač neka grupacija, ki lahko v vsakem trenutku s svojim glasovalnim aparatom izglasuje karkoli, nas potisne v to, da ne moremo odločati. Zato bi prosil v imenu te manjšine, ki je ravno tako legitimno izvoljena in ki je tisti del slovenskega naroda, ki se mu reče po novem "rit", da dobivamo ta besedila na klop in da lahko o njih normalno razpravljamo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg342">Opozoril bi le na eno zadevo, kar se spomnim iz teksta. Gre enostavno za tisti del, kjer se poziva Izvršni svet. Skupščina Izvršnega sveta nima kaj pozivati, skupščina Izvršnemu svetu naloge nalaga. V tem tekstu pač poziva in v tem smislu - če bi bil jaz ciničen, bi rekel, da imenovanje take skupine s približno takim tekstom pomeni, da ta skupina delegatov ne zaupa ravnokar izvoljeni vladi, da bo to preprečevala, kar je za svoj osnovni program imela. Zaenkrat govorim samo o metodi, če bi hoteli ta tekst naprej dodelati, potem bi prosil, da se držimo teh običajev, da enostavno na hitro imenujemo usklajevalno skupino, ki posluša te naše lamentacije, popravlja besedilo in ga daje na koncu vsem delegatom in si na ta način prihranimo več kot eno uro. Glede na to, da sem mislil že nekajkrat, da je zadnjič, kako govorimo o načinu dela, se vnaprej zavezujem, da od tega trenutka dalje, kadarkoli se mi bo zdelo, da gredo zadeve mimo običajnega postopka, bom dvignil roko in pred mikrofonom tudi povedal. Tako delo postaja za parlamentarno manjšino nevzdržno in to je tisto, kar ne vodi tako rekoč nikamor. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg343">Besedo ima poslanec dr. Lev Kreft.</seg>
             </u>
             <note type="speaker">DR. LEV KREFT:</note>
-            <u who="#SSK11.KreftLev1951" ana="#regular">
+            <u who="#KreftLev1951">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg344">Hvala lepa za besedo. Ne bom se še enkrat predstavljal, verjemite mi, da izhajam iz izkušnje nekoga, ki je eno oblast že pomagal rušiti. Ni slabšega kot oblast, pa naj bo parlamentarna ali izvršna, ki z zakoni, ki jih nihče ne upošteva, in z etičnimi pozivi namesto uvajanja reda, pravil dokazuje pravzaprav samo lastno nemoč. Mi smo danes izvolili Izvršni svet z dokaj trdno večino in prosil bi podpisnike zaradi dignitete tudi tega parlamenta, da svoj poziv, med njimi pa so - če sem dobro slišal - vsaj trije člani novoizvoljenega Izvršnega sveta, med drugim tudi taki, ki delajo na resorjih, ki so povezani s to temo, ki jo zdaj obravnavamo - da ta poziv umaknejo. Izvršni svet pa, verjemite, da je, še preden smo mi spregovorili, vse to slišal in vedel, tako kot je vse to slišal in vedel tudi prejšnji. V zelo hitrem času bomo dočakali njegovo reakcijo na ta poziv, pa če ga sprejmemo ali ne. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg345">Hvala. Gospod Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg346">Predlog tega poziva sem razumel kot opozorilo na enega najtežjih problemov: zaščite družbene lastnine. Za mene je to osnovno in zato predlagam, da ta poziv sprejmemo. Gre za to, da bi s tem pozivom skupščina opozorila, da je potrebno vse sprejeti, da zaščitimo družbeno lastnino. Menim, da bi bilo zelo slabo, če bi na tej točki zaradi proceduralnih in formalnih razlogov prišlo do razhajanja. Zato plediram, da bi pri vprašanju obrambe družbene lastnine - v tem apelu se morda stvari lahko še bolje formulirajo - da bi vendar skupščina pokazala enotnost.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg347">Hvala lepa. Naslednji razpravljalec ima besedo.</seg>
             </u>
             <note type="speaker">JANEZ LUKAČ:</note>
-            <u who="#SSK11.LukacJanez1931" ana="#regular">
+            <u who="#LukacJanez1931">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg348">Spoštovani predsednik, spoštovane kolegice, kolegi! Problem verjetno in ne verjetno obstaja. Toda živimo v urejeni pravni državi, v kateri smo danes z naglico odpravili brezvladje, zato da ne bi prišli do diskontinuitete in ne do težav, ki bi jih lahko brezvladje povzročilo. Ta družba je organizirana, tako da ščiti tudi družbeno imovino. Imamo republiške in občinske pravobranilce, imamo javna tožilstva, imamo druge upravne organe, ki to ščitijo. Če je to vse odpovedalo, nam tudi poziv javnosti, da samozaščitno in mimo pravnega reda ščitijo družbeno last, ne bo pomagalo. Edina rešitev je v tem, da danes s tega mesta, zavežemo Izvršni svet, da takoj pripravi zakonske ukrepe, ki bodo sprejeti tudi po hitrem postopku, če je problem tak, da tako izjemno zaščito narekuje. Če zadeve niso v naši pristojnosti, in nekatere niso, tu so bila opozorila pravilna, npr. zakon o podjetjih itn. v zvezni pristojnosti, dajmo iniciative, da se ti akti v pristojni skupščini takoj popravijo, dopolnijo, da bi zaščitili družbeno premoženje. Tudi v zvezni skupščini je gotovo interes, da se družbena lastnina zaščiti.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg349">Poziv javnosti bi kazal na našo nemoč, na nujno samoiniciativno delovanje, ki ne kaže na ustvarjanje pravne države, za katero se vsi zavzemamo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg350">Gospod Juri.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SSK11.JuriAurelio1949" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg351">Pridružil bi se razmišljanju delegata Lukača, Školča in še enega poslanca. Gre za to, da se nekako naučimo načina dela. Predlog tega poziva, pa ne uhajam v pomen oziroma vsebino, je improvizacija. Ker pisnega gradiva nimamo, se pravilno odločati ne moremo. Mislim, da bi morala tudi praksa naše skupščine to izbrisati. Improvizacija je upravičena v trenutku, ko so dogajanja v teku, ko se nekaj spreminja, ko je skupščina dolžna hitro reagirati. Ta problem pa že dolgo časa obstaja. Predlagatelji takega poziva bi ga lahko pripravili za današnjo sejo v pisni obliki. Lahko bi se klubi delegatov sestali in o tem razpravljali. Bistvo problema ni v samem pozivu, ampak v načinu sprejemanja. Zato bi še enkrat apeliral na to, da se improvizacije o takih temah, takih problemih, ki dalj časa obstajajo, ki imajo svojo osnovo in svojo argumentacijo, na katerih naj se mi hitro opredelimo in odločimo, da se to več ne bi pojavljalo. Zato bi predlagal konkretno, da se ta poziv v pisni obliki predloži na naslednjo sejo. To je prva misel, ki sem jo želel povedati.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg352">Drugo. Člani Izvršnega sveta so to slišali in bodo verjetno vključili v program dela. Že ko smo razpravljali o Izvršnem svetu, so bile dane druge pobude, kako bi naj bil oblikovan program Izvršnega sveta. O teh pobudah nismo glasovali. Bomo pa glasovali, ko bo program v celoti predstavljen skupščini. Zato še ta problem obravnavajmo na enak način. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg353">Hvala lepa. Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg354">Moram ob tem pozivu povedati, da je naša stranka že za časa sklica prejšnje skupščine imela podoben poziv - samo moratorij vseh transakcij na družbeni lastnini - že podala tej skupščini, prejšnjega sklica. In to gospod Školč gotovo ve, če je v tej skupščini sedel. Razen, oprostite, počakajte, da do konca povem, razen če administracija v tej skupščini našega poziva ni dala delegatom na klop. Tega nismo mi krivi, ampak administracija v skupščini. Zato apeliram, da ta poziv, kljub vsem pomanjkljivostim, sprejmemo. To, kar se sedaj dogaja z družbeno lastnino, je skrajno malomarno, celo namerno se dogajajo določene transakcije. Vi točno veste, da je bivši Izvršni svet, npr. graščino Brdo tako rekoč podaril Gospodarski zbornici Slovenije, da se dogajajo transakcije prek meje, kjer se dobesedno naše narodno bogastvo podarja, ne razprodaja tujcem. In zato prosim, da ne hodite k temu pultu s proceduralnimi zapleti, ampak, da o tem glasujete. To je v interesu tudi vaše ZSMS - Liberalne stranke, ne samo nas. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg355">Hvala. Gospod Šetinc.</seg>
             </u>
             <note type="speaker">MILE ŠETINC:</note>
-            <u who="#SSK11.SetincMile1956" ana="#regular">
+            <u who="#SetincMile1956">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg356">Zadeva postaja smešna, ampak ne po naši zaslugi in zaslugi naših proceduralnih zapletov, predvsem glede tega nova skupščina - stara skupščina. To, kar ste predlagali stari skupščini, nima nobene zveze z nami. Ne vem, zakaj bi morali mi dobiti gradiva stare skupščine na klop, razen če bi vi to eksplicitno danes zahtevali in bi potem poskušali dobiti. Že vidim, da bo v tistem delu tiska, ki je kljub dominaciji "starega režima" v medijih, vendar inklinira strankarsko v Demosu, to interpretiral kot ščitenje tatov družbene lastnine, ki so v interesu stare oblasti oziroma nove opozicije, ki ima - naj bi imela svoje osebne, prijateljske, naturalne interese. Ampak jaz to tveganje prevzamem, ker mislim, da je to zadeva principa.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg357">Vsi govorimo o kraji družbene lastnine. O tem je bilo že kar impresivno število člankov in komentarjev napisanih. Tudi sam sem jih napisal nekaj na to temo. Vendar priznam, vsaj v svojem imenu, da sem to pisal brez kakršnih koli relevantnih podatkov, ki bi bili dani od katerekoli kompetentne inštitucije. Mislim in si upam trditi, to velja tudi za vse ostale pisce o tej temi. Kdo, koliko, kje, kako izvaja to famozno razprodajo in krajo družbene lastnine? Če pa se že pojavlja, slučajno, kar je redko v kakšnem besedilu, o tem, kako se to dela, obvezno manjka najprej kdo, koliko, kje. Pred tem smo slišali poskus neke ilustracije, mislim, da je dal ta primer gospod Starman, o Portorožu in o tem, kako si skuša skupina privatnikov pridobiti oziroma prisvojiti portoroške hotele. O tem sem nekaj bral v časopisih, ampak iz tistega ni mogoče dobiti jasne podobe. Gre za ljudi iz bivše turistične organizacije Portorož, ki sedaj poskušajo organizirati privatno podjetje in bi rekel organizira storitve oziroma vodi goste v hotel na račun 10% provizije. O tem se lahko razpravlja, to je lahko sporno. Vem, da so v Portorožu o tem spori, eni hoteli so za nov način, drugi niso.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg358">Glede tega bi lahko odpiral druge probleme; lahko bi govoril o problemu Magelana, ki izdaja Demosu naklonjeno Demokracijo, zelo podoben portoroškemu. Gre za problem prenosa, npr. menagerskega znanja, poznanstva itd., ki so ga osvojili na račun družbenega podjetja in se ga uporabi v svoje privatne namene. Obstajajo tudi hujše oblike, npr. če se uporabljajo materialna sredstva, pridobljena v družbenem sektorju. Ampak mislim, da je takšne primere treba prepustiti pristojnim organom. Tudi nikogar ne bi obtoževal, kakor vem, gre pri Magelanu za sodni postopek, ki naj pokaže svoje. Tega na tak način ni mogoče vpletati v kriminalizcijo tega problema, kakor tudi najmanjše zadeve, ki so zaenkrat samo v novinarskih člankih.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg359">Na koncu se odpovedujem celo tistemu svojemu predlogu, ki sem ga predlagal, da se vlado zadolži, da to naredi. Sam sem potem razmišljal, kaj bi storil, če bi me predsednik Bučar pozval, da natančno definiram, kako bi to storil. Namreč, kaj naj rečem? Da naj vlada ugotovi in poroča o zaščiti družbene lastnine? Ne vem, če je splošna tendenca, vsaj izhajajoč iz programov vseh strank, zlasti pa tudi Demosa ter drugih, da poskuša še posebej ščititi družbeno lastnino. Gre za tendenco k uničenju oziroma dokončni odpravi družbene lastnine. To je že sporen termin. Potem, če rečemo: proti divji razprodaji, kaj je to divja razprodaja. Tudi ta izraz je treba definirati. Če rečemo: proti nezakonitemu prilaščanju družbene lastnine, bomo ugotovili, da je veliko tega prilaščanja povsem zakonitega in mu je mogoče nasprotovati samo s širših etičnih ali programskih ciljev novega sistema. Strinjam se s tistim, kar je rekel prej Lev Kreft, da se nova vlada prekleto dobro zaveda tega problema in kot se mi zdi in kolikor sem sklepal iz našega včerajšnjega popoldanskega pogovora z njim, ko je prvič predstavil program in sestavo nove vlade, je bil eden od glavnih vzrokov za tako naglico, ki smo jo danes nekateri zelo odločno kritizirali, prav v tem, da bi vlada čim hitreje prevzela delo in preprečila prav to divjo razprodajo in prilaščanje družbene lastnine. Skratka, predlagam, da danes na noben način o tem ničesar ne odločamo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg360">Hvala. Gospod Toplak.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg361">Desetletja se ukvarjam z vprašanjem, ki se mu reče odgovornost, zlasti v nacionalnem gospodarstvu in v mednarodnem trgovinskem ali mednarodnem gospodarskem pravu. Glede na diskusije, da imamo pri nas vzpostavljen normativni sistem, moram reči, žal ga nimamo. Pri najboljši volji, ob relativno dobrem in celovitem poznavanju problematike menim, da je potrebno približno leto dni, da se zakonodaja celovito uredi. Zlasti še, ker je vse to v veliki meri v pristojnosti zvezne zakonodaje in smo vezani tja. Ni samo v naših močeh tukaj in danes, da bi takoj in celovito lahko reševali. Predvsem pa v času gospodarske reforme, to je med zadnjim letom, so bili zakoni, sprejeti na tem področju in drugi akti, nepopolni. Zaradi svoje nepopolnosti pa odpirajo nove možnosti obnašanja na meji prava ali na meji družbene tolerance. V vsakem primeru pa to v veliki meri omogoča najrazličnejše oblike oškodovanja družbene lastnine ali družbenega premoženja. Opravičujem se, moram reči, ker predloga poziva niste dobili pravočasno na klop, se pa pravkar razmnožuje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg362">Glede na vse že povedano, vam moram reči, da je poziv slovenski javnosti za zavarovanje družbenega premoženja zelo jasen: Skupščina Republike Slovenije ugotavlja, da je v zadnjem obdobju vse več opozoril zaradi oškodovanja družbenega premoženja. Skupina samo ugotavlja, da gre za vse več opozoril, in to predvsem v sredstvih javnega obveščanja ter na različne načine, kot so našteti: neresno poslovanje, izsiljeni stečaji, prenos premoženja v tujino, vprašljiva privatizacija s strani vodilnih ljudi v podjetjih in podobno. Opozarja se tudi na neučinkovitost dosedanjih institucij in nekaterih pristojnih ljudi iz dosedanjega sistema pri preprečevanju oškodovanja materialne in kulturne osnove slovenskega naroda. Nova vlada tudi pri najboljši volji in pri polnih kompetencah tega ne more takoj v celoti rešiti. Ker zadeva presega pravna pravšanja, ker gre za nepravna vprašanja, v veliki meri so to vprašanja moralne, etične in praktično poslovne narave. Radi bi zagotovili zavarovanje celotnega narodnega bogastva in delovno perspektivo delavcem, kmetom in izobražencem ter mladim generacijam v domovini.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg363">V mnogih primerih grozi nezaposlenost, dostikrat tudi zaradi, kot se ocenjuje v sredstvih javnega obveščanja, zrežiranih in izsiljenih stečajev. Zaradi tega grozi, da bo prišlo do socialnih konfliktov, ki bodo dodatno otežili delo tudi novi vladi in novemu parlamentu. Zaradi tega pozivamo slovensko javnost, zlasti vse državne organe, javne službe, vodilne delavce in sredstva javnega obveščanja, da storijo vse v mejah zakonitih dolžnosti ter osebne moralne in državljanske odgovornosti. O tem govorimo dodatno, da se od danes dalje preprečijo vsa dejanja in opustitve, s katerimi bi se še nadalje krnilo narodno bogastvo. V tem kontekstu procesov in reforme - mi vemo, da se ne bomo mogli izogniti procesom privatizacije ali reprivatizacije ali kakorkoli jih imenujemo, ki so del svetovnega procesa in tudi pri nas procesa gospodarske reforme in celotne družbene reforme.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg364">Skupščina Republike Slovenije bo zagotovila proces privatizacije zlati v primerih neučinkovitosti družbene lastnine na pravni podlagi in v sladu z ekonomskimi zakonitostmi ter pravno kulturo Slovencev. Gre namreč za določeno pravno kulturo. V veliki meri je obnašanje, kateremu smo prisotni, in na kar mnogi opozarjajo, izven pravne kulture. Ne moremo reči, da je vedno nepravno ali da je protipravno, je pa v nasprotju s pravnim čustvovanjem in z pravno kulturo našega naroda. Zaradi normativne nedodelanosti menimo, da je v določenem času potrebno zadevo celoviteje proučiti, a noben resor ne more tega tako celovito proučiti in v tem prehodnem obdobju koordinirati. Zato se predlaga posebna skupina delegatov, imenovana na podlagi posebnega odloka, za celovito proučitev okoliščin in posledice pojavov oškodovanja družbene lastnine, ki bi tudi zadevo proučila, ampak to bi bila vsebina naslednje seje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg365">Hvala lepa. Gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg366">Spoštovane poslanke, poslanci, spoštovano predsedstvo! V tem trenutku imam mogoče za ta zbor nepomembno repliko. Izrecno sem se oglasil zaradi tega, ker je poslanec Gros rekel, da bi jaz to že moral poznati - glede na to, da sem bil delegat prejšnjega sklica skupščine. Moram reči, da sem prav tako, kot predvidevam, da je on, prvič izvoljen v skupščino. V tem smislu nisem del tiste oblasti, ki naj bi zagrešila vse te nečednosti. Moja replika je šla v naslednjo smer: če se hočemo o tem pogovarjati, potem moramo vzpostaviti pogoje, da lahko o tem govorimo. Zdaj smo dobili končno ta tekst, rekel bi pa samo še to, da so tudi poslanci bivše ZSMS vložili apel, ki se je nanašal na Iskro, in nenazadnje sedi v teh klopeh precej poslancev iz Iskre, ki vedo, da smo zahtevali določene stvari, vezane za problem kraje družbene lastnine. Daleč od tega, da bi se zavzemali za krajo in daleč od tega je bilo to, da sem mislil, da bomo prvi, ki bomo morali braniti kompetence vlade v teh klopeh. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg367">Hvala lepa. Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg368">Gospod Školča prav dobro razumem in razumel sem ga tudi pred tem, ko nam je pojasnjeval, kako je bilo v prejšnji skupščini. In zato sem menil, da je bil tudi on delegat v prejšnji skupščini. Samo to sem želel povedati, da ne bi kdo mislil, da sem jaz kaj prejudiciral ali da sem se zlagal. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg369">Želi še kdo razpravljati? Prosim, imate besedo.</seg>
             </u>
             <note type="speaker">VLADIMIR SLEJKO:</note>
-            <u who="#SSK11.SlejkoVladimir" ana="#regular">
+            <u who="#SlejkoVladimir">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg370">Menim, da smo že v prvi uri vladavine nove vladi dali le-tej nezaupnico. Problem glede družbene lastnine smo prestavili na vlado in zdaj izvršujemo nekaj, kar bi morala urejati vlada.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg371">Druga stvar pri tem je, da vsi moralni ali podobni zakoni ne veljajo več pred sodiščem, veljajo samo pravni zakoni in nisem prepričan, da te zakone lahko sprejmemo mi. Lahko pa damo samo konkreten predlog, ki ga verjetno skupščina sprejme, to je, da nacionaliziramo vso družbeno lastnino. Samo toliko sem želel povedati.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg372">Hvala lepa. Naslednji govornik, prosim.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg373">Spoštovani predsednik, opravičujem se, ker je potrebna moja ponovna intervenca. Menim, da je smisel poziva samo v tem, da ga sprejme parlament kot celota. Ne mislim, da ga bomo sprejeli vsi enoglasno, ampak moralni učinek bo imel v okoljih, kamor se bomo vrnili samo, če bo enoglasno oziroma če bo večinsko sprejet. Za kaj gre? Kolega je omenil, da živimo v pravno urejeni državi. Menim, da živimo v neurejeni in nepravni državi, vsaj danes je tako. In nova vlada, ki bo šele ugotavljala diagnozo na posameznih področjih, ne bo mogla interdisciplinarno, torej medresorsko ugotavljati načina reševanja izjemno zapletenih oblik kršitev družbene lastnine. Liberalna stranka predlaga, med ostalim, tudi ustanovitev skupine, ki naj bi v okviru parlamenta pripravila rešitev koncepta družbene lastnine, poleg ustave in odnosov do federacije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg374">Menim, da se v tem v celoti strinjamo, vendar trenutek zahteva takojšnje ukrepanje, in sicer iz moralno-etičnih načel, iz načel poslovne morale, ne strogo pravil in sodstva, kot je bilo danes omenjeno. Če preprečimo z današnjim apelom eno škodljivo pogodbo, bomo naredili koristno delo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg375">Hvala lepa. Besedo ima najprej gospod Juri.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SSK11.JuriAurelio1949" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg376">Če dovolite, ne bi se rad šalil ob takem problemu, ki je zelo resen. Samo, sedaj smo prejeli besedilo tega poziva. Na kratko se da razbrati, da Italijani in Madžari v Sloveniji lahko delamo to, kar hočemo. Dovolite, da preberem poziv slovenski javnosti - ko sem bral, tega nisem hotel opredeliti kot nacionalno kategorijo, ampak na koncu besedila vidimo, da se govori o "ter pravno kulturo Slovencev". To je takoj sporna zadeva. Vemo, da v Sloveniji živita še italijanska in madžarska narodnost, kot suverena politična subjekta tega kraja in zato menim, da je že s te plati predlagano besedilo sporno.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg377">Menim, da bi verjetno našli še kakšno sporno zadevo in zato bi morali biti malo bolj natančni in dopustiti, da se nekaj časa vsebina premleva in se oblikuje vsebinsko boljši predlog. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg378">Gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg379">Ko je gospod predsednik povzemal različne predloge, ni povzel tudi mojega in zato ga ponavljam samo še enkrat, da bi to bila ena od pobud, ki smo jih danes dali, tako po vsebini kot po organiziranju komisije in obravnavana na predsedstvu in Izvršnem svetu kot skupen predlog. Prosim, ko se bomo odločali, da se na to ne pozabi.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg380">Sedaj smo dobili nekaj ustnih obrazložitev dr. Toplaka in pisni tekst. Sedaj je mogoče razpravljati, če boste o tem želeli, zdi se pa, da to zahtevate. Razumel sem, da dr. Toplak opozarja, da gre za neustrezne predpise, in sicer ne samo in ne predvsem za tiste, ki so bili izdani v pristojnosti Republike Slovenije, ampak za zvezne, da bo še za najmanj leto dni potrebno, da jih bo mogoče normalno oblikovati. Med tem pa bodo nedorečeni in nejasni s polnopravnimi prazninami, če smem dodatno interpretirati.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg381">Drugič, da gre za neustrezno ravnanje bivše oblasti in da gre v mnogih primerih celo za ravnanja, ki ne zapadejo pod vprašanje prava in zakonitosti, ampak za ravnanja, ki zapadejo pod vprašanje morale, ustreznosti, poštenja, skratka, za vrsto vprašanj, ki so med seboj povezana, jaz pa mislim, da tako, kot so zapisana, po mojem tudi protislovna. V prvem odstavku je ugotovitev, ki jo predlagatelj razlaga, da ne pomeni nobene ugotovitve skupščine, razen da skupščina ugotavlja, da v javnosti obstajajo opozorila. Mogoče se da to razumeti v prvem stavku, morda nekoliko manj, vedno tudi v drugem stavku prvega odstavka, vendar, če preberemo naslednji odstavek, potem to ni več res. Ker potem nič več ne izhajamo iz tega, da nas na to opozarja neka javnost, ampak dajemo zelo jasne trditve, v katerih povemo, da zaradi zavarovanja za naprej ugotavljamo, da se od danes dalje preprečijo vsa dejanja in opustitve, s katerimi bi se še nadalje krnilo narodno bogastvo.</seg>
@@ -1478,128 +1456,128 @@
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg384">In na koncu bi še predlagal, da se glede posebne skupine odločamo posebej, ko se bomo odločali o oblikovanju delovnih teles. Ne verjamem, da bo ta skupščina lahko kako drugače kot v medsebojnih - grobo rečem - prepirih o procedurah delala, če ne bo imela delovnih teles. Vse to, o čemer sedaj razpravljamo, bi morali mirno razpravljati na delovnih telesih. Zato se danes domenimo, katero telo želimo, kakšna telesa želimo, za katera vsebinska vprašanja ter jih čimprej oblikujmo. Drugače bomo drug drugega poslušali in si šli na živce, ko bi lahko kot parlament opravljali normalno delo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg385">Hvala. Gospod Balažic.</seg>
             </u>
             <note type="speaker">MILAN BALAŽIC:</note>
-            <u who="#SSK11.BalazicMilan1958" ana="#regular">
+            <u who="#BalazicMilan1958">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg386">Zelo kratka intervenca. Mislim, da bi morali že vsi vedeti, da smo izvoljeni v parlament, princip parlamentarizma poznamo in meni je nekako dokaj neprijetno, da bom pred celotnim parlamentom ponovil naslednjo stvar.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg387">Od Kanta dalje vemo, da je princip parlamentarizma, da sta zakon in resnica ločena. Se pravi, tudi moralična vprašanja so izven zakona. Zakon spoštujemo zato, ker je zakon, ne zato, ker je dober, slab, moralen, amoralen. Na kar je plediral, mislim da poslanec Starman, to ne sodi in tudi takšni pozivi ne sodijo v več ali manj normalno skupščinsko delo. Ker smo najvišji zakonodajni organ, ne pa neka moralična cerkev slovenskega naroda in državljanov v Sloveniji, bi plediral na to, da se ne opredeljujemo za takšne pozive, ampak plediram na to, da pozivamo vlado, da te stvari pospeši in da skupščina kontrolira delo vlade na tem področju, ne pa da se zopet smešimo, po mojem mnenju, pred slovensko javnostjo in ne dosegamo efekta, ki ga hočemo doseči: to je preprečitev dogajanj, ki se dogajajo danes v slovenskem gospodarstvu. Toliko. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg388">Hvala lepa. Prosim.</seg>
             </u>
             <note type="speaker">JANEZ LUKAČ:</note>
-            <u who="#SSK11.LukacJanez1931" ana="#regular">
+            <u who="#LukacJanez1931">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg389">Spoštovani predsednik, spoštovane kolegice in kolegi! Ne ugovarjam kolegu Starmanu in prof. Toplaku. Vprašanje obstaja, vidim, da se tudi drugi temu ne upirajo. Toda gre le za način, kako vprašanje rešiti: ali pozvat zadnjega v občinski upravi, ki overja pogodbe, da ugotovi, pozvani pa od Skupščine Republike Slovenije, da ugotovi, ali pogodbe so ali niso v skladu z našim pozivom.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg390">Prišli bomo do tega, da bodo v zemljiški knjigi in drugod ocenjevali - npr. službe za overovitev podpisov - ali so pogodbe na škodo družbenega premoženja ali ne. Pozivamo državljane in skupine državljanov, da začnejo ščititi družbeno premoženje. Kako? Ali veste, kako se temu reče? Nered. Mi smo že poskušali v naši pretekli dobi, ki jo obsojamo, s komisijami za ugotavljanje družbenega premoženja ščitili družbene interese. Spomnite se, kaj je to bilo. Tudi zdaj pozivamo skupine, da se organizirajo in da začnejo s posebno zaščito. Vi veste, da so v podjetjih velika nesoglasja, velike delitve in da se skupina organizira in reče, tega pa v tem trenutku ne bomo naredili, ker je nas skupščina poklicala k zaščiti. In zato se ne sklicujemo na moralo in etiko. Ta bo lahko šele takrat, ko bo dosegla stopnjo, ki jo prof. Toplak hoče in zahteva. Splošna pravna kontrola vseh in mogoče z izjemo tiste oficialne in splošne pravne kontrole. Toda ne glede na to kar sem povedal, če stranka na oblasti nima možnosti, da bi s svojim mehanizmom, ki ga ima vlada in z vsem instrumentarijem, zaščitila družbeno lastnino, ne bo učinkovita s pavšalno resolucijo. Predlagam, da naj se formulira akt, s katerim bomo prepovedali pravni promet z družbeno lastnino, dokler niso konkretno z zakoni urejene zadeve. To bi bilo edino sprejemljivo, tudi če nekateri trdijo, da nimamo pravne države, potem jo začnimo graditi od tega trenutka dalje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg391">Hvala. Besedo ima naslednji razpravljalec.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg392">Spoštovane poslanke, spoštovani poslanci! Delegati iz naše stranke smo danes pokazali, da se o občutljivem vprašanju lahko hitro sporazumemo. Predlagali smo vsebino, predlagali smo sestavo skupine, hitro smo dobili skupino, sestala in pripravila je zadeve. Skratka, tudi o občutljivem vprašanju se da učinkovito odločati v tej skupščini. Če predlog, ki ga bom dal, ni sprejemljiv, predlagam, da naredimo odmor, da se sestane skupina in da poskuša poiskati formulacijo. Sam sem skušal poiskati formulacijo, za katero menim, da bi bila sprejemljiva za poslance iz naše stranke, čeprav nisem imel možnosti, da jih podrobneje konsultiram.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg393">Sestavljena bi bila iz dveh točk: ena bi vsebovala tisto, kar ni sporno, da imamo veliko opozoril o tem, da je treba zavarovati družbeno premoženje. Druga točka bi bila, da nalagamo Izvršnemu svetu, da stanje prouči. Formulacija bi bila naslednja: "Skupščina Republike Slovenije ugotavlja, da je v zadnjem obdobju vse več opozoril zaradi oškodovanja družbenega premoženja na različne načine, kot so: nevestno poslovanje, izsiljeni stečaji, prenos premoženja v tujino, vprašljiva privatizacija s strani vodilnih ljudi v podjetjih in podobno." To sem hitro prebral, ker je to povzetek predloženega poziva. Drugi odstavek bi se pa glasil: "Izvršnemu svetu nalagamo, da takoj ugotovi pravo stanje, v okviru svojih pristojnosti ukrepa in spodbudi aktivno delovanje drugih pristojnih organov. Na podlagi poročila Izvršnega sveta bomo na naslednji seji sklepali o tem, ali je potrebno oblikovanje posebnega skupščinskega telesa za to področje." Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg394">Hvala lepa. Prosim predlagatelja, da se izjavi o tem predlogu. Najprej bi se moral o tem predlogu izjaviti predlagatelj dosedanjega predloga, ker gre za popolnoma novo vsebino.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg395">Menim, da konkretni predlog gospoda Franca, ki opozarja na zadnjo vrstico poziva, da bi namesto "osnove slovenskega naroda" zapisali "naroda in narodnosti". Brišemo besede "slovenskega naroda in narodnosti". V drugem odstavku predzadnje vrstice na konkreten predlog, mislim da Potrča, se briše besede "še nadalje, s katerimi bi se krnilo narodovo bogastvo" in v tretjem odstavku zopet na besedo gospoda Franca se briše "pravno kulturo Slovencev" in se da "ter našo pravno kulturo".</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg396">V tem smislu menim, da bi bil predlog sprejemljiv. Glede zadnjih predlogov dr. Ribičiča pa menim, da bi se morala sestati delovna skupina, ki bi to pripravila.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg397">Hvala lepa. Prosim, gospod Šeligo ima besedo.</seg>
             </u>
             <note type="speaker">MAG. RUDI ŠELIGO:</note>
-            <u who="#SSK11.SeligoRudi1935" ana="#regular">
+            <u who="#SeligoRudi1935">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg398">To, kar sem poslušal pa menim, da sem pozorno poslušal tovariša Ribičiča za preformulacije, menim, da je neprimerno boljša artikulacija problema vesti, ki nas očitno žuli kot to, kar smo dobili na to temo v gradivu, čeprav gre za isti problem.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg399">Moram reči, da poleg tega, da je Ribičičeva formulacija določna tudi glede na to, da mora skupščina obdržati svojo digniteto in da nalaga Izvršnemu svetu, se ta formulacija izogne tudi sumljivim stavkom v drugem odstavku predloženega poziva, kjer se govori na sumljiv način o nekem tožarjenju, neki pozornosti državljanov do drugih sodržavljanov, kaj delajo, ker je pozicija, ki je ta parlament ne more podpreti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg400">Prosim, besedo ima gospod Magajna.</seg>
             </u>
             <note type="speaker">ANDREJ MAGAJNA:</note>
-            <u who="#SSK11.MagajnaAndrej1952" ana="#regular">
+            <u who="#MagajnaAndrej">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg401">Spoštovani! Glede tega vprašanja bi dal tudi jaz nekaj pripomb in pomislekov. Prvič, da smo tekst šele zdaj dobili na klop. Razumem povsem dober namen, menim pa, da sam tekst potrebuje nekaj korektur, da bi bil lahko sprejemljiv. Poleg tega pa, kakor sem se posvetoval tudi s kolegi iz stranke, se mi zdi ta predlog Cirila Ribičiča dobra formulacija z določeno pomensko razliko, da bi vseeno morda veljalo to skupščinsko komisijo že ustanoviti, preden slišimo poročilo Izvršnega sveta o tej problematiki.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg402">Hvala lepa. Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg403">Spoštovani! Tukaj gre zdaj za zadevo, pri kateri lahko pridemo skupaj. Ni potrebno, da smo resnično v položaju blok - blok. Strinjam se z razpravljalci pred mano, več jih je bilo z obeh strani, ki pravijo, da se moramo pač obnašati kot oblast. Mi smo zdaj oblast, mi nismo več opozicija. Za opozicijo je ta predlog dober, ampak zdaj moramo mi javnost zaščititi. In kako zaščitimo?</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg404">Menim naslednje, če se zdaj obračamo na javnost, je to znak naše slabosti. Tega, da bi nam rekli, kdo naj pa vam pomaga, če si sami ne morete. Saj imate ves aparat Izvršnega sveta in upravnih organov. Zato bi rekel, da se skoraj v celoti strinjam z besedilom dr. Toplaka, vendar bi ga ne naslovil na slovensko javnost, ampak bi parlament naložil nalogo Izvršnemu svetu, tako kot je že povedal dr. Ribičič in pred njim tudi kolega Školč v tem smislu. Jaz počasi začnem verovati, da vam ne gre samo za obstrukcijo, da želimo nekaj skupnega izdati.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg405">Skratka, če se komisija petih do desetih ljudi sestane za 10 minut, da bi oblikovali skupno besedilo, ki bi ga lahko skupaj sprejeli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg406">Gospod Oven.</seg>
             </u>
             <note type="speaker">EDVARD OVEN:</note>
-            <u who="#SSK11.OvenEdvard1950" ana="#regular">
+            <u who="#OvenEdvard1950">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg407">Gospod predsednik, spoštovani poslanci in poslanke! Ne vem, če smo vsi še enkrat prebrali govor, ki smo ga dobili od predsednika Izvršnega sveta, ki med drugim piše naslednje: "Zaradi pomanjkljive zakonodaje in izgube moralnih norm prihaja do kraje družbene lastnine. Vlada bo sprejela zakonodajne rešitve." Menim, da je zadnji stavek lapsus. Vendar, če je to mandatar povedal in napisal z namenom, da bi preprečil večje zlorabe, to pomeni, da ima program teh rešitev. Zato bi predlagal, da ga ne bi diskvalificirali že na začetku, da bi ta poziv prekvalificirali v obrazložitev zahteve parlamenta, iz katere nalagamo vladi, da nam: prvič, pripravi informacijo o stanju in problematiki prehoda v različne oblike lastnine in o vseh dejavnostnih pojavih v tej zvezi in drugič, da predlaga sprejetje ustreznih normativnih rešitev tako tistih, ki so v pristojnosti vlade kot tudi tistih, ki so v pristojnosti republiškega parlamenta, in tiste, ki jih moramo predlagati na zveznem nivoju. Na osnovi te celovite informacije in predlogov rešitev pa predlagamo potem oziroma ustanovimo tudi posebno telo, kot je mandatar oziroma zdajšnji predsednik Izvršnega sveta predlagal, za izvedbo in nadzor nad privatizacijo. Menim, da se moramo zavedati, da imamo Izvršni svet, ki nam mora pripraviti ustrezne rešitve, ne pa, da parlament predlaga Izvršnemu svetu ustrezne rešitve.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg408">Menim, da bi s takim načinom mogoče lahko prišli bližje in bi se potem tudi odločali na podlagi argumentov in kvalificiranih trditev, ne pa na podlagi časopisnih člankov, za katere menim, da ne sodijo v ta parlament. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg409">Torej, če povzamem vaš predlog, menite, da se da apel Izvršnemu svetu, ki bi se samo nekoliko bolj podrobneje artikuliral. S tega stališča menim, da imamo dva predloga, od katerih je eden predlog, ki ga je predstavila komisija in gospod Toplak ter drugi predlog, ki ga je sedaj formuliral poslanec Ciril Ribičič. Gre torej za dva predloga. O tem drugem se predlagatelj še ni izjasnil. Še enkrat prosim, da se izjasnite o tem predlogu.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg410">Delovna skupina se je sestala in predlaga skupščini, da se skupina razširi z dodatnimi člani za pripravo ustreznega poziva. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg411">Torej, če vas pravilno razumem predlagate, da se skupina predlagateljev razširi z dodatnimi člani. Predlagate, da se to sedaj naredi ali to predlagate za drugo sejo, to moram vedeti.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg412">Glede na zahtevnost zadeve bi kazalo preložiti do naslednje seje, hkrati pa je delovna skupina ugotovila, da bi bilo potrebno, glede na urgentnost, hitro ukrepati. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg413">Vašo intervenco razumem tako, da kot predlagatelji odstopate od sedanjega teksta in predlagate, da se skupina dopolni in predlaga nov tekst.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg414">Samo da se dopolni v smislu več predlogov, ki smo jih slišali, zlasti dr. Ribičiča, Tomšiča in Jurija.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg415">Vendar to pomeni, da skupina pripravi nov tekst. Glede na to menim, da glasovanje o tem predlogu odpade. Zdaj samo glasujemo o tem, ali smo za to, da se sedanja skupina predlagateljev dopolni tudi s poslanci drugih strank. Prosim.</seg>
             </u>
             <note type="speaker">JOŽE BERLEC:</note>
-            <u who="#SSK11.BerlecJoze1949" ana="#regular">
+            <u who="#BerlecJoze1949">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg416">Spoštovani! Čisto na kratko. Menim, da je gospod predsednik prezrl še en predlog iz Liberalne stranke, to je predlog gospoda Ovna. Predlagal je, da prepustimo odločanje o tem Izvršnemu svetu. Menim, če gremo na odločanje, bi odločali v tem trenutku o tem, ali to prepustimo Izvršnemu svetu ali pa imenujemo neko usklajevalno skupino, ki bo do naslednjega zasedanja pripravila besedilo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg417">Gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SSK11.ZagozenFrance1942" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg418">Problem je zelo aktualen in akuten, zelo veliko ljudi je zelo vznemirjenih zaradi vesti, ki prihajajo v javnost o stanju v gospodarstvu in o tem, kaj se v podjetjih dogaja. Zato menim, da bi bilo prav, da skupščina sprejme neko stališče do tega, po možnosti še danes. Pri tem ne gre za poseganje v kompetence vlade, ta bo imela s tem veliko opravka, vendar pa bi imelo stališče skupščine še samo po sebi učinke.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg419">Zato predlagam, da bi to danes naredili in da se skupina za uskladitev tega teksta za 10 minut sestane, oblikuje tekst, ki bo sprejemljiv za vse, in da ga potem sprejmemo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg420">Hvala lepa. To je predlog, ki ne odstopa od prejšnjega, poudarja samo časovno dinamiko. Predlog poslanca Zagožna je, da se že danes skupina dopolni in sestane. Prosim.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg421">Dr. Zagožen je član delovne skupine in vsi smo enotni. Gre samo za isto zadevo; delovna skupina se morebiti dopolni z dodatnim članom, npr. dr. Ribičičem, se sestane za 10 minut in predložimo skupščini končno besedilo. To je bil predlog. Ugotavlja pa se hkrati, da je pozno in da ne bi zavlačevali zadev. Zato bi dal predlog v presojo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg422">Potem dajem najprej na glasovanje predlog, ali s to skupino danes nadaljujemo ali preložimo za prihodnjič. Za sleherno glasovanje moramo najprej ugotoviti prisotnost. Koliko je prisotnih poslancev Družbenopolitičnega zbora?</seg>
                <note>34 prisotnih.</note>
                <seg xml:id="SSK11-VsiZbor.1990-05-16.s002-01.seg423">Prisotnih je 34 članov, kar pomeni nesklepčnost. Delegate Zbora občin, prosim, da dvignete roko.</seg>

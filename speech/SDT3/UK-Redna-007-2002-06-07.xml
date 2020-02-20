@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDT3-UK-Redna-007-2002-06-07"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje delovnih teles Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the working bodies of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Ustavna komisija: 7. redna seja (7. 6. 2002)</title>
-            <meeting n="7"
-                     corresp="#SDT3-UK-Redna-007-2002-06-07.UK"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="7" corresp="#UK" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="3" corresp="#DZ" ana="#parl.term #DZ.3">3. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,36 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">USTAVNA KOMISIJA DRŽAVNEGA ZBORA REPUBLIKE SLOVENIJE</title>
-                  <title xml:lang="sl">(7. seja)</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Nepreverjen zapis seje</edition>
-                  <edition xml:lang="en">Unverified session record</edition>
-                  <idno type="custom" subtype="session">038BCDA568A3C6CCC1256BC700532173</idno>
-                  <idno type="custom" subtype="day">A08B02631338E98DC1256BD500214B4D</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=magdt&amp;uid=A08B02631338E98DC1256BD500214B4D</idno>
-                  <imprint>
-                     <date when="2002-06-07">7. junij 2002</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>Ustavna komisija: 7. redna seja (7. 6. 2002)</title>
+               <edition xml:lang="sl">Nepreverjen zapis seje</edition>
+               <edition xml:lang="en">Unverified session record</edition>
+               <date when="2002-06-07"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=magdt&amp;uid=A08B02631338E98DC1256BD500214B4D</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="10"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="7"/>
                <tagUsage gi="seg" occurs="10"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -103,52 +86,48 @@
                <date when="2002-06-07" ana="#parl.sitting">7. 6. 2002</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDT3-UK-Redna-007-2002-06-07.UK"
-                 ana="#parl.committee"
-                 corresp="#UK">
-               <orgName>Ustavna komisija</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>USTAVNA KOMISIJA DRŽAVNEGA ZBORA REPUBLIKE SLOVENIJE</head>
             <head type="session">(7. seja)</head>
-            <docDate>7. junij 2002</docDate>
             <note type="chairman">Sejo je vodil Borut Pahor, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.12 uri.</note>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg1">
                   <gap reason="inaudible"/> potrditev osnutka, na splošno razpravo mandatu predsednika, sodstvu, poslanski imuniteti, volilnih pravic in državnih simbolih, pač odvisno od tega, kolikor nam bo danes v teku dneva to uspelo.</seg>
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg2">Sprašujem, ali je kakšen drugačen predlog za sprejem dnevnega reda? Prosim, kolega Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDT3.ŠkolčJože" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg3">Se vnaprej opravičujem, ampak sprašujem, ali ne velja dogovor, ki smo ga sklenili, da se začnejo razpravo o posameznih sklopih šele potem, ko dobimo dva dni prej strokovno mnenje teh skupin?</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg4">Seveda, če bo ustavna komisija vztrajala pri tem, potem danes na te točke dnevnega reda ne moremo priti, ker strokovna skupina tega še ni pripravila. Dr. Cerar, ali lahko pojasnite?</seg>
             </u>
             <note type="speaker">DR. MIRO CERAR:</note>
-            <u who="#SDT3.CerarMiran" ana="#regular">
+            <u who="#CerarMiro">
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg5">Hvala lepa. POjasnilo bo zelo kratko. Strokovna skupina pač še ni uspela pripraviti stališč za teh vprašanj. Enostavno gre za veliko dela, ki ga v tako kratkem času ta strokovna skupina ni mogla skoordinirati in pripraviti do te stopnje, da bi lahko izdelala neko pisno poročilo za sejo ustavne komisije.</seg>
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg6">Morda še to omenim. Nazadnje je bil sklic strokovne skupine 31.5., to je bilo v petek, se pravi pravzaprav slab teden pred današnjo sejo. Takrat je tudi prišlo do situacije, da je bila naša skupina nesklepčna, ker je imelo veliko število članov druge nujne obveznosti. Namreč v tem času, morate razumeti, tudi večinoma profesorjev ima izpite in druge stvari, tako da je prišlo do neke tovrstne zagate in skupina dela naprej, velikost skupine, vendar pa kot sem rekel, zaenkrat mnenja o teh vprašanjih še ni uspela izdelati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg7">Tukaj je bilo pojasnjeno. Jaz sem sklical Ustavno komisijo v upanju, da bo morda strokovna komisija te predloge svojih stališč le pripravila. To se ni zgodilo. Zdaj se pač moramo odločiti, ali prekinemo današnje delo, se sestanemo takrat, ko bomo stališča strokovne skupine imeli, ali pa razpravo vseeno začnemo. Lahko se odločimo tudi, da smo dosledni svojim sklepom in da razprave ne začnemo. Sprašujem ustavno komisijo, kakšno je stališče. Prosim, kolega Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDT3.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg8">Hvala lepa. Da se pač neha enkrat s temi negotovostmi bi predlagal, da se tistih sprejetih dogovorov enostavno držimo in da delamo tako, kot smo se dogovorili. Bomo pa drugič. Saj smo že tolikokrat zastonj sedeli, pa bomo mogoče še enkrat.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg9">Dobro. Potem bom ugotovil, če ni drugačnih mnenj, da torej pogoji za nadaljevanje, spričo dejstva, da strokovna komisija ni pripravila stališč, niso izpolnjeni in da bom obvestil čimprej člane Ustavne komisije, kdaj bomo sklicali naslednjo sejo Ustavne komisije.</seg>
                <seg xml:id="SDT3-UK-Redna-007-2002-06-07.seg10">V ponedeljek sta dve predstavitvi mnenj. Vabim članice in člane Ustavne komisije, da pridejo na predstavitev. Hvala lepa.</seg>
             </u>

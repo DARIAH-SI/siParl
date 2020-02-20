@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 22. zasedanje</title>
             <meeting n="22"
-                     corresp="#VsiZbor.1991-12-23.z022-01.DruzPolZb #VsiZbor.1991-12-23.z022-01.ZbObc #VsiZbor.1991-12-23.z022-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="7"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="3"/>
                <tagUsage gi="seg" occurs="37"/>
             </namespace>
@@ -128,23 +119,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-12-23.z022-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-12-23.z022-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-12-23.z022-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -154,21 +128,25 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">22. zasedanje</head>
             <docDate>23. december 1991</docDate>
             <note type="chairman">Sejo je vodil Ivan Bizjak, predsednik Zbora občin</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.32 uri.</note>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-12-23.z022-01.seg1">Spoštovane delegatke in delegati, gospe in gospodje, spoštovani gostje! Pričenjam skupno zasedanje vseh treh zborov Skupščine Republike Slovenije, na katerem bomo poslušali UVODNO BESEDO PREDSEDNIKA Komisije Skupščine Republike Slovenije za ustavna vprašanja, dr. Franceta Bučarja, K PREDLOGU USTAVE REPUBLIKE SLOVENIJE IN PREDLOGU USTAVNEGA ZAKONA ZA IZVEDBO USTAVE Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-12-23.z022-01.seg2">Prosim predsednika, dr. Franceta Bučarja, da poda uvodno besedo.</seg>
             </u>
             <note type="speaker">DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#regular">
+            <u who="#BučarFrance">
                <seg xml:id="SSK11-VsiZbor.1991-12-23.z022-01.seg3">Spoštovano predsedstvo, spoštovani visoki zbor! Pred seboj imate predlog ustave Republike Slovenije, ki vam ga v sprejem predlaga ustavna komisija v skladu s 438. členom sedaj še veljavne republiške ustave. Ta predlog je zasnovan na osnutku ustave, kot ga je skupščina sprejela 12.10.1990. Nadalje, na javni razpravi, ki je tekla od sprejema osnutka ustave formalno dva meseca, dejansko pa vse leto. Nadalje, na vrsti posebnih ločenih dogovorov s posameznimi parlamentarnimi strankami in končno razprav, ki so tekle v ustavni komisiji vse do neposredne predložitve tega osnutka.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-12-23.z022-01.seg4">Čas za pripravo tega predloga zajema tako obdobje več kot enega leta. Prehitevajoči se dogodki zadnjega leta, v katerem je prišlo do plebiscita o samostojnosti Slovenije, temeljne ustavne listine o samostojnosti in neodvisnosti Republike Slovenije in neposredno zatem kratke in uspešne obrambne vojne ter istočasni proces ločevanja Slovenije iz normativnega okvira dotedanje Jugoslavije, so to obdobje zapolnili z nujo po celi vrsti sprotnih ukrepov, ki pa so bili večinoma ustavnega značaja.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-12-23.z022-01.seg5">Zato je bilo treba delo na novi ustavi neprestano prekinjati zaradi priprav amandmajev k obstoječi ustavi. Število teh amandmajev, kot sami veste, je naraslo do številke 100, kar nam je sicer omogočilo prehod v samostojno državnost, brez kašnih večjih družbenih pretresov, hkrati pa pripeljalo do izredno velike ustavne in splošne normativne nepreglednosti, ki sama po sebi narekuje potrebo po novi kodifikaciji temeljnih pravil družbenega sožitja.</seg>
@@ -206,7 +184,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-12-23.z022-01.seg36">Končno naj omenim še spodrsljaj, ki se je naredil v Ustavni komisiji, da je namreč zaradi same jasnosti in same po sebi razumljivosti izpustila na koncu člen, ki bi ga morala v samo ustavo vnesti, namreč, da določimo podlago k temu ustavnemu zakonu, o katerem pravkar govorim. Moramo povedati, za izvedbo te ustave in za zagotovitev prehoda k uporabi določb te ustave sprejemamo ustavni zakon, da ustavni zakon sprejemamo z dvotretjinsko večino glasov v vseh zborih Skupščine Republike Slovenije. Torej predlagam, kolikor sprejmemo ustavo, da sprejmemo tudi ta izvedbeni zakon.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-12-23.z022-01.seg37">Zahvaljujem se predsedniku dr. Bučarju za podano uvodno besedo in zaključujem Skupno zasedanje vseh zborov Skupščine Republike Slovenije. Zbori takoj nadaljujejo delo v svojih dvoranah. Hvala lepa.</seg>
             </u>
             <note type="time">Seja je bila končana 23. decembra 1991 ob 11.15 uri.</note>

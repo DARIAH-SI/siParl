@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 3. seja</title>
             <meeting n="3"
-                     corresp="#VsiZbor.1990-06-13.s003-01.DruzPolZb #VsiZbor.1990-06-13.s003-01.ZbObc #VsiZbor.1990-06-13.s003-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="158"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="12"/>
                <tagUsage gi="seg" occurs="266"/>
                <tagUsage gi="gap" occurs="4"/>
@@ -376,23 +367,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1990-06-13.s003-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-06-13.s003-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-06-13.s003-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -403,16 +377,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">3. seja</head>
             <docDate>13. junij 1990</docDate>
             <note type="chairman">Sejo je vodil dr. France Bučar, predsednik Skupščine Republike Slovenije</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.30 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg1">Začenjam 3. skupno sejo vseh zborov Skupščine Republike Slovenije, ki sem jo sklical na podlagi 340. člena Ustave Republike Slovenije in 134. člena Poslovnika Skupščine Republike Slovenije. Poleg delegatov vseh treh zborov so navzoči tudi nekateri člani Izvršnega sveta Skupščine Republike Slovenije. Najprej bomo ugotovili sklepčnost seje, zato prosim najprej delegate Družbenopolitičnega zbora, da pritisnejo na tipko. Ugotavljam, da je navzočih 56 članov Družbenopolitičnega zbora, kar zagotavlja sklepčnost. Potem prosim delegate Zbora občin, da s pritiskom na tipko pokažejo svojo prisotnost. Torej, ugotavljam, da je 64 navzočih poslancev tega zbora iz česar sledi, da je dana sklepčnost in sedaj še delegati Zbora združenega dela. Navzočih je 66 članov tega zbora in zato ugotavljam, da je podana sklepčnost tudi tega zbora, kar pomeni, da je skupna seja na podlagi 2. točke 72. člena amandmaja Ustave Republike Slovenije in prvega odstavka 135.člena poslovnika Skupščine Republike Slovenije sklepčna. Predlog dnevnega reda za današnjo sejo ste prejeli s sklicem seje. Predlagam še, da razširimo dnevni red še s 3. točko dnevnega reda, to so volitve in imenovanja, tako da dosedanja 3. in 4. točka postaneta 4. in 5. točka dnevnega reda. Ali želi k predlogu dnevnega reda z dopolnitvijo, ki sem jo ravnokar predlagal, kdo razpravljati? Kolikor vidim, nihče. Dajem predlog dnevnega reda na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg2">Kdo je za?</seg>
                <note>183 delegatov.</note>
@@ -448,7 +426,7 @@
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg24">Komisija za volitve, imenovanja in administrativne zadeve je glede na to, da so bili na ločenih sejah zborov sprejeti odloki o ustanovitvi, nalogah, sestavi in številu članov sedem komisij, predložila kandidatne liste za izvolitev predsednikov, podpredsednikov in članov sedmih skupščinskih komisij, in sicer Komisije Skupščine Republike Slovenije za ustavna vprašanja, Zakonodajno-pravne komisije, Komisije za narodnosti, Komisije za vloge in pritožbe, Komisije za nadzorstvo nad zakonitostjo dela službe državne varnosti, Komisije za mednarodne odnose, Komisije za celovito proučitev okoliščin, posledic in pojavov oškodovanja družbenega premoženja. Predloge kandidatur ste prejeli danes. Glede na to, da imate vsi delegati pred seboj predloge kandidatnih list, menim, da ni potrebno, da jih še enkrat berem. Predlogi kandidatur so sestavljeni na podlagi 359. člena Poslovnika Skupščine Republike Slovenije, ki določa, da mora biti na vsaki kandidatni listi poleg kandidata za predsednika in podpredsednika še toliko kandidatov, kolikor članov komisije se voli. Ali želi besedo predstavnik predlagatelja, to je Komisije za volitve, imenovanja in administrativne zadeve. Očitno ne. Torej, predlog kandidatur dajem v razpravo. Želi kdo besedo? Prosim.</seg>
             </u>
             <note type="speaker">MARIJA MARKEŠ:</note>
-            <u who="#SSK11.MarkesMarija" ana="#regular">
+            <u who="#MarkešMarija">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg25">Nimam vsebinskih pripomb na te predloge, imam pa formalen predlog oziroma prošnjo. Prosim, da ta skupščina začne v svojem poslovanju dosledno uporabljati ženski spol iz jezikovnih vljudnostni in drugih nagibov. Primer moje kandidature za izvolitev podpredsednika Komisije Skupščine Republike Slovenije za vloge in pritožbe. Kandidat za podpredsednika sem jaz, Marija Markeš, ker sem kandidatka za podpredsednico. Sicer sem rojena 1962. leta, vendar nisem diplomirani inženir kmetijstva, ampak diplomirana inženirka kmetijstva. Poleg tega tudi nisem delegat v Družbenopolitičnem zboru, ampak delegatka v Družbenopolitičnem zboru. In ker sem že pri besedi, naj riskira ta skupščina fotokopije in namesto delegat v tale plastičen škrnicelj namesti tudi ime delegatka. Čeprav nas je malo, bi rada, da vendarle opazite, da smo. In prosim <gap reason="inaudible"/>
                </seg>
                <note>Ploskanje.</note>
@@ -456,11 +434,11 @@
                   <gap reason="inaudible"/>, da se takšna "skropocala", kot so listki s temi kandidatnimi listami, več ne pojavijo na naših mizah, ker sem šla gledat, dosledno se ne zna uporabljati ženskega spola v teh pisarijah. Prosim za razumevanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg27">Hvala lepa. Torej, jaz prosim delegatki in bomo poskušali v naslednjem te stvari popraviti. Želi še kdo razpravljati? Če ne, prehajamo na glasovanje. V skladu z drugim odstavkom 355. člena poslovnika skupščine, se o predsednikih, podpredsednikih in članih komisij glasuje javno, razen če delegati na predlog predsednika, ali delegata, ali delegatke sklenejo, da se glasuje tajno. Torej sprašujem delegate, ali predlaga kdo tajno glasovanje. Ne vidim, da bi se kdo prijavil k besedi, iz tega sledi, da bo glasovanje javno. Torej prehajamo na glasovanje. Najprej bi glasovali za izvolitev predsednika, za podpredsednika in članov Komisije skupščine Republike Slovenije za ustavna vprašanja. Kandidatna lista za ustavna vprašanje je prva stvar, o kateri moramo glasovati, glede na to, kot je razvidno iz predloga sem kandidat jaz, zato prosim, da ta del razprave vodi podpredsednik.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VANO GOŠNIK:</note>
-            <u who="#SSK11.GosnikVane1953" ana="#regular">
+            <u who="#GosnikVane1953">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg28">Ali je kakšna razprava o tem predlogu? Kandidatna lista predsednika, podpredsednike in člane Komisije Skupščine Republike Slovenije za ustavna vprašanja je naslednja:</seg>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg29">Predsednik dr. France Bučar, mislim, da ni treba da berem generalije, ki so napisane. Podpredsednika Vitodrag Pukl, Miran Potrč. Člani: dr. Leo Šešerko, dr. Franc Zagožen, dr. Ludvik Toplak, Andrej Magajna, Ciril Kolešnik, Danijel Starman, Ivan Bizjak, dr. Rajko Pirnat, dr. Primož Rode, Tone Peršak, Zvone Žagar, Roberto Battelli, Vilijem Sekereš, Zdravko Zabukovec, dr. Ciril Ribičič, Danilo Bašin, Ludvik Gumilar, Darja Lavtižar-Bebler, Tone Anderlič, Boštjan Kovačič, Mojmir Ocvirk in Franco Juri.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg30">Torej predlagam, da izvedemo glasovanje o predsedniku Komisije Skupščine Republike Slovenije za ustavna vprašanja. Mislim, da prisotnosti ni treba preverjati.</seg>
@@ -615,11 +593,11 @@
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg125">Kdo je za? Pardon, ali želite razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">ANDREJ VERLIČ:</note>
-            <u who="#SSK11.VerlicAndrej" ana="#regular">
+            <u who="#VerlicAndrej">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg126">Očitno je prišlo do pomote. Sprašujem, kdo je predlagal Janeza Kopača? Prebrali ste Janez Kopač, zato sem tudi prišel sem intervenirati. Če je tako, se oproščam. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg127">Potem mislim, da lahko glasujemo. Ali želi še kdo razpravljati?</seg>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg128">Potem prehajamo na glasovanje. Najprej glasujemo o predsedniku.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg129">Kdo je za?</seg>
@@ -764,7 +742,7 @@
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg213">Izvršni svet Skupščine Republike Slovenije predlaga, da se razreši Božo Janhuba dolžnosti namestnika predsednika Republiškega komiteja za mednarodno sodelovanje in hkrati imenuje Zoran Thaler za namestnika predsednika Republiškega komiteja za mednarodno sodelovanje. Predlog Izvršnega sveta in mnenje Komisije za volitve, imenovanja in administrativne zadeve ste prejeli danes na klop. Želi besedo predstavnik predlagatelja? Želi besedo predstavnik komisije? Želi o predlogu kdo razpravljati?</seg>
             </u>
             <note type="speaker">MILE ŠETINC:</note>
-            <u who="#SSK11.SetincMile1956" ana="#regular">
+            <u who="#SetincMile1956">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg214">Vnaprej bi rad povedal, da mi je ta diskusija skrajno neprijetna, vsekakor najbolj od vseh do zdaj v tej skupščini, vendar čutim dolžnost, da povem, da bom glasoval proti in da tudi javno pojasnim, zakaj bom glasoval proti in seveda tudi ne skrivam hudobnih namenov, da bi še koga pridobil na svojo stran.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg215">Namreč, jaz, tudi zato je potrebno pojasnilo, ker gre za kolega iz stranke in je seveda na prvi pogled nenavadno, da oporekam tej kandidaturi.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg216">Ne zanikam tega, kot je že rekel gospod Rupel, da je kolega Zoran Thaler sposoben mlad politik in ne oporekam temu, da poslanec, ki se imenuje Zoran Thaler ima tudi vse temu položaju in njegovi osebi nasploh pripadajoče človekove pravice, med njimi tudi to, da si sam izbira službo, za katero meni, da ustreza njegovim sposobnostim in ambicijam. Toda Zoran Thaler je med drugim tudi poslanec Liberalne stranke, izvoljen na listi ZSMS LS, izvoljen v veliki meri seveda tudi po zaslugi ugleda in programa same stranke. Vsekakor je nenavadno, da nekdo iz opozicije zavzame relativno pomemben položaj v vladi oziroma v vladnih službah in menim, da se boste strinjali z mano, da to ni nobena uradniška strokovna funkcija, da gre tu, kot že ime pove, za namestništvo ministra, da v določenih primerih namestnik tudi opravlja ministrske funkcije in torej deluje kot pravi minister. za nas je to nerodno, ker gre za enega od prvakov te stranke in za človeka, ki, kot ste tudi sami opazili, je igral določeno, ne nepomembno aktivno vlogo v dosedanjih parlamentarnih razpravah in končno tudi parlamentarnih bojih med vladajočo koalicijo in opozicijo.</seg>
@@ -772,16 +750,16 @@
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg218">Skratka, predlagam, da človeka ne spravljamo v nemogoč položaj, da ga torej odrešimo teh bodočih muk in da zavrnemo njegovo kandidaturo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg219">Hvala. gospod Thaler.</seg>
             </u>
             <note type="speaker">ZORAN THALER:</note>
-            <u who="#SSK11.ThalerZoran1962" ana="#regular">
+            <u who="#ThalerZoran">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg220">Spoštovane poslanke in poslanci! Moram tako, kot je kolega Šetinc izrazil javno skrb za mojo psihofizično stanje in eventualno shizofrenost, seveda vam zagotoviti, da kar se mene tiče, teh problemov ni, me pa seveda skrbi za to stranko, za katero tudi kolega pravi, da sem pri njej zelo dosti prispeval in je tudi tale moja poteza en del nje, gre tudi za to, da še naprej prispevam za to stranko. Meni je žal, da kolega Šetinc teh vprašanj ni sprožil na našem poslanskem klubu in da se je odločil za metodo razprave pred tem širokim avditorijem in zato moram to sprejeti; po moje je zelo nespametno ne sodelovati pri uresničevanju tiste politike, ki smo jo tudi mi obljubljali volivcem, vsaj recimo 3/4 delu in moja odločitev, da zdaj, ko je mogoče uresničevati resnično evropsko orientacijo slovenske zunanje politike, da grem tja in pripomorem k temu, za kar sem se sam boril v tej stranki, bivši MO, potem ZSMS LS in tisti kratek čas, ki sem ga preživel v slovenskem parlamentu v času starega režima.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg221">Tako da, čeprav to je verjetno bolj razprava za poslanski klub, mene skrbi to veseljačenje nad tem, da naj bi mi zdaj, ko je prišlo do spremembe tega režima, če smo bili prej opozicija, bili spet ponovno po definiciji opozicija. Meni se zdi to shizofrena situacija. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg222">Želi še kdo razpravljati?</seg>
                <note>Nihče.</note>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg223">Dajem predlog na glasovanje.</seg>
@@ -851,11 +829,11 @@
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg262">Sedajle pa najprej sprašujem predstavnika skupine delegatov, predlagateljev poziva, za mnenje o nadaljnji obravnavi in sprejemu poziva, glede na stališče Izvršnega sveta in glede na to, da je že sprejet odlok o ustanovitvi komisije. Prosim, predlagatelja da se izjavi.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SSK11.PodobnikMarjan1960" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg263">Glede na to, da je Izvršni svet podal mnenje, nekako negativno mnenje na sam poziv, pozitivno pa o tem, da se sprejme predlog o ustanovitvi oziroma o odloku o ustanovitvi komisije, ki je bila tudi predlagana oziroma del tega poziva, umikamo našo zahtevo, da se sprejme ta poziv kot celoto, s tem da se pa na današnji seji sprejme odlok o ustanovitvi in imenovanju te komisije, to kar je bilo sedajle tukajle že storjeno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg264">Hvala lepa. Želi še kdo razpravljati?</seg>
                <note>Nihče.</note>
                <seg xml:id="SSK11-VsiZbor.1990-06-13.s003-01.seg265">Če ne želi nihče več razpravljati, je ta točka izčrpana, predlog je torej umaknjen in preidemo, v kolikor je potrebno, na naslednja vprašanja. Mnenje je, da bi ta vprašanja obravnavali zbori v nadaljevanju.</seg>

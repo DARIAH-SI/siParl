@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ1-Redna-02-1993-01-12"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">2. redna seja (12. 1. 1993)</title>
-            <meeting n="2"
-                     corresp="#SDZ1-Redna-02-1993-01-12.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="1" corresp="#DZ" ana="#parl.term #DZ.1">1. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,26 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje
                      avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">2. seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="session">85776B33FFEBEBD1C1257832004838BC</idno>
-                  <idno type="URI">85776B33FFEBEBD1C1257832004838BC</idno>
-                  <imprint>
-                     <date when="1993-01-12">(12. januar 1993)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>2. redna seja (12. 1. 1993)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1993-01-12"/>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="385"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="179"/>
                <tagUsage gi="seg" occurs="783"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -952,23 +936,21 @@
                <date when="1993-01-12" ana="#parl.sitting">12. 1. 1993</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ1-Redna-02-1993-01-12.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR</head>
             <head type="session">2. seja</head>
-            <docDate>(12. januar 1993)</docDate>
             <note type="chairman">Sejo vodi: MAG. HERMAN RIGELNIK, predsednik Državnega zbora Republike Slovenije in Miroslav Mozetič, podpredsednik zbora</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.02 uri</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg1">Spoštovane poslanke in kolegi poslanci, gospe in gospodje! Pričenjam 2. sejo Državnega zbora Republike Slovenije, ki sem jo sklical na podlagi posvetovanj z vodji poslanskih skupin, v skrajšanem roku. Ko pričenjamo delo, ki bo opredeljevalo bodočnost naše republike in odločalo o njenem razvoju in nadaljnjem vključevanju v skupnost razvitih narodov, želim vsem nam, da bi v strpnem, medsebojnega spoštovanja polnem dogovoru izvrševali želje in voljo naših volivcev. Upam, da v imenu vseh lahko zagotovim, da bomo v tem zboru delovali izključno na principih demokracije in v interesu državljank in državljanov Republike Slovenije.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg2">Skupina poslancev je ob vložitvi predloga zakona o Vladi Republike Slovenije navedla razloge, zakaj je potrebno sklicati to sejo v skrajšanem roku. Razlogi so razvidni iz spremnega pisma k predlogu tega zakona, ki ste ga prejeli s sklicem te seje. Po sklepu zbora s prejšnje seje bo do imenovanja sekretarja zbora to funkcijo opravljal vršilec dolžnosti generalnega sekretarja Državnega zbora gospod Bogdan Biščak.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg3">Za današnjo sejo zbora so se vodjem poslanskih skupin opravičili poslanke in poslanci: dr. Dušan Bavdek, poslanska skupina Združene liste, Irena Oman, poslanska skupina Slovenske nacionalne stranke, dr. Peter Tancig, poslanska skupina Zelenih.</seg>
@@ -995,38 +977,38 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg20">Pričenjam razpravo. Kdo želi besedo? Prosim. O hitrem postopku.</seg>
             </u>
             <note type="speaker">FRANC ČERNELIČ:</note>
-            <u who="#SDZ1.ČerneličFranc" ana="#regular">
+            <u who="#ČerneličFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg21">Spoštovani predsednik, spoštovani poslanci in poslanke! Predlagam, da 7. in 8. točko dnevnega reda sprejemamo po rednem postopku. To sta pod 7. - predlog zakona o spremembah zakona o delavcih v državnih organih in predlog zakona o funkcionarjih v državnih organih - točka 8. Obrazložitev:</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg22">V gradivu ni predložena nobena analiza stanj in posledic sprejetja zakona po hitrem postopku. Predlog zakona je z vidika finančnega ministrstva umesten, vendar je potrebno več storiti za pridobivanje sredstev in za razporeditvi po prioritetah. Med prioritete prav gotovo sodi tudi funkcioniranje državne uprave. Gospodarstvu je potrebno pomagati, vendar z drugimi ukrepi. Javna poraba ni le osebni dohodek v upravi. Že kratka analiza pove, da bi s sprejetjem zakonov ostvarili nesprejemljive disproporce na področju uporabnikov proračunskih sredstev. Predvsem bi to prizadelo Vrhovno sodišče, sodišče, sodstvo, upravo, inšpekcije in druge. Vlada ni posredovala izhodišča za januar 1993, na osnovi katerega bi lahko opravili potrebne primerjave. Za sprejemanje predlaganih zakonov brez primerjav in izhodišč nimamo poslanci moralne niti strokovne osnove. Predlagam, da vsi poslanci podpremo enotno izhodišče, izhodiščno vrednotenje vseh porabnikov družbenih sredstev za potrebe osebnega dohodka, ne samo za delavce in funkcionarje v državni upravi. Argumentov je več kot dovolj, da podpremo redno sprejemanje predlaganih zakonov po temeljito pripravljenih primerjavah. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg23">Hvala lepa, gospod Černelič. Želi še kdo?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg24">Ker ne želi. Prosim.</seg>
             </u>
             <note type="speaker">DR. DAVORIN KRAČUN:</note>
-            <u who="#SDZ1.KračunDavorin" ana="#regular">
+            <u who="#KračunDavorin">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg25">Mislim, da je v zvezi s 7. in 8. točko potrebno sklepati po takšnem postopku, kot je bil predviden. Razlog je v tem, ker bi v nasprotnem primeru finance zelo težko kontrolirale nadaljnjo porabo in predvsem gre za segment, ki je sicer v gospodarstvu neobvladan. Zato priporočam dokler se ustrezne pogodbe oziroma socialni pakt ne sklene, da v tem času najdemo vmesno rešitev, ki bo omogočila, da finance normalno poslujejo in ki ne bo privedla do zloma proračuna. Zato predlagam, da obravnavamo zadevo tako je predvideno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg26">Hvala lepa gospod Kračun. Želi še kdo? Prosim.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg27">Podpiram predlog gospoda Černeliča iz vrst Krščanskih demokratov. Menim, da je predlog za redni postopek utemeljen, predvsem zato, ker so potrebni izračuni, ki bodo tudi pokazali, da je linearno zniževanje lahko tudi zelo problematično. Predvsem se ustvarja vtis, da so tu izjemno visoke plače. Dejstvo pa je, da se s tem predlogom znižujejo tudi plače, ki imajo zdaj 20.000 tolarjev in gredo pod normalen minimum. Zato menim, da bi prav z rednim postopkom  zagotovili tako sklepanje, ki ne bo stvari poslabšalo in ne izboljšalo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg28">Hvala lepa. Želi še kdo? Prosim!</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI, minister za finance:</note>
-            <u who="#SDZ1.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg29">Gospod predsednik, gospe in gospodje poslanci! Če ta zakon, kakorkoli imenujete postopek, ne bo v najkrajšem času sprejet, ne prevzemam odgovornosti za nadaljnje izvajanje proračuna leta 1993, ker ga ni mogoče izvajati. Nadaljevanje postopkov, kot so zdaj na področju plač, tako javne uprave kot družbenih dejavnosti, onemogoča kakršnokoli normalno vodenje proračuna v tem letu. Izračuni, ki jih imamo seveda na Ministrstvu za finance in ki sem jih že nekajkrat javno povedal kažejo, če se nadaljuje praksa izplačevanja osebnih dohodkov v skladu z sedaj veljavnim zakonom, bodo uslužbenci v državni upravi in pa sedaj veljavnimi kolektivnimi pogodbami, bo to obremenilo proračun v letošnjem letu za nadaljnji 38 milijard tolarjev, ki jih ta proračun seveda nima oziroma bi prišel v primanjkljaj, ki bi bil večji od milijarde nemških mark. Za takšen primanjkljaj država nima denarja. Ministrstvo za finance tega ne more zagotoviti in jaz bom pač moral potegniti svoje konsekvence, če se tak zakon ne bo sprejel, ker potem minister za finance ne more več odgovarjati za državne finance. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg30">Hvala lepa. Želi še kdo razpravljati, prosim? Ker ne želi nihče več razpravljati, zaključujem razpravo in prehajamo na glasovanje o posameznih predlogih za hitri postopek.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg31">Na glasovanje dajem predlog, da se predlog zakona o Vladi Republike Slovenije obravnava in sprejme po hitrem postopku.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg32">Ugotovimo prosim, sklepčnost!</seg>
@@ -1071,29 +1053,29 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg56">Prehajamo na glasovanje o predlogu dnevnega reda. Ima v zvezi s predlogom dnevnega reda kdo kakšno pripombo? Gospod Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg57">Spoštovani! Glede na razprave, ki so bile na nivoju predstavnikov strank pred prvim zasedanjem Državnega zbora in ob konstituiranju v zvezi z volitvami podpredsednikov in glede na enotno oceno, da bi bilo prav, da so med funkcionarji parlamenta zastopani tako predstavniki pozicije kot opozicije predlagam, da omogočimo odločanje vsem nam o tem vprašanju takrat, ko bo znano, kakšno je razmerje, kdo je v poziciji in kdo v opoziciji. Zato predlagam, da 9. točko dnevnega reda volitve podpredsednika Državnega zbora umaknemo oziroma preložimo na čas, ko bo znano, kdo je v poziciji in kdo je v opoziciji. To je prvi predlog.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg58">Druga stvar pa 11. točka, odobritev zapisnika 1. seje Državnega zbora. Lahko je danes izjema zaradi pomembnih točk dnevnega reda sicer pa menim, da je zaradi vsebinskih razlogov nujno najprej vedno odobriti zapisnik prejšnje seje Državnega zbora, da se tudi ugotovi, ali so stvari korektne, ker imajo lahko, tudi vsebinske posledice. In.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg59">Glede 12. točke predlagam, da vprašanja in pobude poslancev, ni nujno, da danes pač v prihodnje, ostanejo kot je bilo praksa v preteklosti v prvem delu državnega zbora. To je ena od temeljnih pravic in možnosti poslancev, da opozorijo na pereča vprašanja v svojem okolju in v družbi kot v celoti in menim, da s tem, ko jih postavljamo na zadnje mesto, jim že tudi postavljamo težo, torej jim dajemo majhno težo. Zato menim, da bi bilo prav, da bi v prihodnje veljalo, da bi bile tudi pobude poslancev, saj kratka predstavitev, kot 1. oziroma kot 2. točka dnevnega reda. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg60">Gospod Podobnik če dovolite samo eno vprašanje. Predlagate to že za današnjo sejo?</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg61">Jaz sem povedal, da če je bilo to predlagano prav zato, ker imamo volitve, spremljanje zakona o vladi, mandatarja in tako naprej, da bi se lahko odločili in opredelili, da bi to veljalo za prihodnje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg62">Hvala lepa. Prosim.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SDZ1.RupelDimitrij" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg63">Gospod predsednik, predlog gospoda Podobnika ima svojo logiko. Da bi namreč funkcionarska mesta oz. vodilna mesta v parlamentu določali glede tudi na vodilna mesta v vladi. Vendar smo doslej opravili nekaj bistvenih opravil v zvezi s tem že v parlamentu. Imamo predsednika parlamenta in dva podpredsednika, ki jih nismo volili po takšnem načinu, kot ga gospod Podobnik predlaga. Sem zoper to, da bi naredili pri tretjem podpredsedniku izjemo in bi samo tega podpredsednika vezali na volitve vlade. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg64">Hvala lepa. Želi še kdo? Če ne, bi glede teh dveh predlogov gospoda Podobnika in gospoda Rupla želel reči tole: kot veste, je predlog dnevnega reda za današnjo sejo določen na podlagi posvetovanj z vodji poslanskih skupin dne 30.12 in 7.1.1993, o čemer ste prejeli izvlečke iz zapisa posvetovanj v skladu z začasnim poslovnikom. Prav tako je v skladu z začasnim poslovnikom na dnevni red mogoče uvrstiti le zadeve, ki jih poprej že obravnavajo delovna telesa. Pri zakonu o vladi in drugih zakonih, ki so uvrščeni v predlog dnevnega reda za današnjo sejo, smo na podlagi izrecnega dogovora z vodji poslanskih skupin upoštevali v prvi vrsti razloge za skrajšanje rokov za sklic seje pri sprejemanju zakona o vladi in pa resnične prioritete zakonskega urejanja s tem, da so vsi predlogi zakona predloženi s strani skupine poslancev. In gre, torej vsaj glede predložitev za dovolj visoko stopnjo soglasja. Zato ste poročilo začasnega delovnega telesa prejeli danes na klop. Na prejšnji konsenz za izjemno postopanje o skrajšanih rokih bi torej lahko uveljavljali prek vodij svojih skupin. Ker gre tu za primer pobude, da se umakne z glasovanja točka volitve podpredsednika državnega zbora, predlagam, da v zvezi s tem sprejmemo določeno stališče in predlagam, da o tem glasujemo. Ugotovimo sklepčnost.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg65">Kdo je za to, da se danes glasuje za podpredsednika državnega zbora.? Se opravičujem.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg66">Kdo je za to, da se umakne 9. točka iz dnevnega reda? Prosim? Predlagam, da ponovimo.</seg>
@@ -1122,11 +1104,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg83">Predlog Komisije za volitve, imenovanja in administrativne zadeve, da se za sekretarko zbora imenuje gospo Jožico Velišček, ste prejeli s sklicem te seje. Želi predstavnik Komisije za volitve, imenovanja in administrativne zadeve predstaviti predlog za sekretarko državnega zbora. Prosim.</seg>
             </u>
             <note type="speaker"> TONE ANDERLIČ:</note>
-            <u who="#SDZ1.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg84">Spoštovani! Skladno s sklepi 1. seje Državnega zbora je Komisija Državnega zbora Republike Slovenije za volitve, imenovanja in administrativne zadeve opravila vse aktivnosti vključno s kadrovskim postopkom in ker je imenovanje sekretarja Državnega zbora prioritetna naloga za uspešno delovanje Državnega zbora in na podlagi 12. člena  začasnega poslovnika, predlaga Državnemu zboru, da se imenuje za sekretarko Državnega zbora Republike Slovenije gospa Jožica Velišček. Obrazložitev njenega dosedanjega dela in s tem priporočila ste prejeli pisno. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg85">Hvala, gospod Anderlič. Preden začnemo razpravo v skladu s 1. odstavkom 26. člena začasnega poslovnika, moram ugotoviti, ali je navzoč najmanj po en poslanec vsake poslanske skupine.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg86">Liberalno demokratska stranka,  Slovenski krščanski demokrati, Združena lista, Slovenska nacionalna stranka, Slovenska ljudska stranka, Demokratska stranka, Zeleni Slovenije, Socialno demokratska stranka Slovenije. Hvala.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg87">Pričenjam razpravo. Kdo želi besedo? Ker ne želi nihče razpravljati, zaključujem razpravo.</seg>
@@ -1143,17 +1125,17 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg94">Predlog zakona je zboru predložila skupina poslancev Miroslav Mozetič, Roberto Battelli, Vitodrag Pukl, Miran Potrč, dr. Franc Zagožen, Jožef Školč, Polonca Dobrajc, dr. Leo Šešerko in dr. Dimitrij Rupel. Predlog zakona ste prejeli s sklicem seje. Želi predstavnik predlagateljev podati uvodno obrazložitev? Ne. Predlog zakona je obravnavalo začasno delovno telo v skladu s tretjim odstavkom 17. člena začasnega poslovnika Državnega zbora. Poročilo ste prejeli na klop. Želi poročevalec besedo? Prosim.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg95">Gospod predsednik hvala lepa! Poudaril bi samo 4 stvari. Najprej, da gre za sporazumen predlog vseh poslanskih skupin. Delovno telo, ki je obravnavalo pripombe, se je tudi popolnoma  uskladilo o amandmajih. Amandmajev je 7. 3 so vsebinske narave, 3 so potem logično izpeljava sprejemov vsebinskih in eden je redakcijski. Poleg tega smo sprejeli nekaj dodatnih sklepov in naše priporočilo je, da zbor sprejme amandmaje in tudi zakon v celoti ter vse tri končne sklepe. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg96">Hvala, gospod Školč. Poslance, ki bi želeli vložiti svoje amandmaje prosim, da jih vložijo v pisni obliki ter oddajo pri sekretarki Državnega zbora. Prosim poslanke in poslance, da se pisno prijavijo k razpravi. Preden pričnemo razpravo, moramo v skladu s prvim odstavkom 26. člena začasnega poslovnika ugotoviti, ali je navzoč najmanj po en poslanec iz vsake poslanske skupine.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg97">Liberalno demokratska stranka, Slovenski krščanski demokrati, Združena lista, Slovenska nacionalna stranka, Slovenska ljudska stranka, Demokratska stranka, Zeleni Slovenije, Socialna demokratska stranka Slovenije. Hvala.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg98">Pričenjam razpravo. Kdo želi besedo? Gospod France Bučar.</seg>
             </u>
             <note type="speaker">DR. FRANCE BUČAR:</note>
-            <u who="#SDZ1.BučarFrance" ana="#regular">
+            <u who="#BučarFrance">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg99">Gospod predsednik, spoštovani! Predlog, ki ste ga prejeli, je predlog vseh poslanskih skupin. Iz tega bi torej sledilo skoraj brezpredmetno se oglasiti k razpravi. Vendarle menim, da je treba ob tej priložnosti določene stvari vendarle povedati. In sicer naslednje.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg100">Po naši ustavi je predvideno, da je Državni zbor tisti, ki določa politiko in v to politiko se umeščajo tudi zakoni, ki so pravzaprav izraz določene politike. Vlada to politiko izvaja v tem smislu, da prek državne uprave izvaja to politiko, tako državno upravo - ministrstva - usklaja, koordinira, da je državna uprava samostojna v tem smislu, da deluje kot, bi rekel, stalni mehanizem, ki je na razpolago državi. Moderna država tudi rabi moderno orodje in če hočemo postati moderna država, mora imeti moderno državno upravo. Ta državna uprava mora samostojno in strokovno delovati, celo neodvisno od različnih političnih sprememb in to je treba v delu tega državnega mehanizma kot celote zagotoviti.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg101">Ugotavljam, da ta načela v predloženem zakonu niso upoštevana, nasprotno. V čem se to kaže. Predvsem moram povedati naslednje. Zakon o vladi je del sistema in ga moramo oblikovati strokovno, s strokovnih vidikov in šele na ta strokovni skelet, ki je že dan, se potem tako rekoč obesijo različna politična prerivanja, če smem tako reči, borba za oblast itn. Vidite, ta zakon je pa nastajal prav narobe, iz borbe za posamezna politična mesta se je formiral sistem. Zato pravzaprav sistema ni. Če pogledate kako smo nihali, prvotni predlog še v prejšnjem mandatu, je bilo 21 poslancev, pa smo prišli na 12 poslancev pa smo prišli na 14 poslancev, pa na 15 poslancev, pa na 17, pa najprej 3 podpredsednike in še 3 ministre brez listnice. Sedaj imamo še dva ministra brez listnice. Skratka, prišli smo skoraj več ali manj do tistega, kar imamo sedaj. Zato nastaja vprašanje, ali je sploh potrebno sprejemati novi zakon. Če sedaj upoštevamo še to, da sta, recimo, sedanje Ministrstvo za zakonodajo in Ministrstvo za informiranje v bistvu samo po imenu ministrstvi, ker nimata nobenih upravnih pristojnosti, ampak sta v bistvu strokovna organa, se več ali manj spremeni samo ime, skratka ostane vse tako kot je bilo.</seg>
@@ -1165,11 +1147,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg107">Vidite, vse te stvari niso v tem zakonu upoštevane. Mislim, da je zakon popolnoma in a priori zgrešil svoj cilj. Zato osebno, kot sem že rekel, ne vstavljam nobenih amandmajev, ker menim, da je zakon popolnoma nesprejemljiv in jaz bom glasoval tudi proti temu zakonu. Torej, sestavljalci zakona so večkrat poudarjali, tudi že v prejšnjih diskusijah, ker ta diskusija ni od včeraj, češ ta zakon popolnoma upošteva te stvari, o katerih sem tudi zdaj govoril. Seveda nekdo od sogovornikov je verjetno gluh. In če, moram reči, ne mi zameriti, ampak moram reči, v čem je veličina tega zakona. Veličina zakona je samo v neznanju, v ničemer drugem. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg108">Hvala gospodu Bučarju. naslednji razpravljalec je gospod Štefan Kociper. Prosim.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg109">Spoštovane gospe poslanke, spoštovani gospodje poslanci, spoštovani predsednik! Lep prijazen ponovoletni pozdrav. In če smem nadaljevati v stilu novoletnega voščila, naj zaželim vsem družinam nekoliko sreče z odločitvami nas poslancev glede položaja družin in prijaznejšega odnosa do družine in otrok že v samem zakonu o vladi. Zato zelo kratek prispevek k temu.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg110">Ni mogoče namreč opravičiti dejstva, da se je vsaj deklarirana skrb za družino v naslovu dosedanjega ministrstva za zdravstvo, družino in socialno varstvo izgubila že na sami poti iz real-socialistične skupščine v parlament, potem ko dosedanja vlada navkljub številnim zahtevam pretekle skupščine za družino praktično še ničesar ni ukrenila. Družina dobiva v svetu vse pomembnejše mesto kot subjekt in objekt duhovne, moralne, kulturne in materialne obnove naroda, države in mednarodne skupnosti. Končno dobiva družina v svetu vse večjo težo tudi kot objekt poglobljenega sociološkega, psihološkega, zdravstvenega in čedalje bolj tudi ekonomskega proučevanja, npr. kot subjekt in objekt reševanja socialne stiske oz. zdravega načina Življenja sploh, kot družinska kmetija, kot družinsko podjetje itd. Zato je normalno, da imajo vlade v svetu v svoji sestavi tudi ministrstva oz. ministre ali ministrice za družino in tudi v svoji sestavi institute za družino. In v zadnjem času vse pogosteje izdajo tako obsežne zbornike novejših spoznanj, programskih ciljev in političnih smernic s področja družine in družinske politike, kot je ta zajeten zbornik avstrijske ministrice za družino in njenega Inštituta za družino s pomenljivim naslovom "Lebenswelt: Familie", kar torej pomeni "Družina in njeno življenjsko okolje". Kaj takšnega bo morda pri nas nastalo čez dobra leta, ko bo delovalo ministrstvo za družino in tudi ustrezen inštitut za to področje.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg111">Prepričan sem, da bomo poslanci tega parlamenta odločili v skladu s programskimi cilji, ki smo jih v predvolilnem času predstavljali skoraj v vseh strankah in tako vrnili področje družine ponovno na njeno mesto v ministrstvu, in sicer pri ministru ali ministrici za delo, družino in socialno politiko. Le tako bomo volivcem že prvi trenutek našega odločanja dokazali, da smo v predvolilnem času mislili zares in se bomo tudi v prihodnje v tem parlamentu pošteno odločali za prijaznejšo politiko do otrok in družin in na tem področju končno tudi že kaj ukrenili.</seg>
@@ -1179,11 +1161,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg115">V smislu gornjega amandmaja se redakcijsko dopolni tudi 32. člen. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg116">Hvala lepa gospodu Štefanu Kocipru. Razpravljal bo gospod Franc Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg117">Spoštovane poslanke in poslanci!</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg118">Naša poslanska skupina se sicer strinja, da je treba sprejeti zakon o vladi po hitrem postopku in zato smo tudi podpisali predlog, da gre v postopek. To seveda ne pomeni, da se s tem predlogom v celoti strinjamo in imamo predloge za spremembe v obliki amandmajev.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg119">V veliki meri se strinjam z dr. Bučarjem, da bi bilo najbolje zastaviti nov koncept zakona o vladi. Vendar, če so se poslanske skupine uskladile o tem, da sprejmemo zakon o vladi hitro, preden se bo sestavljala nova vlada, potem poskušamo ta predlog spremeniti v tej smeri, kot je svoje poglede razložil dr. Bučar in mislimo, da se z nekaterimi amandmaji to da. S temi amandmaji ne posegamo v število ministrstev in njihova delovna področja, ker ni mogoče upati, da bi v tem primeru lahko dobili za to soglasje, iz razlogov, ki jih je navajal tudi dr. Bučar. Mislim, da bi pa lahko dobili soglasje glede nekaterih drugih členov, ki urejajo delovanje vlade, odnos med Vlado in Državnim zborom in pa notranjo organizacijo dela in področja dela v ministrstvih in v državni upravi.</seg>
@@ -1204,19 +1186,19 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg134">S temi predlogi bi, v kolikor bodo sprejeti in izglasovali, zakon za našo poslansko skupino postal sprejemljiv. Apeliram na zbor, da bi to resno obravnavali in tudi tako izglasovali. V nasprotnem primeru se bomo kot poslanska skupina morali opredeliti proti zakonu, ker je v konceptu po našem mnenju mimo tega, kar smo delali zadnje dve leti in pol s sprejemom ustave in drugimi ustavnimi akti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg135">Hvala gospodu Francu Zagožnu, ki je združil razpravo o vladi in amandmajih. Besedo ima gospod Vladimir Topler.</seg>
             </u>
             <note type="speaker">VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#regular">
+            <u who="#ToplerVladimir">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg136">Spoštovani predsednik, poslanke in poslanci. Zeleni podpiramo zakon o vladi in njegovo hitro sprejetje. Vendar imamo določene pripombe. Pripombe smo imeli, smo jih že izrazili za samostojno ministrstvo za znanost in tehnologijo ter za samostojno ministrstvo za kmetijstvo. Vendar, glede resorja za energetiko še vedno ni optimalne rešitve in tako sedanje ministrstvo združuje dva naravna partnerska nasprotnika. V današnji Sloveniji združiti resor za industrijo in energetiko pomeni neustrezen sistem kontrol in ravnotežij glede porabe energije. Slovenija ni primerljiva z drugimi državami glede porabe energije, saj porabimo na enoto proizvoda 2 - 3 krat več energije. To pa pomeni, da bodo gospodinjstva trajno plačevala večjo energetsko ceno, kajti še vedno bomo imeli energetske "požeruhe", ki ne bodo prisiljeni v bolj energetsko varčevalno obnašanje. Zato Zeleni menimo, da bi bilo bolje, če se resor za energetiko združi v Ministrstvo za promet in zveze skupaj z delom komunalnih dejavnosti in bi se imenoval Ministrstvo za infrastrukturo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg137">Hvala lepa gospodu Vladimiru Toplerju. Besedo ima gospod Feri Horvat.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ1.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg138">Gospod predsednik, kolegice in kolegi, poslanke in poslanci! Rešpektiram pomisleke, ki jih je izrazil dr. Bučar in tudi drugi poslanci, vendar se glede na dejstvo, da ta država nujno potrebuje čimprej konstituirano novo vlado in glede na dejstvo, da je bilo vendarle doseženo soglasje vodij poslanskih klubov, bi se zavzel za to, da ta zakon sprejmemo po hitrem postopku, s sprejemom utemeljenih amandmajev, ki so že predlagani in še bodo. In glede na to, da so zelo tehtni razlogi, da se tako o delitvi pristojnosti med resorji kot tudi o drugih vprašanjih organiziranja in delovanja vlade in državnih organov razpravlja, predlagam, da se smiselno razširi sklepe. Mislim, da bi bilo primerno v tem smislu razširiti točko 3 sklepov in da izkoristimo možnost, da ob pripravi oz. ob razpravi o zakonu o organiziranju državne uprave zagotovimo učinkovite in racionalne rešitve.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg139">Sam namreč mislim, da pri tem zakonu in pa vključno potem tudi zakonu o organiziranju državne uprave, ne gre le za nek rutinski organizacijsko tehnični zakon, ampak da gre pravzaprav za pomemben korak pri organiziranju mlade slovenske države in da bi vzporedno s samim organiziranjem ministrstev in državnih organov morali celo imeti ambicijo poseči tudi na nekatera področja zunaj same vlade, kajti gre za organiziranje države Slovenije. Naj samo, kot primer navedem nekatera področja, ki zaslužijo in zahtevajo tak pristop. Recimo področje, ki ga pokriva predvideno ministrstvo za gospodarske odnose in za razvoj. Glede na amandma za organiziranje posebnega ministrstva za znanost in tehnologijo, s čemer soglašam, se postavlja vprašanje: ali je taka koncepcija ministrstev tudi s takim nazivom še ustrezna, kot je bila predlagana v konstelaciji, ko je tukaj del dosedanjega ministrstva za znanost in tehnologijo. Namreč, če pogledamo v bistvu v vsebino tega ministrstva, bodo tukaj v bistvu ekonomski odnosi s tujino in pa področje trgovine. Vprašanje se postavlja tudi, če ne bi bilo potem tudi bolj smiselno prenesti tisti del tega predlaganega ministrstva, ki se nanaša na ekonomsko politiko in razvoj, v gospodarski resor.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg140">Dalje, mislim, da bi kazalo tudi precizneje opredeliti v okviru tega ministrstva za ekonomske odnose področje trgovinske politike. Tukaj je navedeno področje izvoznega oz. uvoznega režima. Gre pa v bistvu za mnogo več. Gre tako za politiko na področju izvoza, gre za politiko na področju uvoza. Dalje, ni opredeljeno, kaj je z gospodarsko multilateralo, mislim na GATT, na EFTO in na druge ekonomske grupacije. Mislim, da je to sestavni del tudi potem tega ministrstva.</seg>
@@ -1225,11 +1207,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg143">Zato še enkrat predlagam, da bi v tem smislu razširili 3. točko, ki potem omogoča in tudi obveže Vlado, da pride s takšnim celovitim predlogom in da te pripombe, ki jih imamo, to kar ni možno danes rešiti z amandmaji, da potem predlaga rešitve v okviru zakona o organiziranju državne uprave. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg144">Hvala lepa gospodu Feriju Horvatu. Prosil bi ga, če bi to kar je v razpravi povedal, tudi vložil v obliki pisnih amandmajev. Razpravljal bo gospod Dimitrij Rupel. Prosim.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SDZ1.RupelDimitrij" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg145">Gospod predsednik, spoštovane kolegice in kolegi! Bil sem eden tistih, ki je sodeloval pri popravljanju prvotnega teksta zakona o vladi v okviru poslanskih skupin. V poslanskih skupinah smo delovali pod vtisom, da se mudi, pod vtisom nujnih sprememb, pod vtisom, da gre za nujno ekspeditivnost, da bi dobili novo vlado hkrati z novim zakonom.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg146">V smislu tega duha, ki je bil na poslanskih skupinah navzoč, vlaga naš klub oziroma naša poslanska skupina tri amandmaje, in sicer k 6. členu. Tu gre za stavek, ki se glasi: "Vlada vodi in usmerja državno upravo preko ministrstev." V zakonu piše "ministrov". Mi mislimo, da so ministri pač člani vlade in zaradi tega ni logična določba, da Vlada vodi in usmerja upravo preko sebe, to se pravi preko članov vlade, ampak je logično, da Vlada deluje preko ministrstev.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg147">Druga pripomba oziroma drugi amandma k 6. členu je, da se črta tretji odstavek tega člena, ker ta ni v skladu s 15. členom zakona.</seg>
@@ -1240,38 +1222,38 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg152">Bojimo se, da s številom ministrstev, ki so sedaj predlagana, prihajamo blizu staremu zakonu in, ker ga nam ni treba spremeniti do konca 1993. leta. Torej predlagam, da bi ohranili starega takšnega, kakršnega imamo. Posebej mislim, da je bila utemeljena kritika prof. Bučarja, ki je bila tudi strokovno dovolj odprta, da pustimo še nekaj časa, da zakon dozori. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg153">Hvala lepa gospodu Dimitriju Ruplu. Besedo dajem gospodu Janezu Podobniku. Prosim.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg154">Spoštovani gospod predsednik, spoštovane poslanke in poslanci! Najprej misel glede turizma. Podpiram razmišljanje, da turizem oziroma njegovo mesto v tem osnutku ni ustrezno rešeno. Kot je znano je v Grčiji po funkciji podpredsednik vlade minister za turizem. Mislim, da je prihodnost Slovenije vendar le bistveno soodvisna od vloge in mesta turizma, ki ga bo imela v delovanju slovenske države. Sedaj pa se je znašel na nek način v zelo nenavadni družbi. Ne plediram za nov resor oziroma novo ministrstvo, pač pa mislim, da mu je potrebno v okviru tega predloga dati boljše mesto in dobiti boljšo rešitev.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg155">Prav tako pa podpiram predlog, da se resor delo in socialne zadeve razširi oziroma dopolni z družino in se imenuje - delo, družina in socialne zadeve. S tem bi tudi na simbolni ravni, ki pa ni najbistvenejša, je pa pomembna, predvsem pa bi tudi dejansko dali družini veljavo in mesto, ki ji gre. Zavedam se tudi nevarnosti, da bi s to dopolnitvijo družino in vse, kar ta široki segment pokriva, podpirali samo verbalno oziroma načelno, kajti pomembno je, kakšen položaj ima in bo imela družina v novi in tudi že obstoječi zakonodaji. Toda osebno gledam na družino kot na tisto in na tako človeško skupnost, ki omogoča optimistično vizijo slovenstva. Zato sem prepričan, da naj ta vizija dobi svojo potrditev v vladnem resorju, ki bo tudi v nazivu vključeval ime - družina. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg156">Hvala gospodu Janezu Podobniku. Razpravljal bo gospod Rado Bohinc, prosim.</seg>
             </u>
             <note type="speaker">DR. RADO BOHINC:</note>
-            <u who="#SDZ1.BohincRado" ana="#regular">
+            <u who="#BohincRado">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg157">Gospod predsednik, kolegice in kolegi! V poslanski skupini Združene liste, v katere imenu govorim, podpiramo v osnovi predlog zakona o vladi. Štejemo ga kot napredek, kar zadeva uveljavitev nove vloge vlade, kar zadeva temelje za njeno večjo učinkovitost, racionalizacijo in tudi, kar zadeva uveljavljanje koncepcije vlade kot samostojne institucije v okviru delitve oblasti. Podpiramo tudi argumente, ki smo jih slišali danes s strani predgovornika, predstavnika Ljudske stranke in tudi predstavnika Slovenskih krščanskih demokratov glede položaja družine in njene ustrezne uvrstitve v enega od ministrstev. Zdi se nam, da bi bilo prav v tem imenu in tudi sicer dobro ponovno razmisliti o tem, ali ministrstvo, v katerega bi vključili položaj družine, socialno varnost in s tem povezana socialna vprašanja, sodi v Ministrstvo za delo ali ne tja, kamor je uvrščeno sedaj, to je v Ministrstvo za zdravstvo, ki nosi naslov - zdravstvo, družino in socialno varstvo. Naše stališče je in v tej zvezi vlagamo tudi amandma, da bi sodilo tja, kamor sodi po sedanji zakonodaji in da bi tudi imelo naslov Ministrstvo za zdravstvo, družino in socialno varstvo. Zato vlagamo amandma k 14. členu, ki v ničemer ne posega v osnovno koncepcijo zakona, tudi ne predstavlja nobene širitve ministrstev, ampak gre za spremembo v delitvi pristojnosti, kakršna se uvaja s predlogom, da se zadrži enaka delitev dela, področja in pristojnosti med ministrstvom za delo in ministrstvom za zdravstvo, socialno varstvo in družino. Ta sprememba, ki jo predlagamo izhaja predvsem iz spoznanja stroke, da dela ni mogoče obravnavati kot socialno kategorijo, kot to na primer velja prav za zdravstvo, socialno varstvo, pa tudi za vprašanja povezana z družino. Delo je, po našem, in tudi po večinskih spoznanjih povsem nevtralne stroke produkcijski faktor, to je področje investiranja, razvoja in vloga ministrstva za delo je, da vzpodbuja naložbe v človeški kapital, da sprejema ukrepe za pospeševanje njegove mobilnosti, smotrne uporabe, skratka, funkcija dela in v prvi vrsti razvojna in ekonomska. Socialna funkcija dela pa je le rezervna funkcija države v pogojih velike brezposelnosti.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg158">Štejemo, da uvrščanje socialne problematike v sklop Ministrstva za delo ne zagotavlja upravno-pravnega obravnavanja dela kot ekonomske in razvojne kategorije in štejemo tudi, da obravnavanje dela z vidika socialne ogroženosti posameznika, da je to zastarelo pojmovanje - mimogrede komparativni pregled strokovnjakov, ki se ukvarjajo v okviru Mednarodne organizacije dela tudi s temi vprašanji kaže na to, da je to zastarelo pojmovanje in, da ga številne evropske države opuščajo.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg159">Ne nazadnje pa obravnavanje dela z vidika socialne ogroženosti ponižuje tistega, ki si z delom ustvarja ne zgolj preživetje, ampak soliden življenjski položaj. To je blizu pojmovanja plače kot socialne podpore oziroma miloščine, kar je, kot rečeno, v nasprotju z evropskimi trendi, pojmovanji Mednarodne organizacije dela, in tudi zagotovo v nasprotju s splošno družbeno odločenostjo nad vsem, za gospodarsko trdnost, za blaginjo. Namreč, za blaginjo, ki si jo posameznik sam ustvarja z delom, s podjetništvom, ne pa, da zanj skrbi država, ne nazadnje tudi v okviru socialno koncipiranega Ministrstva za delo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg160">Hvala gospodu Bohincu. Besedo ima gospa Kožuh-Novak Mateja.</seg>
             </u>
             <note type="speaker">DR. MATEJA KOŽUH-NOVAK:</note>
-            <u who="#SDZ1.KožuhNovakMateja" ana="#regular">
+            <u who="#KožuhNovakMateja">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg161">Gospod predsednik, kolegice in kolegi, moja pripomba se nanaša na 37. člen. Mislim, da je neodgovorno prelagati skrb za celovito družbeno zaščito otrok samo na eno ministrstvo. To je stvar celotne vlade in nekega medresornega organa, ki usklajuje interese otrok z interesi družbe. Zaradi tega predlagam, da se iz te dikcije izpusti beseda "celovito".</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg162">Hvala lepa gospe Kožuhovi. Besedo ima gospod Ignac Polajnar. Prosim.</seg>
             </u>
             <note type="speaker">IGNAC POLAJNAR:</note>
-            <u who="#SDZ1.PolajnarIgnac" ana="#regular">
+            <u who="#PolajnarIgnac">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg163">Hvala lepa gospod predsednik! Spoštovane kolegice in kolegi! Po tem, kar sem zdaj poslušal o zakonu o vladi, smo seveda pred zadrego, v kakršni smo bili že v prejšnjem mandatu. Tedaj smo Krščanski demokrati zelo resno opozarjali, kaj vse se nam utegne zgoditi, če tega zakona ne bomo sprejeli. Interesi so bili zelo različni. Že konceptualno smo se takrat razhajali - ne glede na to, kdo je kje bil, v opoziciji ali v poziciji - in očitno smo zdaj pred enakim problemom.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg164">Slovenski krščanski demokrati se zavedamo teh pasti in čeri in je ni mogoče pritrjevati skoraj vsem, ki tukaj opozarjajo na pomanjkljivost zakona. Lahko rečem samo nekaj, brez zakona o vladi - tako smo prepričani - ne bo mogoče začeti normalno delati, ne vladni ekipi in tudi ne Državnemu zboru. Zato mi zakon podpiramo, vemo, da ima luknje in nevarno je res to, kar se je zdaj tukaj govorilo, da bi zdaj začeli naštevati kaj vse bi moralo biti v tem zakonu. Seveda najlepše bi bilo, ko bi zdajle naštevali, česa vsega je v tem zakonu preveč.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg165">Gospod Feri Horvat, ki je prej govoril, je lepo opozoril na neko stvar, ki je tudi za nas zdaj vprašljiva. Namreč, če bomo imeli Ministrstvo za znanost, potem druga alinea, taka kot je, ni nepotrebna. Potrebno bo tam nekaj spremeniti. Mi seveda smo nasprotovali, da bi bilo še naprej posebno Ministrstvo za znanost in tudi prvi odmevi, ki smo jih uspeli dobiti včeraj in danes, s strani - vsaj z ljubljanske Univerze kažejo - da bi bila Univerza pripravljena sprejeti rešitev, da je znanost v okviru Ministrstva za šolstvo, znanost in šport. To vsekakor govori, če tako razmišlja najvišja ustanova, da ne bi bilo nič katastrofalno, če znanost nima posebnega ministrstva in obrazložitev seveda lahko velja, ima pa tudi nekaj pomanjkljivosti, tako da jaz tudi opozarjam sedaj na to razhajanje.</seg>
@@ -1279,20 +1261,20 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg167">Navsezadnje krčenje bi bilo še mogoče. Veliko razprav je bilo tedaj, ko smo razpravljali o zakonu o vladi o raznih variantah, tudi o tem, ali imeti samostojno kulturno ministrstvo ali ne. Veliko je bilo razlogov za, veliko jih je bilo tudi proti. Mislim, da je ministrstvo za kulturo ta hip nekoliko manj vsebinske ampak morda bolj simbolne narave. Navsezadnje, kulturniki so bili tisti, ki so nosili glavnino tega, čemur se je reklo ideja o slovenski samostojnosti in neodvisnosti. In zaradi tega seveda kulturno ministrstvo na nek način, če je še vedno tista inštitucija, ki se lahko priklanja kulturnikom in vedno je na nek način tisto transparentno. Ali bi kdaj lahko zdržali brez tega ministrstva? Lahko tudi, ampak zagotovo ta hip še ne, ker bi bilo preveč različnih razlag, zakaj kulturno ministrstvo ali zakaj kulturnega ministrstva ni. Mi smo se strinjali, da to ministrstvo ostane, pravim pa, če bi seveda imeli več časa, časa pa na  žalost ni, potem sem prepričan, da bi se morali tule pogovarjati še o kakšnem krčenju, zagotovo pa ne o širitvi. In še enkrat, mi mislimo, da zakon moramo dobiti. Predstavljam si pa seveda, da bo delovna skupina, ki je pripravila predlog sedaj imela še kar živahno in trdo delo, da bo sprejela tisto, kar so zrna in ločila tisto, kar so pleva. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg168">Hvala gospodu Polajnarju. Gospod Žaro Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg169">Spoštovani! Bom predstavil zgolj en amandma oziroma dodatni člen, 26a člen, ki bi se  glasil takole: "Minister za notranje zadeve, minister za obrambo, minister za pravosodje ter vodji upravnih organov v sestavi tudi drugih ministrstev, ki opravljajo kontrolno, revizijsko, inšpekcijsko ali drugo represivno funkcijo, ne smejo v času državne funkcije opravljati vodstvene funkcije v nobenem organu političnih strank."</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg170">Gre za znane probleme, ki so se pojavili predvsem v delu prejšnjega sklica. Pogoste so bile tudi interpelacije na delo ministrstev prav v zvezi z njihovo sicer politično vlogo v njihovih matičnih strankah. Tako da je ta amandma pač usmerjen v izboljšanje tega odnosa, da ne bi bilo teh stalnih nasprotovanj in prerekanj, kdo izrablja svoj položaj za koristi svoje stranke. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg171">Hvala gospod Pregelj. Razpravljal bo gospod Izidor Rejc. Prosim.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg172">Spoštovani predsednik, kolegice in kolegi!</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg173">Veliko je res, kar je gospod Bučar povedal, predvsem pa to, da je ta zakon v bistvu odsev želja, ki bi jih radi uresničili predvsem kandidati za vlado oziroma tisti, ki so že v  vladi. Se pravi, kar jim ni všeč, potem se seveda tu dajejo amandmaji, na osnovi tega se ta predlog spreminja.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg174">Osebno mislim, da je predlog sorazmeroma dober. Gotovo, da je mnogo boljši od prejšnjega in bom kar v zaporedju poskušal povedati, kateri del amandmajev nekako ne gre skupaj.</seg>
@@ -1302,82 +1284,82 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg178">Zavračam te amandmaje in te predloge, ki so v smislu povečevanja ministrstev in povečevanja števila ministrov, ker mislim, da je 14 dovolj. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg179">Hvala gospodu Rejcu. Razpravljal bo gospod Zmago Jelinčič.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ1.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg180">Lep dober dan vsem skupaj! Povedal bom nekaj misli, ki jih imamo, verjetno ne samo Slovenska nacionalna stranka, ampak tudi drugi, v zvezi z amandmajem Demokratske stranke o tem, da varnostno informativna služba še vedno ostane pod kapo ministrstva za notranje zadeve.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg181">Mislim da, in mislim tudi, da delim mnenje vseh gospodov, da to nikakor ne gre. Mogoče je bil amandma napisan malo drugače, vendar, če bi bil sprejet, bi prišlo zopet do tega. Smo absolutno proti temu. Varnostno-informativna služba mora biti pod Vlado in nikakor ne sme biti v povezavi z Ministrstvom za notranje zadeve, drugače prihaja do tistih zadev, do kakršnih je že prihajalo v polpreteklem času. Pravzaprav Ministrstvo za notranje zadeve v nobeni državi ne vključuje v svoji sestavi varnostno informativnih služb, ne takšne ne drugačne vrste, razen notranje kontrole, ki pa je druga stvar.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg182">Še nekaj bi povedal. Naša stranka je v glavnem za to, da ostane zakon o vladi tak kot je, seveda z nekaterimi amandmaji, ki jih podpiramo, nikakor pa nismo za širjenje števila ministrstev. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg183">Hvala gospodu Jelinčiču. Gospod Jelinčič, kolikor poznam amandmaje, moram reči, da tega Demokratska stranka ni vložila, lahko pa da je kje vloženo.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg184">Razpravljal bo gospod Jožef Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg185">Hvala lepa za besedo. Nadaljeval bom tam kjer sta predhodnika končala, se pravi, da je smiselno to usklajevanje pravzaprav samo v smeri, da se število ministrstev krči, ne pa širi. Treba je povedati, večina teh stvari, ki so bile vložene kot amandmaji, so bile že prediskutirane, da je redko katera rešitev taka o kateri že ne bi govorili. Zato se mi postavlja vprašanje tudi smiselnosti vseh teh dogovorov, ki jih imamo, če se argumentacija, ki je bila podana, potem običajno ne vzame resno in se poskuša praktično v vsaki fazi določene stvari uveljaviti, ker prihaja do paradoksa. Vsi seveda trdimo, da je potrebno vlado racionalizirati tudi s številom. Ne mislim, da je racionalizacija samo v številu. Paradoks usklajevanja je, da za vsakim usklajevanjem dobimo najmanj ministrstvo več. In tudi se mi zdi, da ni mogoče reči, da je vse to delo, ki je bilo narejeno nično, ker če upoštevamo, začeli smo z 12 ministrstvi in smo končali s 14, 15. To je kljub vsemu bližje 12 kot pa 27. To je pa število, s katerim smo imeli opravek do zdaj. Zato se mi zdi, da bi bili pod vprašanjem tudi vsi koraki naprej. V kolikor ne bi sprejeli zakona o vladi, si ne predstavljam, da je mogoče izpeljati tudi diskusijo o mandatarju in o sestavi kabineta.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg186">Zdi se mi pa kljub vsemu tukaj potrebno opozoriti na razpravo o ministrstvu za delo in socialne zadeve, ki naj bi se imenovalo Ministrstvo za družino, delo in socialne zadeve. Žal, niso bili navedeni nobeni drugi razlogi, da se to tako imenuje, kot simbolni. Simbolni so pa edini razlogi, ki ne morejo biti argumenti za to, da se to tako imenuje. Bodisi, da je to bilo rečeno na  način, da je družina prava oblika, odnos do družine je pa boln. Seveda ugovarjam, da bi se to tako imenovalo iz preprostega razloga, ker se mi zdi, da družina ne more biti privilegirana oblika življenja v skupnosti. So tudi druge in simbolno poimenovanje pomeni to. Po drugi strani je pa treba povedati, da ta zakon predvideva rešitev vseh tistih problemov, ki so vezani na vprašanje ogroženih družin in to je rešeno v 36. členu, tako da to ni zakon, ki bi opuščal to, kar je prej Vlada delala na področju družinske politike. Piše pa natančno tako:  da "Opravlja tudi zadeve, ki se nanašajo na položaj in celovito družbeno zaščito invalidov, mladine in družine, na socialno varstvo in socialno skrbstvo, na družbeno pomoč ogroženim posameznikom, družinam in skupinam prebivalstva. Na usposabljanje otrok z motnjami v razvoju, na varstvo oseb, ki niso zmožne skrbeti zase, na varstvo družinskih članov, katerih hranilec je v obvezni vojaški službi." Nobene druge stvari ni, ki bi bila izpuščena in zato predlagam tistim, ki predlagajo, da bi se to ministrstvo preimenovalo, da  v kolikor je katera od stvari, za katero naj bi Vlada skrbela, da jo formulirajo tako, da se doda v ta 36. člen in mislim, da lahko tudi s tem to zadrego rešimo. Ni pa mogoče razpravljati, da je ena sama prava oblika življenja v skupnosti, da so druge deviantne, ker to pomeni, bom rekel diskusijo o vseh tistih, ki živijo v teh nepopolnih družinah, izvenzakonskih skupnostih in tako naprej. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg187">Hvala gospod Školč. Besedo ima gospod Tone Partljič.</seg>
             </u>
             <note type="speaker">ANTON PARTLJIČ:</note>
-            <u who="#SDZ1.PartljičTone" ana="#regular">
+            <u who="#PartljičAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg188">Nadaljeval bom prav tu, čeprav je Školčeva diskusija po moji pameti stvari skoraj postavlja na svoje mesto. Poročen sem že 30 let z eno žensko, sem oče relativno srednje kvalitete in sem dedek, kjer poskušam popraviti, kar sem zamudil kot oče. In veljam torej za družinskega človeka. Kljub temu in seveda ne ironiziram nobene prejšnje diskusije, ki je bila opravljena s tega vidika in tudi mislim, da je mogoče govoriti o družinskih kmetijah, o družinskem zdravstvu in tako dalje. Pravkar berem in še nisem prebral, kot da bi imel občutek, neko knjigo švicarskega psihologa, mislim, da se piše Furier oziroma kako se to izgovarja, ne vem natančno, kjer pa govori o položaju ženske v družbi. Seveda pride na problem družine, ampak prav ta del sem že prebral, kjer pravi - daje pa za primer Ameriko - da kadarkoli se je kakšna družba pribila kot nekakšen mit prav družino in te dobre odnose ata, mama, brat, sestra, mož, žena itd. in je temu podredila svojo družbeno in družabno življenje, se je vedno slabo končalo. Navadno se je zlasti slabo končalo za ženske, če sem dobro razumel. Za žrtvovanje, da bi družina "klapala" in da bi bila to, kar nam gre po glavi. Recimo vprašanje, ali se lahko oba šolata do konca, lahko izpolnita vse svoje ambicije in mi ni treba dosti ugibati, kdo je tu navadno potegnil kratko. Po drugi strani, da ne omenjam teh drugačnih oblik življenja, ki jih ni malo. Zato ne bom zelo skakal v "plafon", če boste to dosegli, samo s tem se navadno ne uredi nič za družino, na ta način. Že Školč je povedal, da se da na neki simbolni ravni, da bi mi, ki smo slabi družinski očetje in možje, imeli čisto vest, potem pa bomo organizirali neko institucijo, ki naj bi namesto nas za to skrbela. To je prvo.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg189">Drugo bi rekel, da se pridružujem tistim, ki pravijo, da je zakon treba sprejeti. To, kar je uvodoma govoril in argumentiral dr. Bučar, si je seveda stvar zapomniti. Čeprav sem nekako razumel, da gre pravzaprav bolj od interpretacije, lahko tudi, kako stvar sploh doumevamo. Na tej relaciji, koliko bo parlament podrejen vladi oz. Vlada podrejena parlamentu, da je to kljub takšnemu in drugačnemu zakonu odvisno in od nas in od vlade. Ne znam si pa predstavljati, da bi zdaj to reč prestavljali, razen če želimo kaos, vlado rabimo, bolje je, da jo sprejmemo po zakonu o vladi in tudi ne vidim takšne nevarnosti kot kolegi, ki prihajajo, da se res že tako radikalno bližamo prejšnjemu zakonu. Mislim, da je število ministrstev, če jih bo 14 ali 15, praktično prepolovljeno. Zato predlagam, da ne bi odpirali, če smo se že zmenili, tako v temelju te debate in zakon na nek način podpiram.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg190">Hvala gospodu Partljiču. Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg191">Spoštovani! Razprava cenjenega gospoda Partljiča me prepričuje, da je problem družina in da so vsebinske zadeve, ki jih ta Vlada vendarle mora urediti, ker tega ni storila doslej. Mislim, da vsako razpravljanje in vrednotenje z vrednostnega vidika za tem ambonom ni na mestu tega tudi jaz in moji sogovorniki oz. govorniki za mano niso postavljali tako. Vsaj jaz tega nisem tako razumel. Izpostavili smo vsebinske probleme, vsebinska področja, za katera mora Vlada nameniti posebno skrb in zato je prav, da to tudi tako imenuje. Ali je pretežni del oblik življenja v naši državi, v našem narodu družina ali ne. Dajmo to institutu, ki ga je treba še ustanoviti in vladi, ki bo seveda morala za to imeti ministrstvo, da vendarle dožene osnovne črke abecede, potem bomo pa razpravljali o določenih oblikah, o določenih vsebinah, kako in na kakšen način želimo, da se urejajo. Vendar, sedaj nimamo odgovornega človeka v vladi oz. ga želimo dati ven iz vlade.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg192">Hvala, gospod Kociper. Želi še kdo razpravljati? Prosim gospod Bučar.</seg>
             </u>
             <note type="speaker">DR. FRANCE BUČAR:</note>
-            <u who="#SDZ1.BučarFrance" ana="#regular">
+            <u who="#BučarFrance">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg193">Gospod predsednik, spoštovani! Samo kratko repliko na nekaj tez, ki so bile tukaj prezentirane in tudi v ekspozeju gospoda Školča je prišlo na dan. Namreč, da je tukaj v tem zakonu prizadevanje za racionalizacijo vlade. Tu absolutno ne gre za racionalizacijo vlade. Tudi ni namen tega, da skrčimo nekaj ministrov, gori ali doli. Gre za to,  da dobimo  sistem vlade, ki bo funkcioniral . Če hočemo imeti moderno državo, moramo imeti tudi moderno državno upravo. In brez moderne državne uprave tudi gospodarstva ne moremo rešiti. V tem je stvar. Prav zato hočem poudariti, in tu je popolno nerazumevanje samega koncepta tega kar hočemo. In gospodom, zlasti iz vrst Krščanskih demokratov bi pa povedal: te vaške zgodbe o tem, da sicer se strinjamo z vsemi pripombami, resnično zakon ni dober, zdaj pa ga je potrebno vendarle sprejeti, ker smo v časovni stiski. 40 let poslušamo te stvari. Hvala lepa zaenkrat, ne rabimo jih več. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg194">Hvala gospod Bučar. Še kdo želi razpravljati? Prosim gospod Avberšek.</seg>
             </u>
             <note type="speaker">MAG. FRANC AVBERŠEK:</note>
-            <u who="#SDZ1.AvberšekFranc" ana="#regular">
+            <u who="#AvberšekFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg195">Gospe in gospodje poslanci! Opozoriti želim, da je podatek, ki ga je podal poslanec Zelenih o 2 in 2,5 krat večji porabi energije na enoto proizvoda o naših energetskih požeruhih ni točen. Podatek drži za porabo za enoto družbenega proizvoda, kar pa z drugimi besedami pomeni, da npr. v Kidričevem porabijo na enoto proizvoda, torej na tono aluminija, enako količino energije kot v Nemčiji. Da pa naše izdelke tudi iz aluminija bistveno slabše prodamo in zato ustvarimo manj družbenega proizvoda. Problem je torej veliko večji v sami prodaji in ustvarjanju družbenega proizvoda kot pa v sami proizvodnji posameznih izdelkov. Tudi v razvitih državah subvencionirajo nekatere večje potrošnike energije. Pomemben pa je seveda obseg industrije, ki dobiva te subvencije. O tem obsegu pa seveda ne sme odločati le gospodarstvo. No, in tu vas podpiram. Zato podpiram predlog Zelenih, da organiziramo Ministrstvo za infrastrukturo, zdaj ali je to gospodarska infrastruktura in tako preprečimo, da bi gospodarstvo narekovalo cene energije za vse potrošnike. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg196">Hvala gospod Avberšek. Želi še kdo? Gospod Šešerko prosim.</seg>
             </u>
             <note type="speaker">DR. LEO ŠEŠERKO:</note>
-            <u who="#SDZ1.ŠešerkoLeo" ana="#regular">
+            <u who="#ŠešerkoLeo">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg197">To je kratka replika. Mislim, da v razpravi o zakonu o vladi pravzaprav ni mesto, da bi šli v detajle naše energetske in gospodarske politike, vendar je pa stališče, da je možno trgovanje ločiti od proizvodnje toliko zastarelo, ki smo ga sedaj slišali, da za nas ni sprejemljivo in naše stališče je, s tem kar smo ravnokar slišali, še bolj potrjeno. To gledanje, da imaš na eni strani trgovino, ki ne funkcionira v redu, na drugi strani pa proizvodnjo, ki je dobro organizirana, je, bi rekel, milo rečeno smešno in neresno in apeliram na vse nas, da se v nadaljnjih diskusijah izogibamo toliko starinskih, preseženih pregledov. Proizvodnja in trgovina sta ena sama nerazločljiva aktivnost. Vlada mora za to skrbeti in treba je od tega sedanjega stanja v Sloveniji, ko je družbeni proizvod tako neracionalno energetsko ustvarjen, od tega se je treba odmakniti. Mi, kot poslanska skupina, nismo zadovoljni z rešitvijo, ki je sedaj v zakonu o vladi predvidena, vendar razumemo ta predlog zakona kot nujen  kompromis, ki ga bomo podprli, si bomo pa prizadevali v izvajanju vladne politike, da tega ločevanja na trgovino, ki nima smisla za proizvodnjo in proizvodnjo, ki teče čisto neracionalno glede na prodajo izdelkov, to pač najbolj značilno realsocialističen fenomen, da do tega ne bo prihajalo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg198">Hvala gospod Šešerko. Želi še kdo? Prosim, gospod Toplak.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SDZ1.ToplakLudvik" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg199">Hvala za besedo, spoštovani gospod predsednik, cenjene kolegice in kolegi! V celoti bi se strinjal z vsem kar je povedal dr. Bučar. Pritrdil bi samo še tudi  amandmajem, ki so bili vloženi, osebno bom pa moral reči, ne danes tukaj, ker je tudi brezpredmetno, bom pa povedal nekaj distanc do tega predloga zakona. Želel pa bi s tega mesta poudariti in navezati na besede dr. Bučarja, ko poudarja, da gre za sistem, sploh ne gre za racionalizacijo. To, da bomo črtali 5 ministrov in bomo s tem racionalizirali državno upravo in vlado, to je čista, milo rečeno, demagogija se je temu reklo. Sploh ne gre za to. Pet ministrov več ali pet ministrov manj pri nekaj tisoč državnih uradnikov, uslužbencev vseh mogočih služb, ki so, ne pomeni kaj veliko. Gre pa za sistem in gre za nekaj, kar pogrešam v vsem delu, to je inštrumentarij odgovornosti, neurejen odnos med, kot se reče "rule making body", parlamentom oz. državnim zborom v našem primeru in organom odločanja, "decision making body", to je v konkretnem primeru Vlada kakor tudi nedodelan odnos do tretjega, to je kot se reče v teoriji "exacutive body" to je do uprave.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg200">Mislim, da teh odnosov nismo uredili to je moj pomislek. Preveč bi bilo in praktično ni mogoče, da bi jih danes takole uredili samo z nekimi amandmaji oz. z amandmaji, ki so bili vloženi, jih lahko samo delno omilimo. Moram pa opozoriti na nekaj, na grozeč pojav, ki je pred nami, to je samo spodbujanje borbe za oblast med posameznimi sistemi, kakor smo jih vzpostavili, kateri konca osebno ne vidim in sem prepričan, da bo ta Državni zbor, preden nas bo to potegnilo v nesrečo, utegnil pripraviti ustrezne dopolnitve tega zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg201">Hvala gospodu Toplaku. Želi še kdo razpravljati? Ker ne želi nihče več razpravljati, zaključujem razpravo. Po tej izčrpni razpravi prekinjam to točko dnevnega reda, da bi se začasno delovno telo takoj sestalo v sobi 209 in do 13.45 pripravilo stališča do vloženih amandmajev ter, da se v tem času do njih opredelijo tudi predlagatelji. V kolikor je čas do 13.45 prekratek, bi prosil vodjo te delovne skupine, da pred nadaljevanjem, namreč po kosilu, zahteva daljši potrebni čas. Ker bomo med tem nadaljevali sejo, bo podpredsednik Državnega zbora gospod Kreft spremljal razpravo pri drugih predlogih zakonov in jo prenesel začasnemu  delovnemu telesu, da bi se le to lahko opredelilo tudi do morebitnih amandmajev k drugim predlogom zakonov.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg202">Sejo Državnega zbora bo v nadaljevanju vodil podpredsednik gospod Mozetič. Prosim.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg203">Prehajamo na 5. TOČKO DNEVNEGA REDA in to je PREDLOG ZAKONA O ČLANSTVU REPUBLIKE SLOVENIJE V MEDNARODNEM DENARNEM SKLADU.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg204">Predlog zakona je zboru predložila skupina poslancev Zmago Jelinčič, Miran Potrč, dr. Dimitrij Rupel, dr. Leo Šešerko, Vitodrag Pukl, Miroslav Mozetič, Jožef Školč, dr. Franc Zagožen in Roberto Battelli. Predlog zakona ste sprejeli s sklicem te seje. Želi predstavnik predlagatelja obrazložiti posebej še predlog zakona?</seg>
                <note>Ne.</note>
@@ -1407,11 +1389,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg218">Amandmaje, če bodo, prosim, da vložite v pisni obliki, prav tako, da se v pisni obliki prijavite k razpravi. Pred pričetkom razprave bomo ponovno ugotovili, če je izpolnjen pogoj poslovnika, da je prisoten vsaj en predstavnik vsake stranke: Liberalno demokratska stranka, Slovenski krščanski demokrati, Združena lista, Slovenska ljudska stranka, Demokratska stranka, Zeleni Slovenije, in Socialdemokratska stranka, Slovenska nacionalna stranka. Ja. Pogoj je izpolnjen. Odpiram razpravo. Želi kdo besedo? Prosim.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ1.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg219">Podpiram sprejem zakona, nimam amandmaja, vendar glede na izjemno pomembnost tega zakona in zakona, ki smo ga sprejeli pri prejšnji točki, želim predlagati naslednje: dejstvo je namreč, da zakon, ta in predhodni, omogočata dostop do nujno potrebnega kapitala mednarodnih finančnih institucij, da pomenita referenco za kapitalski trg na sploh, tudi za komercialne banke in tudi referenco za tuje naložbe in pa seveda tudi povečujeta dostop do izvajanja projektov, ki jih financirajo mednarodne finančne institucije v svetu. Dejstvo pa je, da samo članstvo je nujen, vendar ne zadosten pogoj, da bomo tudi relativno hitro želi sadove tega članstva. Zato mislim, da je nujno pospešiti aktivnosti za efektivnost in operativnost članstva. V obrazložitvi imamo tudi spisek aktivnosti, ki jih predvideva Vlada, vendar tudi to mislim, da ni dovolj. Namreč glede na dosedanje izkušnje na dosedanjem poslu, ki sem ga opravljal v zbornici in tudi sicer je bil eden velikih problemov v preteklosti in tudi trenutno - in to tudi ugotavljajo predstavniki tako Evropske banke za obnovo in razvoj kot tudi Svetovne banke in Mednarodne finančne korporacije - da ni zadovoljivo stanje pripravljenosti in pripravljanja programov in projektov za kandidiranje pri teh institucijah. Zato mislim, da bi morali v okviru teh aktivnosti za efektivnost in operativnost članstva in za to, da bomo dejansko dosegli cilje, zakaj se vključujemo v te institucije, da so potrebni še drugi ukrepi in aktivnosti in to zelo nujno in zelo hitro. Zato bi predlagal, da se sprejme poseben sklep, ki vlado obveže oziroma ji priporoča, da tako v okviru samih resorjev, v okviru Vlade pa tudi pri drugih institucijah, ki so zadolžene za to področje, mislim tako na poslovne banke, tako na Sklad za prestrukturiranje, tudi na zbornico in tudi na druge institucije, da se zagotovi pospešeno pripravo programov in predlogov projektov in to zlasti za področje prestrukturiranja, za izvozne programe in še posebej za programe malega gospodarstva. To so področja, ki so zelo zanimiva in tudi področja, ki jih predstavniki tako Evropske banke za obnovo in razvoj, kot tudi Svetovne banke, pri vseh razgovorih izpostavljajo kot prioritetne projekte, ki so jih pripravljeni financirati oziroma sofinancirati. Zato predlagam, da priporočamo Vladi, da v programu dela in v organizaciji dela uprave oziroma ministrstev, kot tudi v povezavi z institucijami zunaj Vlade, da zagotovi hitro in učinkovito pripravo projektov za kandidiranje pri teh institucijah. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg220">Gospoda Feri Horvata prosim, da bi ta sklep natančno sformuliral, kolikor želi, da ga sprejmemo. Pogojujete sprejem, da glasujemo o sprejemu zakona. Predlagam takole, da bi v tem času gospod Feri Horvat formuliral sklep, mi bi pa lahko zakon sprejeli in v zaključku teh točk bi eventuelno še dodatno sprejeli ta sklep k temu zakonu.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg221">Je še kdo, ki želi razpravljati o tem zakonu. Če ni nikogar več, zaključujem razpravo in lahko preidemo h glasovanju o samem zakonu. Najprej ugotovimo sklepčnost.</seg>
                <note>60 prisotnih.</note>
@@ -1426,27 +1408,27 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg228">Predlog zakona je zboru predložila skupina poslancev: Zmago Jelinčič, Miran Potrč, dr. Dimitrij Rupel, dr. Leo Šešerko, Vitodrag Pukl, Miroslav Mozetič, Jožef Školč, dr. Franc Zagožen in Roberto Battelli. Predlog zakona ste prejeli s sklicem te seje. Želi predstavnik predlagateljev besedo? Želi besedo predstavnik Vlade? Predlog zakona je obravnavala Komisija za volitve, imenovanja in administrativne zadeve, ki je zboru pisno poročala. Njeno poročilo ste prejeli s sklicem seje. Želi poročevalec komisije besedo? Prosim.</seg>
             </u>
             <note type="speaker">TONE ANDERLIČ:</note>
-            <u who="#SDZ1.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg229">Spoštovani! Glede na to, da je enako mnenje o obeh zakonih in sicer k predlogu zakona o spremembi zakona o delavcih v državnih organih in k predlogu zakona o spremembi zakona o funkcionarjih v državnih organih, bi kar o obeh predlogih poročal o mnenju komisije, da se ne bi bilo potrebno še enkrat javljati.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg230">Komisija Državnega zbora Republike Slovenije za volitve, imenovanja in administrativne zadeve je obravnavala omenjena dva zakona, ki ju je predlagala skupina poslancev. Člani komisije podpirajo izenačitev osnove za izračun osebnega dohodka delavcev v državnih organih z osnovo za izračun osebnega dohodka v družbenih dejavnostih, kakor seveda tudi izenačitev osnov po zakonu o funkcionarjih v državnih organih. Izenačitev osnov je nujna, kajti s tem se izenačujejo ti pogoji in se pride na bolj normalen sistem obračunavanja, ki ni avtomatizem in se ne zgleduje po plačah v gospodarstvu, ampak se usklajuje z drugimi negospodarskimi dejavnostmi in sicer z gibanjem cen življenjskih stroškov.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg231">Komisija predlaga, da glede na to, da bo v kratkem predlagan nov zakon o delavcih v javnem sektorju nasploh in bo obsegal tako delavce v državni upravi, kakor tudi celoten javni sektor, posebej bo pa pripravljen tudi zakon o delavcih v pravosodju, ki bo urejal plače za pravosodje in, ker bodo ti zakoni v bližnji prihodnosti na dnevnem redu, da zbor oba predloga sprejme in glasuje tako kot je bilo predlagano po hitrem postopku. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg232">Hvala lepa. Preden bi začeli razpravo ponovno ugotovimo, če je iz vsake poslanske skupine najmanj eden tukaj navzoč.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg233">Liberalno-demokratska stranka, Slovenski krščanski demokrati, Slovenska nacionalna stranka, Slovenska ljudska stranka, Demokrati Slovenije, Zeleni Slovenije in Socialdemokratska stranka Slovenije in Združena lista. Navzoči so vsi. Pričenjam razpravo. Želi kdo besedo. Prosim.</seg>
             </u>
             <note type="speaker">FRANC ČERNELIČ:</note>
-            <u who="#SDZ1.ČerneličFranc" ana="#regular">
+            <u who="#ČerneličFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg234">Ponovno pozivam, da se odločimo na osnovi dejanskih argumentov in postavljam tudi takoj vprašanje, ali gre v tem trenutku za znižanje osnove ali ne.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg235">Drugo, povedano je bilo, da je na vidiku nov zakon. Ali ni to dodaten argument, da z zakonom uredimo in da pustimo v tej situaciji neko ravnovesje, za katerega menim, da ta trenutek obstaja. Predlagal bi Vladi, da pripravi postopke za racionalizacijo vseh vrst postopkov v državni upravi in s tem zagotovi, da bo potrebno manjše število zaposlenih, vendar ti naj bodo resnično ustrezno plačani. Zato še enkrat pravim, da bi bilo smotrno, da danes ne glasujemo pozitivno in da omogočimo Vladi, da pripravi še kaj več podatkov in argumentov. Povedal sem že na začetku, da sem za to, da poenotimo kriterije in da gre za skupne izhodišča. Vendar ta trenutek ne vemo, kaj pomeni to naše glasovanje, ali znižanje sedanjih izhodišč ali v bistvu ostane na isti stopnji, osebni dohodek pa potem kako bo vplival na razmerja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg236">Hvala lepa. Želi še kdo besedo? Prosim. Torej pri tej točki nisem opozoril, da bi se prijavljali pisno, vendar velja to za vsako razpravo.</seg>
             </u>
             <note type="speaker">DR. METKA KARNER-LUKAČ:</note>
-            <u who="#SDZ1.KarnerLukačMetka" ana="#regular">
+            <u who="#KarnerLukačMetka">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg237">V naši državi kosi nevarna bolezen mišljenja, da je celotno sanacijo ekonomskega sistema in gospodarskega sistema seveda možno izvesti prav z zniževanjem osebnih dohodkov. Zniževanje osebnih dohodkov je za vsakega, ki ga to prizadene, zelo boleča zadeva. Po mojem izračunu gre tukaj za zniževanje osebnih dohodkov in sicer delavcev v državnih organih.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg238">Menim, da je predlog, tako kot smo ga dobili na poslanske klopi, premalo argumentiran in zahtevamo, da se pripravi celovit predlog in sicer, da predlog vsebuje:</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg239">1. Kakšne prihranke, če bi bil ta predlog sprejet, bi imel mesečno proračun.</seg>
@@ -1454,18 +1436,18 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg241">3. Ali je to zmanjšanje za katerega jaz predvidevam, da bi  nastopilo, mogoče zagotoviti s smotrnejšo reorganizacijo celotnih služb. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg242">Hvala lepa. Besedo dobi Franc Potočnik.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ1.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg243">Spoštovane gospe in gospodje, lepo pozdravljeni!  K razpravi me je vzpodbudil ta današnji naslov v Delu: "Poslanci imajo višje plače kot ministri". Čutim potrebo, da moram povedati, da se s tem natolcevanjem neha. Namreč za kaj gre. Do zdaj so bili poslanci in ministri plačani po istih kriterijih, isto osnovo so imeli, z zakonom določenim koeficientom.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg244">V zakonu o vladi tudi piše, da velja za ministre v bodoče isti kriterij, način, kot za poslance. Kakšna pa je zdaj poslanska plača? Moja poslanska plača kot poslanca, ki ima faktor 5.4</seg>
                <note>sem stari poslanec iz starega mandata</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg245">, to je tretji najvišji faktor in pa 13 let delovne dobe in davčna olajšava za pet otrok, znaša 80.000 tolarjev. Kdor tega ne verjame, mu lahko pokažem plačilni listek. Dosti poslancev je, ki so imeli nižje plače, profesionalni, in malo je tistih, ki so imeli malo višje. Upam, da je bilo to pojasnilo potrebno in da bo javnost verjela, saj dokaze imamo v hiši. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg246">Hvala lepa. Želi še kdo? Ker ni več razpravljalcev, zaključujem razpravo. Ker ni bilo vloženih amandmajev, lahko preidemo na glasovanje o predlogu zakona o spremembah zakona o delavcih v državnih organih.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg247">Prosim, da ugotovimo sklepčnost.</seg>
                <note>62 prisotnih.</note>
@@ -1522,11 +1504,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg288">Predlog je obravnavala Komisija za volitve, imenovanja in administrativne zadeve, ki je zboru pisno poročala. Želi predstavnik komisije besedo? Prosim.</seg>
             </u>
             <note type="speaker">TONE ANDERLIČ:</note>
-            <u who="#SDZ1.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg289">Državni zbor je prejel predlog predsednika Sodnega sveta, da na lastno željo, s pisno zahtevo, ki jo je vložila gospa Francka Strmole Hlastec, da se jo razreši funkcije predsednice Vrhovnega sodišča in s tem so podani razlogi, da se jo lahko razreši. Komisija je temu primerno oblikovala pozitivno mnenje in predlaga, da se jo razreši z današnjim dnem. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg290">Pričenjam razpravo. Kdo želi besedo? Nihče. Ker nihče ne želi besede, zaključujem razpravo. Prehajamo na glasovanje in dajem na glasovanje predlog, da se gospo Francko Strmole Hlastec  razreši dolžnosti predsednice Vrhovnega sodišča Republike Slovenije.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg291">Najprej ugotavljam sklepčnost.</seg>
                <note>64 prisotnih.</note>
@@ -1583,40 +1565,40 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 12.40 uri in se je nadaljevala ob 13.48 uri.</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg325">Prehajamo na nadaljevanje 2. TOČKE DNEVNEGA REDA, PREDLOG ZAKONA O VLADI REPUBLIKE SLOVENIJE.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg326">Prosil bi gospoda Školča, če bi povedal, kako teče delo.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg327">Hvala lepa. Kot ste verjetno pričakovali, vas bom naprosil za še malo potrpežljivosti, mi smo dobre tri četrtine teh amandmajev uskladili. Imamo še dva do tri amandmaja in nekaj redakcijskih. Naša ocena je, da to lahko naredimo v pol ure in da je potem odvisno od pretipkavanja, kdaj bo to poročilo na klopi, da bi lahko glasovali. Zato bi prosil, če lahko zbor nadaljuje drugo delo, mi pa bomo v tem času, upam, dostavili poročilo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg328">Hvala, gospod Školč. Ker smo bolj ali manj zaključili dnevni red, bi odredil odmor do 14.45 minut.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 13.50 uri in se je nadaljevala ob 14.52 uri.</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg329">Prehajamo ponovno na nadaljevanje 2. TOČKE DNEVNEGA REDA OZIROMA PREDLOGA ZAKONA O VLADI REPUBLIKE SLOVENIJE.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg330">Delo v delovni skupini je relativno težko. Gospod Rupel je predstavnik delovne skupine in bo predlagal zaključke, prosim, gospod Rupel.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SDZ1.RupelDimitrij" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg331">Spoštovani predsednik, kolegice in kolegi. Delo skupine, ki je usklajevala zakon o vladi, je bilo dejansko kar napeto. Ta hip je sestanek končan. Tehnična služba potrebuje še, se mi zdi, 20 - 25 minut. Predlagam, da se razidemo do 15.30, če bo predsednik tako predlagal oziroma odločil.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg332">Hvala lepa. Predlagam, da se dobimo ob 15.30 uri.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 14.55 in se je nadaljevala ob 15.33 uri.</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg333">Obveščam vas, da je poročilo usklajeno, dela se čistopis, sejo bomo lahko nadaljevali ob 15.55. Upam, da bo tehnika funkcionirala, da bo material do takrat pripravljen, tako da bomo lahko po tem resnično nemoteno od 15.55 naprej delali. Do 15.55 odmor.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 15.34 in se je nadaljevala ob 15.57 uri.</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg334">Prehajamo na nadaljevanje 2. TOČKE DNEVNEGA REDA oziroma PREDLOGA ZAKONA O VLADI REPUBLIKE SLOVENIJE.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg335">Amandmaje k predlogu zakona o Vladi Republike Slovenije so pisno vložili:</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg336">- Začasno delovno telo k: 2., 7., 14. 17., 32., 35. in 37. členu, ter poslanci dr. Franc Zagožen k 6., 7., 8. členu, k prvi alinei 14. člena, k peti alinei 14. člena, k 15., 16. členu, drugemu odstavku 20. člena, k tretjemu odstavku 20. člena, k 25., 28., 31. in 39. členu;</seg>
@@ -1630,20 +1612,20 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg344">Pregled amandmajem ste prejeli tudi na klop. Prejeli ste tudi stališča začasnega delovnega telesa in stališča predlagateljev predloga zakona do amandmajev. Želi poročevalec delovnega telesa besedo? Prosim.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg345">Hvala lepa, gospod predsednik! To poročilo je narejeno tako, da v prvi točki našteje amandmaje, ki jih začasno delovno telo ni podprlo in jaz ne bi vsega tega bral.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg346">V drugi točki so amandmaji, ki jih je začasno delovno telo v soglasju s predlagatelji predelalo, se pravi je upoštevalo intenco predlogov, ki so bili dani, je pa zato, da je tekst bolj tekoč ali pa iz drugih razlogov prišlo do svojih amandmajev, jih tudi ne bi bral. Je en amandma v točki 3, ki ga delovno telo v celoti in v istem tekstu podpira in v sklepih je povzet še en amandma na 15. člen, se pravi v tistem delu, ko je sklep dopolnjen: "Zakon iz 15. in 31. člena naj Vlada predloži Državnemu zboru v roku treh mesecev". Kar še velja povedati in kar ni napisano v poročilu, da se večina predlagateljev zakona z rešitvami strinja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg347">Hvala gospod Školč. Želi besedo predstavnik predlagateljev predloga zakona. Prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ1.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg348">Hvala lepa, gospod predsednik. Ponovil bom samo ugotovitev gospoda Školča. Od devetih predlagateljev zakona je sedem predlagateljev neposredno sodelovalo tudi v začasni komisiji oziroma usklajevalnem delovnem telesu. Skupaj smo se na koncu dogovorili, da lahko v imenu teh sedmih predlagateljev rečem, da se večina strinja s predlogi, kakor jih je oblikovalo začasno delovno telo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg349">Hvala gospod Potrč. Želi kdo od vlagateljev amandmajev, ki jih delovno telo oziroma predlagatelji niso podprli, razpravljati o svojih amandmajih oziroma jih spremeniti ali umakniti. Če ne, prehajamo na glasovanje o amandmajih. O vsakem amandmaju k zakonskemu predlogu bomo glasovali posebej. Če je k členu zakonskega predloga predlaganih več amandmajev, se najprej glasuje o amandmaju, ki najbolj odstopa od rešitve, predlagane v zakonskem predlogu in nato, po tem kriteriju še o drugih amandmajih k temu členu. Če je predlagan amandma k amandmaju, se najprej odloča o njem.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg350">Prehajamo na glasovanje o posameznih amandmajih - po pregledu.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg351">Na glasovanje dajem amandma k 2. členu. V drugem odstavku se črta beseda "samostojno". Ugotovimo sklepčnost, prosim.</seg>
@@ -1678,11 +1660,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg368">Na glasovanje dajem amandma k 7. členu: 1. člen se črta. Člen se črta. Ugotovimo prisotnost. Ja, prosim gospod Jaša Zlobec.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SDZ1.ZlobecJašaL." ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg369">Oprostite prosim, gospod predsednik, samo mislim, da bi bilo zaradi večje jasnosti bolje, če bi pri vsakem amandmaju povedali predlagatelja in stališče začasnega delovnega telesa. Oziroma, če je začasno delovno telo predlagatelja tudi to. Če ne bo lahko prihajalo do nesporazumov in poslanci ne bodo vedno vedeli, za kaj glasujejo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg370">Hvala lepa, gospod Zlobec. Predlagam, da potem ponovimo glasovanje o 7. členu. Predlog je, da se člen črta. Predlagatelj je dr. Franc Zagožen. Mnenje začasnega delovnega telesa je, da ne podpira. Prosim, preverimo sklepčnost.</seg>
                <note>82 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg371">Kdor je za, naj, prosim, glasuje!</seg>
@@ -1707,20 +1689,20 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg382">K 14. členu. Na glasovanje dajem amandma, da se prva alinea spremeni, tako da se glasi: "Delo, družina in socialne zadeve". Predlagatelja sta dr. Franc Zagožen, Štefan Kociper. Mnenje začasnega delovnega telesa - ne podpira. Ugotovimo sklepčnost, prosim. Prosim, gospod Kociper želi besedo.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg383">Spoštovane poslanke, poslanci, spoštovani predsednik! Izražam trdno upanje, da se poslanci ne bomo že na začetku svojega mandata spotaknili ob svoje predvolilne obljube. Zato bom seveda glasoval za ta amandma, ki smo ga Krščanski demokrati vložili. Torej, da damo v ministrstvu oz. v Vladi mesto, ki pripada družini. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg384">Hvala, gospod Kociper. Prosim.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg385">Spoštovane poslanke in poslanci! Dovolite mi, da utemeljim, zakaj bom glasoval za ta amandma, ki ga je predlagal dr. Franc Zagožen, prav tako pa tudi gospod Kociper.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg386">Pri tej utemeljitvi ne želim, da bi moja utemeljitev izzvenela moralistično, še manj pa, da bi se prizadevanje za uveljavljanje družine razumelo kot uveljavljanje domačijskih vrednost na Slovenskem. Toda, spoštovane poslanke in poslanci! Družina je temelj narodne in nacionalne vitalnosti. Je najbolj naravna človeška skupnost, v kateri se udejanjajo vzgojna, socialna, materialna in pa tudi bivanjsko eksistencialna dimenzija človekovega življenja. Zato bom glasoval za ta amandma. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg387">Hvala lepa. Želi še kdo? Če ne, predlagam, da ugotovimo sklepčnost.</seg>
                <note>82 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg388">Kdor je za, naj, prosim, glasuje!</seg>
@@ -1739,12 +1721,12 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg396">Na glasovanje dajem amandma k 14. členu: peta alinea naj bi se spremenila, tako da se glasi: "Kmetijstvo, gozdarstvo in prehrana". Predlagatelj dr. France Zagožen, začasno delovno telo ne podpira. Prosim.</seg>
             </u>
             <note type="speaker">ALOJZIJ METELKO:</note>
-            <u who="#SDZ1.MetelkoAlojzij" ana="#regular">
+            <u who="#MetelkoAlojzij">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg397">Glasoval bom za amandma in to iz naslednjih razlogov.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg398">Prvič, že sedanje ime ministrstva ima to obliko. Mislim, kmetijstvo, gozdarstvo in prehrano. To je prav, drugo, popolnoma nerazumljivo se mi zdi, da ločujemo prehrano in kmetijstvo, ker je to tako povezano. Moram reči, da je veliko ministrstev v Evropi, predvsem v zahodni Evropi, kjer ima celo naziv tega ministrstva za prehrano, kmetijstvo in gozdarstvo. Tako, da je to celovito povezano in mislim, da ima v tem smislu to ministrstvo boljšo obliko in zaokroženo celoto, zato bom glasoval za ta amandma.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg399">Hvala lepa. Želi še kdo? Če ne, dajem amandma na glasovanje. Ugotovimo sklepčnost, prosim.</seg>
                <note>79 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg400">Kdor je za, naj, prosim, glasuje!</seg>
@@ -1767,19 +1749,19 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg411">Na glasovanje dajem amandma k 16. členu: člen se spremeni, tako da glasi: "Za opravljanje funkcij, ki so nezdružljive z vlogo in dolžnostmi ministra, se uporabljajo določbe zakona o poslancih". Predlagatelj dr. France Zagožen, začasno delovno telo ne podpira. Prosim.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SDZ1.ZlobecJašaL." ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg412">Meni se zdi amandma kolega Zagožna razumen in bi prosil predstavnike začasnega delovnega telesa, da mi razložijo, zakaj ne podpirajo amandmaja.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg413">Hvala lepa. Prosim, gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg414">Hvala lepa. Čeprav ni razprave, to je problem, ki je rešen v drugem zakonu in popolnoma rešuje ta problem. Ne vem točno kako se imenuje, bil je scitiran na delovni komisiji da, zakon o nezdružljivosti funkcij. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg415">Hvala lepa. Prosim, ugotovimo sklepčnost.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg416">Kdo je za predlagani amandma?</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg417">Kdor je za, naj, prosim, glasuje!</seg>
@@ -1797,11 +1779,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg425">Na glasovanje dajem amandma k 20. členu: črta se drugi odstavek. Predlagatelj dr. France Zagožen. Mnenje začasnega delovnega telesa - predlaga svoj amandma. Ugotovimo, prosim, sklepčnost. Prosim, gospod Zagožen ima besedo.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg426">Spoštovani! Ne glede na to, da začasno delovno telo predlaga svoj amandma, ki deloma ta problem rešuje, vztrajam na tem amandmaju in bom glasoval "za". Rešili smo zadevo, kakor smo mogli. Samo toliko, da ministrski predsednik ne bi imel pravice dajati podrobnejših obvezujočih napotkov. Še vedno pa s tem določilom dobiva pooblastila, ki pravzaprav degradirajo ministre in njihovo samostojnost, kot jim jo daje ustava, namreč, da Vlada in ministri odgovarjajo za delo Vlade in ministri odgovarjajo za delo svojih resorjev. Takoj ko lahko ministrski predsednik daje obvezujoče napotke za delo posameznih ministrstev, potem mislim, da posega v kompetence ministrov in lahko prevzame nadzor nad ministrstvom, za katerega ima poseben interes. Zato predlagam, torej, glasoval bom za ta amandma, da se ta odstavek črta. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg427">Hvala lepa, gospod Zagožen. Želi še kdo? Če ne, prosim, ugotovimo sklepčnost.</seg>
                <note>81 prisotnih</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg428">.</seg>
@@ -1824,11 +1806,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg439">Prosim, gospod Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg440">Spoštovani! Podpiram amandma dr. Zagožna, in sicer zato, ker postavlja bolj jasna razmerja med odgovornostjo Vlade za stvari, ki jih sprejema. Samo za pojasnilo, razlika je v tem, da morajo ministri obveščati o vseh vprašanjih vlado kot celoto in ne samo predsednika Vlade. Menim, da je v interesu vseh, da je taka jasna odgovornost skupna in, da je tudi skupno vedenje o vseh stvareh, ki so pomembna za določanje in izvajanje vladne politike. Podpiram ta amandma.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg441">Hvala gospod Podobnik. Želi še kdo? Ugotovimo prisotnost.</seg>
                <note>84 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg442">Kdor je za, naj, prosim, glasuje!</seg>
@@ -1839,21 +1821,21 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg445">Na glasovanje dajem amandma k 25. členu. Doda se nov prvi odstavek, ki se glasi: "Strokovno delo ministrstva vodi državni sekretar. Imenuje in razrešuje ga Vlada na predlog ministra. Državni sekretar je za svoje delo odgovoren ministru". Sedanji prvi odstavek postane drugi in se spremeni, tako da se glasi: "Strokovno delo na širših zaokroženih področjih v okviru ministrstva lahko vodijo državni podsekretarji. Imenuje in razrešuje jih Vlada na predlog ministra. Za svoje delo so odgovorni ministru in državnemu sekretarju". Sedanji tretji in četrti odstavek postaneta četrti in peti odstavek. Za besedo "državni sekretar" se v ustreznem sklonu doda beseda "državni podsekretar". Predlagatelj je dr. France Zagožen. Mnenje začasnega delovnega telesa: ne podpira. Želi predlagatelj razpravljati? Prosim, gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg446">O tem amandmaju je začasno delovno telo veliko razpravljalo in jaz sem bil prepričan, da smo prišli do skupnega zaključka, da je upravičen in utemeljen. Nazadnje je bila po čudnem postopku, ne vem kako, odločitev drugačna. Gre za to, da bi ministrstva imela državne sekretarje kot strokovne predstojnike ministrstva, ki skrbijo za to, da ministrstvo, in s tem seveda državna uprava, nemoteno deluje ne glede na politične spremembe v sistemu, na zamenjavo ministrstev, na odstopanje ministrov ali kaj podobnega.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg447">Sedanja rešitev predlaga več državnih sekretarjev v ministrstvih za posamezna področja dela v ministrstvih, nikogar pa ni, ki bi strokovno koordiniral delo v ministrstvu in, če ostane takšno ministrstvo še brez politične koordinacije, potem seveda se lahko ti trije, štirje ali pet državnih sekretarjev, ki ostanejo v ministrstvih, med seboj sprejo, recimo, in ministrstvo ostane brez glave.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg448">Predlagam, da to rešitev sprejmemo. V delovni skupini je sicer bila ponujena neka druga rešitev, ki predvideva, da bi z nekim drugim zakonom o državni upravi posegli v ta zakon o vladi. Mislim, da to ni v redu sistemska rešitev, zato bom glasoval za ta amandma. Zakon, ki ga bo ta zbor moral sprejeti v naslednjih treh mesecih v skladu s 15. členom, bo na tej podlagi lahko uredil organizacijo ministrstev in državne uprave, tako da bo ta zares strokovno vodena. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg449">Hvala gospod Zagožen. Želi še kdo? Prosim, gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg450">Hvala lepa. Kljub temu, da to ne bi podrlo sistema zakona bom - tisto kar smo preje izglasovali, je pa sedaj nelogično v 20. členu - glasoval proti temu iz dveh razlogov. Najprej, ker ta odločitev pomeni, da dobimo 14 novih funkcionarjev in drugič zato, ker je to mogoče rešiti v zakonu o državni upravi, ki se pripravlja, kjer gre za vrh državne uprave in se pravi, strokovno vodenje aparata ministrstva. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg451">Hvala lepa. Če ne, prosim, da ugotovimo sklepčnost.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg452">Kdor je za, naj, prosim, glasuje!</seg>
                <note>24 poslancev.</note>
@@ -1863,12 +1845,12 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg455">Na glasovanje dajem amandma k 26. členu, ki se glasi: doda se nov 26./a člen: "Minister za notranje zadeve, minister za obrambo, minister za pravosodje ter vodja upravnih organov, ki je v sestavi tudi drugih ministrstev, ki opravljajo kontrolno, revizijsko in inšpekcijsko ali drugo represivno funkcijo, ne smejo v času državne funkcije opravljati vodstvene funkcije v nobenem organu političnih strank". Predlagatelj je gospod Žarko Pregelj. Mnenje začasnega delovnega telesa: ne podpira. Prosim, gospod Žare Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg456">Spoštovani! Oprostite, če bom najprej proceduralno nastopil. Večkrat se mi dogaja, da mi narobe pišejo priimek. Pregl je popolnoma drug priimek. Moj priimek je Pregelj, z "e" in "j" na koncu. Bi prosil strokovne službe, da to natančno upoštevajo.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg457">Sicer pa bom pojasnil svoje mnenje oz. svojo odločitev, kako bom glasoval. Jasno, da bom glasoval za ta amandma, in sicer iz razlogov, ki so tehtni, ki temeljijo na dosedanjih, bolj negativnih kot pozitivnih izkušnjah. Mislim, da je ena od izkušenj demokracije, ki v bistvu šele nastaja, parlamentarna demokracija v naši državi, tudi ta, da tako občutljivo področje, kot so notranje zadeve, obrambne zadeve, pravosodje in podobni pomembni nadzorni organi v sestavi posameznih ministrstev, ne smejo biti stvar političnega prestiža. Tu gre za področja, kjer je verjetno, kjer je država življenjsko zainteresirana, da ves čas delujejo  strokovno in pravilno in ne smejo biti odvisna od političnih usmeritev ali celo ideološke usmeritve posameznega vodje takega organa. Zato predlagam, da ta amandma sprejmete. Hvala lepa.          </seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg458">Hvala lepa. Želi še kdo? Če ne, se gospodu Žaretu Preglju za tole napako opravičujemo in v bodoče se gotovo ne bo ponovila. Amandma dajem na glasovanje. Ugotovimo, prosim, prisotnost.  </seg>
                <note>83 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg459">Kdor je za, naj, prosim, glasuje!</seg>
@@ -1936,35 +1918,35 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg497">Prosim, gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg498">Tu gre za odločitev ali bo varnostno-informativna služba samostojen organ, samostojna agencija pod neposredno kontrolo Državnega zbora ali pa bo to vladna služba, podrejena Vladi in samo posredno pod kontrolo parlamenta. Jaz sem za prvo rešitev in bom glasoval za ta amandma.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg499">Hvala, gospod Zagožen. Želi še kdo? Prosim, gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg500">Hvala lepa. Sem seveda proti tej rešitvi. Državni zbor ne potrebuje take službe za svoje nemoteno delo, funkcija Državnega zbora je, da to službo nadzoruje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg501">Hvala lepa, gospod Školč. Želi še kdo? Prosim, gospod Žare Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg502">Spoštovani! Glasoval bom za ta amandma iz podobnega razloga, kot za amandma, ki sem ga jaz predlagal. Namreč, dosedanje delo te službe, dosedanji problemi, ki so nastajali v zadnjih dveh letih z nadzorom te službe in z delovanjem Ministrstva za notranje zadeve je pokazalo, da  mora biti taka služba ločena od samega ministrstva in kot samostojna organizacija v okviru Vlade, jasno odgovorna potem Državnemu zboru, kot so odgovorna ministrstva, direktno Državnemu zboru. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg503">Hvala lepa. Gospod Bavčar.</seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SDZ1.BavčarIgor" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg504">Predlog, da se varnostno-informativno službo izloči iz Ministrstva za  notranje zadeve sem podal pred dvemi leti in osmimi meseci ob nastopu funkcije notranjega ministrstva. Pri pripravi zakona sem aktivno sodeloval in prvi predlog, da se službo izloči iz  ministrstva je moj predlog. Predlog gospoda Zagožna pravi, da je potrebno službo vezati na Državni zbor, jaz mislim, da mora Državni zbor opravljati nadzorno funkcijo, med tem ko morajo izvršni organi oziroma Vlada zagotavljat operativnost te službe zato bom podprl amandma, ki ga je očitno, kot vidim, pripravilo delovno telo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg505">Hvala lepa gospod Bavčar. Želi še kdo? Če ne, dajem amandma na glasovanje. Prosim, ugotovimo sklepčnost.</seg>
                <note>83 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg506">Kdo je za amandma?</seg>
@@ -1977,11 +1959,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg511">Na glasovanje dajem amandma k 39. členu, in sicer tisti del, ki zadeva drugi odstavek. Prosim, ugotovimo sklepčnost. Se opravičujem, gospod Thaler želi besedo.</seg>
             </u>
             <note type="speaker">ZORAN THALER:</note>
-            <u who="#SDZ1.ThalerZoran" ana="#regular">
+            <u who="#ThalerZoran">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg512">Gospod predsednik hvala lepa! Podal bi proceduralni predlog, glede na izkušnje tudi iz prejšnjega mandata. Sodim, da imamo delovna telesa zato, da po možnosti pridejo do nekaterih usklajenih stališč ali predlogov amandmajev ob tem, če je amandmajev več so si med seboj podobni in, da gredo v isto smer. Tako, da bi predlagal, da bi mogoče, če je pri posameznem členu tak primer, vprašali predlagatelje izvornih amandmajev, če še vztrajajo na amandmaju kljub temu, da je začasno delovno telo prišlo do usklajenega predloga in bi eventualno, če se temu odrečejo glasovali samo o tem predlogu začasnega delovnega telesa. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg513">Hvala lepa. Gospod Rupel pravi, da se odrečejo, torej ne glasujemo.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg514">Prehajamo na glasovanje k amandmaju začasnega delovnega telesa, in sicer k 39. členu: drugi odstavek se nadomesti z novim drugim, tretjim in četrtim odstavkom, ki se glasijo: "Pravice, dolžnosti in pooblastila ministra za notranje zadeve iz zakona o notranjih zadevah, ki se nanašajo na delo varnostno-informativne službe, izvršuje predstojnik. Posebna tričlanska komisija, ki jo imenuje Vlada izmed svojih članov, spremlja izvajanje pravic, dolžnosti in pooblastil predstojnika varnostno-informativne službe iz prejšnjega odstavka in mu daje smernice za delo varnostno-informativne službe. Predstojnik varnostno-informativne službe mora v 24 urah obvestiti komisijo iz prejšnjega odstavka o uporabi pravic in pooblastil iz drugega odstavka tega člena." Sedanji tretji odstavek postane peti odstavek. Prosim, da ugotovimo sklepčnost.</seg>
                <note>83 prisotnih.</note>
@@ -2052,7 +2034,7 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg561">Predlagani kandidat za predsednika Vlade gospod dr. Janez Drnovšek je navzoč. Ali želite besedo? Prosim. Besedo ima gospod dr. Janez Drnovšek.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ1.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg562">Gospod predsednik Državnega zbora, spoštovane poslanke in poslanci! Pred tem visokim forumom se danes predstavljam kot kandidat za predsednika nove slovenske Vlade. Vsi, ki smo danes tukaj zbrani, smo dobili mandat slovenskih volivcev, da upravljamo našo državo v naslednjem zelo pomembnem obdobju. Volivci so nas nagradili s svojim zaupanjem, hkrati pa so nam naložili zelo veliko odgovornost, da utrdimo našo mlado državo, da izboljšamo njen gospodarski položaj, da dokončamo njeno gospodarsko in politično preobrazbo in jo pripeljemo skozi nevarne čeri mednarodnih političnih in gospodarskih odnosov.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg563">Prejšnji parlament je kljub pogostemu mrtvemu teku, medsebojnim blokadam, opravil pomembno nalogo. Slovenija je z mednarodnim priznanjem postala samostojna država, ušla je iz kotla balkanske vojne in mednacionalnih spopadov. Kljub vojni v neposredni bližini in trganju vseh prejšnjih gospodarskih povezav na tem območju, z izgubo trgov, na katero je bil navezan precejšen del slovenskega gospodarstva, je Sloveniji uspelo ohraniti in celo povečati notranjo gospodarsko trdnost in začeti z resno preobrazbo gospodarskega sistema.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg564">Veliko dela je bilo opravljenega, vendar je še veliko nedokončanega. Mednarodni položaj je zelo zapleten. Morda bi lahko celo trdili, da se še naprej zapleta z možnostjo novih velikih kriz in celo vojn. Časi nekdanje preglednosti in celo stabilnosti v mednarodnih odnosih so minili. Odprava prejšnjega, čeprav potencialno nevarnega, vendar dokaj stabilnega ravnotežja med dvema velikima blokoma v svetu je pripeljala do razmaha demokratskih in tržnih procesov, hkrati pa do nove nestabilnosti, ki bo verjetno še nekaj časa trajala. Kar je bilo včasih videti samo po sebi umevno in zagotovljeno, varnost in mir, danes to ni več. Krizna žarišča v jugovzhodni Evropi in na Vzhodu lahko vsak čas prerastejo v vojna žarišča. Takšno nevarnost še povečuje počasnost pri iskanju poti v učinkovitejše gospodarstvo  v nekdanjih državah Vzhodnega bloka. Številnim možnostim mednacionalnih in verskih spopadov se lahko hitro pridruži eksplozija socialnih napetosti in eksodus ekonomskih in političnih beguncev iz vzhoda proti zahodu. Pri takšnem razvoju dogodkov ostaja očitno, da se bo razviti zahodni svet pred temi pojavi čedalje bolj varoval in zapiral.</seg>
@@ -2067,14 +2049,14 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg573">Podrobnejša predstavitev vseh programskih usmeritev bi preveč obremenila moj današnji nastop in današnjo razpravo. Zato sem vam v naprej poslal gradivo s poglavitnimi usmeritvami. Ta dokument naj bi bil predvsem namenjen programskim razpravam pri sestavljanju Vlade in predlaganju ministrov. Številke in instrumenti, ki so v njem navedeni, so plod dosedanjih spoznanj in analiz, ki jih bomo seveda še dopolnjevali in tudi o njih razpravljali v novi Vladi in v Državnem zboru. Ta dokument ima zato pomen nekakšnega pisma o namerah in mislim, da ni potrebno, da bi se danes Državni zbor do njega formalno opredeljeval. Hvala za pozornost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg574">Gospodu Drnovšku se zahvaljujem za njegove besede. O predlogu predsednika republike, da se za predsednika Vlade Republike Slovenije izvoli poslanec državnega zbora dr. Janez Drnovšek, pričenjam razpravo.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg575">Prosim, da predstavnik poslanske skupine z dvigom roke potrdi, da je skupina navzoča vsaj z enim poslancem. Liberalno demokratska stranka - hvala, Slovenski krščanski demokrati - hvala, Združena lista - hvala, Slovenska nacionalna stranka -</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg576">hvala, Slovenska ljudska stranka - hvala, Demokrati - demokratska stranka - hvala, Zeleni Slovenije - hvala, Socialdemokratska stranka Slovenije - hvala.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg577">Kdo želi razpravljati? Prosim, gospod Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg578">Spoštovane poslanke in poslanci, spoštovani kandidat za mandatarja nove slovenske Vlade. Želim povedati nekaj misli in pogledov o predlaganem kandidatu in o programu oziroma pogledih gospoda kandidata, pri tem pa izhajam iz polletne izkušnje vodenja vaše Vlade.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg579">Vaša programska izhodišča bi bila za mene mnogo bolj sprejemljiva, če ne bi bila preveč splošna in mnogo premalo oprejemljiva. Samo na kratko bom preletel nekatera vprašanja. V začetku ste poudarili, da bi uresničevanje vašega programa do leta 1995 zmanjšalo delež prihodkov javnega sektorja od sedanjih 47% na 43% bruto domačega proizvoda. Torej, v prihodnjih nekaj letih bi poskušal ta delež zmanjšati z deleža, ki ga je vaša Vlada dosegla v tem obdobju 6-mesečnega delovanja na delež, ki ga je prejšnja Vlada dosegla, torej na 42 - 43%. Tu se postavlja predvsem vprašanje, zakaj in kako? Zakaj je bilo potrebno, da se je ta delež v tako kratkem času tako bistveno povečal, ob tem, da je bilo tudi v tem obdobju zadnjih mesecev jasno, da je tako povečevanje porabe za državo izrazito neugodno in slabo.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg580">Glede javnega dolga bi predvsem vprašal, ob tem ko se predvideva zelo visok delež javnega dolga, ki je težak več milijard mark, ali se bo, na primer ohranilo možnost normalnega delovanja neki relativno majhni denarni inštituciji kot so v tem trenutku hranilno-kreditne službe, ki pomenijo v denarnem sistemu finančno zelo malo, pa vendarle se z zakoni, ki se pripravljajo, na nek način poskuša onemogočit normalno delovanje hranilno-kreditnih služb, češ, da so konkurenčne sedanjim bankam.</seg>
@@ -2088,42 +2070,42 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg588">Spoštovani gospod kandidat, spoštujem vas kot kandidata za mandatarja. Menim pa, da  usmeritev, ki ste ji zavezani preko programa svoje stranke, ni najboljše zagotovilo za pozitiven razvoj v prihodnosti. Menim tudi, da je bilo mnogo premalo narejeno, da bi se poiskalo optimalno rešitev tudi glede oblikovanja prihodnje Vlade. Na tej osnovi se bom tudi opredeljeval pri glasovanju za vašo kandidaturo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg589">Hvala lepa, gospod Podobnik. Želi še kdo razpravljati? Prosim, gospod Šešerko.</seg>
             </u>
             <note type="speaker">DR. LEO ŠEŠERKO:</note>
-            <u who="#SDZ1.ŠešerkoLeo" ana="#regular">
+            <u who="#ŠešerkoLeo">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg590">Spoštovane kolegice, poslanke in poslanci! Poslanska skupina zelenih se je opredelila na podlagi razprav v stranki in na podlagi naših razgovorov s kandidatom in se je odločila, da podpre kandidaturo dr. Janeza Drnovška za mandatarja nove slovenske Vlade, in sicer na podlagi volilnih rezultatov na zadnjih volitvah, glede na program, ki ga je predložil in glede na pogovore, ki smo jih imeli. Menimo, da je gospodarski program stabilnega tolarja, prestrukturiranja gospodarstva in sprejem varstvene zakonodaje tisto, kar nas prepričuje za to odločitev. Čeprav Zeleni ne nameravamo biti vladna stranka in nimamo namena biti zastopani kot stranka v njegovi vladi, ne bomo pa nasprotovali oziroma veseli bomo, če bodo posamezni predstavniki Zelenih kot eksperti v tej vladi zastopani. Za nas je pomembna cela vrsta konkretnih ravnanj in odločitev te Vlade in  tudi pri imenovanju posameznih ministrov imamo namen se zelo konkretno pogovarjati o vrsti vprašanj, kar zadeva okoljevarstvenih vprašanj, zlasti tistih, ki so povezana s stališči in resolucijami, ki so bile sprejete na Konferenci ZN v Rio de Janeiru. In pri tem za nas ni pomembna samo resolucija, ki je bila sprejeta v zvezi z okoljem, ampak tudi druga o različnosti naravnih vrst.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg591">Kar zadeva volilni zakon smo kandidata za mandatarja opozorili, da naša stranka ne sprejema tistih pobud, ki bi šle v smeri spremembe volilnega sistema v večinski volilni sistem, ampak smo za to, da se volilni sistem spremeni, tako da bo striktno proporcionalni volilni sistem. In sicer zaradi tega, ker ima karakteristike večinskega volilnega sistema cela vrsta dežel, ki so južneje in vzhodneje od naše. Mislimo,da ne bi peljale k pozitivnemu rezultatu.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg592">Kar zadeva problematiko brezposelnosti, smo jasno povedali, da je zaostrovanje tega vprašanja v Sloveniji pripeljalo do takšne točke, da so potrebni tu zelo aktivni programi, ki morajo biti povezani s prestrukturiranjem gospodarstva. Za nas je tudi pomemben sprejem zakona o referenduma o zaprtju jedrske elektrarne Krško, ker menimo, da je treba to vprašanje razrešiti na splošnem ljudskem referendumu in vrste zakonov: zakon o omejevanju kajenja, potreben je sprejem zakona o gozdovih itd. V vseh teh posameznih vprašanjih se nameravamo Zeleni odločati konkretno glede na to, kakšen dogovor bo na posameznem področju mogoč. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg593">Hvala lepa, gospod Šešerko. Želi še kdo razpravljati? Prosim. Besedo ima gospod Janez Podobnik.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg594">Spoštovane poslanke in poslanci, spoštovani kandidat za predsednika Vlade Republike Slovenije! S posebno pozornostjo sem v vaših predlaganih programskih usmeritvah za delo Vlade v prihodnje sledil vašim ukrepom oz. vašim stališčem do problematike slovenskega podeželja oziroma skladnega regionalnega razvoja, pa mi dovolite, da ob tem povem nekaj misli. Slovensko podeželje je pred veliko preizkušnjo. Z osamosvojitvijo države Slovenije pridobiva poseljenost slovenskega prostora nov pomen. Je garancija za preživetje slovenstva. Ob tem pa je ohranjanje in bogatitev kulturne krajine in poseljenosti tudi osnovni izraz identitete slovenskega prostora. In ne nazadnje, v slovenskem podeželju so korenine vseh nas, vseh Slovencev, seveda v tesni povezanosti z večjimi urbanimi centri in mesti. Ker je problematika podeželja vedno zelo občutljiva, zahteva posebno skrb Vlade, da s svojimi programi in celovitim delovanjem omogoča, da podeželje in tu je mišljeno, tu so mišljene vasi, visokogorska področja, višinska področja, predvsem pa mnoga demografsko ogrožena področja v Sloveniji preživijo in vidijo perspektivo. V zadnjem času, zadnje obdobje, predvsem v času Vlade, ki ste jo vodili vi, spoštovani gospod Janez Drnovšek, se je odnos do podeželja poslabšal. Še več, predvsem na področju neurejenih razmerij v kmetijstvu, se je zostril, lahko rečemo, do te mere, da je kmetijstvo, kot osnovna gospodarska dejavnost na podeželju, okrnjena in prizadeta.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg595">Zato pričakujem, da bo nova Vlada nemudoma spremenila odnos do kmetijstva, kajti sicer se bo praznjenje nadaljevalo. To pa so nepovratni procesi. Za celovit razvoj podeželja, kjer živijo in ustvarjajo tudi podjetniki, mali obrtniki in upokojenci, delavci, predvsem pa mladi, je nujen nadaljnji razvoj infrastrukture. V tej zvezi sem pričakoval večji poudarek v vaši programski usmeritvi cestni infrastrukturi, kajti kot je znano, so skoraj vse politične stranke v predvolilnem času veliko pozornost in tudi energijo namenili tej problematiki.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg596">Prav tako nas skrbi krčenje občinskih proračunskih sredstev in v tem smislu vidim nadaljevanje centralizacije slovenske države, to pa bo najbolj zadelo prav slovensko podeželje in še posebej demografsko ogrožene predele. Ob tem bo tudi ogrožena usmeritev, ki poudarja nujnost odpiranja novih delovnih mest na teh področjih. Zavedam se, da lahko podeželje preživi in živi le v simbiozi z mesti in večjimi urbanimi centri, toda verjemite, podeželje je vedno v opoziciji, da tako rečem, zato potrebuje pomoč in podporo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg597">Hvala lepa gospodu Podobniku. Kdo še želi razpravljati? Prosim, gospod Kociper.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg598">Besedo ima gospod Kociper.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg599">Hvala lepa. Spoštovane poslanke in poslanci, spoštovani gospod predsednik! V skladu z večinsko voljo tega zbora, ki se je pri glasovanju o predhodni točki dnevnega reda, to je o zakonu o vladi, odločil, da vendarle nameni posebno pozornost in skrb področju družine in družinske politike za sedaj še res na simbolni ravni - tako, da je umestil področje družine ministru za delo, družino in socialno politiko, mi dovolite, spoštovani gospod dr. Janez Drnovšek, kandidat za mandatarja, da vas povprašam po vašem stališču in pogledih in sicer o treh zadevah v zvezi z družinsko politiko.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg600">Prvič, o trenutnem položaju družinske politike tako kot jo vidite; drugič, katere ukrepe nameravate predlagati za takojšnje reševanje odsotnosti družinske politike in tretjič, kako se boste lotili dolgoročnejših ukrepov zagotavljanja ustreznega materialnega položaja otrok in družine in s tem ustreznejšega moralnega in materialnega ovrednotenja družine pri njenem vsestranskem prispevku pri samoohranitvi slovenskega naroda?                </seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg601">Dovolite mi, da vas ne nazadnje spomnim na edini stavek, ki sem ga uspel najti v vaših pisnih programskih usmeritvah in sicer se glasi: "Poleg tega bomo zaokrožili ureditev socialne varnosti in družinske politike in zagotavljali medsebojno usklajenost ukrepov na teh področjih". Če sem morda spregledal kaj drugega na to temo v pomanjkanju časa, ker smo dobili gradivo na klop, se opravičujem in bi bil hvaležen za vašo ustno dopolnitev. Seveda pričakujem tudi, da bo vaš program na področju družinske politike tudi še predstavljen, ker se mi zdi, da ga tukaj ni. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg602">Hvala gospodu Kocipru. Želi še kdo razpravljati? Prosim, gospod Žarko Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg603">Spoštovani! Nekoliko sem se bolj osredotočil na sam program oziroma nekakšne povzetke osnovnih programskih usmeritev bodoče Vlade, ki verjetno niso bistveno različne od dosedanje Vlade, saj gre za mandat istega mandatarja in tudi verjetno sama sestava Vlade ne bo bistveno drugačna od sedanje.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg604">Pri takih dokumentih - jasno jih je težko na kratko napisati - je pomembno, da so narejeni po določenih sistematičnih sklopih in da je jasno opredeljeno, kaj je v bistvu vsebina takega dokumenta in kaj je zgolj tehnikalija oziroma nekakšna struktura.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg605">Mislim, da tukaj ni jasne ločnice kateri ukrepi so vsebinski, kaj so cilji vlade in kaj so tehnikalije, kaj so ekonomski instrumenti in podobno. Tukaj gre za zmešnjavo in je potrebno veliko truda, da bi razvozlal pravo željo vladne usmeritve oziroma bodočnost, ki nam jo Vlada obljublja. Zakaj se mi zdi to pomembno? To se mi zdi pomembno iz povsem preprostega, mogoče pragmatičnega stališča, da ima parlament nalogo vlado nadzorovati. In, če jo nadzoruje, mora vedeti kaj Vlada obljublja in kako Vlada to izpolnjuje. Sicer se lahko po tem obešamo na razno-razne kazalce, kot so statistike, kot so razne napovedi, razne ocene - strokovne ali manj strokovne - da nikoli nimamo pravega primerjalnega nivoja, ki bi ga imeli, če bi bilo točno nekje zapisano kaj Vlada hoče, kako bo to naredila, kaj obljublja in na koncu analizo, kaj je naredila. Ta pomanjkljivost upam da bo odpravljena pri sprejemanju novega proračuna, ko bo Vlada dolžna podati analizo svojega dosedanjega dela. Pričakoval bi tak dokument že danes tukaj na mizi.</seg>
@@ -2131,11 +2113,11 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg607">Taki nekako naj bi bili programi. Ali, na primer ugotavljamo, da imamo tako in tako razvito cestno omrežje. V tem obdobju, za katerega Vlada prosi mandat, bomo poskušali zgraditi toliko in toliko cest, na teh trasah, da bomo rešili te in te probleme. Govor zgolj o nekih ekonomskih instrumentih, ki nedvomno so strokovna podlaga o delovanju vlade, mislim da ni stvar nekega programa. Program mora biti namen, ki ga Vlada želi doseči, ne pa tehnika, po kateri bo to dosegla. To je njena stvar kako bo odpravila razne primanjkljaje, kako bo servisirala javni dolg in tako naprej. Osebno bi ponovil svoje zavzemanje prav pri sanaciji bank, da se predhodno, preden se sanirajo banke razjasni, čigave so. Čigavo je to imetje, kako bomo to porazdeliti, če je zguba, kajti zguba se bo gotovo servisirala iz državnega proračuna in prav zaradi tega, kako bomo ta problem, ki je dokaj hud, poleg vseh izgub v gospodarstvu, rešili, mislim da je od tega odvisno marsikaj v tej državi. Tudi politično zdravje in normalno zdravi odnosi v parlamentu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg608">Hvala gospodu Preglju. Želi še kdo razpravljati. Prosim. Besedo ima gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg609">Spoštovane poslanke in poslanci, spoštovani kandidat! Jaz bi sicer bil veliko bolj miren, če bi danes imeli pred seboj program nove koalicije. Zdaj imamo pravzaprav neke usmeritve, ki jih ponuja kandidat za predsednika Vlade. Pri tem pa moram reči, da sem zelo nezaupljiv - nezaupljiv na podlagi izkušenj. Te programske usmeritve so, mislim da dokaj skladne s tistim, kar nam je gospod Drnovšek ponujal tudi spomladi lansko leto ob konstruktivni nezaupnici. Politika Vlade in predvsem politika Liberalno-demokratske stranke ni bila skladna, je v nasprotju s tem. Pri nas politična kriza že traja več kot eno leto. Pri ustvarjanju te politične krize je bila prav Liberalno-demokratska stranka izjemno aktivna. Zato sem v dvomih, če sedaj obljublja politično stabilizacijo. Sprašujem, kakšna bo ta politična stabilnost, zlasti, ker ni uspela zagotoviti očitno neke trdne koalicije za prihodnje, ki bi se danes lahko tudi že predstavila.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg610">Vidim tako neskladnost, recimo, pri obljubah, nekaj o tem je bilo že rečeno, da bo prihodnja kmetijska politika ščitila domače kmetijstvo, hkrati pa dolgo opazujemo katastrofo velikega dela podeželja, kjer potekajo že v veliki meri ireverzibilni procesi. Potem pade tudi drug tak program, tukaj omenjen, da bo Vlada pospeševala razvoj turizma. Če bo polovica podeželja demografsko tako ogrožena, da nima več vitalnosti - lastne vitalnosti za razvoj, potem seveda si je težko predstavljati razvoj turizma, recimo samo ob obali, ki jo imamo menda dva cm na prebivalca Slovenije in v večjih centrih. Turizma brez urejene in kultivirane Slovenije pač ne bo.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg611">Ne vidim v teh usmeritvah nobene prave poti iz zagate, recimo, glede zmanjšanja stroškov za javno porabo. Predvideva se, npr. zmanjšanje deleža za pokojninsko in invalidsko zavarovanje od 12,7% na 10,7%, ne da bi bilo jasno razvidno, da bo družbeni proizvod ustrezno narasel in da torej standard upokojencev ne bo takole za kakšnih 25% ali dobrih 20% znižan s prihodnjimi ukrepi Vlade na tem področju. Ni dovolj perspektive, razvidne za ustvarjanje novih delovnih mest tam, kjer so najbolj potrebna in v tistih regijah, ki so najbolj ogrožene.</seg>
@@ -2143,12 +2125,12 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg613">Bojim se torej, če bo v prihodnje Vlada nastala na takšnih osnovah, da bodo prevladale predvsem vrednote, za katere ne morem glasovati, to je tak divji liberalni kapitalizem in ne socialno stabilna družba z tržnim gospodarstvom. Tudi jaz se bom opredeljeval v skladu s temi svojimi pomisleki. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg614">Hvala gospodu Zagožnu. Želi še kdo razpravljati? Ker ne želi nihče več razpravljati, zaključujem razpravo in začenjamo z volitvami.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg615">V skladu z začasnim poslovnikom <gap reason="inaudible"/> Gospod Drnovšek še želi besedo.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ1.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg616">Povsem na kratko nekaj poizkusov odgovorov, čeprav menim, da seveda smo vsi skupaj odgovore, račune polagali našim volivcem, ki so odločili in na podlagi volilnih rezultatov zato sedaj poizkušamo seveda izbrati mandatarja in sestaviti vlado.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg617">Postavljeno je bilo vprašanje v zvezi z zniževanjem javne porabe v družbenem proizvodu. Mi ocenjujemo že v sedanji vladi, da je to ena izmed temeljnih nalog v naslednjem obdobju in Vlada je v preteklem obdobju namenila veliko pozornost temu vprašanju, pri čemer se je v začetku soočila s situacijo, da je prav v prejšnjem letu prišlo do upada družbenega produkta kot rezultata izgube trgov in vseh pojavov, ki jih dobro poznamo in da ima seveda javna poraba pri tem neko inercijo, torej, da se ne zmanjšuje tako hitro kot je padal družbeni produkt v tej izjemni situaciji, po razpadu prejšnje države. To inercijo v padanju javne porabe so pa vzdrževali mehanizmi, ki jih je že pred tem, torej že pred nastopom naše prejšnje Vlade, sprejela prejšnja skupščina in prejšnja Vlada. Vsi mehanizmi, ki so bili vgrajeni v proračun, v različne kolektivne pogodbe, v zakone o plačah. Skušali smo te mehanizme zaustaviti, spremeniti, velikokrat neuspešno, ker se parlament na to ni odzval, odzval pravočasno, velikokrat smo se pri tem soočali z različnimi pritiski različnih socialnih skupin in interesnih skupin, ki so želele obdržati svoj delež javne porabe. Vse do situacije, ko je pravzaprav Vlada ostala v svojih prizadevanjih za zmanjšanje javne porabe v družbenem produktu celo na robu zakonitosti, ko je bila prisiljena popuščati šele na podlagi sklepov ustavnega sodišča, da se, npr. izplačajo, priznajo višji osebni dohodki kot pa je Vlada menila, da so še vzdržni v tisti situaciji. Skratka, uporabljeni so bili vsi možni načini, instrumenti za zniževanje deleža javne porabe v družbenem proizvodu.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg618">Naloga ni končana. Mislim, da smo storili vse kar se je v prejšnjem letu dalo storiti v okviru teh instrumentov in zakonov, ki smo jih imeli, da bo pa potrebno v naslednjem obdobju resno sodelovanje Državnega zbora in resno delo, da bi skupaj z vlado uspeli napraviti ustrezne premike.</seg>
@@ -2159,7 +2141,7 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg623">V zvezi z drugimi vprašanji menim, da jih ni potrebno danes podrobneje obravnavati, bo precej priložnosti, npr. če govorim o družinski politiki, bo precej priložnosti za takšno obravnavo, ko bodo nastopili tudi kandidati za resorne ministre. Današnje programske usmeritve, ki sem jih predložil, nisem predložil zato, ker bi bile potrebne ali zahtevane za današnjo obravnavo. Zdelo se mi je primerno, da na nek način dam prispevek kot nek uvod k programskim pripravam, razmišljanjem tako poslancev kot tudi prihodnje Vlade. In seveda v tem kontekstu, v tej zvezi imajo tudi bolj tak ne še trdno, formalen značaj, ampak bolj kot nek začetek razprav, ki naj bi sledile. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg624">Hvala  gospodu Drnovšku. Začenjamo volitve.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg625">V skladu z začasnim poslovnikom bom vodil volitve ob pomoči poslancev iz štirih najštevilčnejših poslanskih skupin. Te skupine so predlagale Jožeta Protnerja, poslanska skupina Liberalno demokratske stranke, Staneta Frima, poslanska skupina Slovenskih krščanskih demokratov, dr. Leva Krefta, poslanska skupina Združene liste, Ivana Verzolaka, poslanska skupina Slovenske nacionalne stranke. Pri delu mi bo pomagala tudi sekretarka zbora. Želi o tem predlogu kdo razpravljati? Ne. Ker ne želi nihče razpravljati, zaključujem razpravo in prehajamo na glasovanje. Ugotavljamo navzočnost.</seg>
                <note>74 prisotnih.</note>
@@ -2172,23 +2154,23 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 18.00 uri in se je nadaljevala ob 18.59 uri.</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg630">Spoštovane kolegice poslanke in kolegi poslanci, gospe in gospodje! Nadaljujemo delo Državnega zbora. Dovolite mi, da preberem poročilo volilne komisije.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg631">POROČILO O IZIDU GLASOVANJA O IZVOLITVI PREDSEDNIKA VLADE REPUBLIKE SLOVENIJE. Glasovanje je potekalo 12. januarja 1993 v prostorih Državnega zbora Republike Slovenije. Glasovanja se je udeležilo 87 poslancev. Oddanih je bilo 87 glasovnic. Za kandidata dr. Janeza Drnovška je glasovalo 48 poslancev. Neveljavne so bile tri glasovnice.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg632">Ugotavljam, da je bil za PREDSEDNIKA VLADE REPUBLIKE SLOVENIJE IZVOLJEN GOSPOD DR. JANEZ DRNOVšEK in mu iskreno čestitam.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg633">Vabilu, da prisostvuje seji Državnega zbora pri prisegi predsednika Vlade so se odzvali gostje, ki jih prav lepo pozdravljam. Vabim gospoda Drnovška, da v skladu s 113. členom Ustave Republike Slovenije priseže pred Državnim zborom.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ1.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg634">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg635">Ugotavljam, da je gospod dr. Janez Drnovšek nastopil funkcijo predsednika Vlade Republike Slovenije. Gospodu Drnovšku želim uspešno delo pri opravljanju odgovorne dolžnosti.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg636">S tem smo zaključili 3. točko dnevnega reda. Vodenje seje predajam podpredsedniku gospodu Mozetiču.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg637">Ostalo nam je nekaj še od prej, in sicer pri 6. TOČKI DNEVNEGA REDA je gospod Feri Horvat predlagal, da bi sprejeli še en dodatni sklep, ki se glasi:</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg638">"Državni zbor Republike Slovenije priporoča Vladi Republike Slovenije, da poleg aktivnosti za efektivnost članstva v Evropski banki za obnovo in razvoj v programu dela, organizaciji dela Vlade in ministrstev in v sodelovanju z gospodarskimi subjekti, njihovimi asociacijami, bankami, skladom za prestrukturiranje in prenovo podjetij in drugo pospeši pripravo programov oziroma projektov za financiranje s strani Evropske banke za obnovo in razvoj."</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg639">O tem predlogu sklepa bi bilo potrebno odpreti razpravo. Pred vsako razpravo smo se že navadili, moramo ugotavljati, če je iz vsake poslanske skupine prisoten najmanj en poslanec. Liberalno-demokratska stranka, Slovenski krščanski demokrati, Združena lista, Slovenska nacionalna stranka, Slovenska ljudska stranka, Demokratska stranka, Zeleni in Socialdemokratska stranka.</seg>
@@ -2204,54 +2186,54 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg646">Poročilo je naslednje: Komisija Državnega zbora Republike Slovenije za volitve, imenovanja in administrativne zadeve se je sestala na 5. seji dne 12.1.1993 zaradi vloženega amandmaja poslanca dr. Franca Zagožna k predlogu zakona o spremembi zakona o funkcionarjih v državnih organih vloženega za nov 3.a člen. Komisija je bila seznanjena, da bo predlagatelj ta amandma umaknil, zato o njem ni razpravljala in o njem ni zavzela stališča. Prosim, gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg647">Spoštovane poslanke in poslanci! Komisije nisem obveščal o ničemer takem, da bi ta amandma umikal, zato ne vem, kdo jo je obveščal. Gre za to, da so pravice predsednika države, članov Vlade, parlamenta, torej vseh teh vrhov slovenske oblasti urejene, ni pa urejen status ustavnih sodnikov. Dobil sem sicer interpretacijo, da tega statusa ni mogoče urediti v zakonu o funkcionarjih v državnih organih niti v zakonu o Vladi.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg648">Menim, da je začasno to le mogoče. Lahko bi to uredili začasno tudi z zakonom o Vladi, vendar je to začasno delovno telo po interpretaciji predstavnikov Vlade to zavrnilo. Mislim, da se začasno lahko tudi na ta način, kot je tudi tukaj predlagan uredi, dokler ne bo sprejet zakon o ustavnem sodišču. Sicer bomo pač kot Državni zbor najbrž doživeli očitek, da eno vejo oblasti obravnavamo drugače kot druge in da jo diskriminiramo. Ko pa bo zakon o ustavnem sodišču sprejet in bo ta zadeva urejena, potem se lahko tudi umakne to določilo iz zakona o funkcionarjih v državni upravi.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg649">Prosim najprej predstavnika komisije, da pojasni ta nesporazum.</seg>
             </u>
             <note type="speaker">TONE ANDERLIČ:</note>
-            <u who="#SDZ1.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg650">Spoštovani! Komisija se je sestala, tako kot ji je bilo naloženo. V prvem delu je poskušala ugotoviti možnost za vključitev amandmaja v ta zakon. Ker se je pojavila vrsta vprašanj, sam amandma je bil nekonsistenten glede na to, da se tudi sedaj funkcija generalnega sekretarja ustavnega sodišča ne vrednoti po zakonu o funkcionarjih, tako kot se predsednik in člani ustavnega sodišča, ker je nastalo seveda še več drugih odprtih vprašanj, samo sejo prekinili in poklicali na sejo predsednika Ustavnega sodišča in predstavnika ministrstva za pravosodje.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg651">Po odmoru smo ugotovili skupaj s predsednikom Ustavnega sodišča, da je predsednik Ustavnega sodišča oblikoval predlog amandmaja na zakon o Vladi s popolnoma enako vsebino, kot ga je potem poslanec, gospod Zagožen, povzel in predlagal v zakon o funkcionarjih v državnih organih. Šlo je za nekonsistenco, šlo je torej za drug zakon, na katerega je sploh ustavno sodišče oziroma njen predsednik želel nasloviti amandma in urediti ta položaj. Na seji komisije sta bila prisotna gospod Potočnik in gospod Janez Podobnik, kjer sem ju jaz osebno in seveda tudi drugi člani komisije, zaprosil, če lahko z gospodom Zagožnom opravita razgovor in tak amandma umakne, seveda na tem zboru in ne na komisiji. Dobil sem obvestilo kasneje na izrecno vprašanje, da je ta zadeva sanirana in da se bo to skladno z dogovori tudi uredilo, jasno, z napotilom, da se poskuša ugotoviti, ali je to vprašanje mogoče razrešiti v predlogu zakona o Vladi. Pozneje sem dobil informacijo seveda, da tam sploh ni bil vložen amandma, ne glede na predhodne dogovore, ki so bili že pred sejo pred 10. uro in seveda, da je potem tudi - tako kot je dr. Zagožen rekel - to vprašanje na nek način s strani predstavnikov Vlade in te delovno skupine bilo zavrnjeno že pred tem.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg652">Naše mnenje ni bilo ne odklonilno ne pozitivno, zato, ker nismo obravnavali, nismo zavzeli stališča glede na tako mnenje in ne bi rad, da gospod Zagožen vnaša nek dvom, da se je poskušalo nekaj zaobiti in zapostaviti neko vejo oblasti, ker samo to vprašanje trenutnega, neurejenega statusa Ustavnega sodišča ne pomeni nikakršno podcenjevanje.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg653">Predlagam, če dr. Zagožen vztraja pri tem, da se ta amandma obravnava in ga ob tej obravnavi zdaj ne umakne, da se komisija do njega opredeli. To je edino možno po poslovniku in predpisih. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg654">Hvala lepa. Gospod Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg655">Spoštovane poslanke in poslanci! Rad bi povedal, zakaj mislim, da bi bilo dobro sprejeti amandma in ga obravnavati tako, kot je bilo rečeno in zakaj tudi  mislim, da sodi k temu zakonu.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg656">Ta zakon je že do zdaj urejal položaj sodnikov Ustavnega sodišča in to na enak način, kot ureja sicer vprašanje statusa prejemkov oz. plač drugih funkcionarjev v državnih organih v 3. členu - če pogledate osnovni zakon. In zato  mislim, da je treba njihov status tudi v tem zakonu reševati naprej. Mi smo v preteklem sklicu spregledali, ko smo v zakonu o poslancih položaj nekaterih drugih že reševali; recimo predsednika republike. V zakonu o poslancih smo rekli, da v prehodnih določbah velja ista določba tudi za predsednika republike. Takrat tega nismo naredili za sodnike Ustavnega sodišča. Mislim pa, da bi dejansko, če danes tega ne bi sprejeli, prišlo do tega, da bi status vseh, ki so imeli zdaj enak položaj, kar se tega tiče, kot sodnike Ustavnega sodišča bil  na novo urejen, njihov položaj pa ne. S tega vidika je vendarle treba najti rešitev v okviru tega zakona in to danes. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg657">Hvala lepa. Gospod dr. Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg658">Ne bi rad gospoda Anderliča za kar koli dolžil. Ne gre za to. Mislim, da gre za nesporazum. Sem pač na podlagi takega mnenja gospoda Peršaka amandma vložil k temu zakonu in ne k zakonu o Vladi, kot so predlagali ustavni sodniki. Z njimi se nisem utegnil konzultirati. Menil sem, da delovna skupina lahko ta amandma predloži, vendar smo tam dobili interpretacijo, da ga v zakonu o Vladi ni mogoče. Zato apeliram na ta zbor, če je pravno mogoče, da se to reši v zakonu o funkcionarjih v državnih organih, da to storimo. Zato formalno  nisem umaknil, ker sem čakal ali bom tam uspel, ker nisem, mislim, da je prav, da se odločimo tako, da rešimo pri tem zakonu. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg659">Hvala lepa. Prekinjam razpravo pri tej točki. Prosim, gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg660">Hvala lepa! Se strinjam, da se tudi ta problem reši. Bi pa opozoril na nevaren presedan, ki se je zgodil v tem primeru in sicer, da je predsednik Ustavnega sodišča dal amandma na zakon, ki je v proceduri in tisti zakon, o katerem je bilo več stvari že spornih glede plač. Se mi zdi, da je to tudi ena od stvari, ki jo mora zbor kasneje prediskutirati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg661">Hvala lepa! Glede na to, da je amandma vložen, da ga predlagatelj ne umika, prekinjam v tem delu razpravo o tej točki. Prosim Komisijo za volitve, imenovanja, da se sestane in da zavzame stališče k temu amandmaju.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg662">Mi pa bi nadaljevali delo pri 4. TOČKI DNEVNEGA REDA, IZVOLITEV ZAČASNIH KOMISIJ ZA PREDSTAVITEV PREDLAGANIH MINISTROV.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg663">Predloge za izvolitev začasnih komisij za predstavitev predlaganih ministrov je skladno z 20. členom začasnega poslovnika predložila Komisija Državnega zbora za volitve, imenovanje in administrativne zadeve, ki ste jih prejeli s sklicem seje. Komisija predlaga Državnemu zboru izvolitev naslednjih začasnih komisij: Področje notranjih zadev, obrambe, pravosodja, uprave; področje gospodarstva; področje financ, družbenih dejavnosti, dela, socialne politike in področje mednarodnih odnosov. Želi poročevalec komisije dodatno obrazložiti. Prosim, gospod Anderlič.</seg>
             </u>
             <note type="speaker">TONE ANDERLIČ:</note>
-            <u who="#SDZ1.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg664">Komisija za volitve, imenovanja in administrativne zadeve je skladno s četrtim odstavkom 20. člena in prvim odstavkom 8. člena začasnega poslovnika in na predlog poslanskih skupin ter predstavnikov italijanske in madžarske narodnosti določila predlog sestave za predsednike, podpredsednike in člane začasnih komisij, in sicer:</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg665">- Za področje notranjih zadev, obrambe, pravosodja, uprave je za predsednika predlagan Alojz Metelko, za podpredsednika Janez Janša in za člane Roberto Battelli, Igor Bavčar, mag. Dragan Černetič, Janez Janša, Zmago Jelinčič, Miran Jerič, Mihaela Logar, Jurij Malovrh, Miloš Pavlica, Ignac Polajnar, dr. Ciril Ribičič, Marjan Stanič in Vladimir Topler.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg666">- Za področje gospodarstva je za predsednika predlagan dr. Rado Bohinc, za podpredsednico Jana Primožič ter za člane Geza Džuban, Feri Horvat, Sašo Lap, Štefan Matuš, Ivan Oman, mag. Igor Omerza, Franc Potočnik, Maria Pozsonec, Maks Sušek, Drago Šiftar, dr. Peter Tancig, dr. Franc Zagožen in dr. Janez Zupanec.</seg>
@@ -2262,7 +2244,7 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg671">Komisija predlaga, da Državni zbor obravnava predloge in izvoli začasne komisije za predstavitev kandidatov za ministre v podani sestavi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg672">Hvala lepa. Prehajamo na obravnavo predloga, to je predlog za izvolitev predsednika, podpredsednika in člane začasne komisije za področje notranjih zadev, obrambe, pravosodja in uprave. Za predsednika komisije je predlagan Alojz Metelko, za podpredsednika Janez Janša, za člane komisije Robert Battelli, Igor Bavčar, mag. Dragan Černetič, Janez Janša, Zmago Jelinčič, Miran Jerič, Mihaela Logar, Jurij Malovrh, Miloš Pavlica, Ignac Polajnar, dr. Ciril Ribičič, Marjan Stanič in Vladimir Topler.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg673">V skladu s poslovnikom moramo ponovno ugotoviti, če ima</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg674">vsaka skupina enega poslanca: Liberalno-demokratska stranka, Slovenski krščanski demokrati, Združena lista, Slovenska nacionalna stranka, Slovenska ljudska stranka, Demokrati, Zeleni in Socialdemokratska stranka Slovenije.</seg>
@@ -2314,25 +2296,25 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 19.28 uri in se je nadaljevala ob 20.02 uri.</note>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg706">Ponovno začenjamo nadaljevanje 8. TOČKE DNEVNEGA REDA - PREDLOG ZAKONA O SPREMEMBI ZAKONA O FUNKCIONARJIH V DRŽAVNIH ORGANIH. Vložen je bil amandma. Poročilu k predlogu zakona o spremembi zakona je pripravila Komisija za volitve, imenovanja in prosim predstavnika komisije, če na kratko poroča.</seg>
             </u>
             <note type="speaker">TONE ANDERLIČ:</note>
-            <u who="#SDZ1.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg707">Spoštovani! Komisija Državnega zbora Republike Slovenije za volitve, imenovanja in administrativne zadeve se je ponovno sestala in obravnavala amandma poslanca dr. Franca Zagožna k predlogu zakona o spremembi zakona o funkcionarjih v državnih organih vloženega za nov 3./a člen. Komisija ugotavlja, da je potrebno problematiko plač sodnikov Ustavnega sodišča Republike Slovenije posebej urediti v najkrajšem času in to s posebnim zakonom, ki ga naj pripravi Vlada Republike Slovenije do naslednje seje Državnega zbora. Glede na situacijo, v kateri Vlada ni predlagatelj, bi skupina poslancev ali posamezni poslanec vložil predlog tega zakona do naslednje seje in bi na naslednji seji Državnega zbora obravnavali ta zakon in ga tudi po hitrem postopku sprejemali. Predlagatelj dr. Franc Zagožen je na seji komisije zagotovil umik svojega amandmaja na seji Državnega zbora, saj naj bi po tej razpravi in po tem našem predlogu to problematiko uredil poseben zakon, kot sem rekel, predlagan na naslednji seji Državnega zbora. Zato komisija predlaga Državnemu zboru, da sprejme sklep:</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg708">"Državni zbor Republike Slovenije nalaga Vladi Republike Slovenije, da do naslednje seje Državnega zbora pripravi zakon, s katerim uredi problematiko plač sodnikov Ustavnega sodišča Republike Slovenije".</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg709">Zdaj prosim gospoda Zagožna da potrdi ta svoj umik, če še vztraja pri tem. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg710">Hvala lepa. Doktor Zagožen, prosim. Piše da ste zagotovili umik, zdaj pa prosim, da poveste.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg711">Jaz se strinjam s tem. Pričakujem pa, da bomo ta sklep izglasovali in, da se ga bomo po tem tudi dejansko držali in 25. posebni zakon po hitrem postopku sprejeli. S tem umikam amandma.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg712">Hvala lepa. Amandmaja zdaj nimamo, tako da lahko takoj preidemo h glasovanju o predlogu zakona o spremembah zakona. Najprej ugotovimo sklepčnost.</seg>
                <note>67 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg713">Kdor je za, naj, prosim, glasuje!</seg>
@@ -2346,19 +2328,19 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg719">Želi kdo razpravljati o predlogu tega sklepa? Ker ne želi nihče razpravljati, zaključujem razpravo. Prosim. Pred tem formalno, preden damo besedo, zopet moramo ugotoviti, če smo iz vseh poslanskih skupin: Liberalno-demokratska stranka, Združena lista, Slovenski krščanski demokrati, Slovenska nacionalna stranka, Slovenska ljudska stranka, Demokratska stranka, Zeleni in Socialdemokrati. Prosim.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ1.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg720">Mislim, da smo se na komisiji dogovorili, da v tem zakonu rešujemo problem plač v pravosodju ne samo za Ustavno sodišče.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg721">Gospod Anderlič.</seg>
             </u>
             <note type="speaker">TONE ANDERLIČ:</note>
-            <u who="#SDZ1.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg722">V tem konkretnem primeru gre za poseben zakon za Ustavno sodišče, ki mora biti urejen za to, da ujamemo ta januar mesec. Na začetku, ko sem razlagal predlog sprememb zakona o delavcih v državnih organih in o funkcionarjih, sem že rekel, da je v pripravi zakon o urejanju teh zadev tudi za pravosodje. Dosedanji minister je to zagotovil, tudi na komisiji že prejšnji teden in mislim, da se ni bati, da tudi to ne bi šlo na dnevni red, ampak gre za dve stvari in prosim, če takšen sklep sedaj izglasujemo.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg723">Še kdo želi? Če ne,  zaključujem razpravo in dajem predlog sklepa, ki sem ga prej prebral, na glasovanje.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg724">Najprej ugotovimo sklepčnost.</seg>
                <note>73 prisotnih.</note>
@@ -2371,12 +2353,12 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg729">Prosim, ali je kakšna pritožba na postopek oziroma na glasovanje?</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg730">Spoštovani, imam čisto proceduralno vprašanje. Dobili smo na mizo protest sindikatov v državnih organih in sprašujem zgolj to: ali bomo mi te proteste vzeli zgolj na znanje ali bomo do njih sprejeli kakšno stališče? Mislim, da bi se morali sedaj odločiti, kajti ta praksa, da dobivamo od sindikatov različne proteste, je bila uveljavljena v prejšnjem mandatu in sedaj se je treba odločiti, kako bomo s tem? Ali se bomo na to odzivali ali bo to zgolj za razpravo namenjeno ali kako drugače?</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg731">Poleg tega bi imel proceduralno vprašanje v zvezi s 26. členom in ugotavljanjem prisotnosti poslanskih skupin. Tukaj nikjer ne piše v poslovniku, da je potrebno klicati posamezne skupine. Mislim, da je dovolj, če predsedujoči ugotovi vizualno, da so vse komisije na svojih mestih, ker sedaj to ni nobeden problem, ker ima vsaka poslanska skupina svoje mesto in da bi se s tem nekoliko skrajšala procedura. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg732">Kar zadeva protest, dobili smo ga vsi poslanci na klop in ne vem, kaj naj bi o tem razpravljali oziroma mislim, da ne bi odpirali glede tega protesta razprave.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg733">Kar zadeva pa ugotavljanje, ali je iz vsake poslanske skupine po eden navzoč, smo se dogovorili, da bomo ugotavljali na tak način do tedaj, dokler se dobro ne spoznamo. Formalnost je ven dar formalnost, ker v poslovniku piše tako, se bomo skušali tega držati.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg734">Torej gremo na točko VPRAŠANJE IN POBUDE POSLANCEV.</seg>
@@ -2384,32 +2366,32 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg736">Preden pričnemo s postavljanjem vprašanj in pobud, bi poslanke in poslance rad opozoril, naj pri tem upoštevajo, da Vlada v tem hipu opravlja tekoče posle. Nekateri poslanci oziroma poslanke so vprašanja že vložili pisno, jih bomo odstopili Vladi. Sedaj pa vprašam, če kdo želi od teh, ki je pisno podal, da to obrazloži oziroma, če kdo želi dati še novo vprašanje oziroma pobudo. Prosim, gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ1.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg737">Spoštovane poslanke in poslanci! Imam vprašanje, ki se ne nanaša na tekoče delo Vlade. Glasi se takole: Ker na seji Družbenopolitičnega zbora 28. oktobra 1992 skupina 31-tih podpisanih poslancev ni dobila odgovora Vlade, zahtevam, da na tej seji nedvoumno Vlada pojasni, zakaj in kdaj je anulirala sklep prejšnje Vlade v zvezi s tujimi vlaganji v naftno gospodarstvo. Maja je, mislim da na zadnji seji, prejšnja Vlada sprejela sklep, naj se v naftno gospodarstvo v Sloveniji ne dopušča tujih vlaganj, dokler ne bo vprašanje tega dela gospodarstva sistemsko rešeno.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg738">To sprašujem na podlagi dejstva, da je prišlo do vstopa avstrijskega in hrvaškega partnerja OMV in INA v podjetje ISTRA BENZ. Če to dejstvo nima podlage v sklepu Vlade, ker sem slišal tudi takšne razlage, skratka, če ni sklepa, ki bi anuliral že sprejeti sklep, bi rad vedel, kako je do tega dejstva prišlo in kdo je za to odgovoren? Gre za zelo pomembno gospodarsko in mogoče še kakšno drugačno vprašanje v zvezi s tem in rad bi nedvoumno vedel, ali je Vlada anulirala tisti sklep? Če ga ni, kako je potem lahko prišlo do tega vstopa tujega kapitala v zelo pomembno vejo narodnega gospodarstva.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg739">Hvala lepa. Ali bo predstavnik Vlade lahko odgovoril ali bomo pisno dobili odgovor. Potem Franc Potočnik. Odgovor je. Prosim, besedo ima minister za zunanje zadeve dr. Dimitrij Rupel.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SDZ1.RupelDimitrij" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg740">Nimam zdaj tukaj natančno listin s seboj, ker nisem bil pripravljen na to vprašanje, bomo pa odgovorili. Lahko pa povem po spominu, ker se spominjam kako so stvari tekle. Šlo je za vprašanje vlaganja OMV v "Istra-benz" oziroma v neko skupno naložbo in na Vladi smo - ko je bil še gospod Peterle predsednik - razpravljali o tem primeru, ker ni bilo jasno ali vsota denarja, ki jo avstrijska tvrdka dejansko namerava vložiti v to podjetje ustreza vsoti, ki je bila zapisana v papirjih. Šlo je za nek disproporc med dejanskim denarjem oziroma denarjem, ki ga je bila avstrijska firma pripravljena vložiti in tistim denarjem, ki je bil v papirjih napisan. Šlo je za problem, da je avstrijska firma skušala nekako napajat to svojo naložbo v več obrokih oziroma na ta način, da bi imela sredstva naložena v tujini. Temu smo se pri nas na Ministrstvu za zunanje zadeve uprli še, preden je stvar prišla na Vlado in smo zahtevali, da je vloga avstrijskega partnerja natančno takšna, kakršna je zapisana, in ko se je to tudi zgodilo, to je bilo pred sklepom Vlade, mislim da celo isti dan ali morda en dan prej, ko se je to dejansko zgodilo, ko so Avstrijci rekli "prav, bomo zapisali natanko toliko kolikor bomo dejansko vložili", je naše ministrstvo izdalo tudi tisti rutinski papir, ki je potrdil to, da je do takšne naložbe prišlo. Nato je bila seja Vlade, na kateri je bilo sklenjeno, da v prihodnje po tem primeru ne bi več brez posebne razprave na Vladi šli v kakršne koli posle, ki bi zadevali podjetja kot je "Petrol" ali "Istra-benz", podjetja, ki imajo opravek z bencinskimi črpalkami in tako naprej. Bom pa jaz - ker vem da so to v našem ekonomskem sektorju delali - bom tudi ustrezne papirje citiral v pisnem odgovoru. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg741">Hvala lepa. Prosim, gospod Peterle, samo da se ne bi razprava razvila sedaj.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ1.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg742">Ne mislim razpravljati oziroma komentirati. Želel bi samo povedati v vašo vednost, da takrat ministrstvo, ki ga je zastopal gospod Rupel, ni nič povedalo o tem, da je problem že rešen na tak način kot je bilo pojasnjeno danes. Mi smo problem vlaganja OMV v "Istra-benz" takrat obravnavali kot zadevo, o kateri se še odloča. Zato smo tudi sprejeli sklep naj se ne dopušča tujih vlaganj. Ali pa gre za problem datiranja za nazaj.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg743">Hvala lepa. Franc Potočnik.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ1.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg744">Spoštovane poslanke in poslanci, spoštovani predsedujoči! Jaz sem sicer pobudo pisno predal, ker bi želel, da se zbor do tega opredeli, jo bom kljub temu tudi javno prebral.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg745">Na trgu kmetijskih pridelkov in izdelkov živilsko-pridelovane industrije Vlada velik nered zaradi nenadzorovanega uvoza po dampinških cenah. Le-to grozi uničenju velikega števila kmetov, siromašenju podeželja in dolgoročno preveliko prehransko odvisnost Slovenije od tujih držav. Zato poslanci Slovenske ljudske stranke dajemo pobude Državnemu zboru, da zadolži Vlado za:</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg746">1. Takojšen sprejem ukrepov za zaščito domače kmetijske proizvodnje.</seg>
@@ -2422,32 +2404,32 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg753">Prav tako predlagamo zboru, da to perečo problematiko uvrsti na dnevni red prihodnje seje. Želel bi, da predsedujoči ta predlog da na glasovanje zboru.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg754">Hvala lepa. Predloga bi ne dajal danes na glasovanje, bi to proučili in videli za naprej.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg755">Marjan Podobnik se je javil tudi za vprašanje.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg756">: Spoštovani! Če dovolite, bi najprej predlagal, da se pove, ali ni možno dati na glasovanje, proceduralno sicer mislim, da je prav, da se o predlogu, tako tudi pač se opredeli ob predhodnem predlogu. Sam bi dal Vladi Republike Slovenije vprašanje, o katerem sem na kratko danes že govoril. Bi pa želel, da bi dobil tudi konkreten odgovor in ga bom še enkrat na kratko povzel.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg757">Sredi decembra 1992 je bil iz registra podatkov o državljanih Slovenije in sicer iz pregleda podatkov o osebi črtan podatek o narodnosti osebe, na katere se nanašajo podatki. Sprašujem Vlado kdo in kdaj je dal navodilo, da se iz pregleda podatkov o osebi črta podatek o narodnosti.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg758">30. avgusta 1991 je bil sprejet zakon o spremembah in dopolnitvah zakona o evidenci nastanitve občanov in o registru prebivalstva. Po tem zakonu ni več potrebno v prijavi nastanitve navesti narodnosti. Nikjer pa ni navedeno, da je komurkoli dovoljeno podatek o narodnosti državljanov Republike Slovenije črtati za nazaj.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg759">Odgovor na poslansko vprašanje pričakujem najkasneje do prihodnje seje Državnega zbora. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg760">Hvala lepa. Prosim Tone Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg761">Spoštovane poslanke in poslanci! Postavil bom vprašanje, če prav vem, zadeva resor za socialne zadeve in najbrž ne bom mogel dobiti sedaj odgovora, ampak vendarle. V prihodnje bo pa to, če prav vem, to bolj v domeni Ministrstva za šolstvo.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg762">Gre za ugovore, ki so se v javnosti pojavili v zvezi s standardi in normativi za vzgojno-izobraževalne zavode, se pravi za vrtce. Starši, ki imajo oziroma imamo otroke v vrtcih, se s temi ugovori seveda zelo strinjamo in zato, kot rečeno, naslavljam to vprašanje na Vlado oziroma na pristojni resor, ali namen in če ima namen, kako hitro ima namen na tem področju, se pravi na področju teh standardov in normativov, kakorkoli ukrepati ukrepati v smislu ugoditve tem ugovorom. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg763">Hvala lepa. Prosim, Žarko Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg764">Spoštovani! Imam poslansko vprašanje in pobudo. Ministrstvo za varstvo okolja in urejanje prostora prosim</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg765">za celovito in natančno informacijo ter oceno varnosti pomorske plovbe v Tržaškem zalivu, s posebnim poudarkom na plovbi ladij tankerjev, ki prevažajo nevarne snovi, predvsem nafto in njene derivate ter druge nevarne tekoče kemikalije in utekočinjeni plin.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg766">Prosim tudi za oceno ogroženosti slovenskega morja in obale s strani zgoraj omenjenega prometa in z analizo možnih posledic, ki bi nastale ob eventualni ladijski nesreči. Hkrati prosim tudi za seznam ukrepov, ki jih pristojni državni organi in službe predvidevajo za preprečevanje podobnih nesrečnih dogodkov kot se je zgodil na čereh Shetlandskega otočja.</seg>
@@ -2460,32 +2442,32 @@
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg773">Najnovejši dogodki opozarjajo, da taka politična neusmeritev ni primerna. Zato predlagam, da Vlada pripravi ustrezne dokumente in na izredni seji Državnega zbora to problematiko potem obravnavamo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg774">Hvala lepa. Leo Šešerko.</seg>
             </u>
             <note type="speaker">DR. LEO ŠEŠERKO:</note>
-            <u who="#SDZ1.ŠešerkoLeo" ana="#regular">
+            <u who="#ŠešerkoLeo">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg775">Spoštovani! Vladi Republike Slovenije predlagam, da sprejme sklep, po katerem naj se skladno z razpisom o gradnji avtocestnega odseka Razdrto - Čebulovica iz marca 1989 takoj začne gradnja obeh viaduktov na tem odseku. Gre za to, da je v razpisu leta 1989 in ob začetku gradnje tega avtocestnega odseka bilo jasno definirano, kakšni so pogoji za gradnjo tega avtocestnega odseka in tudi jasno določeno, da je treba oba viadukta zgraditi. Pri izvajanju te gradnje pa se je zgodilo, da so gradili samo cestni del, medtem ko viaduktov niso. Očitno je šlo tu za kršitev pogodbe in, ker je Vlada najmanj nadzorni organ pri izvajanju gradnje, bi verjetno bilo smiselno ugotoviti, kakšne so krivde za to, da se ni gradilo tako kot je pogodba določala. Predlagam, da se z gradnjo takoj začne, ker v nasprotnem primeru bo prišlo do tega, da bo nekdo rekel "iz časovnih razlogov tega ne moremo narediti". Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg776">Hvala lepa. Zmago Jelinčič.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ1.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg777">Zato, ker na poslanska vprašanja želim pisne odgovore, tudi vprašanj tukaj ne bom bral. Bom pa prebral dve poslanski pobudi, in sicer prva: Slovenska nacionalna stranka predlaga Vladi Republike Slovenije, da pripravi spremembo zakona o poslancih v tistem delu, ker imajo poslanci ugodnejši položaj pri upokojevanju glede na posebej določeno krajšo delovno dobo 25 let, in sicer tako, da se ta določba odpravi.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg778">In druga poslanska pobuda: Slovenska nacionalna stranka predlaga Državnemu zboru, da v skladu s 24. členom Zakona o poslancih pooblasti Komisijo za volitve, imenovanja in administrativne zadeve, da zniža osnovo za obračun plač poslancev za 20%. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg779">Hvala lepa. Prosim. Če kdo želi še postaviti vprašanje, prosim, da se pisno prijavi, tako bo šlo lažje in hitreje.</seg>
             </u>
             <note type="speaker">CIRIL PUCKO:</note>
-            <u who="#SDZ1.PuckoCiril" ana="#regular">
+            <u who="#PuckoCiril">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg780">Spoštovane poslanke in poslanci, tudi jaz ne bi bral vprašanj in bi samo povedal pobudo, ki jo imam. Na predsednika Državnega zbora apeliram, da naredite vse, kar je v vaši pristojnosti, da bi čim prej popolnili Ustavno sodišče. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ1.MozetičMiroslav" ana="#chair">
+            <u who="#MozetičMiroslav" ana="#chair">
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg781">Hvala lepa. Ima še kdo vprašanje ali pobudo?</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg782">S tem smo izčrpali današnji dnevni red.</seg>
                <seg xml:id="SDZ1-Redna-02-1993-01-12.seg783">Zaključujem 2. sejo Državnega zbora Republike Slovenije in se poslankam in poslancem zahvaljujem za prisotnost in vztrajnost.</seg>

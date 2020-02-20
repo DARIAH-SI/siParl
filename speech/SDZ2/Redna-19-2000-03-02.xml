@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Redna-19-2000-03-02"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">19. redna seja (2. 3. 2000)</title>
-            <meeting n="19"
-                     corresp="#SDZ2-Redna-19-2000-03-02.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="19" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">NADALJEVANJE 19. SEJE</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|85981BE22894280BC125689B00444E71</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=85981BE22894280BC125689B00444E71</idno>
-                  <imprint>
-                     <date when="2000-03-02">(2. marec 2000)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>19. redna seja (2. 3. 2000)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="2000-03-02"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=85981BE22894280BC125689B00444E71</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="105"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="88"/>
                <tagUsage gi="seg" occurs="373"/>
                <tagUsage gi="gap" occurs="7"/>
@@ -467,23 +452,21 @@
                <date when="2000-03-02" ana="#parl.sitting">2. 3. 2000</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Redna-19-2000-03-02.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">NADALJEVANJE 19. SEJE</head>
-            <docDate>(2. marec 2000)</docDate>
             <note type="chairman">Sejo je vodil Janez Podobnik, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.08 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje! Pričenjam nadaljevanje 19. seje državnega zbora Republike Slovenije. Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Jožef Zimšek, Vladimir Čeligoj, Branko Tomažič, Zoran Lešnik, Mario Gasparini Herman Tomažič, Ivo Hvalica, Jože Možgan, Roberto Battelli, Maria Pozsonec, Eda Okretič-Salmič, Darja Lavtižar-Bebler, za pričetek seje Mirko Kaplja, za pričetek seje Vili Trofenik, za pričetek seje Alekdarnder Merlo, od 11.30 do 12.30 Andrej Gerenčer. Prosim, da ugotovimo navzočnost v dvorani. Tudi gospod Čeligoj je prisoten, kljub temu, da ga je strokovna služba poslanske skupine opravičila. Ugotovimo prisotnost!</seg>
                <note>61 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg2">Zbor je sklepčen in lahko odloča.</seg>
@@ -491,32 +474,32 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg4">Zbor bo današnje nadaljevanje 19. seje pričel z obravnavo prekinjene 32. TOČKE DNEVNEGA REDA, TO JE INTERPELACIJE O DELU IN ODGOVORNOSTI MINISTRA ZA FINANCE. Predlagam tudi, spoštovane kolegice in kolegi, da naše razprave intoniramo na tak način, da bi danes do 18.00 ure državni zbor s to točko tudi zaključil, da bi se pač odločal o predlogu skupine poslancev, ki je predlagala interpelacijo. Kot že včeraj napovedano, imamo 13 prijavljenih razpravljavcev, ostale razprave pa bodo omejene v skladu s poslovnikom na 5 minut. Kolege in kolegice bi seveda prosil, da se v razpravah držijo vsebine interpelacije in odgovora na interpelacijo, ki je v pisni obliki bila posredovana s strani ministra Gasparija. Proceduralni predlog imate? Drugače, kot sem predlagal? Prosim, kolega Avšič.</seg>
             </u>
             <note type="speaker">JOŽE AVŠIČ:</note>
-            <u who="#SDZ2.AvšičJože" ana="#regular">
+            <u who="#AvšičJože">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg5">Hvala, gospod predsednik, za besedo. Imam proceduralni predlog, ki je verjetno še malo boljši od vašega in bi bistveno lahko skrajšal današnjo razpravo o točki, ki je na dnevnem redu. Namreč, sem eden od tistih poslancev, ki sem včeraj kar veliko časa prebil v dvorani in lahko rečem, da sem slišal skoraj vse uvodne razprave, tako podpisnika interpelacije, kot predstavnikov poslanskih skupin in seveda tudi zelo temeljit odgovor ministra Gasparija. Ne moremo mimo ugotovitve, da je gospod Gaspari učinkovito zavrnil vse razloge za interpelacijo, da predlagatelji interpelacije niso povedali nič novega, da so <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg6">Kolega Avšič, kaj pa je zdaj to?</seg>
             </u>
             <note type="speaker">JOŽE AVŠIČ:</note>
-            <u who="#SDZ2.AvšičJože" ana="#regular">
+            <u who="#AvšičJože">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg7">Bom dal takoj predlog, ker utemeljujem predlog.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg8">Prosim, da ste korektni in da v skladu s poslovnikom predlagate proceduralni predlog, ne pa vsebinsko komentirate včerajšnje razprave. Lepo prosim.</seg>
             </u>
             <note type="speaker">JOŽE AVŠIČ:</note>
-            <u who="#SDZ2.AvšičJože" ana="#regular">
+            <u who="#AvšičJože">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg9">Ampak proceduralni predlog gre ravno na to, kar smo včeraj slišali. Namreč, tudi večina poslanskih skupin ali pa večje poslanske skupine so že najavile, kako bodo glasovale o tej interpelaciji. Ker imamo na tej seji še veliko, veliko pomembnih točk, ker je namen interpelacije podpisnikov verjetno že dosežen z enodnevnim TV prenosom, ker so odmevi takšni, kot so, predlagam podpisnikom temeljit razmislek, morda pol ure pavze, da razmislijo o umiku predloga za interpelacijo in s tem pripomorejo k našemu učinkovitejšemu delu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg10">Hvala lepa kolega Avšič. Zloraba poslovnika. Nekorekten proceduralni predlog, v nasprotju z našim poslovnikom. Če boste na ta način izjavljali besede, vam jo ne bom več dal. To ni v skladu s poslovnikom, kar ste zdaj predlagali. Besedo ima kolega Henigman, za njim naj se pripravi gospod Bogomir Špiletič. Prosim vas za korektnost.</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ2.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg11">Hvala gospod predsednik. Lep pozdrav vsem skupaj. Naj za začetek rečem, da se s predhodnikom proceduralno nikakor ne morem strinjati, ker želim kot poslanec državnega zbora povedati tudi svoje mnenje in svoje stališče do interpelacije, ne samo na to, da sem jo podpisal in kar smo v njej zapisali in kar je minister odgovoril, ampak tudi oceno oziroma pogled na to, kar se je včeraj dogajalo oziroma kako je minister predstavil odgovor na naša vprašanja in hkrati tudi trditve.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg12">Naj ob tem samo za začetek povem, če se držimo 289. člena poslovnika, v njem v tretjem odstavku piše, da tisti, ki je interpeliran, na kratko obrazloži svoj odgovor. Jaz nimam nič proti, da je minister Gaspari ta odgovor obrazlagal ravno tako dolgo kot predlagatelji, vendar po poslovniku to ni, ker jasno piše, da se ga na kratko obrazloži. Pri predlagateljih interpelacije pa v ničemer ne omejuje poslovnik dolžine razprave.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg13">Rad bi se omejil na tri stvari. Najprej na splošno oceno dela vlade, predvsem pa ministrstva za finance in seveda z njim povezanega gospoda ministra mag. Gasparija, glede problematike, ki se jo dotika interpelacija, vsaj v dveh točkah oziroma v treh, bolj podrobno pa v dveh, in sicer pri procesu privatizacije bank in pri tako imenovanem zakonu o temeljnih razvojnih programih o oboroževanju.</seg>
@@ -542,48 +525,48 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg33">Namen te interpelacije, kot jo razumem jaz, je razčiščenje javnih financ, postavitev boljših in novejših pravil in priznanje opoziciji, da odpira prava vprašanja. Priznanje, da opravlja svojo funkcijo in da je treba te stvari urediti, ne pa, da pozicijski poslanci in poslanske skupine poskušajo krivično in brez argumentov smešiti, brez argumentov, pravim, zavajati slovensko javnost, da vprašanja v interpelaciji niso korektna, niso pravilna in niso argumentirana. Še kako so argumentirana in mislim, da bi jih morala slovenska javnost tudi prek drugih medijev spoznati in se na njih odzvati. Nadaljnja razprava bo pokazala, potem ko boste odgovarjali, kaj ste na ta moja na hitro postavljena vprašanja storili do sedaj oziroma kaj poskušate storiti. Če nisem bil dovolj jasen, sem pripravljen v kratkem nastopu ta vprašanja še enkrat predočiti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg34">Hvala lepa, kolega Henigman. Replika, kolega Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SDZ2.JakičRoman" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg35">Gospod predsednik, spoštovane kolegice in spoštovani kolegi! Repliciram današnjemu prvemu razpravljalcu, gospodu Henigmanu, in sicer v skladu s 70. členom poslovnika državnega zbora, ki govori o tem, da je treba opozoriti na napako.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg36">Menim, da je gospod Henigman naredil napako, ko je rekel, da so odgovori ministra Gasparija na interpelacijo "streljanje mimo tarče, ki smo jo podpisniki postavili". Meni se zdi, gospod Henigman, da je to narobe svet. Imam občutek, da nikoli niste prav dobro razumeli demokratičnega načela, da je seveda tožnik tisti, ki mora dokazati krivdo obtoženemu, ne pa da obtoženi dokazuje svojo nedolžnost. V tem primeru je minister Gaspari tarča in streli v prazno pa, po mojem mnenju, prihajajo s strani interpelatorjev, razen seveda, če ni zadaj lustracija, glede na to, da sem poslušal včeraj gospoda Peterleta, ko je opozarjal na neke nepravilnosti gospoda Gasparija še iz časov, ko je služboval v Narodni banki Jugoslavije. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg37">Hvala. Besedo dajem gospodu Bogomirju Špiletiču. Replika? Replika, gospod Henigman.</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ2.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg38">Gospod Jakič, moje besede zlorabljate. Če bi upoštevali celoten nastop, bi lahko upoštevali, kar sem na koncu povedal - da ni moj namen gospoda ministra spravljati s tega položaja kar tako, da ne uporabljam istih besed, kot sem jih, vendar pa odgovor strelja v prazno, odgovor! Mi ne postavljamo gospoda ministra za tarčo, vendar odgovor, ki cilja, ki naj bi ciljal na vprašanja in trditve, ki so v interpelaciji - trditve, vi ste rekli, obtožbe - trditve, ki so notri nista povezana in gresta eden mimo drugega. To sem povedal. In ne zlorabljati govornice za to, da bi mi pripisovali nedemokratičnost in nepoznavanje sodnega sistema ter nepoznavanje politične debate v parlamentu, ki je možna. Interpelacija je polje, na katerem se o teh stvareh lahko pogovarjamo. To ni sodišče. Sodišče je drugje. Ustava točno govori, da smo vsi nedolžni, dokler se nam ne dokaže krivda. Tukaj nihče nikomur ne dokazuje sodne krivde. Argumentirali pa smo in napisali tisto, kar, če ne bo sedajsprejeto in upoštevano, bo pa čez nekaj časa prišlo na dan kot pravo. V parlamentu vas ne moremo prepričati, da bi drugače glasovali, če vi tega ne želite, ker imate večino. Saj vas ne moremo. Lahko vam pa povemo naša dejstva. To pa lahko. Vi pa jih lahko upoštevate ali pa ne. Če imate vest in če ugotovite, da je to v redu, jih boste upoštevali.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg39">Minister Gaber - se opravičujem, ker to spet uporabljam - je tukaj za govornico tolkel, "dokažite". Potem je pa šel. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg40">Besedo dajem gospodu Bogomirju Špiletiču. Replika? Torej, govorimo o interpelaciji gospodu Gaspariju, ne pa njega.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SDZ2.JakičRoman" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg41">Jaz se opravičujem kolegu Henigmanu. Seveda, replika na repliko gre. Moje izvajanje je bilo zelo mirno. Jaz sem samo opozoril na dejstvo, da je seveda na izjavo, ki ste jo dali, in vaša izjava je bila, poglejte si magnetogram, "odgovori ministra Gasparija na interpelacijo, je streljanje mimo tarče, ki smo jo podpisniki postavili".</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg42">Moja teza je, da z interpelacijo ste tarčo oziroma križec, "naštimali" na čelo gospoda ministra. Ali pa, če mi potem vi poveste, gospod Henigman, komu interpelirate, ali kompletni vladi ali interpelirate zato, ker niste uspeli pri gospodu Gabru, gospodu ministru za Gabrova dejanja, in seveda, da odgovorite, kakšne dokaze ste posredovali. Interpelacija zoper ministra Gabra, ki je seveda politična odgovornost, dokazovanje politične odgovornosti, saj ta ni bila dokazana. Interpelacija ni bila tu sprejeta. Zato seveda vi ne obračajte mojih besed za tem govorniškim odrom. Jaz sem samo rekel, da ste za tem govorniškim odrom predstavili napačno trditev. Trditev pa je bila - še enkrat ponavljam - "da so odgovori streljanje mimo tarče". V resnici ste tarčo naredili vi s tem, ko ste interpelacijo vložili.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg43">To pa, da sem seveda potegnil ven lustracijo, sem pa potegnil zato, ker je šef vaše poslanske skupine in predsednik vaše stranke včeraj mimo vseh, in na seveda presenečenje vseh nas, govoril o tem, kako je minister Gaspari v Narodni banki Jugoslavije, ne vem,dvajset dni ali dva meseca ni vedel, da mu je nek denar izginil. Zato sem opozoril. Opozoril sem na nepravilnost v skladu s 70. členom poslovnika državnega zbora Republike Slovenije.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg44">Gospod Henigman! Replika na repliko!</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ2.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg45">Gospod podpredsednik! Upam, da bom zadnjič. Ne bom nasedel na provokacijo, vendar že nekaj razpravljavcev je ob tej interpelaciji dalo pomislek, ali je interpelacija pravilno usmerjena in locirana. Seveda je pravilno usmerjena, na gospoda ministra Gasparija, ministra za finance, kot - ne motiti gospod Jakič, ne govorim o tarčah - najbolj odgovornega ministra za javne finance v državi, ki ima škarje in platno, s svojo ekipo, ki ga je prišla tukaj tudi podpirat, pri vseh ministrstvih, pri lokalnih skupnostih, pri javnih podjetjih in povsod drugje, minister kima. Se pravi, je on tisti, ki je najbolj zaslužen, najbolj odgovoren in ki mora bedeti nad vsemi stvarmi.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg46">Ker so pa nekatere poslanske skupine dale pomislek, ali je samo on za to odgovoren za te nepravilnosti, ki se dogajajo, seveda ni. Odgovoren je tudi kdo drug. Vendar tisti, ki smo podpisali, smo se odločili za ta način interpelacije. Če pa menijo ostali, da je še kdo drug odgovoren, pa lahko dopolnijo interpelacijo in dajo interpelacijo na celo vlado. Tukaj mislim na predstavnike DeSusa, združene liste, pa še koga drugega. Saj ni problem. Saj lahko tudi koga drugega. Vendar ključna vloga, kar sem hotel v svojem nastopu povedati in očitno nekateri ne poslušajo, je, da je on, ministerza finance, tista oseba, ki je v startu odgovoren oziroma tisti, ki pripravlja rešitve za boljše, transparentno, razdeljevanje sredstev in mora dobiti to potrditev v vladi in v parlamentu. Če tega ne stori in če te potrditve ne išče, je odgovoren. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg47">Hvala. Besedo dajem gospodu Špiletiču.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg48">Hvala za besedo. Svojo razpravo bi začel s tem, da bi prebral 23. člen zakona o vladi. Ta pravi naslednje, citiram: "Ministri so odgovorni za odločitve in stališča vlade ter za njihovo izvajanje, za svoje odločitve pri vodenju ministrstev kakor tudi za opustitev ukrepov, ki bi jih morali sprejeti".</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg49">Minister se na očitke v interpelaciji, ki pa se v pretežni meri, lahko rečem, nanašajo predvsem na škodljive posledice zaradi opustitve določenih dejanj, izgovarja, češ, da za določena dejanja, bodisi ni vedel, bodisi, da nekaj ne sodi v njegovo pristojnost.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg50">Menim, da niti eden, niti drugi izgovor ne more držati. Minister preprosto mora vedeti. Nevednost ga v ničemer ne odrešuje krivde oziroma ne zmanjšuje stopnje njegove odgovornosti. Še več. Če ni vedel, v tem primeru odgovarja celo za to, da ni vzpostavil sistema, ki bi ga pravočasno obveščal.</seg>
@@ -610,27 +593,27 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg71">Ker minister tega ni storil, je v praksi prihajalo tudi do napak, do nepravilnosti, prihajalo je do nezakonitega in negospodarnega trošenja proračunskih sredstev. V svoji razpravi sem točko za točko tudi podkrepil, da je minister bil o tem seznanjen in da ni ukrepal. Tako da menim, da sem uspel dokazati, da so očitki iz interpelacije utemeljeni in da je sklep, ki ga predlagatelji interpelacije na koncu predlagamo, upravičen. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg72">Hvala. Gospod Špiletič! Safti ni v interpelaciji, ampak sem smatral vaše poslansko vprašanje, da ste hoteli odgovor. Prosim, da razjasniva. Smatral sem, da ste opozorili, da niste dobili odgovor na vaše poslansko vprašanje.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg73">Gospod podpredsednik! Če smem pojasniti.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg74">Prosim.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg75">Dolgovi Saftija so vključeni v paket, ki je poznan z imenom novi finančni sporazum. In ker se očitek iz interpelacije nanaša na ta "NFA - New Financial Agreement" in ker odgovora ni bilo, sem menil, da je utemeljeno, da povprašam, zakaj odgovora ni bilo, da dobim odgovor na vprašanje, ker v nasprotnem primeru, sem že tudi v razpravi povedal, obstaja teza oziroma vsaj meni, jaz izražam dvom, da je to, kar je bilo sklenjeno s tem sporazumom, res vse tako lepo, kot trdi stran vlade.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg76">Dobro. Hvala. Sva si pojasnila. Gospod minister želi replicirati, prosim.</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ2.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg77">V tem trenutku bi odgovoril obema razpravljavcema, gospodu Henigmanu in pa Šiletiču. To, kaj je dokazano in ali so argumenti dovolj trdni, ni dovolj samo trditev tistega, ki jih postavi. Tako kot seveda za vas ni dovolj tisto, kar vam jaz odgovorim, ampak o tem se bo na koncu ocenjevalo tako, kot se v državnem zboru ocenjuje Ker očitno ni ene resnice, glede na to, kar slišim tukaj v tem parlamentu. Recimo, o splošni odgovornosti ministra in navajanju aktov, ki to omenjajo. Jaz lahko ponovim isto, kot sem ponovil, a ne, in se zopet to nanaša na zelo jasna določila v posameznih predpisih.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg78">To, kar pravi gospod Špiletič, kaj vse ni bilo narejenega, iz leta v leto se sistem dopolnjuje, bom tako rekel, zelo bi rekel direktno, za časa Demosove vlade ni bilo nič od tega predpisanega. Žal. Čeprav je bilo dve leti časa, da se tudi kaj uredi. Ni bilo. Tudi v času te vlade, v katere član sem jaz, ni bilo vse urejeno v prvem, niti drugem, niti tretjem letu, ampak se ureja postopoma, kot so dane, bom rekel naše človeške organizacijske in druge možnosti in seveda tudi kapaciteta organov, ki o tem odločajo. Bilo je celo citirano, so bili Intosaijevi standardi, objavljeni so, v uradnem listu je pravilnik o notranji reviziji in kontroli. Če pogledate uradni list Republike Slovenije, ja seveda, a je bil objavljen leta 1992, ali pa 1991, ali ga je uporabljal SDK takrat, ali ga ni, ni. Seveda ga ni uporabljal. Zakaj ne? Zato ker se to postopoma uvaja v sistem. Imamo pravilnik o finančnih službah, tudi je objavljen v uradnem listu. Imamo zakon o javnih financah, ki jasno govori o tem, kako se pripravlja, kako se sprejema, kako se izvršuje, kako se kontrolira in kako se poroča o državnem proračunu in javnih financah. Takega zakona ni bilo leta 1990 in 1991. Nobenega zakona takrat ni bilo o javnih financah. Bil je nek "potpuri", ki se mu je reklo zakon o uporabi javnih sredstev. Imamo zakon o javnem računovodstvu? Imamo, ki ureja področje računovodstva za vse pravne osebe, ki niso gospodarske družbe, in ki niso tiste pridobitne organizacije, ki se ne ravnajo po zakonu o javnem, o družbah oziroma o društvih. Imamo. Po njem se posluje na vseh teh segmentih. Na iniciativo ministra za finance je nastal zakon o javnih skladih, čeprav je bilo mnogo interesov, da ga ne bi bilo. Minister za finance opozarja že nekaj let na to, da je treba sprejeti zakon o javnih zavodih, ki povzroča velike probleme pri izvrševanju javnih financ in ni ministrstvo za finance tisto, ki ga mora pripraviti in na vladi tudi spraviti v proceduro. Ministrstvo za finance je delalo in dela na zakonu o javnih naročilih in o revizijski komisiji s tega področja. Nobene te zakonodaje ni bilo leta 1990, 1991, 1992, čeprav je takrat pokalo na določen način, danes poka pa na drug način. Pokalo je in pokalo bo na zelo različne načine tudi v naslednjih vladah, tudi na finančnem področju, si upam trditi.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg79">Torej, kar se tega tiče, načeloma, o odgovornosti in o tem, ali se sistem razvija ali ne, s tem nisem želel državnega zbora obremenjevati, koliko zakonov je ministrstvo za finance v svojem mandatu in ta minister predlagal državnemu zboru in je bilo sprejetih, ker se mi zdi to omaloževanje razprave o tej temi, ampak če želite, bomo spisek vseh aktov, ki jih je to ministrstvo predložilo državnemu zboru v 8 letih in se bo zlahka ugotovilo, da to ni ministrstvo ni spalo, da to ministrstvo ni neodgovorno se obnašalo in to ministrstvo ni bilo ministrstvo, ki ne bi ukrepalo oziroma opuščalo dejanj ukrepanja. Če govorimo o nekih splošnih zadevah odgovornosti za področje javnih financ in če boste pogledali ta področja, ki so tukaj zapisana v zakonu o delovnem področju ministrstva v 5. členu, boste za vsako od teh področij lahko ugotovili - mimogrede, to ugotavlja tudi evropska komisija, ki postaja zdaj neka referenca - da je na večini teh področij situacija kvalitetna, bančništvo, devizni sistem, kapitalski trg dematerizacija vrednostnih papirjev, revidiranje, javno in drugačno, komercialno, računovodstvo, javne finance.</seg>
@@ -653,11 +636,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg95">Drugič. Že včeraj sem povedal. Po zakonu o upravnem postopku - in tukaj gre, moram reči, res za formalnosti, sicer ne bi imeli zakon o upravnem postopku - kdo je instanca za kakšno zadevo. In če jim zakon jasno pove, da je postopek dvoinstančen, potem se jasno ve, kaj je odgovornost prve instance in kaj je odgovornost druge instance. Razlaga teorijo, da je urad opozarjal, svetoval drugi instanci, kaj naj stori, pomeni, da je sam opustil dejanja, če so takšna res bila, ki bi jih bil dolžan po zakonu sprožiti ne glede na drugo instanco. To pa je, prijaviti take stvari družbenemu pravobranilcu po zakonu o družbenem pravobranilcu, če je šlo za utemeljen sum oškodovanja družbenega premoženja. Piše v zakonu, zelo jasno. Če to ni ugotovil in če je opozarjal, je opozarjal v prazno, ker potem ni ugotovil nečesa, kar bi moral storiti sam kot prvostopenjski organ. In drugostopenjski organ je reagiral na odločbe prvostopenjskega organa samo takrat in samo na takšen način, da mu je vračal tiste odločbe, ki niso bile glede na zakon o upravnem postopku v skladu z zakonom pripravljene. Ni mu razveljavljalo vsebine odločbe, razveljavljalo mu je formalni postopek. Enako pri tej zadnji zadevi glede Triglava. Ministrstvo za finance ni odločilo, da je dokapitalizacija Triglava korektna. Odločilo je v drugi instanaci, da je bila odločba na prvi stopnji procesualno slabo pripravljena in da ni izpolnjevala kriterijev, ki jih je treba po zakonu izpolnjevati, vrnila v odločanje in je prvostopenjski organ odločil. Ministrstvo za finance se pa ni izogibalo odgovornosti in je tudi reagiralo ob tem, ko je prišlo do te zahteve po dokapitalizaciji. Glede računovodskih oškodovanj in neoškodovanj, bistvena razlika obstaja, žal mi je, med oškodovanji v podjetjih, ki so nastajala po zakonu o lastninskem preoblikovanju oziroma njegovih dopolnitvah, in zavarovalnicami. Bistvena razlika. Zakaj? Zaradi tega, ker je v podjetjih po zakonu o podjetjih, po zakonu o družbenem kapitalu, ki so bili vsi zakone, ki so predhajali zakon o lastninskem preoblikovanju, obstajal družbeni kapital, ki ga je nekdo imel, po zakonu, ker je zakon o podjetjih in zakon o družbenem kapitalu že določal mešano lastnino. In zato je bil tam določen družbeni kapital in se ga je dalo oškodovati. Pri zavarovalnicah tega dejstva ni bilo. Družbeni kapital nikoli ni bil določen in tisti, ki je včeraj razlagal to tezo, da je to mogoče enostavno izračunati iz premoženja na eni strani, obveznosti na drugi strani, razlika je kapital in potem se ve, ker je privatnega toliko, je družbenega toliko. Ja, zakaj smo pa potem napisali zakon o lastninskem preoblikovanju zavarovalnic, kjer smo morali določiti metodo določitve tega po načelu, saj je tako samo po sebi jasno naprej. Prosim? Če mi lahko bolj glasno poveste.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg96">Gospod Gaspari, na ta način ni možen dialog. Če želijo poslanci besedo, bodo dvignili roko in bodo imeli repliko.</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ2.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg97">7 let nismo iskali družbenega kapitala, 7 let je trajalo, če želite, nekaj manj kot 7 let je trajala predvsem diskusija, kako formulirati kriterije za določitev ne samo družbenega kapitala, ampak tudi za ovrednotenje, in spor je bil, ali lahko za to obstaja kot kriterij knjigovodska vrednost ali ne. Minister za finance ni predlagal rešitve, ki bi temeljila na knjigovodski vrednosti. Če se pa spomnite razprave ob sprejemanju zakona pred mesecem ali dvemi ter tiste razprave, ki je tekla pred razpravo v državnem zboru, si pa upam trditi, da celo v državnem zboru ob koncu razprave, ta tema ni bila dokončno, med mnogimi, razčiščena. Ne samo, ne samo znotraj vlade, tudi med mnogimi poslanci. Toliko imamo vsi spomina in stenograme ste tudi lahko čitali. Kar ne pomeni, da je kdo kriv, ali ne, ampak da je šlo za relativno zelo zapleteno operacijo iz preprostega razloga, ker se v nekem trenutku, in ta trenutek ni bilo leto 1994 ali pa 1995, ampak leto 1990, z zakonom o, s takratnim zakonom o zavarovalnicah, ta zadeva ni dokončno uredila in je ostala kot recediv. Zakaj se takrat ni uredila, jaz ne vem. Ni se uredila. Pri bankah je bila urejena, tukaj se pa ni uredila. Leta 1990. In je zaradi tega ostalo nekaj tega kapitala nenominiranega. Ob tistem, kar so delničarji vplačali kot privatni kapital. Vi veste, da se vzajemna skupnost Triglav takrat preoblikovala. V delniške družbe. Kjer je bilo treba vplačati kapital, ki je bil vplačan. Del premoženja pa ni bil rešen in je v zakonu pisalo, da se bo reševal kasneje. Zakaj? Ravno tako kot pri bankah bi se lahko rešil v tistem trenutku. In se ni.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg98">Glede dolgov in, bom rekel, odplačevanja dolgov, lahko zelo jasno povem še enkrat. O Saftyju in o teh zadevah smo razpravljali najmanj že trikrat v državnem zboru. Imate poročilo v državnem zboru agencije za sanacijo bank in hranilnic na to temo, ki ga državni zbor nikoli ni obravnaval. Je pa tukaj. V državnem zboru od leta 1994 naprej. Vlada, ko se je pogajala in ko je sklepala sporazum, nikoli ni prevzemala kakršnihkoli terjatev iz naslova svopov katerekoli slovenske banke, ali druge osebe, v okviru prevzetega dolga po NFA Republike Slovenije. To se da tudi seveda dokazati z dokumenti in z evidencami. Nikoli. Glede zneska prevzetega dolga, bi pa tako rekel najprej. Lahko je biti general po bitki, to bodo vedeli tisti, ki so bili v drugačnih situacijah, ko je šlo za osamosvajanje Slovenije, čeprav tega ne primerjam po enaki teži in kvaliteti, ampak trditi, da smo prevzeli preveč, da smo zavajali parlament, je na nepošteno.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg99">Kdo se bo potrudil in prebral precej debele, debela gradiva o osnovni pogodbi NFA, bo ugotovil, da ta dolg nikoli ni bil alociran in nealociran. Da je bil s splošno garancijo, ki jo je prevzela takratna država SFRJ, od takrat naprej dolg vseh Jugoslovanov. Od leta 1983 naprej. Nobene razlike več ni bilo med tem, ali je neko podjetje dokončno to samo plačalo, ali jeto, ali bi to naj plačala Narodna banka Jugoslavije, če bi ta država ostala. Žal ne. Žal ne.</seg>
@@ -665,11 +648,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg101">Če pa nekdo smatra, da je s tem še karkoli odprtega, ima pa prosto pot, da gre te dokumente pregledat v Ljubljansko banko, tako prejšnjo Ljubljansko banko pa tudi zdaj Novo Ljubljansko banko in dodatno zahteva te dokumente, če tisti dokumenti, ki v parlamentu že so, niso dovolj. Država in ministrstvo za finance s temi zadevami ni povezana. Nibila povezana in tudi sedaj ni povezana. To so v principu odgovori, ki so se mi zdeli potrebni na ta del diskusije. Mislim, da je predvsem tisto pomembno, kar je povedal gospod Špiletič, glede splošnih elementov odgovornosti, ker tam pa dejansko za vsebinsko diskusijo, ki je v interpelaciji žal ni bilo, v odgovoru se tega jaz nisem mogel dotakniti, ker bi bil potem odgovor še bistveno daljši. Lahko vam podam celoten spisek vseh aktov zakonov in podzakonskih aktov, ki jih je ministrstvo pripravilo, vlada sprejela, državni zbor, kadar je bilo potrebno, tudi potrdil in boste ugotovili, da ne gre za namerno zamujanje, da ne gre za velike zaostanke, da je to ministrstvo eno tistih ministrstev, ki je, če že ocenjujemo z ocenami zaostankov in izvedenih postopkov, sigurno med boljšimi v tej prejšnji in predhodni vladi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg102">Hvala lepa gospod minister. Replika najprej gospod Peterle, nato replika dr. Jože Zagožen.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg103">Hvala lepa za besedo gospod predsednik. Spoštovane poslanke in poslanci! Gospod minister.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg104">Vesel bi bil, če bi imel gospod minister tako izrazit občutek za vsebino, kot ga ima za formalnost. Meni je vseeno ali je bil nekdanji 23. člen zakona z dopolnitvami in spremembami preštevilčen v 17. člen. Zame je pomembna vsebina in ta je nedvoumna. Piše tako: "ministri so odgovorni za odločitve in stališča vlade ter za njihovo izvajanje za svoje odločitve pri vodenju ministrstev, kakor tudi za opustitev ukrepov, ki bi jih morali sprejeti". Torej tukaj se jasno govori o odgovornosti za odločitve in tudi za neodločitve oziroma za opustitve ukrepov.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg105">Druga zadeva, ki bi jo želel pojasniti. Minister je povedal "za naše ministre vseh Drnovškovih vlad" zanimiv stavek oziroma znamenit stavek. "Leta opozarjam na nekaj, pa nič". Ali ste v tej vladi ali ste v kakšni drugi vladi, to poslušamo tudi druge ministre. Ko sem jaz videl, da predsednik vlade ne dela z mano, da dela proti meni, sem pustil vlado, ker ni imelo smisla sodelovati v taki vladi. Davek na dodano vrednost leta1992 je bila sprejeta odločitev, da se pripravi ta zakon. 6 let je trajalo, do 1998 leta in sprejet je bil šele leta 1999. Torej kakšna je vlada, če mora minister za finance jo opozarjati na zakon o zavodih, kot ste to rekli, pa se nič ne zgodi. Ne poznam vlade, kjer bi ministri tolkli po svoji vladi, da vlada ne posluša pomembnih opozoril ali pomembnih ugotovitev.</seg>
@@ -677,11 +660,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg107">Ponovno ste nas poučili o štirih pojmih, da so štiri faze pri odločanju o TRP-ju in tako naprej. Glejte, nepoučeni, tudi če gleda televizijo, bi iz vaših besed lahko sklepal tudi takole: da vlada vam predlaga, kaj narediti, ne da resor vladi predlaga v odločanje. Torej, tu želim, da ne nastopa megla, ampak povsem jasna slika - ve se, da resorji predlagajo stvari vladi, ki jih je treba na višji ravni določiti, in tudi v relaciji ministrstvo za finance-vlada je stvar taka. Torej prosim, da ne meglite zadeve.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg108">Hvala lepa. Replika, dr. Jože Zagožen, nato Jožef Jerovšek.</seg>
             </u>
             <note type="speaker">DR. JOŽE ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženJože" ana="#regular">
+            <u who="#ZagoženJože">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg109">Hvala lepa. Težko je na vse te stvari odgovoriti oziroma ponovno odgovarjati, vendar bi gospoda ministra spomnil samo na nekaj stvari.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg110">V predstavitvi, ki jo ima ministrstvo za finance na internetu, med drugim piše tudi "sistem računovodstva, revizije in finančnega poslovanja" - se pravi, je odgovorno za sistem računovodstva, se pravi, za ustrezno evidentiranje, prikazovanje in tudi za računovodski nadzor kot sestavino računovodstva. V zakonu o izvrševanju proračuna iz leta 1994 je napisano naslednje:</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg111">"Računovodsko izkazovanje se opravlja za vsa ministrstva in vladne službe v ministrstvu za finance. Minister za finance predpiše standardne računovodske postopke in načine ter postopke poročanja uporabnikov ministrstvu za finance. Nadzor nad finančnim, materialnim in računovodskim poslovanjem uporabnikov ter nad zakonitostjo in namembnostjo upravljanja s proračunskimi sredstvi ter državnim premoženjem opravlja ministrstvo za finance.</seg>
@@ -690,11 +673,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg114">In samo še dvoje mi dovolite. Poglejte, gospod minister, tu imam dva papirja, na enem ste vi zapisali z odredbo, da se stroški obresti vključujejo v skupni znesek, na drugem pa sta z ministrom Demšarjem zapisala, da to ni tako. Dva papirja, z vašim podpisom, na obeh papirjih pa različno stališče, tako da, žal moram končati pri tej repliki, ostalo bom še kasneje, tako da je vrsta dokazov, da to, kar vi tukaj pravite, ne drži. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg115">Hvala lepa. Replika, Jože Jerovšek, nato Bogomir Špiletič.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg116">Hvala lepa. Repliciral bi čisto na prvi stavek gospoda ministra oziroma pojasnilo, ko je dejal, da ni dovolj za dokaz tisto, kar se trdi, ko v interpelaciji ali pa razpravi kot dokaz o odgovornosti. Seveda jaz razumem, da se skuša navedbe iz interpelacije postaviti na trhle noge, to je legitimno in absolutnega kriterija o verodostojnosti ni, ker vsaka stran pač ponudi svoj videnje, to je tudi minister rekel.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg117">Ker nas gledajo gledalci je treba povedati, da so interpelacije, ki jih mi v Socialdemokratski stranki napišemo, praviloma zelo utemeljene. Noben minister, ki je bil interpeliran ni več minister, noben. Minister Gaber je takrat cepetal z nogami, da naj damo dokaze, vendar je potem odšel, ker se je zavedal nepravilnosti pri maturi, tiste šolske dejavnosti in izkazi računskega sodišča in se je pravočasno potem sam umaknil. Takrat je trdil, da to ne drži.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg118">Minister Bandelj je padel na interpelaciji. Ni se mogel ubraniti.</seg>
@@ -702,11 +685,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg120">Glede na situacijo v Sloveniji bi moralo biti interpelacij v bistvu še več, vendar smo mi milostni. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg121">Hvala lepa. Replika gospod Špiletič, nato gospod Henigman.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg122">Hvala za besedo. Repliciram gospodu ministru. Najprej replika na njegovo izjavo, da je očitno več resnic.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg123">Gospod minister, jaz mislim, da je resnica ena. Dejstvo pa je, da imamo lahko do določenega vprašanja različna stališča, različna mnenja, vendar resnica je ena. Zgodbo o več resnicah so prodajali predolgo in upam, da je sedaj že dokončno pošla zaloga in da o tem nima več smisla razpravljati.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg124">Drugič. Gospod minister! Vi ste dejali, da je pomembno tisto, kar sem opozarjal, vzpostaviti dober sistem delovanja notranjih kontrol in zgraditi sistem, ki bo deloval. Dejali ste tudi, da se to iz leta v leto izboljšuje in da je sistem, kot je vzpostavljen danes, že veliko boljši, kot je bil leta 1991. Gotovo, da v 9 letih je bilo nekaj storjenega. Storjenega je bilo veliko premalo, kot bi bilo potrebno, in tisto, kar je vzpostavljeno, medsebojno ni usklajeno, kar ugotavlja računsko sodišče skoraj v vsakem svojem poročilu, oziroma v praksi ne daje učinkov tako, kot bi jih moralo.</seg>
@@ -716,11 +699,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg128">Kar pa se tiče, gospod minister, poslanskega vprašanja, pa samo še enkrat: poslansko vprašanje sem v skladu s poslovnikom državnega zbora zastavil 25. 7. 1997. Po poslovniku bi moral dobiti odgovor na to poslansko vprašanje še pred prvo naslednjo sejo državnega zbora - to se ni zgodilo, kljub temu da je gospod Andrej Simonič, državni sekretar v vašem ministrstvu, dejal naslednje: "Glede prvih dveh vprašanj v zvezi z Novo Ljubljansko banko in Agencijo za sanacijo bank gre za podrobna vprašanja, zato bomo pripravili pisni odgovor, ustno ne morem tako hitro odgovoriti." Pa vendar, še danes ste za to govornico dejali, da ste na to - po vaši oceni - že odgovorili in da četrtič tega ne mislite storiti. Upam, da je predsednik državnega zbora to slišal in da bo vsaj on skušal storiti vse, kar je v njegovi pristojnosti, da bi bila določila poslovnika spoštovana.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg129">Hvala lepa. Replika, Benjamin Henigman, nato naj se za razpravo pripravi Richard Beuermann.</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ2.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg130">Hvala, gospod predsednik. Hvala tudi vam, gospod minister, za odgovore, iz katerih pa mi je nekaj vendarle bolj jasno; in sicer, jasno ste povedali, da proračunska inšpekcija ni nikoli opravljala inšpekcije TRP-ja, se pravi, nabave orožja prek tega zakona. To mi pa ne gre v glavo in tu bom pa rekel, da smo vas pa "našli". Povedali ste, da ste, računsko sodišče in ministrstvo za finance, v dogovoru, kaj kdo gleda. Prej ste trdili, da je računsko sodišče neodvisno in da se v njihove stvari ne vtikate, da ne ocenjujete dela računskega sodišča, tu ste pa povedali, da imate interni dogovor - verjetno v vladi oziroma v ministrstvu - da kar gleda računsko sodišče, ne gleda proračunska inšpekcija. Vendar pa, zakaj jo pa imate potem, proračunsko inšpekcijo? Verjetno je nimate zato, da vam napake odkriva računsko sodišče, ampak jo imate zato, da ugotavljate, kaj v samem postopku oziroma v delovanju posameznih porabnikov ni v redu. In tisto, kar sem prej v razpravi nakazal, nisem vedel - vprašal sem vas, ali ste to gledali, očitno tega niste gledali, gledali pa niste zaradi tega celo, ker ste se izgovarjali, ker iščete razloge pri nekom drugem. Mislim, da to ni prava logika in da to ni pravi način dela na ministrstvu.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg131">Še eno stvar bi rad omenil, in sicer, ne vem, ali sem pravilno slišal, glede pogodb o obrestih in ostalih stroških pri nabavi orožja. Če sem pravilno razumel, ste trdili, da teh pogodb ni v ministrstvu za obrambo. Tu bi rad dodatno pojasnilo, ker če teh pogodb ni v ministrstvu za obrambo, potem so logična neskladja med obračuni oziroma med porabljenimi sredstvi iz tega zakona.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg132">Zadnje, kar je pa evidentno in kjer vlada oziroma ministrstvo ni opravilo svojega, so pa banke in lastninjenje bank. Nihče ni tu govoril o vsebini, o certifikatih, povezanih s sklepom državnega zbora. V interpelaciji nikjer ne govorimo o tem, da je treba certifikate upoštevati. Pustimo zdaj zakon, ki je bil vložen in katerega je državni zbor zavrnil. Vendar dejstvo je, da je tako, kot sem že prej povedal, Ljubljanska banka dobila navodilo, da prične postopek privatizacije, da prične postopek za privatizacijo, ki jo bo izvedla vlada Republike Slovenije. Iz člankov 28. avgusta 1999 Marka Voljča - jaz mislim, da je to verodostojen dokument, ker opozicija drugega še do danesnima - jasno izhaja, bom citiral vprašanje: "So realne napovedi, da naj bi do konca leta privatizirali približno 30% kapitala banke in naj bi ga v državni lasti ostalo še 65%." Preskočim del odgovora in zadnji stavek pravi: "Po tem programu bi bil zastavljeni cilj, da bi do konca leta ostalo v državni lasti še 65% kapitala banke, realističen." Potem pa ponovno vprašanje: "Zdi se, da je vlada po dveletnem mečkanju pohitela z objavo privatizacije NLB in NKBM zaradi pritiskom EU itn." Mag. Voljč odgovarja: "Odločitev o privatizaciji je bila težka, zahtevna in tudi politično občutljiva." Absolutno se strinjam z njim. "Predvidevam, da bo vlada vložila vse napore, da bo v prihodnjih mesecih prišlo do uspešnega zaključka te prve faze privatizacije." Napisano 28. avgusta, predvideno do konca leta 1999.</seg>
@@ -729,11 +712,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg134">Takoj bom končal, gospod predsednik. Iz tega vsega izhaja, da nibilo nikakršne namere, da se sprejme poseben zakon. Zakon, ki bi pokrival privatizacijsko luknjo, je bil vložen leta 1996, je bil umaknjen. Zakon o lastninjenju državnega premoženja je v postopku. Se pravi, ni pravne osnove, ni konkretne pravne osnove za ta dejanja, jih ni. In mislim, da je - to je pa moje politično mnenje in mnenje, ki je, mislim, tudi v korist slovenskih državljanov, pa je, da si ne moremo dovoliti, da bi vlada by-pass brez zakona 30% pa še kaj, pa še tako privatizirala naše banke. Mislim, da morajo ostati slovenske, in mislim, da bi morali upoštevati sklep državnega zbora iz leta 1994 v tej smeri, ne pa ga poskušati obiti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg135">Hvala lepa. Richard Beuermann, razprava. Za njim se naj pripravi Pavle Rupar. Kdaj ste dvignili roko, kolega Rejc? Po nastopu gospoda Henigmana? Prosim, kolega Beuermann, potem vam dam besedo. Nisem vas videl prej. Boste dobil besedo. Bom dal takoj besedo, ker je gospod Beuermann bil že na poti.</seg>
             </u>
             <note type="speaker">RICHAR BEUERMANN:</note>
-            <u who="#SDZ2.BeuermanRichard" ana="#regular">
+            <u who="#BeuermannRichard">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg136">Hvala za besedo. Gospod predsednik! Lep pozdrav vsem skupaj. Sam bom seveda v svoji razpravi upošteval poziv predsednika, da se omejimo na vsebino interpelacije, in sicer bom govoril predvsem o tistem delu interpelacije, ki govori o odgovornosti pri porabi proračunskih sredstev ministrstva za šolstvo in šport za izvajanje visokošolskih izobraževalnih programov v letu 1996.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg137">V zvezi s tako domnevnimi nepravilnostmi in predvsem očitki, da je šlo pri ministrstvu za finance za nepripravljenost odprave in nepripravljenost, skratka je treba opozoriti na naslednja dejstva.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg138">Odbor državnega zbora za nadzor proračuna in drugih javnih financ je na svoji 35. redni seji 10. februarja letos obravnaval odgovor vlade na poročilo računskega sodišča, ki se nanaša na dokončno poročilo o reviziji dodeljevanja proračunskih sredstev ministrstva za šolstvo in šport za izvajanje visokošolskih programov v letu 1996. Odbor je sprejel informacijo o ukrepih ministrstva za šolstvo in šport, ki obsega tudi že izvedene in načrtovane ukrepe za odpravo nepravilnosti in realizacijo, ter ocenil, da so ukrepi ustrezni, da gre v smeri odprave problemov. Njihovo izvajanje pa bodo omogočile tudi konec lanskega leta v državnem zboru sprejete spremembe in dopolnitve zakona o visokem šolstvu. Te pa so povezane z uveljavljanjem večje demokratizacije v visokem šolstvu, z uvedbo novega sistema integralnega financiranja, s širše odprtimi vrati za vpis v univerzitetne programe, ki je sedaj možen tudi s poklicno maturo.</seg>
@@ -746,11 +729,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg145">Sicer pa menim, da je tudi sam minister v včerajšnjem svojem odgovoru, izčrpnem odgovoru, na interpelacijo in pa tudi v današnjem izvajanju dovolj jasno in argumentirano odgovoril na vse obtožbe, tako da pri tem končujem, menim, da bomo čimprej prišli h glasovanju in želim, da se parlament čimprej posveti normalnemu delu na področju zakonodaje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg146">Hvala, kolega Beuermann. Najprej dajem besedo kolegu Rejcu. Jaz se opravičujem, ker sem vas prej spregledal, je še replika na razpravo gospoda ministra, nato pa ima repliko tudi kolega Mežan.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg147">Spoštovani gospod predsednik, gospe in gospodje, gospod minister! Ko si govoril oziroma odgovarjal na posamezne trditve naših - tistih, ki interpeliramo - si omenil en pomemben stavek, ta je pa v povezavi z računskim sodiščem. Rekel si tako: "Imamo dogovor z računskim sodiščem, da tisto, kar pregleduje naša finančna inšpekcija, oni ne delajo." Seveda, to bi bilo prav ali pa meni bi bilo zelo prav, da ti ne bi ušlo iz ust, ker v tem primeru to pomeni, da ste v dogovoru z računskim sodišče. Ali pa drugače povedano; lahko se to tako dogodi, da rečeš, pustite mi to, bomo mi to pogledali. Se pravi, vi odmikate pravico in moč računskega sodišča. To je ena stvar. Druga stvar je pa protiustavna, ker računsko sodišče je najvišji vrhovni organ kontrole nad izvajanjem proračuna in te javne porabe, od same države do lokalnih skupnosti. Torej, ta zadeva mi je zelo sporna in seveda zelo, zelo je zavpila, ko si jo izrekel. In nekako mi ne gre v nobeno pravno relacijo ali pa razmišljanje.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg148">Zdaj pa povem še nekaj. Tudi ko je govor o lastninjenju bank, ne glede na to, da ti očitamo, da so stvari prepočasne, da se nisi držal sklepov in podobno, da ste se vedno izvijali. Vendar, v nobenem primeru se ne bo mogla tudi ta privatizacija izvršiti, če ne bo sprejet zakon o privatizaciji družbenega premoženja. Državnega premoženja. In ta zakon je potrebno zelo hitro sprejet, ker le ta bo določal, po kakšni poti je ocenjevanje itn., ne glede, da bojo prihajali tujci. To jaz verjamem, da bojo prihajali. Vendar, zakon mora zahtevati in mora biti jasna opredelitev, kako se bo to premoženje, na kateri način prodajo in zakaj in podobno. Skratka, ta zakon je gotovo v prvi prioriteti.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg149">O družbenem kapitalu. Družbeni kapital je gotovo kategorija, ki se jo da vedno določiti. Vedno, pravim. Kot sem povedal včeraj - če je leta 1996 urad za zavarovalni nadzor povedal, da so določene zavarovalnice imele toliko družbenega kapitala, toliko delniškega kapitala. To so naneki osnovi izračunali. In seveda na osnovi tega so tudi delili dobiček. Ker če je bilo, recimo, polovica družbenega kapitala, polovico delnic, potem so lahko dobiček 100 milijonov delili pol na pol. In 50 milijonov je moralo iti k družbenemu kapitalu, 50milijonov pa je eventualno lahko šel za delitev med te delničarje. In, seveda, ta je določljiv, ker je določljiv bil tudi v lastninskem preoblikovanju podjetij. Če pa, seveda, je podjetje prikazalo bilanco, ki je bila osnova za revizijski postopek, je potem pa revizija določila, kako je podjetje ravnalo od leta 1992 naprej s tem kapitalom in kako ga je zanemarjalo, izkoriščalo, kakorkoli oškodovalo. In to je pa tisto, da bo revizija natančno določila, kaj so vmes počeli.</seg>
@@ -758,11 +741,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg151">V primeru, ki je pa nastal lansko leto v Triglavu, se je šlo pa za neko poslovno možnost, ki naj jo še bolj uveljavijo, recimo - vsaj tako je bilo meni znano - vendar se je ta zadeva potem ustavila, vendar ta dokapitalizacija bi pomenila samo spremembo razmerja do družbenega kapitala. Če je prišel nov kapital, je pač delniški kapital, ki ne zmanjšuje družbenega, ampak v razmerju, če je nastalo potem 200, je seveda nastalo drugo razmerje. To se pravi,da so te stvari povsem jasne in znane in v tem primeru je tudi v tej interpelaciji zelo natančno povedano, da se gre za to, da bi morala biti lastninsko preoblikovanje zavarovanje že leta 1993, 1994, najkasneje pa 1995 in ker je prepozno prišlo, so pač nastala posledice, ki so znane. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg152">Hvala lepa. Replika, gospod Mežan, nato gospod Peterle.</seg>
             </u>
             <note type="speaker">JANEZ MEŽAN:</note>
-            <u who="#SDZ2.MežanJanez" ana="#regular">
+            <u who="#MežanJanez">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg153">Hvala lepa. Spoštovani gospod predsednik, poslanke in poslanci! Repliciram oziroma ugovarjam gospodu Beuermannu. Jaz sicer razumem, da prihaja - lahko razumem - da prihaja do nezakonitosti v posameznih ministrstvih in da nekateri ministri tudi zagovarjajo to nezakonitost. Manj pa seveda razumem, da poslanec, ki je del tega državnega zbora, ki sprejema zakona, zagovarja to nezakonitost. Poročilo o reviziji dodeljevanja proračunskih sredstev ministrstvu za šolstvo in šport za izvajanje visokošolskih programov v letu 1996 pravi takole: "Odgovorne osebe za zakonitost in pravilnost poslovanja v zvezi s predmetom nadzora za obravnavano obdobje sta odgovorna dr. Slavko Gaber, minister, in dr. Pavel Zgaga, državni sekretar za srednje in visoko šolstvo." Kaj očita v tem dokončnem mnenju računsko sodišče ministrstvu za šolstvo in šport? Dovolite, da dobesedno navedem.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg154">Prvič. Notranje kontrole na ministrstvu so bile pomanjkljive in niso dale ustreznih zagotovil za pravilnost obračunanih zneskov na odredbah in za nakazilo sredstev izvajalskim organizacijam, zato je tveganje, da so sredstva nepravilno in nezakonito dodeljena, veliko.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg155">Drugič. Ministrstvo je nadpovprečne delovne obremenitve do štiri četrtine oziroma do pet tretjin za vodilne delavce normativne obremenitve financiralo v obliki osnovne plače, kar je, v nasprotju s 3. členom ZRPJZ-ja, ocenjeni obseg izplačil na neustrezni pravni podlagi znašal v letu 1996 1,15 milijarde tolarjev, kar predstavlja 9,6 vseh porabljenih sredstev za plače za visoko šolstvo v proračunu ministrstva.</seg>
@@ -773,31 +756,31 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg160">To so očitki, ki so dokončni. V odgovoru na odboru za finance je sicer minister za šolstvo opravičeval vse te nepravilnosti s tem, da je državi prihranil denar oziroma posloval gospodarno. Vendar pa je najbrž prva stvar delo ministrstva po zakonu, se pravi zakonitost poslovanja in minister, če je ugotovil, da obstoječa zakonodaj inpodzakonski akti niso ustrezni za dodeljevanje proračunskega denarja, je imel vse vzvode, da da predlog za spremembo zakona oziroma da da predlog za spremembo podzakonskih aktov na vlado, seveda v svojih rokah. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg161">Hvala lepa. Replika gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg162">Hvala lepa. Sedaj smo v tisti fazi, ko nas poslanec iz tako imenovane edine razumen stranke poziva k normalnosti. Sem čakal, da bo ta stavek prišel in sem bil prepričan, da bo. In smo ga tudi doživeli. On pravi, dajmo to že končati, posvetimo se normalnemu delu.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg163">Gospe in gospodje! Če je kaj bolj normalnega kot, da poslanci neke demokratične države hočejo razčistiti javne finance, potem ne vem, kaj bi bilo bolj normalnega. Ali je normalno tiščanje glave v pesek, ko se pogovarjamo o milijardah in milijonih, o potratnosti, o nezakonitosti, o čudnih zadevah, ki se v demokraciji ne spodobijo. Ne nas pozivati k normalnosti, ker bolj normalnega dela ni za poslance, kot je to, in bomo, seveda, vztrajali, da se zadeve razčistijo in se da se ugotoviti odgovornost in da se tudi odločimo v skladu z ugotovljenimi dejstvi, ne glede na vsa pokritja in vezave. Eni so zvezani za nazaj, eni za naprej že. Ker tukaj ne razpravljamo ne o zajtrkih, ne o kosilih, ampak o javnih financah.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg164">Še nekaj, gospod Beuerman, bi rad povedal. Vi ste opravili - nekako pač razumem - strankarski zagovor nekdanjega ministra gospoda Gabra. Minister je - po mojem - vedel, da ne more preživeti z negativnim mnenjem računskega sodišča in je šel raje prej, preden je postalo dokončno. Mislim, da je ravnal pametno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg165">Replika? Gospod Beuerman ima repliko.</seg>
             </u>
             <note type="speaker">RICHARD BEUERMANN:</note>
-            <u who="#SDZ2.BeuermanRichard" ana="#regular">
+            <u who="#BeuermannRichard">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg166">Hvala za besedo. Torej, repliciram predvsem gospodu Podobniku. Pardon, gospodu Peterletu, se opraivčujem, se zgodi.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg167">Gre za sledeče. Moj poziv k temu, da pač poskušamo čim prej preiti k glasovanju, je bil pač dan zato, ker res menim, da bi lahko v relativno kratkem času prišli do glasovanja. Kajti verjetno je namen interpelacije, da poleg tega, da se razčistijo javne finance, predvsem to, ali bo minister, ki je tarča, preživel ali ne bo preživel. Tako vsaj jaz razumem celo zadevo.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg168">Kar se tiče pa ostalih očitkov, bi pa rekel samo sledeče. Poglejte, v interpelaciji je med drugim tudi zapisana trditev, da je ministrstvo za šolstvo financiralo 3 leta neke študijske programe, ki ne eksistirajo. Pa interpelatorji kljub temu niso čutilo za dolžnost, da bi, ali pa za potrebo, da bi navedli za katere študijske programe gre. To bi, recimo, mene zelo zanimalo. Tega v interpelaciji nisem zasledil. In ko tega nisem zasledil, se mi je precejšen del teksta interpelacije zdel še bolj smešen, kot sicer. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg169">Hvala lepa. Razprava, Pavle Rupar. Pripravi naj se Janez Mežan.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ2.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg170">Hvala lepa, gospod predsednik, za dano besedo. Povem že vnaprej, da imam za približno 30 minut pripravljenega materiala in da bom po sili razmer prekinjen in bom verjetno v drugem delu ponovil izvajanje teh petih minut, ki jih ima zdaj na razpolago. Razen, če seveda kolega Mežan, ki je za menoj, nima krajšega referata in bi bilo morda primerno, če zamenjava. Sprašujem. 20 minut. Dobro.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg171">Potem nadaljujem. Spoštovane kolegice in kolegi, spoštovani gospod predsednik, spoštovani gospod minister. Nekaj stvari bi rad prebral, ki sem jih zbral v obdobju od vložitve interpelacije in ki so zajete oziroma naj bi bile zajete v prvi točki interpelacije; to je nezakonito, nenamensko in negospodarno financiranje javne porabe. Vse točke, ki jih bom našteval, sicer med seboj niso povezane, so pa vsaka za sebe smiselna celota in na koncu seveda tudi na vprašanje, ki ga bom zastavil ministru Gaspariju in pristojnim službam, pričakujem tudi odgovor.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg172">Prvo vprašanje oziroma prvi del se nanaša na delo ministrstva za finance, in sicer davčne uprave Republike Slovenije. Dejstvo je, da ima vsak državljan, ki mora doplačevati davčne obveznosti iz naslova dohodnine, možnost uveljavljanja odloga plačila ali dela tega plačila, torej celotnega odpisa odmerjene dohodnine, kar lahko uveljavlja vza to predpisanem zakonskem roku. Dejstvo je, da DURS, ki je sestavni element ministrstva za finance, pod vodstvom mag. Mitja Gasparija, v službi, ki je odgovorna za hitro in ažurno odločanje, v predhodnih zaprosilih državljanov beležijo večletni zaostanek, saj mi je poznan primer, kjer velja, da predmetna služba še ni odgovorila na zaprosilo državljana Republike Slovenije iz naslova odmerjene dohodnine celo za leto 1996. Predmetne zaostanke beleži ministrstvo za finance in to po podatkih, ki jih imam, v nekaj tisočih primerov, kar vse kaže na strokovno nesposobnost in strokovno neodgovornost, seveda posledično na politično odgovornost vas, gospod Mitja Gaspari, ki ni v stanju urediti predmetne službe tako, da bo svoje naloge opravljala v zakonitem in predpisanem roku. S predmetnim nedelovanjem službe DURS-a se povzroča državnemu proračunu škoda, državljanom, torej davkoplačevalcem Republike Slovenije pa dolgoletna krivica, saj ne vedo, kako se bodo službe DURS-a odločile. Poseben problem so obresti za ta čas nedelovanja teh služb, zato se ministra Gasparija sprašuje, kaj ima povedati o tem problemu, ki pa je le verjetno kaplja v morju v delu in nepravilnostih ministrstva za finance.</seg>
@@ -805,19 +788,19 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg174">Zdaj pa predlagam, gospod predsednik državnega zbora, ker prehajam na dve mnogo bolj obširni točki, da mi dovolite, da to nadaljujem v nadaljevanju zasedanja tega dne.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg175">Hvala lepa, kolega Rupar. Torej sejo nadaljujemo ob 14.30 uri z nadaljevanjem vaše razprave. Nato se naj pripravi kolega Mežan.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 12.55 uri in se je nadaljevala ob 14.37 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg176">Spoštovane kolegice in kolegi, nadaljujemo z redno sejo in z 32. točko dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg177">Dodatno opravičeni za nadaljevanje 19. seje dne 2. 3. 2000: za popoldanski del Josip Bajc, od 17.00 ure dalje Jakob Presečnik in za pričetek popoldanskega dela Aleksander Merlo.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg178">Ugotovimo prisotnost v dvorani! Prisotnih je 60 poslank in poslancev; zbor je sklepčen in lahko odloča.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg179">Nadaljujemo splošno razpravo. Ponovno bi izrazil pričakovanje, da bodo razprave tako oblikovane, da bi državni zbor lahko danes ob 18.00 uri odločal o predlogu sklepa, ki ga je predlagala skupina poslancev ob zaključku razprave o interpelaciji. Imamo še devet razpravljalcev. Prej smo med razpravo - zaradi naše prakse, da ob 13.00 uri sejo prekinjamo - prekinili kolega Ruparja, ki ga vljudno prosim, da svojo razpravo dokonča. Nato se naj pripravi kolega Mežan.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ2.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg180">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi, spoštovani gospod minister! Nadaljujem z 2. točko oziroma drugim delom svojega izvajanja ob interpelaciji zoper ministra, mag. Mitja Gasparija.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg181">Ob dejstvu, ki nam ga je kolega Kopač včeraj cinično razložil - pa takoj opozarjam, da to ni replika na njegovo izvajanje, pač pa morda komentar na tisto, kar smo lahko prebrali in slišali prek medijev - kaj pomeni pojem "interpelacija", kjer se je, po mojem mnenju, celo spozabil in to tako zelo, da je interpelacijo zoper ministra Gasparija poimenoval z "virtualno interpelacijo", je prav, da mu - sedaj na podlagi medijev - odgovorim z razlago, kaj pomeni "virtualno". Virtualno, gospod mag. Kopač, pomeni navidezno. Kako pa deluje tanavideznost v odgovoru na interpelacijo, pa si je treba osvežiti spomin, kar kolegu Kopaču verjetno ne bo težko, zato si morda za primer oglejmo, kaj pomeni virtualni odgovor na interpelacijo, ki jo je pred časom predstavil sedaj - hvala bogu, že bivši minister za šolstvo, gospod Slavko Gaber - to je minister, s katerim je Mitja Gaspari sodeloval pri nezakoniti potrošnji davkoplačevalskega denarja, kar je dokončno ugotovilo računsko sodišče v reviziji Centra za šolske in obšolske dejavnosti, saj velja, da nezakoniti nakup hotela Avtocommerce v Kranjski Gori za potrebe centra, vse v režiji Slavko Gaber, Mirko Bandelj, Herman Rigelnik</seg>
                <note>vsi člani LDS</note>
@@ -839,19 +822,19 @@
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg197">Kolega Rupar, lepo bi vas prosil, da ta zadnji vaš del razprave, po mojem mnenju, ta del razprave ni v povezavi z interpelacijo. Kajti v interpelaciji ne najdem osnove, na podlagi določb poslovnika, ki govori: Interpelacija se vloži pisno. V njej mora biti jasno postavljeno in obrazloženo vprašanje. V interpelaciji ne najdem poglavja ali tem, ki bi jasno govorile o financiranju lokalne samouprave. Zato vas lepo prosim, da o tem delu ne nadaljujete, ker tudi minister za finance vam ni dolžan odgovarjati. Če pa predlagate razširitev, pa naj skupina poslancev, ki je vložila interpelacijo, predlaga razširitev interpelacije. To bi bila korektna pot.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ2.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg198">Hvala za opozorilo gospod predsednik. Jaz sem govoril, da govorim o prvi točki interpelacije, nenamenska, negospodarna in nezakonita poraba javnih sredstev. Predvidevam, da vi ne veste, kako bom zaključil. Zato mi dovolite, da ta uvod tudi glede lokalne samouprave vendarle pripeljem do te točke, da bom lahko utemeljil to, kar sem izjavil, da spada moje izvajanje v prvo točko interpelacije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg199">Seveda o tej vsebini minister za finance ni dolžan odgovarjati in je v tem smislu vaša razprava povsem nepotrebna. Predlagam, da predlagate razširitev interpelacije. To je korektna pot in tudi naša dosedanja praksa, ne pa da odpirate nove teme, o katerih v interpelaciji ni bilo govora. In tudi ni govora v odgovoru na interpelacijo. O ja, o lokalni samoupravi, o računskem sodišču, ki je ocenjevalo delo občin, jaz nisem našel tudi ene same besede v interpelaciji in tudi v odgovoru nanj ne. Samo to vas opozarjam, da je to tema, ki razširja vsebino interpelacije. Če pa predlagate razširitev, potem morate to pisno seveda to vložiti.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ2.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg200">Predsednik, morda sem res prehitro bral, pa niste bili pozorni, ampak vendarle govorim o nezakonitem ravnanju ministra in ministrstva za finance, predvsem pri financiranju občin in pri prerazporejanju financ znotraj postavk državnega proračuna, kar je seveda nezakonito. Prišel bom tudi do točke, v kateri bom točno povedal, v katerih členih je minister ravnal nezakonito. Seveda to pa imate v interpelaciji kar nekajkrat opisano. Zato mi dovolite, da na kratko zaključim, upoštevam vaše mnenje.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg201">Najmanj tri zakone ste gospod minister pri tem, kar sem govoril prej, kršili. Kršili ste jih tako, da ste povsem in polno odgovorni tudi za finance znotraj občinskih proračunov in za občine. Prav gotovo ste kršil 142. člen ustave Republike Slovenije s svojim podpisom na dopise in sicer ta govori:</seg>
                <note>lahko se pa tudi smejete, saj meni ne greste na živce, ste bolj simpatični, če kažete zobe, kot ne.</note>
@@ -864,21 +847,21 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg207">- da se ne bo pridružila interpelaciji. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg208">Hvala lepa.</seg>
                <note>Kihanje v dvorani.</note>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg209">Na zdravje kolegu Pahorju! Besedo ima Janez Mežan, nato Vladimir Čeligoj.</seg>
             </u>
             <note type="speaker">JANEZ MEŽAN:</note>
-            <u who="#SDZ2.MežanJanez" ana="#regular">
+            <u who="#MežanJanez">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg210">Hvala lepa, gospod predsednik. Poslanke in poslanci, gospod minister! Včeraj nas je poslanec Kopač, ki je sicer predstavljal stališče poslanske skupine, podučil, kaj je interpelacija. Mimogrede, beseda "interpelacija" ni italijanskega izvora, ampak latinskega; če želi, mu lahko tudi vse pomene naštejem. Dejal je, da je interpelacija predvsem postavljanje jasnih in obrazloženih vprašanj. Zato moram že takoj na začetku reči, da se bom držal tega navodila oziroma tega poslovniškega določila in postavil nekaj jasnih in tudi obrazloženih vprašanj čeprav se bojim, da ne bom dobil najbolj jasnih ali pa vsaj ustreznih odgovorov.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg211">Kolega Mežan, dovolite! Ne želim vas kakorkoli prekinjati, sama interpelacija je po poslovniku, kot ste sami omenili, da se postavi jasno določeno vprašanje, ne da se danes tu odpirajo in postavljajo nova vprašanja. Danes se tu pogovarjamo o vaši interpelaciji in o odgovoru nanjo - to je interpelacija, ne pa da se sedaj tu postavljajo nova vprašanja, ki niso povezana z vsebino interpelacije.</seg>
             </u>
             <note type="speaker">JANEZ MEŽAN:</note>
-            <u who="#SDZ2.MežanJanez" ana="#regular">
+            <u who="#MežanJanez">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg212">Vsekakor, gospod predsednik, ne bodo nova vprašanja, bodo pa postavljena jasno. Mimogrede še to: odgovornost ministra je, seveda, lahko posredna ali neposredna oziroma subjektivna ali objektivna. Ko bom postavil ta vprašanja, verjamem oziroma sem prepričan, da gre v nekaterih primerih za neposredno odgovornost, v drugih pa za posredno.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg213">V tej svoji krajši razpravi bi se rad dotaknil dveh stvari. Najprej tistega dela interpelacije, ki se nanaša na odgovornost ministra za finance v zvezi z nezakonito, nenamensko in nepravilno porabo sredstev ministrstva za šolstvo in šport za izvajanje visokošolskih izobraževalnih programov v letu 1996. V drugem delu pa še druge dokončne odločbe računskega sodišča o nepravilnostih na centru šolskih in obšolskih dejavnostih. Prvi očitki so seveda nastali na podlagi negativnega mnenja računskega sodišča, ki v 7 točkah na koncu 31 strani dolgega poročila navaja v strnjeni obliki bistvene nepravilnosti na ministrstvu za šolstvo in šport v zvezi s porabo proračunskega denarja.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg214">Računsko sodišče v svojem poročilu sicer res ne zapiše, da je za nepravilnosti, nezakonitosti in nenamensko porabo proračunskega denarja odgovoren minister za finance, vendar pa v 67. členu zakona o izvrševanju proračuna, Uradni list 5/96, v prvem odstavku piše: "Nadzor nad finančnim, materialnim in računovodskim poslovanjem uporabnikov ter nad zakonitostjo in namembnostjo porabe proračunskih sredstev opravlja ministrstvo za finance." Torej, če bi ministrstvo za finance res opravilo nadzor na ministrstvu za šolstvo in šport, na 20. strani odgovora na interpelacijo minister sicer pravi, da ga je, bi verjetno ugotovilo to, kar je ugotovilo računsko sodišče v svojem poročilu in v svojem dokončnem mnenju, in seveda tudi ugotovilo odgovorni osebi, ki odgovarjata za te nepravilnosti, to je bivši minister za šolstvo in šport, dr. Gaber, in pa državni sekretar, Pavle Zgaga. Normalno bi seveda bilo, da od njiju minister za finance terja ustrezno odgovornost, če ne takrat, recimo, da takrat ni vedel, pa seveda kasneje. Torej prvo jasno vprašanje. Ali je to storil? Ali je zahteval odgovornost obeh odgovornih oseb in če ne, zakaj ne?</seg>
@@ -900,11 +883,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg230">Naj končam. Vprašanj je kar nekaj in najbrž tudi odgovornosti ne bo tako malo. Upam, da se jih minister za finance zaveda in da bo zaradi teh nepravilnosti tudi potegnil določene konsekvence. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg231">Hvala lepa. Besedo ima gospod Čeligoj, za njim Alojz Peterle.</seg>
             </u>
             <note type="speaker">VLADIMIR ČELIGOJ:</note>
-            <u who="#SDZ2.ČeligojVladimir" ana="#regular">
+            <u who="#ČeligojVladimir">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg232">Hvala lepa za besedo. Spoštovani zbor in spoštovani gospod minister Gaspari! V svojem nastopu se bom osredotočil predvsem na področje investicij na področju šolstva.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg233">Zakon o najetju posojila pri skladu Sveta Evrope za socialni razvoj in izvedbi projekta investiranja v šolski prostor in opremo v Republiki Sloveniji ali na kratko povedano, pariški kredit, za investicije v šolstvo, je vlada Republike Slovenije obravnavala in sprejela na svoji 217. seji dne 18. oktobra 1996. Na predlog zakona je bila določena višina najetja kredita v znesku 9 milijard 203 milijone tolarjev. Za ta kredit je bil narejen program investicij v šolski prostor za obdobje 1998-2002 na demografsko ogroženih območjih, za šolstvo narodnosti ter za srednje in visoke šole. Vlada Republike Slovenije je po svoji oktobrski seji leta 1996 zaprosila za kredit pri skladu Sveta Evrope, ki je že 20. januarja 1997 kredit odobril. No, od tu dalje pa se začenjajo stvari zapletati. Januarja 1997 imamo program investicij v šolstvo in imamo odobren zelo ugoden pariški kredit. Namesto da bi predlog zakona takoj po vladni obravnavi prišel v parlament, je vsa stvar obtičala na finančnem ministrstvu. Šele 3. julija 1998 je vlada Republike Slovenije predlog zakona za najetje pariškega kredita poslala v parlamentarno proceduro. Šest dni pozneje, 9. julija 1998, je predlog najetja kredita že obravnaval odbor za kulturo, šolstvo in šport vdržavnem zboru Republike Slovenije. Že tedaj sem postavil vprašanje, zakaj šele po tolikem času, po 20 mesecih, daje vlada Republike Slovenije v državni zbor v obravnavo predlog najetja ugodnega pariškega kredita. Kje je bilo ministrstvo 20 mesecev? Ali drugače povedano. Zakaj je predlog za najetje kredita potoval od vladne palače Republike Slovenije do državnega zbora toliko časa? Tedanji šolski minister je na to zastavljeno vprašanje odgovoril na matičnem odboru za kulturo, šolstvo in šport. Navajam: "Odgovor je meni nepretirano drag, čeprav sem vesel, da smo vsaj sedaj tukaj v državnem zboru, pred tem znotraj vlade Republike Slovenije ni bilo mogoče uskladiti javnofinančnih gabaritov in torej sprejeti odločitve, da bomo ta kredit dejansko tudi najeli v primeru, da bo državni zbor sprejel zakon, ki ga imamo tukaj. To pomeni, dolgo je trajalo." Konec navedbe. Res, gospod minister Gaspari, dolgo je trajalo, celih 20 mesecev ste potrebovali, da uskladite finančne gabarite, in to za ugoden kredit, ki ga je sklad Sveta Evrope že odobril 20. januarja 1997 namensko za investicije v šolstvo. Dolg je seznam investicij v šolstvo, ki so vključene v program pariškega kredita in so čakale na vašo 20-mesečno uskladitev finančnih gabaritov.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg234">Naj navedem seznam investicij v šolstvo, ki obsega za leto 1998-2002 v celoti. Prvič. Na področju šolstva narodnosti je predvidenih 7 investicij. Na področju osnovnih šol na demografsko ogroženih področjih 21 investicij. Na področju srednjih šol 16 investicij, adaptacije in dozidave 24 investicij, izgradnja telovadnic pri srednjih šolah 14 investicij, v visokem šolstvu 22, študentski in dijaški domovi 4, zavodi za usposabljanje 9 investicij, centri za izobraževanje 2, republiški zavodi 3. Poleg tega pa še priprava dokumentacije, intervencijska sredstva, center za šolsko in obšolsko dejavnost, višje šolstvo, urad za mladino in investicijsko vzdrževanje. Od vseh pravkar navedenih investicij je bilo v letu 1998 iz pariškega kredita predvidena poraba 3 milijarde 385 milijonov tolarjev, in sicer za 22 investicij širom po Sloveniji. Torej denar iz odobrenega kredita bi se moral začeti črpati že v letu 1998, saj je državni zbor predlog sprejema kredita obravnaval in sprejel že 10. julija 1998. Kljub temu pa se je kredit začel črpati šele konec minulega leta, se pravi konec leta 1999.</seg>
@@ -916,11 +899,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg240">Kakorkoli skušate gospod minister odgovornost prenesti na resorna ministrstva, kot ste to dejali v včerajšnjem odgovoru na interpelacijo, je vaša dolžnost in obveza, da kot finančni minister poskrbite za tako organiziranost finančnega sistema, da do nepravilnosti in do napak ne bi prihajalo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg241">Hvala lepa kolega Čeligoj. Ponovno sem dolžan ugotoviti, da večji del vaše razprave ni bil v povezavi z interpelacijo. Investicij v šolstvo v predlogu interpelacije nisem zasledil. Tudi način črpanja pariškega kredita v interpelaciji ni bil omenjen. Besedo ima kolega Peterle. Za njim Rudolf Petan.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg242">Spoštovani! Vidim, da sem razveselil Toneta Anderliča in sem vesel pozitivne pripombe, hvala lepa.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg243">Spoštovane poslanke in poslanci! Spoštovani hrup! Najprej bi rad povedal nekaj besed k začetku tega, kar je gospod minister Gaspari povedal v svoj zagovor oziroma v svojem odgovoru.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg244">Dejal je, da vprašanje v interpelaciji naj ne bi bilo jasno postavljeno oziroma kot da tega, kar smo naredili, ni razumeti kot vprašanje. Seveda, sam ne razumem poslovnika na način, kot je to povedal gospod minister, in menim, da je to, kar smo v interpelaciji povedali, eno samo veliko vprašanje, ki se ga da na kratko povedati. Vprašanje je, gospod minister, kako je mogoče -kako je mogoče na podlagi ugotovitev računskega sodišča voditi javne finance tako, kakor so bile vodene. Se pravi, glede 284. člena poslovnika so zadeve povsem jasne in ministru je bilo postavljeno zelo jasno vprašanje.</seg>
@@ -940,11 +923,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg256">Glede na to, kar smo slišali včeraj, bi rekel, da je včasih zelo opevani kriterij poštenja pošel. Mislim, da ga skoraj nihče več ni omenjal v tej razpravi. Mislim, kot sem že rekel, da se bodo nekatere stvari pokrivale zaradi bivših poslov, nekatere zaradi bodočih poslov. Zato me ne bo čudilo, če bo minister preživel to interpelacijo, ki je zelo jasna. Če bo preživel, v tej deželi ne bo lažje, tudi ne bo boljše, ampak bo samo še dražje. Ko se bo to dovolj pokazalo v žepih davkoplačevalcev, ki imajo dno, potem se bo vse skupaj mogoče zelo kmalu videlo zelo drugače. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg257">Hvala gospod Peterle. Besedo ima Rudolf Petan. Nato Mirko Zamernik.</seg>
             </u>
             <note type="speaker">RUDOLF PETAN:</note>
-            <u who="#SDZ2.PetanRudolf" ana="#regular">
+            <u who="#PetanRudolf">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg258">Hvala za besedo gospod predsednik. Spoštovane kolegice in kolegi! Spoštovani gospod minister, ki ga sicer ne vidim.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg259">Veliko je že bilo danes povedanega. Veliko smo bili že tudi opozorjeni, da se ne držimo predmeta interpelacije. Zato se bom skušal strogo držati te vsebine, zaradi česar smo se tudi podpisali pod to vsebino interpelacije, in sicer zaradi nezakonitega, nenamenskega financiranja javne porabe, zaradi nezakonitosti in nepravilnosti v postopku privatizacije državnih bank in lastninjena zavarovalnic,zaradi nezakonitega in negospodarnega upravljanja z državnim premoženjem, zaradi vodenja škodljive politike javnih financ in zaradi drugih ugotovljenih nepravilnosti. Kot sem že omenil, se bom držal okvira teh navedb. Bi pa povedal, da sem vesel, da se jevčeraj tudi sprožilo področje virtualnosti. Namreč, v virtualnosti je čas tista največja spremenljivka in če nismo vsi v istem času, če vsi ne živimo v istem času, seveda različno gledamo na dogodke ali pa nekaterih dogodkov sploh ne vidimo in jih sploh ne opazimo. Po drugi strani bi pa rekel, da sem se podpisal pod vsebino interpelacije tudi zato, ker smo na nepravilnosti dolžni opozoriti. To je naša naloga in to je naša obveza; in ne nazadnje, kdo pa naj opozarja vlado na nepravilnosti, na nepravilne postopke, če ne opozicija ali če to ne bi bila opozicija, potem bi bilo res nekaj hudo narobe v naši državi. Seveda z opozicijo, ampak to je ravno dokaz, da je opozicija budna in da dela.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg260">Veliko je že bilo povedanega, po drugi strani pa je treba tudi povedati, da se vsak dan odkrije nekaj novega, pri čemer gre tudi za posredno ali pa neposredno odgovornost ministra za finance in je kar v skladu z vsebino te interpelacije. Dejstvo je namreč, da se z negospodarno porabo denarja slovenske davkoplačevalce prikrajša tako za denar kot za projekte, po drugi strani jim pa naloži nove obveznosti, ki jih bo treba pokriti ali po domače povedano, odplačevati v naslednjih letih ali tako kot kaže že sedaj, to bo moralo storiti tudi nekaj naslednjih generacij, ki pri tem niso, žal, nič krive in nič dolžne in kot pravi slovenski pregovor, pri tem zapitku nimajo ničesar, razen da bodo dobile izstavljen račun.</seg>
@@ -965,11 +948,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg274">In sedaj bi na koncu, mogoče pol za šalo pol pa zares, še dejal, da mi je sedaj marsikaj bolj jasno, zakaj so argumenti, tudi če so nedvoumni, včasih kot bob ob steno. To smo nekako ugotovili včeraj, ko smo v parlamentu uvedli virtualnost; kajti marsikdaj se nam, tistim, ki imamo argumente - in predlagatelji te interpelacije imamo argumente - zdi, kot da nismo vsi v isti resničnosti. Namreč, virtualnost pomeni tudi področje, kjer je čas tista največja spremenljivka, in to pomeni, da nismo vsi v istem času, da ne živimo vsi v istem času. In če nekdo ne živi v tem času, v tem realnem času, ki ga nekateri živimo, potem teh argumentov ne more slišati, se z njimi ne more soočiti in jih potem tudi kategorično zavrača; češ, to pa ni to. Ampak dejstvo je takšno, da živimo v tem času, v realnem času, virtualni čas in virtualnost, to pa je nekaj drugega. In želel bi, da bi argumenti, ki smo jih predlagatelji navedli, bili sprejeti v tem realnem času, kajti, ne gre samo za to, če bi kdo odstopil ali če bo kdo izgubil glavo. Gre za to, da bi se ta dejstva, ki so tu navedena, da bi se to spremenilo. In glede na to, ko sem omenil, da je vsak Slovenec v tem trenutku zadolžen za 2500 dolarjev, bi bilo dobro, če bi se to začelo odpravljati in to bi bilo verjetno največje poplačilo, tudi predlagateljem interpelacije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg275">Hvala, kolega Petan. Razpravljal bo kolega Zamernik, pripravi naj se Branko Kelemina.</seg>
             </u>
             <note type="speaker">BOGOMIR ZAMERNIK:</note>
-            <u who="#SDZ2.ZamernikBogomir" ana="#regular">
+            <u who="#ZamernikBogomir">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg276">Hvala lepa za besedo, gospod predsednik. Kolegice in kolegi, spoštovani minister v odsotnosti. Saj vsemu temu dogajanju dvodnevnem bi lahko rekli: že videno. Na eni strani argumenti, obtožbe v interpelaciji, na drugi strani gladko zavračanje vseh navedb v interpelaciji.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg277">Jaz ne bom tukaj tisti, ki bo rekel: navijam za eno ali drugo. Ljudje naj sami ocenijo. Podatki so tukaj. To, kar bom pa sedaj navedel, je pa najbrž ljudem tudi zelo blizu in bodo lahko sami ocenili, kdo ima pri vsem skupaj prav. In kot sem rekel, ne bi želel obtožb naslavljati direktno na ministra, ampak na sistem, ki ga imamo in ki dopušča take nepravilnosti, kot jih bom sedaj navedel. Konec koncev je minister minister že osem let na področju, ki je najbolj pomembno v državi. In v teh osmih letih bi se stvari, ki jih bom sedaj navedel, lahko - če bi bila volja, želja, mislim, da znanja je zadosti - odpravile.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg278">Pred nadaljevanjem, bi opozoril na zadnji odstavek 14. člena ustave. Najbrž da vsi vemo, da gre za določbo, da smo pred zakonom vsi enaki. In to mi je bila nekako izhodiščna točka za ta nastop. Mesec marec je zelo aktualen mesec za oddajo napovedi za odmero dohodnine. Veste, ljudje - ne vem, ali je v vašem okolju kaj drugače, ampak v mojem tako, da vsaj nekateri - ne razločijo med občino, upravno enoto in pa davčno izpostavo. In potem se obračajo tudi na občine za pomoč pri pisanju napovedi za odmero dohodnine. Kljub temu da to seveda ni naloga občin, jim pri tem z veseljem pomagamo. No in sedaj se je to že začelo delati in zgodi se tako, danekdo pride brez popolnih podatkov za izpolnitev tega obrazca in ga opozorimo, če do 31.3. ne boš vložil napovedi za odmero dohodnine, te čaka kazen. Na to kazen obresti, vse skupaj se sešteje in na te obresti in kazen še dodatne obresti in še potem vse skupaj obresti - za en dan zamude! Ravno prejšnji teden je bil tak primer, zamahnil je z roko, je rekel, ah, kaj pa to. Jaz bi moral dobiti lansko leto, aprila, na podlagi tudi zakonov, neko subvencijo za gorsko pašništvo, nekaj podobnega. Pa te subvencije ni, čeprav črka zakona piše, da bi ta subvencija morala biti plačana s strani države. Se pravi: na eni strani zahtevati do dneva natančno, da zavezanec vloži napoved, na drugi strani od aprila do danes, marca, ne dobi subvencije, do katere je tudi upravičen po zakonu. Pravi, lahko bi si tudi iztožil to subvencijo, ampak kako naj grem na sodišče, če pa - kar sem mu seveda moral pritrditi - najvišji, skorajda najvišji predstavnik sodne oblasti tu izza te govornice reče, jaz ne morem izpolnjevati določenih določb zakona. Najbrž vsi vemo, kaj imam v mislih. In seveda mu moram pritrditi, da se mu tudi na sodišče ne splača iti, pa tudi ne more, kajti nima sredstev, da bi lahko vložil in plačal takso, ki smo jo tudi tukaj tako visoko postavili. To hočem povedati inpokazati na dvojnost meril; kaj velja za državo, kaj pa velja za davčnega zavezanca, kot ga imenujete.</seg>
@@ -983,11 +966,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg285">Kot sem že prej rekel, 8 let je v politiki relativno dolga doba. Najbrž - mislim, da se ne bom zmotil - da so v tej državi na oblasti samo trije politiki toliko časa: predsednik Kučan, predsednik Drnovšek in pa minister Gaspari. In če bi bila volja, želja ali pa znanje, kot sem prej rekel - to verjamem, da je - bi se take stvari, kot sem jih sedaj navedel, lahko odpravile. Če bi bila želja! In ne želim, tako kot pravi varuh človekovih pravic v svojem poročilu, da naj bi bila država in pa davčni zavezanec v popolnoma enakem položaju; ampak, dajte možnost nekomu, ki bo zagotovil to, da bosta država in pa davčni zavezanec vsaj v približno enakem položaju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg286">Hvala, kolega Zamernik. Besedo ima kolega Kelemina. Pripravi naj se Janez Janša.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg287">Hvala lepa za besedo. Spoštovani predsednik, spoštovani vsi skupaj! V svojem delu interpelacije ministru za finance se bom osredotočil na področje nezakonitega, nenamenskega in negospodarnega ravnanja z javnimi financami in bom na dveh, treh konkretnih primerih poskušal dokazati, seveda, objektivno in subjektivno odgovornost ministra za finance glede očitanih nepravilnosti in nezakonitosti. Preden pa podam svoje dokaze, pa ne morem mimo tega seveda, da z ogorčenjem naj ugotovim, kako so posamezni LDS-ovski protagonisti in drugi simpatizerji divjega liberalizma poskušali od dneva najave o vložitvi interpelacije pa vse do današnjega dne javnosti slovenski javnosti, prikazati interpelacijo kot neupravičen napad dela opozicije na urejeno finančno institucijo in njenega vodja; prikazati interpelacija kot neutemeljeno, poslovniško nepravilno, strokovno pomanjkljivo in neprimerno, vse z enim samim razlogom: popolnoma diskvalificirati očitane nepravilnosti in pa ustvarjati vtisa, da večjih uspehov in boljših rezultatov, kot jih je dosegla obstoječa struktura, ni mogoče niti zamisliti, niti pričakovati. Poleg tega pa ministra za finance prikazati kot žrtev, ki jo opozicija polaga na oltar kot predvolilno žgalno daritev. Tudi to, da sam minister v svojih izjavah odločno, kategorično in brez vsakega pomisleka - razen nekoliko z rdečim obrazom, ker ga je le delno sram, ker zagovarja nezakonitost - torej kategorično zavrača vse očitke iz interpelacije, kot netočne, neutemeljene in brez zakonske podpore. S tem seveda kaže na to, kako minister arogantno in ponižujoče tepta pravni red v naši državi, z namenom, da bi zaščitil ne toliko svojo lastno ime, ampak da bi zaščitil HDZ-jevsko aroganco LDS do oblasti, HDZ-jevsko aroganco LDS do pravnega reda in do slovenskih davkoplačevalcev. Zato po moji oceni, minister za finance v tej interpelaciji ni žrtveno jagnje, ampak je volk, ki pod taktirko LDS dovoljuje neusmiljenju mesarjenje vsevprek po javnih financah in državnem premoženju. Osebno sem tudi prepričan, da slovenska javnost in pa davkoplačevalci po ustavi in ostalih predpisih imamo pravico kritičnega vpogleda v porabo javnih sredstev. Vsakega tolarja, kaj šele milijona, milijarde, ali tisoč milijard. In prav ta neodgovornost in nespoštovanje vsakega slednjega tolarja sili v ospredje iz odgovora ministra na interpelacijo. Minister celo poenostavljeno razlaga, da za nobeno očitano nepravilnost ni odgovoren in ni pristojen. Iz tega seveda lahko sklepamo le to, seveda na osnovi obstoječe zakonodaje, da minister noče biti minister, saj ministra brez odgovornosti ne more biti. Toliko za uvod.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg288">Odgovornost pri nezakoniti porabi proračunskih sredstev ministrstva za šolstvo in šport minister v celoti zavrača z obrazložitvijo, da ni odgovoren za delo drugih ministrstev. To pri upoštevanju celotne zakonodaje, seveda, ne drži. 5. člen zakona o organizaciji in delovnem področju ministrstva namreč govori - jaz bom samo navedel tiste elemente iz tega člena, ki se bodo dotikali v tem trenutku moje razprave - Ministrstvo za finance opravlja zadeve, ki se nanašajo na sistem javne porabe, na proračun, na sistem revizije in finančnega poslovanja." Samo to bom navedel. S tem, upam, da vam je že gospod Špiletič natančno razložil, kaj pomeni sistem neke revizije, finančnega poslovanja, sistem javne porabe, proračuna in tako naprej. To je jasno tukaj iz 3. člena, da je to naloga celotnega ministrstva, ne samo ministra kot posameznika. Vendar potem 4. člen, drugi odstavek zakona o vladi govori, da je za delo posameznega ministrstva odgovoren in pristojen minister. Toliko, da bo jasno, da odgovornost absolutno obstaja.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg289">17. člen zakona o vladi Republike Slovenije pa pravi, da so ministri odgovorni za svoje odločitve pri vodenju ministrstev kakor tudi za opustitev ukrepov, ki bi jih morali sprejeti. To je bilo že danes večkrat povedano in kljub temu mislim, da ne bo odveč.</seg>
@@ -1011,11 +994,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg307">Spoštovani minister za finance! Pričakujem, da boste na osnovi dokazov spoznali svojo zmoto, neodgovornosti in sami ukrepali v skladu z načeli vaše pristojnosti in odgovornosti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg308">Hvala lepa, kolega Kelemina. Še dva prijavljena sta za neomejeno razpravo. Prvi ima besedo Janez Janša, za njim Jelko Kacin. Nato še 4 prijavljeni za 5- minutno razpravo.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SDZ2.JanšaJanez" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg309">Spoštovani gospod predsednik! Gospodje ministri! Kolegice in kolegi! Najprej kratek uvod k nekaterim dodatnim obrazložitvam interpelacije in tudi k dodatnim vprašanjem.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg310">Prvo, kar je zbodlo v oči nas, ki smo vložili interpelacijo, je bilo to, da se je vlada do interpelacije ni opredelila. Interpelacija proti ministru za finance, ki smo jo vložili, ni prva, je druga v njegovi dolgi ministrski karieri. Prva je bila vložena leta 1994 in takrat se je vlada do nje opredelila na podlagi istega poslovnika, istih členov. Očitno je zdaj obstajal nek razlog, da se vlada do te interpelacije ni opredelila. Se pravi, vlada formalno ni podprla ministra. To je bilo doslej prezrto, mislim pa, da je pomembno.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg311">Drugo, kar je v zvezi s temi splošnimi stvarmi, važno je to, da minister, proti kateremu smo vložili interpelacijo, temu državnemu zboru še vedno dolguje pojasnila v zvezi z zagotovili, ki jih je dal ob prvi interpelaciji leta 1994. Takrat je namreč minister obljubil, da iz državnih poroštev, ki jih je vlada na njegov predlog podelila podjetju funkcionarja liberalne demokracije Vladimirja Slejka z imenom Optimizem, da državni proračun ne bo oškodovan zaradi teh poroštev, vendar so bila ta poroštva kasneje vnovčena, ta poroštva so bila kasneje vnovčena, državni proračun je bil oškodovan, to se je vedelo že ob tisti razpravi, kljub temu pa je minister zagotavljal, da bo država po sodni poti izterjala ta denar. Doslej ta državni zbor neuradno, ne neuradno ni bil obveščen, ali je bil ta denar izterjan. Šlo je pa za prek 120 milijonov tolarjev. Se pravi, spodobilo bi se, da preden minister odgovarja na očitke iz te noveinterpelacije, odgovori oziroma pove temu državnemu zboru, ali so njegova zagotovila ob prvi interpelaciji sploh uresničena. Državni zbor ga takrat ni razrešil na podlagi njegovih zagotovil, da državni proračun ne bo oškodovan. Po šestih letih bi se spodobilo, da izvemo, ali je dejansko bil, ali ne. Ker leta 1998 po podatkih, ki smo jih lahko dobili, ta dolg še ni bil poplačan oziroma postopek na sodišču še ni bil končan.</seg>
@@ -1036,11 +1019,11 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg326">To so vprašanja, ki terjajo odgovor in to so seveda, od teh odgovorov je odvisno, ali je ta očitek v 3. točki interpelacije, ki govori o odgovornosti za oškodovanje družbenega premoženja pri privatizaciji bank in zavarovalnic upravičen ali ne. To so ključni odgovori. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg327">Hvala lepa. Zadnji prijavljeni, gospod Jelko Kacin, nato 5-minutna razprava Maria Pozsonec.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg328">Hvala za besedo, gospod predsednik. Kolegice in kolegi! Interpelacija je spisana na dolgo, odgovor je izčrpen, jaz bi se rad zadržal pri dveh poglavjih in bil kolikor toliko razumljiv, in sicer to zadnje poglavje, ki govori o tem, koliko dolgov preveč ali premalo je prevzela Republika Slovenija iz skupnega jugoslovanskega obsega dolgov. Najprej bi rad ugotovil, da je mag. Gaspari, sedanji finančni minister tistega večera, 26. junija, ko smo imeli svečanost, potem ko je bila v državnem zboru oziroma takratni skupščini že sprejeta odločitev o naši samostojnosti, bil prisoten na tistem dogodku. Ni bil med tistimi funkcionarji, ki so prišli pravočasno iz Beograda Nasprotno, ki so prišli prepozno. Nasprotno. Prišel je pravočasno in zato tudi verjamem, da je zagotovo najbolj vedel, da je vprašanje prevzema svojega dela dolgov ključno vprašanje, ki Slovenijo naredi normalno državo v očeh drugih evropskih držav.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg329">Ali smo prevzeli preveč dolgov ali premalo? To bo večno vprašanje. Ampak sedanje stanje je tako, da je Slovenija bila prva država, ki je določila obseg dolgov, ki jih je prevzela iz tega zveznega obsega. Slovenskemu vzgledu so potem sledile druge države, ki so razglasile samostojnost za nami. Najprej Hrvaška, potem pa še kdo. Ampak med vsemi temi, ki so dolgove prevzemali za nami, je Slovenija daleč najbližje vstopu v Evropsko unijo. Naj spomnim posebej poslance, ki so do sedaj napovedali, da bodo glasovali za interpelacijo, se pravi poslance socialdemokratske stranke in poslance Slovenskih krščanske demokracije, pa tudi poslance Slovenske nacionalne stranke, da je bil tukaj sprejet dogovor, da bomo podpirali vstop Slovenije tako v Evropsko unijo in Nato. Slovenska nacionalna stranka tega dogovora ni podpisala in iz teh razlogov tudi razumem, da lahko glasuje za interpelacijo.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg330">Ampak ta del navedbe v interpelaciji, ki govori o tem, da je obseg dolgov, ki smo jih prevzeli, prevelik, ta del interpelacije je v nasprotju z dogovorom, ki ga je 6 političnih strank podpisalo in podpisala sta tudi oba predstavnika manjšin. Zato bi vas gospodje vendarle pozval, da spoštujete stvari, ki so bile dogovorjene, in ki nas zavezujejo tudi v odnosu do mednarodne javnosti.</seg>
@@ -1057,31 +1040,31 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg341">Malo pred tem smo se pogovarjali, kako uro nazaj, s poslancem Henigmanom, ki ga ni tukaj, Kanglerjem in Jagonikom in vprašali so me, če lahko, to o čemer govorimo, s čim podkrepim. Rekel sem, da bom pridobil papir in da ga bom izročil za to pristojnim. Zato ta svoj današnji nastop izkoriščam tudi za to, da bi predsedniku državnega zbora izročil en dokument, to je rokopis, ki ga je napisal gospod Andrej Lovšin, in ki je tudi račun za 2 milijona 503 tisoč 500 nemških mark gotovine za prodajo orožja sosednji Hrvaški. Ta papir je verodostojen.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg342">Kolega Kacin. Vsebina trgovine z orožjem ni vsebina interpelacije. Zato vas prosim, da se držite našega dogovora in komentirajte interpelacijo in odgovor na interpelacijo.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg343">Hvala gospod predsednik. Trgovina z orožjem je del interpelacije. Kajti prvo poglavje govori o temeljnih razvojnih programih, o nakupih orožja za potrebe teritorialne obrambe Slovenske vojske oziroma obrambnih sil Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg344">Papir, ki sem vam ga dal, ima na zadnji strani vse potrebne pečate, iz česar je razvidno, da je prišel iz tujine in da je overjen pri notarju, in kot boste videli piše, da je original in da je to rokopis Andreja Lovšina. Prosim vas, da to izročite gospodu Mogetu, ki ima težave s pridobivanjem nekaterih dokumentov s strani vlade Republike Slovenije. Ta dokument pa seveda ni nekaj novega, to je dokument, ki je že 4 leta v arhivih ministrstva za obrambo, in ki naj seveda služi temu, da bodo v ministrstvu za obrambo arhive odprli nekoliko hitreje in omogočili, da tisto, kar vemo že zdavnaj in bi moralo pravosodje že zdavnaj tudi uporabiti za svoje delo, izročijo vsaj preiskovalni komisiji gospoda Mogeta.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg345">Sedaj bi rad nekaj rekel na to temo. Namreč prav nedavno smo bili na obisku v Belgiji, z nami je bil tudi gospod Per iz Slovenske ljudske stranke in zaprosili smo gostitelje, da obiščemo tudi tako imenovano dioksinsko komisijo. To je ena od dveh preiskovalnih komisij, ki se ukvarja z akutnimi problemi belgijske države. Ta komisija je najvišji organ tiste države. Ni funkcionarja, ki bi si upal zamuditi priti na tako komisijo, takrat ko se ta loti svojega dela. Ni organa, ki ne bi izločil dokumentacije, ki jo ima na voljo, da bi omogočil delo te komisije. Ne smeta pa delati več kot dve hkrati. Zato je to prva prioriteta delovanja parlamenta. Osebno sem prepričan, da si ta parlament po dveh dneh razprav, kjer je bila gledanost katastrofalno nizka, ker so se ljudje zaradi zahtevnosti teme, na drugi strani pa tudi zaradi načina predstavitve razlogov za interpelacijo slej ko prej naveličali tega gledanja, da ni boljšega načina, kot da se ohrani in ponovno dvigne ugled in avtoriteta tega državnega zbora, da preiskovalne komisije opravijo svoje.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg346">Zato izkoriščam to priložnost, da pozovem vse poslance, da kakor je mogoče hitro izrazimo svojo voljo in glasujemo o tej interpelaciji, bodisi tako, da jo podprete, ali pa tako, da se do nje ne opredeljujemo, kajti tisti, ki so se odločili zanjo, seveda nosijo tudi odgovornost zanjo in lepo bi bilo, če bi lahko tudi na ta način ocenili, koliko verodostojna je, tako po obsegu kot tudi po vsebini. Mislim pa, da bi nam bili gledalci zagotovo hvaležni, če bi to zadevo zaključili danes in bi jim omogočili, da jutri normalno spremljajo drugi program nacionalne televizije, tako kot se je to dogajalo prej, preden se je začela interpelacija zoper ministra Gasparija. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg347">Hvala lepa. Tri replike po vašem nastopu, prvi je dr. Jože Zagožen, nato Janez Janša in Jože Jerovšek.</seg>
             </u>
             <note type="speaker">DR. JOŽE ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženJože" ana="#regular">
+            <u who="#ZagoženJože">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg348">Hvala lepa. Sedaj smo poslušali velikega retorika Jelka Kacina, to je tistega, ki je najbolj držal vrečo pri nepravilnostih pri temeljnih razvojnih programih. To je tistega, ki je kupoval staro šaro v tujini, to je tistega, ki je kupil tudi tisto havbico, pri kateri je en častnik oslepel, druga oseba pa je umrla. To je tistega, ki je tako uresničeval temeljne razvojne programe, da je v poročilu vlade navedeno, da je bilo za zračno obrambo v času revizije namenjenih 12% sredstev, temeljni razvojni programi pa so predvidevali 32%. Podobna razhajanja so bila na vse ostalih postavkah. Zakon je izrecno zahteval, da se mora dati prednost opremljanju kopenske vojske, vendar je bilo zanjo namenjenih le 2,7%. Jelko Kacin je dajal prednost svojim hobijem pred realnimi potrebami slovenske vojske. Kljub temeljnim razvojnim programom je danes slovenska vojska po lastnih navedbah - in tu sedijo predstavniki te vojske - še vedno brez ustrezne zaščite pred napadi iz zraka in zapravljene so bile težke milijarde, s tem pa je bila zmanjšana tudi bojna usposobljenost vojskein pa obrambna sposobnost države. Prvo od vsega je računsko sodišče ugotovilo te nepravilnosti. In to računsko sodišče, ki ga danes tukaj poskuša Jelko Kacin diskvalificirati, strokovno izničiti, je zapisalo, da je bilo uresničenih samo 50 odstotkov kosovnih načrtov. Kje je ostala polovica, gospod Kacin? Še danes ne vemo, koliko sredstev resnično manjka za realizacijo temeljnih razvojnih programov. Temeljni razvojni program je bil sprejet na ministrstvu za obrambo in zakon pravi, da se realizira na osnovi letnih programov. Vendar tu gre očitno za zelo velika razhajanja. Kajti računsko sodišče samo pravi, da je finančno ostal še nepokrit kosovni načrt v višini 92 milijard tolarjev. Čeprav je celotni znesek v zakonu znašal 76,6 milijard. Zato menim gospod Kacin, da nič ne bo pomagalo, če boste poskušali tu z blestečimi, demagoškimi prijemi tudi z namigovanji na trgovino z orožjem zmanjšati, ali pa zmanjševati svojo lastno odgovornost pri tej polomiji, ki se ji rečejo temeljni razvojni programi.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg349">In drugo, ko ste tu omenjali zgodbo okrog letal. Na odboru za obrambo ste poskušali podtakniti, da smo kupovali ta letala mimo temeljnih razvojnih programov. Takrat sem vam jasno povedal, da smo bili na Češkem in da so bila ta letala kupljena pred sprejetjem zakona in pred temi programi. Vendar tega danes tukaj nočete več priznati. Menim, da bi bilo bolje gospod Kacin, če bi kaj več tu povedali o ograji iz vojašnice, ki se je znašla pred vašo hišo. Kar se tiče, kar se tiče dolgov in pa obveznosti Slovenije do konzorcijakomercialnih bank, pa bom kasneje stvar obrazložil, kajti tu je največ sprenevedanja in bom točno s številkami dokazal, kako je gospod Gaspari z ekipo sistematično zmanjševal odstotek tega, kar smo v resnici plačali preveč na račun tega dolga. Tako ste zmanipulirali, da ste na koncu prišli na 16 odstotkov od 50. To bom pa potem povedal, ko bo čas. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg350">Hvala lepa. In prosil bi vas kolegice in kolegi, da v replikah ne napadate osebno kolegov med seboj. Da pač argumentirano soočite stališča, ne pa da osebno sedaj izpostavljate kolegice ali kolege, če neko stališče izrečejo. Replika, Janez Janša, za njim Jože Jerovšek.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SDZ2.JanšaJanez" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg351">Hvala, gospod predsednik. Tudi ta vaša zadnja pripomba je dobrodošla, samo malo pozna je, bom rekel, malo ste spali zadnjih 10 minut. Kar se pa tiče replike, je pa seveda to replika na izvajanje gospoda Kacina. Jaz vem, da se na neki način tukaj čuti dolžan pomagati ministru, ki je pod interpelacijo, končno je eden od krivcev za to, da je gospod Gaspari tudi pod interpelacijo, jaz verjamem, da gospod Gaspari ni točno poznal vsega, kar je podpisal in mu je gospod Kacin podtaknil v tisto komisijo, tako da jaz razumem to skrb pomagati nekomu, ki si ga spravil v godljo, čeprav metoda ni bila ravno takšna, da bi se to dalo zakriti, je bilo vse skupaj zelo prozorno. Veste, takih dokumentov, kot jih je gospod Kacin dal tukaj predsedniku, je še veliko. Na tistem zapisniku med mano in njim, ki obsega nekaj strani, je zelo dolg seznam različnih dokumentov. Samo seznam dokumentov, ki jih je dobival pri primopredaji, je dolg nekaj strani in tam so različne stvari, zelo zanimive, tudi drugače po arhivih ministrstva je verjetno leta 1994 nabral vse mogoče. Tudi jaz bi lahko, če bi tako delal kot on, pa bi si kaj skopiral, tukaj mahal z dokumentom, kjer piše, ki ga je poslal Izatbegović Kučanu pa piše: "Dragi Milane, šalji mi one granate, za koje smo se dogovorili." To tudi obstaja nekje v arhivih. Ali pa tisti dogovor med Kučanom in Abdičem, na podlagi katerega smo usposabljali potem bosansko vojsko itn. Veliko tega je.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg352">Zdaj, gospod Moge v svoji komisiji nima pooblastil, da raziskuje kaj drugega, razen Maribor in Ložnico, čeprav to dela nezakonito. Tukaj je državni zbor, ki mu lahko ta pooblastila poveča, naj pride s tem predlogom, glasujte za to, pa se bomo o tem pogovarjali, ampak ne tako selektivno in s takimi manipulacijami, ampak s celovito dokumentacijo. In prosim, da to naredite pravočasno, da ne boste potem rekli, da je bilo konec mandata.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg353">Kar se pa tiče same vsebine, je pa tako. Obresti v zvezi z zakonom o temeljnih razvojnih programih, veste, s temi obrestmi je zgodba čudna, spreminjala se je pa v skladu s tem, kdo je bil minister. Prvi dogovor, ko se je ta zakon delal in še preden se je začel delati, mislim, da je bil nekje dosežen na nekem dogovoru pri predsedniku vlade, kjer sva bila tudi midva oba z gospodom Gasparijem, in tam je bilo dejansko dogovorjeno, da se gre v zakonodajo, kjer se bo skušalo ustvariti podlago za modernizacijo slovenske vojske inda obresti od tega kreditiranja ne bodo bremenile nakupov. To je bil prvotni dogovor, to verjetno obstaja še kje kakšna zabeležka. Se pravi prvotni dogovor je bil tak, kakršen je ta, na katerem zdaj vztraja. Ampak, ko je šel zakon v proceduro, je bila liberalna demokracija tista, ki je vztrajala, da temu ni tako. Tukaj so poslanci, mislim da je bila najglasnejša sedanja organizatorica zajtrkov na magistratu, zahtevali, da gredo obresti zraven, da ministrstvo za obrambo točno predloži strukturo, kaj bo kupilo. Da je treba predložiti točen načrt, število vsega do zadnje oborožitve oziroma opreme, po kosih, po letih, kdaj je bilo kupljeno in vse to je bilo pripravljeno. To je bilo vse pripravljeno leta 1994, ko se je zakon sprejemal. Ne zaradi dobre volje gospoda Gasparija ali mene, ampak zato, ker je to zahtevala tista stranka, ki sedaj zagovarja povsem nasprotno. Takrat so bila tudi sredstva bistveno znižana. Skoraj za 70% od prvotnega predloga.</seg>
@@ -1090,49 +1073,49 @@
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg356">Ta zakon nikoli ne bi bil sprejet, če ne bi bilo natančnih kosovnic, kot sedaj temu pravite. Tukaj je imel dr. Zagožen popolnoma prav. V gradivu, ki je imelo sicer oznako zaupno, je bilo treba obrazložiti poslancem na zahtevo poslancev liberalne demokracije točno dinamiko nakupov po mesecih in letih in po strukturi sredstev. Do takrat, so rekli, ne bodo glasovali za mačka v žaklju. Ko se je zakon izglasoval, se je vedelo, zakaj se je ta denar namenil. Če pa danes pogledate, kaj od tega je kupljenega in kaj ni boste videli, da so kupljene povsem druge stvari. Da se to enostavno ni upoštevalo. Vlada je sicer imela pristojnost, da to spreminja, očitno je to spreminjala. Ampak rezultat tega početja je osnutek poročila Pentagona, ki ga imate, ki je bilo tudi objavljeno, in ki ugotavlja, da slovenska vojska danes ne predstavlja tistega, kar bi morala. To je rezultat vsega tega.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg357">Hvala lepa. Replika Jože Jerovšek, nato Jelko Kacin. Pred nami je odločitev ali bomo še opravili 4, 5 minutne razprave?</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg358">Hvala lepa. Repliciram gospodu Kacinu in moram reči, da sem mu hvaležen, da je odprl način delovanja Mogetove komisije in da bo možno vsaj nekaj slovenskim gledalcem o scenarijih in manipulacijah, ki se tu dogajajo, povedati. Sedaj gospod Kacin pravi, da ima gospod Moge težave s strani vlade, da ne dobi dokumentacije. Sinoči, ko sem bil opazovalec na seji odbora za mednarodne odnose, sem videl, da nima samo gospod Moge težave, očitno, ker jih ima gospod Kacin tudi. Minister Rupel je jasno povedal, da ne vodi kompetentnega odbora gospod Kacin, ker je izločil opozicijo, in mislim, da je situacija popolnoma jasna, in na tej podlagi seveda išče zavezništva in skuša gospoda Gasparija, ki ga je spravil v stisko, sedaj podpirati. Logično! Ampak mislim, da so pri vas stvari že precej jasne, da je gospod Drnovšek naredil ločnico med boljševiki pa drugimi, kot se je izrazil.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg359">Ampak glejte, o oviranju Mogetove komisije. Sedaj pa bomo videli - gospod Moge je na Kviazu izjavil</seg>
                <note>citiram</note>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg360">: "Morate me razumeti, da sem kot predsednik komisije izpostavljen strašnim pritiskom." Gospod Moge je izpostavljen strašnim pritiskom! Kdo na njega pritiska, to je pa res zanimivo! In očitno je, kar se je videlo, ko je dal tisto izjavo po tisti seji, ko je magnetogram - potem so umaknili pa skrili - da so se mu takole tresle roke! Takole so se mu tresle roke, in da je imel slučajno težave, katero vrstico iz izjave, ki je bila pripravljena, mora prebrati.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg361">Kolega Jerovšek, vsebina dela Mogetove komisije, če jo smem tako imenovati, vsekakor ni na današnjem dnevnem redu, lahko bo pa na eni od prihodnjih sej, in predlagam, da <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg362">Jaz repliciram na izvajanje gospoda Kacina, gospod predsednik.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg363">V čem?</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg364">Ko je omenjal, da ga skušajo ovirati, da bi moral samo Ložnico, in da imamo težave s strani vlade. In gospod Kacin je tudi omenjal dioksinsko komisijo v Belgiji, da ni slučajno, da ne bi mogel kdo dobiti dokumentacije. Hvala bogu, da je to omenil! Pri dioskinski aferi sta takoj v eni uri odstopila dva ministra v Belgiji, še prej pa pri kupčijah z orožjem trije ministri v dveh urah, gospod Moge, v Belgiji. In gospod Kacin je navedel, da ni organa, ki bi si dovolil, da ne bi izločil dokumentacije. Zakaj se gospod Kacin ni oglasil, ko osem mesecev ni gospod državni okrožni tožilec izročil dokumentacije? Ministrstvo za notranje zadeve še sedaj ne izroči dokumentacije o zadevi Vič-Holmec. Zakaj ni protestiral? Sedaj pa je naenkrat Moge žrtev in revež! Po tisti seji, ko je gospod Moge dal izjavo, je prišel sem - jaz sem ga tam slučajno gledal, sta priletela gospod Kacin in gospod Ribičič <gap reason="inaudible"/>
                </seg>
                <note>Smeh.</note>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg365">Potem je pa prejšnji teden nek poslanec iz teh vrst, ki ga tudi moti, povedal, da je tam za vrati stal, pa da je bilo rečeno - šlo je za gospoda Pajnkiherja - "ali je povedal tisto, kar je bilo dogovorjeno?", je nekdo izjavil. No, tako, vidite! "Ali je gospod Pajnkiher povedal, kar je bilo dogovorjeno" in kar je že avgusta po Delu pisal, pa so ga <gap reason="inaudible"/> In seveda, potem je v avtorizaciji, čeprav v zapisniku, ki so ga navajali kot kronski dokaz, piše točno tako, kot je bilo na komisiji izrečeno, in je gospod sekretar zapisal, "kasneje, leta 1992 ali v začetku 1993 pa sem dokumentacijo predal Lovšinu". Ampak ker je bilo to v tistem tednu, ko se je na neki drugi komisiji ugotavljalo provizije na račun CK-ja in financiranje prepovedane neke stranke, partije, je moral Pajnkiher seveda zrecitirati tako kot so mu naročili. To je jasno. In je zelo krasno in "fajn" je, da je gospod Kacin to zadevo odprl, ker bomo končno lahko slovenski javnosti povedali, kako te stvari potekajo. In tu je zrežirana zadeva, zmanipulirana, scenariji narejeni in delate vse po scenarijih. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg366">Hvala lepa. Še replika gospoda Kacina. Če ste se ostali oglasili k replikam, seveda to ne bo mogoče, predno se ne odločimo, kako bomo nadaljevali delo. Ura bo 18.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg367">Hvala lepa za besedo gospod predsednik. Jaz bi najprej rad reliciral gospodu Janši in sam mu pravzaprav hvaležen, da je tukaj javno povedal, kakšen je bil osnoven dogovor v zvezi z zakonom o temeljnih razvojnih programih, modernizacijo obrambnih sil RepublikeSlovenije. Obresti ne sodijo v zakon, kajti to gre na škodo opremljanja slovenske vojske. Zakon je bil sprejet tak, kot je sprejet zato, da bi se obveznosti raztegnile na daljše časovno obdobje, da se pomaga likvidnostni, presegati likvidnostne težave te države, da se, če hočete, pomaga ministru za finance pri opravljanju njegove funkcije in da ima zdrava, da ima država zdrave finance. Torej to, kar se je dogajalo kasneje, jaz ne želim komentirati, rad pa bi povedal, da dokler sem bil minister za obrambo, ministrstvo za finance nikoli ni uveljavilo stališča, da je potrebno obresti računati na račun odobrenih sredstev. Lahko povem celo nekaj drugega. Jaz se moram pritožiti, ker v letu 1994 minister za finance sploh ni bi kooperativen. In če smo želeli karkoli kupiti, je moralo ministrstvo za obrambo samo poiskati kreditne možnosti in zato je kupovalo samo tam, kjer so bili na voljo blagovni krediti, ker drugih kreditov preprosto ni bilo.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg368">No, rad pa bi se odzval tudi na to razpravo okrog kosovnic. Kosovnice gospe in gospodje, so bile nestrokovno pripravljene, vsaj kar zadeva zneske. Gospod Janša dobro ve, da na svetu ni letala, ki bi ga lahko kupil za tak znesek, kot so si oni to zamislili v kosovnici, in dinamiki uresničevanja temeljnih razvojnih programov. Zato seveda bojnih letal iz tega naslov in iz tega zakona nismo mogli in tudi ne bomo mogli kupovati naprej. Ampak nekaj pa je ključno in tukaj sem, pravim, gospodu Janši zelo hvaležen. Mislim, da po njegovi razlagi, ne bo težka razlaga zakonodajalca, ali obresti sodijo v zakon, ali ne. To je bila konstruktivna drža in se vam gospod Janša za to zahvaljujem.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg369">Drugo vprašanje pa je odgovor na razpravo gospoda Zagožna. Govoril je o mrtvih, o ranjenih pri nesreči s havbico. To je bila tragedija in mislim, da ni primerno take stvari tukaj odpirati. Organi pregona so raziskovali in so ugotovili, da so nekateri že dovolj pretrpeli in da ni prav nobene potrebe, da bi še organi pregona nadaljevali s sankcioniranjem razlogov in posledic tistega, kar se je zgodilo. Jazosebno obžalujem, da je do te tragedijo prišlo, čeprav takrat nisem bil minister. Ravno tako, kot obžalujem druge tragedije, ki so se zgodile v času vojne za Slovenijo, ko smo po pomoti sestrelili človeka, ki je delal za nas, pa smo potem potrebovali leta da je ministrstvo za obrambo priznalo, da je delal za nas. Zato prosim, pustite mrtve pri miru in ne oživljajte ponovno bolečin pri svojcih, ki so pretrpeli marsikaj. Z vsakim vozilom in z vsako havbico se lahko dogodi nesreča. Zato prosim, dajmo upoštevati dejstva in ne prilivajmo ognja tam, kjer to ni potrebno.</seg>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg370">Rad bi pa seveda na koncu, ker gre za materialne evidence, za finančne evidence, povedal. To, kar sem dal gospodu predsedniku, ni v nobenih evidencah. Dokazuje pa, da so se protiletalske rakete prodale po petkratni ceni v primerjavi s tisto, ki jo je Janša napisal v poročilu, na katerega se sklicuje in to ni edini primer. In ko se bo Mogetova komisija lotila teh evidenc, bo ugotovila, da materialne in finančne evidence ni, ker je tam ni več. Ti papirji, ki sem jih pa izročil gospodu predsedniku, pa kažejo, da ta evidenca je bila, da del nje obstoji v tujini in da se zdaj iz tujine vrača v domovino, kar je dobro. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg371">Hvala lepa. Kolegice in kolegi! Preden se odločimo za nadaljevanje seje, bi najprej vprašal, ali ima namen oziroma, ali želi gospod minister ob zaključku razprave besedo?</seg>
                <note>Želi.</note>
                <seg xml:id="SDZ2-Redna-19-2000-03-02.seg372">Zjutraj, ko smo začeli sejo, sva imela z gospodom Avšičem različne poglede na nadaljevanje današnje seje, morda sem ga tudi takrat preveč ostro zavrnil. Res pa je, da imamo sedaj možnost, da se dogovorimo, ampak samo, če je dogovor. Samo trenutek. Trije ste prijavljeni za replike, štirje so prijavljeni za 5.minutne razprave, gospod minister tudi pravi, da bi se še oglasil. Ali je možen dogovor, da bi danes državni zbor delo podaljšal in poskušal danes zaključiti točko dnevnega reda in tudi odločati o tej točki?</seg>

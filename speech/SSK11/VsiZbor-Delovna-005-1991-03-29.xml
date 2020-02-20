@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 5. delovna seja</title>
             <meeting n="5"
-                     corresp="#VsiZbor.1991-03-29.d005-01.DruzPolZb #VsiZbor.1991-03-29.d005-01.ZbObc #VsiZbor.1991-03-29.d005-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="78"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="30"/>
                <tagUsage gi="seg" occurs="138"/>
             </namespace>
@@ -235,23 +226,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-03-29.d005-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-03-29.d005-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-03-29.d005-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -262,16 +236,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>DELOVNA SKUPNA SEJA SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">5. seja</head>
             <docDate>29. marec 1991</docDate>
             <note type="chairman">Sejo je vodil: Jože Zupančič, predsednik Zbora združenega dela</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 15. uri.</note>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg1">Spoštovane delegatke, spoštovani delegati, cenjeni gostje, dragi novinarji - pričenjamo 5. delovno skupno sejo vseh treh zborov Skupščine Republike Slovenije, kjer bomo obravnavali samo PREDLOG ZAKONA O PRORAČUNU REPUBLIKE SLOVENIJE ZA LETO 1991.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg2">Glede na to, da se skupna komisija ni poenotila pri oblikovanju sporazumnega predloga pri predlogu zakona o proračunu, pri predlogu zakona o obrambi in zaščiti pa smo se poenotili, bomo odločali samo o prvem predlogu, in sicer na podlagi četrtega odstavka LXXIII. amandmaja k Ustavi Republike Slovenije. O predlogu zakona odločamo na skupni seji vseh treh zborov Skupščine Republike Slovenije. Tako bi danes obravnavali samo to. Predlog zakona o proračunu smo uvrstili na dnevni red skupne seje na zahtevo Izvršnega sveta Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg3">Predno preidemo na odločanje o spornih vprašanjih pri predlogu o proračunu, moramo ugotoviti sklepčnost, kako je z našo prisotnostjo. Najprej prosim Družbenopolitični zbor:</seg>
@@ -285,7 +263,7 @@
                <note>Da.</note>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg8">Glede na rezultate razgovorov v Splitu in včerajšnje razprave se nam zdi primerno, da preberem pobudo Liberalne stranke in Socialdemokratske stranke Slovenije ter predlagam, da to skupno zasedanje prekvalificiramo v skupno sejo ali takoj po skupnem zasedanju skličemo skupno sejo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg9">Spoštovani! Kluba poslancev Liberalne stranke in Socialdemokratske stranke zahtevata, da se danes, to je 29. marca 1991, nadaljuje z dne 28. marca 1991 začeta in prekinjena skupna seja Skupščine Republike Slovenije in da se nadaljuje z razpravo, ki naj se zaključi z odločitvijo o dokončni in popolni osamosvojitvi Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg10">Kluba poslancev Socialdemokratske stranke in Liberalne stranke ugotavljata, da je Skupščina Republike Slovenije na pobudo Socialdemokratske stranke na svoji skupni seji dne 28.3.1991 uvrstila na dnevni red obravnavo točke o takojšnji in dokončni osamosvojitvi Republike Slovenije. V zvezi s tem je Skupščina sprejela sklep, da se že začeta skupna seja prekine in da se obravnava in odločanje o tej točki nadaljujeta takoj, ko bodo znani izidi razgovorov predsednikov republik in predsednikov predsedstev republik v Splitu. Razgovori v Splitu so bili zaključeni, izidi so znani. Po svoji vsebini rezultati ne predstavljajo nič drugega kot taktiziranje in dogovor o nadaljnjem dogovarjanju.</seg>
@@ -294,17 +272,17 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg13">Menimo, da je s tem naša zahteva utemeljena. Torej predlagam, da se poslanci po premisleku izjasnite o tej pobudi, da danes skličemo skupno sejo ali to sejo prekvalificiramo v skupno sejo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg14">Gospod Gros, zavračam vašo pobudo zaradi tega, ker delamo danes samo v skladu s LXXIII. amandmajem k Ustavi Republike Slovenije. Vašo pobudo lahko naslovite na gospoda predsednika in gospod predsednik ima naše pooblastilo, da po svojem premisleku odloča. O tem danes ne bomo razpravljali. Ne dovolim! Tudi ne bomo razširjali dnevnega reda. Naj to predlaga zbor, ne more pa posameznik dati takega predloga. Danes ne bomo razpravljali! Ne dovolim več, razen če je v zvezi z samo proceduro. Prosim?</seg>
                <note>Gros govori iz klopi.</note>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg15">Lahko. V redu. Gospod Verlič je sedaj.</seg>
             </u>
             <note type="speaker">ANDREJ VERLIČ:</note>
-            <u who="#SSK11.VerlicAndrej" ana="#regular">
+            <u who="#VerlicAndrej">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg16">Ne bom nadaljeval s temi smešnimi stvarmi, s katerimi je začel gospod Gros. Želim postaviti samo eno vprašanje. Do uvoda te skupne seje sem bil prepričan, da je ta skupna seja delovna, sklicana na predlog in sklep Družbenopolitičnega zbora te Skupščine. Sedaj sem od vas slišal, da je sklicana na predlog oziroma zahtevo Izvršnega sveta Skupščine Republike Slovenije in sprašujem, kaj je to. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg17">Izvršni svet je poslal to pismo: Skupščina Republike Slovenije, Družbenopolitični zbor, Zbor združenega dela, Zbor občin.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg18">Na skupnih sejah komisij vseh zborov Skupščine Republike Slovenije, ki sta usklajevala amandmaje k zakonu o proračunu Republike Slovenije za leto 1991 in amandma k zakonu o obrambi in zaščiti, ni bilo doseženo soglasje. (To smo naknadno ugotovili za drugi zakon, da je bilo.)</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg19">Izvršni svet Skupščine Republike Slovenije ugotavlja, da je sprejetje zakona nujen in zato po LXXIII. amandmaju k Ustavi Republike Slovenije Izvršni svet Skupščine Republike Slovenije predlaga, da o neusklajenih rešitvah odločajo zbori Skupščine Republike Slovenije na skupni seji.</seg>
@@ -318,22 +296,28 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg25">Če lahko pričnemo z delom. In sicer poročilo skupne komisije za pripravo sporazumnega predloga k predlogu zakona o proračunu Republike Slovenije za leto 1991. Menim, da bi lahko gospod Kopač povedal nekaj stavkov.</seg>
             </u>
             <note type="speaker">JANEZ KOPAČ:</note>
-            <u who="#SSK11.KopacJanez1961" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg26">Hvala za besedo. Spoštovane, spoštovani! K tej temi, ki jo imamo ob razpravi brez dnevnega reda, naj bi povedal to, da se je delovna skupina sestala dvakrat v isti sestavi, enkrat pod imenom delovna usklajevalna skupina, enkrat pod imenom skupna komisija vseh treh zborov za uskladitev tega predloga zakona. Včeraj zvečer smo delovali po sistemu preglasovanja. Danes smo šli po sistemu možnosti dogovora. Pri preglasovanju so bile stvari enostavnejše, kar se pa tiče dogovarjanja pa to ni in ni šlo, tako da smo se na zasedanju skupne komisije poenotili samo okoli enega samega amandmaja. To je amandma, ki ga je sprejel Družbenopolitičnih zbor in ki govori o tem, da se koristniku sredstev Republiškemu sekretariatu za vzgojo in izobraževanje doda nova postavka pri dotacijah družbenih dejavnosti: 2,600.000,00 dinarjev je namenjeno za obnovo, vzdrževanje in sanacijo visokogorskih planinskih postojank. Kasneje zaradi nesporazuma ta amandma niti ni bil dan na glasovanje v Zboru združenega dela, tako da ga na nek način lahko štejem za neusklajenega.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg27">Vsi drugi, po zborih različno sprejeti amandmaji, med katerimi posebej izpostavljam amandmaje v zvezi z ukinitvijo postavke pluralizacije medijev in amandmaje v zvezi z zmanjševanjem sredstev za nabavo oborožitve in vojaške opreme oziroma rednega usposabljanja vojakov, pa tudi sredstev za opreme oziroma rednega usposabljanja vojakov, pa tudi sredstev za financiranje JLA. Vsi ti amandmaji niso bili usklajeni. V poročilu je vse to napisano in ker v skupni komisiji ni bil možen nikakršen dogovor, pač predlagam, da s preglasovanjem sprejmemo dokončno rešitev v zvezi s proračunom. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936"
+               xml:id="SSK11-VsiZbor.1991-03-29.d005-01.u7"
+               next="#SSK11-VsiZbor.1991-03-29.d005-01.u9"
+               ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg28">Hvala lepa. Naše delo je ustaljeno. Glasujemo o spornih amandmajih, in sicer skupaj.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg29">Ker samo poslanci Zbora združenega dela niso sprejeli prvega amandmaja v okviru sporazumnega predloga. Da bi poslanci Zbora združenega dela o njem glasovali in izoblikovali svoje mnenje. Prosim samo poslance Zbora združenega dela; najprej ugotovimo prisotnost.</seg>
                <note>48 delegatov.</note>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg30">Kdo je za?</seg>
             </u>
             <note type="speaker">Bogo Rogina:</note>
-            <u who="#SSK11.RoginaBogo1947" ana="#unauthorized">
+            <u who="#RoginaBogo1947">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg31">Si ga prebral?</seg>
             </u>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936"
+               xml:id="SSK11-VsiZbor.1991-03-29.d005-01.u9"
+               prev="#SSK11-VsiZbor.1991-03-29.d005-01.u7"
+               ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg32">Vedo, točno vedo. Saj je gospod Kopač točno povedal. Drugače je pa usklajeno v Družbenpolitičnem zboru in Zboru občin. Tam je bilo sprejeto, samo mi ga nismo sprejeli.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg33">Kdo je za?</seg>
                <note>32 delegatov.</note>
@@ -384,7 +368,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg62">Kdo se želi izjasniti o tem amandmaju? To je samo pojasnjevanje vašega glasu, ne načelna razprava.</seg>
             </u>
             <note type="speaker">FEDJA KLAVORA:</note>
-            <u who="#SSK11.KlavoraFedja1940" ana="#regular">
+            <u who="#KlavoraFedja1940">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg63">Spoštovano predsedstvo, spoštovane kolegice in kolegi! Dovolite, da pojasnim svoj glas, posebej zaradi tega, ker sem amandma predstavil samo v Zboru občin in bi bilo prav, da rečem nekaj besed tudi vsem skupaj. Torej. Vso upravičenost tega amandmaja in ciljem, ki jih z njim zasledujem, daje pravzaprav glasovanje v našem zboru, saj smo - prvič glasovali brez glasu proti, in drugič - samo s šestimi proti amandmaju, ki sem ga postavil. Zakaj se zavzemam za ta amandma in zakaj bom zanj glasoval, kljub temu da ugotavljam, da je Izvršni svet že s sredstvi, ki jih je prvič po vojni namenil takim območjem, pokazal gesto, kakršna se spodobi novim razmeram. Vendar kljub temu imam nekaj argumentov, s katerimi bi želel opravičiti višja sredstva, ki sem jih nakazal s tem amandmajem.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg64">Prvič: Območja za naprej nimajo pravih možnosti, da pritegnejo domače, predvsem pa tuje vlagatelje. To velja tako za infrastrukturne kot za gospodarske programe, kar pa ni enako pri vseh ostalih investicijah na ostalih področjih, kjer bomo našli tujce in bomo našli kapital za sovlaganje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg65">Drugič: Poselitveni prostor s cca 20% populacije v Sloveniji, ki bo v fazi prestrukturiranja gospodarstva še naprej izgubljalo delovna mesta in verjetno t udi spodobne dohodke, predvsem v obratih industrije, kakršna je pač nastala na podeželju.</seg>
@@ -393,7 +377,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg68">Posebej pomembno se mi zdi še nekaj reči na koncu: Da se je večina strank pred volitvami posebej zavzemala, mislim da vse, da ta območja dobijo posebno pozornost in tudi konkretno spodbudo. To se je tudi zgodilo, vendar mislim, da smo trdili tudi nekaj drugega: da bomo sredstva, ki jih namenjamo nerazvitim v Jugoslaviji, namenili našim območjem. Zato imam tudi po tej plati argument, da približna sredstva, ki so bila namenjena nerazvitim v federaciji, damo sedaj geografsko ogroženim območjem v Sloveniji, vendar v polni meri in jasno, da jim ne odtegujemo tistega, kar lansko leto ni bilo porabljenega zaradi sklepov, ki smo jih sami junija meseca tukaj sprejeli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg69">Hvala gospod Klavora. Želi še kdo razpravljati?</seg>
                <note>Ne.</note>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg70">Lahko tudi o tem amandmaju glasujemo?</seg>
@@ -418,13 +402,13 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg82">Amandma je bil sprejet samo v našem zboru - v Zboru združenega dela. V zvezi s tem amandmajem bo pojasnil gospod Zlobec, kako bo glasoval.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg83">Lep pozdrav vsem skupaj, za gospoda Grosa pa en "salve". Navajeni smo tudi v nenavadnih situacijah, da se glasovanja razdelijo na levo in desno stran.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg84">Sedaj pa pojasnim svoj glas, za katerega mislim, da nima povezave z levico in desnico. Vsi govorimo o policentrizmu kot o nujnem pogoju za kulturno in sploh nacionalno preživetje Slovenije. Maribor je doživel svoj gospodarski zlom, doživel ga je v velikimi meri tudi zato, ker že dvajset let doživlja obubožanje na kulturnem in intelektualnem in duhovnem področju. Ljubljana je kot center Slovenije prepolna gledaliških in drugih inštitucij. Maribor že desetletje in več gradi svoje gledališče in je v situaciji, da če ne dobi subvencije, da ga dejansko ne bo mogel zgraditi do konca. V proračunu se ta amandma ne bo nič poznal, niti za vejico se ne bo nič spremenil. Skupščina pa bo s tem dokazala, da v resnici je iskreno naklonjena policentrizmu v Sloveniji. Maribor, kot središče cele severozahodne Slovenije, si najmanj, kar je, zasluži gledališče, v katerem bo poleg gledališča, oper in baleta tudi kongresni center in še vse ostalo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg85">Če tega amandmaja ne izglasujemo, pomeni da smo držali figo v rokah vedno, ko smo govorili o resnični policentrični Sloveniji. Glasoval bom za.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg86">Lahko končam? Glasujemo o 7. amandmaju, ki ste ga prebrali pod številko 76. Amandma je bil sprejet samo v našem zboru.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg87">Kdo je za ta amandma?</seg>
                <note>78 delegatov.</note>
@@ -436,7 +420,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg91">Ugotavljam, da smo tri amandmaje sprejeli, štiri zavrnili in sedaj glasujemo še o zakonu v celoti, z usklajenimi amandmaji, ki smo jih sprejeli. O zakonu v celoti. Dr. Glavič, želite pojasniti svoje glasovanje?</seg>
             </u>
             <note type="speaker">DR. PETER GLAVIČ:</note>
-            <u who="#SSK11.GlavicPeter1940" ana="#regular">
+            <u who="#GlavicPeter1940">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg92">Spoštovano predsedstvo, dame in gospodje. Dovolite mi, da v imenu Liberalno demokratske stranke povem, zakaj bomo glasovali proti sprejemu tega zakona. Mi izredno cenimo trud Skupščine in trud Izvršnega sveta, ki je bil vložen v končno besedilo in vsebino tega zakona, in menimo, da je ta bistveno boljša, kot je bila v začetku - v osnutku in tudi v predlogu.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg93">Vendar ne moremo sprejeti tega proračuna iz treh razlogov. Prvič, ker je realno večji od lanskega, upoštevaje emisijo, s katero se pokrivajo izdatki zveze z našim dovoljenjem oziroma dovoljenjem Izvršnega sveta, in zaradi vdorov, ki so realno povečali obremenitve Slovenije. Obremenitve bodo padle direktno na gospodarstvo in na ljudi.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg94">Drugič, ker ta proračun ni sestavina protiinflacijskega programa, ki smo ga zahtevali na skupni seji zborov v januarju in seveda zaradi tega odlaganja stabilizacije, upajmo, da ne za eno leto ampak vsaj za nedoločen čas.</seg>
@@ -445,28 +429,28 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg97">Hvala. Gospod Prelovec, prosim.</seg>
             </u>
             <note type="speaker">VALENTIN PRELOVEC:</note>
-            <u who="#SSK11.PrelovecValentin1934" ana="#regular">
+            <u who="#PrelovecValentin1934">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg98">Spoštovano predsedstvo, spoštovane poslanke in poslanci, začel bi tako. Če bi živel v samostojni, suvereni, svobodni državi Sloveniji, bi glasoval tako: dal bi ogromno sredstev za šolstvo, da bi čimprej dvignili tehnološki zaostanek; dal bi ogromno za kulturo, da se ne bi poznali sledovi tistih 45 let, ki se sicer poznajo itd. Lahko bi našteval v nedogled, kako bi glasoval, če bi to že imeli. Ker pa tega nimamo, imam ta proračun za enega najvažnejših elementov, da to dosežemo. Zato bom glasoval za ta proračun.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg99">Hvala. Je potrebno razpravljati še v zvezi s pojasnjevanjem glede zakona v celoti? Gospod Potrč ima besedo.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg100">V imenu Stranke demokratične prenove izjavljam, da bomo poslanci našega poslanskega kluba glasovali proti predlogu proračuna.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg101">Predlog proračuna, kakor je pripravljen, kljub nekaterim nebistvenim popravkom, izhaja iz razvojne in ekonomske politike, ki po našem prepričanju ne more zagotoviti potrebnega reševanja krize, v kateri se nahajamo in tudi ne dajati podlag za razvojni impulz, ki bi nam bil potrebe. Mi smo iz istega razloga kot poslanci stranke tudi vložili interpelacijo in predlagali razpravo o razvojni ekonomski politiki slovenske vlade, da bi vsem nam dali po sprejetju proračuna možnost skupne ocene, kaj v naslednjem času storiti, da bi našli potreben družbeni, politični in socialni konsenz v Sloveniji za reševanje objektivnih problemov, vendar na način, ki bi bolj povezoval, ne pa razdvajal, tako kot delamo doslej.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg102">Hvala. Gospod dr. Marko Kranjec, republiški sekretar za finance, se vam zdi potrebno odgovoriti? Prosim.</seg>
             </u>
             <note type="speaker">DR. MARKO KRANJEC:</note>
-            <u who="#SSK11.KranjecMarko1940" ana="#regular">
+            <u who="#KranjecMarko1940">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg103">Seveda nisem prišel pledirat za proračun, spoštovani poslanci in poslanke, ampak predlagat amandma Izvršnega sveta, ki je v zvezi z amandmajem 34, ki ste ga sprejeli. Ker namenjamo manj razvitim, demografsko ogroženim območjem približno 67 milijonov dinarjev, moramo - da proračun izravnamo - predlagati spremembo na strani virov. In to je, da predlagamo, da se za ta znesek zmanjšajo sredstva rezerv, ker ne vidimo drugih virov. Zato je to amandma pred glasovanjem o proračunu kot celote. Torej, postavka 3.5 na strani 15 predloga proračuna: sredstva rezerv se zmanjšajo za 67,3% in znašajo 226.100,00 dinarjev. To je vse kar sem želel povedati.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg104">Hvala. Mi moramo o tem amandmaju Izvršnega sveta glasovati. Kljub temu da bi verjetno bilo možno tudi kako drugače, ker imamo še pripravljen sklep: Skupna komisija predlaga zborom Skupščine Republike Slovenije, da pooblastijo strokovno službo v Republiškem sekretariatu za finance, da izvede ustrezne spremembe v bilanci prihodkov in odhodkov ter v ustreznem delu proračuna Republike Slovenije za leto 1991 na podlagi sprejetega usklajevalnega predloga zborov.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg105">Ali bi mogoče to zadoščalo, ker gre za vsebinsko enaka. Slišali ste amandma, ki je posledica sprejetega našega amandmaja. Saj je logično, ne? Glasujemo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg106">Kdo je za predlagani amandma gospoda Kranjca?</seg>
@@ -479,51 +463,51 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg110">Želi kdo besedo? Gospod Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg111">Spoštovani! Glasoval bom proti temu proračunu zaradi tega, ker se je pojavila osnovna dilema: razvoj ali vojska. V tem proračunu je težišče na vojski. S takšno koncepcijo se ne strinjam. Mislim, da v nasprotju z interesi suverenosti Republike Slovenije, ne upošteva naših notranjih razmer, jugoslovanskih in mednarodnih. Če kdo misli, da bo s takšnim forsiranjem zaznamovanjem reševal suverenost Slovenije, se zelo moti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg112">Drugi razlog, zaradi katerega sem proti, je da se bistveno zmanjšujejo sredstva na vitalnih področjih, kot so zdravstvo, socialna zaščita, kultura; da se s tem proračunom zmanjšujejo sredstva za vzgojo in izobraževanje; da se s tem proračunom ne pomaga k odpiranju perspektive gospodarskega razvoja Republike Slovenije. Če govorimo resno - in mislim, da smo vsi za to, da govorimo resno o suverenosti Slovenije - potem je ta suverenost odvisna od gospodarske moči Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg113">Ne napadam arhitektov tega proračuna, ker so pač morali upoštevati to dilemo, ki so jo nekateri vsilili, da je treba vse dati za oboroževanje in za policijo in so seveda pripeljali stvar v kritično točko. Če bo jutri v Sloveniji kompleten ekonomski in socialni kolaps, se sprašujem kdo bo branil to slovensko suverenost. O tem smo veliko razpravljali, o tem je v teh razpravah bilo tudi jasno rečeno, da problem ni tehničen, kje nekaj vzeti, kje nekaj dodati, ampak je pa političen problem. Političen problem je odnos med razvojem in represijo. Ta politična odločitev, ki jo forsira Izvršni svet - seveda pod zelo arogantno udeležbo Janše in podobnih - je, da se ta sredstva dajo za represijo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg114">Dovolite da končam, Lukač se bo že potem javil, če hoče. Jaz opozarjam, da bom glasoval proti temu proračunu in naj mi nihče ne ogovori, da sem jaz zaradi tega proti suverenosti slovenskega naroda, ker menim, da bomo na ta način samo škodovali suverenosti Republike Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg115">Lepo prosim, sedaj naj ne bi imeli načelne razprave, niti nima smisla, da sedaj tu kakor koli skušamo drug drugega nadmodrovati. Povedali so svoje mnenje, zato bi predlagal, da če res ni kaj ne vem kako pomembnega, da bi glasovali. Lepo prosim, res bi prosil, da glasujemo in sicer predlagam, da glasujemo o predlogu zakona o proračunu. Gospod Kopač želi besedo.</seg>
             </u>
             <note type="speaker">JANEZ KOPAČ:</note>
-            <u who="#SSK11.KopacJanez1961" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg116">Hvala, ker ste mi dali besedo. Mislim, da imam do tega pravico. Tako ali tako bomo vsi kmalu govorili o tem proračunu, zato bodite kar prepričani, bo prej kot v treh mesecih prišlo do popravkov tega proračuna. Rad bi povedal kako bom glasoval.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg117">Glasoval bom proti temu proračunu, pa ne zato, ker bi se z mnogimi stvarmi ne strinjal, čeprav se z nekaterimi ne, ampak zato, ker tukaj zelo veliko ljudi ta proračun jemlje kot zgodovinski dogodek. Jemati proračun kot zgodovinski dogodek je napaka, ki nas bo še vse veliko stala. Namreč, proračun je čisto obrtniško delo, pri katerem se zameša politika in tokrat se je vmešala zelo in od tega ni imel koristi nihče drug kot nekaj posameznikov, ki so si z denarjem posuli pot do svojih ambicij. Ta proračun dolgo zdržal ne bo: ne bo zdržal zaradi pritiskov, ki bodo prerasli v pritiske političnega značaja, kar je nekaj povsem normalnega v vsaki civilizirani državi, in ne bo zdržal zaradi inflacije. Takrat bo prišlo do rebalansa. Trdim, da bo to v roku približno treh mesecev. Ampak pomembno pa je nekaj. In ta nekaj se je zgodil s tem, ko ljudje proračun jemljejo - nekateri kot zgodovinsko dogodek. Namreč določene stvari so se spravile v proračun in valjale se bodo, ker postavljamo svojo državo, naslednje desetletje ali dve v tem proračunu. Samo to je bilo važno pri vseh tistih postavkah, ki so sporne in ki se niso zniževale, tako kot so se zniževale vse druge, pri katerih mora prihajati do racionalizacij.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg118">Mislim, da je taka logika, ki bi se ji lahko izognili, če bi vladajoča koalicija bila bolj pripravljena na pogovor, in ob osnutku proračuna je pozivala na nacionalni konsenz, v razpravi o predlogu proračuna pa je prišlo do čistega preglasovanja. Če bi do tega prišlo, mislim, da bi lahko proračun naredili bolje. Bolje za vse nas. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg119">Kaj menite tisti, ki ste se prijavili? Gospod Janša, morate razpravljati ali ne? Gospod Lukač? Lahko odstopite. Prosim, Janez Janša.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg120">Torej, glasoval bom za ta proračun , in sicer tudi iz tega razloga, ker je po mojem mnenju o razmerah, v kakršnih smo, uspešno rešili dilemo, ki se postavlja pred vse nas glede na to, da sredstev ni dovolj in sicer kaj namenjati tistim tradicionalnim postavkam, ki jih je Slovenija že do sedaj zagotavljala v republiškem proračunu - od gospodarstva do prosvete itn. - med postavkami, ki so nove in ki se nanašajo na prenesene vire, ki smo jih do sedaj zagotavljali federaciji. V nobenem primeru ta proračun ne daje prednosti vojski, kot je bilo rečeno, pred razvojem.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg121">Za obrambo in zaščito, kar je mnogo širši pojem od vojske, ta proračun namenja 1,7 nacionalnega dohodka. Res pa je, da je teh sredstev, o katerih danes odločamo, mnogo manj, kot bi jih bilo lahko, če v prejšnjih letih v sistemu, v katerem je imel gospod Smole glavno besedo, ne bi dajali takih ogromnih sredstev za vojsko. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg122">Hvala lepa. Gospod Ervin Anton Schwarzbartl prosim.</seg>
             </u>
             <note type="speaker">MAG. ERVIN ANTON SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg123">Mislim, da smo neiskreni in da ne ravnamo pošteno. Za mene so bile utemeljitve skupin poslancev po strankah umetne in sprenevedanje. Pravim za mene. Razumem, da posamezni poslanec različno glasuje - po svoji vesti, po razsodnosti, po interesih itd. Ne sprejemam pa, da v tem težkem in kriznem času za ta narod stranke a front izjavljajo, da ne bodo podprle proračuna.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg124">Menim, da to pomeni rušenje tega, kar smo po volitvah gradili. In ni bilo malo truda vloženega v to. Verjetno nam je malo mar, ali bo ta trud poplačan ali ga bomo vrgli na smetišče zgodovine, kot je nek nadut poslanec včeraj omenjal.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg125">Zato menim, da če bi bilo iskreno mišljeno, potem bi najbrž podprli tak proračun, ki smo ga s tako muko ustvarjali, za katerega smo pri amandmajih izglasovali, in sedaj, ko je treba v celoti podpreti, slišim take izpade. Osebno bom seveda podprl takšen proračun. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg126">Še gospod Stanko Buser želi besedo.</seg>
             </u>
             <note type="speaker">DR. STANKO BUSER:</note>
-            <u who="#SSK11.BuserStanko1932" ana="#regular">
+            <u who="#BuserStanko1932">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg127">Spoštovani! Zares bom podprl ta proračun, saj vendar daje veliko manj sredstev za dve vojski, kot pa je prejšnji dajal za eno. Zato bom glasoval za ta proračun. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg128">Predlagam, da glasujemo. Na glasovanje dajem predlog zakona o proračunu Republike Slovenije za leto 1991 s sprejetimi amandmaji v celoti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-29.d005-01.seg129">Kdo je za?</seg>
                <note>96 delegatov.</note>

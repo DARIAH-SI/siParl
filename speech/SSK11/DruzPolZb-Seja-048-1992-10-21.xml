@@ -9,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Skupščine Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Družbeno-politični zbor: 48. seja</title>
-            <meeting n="48"
-                     corresp="#DruzPolZb.1992-10-21.s048-01.DruzPolZb"
-                     ana="#parl.meeting.regular"/>
+            <meeting n="48" corresp="#DruzPolZb" ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +27,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +40,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +61,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="50"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="7"/>
                <tagUsage gi="seg" occurs="96"/>
             </namespace>
@@ -208,13 +197,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="DruzPolZb.1992-10-21.s048-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -224,16 +206,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>DRUŽBENOPOLITIČNI ZBOR SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">48. seja</head>
             <docDate>21. oktober 1992</docDate>
             <note type="chairman">Sejo je vodil dr. Ludvik Toplak, predsednik Družbenopolitičnega zbora</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.20 uri.</note>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg1">Spoštovane poslanke, spoštovani poslanci, cenjeni gostje, spoštovani predstavniki sredstev obveščanja! Začenjamo 48. sejo Družbenopolitičnega zbora Skupščine Republike Slovenije. Za današnjo sejo zbora so se opravičili: mag. Rudi Šeligo, Božo Kuharič, mag. Kocijančič, mag. Viktor Žakelj, Janez Gajšek, Alojz Peterle, dr. Stanko Buser je tukaj, in dr. Božidar Voljč. Seje se bodo kasneje udeležili tudi Vano Gošnik, dr. Drago Plešivčnik, dr. Lev Kreft, Ivan Tomše, Janez Lampret in Ciril Kolešnik. Po podatkih službe je navzočih 45 poslancev in poslank, prosim, da ugotovimo navzočnost. Ugotavljamo navzočnost. V dvorani je 38 od 45 prijavljenih.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg2">Prosim vodje poslanskih klubov, da ugotovijo in zagotovijo možnost za nadaljevanje dela. Ponovno apeliram na vodje poslanskih klubov, da ne izgubljamo časa. Mi imamo danes obširen dnevni red. Dva sta vstopila, dva sta odšla, trije so vstopili, dva sta odšla in še eden odhaja. Prosim ponovno, če ugotovimo navzočnost. Ugotavljamo navzočnost. V dvorani je 40 poslancev. Ponovno prosim, ugotovimo navzočnost.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg3">Še enkrat prosim,</seg>
@@ -282,11 +268,11 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg32">Želijo besedo poročevalci delovnih teles? Prosim. Gospa Mihaela Logar, predsednica Komisije za mednarodne odnose.</seg>
             </u>
             <note type="speaker">MIHAELA LOGAR:</note>
-            <u who="#SSK11.LogarMihaela1953" ana="#regular">
+            <u who="#LogarMihaela">
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg33">Komisija Skupščine Republike Slovenije za mednarodne odnose je na svoji seji obravnavala predlog akta o potrditvi nasledstva glede konvencij, statutov in drugih mednarodnih sporazumov, ki predstavljajo akt o ustanovitvi mednarodnih organizacij. Glede na to, da pa je SFRJ 29.6.1961 odstopila od konvencije o ustanovitvi Evropske organizacije za jedrske raziskave, kar pomeni, da ni možno uveljavljati pravnega nasledstva za to konvencijo, komisija predlaga naslednji amandma: V predlogu akta se črta 5. točka. 6. točka tako postane 5. točka; ker če ne, sprejemamo en sporazum, ki ni veljal za Jugoslavijo in je potrebno ponovno ves postopek za Slovenijo o pristopu k temu aktu. Komisija soglaša s tako popravljenim predlogom akta in predlaga zborom Skupščine Republike Slovenije, da ga sprejmejo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg34">Hvala lepa gospe Mihaeli Logar. Želi še kdo besedo od poročevalcev delovnih teles? Če ne, odpiram razpravo. Želi kdo razpravljati? Če ne, zaključujem razpravo in prehajamo na glasovanje. Na glasovanje dajem predlog akta o potrditvi nasledstva glede konvencij, statutov in drugih mednarodnih sporazumov, ki predstavljajo akt o ustanovitvi mednarodnih organizacij.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg35">Ponovno ugotovimo navzočnost.</seg>
                <note>38 prisotnih.</note>
@@ -341,16 +327,16 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg70">Želijo besedo predlagatelji v imenu komisije? Prosim. Gospod Tomažič ima besedo.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg71">Hvala. No, ker se lahko zgodi, da pride do paradoksalne situacije, da bi parlament sprejemal spremembe poslovnika na svoji zadnji seji, se mi zdi le vredno vas opozoriti na to, da pogledate v obrazložitvi razloge za to, da je ta stvar šele sedaj na dnevnem redu. Približno pred enim letom smo že pripravili prve spremembe, vendar iz razlogov, ki so v obrazložitvi, do obravnave še vedno ni prišlo. Kot je bilo sedaj že rečeno, tudi na Zakonodajno-pravni komisiji so bili izraženi pomisleki, ali je še smiselno obravnavati in sprejemati spremembe in dopolnitve poslovnika skupščine, ker bo lahko veljal le kratek čas. Kljub temu je prevladalo mnenje, naj skupščina obravnava in sprejme predlagane spremembe in dopolnitve poslovnika. Predvsem je potrebno, da so urejeni nekateri novi inštituti, ki jih uvaja ustava Republike Slovenije, ki bi lahko tudi še prišli v poštev, kot so konstruktivna nezaupnica, vprašanje glasovanja o nezaupnici pri interpelaciji in tako dalje.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg72">Obravnava in sprejem sprememb poslovnika bo tudi koristna osnova za pripravo strokovnih podlag za sprejemanje poslovnika državnega zbora. Tu naj še posebej povem, da te strokovne podlage pripravljamo v okviru skupščinskih služb in da bodo vse te razprave, ki bodo ob sprejemanju teh sprememb zelo dobrodošle, tako da bodo poslanci naslednjega Državnega zbora imeli veliko gradiva. Seveda ta skupščine ne more že kar pripraviti poslovnika za nov Državni zbor. To bo moral sam Državni zbor, vendar veliko gradiva bo pripravljenega, prepričan sem, da tudi cela poglavja relativno dobro pripravljena. Posebej naj še omenim, da smo dali v postopek tudi besedilo parlamentarne preiskave, katerega ste verjetno tudi že dobili, če ne, ga pa boste vsak čas. Tako, da ideja je, da bi vse te pripombe in ideje, ki bodo v razpravi, potem lahko skomponirale v kvaliteten poslovnik za naslednji Državni zbor. Kot rečeno, to bodo samo strokovne podlage, Državni zbor pa bo sam lahko to sprejel. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg73">Hvala lepa gospodu Tomažiču. Želi še kdo od poročevalcev delovnih teles besedo? Če ne, odpiram razpravo. Prosim, gospod Anton Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg74">Jaz bom kratek. Govorim v svojem imenu. Mislim, da je prav, da se to sprejme, čeprav je res že pozno. Bi pa povedal, da nisem dal nobenih amandmajev, ker tudi mislim, da glede na čas, ki je pred nami, to ni potrebno. Zdi se mi prav, da gredo nekatere rešitve v preizkus in zato upam, da bomo še kakšno sejo imeli in jo vodili tudi po teh spremembah že, da bomo videli kako poteka.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg75">Rad bi samo povedal dva, tri pomisleke k nekaterim rešitvam, vem, da se celo skladajo s pomisleki Zakonodajno-pravne komisije, ki se mi zdi, da bi jih bilo dobro še premisliti, ker so lahko takšne, ki bodo vodile tudi nekako sestavljavce novega poslovnika. Ena je takšna čisto obrobna, nanaša se pa - pomislek je čisto obroben - na 4. člen tega predloga, ki pravi, da se v 94. členu črta prvi stavek, v drugem odstavku pa se črta besedo "tudi" posledično. To sedaj pomeni, da se sklicujejo seje zborov izključno pravzaprav na iniciativo mislim da poslanskih skupin, poslancev in tako naprej, ni pa več tiste določbe, da se sklicujejo tudi na podlagi nekega načrta; ker prvi stavek je predvideval, da se sklicujejo seje na podlagi nekega delovnega načrta. Mislil, še zlasti z orientacijo na to, da bo, kot pravim, lahko to služilo tudi kot vodilo za pripravo nadaljnjega poslovnika, da bi vendarle neko načelo nekega načrtnega dela veljalo ohraniti, ne pa zgolj ta princip, da se pač skliče takrat, ko nekdo, če tako rečem, zahteva sejo; ampak da je nek plan, da tako rečem, dela Državnega zbora, kasneje seveda.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg76">Druga moja takšna pripomba se nanaša (ta moja diskusija o tem, je vsaj tistim, ki se s poslovnikom ukvarjajo, že znana) na 11. člen, sicer na 121.a in 121.b člen; 121.a člen predvideva sicer situacijo, ki se po moje zelo redko zgodi - ne vem, če se je že pravzaprav kdaj zgodila, ampak možna pa je - ko pravi: ko razprava teče, ima zbor možnost omejiti oziroma razpravo tudi v tem smislu, ne samo da omeji poslancu število minut, ampak da omeji tudi skupno razpravo na ta način, da sme vsak klub razpravljati samo določen čas. To seveda se mi zdi, da glede na 82. člen ustave je vredno premisleka, ali je to čisto v duhu tega ali ne. Jaz seveda nisem ljubitelj tega, da se razprave vlečejo v nedogled, zato sem bolj za to, da se s poslovnikom regulira, da ima vsak poslanec pravico do ene razprave in da se tudi pove, koliko je principielno lahko ta razprava dolga, ne pa da se v bistvu omeji možnost, da vsi poslanci ne morejo razpravljati, kajti to lahko iz tega sledi.</seg>
@@ -358,7 +344,7 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg78">Podobno kot Zakonodajno pravna komisija tudi sam mislim, da pri členu, to je 17. člen, ki spreminja oziroma na novo uvaja 227.č člen, da zahteva, da mora pri konstruktivni nezaupnici kandidat za novega mandatarja že v tistem svojem prvem nastopu, ko se pravzaprav bori za to, da bi bil izglasovan, že predložiti tudi predvideno sestavo nove Vlade, da bo to v določenih situacijah verjetno nemogoče, in da je to lahko celo ovira za določene postopke in za določene konstruktivne nezaupnice; tiste, ki pridejo na podlagi nekega ukrepa, recimo, na sami seji in se mi zdi, podobno kot Zakonodajno-pravna komisija, da bi to določbo veljalo za novi poslovnik še premisliti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg79">Hvala lepa gospodu Tonetu Peršaku. Želi še kdo? Če ni več razpravljavcev, zaključujem razpravo. Ugotavljamo, da so v zboru vloženi amandmaji in na glasovanje dajem amandma Zakonodajno-pravne komisije k 17. členu, to je prejšnjemu 277.a člen, ki se glasi: "Ta člen se črta."</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-21.s048-01.seg80">Ugotovimo navzočnost.</seg>
                <note>43 prisotnih.</note>

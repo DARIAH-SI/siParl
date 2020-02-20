@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 4. seja</title>
             <meeting n="4"
-                     corresp="#VsiZbor.1990-07-02.s004-01.DruzPolZb #VsiZbor.1990-07-02.s004-01.ZbObc #VsiZbor.1990-07-02.s004-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="267"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="116"/>
                <tagUsage gi="seg" occurs="448"/>
                <tagUsage gi="gap" occurs="15"/>
@@ -585,23 +576,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1990-07-02.s004-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-07-02.s004-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-07-02.s004-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -612,16 +586,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">4. seja</head>
             <docDate>2. julij 1990</docDate>
             <note type="chairman">Sejo je vodil dr. France Bučar, predsednik Skupščine Republike Slovenije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 12.30 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg1">Začenjam 4. skupno sejo vseh zborov Skupščine Republike Slovenije, ki sem jo sklical na podlagi 374. člena Ustave Republike Slovenije in 134. člena poslovnika Skupščine Republike Slovenije. Poleg delegatov vseh treh zborov so na seji navzoči tudi nekateri člani Izvršnega sveta Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg2">Najprej bomo ugotovili sklepčnost seje. Prosim delegate Družbenopolitičnega zbora, da pritisnejo na tipko.</seg>
                <note>Navzočih je 63 delegatov družbenopolitičnega zbora.</note>
@@ -633,7 +611,7 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg6">Predlog dnevnega reda za današnjo sejo ste prejeli s sklicem seje. 26. junija smo vam poslali še predlog za razširitev dnevnega reda, in sicer izvolitev petih sodnikov Ustavnega sodišča Republike Slovenije. Ali želi o predlogu dnevnega reda, skupaj s predlagano razširitvijo kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg7">Spoštovano predsedstvo, spoštovane poslanke in poslanci! V imenu 56 poslancev sopodpisnikov tega predloga in na podlagi 136. ter 100. in 99. člena poslovnika Skupščine Republike Slovenije in v skladu s prvo alineo 4. točke 72. amandmaja k Ustavi Republike Slovenije predlagam, da na dnevni red današnje skupne seje zborov kot novo 2. točko dnevnega reda uvrstimo predlog in sprejem Deklaracije o polni suverenosti države Republike Slovenije. Gre za skupni predlog Koalicije DEMOS, ki je nastal na osnovi predlogov Slovenske demokratične zveze in Liberalne stranke, doslej Slovenske obrtniške stranke.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg8">Kot izhaja iz 136. člena poslovnika, se razširitev dnevnega reda skupne seje zborov predlaga na enak način kot razširitev v skladu s 100. členom poslovnika. Predlog v skladu s 1. odstavkom 99. člena utemeljujemo z oceno, da je stanje slovenskega gospodarstva in tudi stanje v posameznih družbenih dejavnostih tako zaskrbljujoče, da je mogoče predvidevati zlom slovenskega gospodarstva ter hude socialne nemire in kot posledico tega zloga in nemirov tudi akutno politično krizo, ki utegne ogroziti proces osamosvajanja Slovenije, za katerega so se pred volitvami, aprila 1990, opredelile vse politične stranke, ki so danes v skupščini zastopane s svojimi poslanci.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg9">Slovenija si mora zagotoviti možnost samostojnega odločanja, tako na področju gospodarskega sistema in gospodarske politike kakor tudi na področju političnega sistema. To pa si lahko zagotovi samo pod pogojem, da razglasi primernost ustave in zakonov Republike Slovenije ter razveljavi za območje Republike Slovenije vse tiste zvezne pravne akte in vse določbe zvezne ustave, ki niso v skladu z ustavo in zakoni Republike Slovenije.</seg>
@@ -642,25 +620,25 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg12">Dovolite, spoštovano predsedstvo, da vam izročim predlog deklaracije s 56 podpisi delegatov, ki predlog vlagajo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg13">Ugotavljam, da je predlog podpisalo 56 delegatov iz vseh zborov in da je s tem izpolnjena zakonska določba glede začetka postopka za sprejem pravnega akta, ki ima ustavno-pravne posledice.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg14">Dajem najprej v razpravo sam ta predlog o razširitvi dnevnega reda. Želi kdo besedo? Prosim.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOCIJANČIČ:</note>
-            <u who="#SSK11.KocijancicJanez1941" ana="#regular">
+            <u who="#KocijančičJanez">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg15">Spoštovano predsedstvo, kolegice poslanke in kolegi poslanci! Mislim, da je ta tema po logiki stvari slej ko prej morala priti na dnevni red. V svojem imenu temu nikakor ne nasprotujem. Nisem imel nobene priložnosti, da bi se posvetoval v okviru poslanskega kluba ali organizacije, ki ji pripadam, vendar bi postavil naslednje vprašanje. Če gre za dokument, ki ima nesporno ustavno-pravne posledice, potem me zanima stališče Zakonodajno-pravne komisije ali pa vodstva skupščine, ali je možno o tem dokumentu razpravljati na drugačen način kot po postopku, ki je predviden za spremembo ustave.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg16">Želi še kdo razpravljati? Če ne, potem dajem ta predlog, da se dnevni red razširi z razpravo in sprejemanjem Deklaracije o polni suverenosti države Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg17">Kdo je za ta predlog? Prosim. Da.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg18">Gospod predsednik, rad bi vas opozoril, da je bilo ravnokar postavljeno vprašanje in da bi najbrž bilo korektno, da se na vprašanje odgovori, preden bi se odločali. Mislim, da bi bilo tudi korektno, da vsaj vidimo vsebino deklaracije, ker bi takrat lahko o tem razmišljali. Njena vsebina je ustrezna ali ne. Dodatno bi še predlagal, da vprašanje tretje alinee 349. člena oziroma 72. amandmaja, na katerega se predlagatelji sklicujejo, oceni tudi Ustavna komisija. Trdim namreč, da to, o čemer je dan predlog, ni vprašanje, o katerem naj bi odločali zbori na skupni seji, ampak so to vprašanja, o katerih bi morali razpravljati, tako kot se o njih razpravlja, kadar gre za spreminjanje ustave. Ta določba ima, po mojih trditvah, popolnoma drugačen pomen. Lahko pa se pogleda vse stenograme, takrat, ko je bila pripravljena. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg19">Gre za razlikovanje o dveh vprašanjih. Najprej postavimo ta predlog na dnevni red, to je eno vprašanje, drugo je potem vprašanje nadaljnje procedure. Zato ponavljam predlog. Glasovanje ponovimo najprej o tem, ali smo za to, da gre na dnevni red ali ne.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg20">Kdo je za tak predlog?</seg>
                <note>120 delegatov.</note>
@@ -674,16 +652,16 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg26">Kdo je za ta predlog?</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg27">Spoštovane poslanke in poslanci! Mi smo to točko uvrstili na dnevi red. Predlagam, da se vse nadaljnje razprave opravijo v okviru točke, ko bo ta na dnevnem redu, da se takrat izpostavi tudi ta pravna vprašanja. Izvršni svet ima sejo ob 14.00 uri, zdajle sklicano, lahko se opredeli tudi do tega vprašanja. Glavno je, da zdaj delamo naprej po dnevnem redu.</seg>
             </u>
             <note type="speaker">VITOMIR GROS (Liberalna stranka, doslej Slovenska obrtniška stranka.):</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg28">V imenu 32 podpisanih poslancev predlagam Skupščini Slovenije naslednjo Deklaracijo o narodni spravi:</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg29">"Podpisani poslanci vseh zborov Skupščine Republike Slovenije prosimo, da vodstvo skupščine uvrsti na dnevni red skupne seje, 2.7.1990, naš predlog Deklaracije o narodni spravi in jo predlaga v sprejem v predlaganem besedilu." Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg30">Mislim, da je to zdaj naslednja točka dnevnega reda, o njej bomo razpravljali pozneje. Zdaj dajem na glasovanje najprej ta predlog. To se pravi, da se o tem predlogu o deklaraciji izjavi Izvršni svet, ki ima sejo ob 14.00 uri in da se bo med tem sestala tudi naša Zakonodajno-pravna in ustavna komisijo in bo o predlogu razpravljala, in da bomo potem o stvari sami razpravljali potem, ko bomo imeli vse te predloge, mnenja in stališča o tem. Ali se s tem strinjamo? Dam na glasovanje ta predlog, kdo je za? Torej, da ponovim še enkrat. Predlog je v tem, da se o tem razpravlja na skupni seji, ko dobimo mnenje Izvršnega sveta, Zakonodajno-pravne in Ustavne komisije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg31">Dajem ta predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg32">Kdo je za ta predlog?</seg>
@@ -702,78 +680,78 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg39">Ugotavljam, da je sklepčnost podana. Torej, zdaj glasujemo o predlogu, kot je bil oblikovan, to se pravi, da bo ta skupščina, ta seja razpravljala o predlogu potem, ko bo dobila mnenje Izvršnega sveta, Ustavne komisije in Zakonodajno-pravne komisije. Prosim.</seg>
             </u>
             <note type="speaker">MAG. SPOMENKA HRIBAR:</note>
-            <u who="#SSK11.HribarSpomenka1941" ana="#regular">
+            <u who="#HribarSpomenka1941">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg40">Spoštovano predsedstvo, spoštovani poslanci in poslanke! Lahko se nam zdi, da ne bomo dobili mnenja Komisije za ustavna vprašanja in Izvršnega sveta, in s tem potem spremenimo sklep, da to deklaracijo uvrstimo na dnevni red. Mislim, da bi morala ta razprava, če smo že sprejeli stališče, da jo uvrščamo na dnevni red, potem postopati, tako kot je predlagal že poslanec Janša - ko bo na vrsti in gremo po dnevnem redu, tako kot je napisan oziroma kot smo ga sprejeli. Ne vidim razloga, da zdaj v naprej sprejemamo nekaj, kar bo še na razpravi pod drugo točko dnevnega reda. Meni se zdi to glasovanje nepotrebno. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg41">Ugotavljam, da predlog te resolucije še niti ni bil razdeljen. Ne morem ga takoj dati v obravnavo in na glasovanje, če delegati predloga še niso prejeli. Prosim.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg42">V predlogu je bilo povedano, da predlagamo uvrstitev tega vprašanja kot druge točke dnevnega reda. Se pravi, najprej imamo po proceduri oziroma po dnevnem redu prvo točko, kot je predvidena, in razpravo o deklaraciji v okviru druge točke dnevnega reda. Medtem deklaracijo delijo. Ko smo pa že tukaj, bi še enkrat poudaril, mi deklaracijo vlagamo kot predlog, ki pomeni dejanje samoodločbe. Da še enkrat iz ustave citiram člen, ki o tem govori. Mi govorimo o deklaraciji v 4. točki deklaracije in zdaj ste jo dobili, zahtevamo sprejem ustavnega zakona. Deklaracija zahteva sprejem ustavnega zakona in v predlogu tudi zahtevamo normalno proceduro za ustavni zakon. Medtem ko v skladu z deklaracijo kot dejanjem samoodločbe, ponovno citiram, gre za prvo alineo 4. točke 72. amandmaja: "Zbori (to je nagovorni tekst), Zbor združenega dela, Zbor občin in Družbenopolitični zbor na skupni seji urejajo vprašanja in postopke v zvezi z uresničevanjem pravice do samoodločbe. Se pravi, pristojnost zborov je, da na skupni seji odločijo po kakšni proceduri in na kakšen način bodo sprejeli dejanje oziroma odločitev, ki zadeva dejanje s področja samoodločbe. Ni vnaprej predpisane procedure. Pristojnost zborov je, da to proceduro samostojno opredelijo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg43">Hvala lepa. Torej, v vsakem primeru menim, če to vprašanje formalno-pravno ni dokončno rešeno, bi v vsakem primeru hotel imeti reditorno mnenje zlasti Zakonodajno-pravne komisije. Dobro, v vsakem primeru odstopamo, damo na glasovanje. Torej, menim, da je kot razširitev dnevnega reda predlog bil sprejet in da to postane 2. točka današnjega dnevnega reda in vse ostale točke ostanejo za eno številko naprej.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg44">Medtem je prišel še en predlog, predlog Deklaracije o narodni spravi, ki nosi 32 podpisov: "Podpisani poslanci vseh zborov Skupščine Republike Slovenije prosimo, da vodstvo skupščine uvrsti na dnevni red skupne seje za 2.7.1990 naš predlog Deklaracije o narodni spravi in ga predlaga v sprejem v predlaganem besedilu."</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg45">Ali so poslanci to besedilo dobili? Prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg46">Ali se smem vrniti in vas vprašati, kaj so razlogi, da ste že opravljeno glasovanje v dveh tretjinah prekinili, namreč, mi smo glasovali o predlogu, ki ste ga dali vi. Imeli smo ugotovljeno koliko delegatov je bilo za vaš predlog, koliko jih je proti, prekinili ste glasovanje, koliko se jih je vzdržalo in res zdaj ne vemo za glasovanje. Kaj je razlog? In drugo, kaj je razlog, če ste že ugotovili, da bi morali ponovno glasovati, da zdaj tega ponovno ne dajete na glasovanje, da pa vemo, za kaj gre. Hkrati ugotavljate vi, da bi bilo koristno dobiti neka mnenja. Sprašujem zato, da ne bi kasneje potem ugotavljali, ali je treba dobiti mnenje Zakonodajno-pravne komisije. Izrecno je delegat zahteval, da je treba dobiti mnenje Ustavne komisije, izrecno ga je delegat zahteval. Vi ste predlagali, da je treba dobiti mnenje Izvršnega sveta, do sedaj ga nismo dobili. Dajmo približno vedeti kaj je, da ne bomo kasneje ugibali, kakšen sklep je bil sprejet in po kakšnem postopku to obravnavati.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg47">Hvala lepa. Torej ugotavljam, da je bil za sedaj sprejet samo sklep, da to točko uvrstimo na dnevni red, tako kot vsako drugo točko, in nič drugega za sedaj. Ostalo po intervenciji delegata Peršaka sem menil, da ni potrebno, da nadaljujemo v tisti smeri. Ostane samo pri tem, da je to vprašanje, ki je postavljeno na dnevni red kot druga točka. Vse ostalo bomo razpravljali, ko preidemo na sam dnevni red.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg48">Tukaj sem dobil informacijo, da je predlog Deklaracije o narodni spravi že obravnavala naša Zakonodajno-pravna komisija. V vsakem primeru dajem najprej tudi to vprašanje najprej v odločitev, ali sprejmemo ta predlog na dnevni red ali ne. Prosim? najprej razpravo, nato pa, ali sprejmemo na dnevni red. Želi kdo razpravljati? Ne želi nihče. Prosim.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg49">Dober dan. Jaša Zlobec, Liberalna stranka. Moram reči, da se mi zdi popolnoma neresno, da sprejemamo ali ne sprejemamo predlog na dnevni red, ne da bi poznali vsebino tega predloga. Se pravi, da lahko na pamet sprejmemo največjo neumnost ali pa največjo genialnost in mislim, da če se določeni, če se je 32 delegatov zbralo, da je prišlo z nekim predlogom na dan, bi pa že lahko poskrbeli, da bi ta predlog vsi videli, da bi vedeli zakaj gre. Mislim, da je to skrajna neresnost in vas prosim vnaprej, da nas s takimi ne obremenjujete več. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg50">Hvala lepa. Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">VITOMIR GROS (Liberalna stranka, doslej Slovenska obrtniška stranka.):</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg51">Moram reči, da tole, kar je zdaj bilo povedano, se ne sklada s poslovnikom naše skupščine. Vsakdo ima pravico do sprejema dnevnega reda predlagati razširitev dnevnega reda. Več ne bi razlagal. Delegat, ki je bil pred menoj tukaj gori, naj natančno pogleda poslovnik doma, pa ne bo imel problemov na seji. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg52">Hvala lepa. Želi še kdo razpravljati?</seg>
             </u>
             <note type="speaker">DANIJEL BOŽIČ:</note>
-            <u who="#SSK11.BozicDanijel1959" ana="#regular">
+            <u who="#BozicDanijel1959">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg53">Spoštovani, če se sklada s poslovnikom to, da se glasuje o tistem, za kar se sploh ne ve, za kaj gre, pač bom moral še enkrat brati poslovnik. Ampak dvomim, da smo ga tako prikrojili, da je treba glasovati o zadevah, ki jih nismo prebrali. Rad bi pa rekel, da smo na prejšnjem zasedanju dobili zakon na mizo in smo ga obravnavali po hitrem postopku. Danes smo spet dobili na mizo zakone, spet po hitrem postopku. Dvomim, da je to dobro in je to vprašanje, če bomo lahko pametne stvari sprejemali, če bo treba na tak način delati. Mislim, da ta skupščina ima le toliko mandata, da si lahko vzame vsaj kdaj čas in si temeljito prebere, prouči, posluša strokovno mnenje in potem tudi morda z lažjo vestjo odloča. Mislim, da taka represija ni najboljša. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg54">Hvala lepa.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg55">Prepričan sem, da se pred odločitvijo na dnevni red glede takšnega vprašanja tekst predloži, poleg opozoril, ki ste jih dali, da bi bilo korektno, če smo enakopravni poslanci, sam bi to želel biti, da vidimo vsaj tekst, o katerem se lahko odločamo. Mislim pa, da sta še dve vprašanji pomembni. Prosim, gospod predsednik, da vi daste na njiju odgovor. Prvič, ali je sprejem takšne deklaracije v pristojnosti Skupščine Republike Slovenije in drugič, ali je po 349. členu v pristojnosti skupščine na skupni seji. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg56">Prosim, gospa Hribar.</seg>
             </u>
             <note type="speaker">MAG. SPOMENKA HRIBAR:</note>
-            <u who="#SSK11.HribarSpomenka1941" ana="#regular">
+            <u who="#HribarSpomenka1941">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg57">Spoštovano predsedstvo, spoštovani delegati! Ne vem, ali je tukaj neka pomota ali kaj, ampak dobila sem to, skupno z materialom, ki je bilo poslano skupščini, ne samo meni. In sicer je tukaj dopis gospoda Klepa, podpisana sta Šter in Vezjak, tekst - Predlog Deklaracije o narodni spravi. Sprejeto je bilo s skupščino 24.6. številka 020-06/89-1. Ne vem, v čem je sedaj problem, ali ničesar ne razumem ali kaj. Ko sem pa že pri besedi, bi predlagala, da je sicer ta zadeva uvrščena v dnevni red, vendar, da bi šla deklaracija v redni postopek, ne moremo na vrat na nos take zadeve sprejeti. To je pa dodatno, kar govorim. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg58">Hvala.</seg>
             </u>
             <note type="speaker">MAG. VIKTOR ŽAKELJ:</note>
-            <u who="#SSK11.ZakeljViktor" ana="#regular">
+            <u who="#ZakeljViktor">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg59">Meni je nekako nerodno, da smo začeli razpravo o tem vprašanju spet na tak način, ki ni vreden pomiritvenega in spravnega dejanja. Po moji sodbi namreč tako občutljivo zadevo, ki smo jo na nek način tako dolgo negovali in ki se naj na simbolni ravni konča 8. ta mesec, sodim, da ne kaže "brkati" z besedili in teksti na način naglice, nepoznavanja, ker nas bo oddvojilo od tega, kar najbrž vsi želimo. Da se na Slovenskem nekaj konča, da se opravi pomiritveno in spravno dejanje kot konsenz vseh naših ljudi, ne pa, da je to spet nov razlog za razprtije, nasprotja za nove revolucije in nove tesnejše pomiritve. Zato bi si vendarle prizadevati, tako kot sem bil do sedaj seznanjen, da je po dogovoru strank in med Predsedstvom tudi in med škofijo in tudi drugimi dogovorjena procedura, dogovorjeno pravno in simbolno dejanje in če je mogoče, zavzemam se, da to na tak način naredimo, ne pa, da tu z glasovanjem, tako ali drugače, vnašamo razdor in spor, ki ga naša družba ne potrebuje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg60">Torej, tukaj bi vas samo spomnil na določilo poslovnika. Govori samo o sejah zborov, mislim</seg>
                <note>nerazumljivo</note>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg61">, ki pravi, da dnevni red že sklicane seje zbora se lahko razširi le izjemoma, kadar je to nujno zaradi razlogov, navedenih v prvem odstavku prejšnjega člena, ki govori, kadar je to v interesu in tako naprej, kar smo danes že brali. O tem, ali se dnevni red seje zbora uvrsti za dneve, ki so bili predlagani v zboru, odločajo delegati v zboru na seji zbora, ob določitvi dnevnega reda. Zato, moj predlog bi bil, glede na to intervencijo, ta predlog sprejmemo in ga damo v redni postopek. MOj predlog je, da ga danes ne sprejmemo že na dnevni red, pač pa ga skupščina sprejme v redno proceduro, kar pomeni, da ga damo v presojo najprej ustreznim skupščinskim organom in na podlagi njihovega mnenja lahko na eni prihodnjih sej o tem razpravljamo.</seg>
@@ -794,11 +772,11 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg73">Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SSK11.PodobnikMarjan1960" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg74">Predlagam razširitev dnevnega reda s točko - problematika rejcev živine v Sloveniji, v povezavi z nadaljevanjem uvoza mesa, mesnih in mlečnih izdelkov brez ustreznih zaščitnih carin. V zvezi s to točko sem pred začetkom podal besedilo, rečeno je bilo, da ga boste dobili na mize, do sedaj še ni prišlo, tudi na prejšnji seji zbora in bi prosil, če se lahko, obrazložili bi pa to problematiko pri sami točki, če bo sprejeta. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg75">Gospoda Podobnika moram opozoriti, da po ustavnih amandmajih to ne sodi na dnevni red skupne seje, to bo treba pač razpravljati v ustreznem zboru.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg76">Želi še kdo razpravljati? V kolikor ne, dajem ta predlog dnevnega reda na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg77">Kdo je za?</seg>
@@ -826,56 +804,56 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg93">Če je stvar taka, potem moje mnenje, prosim, poudarjam, to je samo mnenje, da tukaj še ne gre za neposredno ustavni tekst, čeprav ima v posledici neposredno ustavnopravne pravice in da zdaj najprej odločimo, ali o njem glasujemo z navadno večino ali glasujemo na podlagi kvalificirane večine. Prosim.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOCIJANČIČ:</note>
-            <u who="#SSK11.KocijancicJanez1941" ana="#regular">
+            <u who="#KocijančičJanez">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg94">Gospod predsednik, poslanke in poslanci! Moje mnenje je, da gre za vsebinski tekst in za vsebinsko odločitev, ki jo sicer ločimo od formalno-pravne odločitve, ker predvidevamo sprejem posebnega ustavnega zakona. Ta je sicer restriktivno formuliran, kot sem uspel na hitro prebrati, da bo ta ustavni zakon določal, kateri zvezni predpisi se bodo na področju Republike Slovenije začasno opravljali kot pravna pravila. Se pravi, ne posega v materijo v prvem, drugem in tretjem členu deklaracije, kjer gre za dokončne vsebinske sklepe in ti sklepi so nesporno ustavno-pravnega karakterja. Nesporno je, vsaj po mojem mnenju to, da se o takih sklepih, ki tako globoko posegajo v ustavno ureditev naše republike in slovenskega naroda, ne bi smelo na hitro odločati, ampak bi se moralo odločati, tako kot je za to kvalifikacijo sklepov, se pravi, za ustavno-pravne sklepe, določeno z našo ustavo. Drugače z istim aktom, s katerim gradimo ustavnost Slovenije, to ustavnost rušimo, ker te same ustavnosti ne spoštujemo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg95">Lahko vas opozorim na kontradikcije, ki sem jih na hitro prebral. Na primer v 1. členu se sklicujemo na določbo Mednarodnega pakta o človekovih pravicah, v 3. členu pa vsi akti, ne, to je v 2. členu, pa vsi akti, mednarodni pravni akti veljajo v Republiki Sloveniji kot enakopravni akti do dne, ko jih je ratificirala Skupščina Republike Slovenije. S tem členom razveljavljamo veljavnost Mednarodnega pakta o človekovih pravicah v Sloveniji.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg96">To so stvari, ki mislim, da jih je treba delati na znatno kvalitetnejši način, če želimo kot poslanci upravičiti zaupanje slovenskega naroda in volivcev, ki so volili.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg97">Hvala lepa. Moram pripomniti k tej intervenciji to, da so v bistvu s tem argumentom popolnoma strinjam, ampak zdaj razpravljamo oziroma želel bi odločitev tega zbora o tem, ali, če se odločimo glede postopka, da zahtevamo kvalificirano večino ali zahtevamo lahko navadno večino. Prosim.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg98">Kot smo že večkrat poudarili, da je odločitev, ki jo predlagamo odločitev, pogojena z značajem dejanja samoodločbe. Gre za temeljno politično odločitev, za katero se sicer o navadi - to je res - odločajo ljudje, niti ne na ta način, da bi se spraševali o tem, na kakšen način bodo o njej glasovali in, ali je potrebna takšna ali drugačna večina. Ampak, če se o tem že moramo odločiti, mislim da, ker gre v principu za politično odločitev, ne za formalno odločitev, ki bi posegala v spremembe republiške ustave ali kaj takega, mislim, da zadošča normalna večina.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg99">Kar zadeva vprašanje, ki je bilo postavljeno, moram reči, da ne vidim kontradikcije, ki je bila izpostavljena. Če je slovenska skupščina ratificirala mednarodni akt o človekovih pravicah, ta akt velja, tukaj piše, ko je ratificiran v slovenski skupščini, za mene se to vprašanje ne postavlja prav zaradi tega, da vsi akti, ki so bili v slovenski skupščini ratificirani, ostanejo v veljavi, mednarodni. Drugo pa, samo še to bi želel poudariti, odločitve, ki so bile sprejemane, recimo, na Kočevskem zboru, ne glede na to, kaj kdorkoli v dvorani misli o tem zboru, se ravno tako niso spraševale o tem, ali je to zdaj ustavno regulirano, ali je v skladu, ali bo v skladu s kakšnimi zakonskimi odločitvami in tako naprej. Te odločitve se zmeraj sprejemajo na nek način, bi rekel, kot enkratne odločitve in za seboj potegnejo potem določeno pravno, se pravi, ustavno, zakonsko in tako naprej dograditev. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg100">Prosim.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg101">Gre za zelo pomemben dokument. Na vprašanje predsednika Bučarja dajem pač svoje mnenje, da je potrebna kvalificirana večina, ker gre za pomemben dokument. Kar zadeva pakt o človekovih pravicah, ga je ratificirala skupščina SFR Jugoslavije. Glede na resnost dokumenta bi se ponovno zavzemal, kar sem že nekajkrat storil ob manj pomembnih zadevah, da gredo stvari v redno proceduro in bi podprl predlog, ki ste ga vi dali, predsednik Bučar, da naj se najprej o tem tekstu opredeli Ustavna komisija, Zakonodajno-pravna komisija in tudi Izvršni svet in da potem po vseh teh regularnih procedurah razpravljamo o tako resnem dokumentu.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg102">Prosim.</seg>
             </u>
             <note type="speaker">DR. LEV KREFT:</note>
-            <u who="#SSK11.KreftLev1951" ana="#regular">
+            <u who="#KreftLev1951">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg103">Hvala lepa. Ta skupščina se je zdaj že nekajkrat znašla ob manj pomembnih točkah v nerodnem položaju, da z glasovanjem, namesto z uradnim tolmačenjem odloča o tem, kaj je ustavno in kaj zakonito. To mislim, da ni dobro za njeno delo. Sicer pa mislim, da o 1. točki te deklaracije ni mogoče sklepati ne z navadno ne s kvalificirano večino. To je točka, za katero se je vsaj naša stranka zavezala, da jo bo realizirala z referendumom, zato jo lahko sprejmemo samo pod pogojem, da vključuje odločitev z referendumom in da lahko predstavlja neko drugo formulacijo o sleditvi temu cilju.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg104">Kar se tiče omenjenega Kočevskega zbora, suverenost se dobi z revolucionarno vstajo ali pa po mirni poti. Če revolucionarno vstajo izgubiš, ostaneš heroj, ki se je bojeval za suverenost svojega naroda. Če pa po mirni poti nečesa, kar si deklariral, nisi sposoben izpeljati, se samo osmešiš in mislim, da deklaracija tega tipa ne sodi na začetek, ampak na konec procesa. Na začetek procesa sodi skupen dogovor o namenu in ne deklarirana suverenost.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg105">Ostalo, kar je predloženo v tem dokumentu, je verjetno predmet različnih postopkov, gre za različne točke, ki verjetno niso vse iste vrste, zato menim, da v taki obliki o tem predlogu skupščina lahko razpravlja, ne more pa sprejemati veljavnih sklepov. Predstavljajte pa si, kakšna bi bila posledica, ko bi ugotovili, da smo sprejeli deklaracijo o polni suverenosti države Republike Slovenije po neveljavnem postopku in z neveljavnim načinom glasovanja v trenutku, ko nimamo uradnega tolmačenja, kako moramo to delati in sprejeti, ampak bi želeli pravzaprav o tem zdaj glasovati. Naše samo glasovanje o postopku, sam način glasovanja o tem, kako bomo to sprejemali, predstavlja v bistvu sklepanje o ustavnih vprašanjih in bi zahtevalo vsaj ustavno tolmačenje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg106">Torej, za 1. točko referendum, za ostale točke je treba pa dobiti uradno tolmačenje, kakšna kvalificirana večina za nekatere stvari. Za nekatere pa verjetno ni potrebna, ne vem, ampak hočem imeti zakonsko in ustavno trdno tolmačenje, ne pa glasovanje tega organa o tem, kaj je ustavno in kaj zakonito, kajti v pravni državi so zakoni in ustava tudi nad to skupščino, razen o postopku, ki velja zanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg107">Prosim, gospod Tomažič.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg108">Spoštovani zbor! Sem eden podpisnikov predloga te deklaracije in zagotavljam vam, da smo temeljito preštudirali to besedilo, ki ga predlagamo. Vedeli smo, da bi ga lahko poslali na vsa mogoča telesa, na Zakonodajno-pravno komisijo, na ustavno-pravno komisijo, na Izvršni svet in tako dalje. Vemo, da bi morda bil rezultat pozitiven, tu ne gre za izrazito in čisto ustavno problematiko, niti za izrazito in čisto zakonodajno problematiko. Gre za politični akt, ki je najvažnejši in obratno, kot je moj predgovornik rekel, naj bi sodilo na konec. Ta deklaracija sodi na sam začetek. Potem bomo šele lahko sprejemali zakone, kakršne hočemo. Potem bo lahko vlada izvajala program, ki si ga je zastavila in tudi vsi naši državljani bodo lahko na referendumu sprejemali ustavo, kajti dokler te deklaracije nimamo, bo vedno nekaj v nasprotju z jugoslovansko ustavo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg109">Verjemite, nočemo vas postavljati v situacijo, da bi glasovali proti takšni deklaraciji. Mislim, da bi vsakega bolelo srce, če bi moral glasovati proti Deklaraciji o suverenosti Slovenije, zato predlagam, da rajši še nekaj časa posvetimo tej obravnavi, da podate konstruktivne predloge, da jih sprejmemo, da jo prilagodimo in da se ne sprašujemo, ali naj glasujemo z navadno ali z dvotretjinsko večino, ampak, da to deklaracijo sprejmemo z aklamacijo.</seg>
                <note>Aplavz v dvorani.</note>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg110">Menim, da slovenski narod končno že ima pravico do takšne skupščine, ki bi storila nekaj odločnega in zgodovinskega. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg111">Prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg112">Zelo podpiram mnenje gospoda Tomažiča in bil bi zelo vesel in počaščen, če bi način pripravljanja odločitev v tej naši skupščini bil tak, da bi se tako pomembne odločitve lahko sprejemale z aklamacijo. Če se to želi, potem moramo kaj storiti, da bi bile stvari tudi tako predlagane. Če pa so predlagane s strani določenega števila podpisnikov ali pa posamezne stranke - bom povedal svoje mnenje, upam, da ne bo žaljivo - v želji, da se poudari pomen stranke, ki je to predlagala, ne pa vsebina odločitve, potem je toliko težje, da se take stvari sprejmejo z aklamacijo, ker predhodno niso bile niti pravno niti politično tako prevedene, da bi jih lahko vsi skupaj z aklamacijo sprejeli.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg113">Mislim, da je to slabost, ki se je na žalost prevečkrat poslužujemo. Poslužujejo se je, rekel bom povsem iskreno, tiste stranke, ki računajo s tem, da bo neodvisno od vsebinskih, neodvisno od proceduralnih, neodvisno od kakršnihkoli drugih pomislekov, tudi če so v celoti upravičeni, večina v tej skupščini nadomestila ustavo, nadomestila zakone, nadomestila, če hočete, politično voljo tudi vseh Slovencev, ker je pač takšna, pa četudi z enim človekom, večina vladajočih v koaliciji zagotovljena.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg114">Dajte, gospodje poslanci vladajoče koalicije, resno razmisliti, ali s takšnimi zahtevami pomagate h konstruktivnemu delovanju te skupščine ali k temu vi ustvarjate klimo, da bi lahko sicer res opravičili obljube, ki ste jih dajali z volilnim programom pred delom volivcev, ki vas je volil, toda hkrati pa zelo otežujete položaj kogarkoli drugega, ne samo poslanca v parlamentu, ampak tudi vseh drugih občanov, ki slučajno pač niso volili predstavnikov vaše stranke in zavedajte se, da je teh nekaj manj kot pol glede na skupne volilne rezultate.</seg>
@@ -887,39 +865,39 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg120">Samo, če gre za te elemente, potem je dvom o tem, da bi morali najmanj odločati z dvotretjinsko večino, nesmiseln. Celo trdim, da sploh o elementih samoodločbe, dokler ne opredelimo načina vprašanj in postopka, ta skupščina ne sme odločati, ker tega najprej ni uredila. Sem za to, da se danes dogovorimo, da Ustavna komisija in kdorkoli skupaj z Izvršnim svetom, takoj pripravi vse potrebno, da bi vedeli, po kakšnih procedurah o teh vprašanjih odločamo in da potem to damo tudi na dnevni red, ne pa da trdim popolnoma v nasprotju s pristojnostmi, ki jih ima ta skupščina po ustavni plati, da ne govorim politično, ker bi o tem morali odločati ljudje, ki bodo tudi posledice takih odločitev nosili, da danes sprejmemo odločitev. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg121">Prosim, gospod Šeligo.</seg>
             </u>
             <note type="speaker">MAG. RUDI ŠELIGO:</note>
-            <u who="#SSK11.SeligoRudi1935" ana="#regular">
+            <u who="#SeligoRudi1935">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg122">Spoštovano predsedstvo, spoštovane delegatke in delegati! Sedaj je bilo že veliko rečenega. Nima smisla, da ponavljam argumente z vseh strani. Očitno gre za različne zorne kote gledanja. Zame ta deklaracija ni na ravni ustave ali ustavnega jezika. Ta deklaracija, ki jo imamo pred seboj, je preprosto, samo teža je v tej preproščini, je preprosto izgovarjava stoletnih hotenj slovenskega naroda. Ne morem je drugače razumeti kot dobesedno tako. Če gre za težka hotenja, ki so potovala skozi zgodovino, da bi našla novo ali ponovno izgovorjava, pa je sklicevanje na katerikoli poslovnik nesmiselno, je otročje oziroma je zapiranje oči pred tem, za kaj sploh gre. Vsako odlašanje o glasovanju o tem je dejansko postavljati vse nasproti tem željam oziroma ponovno izražanje tega, kar vemo že od pesnika Voduška naprej, da Slovenci nikdar ne bomo dobili toliko poguma, da bi do take deklaracije, ki jo imamo sedaj pred seboj, sploh prišli.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg123">Mislim, da referendum, na tisto, na kar so se nekateri kolegi sklicevali, je bil že narejen. Ta referendum je bil zame narejen z aktom volitev in zaradi tega še enkrat se vračati na to, koliko je ta temeljna želja smiselna in preko poslovnikov in členov sploh izvedljiva, je, recimo temu tako, nezgodovinsko izmikanje zgodovinskim vprašanjem. Hvala lepa.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg124">Hvala.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg125">Spoštovani delegati, spoštovane delegatke! Ne razumem, zakaj se je zataknilo ravno pri tej točki. Očitno gre tudi danes zopet za prestižno vprašanje, kdo bo prvi, prva politična stranka, ki bo naredila simbolični korak h konkretnejši osamosvojitvi Slovenije. Sama deklaracija, po mojem mnenju, ni sporna, ker ni niti, vsaj iz ustavno-pravnega vidika tako pomembna, kot je bilo že povedano, kot bo to ustrezni ustavni akt. Gre torej le za vprašanje podlage, simbolične in politične narave, ki ne pomeni nič drugega kot to, kar že vsi politično podpiramo. Ne vidim razloga za to, da bi resoluciji oporekali, ali pa bi o njej posebno evforično razpravljali. Končno dejanje vsega tega pa mislim, da mora biti referendum. Referendum ni isto kot so bile politične volitve. To vsi vemo, da je nekaj drugačnega. Na koncu bi prisotne opozoril še na en problem.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg126">Podoben dokument, sicer v manjši skali in pomemben le za dve narodnostni skupnosti, ki živita v Sloveniji, je predstavil, čeprav večina tega ni opazila, predstavnik italijanske manjšine Roberto Battelli na eni prejšnjih sej. Šlo je za deklaracijo, ki bo obvezala to skupščino in ustrezno komisijo, da pri pripravljanju nove republiške ustave ohrani že doseženo raven pravic nacionalnih manjšin. Takrat je predsedstvo posredovalo ta predlog ustavni komisiji. Upam, da bomo po istem načelu, kot se danes odločamo o tem politično pomembnem dokumentu, razpravljali tudi o manjšinski deklaraciji na naslednji seji. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg127">Prosim, gospa Hribar.</seg>
             </u>
             <note type="speaker">MAG. SPOMENKA HRIBAR:</note>
-            <u who="#SSK11.HribarSpomenka1941" ana="#regular">
+            <u who="#HribarSpomenka1941">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg128">Spoštovano predsedstvo, spoštovane delegatke in delegati! Mislim, da se je, kar se tiče postopka in natančnosti sprejemanja nekega dokumenta, mogoče v marsičem strinjati s poslancem Potrčem. Vendar je navrgel nekaj političnih očitkov, ki mislim, da jih je malo težko prenesti. Dovolite mi, da se spomnim razprave in protesta predvsem Društva slovenskih pisateljev v času sprejemanja oziroma dajanja pristanka za začetek postopka za spremembo zvezne ustave oziroma amandmajev. Takrat je Društvo pisateljev naredilo cel alarm predvsem zaradi kršenja suverenosti Slovenije že takrat, kolikor ga je bilo. In zaradi amandmaja, ki je določal prednost zveznih zakonov nad republiškimi. Takrat je bila današnja opozicija, takratna oblast, gluha na opozorila, ki so bila izrečena v Cankarjevem domu in še marsikje. Tako da ta zadeva, ki se danes tu sprejema, v bistvu popravlja, kar je bilo takrat zamujeno. Zato po tej strani ne bi dajala tej deklaraciji tako visokostni in ne vem kakšen pomen, niti ne tako parternega, kot nekdo drug hoče. Vendar bi rekla, da iz pragmatičnih razlogov preprosto rabimo neko izjavo, neko deklaracijo, ustavni zakon, karkoli hočete, da bo lahko slovenska vlada preprosto delala, ker ima sedaj zvezane roke z zveznimi zakoni.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg129">Dajmo se torej, apeliram na vse vas, dajmo se skupaj dogovoriti, na kakšen način je treba pravno natančno in čim hitreje priti do neke rešitve, da bomo lahko šli naprej, ker drugače smo sami sebi zvezali roke in v bistvu nikamor ne moremo. Niti ene zaresne, bi rekla, akcije ali spremembe še nismo uveljavili. Nujno rabimo zadevščino, da se nam te roke razvežejo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg130">Hvala.</seg>
             </u>
             <note type="speaker">BORUT ŠUKLJE:</note>
-            <u who="#SSK11.SukljeBorut1958" ana="#regular">
+            <u who="#ŠukljeBorut">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg131">Gospod predsednik, poslanci in poslanke! Predlog Deklaracije o polni suverenosti države Republike Slovenije razumem vsaj v štirih točkah. Prva je ta, da je ureditev razmerij v okviru jugoslovanske federacije, kakršno označujemo z imenom AVNOJ-ska Jugoslavija, da je ta dokončno izrabila svoje integrativne možnosti in to kažejo tudi vsi načrti za bolj ali manj očitno formiranje Jugoslavije. O enem izmed teh bomo govorili v naslednji točki dnevnega reda glede ustavnega dopolnjevanja zvezne ustave.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg132">Drugič. Predlog deklaracije razumem tudi v tem smislu, da je vsaj ena izmed človekovih pravic pravica do političnega združevanja, ki nedvoumno obsega tudi pravico do združevanja v državo, pa čeprav na nacionalni podlagi. Izbira nacionalnosti je namreč danes predvsem nacionalna, predvsem politična izbira, čeprav največkrat temelji na kulturnih, civilizacijskih in zgodovinskih danostih. Deklaracijo razumem, tretjič, v tem smislu, da je to, kar je danes v Jugoslaviji izrabljeno, natančno tisto, zaradi česar unifikacijski projekti v Sloveniji niso več sprejemljivi. Slovanska sorodnost iz 19. stoletja, bojno tovarištvo in krvna zaveza, bratsko medsebojno zaupanje brez formalnih garancij, več ne motivirajo za življenje v jugoslovanski simbiozi. Zato je povsem normalno iz teh treh razlogov, da vsi politični subjekti v Sloveniji, in ne samo v Sloveniji, iščejo nove poti v smeri osamosvojitev iz Jugoslavije oziroma konfederativne rešitve razmerij. Socialisti smo v svojem predvolilnem programu in svojem kongresnem načrtu temu rekli "osamosvojitev od Jugoslavije in članstvo v konfederaciji sta pravzaprav povsem enakovredni rešitvi." V tem smislu se mi zdi deklaracija politični akt, ki ga je treba podpreti in čimprej priti do realizacije 2. točke, ki govori, da je potrebno iz deklaracije izpeljati ustrezne politične in pravne postopke. Vse to, o čemer deklaracija govori, se danes namreč pred nami dogaja. Zato mislim, da je potrebno v deklaracijo, če tako kot je, mislim, kot je rekel gospod Tomažič, bi v to deklaracijo <gap reason="inaudible"/>
                </seg>
@@ -937,81 +915,81 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg139">Torej predlagam, da deklaracijo sprejmemo in preidemo k nadaljnjim postopkom, kot so razvidni iz druge točke deklaracije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg140">Prosim.</seg>
             </u>
             <note type="speaker">MOJMIR OCVIRK:</note>
-            <u who="#SSK11.OcvirkMojmir" ana="#regular">
+            <u who="#OcvirkMojmir">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg141">Spoštovani! Sem tudi predstavnik naše stranke v ustavni komisiji, kjer sem v dosedanjih razpravah dal pobudo za približno tako deklaracijo, ki pa naj ne bi bila deklaracija, ki je danes pred nami. Kar pomeni, da se na nek način strinjam z vsebino, ki je zapisana v tej deklaraciji. Imam pa bistvene pripombe.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg142">Poglejte, v slovenski ustavi zelo natančno piše, kako se spreminja in kdo lahko da pobudo za spremembo slovenske ustave. Imam veliko zamer pobudnikom, da so napisali, da gre za predlog deklaracije o popolni suverenosti države Republike Slovenije, namesto, da bi napisali na vrhu, da gre za teze, ne vem kako že, amandmaje k slovenski ustavi. Razumem tudi razloge oziroma bojim se, da so razlogi, ki jih bom tudi povedal, da so ti: namreč, deklaracija o popolni suverenosti se mi zdi, da na nek način zavira uveljavljanje vseh teh določb, ki so tu pred nami. Na drugi strani tudi odlaga to odločenost oziroma republiške skupščine, da resnično nekaj naredi v tem kontekstu. Skoz in skoz imam občutek, da tako na levi kot na desni stranke, ki tam sedite, izhajate iz nekega načela, da je treba zadovoljiti slovenski narod kot celoto, kot homogenon.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg143">Živim v nekem okolju, kjer velja kaj posameznik, ta posameznik pa ima samo eno kritje v tej državi, in to je lahko samo kritje znotraj ustavnih določil. Zato ne razumem, zakaj to zavlačevanje. Prav tako se strinjam s Šukljetom, da pač sprejmimo to deklaracijo, zato, ker mene resnično nič ne moti, ker tudi nikogar nič ne obvezuje. Lahko pa zelo hitro to razpravo končamo. Moj predlog pa bi bil, da se ta deklaracija oziroma ta naslov spremeni v drug naziv, ki bi hkrati omogočil tudi začetek spreminjanja slovenske ustave v tej smeri, ki je tukaj notri napisana. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg144">Hvala.</seg>
             </u>
             <note type="speaker">VIKTORIJA POTOČNIK:</note>
-            <u who="#SSK11.PotocnikViktorija1957" ana="#regular">
+            <u who="#PotočnikViktorija">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg145">Ne bom se spuščala v razpravo, ali gre za pravni ali gre za politični akt, ker se mi zdi, da gre za akt, po katerem se stvari v Jugoslaviji in v Sloveniji že krepko dogajajo. Ne bom se spuščala v proceduralni postopek, ker se mi zdi, da bi si lahko polomila v tej skupščini kdaj pa kdaj ravno na teh vprašanjih tudi zobe. Tudi sama sem za to, da se ta deklaracija sprejme; bom pa konstruktivna in predlagam, da se v 4. točki deklaracija dopolni.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg146">Za piko naj se vstavi naslednji tekst: "Takoj pa prenehajo delovati tisti zakoni in tisti podzakonski akti, ki niso sprejeti po določilih Ustave Republike Slovenije."</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg147">V kolikor veste oziroma najverjetneje veste, da si že leto in pol prizadevam v zvezni skupščini odkriti vse tiste podzakonske akte, po katerih predvsem deluje Jugoslovanska ljudska armada in Sekretariat za notranje zadeve, po katerih morajo delovati tudi naši organi in so daleč od oči in predpisov, po katerih se določa, kako naj bodo sprejeti in direktno posegajo tudi v človekove pravice in se mi zdi, da bi to pomenilo takojšnjo obvezo vsem organom v Republiki Sloveniji.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg148">Nadalje predlagam za pospešitev procesov v Sloveniji, čeprav imamo to sicer na drugi točki, da predlagamo, da se delegati v Zveznem zboru ne udeležujejo več sej Zveznega zbora Skupščine SFR Jugoslavije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg149">Moram reči, da tudi predsedstvo skupščine ni bilo vnaprej pripravljeno, ker je to prišlo iznenada, na proceduralne in pravne zaplete, ki lahko v zvezi s to deklaracijo nastanejo. Zato smo zdaj nekako v negotovosti glede pravnega značaja, glede procedure in tako naprej. Moj predlog je bil najbolj eleganten izhod iz teh težav.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg150">Prvič, po splošni pravni teoriji razlaga pravne predpise tisti, ki jih sprejema, in to je ta skupščina. Zato je ta skupščina upravičena, da tukaj dokončno odloči o postopku.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg151">Drugič. Če to resolucijo lahko sprejmemo z aklamacijo, to se pravi v tem smislu, da je zanjo absolutna večina, potem mislim, da preprosto obidemo vse pravne težave, ker so preprosto vsi ti problemi avtomatično rešeni. Zato bi najprej poskusno skušal ugotoviti, kakšno je mnenje te skupščine. Če ugotovimo, da je pretežna večina za, potem lahko to razpravo kar zaključimo. Prosim.</seg>
             </u>
             <note type="speaker">MAG. VIKTOR ŽAKELJ:</note>
-            <u who="#SSK11.ZakeljViktor" ana="#regular">
+            <u who="#ZakeljViktor">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg152">Tudi sam bi rad nekako vzneseno govoril, kot je pisatelj Šeligo. Ker se zavedam, da je v knjižici različnih slovenskih deklaracij pravzaprav še ena uglašena na isto misel, pravzaprav misel kako emancipirati slovenski narod, kako dobiti poslednje atribute nacije. Ampak hkrati beseda, sem zelo za to, kar je prof. Bučar, da tudi tole ne bi želel, če se da mogoče, da tega ne sprejmemo drugače kot z veliko večino, kajti to bi nas na nek način legitimiralo pred zgodovino, ker to je prav gotovo zgodovinsko dejanje. Da bi morda olajšal to hotenje, ki je na nek način meni samemu in da bi bila naša odločitev ne samo emocionalna, ampak tudi racionalna tudi v tem smislu, da bi kompetentni lahko odgovorili za posledice, ki iz te odločitve izhajajo. Mislim pa predvsem na naslednje posledice. Na ustavno pravne, na notranje politične, na zunanje politične in na ekonomske, o katerih danes nič ni bilo govora.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg153">Zato bi morda, preden bi odločali o tem, in želim, da odločimo čimbolj enoglasno, da bi se obrnili na Izvršni svet naše republike, da morda o tem da besedo in pove, da je ta stvar pretehtana tako z ustavnopravnega, notranjepolitičnega, zunanjepolitičnega in nekaj izkušenj z vzhodno Evropo že imamo. Mene kot ekonomista posebej zanima, kaj to pomeni z ekonomskega vidika za združeno delo, za slovensko gospodarstvo, namreč to, kar ste danes dobili, tako kot za eno naslednjih sej, je analiza razvojnih možnosti. Možnosti slovenskega razvoja vnaprej. Tam na neki strani, sem hitro preletel, je tudi ta podatek. Moramo mu zaupati. Da Slovenija ta čas menjava s svojim okoljem 50% družbenega proizvoda. Od tega 20% okroglo na eksternih trgih in 30% na jugoslovanskem trgu. Drugih številk ne bom navajal, ker so vam poznane. Meni bi pred tako odločitvijo veliko pomenilo, da je ta stvar po teh kazalcih, po teh vprašanjih, ki sem jih prej zastavil, pretehtana in tudi odgovornost za to odločitev bi bila potem lažja.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg154">Prosim, gospod Tomšič.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg155">Spoštovano predsedstvo, spoštovane poslanke in poslanci! Ko to poslušam, se spominjam, mnogokrat je prišlo v Sloveniji do takih stvari. Takrat, ko bi morali nekaj odločilnega skupaj narediti, narediti odločilni korak, se prične razvodenitev, in to je danes. Vse, kar se je zadnje pol leta velikega v Evropi zgodilo, kako se je zgodilo? Ali je to bilo vedno pravno podkovano, kako se je oklicala za samostojno Litva, vemo, da ima težave; ali bi to slovenski narod kdaj počel, nikoli ne bi počel kaj takega. Skratka, pravilno je, da smo bili toliko časa pod tujo komando.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg156">Kako se je zgodilo z Nemčijo? Ali je to bilo pred pol leta sploh mogoče. Nobeni pravni akti niso tam držali. Torej so šli pri pomembnih stvareh vedno za korak naprej od tega, kar zakon določa in to je ravno to, kar mi danes počenjamo. Veseli me, da smo kljub temu po eni uri le prišli skupaj in se zavedamo, da je to, kar danes počenjamo, da to ni nenormalni korak, ampak je prestop Rubikona. Do zdaj smo vedno govorili. To kar pa danes delamo je pa ta Rubikon in sem prepričan, da kolega, da leva in desna stran, da tukaj ne bo šla, ja, mi ne smemo, ker smo pač prenovitelji oni so dali pravzaprav prvo iniciativo in bodo s tem dobili veliki politični kapital. Rečem vam pred dvemi leti, ko smo pisali z Magajno in z nekaterimi kolegi, je na našem balkonu nastajala ta deklaracija. Mi smo poleti 1988 vse te točke, ki so tukaj in se ve, da so naši zakoni takrat bili popolnoma drugačni in nikoli ne rečemo, da je DEMOS nastal na našem terenu, nastal je tako na vašem, ker ste to dopuščali in na našem. Zato mislim, da to, kar je bilo dano, že predlagamo. Stopimo skupaj končno. To je prvi korak v neodvisno Slovenijo. Hvala lepa.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg157">Prosim, naslednji.</seg>
             </u>
             <note type="speaker">ANDREJ MAGAJNA:</note>
-            <u who="#SSK11.MagajnaAndrej1952" ana="#regular">
+            <u who="#MagajnaAndrej">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg158">Spoštovani! Tudi Socialdemokrati smo se ločeno opredeljevali do te deklaracije. Že nekaj časa smo tudi aktivno sodelovali pri pripravi in moram reči, da smo se odločili, da jo podpremo in tudi, da jo danes sprejmemo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg159">Jasno, tudi mene motijo ti načini sprejemanja po hitrem postopku, vendar bi to pojasnil iz dveh razlogov. Deklaracija je naša skrajna zahteva. Pravzaprav smo se tudi Socialdemokrati vključili v DEMOS ravno zato, da si čimprej izborimo slovensko državno suverenost. To je vsebina in pomen deklaracije. Je že dolgo časa prisoten. Tudi ta tekst, nekoliko z majhnimi spremembami, je bil že objavljen in drugi razlog, akutna gospodarska kriza nas sili v to, da čimprej nekaj sprejmemo in sklenemo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg160">Deklaracija sama ne bo nič rešila, to vemo. To je politični akt, in tako ga tudi gledamo. Odpira pa pot in bo tudi, če rečem v narekovanjih, spodbuda in podpora naši vladi, da čimhitreje uresniči te zahteve po gospodarski suverenosti Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg161">Če bi gledali na te pravne razloge in zadržke, so že kolegi pred mano rekli, verjetno ne bi nikoli ustrezno rešili. Vedno bomo ugotovili, da je slovenska ustava v nasprotju zvezno ustavo in so naši zakoni v nasprotju z zvezno ureditvijo. To bomo ugotavljali in mislim, da moramo enkrat presekati to zadevo in zadevo obrniti in ugotavljati, koliko je zvezna zakonodaja v skladu s slovensko. Torej, ali je čas primeren, primeren zgodovinski čas, da to sprejmemo ali ne, ali je to primerno, da to danes sprejmemo, bi kratko rekel: ne samo da je čas, to je že pozno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg162">Prosim, gospod Toplak.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg163">Hvala, gospodje! Deklaracije nisem podpisal, ker kaže, da nisem bil zraven, ko se je podpisovalo. Podpisal sem neko drugo, ko smo o tej razpravljali, ker sem mislil, da gre za to in je smiselno tudi šlo za isto platformo. Načelno. Vsebinsko je deklaracija akt pravno-politične, ustavnopolitične narave. Zato moram reči, da so vsi pomisleki glede vsebine nepotrebni in drugo. Procesnih pomislekov glede sprejemanja te deklaracije osebno ne vidim. Glede konkretnih predlogov zlasti predlogov gospoda Šukljeta in gospe Vike Potočnik mislim, da jih je v celoti sprejeti. Glede samega sprejemanja pa moram reči, da gre ponoviti, da gre za akt pravno-politične narave, ki neposrednih pravnih konsekvenc nima, gre pa za našo pravno-politično in ustavno-politično orientacijo pri našem nadaljnjem delu, tako skupščine in ki določa tudi, rekli bi, nadaljnjo politiko Republike Slovenije in zato ne kaže s tem obremenjevati, kot je predlagal gospod Žakelj, Izvršnega sveta Slovenije, ki je izvršno telo in zlasti izvršno telo skupščine. Zato predlagam, da se sprejme.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg164">Hvala.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SSK11.PotočnikFranc1955" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg165">Slišali smo mnenja različnih strank. V načelu se bolj ali manj vse s to deklaracijo strinjajo. Želimo, da bi jo soglasno sprejeli. To pa pomeni, da bi najbrž pri nastanku tudi druge stranke lahko sodelovale, zato predlagam, da se tiste eventualne pripombe, ki bi bile možne oziroma ki so potrebne, vnesejo v to. Ne moremo kar na tem mestu, ampak bi predlagal skupino, sestavljeno iz različnih strank, ki naj tukaj kaj doda ali odvzame, če je potrebno in da potem s tem usklajenim predlogom pridemo gor in da ga lahko potem soglasno sprejmemo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg166">Prosim.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOCIJANČIČ:</note>
-            <u who="#SSK11.KocijancicJanez1941" ana="#regular">
+            <u who="#KocijančičJanez">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg167">Gospod predsednik, spoštovane poslanke in poslanci! V načelu bi se strinjal s tem predlogom. V vsakem primeru bi imela deklaracija o polni suverenosti države Republike Slovenije mnogo večji pomen, če bi bila pripravljena na konsenzualen način in če bi čustva, kolikor jih pač je, zamenjal razum oziroma bi bil to akt resnične državne suverenosti. Pri tem mislim, o tem sem že govoril, da kvalificirani postopki smo ščitijo kvaliteto teksta. Moram vas opozoriti, da ta tekst ni dovolj kvaliteten. Deklerativen je samo 1. člen, kjer se izjavlja suverenost Republike Slovenije kot države slovenskega naroda. Verjetno bi se pravno teoretično dalo tudi temu tekstu oporekati, vendar naj vam privarčujem to, ker tu se citirajo v enem samem stavku tri suverenosti: suverenost države, suverenost slovenskega naroda in suverenost državljanov.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg168">Kar se tiče drugega in tretjega odstavka, sta pa to odstavka s povsem konkretnimi pravnimi konsekvencami. Tu ne gre za nobeno deklarativnost. Gre za razveljavitev ustave SFRJ in zveznih zakonov, v kolikor niso v skladu z ustavo in zakoni Republike Slovenije. Na stran pravno vprašanje, na katero v tej dikciji ni odgovorjeno, ali to pomeni, da so zakoni Slovenije nadrejeni ustavi Jugoslavije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg169">V nadaljnji dikciji gre za določitev, da mednarodni pravni akti veljajo v Republiki Sloveniji kot enakopravni akti od dne, ko jih je ratificirala Skupščina Republike Slovenije. Skupščina Republike Slovenije, ne vem, če je ratificirala kakšne pravne akte, vsekakor pa nobenega od pomembnejših pravnih aktov, ker je po dosedanji ustavni proceduri dajala samo soglasja za ratifikacijo, ki se je vršila v skupščini Jugoslavije. To pomeni, da so vsi pravni akti neveljavni, pa to taki pomembni, kot je o določitvi mej in podobno. Ne vem, če si to lahko dovolimo. Trdim, da na področjih - sam delam na področju civilnega letalstva, da od trenutka, kose to sprejme in do trenutka, ko ta skupščina ne bi ratificirala bilateralnih sporazumov s posameznimi državami, ne bi mogla naša letala leteti nikamor, pravno formalno, kot je to zapisano.</seg>
@@ -1020,64 +998,64 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg172">Skratka, gospod predsednik, predlagam, da se tekst, o katerem bi se eventualno danes izjasnjevali, pripravi na medstrankarski osnovi, in drugič, predlagam, da se o tem tekstu glasuje bodisi z aklamacijo ali bodisi po kvalificiranem postopku in s kvalificirano večino, in hkrati predlagam, da s vsi potrebni pravni dodatki uvrstijo v ustavni zakon, ki bi ga sprejemali v proceduri, ki je z ustavnim zakonom predvidena.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg173">Prosim, gospod Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg174">Sedaj je sicer razprava šla že nekoliko naprej od takrat, ko sem dvignil roko in so se pojavili nekateri moji predlogi. Moj predlog je hotel iti v tej smeri, da bi mi na ta način to rešili. Mislim, da so predlogi, ki sta jih dala kolega Šuklje in gospodična Potočnik, zelo dobrodošli. Glede na to, da pa gre za določen faktor časa, je bil moj predlog mišljen v tej smeri, da bi mi deklaracijo sprejeli in da bi vse te predloge sprejeli kot iz nje izhajajoče sklepe, ki sta jih onadva predlagala. Zdi se mi, da so zelo dobrodošli. Drugo je pa to, da še vedno mislim, da je to, na kar opozarja gospod Kocijančič, v bistvu rešeno z vsebino 4. točke. Namreč, tudi tako imenovana soglasja k mednarodni ratifikaciji pravnih aktov se dajo s tem ustavnim zakonom do tistega roka, ko bomo rekli, da bo Skupščina Slovenije ratificirala posebej te pravne akte in s tem podaljšati s tem ustavnim zakonom, tako kot si predstavljam, a bo v tem ustavnem zakonu povedano: ti pa ti zakoni, ti pa ti pravni predpisi Skupščine SFRJ, ti in ti členi Ustave SFRJ za področje, za ozemlje Slovenije ne veljajo več, kar ne pomeni, da za področje, za ozemlje Slovenije ne veljajo več, kar ne pomeni, da se slovenska ustava postavlja nad zvezno ustavo, postavlja se samo za ozemlje Slovenije in za območje države Slovenije, ne pa za ostale dele Jugoslavije. Na naslednji točki se pa pove, kateri pravni predpisi, členi ustave, zakoni in ostali predpisi in za koliko časa veljajo ti zvezni tudi še za območje Republike Slovenije, do kdaj, kot pravno pravilo. Mislim, da je na ta način vsebinsko rešeno. Mi lahko iščemo druge variante, mogoče s strogo pravnega vidika bolj sprejemljive, ampak, kot rečeno, gre tukaj v principu vendarle za politično odločitev, ali pa vsaj v tistem smislu, kot je to interpretiral gospod Toplak, za politično-pravno odločitev, ki se potem na tem strogo pravnem nivoju izvede skozi določeno proceduro in na določen način. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg175">Gospod Šter, prosim.</seg>
             </u>
             <note type="speaker">ANDREJ ŠTER:</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg176">Spoštovani! Če bi se nekdanji Američani spraševali podobno kot se sprašujemo mi, bi bil pod vsak ameriški zakon, zakon s področja Združenih držav Amerike še sedaj podpisan angleški kralj. Sram me je, da sem prisostvoval glasovanju te skupščine o podpori državi Litvi. Sram me je. Sram me je, da smo glasovali. Razprave v zvezi z deklaracijo so zame osebno dokaz, da skupščina, kateri pripadam, noče sprejeti odgovornosti in se sklicuje na nekakšna mnenja, predhodna tolmačenja. To je veljalo za delegatsko skupščino in je pravzaprav ta zasedala vsakič v drugačni zasedbi, zato je bilo mnenje, vprašanje, mnenja in stališča so bila vprašanja kontinuitete dela. Mi pa smo prvič v slovenski zgodovini poslanska skupščina, z jasnimi odgovornostmi.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg177">Referendum o vprašanju deklaracije, ki ga je zahteval poslanec Kreft, je šele ob koncu celovite razprave in vsega postopka, torej pred sprejetjem ustreznega ustavnega zakona. Ta deklaracija, ki jo danes vetrimo, pa je zagotovilo oziroma predpogoj, da se razmere, družbene, politične, celovite za Slovenijo v SFRJ medtem ne bodo bistveno spremenile in tega ustavnega zakona mogoče sploh ne bi bilo. Osebno sem pogosto in vse pogosteje postavljen pred neprijetna vprašanja, kdaj bodo volilne obljube tudi uresničene. Vesel sem, da je naša skupščina sprejela to vprašanje na dnevni red. Kakršenkoli bo že izid odločanja o tej zadevi, bo lahko Slovenija izvedela, kdo zavira izvajanje volilnih programov. Predlagam vodstvu skupščine, da zaključi razpravo, ker moram reči, da kaj novega v zadnjih razpravah ni bilo povedano in da izvedemo glasovanje. Hvala.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg178">Gospod Pahor.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SSK11.PahorBorut1963" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg179">Zelo bi bil zadovoljen, ko bi imel to priložnost, da bi tako pomemben dokument, kot je Deklaracija o suvereni Sloveniji, lahko sprejeli z aklamacijo in ne z glasovanjem v tej skupščini. Vendar se mi kot poslancu, ki želi odločitve sprejemati s polno mero odgovornosti, vendarle ponovno pojavlja naslednje vprašanje. Ali je papir, katerega pomembnost vsi priznavamo, papir, ki ima neke formalne in pravne konsekvence, ali pa papir to ni. Če ta papir teh konsekvenc nima, sem proti temu, da skupščina kot oblast te države, trati čas s tako nepomembnim papirjem. Da smo zadovoljni s tako majhnim igračkanjem, sem proti temu. Če pa na drugi strani, gospe in gospodje, tovarišice in tovariši, menimo in ugotavljamo, da ta papir ima konsekvence in da ima pomembne konsekvence za nadaljnje življenje naših ljudi v tej državi, potem vendarle predlagam, da smo toliko odgovorni, da počakamo z njim, pa če je treba samo do 18. julija in vendarle zaprosimo vse ustrezne institucije v državi, od vlade do strokovnjakov, da dajo svoje mnenje o tem, kaj se bo zgodilo potem, ko to deklaracijo sprejmemo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg180">Verjamem, če smem dokončati, da je deklaracija izjemno pomembna. Če mislite, da je argument umesten, da smo - če sedaj krik iz poslanske klopi prenesem za govorniški oder - brez jajc, ker si sedaj takoj ne upamo o tem glasovati, potem se upiram taki interpretaciji. Prav gotovo sem bil že pred sklicem te skupščine med tistimi kandidati za poslanski zbor, ki je bil za to, da Slovenija dobi polno samostojnost in suverenost. Govorim pa, da moramo vendarle toliko potrkati na našo lastno poslansko vest in odgovornost, da se, preden sprejmemo tako pomemben dokument, vendarle seznanimo z vsemi konsekvencami. Sem proti kakršnimkoli razlagam, da si tu nečesa ne upam storiti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg181">Prosim.</seg>
             </u>
             <note type="speaker">JANEZ GALE:</note>
-            <u who="#SSK11.GaleJanez1931" ana="#regular">
+            <u who="#GaleJanez1931">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg182">Moj oče je bil Maistrov borec. Veliko mi je povedal, pa stric je bil spomeničar, tudi drugi so bili. Ali bomo čakali zaradi tega omahovanja še 70 let, da bomo lahko govorili, tako kot je treba. Dajmo se zbuditi. Dajmo se zbuditi odločno. Bodimo suvereni, dosti je tega omahovanja. Tudi mene je strah, kot je moj predhodnik rekel. Prosim, nehajmo s tem. Glasujmo.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg183">Prosim, gospod Buser.</seg>
             </u>
             <note type="speaker">DR. STANKO BUSER:</note>
-            <u who="#SSK11.BuserStanko1932" ana="#regular">
+            <u who="#BuserStanko1932">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg184">Gledal bom bolj levo stran. Nikakor še ni noben Slovenec pozabil, med njimi tudi jaz ne, ko smo tudi mi ob televizijskih aparatih ponoči, zvečer, ko ste odhajali, izžvižgani še takrat, ko ste se imenovali uradno komunisti iz Slovenije, zapuščali tisti zbor, tudi s solzami v očeh. Takrat ste to začeli. Vsi srečni smo bili, ker smo rekli, končno se je premaknilo in končno bomo tisto, kar hočemo biti. Imeli smo vsi to zapisano, prav na prvih mestih v naših programih. Tako desna stran kot leva stran. Mislim, in všeč mi je, da je ta dokument tako pošteno in preprosto napisan, da ga bo vsaka mamica in vsak kmečki možakar lahko prebral in bo razumel, za kaj je. Čudim se, zakaj toliko vprašanj po pravnih zakonih. Še celo v Beograd bomo šli spraševat, če smemo to sprejeti. Poslušajte, kdo nam bo pa to dovolil? Veste, da s temi stvarmi se res ne moremo strinjati. Bodimo pametni, saj smo vsi rekli, da smo pametni Slovenci. Martina Krpana se spomnimo, ki je bil tudi pameten. Ali ne znamo prerezati s tem? Sveto sem prepričan, ko bomo glasovali o tem, ko nas bodo Slovenci poslušali in gledali pred TV aparati, da nikogar tukaj v skupščini ne bo, niti iz stranke prenoviteljev, niti socialistov, liberalcev, starih in sedanjih, vseh demosovcev, da bi bilo pravzaprav sram, če roke za to ne bo. Trdno sem prepričan, tudi ena roka ne bo ostala spuščena.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg185">Gospod Pučnik, prosim.</seg>
             </u>
             <note type="speaker">IVAN PUČNIK:</note>
-            <u who="#SSK11.PucnikIvan1927" ana="#regular">
+            <u who="#PucnikIvan1927">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg186">Ni dovolj, kaj mi mislimo in kaj govorimo, da hočemo. Svojo dolžnost bomo opravili samo na ta način, da nekaj storimo. Mi v tem domu lahko marsikaj storimo. Ali niso izhodišča te preprosto, vendar jasno napisane deklaracije, napisana, tako kot smo svoj čas vsi na ta ali drugačen način govorili. Potem pa vendar bodimo odločeni in to storimo, kar smo mislili, pa tudi vsak po svoje obljubljali. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg187">Hvala.</seg>
             </u>
             <note type="speaker">CIRIL KOLEŠNIK:</note>
-            <u who="#SSK11.KolesnikCiril" ana="#regular">
+            <u who="#KolesnikCiril">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg188">Ni potrebno narediti vaje iz zgodovinske preteklosti, da lahko zelo resno ugotovimo, da smo vedno zmogli Slovenci <gap reason="inaudible"/>
                </seg>
                <note>nerazumljivo</note>
@@ -1089,60 +1067,66 @@
                   <gap reason="inaudible"/>, to je vprašanje, ne, ali je to zakonito. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg191">Gospod Janša.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg192">Spoštovane poslanke, poslanci! Deklaracija je akt politične volje. V to smo se v tej razpravi že vsi prepričali. In to akt politične volje, ki smo jo tako ali drugače vse stranke, ki so danes zastopane v tem parlamentu, pisale v svoje programe. To ni deklaracija o odcepitvi, to tudi dovolj jasno piše, to je bistvena razlika, predvsem pa to ne potegne takih konsekvenc, da bi sedaj morali imeti pred seboj kompletno analizo posledic take deklaracije. Mislim, da vsi, ki tukaj sedimo, da si lahko predstavljamo, kakšne bodo posledice take deklaracije. Nobenih dramatičnih posledic ne bo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg193">Ločiti moramo deklaracijo, ustavni zakon in ustavo. Za ustavni zakon in za ustavo so predpisani postopki in to drugo in tretje, se pravi ustavni zakon in ustava terjata določeno proceduro in določen čas. Vendar pa moramo mi ukrepati tudi v tem času, dokler ne pride do ustavnega zakona oziroma do ustave. Za ta čas potrebujemo najmanj jasno izraženo politično voljo. V tem času se je, med drugim, oblikoval in se bo sprejemal program nove vlade. Na podlagi stare ustave, na podlagi neke izražene politične volje, za katero se je pa ravno ob pisanju tega programa izkazalo, da ni jasno izraženo. Ko se je ta program pisal, smo prihajali ravno v zvezi s tem, kar ta deklaracija rešuje, v težke dileme. Kdor je program prebral, nekateri ste ga dobili šele danes, najbrž lahko to sam potegne iz njega. Kolega poslanec Kocijančič sprašuje, če bodo letala Adrie letela še potem, ko bomo to deklaracijo sprejeli. Najbrž mu lahko vsi, ki tukaj sedimo, zatrdimo, da bodo tudi jutri letela, ne glede, če bomo mi to deklaracijo sprejeli.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg194">Sprašujem vas, kogarkoli v tej dvorani, če mi lahko našteje en pravni akt, na katerega lahko ta skupščina opre svojo odločitev, da v septembru ne pošlje več nabornikov na Kosovo. O tem se bo ta skupščina najbrž odločala na naslednji seji. Take odgovornosti ne bom več prevzemal. Indeks v primerjavi z lanskim septembrom pa je okrog 500%. Nikakršne pravne osnove ni, da ta skupščina sprejme nek akt, s katerim mi zavrnemo pošiljanje nabornikov na Kosovo ali izven Slovenije. Zaradi tega rabimo odprta vrata, ne za nazaj, ampak za naprej. Ta deklaracija ne razveljavlja nobenega zakona za nazaj, saj tako kot je sedaj napisana. Odpira pa vrata za naprej. Ne razveljavi v taki obliki ničesar, dopušča pa možnost, izraža vsaj neko politično voljo, podlago, da ta skupščina sprejme nek ukrep, ki ne bo v skladu z zvezno zakonodajo. V prihodnje bomo najbrž sprejemali več takih ukrepov. Prisiljeni bomo v to. Zaradi tega podpiram tudi drugo točko te deklaracije in nisem za to, da se karkoli spreminja ali črta.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg195">Brez teh odprtih vrat za naprej bo tudi ta program, ki ga bomo obravnavali na naslednji seji, ta vladni program v bistvu nemogoče realizirati. Na vseh področjih zadenemo na to blokado in nemogoče je stvari rešiti, ne, tako da pač ukinjamo veljavno zvezno zakonodajo za nazaj, ampak najprej si moramo odpreti vrata za naprej, vrata za ukrepe, ki bodo šli tudi v drugo smer. Zaradi vsega tega predlagam, da to deklaracijo sprejmemo. S tem bomo mi samo še enkrat skupaj v nekem aktu nove skupščine napisali to, kar smo vsi tako ali tako pisali v predvolilne programe, ki so bili podprti s procenti, kakršne so dobili. To deklaracijo rabimo predvsem zaradi nas, ne toliko zaradi volivcev, ampak zaradi nas, zaradi naših načrtov za prihodnje, tudi zaradi premikov v naši miselnosti. Da bo konec dilem, ki jih na papirju že od predvolilnega časa ni več v naših glavah, pa kot kaže ta razprava, danes očitno so še. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg196">Hvala.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SSK11.PozsonecMaria1940" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg197">Spoštovano predsedstvo, spoštovani poslanci, spoštovane poslanke! Rada bi vas opozorila na dejstvo, da dosedanji pravni akti, ustava in drugi, so govorili o italijanski in madžarski narodnosti kot o avtohtoni narodnosti oziroma prebivalstvu Slovenije, ne pa kot ostalim državljanom Slovenije. Tu govori o drugih narodnostih Slovenije, državljanov, mi pa bi radi, da bi ostala prejšnja formulacija. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg198">Gospod Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg199">Spoštovano predsedstvo, delegati in delegatke! Moram reči, da bi bila ta razprava lahko bistveno krajša, če bi v pripravah tako pomembnega dokumenta, kot je Deklaracija o polni suverenosti države Republike Slovenije, poskušali upoštevati tisto, kar smo že nekajkrat skušali doseči in poudarjati, da stvari, ki naj bi imele nacionalni in s tem tudi nadstrankarski pomen, na ta način tudi poskušamo pripravljati. Ne pa na način, da nekdo ponudi rešitev, potem je pa stvar drugih, da to odločitev sprejemajo ali pa bodo pod pritiskom in obtožbami, da nasprotuje sami ideji, ne pa posameznim formulacijam in določbam, ki so predložene. Tako tudi tokrat. Sam sem bil vključen aktivno v priprave ustavnih dopolnil k naši ustavi Republike Slovenije, v katere je zapisano, in je to sedaj sestavni del 1. člena Ustave Republike Slovenije, ki nas vse zavezuje in ki se glasi: "Socialistična Republika Slovenija (pozneje je bila sprememba še Republika Slovenija) je v sestavi SFRJ na temelju trajne celovite in neodtuljive pravice slovenskega naroda do samoodločbe, ki vključuje tudi pravico do odcepitve in združitve." To je določba, ki daje podlago slovenskemu narodu, italijanski, madžarski narodnosti in vsem državljanom Slovenije, da si samostojno določajo svoj ekonomski in politični status in v tem okviru tudi svoj mednarodni status, status v okviru Jugoslavije pri povezavi z drugimi narodi in tako naprej. Tukaj ni nesporazumov. To je sprejela skupščina v prejšnji sestavi. To je bila tista določba, ki jo je na nočni seji, na Centralnem komiteju Zveze komunistov Jugoslavije, odločno, po oceni državljanov Slovenije, branil tovariš Milan Kučan, veliko prej kot pa smo mi odšli s 14. kongresa, ki nam je poskušal vsiljevati drugačen koncept federacije ob drugih konsekventnih rešitvah.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg200">Mi smo bili sestavni del, pa tudi velikokrat na čelu te borbe za slovensko suverenost in želimo ostati ta sestavni del tudi sedaj in nam ni prav, da se mimo nas, ali pa celo še poskuša ustvarjati vtis proti nam, poskuša uveljavljati slovenska suverenost. To ni težko doseči, zelo preprosto je možno, da se sestanejo predstavniki v parlamentu zastopanih strank in da ugotovimo, kje gre za načelne razlike, kjer gre pa za različne poglede na formulacije in na značaj same deklaracije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg201">Pripomba, ki jo bom sedaj povedal naj ilustrira to, da ni nujno, da bi šle vse naše pripombe v eno smer. Ta pripomba se glasi, po mojem mnenju, v 1. točki te deklaracije se ne bi smeli sklicevati na 3. člen ustave SFRJ. Ta člen določa, da je republika država, ki temelji na suverenosti naroda - nekateri to celo prevajajo ljudstva - in na suverenosti in na oblasti in samoupravljanju delavskega razreda in vseh delovnih ljudi, narodov in narodnosti, ki v republiki živijo. To je neka sinteza dosedanjega pogleda na status, na razredni in nacionalni značaj Slovenije. Sklicevati se v deklaraciji, ki govori o polni suverenosti države Republike Slovenije, na 3. člen Ustave SFRJ, mislim, da je kar resna napaka v pristopu, ker v bistvu gre za to, da se zanika takšen ustavno-pravni status, ki ga določa 3. člen in celota Ustava SFRJ.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg202">Zaradi tega, ker gre za zelo pomemben dokument, ki bi ga mi želeli tudi spoštovati, ni vseeno, na kakšen način se sprejme. Če kdo misli, da je prehudo odložiti stvar za toliko časa, da bi se predstavniki strank oziroma strankarskih klubov v tej skupščini lahko sestali in ugotovili, če lahko dosežejo sporazum, potem za mene to stališče preprosto ni razumljivo. Razen, če se poskuša to uporabljati kot zasluga ene strani nasproti oziroma proti drugi strani, kar upam, da ni tako in ne bi smelo biti tako pri tako pomembnih vprašanjih nacionalnega, ne pa strankarskega značaja. Ampak, če vam je to vseeno prehudo dovoliti, potem dovolite vsaj, da se sestane strankarski klub ZKS-SOP in zavzame konkretna stališča do predložene deklaracije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance"
+               xml:id="SSK11-VsiZbor.1990-07-02.s004-01.u86"
+               next="#SSK11-VsiZbor.1990-07-02.s004-01.u88"
+               ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg203">Hvala lepa. Konkreten predlog. Da se prekine razprava in da se stranke posvetujejo in da lahko potem skupaj odločimo. Se s tem lahko strinjamo? Je potrebno glasovanje? Potem bi v razpravo posegali kasneje. Gospod Ocvirk.</seg>
             </u>
             <note type="speaker">Ocvirk:</note>
-            <u who="#SSK11.OcvirkMojmir" ana="#unauthorized">
+            <u who="#OcvirkMojmir">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg204">Eno vprašanje imam.)</seg>
             </u>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance"
+               xml:id="SSK11-VsiZbor.1990-07-02.s004-01.u88"
+               prev="#SSK11-VsiZbor.1990-07-02.s004-01.u86"
+               ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg205">Da, čakajte. Mi smo se dogovorili, da glasujemo najprej o odmoru. Ne morem delati izjem.</seg>
             </u>
             <note type="speaker">MOJMIR OCVIRK:</note>
-            <u who="#SSK11.OcvirkMojmir" ana="#regular">
+            <u who="#OcvirkMojmir">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg206">Želel bi vprašati ministra Janšo, če<gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg207">Poslušajte, gospod Ocvirk. Nimate besede in ne moremo se tako obnašati. Nočem biti vsiljiv</seg>
                <note>aplavz v dvorani</note>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg208">, ampak mi je zelo žal. Če hočem obdržati red. Se pravi, odrejam toliko odmora, da se klubi posvetujejo o tem in potem lahko <gap reason="inaudible"/> Pol ure, je dosti? Eno uro? Dobro, eno uro.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 14.30 uri in se je nadaljevala ob 15.45 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg209">Preden bi nadaljevali, moramo ugotoviti navzočnost in bi prosil, da najprej poskušamo to proceduralno dejanje opraviti. Družbenopolitični zbor, prosim, če ugotovimo navzočnost. Prosim? Da. Dobro. Koliko smo ugotovili? Še nismo glasovali. Navzočnost Družbenopolitičnega zbora. Prosim, če pritisnete na tipko.</seg>
                <note>23.</note>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg210">Družbenopolitični zbor še ni sklepčen. Poskusimo Zbor občin</seg>
@@ -1262,7 +1246,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 16.00 uri in se je nadaljevala ob 17.00 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg284">K 3. TOČKI DNEVNEGA REDA in preberem zapisnik volilne komisije o izidu glasovanja za sodnike Ustavnega sodišča Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg285">Volilna komisija ugotavlja naslednje: Za volitve sodnikov Ustavnega sodišča Republike Slovenije je bilo danih 177 glasovnic, od tega je bilo veljavnih 177 glasovnic, neveljavnih glasovnic ni bilo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg286">Tretjič, posamezni kandidati so prejeli naslednje število glasov: dr. Peter Jambrek 160 glasov, mag. Tone Jerovšek 146 glasov, dr. Anton Perenič 143 glasov, dr. Miha Ribarič 77 glasov in dr. Lovro Šturm 160 glasov.</seg>
@@ -1403,23 +1387,23 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg371">Ugotavljam, da je na podlagi tega dr. Ljubo Bavcon z večino glasov izvoljen za predsednika Sveta za varstvo človekovih pravic in temeljnih svoboščin.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg372">Vsem, ki so bili na današnji seji. Prosim, da.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg373">Prosil bi, da se prisotnost še enkrat ugotovi zanesljivo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg374">Saj je bila zanesljivo ugotovljena.</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg375">Vprašanje zaradi tega, da se doseže več kot polovico, se lahko ne prijavi takrat, ko je prisotnost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg376">Ugotoviti moram, da je bila prisotnost ugotovljena ponovno in ugotavljam, da je dr. Ljubo Bavcon izvoljen nesporno.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg377">Vsem, ki so bili na današnji seji izvoljeni oziroma imenovani, čestitam k izvolitvi oziroma imenovanju in jim želim uspehov pri njihovem delu.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg378">Sedaj nam ostaja še sklepanje o Deklaraciji o polni suverenosti države Republike Slovenije. Ali je mogoče komisija za usklajevanje že končala. Očitno ne. Prosim, če kar ostanete na svojih mestih. Torej, moram vas obvestiti, da je usklajevanje končano in se sedaj piše samo še čistopis in prosim za potrpežljivost in da počakate na svojih mestih.</seg>
@@ -1427,20 +1411,20 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 17.30 uri in se je nadaljevala ob 19.00 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg380">Nadaljujemo razpravo o Deklaraciji o popolni suverenosti države Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg381">Kot ste bili obveščeni, je predlog besedila te deklaracije usklajevala posebna komisija, sestavljena iz predstavnikov vseh strank in skupin, ki delujejo v tej skupščini, tako da imamo sedaj pred seboj dokument, ki je rezultat dogovora vseh političnih dejavnikov, ki sodelujejo v tej skupščini in prosim poročevalca te skupine, da pove, kakšno je stališče in rezultat.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg382">Spoštovano predsedstvo, spoštovane poslanke in poslanci! Usklajevalna komisija vodij poslanskih klubov se je dvakrat sestala. Prvič zato, da je uskladila predlog besedila Deklaracije o suverenosti države Republike Slovenije. Drugič so se vodje klubov sestali po sejah klubov in potrdili soglasje vseh klubov glede besedila deklaracije. Poudarjam, deklaracija, kakor je predlagana, je izoblikovana kot usklajen predlog vseh strank in poslanskih skupin, ki so zastopane v Skupščini Republike Slovenije. Potemtakem izraža voljo vseh teh strank in skupin. Prosim predsednika skupščine gospoda Franceta Bučarja, da prebere usklajen skupni predlog Deklaracije o suverenosti države Republike Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg383">Dajem najprej to besedilo, ki je bilo obravnavano v vseh klubih, z vsebino ste že seznanjeni, v razpravo. Želi kdo razpravljati?</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ:</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg384">Gospodine predsedniče, poštovani zbori, sama predložena deklaracija duboko pogadja sve gradjane zaposlene u uružanim snagama u SFRJ, jer njihov status u ovom djelu SFRJ proglašava u nekim djelovima neregularnim. Svi u uružanim snagama smo za samostalnost i suverenost svakog naroda u Jugoslaviji, ali smo za dogovor svih naroda kako da se ona provede kao i na koji način, da sačuvamo zajedničku domovinu. Zato deklaracija neka bude deklaracija politički akt, koji omogućava normalan, mirnodobski rad onih skupštinskih organa i organa pravne države, koji trebaju to za svoj normalan rad. Slovenski narod je gradio zajedničku državu zajedno sa drugim narodima. <gap reason="inaudible"/>
                </seg>
                <note>nerazumljivo</note>
@@ -1451,16 +1435,16 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg387">Nimamo razlogov, da ne bi z drugimi narodi gradili tudi novih odnosov v skupni domovini. Ali bo to konfederacija ali federacija, je stvar dogovora vseh zainteresiranih v domovini. Ker ima predlog deklaracije pomen ustavnega dokumenta, bi rad vprašal, ali takšen način sprejemanja dokumenta daje tudi drugim, drugače mislečim pravico, da na podlagi lastnih argumentov delajo drugače, kakor ta zbor misli in si želi. Zato predlagam normalen ustavni postopek v dogovoru z vsemi zainteresiranimi v Jugoslaviji. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg388">Hvala lepa. Želi še kdo besedo?</seg>
             </u>
             <note type="speaker">DR. RAJKO PIRNAT:</note>
-            <u who="#SSK11.PirnatRajko1951" ana="#regular">
+            <u who="#PirnatRajko1951">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg389">Hvala. Želel bi izraziti svoje nestrinjanje s tem, da predstavnik oboroženih sil, prvič, govori v tujem jeziku, kajti to so tudi oborožene sile države Slovenije in bi moral kot predstavnik govoriti v slovenskem jeziku. Hkrati izražam tudi svoje nestrinjanje, da kot predstavnik oboroženih sil govori o zadevi, ki je pravzaprav uresničevanje suverenosti slovenskega naroda in vseh državljanov Slovenije. Hvala.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg390">Hvala lepa. Želi še kdo besedo? V kolikor ne, menim, da so bile te intervencije že predmet dosedanje razprave in mislim, da ni bilo treba, da o njih še posebej zavzemamo stališča. V kolikor ni novih razpravljavcev, dajem ta predlog deklaracije na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg391">Najprej bi ugotovili navzočnost, bom prebral. Najprej bi ugotovili kvorum. Družbenopolitični zbor. Torej, še enkrat moramo poskusiti. Družbenopolitični zbor</seg>
                <note>67 poslancev.</note>
@@ -1499,25 +1483,25 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg416">Da, da, saj pravim. V nadaljevanju. Spoštovani poslanci! V nadaljevanju te točke dnevnega reda se priglašajo še nekateri poslanci s predlogi za dodatne sklepe.</seg>
             </u>
             <note type="speaker">MAG. RUDI ŠELIGO:</note>
-            <u who="#SSK11.SeligoRudi1935" ana="#regular">
+            <u who="#SeligoRudi1935">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg417">S sprejemom deklaracije o suverenosti slovenske države je v tem hipu, v tem trenutku odprta pot, ki jo vendarle moremo kot dejstvo, ki ga pa vendarle še ni, vendarle sprejeti. Ukinjeni in neveljavni so jugoslovanski zakoni, ki so doslej brutalno prekinjali in onemogočali dotok slovenske misli, slovenskih knjig, slovenske literature v Republiko Slovenijo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg418">Vzpostavljena je identiteta med slovensko kulturo v diaspori in zamejstvu in kulturo v Republiki Sloveniji.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg419">Prosim poslance, da sprejmejo to izjavo, ki jo dajem v imenu Društva slovenskih pisateljev z aklamacijo. Hvala lepa.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg420">Kot poročevalec iz usklajevalne skupine sem dolžan podati še en predlog te skupine, ki je bil na usklajevalni komisiji soglasno predlagan skupščini v sprejem. Gre za to, da zdaj, po sprejemu deklaracije, sprejmemo dodatni sklep, ki izhaja iz deklaracije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg421">Predlog sklepa se glasi:</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg422">Skupščina Republike Slovenije obvezuje Izvršni svete Skupščine Republike Slovenije, da najkasneje do začetka septembra 1990 pripravi predlog ustavnega zakona, s katerim se bo ugotovilo, kateri zvezni zakoni na podlagi te deklaracije ne veljajo na območju Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg423">Najbrž je iz teksta samega razvidno, da ta zakon pomeni operacionalizacijo te deklaracije oziroma pot do tega, da se deklaracija kot načelo spremeni tudi v prakso, politično. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg424">Hvala. Ugotavljam, da je ta predlog bil tudi predmet usklajevanja na skupni komisiji in da ga torej lahko smatramo kot skupni predlog ne samo tega poslanca, ampak skupni predlog vseh klubov in vseh delegatov. Ali želi o tej stvari še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">VIKTORIJA POTOČNIK:</note>
-            <u who="#SSK11.PotocnikViktorija1957" ana="#regular">
+            <u who="#PotočnikViktorija">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg425">Spoštovani! S sprejemom današnjega akta je bil narejen poseben in izjemen korak in tega koraka nazaj ni moč več napraviti. To deklaracijo jemljem kot resen dokument, to sem pristopila že dopoldan, ko sem predlagala dva amandmaja, katera nista bila sprejeta, zato predlagam, da še enega posebej sprejmemo kot poseben sklep.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg426">Namreč predlagam, da predlagamo delegatom v Zveznem zboru Skupščine SFRJ, da se ne udeležujejo več sej Zveznega zbora.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg427">To utemeljujem iz naslednjih razlogov:</seg>
@@ -1525,29 +1509,29 @@
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg429">Hvala lepa. S strani predlagatelja, s strani skupne komisije sem bil obveščen, da je tudi ta predlog usklajen s komisijo, zato dajem najbrž še zmeraj v razpravo oba sklepa. Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg430">Predlog je bil v razpravi na usklajevalni komisiji v skupini, vendar soglasje ni bilo doseženo v celoti, zato ga tudi skupina ni predlagala. Bilo pa je povedano, da bodo predlagatelji, zlasti iz vrst ZSMS, še vedno ali doslej kakor pač rečemo Liberalna stranka, to predlagali na skupni seji, ni pa bilo, niso bili predstavniki vseh klubov soglasni s tem predlogom. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg431">Hvala lepa. Se opravičujem oziroma pozdravim to korekturo moje intervencije in prosim za razpravo še naprej.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg432">Moram dopolniti gospoda Peršaka, da je bila tudi naša stranka za predlog gospe Vike Potočnik, ravno tako kot Jožef Školč, in je bilo mnenje komisije približno pol na pol in predlagam, da to sprejmemo, ker nima smisla, da deklaracijo sprejmemo, tega pa ne. Hvala lepa.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg433">Sporočil bi rad, da smo bili na usklajevalni skupini obveščeni o tem predlogu in v klubu naše stranke smo o njem razpravljali. Mi tega predloga ne podpiramo. Mislimo, da je logika točno obratna od te, ki jo zagovarjajo predlagatelji sklepa. V deklaraciji smo se opredelili, da do ustavnega zakona v Republiki Sloveniji veljajo zvezni predpisi in opredelili smo se, da po sprejemu te deklaracije, ki smo jo svečano že razglasili, od tega trenutka dalje ne more biti sprejet v Skupščini Jugoslavije niti v Zboru republik in pokrajin, niti v Zveznem zboru, noben zakon, če k njemu ali v postopku v zboru predhodno ali kasneje, ko je v Zveznem zboru že sprejet, ne da soglasja Skupščina Republike Slovenije. To praktično pomeni, da bi, če se izrazim mednarodnopravno, Republika Slovenija ratificirala zakone, ki so bili sprejeti v Zveznem zboru Skupščine SFR Jugoslavije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg434">Mislim, da je eno od načel sodelovanja v svetu sodelovanje in da ni mogoče ratificirati nobenega akta, če predstavnik države, suverene države, pri pripravljanju tega akta ne sodeluje. Če ne sodeluje, ima pač možnost poznejšega pristopa, s tem se pa izključi iz soustvarjanja njegove vsebine in to je razlog, zaradi katerega mislimo, da je sicer naloga, ki jo od tega trenutka dalje ne samo delegati Zbora republik in pokrajin, ampak toliko bolj delegati v Zveznem zboru dobivajo, še težja, kot je bila včeraj. Vendar mislim, da kaže, da to še težjo nalogo v našo korist sprejmejo, da bi lahko bili v položaju, da bomo sprejeli še kakšno rešitev, ki bo tudi za nas sprejemljiva. V nasprotnem primeru se najbrž pač kot delegati te skupščine moramo zavedati, da bo v zelo kratkem času prišlo do tega, da bo ali res kompletno, preden bomo sprejeli to zavestno odločitev, razpadel pravni sistem v Jugoslaviji, pravim, preden bomo o tem sprejeli zavestno odločitev oziroma da bomo morali za vse tisto, kar ne bomo sprejemali sami v republiki, urejati brez možnosti in brez naprejšnje ocene, kakšno veljavo takšne naše odločitve imajo za odnose v Jugoslaviji in kakšno mednarodnopravno veljavo imajo takšne naše odločitve.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg435">Želel bi povedati, da je, ne na moj predlog, ampak v obvezi, ki jo je dal predsednik skupščine in predsednik Ustavne komisije v delu te ustavne komisije, ki sem jo vodil, bil razpravljan tudi predlog, ali naj se delegatom v Zveznem zboru podaljša mandat ali ne. V ustavni komisiji je bilo soglasno mnenje sporazumno dogovorjeno med predstavniki vseh strank pred približno tednom dni, da naj na današnjem zasedanju Skupščine Republike Slovenije sklenemo, da se mandat delegatom v Zveznem zboru podaljša do 31.12. tega leta. Če drugega ne, ker ste dobili takšen pisni predlog prosim, da tudi njega upoštevate, da ne bi slučajno zdaj glasovali o predlogu, ki ga je dala delegatka Vika Potočnik in mogoče čez čas, ko bo ta točka prišla na dnevni red sklenili, da jim sicer podaljšamo mandat, da jim pa hkrati nalagamo, naj ta mandat koristijo v Sloveniji, ne pa na sejah, kamor bi sicer naj šli in zastopali naše interese. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg436">Hvala lepa. Želi še kdo razpravljati? V kolikor ne, gre za dva ločena predloga. Najprej gre za predlog, ki ga je podal delegat Peršak, in sicer, da Skupščina Slovenije obvezuje Izvršni svet Skupščine Republike Slovenije, da najkasneje do začetka septembra 1990 pripravi predlog ustavnega zakona, s katerim se bo ugotovilo, kateri zvezni zakoni na podlagi te deklaracije ne veljajo na območju Republike Slovenije. Dajem predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg437">Kdo je za?</seg>
                <note>199 delegatov.</note>
@@ -1567,12 +1551,12 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg446">Ker je s tem dnevni red skupne seje izčrpan zaključujem to sejo. Prosim.</seg>
             </u>
             <note type="speaker">NEIDENTIFICIRANI GOVORNIK:</note>
-            <u who="#SSK11.unknown" ana="#regular">
+            <u who="#unknown">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg447">Spoštovani predsednik, gospe in gospodje poslanci in vsi ostali! Sodim v tisto skupino poslancev, ki ni dobila tega spominskega nageljna, pa sem zato to prišel povedat samo zaradi tega, ker sem glasoval za deklaracijo, pa mi je zelo hudo, če morda je nagelj dobil tisti, ki je glasoval proti oziroma tisti, ki se je glasovanja vzdržal.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.s004-01.seg448">Upam, da se bo ta nagelj našel. Spoštovani poslanci, hvala lepa za potrpežljivost. Čestitam vam vsem skupaj, napravili smo veliko dela. To sejo zaključujem. Nadaljevale pa se bodo zdaj seje posameznih zborov.</seg>
                <note>Ploskanje.</note>
             </u>

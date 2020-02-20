@@ -9,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Skupščine Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Družbeno-politični zbor: 37. seja</title>
-            <meeting n="37"
-                     corresp="#DruzPolZb.1992-04-22.s037-01.DruzPolZb"
-                     ana="#parl.meeting.regular"/>
+            <meeting n="37" corresp="#DruzPolZb" ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +27,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +40,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +61,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="196"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="83"/>
                <tagUsage gi="seg" occurs="339"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -476,13 +465,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="DruzPolZb.1992-04-22.s037-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -492,16 +474,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>DRUŽBENOPOLITIČNI ZBOR SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">37. seja</head>
             <docDate>22. april, 12., 20. in 27. maj, 3., 17. junij, 16. in 29. julij 1992</docDate>
             <note type="chairman">Sejo sta vodila: dr. Ludvik Toplak, predsednik Družbenopolitičnega zbora in Anton Peršak, podpredsednik Družbenopolitičnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.20 uri.</note>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg1">Spoštovani poslanci, cenjeni gostje, predstavniki sredstev javnega obveščanja. Pričenjam 37. sejo Družbenopolitičnega zbora Skupščine Republike Slovenije, ki sem jo sklical na podlagi 31. člena začasnega poslovnika Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg2">Za današnjo 37. sejo so se opravičili dr. Drago Plešivčnik, Aleksandra Pretnar, Vitodrag Pukl, dr. Katja Boh in dr. Lev Kreft.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg3">Po podatkih službe je navzočih 52 poslank in poslancev. Prosim, da ugotovimo navzočnost. V dvorani je navzočih 43 poslank in poslancev. Zbor je sklepčen in nadaljujemo z delom.</seg>
@@ -546,11 +532,11 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg27">Dalje. Komisija za mednarodne odnose predlaga, da se predlog dnevnega reda današnje seje razširi še s predlogom zakona o ratifikaciji plačilnega sporazuma med Republiko Slovenijo in Republiko Makedonijo. Želi predlagatelj podati obrazložitev? Če ne, odpiram razpravo glede razširitve. Prosim lepo, Mihaela Logar.</seg>
             </u>
             <note type="speaker">MIHAELA LOGAR:</note>
-            <u who="#SSK11.LogarMihaela1953" ana="#regular">
+            <u who="#LogarMihaela">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg28">V zvezi s tem zakonom, in z ostalimi, za katere tudi predlaga Komisija za mednarodne odnose, da jih danes uvrstimo na dnevni red, prosim, da bi te stvari podprli, zaradi tega, ker so to spet sporazumi, ki odpirajo določene razgovore in mislim, da je pametno, da te stvari podpremo. Problem je tudi v tem, da začasno te stvari že tečejo in torej nekje že veljajo. Mislim, da moramo legalizirati in zakone podpreti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg29">Hvala lepa. Želi še kdo besedo? Če ne, preidemo na glasovanje. Ugotovimo prisotnost!</seg>
                <note>55 prisotnih.</note>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg30">Kdo je za predlagano razširitev?</seg>
@@ -590,45 +576,45 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg51">Prosim, gospod Golija ima besedo.</seg>
             </u>
             <note type="speaker">FRANC GOLIJA:</note>
-            <u who="#SSK11.GolijaFranc" ana="#regular">
+            <u who="#GolijaFranc">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg52">Spoštovane poslanke in poslanci! Zakon o intervencijah v gospodarstvu za ta čas, ki ga mi danes imamo, ni primeren in tudi mislim, da ga ne bi smeli dati na dnevni red oziroma bi ga morali vsaj vrniti v fazo osnutka. To obrazlagam s sledečimi razlogi: 900 milijonov mark, to so velika finančna sredstva, ki bi jih država posodila in v tem času, ko še nimamo znanega lastnika v družbenem sektorju, bi ta denar država posodila neznanemu lastniku. Mislim, da bi firme, ki se potegujejo za ta sredstva intervencije v gospodarstvu, morale bolj aktivno sodelovati pri zakonu o lastninjenju, o privatizaciji. S tem bi bili dani osnovni pogoji, da si potem lahko tudi država denar sposodi in ga da znanemu lastniku, za katerega se ve, da bo denar tudi lahko vrnil.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg53">Zakon ima kup pomanjkljivosti. Ni nobenih garancij, da bodo ta sredstva tudi vrnjena; ni nobenih garancij, da se ta sredstva ne bodo prelila v osebne dohodke. Razen tega, viri so podani iz proračuna in iz zadolževanja od zunaj. Mi smo pred kratkim sprejeli proračun. Če bomo zdaj iz proračunskih virov potem črpali sredstva za intervencije v gospodarstvu, bomo proračun že naprej podrli in neobhodno potrebno bo, da se potem proračun pozneje renominira ali popravi. Mislim, da si take situacije ne moremo privoščiti. Zato predlagam, da se zakon vrne najmanj v osnutek, da se te stvari dodela in pripravi tako, da ni možno, da bi ta denar, ki si ga bomo sposodili, ne obrodil tudi uspehov. Razen tega pa predlagam, da si vlada namesto za tako intervencijo v gospodarstvo denar sposodi za intervencije za investiranje v infrastrukturo cest in telefonijo. Tam bo denar prav gotovo dobro naložen in bodo koristniki vsa podjetja v slovenskem prostoru. Mislim, da bi morala vlada v bodoče investirati in kreditirati posle, ne pa na ta način, kot smo si zdaj te stvari zamislili. Zato predlagam, da gre zakon v fazo osnutka ali pa celo z dnevnega reda. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg54">Hvala lepa. Prosim, gospod Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SSK11.RejcIzidor1936" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg55">Spoštovani gospod predsednik, spoštovane kolegice in kolegi! O zakonu o intervencijah v gospodarstvu smo že zadnjič dvakrat poslušali s tega mesta in je gotovo izjemno potreben, ker smo v fazi, v kateri je treba to gospodarstvo, predvsem pa industrijo in ostale veje, zagnati. Vemo tudi, da je potrebno pridobiti tuji kapital in v razgovoru s tujci in v razgovoru s podjetji se točno vidi, da bi ta tuji kapital prišel, če nastopi zadaj država kot garant. To je ena stran.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg56">Druga stran, ne bom govoril o izgubah trga in o tej situaciji, v kateri je naše gospodarstvo in mislim, da so tudi v samem zakonu, ki smo ga dopolnili, v predlogu, praktično upoštevani vsi vaši predlogi, ki so bili tu dani. Obrazložili smo vso situacijo, ki je in tudi povedali, da je podoben zakon bil že v letu 1991, vendar ni imel zaradi splošne politične situacije svojega učinka in svojih materialnih možnosti. Mislim, da je ta zakon izjemno pomemben za to, da se to gospodarstvo oživi, da se preusmeri v izvoz na zahod in da najde, kot se temu reče, malo zraka in da uspešno posluje. Mi vemo, da preusmerjamo to gospodarstvo na zahod, da je to edina opcija in je gotovo to edina možnost, da na osnovi tega zakona, ki naj velja v tekočem letu in v prihodnjem letu, to se pravi, ne bi obremenjeval sredstev iz proračuna iz tekočega leta, bili bi to krediti iz tujine in iz domačega, našega prostora in bi bila to tudi posojila. Vsi ti pogoji so jasno in natančno napisani in mislim, da ko govorimo o situaciji, in ko govorite o tem, kako težka je situacija, potem mislim, da je potrebno, da se ta predlog zakona sprejme in da pride danes na dnevni red. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg57">Hvala lepa. Prosim, gospod Franc Pipan. Smo pri proceduralni fazi.</seg>
             </u>
             <note type="speaker">FRANC PIPAN:</note>
-            <u who="#SSK11.PipanFranc1941" ana="#regular">
+            <u who="#PipanFranc1941">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg58">Spoštovani! Nasprotujem temu predlogu, ki ga je dal gospod Golija in podpiram te besede, ki jih je dal minister Rejc. Menim, da je obravnava tega zakona nujna, saj gre za preživetje mnogih slovenskih firm in mnogih delavcev, ki delajo v teh firmah. Ko smo na eni izmed prejšnjih sej obravnavali osnutek tega zakona, so bile dane številne pripombe in verjetno so bile upoštevane in mislim, da je nujno, da ta zakon danes obravnavamo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg59">Hvala lepa. Prosim, gospod Golija ima repliko. Samo proceduralno.</seg>
             </u>
             <note type="speaker">FRANC GOLIJA:</note>
-            <u who="#SSK11.GolijaFranc" ana="#regular">
+            <u who="#GolijaFranc">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg60">Jaz bi rekel samo to: ko minister Rejc omenja izgubo trgov. Tudi male firme so na področju bivše Jugoslavije izgubile trg in če bi mi te male firme sešteli, bi bila vrednost teh izgub mnogo večja, kot so izgube teh firm, ki so zdaj na tej listi kandidati za ta sredstva, pa teh malih firm ni na tem seznamu. Ta zakon predvideva, da samo projekti nad milijon mark. To pomeni, da že spet protežiramo velike firme, malega gospodarstva, srednjih firm pa ne protežiramo, ne podpiramo. Tak način intervencij v gospodarstvu ni sprejemljiv in mislim, da ga tudi ne moremo podpreti. Jaz bi tu opozoril tiste, ki zagovarjajo ta zakon intervencije v gospodarstvo, da je to potrebno - kje so bili pa takrat, ko smo sprejemali zakon o lastninjenju, takrat pa to ni bilo potrebno. Takrat so v Zboru združenega dela blokirali zakon o lastninjenju; zakon o intervencijah v gospodarstvu pa so sprejeli po hitrem postopku na prvi seji. Jaz mislim, da se je treba okrog tega tudi zamisliti, kako stvar teče. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg61">Hvala lepa. Prosim, gospod Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SSK11.PodobnikMarjan1960" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg62">Spoštovani! Poslanski klub Slovenske ljudske stranke je obravnaval zakon, predstavniki poslanskega kluba pa smo se o njem tudi pogovarjali z ministrom gospodom Rejcem. Naša ocena je, da je zakon potreben. Ocena pa je tudi, da je zakon pravno-tehnično nedodelan, z nedefiniranimi pogoji, kakor tudi z nedefinirano odgovornostjo tistih, ki bodo denar prejeli in tistih, ki ga bodo delili. Niso zdiferencirani subjektivni od objektivnih vzrokov gospodarskih težav, kakor tudi ne kriteriji za dodeljevanje in za vračanje ter nedefinirani kriteriji za vrednotenje tako imenovanih narodnogospodarskih ciljev. Zato predlagam oziroma podpiram pobudo gospoda Golje, da se zakon obravnava oziroma, da gre zakon v fazo osnutka.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg63">Mi smo zdaj samo v proceduralni fazi - če ga uvrstimo na dnevni red, da ali ne. Še kdo?</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg64">Če ne, preidemo na glasovanje! Ugotovimo prisotnost!</seg>
                <note>52 prisotnih.</note>
@@ -669,37 +655,37 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg85">Dalje. Zboru še predlagam, da s predloga današnjega dnevnega reda preložimo točko obravnava materialnega položaja delavcev v Republiki Sloveniji, ker še nismo prejeli od vlade Republike Slovenije gradiva v zvezi z omenjeno problematiko. Predlagam predložitev na naslednjo sejo. Gradivo je bilo obljubljeno že večkrat. V dopisu, ki smo ga prejeli piše: "Prosimo, da z dnevnega reda današnjega zasedanja Družbenopolitičnega zbora Skupščine Republike Slovenije odložite točko "materialni položaj delavcev v Republiki Sloveniji" in jo uvrstite na majsko zasedanje skupščine. Sonja Lokar želi besedo. Prosim, gospa Lokarjeva.</seg>
             </u>
             <note type="speaker">SONJA LOKAR:</note>
-            <u who="#SSK11.LokarSonja1948" ana="#regular">
+            <u who="#LokarSonja1948">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg86">Protestiram in to v imenu poslancev SDP, ker se ta razprava o materialnem položaju delavcev že drugič odlaga z dnevnega reda in nimamo nobene garancije, da bodo stvari pripravljene do naslednje seje. Namreč objavljeni uradni podatki kažejo, da je splošno vzeto materialni položaj zaposlenih zelo resen, marsikje pa katastrofalen. Večina zaposlenih dobiva plače pod povprečjem, življenjski stroški so samo v marcu zrasli za blizu 10%, 60-84% dvostarševskih družin v Sloveniji ima tako nizke prihodke, da starša ne zaslužita niti toliko, da bi kupila 70% minimalnih življenjskih stroškov. Poročilo družbenih pravobranilcev samoupravljanja in sodišč združenega dela kažejo, da obstaja tragična brezpravnost zaposlenih kadar gre za najbolj bistvene zadeve: za plače po kolektivnih pogodbah, za delovna mesta, za pravice iz zavarovanja za primer brezposelnosti, za divje privatizacije, za lažne stečaje in podobne zadeve.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg87">V Tržiču na primer 60% otrok ne prejema nobenega obroka v šoli, stopnja brezposelnosti v tej občini pa je 25%. In tako dalje in tako naprej. Odbor za delo je izrecno terjal, ko je razpravljal na zadnji seji o pravnem položaju zaposlenih, da se gradivo o materialnem položaju delavcev pripravi takoj in da se tudi uvrsti na prvo naslednjo sejo. Ministrstva, ki bi morala to gradivo pripraviti, pravijo, da potrebujejo več časa. Tisti, ki tonejo v revščino in brezpravje ga nimajo več. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg88">Hvala lepa. Mi smo samo pri proceduralnemu vprašanju glede umika točke z dnevnega reda. Gospa Maria Pozsonec.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SSK11.PozsonecMaria1940" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg89">Kot predlagatelj te točke dnevnega reda odločno protestiram. Mislim, da to ni odgovorno. Protestiram v imenu nezaposlenih, ki jih je že 30% v Lendavski občini in v imenu tistih, ki živijo izpod minimuma. Jaz ne vem, sedaj brez materiala o tem govoriti se ne da, ampak stvarno, na naslednjem sestanku pa je treba to dati na dnevni red.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg90">Hvala lepa gospe poslanki Marii Pozsonec. Besedo želi Janko Halb.</seg>
             </u>
             <note type="speaker">JANKO HALB:</note>
-            <u who="#SSK11.HalbJanko1957" ana="#regular">
+            <u who="#HalbJanko1957">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg91">Spoštovani, lepo pozdravljeni! Prav čudno se mi zdi, da enostavno vlada ni pripravila gradiva, po drugi strani pa se sprašujem, kaj je vzrok, da gradiva ni. Ampak ne glede na to če gradiva ni smo mi le parlamentarni zbor, ki o neki problematiki verjetno lahko razpravlja in jaz se sprašujem, kaj mi bo tisto gradivo pomenilo, ko smo verjetno vsi prepričani, da je ne samo položaj delavcev izredno težak, ampak da je splošno položaj v družbi, pa sedaj, če so to delojemalci identični z delavci, je tak, da je potrebno enkrat odpreti to razpravo in zato predlagam, da mi uvrstimo to točko na dnevi red, vendar jo verjetno danes ali tokom dnevnega reda ne zaključimo, potem pa zadolžimo vlado, da pa v duhu že sedanje razprave predloži tudi predlog konkretnih ukrepov, ki bodo sanirali ali pa nekako izboljšali, opredelili, pojasnili ta zapleteni položaj. Zato sem izključno za to, da mi glasujemo, da uvrstimo točko na dnevni red, vlada bo pa že verjetno takrat tudi reagirala. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg92">Hvala lepa. V zvezi z vprašanjem nisem prebral celega dopisa v celoti, pa bom sedajle odgovoril oziroma sporočil: "Z informacijo o socialnem položaju smo želeli prikazati trenutni položaj v Sloveniji in ga osvetliti z več različnih vidikov, tako kot je to bilo na seji Družbenopolitičnega zbora Skupščine Republike Slovenije tudi dejansko postavljeno vprašanje. Zaradi dvomesečnega zamika pri obdelavi podatkov o plačah šele sedaj razpolagamo s podatki za prva dva meseca letošnjega leta, ki omogočajo realnejšo oceno gibanj na tem področju. Podatki za mesec januar so običajno rezultat zelo različnih vplivov in ne bi bili prava podlaga za ocenjevanje stanja v letošnjem letu. Glede na to, da gre za medresorsko pripravo informacije pa jo morajo predhodno obravnavati odbori in vlada Republike Slovenije, kar v predvidenem roku ni bilo mogoče opraviti." Toliko še v dodatno pojasnilo. Prosim gospa Belopavlovič, namestnica ministrice za delo, želi besedo.</seg>
             </u>
             <note type="speaker">NATAŠA BELOPAVLOVIČ:</note>
-            <u who="#SSK11.BelopavlovicNatasa1949" ana="#regular">
+            <u who="#BelopavlovicNatasa1949">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg93">Če lahko samo dodam k temu pisnemu opravičilu. Gre za to, da bi radi naredili pregled pravzaprav z vseh vidikov: pregled oziroma prerez preko osebnih dohodkov, torej preko plač, nadomestil, socialnih dajatev, štipendij, pokojnin in vsega ostalega, poleg tega pa tudi še z vidika varstva lastnine - vse kar je bilo omenjeno v delegatski pobudi, če se spomnite. Dejansko gre za obsežno analizo. Eno je to, da podatki niso ažurni, da je zamik v podatkih za plače resnično tak, da imamo šele 18. aprila podatke za začetek leta. Drugo je to, da se zavedamo, da je položaj resen in da veliko svoje energije - veste pa, koliko nas je, ki se v vladi s temi stvarmi ukvarjamo - usmerjamo na teren, ne na pripravo analiz. Jaz moram to kar odkrito povedati; tudi zato kakšne stvari niso tako hitro v papirju pripravljene, ampak se delajo tam, kjer jih je potrebno upravljati.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg94">Na drugi strani je treba opozoriti tudi to. Proračun ni bil sprejet. Mi smo bili financirani praktično do enega meseca nazaj po dvanajstinah. Veste da štipendije, nadomestila, vrsta teh dajatev, o katerih tu govorimo in pomenijo določen boljši ali pa slabši socialni položaj delavcev, je bila odvisna od tega proračuna. In tako kot so sredstva po dvanajstinah pritekala, tako so potem tudi odtekala za te socialne dajatve. Tako da tudi to je en razlog, ki je v neki meri slabil ta položaj in ki ga je treba upoštevati. Realna situacija se bo šele sedaj pokazala, ko proračun normalno spet deluje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg95">Hvala lepa. Če ni več razpravljavcev, dajem predlog za preložitev te točke na naslednjo sejo zbora na glasovanje. Ugotovimo navzočnost</seg>
                <note>47 prisotnih.</note>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg96">Govorimo o predlogu, da se točka dnevnega reda umakne oziroma preloži na naslednjo sejo.</seg>
@@ -713,20 +699,20 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg101">In sedaj dajem na glasovanje dnevi red s spremembami in dopolnitvami, kakor smo ga izglasovali. Prosim lepo, še gospod Franco Juri.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg102">Spoštovane poslanke in poslanci! Predlagam razširitev dnevnega reda s točko: Problematika beguncev iz Bosne in Hercegovine in iz Hrvaške v Sloveniji. In sicer zato, da bi že danes ustanovili skupino poslancev ali v okviru Komisije za mednarodne odnose ali v širšem skupščinskem okviru, ki bi spremljala to problematiko in skušala ponujati, tudi z vidika našega parlamenta, ustrezne rešitve in ustrezne pobude. Predvsem pa zato, ker je naš parlament do sedaj deloval zelo mlačno v odnosu do teh vprašanj in kot glavna institucija oblasti lahko prispeva tudi pri nagovarjanju in prepričevanju parlamentov sosednjih držav Italije, Madžarske in Avstrije naj bolj aktivno pomagajo Sloveniji v tej delikatni fazi. Kot vemo je število beguncev že prišlo do takega števila, kjer kritična masa postavlja v zadrego našo vlado. Sicer objektivno vlada ugotavlja, da kapacitete so omejene in ne moremo prepustiti le vladi in nekaterim resorjem tega problema. Zato menim, da bi morali že danes ustanoviti skupino najmanj petih ali pa šestih poslancev različnih strank, ki bi delovala in predvsem bi čimprej obiskala sosednje parlamente in jih obveščala o teh vprašanjih.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg103">Oblikovali smo tudi posebno delegatsko pobudo, ki jo bomo predstavili malce kasneje; podpisali so jo že nekateri poslanci - upam, da jo bodo še drugi iz vseh strank. In dajem ta predlog za razširitev dnevnega reda, ki seveda ne bi pomenil širše razprave o širši problematiki, ampak predvsem operativna razprava formiranje te skupine.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg104">Hvala lepa. Poslance naj obvestim, da je vlada Republike Slovenije, iz kabineta predsednika, poslala informacijo o nastanitvi in oskrbi beguncev iz Republike Hrvaške in Republike Bosne in Hercegovine in v zadnjem odstavku pravi: "Vlada Republike Slovenije bo na zasedanju Skupščine Republike Slovenije 22.4.1992 obvestila Skupščino o stanju in reševanju begunske problematike v Republiki Sloveniji. To se ujema praktično s predlogom vlade - verjetno je to bilo mišljeno na današnji skupni seji ali na ločenih zborih. Predlog gospoda Franca Jurija mislim da lahko damo na glasovanje. Da bo gradivo razdeljeno, informacija zagotovljena pa lahko zagotovijo službe. Prosim želi še kdo?</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg105">Stvar me veseli, ampak se sprašujem, če bo v okviru te razprave in če bo to na skupni seji možno o tem razpravljati in tudi sklepati nekaj. Če ta možnost obstaja, se strinjam, da bi se ta predlog predložil.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg106">Hvala. Predlog gospoda Franca Jurija, da dnevni red razširimo še z točko "Informacija o nastanitvi in oskrbi beguncev iz Republike Hrvaške in Republike Bosne in Hercegovine" dam na glasovanje. Ponovno ugotovimo navzočnost</seg>
                <note>47 prisotnih.</note>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg107">Kdor je za, naj prosim glasuje.</seg>
@@ -765,88 +751,88 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg131">Javlja se Dušan Semolič.</seg>
             </u>
             <note type="speaker">MAG. DUŠAN SEMOLIČ:</note>
-            <u who="#SSK11.SemolicDusan1947" ana="#regular">
+            <u who="#SemolicDusan1947">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg132">Spoštovane poslanke, poslanci. Znano je, da so v počitniško naselje pri Rovinju, ki so ga Pomurci gradili pred dvajsetimi leti, brez njihovega dovoljenja preselili begunce iz sosednjih hotelskih objektov. S tem bodo verjetno res omogočili tujcem letovanje na morju, zagotovo pa tokrat na račun Slovencev in Slovenk in še na račun naše nesporne lastninske pravice. Obstoja utemeljena bojazen, da bo podobna usoda doletela tudi druge počitniške objekte, ki so last ali državljanov Republike Slovenije ali slovenskih podjetij. V Republiki Hrvaški je cca 7.100 ležišč v počitniških domovih in 9.500 ležišč v stanovanjih oziroma v počitniških hišicah, ki so premoženje slovenskih sindikalnih organizacij in podjetij. Slovensko vlado vprašujem, kaj je oziroma bo storila za zaščito slovenske lastnine v hrvaški državi, zlasti glede na odlok vlade Republike Hrvaške, Urada za izgnance in begunce, ki govori o prevzemanju in uporabi delavskih počitniških kapacitet. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg133">Hvala lepa gospodu Semoliču. Dr. Magdič ima besedo.</seg>
             </u>
             <note type="speaker">DR. JOŽE MAGDIČ:</note>
-            <u who="#SSK11.MagdicJoze1943" ana="#regular">
+            <u who="#MagdicJoze1943">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg134">Spoštovani! Podpisani poslanci Tone Peršak, Zdenka Vidovič, Janko Halb, Jože Magdič in Marija Pozsonec, torej iz Pomurja, apeliramo na ministrstvo za šolstvo in šport Republike Slovenije, da usmeritev elektrikar - elektronik na Srednji strojni in tekstilni šoli v Murski Soboti ostane, torej, da se ne ukine. Obrazložitev je obsežna: podana je z aspekta dijakov, z aspekta profesorjev, z vidika tistih, ki rabijo to, skratka z vidika napredovanja slovenske ekonomije, slovenske industrije, gospodarstva, privatne obrti, odnosno, da bo tudi v Pomurju čimveč tistih mladih kadrov, ki ne bodo sedeli po uradih, ampak za proizvodnimi stroji. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg135">Hvala lepa dr. Magdiču. Javlja se dr. Buser.</seg>
             </u>
             <note type="speaker">DR. STANKO BUSER:</note>
-            <u who="#SSK11.BuserStanko1932" ana="#regular">
+            <u who="#BuserStanko1932">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg136">Spoštovani! Zopet bom malo sitnaril, verjetno na našo vlado oziroma dajem ponovno pobudo Skupščini, ne več vladi, v zvezi z razrešitvijo glavnega inšpektorja za jedrsko varnost. 20.2. sem že dal vladi jasna vprašanja v pisni obliki, na katera sem prejel odgovor šele včerajšnjega dne. Primer nikakor pravno ni tako nemogoče rešljiv, da bi ga že preje ne mogli rešiti. Ugotavljam, da vlada do sedaj v zvezi s tem problemom, ki je zares lahko že nevaren, ni storila ničesar, razen da je dognala to, da zares direktor Republiške uprave za jedrsko varnost, gospod Gregorič v tem primeru, ni pravilno uporabljal zakon oziroma pravo in da dosedanjemu republiškemu inšpektorju ni prenehal mandat, ker je on tudi pomočnik direktorja za jedrsko varnost. Nikakor pa vlada ni tega odpravila, da direktor za jedrsko varnost sam sedaj nadzira te jedrske objekte, kar je nezdružljivo z njegovo funkcijo kot z direktorjem. Vedeti moramo naslednje, da isti človek izvaja inšpekcijo v jedrskem objektu. Če ta človek da pripombo na delovanje jedrske elektrarne, se elektrarna lahko pritoži in to pritožbo zopet rešuje direktor republiške uprave za jedrsko varnost. To se pravi, da je to združeno v eni osebi; in to je nemogoče, pravno je to nemogoče, še manj je to mogoče strokovno.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg137">Zato ponovno vztrajam na svoji zadnji pobudi, da o tem razpravljajo vsi trije zbori v Skupščini in če ni sposobna vlada v tolikem času razrešiti tega problema in da se toliko močno igra z varnostjo v naših jedrskih objektih, da to stori Skupščina. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg138">Hvala lepa. Besedo ima gospod Vano Gošnik.</seg>
             </u>
             <note type="speaker">VANO GOŠNIK:</note>
-            <u who="#SSK11.GosnikVane1953" ana="#regular">
+            <u who="#GosnikVane1953">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg139">Hvala lepa. Kratko vprašanje postavljam zato sedaj, ker je, v skladu z opozorilom predsednika, pričakovati odgovor vlade še na tej seji. Po nekaterih, sicer nepreverjenih vesteh, naj bi se v zadnjem času močno povečala masa tolarjev v obtoku, posledica tega pa naj bi bil občuten padec vrednosti tolarja. Ker mnogi oboje povezujejo z ukinitvijo zakona o plačah, vlado Republiko Slovenije sprašujem, ali se je masa tolarjev v obtoku v zadnjih tednih resnično povečala? Drugič. Če se je masa resnično povečala, ali je to mogoče pripisati ukinitvi zakona? In slednjič. Kakšno je bilo gibanje plač v državi po ukinitvi zakona? Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg140">Hvala lepa gospodu Vanetu Gošniku. Besedo ima Franc Pipan.</seg>
             </u>
             <note type="speaker">FRANC PIPAN:</note>
-            <u who="#SSK11.PipanFranc1941" ana="#regular">
+            <u who="#PipanFranc1941">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg141">Spoštovani! Najprej vprašanje Ministru za pravosodje. Kaj namerava ministrstvo za pravosodje narediti v zvezi z reševanjem problemov, ki jih imajo sodišča združenega dela? Vemo, da zaradi vse večjega naraščanja števila delovnih sporov se ta sodišča dobesedno dušijo v zadevah. In po nekih časopisnih informacijah, je na nekaterih območjih potrebno čakati tudi do dve leti za rešitev zadeve. Vemo pa, da je pri reševanju delovnih sporov zelo pomembno načelo hitrega reševanja sporov. In glede na to, da so sodišča združenega dela tako zatrpana, da so kadrovsko, bi rekel, zelo na tesnem in da jih tudi je modernizacija obšla v primerjavi z modernizacijo, ki so jo deležna redna sodišča, zato sprašujem: Kdaj in na kakšen način bo ministrstvo za pravosodje za sodišča združenega dela in s tem seveda za številne delavce, ki imajo delovne spore, nekaj ukrenilo?</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg142">In drugo vprašanje: Kdaj kani vlada dati odgovor mojemu vprašanju, ki sem ga dal že pred letom, na kakšen način bo odpravljena krivica ljudem, ki so med vojno utrpeli vojno škodo in katero del so Nemci in Italijani poravnali Jugoslaviji? V zvezi s tem vprašanjem je bilo tudi v Skupščini postavljeno vprašanje za ožji del te problematike, postavil ga je delegat Liberalno demokratske stranke in jaz tudi v zvezi s tem sprašujem, ker tudi on ni dobil odgovora: Kdaj bo vlada začela reševati zahteve, ki jih je postavilo prednjo Društvo izgnancev Slovenije v zvezi z njihovimi problemi in z njihovim reševanjem krivic, ki tudi niso odpravljene? Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg143">Hvala lepa. Prosim, gospod Ivan Pučnik. Maria Pozsonec ima besedo.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SSK11.PozsonecMaria1940" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg144">Spoštovani! Opozorila bi na škodljiv pojav institucialno ropanje narodnega bogastva, ki že teče nekaj časa in na tem področju ni bilo narejeno kaj zaradi tega. Nacionalno bogastvo, doseženo v dolgih letih z žulji delavcev, ki delajo oziroma so delali v teh podjetjih, preide v roke posameznikov in bank, ki z goljufijo ustanavljajo lastna podjetja in tako enostavno prevzamejo že utečene programe. Zadnji kričeči primer je tovarna Utok iz Kobilja. Ali smo res toliko nemočni, da bi preprečili takšna dejanja?</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg145">Druga pobuda, v naših krajih lovci svobodno streljajo na prelepo ptico srako. Za nagrado dobijo nekaj nabojev za pobito ptico. S tem osiromašimo našo naravo, naše kraje. Ali res nočemo, da bi tudi naši vnuki videli to koristno in krasno ptico? Predlagam, da z zakonom zavarujemo ptico srako, kot smo to storili z velikim polžem. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg146">Hvala lepa. Gospod Kociper ima besedo.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SSK11.KociperStefan1952" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg147">Spoštovani! Ker bomo kmalu deležni nekakšnih obračunov za dohodnino za preteklo leto, postavljam Ministrstvu za finance vprašanje v zvezi s štipendijami. Namreč, po neuradnem tolmačenju uslužbencev Ministrstva za finance se olajšave za vzdrževane družinske člane kompenzirajo s štipendijo, ki jo je dobival, če jo je dobival vzdrževani družinski član v letu 1991. To naj bi konkretno pomenilo, da se praktično v vseh primerih, ko je vzdrževani družinski član prejemal štipendijo, davčne olajšave ne uveljavljajo. Na ta način pa je štipendija praktično obdavčena praviloma po bistveno višji davčni stopnji, kot če bi prejemnik štipendije plačeval oziroma bil davčni zavezanec. Če bi bil davčni zavezanec, bi padel v najnižji davčni razred, to je 19%, sicer pa se lahko zgodi, da plača vzdrževanec oziroma vzdrževalec davek za štipendijo 35 ali pa tudi 40, 45%. Zakon o dohodnini, prvič, z nobenim členom ne predvideva, da bi lahko Ministrstvo za finance oziroma davčna uprava kateregakoli vzdrževanega družinskega člana prikrajšala za olajšavo. Drugič, zakon o dohodnini niti ne predvideva oziroma konkretno v 14. členu med osnovami za davek od osebnih prejemkov ne našteva štipendij in v 17. členu v 16. točki eksplicitno navaja tudi štipendije, od katerih se ne plačuje davek. Zato Ministrstvo za finance prosim za uradno tolmačenje dosedanjega neuradnega tolmačenja, in sicer: Katere so zakonske osnove za to, da vzdrževani družinski član ni deležen olajšave oziroma, kje je zakonska osnova za to, da se na ta način štipendista obdavči, čeprav je to v nasprotju s 14. in 17. členom zakona o dohodnini. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg148">Hvala lepa gospodu Kocipru. Besedo ima Jure Nemanič.</seg>
             </u>
             <note type="speaker">MAG. JULIJ NEMANIČ:</note>
-            <u who="#SSK11.NemanicJulij1938" ana="#regular">
+            <u who="#NemanicJulij1938">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg149">Imam pobudo s predlogom, da Ministrstvo za zunanje zadeve prednostno začne postopek z Republiko Francijo za ukinitev vizumov med Republiko Slovenijo in Republiko Francijo. Hvala.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg150">Skupina poslancev Slovenske ljudske stranke je vložila zakon o obrestni meri; predlog za izdajo zakona z osnutkom zakona. Zakon o obrestni meri je kratek in vzpostavlja v Evropi in v drugih tržne ekonomije preizkušen model obračunavanja in določanja obrestne mere, in sicer dejansko obrestno mero omejuje na 6% med posamezniki, na 8% za gospodarske kredite in do 12% za zamudne obresti. Na ta način se po v svetu preizkušenih modelih ustvarijo zakonski pogoji za tržno ekonomijo na področju finančnega trga, stimulirajo se naložbe, stimulira se gospodarsko prestrukturiranje za razločevanje dobrih od slabih gospodarjev po objektivni metodi, kot je nujno za utrjevanje samozavesti gospodarskih subjektov, v proizvodnih in storitvenih dejavnosti je to prav tako nujno, zlasti pa doprinese k zmanjšanju potreb po državnih intervencijah, kompenzacijah, subvencijah, stimulacijah in drugih vrstah pomoči, vključno s pomočjo za takoimenovane demografsko ogrožene. Doprinese k zmanjšanju obsega izgub v gospodarstvu in nevarnosti stečajev. Zmanjšuje pritisk na inflacijo, doprinese k vzpostavljanju med ponudbo in povpraševanjem na finančnem trgu, doprinese k stabilizaciji socialnih problemov v deželi, doprinese k stabilizaciji gospodarstva kot celote ter pospeši pozitivne gospodarske in socialne učinke. Doprinese k zmanjšanju možnosti političnega voluntarizma v sferi monetarne politike ter doprinese k ustvarjanju ekonomskih predpostavk za želeno pridruženo članstvo v Evropski skupnosti.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg151">Glede na to, da imamo v obravnavi številne druge zakone, se ocenjuje in v imenu predlagateljev zakona predlagam, da vlada pospešeno in afirmativno obravnava predloženi zakon o obrestni meri, da bi mogli učinke tega zakona čimprej v praksi uveljaviti in doprinesti k reševanju gospodarske in s tem povezane socialne problematike. Hvala.</seg>
             </u>
             <note type="speaker">CIRIL KOLEŠNIK:</note>
-            <u who="#SSK11.KolesnikCiril" ana="#regular">
+            <u who="#KolesnikCiril">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg152">Gospod predsednik, jaz se opravičujem, da nimam napisanega delegatskega vprašanja oziroma poslansko vprašanje, ker sem odgovor na eno izmed vprašanj, ki sem jih sicer malo izpostavil, dobil šele danes zjutraj po dveh ali treh mesecih; verjetno nekaj manj, tu nekje. Je pa ta odgovor na vprašanje o teh razvpitih supergah in uporabi tega izraza v zakonu o prometnem davku, kar mislim, da je posebnost v svetu. Ampak vseeno, Ministrstvo za trgovino je končno našlo knjigo, v kateri nekaj o tem izrazu piše. Res dolgo so potrebovali, lahko bi mene vprašali, pa bi jim tudi povedal, kje naj to najdejo. Našli so namreč Slovar slovenskega knjižnega jezika in tu tudi izraz "superga". S tem so seveda potrdili samo tisto, kar sem jaz tudi vprašal. Namreč, v odgovoru piše tako: Ker pomeni izraz "superge" splošno uporabljen izraz za športne copate, zlasti močnejše, poznajo ga tudi itn. S tem potrjujejo, da je superga izraz za športne copate. Sedaj se pa postavlja vprašanje: zakaj se potem uporablja ime superga, če je to izraz za športne copate? SEveda, če ni v tej uporabi izraza superga, namen, da se razlikujejo različni proizvajalci copat, ker če je edina razlika med športnimi copati samo razlika zlasti močnejše, potem postavljam ministrstvu tudi vprašanje, ali se s tem ne daje nekomu v ministrstvu, kjer se, zgleda, slabo spoznajo na šport, pooblastilo, da subjektivno odloča, katere copate so to "močnejše" in te copate bodo seveda imele toliko ugodnejšo postavko oziroma nižjo davčno stopnjo. Sedaj pa zopet postavljam ministrstvu vprašanje, ali to ne pomeni, da smo mi uzakonili nelojalno konkurenco in da bo nekdo sedaj v ministrstvu, meni neznana oseba rekla, ti copati so močnejši, ti so lažji, ti bodo imeli nižjo davčno osnovo, ti bodo imeli pa višjo davčno osnovo. Kolikor je meni znano, poznam samo razliko v velikosti copat. En ima res nogo 45, ampak to ne more pomeniti, da je to močnejši copat kot tisti, ki ima nogo 35. Ali tukaj ne delamo razlike med spoli? Upam, da ne. Poznam tudi še eno razliko, po namenu uporabe copatov v posamezni športni panogi, pa morda veliki copati in majhni copati v višini. Drugih razlik ne poznam.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg153">Zato še enkrat prosim, nezadovoljen sem s tem odgovorom na eni strani in zelo nezadovoljen na drugi strani, ker se mi je potrdilo tisto, kar sem stalno trdil, da je superga lahko izraz za športne copate, vendar da se dela nekomu škoda. In to danes ponavljam in prosim ministrstvo, da si vzame nekega športnega izvedenca in od njega in s pomočjo njega odgovori na moja vprašanja. S tem ne želim nobene škode ministrstvu, posebno ne ministru gospodu Jeraju, ki je prišel kasneje, kot pa je ta razvpiti zakon sprejet s to razvpito definicijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg154">Hvala lepa. Prosim, Rudi Šeligo ima besedo.</seg>
             </u>
             <note type="speaker">MAG. RUDI ŠELIGO:</note>
-            <u who="#SSK11.SeligoRudi1935" ana="#regular">
+            <u who="#SeligoRudi1935">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg155">Spoštovani! Dejstvo je, da se zadnje tedne stopnjuje na Slovenskem odnašanje skrinj in drugih predmetov etnološke vrednosti naše države. Dejstvo je tudi, da so doslej vsa vprašanja s strani poslancev in zahtev Odbora za kulturo po novem učinkovitem zakonu o varstvu kulturne dediščine naletela pri vladi na gluha ušesa. Neprecenljiva škoda narašča. Prav danes je v Posavju sklican poseben simpozij na to tematiko. Konec tedna bo pri nas v tej skupščini zasedal pododbor za varstvo arhitekturne in umetnostne dediščine parlamentarne skupščine Sveta Evrope. Gotovo bodo sprožena tudi ta in tovrstna vprašanja. Težko bomo opravičevali, lahko rečemo, to našo zanikrnost in lahkomiselnost na tem področju. Zato vladi postavljam vprašanje, kaj in kdaj misli storiti za učinkovito zaščito predvsem premične kulturne dediščine.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg156">Hvala lepa Rudiju Šeligi. Gospod Ivan Pučnik želi ustno obrazložiti sicer pisno vloženo pobudo. Hvala lepa. Še kdo, sicer zaključujem to predtočko.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg157">Prehajamo na 1. TOČKO DNEVNEGA REDA - ODOBRITEV OSNUTKOV ZAPISNIKOV 12. IN 13. SKUPNE DELOVNE SEJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg158">Osnutka zapisnika 12. in 13. seje skupne delovne seje vseh zborov smo prejeli s pošiljko 10.4.1992. V zvezi z zapisnikom 12. skupne delovne seje vas opozarjam, da je v osnutku zapisnika glede datuma seje napaka: 12. delovna seja vseh zborov Skupščine Republike Slovenije je bila 27.3.1992 in ne 12.3.1992, kot je navedeno v osnutku zapisnika te seje. Predlagate še kakšno dopolnitev, spremembo, popravek? Če ne, dajem predlog na glasovanje. Preverimo prisotnost! Vodje poslanskih klubov prosim, če bi lahko zagotovili možnost nadaljevanja dela!</seg>
@@ -854,7 +840,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 11.30 uri in se je nadaljevala ob 11.42 uri.</note>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg160">Ugotovimo navzočnost! Ugotavljam, da je zbor sklepčen.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg161">Smo pri 1. točki dnevnega reda. Na glasovanje dajem osnutek zapisnika 12. skupne delovne seje vseh zborov, upoštevajoč popravek datuma, da je bila seja 27.3.1992.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg162">Ponovno ugotovimo navzočnost.</seg>
@@ -892,7 +878,7 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg180">Predlog zakona je predložila Vlada Republike Slovenije. Obravnavali sta ga Komisija za mednarodne odnose kot matično delovno telo in Zakonodajno-pravna komisija. Predstavnik vlade pri tej točki je gospod minister Jeraj. Želi besedo? Besedo ima Jože Jeraj, minister za trgovino.</seg>
             </u>
             <note type="speaker">JOŽE JERAJ:</note>
-            <u who="#SSK11.JerajJozef1938" ana="#regular">
+            <u who="#JerajJožef">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg181">Spoštovani! Tu gre za paket sporazumov z Republiko Makedonijo. Prvi je o plačilnem prometu, potem o gospodarskem sodelovanju, potem pa še o blagovnih listah. Rad bi povedal, da so ti sporazumi delani na principu proste trgovine in seveda smo se trudili pri sestavi teh sporazumov, da bi ti temeljili tudi na bazi enakopravnosti obeh partnerjev, torej držav Slovenije in pa Makedonije.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg182">Mi smo že začeli z operacionalizacijo teh sporazumov. Jaz bi v tem primeru govoril sedajle samo o gospodarskih sporazumih, ki so pravzaprav takoj v nadaljevanju tega prvega o plačilnem, in sicer želimo na osnovi izkušenj, ki jih imamo s Hrvaško, stvari poenostaviti. Tu smo sedajle v razdelavi blagovnih list s posameznimi podjetji. Skupaj z Gospodarsko zbornico, bo komisija imenovana na Vladi Republike Slovenije. Ta naj bi bila sestavljena iz ministrstev za finance, za zunanje zadeve, za trgovino, potem pa tudi ojačana s predstavniki carine, Banke Slovenije, Ljubljanske banke in Gospodarske zbornice.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg183">Nadalje pripravljamo navodila za izvajanje plačilnega prometa preko klirinških računov. Za razliko od Hrvaške bo tu enoten način plačevanja preko klirniških računov, da bi se pač izognili vsem problemom, ki jih imamo s Hrvaško. V tem sporazumu je predvideno, naj bi se 10% celotne vrednosti blagovne liste lahko prekoračilo, torej naj bi bil saldo do 10% višji na računu, ampak nič več, usklajevali bi se mesečno, ob treh mesecih naj bi se pa izravnali. In če bo to presegalo 10% se pač plača v konvertibili.</seg>
@@ -901,25 +887,25 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg186">Ti sporazumi, o katerih boste danes razpravljali oziroma jih sprejemali, bodo sicer stopili v veljavo po objavi v uradnem listu, vendar praktično bodo stopili v veljavo šele, ko bodo izmenjane note med obema vladama, torej ko jih bosta oba parlamenta oziroma njihovo Sobranje in naš parlament sprejela in potem Vlade nato izmenjajo note ob hkratni uveljavitvi sporazumov. Toliko za uvodna pojasnila. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg187">Hvala lepa gospodu ministru. Želijo besedo poročevalci delovnih teles? Besedo ima Mihaela Logar.</seg>
             </u>
             <note type="speaker">MIHAELA LOGAR:</note>
-            <u who="#SSK11.LogarMihaela1953" ana="#regular">
+            <u who="#LogarMihaela">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg188">Komisija Skupščine Republike Slovenije za mednarodne odnose je na svoji 69. seji, ki je bila 21. aprila, obravnavala predlog zakona o ratifikaciji plačilnega sporazuma med Republiko Slovenijo in Republiko Makedonijo.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg189">Komisija predlaga zborom Skupščine, da predlog zakona o ratifikaciji plačilnega sporazuma med Republiko Slovenijo in Republiko Makedonijo sprejmejo. Enako velja za cel paket teh zakonov, ki omogočajo nadaljnje gospodarsko sodelovanje in nadaljnje delo Vlade. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg190">Hvala lepa. Besedo ima gospod Žagar.</seg>
             </u>
             <note type="speaker">ZVONE ŽAGAR:</note>
-            <u who="#SSK11.ZagarZvone" ana="#regular">
+            <u who="#ZagarZvone">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg191">Hvala lepa. Ugotavljam, da je plačilni sporazum z Makedonijo bistveno boljši kot je bil plačilni sporazum s Hrvaško. To je eno. Izpostavil bi pa naslednje. Gre za eno od možnosti plačevanja, to je devizna vplačila, ki so predvidena v sporazumu. Vprašal bi ministra, v kakšni fazi je to, ker to je edini kvalitetni način in edina pridobitev, ki smo jo mi z osamosvojitvijo dobili v odnosih s sosedi, še predvsem z bivšimi jugoslovanskimi republikami.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg192">Gre za fizične in pravne osebe na obeh straneh, ki želijo ali pa so prisiljene plačati blago v devizah, v valuti. Kako je s tem? To pojasnilo bi želel. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg193">Hvala lepa. Želi še kdo razpravljati?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg194">Zaključujem razpravo in prehajamo na glasovanje.</seg>
@@ -960,7 +946,7 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg214">Ugotavljam, da je soglasno sprejeto.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg215">Prehajamo na 6. TOČKO DNEVNEGA REDA - PREDLOG ZAKONA O RATIFIKACIJI SPORAZUMA MED REPUBLIKO SLOVENIJO IN REPUBLIKO MAKEDONIJO O UKINITVI VIZUMOV.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg216">Predložila je predlog vlada Republike Slovenije, obravnavali sta ga Komisija za mednarodne odnose in Zakonodajno-pravna komisija. Želi besedo predstavnik vlade?</seg>
                <note>Ne želi</note>
@@ -976,19 +962,19 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg223">Predlog zakona je predložila v obravnavo vlada Republike Slovenije. Obravnavala sta ga Odbor za proračun in javne finance kot matično delovno telo ter zakonodajno pravna komisija. Predstavnik vlade k tej točki je minister Rejc. Želi besedo? Prosim, lepo. Prosim, proceduralno Janez Kopač.</seg>
             </u>
             <note type="speaker">JANEZ KOPAČ:</note>
-            <u who="#SSK11.KopacJanez1961" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg224">Odbor za finance in javni proračun je danes obravnaval ta zakon in imel kar nekaj pripomb; približno deset amandmajev smo na njega postavili. Proti zakonu že zadnjič nismo bili pri prvi obravnavi prvega predloga, niti danes, seveda. Zakon v celoti podpiramo, seveda z našimi amandmaji. Predlagal pa bi, da se to zdaj ta trenutek ne obravnava, ker mora vlada še sprejeti stališča do amandmajev Odbora, mislim, da tudi stališča do amandmajev Zakonodajno-pravne komisije, ki pa je zasedala včeraj in je ravno tako imela precej zelo utemeljenih pravno-sistemskih ali pravno-tehničnih amandmajev. Zato bi predlagal, da pač počakamo na stališča vlade. Sam zakon pa ne na Zakonodajno-pravni komisiji in ne na Odboru ni bil sporen. Torej, ne predlagam tega zato, da bi morebiti poskušali odlagati sprejem tega zakona. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg225">Prav, slišali smo proceduralni predlog. Želi verjetno, proceduralno, gospod Franc Golija.</seg>
             </u>
             <note type="speaker">FRANC GOLIJA:</note>
-            <u who="#SSK11.GolijaFranc" ana="#regular">
+            <u who="#GolijaFranc">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg226">Jaz bi samo podprl predlog gospoda Kopača, tako da zakona danes ne bi obravnavali in da počakamo vsa ta poročila vseh teh komisij.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg227">Hvala lepa. S tem da je vložen tudi amandma. Vsebinski amandma je vložil tudi klub poslancev Liberalne stranke. Se zbor strinja, da preskočimo 7. točko, ker ni proceduralnih pogojev za obravnavo.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg228">Prehajamo na 8. TOČKO DNEVNEGA REDA - PREDLOG ODLOKA O STOPNJI PRISPEVKOV ZA OŽJI OBSEG PRAVIC IZ POKOJNINSKEGA IN INVALIDSKEKGA ZAVAROVANJA.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg229">Odbor za zaposlovanje in socialno politiko Republike Slovenije je na seji dne 9.4.1992 obravnaval predlog skupščine Skupnosti pokojninskega in invalidskega zavarovanja za določitev stopnje prispevkov za ožji obseg pravic iz pokojninskega in invalidskega zavarovanja. Skupščina Skupnosti pokojninskega in invalidskega zavarovanja je Skupščini Republike Slovenije predložila omenjeni predlog na podlagi 225. člena zakona o pokojninskem in invalidskem zavarovanju. Odbor za delo, zaposlovanje in socialno politiko je zato na podlagi 266. člena poslovnika Skupščine Republike Slovenije predložil predlog odloka o stopnji prispevkov za ožji obseg pravic iz invalidskega in pokojninskega zavarovanja. Obravnavala ga je zakonodajno pravna komisija, ki predlaga, da zbori sprejmejo predloženi odlok, ker v primeru, da ne bosta določeni prispevni stopnji po tem odloku, ne bo mogoče izvajati zavarovanja za ožji obseg pravic, niti za dokupovanje pokojninske dobe za čas zaključenega rednega šolanja na višji ali visoki šoli oziroma časa služenja vojaškega roka. Na klop smo prejeli mnenje vlade Republike Slovenije. Želi predstavnik Odbora besedo? Če ne, želijo predstavniki Zakonodajno-pravne komisije? Predstavnik vlade Republike Slovenije?</seg>
@@ -1008,7 +994,7 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg238">Želi besedo predstavnik vlade? Minister Kacin želi besedo? Prosim v imenu ministrstva? Prosim lepo, gospod Fabčič, namestnik ministra za informiranje.</seg>
             </u>
             <note type="speaker">MIRKO FABČIČ:</note>
-            <u who="#SSK11.FabcicMirko" ana="#regular">
+            <u who="#FabcicMirko">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg239">Gospod predsednik, spoštovani zbor! Dovolite nekaj uvodnih besed. Se oproščam za zamudo, ker smo imeli na Zboru združenega dela pravkar končano obravnavo; minister Kacin pa bo tudi prišel. Torej, osnutek zakona o javnih glasilih smo pripravili ob upoštevanju pripomb in predlogov iz razprav o predlogu za izdajo in ohranja temeljni koncept urejanja tega pomembnega področja oziroma bistvene rešitve in temeljna načela nespremenjena. Da jih obnovim, to so: področje obveščanja naj obvladuje medijski pluralizem, strokovna avtonomnost javnih glasil, omogočeno naj bo čimbolj svobodno ustanavljanje javnih glasil, velja naj načelo enakopravnosti vseh subjektov ne glede na vrsto lastnine in zvrst glasila, načelo tržnih zakonitosti pa naj pripomore k boljši kvaliteti in raznovrstnostni ponudbi. Kaj so glavne spremembe v primerjavi s predlogom za izdajo zakona. V tem osnutku so opuščene določbe glede obvezne objave mnenj pomembnih za javnost, ker je v razpravi prevladalo stališče, da v pluralni družbi in razvejanem trgu informacij taka določba ni potrebna, saj se bodo morala glasila zaradi konkurenčnega boja boriti za pridobitev pomembnih mnenj za javnost, pa tudi nova ustava na tem področju govori le o pravici do popravka in do odgovora.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg240">V osnutku je posebna pozornost namenjena sodnemu varstvu in pravici do objave odgovora oziroma popravkov objavljene informacije, s katero je prizadeta pravica oziroma interes državljana ali pravne zadeve. Glede zaščite obeh pravic predlagamo enako sodno varstvo, in sicer s tožbo zoper odgovornega urednika pred pristojnim temeljnim sodiščem in razdelan je tudi postopek uveljavljanja teh pravic.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg241">Najpomembnejša novost v primerjavi s predlogom za izdajo je v tem osnutku poglavje o radijskih in televizijskih programih, s katerim smo sledili tudi pripombam iz razprave, da ne bi bilo smiselno imeti posebnega zakona o radiodifuziji, poleg že obstoječega zakona o RTV Slovenija in zakona o telekomunikacijah oziroma frekvencah, ki naj bi se pripravil. Vprašanje glede nacionalnih radijskih in televizijskih programov naj bi uredili v tem zakonu glede na to, da so ti programi javna glasila. Vprašanje zvez oziroma vse kar sodi pod terminus oddajanje, tako tudi na primer problematika kabelsko razdelilnih sistemov, pa naj bi uredili v predpisih s področja zvez. Eden od razlogov za uvrstitev tega poglavja v osnutek je tudi, da bi s tem pripravili primerno podlago za smotrno delitev frekvenčnih resursov s programskega vidika. Za zdaj velja moratorij za dodeljevanje frekvenc. Povedati pa moram, da je na Ministrstvu za promet in zveze več kot 40 prošenj za radijske in televizijske frekvence. Drugi cilj tega poglavja pa je, da bi odprli možnosti za širitev in bogatitev ponudbe za svobodno konkurenco pri ustvarjanju nacionalnih radijskih in televizijskih programov. Skladno s povedanim so tudi predlagane rešitve. Naj jih na kratko povzamem. Ta Skupščina, parlament naj bi sprejel izhodišča za nacionalni radijski in televizijski program, opredelil temeljne cilje, število nacionalnih programov, programske standarde in število potrebnih frekvenc oziroma mrež za njihovo oddajanje. Predpisani so minimalni zakonski pogoji za pridobitev statusa nacionalnega programa. Dana je možnost, da tudi druge organizacije, poleg javnega zavoda RTV Slovenija, na podlagi koncesije, ki naj bi jo podeljevala vlada po javnem razpisu, ustvarijo dele nacionalnega programa. RTV naročnina se ohranja kot poglavitni vir za financiranje. Novost pa je, da naj bi k predlogu sveta RTV Slovenija o višini in delitvi RTV naročnine med nosilce nacionalnega programa dala soglasje vlada. Opredeljeni so tudi vsebinsko programski kriteriji za dodeljevanje frekvenc, ki naj bi jih dodeljevalo pristojno ministrstvo za promet in zveze na predlog komisije Republike Slovenije za radiodifuzijo, ki jo predvidevamo v tem osnutku.</seg>
@@ -1016,43 +1002,43 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg243">V osnutku je tudi nekaj variantnih rešitev, npr. glede novinarske zbornice, ki so zapisane zato, ker so bila mnenja v razpravi dokaj različna. Glede lastninskih razmer v časopisnih in RTV organizacijah in podjetjih menimo, da jih velja urejati po predpisih, ki bodo veljali za lastninjenje organizacij združenega dela, ker po našem mnenju ni razlogov za posebno urejanje teh vprašanj na področju javnega obveščanja. Na koncu bi rad posebej opozoril na dejstvo, da je bil osnutek zakona o javnih glasilih pripravljen in poslan v skupščinsko proceduro pred sprejemom nove ustave, zato bo treba nekatere nove rešitve in terminologijo v predlogu zakona uskladiti in proučiti zlasti z vidika 39. člena ustave, ki govori o svobodi izražanja oziroma svobodi tiska. Na to je opozorila tudi zakonodajno pravna komisija. Pri pripravi osnutka smo proučili in upoštevali tudi ureditev tega področja v različnih evropskih državah in določila meddržavnih pogodb oziroma konvencij. Kljub temu pa želimo v okviru programa sodelovanja s Svetom Evrope naše predvidene zakonske rešitve preveriti v okviru posebnega delovnega srečanja, ki je že dogovorjeno za začetek junija. Predlagam, da po razpravi osnutek zakona sprejmete. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg244">Gospod Smole ima proceduralno.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg245">Matično telo - skupščinska komisija za informiranje včeraj ni bila sklepčna. Razlog je v tem, da je bila sklicana sočasno s Komisijo za mednarodne odnose in polovica članov skupščinske Komisije za informiranje so hkrati člani Komisije za mednarodne odnose. Potemtakem komisija včeraj ni mogla sprejeti dokončne opredelitve do predlaganega osnutka, zato, gospod predsednik, predlagam da mi to točko preložimo na jutri, ker sigurno bomo še jutri zasedali, in naj se vmes vendarle sestane matično telo, ki naj da dokončno poročilo. Ker jaz se ne strinjam, da sam predsednik komisije nekaj govori, kar je bilo sklenjeno, ker ni bilo nič sklenjenega, ker komisija sploh ni bila v polni sestavi.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg246">Hvala. Sedaj sklepa oziroma zadnjega stališča te komisije res še nismo dobili. Sprašujem sedaj zbor - verjetno bi bilo prav, da bi ga dobili. Se pravi, da predlagam, da tudi to točko prekinemo in razpravo nadaljujemo takrat, ko bomo dobili dokončno poročilo komisije za informiranje. Se strinjate s tem? Hvala. Prijavljeni, ki smo se prijavili, bomo pa seveda razpravljali po tem poročilu.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg247">Sedaj prehajamo na 10. TOČKO DNEVNEGA REDA - OSNUTEK ZAKONA O REPREZENTATIVNOSTI SINDIKATOV.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg248">Osnutek zakona je predložila v obravnavo vlada Republike Slovenije. Osnutek zakona so obravnavali Odbor za delo, zaposlovanje in socialno politiko na ravni Skupščine Republike Slovenije, ki je dvakrat obravnaval osnutek zakona o reprezentativnosti sindikatov. Prvič je na seji dne 11.2.1992 ugotovil, da so ob osnutku zakona prisotne dileme ali je zakon primerno sprejeti glede na to, da med sindikati ni soglasja o njem. Odbor je na podlagi razprave ugotovil, da sta glede obravnave osnutka zakona v zborih odprti dve možnosti, in sicer: da se osnutek zakona ne obravnava dokler v njem ne bo doseženo soglasje med sindikati ali da se predlaga zborom v obravnavo in sprejem zakona ob upoštevanju vseh pripomb. Odbor je sklenil da bo predlagal vladi, naj se ponovno skušajo uskladiti sindikati, odbor pa bo ob osnutku zakona in o konkretnih pripombah k posameznim določbam razpravljal po tem poskusu uskladitve. Odbor za delo zaposlovanje in socialno politiko je ponovno obravnaval osnutek zakona o reprezentativnosti sindikatov na svoji seji dne 6.4.1992 in v skladu z 149. členom poslovnika predlagal zborom, da osnutek zakona o reprezentativnosti sindikatov uvrstijo na dnevne rede svojih sej. Odbor predlaga, da se predlagatelj zakona do obravnave osnutka zakona na sejah zborov opredeli do konceptualno drugačnih predlogov o zakonskem urejanju sindikatov in konkretnih pripomb k osnutku zakona, ki so jih predložili posamezni sindikati. Osnutek zakona je obravnavala tudi zakonodajno pravna komisija. Na klop ste prejeli stališča Zveze svobodnih sindikatov Slovenije. Predstavnik vlade Republike Slovenije k tej točki je gospa Belopavlovič, namestnica ministrice za delo. Želi besedo? Prosim.</seg>
             </u>
             <note type="speaker">NATAŠA BELOPAVLOVIČ:</note>
-            <u who="#SSK11.BelopavlovicNatasa1949" ana="#regular">
+            <u who="#BelopavlovicNatasa1949">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg249">Bom zelo kratka. Dejstvo je, da naloga, ki nam jo je matični odbor naložil, naj se poskušamo uskladiti oziroma naj uskladimo stališča vseh sindikatov, je pravzaprav neizvedljiva. Mislim, da sindikati na tej točki za enkrat niso prišli skupaj in da tudi še nekaj časa ni računati, da bi nekako se enotno opredelili do tega zakona. Več kot je sindikatov (in moram reči, da ti sindikati nastajajo, vedno več jih je), več je tudi stališč in opredelitev do samega zakona. Človek po malem že razmišlja, ali kaže ta zakon še naprej uvrščati v Skupščinsko proceduro ali ga kaže umakniti.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg250">Jaz moram reči, da je naše vodilo, zakaj želimo priti do tega zakona, sledeče. Mi smo reprezentativnim sindikatom dali neke vloge že v sedanji zakonodaji in jih imamo namen dati še v bodoče. Gre na primer čisto konkretno: za sestavo določenih komisij, določenih upravljavskih teles; na primer: v skupščini skupnosti pokojninskega in invalidskega zavarovanja oziroma novega zavoda za pokojninsko zavarovanje imajo sindikati eno tretjino oziroma skoraj eno tretjino predstavnikov; v Zavodu za zaposlovanje, upravnem odboru, imajo tudi eno tretjino predstavnikov; sindikati so tisti, ki predlagajo pravzaprav svoje predstavnike v skupščino zdravstvenega zavarovanja. Pa da ne naštevam še naprej.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg251">Končno se sindikati pojavljajo tudi v tej skupščini, ne samo njihovi predstavniki kot delegati ampak tudi sindikati kot organizacija. In kadar prihaja do tega, kateri je tisti sindikat, ki lahko kvalificirano zastopa delavce na tem ali pa drugem mestu, vedno prihaja do tega problema, kdo je reprezentativni sindikat. Skratka, če smo jih dali neko vlogo, potem je treba tudi vedeti, kdo ti reprezentativni sindikati so, drugače prihaja med njimi do praktično sporov in do problemov, ker se nekako sami med seboj tudi za to reprezentativno vlogo ne morejo opredeliti. To je edini razlog in edina želja, zakaj pravzaprav prihajamo v skupščino s tem zakonom, zakaj nismo od njega že odstopili.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg252">V zvezi s temi pripombami, mnenji in predlogi, ki so bili dani v prvi fazi zakonodajnega postopka, moram povedati, da so se nanašali predvsem na določitev pogojev za pridobitev reprezentativnosti sindikata, na opredelitev najbolj reprezentativnih sindikatov ter na ravni reprezentativnosti. Te navedene pripombe smo v predloženem osnutku upoštevali s tem, da smo pogoj za pridobitev reprezentativnosti dopolnili in natančneje opredelili. Pojem reprezentativnosti sindikatov po svoji vsebini ustreza pojmu največje reprezentativnosti oziroma najvišje reprezentativnosti (to kar je bilo želeno s pripombami) in ravni delovanja reprezentativnosti sindikatov so smiselno vključene v besedilo 10. člena osnutka, sicer pa je ta raven kot poseben inštitut črtana. Tako, da mislim, da v tej fazi kar se je dalo narediti oziroma kolikor se je dalo uskladiti, smo to naredili. Popolnoma in z vsemi stranmi pa nismo usklajeni in, še enkrat ponavljam, da to bomo tudi zelo težko naredili.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg253">Hvala lepa. Želijo besedo poročevalci delovnih teles?</seg>
                <note>Ne.</note>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg254">Potem odpiram razpravo. Za razpravo so prijavljeni gospod Magajna, gospod Balažic in gospod Potrč. Prosim, gospod Magajna. Ga ni? Gospod Balažic.</seg>
             </u>
             <note type="speaker">MILAN BALAŽIC:</note>
-            <u who="#SSK11.BalazicMilan1958" ana="#regular">
+            <u who="#BalazicMilan1958">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg255">Hvala lepa za besedo. Spoštovani! Ponavadi, ko v tem parlamentu sprejemamo zakone, ko dobimo najprej prvo varianto, recimo, teze, ali kakorkoli že, smo polni dvomov in pozneje v proceduri se stvari razčiščujejo, dvomi odpadajo in na koncu približno vemo za kaj gre. Pri tem zakonu imam, vsaj kar se mojih občutkov tiče, nek čuden občutek, da bolj ko govorimo o tem zakonu, več dvoma se poraja, ali je ta zakon sploh potreben ali je v skladu z ustavo, ali ne omejuje sindikalnih pravic in podobno. Ko smo prvič razpravljali o tem zakonu, smo ugotavljali to, da zakon v neki meri upošteva in da temelji na konvenciji o mednarodni organizaciji dela o sindikalnih svoboščinah in varstvu sindikalnih pravic. Prav tako smo ugotavljali, da državne oblasti ne smejo omejevati sindikalnih svoboščin, razen tam kjer vemo, da je to možno (pri vojski, policiji). Govorili smo o tem, da načela, na katerih temelji, velja podpirati, se pravi načelo sindikalne svobode, načelo pluralnosti sindikatov in oblik organiziranja, načelo posebnih pravic za reprezentativne sindikate in opozarjali smo tudi na te pasti, da ne bi država arbitrarno sama odločala, recimo, vsakokratna politična elita o tem, kateri sindikat je predstavniški, da ne bi nekatere favorizirali in zapostavljali kakšne druge, skratka, da ne bi država poskušala zakonsko posebej nekatere sindikate podpirati, všečne, in druge ne, kar bi bilo seveda nevarno za tisto stvar, ki jo poznamo iz zgodovine in se pojavlja ob totalitarnih režimih, to je korporativizem, to je povezava med vlado in vladnimi sindikati. Vse to smo takrat povedali in ves čas so se porajali dvomi okrog tega zakona. Enega sem že omenil: ali je to v skladu z ustavo, tudi z novo ustavo? Potem, zahtevali smo, naj se preveri, da določilo, da se kolektivne pogodbe sklepajo zgolj med reprezentativnimi sindikati, ampak da to ne omejuje sindikalne svobode. Spraševali smo, ali se da zagotoviti, da identitete sindikatov oziroma registracije ne bi bile uporabljene, ali zlorabljene proti sindikatom. Potem so tudi vprašanja okoli kriterija številčnosti, različne reprezentativnosti na različnih nivojih in še in še. Skratka, ti dvomi še vedno niso, vsaj po mojem mišljenju, odstranjeni. Predlagatelj zakona je upošteval večino pripomb in če bi samo na tej ravni govorili, bi lahko rekli, da je v tej fazi osnutka zakona zakon solidneje pripravljen, kot je bil v prvi fazi. Toda pred nami so naslednja vprašanja, ki jih bo potrebno razrešiti: ni soglasja med sindikati, to je prva stvar, in ni soglasja sindikatov z vlado. To je druga stvar. Skratka brez tega soglasja je vprašanje, če lahko sploh zakon zaživi, kajti mora biti legaliziran in legitimiran tudi s strani vseh subjektov, ki jih zakon o reprezentativnosti sindikatov upošteva.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg256">Naslednja stvar je ta, da imamo v členu 76. nove ustave zapisano: "ustanavljanje in delovanje sindikatov ter včlanjevanje vanje je svobodno." In tu se poraja seveda pomislek, ali predloženi zakon ne posega v svobodo sindikalnega organiziranja s tem, ko v bistvu daje dispecijsko pravico odločanja o tem, kateri sindikat je reprezentativen, v roke državi oziroma upravnim organom ali celo delodajalcem. In končno, ali ne gre tukaj za poseganje države v še ne izoblikovan prostor sindikalnega organiziranja in morda, samo morda, to je mogoče nek predlog za razmislek, ali velja vzpostaviti pred sprejemom tega zakona neko prehodno obdobje, ki naj bi ne vem koliko časa trajalo, dve leti ali mogoče več, da si pustimo, pač da pustimo času čas in da se zadeve izbistrijo tako znotraj sindikalnega korpusa, kot seveda tudi kar se tiče potrebnosti takega zakona. Zaenkrat moram reči, da ti dvomi obstajajo in, na žalost, moram ugotoviti, da niso odstranjeni. Če ta zakon ne daje določenih prednosti sindikatom in če sindikati, ali pa večina njih ugotavlja, da jih bo prej omejeval, kot dajal neke dodatne privilegije s to reprezentativnostjo in statusom, potem seveda ta zakon, mislim, da ni potreben. Zato ravno zaradi teh razmislekov predlagam, da ta zakon danes zavrnemo in ga preprosto umaknemo z dnevnega reda za določeno časovno obdobje, dokler ne bodo vzpostavljeni vsi pogoji, ki so, bom rekel, družbene, politične in še kakšne druge narave, za to, da pač ta zakon potem lahko doseže svoje učinke. V tem trenutku pa se bojim, da zaradi vseh razlogov, ki sem jih naštel, ta zakon je lahko kontraproduktiven za vse subjekte, ki bi nastopali znotraj te igre. To je tudi moj predlog, ki ga dajem na koncu na glasovanje in ga bom tudi pisno pripravil. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg257">Hvala lepa, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg258">Hvala lepa. Temeljen dileme, o katerih želimo povedati svoje mnenje tisti, ki smo se prijavili k razpravi, so najbrž podobne. Stiska, kako te probleme rešiti, je najbrž tudi podobna. In prva gotovo je, ali je zakon glede na politične razmere in nesoglasja v sindikatih, hkrati pa na dejstvo, da država - tukaj pa ne mislim v nobenem negativnem smislu - ampak v interesu vseh, da se zagotovijo potrebni pogoji za to, da bi se zagotovila večja možnost sklepanja, veljavnosti, dopolnjevanja in slično kolektivnih pogodb, ne samo na ravni države, ampak tudi na ravni panog, s pooblastili, da se te kolektivne pogodbe, tam kjer bo sindikat oziroma bodo sindikati dovolj močni tudi v posameznih podjetjih, lahko še naredijo kvalitetnejše, z več pravicami. Skratka, potreba po tem, da imamo partnerje za sklepanje kolektivnih pogodb je najbrž tudi očitna. En partner, to je država, je zaenkrat tukaj, najbrž ne tisti, ki bo pri vsem sodeloval; pri drugem partnerju - Gospodarski zbornici - smo vsi tako ali drugače v dvomih, in je to tudi nek prehoden čas. In na tretji strani - neenotno je mnenje med posameznimi sindikati, na kak način naj se k temu pristopa. Jaz sem šel in poskušal po svoje pregledati, proučiti konvencijo mednarodne organizacije dela o sindikalnih svoboščinah in varstvu sindikalnih pravic in sem ugotovil, da država ima neko možnost, da pove, s kom, pod kakšnimi pogoji bo sklepala določene sporazume; seveda mora biti pa pri tem, po mojem prepričanju, skrajno previdna, da te možnosti ne izrabi na način, da bi kakorkoli posegla res v ustavno zagarantirano sindikalno svobodo. In če iz tega, za začetek v smislu nekaterih opozoril, ki bi jih dal na osnutek zakona, izhajam, potem bi najprej rekel kot prvo, da se mi zdi, da tudi če bi ugotovili, da je mogoče zakon sprejeti, obstoja neka kolizija in se malo mešajo stvari, ki so povezane z registracijo sindikatov na eni strani, s tem da se sindikatom dodeljuje nek status pravne osebe, določajo neki kriteriji, kdaj bo to pravico imel ali ne, hkrati s tem in na drugi strani pa, da se govori o eventualni reprezentativnosti. In moje mnenje je, da je pravno zelo dvomljivo, da obstoja takšna mešanica v zakonu in da ustavno vse tisto, kar lahko diši po registraciji, omejevanju svobode, dodeljevanju z nekimi odločbami pravnega statusa in tako naprej, ne bi smelo biti vsebina tega zakona. Vprašanje reprezentativnosti - da ali ne - pa je predvsem politično vprašanje. Ampak tudi, če bi se opredelili, da na neko reprezentativnost gremo, mislim, da bi ta pravna vprašanja morali bistveno bolj razčistiti, kot smo jih razčistili. V zvezi s tem jaz mislim, da enostavno ne bi smeli upravnim organom na katerikoli ravni dajati nobene pravice, da izdajajo odločbe, ampak, če bi se za to odločili, da je to pač priglasitev, ki jo evidentira in registrira. To velja že za drugi člen. Da tretji člen ne bi smeli napisati na način, da se ga da razumeti, da pravzaprav upravni organ presoja, ali sedaj sindikat izpolnjuje te pogoje, da je neodvisen, da se v njega delavci prostovoljno združujejo, da je njegova funkcija varovanje družbenega, ekonomskega in socialnega vprašanja, ne pa, recimo, nekaj drugega; to niso stvari, ki bi jih, po mojem, lahko presojal po naši ustavi katerikoli upravni organi. Jaz ne trdim, da tudi upravni organ nima pravice podvomiti, ali gre res za sindikate v smislu naših ustavnih določb, ali ne. Samo, če podvomi, potem je za mene ustavno sodišče tisto, ki bo v primeru dvoma razsojalo, ali so izpolnjeni ustavni pogoji in ali lahko nek sindikat deluje ali ne. Če takšnega dvoma ni, sindikat z dejstvom, da je ustanovljen, je samostojna, svobodna organizacija delavcev in jo je mogoče samo priglasiti in evidentirati, če je to za potrebe reprezentativnosti eventuelno potrebno.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg259">Jaz bi toplo priporočal res zakonodajalcu, da v tem smislu drugi, tretji in jaz moram reči, da tudi sedmi člen najtemeljitejše pogleda. Ker v 7. členu reči, da so reprezentativni sindikati, ki so demokratični, uresničujejo svobodo včlanjevanja. Kdo naj to presoja? Ali naj to presoja, recimo, na občinski ravni, upravni organ v občini, ali pa na republiški upravni organ? Mislim, da to ne gre.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg260">Naslednje imamo: "kriterij so neodvisni od države in od delodajalcev." Ja, to je tudi določba konvencije, ampak to ne more država sama presojati, ali je sindikat od nje neodvisen ali ne; za to je pristojno eventualno ustavno sodišče. Po mojem, da ne naštevam naprej, je res mogoče iz tega 7. člena, pravno gledano, govoriti samo o tem, če bi se opredelili za reprezentativnost: da ima določeno število članov pa, da določen čas deluje. Ali je to 6 mesecev ali je to 3 tedne, ne vem, ampak to dvoje sta lahko kriterija, vse ostalo pa posega v to neposredno svobodo in samostojnost sindikata, ki jo ta zakon, po mojem, na noben način ne bi smel omejevati.</seg>
@@ -1063,11 +1049,11 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg265">Predlagam zato, da razpravljamo danes o tem zakonu, da pa morda le pred odločitvijo o osnutku damo sugestijo vladi in tudi politično sugestijo sindikatom, da bi (ampak jaz predlagam v nekem krajšem času, dva meseca, ne pa dolgega časa) še poskušali iskati rešitve. Predvsem pa predlagam, da vlada sama ugotovi, kje je v zakonskem tekstu pa toliko stvari, ki lahko vlečejo na neustrezno vsebino, da ga očisti res na tisto najmanjšo nujnejšo mero, ki bi bila eventualno potrebna, če res do ustreznega sporazuma in medsebojnega priznavanja pravice zastopanja delavcev med sindikati ne bi prišlo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg266">Hvala lepa. Gospod Magajna ima besedo.</seg>
             </u>
             <note type="speaker">ANDREJ MAGAJNA:</note>
-            <u who="#SSK11.MagajnaAndrej1952" ana="#regular">
+            <u who="#MagajnaAndrej">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg267">Spoštovani! Med drugimi sindikati se je tudi sindikat Vzajemnost, sindikat nezaposlenih in socialno ogroženih, vključil v to razpravo in imam tudi nekaj pisnih pripomb, ki jih bom oddal. Povedal bi tudi nekaj svojih komentarjev. Predlagatelj je pri pripravi novega osnutka le deloma upošteval - to je bilo že danes rečeno - pripombe na skupščinskih zborih. Zakon je prišel v proceduro, čeprav med sindikati, vlado in Gospodarsko zbornico ni prišlo do preseganja dilem in uskladitve pogledov na ključne rešitve. Odprtih je še veliko posameznih vprašanj, ki so za nekatere sicer obrobnega pomena, npr. ustreznost imena zakona, pogoji za pridobitev statusa pravnih oseb (eni pravijo, da so preblage, drugi, da so preveč omejevalne, vsaj glede presoje statuta s strani upravnega organa), nadalje, ali naj govorimo o deponiranju statuta, ali le o evidenci sindikatov brez posebnega postopka.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg268">Odprta pa so ostala vsaj še tri generalna vprašanja: 1. Ali je primerno delovanje sindikatov sploh urejati z zakonom in ali je ta potreben.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg269">2. Kaj naj obsega zakon? Zgolj kriterije za dosego reprezentativnosti ali tudi podrobneje naštete pristojnosti, naloge, pravice reprezentativnih sindikatov?</seg>
@@ -1082,11 +1068,11 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg278">Pa še zadnja pripomba. Potrebno je rešiti tudi vprašanje, kateri sindikati zastopajo delavce pri zasebnih delodajalcih. Tudi o tem zakon nič ne piše. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg279">Besedo ima France Tomšič.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg280">Hvala lepa. Spoštovani, kolegice in kolegi. Zakon o reprezentativnosti sindikatov sam po sebi ne rešuje sindikalne scene kakršna je danes. To je v bistvu eden najkrajših zakonov, kar jih bo ta skupščina sprejela. V bistvu je vse skupaj napisano na eni strani, ima 11 členov, in nekateri se že tega zelo zelo bojijo. Če pogledamo pod drobnogled posamezne člene, vidimo, da ta zakon v bistvu nobene pravice, ki smo jo sedaj že imeli, katero smo že prakticirali, ne ukinja. Razen to, kar so že moji predhodniki rekli v 11. členu; jasno da je nesmiselno in neumno, da bi nekdo, ki predstavlja management odločal, kdo naj bi bil reprezentativen sindikat. Potem bi si management sigurno ustanovil takoj svoj sindikat, pa tudi če bi imel samo 5%, bi rekel, to je moj sindikat, ki je reprezentativen. Skratka, ta stvar je zelo absurdna in jasno, da bi konfederacija sindikatov Slovenije te stvari odklanjala.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg281">Sedajle, ali potrebujemo ta zakon? Zakaj bi delali zakon, če ga ne potrebujemo. Jaz mislim tako. Osnutek je treba dodelati; s temi stvarmi, kar so tukajle pred menoj rekli že kolega Magajna, kolega Potrč in še drugi, ga je treba dopolniti. O tako kratkem zakonu ni potrebno ne vem koliko časa razmišljati - tudi Milan Balažic je o tem govoril - tako da gre vsekakor lahko skozi proceduro.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg282">Mislim, da uvaja nekaj, kar je za ta čas v Sloveniji pozitivno. Zavedajmo se, da smo mi podedovali sindikalno sceno, ki je bila totalitarna. In če se danes vprašamo, res je, da druge evropske dežele, marsikatere tega ne odrejajo, zato ker so imeli normalno rast. 150 let je rasla sindikalna trdnjava, bi rekel, paralelno s parlamentarno demokracijo. Pri nas je bilo to prekinjeno. Drugače sigurno ne bi potrebovali nobenega takega zakona. Kdo rabi ta zakon? Ne Zveza svobodnih sindikatov - zato je ona napisala cel traktat proti temu - vendar Zveza svobodnih sindikatov ni edina organizacija tukajle. Mi vemo na kakšen način je nastala. Že drugič, tretjič govorim v tem domu, da so vzhodne dežele enostavno rešile ta problem; enostavno so stare sindikate, totalitarne sindikate razrešile in so začeli resnično od nič. Pri nas se to ni zgodilo. Mi ne zahtevamo, da bi sedajle se to zgodilo, bi bilo absurdno - vendar dajte šanso, tudi opozicijske stranke, tudi demokratizacijski sceni v Sloveniji da zaživi: sedajle še ni zaživela tako kot bi morala. Jaz verjamem, da stari sindikat nima nobenih problemov pri reprezentativnosti, saj so ostali vsi isti, saj jim ni treba deponirati nobenih stvari. Njim ne zavračajo dvakrat, trikrat iz občinskih in republiških nivojev, dajte to popraviti, pa to naredite, da bo dobro. Zato je nepošteno, če se oni sedajle ogradijo z vrtičkom in druge sindikate, ki želijo enakopravno delovati, da jih ne pustijo enakopravno delovati. Za mene ta zakon daje dodatne pravice ne odvzema ničesar.</seg>
@@ -1097,11 +1083,11 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg287">Jaz ne bi veliko govoril. O posameznih členih so že moji kolegi tukajle govorili in se strinjam z njimi. Dajmo podpreti ne glede na strankarstvo. Kot veste je danes ena koalicija, jutri bo druga, tretji dan bo lahko tretja koalizacija, sindikat pa mora vedno delovati. In zato prosim, ne glede na to, v kateri stranki smo, podprimo to, da naredimo prvi korak. Tisti glavni korak nas pa še čaka. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg288">Hvala. Besedo ima Dušan Semolič.</seg>
             </u>
             <note type="speaker">MAG. DUŠAN SEMOLIČ:</note>
-            <u who="#SSK11.SemolicDusan1947" ana="#regular">
+            <u who="#SemolicDusan1947">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg289">Spoštovani! Dejstvo je, da v tem trenutku v slovenski državi pravne praznine, ki bi zahtevala tak zakon, te praznine ni. Zakaj ne? Imamo novo ustavo, ki je dokaj jasna, kar se tiče sindikalne svobode, organiziranega delovanja sindikatov, imamo nekaj mednarodnih konvencij, ki smo jih ratificirali in kot take veljajo v tem pravnem prostoru, imamo tudi mednarodni pakt o ekonomskih, socialnih in kulturnih pravicah. Zagotovo je, da obstoje številni problemi: mnoge probleme, ki smo jih tukajle danes slišali, kot take priznavam, vendar se bojim, trdno sem prepričan, da teh problemov, ali pa vsaj večine teh, ta zakon, ki se ponuja kot tak, zagotovo ne bo rešil. Sem pa za to, da smo pozorni na te in mnoge druge probleme pri zakonu o kolektivnih pogodbah, zakonu o delovnih razmerjih in še kje, kjer se pojavljajo sindikati kot partner delodajalcu oziroma državi.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg290">Zakon, takšen kot je, s temi načeli, bi po našem prepričanju pomenil nasilen poseg v oblikovanje tega sindikalnega prostora. To se pravi, po teh kriterijih, ki so notri, se še najmanj bojimo za svobodne sindikate Slovenije, pač pa za mnoge sindikate, in ki jih je cca 30, za nekoga preveč, ampak pluralizem je žal, ali pa k sreči, realnost, ki bi pa zagotovo omejil samo na dve sindikalni centrali ali pa tri. Še to. Ali je nek zakon dober ali slab, ni kriterij število členov. Zadosti, da je en člen, pa je zakon slab ali pa tudi dober; to število členov zagotovo ne šteje.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg291">Pomembno je vedeti, da večina zahodnoevropskih držav ne pozna zakonskega urejanja sindikatov. Predlagatelj zakona pa je pri njegovem oblikovanju upošteval nekatera izhodišča, ki so pač sprejeta v Franciji in Italiji, čeprav je prav francoska ureditev poznana kot najslabša v Evropi. Podobno mnenje imajo tudi - ne vsi, večina pa - sindikalni kolegi, kar se tiče zakonske ureditve za sosednji državi.</seg>
@@ -1114,17 +1100,17 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg298">Torej problemi res da so, ne more jih pa rešiti zakonska prisila. Administrativno določanje partnerjev zagotovo ni dobro. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg299">Hvala. Besedo ima gospa Sonja Lokar.</seg>
             </u>
             <note type="speaker">SONJA LOKAR:</note>
-            <u who="#SSK11.LokarSonja1948" ana="#regular">
+            <u who="#LokarSonja1948">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg300">Zanimivo se mi zdi, kako se v tej razpravi kaže, kako pri nas pravzaprav vse stoji na glavi. Vlada pravi: zakon bi bil koristen, ker bi Vladi omogočil, da se od nekdaj razdrobljenih sindikatov pridobi zanesljive verodostojne sindikalne sogovornike, hkrati pa ne zapišejo v zakon, kako misli to reprezentativnost realistično preverjati. Največji slovenski sindikat pravi: zakon iz načelnih razlogov odklanjamo, ker omejuje sindikalno svobodo in omogoča vladi in delodajalcem, da izberejo reprezentativnost sindikatov po lastni strukturi. Neodvisnost, ki bi rada postala vpliven sindikat - vendar se bojim, da predvsem tako, da dokazuje takšno ali drugačno nelegitimnost Svobodnih sindikatov - je za zakon, vendar ne za realistično ugotavljanje, koliko članov ima kateri sindikat.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg301">Sindikati se tako prepirajo, vlada se spreneveda, zaposleni pa ostajajo tista stranka v tem sporu, ki nima nobene možnosti vzpostaviti se kot resni partner v socialnem partnerstvu.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg302">Jaz mislim, da bi bil že čas, da se vlada odloči za resna pogajanja s sindikati in da preprosto vzame nase odgovornost, katere sindikate bo pri tem štela za reprezentativne. Če se bo zmotila, jo bo o zmoti podučila pač takšna ali drugačna oblika sindikalnega boja. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg303">Če ni več razpravljavcev, predlagam, da preidemo na odločanje o tem. Sedaj imamo dva predloga. Čeprav sta predloga taka, da eden drugega izključujeta, bo - če eden ne bo sprejet - treba glasovati tudi o drugem, kajti vsak predlog ima točko ali dve in v tem se predloga razlikujeta. Tako bom dal najprej na glasovanje tisti predlog, ki je po logiki nekako bolj oddaljen od dejstva, da je bil dan osnutek na dnevni red in predlagan za sprejem, in potem tistega običajnega. Ta predlog nekako povzema to, kar je predlagal gospod Balažic in kar je predlagal gospod Potrč. In sicer je to v skladu z 282. členom poslovnika, imel pa naj bi dve točki:</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg304">Prva točka naj bi se glasila, da osnutka zakona o reprezentativnosti sindikatov zbor ne sprejme, torej da se ne sprejme.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg305">In druga točka: da Družbenopolitični zbor nalaga vladi, naj predloži nov osnutek zakona in pri pripravi upošteva pripombe poslancev, izrečene v zboru ob obravnavi tega osnutka in v delovnih telesih skupščine.</seg>
@@ -1133,21 +1119,21 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg308">Mislim, da prvi predlog v bistvu povzema tudi predlog gospoda Potrča, samo da ni dan rok. In po mojem roka ni, razen če vztrajate, da se da kot tretja točka, da se da nek rok, ali da se da v drugo točko, da zbor nalaga vladi, da v tem in tem času - itn. Ampak mislim, da že iz diskusije sledi, da je bil predlagan rok. In s tem, ko pravimo, da se upošteva diskusija, je na nek način to konzumirano. - Ali je v redu? Gospod Potrč želi besedo.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg309">Ne vem, ali je morda moja želja preoptimistična in preveč dobronamerna. Jaz sem videl neko vmesno možnost, kjer bi se sklep glasil tako-le: Sklepanje o osnutku zakona se odloži. Kar pomeni, da smo mi o zakonu razpravljali, da pa danes o njem ne sklepamo. In drugič, da se naloži vladi in tudi priporoča sindikatom, da v roku dveh mesecev preučijo pripombe, ki so bile dane na osnutek in poskušajo najti neko rešitev in da v dveh mesecih dobimo poročilo o tem s strani vlade in takrat tudi potem opravimo to odločanje. Ker odločanje bo potrebno - tako ali drugače; ali bomo zakon zavrnili ali pa ga bomo sprejeli. Meni je ljubše, da to naredimo le po neki preveritvi, kot da naredimo tako ali drugače danes. Če ga sprejmemo, bo napak; če ga odložimo, bo lahko tudi napak. To je nek vmesni predlog, predsednik. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg310">Hvala. Jaz vidim tu tisto čisto proceduralno težavo: ali bo potem smatrano, da smo mi razpravo opravili in da se lahko razpravlja samo še o poročilu, ali bomo še enkrat razpravljali in tako naprej. Predvsem je pa tu vprašanje gospoda Balažica, ki je dal predlog, da se ne sprejme osnutka. No, jaz predlagam, da glasujemo; lahko pa rečemo, da naj v tem in tem roku predloži nov osnutek. Čeprav mi zahtevamo, da nekaj upošteva; če tega ne bo mogoče upoštevati, potem je težko naložiti rok.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg311">No, jaz sedaj predlagam, da glasujemo o sklepu, torej o takem predlogu, kot sem ga najprej prebral - se pravi: "1. Družbenopolitični zbor ne sprejema osnutka zakona o reprezentativnosti sindikatov. 2. Družbenopolitični zbor nalaga vladi, naj predloži nov osnutek zakona in pri pripravi tega osnutka upošteva pripombe poslancev, izrečene v zboru in v delovnih telesih skupščine."</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg312">Najprej dajem to na glasovanje. Prosim, gospod Tomšič bo sedaj obrazložil svoj glas o tem predlogu sklepa.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg313">Nekaj ne razumem. Prej sem dejal, da je to eden najkrajših zakonov in v bistvu teh 11 članov - dobre pol strani - odlagati na "dolgo klop"<gap reason="inaudible"/> Zaradi česa bi odlagali? Jaz ne vidim nobenega pravega razloga. Vsi tisti, ki imate res dobre predloge, predložite predloge. (Predsedujoči ga opozori, naj samo obrazloži svoj glas.) Možnost je še za spremembo tega osnutka. In prosim - zavrnimo ta predlog in sprejmimo osnovni predlog: osnutek naj se sprejme.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg314">Če ne bo sprejet ta sklep, bomo o takem sklepu glasovali, gospod Tomšič. V tej "rubriki" (da tako rečem) se samo pojasnjuje svoj glas do predloga. Vsak poslanec ima pravico predlagati predlog v skladu s poslovnikom in o predlogu je treba glasovati.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg315">Najprej ugotovimo navzočnost!</seg>
                <note>46 prisotnih.</note>
@@ -1161,21 +1147,21 @@
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg320">Sedaj bo gospod Potrč predlagal, da se njegov predlog sprejme.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg321">Jaz mislim, da je sedaj aktualen tudi moj predlog, ki je nekaj vmes. Če je vprašanje nejasnosti, ali ponovno odpirati razpravo ali ne, potem najbrž lahko sprejmemo kot prvo točko tudi sklep, da zbor prekinja razpravo o osnutku tega in tega zakona. In drugo (kot sem predlagal), da se v dveh mesecih preverijo rešitve, da poročilo, dobi tudi stališča sindikatov in se potem po dveh mesecih opravi nadaljnjo razpravo in odločanje. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg322">Hvala. Mene v tem predlogu sklepa moti samo zaključek. Ali lahko skupščina naloži sindikatom kaj?</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg323">Gospa Puharjeva ima besedo, ministrica za delo.</seg>
             </u>
             <note type="speaker">JOŽICA PUHAR:</note>
-            <u who="#SSK11.PuharJozica1942" ana="#regular">
+            <u who="#PuharJožica">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg324">Hvala lepa za besedo. Spoštovani poslanci! Jaz se nisem imela namena oglašati in pravzaprav sedaj intervenirati in nekako vplivati na vaše odločitve, samo ko poslušam te zadeve, se mi le zdi vprašljivo, da razmišljamo in si postavljamo neke roke. Rada bi opozorila, da gre za fazo osnutka; gre za to, da je vse to, kar ste, recimo, vi sedaj še razpravljali, je možno še v pripravi predloga presoditi. Delovne metode, ki jih imamo, kadar pripravljamo predlog, so takšne, da vse pripombe presodimo še v krogu strokovnjakov, ki se profesionalno ukvarjajo s področjem; konkretno, recimo, za to sindikalno gibanje tudi strokovnjaki, ki predavajo o tem na fakulteti, ki poznajo mednarodne konvencije, ki se profesionalno ukvarjajo. Tako da bomo tudi te pripombe na nek način obravnavali, prebavili in kar se bo dalo upoštevali, da bo zakon čimbolj smiselno operativen, bomo upoštevali. Toda po mojem sedaj zopet vleči, pomeni nadaljnjo fazo, torej zavlačevanje neke stvari, o kateri se bomo pač morali odločiti. In kolikor jaz poznam sedaj sindikalno gibanje pri nas, ne morem verjeti, da bo situacija v dveh mesecih kaj bistveno boljša, kot je sedaj. Sedaj pa je taka, da nekaj rabimo, da bomo lažje delali. Predvsem gre za to, da bomo lažje delali. Ne gre za nobeno omejevanje sindikalnega gibanja, ne gre za poseganje v svoboščine sindikatov; gre samo za nek pripomoček, da le lažje delamo in da vemo, s kom se pogovarjamo, kdo je pravzaprav tisti, ki nam v določenih primerih kot partner stoji nasproti in vnesemo nek minimum urejenosti na to področje. Nobene druge ambicije nismo imeli in mislim, da tudi v predlogih ni bilo kakšnih hujših ambicij; vse ostalo sindikati uredite med seboj.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg325">Tako da bi jaz, če se da pripomoči k temu, predlagala, da vseeno sprejmete osnutek, pa se potem - če ga ne bomo dobro presodili in če bo vlada slabo predlagala - še okrog predlogov menimo in z amandmaji kaj naredimo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg326">Hvala lepa. Gospod Potrč, vi ostajate pri svojem? Ta sklep, ki ga predlaga gospod Potrč, bi se potem najbrž glasil nekako takole: "1. Družbenopolitični zbor odlaga sklepanje o osnutku zakona o reprezentativnosti sindikatov. - 2. Družbenopolitični zbor nalaga vladi Republike Slovenije, naj v dveh mesecih pripravi poročilo o spornih vprašanjih, izpostavljenih v razpravi na zboru in v delovnih telesih skupščine, in skuša ta vprašanja uskladiti z zainteresiranimi subjekti."</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg327">Ali je tako v redu? Ta predlog dajem na glasovanje.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-04-22.s037-01.seg328">Najprej pa ugotovimo navzočnost!</seg>

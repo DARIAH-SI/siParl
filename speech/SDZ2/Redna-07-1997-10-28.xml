@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Redna-07-1997-10-28"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">7. redna seja (28. 10. 1997)</title>
-            <meeting n="7"
-                     corresp="#SDZ2-Redna-07-1997-10-28.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="7" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">7. seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|21C92FED9ABC9A2EC1256544004BBAA5</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=21C92FED9ABC9A2EC1256544004BBAA5</idno>
-                  <imprint>
-                     <date when="1997-10-28">(28. oktober 1997)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>7. redna seja (28. 10. 1997)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1997-10-28"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=21C92FED9ABC9A2EC1256544004BBAA5</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="443"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="121"/>
                <tagUsage gi="seg" occurs="740"/>
                <tagUsage gi="gap" occurs="10"/>
@@ -888,23 +873,21 @@
                <date when="1997-10-28" ana="#parl.sitting">28. 10. 1997</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Redna-07-1997-10-28.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">7. seja</head>
-            <docDate>(28. oktober 1997)</docDate>
             <note type="chairman">Sejo sta vodila Janez Podobnik, predsednik državnega zbora, in Andrej Gerenčer, podpredsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 13.15 uri.</note>
             <note type="speaker">PREDSEDNIK DRŽAVNEGA ZBORA:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje! Pričenjam 7. sejo Državnega zbora Republike Slovenije, ki sem jo sklical na podlagi 49. člena Poslovnika Državnega zbora.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg2">Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: do 15. ure Rudolf Petan, Majda Ana Kregelj-Zbačnik je tukaj za eno uro, Jože Jerovšek, Franc Pukšič, do 15. ure Peter Hrastelj, dr. Franc Zagožen do 15. ure, Janez Per, Jakob Presečnik, Roberto Battelli za pričetek seje, Ivan Kebrič, Branko Janc, Anton Partljič. Ugotovimo sklepčnost!</seg>
                <note>66 prisotnih.</note>
@@ -972,23 +955,23 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg40">Torej, v skladu s poslovnikom prehajamo na predloge za umike posameznih točk z dnevnega reda. Predlogov za umik nismo prejeli. Gospod Potrč, gospod Božič - se opravičujem!. Prosim, gospod Potrč ima predlog za umik.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg41">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi! V poslanski skupini Združene liste smo s poslansko skupino LDS podpisali včeraj skupen dogovor o načinu reševanja vprašanj, povezanih z zakonom o zaposlovanju in zavarovanju za primer brezposelnosti. Zaradi tega smo se odločili v poslanski skupini, da jaz in tudi moja dva kolega, gospod Bojan Kontič in Janko Veber, umaknemo zakone, ki smo jih vložili.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg42">Zaradi tega tudi predlagam, da se umakne z dnevnega reda odločanje o mojem predlogu zakona o spremembi in dopolnitvi zakona o zaposlovanju in zavarovanju za primer brezposelnosti, EPA 260-II , po skrajšanem postopku. Da pa bi zagotovili možnost kasnejšega čimprejšnjega odločanja o vladnem predlogu, soglašam, da se ta predlog tudi prekvalificira in da državni zbor odloča potem o tem, da sprejme umik zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg43">Hvala lepa, gospod Potrč. Hvala lepa tudi zato, ker ste se dogovorili kot predlagatelji z vlado in s tem ta možni zaplet, ker je bilo v proceduri več zakonov z istim naslovom, da ste v dogovoru z vlado našli to rešitev.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg44">Torej, 21. točka dnevnega reda, ki se glasi: predlog zakona o spremembi in dopolnitvi zakona o zaposlovanju in zavarovanju za primer brezposelnosti, skrajšani postopek, se umakne z dnevnega reda, toda jo pa nadomesti točka: predlog za umik tega zakona iz zakonodajnega postopka.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg45">Gospod Božič.</seg>
             </u>
             <note type="speaker">IVAN BOŽIČ:</note>
-            <u who="#SDZ2.BožičIvan" ana="#regular">
+            <u who="#BožičIvan">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg46">Hvala lepa, gospod predsednik. Torej, naša poslanska skupina pa predlaga, da se ne uvrsti na dnevni red 28. točka - predlog Vlade Republike Slovenije za umik iz zakonodajnega postopka predloga zakona o kmetijsko gospodarskih zbornicah, druga obravnava.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg47">Torej, dvakrat smo to točko že zavrnili in menimo, da še ni potrebe, da bi jo uvrstili na dnevni red. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg48">Hvala lepa, gospod Božič. Omenili ste zakon o kmetijsko gozdarskih zbornicah. Torej predlog je bil dan. Dan je bil predlog,da se z dnevnega reda umakne 28. točka dnevnega reda - predlog Vlade Republike Slovenije za umik iz zakonodajnega postopka predloga zakona o kmetijsko gozdarskih zbornicah - druga obravnava.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg49">Želi predstavnik predlagatelja besedo? Predlagatelj je v tem primeru Vlada Republike Slovenije.</seg>
                <note>Ne želi.</note>
@@ -999,11 +982,11 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg52">Želijo besedo predstavniki poslanskih skupin? Gospod Veber v imenu poslanske skupine Združene liste socialnih demokratov.</seg>
             </u>
             <note type="speaker">JANKO VEBER:</note>
-            <u who="#SDZ2.VeberJanko" ana="#regular">
+            <u who="#VeberJanko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg53">Hvala za besedo. Tudi o tem predlogu smo razpravljali v poslanski skupini in dejansko ugotavljamo, da obveznosti, ki jih nalaga nov zakon o kmetijsko gozdarskih zbornicah so take, da v tem trenutku niso sprejemljive za slovenske državljane. Zato podpiramo prejšnjo varianto in s tem tudi nasprotujemo umiku z dnevnega reda. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg54">Hvala lepa gospodu Vebru. Želi še kdo besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg55">Sprašujem, ali želi predlagatelj umika dodatno obrazložiti svoj predlog?</seg>
@@ -1019,7 +1002,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg61">Gospod Sovič ima prav tako predlog za umik.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg62">Cenjene dame, spoštovani! Prisrčen pozdrav. V zvezi s točko dnevnega reda, ki obravnava predlog zakona o dopolnitvi zakona o industrijski lastnini. Gre za 14. točko dnevnega reda. Predlagam, da bi to točko umaknili. Mi smo v Odboru za znanost in tehnologijo o tem razpravljali in dali predlog Vladi Republike Slovenije, da bi sama do začetka obravnave tega teksta v državnem zboru navedeni tekst umaknila. Ker se to še ni zgodilo, predlagam, da bi danes mi sami ta tekst umaknili.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg63">To utemeljujemo z dvema razlogoma.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg64">1. Ta tekst, ki je pred nami, je v nasprotju z 8. členom ustave Republike Slovenije, ki govori o tem, da je nujno respektirati mednarodne konvencije, ki jih je ratificirala Republika Slovenija in jih praktično direktno uporabljati.</seg>
@@ -1027,29 +1010,29 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg66">Ker gre za relativno kratek zakonski tekst, hkrati pa problematiko, ki je relativno pomembna, je v odboru bilo naše mnenje, da je smiselno tekst umakniti iz procedure, zato, da bi vlada lahko čimprej pripravila nov tekst, ki bi upošteval ti dve danosti. Na ta način bi ta tekst lahko čimprej v državnem zboru sprejeli. Skratka, predlagamo, da bi ta predlog zakona o dopolnitvi zakona o industrijski lastnini umaknili iz te točke dnevnega reda in s te seje državnega zbora. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg67">Hvala lepa, gospod Sovič. Gospod Sovič to predlaga v funkciji poslanca državnega zbora, ne pa v funkciji komisije oziroma matičnega delovnega telesa, kajti če bi to bilo tako, potem bi seveda ta točka bila umaknjena z dnevnega reda in se uvrstila na dnevni red naslednje seje. Ta predlog, torej da se umakne 14. točka, predlog zakona o dopolnitvi zakona o industrijski lastnini, z dnevnega reda te seje, bomo obravnavali, kot to določa poslovnik. Želi predstavnik predlagatelja, v tem primeru, vlade besedo?</seg>
                <note>Želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg68">Prosim, državni sekretar oziroma gospod Pretnar, direktor Urada za varstvo industrijske lastnine.</seg>
             </u>
             <note type="speaker">DR. BOJAN PRETNAR:</note>
-            <u who="#SDZ2.PretnarBojan" ana="#regular">
+            <u who="#PretnarBojan">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg69">Spoštovani, hvala lepa. Želel bi povedati, da se seveda zavedamo pripomb, ki jih je matični odbor v zvezi s to točko imel. Rad bi opozoril, da predlagatelj ravno s 155. členom, drugim odstavkom, brani svoj predlog za spremembo tega zakona, ker gre za velik javni interes in obrambo pridobljenih pravic. Če bo zakon umaknjen iz razprave, se z vsakim dnevom povečuje nevarnost škode, ki jo bo občutilo naše gospodarstvo. In zaradi tega predlagamo, da ta točka ostane na dnevnem redu, v okviru razprave bi pa potem podrobneje pojasnili vse naše argumente, zakaj pri tem vztrajamo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg70">Hvala, gospod Pretnar. Ko ste rekli "155. člen", ste mislili ustave Republike Slovenije?</seg>
                <note>Da.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg71">Hvala lepa.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg72">Želi besedo poročevalec matičnega delovnega telesa? Gospod Sovič.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg73">Spoštovani! Ravno zato, ker je matični odbor na nek način respektiral razloge, ki jih je zdaj predstavnik vlade omenjal, smo želeli predlagati najbolj enostavno rešitev, in to je, da bi vlada sama umaknila tekst, ki seveda ima resne težave, kar se njegove ustavnosti tiče; ne nasprotuje samo enemu členu ustave, ampak kar dvema. In ravno to je bila zamisel, da bi vlada nemudoma pripravila nov tekst, ravno zaradi tega, ker gre za relativno občutljivo problematiko, zaradi katere pravzaprav se relativno mudi. In zaradi tega je še toliko bolj zanimivo in neobičajno, da vlada tega ni že storila in nam že praktično ni predstavila že novega teksta, ki bi ga seveda potem v primeru potreb lahko že tudi poskušali čimprej obravnavati.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg74">Še enkrat poudarjam, ta tekst je nesprejemljiv, ker je v nasprotju z ustavo, vsaj tako je mnenje, bi rekel, ki smo ga prejeli. In na ta način - tekst zakona je pa relativno kratek, samo en člen ima ta zakon, poleg tistih prehodnih določb, in neverjetno je, da bi že v enem členu bilo možno kar dvakrat kršiti ustavo. Skratka, na tej osnovi je odbor bil mnenja, da bi bilo zelo smiselno pravzaprav omogočiti vladi, da pripravi tak tekst, ki bo skladen z ustavo, tak tekst, ki ga potem tudi državni zbor lahko seveda obravnava in čimprej sprejme. In tudi iz tega razloga mislim, da je tak predlog utemeljen, ki sem ga dal na začetku. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg75">Hvala lepa gospodu Soviču. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg76">Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -1065,7 +1048,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg82">Je še kakšen predlog za umik? Gospod Špiletič ima predlog. Prosim.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg83">Spoštovani! Predlagam, da se umakne z dnevnega reda 18. točka, to je predlog zakona o zaključku lastninjenja in privatizaciji pravnih oseb v lasti Slovenske razvojne družbe. Razlogi za ta predlog pa so predvsem naslednji:</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg84">1. Vlada vse do danes še ni izpolnila sklepov državnega zbora, ki bi lahko v celoti osvetlili posledice predlaganega zakona.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg85">2. Še tik pred današnjo sejo so bili vloženi številni amandmaji na omenjeni zakon in vlada do njih še ni zavzela stališča, hkrati pa vse do danes tudi matično delovno telo ni zavzelo dokončnega mnenja o tem predlogu zakona in številnih amandmajih, iz enostavnega razloga, ker vlada ni pravočasno podala tisto, k čemur jo je državni zbor zavezal.</seg>
@@ -1073,17 +1056,17 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg87">Menimo, v naši poslanski skupini, da se ob tako veliko odprtih vprašanj, ki imajo tako težke materialne posledice, ni mogoče odločati, zato predlagamo umik in prestavitev na naslednjo sejo državnega zbora.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg88">Hvala lepa. Torej poslanec gospod Špiletič predlaga, da se z dnevnega reda te seje umakne 18. točka dnevnega reda - predlog zakona o zaključku lastninjenja in privatizaciji pravnih oseb v lasti Slovenske razvojne družbe, hitri postopek. V okviru tega postopka sta pred nami še druga in tretja obravnava.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg89">Želi predstavnik predlagatelja, torej vlade, besedo? Želi. Državni sekretar dr. Pirkmajer.</seg>
             </u>
             <note type="speaker">DR. EDO PIRKMAJER:</note>
-            <u who="#SDZ2.PirkmajerEdo" ana="#regular">
+            <u who="#PirkmajerEdo">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg90">Gospod predsednik! Spoštovani poslanke in poslanci! Vlada predlaga, da se predlog za umik kot točke dnevnega reda zavrne, in vztraja pri tem, da bi o zadevi, o zakonu državni zbor razpravljal.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg91">Vlada je izpolnila svoje obveznosti in 2. oktobra poslala v državni zbor svoje amandmaje, zavzela je tudi stališče do vseh do takrat predlaganih amandmajev. Res pa je, da so po 2. oktobru, deloma z istim datumom prišli v državni zbor dodatno mnenje zakonodajno-pravne službe državnega zbora, Sekretariata za zakonodajo in pravne zadeve, in da so bili vloženi številni amandmaji pooblaščenih ponudnikov, predlagateljev, kakor tudi nepooblaščenih. Pretekli četrtek je bila seja komisije za lastninsko preoblikovanje, na kateri so bili vsi ti amandmaji obravnavani in sprejet je bil sklep, da vlada pripravi stališča do novih amandmajev. Ta stališča so danes pripravljena in bodo šla skozi vladno proceduro, nato bodo predstavljena državnemu zboru. Odprti sta dve ali tri vprašanja in tu obstaja, še poteka usklajevanje s pobudniki oziroma predlagatelji nekoliko drugačnih rešitev. Vsekakor bo vlada nared s svojimi predlogi in svojimi stališči, da bo lahko takrat, ko bo zadeva uvrščena ponovno na dnevni red komisije, matičnega delovnega telesa, da bo to svoje stališče predstavila in sodelovnala pri tem, da se zakon sprejme. Zakon je izredno pomemben, in o tem smo povedali svoje mnenje že zadnjikrat, na julijski seji. Odlašanje bi pravzaprav prispevalo k temu, da bi bila nekatera pereča vprašanja našega lastninjenja odložena. Prav tako bo do seje komisije podano tudi novo poročilo o oceni tako imenovane privatizacijske vrzeli, kakor tudi o premoženju, ki bi bilo še potrebno lastnjinjenja. S tem bi vlada v celoti, in to po današnjem stanju, opravila svojo nalogo, ki ji jo je državni zbor določil. Ponovno predlagam, da državni zbor ne podpre predloga za umik.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg92">Hvala državnemu sekretarju. Želi besedo poročevalec matičnega delovnega telesa?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg93">Želi besedo predstavnik Sekretariata za zakonodajo in pravne zadeve?</seg>
@@ -1102,30 +1085,30 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg100">Sprašujem, ali je še kakšen predlog za umik z dnevnega reda. Gospod Janko Veber ima predlog za umik.</seg>
             </u>
             <note type="speaker">JANKO VEBER:</note>
-            <u who="#SDZ2.VeberJanko" ana="#regular">
+            <u who="#VeberJanko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg101">Hvala za besedo. Pravzaprav ne gre za umik, gre pa bolj za mnenje predsedujočega o tem, kako se bo nadaljeval postopek o spremembi predloga zakona o spremembah in dopolnitvah zakona o Skladu kmetijskih zemljišč. S predlagateljem sva upoštevala mnenje službe za zakonodajo in iz skrajšanega postopka predlagava spremembo v redni postopek. In me zanima, ali to pomeni, da se ta točka umakne, ali ostane na dnevnem redu?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg102">Gre za 20. točko dnevnega reda - Predlog zakona o spremembah in dopolnitvah zakona o Skladu kmetijskih zemljišč in gozdov - skrajšani postopek. Podpisana poslanca - vlagatelja gospod Potrč in gospod Veber sta predlagala oziroma umaknila predlog za skrajšani postopek. To pa pomeni, da bo zakon uvrščen po rednem postopku. Vprašanje, ki se odpira, je bilo na nek način že odprto tudi na seji kolegija. Kajti v proceduri imamo vedno zelo veliko zakonov po hitrem ali skrajšanem postopku, in kadar se dogovorimo ali kadar državni zbor ne potrdi hitrega ali skrajšanega postopka, potem bi bil moj predlog, da se ta zakon uvrsti na eno naslednjih sej. Se strinjate s tem? Hvala.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg103">Smo pri umikih. Mislim, da smo sedaj izčrpali. Gospod Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg104">Hvala, gospod predsednik. Moj umik je sicer pogojen z nekim pojasnilom, ki bi ga eventualno dobil tu od predstavnikov vlade. Spoštovani kolegi, 37. točka dnevnega reda - ne verjamem, da vidim napačno, še vedno dobro vidim - predlog zaključnega računa proračuna Republike Slovenije v letu 1994. Ali ima to smisel dati na dnevni red, razen če mi ne rečete, da je to mogoče za 1995 ali 1996. Potem jaz umaknem svoj predlog. Prosim predstavnika vlade, da pove, ali je tu napaka, ali se vi delate norca z nami, ker drugače se bomo tudi mi z vami. Kolikor pa to drži, da gre za leto 1994, predlagam, da smo maksimalno racionalni, da to umaknemo z dnevnega reda, ker je to "passé." Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg105">Hvala. V skladu z obstoječo zakonodajo vemo, da je potrebno, da zaključni račun proračuna potrdi tudi državni zbor, ta predlog, ki je bil v proceduri. Z novim zakonom o Računskem sodišču pa ima tudi le-ta pristojnost, da prav tako tudi pogleda zaključni račun proračuna Republike Slovenije za ta leta, odkar deluje Računsko sodišče, in tu je eden od razlogov, da je prišlo do tega zamika. Predlagam pa, da ta tema - točka ostane na dnevnem redu, da državni zbor sprejme in potrdi zaključne račune za pretekla leta. Tukaj smo odvisni tudi od stališča Računskega sodišča. Gospod Hvalica, pri tej temi, žal, ni razprave.</seg>
                <note>Glas iz dvorane.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg106">Gospod Hvalica, potem predlagam, da predlagate umik in da o tem glasujemo.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg107">Hvala, gospod perdsednik. Potem predlagam začasni umik, tako da bi skupaj lahko obravnavali predlog zaključnega računa še za leti 1995 in 1996. Mislim, da bi bilo to racionalno. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg108">Hvala lepa. Predlog torej gospoda Hvalice je, ker ni termina začasni umik, da se torej umakne 37. točka dnevnega reda - predlog zaključnega računa proračuna Republike Slovenije v letu 1994 z dnevnega reda 7. redne seje. Želi predstavnik vlade besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg109">Poročevalec matičnega delovnega telesa?</seg>
@@ -1144,7 +1127,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg117">Gospod Schiffrer, prosim.</seg>
             </u>
             <note type="speaker">MAG. MARIJAN SCHIFFRER:</note>
-            <u who="#SDZ2.SchiffrerMarijan" ana="#regular">
+            <u who="#SchiffrerMarijan">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg118">Gospod predsednik! Spoštovane kolegice in kolegi! S presenečenjem ugotavljam, da na dnevnem redu 7. seje Državnega zbora Republike Slovenije, ki jo danes začenjamo, ni poročila, ki ga je Državni zbor Republike Slovenije zahteval od vlade na svoji 6. seji, 11. septembra 1997. Če dovolite, bom citiral: "Državni zbor Republike Slovenije je na 6. seji dne 11.9.1997 ob obravnavi točke" položaj slovenske manjšine v Italiji in uresničevanje resolucije o položaju avtohtonih slovenskih manjšin", sklenil naslednje v svoji 5. točki: Državni zbor Republike Slovenije na podlagi 270. člena poslovnika zahteva, da mu Vlada Republike Slovenije na 7. seji poroča o izvrševanju resolucije o položaju avtohtonih slovenskih manjšin v sosednjih državah in s tem povezanimi nalogami državnih in drugih dejavnikov Republike Slovenije. V poročilu naj izpostavi razloge, zaradi katerih še ni ustanovljeno posvetovalno telo pri Vladi Republike Slovenije iz tretjega odstavka, rimska II - tretje poglavje resolucije, in sklad za gospodarsko sodelovanje s slovenskimi avtohtonimi manjšinami, peti odstavek, rimska II - četrto poglavje resolucije."</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg119">Predlagam, da se na podlagi omenjenega sklepa 6. seje razširi dnevni red z navedenim poročilom, ki ga naj vlada posreduje, še preden bi bila točka dnevnega reda na vrsti.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg120">Opozoril bi rad na odnos med vlado in državnim zborom. Vlada v več primerih ne upošteva sklepov državnega zbora, jih ne izvaja, ravno tako ne uresničuje resolucije o položaju avtohtonih slovenskih manjšin v sosednjih državah in s tem povezanih nalog državnih in drugih dejavnikov Republike Slovenije.</seg>
@@ -1152,53 +1135,53 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg122">Predlagam, da se ne dovoli še nadaljnje neupoštevanje sklepov državnega zbora in da se dnevni red 7. redne seje razširi s poročilom vlade. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg123">Hvala lepa, gospod Schiffrer. Drugi odstavek 270. člena poslovnika govori: Vsak poslanec lahko predloži, da državni zbor sprejme sklep, s katerim se od vlade ali posameznega ministra zahteva, da poroča državnemu zboru o izvrševanju zakonov, drugih predpisov, ki jih je sprejel državni zbor.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg124">Ta sklep je državni zbor sprejel na prejšnji seji. Do danes odgovora vlade na ta sklep državnega zbora nismo prejeli. Delim vaše mnenje, gospod Schiffrer, da je vlada dolžna v celoti v skladu s poslovnikom državnega zbora izvrševati tiste obveznosti, ki so pač del naših poslovniških določil in govorijo o korektnem odnosu med državnim zborom in Vlado Republike Slovenije. Res pa je, da tega poročila ni v državnem zboru in naša dosedanja praksa je bila naslednja, da smo v takem primeru, kot je vaš, gospod Schiffrer, naslovili poslanko ali poslanca, da je s poslanskim vprašanjem to vprašanje odprl, in pri točki poslanskih vprašanj, do takrat lahko vlada pripravi to poročilo. Seveda pa to ne pomeni, da ne bi na naslednji seji, ko bo to poročilo prišlo v državni zbor, to bila tudi točka dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg125">Mislim, da sem dal korektno pojasnilo. Boste podali poslansko vprašanje v pisni obliki in do poslanskih vprašanj že lahko vlada v celoti pripravi odgovor na sklep državnega zbora.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg126">Kolegice in kolegi! Ali je še kakšen predlog za razširitev dnevnega reda? Gospod Rejc ima proceduralno, potem pa gospod Potočnik.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg127">Gospod predsednik, gospe in gospodje! Menim, da je to pojasnilo, ki si ga dal, tako, zvodenelo. Glede na to, da poslansko vprašanje je še večji nič kot pa sklep državnega zbora. Menim, da je predlog, ki ga je dal gospod poslanec Schiffrer, treba dati na glasovanje in naj da vlada svoje poročilo. Do konca seje bomo že nekaj dobili. To je mislim edino umestno, da se zgodi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg128">Gospod Rejc, v svojem pojasnilu nisem navajal še enega pomembnega poslovniškega določila, ki je vedno zelo pomembno pri razširitvi dnevnega reda. To so pa tako imenovani razlogi, ki nastanejo v času, ko je sklic seje že sklican. To je vprašanje. Strinjam se z gospodom Schiffrerjem in tudi s tabo, gospod Rejc, da je vprašanje položaja slovenskih manjšin zelo pereče. To je tema, o kateri je državni zbor že večkrat govoril. Zadeva je zelo aktualna. Mislim pa, da v zadnjih šestih dnevih niso nastali novi razlogi, ki bi poslance navedli k temu, da bi pač navajali nove razloge, ki so nastali od sklica redne seje. Ponovno pa zagotavljam, da se bom tudi sam zavzel, da bo poslanec dobil celovit odgovor pri točki, kjer ga lahko dobi. To so poslanska vprašanja. To pa ne pomeni, da na naslednji seji državnega zbora ta odgovor ne bo samostojna točka dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg129">Gospod Potočnik.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg130">Gospod predsednik! Najprej vprašanje v zvezi z 20. točko in na osnovi tega odgovora, ki ga bom dobil, se bom potem odločil, ali bom predlagal razširitev ali ne.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg131">20. točka je predlog zakona o spremembah in dopolnitvah zakona o Skladu kmetijskih zemljišč in gozdov Republike Slovenije; vložen je bil po skrajšanem postopku. Predlagatelji predlagajo, da gre po normalnem postopku, in me zanima, ali bo na današnji seji ta zakon obravnavan ali ne.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg132">Hvala, gospod Potočnik. Jaz sem delno že prej odgovoril na zelo podobno vprašanje gospoda Vebra. Jaz sem odgovoril naslednje: ta zakon bo sedaj v normalnem postopku in bi bil uvrščen na eno od prihodnjih sej, lahko rečemo tudi že na naslednjo; seveda, tu je en problem, da ni na predhodnem sklicu. Na kolegiju smo veliko govorili o teh vprašanjih, kajti skrajšani in hitri postopki obsegajo zelo veliko dela in prostora v državnem zboru, pač poslovnik to omogoča. In tukaj se pojavlja vprašanje dosedanje prakse. Če se zakon umakne iz skrajšanega postopka v običajni postopek, je bila praksa taka, da zakon ni potem ostal na tisti seji, kjer je bil uvrščen kot skrajšani postopek. Prosim, gospod Potočnik.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg133">Torej, glede na to, da predlog zakona o spremembah in dopolnitvah zakona o Skladu kmetijskih zemljišč in gozdov Republike Slovenije zdaj ni več na dnevnem redu, predlagam razširitev točke - predlog zakona o spremembah in dopolnitvah zakona o Skladu kmetijskih zemljišč in gozdov Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg134">Predlagatelji so obrazložili sicer, ko so umikali skrajšani postopek, da so se po posvetu s službo za zakonodajo tako odločili. To stališče službe je bilo podano tudi že na Odboru za kmetijstvo, gozdarstvo in prehrano, ki je ta zakon obravnaval in ga zavrnil z rezultatom 11 proti 1. 21.10. so predlagatelji napisali:</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg135">"Glede zakona o Skladu kmetijskih zemljišč in gozdov tudi ne spreminjamo načina obravnave, ocenjujemo pa sicer, da ni nujno, da je uvrščen na 7. redno sejo državnega zbora."</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg136">S to proceduralno "finto", če rečem po domače, je pač doseženo, da je zakon umaknjen z dnevnega reda. In ker je bil zakon vložen nekaj dni ali pa nekaj ur pred vladnim zakonom, ki obravnava podobno problematiko, kot ta, in še veliko širše, in ocenjujem, da je pač ta manever narejen zaradi tega, da se prepreči oziroma čim dlje zavleče sprejem vladnega zakona. Zato predlagam, da se dnevni red današnje seje razširi s točko: predlog zakona o spremembah in dopolnitvah zakona o Skladu kmetijskih zemljišč in gozdov Republike Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg137">Hvala lepa. Gospod Potočnik, vsekakor ste s tem predlogom predlagali rešitev, ki je poslovnik ne določa. Namreč, najprej vas sprašujem, ali vi predlagate na dnevni red zakon, ki ga je vložila vlada, ali poslanca Miran Potrč in Janko Veber?</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg138">Jasno je, da se po poslovniku zakoni obravnavajo po vrstnem redu vložitve, in ker je vložen prej zakon gospoda Potrča in Vebra, pomeni to, da danes predlagam uvrstitev na dnevni red zakona, ki sta ga podpisala gospod Veber in gospod Potrč.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg139">Hvala lepa, gospod Potočnik. To je sedaj nova situacija. Tudi v smislu našega poslovnika.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg140">Torej, zgodilo se je naslednje. Predlagatelja tega zakona sta umaknila skrajšani postopek in dosedanja praksa je bila, da je tak zakon potem šel avtomatično na naslednjo sejo državnega zbora. Sedaj smo pa v situaciji, ko nek drug poslanec predlaga, da se ta zakon po običajnem postopku vendarle uvrsti na dnevni red te seje državnega zbora.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg141">Torej to bo potem predlog za razširitev in bi predlagal, da gremo - mislim, da ne kršimo poslovnika, torej da gremo po možnosti <gap reason="inaudible"/> Želi predlagatelj zakona besedo? Gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg142">Gospod predsednik! Jaz bi imel sledeča pojasnila. Ne bom rekel, da je treba kaj zelo komplicirati.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg143">1. Predlagatelja imava pravico povedati o tem, po kakšnem postopku se bo obravnavalo in sva to korektno naredila.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg144">2. Res je, da morda nismo ali niso bile vse poslanke in poslanci pozorni glede vaših ugotovitev.</seg>
@@ -1207,7 +1190,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg147">Res pa je, da se potem lahko in mora to v ta zakonodajni postopek vključiti. Za to se mi bo zdelo čudno, če bomo ponovno, tukaj pa poudarjam, ponovno običaje, ki smo jih imeli zaradi interesa neke stranke ali kakorkoli, spreminjali in bi vam svetoval, da tudi vi tega ne naredite. Ker ste korektno povedali, doslej je bila redna praksa, če je zakon po skrajšanem postopku, če ni sprejet, se ne obravnava prva obravnava po tem postopku. Situacija, gospod Anderlič, je popolnoma enaka, odločitve o tem ne more biti, ker so predlagatelji predlagali spremembo postopka in zakona v skrajšanem postopku ni. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg148">Hvala lepa, gospod Potrč. Torej zame, kot tudi v tem primeru predsedujočega, je zelo pomembno, da korektno tolmačim poslovnik oziroma da sem konsekventen. Jaz sem povedal, da je bila dosedanja praksa taka, ne vem, ali je bila pri vseh primerih. Je pa to seveda sedaj novo, da poslanec predlaga nek zakon na dnevni red od drugega poslanca, ki pa umika skrajšani postopek. Mislim, da je to prvič, tak primer. To, kar se je sedaj zgodilo. Tako, da bo tudi ta odločitev današnja, kakršnakoli bo, bo precedens. Zato je pomembno, da najdemo rešitev, ki bo tudi poslovniško maksimalno korektna.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg149">Gospoda Potrča sem razumel, da ni nasprotoval v celoti temu predlogu. Vi ste me opozoril, jaz pa sedaj, ko razlagam ta svoj položaj, pač nekako obrazlagam, kako gledam na to situacijo, ki je zapletena. Sprašujem, ali želi predstavnik sekretariata besedo?</seg>
                <note>Ne želi.</note>
@@ -1222,7 +1205,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 14.00 uri in se je nadaljevala ob 14.13 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg155">Kolegice in kolegi! Nadaljujemo sprejemanje dnevnega reda 7. redne seje. Ugotovimo sklepčnost!</seg>
                <note>47 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg156">Ugotavljam, da je državni zbor sklepčen in lahko odloča.</seg>
@@ -1242,7 +1225,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg165">Potem prehajamo na glasovanje o skrajšanem oziroma po hitrem postopku. Najprej po hitrem. Vlada Republike Slovenije je zboru predložila predlog zakona o dopolnitvi zakona o industrijski lastnini in predlaga zboru, da ga sprejme o hitrem postopku. Matično delovno telo ne podpira sprejema predloga zakona po hitrem postopku. Želi besedo predstavnik vlade? Gospod Pretnar.</seg>
             </u>
             <note type="speaker">DR. BOJAN PRETNAR:</note>
-            <u who="#SDZ2.PretnarBojan" ana="#regular">
+            <u who="#PretnarBojan">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg166">Hvala lepa. Spoštovane gospe in gospodje! Dovolite mi, da še enkrat v imenu predlagatelja povem nekaj besed, zakaj smo predlagali hitri postopek in kako utemeljujemo ta zelo kratek in res da nekoliko ne navaden zakon.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg167">Ustavno sodišče je s svojo odločbo razveljavilo obveznost, da tisti nosilci pravic industrijske lastnine, ki so jih imeli, svoje pravice, to so patenti in znamke in podobno, 3. aprila 1992 v Zvezni Jugoslaviji prijavljene - zakon je doslej pogojeval, da je treba te pravice v nekem roku prenesti na slovenski urad za intelektualno lastnino, ki je bil ustanovljen z ustavnim zakonom ob samosvojitvi - torej ustavno sodišče se je odločilo, da črta obveznost tako imenovanega prenosa teh pravic na Slovenijo. S tem je nastal strahovit pravni nered in celo javni interes je po našem mnenju ogrožen, zaradi tega, ker ta trenutek sedaj ne vemo, katere pravice v Sloveniji, pravice industrijske lastnine veljajo in katere ne veljajo. Da postrežem z enim podatkom.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg168">Od približno 30 tisoč veljavnih znamk, ki so bile 3. aprila 1992 veljavne pri zveznem zavodu za patente v Beogradu, jih je bilo prenesenih v rednem roku v Slovenijo samo 7.000, 23.000 jih je ostalo neprenesenih, in te so seveda potem v skladu z zakonom, preden ga je ustavno sodišče z odločbo spremenilo, prenehale veljati v Sloveniji.</seg>
@@ -1255,17 +1238,17 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg175">Glede na to, da gre za urgentne zadeve, ki resno ogrožajo - nam je znano, da se grožnje in tožbe pripravljajo proti slovenskim nosilcem patentov in znamk, glede na to, da gre za resen problem, predlagamo, da se po hitrem postopku sprejme predlog zakona, takšen, kot je. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg176">Hvala, dr. Pretner. Želi besedo poročevalec matičnega delovnega telesa? Gospod Sovič.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg177">Cenjene dame, spoštovani! Že uvodoma, ko smo razpravljali o dnevnem redu, sem na nek način opozoril na stališča, ki jih je naš odbor v zvezi s to tematiko sprejel. Gre res za materijo, ki v mnogih elementih vpliva na položaj kar precejšnjega dela slovenske industrije. Vendar to hkrati tudi zahteva od nas, da pripravimo takšno rešitev, ki bo omogočala, da bi se sedanji problemi na nek način razpletli. Ker imamo opozorila, da sta v obstoječem členu, saj gre samo za en pomemben člen, kar dva elementa, ki lahko na nek način dopuščata dvom o ustavnosti rešitev, je vprašanje, ali je možno s tako rešitvijo razplesti situacijo, s katero smo soočeni. Mislim, da bi potrebovali zelo jasno zagotovilo, da bo rešitev, ki je predlagana, takšna, da ne bo sprožala novih sporov in morebiti spet pred ustavnim sodiščem nove razveljavitve kakšnega od določil tega zakona.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg178">Ker gre pri eni od teh interpretacij tudi za to, da ta zakon ureja stvari za nazaj, torej za retroaktivnost, mislim, da je dvom v to, da bi se lahko ponovno zgodilo, da bi vsaj en del tega zakona bil razveljavljen, kar upravičen. S tega vidika se mi zdi, da kaže rešitve, ki so, pretehtati, da ne bi bila pravna zmeda še večja.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg179">To je na nek način vodilo naš odbor k temu, da smo predlagali, da bi se ne obravnaval ta zakon po hitrem postopku. Mi smo celo predlagali, da bi ga vlada kar umaknila in prišla s čisto rešitvijo, ki bo imela realno možnosti, da ne bo potem ustavno spodbijana. Mislili smo, da bo na ta način pravzaprav najlažje razplesti zaplet, pred katerim smo. To so na nek način razlogi, ki po našem mnenju upravičujejo to, da bi kazalo ponovno pretehtati, ali je sploh ta hitri postopek smiseln ali ne. Še enkrat pa poudarjam, boljše bi bilo ta zakon umakniti in ga pripraviti v nekem tekstu, ki bi bil sprejemljiv tako z vidika ustave kot z vidika interesov slovenske industrije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg180">Hvala, gospod Sovič. Kolege v ozadju bi prosil, da ali stopijo v preddverje ali pa v svoje poslanske sedeže. Želi besedo predstavnik Sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg181">Želijo besedo predstavniki poslanskih skupin? Govorimo o predlogu zakona o dopolnitvi zakona o industrijski lastnini - hitri postopek.</seg>
@@ -1347,11 +1330,11 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg222">Gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg223">Hvala lepa. Gospod predsednik! Mogoče želite pomagati pri odločanju, ne bom rekel, da ne, ampak to bi bil danes drugi primer, kjer bi dvakrat odločali. Lepo prosim ne delajmo tega. Imam v spominu, da ste povedali in da je državni zbor soglašal, da se ta točka uvršča na dnevni red kot obravnava predloga zakona oziroma obravnava predloga umika tega zakona in ne dajmo o tem še enkrat odločati. Razen, če bi vi želeli, da odločimo drugače kot smo prej odločali. Odločati o skrajšanem postopku pa nima smisla, če smo predlagali umik. O tem umiku je treba odločati in jaz mislim, da je to dogovorjeno. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg224">Hvala gospod Potrč. Z vašim posegom ste mi prepričali in umikam predlog, da bi državni zbor glasoval tudi glede skrajšanega postopka.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg225">Vlada Republike Slovenije je v obravnavo zboru predložila predlog zakona o spremembah in dopolnitvah zakona o vojnih invalidnih in predlaga zboru, da ga sprejme po skrajšanem postopku. Matično delovno telo soglaša s tem predlogom. Želi predstavnik vlade besedo? Želi besedo poročevalec matičnega delovnega telesa? Želi predstavnik Sekretariata za zakonodajo in pravne zadeve? Predstavniki poslanskih skupin?</seg>
                <note>Ne želijo.</note>
@@ -1401,12 +1384,12 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg251">Proceduralni predlog ima tudi gospod Ivo Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg252">Hvala lepa, gospod predsednik. Dovolite, da ob mojem proceduralnem predlogu komentiram še to, kar ste vi predlagali, torej da bi seje dejansko vodili po dnevnem redu. To se nam do sedaj še ni zgodilo. Upam, da je iskrena težnja k temu, da bi se to dogajalo, ampak jaz v to ne verjamem, ker smo že začeli s 1. točko in smo jo premaknili.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg253">Torej, zdaj bi pa še jaz rad spremenil dnevni red, ker je pogojen s to točko dnevnega reda. Gre za to, da imamo na tej seji kot 41. točko dnevnega reda tudi obravnavo postopka nabave policijskega plovila 5-111. Ta točka je neposredno povezana s 1.A točko dnevnega reda. Predlagam, zaradi higiene, kot jaz temu pravim, da bi najprej obravnavali 41. točko dnevnega reda, ugotovili eventuelne odgovornosti, ki so nastale ob tem - jaz sam sem bil v prejšnjem mandatu član Odbora za nadzor proračuna in verjetno imam kaj o tem povedati, pa tudi drugi - torej, da bi pred tem obravnavali 41. točko dnevnega reda. Ker smo pravkar izglasovali to, da bodo volitve obeh ministrov ob 14.30 uri, predlagam, da bi 41. točko opravili jutri ob 10.00 uri. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg254">Hvala lepa za vaš proceduralni predlog. Člen poslovnika govori: "Med sejo državni zbor lahko spremeni vrstni red obravnave posameznih točk dnevnega reda." V smislu te določbe dajem ta predlog gospoda Hvalice na glasovanje. Ugotovimo sklepčnost!</seg>
                <note>65 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg255">Kdo je za?</seg>
@@ -1421,19 +1404,19 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg261">Predlog zakona je obravnaval Odbor za mednarodne odnose kot matično delovno telo. Želi poročevalec odbora besedo? Morda za vse? Prosim, gospod Kacin.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg262">Gospod predsednik, kolegice in kolegi! Odbor Državnega zbora Republike Slovenije za mednarodne odnose je na svoji 16. seji, ki je bila 16. julija, se pravi pred počitnicami, obravnaval predlog zakona o ratifikaciji sporazuma med Republiko Slovenijo in organizacijo za gospodarsko sodelovanje in razvoj o privilegijih, imunitetah in ugodnostih, ki se podeljujejo organizaciji. Odbor je pri obravnavi upošteval mnenje Sekretariata za zakonodajo in pravne zadeve, ki na predlog zakona ni imel pripomb. Odbor je soglašal z navedenim predlogom zakona ter predlaga državnemu zboru, naj ga uvrsti na sejo in sprejme. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg263">Gospod Kacin, ali lahko poveste tudi za ostale ratifikacije?</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg264">Vrsta ratifikacij je na današnjem dnevnem redu. Nekatere so izjemno pomembne, med njimi pa je tudi ena, za katero je negativno mnenje matičnega delovnega telesa in ob tej točki bi želel posebej spregovoriti.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg265">Hvala lepa, gospod Kacin. Želi besedo predstavnik Sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg266">Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -1479,11 +1462,11 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg288">Prehajamo na 4. TOČKO DNEVNEGA REDA - OBRAVNAVA PREDLOGA ZAKONA O RATIFIKACIJI BUDIMPEŠTANSKE POGODBE O MEDNARODNEM PRIZNANJU DEPOZITA MIKROORGANIZMOV ZA POSTOPEK PATENTIRANJA IN PRAVILNIKA BUDIMPEŠTANSKE POGODBE O MEDNARODNEM PRIZNANJU DEPOZITA MIKROORGANIZMOV ZA POSTOPEK PATENTIRANJA. Predlog tega zakona je v obravnavo zboru predložila Vlada Republike Slovenije. Želi predstavnik vlade besedo? Želi besedo predstavnik Odbora za mednarodne odnose? Predstavnik Sekretariata za zakonodajo in pravne zadeve? Predstavniki poslanskih skupin? Želijo poslanke in poslanci besedo? Gospod Sovič, prosim.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg289">Cenjene dame, spoštovani! Odbor za znanost in tehnologijo je obravnaval ta tekst, ki ga zdaj obravnavamo, in predlagal dodatni sklep, ki bi ga, ta sklep bi jaz rad zdaj tudi predložil državnemu zboru z željo, da bi ga sprejeli. Gre preprosto za to, da bi predlagali, da Vlada Republike Slovenije čimprej ugotovi interes za mednarodni depozitarni organ v Republiki Sloveniji, takšnega kot ta dokument, torej ta zakon o ratifikaciji Budimpeštanske pogodbe tudi predvideva. Tak interes v Sloveniji obstaja, mi smo na odboru bili seznanjeni s predlogom ustrezne institucije in mi bi želeli, da bi nam vlada čimprej sporočila, kakšne aktivnosti je v tej smeri izvedla, skratka, da bi čimprej realizirali te možnosti, ki nam jih ta Budimpeštanska pogodba tudi daje. Torej mi vsekakor podpiramo ratifikacijo, hkrati pa predlagamo dodatni sklep, da bi vlada čimprej ugotovila interes za mednarodni depozitarni organ v Republiki Sloveniji v skladu s to pogodbo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg290">Hvala, gospod Sovič. Predlog vašega dodatnega sklepa je v poročilu vašega odbora. Želi še kdo od poslank in poslancev besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg291">Razpravo zaključujem. Na glasovanje dajem najprej predlog, da bomo glasovali o predlogu zakona v celoti. Ugotovimo sklepčnost!</seg>
@@ -1505,19 +1488,19 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg300">V razpravo dajem dodatni sklep, ki ga je v imenu Odbora za znanost in tehnologijo, ki ga je predlagal gospod Boris Sovič. Državni zbor Republike Slovenije predlaga Vladi Republike Slovenije, da ugotovi interes za mednarodni depozitarni organ v Republiki Sloveniji in o tem skladno z 9. členom Budimpeštanske pogodbe pripravi pismeno poročilo ustrezni mednarodni instituciji. Želi v zvezi s tem dodatnim sklepom kdo besedo? Prosim. Dr. Hren-Vencljeva.</seg>
             </u>
             <note type="speaker">DR. HELENA HREN-VENCELJ:</note>
-            <u who="#SDZ2.HrenVenceljHelena" ana="#regular">
+            <u who="#HrenVenceljHelena">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg301">Spoštovani! Na tem področju vlada že precej časa vodi aktivnosti oziroma ministrstvo za znanost in tehnologijo in tudi depozit njihovih organizmov se že od leta 1975 neuradno sicer zaenkrat izvaja na Kemijskem institutu, tako da mislim, da je sicer primerno, da vlada poda celovit pregled, kaj je na tem področju naredila, ker ne gre samo za mikroorganizme, ampak tudi za druge vrste živega sveta, ki ga je pri nas torej v našem okolju. Mislim, da je to poročilo primerno, vendar kar se tiče mikroorganizmov, ta stvar je v polnem teku že dolgo časa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg302">Hvala lepa dr. Hren-Vencljeva. Gospod Sovič.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg303">Jaz bi rad samo dodatno dopolnil oziroma pojasnil stališče našega odbora. Stališče se nanaša na 7. člen tega zakona oziroma te pogodbe, ki govori, da depozitarno ustanova pridobi status mednarodnega depozitarnega organa na podlagi pisnega sporočila, ki ga na generalnega direktorja naslovi država sopogodbenica. Torej poanta našega sklepa je preprosto ta, da bi Vlada Republike Slovenije takšno pisno sporočilo tej mednarodni organizaciji posla, da bi na ta način zagotovila možnost, da bo ustrezna institucija v Sloveniji sploh dobila ingerence te depozitarne ustanove. S tega vidika mislim, da je zelo utemeljeno, da bi se ta sklep sprejel, tudi spričo tega, kar je sama kolegica povedala. Ker v Sloveniji očitno obstaja realni interes in možnosti za to. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg304">Hvala lepa. Želi še kdo besedo? Predstavnik vlade?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg305">Na glasovanje dajem dodatni sklep, kot sem ga že prej prebral. Ugotavljamo prisotnost!</seg>
@@ -1546,24 +1529,24 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg318">Predlog zakona je v obravnavo zboru predložila Vlada Republike Slovenije. Želi predstavnik vlade besedo? Prosim, državna sekretarka, gospa Belopavlovičeva.</seg>
             </u>
             <note type="speaker">NATAŠA BELOPAVLOVIČ:</note>
-            <u who="#SDZ2.BelopavlovičNataša" ana="#regular">
+            <u who="#BelopavlovičNataša">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg319">Hvala lepa. Rada bi poudarila, da je ratifikacija sporazuma o socialnem zavarovanju med Republiko Slovenijo in Republiko Hrvaško zelo pomembna, tako za naše državljane kot za naše zavarovance, tiste, ki živijo in ki delajo, in za tiste, ki so živeli in ki so delali na drugi strani meje.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg320">Sporazum pomeni možnost na eni strani seštevanje zavarovalnih dob, pridobljenih v eni drugi državi, kar je pomembno, glede na našo notranjo zakonodajo; pomeni možnost oziroma urejanje transferja določenih dajatev iz pokojninskega in invalidskega zavarovanja in ureja tudi problematiko zdravstvenega zavarovanja, vključno z zavarovanjem za nujne primere v času, ko nekdo začasno biva v eni ali drugi državi.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg321">Sporazum je pripravljen na podlagi standardov, ki veljajo v Evropski uniji na področju socialnega zavarovanja, in pomeni pomemben korak v urejanju odnosov z Republiko Hrvaško in to v tistem delu, ki prizadeva državljane ene in druge države najbolj neposredno.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg322">Na matičnem odboru so se pojavila nekatera vprašanja; mi smo ta vprašanja tudi kasneje po seji skušali pojasniti oziroma s posameznimi poslanci razčistiti, tako da mislim, da ni več nekih pomislekov v zvezi z ratifikacijo tega sporazuma. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg323">Hvala lepa, gospa državna sekretarka. Predlog zakona je obravnaval Odbor za mednarodne odnose kot matično delovno telo. Želi besedo poročevalec odbora? Prosim, gospod Jelko Kacin.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg324">Gospod predsednik, kolegice in kolegi! Odbor Državnega zbora Republike Slovenije za mednarodne odnose je na svoji 16. seji, 16. julija 1997, obravnaval predlog zakona o ratifikaciji sporazuma o socialnem zavarovanju med Republiko Slovenijo in Republiko Hrvaško.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg325">Predstavnica vlade, državna sekretarka Belopavlovičeva, je po uvodni predstavitvi predloga zakona odgovarjala na vprašanja članov odbora v zvezi z izplačevanjem vojaških pokojnin in uporabo določb sporazuma med Republiko Slovenijo in Republiko Hrvaško o vojaških pokojninah, z dne 20. julija 1992, tudi po uveljavitvi sporazuma o socialnem zavarovanju med Republiko Slovenijo in Republiko Hrvaško. Odgovarjala je na vprašanja o predpisih, ki na Hrvaškem zajemajo nadomestilo plače za čas porodniškega dopusta. Pojasnila je tudi termin "osebna služba" pri diplomatskem ali konzularnem predstavniku. V razpravi je član odbora, Zmago Jelinčič, menil, da sporazum vsebuje še nekatere druge formulacije, ki so v škodo Republike Slovenije, ter se v imenu poslanske skupine Slovenske nacionalne stranke zavzel za preložitev obravnave na naslednjo sejo odbora. Odbor je pri obravnavi upošteval mnenje Sekretariata za zakonodajo in pravne zadeve, ki na predlog zakona ni imel pripomb. Po končani razpravi pa je potem odbor glasoval o navedenem predlogu in se z njim ni strinjal. Nismo zmogli zadostno število glasov, da bi ta predlog zakona podprli. To je poročilo.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg326">Ker pa sem ravno pri besedi, bi rad opredelil tudi oziroma obrazložil svoj glas. Neglede na odločitev matičnega delovnega telesa, bom predlog ratifikacije podprl, in predlagam isto tudi vsem kolegicam in kolegom v državnem zboru. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg327">Hvala gospod Kacin. Drugi del vašega nastopa seveda sodi v rubriko stališča poslancev in poslank. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg328">Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -1622,12 +1605,12 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg360">Želi besedo predstavnik Odbora za mednarodne odnose? Gospod Jelko Kacin, prosim.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg361">Hvala za besedo. Odbor Državnega zbora Republike Slovenije za mednarodne odnose je na svoji 16. seji 16. julija letos, obravnaval predlog zakona o ratifikaciji pogodbe med Vlado Republike Slovenije in Vlado Republike Hrvaške o urejanju vodnogospodarskih razmerij. Odbor je razpravo omenjenega zakona prekinil in sklenil, da jo bo nadaljeval na naslednji seji odbora pod pogojem, da mu bo Vlada Republike Slovenije do takrat posredovala tudi pravilnik stalne slovensko-hrvaške komisije za vodno gospodarstvo, ki je bil podpisan hkrati s pogodbo.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg362">V skladu s sklepom 16. seje Odbora za mednarodne odnose je Vlada Republike Slovenije v naslednjih dneh, 28. julija 1997 državnemu zboru posredovala pravilnik stalne slovensko-hrvaške komisije za vodno gospodarstvo kot dodatno informacijsko gradivo. Odbor je potem na 28. seji 23. oktobra nadaljeval obravnavo predloga zakona o ratifikaciji navedene pogodbe. Pri obravnavi je upošteval mnenje Sekretariata za zakonodajo in pravne zadeve, ki na predlog zakona ni imel pripomb ter mnenje Odbora za infrastrukturo in okolje, ki predlog zakona podpira. Odbor je soglašal z navedenim predlogom zakona, ter predlagal državnemu zboru naj ga uvrsti na sejo, in sprejme. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg363">Hvala lepa, gospod Kacin. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg364">Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -1750,24 +1733,24 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg434">Prehajamo na 14. TOČKO DNEVNEGA REDA - PREDLOG ZAKONA O DOPOLNITVI ZAKONA O INDUSTRIJSKI LASTNINI, HITRI POSTOPEK. Predlog tega zakona je v obravnavo zboru predložila Vlada Republike Slovenije. Želi predstavnik vlade besedo? Prosim. Svetovalec vlade, gospod Piano. Prosim.</seg>
             </u>
             <note type="speaker">ANDREJ PIANO:</note>
-            <u who="#SDZ2.PianoAndrej" ana="#regular">
+            <u who="#PianoAndrej">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg435">Hvala lepa, gospod predsednik. Dovolite mi, da ponovim besede, ki so bile že pred kratkim izrečene. S predloženo dopolnitvijo zakona o industrijski lastnini po hitrem postopku želi vlada urediti položaj, ki je nastal po odločbi Ustavnega sodišča, s katero je razglasilo za neustaven določen rok, s katerim je Republika Slovenija določila, da je potrebno vse pravice industrijske lastnine, ki so bile prijavljene ali registrirane pri uradu, bivšemu uradu SFRJ za patente, prenesti na Slovenijo. O tem predlogu so bila danes že izrečena določena stališča. Jaz bi samo poudaril, da s predloženim ne kršimo 8. člena ustave, ki govori o veljavnosti mednarodnih pogodb, saj tukaj ne gre za neposredno uporabo 5. člena BIS Pariške konvencije, ampak gre samo, da uporabimo rok iz te konvencije, ki je 6 mesecev. Samega 5. BIS člena pa vsekakor v tem primeru ne moremo uporabljati, ker 5. BIS člen določa, da če kdo ne plača pristojbino, na primer za patent ima še možnost, da ga v 6 mesecih, ampak to pomeni, da ga urad obvesti, da mu pošlje ta poziv, da plača z dodatno pristojbino. Glede 155. člena pa je treba povedati, da tukaj dejansko gre za retroaktivnost, vendar pa so tukaj ogroženi javni interesi Republike Slovenije, pravna varnost, saj se ne ve, katera pravica velja, kar pa lahko povzroča velike težave oziroma število raznih nepotrebnih tožb, ter predlagamo, da; gospe in gospodje, vlada predlaga, da se ta vladni predlog sprejme, kakor ga je vlada predložila v obravnavo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg436">Hvala lepa gospod Piano. Predlog zakona je obravnaval Odbor za znanost in tehnologijo kot matično delovno telo. Prosim poročevalca, da predstavi mnenje.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg437">Spoštovani! Danes je bilo že nekajkrat bilo tu zelo natančno predstavljeno stališče našega odbora, zato mislim, da nima nobenega smisla, da bi sedaj to ponavljal. Samo na kratko rečeno. Naš odbor je ta tekst obravnaval in se seznanil z mnenjem sekretariata. Sekretariat je izrazil pomisleke o tem ali je tekst, ki je predložen, skladno z ustavo. Sekretariat je bil mnenja, da sta dva člena ustave, ki sta drugačna in imata drugačno intencijo kot ta tekst. In na tej osnovi je naš odbor preprosto predlagal, da bi vlada ta tekst umaknila iz obravnave z ozirom na to, kar smo pravzaprav že prej slišali. Pričakujem, da nam bo vlada predstavila kakšni so ti amandmaji, ki jih bodo predložili, ker predpostavljam, da je tudi vladi očitno, da tak tekst seveda ne more biti sprejet. Za to bi jaz predlagal, da se bodisi ta obravnava prosto prekine, dokler ne dobimo amandmajev vlade, bodisi, da se to na nek način počaka. Vsekakor pa mislim, da ni možno, da bi obravnavali ta tekst ob vedenju, kakšno je mnenje sekretariata. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg438">Gospod Sovič, mislim da je pravkar predstavnik vlade povedal, da vlada vztraja na predlagani vsebini zakona. Jaz sem tako razumel njegov nastop.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg439">Želi besedo predstavnik Sekretariata za zakonodajo in pravne zadeve? Gospod Baškovič prosim.</seg>
             </u>
             <note type="speaker">MILAN BAŠKOVIČ:</note>
-            <u who="#SDZ2.BaškovičMilan" ana="#regular">
+            <u who="#BaškovičMilan">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg440">Hvala lepa. V tem primeru gre za dokaj zapleteno zadevo in tudi za precej občutljive dejanske posledice celotnega dogajanja na tem področju patentov oziroma varstva industrijske lastnine.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg441">Mi smo v našem mnenju opozorili na nekatere vidike, ki so samo pravnega značaja, ne pa na vse drugo, kar je s tem v zvezi povezano. Namreč gre za to, da je prvotni zakon o industrijski lastnini, izdan po osamosvojitvi garantiral te pravice, kot so bile bile že prej pri zavodu za patente vedno v Beogradu prijavljene, praktično brez omejitev in tako naprej. Stvari so bile nesporno takrat urejene.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg442">Glede na kontinuiteto in obveznosti, ki jih je država prevzela, kasneje čez nekaj let, to je bilo leta junija 1993 pa je neka novela zakona uveljavila neko dodatno pravilo, s katerim naj bi nosilci teh pravic industrijske lastnine morali ponovno prenesti pravice na naš republiški oziroma državni slovenski zavod. To je tisto poenostavljeno rečeno, da bi morali to pravico ponovno registrirati, dodan je bil neki rok in tako naprej.</seg>
@@ -1777,20 +1760,20 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg446">Potem je pa še rok, ki še posebej govori, da ni bilo mogoče naknadno obnavljati neprenesenih pravic, ki so prenehajo veljati, razen, če so najkasneje do 1.3.1994 spremenjene v prenesene pravice. Vse govorimo v normalnem jeziku, kot da se bo to dogajalo, niti ne uporabljamo preteklega časa. Če bi vsaj nekaj človek hotel razumeti, da se šteje nekaj, kar je bilo takrat in do takrat storjeno, pa bi takrat že morala ta dolžnost biti, da bi to lahko subjekti, gospodarski in drugi poznali. Tako da s tega vidika smatramo, da je treba ta predlog še natančneje analizirati, ugotoviti, kaj se da narediti v tem času, kako obravnavati ravnanje v tem vmesnem obdobju, ko te stvari niso bile urejene, tako gotovo ne, kot sedaj piše, ko se vsi datumi, vsi roki postavijo, kakor da nastopajo, tudi cilj je tak, šteto od tega, v roku enega leta, če so najkasneje do takrat spremenjeni. Ne govori, če so bili, tudi niso mogli biti, ker ni bilo takrat te situacije, niti v pravu postavljene. Zato smo na to posebej opozorili in tudi na odboru je bilo dosti razprave okrog teh pravil za nazaj in mislim, da je bilo tudi na odboru dovolj določno in soglasno ocenjeno, da taka pravila za pretekli čas, za ravnanje, ki ni več možno ga niti sanirati, niti po njem poslovati in doseči to, kar zakon terja, da je to nemogoče, da je to dejansko nekaj, kar je skregano z načeli pravne države. Pravila postavljati tako, da jih ne more nihče uporabljati, pa so že vsa potekla, rokovno in se govori o nekem naknadnem roku, ki je tudi po Pariški konvenciji razumeti kot naknadni rok, ne pa rok, ki ga nazaj naknadno postaviš, za nas je to nelogično, pravno neizvedljivo in bo tukaj še večji problem, če tak zakon sprejmemo. Toliko. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg447">Hvala lepa, gospod Baškovič. Želijo besedo predstavniki poslanskih skupin? Prosim, gospod Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg448">Hvala lepa. Spoštovani! Upam, da smo pozorno poslušali, najprej prvo razpravo oziroma že današnji celotni potek te točke dnevnega reda in da že tudi odbor, smo slišali, kakšno mnenje je podal. Sedaj smo, upam da, poslušali tudi razpravo gospoda Baškoviča s sekretariata za zakonodajo, in tudi v poslanski skupini SDS se strinjamo s tema obema razpravama in smatramo, da je potrebno ta predlog zakona zavrniti oziroma glasovati proti in naj vlada pač pripravi te zadeve v skladu s predlogi, ki so bili danes tukaj podani. Zato bo naša skupina glasovala proti temu predlogu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg449">Hvala, gospod Kelemina. Torej glede na stališče matičnega delovnega telesa, če ga imate pred seboj, je razvidno, da ne podpira sprejema predlagane dopolnitve po hitrem postopku. O tem se je danes državni zbor že odločal. V drugem delu pa predlaga, seveda vladi, da umakne navedeni zakonski predlog iz zakonodajnega postopka ter po uskladitvi s pripombami vloži nov predlog zakona, pri čemer lahko prouči tudi možnost skrajšanega postopka. Iz tega stališča - žal ni decidirano zapisano - razberem, da matično delovno telo ne podpira tega zakona. Ampak tega sklepa - in bi prosil, da bi v bodoče bili taki sklepi zapisani, da lahko potem državni zbor na podlagi matičnega delovnega telesa tudi odloča.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg450">Torej, želi še kdo od poslanskih skupin besedo? Želi kdo besedo od poslancev in poslank? Želi predstavnik vlade besedo? Prosim, dr. Pretnar, direktor Urada Republike Slovenije za intelektualno lastnino.</seg>
             </u>
             <note type="speaker">DR. BOJAN PRETNAR:</note>
-            <u who="#SDZ2.PretnarBojan" ana="#regular">
+            <u who="#PretnarBojan">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg451">Gospod predsednik, spoštovane gospe in gospodje! Dovolite mi samo še čisto kratko repliko, če smem tako reči, na pripombe sekretariata za zakonodajo.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg452">Novela zakona o industrijski lastnini ni bila tista, ki bi zahtevala ponovno registracijo; mi smo šele takrat uvedli sploh inštitut prenosa tistih pravic, ki so veljale v Jugoslaviji, v Slovenijo, glede na to, da so proti Zvezni republiki Jugoslaviji bile uvedene sankcije in so se prekinile vse komunikacijske poti, ki bi nam sicer omogočale normalno pridobitev teh podatkov o teh pravicah.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg453">Moram povedati, da je bila ta novela zakona usklajena s Svetovno organizacijo za intelektualno lastnino, to je specializirana agencija Organizacije združenih narodov, ki administrira vse mednarodne konvencije, med drugim tudi Pariško konvencijo, ki je tukaj omenjena. Ta model, ki je bil v tem znamenitem 122. členu zakona o industrijski lastnini uveljavljen, so potem posnele vse novonastale države, ki so sledile Sloveniji, ki je bila prva, ki je to uredila na izredno eleganten način. Zahteva po prenosu ni v ničemer posegala v vsebino pravic in tukaj smo spoštovali vso pravno kontinuiteto, takšnokot je.</seg>
@@ -1805,34 +1788,34 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg460">Spričo vsega navedenega menim, da kljub resnim pomislekom, in zavedamo se teh pomislekov, vendarle upoštevamo resnost situacije, še enkrat bom dejal, grožnje nekaterim uglednim, uspešnim slovenskim podjetjem so na glavi, zaradi popolnoma nedefiniranega konfuznega stanja, ko se niti ne morejo braniti, ker nasprotnika in njegovih argumentov ne morejo prepoznati, ker so ti argumenti, morda tudi niso, nekje v Beogradu. Zato seveda naj še enkrat apeliram na vas, da vendarle sledite vladi in da predlog zakona, takšen kot je sprejmete. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg461">Hvala lepa, dr. Pretnar. Jaz bi imel eno vprašanje za vas. Dogovor je, nenapisan dogovor, da vedno vprašamo, ali so vsi predlagani zakoni, ki so v proceduri, tudi v skladu z zakonodajo Evropske unije. Me zanima, ali je to tako. To je pomemben podatek. Vaša beseda, da se zavedate nekaterih pomislekov, gospod Sovič vas je nekako že dvakrat izzval. Ali je možno, ker smo v okviru hitrega postopka, ali je možna kakšna dopolnitev v okviru amandmaja, ki bi te pomisleke sanirala, da bi bila rešitev taka, da bi bila tudi v skladu s stališči Sekretariata? Prosim, gospod Pretnar.</seg>
             </u>
             <note type="speaker">DR. BOJAN PRETNAR:</note>
-            <u who="#SDZ2.PretnarBojan" ana="#regular">
+            <u who="#PretnarBojan">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg462">Hvala lepa za besedo gospod predsednik! Ključna dopolnitev, ki bi bila možna, je seveda, da opustimo tisti zadnji stavek oziroma da ga spremenimo, da veljajo neprenešene pravice le, če so za njih plačane takse, od sedaj naprej. Ampak to je potem tisto, da priznamo ta nered, ki je nastal. Ravno tukaj je jedro te rešitve, da moramo vzpostaviti stanje, kot je bilo pred to ponesrečeno odločbo ustavnega sodišča. Drugače bomo pravni nered imeli. Še enkrat poudarjam, če gremo v to pravno korektno rešitev, potem bomo posegli v obstoječe pravice subjektov, ki imajo ligitimne pravice s področja industrijske lastnine v Sloveniji. Retroaktivnost je tukaj po našem mnenju upravičena s tistim 2. odstavkom, ker se varuje tako javni interes kot pridobljene pravice, v nasprotnem primeru pa bi jih omejili. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg463">Kaj pa glede Evropske unije?</seg>
             </u>
             <note type="speaker">DR. BOJAN PRETNAR:</note>
-            <u who="#SDZ2.PretnarBojan" ana="#regular">
+            <u who="#PretnarBojan">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg464">Mi smo rešitev prediskutirali s svetovno organizacijo, kot to običajno počnemo, s svetovno organizacijo za intelektualno lastnino in tukaj ni nobenih pomislekov, pa tudi z Evropskim patetentnim uradom smo usklajevali te poglede in tudi tam ni bilo večjih pomislekov oziroma nismo našli boljše rešitve, kot je ta, ki jo vlada predlaga.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg465">Hvala dr. Pretnar. Smo pri razpravi poslancev in poslank. Gospod Sovič.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg466">Spoštovani! Jaz bi še enkrat rad vljudno predlagal, vem, da se sedaj že ponavljam, mislim da bi bilo zelo smiselno, če bi vlada pretehtala te pomisleke, ki jih je dal Sekretariat. Ne vem, kakšen je bil običaj v prejšnjem mandatu, ampak meni se zdi preprosto nepojmljivo, da bi mi obravnavali zakon, ob tem, ko vemo, da so resni pomisleki o tem, ali je skladen z ustavo ali ne. Zato bi rad vljudno predlagal, da bi mogoče na tej točki dejansko prekinili to razpravo in dali vladi možnost, vladi kot celoti, ki inkorporira več resorjev, možnost, da se do teh mnenj, ki so bila danes tukaj predstavljena, opredeli in da nam pripravi rešitev, ki bo problem poskušala razplesti.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg467">Mi smo že na odboru bili soočeni s to hudo dilemo, kaj storiti s tem tekstom. Če bi namreč na odboru že zavrnili hitri postopek zelo eksplicitno in bi na nek način s tem sprožili normalno proceduro, potem bi se urejevanje tega problema lahko vleklo mesece, tako kot pač trajajo procedure, kadar imamo prvo, drugo in tretje branje. To je bil razlog, da smo na odboru zelo previdno poskušali formulirati stvari tako, da bi vladi dali priložnost, da oblikuje tekst do te mere, da bo ta pomislek, ki ga imamo zdaj vsi skupaj pred seboj, odpadel. To se še ni zgodilo, ampak jaz mislim, da je smiselno, da vlada to vendarle stori. Kaj smo pa naredili, če bomo mi zdaj v želji, da bi problematiko razrešili, tak zakon sprejeli, jutri bomo pa soočeni z zelo verjetnim ustavnim sporom. Potem smo pravzaprav ustvarili še dodatno, jaz bi rekel celo, dvojno zmedo na tem področju in dodatno prizadeli gospodarske subjekte.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg468">Zato mislim, gospod predsednik, da je smiselno na tej točki preprosto sprejeti odločitev, da se ta razprava prekine do trenutka, ko dobimo jasno stališče vlade do tega, kar je bilo pravzaprav s strani Sekretariata rečeno. Jaz mislim, da se, ne vem, sicer dopuščam tudi, da se Državni zbor odloči drugače, ampak meni se zdi nesprejemljivo, da sploh razpravljamo o stvari, kjer imamo sum, da je stvar zelo verjetno v nasprotju z ustavo. Tudi odbor, upam, da razumete, se ni preprosto želel več spuščati v podrobnosti, v razpravo o samem tekstu, ko smo dobili že to izhodiščno mnenje, da je pravzaprav stvar po vsej verjetnosti v nasprotju, ne z enim, ampak kar z dvema členoma ustave, in to en sam člen zakona.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg469">Zato mislim, da je to razumen predlog, v interesu vseh nas, v interesu vlade, v interesu gospodarstva, da se pride z rešitvijo, ki bo čista, ki bo imela šanso, da tudi vzdrži presojo, če bo do nje prišlo, ponovno na Ustavnem sodišču. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg470">Hvala, gospod Sovič. Jaz povzemam njegov predlog kot predsedujoči in v tem trenutku prekinjam. Dal bom na glasovanje predlog, da se prekine 14. točka dnevnega reda, da vlada v tem času do nadaljnje obravnave te točke prouči tako pomisleke s strani Sekretariata in pomisleke, ki so bili izraženi v razpravi in da bo Državni zbor odločal o tej točki v nadaljevanju te seje. Ta proceduralni predlog dajem na glasovanje. Ugotovimo sklepčnost!</seg>
                <note>48 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg471">Kdo je za?</seg>
@@ -1845,29 +1828,29 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg475">Predlog tega zakona je obravnaval Odbor za gospodarstvo kot matično delovno telo. Želi predstavnik tega odbora besedo? Prosim, gospod Feri Horvat, podpredsednik odbora.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg476">Hvala za besedo, gospod predsednik. Spoštovane kolegice in kolegi, predstavniki vlade! V odsotnosti predsednika odbora doktor Zagožna mi dovolite, da na kratko predstavim stališča oziroma sklepe Odbora za gospodarstvo, ki je kot matično delovno telo obravnaval predlog zakona. Poročilo ste dobili, tako da ga ne bom predstavljal, niti komentiral, ampak se omejim samo na sklepe.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg477">Odbor je po opravljeni splošni razpravi podprl sprejem predloženega zakona in tudi podpira hitri postopek. Ob tem pa je sprejel naslednji sklep. Odbor za gospodarstvo opozarja na nujnost opredelitve ustreznega deleža domačih izvajalcev in zagotovitve primernega deleža protidobav pri izvajanju predloženega zakona. Odbor poziva Vlado Republike Slovenije, da Državnemu zboru do konca leta 1997 v obravnavo predloži nacionalni energetski program. V drugi obravnavi predloženega zakona in upoštevajoč mnenje Sekretariata za zakonodajo in pravne zadeve, ki je bilo članom odbora ustno predstavljeno na seji, predvsem konkretne pripombe členov 1 in 2, je potem odbor predlagal, da naj vlada pripravi amandmaje. Vlada je temu sledila, pripravila je amandma, ki ga imamo v gradivu, vendar se odbor ni do tega amandmaja posebej opredelil. Ob tem pa je odbor sprejel še naslednji sklep: Vlada Republike Slovenije naj do obravnave predloga zakona o poroštvu Republike Slovenije za najetje posojil za izgradnjo plinskih blokov moči 2 x 114 MW, v Termoelektrarni Brestanica, hitri postopek, na 7. seji Državnega zbora Republike Slovenije v skladu z mnenjem Sekretariata za zakonodajo in pravne zadeve pripravi in Državnemu zboru predloži amandmaje k 1. in 2. členu. Se pravi amandma, ki je bil predložen k 2. členu.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg478">Odbor za gospodarstvo podpira predlog zakona o poroštvu Republike Slovenije za najetje posojil za izgradnjo plinskih blokov moči 2 x 114 MW, v Termoelektrarni Brestanica ter predlaga Državnemu zboru, da ga obravnava in sprejme po hitrem postopku. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg479">Hvala lepa gospod Feri Horvat. Želi besedo predstavnik Sekretariata? Gospod Baškovič, prosim.</seg>
             </u>
             <note type="speaker">MILAN BAŠKOVIČ:</note>
-            <u who="#SDZ2.BaškovičMilan" ana="#regular">
+            <u who="#BaškovičMilan">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg480">Hvala lepa za besedo. Jaz bi sam na neko podrobnost opozoril, ki smo jo tudi v našem mnenju napisali. Odbor jo je tudi načelno podprl kot pripombo, vendar vlada ni ustrezno reagirala. Na to bi rad opozoril. Škoda je, ker odbor tega amandmaja vlade potem ni več obravnaval, ker ravno v tem je problem, da amandma vlade ne ustreza temu, kar je bilo naročeno na odboru. Namreč, mi smo opazili pri tem zakonu, ki je zelo špartansko napisan v dveh členih, da mi v teh zakonih, ko dajemo poroštva, praviloma zmeraj v zakon napišemo tiste temeljne pogoje, pod katerimi se poroštvo daje. Če tega ni bilo, je Državni zbor zmeraj te pogoje potem naknadno z amandmaji oziroma v sporazumu s predlagateljem v zakonu uredil.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg481">Mi smo celo napisali, kaj iz teh običajnih zakonov te vrste izhaja, glede skupne višine, glede tega, kdaj nastanejo obveznosti, pod kakšnimi pogoji se dajo, zavarovanje in tako naprej. Vendar je amandma vlade k 2. členu samo toliko spremenil, da je še bolj poenostavil prejšnjo rešitev in je vse to prepustil pravzaprav pogodbi, ki jo sklepa minister na tem področju. To je pogodba, ki jo sklepa minister, pristojen za gospodarske dejavnosti; niti vlada ni več, kot je bila v osnovnem tekstu 2. člena zakona. Pogoji so popolnoma izpuščeni in jih enostavno ni, niti v tej pogodbi niso kot element predvideni.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg482">Na to podrobnost opozarjam zato, ker mislim, da je le pomembna, čeprav ni samo pravne narave, ampak je predvsem vsebinske materialne narave. Dolžan sem bil to povedati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg483">Hvala lepa, gospod Baškovič. Želijo besedo predstavniki <gap reason="inaudible"/> Gospod državni sekretar, gospod Kovše želi besedo. Torej, gospod Kovše, samo da se dogovorimo, da imate besedo kot predstavnik vlade, ker najprej je niste želeli imeti. Ali kdo nasprotuje, da spregovori gospod Kovše?</seg>
                <note>Ne nasprotuje.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg484">Prosim, gospod Kovše.</seg>
             </u>
             <note type="speaker">ALOJZ KOVŠE:</note>
-            <u who="#SDZ2.KovšeAlojz" ana="#regular">
+            <u who="#KovšeAlojz">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg485">Spoštovani! Samo obrazložitev glede zakona ste dobili, pa bomo kasneje mogoče kaj odgovorili. Mislim pa, da sem dolžan mogoče obrazložiti glede samih amandmajev, ker žal procedure so takšne, da je tudi vlada morala trikrat obravnavati te pripombe, ki jih je dal Sekretariat za zakonodajo državnega zbora.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg486">Menimo, da Državni zbor Republike Slovenije oziroma vlada ima s podobnimi zakoni o poroštvih za investicije v elektrogospodarstvu že izkušnje, in sicer izkušnje na področju zakona o poroštvu Republike Slovenije za najetje posojil za obnovo in doinštaliranje hidroelektrarne Doblar, in zakona o poroštvu Republike Slovenije za najetje posojil za izgradnjo razžveplevalne naprave na Bloku V Termoelektrarne Šoštanj. Zakona sta bila sprejeta v letu 1995 in sta bila spremenjena že naslednje leto, saj določila zakona za potencialnega kreditodajalca niso bila dovolj jasna. Glede na te izkušnje, je vlada predlagala operativnost teh amandmajev. In sicer bi jih prebral:</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg487">Prvič, končni amandma. Poroštvene pogodbe z upniki sklepa minister, pristojen za gospodarske dejavnosti, po predložitvi pogodbe o zavarovanju poroštvene obveznosti, sklenjene med Republiko Slovenijo in kreditojemalcem.</seg>
@@ -1875,20 +1858,20 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg489">Predvsem mislimo, da je potrebno upoštevati dejstvo, da sta kreditojemalec - da je v tem primeru javno podjetje, ki razpolaga z državnim premoženjem, in je zelo težko dogovoriti ustrezno zavarovanje. V tem smislu smatramo, da je ta amandma primeren za sprejem. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg490">Hvala lepa, gospod Kovše. Prehajamo na besede predstavnikov poslanskih skupin. Ne želi nihče razpravljati. Potem sprašujem, ali želijo razpravljati poslanke in poslanci? Da, gospod Kelemina, prosim.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg491">Hvala lepa. Spoštovani! V poslanski skupini SDS smo proučili predlog zakona o poroštvu Republike Slovenije za najetje posojil za gradnjo plinskih blokov Termoelektrarne Brestanica. Tudi na osnovi vseh dosedanjih razprav v odborih, stališč vlade in ostalih zainteresiranih institucij ugotavljamo, da je ta predlog zakona o poroštvu dejansko eden tistih, kateremu lahko brez vsakih zadržkov damo pristanek na ta predlog zakona.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg492">Menimo, da je ta investicija popolnoma opravičljiva, ker je v skladu tudi s tisto nesprejeto energetsko strategijo Slovenije in zaradi vseh ostalih obrazložitev, ki so podane v samem predlogu in tudi vseh ostalih, bo naša poslanska skupina ta predlog zakona podprla in meni, da ne bo prišlo do nobenih obveznosti iz naslova državnega proračuna, obremenitev ali iz kakršnihkoli drugih virov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg493">Hvala lepa, gospod Kelemina. Poslanke in poslanci imate besedo. Gospod Sovič je vložil predlog amandmaja. Želite besedo, gospod Sovič? Prosim.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg494">Spoštovani! Pred vami je tekst, ki na nek način v pomembni meri vpliva na razmerje v elektroenergetskem sistemu. Gre za objekt Brestanica, ki ima večkraten pomen in vpliv. V prvi vrsti gre za objekt, ki uporablja gorivo zemeljski plin. To dejstvo je posebej pomembno spričo tega, ker mi do sedaj v Sloveniji nimamo pomembnejših objektov, sploh ne večjih, ki bi lahko ta vir izkoriščali. Seveda je res, bo kdo rekel, saj ta vir je končno iz uvoza in s tem se uvozna odvisnost Slovenije ne zmanjšuje. To drži, vendar je hkrati res, da vse države poskušajo zagotoviti na nek način raznoterost virov in s tem izboljšati stabilnost svoje oskrbe. S tega vidika je ta projekt gotovo zelo pomemben.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg495">Pomemben je tudi s tega vidika, ker lahko znižuje stroške v elektroenergetskem sistemu, saj bi zaradi tega, ko bi zagotavljali rezervno moč, na nek način zmanjšali zakupe te rezervne moči v tujini in s tem tudi zmanjšali stroške. Nekatere ocene kažejo, da bi se že spričo tega dejstva en blok termoelektrarne Brestanica lahko v relativno kratkem času izplačal.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg496">Res pa je, da se ponovno prihaja v parlament s predlogom zakona o poroštvu. To je tema, ki je bila že v prejšnjem mandatu mnogokrat eksploatirana v mnogih razpravah in zelo dobro je, da se zavedamo, da je to pač posledica dejstva, da smo v preteklosti vodili določeno cenovno politiko na področju elektroenergetike. Spomnimo se, da je 1. oktobra leta 1991 cena električne energije v Republiki Sloveniji padla na polovico te cene, mimogrede to je ukrep, ki ga ne pozna nobena država v zahodni Evropi. To dejstvo je prispevalo k temu, da so se investicijske potrebe v Elektrogospodarstvu morale začeti pokrivati na drugačen način, ker je očitno, da s polovično ceno tega več ni bilo možno storiti. Ta današnji zakon je pač posledica tega dejstva.</seg>
@@ -1898,11 +1881,11 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg500">Skratka, če povzamem, jaz mislim, da je projekt potrebno podpreti. Mislim, da gre za večjo raznoterost virov, kot jo imamo do sedaj. Gre za doseganje večje zanesljivosti v elektroenergetskem sistemu. Gre končno tudi za reševanje problema rezerv, ki jih zdaj v Sloveniji primanjkjuje, hkrati pa gre za to, da s tem dosežemo umeščenost tega projekta v celoto in s tem preprečimo morebitne težave, ki bi jih na tej točki lahko imeli. Lepa hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg501">Hvala lepa, gospod Sovič. Amandma ste vložili, ga bomo razmnožili. Gospod Rejc želi besedo.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg502">Hvala lepa, gospod predsednik. Ko smo obravnavali na obeh odborih, Odboru za gospodarstvo, kjer je še dokaj hitro šlo "skozi" in smo se hitro ujeli ali pa nekako razumeli, da je to potrebno, je bilo zanimivo na Odboru za finance in monetarno politiko, ki nekako ščiti izdatke oziroma proračunske izdatke, ni matično, ampak je zainteresirano, vsaj tako se je dalo slišati. Vendar na tem odboru smo zelo temeljito izpraševali predlagatelje, čemu in zakaj in kakšen je račun. Povedali so, da je račun, da se dobro izide, da se v 4 do 5 letih poplača investicija in da je to pač investicija v neko varnost, neko sigurnost, neko zagotovitev porabe oziroma sploh zagotovitev, da letošnja energija je na voljo, ko pač nastopijo neki kritični trenutki.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg503">Zanimivo je to, kot je že gospod Baškovič povedal, da je bil zakon zelo skromno napisan. Mi smo že vendar v parlamentu imeli na voljo obravnavati vsaj 20 ali še več takih in podobnih zakonov, s katero nastopa država kot poroštvo, pa je bil ta zakon napisan nekako pomanjkljivo, kot da ni teh vzorcev več.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg504">Ko smo razglabljali o situaciji in ko smo nekako se predali mnenju, kot češ, vendar nam verjemite, tu ima besedo stroka. Menim, da je iz takih in podobnih stališč razbrati marsikaj. Ko je bilo postavljeno neko vprašanje, mislim da je dr. Jože Zagožen vprašal, kakšna je izhodna cena posameznih lokacij, kjer se proizvaja električna energija. Dobili smo precej različne cene, kar pomeni, da je to tudi eno od temeljnih osnov, kako bomo to strategijo usmerjali in kako jo bomo krotili in kaj bo za nas pomenilo temeljno izhodišče, kje bomo vlagali. Vemo, kjer so zneski oziroma kjer je izhodna cena visoka, potem bo najbrž malo manj razumevanja, kjer je nižja, bo več razumevanja.</seg>
@@ -1910,7 +1893,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg506">Podpiram ta zakon.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg507">Hvala lepa gospod Rejc. Predlagam, da nadaljujemo razpravo. S tem ko smo izčrpali razpravo v tem prvem delu, ugotovimo da smo opravili prvo razpravo v okviru hitrega postopka in bi s tem prešli na obravnavo in odločanje o posameznih členih predlogov zakona. Se strinjate?</seg>
                <note>Da.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg508">Prehajamo v okviru druge obravnave na glasovanje o posameznih členih. Jaz mislim, da to odpade.</seg>
@@ -1938,18 +1921,18 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg522">Ta amandma dajem v razpravo. Gospod Kovše, državni sekretar.</seg>
             </u>
             <note type="speaker">ALOJZ KOVŠE:</note>
-            <u who="#SDZ2.KovšeAlojz" ana="#regular">
+            <u who="#KovšeAlojz">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg523">Hvala za besedo. Mislim, da je potrebno dve, tri besede spregovoriti.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg524">Jaz se opravičujem, da ta državni zbor še ni obravnaval nacionalnega energetskega programa. Ta nacionalni energetski program je izdelan in je sedaj v vladni proceduri in bo v najkrajšem času pred vami. Žal ne vem, zakaj iz določenih zadev ni bil posredovan pred temi pomembnimi trenutki, ko se že odločamo v bistvu o operacionalizaciji nacionalnega energetskega programa. Vsekakor pa je do sedaj v prejšnjem mandatu vlade bilo opravljenega ogromno dela, da je ta nacionalni energetski program v bistvu zagledal luč sveta. Sedaj je v vladni proceduri in bo v najkrajšem času posredovan Državnemu zboru. V kratkem bi samo rekel, da ta nacionalni energetski program precizno obravnava položaj investicij v elektroenergetske objekte, in to z vidika rekonstrukcij, rekonstrukcij termoelektrarn, hidroelektrarn, novogradenj, potem zaustavitev objektov, objektov kontinuitete, oskrba z električno energijo temelji na potrebnih investicijah s ciljem doseči kvalitetno in zanesljivo oskrbo uporabnikov.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg525">Vse analize kažejo, da obstoja zelo močna korelacija med razvojem neke nacionalne ekonomije in porastom porabe električne energije. Te investicije so usmerjene v te zadeve. Jaz bi samo takole preprosto rekel, ko hiša gori, v bistvu se takoj začne z nekimi ukrepi. V energetiki se je v zadnjih desetih letih v bistvu zelo malo investiralo, kot je rekel gospod Sovič, se je v bistvu sama cenovna politika leta 1991 realno skoraj prepolovila itn <gap reason="inaudible"/> Jaz bi samo toliko rekel, da ta amandma, v bistvu se bojim, da bi lahko pri operacionalizaciji tega projekta, ki je nujen v bistvu, da bi ga zaustavil. To je pomislek Ministrstva za gospodarke dejavnosti. Predvsem tudi iz tega razloga, ker zaradi te funkcije, ki jo ima v elektroenergetskem sistemu, ta plinska elektrarna Brestanica, kot so kolegi iz Odbora za gospodarstvo in Odbora za finance v bistvu povadali, da podpirajo, ker tam smo več kot tri ure podrobno razlagali funkcijo plinskih elektrarn v tem energetskem sistemu.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg526">Moram povedati, da v tem trenutku Slovenija preko 80-milijonov tolarjev letno plačuje fiksno za odkup rezervnih moči v Avstriji itn <gap reason="inaudible"/> Vsako odlašanje v bistvu tudi bi lahko bilo neekonomično in neracionalno. V tem smislu sem vam dal mogoče nekaj dodatnih argumentov, da se ne bi zadeve povezovale s sprejetjem nacionalnega energetskega programa, ki pa je sicer izdelan. Bojim se, da bi pri operacionalizaciji, operativni izvedbi to pomenilo zastoj. Hvla lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg527">Hvala lepa, gospod državni sekretar. Sprašujem gospda Soviča, ali je možno, da bi vi vaš amandma prekvalificirali v dodatni sklep. Ali vztrajate pri tem amandmaju? Prosim gospod Sovič.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg528">Hvla lepa. Jaz bi rad povedal, da bi se bilo težko strinjati z oceno, da bi ta amandma lahko zavrl investicijo. Mislim, da je obratno res. S tem amandmajem bi na nek način dosegli umeščenost te investicije v slovenski elektroenergetski sistem. Jaz bi pač ponovno opozoril na dejstva, da v resoluciji o strategiji na področju energetike, ki jo je Državni zbor sprejel, in v strokovnih osnovah pri tej resoluciji je bilo zelo jasno predvideno za termoelektrarno Brestanica 70 MW. Mi dobimo zdaj s strani vlade drugačno moč. Jaz mislim, da so določeni razlogi za to, da bi takšna moč tudi bila, vendar bi pa rad opozoril na dejstva, da pač programi na področju elektroenergetike morajo biti notranje konsistentni in ni mogoče povečevati moči enega objekta, ne da bi se to poznalo pri drugih objektih. Zato dodatne kapacitete na eni strani hote ali nehote vplivajo na ostale objekte v državi.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg529">Ker imamo sedaj v obravnavi več projektov, omenil sem nekatere od teh, omenil sem projekt, na tej seji imamo obravnavo Lendave, imamo obravnavo Trbovelj, imamo projekt soških elektrarn, ki je že v teku, imamo kogenoracijo v Mariboru, imamo kogenoracijo v Ljubljani, ki se pripravlja, in še vrsta drugih stvari, bi rad opozoril na to, da je smiselno faznost gradnje teh objektov in vključevanje v elektroenergetski sistem snovati šele na osnovi celovitega teksta, na osnovi celovitega elaborata, na osnovi celovitega dokumenta, ki upošteva specifike posameznih blokov in upošteva vplive teh blokov drug na drugega. Za to gre.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg530">Ta tekst govori o faznosti. Kdor si je dobro prebral obrazložitev in vlada jo verjetno je, saj jo je končno pisala, tudi vidi, da je sama obrazložitev pripravljena tako, da se govori o fazah. Tako da v tem amandmaju je preprosto povzeta faznost iz obrazložitve. To lahko vsak sam preveri. Tudi vključevanje v elektroenergetski sistem mora biti posledica celovitega pristopa in pričakujemo, da bo nacionalni energetski program tak celovit prestop pravzaprav predstavljal. Tekst, ki nam ga je pokazal državni sekretar, s tega vidika predpostavljam, da to vključuje.</seg>
@@ -1957,11 +1940,11 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg532">Skratka, vsekakor mislim, da je amandma utemeljen tudi zato, da bi preprečili morebitne težave na drugih lokacijah, ki jih imamo in za katere smo ravno tako zainteresirani kot za to, predvsem pa, da bi s tem preprečili neskladnost v elektroenergetskem sistemu. Zato vljudno prosim, da bi ga podprli. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg533">Hvala lepa, gospod Sovič. Besedo želi gospod Potrč. Prosil bi podpredsednika, gospoda Gerenčerja, če prevzame vodenje seje.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg534">Hvala lepa. Tudi sam bi želel predvsem opozoriti na to, da je v razpravi v tem državnem zboru, ne sicer danes, ampak sicer, več konkretnih programov in na dejstvo, da se vsi tako ali drugače navezujejo na strategijo in hkrati na nacionalni program, ki ga še ni.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg535">Gospod državni sekretar Kovše je rekel, da ne ve zakaj, še ni pred državnim zborom. Najbrž zato, ker še v vladi ni sprejet. Dokler v vladi ni sprejet, pač pred državnim zborom ni. Res pa je, da priprave za njegov sprejem v vladi potekajo kar nekaj časa. Tudi mi imamo informacije, da pač iz razloga, ker v okviru elektrogospodarstva obstojajo posamezni različni pogledi o tem, kakšna naj bi bila dinamika, konkretizacija, vsebina in podobno energetskega nacionalnega programa.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg536">S tem v zvezi bi želel, da mi gospod državni sekretar zelo jasno odgovori na eno vprašanje. Ali ob dejstvu, da vlada za nekatere zakone predlaga hitri postopek, pri drugih izrecno nasprotuje hitremu postopku, prihaja do tega, da ima različen odnos do teh različnih prioritet. Ali gre za različno pripravljenost teh prioritet ali želi prehitevati eno z drugim. Moram reči, da bi rad, da se mi tudi ob obravnavi izgradnje oziroma garancije za sredstva za Termoelektrarno Brestanica jasno pove, ali ostaja stališče, sicer jasno oblikovano, v vladi, da podpira tudi poroštvo za izgradnjo Termoelektrarne Trbovlje 3 ali ne.</seg>
@@ -1969,27 +1952,27 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg538">Zato bi v tem smislu želel izrecno jasno, nedvoumno izjavo vlade, ker me moti, da se s spreminjanjem stališč o proceduralnih postopkih in s tem, da potem tudi obravnave v Državnem zboru tečejo tako različno, dopušča možnost, da eventualno tudi kaj takšnega se v Državnem zboru lahko zagotovi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg539">Hvala lepa. Gospod Kovše, državni sekretar.</seg>
             </u>
             <note type="speaker">ALOJZ KOVŠE:</note>
-            <u who="#SDZ2.KovšeAlojz" ana="#regular">
+            <u who="#KovšeAlojz">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg540">Glede na natančno postavljeno vprašanje, če vlada podpira izgradnjo Termoelektrarne Trbovlje 3 in glede hitrih in teh postopkov. Jaz moram reči, da smo skupaj v Državnem zboru ugotovili, da za Termoelektrarno Trbovlje je lahko normalni postopek sprejemanja zakona o poroštvu, predvsem zaradi tega, ker se lovi končni rok leto 2004, ko bi se stara termoelektrarna Trbovlje v bistvu zaustavila in se bi v tem trenutku potem morala postaviti nova. Vlada podpira, kar smo tudi javno povedali in konec koncev tudi pokazali z amandmaji na zakon o poroštvu Termoelektrarne Trbovlje 3, ki so že v Državnem zboru več kot mesec dni. Ne vem, zaradi katerih zadev, ampak po mojih informacijah bo zdaj na naslednji seji. Več kot mesec dni pa je vlada izrazila podporo temu projektu s svojimi amandmaji, glede na poroštvo in tudi na sofinanciranje tega projekta.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg541">Posebej bi pa povedal, da sigurno vlada podpira domače resurse. Energetska odvisnost strmo narašča in znaša že okrog 70%, premog je eden izmed ključnih, najpomembnejših energetskih virov, saj se iz njega proizvaja praktično tretjine električne energije. Ampak o samem premogu, pa o teh zadevah jaz tokrat ne bi govoril, ampak se bomo drugič srečali. Na vprašanje sem pa bil dolžan odgovoriti, ker ga je poslanec Potrč postavil. Podpiramo, glede hitrih in teh postopkov pa mislim, da smo tudi zadevo povedali. Sigurno se bomo pa zavzemali, da se tisti roki ne bi oddaljevali in da ne bi bila ogrožena sama izgradnja nadomestnega objekta. Zaradi zastarelosti, zaradi izteka življenjske dobe in konec koncev tudi zaradi evropskih določil glede emisij je leto 2004 skrajni rok, da mora zafunkcionirati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg542">Hvala lepa. Želi še kdo besedo o tem amandmaju? Prosim, gospod Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg543">Hvala lepa. Spoštovani! Mi sicer popolnoma delimo mišljenje z gospodom Sovičem in tiste bojazni v zvezi z izvajanjem nacionalnega energetskega programa. Strinjamo se, da je potrebno ta energetski program v najkrajšem času dejansko sprejeti, ga obravnavati in da nam bo točno jasno, kako se bo razvijala dinamika v naslednjem obdobju in kateri energetski objekti so dejansko na vrsti, tako da ne bomo v nekem dvomu, da ne bomo mislili, da gre za neke politične odločitve.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg544">Ta energetski program bo treba temeljito preštudirati tudi zaradi vseh razmerij, ki vladajo v Evropi na področju elektroenergije. Upam, da ste seznanjeni oziroma da poznate podatek, da predvidevajo, da bo v naslednjih 10 letih v Evropi zelo veliko, preveč električne energije in da bo ta zelo cenena. Treba se bo prilagajati tem evropskim trendom, v kolikor so resnični, in bo treba temeljito preštudirati, ali so upravičeni potem drugi energetski objekti pri nas, ki s svojo ceno bistveno presegajo evropsko ceno. Tako bo dejansko treba o tem čim prej in čim bolj celovito razpravljati.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg545">Glede na ta projekt, predlog Termoelektrarne Brestanica, pa smatram, da je to projekt, ki je sedaj v neki dinamiki, da je ekološko izredno nesporen, eden najbolj ekološko sprejemljivih objektov pri nas. Zato ga moramo podpreti. Gre pa tudi za izredno oziroma dosti razumno nizko ceno proizvodnje električne energije, kar nam drugi objekti v Sloveniji prav gotovo ne bodo zagotavljali oziroma bo prav zaradi cene in zaradi ekologije o tem treba temeljito razmisliti.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg546">Zato jaz in naša poslanska skupina v tem trenutku tega predloga gospoda Soviča ne podpira in prav zaradi tega, da se ne bi ta dinamika zavrla in zaradi vseh teh pozitivnih elementov in podatkov, ki smo jih bili deležni ob tej predstavitvi tega projekta, mi ne podpiramo tega predloga. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg547">Hvala, gospod Kelemina. Želi še kdo besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg548">Zaključujem razpravo o tem amandmaju in prehajamo na glasovanje. Dobili ste ga na mizo oziroma ga pravkar dobivate.</seg>
@@ -2034,7 +2017,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg572">Predlog zakona je v obravnavo zboru predložila skupina poslancev s prvopodpisanim Cirilom Puckom. Želi predstavnik predlagateljev k predlogu zakona besedo? Prosim, gospod Pucko.</seg>
             </u>
             <note type="speaker">CIRIL PUCKO:</note>
-            <u who="#SDZ2.PuckoCiril" ana="#regular">
+            <u who="#PuckoCiril">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg573">Hvala lepa, gospod podpredsednik. Spoštovani predstavniki vlade, spoštovane poslanke in poslanci! Iskanje primerne rešitve za ekonomsko, tehnološko in ekološko sanacijo podjetja Nafta ima precej dolgo zgodovino. Tako je leta 1994 podjetje zašlo v velike ekonomske težave in zato, da bi se izognili stečaju podjetja, je Vlada Republike Slovenije 17. junija 1994 sprejela sklep, na osnovi katerega je premoženje podržavila in pristopila k sanaciji podjetja. Za sanacijo podjetja je vlada 30.11.1994 s Petrolom podpisala družbeno pogodbo o ustanovitvi družbe Nafta Lendava, d.o.o., kjer ima Republika Slovenija 45%-ni lastniški delež in Petrol d.d. 55%-ni lastniški delež. Tako je Nafta Lendava že v drugi polovici leta 1994 poslovala z 223 milijoni čistega dobička in poravnala vse zapadle kratkoročne obveznosti.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg574">Sanacija podjetja se je nadaljevala tudi v letu 1995, tako da je podjetje postalo likvidno in sposobno brez večjih zadolžitev financirati proizvodnjo. Podjetje je to leto zaključilo s 120 milijoni tolarjev dobička. K temu je precej pripomogla konjuktura na svetovnem trgu petrokemičnih izdelkov, saj je podjetje izvozilo 95% celotne proizvodnje in realiziralo 65 milijonov nemških mark izvoznih prilivov.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg575">Ekonomski položaj podjetja se je začel slabšati v zadnjem kvartalu leta 1995, ko je začela naraščati vrednost ameriškega dolarja in ko so pričele naraščati cene surove nafte. Zaradi tega je Nafta Lendava leto 1996 zaključila z izgubo iz poslovanja rafinerijske dejavnosti v višini 1.229.000.000 SIT. Zaradi drugih dejavnosti znotraj podjetja, ki so poslovale pozitivno, pa se je izguba celotnega podjetja zmanjšala na 798 milijonov SIT.</seg>
@@ -2049,11 +2032,11 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg584">Zato naprošam spoštovani zbor, da bi podprli ustrezen predlog. V imenu predlagateljev se zavezujem, da bomo ustrezno upoštevali tako amandmaje vlade, mnenje iz razprave na odboru in iz današnje razprave ter mnenje, ki ga je dal Sekretariat za zakonodajo in pravne zadeve tega državnega zbora. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg585">Hvala lepa. Predlog zakona je obravnaval tudi odbor za gospodarstvo, kot matično delovno telo. Prosim poročevalca, da predstavi mnenje odbora o predlogu zakona. Gospod Horvat.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg586">Hvala za besedo, gospod podpredsednik. Spoštovane kolegice in kolegi, spoštovani predstavniki vlade! Odbor za gospodarstvo je kot matično delovno telo obravnaval predlog zakona. Ob tem so se člani odbora seznanili z mnenjem in amandmaji vlade, z mnenjem Sekretariata za zakonodajo in pravne zadeve ter mnenjem Komisije Državnega sveta za gospodarstvo.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg587">Ne bom komentiral niti predstavljal ugotovitev odbora, ker imate to zapisano v poročilu, zato mi dovolite, da spet predstavim samo sklepe, ki jih je odbor sprejel po dosti temeljiti obravnavi.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg588">1. Odbor za gospodarstvo podpira predlog zakona o ukrepih za ekonomsko, tehnološko in ekološko sanacijo Nafte Lendava in podpira tudi predlagan hitri postopek.</seg>
@@ -2063,7 +2046,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg592">Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg593">Hvala lepa. Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg594">Želi besedo predstavnik vlade?</seg>
@@ -2071,7 +2054,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg595">Želijo besedo predstavniki poslanskih skupin? Gospod Kelemina. Branko Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg596">Hvala lepa. Spoštovani! Pred nami je zdajle pa drugačna zadeva, kakor je bila v prejšnjih točkah. In sicer gre za tehnološko in ekološko sanacijo Nafte Lendava. Upam, da ste gradivo temeljito preštudirali in da ste ugotovili izredno nedorečen zakon, o čemer sem tudi govoril že na seji Odbora za gospodarstvo. In sicer, dovolite, da nekoliko obrazložim svoje razmišljanje pri tem predlogu zakona.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg597">Poglejte, že v uvodni besedi je predlagatelj lepo navedel, kakšna je bila dinamika dejansko razvoja in tudi različnih ukrepov v Nafti Lendava. Seveda se absolutno strinjamo v tistem delu, ko govori, da je na osnovi tudi nacionalnega programa in tudi s strateškega vidika ta objekt izredno pomemben; prav tako se zavedamo, da je pomemben za regijo kot celoto, zato mi v tem pogledu absolutno ta program podpiramo. Seveda ga pa ne moremo podpirati v tistem delu, ki govori o načinu, kako se naj ta zakon oziroma ta sanacija realizira. S tem se ne moremo v nobenem pogledu strinjati, ker ne moremo pristati na to, da bi se kar prevzemal dolg, ki je nastal v tej rafineriji, zdaj na breme države, na breme davkoplačevalcev. Prav tako se ne moremo strinjati, da naj država s svojimi sredstvi dejansko iz proračuna vloži svoja sredstva za ekološko posodobitev rafinerije. To so dejansko naložena sredstva, podarjena nekomu, torej poglejmo komu - lastniku! Lastnik pa je Petrol v višini 55% in vlada oziroma Republika Slovenija v višini 45%.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg598">Poglejte, kako fino bi bilo, če bi jaz z nekom ustanovil firmo, in bi mi potem - pa tudi da ima nacionalni interes nekdo tam ali kakorkoli že, pa da mi nekdo - na eni strani prikazujem dobre profite, visoke dobičke in vlagam denar v druge namene, na drugi strani pa en drug projekt - pa mi naj država financira! To ne gre, spoštovani! Takega projekta mi ne moremo podpirati. Poglejte samo, Petrol ruši bencinske črpalke, ki bi lahko še danes ali pa še deset let sigurno funkcionirale. Ne rečem, da ni potrebna posodobitev, ampak še bi lahko funkcionirale, torej imajo veliko denarja, tukaj pa prikazujejo, da naj drugi oziroma dejansko država in davkoplačevalci financirajo ta projekt! S takim sistemom se mi ne moremo strinjati in ga ne bomo podprli v nobenem primeru!</seg>
@@ -2079,11 +2062,11 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg600">V glavnem, v globalu stranka Socialdemokratov tega zakona ne bo podprla. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg601">Hvala. Gospod Brenčič.</seg>
             </u>
             <note type="speaker">STANISLAV BRENČIČ:</note>
-            <u who="#SDZ2.BrenčičStanislav" ana="#regular">
+            <u who="#BrenčičStanislav">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg602">Hvala lepa, gospod podpredsednik. Kolegice poslanke in poslanci! V poslanski skupini Slovenske ljudske stranke razumemo razloge, ki so botrovali temu, da ste kolegi poslanci vložili ta zakon v proceduro. Ta je prav gotovo predvsem ta, da družba Nafta Lendava veže nase toliko in toliko delovnih mest, ki jih seveda v primeru stečaja ne bi bilo več. Tudi podpiramo investicijo s tega naslova, da se del državnega denarja investira tudi ven iz velikih državnih središč, če temu tako rečemo.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg603">Vendar pa se nam zastavlja resno vprašanje, ali ima Vlada Republike Slovenije jasno dorečeno strategijo vlaganj v elektrogospodarstvo. Saj sočasno vlaganje v toliko elektroenergetskih objektov kot se dogaja sedaj, to je vlaganje v Brestanico, v Lendavo, v termoelektrarno Trbovlje 3, v nuklearko Krško, v verigo savskih hidroelektrarn, investiranje v posodobitev dravskih in soških elektrarn in posodobitev termoelektrarne Šoštanj, ki že potekajo. Vse to zastavlja vprašanje, da se država v takih investicijah ne more napajati z nekim proračunskim denarjem, ampak bodo potrebne velike zadolžitve, kar pa lahko popelje državo v povečanje javnega dolga. Ponudba kilovatne ure bo tudi v cenah, ki jih omogoča Evropska unija in vprašanje je, če ne bo tolikšno podvajanje elektroenergetskih objektov, kot jih sedaj načrtujemo, pripeljalo do tega, da bo treba prevelika in bodo zaradi tega tudi posamezni objekti prisiljeni zmanjševati proizvodnjo. To pa ima za posledico tudi takoj večanje stroškov proizvodnje in netržno zmožnost.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg604">Poleg tega se zavedamo, da je potrebno predvsem pri načrtovanju vlaganj v termoelektrarne nujno upoštevati sočasno tudi izkoriščanje toplotne energije, ker le tako dosegamo ceno kilovatne ure, ki bo tržno znosna, ki bo tržno primerljiva v odnosu za evropsko ponudbo.</seg>
@@ -2094,11 +2077,11 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg609">Zato zakon kot takšen podpiramo za splošno obravnavo, vendar, kot je tudi sam predlagatelj ugotovil in tudi Odbor za gospodarstvo, pa se bomo v poslanski skupini do druge obravnave tudi pripravili in opredelili do vsebine posameznih členov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg610">Hvala lepa, gospod Brenčič. Besedo dajem gospodu Izidorju Rejcu.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg611">Gospod podpredsednik, gospe in gospodje! Slovenski krščanski demokrati smo se precej poglobili v to ekonomsko, tehnološko in ekološko sanacijo v Lendavi. Jasno je, da nekateri najbrž stvari bolj poznate, drugi manj, nekaterim je ta zgodba že dolgo časa znana. Vemo tudi, da so bila v zadnjih letih - da je bilo vloženega nekaj truda, da je tudi vlada oziroma država nekaj naredila, da je pač poskušala s solastništvom oziroma z razdelitvijo lastništva tudi ukrepati in nekaj narediti. Jasno je in iz poročil, ki so nam bila na voljo, ali pa vsaj tisti, ki imajo večinski delež, v tem primeru to velja za Petrol, ki ima 55, in država, vlada, ki ima 45, so povedali, da je bilo že precej denarja vloženega, bodisi za plače bodisi za to, da je sploh tehnološki oziroma proizvodni proces tekel normalno.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg612">Gotovo je res, da se je tudi strategija oskrbovanja z derivati spreminjala, in da smo sedaj šli sem, sedaj tja, in najbrž od prejšnje naveze proti Sovjetski zvezi, do raznih drugih virov, v zadnjem času pa vemo, tudi Ina kot taka, ki je bila nekako njega dni nazaj tudi nek pogoj ali pa neka naveza za Lendavo, da je bila tudi to zgodba, ki se je ni dalo kar tako razplesti in da je pač ta scenarij, ki je tekel zadnja leta, morda bil malo premalo učinkovit. Na Odboru za gospodarstvo smo tudi tako povedali oziroma sam sem povedal, da se iz tega vidi, da bi bilo pričakovati, da bo ta sanacija, bodisi ekonomska pa tudi tehnološka, ker v tem primeru gre za to, da so sicer dobili ISO 9001, kar pomeni v organizacijskem smislu, da so sposobni neke stvari urejevati, voditi in podobno, da pa je tehnologija gotovo zastarela in da je, razumljivo, bi rekel, predelava na sod previsoka in da je lastna cena pri izhodu previsoka, proti temu, kar se dobi drugod in da je to tisti osnovni problem.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg613">Dalje. Ko gledaš vso to operacijo, ki seveda gre iz 3+3 milijarde, po nekakšnem preračunu, je to seveda prelaganje oziroma je to zgodba, ki bi ji rekel, da bi vlada skupaj z lastnikom, se pravi s Petrolom, že morala nekaj narediti. Če bo to trajalo zdaj dve ali tri leta, potem je kar naenkrat padlo v kritično stanje, v katerem se je seveda ta operacija, bi rekel, odpletla, v katerem pa se vidi ali pa lahko rečemo, da oba lastnika nista bila preveč racionalna, ker sta le nekako upala, da se bo kaj boljšega zgodilo, ali pa da bodo morda cene bile temu bolj bi rekel naklonjene. Pa gotovo je res, da sta se oba zmotila, ker pri stari tehnologiji se ne da kaj posebnega napraviti in to dejstvo je padlo v ta zakon. Operacija se me ne zdi nič kaj posebno težka, ker v tem primeru gre za to, da vlada, bi rekel, sega po premoženju oziroma po določenem poslovnem uspehu Petrola. Petrol daje garancijo seveda Lendavi, vlada pa si zagotovi, bi rekel, tudi pokritje v Petrolu. Lahko se pove, da me ne skrbi ta operacija, ker konec koncev, saj veste, že vsi govorijo in vsi govorijo, da bomo morali približati cene derivatov in električne energije evropskemu nivoju, kar lahko samo pričakujemo, da se bo ta zgodba odpletla v smeri podražitev, tako da jasno, da je ta ekonomska, tehnološka sanacija potrebna. Mi se včasih sprašujemo, ali pa se vsi sprašujemo, čemu pa smo se zdaj tu s tem podjetjem ali pa s to dejavnostjo nekako sprijaznili, da je treba rešiti.</seg>
@@ -2107,11 +2090,11 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg616">Potem menim, da je potrebno in da je tudi odbor za gospodarstvo prav naredil, da smo rekli, da se naj ta prva obravnava napravi, da se sicer zadevo podpre, vendar pa da se pojavi čimprej ta sanacijski program, ki bo omogočil, da se ta zadeva sanira in uredi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg617">Hvala lepa gospod Rejc. Besedo ima gospod Sovič.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg618">Hvala lepa. Spoštovani! Poslanska skupina Združene liste, podpira osnovno intenco tega zakona, ker gre za pomemben objekt, ki na neki način v veliki meri vpliva na razmere v državi, in to razmere, ki se tičejo oskrbe države z energijo, pa tudi na nekatere ekološke vidike te oskrbe in ne nazadnje to je objekt, ki ima pomemben vpliv tudi na socialne razmere v pomembnem delu te države.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg619">Ta zakon govori o ekonomski, tehnološki in ekološki sanaciji te rafinerije in mislim, da je že v naslovu pravzaprav zajeto to bistvu. Sam projekt sanacije Nafte Lendava ima dejansko več vidikov.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg620">Če gledamo tehnološkega, je treba seveda zelo jasno se vprašati, kakšno perspektivo ima sedanja rafinerija. In odgovor je na dlani. Sedanja rafinerija po sedanji tehnologiji nima prav nobene perspektive, niti v Evropski zvezi, niti v Sloveniji. Standardi so v tem času se že tako spremenili, zahteve po kvaliteti so tako narasle, da preprosto obstoječa proizvodnja ni v stanju teh kriterijev izpolniti. Produkt, ki prihaja iz rafinerije Nafta Lendava, zelo na kratko rečeno, ni več takšen, da bi ustrezal pričakovanjem, ki jih Evropska zveza na tem področju ima. In s tega vidika je seveda jasno, da neodločitev za sanacijo ali pa odločitev za nesanacijo seveda pomeni hkrati odločitev o zaprtju te rafinerije.</seg>
@@ -2130,7 +2113,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg633">Skratka, mislim, da gre za pomemben projekt. Mislim, da je treba izraziti priznanje tistim, ki so ta tekst zakona pripravili. Gre za projekt, ki ima pomembne ekološke, tehnološke in energetske vidike. In nenazadnje tudi socialne, ki so spričo situacije v regiji, v kateri rafinerija je, tudi prav tako pomembni. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg634">Hvala lepa, gospod Sovič. Želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg635">Prehajamo na besedo poslank in poslancev. Prijavljenega imamo samo gospoda Ferija Horvata, ki se je pisno prijavil. Se želi še kdo prijaviti?</seg>
@@ -2138,7 +2121,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg636">Ostali poslanci imate potem pet minut. Gospod Feri Horvat, imate besedo.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg637">Hvala za besedo, gospod podpredsednik. Spoštovane kolegice in kolegi, predstavniki vlade in drugi prisotni! Dovolite mi še nekaj besed v tej splošni razpravi kot argumente za to, da podpremo zakon v prvi obravnavi. Jaz se kljub temu, da zdaj verjetno pričakujete, da bom predvsem z regijskega vidika pa s podjetniškega vidika zagovarjal ta problem, ta predlog, ga želim predvsem z narodnogospodarskega vidika, ker mislim, da bo ta bistven za našo odločitev tukaj, in bi predvsem s tega vidika še dodal nekaj argumentov k temu, kar so že kolegi v razpravi rekli.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg638">Normalno je, da nacionalni program za področje energetike, ki je zaenkrat v osnutku, da sledi strategiji, ki smo jo sprejeli v prejšnjem mandatnem obdobju. In poleg tega argumenta, da je potrebno imeti del oskrbe z naftnimi derivati iz lastne proizvodnje v višini okrog 30%, da poleg varne oskrbe je zelo pomemben še ta dodatni argument v zvezi z rezervami. Jaz bi k temu zraven, kar je kolega Sovič rekel, dodal samo še to, da to ni neka zdaj splošna želja, ampak je to zahteva direktive Evropske unije. In da bo Slovenija prišla v pogajanjih z Unijo v težave, ker ne bo mogla izpolniti zahteve in bo morala zaprositi za odlog, zato da bo ugodila temu pogoju, bo lahko potrebne rezerve zagotovila.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg639">Dalje mislim, da je še en dodatni argument, da, če bomo imeli en del lastne oskrbe, kljub temu, da bomo surovo nafto tudi naprej morali uvažati, bo manj možnosti, da bi nas kdorkoli izsiljeval tudi s cenami pozneje. To pravim zaradi tega, ker so prisotna tudi mnenja deloma v strokovnih krogih, da bi lahko šli v neke dolgoročne povezave z rafinerijami izven Slovenije. In taki predlogi, kot slišim, tudi prihajajo od zunaj, celo da bi sovlagali v kakšne rafinerije.</seg>
@@ -2151,7 +2134,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg646">In na koncu samo še to. Slovenija rabi poleg rasti porabe električne energije nadomestne kapacitete za nuklearko. Mi vemo, da bo nuklearko treba enkrat zapreti. Vidimo tudi zahteve, ki prihajajo od zunaj za to vse močneje. To piše tudi v strategiji, da gre Slovenija ven iz jedrskega kluba, pri proizvodnji električne energije, in tudi to je dodatni argument, da je potrebno dodatne kapacitete zgraditi, da bomo lahko v doglednem času nuklearko tudi zaprli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg647">Hvala lepa gospod Horvat. Želi še kdo besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg648">Zaključujem splošno razpravo. Predlagam, da se druga in tretja obravnava preloži na eno izmed naslednjih sej, ko bo vlada predložila sanacijski program oziroma ko bo državni zbor dobil sanacijski program.</seg>
@@ -2178,20 +2161,20 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg662">Predlog zakona je v obravnavo zboru predložila skupina poslancev s prvopodpisanim Miranom Potrčem. Želi predstavnik besedo oziroma predlagatelj? Prosim, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg663">Hvala lepa. Spoštovani predsedujoči, spoštovane kolegice in kolegi! S predlaganimi spremembami zakona želimo, da se v zakonu o Slovenski razvojni družbi in programu prestrukturiranja podjetij zagotovi enakopravnejši položaj v primeru sklepanja sporazuma med razvojno družbo in zaposlenimi delavci. Menimo, da smo na podlagi besedila, ki smo ga vložili, mnenja vlade, ki je v načelu soglašala z našim predlogom, in skupaj dogovorjenega amandmaja na seji matičnega delovnega telesa, ta cilj dosegli.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg664">V imenu predlagateljev zato podpiramo amandmaje, ki so bili oblikovani na Odboru za gospodarstvo kot amandmaje na amandmaje vlade in tudi vladni predlog. In menimo, da bi tako sprejeti amandma k 1. členu zadostil našemu cilju, da bi se tudi v primeru tega sporazuma postavili v enakopravnejši položaj delavci v podjetjih, ki pač pridejo pod sanacijo v okviru Slovenske razvojne družbe. Predlagam torej, da ta zakon, skupaj s predloženimi amandmaji, sprejmemo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg665">Hvala lepa. Predlog zakona je obravnaval tudi Odbor za gospodarstvo kot matično delovno telo. Prosim predstavnika, da predloži mnenje odbora. Gospod Horvat.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg666">Hvala za besedo. Bom zelo kratek. Odbor za gospodarstvo podpira predlog zakona, podpira tudi skrajšani postopek, odbor podpira tudi amandma vlade in na ta amandma je dal še svoj amandma na amandma.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg667">Hvala lepa. Želi besedo predstavnik Sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg668">Želi besedo predstavnik vlade?</seg>
@@ -2212,7 +2195,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 17.24 uri in se je nadaljevala ob 17.33 uri.</note>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg677">Kolegice in kolegi poslanci! Nadaljujemo s sejo. Prosim, da ugotovimo prisotnost v dvorani.</seg>
                <note>47 poslank in poslancev.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg678">Državni zbor je sklepčen in lahko nadaljuje z delom.</seg>
@@ -2242,13 +2225,13 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg692">Prehajamo na 2. člen. Želi kdo razpravljati o 2. členu? Prosim, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg693">Spoštovane kolegice in kolegi! Prosil bi vas, da niste slabe volje, ker sem tudi sam zaradi tega predloga. Opozoril me je naš sekretar za zakonodajo in pravne zadeve, da, če bi ostalo besedilo takšno, bi potem formalno povzročalo nekaj problemov. Gre samo res za redakcijski popravek, če ga smem brez vaše slabe volje povedati.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg694">Poglejte, v obeh delih teksta, če gledate na strani 6 besedila je na koncu napisano, da sedanji tretji odstavek ima že napisano, s čemer prenehajo veljati določbe zakona o tehnološkem razvojnem skladu razen določbe 6. člena. Če napišemo v tej spremembi tretjega odstavka to še enkrat, bo izpadlo, kot da smo v zakonu o tehnološko-razvojnem skladu dvakrat razveljavili. In gospod Baškovič nas opozarja, da bi nas lahko kdo na to malenkost ali pa na to tehnično formalno napako opozoril.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg695">Zato bi predlagal, če se lahko ta amandma glasi: V tretjem odstavku 36. člena se dosedanje besedilo "Slovenska razvojna družba z dnem uveljavitve tega zakona prevzame dejavnost, poslovanje, zaposlene, pravice in obveznosti tehnološko-razvojnega sklada Republike Slovenije" nadomesti z naslednjim besedilom: "Slovenska razvojna družba z dnem uveljavitve tega zakona postane pravni naslednik tehnološko-razvojnega sklada Republike Slovenije in prevzame njegovo dejavnost, poslovanje, zaposlene, pravice in obveznosti." Besedili, ki sem ju prebral, bom dal tudi pisno, ampak če mi verjamete, da je to isto, bi lahko takoj glasovali. Bom pa napisanega dal. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg696">Hvala lepa. Torej gre za amandma gospoda Potrča. Mislim, da ga lahko sprejmemo. Gospod Baškovič, želite morda vi besedo ali pa se strinjate? Se strinjate. Hvala. Kolegice in kolegi, dajem v razpravo amandma gospoda Potrča. Želi kdo razpravljati?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg697">Zaključujem razpravo in dajem amandma gospoda Potrča v odločanje. Ugotovimo sklepčnost!</seg>
@@ -2297,7 +2280,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg722">Poslanec Miran Potrč je z dopisom predlagal državnemu zboru, da iz zakonodajnega postopka umakne predlog zakona o spremembi in dopolnitvi zakona o zaposlovanju in zavarovanju v primeru brezposelnosti, skrajšan postopek. Želi predlagatelj predloga zakona besedo? Prosim gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg723">Hvala lepa. Spoštovane kolegice in kolegi! Predlagam, da podprete predlog za umik iz zakonodajnega postopka predloga zakona o spremembi in dopolnitvi zakonov o zaposlovanju in zavarovanju za primer brezposelnosti. Če bo ta predlog umaknjen, bodo doseženi, po prepričanju Bojana Kontiča, Janka Vebra in mene ter naše poslanske skupine, cilji, ki smo jih želeli doseči s tremi zakoni, ki smo jih vložili v proceduro. Naš namen je namreč bil, da bi opozorili na nekatera vsebinska vprašanja zakona o zavarovanju in zaposlovanju za primer brezposebnosti, ki terjajo za delavce ugodnejše rešitev, in da bi opozorili vlado in državni zbor, da celovitih sprememb zakona o zavarovanju in zaposlovanju za primer brezposelnosti, kakor jih predlaga vlada, ni mogoče obravnavati po hitrem ali skrajšanem postopku.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg724">Potem, ko so bili vloženi naši trije zakoni je vlada svoj zakon predložila po rednem postopku. S tem so - po našem prepričanju bili - ustvarjeni pogoji, da se pogovarjamo tudi o vsebinskih vprašanjih. In kar zadeva vsebinska vprašanja, smo se včeraj s Poslansko skupino LDS dogovorili, da bo sama - poskušala pa bo to doseči tudi pri vladi in pri drugih koalicijskih partnerjih - zagotovila, da bi bile rešitve, ki jih predlaga vlada v svojih zakonih, bistveno dopolnjene v skladu s predlogi, ki jih bo dala Združena lista.</seg>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg725">Ti pomembnejši predlogi so naslednji: kar zadeva 19.a člen, kar je tudi vsebina mojega predloga zakona, bodo uveljavljene tudi rešitve, ki pravico, da postanejo aktivni brezposelni - s pravico dobilt tudi nadomestilo za brezposelnost - postanejo tisti delavci, ki jim ni bila izplačana plača tri zaporedne mesece, ali to, kar je tudi naš predlog - 9 mesecev v zadnjem koledarskem letu.</seg>
@@ -2309,7 +2292,7 @@
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg731">Ker so nam v Poslanski skupini LDS obljubili, da bodo podprli takšne usmeritve in s tem uravnotežili nova bremena, ki jih dobiva, ali pa slabše pogoje, ki jih pridobijo v brezposelnosti, tudi z nekaterimi ugodnejšimi pravicami, se nam je zato zdelo prav, da umaknemo zakone, ki smo jih vložili jaz in moja dva kolega: Bojan Kontič in Janko Veber. Predlagam, da to sprejmete in da s tem omogočimo, da bi se začela procedura vladnega predloga po rednem postopku. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg732">Hvala lepa, gospod Potrč. Želi besedo poročevalec Odbora za zdravstvo, delo, družino in socialno politiko?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-07-1997-10-28.seg733">Želi besedo predstavnik Sekretariata za zakonodajo in pravne zadeve?</seg>

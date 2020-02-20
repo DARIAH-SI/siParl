@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 15. delovna seja</title>
             <meeting n="15"
-                     corresp="#VsiZbor.1992-10-07.d015-01.DruzPolZb #VsiZbor.1992-10-07.d015-01.ZbObc #VsiZbor.1992-10-07.d015-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="143"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="81"/>
                <tagUsage gi="seg" occurs="163"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -264,23 +255,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1992-10-07.d015-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-10-07.d015-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-10-07.d015-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -290,16 +264,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>DELOVNA SKUPNA SEJA SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">15. seja</head>
             <docDate>7., 8. in 14. oktober 1992</docDate>
             <note type="chairman">Sejo je vodil dr. Ludvik Toplak, predsednik Družbenopolitičnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 16.15 uri.</note>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg1">Spoštovane poslanke in spoštovani poslanci! Pričenjamo 15. delovno sejo vseh treh zborov Skupščine Republike Slovenije, na kateri bomo odločali o spornih vprašanjih v zvezi s predlogom zakona o političnih strankah in predlogom zakona o volilni kampanji.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg2">Glede na to, da ni bil sprejet sporazumen predlog skupne komisije vseh treh zborov v Zboru občin pri predlogu zakona o političnih strankah, in v Zboru občin in Zboru združenega dela pri predlogu zakona o volilni kampanji, se na podlagi četrtega odstavka amandmaja 73 k ustavi Republike Slovenije v zvezi s tretjim odstavkom 2. člena ustavnega zakona za izvedbo ustave Republike Slovenije iz leta 1991 o spornih vprašanjih v zvezi s predlogom zakona odloča na skupni seji vseh treh zborov Skupščine Republike Slovenije. Predlog zakona o političnih strankah smo uvrstili na dnevni red skupne seje na zahtevo Družbenopolitičnega zbora Skupščine Republike Slovenije, predlog zakona o volilni kampanji pa prav tako na predlog Družbenopolitičnega zbora.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg3">Preden preidemo na odločanje o spornih vprašanjih pri predlogu zakona o političnih strankah in predlogu zakona o volilni kampanji, moramo ugotoviti sklepčnost skupne seje, na kateri mora biti navzočih večina vseh poslancev vsakega zbora po ustavnem amandmaju 72 k Ustavi Republike Slovenije iz leta 1974: "Kadar zbori odločajo na skupni seji, veljavno sklepajo z večino vseh poslancev vseh zborov."</seg>
@@ -338,86 +316,86 @@
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg22">Na glasovanje dajem amandma Zbora občin k 37. členu - za nov 37.a, b), c) in č) člen, ki se glasi - kakor ste verjetno prebrali (da ne bomo brali). Besedo želi gospod Starman.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg23">Spoštovane kolegice in kolegi! Sem eden od avtorjev tega teksta. Poleg mene sta sodelovala, še gospod Šter in gospod Vano Gošnik. Torej gre za tekst, ki je star skoraj eno leto in je bil namenjen kot sprememba zakona o političnem združevanju iz decembra leta 1989. Dovolite, da obrazložim svoj glas s tremi razlogi, zaradi katerih mislim, da je treba ta amandma sprejeti. Drugače bo ta parlament dokazal konkretno, da ni za pravno državo.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg24">Politični razlogi so naslednji: eden največjih neuspehov Demosa kot koalicije je bil, da tega zakona ni sprejel še v času trdnosti koalicije. Ne bi se spuščal v razloge, zakaj ni bilo sprejeto. Nujno bi bilo vzpostaviti tudi na premoženjskem področju stanje, ki je prišlo v političnih odnosih.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg25">Ustavno-pravni kriteriji so naslednji. Ustavno sodišče je sprejelo jasno stališče o zahtevi Stranke demokratične prenove, da se razveljavi 111. člen zakona o stanovanjskih razmerjih in da stanovanja ostanejo njihova last. Dovolite, da preberem ta tekst, ki se nanaša, obrazložitev teksta, ki se nanaša na to področje. Gre za pravno popolnoma enak temelj, ker gre vedno za družbena sredstva, ali so to stanovanja ali so to stavbe ali so pisalne mize, vedno gre za družbeno lastnino. Zveza komunistov in Zveza sindikatov ter njune posamezne organizacijske oblike so bile po ustavi iz leta 1974 družbenopolitične organizacije. Za uresničevanje svojih ciljev so družbenopolitične organizacije razpolagale s sredstvi, ki so bila, ne glede na vire po 75. členu te ustave, družbena sredstva. Zato so tudi zneski članarin, to posebej poudarjam, kot prostovoljni prispevki njenih članov postali družbena sredstva, s katerimi je razpolagala družbenopolitična organizacija. In še ta tekst. Z vpisom v register političnih strank, po zakonu o političnem združevanju, je takratna ZK oziroma ZK - Stranka demokratične prenove postala politična organizacija. Vendar s tem vpisom družbena sredstva, s katerimi je upravljala kot družbenopolitična organizacija, niso postala njena lastnina. Takih določb o preoblikovanju družbene lastnine v premoženje političnih organizacij zakon o političnem združevanju nima. Obveščen sem tudi, da so delegati bivšega sklica 29. decembra, ko so sprejemali zakon o političnem združevanju, sprejeli dodaten sklep, ki bi ga morali tudi mi upoštevati, da je potrebno to vprašanje premoženja družbenopolitičnih organizacij urediti, ker niso hoteli že takrat v predhodne določbe urediti tako materijo, kot jo predlagamo danes. Poleg Ustavnega sodišča, kot najvišjega čuvaja zakonitosti in ustavnosti v tej deželi je o konkretnem premoženjskem sporu odločalo tudi Temeljno sodišče v Celju - enota v Žalcu, ki je v pravni zadevi P-403/91 izdalo sodbo, po kateri je obsodilo toženo stranko, Občinsko konferenco SDP Velenje in Zvezo sindikatov Slovenije, območno organizacijo Velenje, da sta dolžni tožeči stranki občini Velenje izročiti v last posest ter prepustiti prazne stvari in naslednje prostore: v sodni stavbi na parceli št. ta in ta, in klavzula vpisa v zemljiško knjigo. Imamo torej dva judikata enega Splošnega sodišča, enega Ustavnega sodišča, da je nujno potrebno, da kvalificiramo to premoženje kot družbeno lastnino in v nobenem primeru ne moremo niti članskih deležev šteti kot zasebno, privatno lastnino. V 2. členu naše ustave je napisano, da je Slovenija pravna in socialna država. Ta tekst je oblikoval gospod Ciril Ribičič in smo ga sprejeli po dosti dolgi razpravi tudi kot temeljno izhodišče. Menim, da bi bilo nesprejetje takega amandmaja oziroma sprejem tistega kompromisnega predloga, kot nam je bil predložen v razpravo v nasprotju s 14. členom ustave, ki govori o enakosti pred zakonom. Namreč, glede na družbeni položaj nekaterih, torej tistih, ki so člani teh političnih strank, bi bili privilegirani v nasprotju z drugimi, ki niso v teh organizacijah. Zato iz ustavno-pravnih in čisto konkretno civilno-pravnih razlogov menim, da moramo najti razum, da te stvari sprejmemo, tako kot je treba.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg26">In tretje vprašanje. Mislim, da je treba poudariti tudi razloge morale. Nemoralno bi bilo, da sedaj, pred drugimi volitvami, nekatere politične stranke ne razpolagajo niti s tistimi osnovnimi prispevki do danes - konkretno imam v smislih Narodne demokrate, ki jim gredo zaradi uspeha na volitvah - druge bi se pa "kitile" z neizmernim bogastvom. Če dovolite naslednje. Samo za ljubljanske poslovne prostore, ki jih je 1800 m2, se dobi mesečno okrog 5000 mark. Kaj je v Sloveniji, ne vem. Dejstvo je, da je od volitev v aprilu leta 1990 do danes tega premoženja, ki je neupravičeno pridobljeno, nekaj 100 tisoč mark. Mislim, da bo moral nekoč nek javni pravobranilec vložiti tožbo in zahtevati tudi ta sredstva, ki so neupravičeno pridobljena. Zato spoštovane kolegice in kolegi, naredimo danes križ čez neko premoženjsko preteklostjo in sprejmimo stališče, ki vam je ponujeno, da se to premoženje prenese na občino oziroma republiko in seveda to premoženje bo vedno v upravljanju in v uporabi političnih strank, enakopravno, brez odnosa, da so eni najemodajalci, drugi najemojemalci, tudi če najemnin trenutno ne plačujejo. Nemogoče je sprejeti stališče iz moralnih razlogov, da stavba Tomšičeva 5, ki je bila kupljena takole oziroma pridobljena takole. Dovolite. Dne 11. oktobra 1949 so prišli na Okrajno sodišče za glavno mesto Ljubljano naslednje gospe in gospodje.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg27">Prosim, samo malo prosim, gospoda Starmana moram opozoriti, da je čas pretekel.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg28">Samo povem. Lidija Šentjurc, France Popit in Regent Ivan, kot minister za prosveto. Ugotovljeno je v zemljiški knjigi, da gospod Popit, ki je prišel kot generalni sekretar vlade, ni imel nobenega pooblastila in je podpisal menjalno pogodbo brez pooblastila, zato je ta menjalna pogodba nična. In iz teh razlogov - jaz imam vse dokumente na razpolago, jih lahko pokažem - menim, da je tudi nemoralno vse upravljanje in to kar se danes tukaj postavlja kot zakonito dejanje. Hvala. Zato bom glasoval za amandma, menim, da tisti, ki ne boste glasovali za amandma, boste naredili večjo škodo tej deželi, kot takrat, ko niste glasovali za udbovski amandma.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg29">Hvala lepa. Prosim, gospod Golija.</seg>
             </u>
             <note type="speaker">FRANC GOLIJA:</note>
-            <u who="#SSK11.GolijaFranc" ana="#regular">
+            <u who="#GolijaFranc">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg30">Glasoval bom za amandma, ki ga je predlagal gospod Starman in to iz naslednjih razlogov: mislim, da gre za osnovni trenutek poštenosti vas poslancev in vseh nas, ki danes tukaj v tej Skupščini odločamo. Mislim, da je treba stvari pogledati tako kot so. Vsi hitimo z velikimi aktovkami v Evropo in se izdajamo za demokrate. Po drugi strani pa ugotavljamo, da pri nas edina država od vzhodno evropskih, če jih tako imenujem, ni razlastila partije. Vse vzhodnoevropske države so partijo razlastile, pri nas pa ne. Mislim, da je potrebno, da se vsi poslanci zamislite ob tem in da glasujete za amandma in da naredimo črto pod preteklostjo in začnemo s poštenostjo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg31">Hvala. Gospod Metelko.</seg>
             </u>
             <note type="speaker">ALOJZIJ METELKO:</note>
-            <u who="#SSK11.MetelkoAlojz1940" ana="#regular">
+            <u who="#MetelkoAlojzij">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg32">Glasoval bom za amandma Zbora občin, to se pravi, za amandma, ki ga je vložil v našem zboru gospod Starman, to pa iz naslednjih razlogov: kot je bilo že omenjeno, je naš zbor že leta 1989, decembra meseca, sprejel zakon o lastnini bivših družbenopolitičnih organizacijah. Zbor Združenega dela omenjenega zakona ni hotel dati niti na dnevni red, ne vem, kaj je bilo pa v družbenopolitičnih organizacijah. Na moje poslansko vprašanje meseca aprila, leta 1991, kaj je z omenjenim zakonom, sem dobil odgovor še od bivše vlade, da je zakon v postopku in da ni umaknjen. Zaradi tega omenjeno lastnino bivših družbenopolitičnih organizacijah opredeljuje naš amandma, amandma Zbora občin, zato je ta amandma sprejemljiv in s tem amandmajem bomo odpravili krivice, ki so bile narejene marsikomu.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg33">Hvala. Gospod Zabukovec.</seg>
             </u>
             <note type="speaker">ZDRAVKO ZABUKOVEC:</note>
-            <u who="#SSK11.ZabukovecZdravko1940" ana="#regular">
+            <u who="#ZabukovecZdravko1940">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg34">Spoštovani, glasoval bom proti amandmaju, kljub temu da sta kar dva predgovornika že razvrstila vse poslance v poštene in nepoštene. Pač, kako bodo glasovali. Zakaj pa bom tako glasoval? Zaradi pravne kontinuitete in zaradi pravne države, kajti mi ne moremo določiti z zakonom, da so vsi pravni posli in vse okoliščine, v katerih je prišlo do določenega premoženja, nezakonite. S tem obrnemo dokazno breme, brani se pred zopet revolucionarno zakonodajo. Predlagam, in verjamem, verjamem, da so bili določeni posli in določene pogodbe dvomljive, sumljive, morda celo nezakonite. To naj se dokaže, za vsak primer posebej. Torej, zakon in zakonodajalci moramo biti previdni, kadar takole revolucionarno razmišljamo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg35">Hvala. Gospod Podobnik.</seg>
             </u>
             <note type="speaker">MARCEL ŠTEFANČIČ:</note>
-            <u who="#SSK11.StefancicMarcel1937" ana="#regular">
+            <u who="#StefancicMarcel1937">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg36">Spoštovane poslanke, spoštovani poslanci, spoštovano predsedstvo! Živeli so kralji, ki so imeli kraljestva. Pa so se potlej kralji odpovedali kraljevanju, ohranili pa so kraljestva. Potlej so vsi drugi rekli: če nisi kralj, ne moreš imeti kraljestva. In kralju to ni bilo všeč. In je dejal kralj: kraljestvo imajo lahko tudi nekralji in tako bodi. Tako je bilo in ostalo, kakor med kralji. Mi, drugi pa želimo samo to, da se nekralja ne more držati kraljestvo še kar naprej. Zato menim, da so amandmaji o prerazporeditvi kraljestva kar pravšnji. Žal, pa dosti dosti prepozno.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg37">Hvala. Gospod Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SSK11.PodobnikMarjan1960" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg38">Spoštovani, glasoval bom za amandma Zbora občin zato, ker sem prepričan, da je to prav in pošteno, kar govori ta amandma. Razprava o kontinuiteti je v tem primeru zelo vprašljiva; namreč stranke, ki so lastnice tega premoženja, se odrekajo kontinuiteti, ko gre za nedela, zločine in vse stvari, ki so jih njihove predhodnice pač naredile nekoč, zdaj pa želijo imeti kontinuiteto, ko gre za premoženje, ki so ga te njihove predhodnice pridobile. Zato menim, da nekaj doslednosti bi bilo le prav tudi za vse te stranke, sicer boste nekako težko šli tudi pred volilce. Saj bi to premoženje, ki je premoženje ne vseh strank, pač pa vseh državljanov Slovenije, ostalo v lasti dedičev tistih strank, ki so se svojih predhodnic kot takih odpovedali. Zato bom glasoval za ta amandma in sem prepričan, da bo večina tudi glasovala zanj in da bo to dejansko pomenilo pomemben korak naprej k enakovrednosti in enakopravnemu nastopu ne le vseh strank, ampak tudi vseh volilcev in državljanov, ki se odločajo za katerokoli stranko. Glasoval bom za amandma.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg39">Hvala. Gospod Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SSK11.PregeljZarko1956" ana="#regular">
+            <u who="#PregeljZarko1956">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg40">Spoštovani! Glasoval bom "za" amandma, ki je bil sprejet v Zboru občin, in to zato, ker želim v skladu s svojo načelno opredelitvijo tolerantno in širokogrudno pomagati tistim strankam, ki so pravne naslednice strank oziroma družbenopolitičnih organizacij, ki so imele to imovino v posesti, da bodo lahko dokončno zaključile proces sestopanja z oblasti s sestopom od korita. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg41">Hvala lepa. Besedo ima gospod Urbančič.</seg>
             </u>
             <note type="speaker">MILOŠ URBANČIČ:</note>
-            <u who="#SSK11.UrbancicMilos" ana="#regular">
+            <u who="#UrbancicMilos">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg42">Glasoval bom za amandma, ker če bivših organizacij ni več - kajti po volitvah so bivše organizacije propadle, preprosto jih ni več - potem ne more biti nobenega lastnika njihovega premoženja. In če ni lastnika njihovega premoženja, potem to pripada družbi ali državi in ga potem daje država v upravljanje komurkoli. Ne morem razumeti, kako - če pa mislijo nekateri, da bi bili še vedno dediči tega premoženja, zakaj potem niso ostali z imenom Zveza komunistov Slovenije še naprej; zakaj so se spremenili v drugo stranko? In tudi vse druge stranke. Naj bi ostali z bivšim imenom in z bivšimi pravicami. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg43">Hvala lepa. Besedo ima gospod Potočnik.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SSK11.PotočnikFranc1955" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg44">Glasoval bom za ta amandma Zbora občin. Da pa bi bila stvar čista in da bi vedeli, kdo za kaj je v tej državi, predlagam javno glasovanje.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg45">Takole piše: "Posamično se izjavljajo delegati v zboru, če tako odloči zbor na predlog predsednika zbora ali delegatov v zboru, če je to potrebno za natančno ugotovitev izida glasovanja."</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg46">Predlog poslanca gospoda Potočnika smo dobili. Predlog bom dal na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg47">Preden preidemo na glasovanje, prosim, da ugotovimo navzočnost! Poslanci Družbenopolitičnega zbora</seg>
@@ -457,219 +435,219 @@
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg66">Gospod Potočnik želi besedo. Prosim.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SSK11.PotočnikFranc1955" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg67">Izid glasovanja je nejasen: 144 ob preverjanju navzočnosti in 77 glasov za ta amandma - potemtakem bi ta amandma moral biti sprejet. Koliko je pa sedaj glasov? Kaj v takem primeru storiti?</seg>
                <note>Posvetovanje in dogovarjanje v delovnem predsedstvu.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg68">Besedo želi gospod Vano Gošnik.</seg>
             </u>
             <note type="speaker">VANO GOŠNIK:</note>
-            <u who="#SSK11.GosnikVane1953" ana="#regular">
+            <u who="#GosnikVane1953">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg69">Hvala lepa, želim poudariti, da se tukaj ne pojavljam kot kakšen poseben zagovornik tega amandmaja, saj sem eden - pogojno rečeno - od soavtorjev kompromisnega predloga. Toda, prosim poslovniško komisijo oziroma vsaj predsednika ali pa sestanek, da nesporno ugotovi, da je tukaj bilo prisotnih 144 poslancev, glasuje se z večino prisotnih poslancev in večina prisotnih poslancev je 73 glasov. Prosim, da se nesporno ugotovi, kakšna kvota glasov je potrebnih pri prisotnosti 144 poslancev. Prosim, to je moja prošnja, da komisija ali predsednik komisije to nesporno ugotovi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg70">Hvala. Danijel Božič.</seg>
             </u>
             <note type="speaker">DANIJEL BOŽIČ:</note>
-            <u who="#SSK11.BozicDanijel1959" ana="#regular">
+            <u who="#BozicDanijel1959">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg71">Hvala lepa. Namreč, gre za to, da tisti kolegi, ki niso pritisnili gumba pri preverjanju, seveda ne bi smeli pritisniti gumba potem, ko se je glasovalo. In normalno, da če se izvaja take kolobocije, potem to ne more veljati. Drugače pa, če se ne moremo zmeniti vsi, ki ne smejo biti pri tipkah, naj gredo iz dvorane, in se glasuje še enkrat. Seveda pa mora gospod predsedujoči pustiti, da gorijo lučke, da ugotovimo, kdo ni pritisnil prisotnosti in kdo je potem glasoval o amandmaju, da se ugotovi, zakaj razlika.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg72">Hvala. Gospod Tomažič.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg73">Strinjam se z razlago, ki jo je dal gospod Gošnik. Kajti kolobocije so bile lahko potem, ko je nekdo na sosednjem sedežu pritisnil in je ustvaril navidezno, da je bilo več vzdržanih glasov.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg74">Hvala. Franc Planinšek.</seg>
             </u>
             <note type="speaker">FRANC PLANINŠEK:</note>
-            <u who="#SSK11.PlaninsekFranc1957" ana="#regular">
+            <u who="#PlaninsekFranc1957">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg75">Tudi sam predlagam, da štejemo te glasove za veljavne, ker drugače, če to ni tako, zahtevam, da se poimensko izražamo, da se bo jasno videlo, kaj kdo reče, vsakega se bo poklicalo, vsakdo bo lahko rekel, da je proti ali je za to. Če to ni tako, če to ne bo sprejeto, mislim, da imamo še enkrat jasen dokaz , da če je bilo na nepravičen način to pridobljeno, da bo tudi danes na nepravičen način to ponovljeno.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg76">Gospod Starman.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg77">Prosim za 15 minut pavze, da se poslanski klub Demosa sestane in da se dogovorimo.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg78">Najprej prosim, bom predlagal cenjenemu zboru, da se glasovanje ponovi. Predlagam, da zbor odloči, ali se glasovanje ponovi. Gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg79">Soglašam, da se glasovanje ponovi. Prosil bi pa samo za naš pošten dogovor o tem, kako bomo naslednjič šteli. Če ugotovimo, da so v dvorani prisotni samo poslanci, ki imajo pravico glasovati, potem seveda moramo računati za, proti in vzdržane glasove. In je mogoče odločitev sprejeti samo, če je glasovalo več za, kot jih je glasovalo proti ali vzdržanih. Če bomo pa ugotovili, da koga ni v dvorani, potem mislim, da so še kakšni drugi v dvorani, naj se prosim iz dvorane pred tem odstranijo. Način glasovanja prej je gotovo pokazal, da del poslancev ni glasoval na tipke ali da so nekateri poslanci ali nekateri drugi prisotni glasovali dvakrat. Druge možnosti ni in prosim, da se to predhodno ugotovi, da se nam ne bi zgodil enak zaplet. Jaz sem namreč trdno prepričan, da je rezultat glasovanja nesporen in da pač ta amandma ni dobil potrebne večine. Vse drugo je popolnoma samovoljna razlaga, sem pa pripravljen, da se tudi glasovanje ponovi. Samo prej se dogovorimo kako bomo šteli, da ne bomo enake stvari ugotavljali. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg80">Gospod Vano Gošnik.</seg>
             </u>
             <note type="speaker">VANO GOŠNIK:</note>
-            <u who="#SSK11.GosnikVane1953" ana="#regular">
+            <u who="#GosnikVane1953">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg81">Hvala lepa, gospodje poslanci in gospe poslanke! Slišali smo eno od možnih razlag poslovnika. Mislim, da smo to razlago nekoč že nekako absolvirali, da se mora rezultat proti in vzdržan ujemati z glasovanjem tistih, ki so oddali svoj glas za. Dovolite, da povem svoje mnenje, zato bi lepo prosil gospoda predsednika, da se upošteva moja vljudna prošnja, da tisti, ki je pristojen za tolmačenje poslovnika, nesporno ugotovi ali je bila po poslovniku zahtevana večina glasov za predlog ali je bila manjšina za predlog. Prosim lepo, še enkrat vljudno, da zato pristojna komisija nesporno ugotovi in če je potrebno, predlagam, da se tudi napravi ustrezno dolga pavza.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg82">Hvala. Še gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg83">Hvala lepa! Podprl bi predlog, da se glasovanje ponovi, s tem da, v kolikor bi imel kdorkoli kakšne ugovore, predlagam predsedujočemu, da ne ugasne lučk in bi bilo zelo preprosto videti, kje vse lučke gorijo po glasovanju za, proti in vzdržani. V kolikor sprejmemo odločitev, da je bilo glasovanje nejasno, bojim pa se, da če ne ponovimo glasovanja, da se bodo ti očitki ponavljali, zato je moj predlog, da se glasovanje ponovi. Predsedujoči naj zaprosi tiste, ki niso poslanci oziroma poslanke, da se umaknejo v predsobo ali pa na balkon, kjer so še raje in da ponovno glasujemo, s tem da se ne ugasne tistih lučk, dokler bi imel kdorkoli ugovor na glasovanje in vsakdo bo videl, kdo bi se lahko stegnil k sosedu ali pa ne utegnil pritisniti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg84">Hvala. Prosim, gospod Starman.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg85">Gospod predsednik, ponavljam predlog, da mi date 15 minut. Po poslovniku imamo to pravico, drugače bo moral, žal, naš klub zapustiti to zasedanje, krivda bo v nepravilnem vodenju procedure. Ne vem, kdo je dovolil, da se ponovi glasovanje, ki je bilo za nas popolnoma matematično jasno. Slišali smo tudi predsednika poslovniške komisije in to preurejanje poslancev, da odhajajo na hodnik, kot predlaga gospod Školjč, je nezaupanje v našo poštenost. Mi smo predlagali poimensko glasovanje, ste zavrnili. Ko ste pa goljufali s pritiskanjem na gumb, ne prvič, pa hočete ponoviti glasovanje.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg86">Za 15 minut prekinjam sejo. Prosim poslovniško komisijo, da se v tem času tudi sestane.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 16.50 uri in se je nadaljevala ob 17.20 uri.</note>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg87">Spoštovane poslanke in poslanci, nadaljujemo delo. Med tem smo prejeli protest poslanca Petra Bekeša, kjer protestira zoper poslanca Danijela Starmana, ker je v razpravi na rovaš poslancev, ki so glasovali proti amandmaju, sprejetem v Zboru občin, izrekel grob in skrajno žaljiv očitek s tem, da je uporabil besedno zvezo "za vas, ki ste goljufali pri glasovanju". Opozoriti moram poslanca Starmana, kakor tudi druge poslance, da nobenih žaljivih ali podobnih izrazov ni več tukaj. Moram na to stvar opozoriti.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg88">Predlagam, da nadaljujemo, da preidemo k stvari. Prosim predsednika poslovniške komisije gospoda Tomažiča, da odgovori na odprto, vendar na poslovniški komisiji že obravnavano vprašanje.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg89">Zato tudi nisem skliceval komisije, ker je to vprašanje komisija že nekoč obravnavala in bi tudi sicer verjetno ne mogli tako hitro sklicati komisije. Zato bom kar prebral mnenje, in sicer: "Komisija za pripravo in spremljanje izvajanja poslovnika z dne 23.10.1991, to je bilo mnenje v zvezi z zahtevo podpredsednika Skupščine Republike Slovenije Vaneta Gošnika in predsednika Družbenopolitičnega zbora dr. Ludvika Toplaka za tolmačenje določb poslovnika, ki se nanašajo na glasovanje. Zastavljeni sta bili dve vprašanji, od katerih je prvo za to relevantno, ki se glasi: ali je po poslovniku potrebno, da ob glasovanju število delegatov, ki so glasovali "za", "proti" in, ki so se aktivno vzdržali doseže predhodno ugotovljeno število prisotnih delegatov oziroma najmanj 41. Komisija je zaprosilo obravnavala na seji 18. oktobra 1991 in je v zvezi s tem sprejela naslednje stališče: Komisija je menila, da ni potrebno, da ob glasovanju število delegatov, ki so glasovali "za", "proti" in ki so se aktivno vzdržali doseže predhodno ugotovljeno število prisotnih delegatov oziroma najmanj 41. Kot izhaja iz drugega odstavka 127. člena poslovnika, je pred glasovanjem v zboru potrebno ugotoviti, koliko delegatov je prisotnih na seji in s tem, ali je zbor sklepčen. Komisija je menila, da potem, ko je predsednik zbora neposredno pred glasovanjem ugotovil, da je zbor sklepčen, ni pomembno ali se seštevek glasov "za", "proti" in "vzdržani" ujema, saj se lahko nekateri delegati pri glasovanju vzdržijo tudi na ta način, da ne uporabijo glasovalne naprave. Zato, da je odločitev v zboru sprejeta je potrebno, da je zbor sklepčen in, da za njo glasuje več kot polovica navzočih delegatov.</seg>
                <note>Posvetovanje in dogovarjanje v delovnem predsedstvu.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg90">Predsedstvo soglasno ugotavlja: na podlagi stališča Komisije za pripravo in sprejemanje izvajanja poslovnika skupščine, je amandma izglasovan.</seg>
                <note>Aplavz.</note>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg91">Navzočih po tej obrazložitvi je bilo 144 poslancev; "za" je glasovalo 77 poslancev, kar je nad polovico, "proti" je bilo 61 poslancev, "vzdržanih" smo našteli še 22. Po obrazložitvi je nad polovica navzočih bila "za". Tako je stališče poslovniške komisije in po tej dikciji je tako stališče predsedstva soglasno.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg92">Zdaj odpiram proceduralna vprašanja. Roman Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg93">Hvala za besedo. Ne strinjam se z interpretacijo in menim, da komisija ni opravila svoje naloge, sploh se ni sestala. Namreč, sestala se je v povsem drugačnem primeru, oziroma je gospod predsednik komisije prebral stališča, ki so bila na prejšnji seji. Gre za razliko v dikciji, ker v tem primeru, ki ste ga vi predstavili, je šlo za dikcijo, ki govori ali število tistih, ki po tem glasujejo doseže število, ki je na displeju prisotnih. V našem primeru pa imamo primer, ker je bilo s številom plus, minus in vzdržanih preseženo število prisotnih. Seveda, če bomo nadaljevali s tako metodo, potem pomeni, da se polovica tega parlamenta lahko ne prijavi k besedi oziroma ne prijavi svoje prisotnosti, na kar glasuje in s tem zniža kvorum in doseže svoje. Zato zame še vedno ni bilo jasno glasovanje pri prejšnjem amandmaju in še vedno vztrajam pri tem, da se glasovanje o amandmaju, ki ga je sprejel Zbor občin, ponovi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg94">Gospod Senčur.</seg>
             </u>
             <note type="speaker">MILOŠ SENČUR:</note>
-            <u who="#SSK11.SencurMilos1957" ana="#regular">
+            <u who="#SencurMilos1957">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg95">Kot je bilo že ugotovljeno, gre nesporno za drugačno dejansko stanje in nekateri, ki se na te zadeve spoznate, boste videli, da je to tako. Tako da ta precedens ne more biti v tem primeru uporabljen. Drugo pa je vprašanje, ali predsedstvo oziroma predsedujoči te seje lahko sklenejo, da je bilo neko glasovanje jasno in naj tako bo. Se pravi, pridružujem se zahtevi, zame glasovanje ni bilo jasno, zato ga ponovimo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg96">Besedo ima gospod Rogina.</seg>
             </u>
             <note type="speaker">BOGO ROGINA:</note>
-            <u who="#SSK11.RoginaBogo1947" ana="#regular">
+            <u who="#RoginaBogo1947">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg97">Hvala za besedo! Glede na to, da sem tudi še član Komisije za poslovnik in glede na to, da ne vem, da bi bila danes kakšna seja niti me ni predsedujoči komisije ali kdorkoli vprašal za mnenje, protestiram proti takemu načinu interpretiranja komisije. Da ne bi ponavljal, kar sta govorila predhodnika - dejansko stanje je bilo drugačno kot je predsednik navedel primer. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg98">Hvala lepa. Gospod Potrč je želel besedo. Umika - hvala.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg99">Besedo ima gospod Mak.</seg>
             </u>
             <note type="speaker">VILJEM MAK:</note>
-            <u who="#SSK11.MakViljem1937" ana="#regular">
+            <u who="#MakViljem1937">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg100">Spoštovani! Nisem pravnik, zato se v naprej opravičujem pravnikom, če ne bom uporabljal pravilnih izrazov. Vendar se mi zdi, da recimo, na sodniji sodijo po zakonu ali po sodni praksi. Tukaj pa najbrž delamo po poslovniku in po ustaljeni poslovni praksi. Rad bi povedal samo, kako delamo v Zboru združenega dela. Gospod Zupančič, tu je predsednik ki me bo najbrž potrdil, da smo v preteklosti imeli podobnih primerov ne enega, ampak verjetno deset ali več, ko smo se v zboru sporekli, podobno kot tule. Vendar, vedno je bil zaključek tak: po poslovniku je zakon sprejet, če je "za" več kot polovico prisotnih na gumbu. Zato menim, da je tudi to pot ta zadeva podobna in da o njej ne bi bilo treba več razpravljati.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg101">Hvala lepa. Besedo ima gospod Reberc.</seg>
             </u>
             <note type="speaker">PETER REBERC:</note>
-            <u who="#SSK11.RebercPeter1966" ana="#regular">
+            <u who="#RebercPeter1966">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg102">Spoštovani! Po mojem ponovno glasovanje ni možno iz mogoče preprostega ali banalnega razloga, namreč, da je od prejšnjega glasovanja poteklo že toliko časa, da so med tem poslanci šli ven, ponovno prišli notri in ne moremo ugotoviti, ali so tukaj prisotni vsi tisti kot pri prvem glasovanju. Zato pri tem ne bi šlo za ponovitev glasovanja, ampak za popolnoma novo glasovanje o isti zadevi. Zaradi tega mislim, da ponovno glasovanje ni možno.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg103">Hvala. Želi še kdo besedo? Prosim, gospa Darja Lavtižar-Bebler.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER:</note>
-            <u who="#SSK11.LavtizarBeblerDarja1950" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg104">Spoštovane kolegice, spoštovani kolegi! Če sem kaj prav razumela: prej, pred začetkom odmora je bilo sklenjeno, da se mora sestati poslovniška komisija. Sedaj je predsednik Komisije za poslovnik pač ocenil, da je stališče, ki ga je oktobra komisija sprejela - ampak ob drugi situaciji - stališče, ki je primerno tudi za razlago te situacije, ki je vendarle drugačna. Zato predlagam, da se poslovniška komisija vendarle sestane, ugotovi, da gre za nove razmere, kjer število oddanih glasov "za" presega in da potem tudi poslovniška komisija sprejme ustrezno stališče. Kajti to stališče ni adekvatno razmeram, kakršne so ta hip. In zahtevam, da se sestane poslovniška komisija in da sprejme svoje stališče, kajti to stališče, na katero se sklicuje predsednik komisije, ne ustreza dejanskemu stanju teh razmer sedaj.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg105">Hvala lepa. Takoj moram opozoriti: ni bilo sklenjeno, da naj se sestane. Res je, da sem na zahtevo poslancev Demosa, gospoda Starmana, dal 15 minutno prekinitev in naknadno zaprosil poslovniško komisijo, da dobim stališče oziroma da se sestane. Dobili smo stališče; kot sedaj vidim, se ni sestala - to je stvar poslovniške komisije. Sem pa naknadno sam želel dobiti stališče poslovniške komisije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg106">Besedo želi Nace Polajnar.</seg>
             </u>
             <note type="speaker">IGNAC POLAJNAR:</note>
-            <u who="#SSK11.PolajnarIgnac1948" ana="#regular">
+            <u who="#PolajnarIgnac">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg107">Hvala lepa. Kot sem razumel tolmačenje te komisije, ki je bilo lani oktobra (se pravi v letnem času kakršen je sedaj), ni šlo za to, da je morala ta komisija odgovoriti na neko konkretno zadevo, ampak je preprosto morala odgovoriti, kako naj ugotavljamo rezultate glasovanja v tem parlamentu. Za to je šlo. In tisto, kar je takrat ugotovila, seveda tudi leto dni po tem še velja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg108">Hvala lepa. Sedaj ima po vrsti besedo gospod Tomažič.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg109">Tako kot je že gospod predsednik rekel, ni bilo sklenjeno, da naj se sestane komisija. Potem, ko smo že vstajali in odhajali, je gospod predsednik rekel, da naj bi se sestali; vendar, ker so poslanci odhajali, sem prepričan, da bi precej časa trajalo, preden bi komisijo lahko sklicali, hkrati pa sem vedel, da že imamo to mnenje. Predlagam, da poiščemo tudi magnetograme - upam, da obstajajo, ponavadi jih imamo - ker vem, da smo debatirali pravzaprav v obe smeri - preprosto, da se ne ujema. Včasih je kakšen več, včasih je kakšen manj, ker so možni ali odhodi ali prihodi. In mislim, da bi bilo prav nesmiselno sedaj sprejemati drugačno stališče za primer, ko je kakšen več kot če je kakšen manj. Tako smo tudi na komisiji debatirali in prepričan sem, da bi to stališče težko spreminjali. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg110">Hvala lepa. Besedo ima gospod Zupančič.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#regular">
+            <u who="#ZupancicJoze1936">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg111">Spoštovane kolegice in kolegi! Trdno sem prepričan, da smo danes vsi tukaj zbrani zato, da bi ta zakon sprejeli. Ali so tu sedaj velike spremembe ali majhne, ali gre za prestiž ali ne, vendar bi vas iskreno prosil, da ta prestiž zanemarite zaradi tega, ker kakorkoli se vzame, imamo še samo nekaj dni časa, da se predstavimo slovenski javnosti kot dober in sposoben zbor. In zato bi predlagal v korist vseh, da še enkrat ponovimo glasovanje in tako, na tak način - bodite trdno prepričani, za vaše dobro, ne ekstremistov, tudi ta zakon sprejmemo. Trdno sem prepričan, da ne smemo ekstremistom popustiti.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg112">PREDSEDUJOČI DR. LUDVIK TOPLAK:</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg113">Hvala. Tone Partljič.</seg>
             </u>
             <note type="speaker">TONE PARTLJIČ:</note>
-            <u who="#SSK11.PartljicAnton1940" ana="#regular">
+            <u who="#PartljičAnton">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg114">Resnično obžalujem, da prihajam sem tako, vedno z duhovitostmi, namesto s konstruktivnimi diskusijami. Vendar vas res opozarjam, veste, da je zdaj teden otroka, in da smo že tu imeli otroški parlament, zdaj ga imamo v Mariboru. In to zagotovo ni nič drugače s tem štetjem, kot da tu sedi nek otroški parlament, kar zadeva te rezultate. To bi lahko dokazal, ker je tudi neverjetno, da se reče, da gre za isto stvar,če ugotavljamo, da nekoč lahko kdo ni pritisnil, ker se ni želel izjasniti, pritisnil pa je, da je bil kvorum, zdaj pa smo imeli nenadoma tak presežek glasov, pomeni - ista logika tu ne more veljati. Ampak je nekdo dvakrat pritisnil ali je bilo na nek način to dogovorjeno. Pomeni, če take rezultate ohranimo, imamo obe interpretaciji. Jasno je pisalo, da jih je bilo več proti in vzdržanih kot tistih, ki so glasovali za. Če pogledate te številke, si ne znam razlagati drugače. Jasno je, da je neko nasprotje, kolikokrat smo se pa že preštevali po dvakrat ali trikrat ali štirikrat. Od kod zdaj ta pamet, da je bilo to preštevanje prisotnih tako zakonito, da tega ni več moč spremeniti. Po drugi strani mislim, da so argumenti v tem, kar gospod Starman tu pripoveduje, saj z njegove strani popolnoma razumem to diskusijo, kar zadeva načelno. Drugi del diskutiranja tukaj skoraj ni v čast, gospod Starman, tak pravnik, pa tako po domače sem in tja barantati, tega vsega skupaj si pravzaprav ne znam predstavljati. Predlagam, da, ali se ponovi glasovanje, da se ponovno ugotovi prisotnost in se prešteje, kar smo vedno delali v spornih zadevah. Očitno gre za prestižno stvar, pravzaprav niti ne vem, zakaj je ta stvar tako prestižna, ker je vsebinska, in bi popolnoma podprl gospo Beblerjevo. Za normalnega človeka se mi pa zdi, da bi se tako obnašali otroci parlamenta. Spreten in odličen predsedujoči, ki je sicer sam pravnik in piše zakone, ki jih zelo podpiram in cenim, se mi zdi neverjetno, da sam tako preprosto tolmači in je pripravljen sprejeti tako nestrokovno tolmačenje, kajti predsednik komisije ni rekel, da govori v svojem imenu, ampak je rekel, da govori v imenu komisije. Šele ko se je izjasnilo, da ne gre za to, smo videli, da ta stvar ne drži in za vas, gospod Toplak, sem prepričan, da si kaj takšnega ne boste dovolili.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg115">Hvala. Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg116">Nepotrebno je ponavljati argumente, ki so jih povedali v razpravi nekateri predgovorniki. Mislim, da pa moram kot član poslovniške komisije gospodu predsedniku in vam obuditi spomin, kako je do razprave in do odločitve, o kateri je gospod predsednik govoril, prišlo. Takrat smo ugotavljali, ali je mogoče ugotoviti, da je nek zakon sprejet. Če je sicer kvorum bil ugotovljen 41 oziroma šlo je celo za skupno zasedanje, to je bil sporen zakon o RTV, 143, ali je potem sprejeto, če kljub temu glasuje manj od tega seštevka. To je bilo v zelo konkretnem primeru, konkretno vprašanje. In odgovor je bil, če se nekdo ni želel opredeliti, niti za niti proti, je pa izjavil svojo prisotnost, potem pač prisotnost velja in velja večina. In zato je tudi zelo jasno napisano, da če ta seštevek ne doseže prisotnosti, v tem primeru velja, da je več kot pol prisotnih glasovalo za zakon. Situacija je danes popolnoma drugačna, kdor želi, jo bo priznal. Kdor ne, pač ne ravna po poštenju, po dejanskem stanju, ampak po nekem interesu, česar mu nihče ne more zameriti, ampak to je preprosto potrebno ugotoviti. Za mene je odločitev prej veljavno sprejeta in amandma je zavrnjen po vsaki logični razlagi. Če pa želimo dokazovati, da je to sporno, potem še enkrat predlagam, glasujmo ponovno. Če glasujemo ponovno predlagam, da predsedujoči najde rešitev, po kateri ne bo mogoče ugotavljati, da je bilo nekaj neregularno. Ali se preštejmo ali poimensko glasujmo ali pa na nek drug način ugotovimo, ker vemo vsi, poslanci smo dve leti in pol, in seveda vsak od nas ve, kaj pomeni primer ne biti prisoten oziroma ne se javiti s tipko za prisotnost pa kasneje glasovati in kaj je bil nasproten primer. To je pravica, ki jo poslanec ima in jo lahko tudi uporablja, vendar seveda ne more potem delovno predsedstvo v primeru seštevka, proti, vzdržanih, kjer ni dokazano, da so to delali drugi, ne pa poslanci, reči, da je nekaj sprejeto po neki skonstruirani logiki, kakršno razlaga gospod predsednik Tomažič. In še nekaj, če bi bil dvom prosim, da gospod Tomažič skliče poslovniško komisijo, ker imam v spominu, da smo poleg besedila, ki ga je gospod Tomažič bral, napisali še približno kakšno stran teksta o drugi situaciji. Gospod Tomažič, kot običajno, ker to ni v interesu ugotavljanja tega dejstva, vsega tistega, kar je kasneje napisano, ni prebral. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg117">Hvala. Gospod Mak.</seg>
             </u>
             <note type="speaker">VILJEM MAK:</note>
-            <u who="#SSK11.MakViljem1937" ana="#regular">
+            <u who="#MakViljem1937">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg118">Najprej repliko predgovorniku kolegu Potrču, ker me je nekako užalil z besedo o poštenju, o tem, da smo mi, ki smo glasovali tako nepošteni. Potem bom repliciral takole: menim, da je bilo to premoženje nepošteno pridobljeno in mi samo želimo, da se to premoženje da ne strankam, ampak državi, to pa je nam vsem, delovnim ljudem te dežele. In zato bom jaz vedno glasoval. Zdaj pa še, za kar sem se prej prijavil k besedi: prej sem hotel opozoriti na to, da ima poleg poslovniških pravil tudi poslovniška praksa, ima svojo težo, ima jo v sodstvu in ima jo tudi tukaj in to poznam, da je to res tako. Zato pozivam gospoda Zupančiča, da pride semle, ne tako kot je prišel prej, ampak da pove, ali če jaz govorim narobe, če lažem, da mi to pove, ampak jaz trdim, da smo imeli najmanj deset, bilo jih je pa gotovo več primerov, ko smo tako seštevali kot danes in da so bili med njimi tudi primeri, ko se je matematično podobno izšlo kot danes. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg119">Hvala. Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg120">Gospodu predgovorniku, na žalost ne vem imena, se opravičujem, če me je narobe razumel. Sploh nisem govoril o tem, kdo je pošten ali ne, kako je glasoval, govoril sem samo o tem, da če želimo pošteno presojati konkretno situacijo, potem jo moramo presojati, da ni identična s primerom, ki ga je navedel gospod Tomažič. Kdor pa želi presojati po političnem interesu, seveda ima to pravico. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg121">Za besedo se javlja gospod Starman.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg122">Spoštovani! Bil sem dvakrat atakiran. Odgovoril bom samo kolegu iz našega zbora, gospodu Partljiču. Razočaral me je kot humorist, danes, ker je bil zelo resen in tudi nekorekten. Zelo rad bi govoril o konkretnih številkah, če bi nam žal, tisti, ki to premoženje neupravičeno uporabljajo dali številke o najemninah, številke o premoženju, o njegovi vrednosti, ki je gotovo nekaj 10 milijonov mark. Lahko trdim, o tem bo odločalo ministrstvo, bo ugotavljalo kaj je in kaj je bilo prisvojeno. Bi zelo rad v konkretnih številkah, vendar ti, žal, tega ne dajo, ker skrivajo premoženje. Rad bi pa vas še obvestil o stališču poslanskega kluba Demos. Zato smo tudi prosili za odmor in ko smo se seznanili s stališči poslovniške komisije in prakse Zbora združenega dela, ki vedno kot Damoklejev meč visi nad Demosom, ker ima večino, smo sprejeli naslednje stališče: Za nas je amandma sprejet in veljaven. Glasujemo samo in vsi za zakon kot celoto. Če tega ne boste sprejeli, se bomo ponovno posvetovali in odločili, ali še sodelujemo pri takem nepravnem delu tega parlamenta.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg123">Sedaj pa takole, imamo še 12 prijavljenih. V predsedstvu smo se odločili: prekinemo sorazpravo, za tri minute se predsedstvo umakne in bo odločilo glede nadaljnje procedure. Prosim, ostanite na mestu. Hvala.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 17.50 uri in se je nadaljevala ob 17.55 uri.</note>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg124">Prosim poslance, da vstopijo v dvorano, da bomo nadaljevali delo. Poslanke, spoštovani poslanci! Delovno predsedstvo je na posvetu z večino glasov ugotovilo, da je prvotna ugotovitev v smislu poročila in stališča poslovniške komisije z dne 23.10.1991, da je amandma izglasovan in da brez nadaljnje razprave preidemo na glasovanje o zakonu v celoti.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg125">Ugotovimo navzočnost. Prosim, poslanci Družbenopolitičnega zbora.</seg>
                <note>50 prisotnih.</note>
@@ -680,29 +658,29 @@
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg128">Ugotavljam, da je zbor sklepčen za nadaljevanje dela in glasujemo o zakonu z amandmaji v celoti. Prosim. Gospod Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg129">Hvala lepa. Prosim, da se glede na nesporno ugotovljeno proceduralno prakso dovoli 15 minut odmora za sestanek poslanskega kluba SDP. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg130">Hvala lepa. Prosim, samo še gospod Potočnik je želel besedo.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SSK11.PotočnikFranc1955" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg131">Predlagam poimensko glasovanje. Ob tem bi pa povedal, da nas je sedaj 2 manj, kot nas je bilo prej. Prej nas je bilo 144. Sedaj nas je pa 142.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg132">Hvala lepa. Prosim, glede na predlog poslanca Potrča. Predlagamo, da najprej odločimo o poimenskem glasovanju in nato damo 15-minutni odmor na željo kluba poslancev.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg133">Glasujemo najprej o poimenskem glasovanju o zakonu v celoti z amandmajem, kakor je bil izglasovan.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg134">Kdor je za, naj, prosim, glasuje. Prosim, želi besedo gospod Podobnik. Obrazložil bo glas. Dobro, prosim, kratko.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SSK11.PodobnikMarjan1960" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg135">Spoštovani! Ker gre za zelo pomemben zakon za izvedbo volitev in tudi sicer in zato, da bi res vsak nosil polno odgovornost, za kar se bo odločil, bom glasoval za poimensko glasovanje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg136">Hvala lepa. Prosim.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg137">Kdo je za?</seg>
                <note>75 poslancev.</note>
@@ -720,17 +698,17 @@
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg143">Prosim, gospod Kreft.</seg>
             </u>
             <note type="speaker">DR. LEV KREFT:</note>
-            <u who="#SSK11.KreftLev1951" ana="#regular">
+            <u who="#KreftLev1951">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg144">Hvala za besedo. Drage poslanke, spoštovani poslanci, sedeči in stoječi, in tisti, ki ste na pol že zunaj, mislim, da ne moremo kar tako preko ponovljene procedure in številk, ki smo jih videli. Strinjam se s tem, da gre za čast in poštenost tega zbora. Če se nekdo prijavi za prisotnost in ne glasuje, potem ko se glasuje, je to normalno. Če pa se nekdo ne prijavi, da je prisoten, potem pa glasuje zato, da bi znižal številko, do katere je treba priti, da se nekaj sprejme ali ne sprejme in potem seveda glasuje pa mislim, da je to lahko zelo nevarno in je to goljufija in če nekdo glasuje dvakrat, pri sebi in pri sosedu, je to prav tako goljufija. In eno od obojega se je pri obeh glasovanjih zgodilo. Zato mislim, da je treba, preden nadaljujemo kakršnokoli glasovanje ugotoviti kaj se je zgodilo in zakaj in prosim, da se ta raziskava naredi, in da se z rezultati ta zbor obvesti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg145">Dobro, tehnično gospodu</seg>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg146">Kreftu ne moremo ustreči. Predlagam najprej petnajst minut na željo gospoda Potrča, 15-minutno pavzo.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 18.05 uri in se je nadaljevala ob 18.55 uri).</note>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg147">Ugotovimo navzočnost. Družbenopolitični zbor</seg>
                <note>45 prisotnih.</note>
                <seg xml:id="SSK11-VsiZbor.1992-10-07.d015-01.seg148">Zbor občin</seg>

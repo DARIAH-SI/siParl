@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 2. slavnostna seja</title>
             <meeting n="2"
-                     corresp="#VsiZbor.1992-05-27.sl002-01.DruzPolZb #VsiZbor.1992-05-27.sl002-01.ZbObc #VsiZbor.1992-05-27.sl002-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.ceremonial"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="42"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="31"/>
                <tagUsage gi="seg" occurs="115"/>
             </namespace>
@@ -209,23 +200,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1992-05-27.sl002-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-05-27.sl002-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-05-27.sl002-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -235,16 +209,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SLAVNOSTNA SKUPNA SEJA VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">2. seja</head>
             <docDate>27. maj 1992</docDate>
             <note type="chairman">Sejo je vodil dr. France Bučar, predsednik Skupščine Republike Slovenije</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 18.08 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg1">Poslanke in poslanci, spoštovani gostje! Začenjam SLAVNOSTNO SKUPNO SEJO vseh zborov Skupščine Republike Slovenije, ki sem jo sklical OB SPREJEMU NAŠE DRŽAVE V ORGANIZACIJO ZDRUŽENIH NARODOV.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg2">Sprejem Republike Slovenije v Organizacijo združenih narodov je tako pomemben dogodek, da je prav, da ga na primeren način obeležimo tudi z današnjo slavnostno sejo.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg3">Posebej pozdravljam predsednika in člane Predsedstva Republike Slovenije ter predsednika in ministre Vlade Republike Slovenije. Prav tako pozdravljam tudi predstavnike drugih organov in organizacij in posameznike, ki so se odzvali našemu vabilu. V posebno čast mi je pozdraviti diplomatsko konzularne predstavnike drugih držav s sedežem v Ljubljani, diplomatsko konzularne predstavnike Republike Slovenije v tujini in predstavnike Slovencev v Italiji, Avstriji, Madžarski ter predstavnike Slovenskega svetovnega kongresa.</seg>
@@ -275,7 +253,7 @@
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg28">Na današnji slavnostni seji bodo s kratkimi nagovori nastopili tudi vodje oziroma predstavniki poslanskih klubov, ki jim bom dajal besedo po vrstnem redu, kakor so se prijavili za aktivno sodelovanje na današnji slovesnosti. Prvi ima besedo dr. Hubert Požarnik, predstavnik poslanskega kluba Zelenih Slovenije.</seg>
             </u>
             <note type="speaker">DR. HUBERT POŽARNIK:</note>
-            <u who="#SSK11.PozarnikHubert1937" ana="#regular">
+            <u who="#PozarnikHubert1937">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg29">Spoštovani gospod predsednik, spoštovani člani Predsedstva Republike Slovenije, spoštovani predsednik Vlade Republike Slovenije, spoštovani poslanci in poslanke in gostje! Dovolite, da izrazim v imenu Zelenih Slovenije veselje in zadovoljstvo nad dogodkom, ki smo mu bili priča te dni. Dovolite, da izrazim tudi zahvalo številnim slovenskim politikom, vsem parlamentarnim strankam in vsem državljanom Slovenije, ki so vsak na svoj način prispevali k nastanku suverene države Slovenije in njenemu sprejemu v svetovno skupnost narodov.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg30">Kot je povedal že predsednik Bučar, bomo kljub temu, da je svet vse bolj med seboj povezana celota, sami odločali o svoji usodi, o tem, kako bomo živeli v prihodnje.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg31">Čemu dati prednost? Po mnenju Zelenih Slovenije bi morali naš prihodnji razvoj graditi na naslednjih sedmih temeljih. Ti temelji so:</seg>
@@ -289,11 +267,11 @@
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg39">Zeleni Slovenije z zaupanjem gledamo v prihodnost države Slovenije in slovenskega naroda. Hkrati pozivamo ob današnjem svečanem dnevu vse politične stranke in vse posameznike, da se potrudijo za čim večjo medsebojno strpnost in složnost. Če bomo vsi skupaj zavihali rokave, bomo dosegli več in predvsem hitreje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg40">Hvala. Besedo ima Franc Golija, vodja poslanskega kluba Liberalne stranke.</seg>
             </u>
             <note type="speaker">FRANC GOLIJA:</note>
-            <u who="#SSK11.GolijaFranc" ana="#regular">
+            <u who="#GolijaFranc">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg41">Spoštovano Predsedstvo, spoštovane poslanke, spoštovani poslanci, spoštovana slovenska javnost! Pred časom marčnega vetra pomladi narodov v davnem letu 1948 so Slovenci dokazali, da razumejo duha časa in so stopili v krog tistih, ki so se znali, hoteli in zmogli oblikovati v narod, slovenski narod. Današnji Slovenci dokazujemo, da smo razumeli duha današnjega časa in smo zato znali, hoteli in zmogli slovenskemu narodu udejaniti njegovo pravico do lastne in samostojne države. Storili smo to, kar smo tudi dolžni storiti, samo to in nič več.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg42">V tem skupnem naporu vseh Slovencev so nekateri včasih omahovali, govorili, da je težko, da ni mogoče, da je predrago in predvsem, da nam to nikoli ne bo uspelo. Marsikoga je bilo preprosto strah, človeško strah.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg43">Liberalci v tej stvari nismo nikoli niti za trenutek omahovali. Prvi smo sprožili pobudo za neodvisnost Slovenije v tem visokem domu. Na našo pobudo in s podporo drugih je bila sprejeta deklaracija neodvisnosti Slovenije 2. julija 1990. Vedno smo bili med prvimi borci za slovensko državnost. Zagotovo pa vedno med najpogumnejšimi in najdoslednejšimi in ko je bilo nekatere pošteno strah, tako strah, da niso hoteli priti na julijski miting podpore pekrškim junakom in so Demos pustili, da je na vročem petkovem popoldanskem soncu na ljubljanskem Kongresnem trgu sam prevzel odgovornost za uresničitev narodne volje, da so naši predstavniki na tem mitingu rekli "sedaj in zares". Nato smo vsi skupaj, tudi s tistimi, ki jih je bilo strah, zmogli vse, kar je bilo potrebno za dosego našega skupnega cilja. Storili smo to, kar smo bili dolžni storiti.</seg>
@@ -301,31 +279,31 @@
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg45">Liberalci bomo slovensko državo z enako odločnostjo in prizadevnostjo negovali in gradili, kot smo jo skupaj z drugimi oblikovali. Če bo treba, pa tudi branili in ubranili. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg46">Besedo ima Borut Pahor, predstavnik poslanskega kluba Stranke demokratične prenove.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SSK11.PahorBorut1963" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg47">Spoštovani gospodje predsedniki, spoštovani gostje, spoštovane gospe in gospodje! S sprejetjem Slovenije v univerzalno mednarodno organizacijo lahko dokončno rečemo, slovenska politična pomlad je dozorela. Bila je izraz trdega prepričanja naših ljudi, da smo sposobni ustvariti sodobno, demokratično evropsko državo in svobodno civilno družbo. Slovenska pomlad je bila veren dokaz, da zmorejo napredne politične sile združiti ustvarjalne moči za velike zgodovinske poteze. Ta nauk demokratičnega preporoda je nadvse aktualen tudi danes. Zdaj gre za to, da kljub mnogim razlikam med nami poiščemo tisto skupno, ki bo v Sloveniji in Sloveniji omogočilo čimbolj uspešen gospodarski polet in priključitev k sodobnim evropskim razvojnim izzivom.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg48">Državljanke in državljani Slovenije se nismo odločili za lastno državo iz nacionalnega egoizma, pač pa zato, ker smo v njej videli instrument pospešenega razvoja in možnost za boljšo kvaliteto življenja. V sodobnem svetu, ki postaja vse bolj soodvisen, pomeni to predvsem uspešno odpiranje države mednarodni skupnosti, njeno sodelovanje in tudi povezovanje. Slovenija je za ta izziv mnogo kje pripravljena bolj kot druge države srednje in vzhodne Evrope. Te primerjalne prednosti moramo še naprej razvijati in še bolj podjetno unovčiti. S sprejetjem Slovenije v Združene narode dobivamo predvsem priložnost, da skupaj z drugimi narodi in državami suvereno in odgovorno poiščemo odgovore tako za izide vsakdana kot na globalna vprašanja civilizacije. Slavnostni, toda trezen način proslavitve tega pomembnega dogodka dokazuje, da se te odgovornosti v celoti zavedamo. Iskreno obžalujemo, da podobnega praznika ne morejo imeti naši kolegi v suvereni Bosni in Hercegovini.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg49">Spoštovane kolegice in kolegi! V demokratično, samostojno in v svet odprto Slovenijo so bila in bodo tudi v prihodnje urejena tudi hotenja in napori članov in simpatizerjev stranke Socialdemokratske prenove. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg50">Besedo ima Anton Tomažič, vodja poslanskega kluba Slovenske demokratične zveze - narodno demokratske stranke.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg51">Spoštovane poslanke, spoštovani poslanci, spoštovani gostje! Ko smo aktivisti Demosovih strank leta 1989 pobirali podpise v podporo Majniške deklaracije, ki je zahtevala, naj bi o bodočem položaju suverene Slovenije v odnosih z drugimi narodi, zlasti z narodi na območju tedanje Jugoslavije, odločil slovenski narod z referendumom, smo bili deležni zasmehovanja in oviranja s strani naših političnih nasprotnikov. Dobro se spominjam, kako sem zaman nosil letake in podpisne izjave na Kamniško sedlo, kjer je bilo srečanje planincev, saj mi je nek naduti funkcionarček prepovedal tam zbirati podpise. Toda, ko sem tako rekoč na črno razpostavil letake nižje doli v gozdu, sem videl, da so planinci, ki so se vračali, še kako radi podpisovali zahtevo za slovensko samoodločbo, saj sem dobil kar nekaj sto podpisov. Res je, da so se nam mnogi nejeverni Tomaži dobrohotno, a močno dvomljivo nasmihali ob naših zatrjevanjih, da Slovenija lahko obstaja tudi kot samostojna država. V naši stranki smo večstoletno, včasih prikrito, a nikdar ugaslo željo slovenskega naroda artikulirali prej in bolj nedvoumno kot drugi. Na naše predvolilne letake smo kot glavno geslo napisali "Za samostojno Slovenijo". Tako kot za druge Demosove stranke, je bilo po uspehu na prvih svobodnih volitvah in prevzemu velike odgovornosti tudi za našo stranko glavno prizadevanje prav čim prejšnja, čim bolj temeljita in dokončna odcepitev od Jugoslavije, katero smo imeli za ječo narodov. Prepričan sem, da ogromna večina članov naše stranke ni niti za trenutek podvomila o tem, da bo Slovenija samostojna država, da bo imela svoj denar in svojo vojsko, da bo dobila mednarodno priznanje, in tudi to smo vedeli, da bo naša Slovenija zagotovo postala članica Združenih narodov. Vedeli smo, da drugače preprosto ne more biti. Če je le pravica na tem svetu in pravica vendar mora biti, tega upanja ne smemo nikdar izgubiti.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg52">Danes, ko se je izkazalo, da je bilo naše upanje in prepričanje utemeljeno, smo srečni in ponosni, da smo bili zraven, in to aktivno, po svojih najboljših močeh. Hkrati pa gledamo že v prihodnost. Naše zadovoljstvo z doseženim se že nadaljuje v zaskrbljenost za nadaljnjo usodo slovenskega naroda in njegove države. Poleg gospodarskih težav se pojavljajo tudi problemi pri dokončni demontaži ostankov 45-letne diktature in pri vzpostavitvi normalnih institutov pravne države. Imamo sicer lepo novo ustavo, toda do izvolitve Državnega zbora obstajajo nevarnosti njenega samovoljnega tolmačenja in izkoriščanja ostankov iz stare ustave za dnevnopolitične interpretacije po volji trenutne večine v Skupščini.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg53">Ta svečanost ni namenjena političnim polemikam, zato ne bom niti omenjal glavnega trenutnega političnega projekta nas, Narodnih demokratov, to je zagotovitve čimprejšnjih kvalitetnih in resnično demokratičnih volitev po volji državljanov Slovenije. Namesto tega bom ponovil naše veliko navdušenje nad dogodkom, zaradi katerega smo se danes tu zbrali in poudaril odločno pripravljenost Narodnih demokratov za nadaljnje konstruktivno politično delovanje, pa če bomo v opoziciji ali v poziciji. Naše glavno vodilo bo prizadevanje za dobro slovenskega naroda, njegove države Republike Slovenije in vseh njenih prebivalcev. Tvegal bom celo vzklik, zaradi katerega me bo dežurni humorist spet nekajkrat vtaknil v njegove humoreske: "Naj živi na vse veke vekov svobodna Slovenija in samostojna Slovenija"!</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg54">Besedo ima Lojze Peterle kot predstavnik poslanskega kluba Slovenskih krščanskih demokratov.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg55">Spoštovane poslanke in poslanci, cenjeni gostje in drugi prijatelji!</seg>
                <note>Pozdrav tudi v madžarščini in italijanščini.</note>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg56">Spominjajoč se razlik v pogledih na prihodnost Slovenije med Majniško deklaracijo in Temeljno listino sem vesel, da smo pri plebiscitu in v kasnejših državotvornih dejanjih dosegli tisto temeljno zrelost, ki se ji reče "enotnost v doseganju temeljnih narodovih ciljev". Nismo pozabili naših dedov, ki so sanjali o samostojni in svobodni slovenski državi, nismo bili opazovalci zgodovine, ampak smo jo kot suveren osebek soustvarjali. Naš skupen rezultat je samostojna in priznana svobodna slovenska država, ki je z vstopom v svetovno družino držav postala dokončno prepoznavna na političnem zemljevidu sveta. Vesel in ponosen sem na prispevek Slovenskih krščanskih demokratov k polni slovenski državnosti. Vesel in ponosen sem tudi, da sem s potrdilom te Skupščine lahko vodil prvo demokratično izvoljeno slovensko vlado, ki je nosila ključno breme operativne izvršitve te zgodovinske naloge, ki se ji reče "osamosvajanje Slovenije".</seg>
@@ -335,11 +313,11 @@
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg60">Besedo ima Spomenka Hribar, vodja poslanskega kluba Demokratske stranke Slovenije.</seg>
             </u>
             <note type="speaker">MAG. SPOMENKA HRIBAR:</note>
-            <u who="#SSK11.HribarSpomenka1941" ana="#regular">
+            <u who="#HribarSpomenka1941">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg61">Spoštovani gospod predsednik, spoštovani poslanci, gostje! Dovolite nekaj besed ob tej priložnosti.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg62">Poslanci in člani Demokratske stranke imamo dovolj razlogov za to, da smo na uspeh "osamosvojitve Slovenije in njeno sprejetje v Organizacijo združenih narodov" še posebej ponosni. Vendar je prav ob prazničnih trenutkih - in ta seja je slavnostna, torej praznična - treba biti skromen in pravičen. Če naj bo slavje res slavje, potem moramo imeti v mislih vse, ki so k zmagoslavju pripomogli. To pa niso le posamezni ministri, ampak Vlada v celoti, Predsedstvo in na drugi ravni ta parlament, ki je v kritičnih trenutkih zbral dovolj modrosti in soglasja, da je, ob sicer veliki dozi sreče, potegnil prave poteze.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg63">In dalje. Napačno bi bilo, če bi hvalili samo sami sebe. Osamosvojitev je delo in energija vsega slovenskega naroda in državljanov Republike Slovenije. Kljub različnim stiskam in strahovom, kljub nezaupanju, ki se vleče že iz preteklosti, smo zmogli to dejanje - osamosvojitev, se pravi rojstvo svojega naroda v nacijo. Zato lahko upravičeno in iskreno čestitamo drug drugemu.</seg>
@@ -350,63 +328,63 @@
                <note>Ploskanje v dvorani.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg68">Hvala lepa. Besedo ima Dušan Semolič, vodja poslanskega kluba Socialistične stranke Slovenije.</seg>
             </u>
             <note type="speaker">MAG. DUŠAN SEMOLIČ:</note>
-            <u who="#SSK11.SemolicDusan1947" ana="#regular">
+            <u who="#SemolicDusan1947">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg69">Spoštovani gostje, spoštovane poslanke in poslanci! Zagotovo je sprejem Slovenije v Organizacijo združenih narodov velik dogodek. Država Slovenija je dočakala svojo polnoletnost. Velja si zapomniti, da smo do tega cilja prišli zato, ker smo v teh nemirnih časih, ki so za nami, dosledno spoštovali temeljna načela te svetovne organizacije kot tudi druga načela občega mednarodnega prava. Še zlasti je pomembno, da smo si v procesu osamosvajanja prizadevali dosledno upoštevati tisto načelo ustanovne listine Združenih narodov, ki pravi, da morajo države reševati svoje mednarodne spore z mirnimi sredstvi, torej na način, da se mednarodni mir, varnost in pa pravičnost ne spravijo v nevarnost. Je pa sprejem v svetovno organizacijo zagotovo več kot le priznanje države Slovenije kot polnopravne članice svetovne skupnosti držav. Je tudi resno ponujena priložnost, da končno krenemo na pot gospodarske in socialne razvitosti. Je pa zgolj priložnost. Ali jo bomo pametno izkoristili, je odvisno tako od naše skupne politične volje, pa tudi znanja, sposobnosti tako vlade, parlamenta, našega gospodarstva in še marsikoga. Zato Socialisti opozarjamo tudi na tisto določbo ustanovne listine, ki obvezuje združene države, Združene narode in članice in tako tudi našo državo, da se zavzame za zvišanje življenjske ravni, polno zaposlitev ter pogoje za ekonomski in socialni napredek in razvoj ter splošno in dejansko spoštovanje človekovih pravic in temeljnih pravic za vse ljudi, ne glede na raso, spol, jezik in vero. To so pomembne zahteve, aktualne tudi za nas, za naš čas in naš prostor.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg70">Pomembno se je zavedati, da sprejem Slovenije v Organizacijo združenih narodov na široko odpira vrata naši državi v polnopravno članstvo v številnih pomembnih mednarodnih ustanovah in organizacijah. Naj samo omenim, da bomo postali te dni tudi polnopravni član Mednarodne organizacije dela, organizacije, ki pomembno vpliva na socialni mir, saj se v tej organizaciji srečujejo interesi delavstva, sindikatov, delodajalcev in državnih oblasti v prizadevanjih za izboljšanje delovnih razmer in življenjske ravni. Da bi pa vse te možnosti res dodobra izkoristili, predvsem za nujen gospodarski in socialni napredek, je potrebno nemudoma priti do vizije gospodarske preobrazbe, do družbenega konsenza pri iskanju odgovora na vprašanje, kako naprej, saj dogajanje v času od plebiscita naprej kaže, da tisto, kar kot narod, kot ljudstvo Slovenije želimo, to tudi dosežemo. Le nujno potrebno soglasje in medsebojno spoštovanje ter zaupanje je potrebno med nami.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg71">Spoštovane poslanke in poslanci! Zgodovina slovenskega naroda je zgodovina njegove emancipacije, je zgodovina boja za priznanje pravice, da sami odločamo o svoji usodi. Sprejem v Organizacijo združenih narodov je hkrati izziv z nenehnim, toda potrebnim dokazovanjem demokratičnosti, odprtosti in zrelosti slovenske države. To je pa lahko tudi naš največji prispevek ob polnopravnem vstopu v mednarodno skupnost. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg72">Hvala lepa. Besedo ima Maria Pozsonec, predstavnica poslancev madžarske narodnosti. Govorila bo v madžarskem jeziku.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SSK11.PozsonecMaria1940" ana="#regular">
+            <u who="#PozsonecMaria">
                <note>Prevajalka prevaja.</note>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg73">Spoštovani gospod predsednik, spoštovani poslanci, poslanke in gostje! Pomurska madžarska narodna skupnost iz srca čestita za sprejem Slovenije v Organizacijo združenih narodov. To dejanje je pričakovana in pravična postaja slovenske politične poti, je zaslužen rezultat prizadevanja celotnega in tudi vsakega posameznega člana slovenskega političnega vodstva. Slovenija si je z demokratičnim prizadevanjem, s humano narodnostno politiko zaslužila, da je postala enakopravna članica te velike družine. Kot državotvorna avtohtona narodna skupnost se tudi mi, pripadniki narodnosti, počutimo kot sooblikovalci teh demokratičnih prizadevanj. Slovenija je naš dom. Svoje delo in življenje postavljamo na razpolago tej državi, sprejemamo njeno izgradnjo, obrambo. Samozavestno se imamo za enakopravne državljane. Prav izhajajoč iz demokratičnosti Slovenije imamo pravico do zaščite. Od nove države pričakujemo, da ustvari take pogoje, da se bodo lahko uresničile z ustavo zagotovljene narodnostne pravice v vsakdanjem življenju, v praksi na narodnostno mešanih območjih, da ne ostanejo te pravice le lepo zveneče besede, temveč naj pripomorejo k utrditvi gospodarskega razvoja narodnosti, k razcvetu samozavesti in k preprečitvi asimilacije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg74">Sloveniji želimo ob novi zgodovinski dobi državnosti uspešno pot, vsestranski razvoj, mednarodno spoštovanje, možnost k izoblikovanju nadaljnjega razvoja. Želimo, da bi z mednarodno dejavnostjo vplivala na to, da bo na tem območju trajen mir. Da bo zaradi zemljepisne lege in zgodovinske preteklosti most med vzhodom in zahodom. Da bo vedno borec za pravično zadevo. Da bo spoštovana članica mednarodnih institucij. Da ohrani narodnostni značaj, vrednote, narodna bogastva. Da bo imela vedno v zavesti svojo suverenost. Da ne bo nikoli podrejena izkoriščanju razvitih držav. Da bo sposobna ustvariti takšne gospodarske pogoje, da bodo državljani živeli človeku dostojno življenje. Da bo delo primerno vrednoteno. Da bo imel delavec delo - kruh. Da bo imel človek vero v bodočnost. Da bodo imeli otroci srečno otroštvo, mlad človek ustvarjalno prihodnost, star človek dostojno starost. Da bo lahko mati z zaupanjem rodila svojega otroka. Svoboda in mir naj vladata onkraj in znotraj meja in v srcih ljudi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg75">Besedo ima Roberto Battelli, predstavnik poslancev italijanske narodnosti. Govoril bo v italijanskem jeziku.</seg>
             </u>
             <note type="speaker">ROBERTO BATTELLI:</note>
-            <u who="#SSK11.BattelliRoberto1954" ana="#regular">
+            <u who="#BattelliRoberto">
                <note>Govori v italijanščini, prevajalka prevaja.</note>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg76">Gospodje predsedniki, spoštovani gostje, spoštovane kolegice in kolegi! Ni članstva v mednarodni organizaciji, ki bi bilo pomembnejše od članstva v združenih narodih. Če demokracija pomeni odgovornost in še zlasti možnost svobodnega, enakopravnega dostopa do odgovornosti in če je Organizacija združenih narodov že "par excellence" kraj, na katerem članice, upoštevaje norme demokracije in pravičnost razpravljajo in iščejo rešitve za največje vprašanje sodobnega sveta, smo torej zdaj vsi mi na tem kraju.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg77">Upamo, da bo Slovenija, neodvisna država in enakopravni član mednarodne skupnosti, znala dalje ostriti instrumente demokracije in sožitja, da bo znala zvišati kakovost življenja na notranjepolitični ravni in posledično dati svoj prispevek k uveljavljanju teh vrednot na mednarodni ravni.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg78">Potem, ko se je zaokrožilo obdobje prizadevanj za uveljavitev samostojnosti, postaja prav to sedaj naša poglavitna odgovornost, torej, da damo prispevek k uveljavljanju vrednot na mednarodni ravni, odgovornost, s katero se bomo morali soočiti ob nenehnem upoštevanju tega, da samostojnost služi prav boljšemu udejanjanju ciljev miru in splošnega civilizacijskega napredka. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg79">Hvala. Besedo ima gospod Danijel Starman, predstavnik poslanskega kluba Demos.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg80">Predsednik Skupščine je odločil kratek, največ tri minutni pozdravni nagovor, zato me oprostite posebnih pozdravov, gospe in gospodje. V imenu poslanskega kluba Demos s ponosom ugotavljam, da smo od izvolitve v ta najvišji zbor dejansko zasledovali le en temeljni cilj. Po pravni poti osvoboditi slovenski narod balkanskega federalizma in vsiljenega nedemokratičnega sistema ter ga vključiti v družino enakopravnih demokratičnih držav sveta. Priznati moram, da so nam bile zvezde naklonjene. S pravimi in modrimi potezami vodstva koalicije Demos in njegove vlade smo to skupno pot, žal tudi z vojno, prebrodili brez velikih žrtev. Ta veliki projekt, lahko ga imenujemo Eureka slovenske državnosti, je bil v prvem delu zaključen na simbolen način z dvigom 176. zastave na drog Združenih narodov.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg81">Zato pozdravljam sklic te svečane seje, da bi vsi zbrani, ki smo sicer v različnih vlogah neposredno uresničevali ta veliki projekt, sporočili zahvalo vsem; najprej državljanom Republike Slovenije, ki so s plebiscitom odločno izrazili živeti v suvereni, moderni in neodvisni državi, našim zamejskim Slovencem in Slovencem v izseljenstvu ter še posebej vsem prijateljem po svetu, zlasti tistim državnikom, ki so pogumno, često tudi ne v celoti v skladu s stališči svojih vlad, odločno stali na naši strani.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg82">Menim, da je s tem vloga te skupščine tudi odigrana in njena zakonodajna pobuda izčrpana. Menim tudi, da moramo drugi del projekta, to je dokončno odpravo vsiljenega družbenega sistema, prepustiti novo izvoljenim predstavnikom te države. Na podlagi nove ustave bodo lahko gradili nov pravni in politični sistem, sistem prave demokracije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg83">Zaključujem z željo, da bi ta skupščina čimprej sprejela volilne zakone in priporočila volivcem, da oddajo svoj glas za tisto politično opcijo, ki daje jamstvo za ohranitev in razvoj slovenske identitete in izgradnjo družbe, v kateri bodo njeni člani živeli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg84">Hvala. Besedo ima Marjan Podobnik, vodja poslanskega kluba Slovenske ljudske stranke.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SSK11.PodobnikMarjan1960" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg85">Spoštovane poslanke in poslanci, spoštovani gostje! Sprejem Slovenije v Organizacijo združenih narodov tudi Slovenska ljudska stranka jemlje kot zaključek velikega skupnega projekta Slovencev in državljanov Slovenije. Ob spoštovanju prizadevanj vseh političnih strank in posameznikov za uresničitev osamosvojitve pa je treba poudariti pomen in odločilno vlogo Demosa, katerega stranke so bile pobudnik in gonilna sila osamosvojitvenih aktivnosti. Projekt Slovenske ljudske stranke je bila od ustanovitve Slovenske kmečke zveze, v maju leta 1988, samostojna Slovenija, z vsemi elementi državnosti, vključno z lastno vojsko in lastnim denarjem, in to takrat, ko so mnogi še govorili o asimetrični federaciji. Odločnost slovenskega kmetijstva, ki je temelj Slovenske ljudske stranke, odločnost, da je potrebno narediti slovensko državo, je bila tudi tokrat neomajna in zato tako pomembna. S sprejemom v Organizacijo združenih narodov postaja Slovenija enakovredna članica Združenih nacij, s čimer se uresničujejo naše želje po lastnem razvoju v gospodarskem, družbenem in političnem smislu.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg86">Ob slovesnem trenutku sprejema Slovenije v Organizacijo združenih narodov lahko ugotovimo, da ga Slovenci sicer nismo praznovali bučno, smo pa ponosni. Tudi v Slovenski ljudski stranki smo ponosni, da smo ne le sodelovali, ampak dali začetni moralni in organizacijski impulz temu velikemu projektu, ki je povezal slovenstvo. Vstop v Organizacijo združenih narodov nas zavezuje za nadaljnjo demokratizacijo notranjih institucij na ekonomskem in vseh drugih področjih. V Slovenski ljudski stranki smo prepričani, da je potrebno krepiti identiteto slovenske države, ki naj se kot taka povezuje z vsemi drugimi. Zato je zaželeno čim bolj usklajeno in v prid državljanov delovanje vseh, ki predstavljajo našo državo v svetu. Verjamem, da smo tega sposobni, kajti cena osamosvojitve je bila z vsakim izgubljenim življenjem velika in dolžni smo jo spoštovati. Hvala.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg87">Besedo ima Zoran Thaler, predstavnik poslanskega kluba Liberalno-demokratske stranke.</seg>
             </u>
             <note type="speaker">ZORAN THALER:</note>
-            <u who="#SSK11.ThalerZoran1962" ana="#regular">
+            <u who="#ThalerZoran">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg88">Spoštovani! Vodja poslanskega kluba Liberalno-demokratične stranke je odsoten, pa sem zaprošen, da povem nekaj besed v imenu Liberalno-demokratske stranke.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg89">Rad bi predvsem v imenu Liberalno-demokratske stranke delil veselje, zanos in ponos, ki preveva nas, poslanke in poslance, prebivalce in prebivalke Slovenije ob tem, ker se je zgodilo 22. maja letos v New Yorku. Slovenija je bila sprejeta v polnopravno članstvo, v najširši klub držav sveta, ki pa je po drugi strani tudi najbolj ekskluziven. Dokončno smo bili potrjeni; naša politična identiteta, imenovana Slovenija, je bila potrjena, da je res država.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg90">Slovenije je bila do sedaj izrecno priznana s strani nekaj čez 80 držav. Sprejem Slovenije v Organizacijo združenih narodov z aklamacijo ter še prej s soglasjem 15 držav članic Varnostnega sveta pa predstavlja naše priznanje celotne mednarodne skupnosti. To je 175 držav članic Organizacije združenih narodov. S tem je, po našem mnenju, boj za priznanje države Slovenije praktično zaključen. Zdaj je po mnenju Liberalno-demokratske stranke potrebno usmeriti pogled tudi naprej.</seg>
@@ -417,11 +395,11 @@
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg95">Besedo ima Andrej Muren, vodja poslanskega kluba Socialdemokratske stranke Slovenije.</seg>
             </u>
             <note type="speaker">ANDREJ MUREN:</note>
-            <u who="#SSK11.MurenAndrej1953" ana="#regular">
+            <u who="#MurenAndrej1953">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg96">Spoštovano Predsedstvo, spoštovane poslanke in poslanci, cenjeni gostje, spoštovana slovenska javnost! V imenu Socialdemokratske stranke Slovenije bi se tudi sam zahvalil vsem, ki so kakorkoli pripomogli k slovenski samostojnosti. Prav tako bi se v imenu naše stranke poklonil spominu vseh tistih, ki so v preteklosti pomembno oblikovali narodno zavest in kulturo ter postavili temeljne pogoje za našo samostojnost, in to od začetka s Trubarjem in preko Prešerna, Cankarja, generala Maistra in še mnogim drugim borcem, brezimnim, za našo samostojnost in naš napredek.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg97">Proces osamosvajanja Slovenije, ki je bil uspešen in njena vključitev v Organizacijo združenih narodov, bi po pomenu primerjal s pomenom naselitve Slovanov konec 6. stoletja na naših tleh. Z mednarodnim priznanjem in vključitvijo Slovenije v Organizacijo združenih narodov, smo Slovenci končno dobili pravo državo in postali narod prvega reda, ki se lahko neposredno povezuje in neposredno sodeluje s komerkoli na svetu, v kakršnikoli obliki federacije, asimetrične federacije ali celo konfederacije bi bilo to mogoče neposredno, s tem pa bi mi bili narod drugega reda. Treba je povedati, da je najdražja samostojnost veliko cenejša od najcenejše nesamostojnosti. Dokaz za to je izgon dveh tretjin prvotnega poselitvenega prostora naših prednikov za časa nemško-avstrijske nadvlade in veliko gospodarsko zaostajanje za sosednjimi deželami v času bivše Jugoslavije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg98">Vstop v Organizacijo združenih narodov pomeni naše nadaljnje vključevanje v vse pomembne mednarodne organizacije, kar bo izjemno pomembno za naš nadaljnji razvoj. S samostojnostjo pa smo si naložili na pleča polno odgovornost za lastno usodo. Nič več se ne bomo mogli izgovarjati na druge in jih delati krive za lastne težave. Poslej bomo sami uživali vse svoje zasluge in nosili vse posledice svojih odločitev in dejanj.</seg>
@@ -435,28 +413,28 @@
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg106">Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg107">Hvala lepa. Besedo ima še Jože Zupančič, vodja poslanskega kluba Neodvisnih.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#regular">
+            <u who="#ZupancicJoze1936">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg108">Gospod predsednik, drage poslanke in poslanci, cenjeni gostje! Po izjemno poglobljenem uvodu, ki ga je podal gospod predsednik dr. Bučar, in po kar trinajstih govornikih, ki so tudi vsak po svoje povedali nekaj lepega ob današnjem dogodku, je štirinajstemu težko kaj novega povedati.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg109">Najprej naslednje. Trdno sem prepričan, da ko je gospod predsednik Bučar omenjal cankarjanstvo v slovenski državi, da ni mislil na mlado populacijo. Mladi poznajo Cankarja, ne poznajo pa več cankarjanstva. Oni so s tem opravili. Če je še v nekaterih glavah tudi to prisotno, je to zelo kratkoročno in bo kmalu usahnilo zaradi tega, ker je Slovenec postal nekaj drugega, nekaj boljšega, nekaj bolj kvalitetnega in zato smo tudi tu mi.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg110">Drugo. Gospod Semolič je govoril o tem, da je naša država polnoletna. Polnoletnost pomeni tudi, da bomo opravili diplomo ali maturo. Upam tudi, da tudi iz naše demokracije. Demokracija se pa diplomira na različnih stopnjah. Upam, da bomo v letošnjem letu prišli do najvišje stopnje in da bo ta dogodek, ki smo mu bili priča 22.5., pomenil vrh sprave med nami zaradi tega, ker tu gre za spravo ne samo na kulturnem, mogoče osebnostnem, človeškem, ampak tudi na ekonomskem področju. Trdno sem prepričan, da če smo opravili kvaliteten premik v naših demokratičnih odnosih, da bomo spravili tudi pod streho še marsikaj, kar nas čaka v letošnjem letu. Pred nami so velika dejanja in veliki dogodki. Ne gledati samo nazaj, glejmo v prihodnost! Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg111">Hvala lepa. Torej, lista zastopnikov poslanskih klubov je s tem izčrpana. K besedi se je prijavil na podlagi naročila Družbenopolitičnega zbora še gospod Kreft. Dajem mu besedo.</seg>
             </u>
             <note type="speaker">DR. LEV KREFT:</note>
-            <u who="#SSK11.KreftLev1951" ana="#regular">
+            <u who="#KreftLev1951">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg112">Spoštovani gospod predsednik, hvala za besedo. Drage poslanke, spoštovani poslanci in gostje! Na predlog Milana Balažica je danes popoldan Družbenopolitični zbor sprejel sklep, da delovna skupina v sestavi Milan Balažic, dr. Stanko Buser in dr. Lev Kreft predloži Skupščini Republike Slovenije naslednji poziv:</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg113">"V Bosni in Hercegovini se dogajajo grozodejstva take vrste, da segajo tudi preko meja bestijalne racionalnosti, ki je pripadnikom nesrbskim narodom prepustila izbiro med izginotjem v begunstvu ali genocidu. Zgroženi smo nad vsem tem in pretreseni zaradi nedolžnih in nesmiselnih smrti in zaradi trpljenja in stiske tistih, ki so še živi. Zato pozivamo vse mednarodne organizacije, posebej pa Združene narode in vse države sveta, posebej pa Združene države Amerike in evropsko dvanajsterico, da store tisto, kar je v njihovi moči in vaj pomagajo nedolžnim ljudem, ki so se znašali v pasti smrti. Takoj naj se odpre koridor, po katerem bo v Bosno in Hercegovino prišla pomoč. Takoj naj se v Bosni in Hercegovini ustvarijo varna in zaščitena področja, kamor bo ljudem mogoče bežati pred morijo in tako področje naj bo zlasti Sarajevo. Državam, ki sprejemajo begunce iz Bosne in Hercegovine, naj priskoči mednarodna skupnost na pomoč učinkoviteje kot do sedaj. V upanju, da bo vsaj to storjeno ob pogledu na grozo, ki strmi v vse nas iz sporočil, pa ne moremo mimo ugotovitve, da konca ne bo, dokler povzročitelj vsega gorja ne bo poražen na način, ki si ga je za svojo politiko sam izbral."</seg>
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg114">Predlagam, da poziv sprejmemo z aklamacijo. Hvala.</seg>
                <note>Ploskanje v dvorani.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-05-27.sl002-01.seg115">Hvala lepa. Po aplavzu sodim, da se strinjamo s tem pozivom. Zato s tem zaključujem skupno slavnostno sejo vseh zborov Skupščine Republike Slovenije. Vse poslance in goste vabim na srečanje v avli pred dvorano. Hvala lepa.</seg>
             </u>
             <note type="time">Seja je bila končana 27. maja 1992 ob 19.30 uri.</note>

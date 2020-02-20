@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Redna-08-1998-02-18"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">8. redna seja (18. 2. 1998)</title>
-            <meeting n="8"
-                     corresp="#SDZ2-Redna-08-1998-02-18.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="8" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">8. seja </title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|EAF6BBFD2391F41BC12565B40050EF33</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=EAF6BBFD2391F41BC12565B40050EF33</idno>
-                  <imprint>
-                     <date when="1998-02-18">(18. februar 1998)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>8. redna seja (18. 2. 1998)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1998-02-18"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=EAF6BBFD2391F41BC12565B40050EF33</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="321"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="129"/>
                <tagUsage gi="seg" occurs="597"/>
                <tagUsage gi="gap" occurs="9"/>
@@ -739,23 +724,21 @@
                <date when="1998-02-18" ana="#parl.sitting">18. 2. 1998</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Redna-08-1998-02-18.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">8. seja</head>
-            <docDate>(18. februar 1998)</docDate>
             <note type="chairman">Sejo sta vodila Janez Podobnik, predsednik državnega zbora in Eda Okretič-Salmič, podpredsednica državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.19 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg1">Spoštovane kolegice poslanke kolegi poslanci, gospe in gospodje! Pričenjam 8. redno sejo državnega zbora Republike Slovenije, ki sem jo sklical na podlagi 49. člena poslovnika državnega zbora.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg2">Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Jurij Malovrh, dr. Ciril Ribičič, Maksimiljan Lavrinc, Pavel Rupar, Herman Tomažič, Davorin Terčon, Roman Jakič, Miran Jerič, Darja Lavtižar-Bebler. Prosim, da ugotovimo navzočnost v dvorani!</seg>
                <note>73 poslancev.</note>
@@ -814,69 +797,69 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg35">Prehajamo na predloge za umik. Prosim, besedo ima poslanka, gospa Zbačnikova.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg36">Lep pozdrav vsem skupaj! Poslanska skupina Združene liste je 17.2.1998 vložila zahtevo na podlagi drugega odstavka 150. člena za sklic izredne seje odbora za delo, družino in socialne razmere, za zdravstvo, za obravnavo predloga zakona o spremembah in dopolnitvah zakona o pokojninskem in invalidskem zavarovanju, ki ga je vložil v postopekgospod Kebrič, po hitrem postopku.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg37">Kot predsednica odbora sem po poslovniku dolžna sklicati sejo, zato člane odbora obveščam, da je seja odbora sklicana za danes, to je 18.2.1998. Glede na predsednika pa sedaj sprašujem: ali je možno, da prekinemo sejo ob 12.00 uri, da skličem izredno sejo in se opredelimo, sicer bo seja ob 13.00 uri. Sklic seje dobite takoj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg38">Samo trenutek, gospa Zbačnikova. V bistvu je to proceduralno vprašanje, ki ste mi ga postavila. Gre za 26. točko dnevnega reda, predlog zakona o spremembah in dopolnitvah zakona o pokojninskem in invalidskem zavarovanju, hitri postopek. Je to to?</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg39">Poglejte, predlagam, da v okviru možnosti, ki jih bo dala obravnava same seje, skličete sejo tako, da je ne bo potrebno prekinjati. Ker je to 27. točka dnevnega reda, sem prepričan, da boste našla tak termin, da bo lahko državni zbor normalno delal.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg40">Poslanska skupina zahteva, da skličemo, predno se bo glasovalo o hitrem postopku.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg41">To pa seveda ni <gap reason="inaudible"/> Potem pa lahko predlagate prekinitev. Ampak dosedanja praksa pri hitrih postopkih je bila naslednja: da se državni odloči pri sprejemu dnevnega reda in potem tudi dobi celovito poročilo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg42">Poslovnik ne zahteva, da je poročilo matičnega delavnega telesa ob samem sprejemanju dnevnega reda tudi že na mizi pri poslankah in poslancih.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg43">Vendar, glede na to problematiko pokojninsko-invalidskega zavarovanja, kjer je treba celovito in bolj sistemsko reševati, so ti posegi taki, da posegajo zlasti v aktivno populacijo in je bilo že na prejšnji seji zahteva, da se odbor prej do nekaterih stvari opredeli, zato bi še enkrat kot predsednica predlagala, da imam možnost sklica izredne seje pred glasovanjem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg44">Ja, poglejte. To je vaša odločitev. To ni tema sedaj za umik posamezne točke z dnevnega reda. Hvala lepa, gospa Zbačnikova.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg45">Samo za glasovanje, za obravnavo pred glasovanjem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg46">Hvala lepa. Ima kdo predlog za širitev, za umik? Gospod Potrč ima predlog za umik. Gospod Veber, gospod Lešnik, proceduralno gospod Potrč. Prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg47">Hvala lepa. Gospod predsednik, proceduralno predlagam, da preden bomo odločali o tem, da se predlagani zakon - o katerem je govorila gospa Zbačnikova, predsednica odbora za delo, družino in socialno politiko - da v odločanje, ali bo sprejet po hitrem postopku ali ne, da omogočite odmor - če bo treba - drugače pa ob enih sejo, da se matično delovno telo sestane in o tem opredeli.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg48">Ne gre za formalno nujnost, vendar gre za formalno možnost. In vi takšno možnost lahko dopustite, lahko jo daste tudi na glasovanje. Ta moment bom izrekel samo najkrajšo utemeljitev, ker mislim, da bomo o vsebini kasneje govorili. Prav je, da glede na vsebino vprašanj - glede na sedanji postopek obravnave tega ali pa podobnega zakona - in glede na to, da je nesporno, da pogoji za hitri postopek niso po nobeni možnosti izpolnjeni, daste priložnost matičnemu delovnemu telesu: da o tem razpravlja, to pogleda, pogleda tudi poročilo, ki ga je pripravil sekretariat, da boste vsaj poslanci zavestno odločali - ne samo po tem, ali smo v koaliciji, ali v opoziciji, ali je treba drug drugemu nagajati - ampak kaj je pametna odločitev.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg49">In prosim vas, da omogočite, da se matično delovno telo odloči in pripravi državnemu zboru poročilo prej, preden bi odločali o hitrem postopku po tem zakonu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg50">Hvala lepa, gospod Potrč. Ko bo državni zbor glasoval in se odločal, ali bo sprejel hitri postopek ali ne, obstajajo take možnosti, o katerih ste govorili. Vsekakor pa, če poslanke in poslanci ocenjujejo, da je vsebina zakona taka, da ne zasluži hitrega postopka, lahko to z glasovanje uredijo in ne podprejo hitrega postopka. Potem se omogoči vse, o čemer ste govorili. Gospod Veber predlaga umik. Prosim.</seg>
             </u>
             <note type="speaker">JANKO VEBER:</note>
-            <u who="#SDZ2.VeberJanko" ana="#regular">
+            <u who="#VeberJanko">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg51">Hvala za besedo in lepo pozdravljeni. Na podlagi 64. člena poslovnika državnega zbora predlagam, da se predlog zakona o spremembah in dopolnitvah zakona o urejanju naselij in drugih posegov v prostor - EPA 325 - hitri postopek, ki so ga v zakonodajno proceduro vložili poslanci Jakob Presečnik - SLS, Miran Jerič - LDS in Ivan Kebrič - Desus, umakne z dnevnega reda 8. seje državnega zbora Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg52">Vladi Republike Slovenije je bil zakon dodeljen že 11.12.1997. Kljub temu pa vlada še do sedaj ni opredelila svojih stališč do njega, kar pa bi bilo glede na njegovo vsebino nujno potrebno. Zakon namreč uvaja oprostitev oziroma znižanje plačila odškodnine za spremembo namembnosti kmetijskega zemljišča na vse infrastrukturne objekte državnega pomena, do sedaj pa je ta boniteta veljala le za gradnjo avtocest. Do takega vprašanja se, po mojem mnenju, vlada mora opredeliti in tudi glede na razpravo na odboru za infrastrukturo in okolje je bilo razvidno, da vlada očitno še do današnjega dneva nima stališča in ga tudi težko pričakujemo med to sejo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg53">Menim in predlagamo s strani poslanske skupine, da se točka umakne z dnevnega reda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg54">Hvala lepa. Poslanec Veber predlaga, da se z dnevnega reda umakne 24. točka dnevnega reda - predlog zakona o spremembah in dopolnitvah zakona o urejanju naselij in drugih posegov v prostor - hitri postopek.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg55">Želi predstavnik predlagatelja besedo?</seg>
                <note>Da.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg56">Gospod Presečnik, prosim.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ2.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg57">Hvala lepa za besedo. Kolegice in kolegi, odbor za infrastrukturo in okolje je predlog zakona obravnaval in zadolžil tudi oziroma predlagal državnemu zboru, da zadolži vlado, da pripravi nekatere podatke in nekatere dodatne spremljevalne predloge in da na ta način odbor in predlagatelji lahko pripravijo eventualno korigiran zakon za drugo obravnavo v državnem zboru. Predlagam, da ostane v proceduri.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg58">Hvala lepa, gospod Presečnik. Nastopili ste tudi v funkciji poročevalca matičnega delovnega telesa. Tako razumem vašo razpravo. Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg59">Želi besedo predstavnik vlade?</seg>
@@ -884,11 +867,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg60">Želijo besedo predstavniki poslanskih skupin? Gospod Potrč v imenu poslanske skupine Združene liste socialnih demokratov.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg61">Hvala lepa. Zelo na kratko bi rad rekel, da popolnoma iz formalnih razlogov podpiramo ta predlog, ne iz vsebinskih. To je tipičen primer, kako nepripravljeno dajemo - samo zato, ker gre tokrat za koalicijske poslance - neko točko na dnevni red. Niti vlada se do tega predloga še ni opredelila; matično delovno telo ni moglo pripraviti poročila, ker je reklo, da naj vlada najprej pove svoje; in mi bomo to dali na dnevni red - saj imamo čas, ker imamo 66 točk in bomo že med tem to prelagali tako dolgo, dokler se stvari ne bodo uredile. To, gospe in gospodje, po mojem ni pameten način dela. Mi bomo podprli umik. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg62">Hvala lepa, gospod Potrč. Želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg63">Želi predlagatelj umika dodatno razložiti svoj predlog?</seg>
@@ -903,7 +886,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg68">Predlog za umik ima tudi gospod Lešnik.</seg>
             </u>
             <note type="speaker">ZORAN LEŠNIK:</note>
-            <u who="#SDZ2.LešnikZoran" ana="#regular">
+            <u who="#LešnikZoran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg69">Gospod predsednik, kolegice in kolegi! Naša poslanska skupina, Demokratična stranka upokojencev predlaga, da 34. točko umaknemo z dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg70">Predlog utemeljujemo: Predlog sprememb in dopolnitve zakona o Skladu kmetijskih zemljišč in gozdov Republike Slovenije je slabo in enostransko pripravljen. Predlog sprememb in dopolnitev zakona o Skladu kmetijskih zemljišč in gozdov ni v skladu z odločbo ustavnega sodišča. Iz poročila sekretariata za zakonodajo in pravne zadeve je več kot očitno, da so predlagani členi neutemeljeni, neusklajeni in protizakoniti, zlasti pa neusklajeni z odločbo ustavnega sodišča Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg71">Tudi v poročilu odbora za kmetijstvo, gozdarstvo in prehrano je dvomljivo napisano: odbor sicer soglaša z obravnavo na zboru, vendar meni da se mora, zaradi nejasnosti pred odločanjem na zboru še enkrat sestati. Tega ponovnega sklica ni bilo, med zasedanjem pa to - verjetno po 151. členu poslovnika, razen če mu to zbor izrecno ne določi in naroči - ni možno.</seg>
@@ -911,41 +894,41 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg73">Še enkrat, v imenu poslanske skupine predlagam umik te točke z dnevnega reda. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg74">Hvala lepa. Gospod Lešnik predlaga, da se umakne z dnevnega reda 34. točka, to je predlog zakona o spremembah in dopolnitvah zakona o Skladu kmetijskih zemljišč in gozdov Republike Slovenije - skrajšani postopek. Želi besedo predstavnik predlagatelja? Predstavnik vlade? Državni sekretar mag. But, prosim.</seg>
             </u>
             <note type="speaker">FRANC BUT:</note>
-            <u who="#SDZ2.ButFranc" ana="#regular">
+            <u who="#ButFranc">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg75">Hvala lepa, gospod predsedujoči. Spoštovane gospe poslanke in gospodje poslanci! Predlagatelj predlaga, da se točka ne umakne z dnevnega reda, ker menimo, da je obravnava te točke izredno nujna, ker je funkcija oziroma delovanje sklada v sedanji obliki - brez te spremembe tega zakona - omejena, ker ni mogoče izvajati nekatere funkcije in ker ni mogoče v celoti uvajati tudi nekaterih funkcij sklada v procesu denacionalizacije. Pravzaprav je neurejeno področje, ki govori o možnostih prenosa nezazidanih stavbnih zemljišč na občine.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg76">Skratka, zelo veliko je argumentov, ki govorijo v prid, da je treba točko ohraniti in obravnavati v parlamentu. Skratka, v vsakem primeru predlagamo, da se odločite v prid tega, da ta točka ostane na dnevnem redu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg77">Hvale lepa državnemu sekretarju. Želi besedo poročevalec matičnega delovnega telesa? Besedo ima gospod Franc Potočnik, predsednik odbora za kmetijstvo.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg78">Spoštovani! Odbor je zelo podrobno vodil razpravo o predlogu zakona. Po dolgi razpravi je sprejel sklep, da podpira, da se zakon uvrsti na dnevni red po skrajšanem postopku. Pri tej točki smo potem sejo odbora oziroma to točko prekinili, ker je vlada na osnovi razprav v odboru obljubila - oziroma ministrstvo je obljubilo, da bodo pripravili amandmaje, ki bodo bolj natančno opredelili, kako bo s prenosom skladovih zemljišč nazaj na občine. In ker takrat pač teh amandmajev pa nekaterih drugih redakcijskih še ni bilo, smo se dogovorili, da bomo sejo nadaljevali, ko bodo ti amandmaji predloženi.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg79">Sedaj so amandmaji predloženi in v času do obravnave te točke v državnem zboru se bo odbor tudi sestal in se opredelil do predloženih amandmajev.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg80">Hvala lepa gospodu Potočniku. Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg81">Predstavnik vlade je že imel besedo kot predlagatelj. Želijo besedo predstavniki poslanskih skupin? Gospod Geza Džuban v imenu poslanske skupine Liberalne demokracije Slovenije, gospod Veber in gospod Špiletič.</seg>
             </u>
             <note type="speaker">GEZA DŽUBAN:</note>
-            <u who="#SDZ2.DžubanGeza" ana="#regular">
+            <u who="#DžubanGeza">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg82">Hvala lepa gospod predsednik. Poslanska skupina Liberalne demokracije podpira stališče matičnega delovnega telesa. Če smo dobro poslušali, ta predlaga, da se točka uvrsti na dnevni red seje državnega zbora po skrajšanem postopku, na način, da se opravi prva obravnava, se točka prekine in se poskušajo rešiti dileme, ki so prisotne pri spremembi zakona o Skladu kmetijskih zemljišč.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg83">Po naši presoji sta še zmeraj nedodelani dve poglavji spremembe zakona. Prvi del - glede pristojnosti in pridobljenih pravic izvajalskih gozdnogospodarskih podjetij, kjer ocenjujemo, da bi morali upoštevati nekatere sugestije ustavnega sodišča, sekretariata in še marsikoga; doreči vsebino predloženega zakona in spremembe oziroma dopolnila, ki bi bila potrebna. In v drugem delu - Sklad stavbnih zemljišč, rešitve, ki so variantno že ponujene. Mislim, da so do take mere, da bi lahko dopolnile zakon v takem smislu, da bi ustrezal bivšim, sedanjim in novonastajajočim občinam. Glede na problematiko sklada, ki je prisotna na različnih ravneh.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg84">Eno je delovanje sklada kot takšnega in spada morda v samo letno obravnavo letnega poročila o skladu, kjer bi morali nekatere zadeve izpostaviti in doreči. Drugo je sprememba zakona, ki je pred nami, in bi morali prinesti rešitve tako, da bi sklad začel končno delovati in opravljati svoje naloge in funkcije. In v tem drugem delu se zavzemamo za to, da na dnevni red državnega zbora uvrstimo spremembo zakona - po skrajšanem postopku in poskušamo doreči in dodelati rešitve, ki so potrebne predvsem v smislu delovanja Sklada kmetijskih zemljišč. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg85">Hvala lepa, gospod Džuban. V imenu poslanske skupine Združene liste socialnih demokratov bo podal stališče gospod Veber.</seg>
             </u>
             <note type="speaker">JANKO VEBER:</note>
-            <u who="#SDZ2.VeberJanko" ana="#regular">
+            <u who="#VeberJanko">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg86">Hvala še enkrat za besedo. No, sam mislim, da je treba poudariti naslednje; da obnovimo nekako spomin, ko smo obravnavali predlog zakona o spremembah in dopolnitvah zakona o Skladu kmetijskih zemljišč in gozdov Republike Slovenije, ki je bil objavljen v Poročevalcu številka 39/97, ki sva pa v obravnavo vložila skupaj s kolegom Potrčem, je bil sprejet sklep v tem državnem zboru, da je ta zakon neprimerna podlaga za nadaljnjo obravnavo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg87">Spremembe in posegi, ki jih je predlagani zakon takrat predvideval, so bile - vsaj po ugotovitvah večine poslancev -takšne narave, da bi zakon onemogočal normalno proceduro zaradi zahtevnosti postopkov in zato je bil tudi umaknjen z dnevnega reda. Če naredimo primerjavo med tistim zakonom in med tem, ki ga je vložila vlada, je tudi eden od razlogov za to, da se je takrat najin zakon s Potrčem zavrnil, je bil ta, da bo vladni predlog reševal to problematiko in ne tisti, ki sva ga vložila takrat z gospodom Miranom. Dejstvo je, da vladni predlog posega še širše, odpira še globljo problematiko, ta predlog ponuja še več nedorečenosti in seveda zato je povsem upravičen predlog DeSUS-a, da se ta zakon umakne iz procedure.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg88">Kajti ti posegi, ki jih predlaga vlada, so dejansko protiustavni, posamezni členi, ki jih spreminja vlada, so med seboj neusklajeni; gre za dejstvo, da spreminja 22. člen po skrajšanem postopku, ne spreminja pa 14. člena, ki ima ravno tako opredeljene nekatera stališča glede vračanja nezazidanih stavbnih zemljišč občinam. In tudi, če bo ta zakon šel v proceduro po skrajšanem postopku, ga enostavno ne bo moč izvajati. Zato je več kot dovolj teh razlogov, da dejansko vlada pripravi nov predlog. Sam mislim, da je tudi skozi obravnavo - tako na odboru za kmetijstvo kot tudi na odboru za infrastrukturo - bilo podanih dovolj kvalitetnih pripomb na to gradivo, da bo vlada lahko pripravila kvaliteten predlog in s tem pozneje prišla v postopek sprejemanja in reševanja problemov, ki so nakazani oziroma ki so potrebni za delovanje samega sklada.</seg>
@@ -954,27 +937,27 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg91">Torej razlogi so povsem drugje. Mislim, da bi vlada resnično morala še enkrat trezno razmisliti o razlogih, zakaj je vložila takšno besedilo v obravnavo, kajti protiustavno besedilo, med seboj neusklajeni členi, ki jih je nemogoče uskladiti zaradi skrajšanega postopka, seveda ne dajejo možnosti oziroma ne dajo možnosti, da bo prišlo do ustreznih rešitev. Seveda je predlog za umik več kot utemeljen in tudi v naši poslanski skupini bomo umik podprli.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg92">Hvala lepa, gospod Veber. V imenu poslanske skupine Socialdemokratov bo spregovoril gospod Špiletič.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg93">Hvala lepa za besedo. Moram reči, da bi naj bil cilj tega zakona doseči boljše gospodarjenje z gozdovi in s kmetijskimi površinami. Žal zakon, tako kot je pripravljen, nima vgrajene nobene varovalke, da bo gospodarjenje z gozdovi jutri boljše, da bo gospodarjenje z gozdovi jutri s kmetijskimi zemljišči boljše. Naslednje, kar je, je povsem nesprejemljivo; da je vloga lokalnih skupnosti, na katerih ležijo ogromne kmetijske površine ali ogromne gozdne površine, povsem zanemarjena. Ta danes nimajo povsem nobene možnosti vplivati na gospodarjenje s pretežnim delom kmetijskega ali gozdarskega zemljišča, ki leži, na njihovem področju. Menimo, da bi v tej smeri potrebno iskati spremembe in dopolnitve tega zakon. Torej, povečati vlogo lokalnih skupnosti in vnesti potrebne varovalke za to, da bi resnično prišlo do boljšega izkoriščanja kmetijskih in gozdarskih površin.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg94">Moram reči, da bi se veliko lažje odločali o tej točki oziroma o predlogu, ki je bil tu dan, če bi se matični odbor državnega zbora še enkrat sestal, kjer bi vlada jasno povedala, kje je popustila oziroma kje je pripravila dopolnila, katera je omenil tu gospod Potočnik. Predlagam, da o tem umiku z dnevnega reda odločamo potem, ko bo opravljena predhodna obravnava na matičnem delovnem telesu, kar je bilo sicer dogovorjeno, da se bo zgodilo že včeraj, vendar se ni.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg95">Hvala lepa, gospod Špiletič. V imenu poslanske skupine Slovenske ljudske stranke bo spregovoril doktor Franc Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg96">Spoštovani zbor! Poslanska skupina Slovenske ljudske stranke podpira predlog matičnega delovnega telesa, da se zakon uvrsti po skrajšanem postopku in seveda apeliramo tudi na vse druge poslanske skupine, da ravnajo tako.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg97">V skladu je res vse narobe, sklad ne more opravljati svojih nalog, ki bi jih po zakonu moral. Sklad je pravzaprav žrtev raznih političnih opredelitev in gledanj v vseh zadnjih letih. Zaradi stanja na področju zemljiške zakonodaje in zaradi stanja v skladu - tudi zakonodaje, ki seveda določa delovanje sklada in tudi onemogoča njegovo delovanje, že celo to desetletje, praktično od leta 1990 naprej - ni mogoča nobena sistematična državna zemljiška politika na področju kmetijstva-kmetijska zemljiška politika in tudi nobeni učinkoviti ukrepi, ki bi bili v tem času še kako nujni.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg98">Mi vsa ta leta vemo, da želimo v Evropsko unijo. Mislim, da smo se vsi zavedali, da je vstop v Unijo posebno odgovoren na področju kmetijstva, da je struktura našega kmetijstva povsem neprilagojena temu, kar bi morali storiti pred vstopom v Evropsko unijo in državni zbor in vlada in vse veje oblasti pravzaprav so tolerirale stanje, ko nobeno sistematično delo ni bilo mogoče in tudi v prihodnje ne bo, če ob ta zakon zavrnjen. Stvari bodo samo še slabše.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg99">Zato mislim, da gre za zelo veliko odgovornost. Na treh področjih naj bi zakon uredil stvari; občinam omogočil, da dobijo stavbna zemljišča in s tem omogočil razvoj, kar je pomembno za vso Slovenijo, tudi za regionalni razvoj. Omogočil naj bi skladu, da začne s prometom kmetijskih zemljišč. Trenutno mu je to onemogočeno tudi iz razloga, ker niti ne more izvesti zemljiškoknjižnega vpisa za vsa zemljišča, katerih lastnik je po zakonu je država. In tretje - uredil naj bi gospodarjenja z gozdovi ob upoštevanju tudi tržnih principov in jasno ob upoštevanju zakona o gozdovih, za kar je poleg sklada predvsem zadolžena javna gozdarska služba - to je Zavod za gozdove - za izvajanje zakona o gozdovih. Ti trije razlogi so. Vsak od njih je zadosten razlog, da je zakon treba po skrajšanem postopku sprejeti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg100">Hvala lepa dr. Zagožnu. Želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg101">Želi predlagatelj umika dodatno obrazložiti svoj predlog?</seg>
@@ -982,7 +965,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg102">Gospod Lešnik prosim.</seg>
             </u>
             <note type="speaker">ZORAN LEŠNIK:</note>
-            <u who="#SDZ2.LešnikZoran" ana="#regular">
+            <u who="#LešnikZoran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg103">Gospod predsednik, poslanke in poslanci. Ne bom polemiziral, ne bom repliciral. Rekel bom samo to, da poslanska skupina vztraja pri predlogu, ki ga je podala. Glasovanje naj o tem odloči in bomo potem pač videli, kakšen je nadaljnji postopek. Bi pa prosil vse, da ne bi bilo preveč zavajanja.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg104">Iz poročil sklada, ki so bila doslej podana, je razvidno da je promet bil, saj je na koncu koncev sklad kupoval gozdove, prodajal zemljo - takšno in drugačno, obdelovalno, gradbene parcele itd. Da je delo sklada onemogočeno, mislim, da temu ni kriva sedanja zakonska ureditev, ampak da so temu krivi ljudje, ki se niso znali dogovarjati. Kajti, dokler je to bilo dogovarjanje normalno, je vse teklo tudi normalno. In gospodarjenje z gozdovi naj bo na osnovi tržnega principa. Mislim, da je tržni princip tudi sedaj, s to razliko, da bo potem - ker je sedaj po samem zakonu bila koncesija dodeljena določenemu, ki je izvajal dela v gozdovih, medtem ko bo potem na osnovi licitacije in če je to tisti tržni princip, potem moramo tudi ta tržni princip v interesu države preanalizirati.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg105">Ne bi rad polimiziral s predsednikom odbora za kmetijstvo, bi ga pa rad spomnil, da sem osebno kot član odbora dal pobudo za sklic seje, vendar sem na osnovi dogovora, da bo ta seja do današnjega dne, pač pristal, da se to obravnava z drugimi amandmaji. Tega pa ni bilo, ampak je predsednik tudi to prezrl.</seg>
@@ -990,16 +973,16 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg107">Še enkrat poudarjam - vztrajamo; predlagamo in pri tem predlogu vztrajamo, da se umakne ta točka dnevnega reda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg108">Hvala lepa gospodu Lešniku. Prehajamo torej na glasovanje o umiku 34. točke z 8. seje - predlog zakona o spremembah in dopolnitvah zakona o Skladu kmetijskih zemljišč in gozdov Republike Slovenije, skrajšani postopek. Ugotavljamo prisotnost! Smo že v fazi glasovanja. razprave ni več, razprave ni več. Proceduralno? Priznam, da nisem pogledal. Gospod Špiletič se je javil za proceduralno,prosim.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg109">Gospod predsednik, pravočasno sem dvignil roko, ampak tudi že vsebina moje razprave prej je bila naravnana proceduralno oziroma vsebovala je proceduralni predlog, da se predhodno, predno se glasuje o tej točki, še enkrat sestane matično delovno telo, da se lahko preučijo tudi novi predlog vlade, ker potem bi lahko zavestno odločali o tej zadevi.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg110">Drugače nas silite, da odločamo o nečem, celote pa ne poznamo. To je pač moj predlog in bi prosil, da ga daste na glasovanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg111">Hvala lepa gospod Špiletič. Te možnosti po poslovniku izrecno ni zapisane. Poslanci in poslanke imajo možnost, da se opredelijo in izglasujejo predlog umik z dnevnega reda. Prav tako bomo tudi glasovali o skrajšanem postopku. Obe možnosti sta in tukaj se boste pač na glasovanju izjasnili. Ugotavljamo prisotnost! Prosim? Samo trenutek.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg112">64. člen govori naslednje: "... O predlogih za razširitev dnevnega reda lahko poda mnenje vlada, če ni sama predlagateljica razširitve. Državni zbor lahko sklene, da mora pred odločanjem podati mnenje matično delovno telo." Če gospod Špiletič vztraja na tem, bom dal to na glasovanje. Ampak glasujemo o umiku, ne o razširitvi. Vztrajate pri tem predlogu? Na glasovanje dajem predlog gospoda Špiletiča, da preden državni zbor odloča o umiku te točke dnevnega reda, da se pred tem sestane tudi matično delovno telo. Ugotovimo sklepčnost!</seg>
                <note>67 prisotnih.</note>
@@ -1018,12 +1001,12 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg120">Ali je še kakšen predlog za umik? Predlogov za umik ni. Prehajamo na predloge za razširitev dnevnega reda. Prejeli smo samo en predlog za širitev dnevnega reda 8. seje. Predlaga ga gospod Tone Anderlič v imenu poslanske skupine Liberalne demokracije Slovenije. Ali želi besedo? Gospod Anderlič, prosim.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg121">Na tej seji je predlagan predlog zakona oziroma rebalans nacionalnega programa graditve avtocestnega omrežja in če želimo po tem predlogu v letošnjem letu opravljati aktivnosti, je treba sprejeti tudi zakon o zagotovitvi sredstev za to in zato v skladu s 64. členom poslovnika predlagam, da na dnevni red uvrstimo predlog zakona o zagotovitvi namenskih sredstev za gradnjo avtocestnega omrežja Republike Slovenije po letu 1999, druga obravnava.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg122">Ta zakon je namreč bil uvrščen že v prejšnjem sklicu in ima tudi poročilo iz septembra 1996. leta prejšnjega sklica in je na nek način blokiral proceduro za vladni zakon, ki je predlagan, vendar ni bil kot dvojček v paketu predlagan za to sejo. Če hočemo, pravim, kakorkoli stvari v rokih izpeljati, potem je treba dati ta zakon na dnevni red in s tem omogočiti nadaljevanje izgradnje avtocestenega omrežja. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg123">Hvala lepa gospodu Anderliču. O tej temi in o tem vprašanju je bil tudi govor na zadnji seji kolegija, kjer smo se pripravljali za 8. redno sejo. Takrat je bila napovedana tudi ena od možnosti, da bi se eventualno ta zakon umaknil s procedure, da bi se s tem omogočilo, da bi vladni predlog zakona prišel v proceduro. Ker so to ni zgodilo, je sedaj predlagan tak način, kot je predlagan in naj državni zbor odloči, če se strinja z razširitvijo te točke dnevnega reda. Želi besedo poročevalec matičnega delovnega telesa? Se opravičujem. Želi predlagatelj zakona besedo? Predlagatelja zakona sta gospod poslanec Janc in gospod poslanec Kužnik.</seg>
                <note>Ne želita.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg124">Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
@@ -1033,36 +1016,36 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg126">Želijo besedo predstavniki poslanskih skupin? Gospod Mozetič v imenu poslanske skupine Slovenskih krščanskih demokratov.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg127">Spoštovane kolegice, spoštovani kolegi! Polovica, 50% predlagateljev tega zakona je iz poslanske skupine, ki predlaga uvrstitev, ampak to niti ni pomembno. Niti enega razloga nisem slišal od predlagatelja razširitve dnevnega reda, ki pomenijo po poslovniku razloge za razširitev dnevnega reda. Niti da se je nekaj zgodilo po sklicu seje, da je nujno, da gori voda. To, da je pač treba delati avtoceste in da je to nujno, to je razumljivo. Ampak pričakoval bi od pozicije, ki bo ta predlog vsekakor podprla - vsaj tako glasovanja do zdaj vedno kažejo - da bi vsaj povedala, kaj so razlogi za širitev dnevnega reda. Ta dnevni red, ki ga je predsednik predlagal - in prejšnja točka je bila taka, prejšnja točka ni imela pogojev za uvrstitev s strani predsednika na dnevni red, ne s strani državnega zbora; torej v predlog dnevnega reda in še vrsto takih točk je. Če mislimo na tak način naprej delati in nas siliti v to delo, potem dajmo na prvo točko - bom predlagal zdaj širitev dnevnega reda s točko - ukinitev oziroma razveljavitev poslovnika državnega zbora. Razveljavitev poslovnika državnega zbora. In ta državni zbor od tistega trenutka naprej dela tako kot - bodisi predsednik, predsedujoči ali koalicija, taka ali drugačna, zdaj ne bom rekel kakšna, ker je že tudi v tem sklicu različna koalicija - namerava delati. Ampak, da bomo vsaj vedeli, da ni reda, ker sicer je nesmisel, da govorimo o poslovniku, da smo ga z dvotretjinsko večino sprejeli in enostavno ne delamo po poslovniku.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg128">Hvala lepa. V imenu poslanske skupine Združene liste bo spregovoril gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg129">Hvala lepa. Da ne bom brez potrebe jemal čas: Tole, kar je gospod Mozetič rekel, ne bom ponavljal, je pa tudi mnenje naše poslanske skupine in smo ga mnogokrat izrekli. Rad bi povedal naslednje.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg130">Kadar je cilj, da se določen zakon uvrsti na dnevni red zato, da bi se ga pravi čas zavrglo oziroma zavrnilo in da bi lahko nov zakon prišel, potem je treba vsaj to povedati. Tudi to je možno. Kadar gre za to, da se poskuša zagotoviti, da v nekem normalnem času pride na dnevni red vladni zakon, je najbrž to treba pravočasno pripraviti. Jaz vem, da imamo v državnem zboru precej stvari in precej aktov in da je treba malo spremljati, kaj se pri nas dela. Samo, nemogoče je, da to delamo na sejah državnega zbora s stalno novimi zahtevami, s stalno novimi ugotovitvami na način, ko je enkrat nekaj v rednem postopku, potem v skrajšanem, potem v hitrem, potem se na hitro odločamo in argument - edini, ki tu velja - je večina, ki jo oblikuje ta koalicija. Bojim se, da bo takšen način dela kmalu pripeljal ta državni zbor v položaj, ko bomo res začeli ugibati, zakaj kakšen program, kakšen sistem, kakšen poslovnik še velja. Vi boste sproti odločali, kaj je prav in kaj ni prav, argument, dragi gospodje, pa vam ne zaleže nobeden; niti poslušati ga nočete, niso važna mnenja sekretariata, niso važna mnenja delovnih teles, ni se treba sestajati, dovolj je, da nekdo pri vas misli, da je tako treba odločiti. Mi nasprotujemo temu, da se tako razširi dnevni red in sem prepričan, da tudi formalno pogoji za to niso izpolnjeni. Ampak, tudi tega ne bom več ponavljal, gospod predsednik, ker tudi vi ne storite dovolj, da bi se poslovnik spoštoval. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg131">Hvala lepa gospodu Potrču. Želi še katera od poslanskih skupin besedo? Gospod Presečnik v imenu poslanske skupine Slovenske ljudske stranke.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ2.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg132">Predsednik hvala lepa za besedo. Kolegice in kolegi! Poslanska skupina Slovenske ljudske stranke predlaga uvrstitev te točke na dnevni red in je možno v nadaljevanju zadevo izpeljati tudi prek odbora za infrastrukturo in okolje in pripraviti ustrezno gradivo. Možna sta seveda dva načina: ali pripeljati ta zakon do konca in ga ustrezno koregirati tudi z usmeritvami, ki jih je sprejela vlada in katerega predlog zakona imamo že v proceduri, ampak čaka na ta zakon. Podpiramo uvrstitev na dnevni red.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg133">Hvala lepa. Želi besedo še katera od poslanskih skupin? Želi predlagatelj dodatno obrazložiti svoj predlog? Gospod Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg134">Gre preprosto za to, da sem že rekel, da s tem, ko je bila 32. točka dnevnega reda - in sicer predlog sprememb in dopolnitev nacionalnega programa izgradnje avtocest v Republiki Sloveniji - hitri postopek uvrščena na to sejo - in brez zakona, ki bo zagotavljal vire, mi tako ali tako ne smemo nobenih obveznosti v tem državnem zboru sprejemati. To pa seveda vsi vemo, da če gremo v zakon oziroma v program, ki bo sprejel obveznosti za črpanje državnih sredstev, ta program predvideva tudi določen del zajemanja tako iz državnega proračuna kot iz tako imenovanega namenskega bencinskega tolarja. Zato je pač potrebno tudi zagotoviti vir. In v tem smislu so nastali razlogi po sklicu seje. Kajti, prepričan sem bil, če bo že sporno vprašanje virov za ta nacionalni program, da bo vse skupaj šlo na izredno sejo ali na eno od naslednjih sej. Vendar, v tem trenutku je predlog zaradi dinamike in vseh drugih stvari pod točko 32, da se vendarle obravnava, in če hočemo obravnavati predlog sprememb programa, moramo zagotoviti tudi vir. Za to gre. In menim, da vendarle so nastali razlogi po sklicu seje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg135">Hvala lepa. Sedaj smo po poslovniku izčrpali možnost razprav o predlogu za razširitev dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg136">Na glasovanje dajem predlog, da se razširi dnevni red 8. seje z obravnavo predloga zakona o zagotovitvi namenskih sredstev za gradnjo avtocestnega omrežja Republike Slovenije po letu 1999, druga obravnava, in hkrati, da se skrajšajo roki za obravnavo tega predloga zakona, skladno z 52. členom poslovnikom državnega zbora, in da se amandmaji k predlogu zakona lahko vlagajo do vključno 25. februarja 1998. Ta rok je podoben, kot ga bo predlagan tudi za enega od drugih zakonu, ki je prav tako vložen po tem postopku. Ugotavljamo prisotnost!</seg>
                <note>63 prisotnih.</note>
@@ -1085,19 +1068,19 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg147">Na glasovanje dajem predlog za sprejem predloga zakona o udelžbi zaposlenih pri dobičku družbe, po hitrem postopku. Ugotavljamo prisotnost! Proceduralni predlog, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg148">Gospod predsednik, jaz se opravičujem. Samo vprašam vas, ali ni dano poročilo matičnega delovnega telesa k temu zakonu, ki predlaga, da se zakon umakne s te seje in preloži na naslednjo sejo?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg149">Vprašanje, torej besedo sem dal tudi poročevalcu matičnega delovnega telesa. Prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg150">Najbrž tudi, kadar je formalni predlog dan, ne glede na poročevalca <gap reason="inaudible"/> Saj imate pregled.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg151">Tako je. Matično delovno telo - odbor za zdravstvo, delo, družino in socialno politiko predlaga <gap reason="inaudible"/> Odbor državnega zbora za zdravstvo, družino in socialno politiko podpira predlog zakona o udeležbi zaposlenih pri dobičku družbe in predlaga državnemu zboru Republike Slovenije, da ga uvrsti na naslednjo, to je 9. sejo državnega zbora, da ga obravnava skupaj z amandmaji in sprejme po hitrem postopku. Poslovnik to možnost točno opredeljuje in to pomeni, da pač zakon bo obravnavan na naslednji seji državnega zbora. Zahvaljujem se gospodu Potrču za njegovo opozorilo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg152">Vlada Republike Slovenije je zboru predložila predlog zakona o poroštvu Republike Slovenije za najetje posojila za nakup potniških vlakov in predlaga, da ga sprejme po hitrem postopku. Matično delovno telo podpira predlog zakona po hitrem postopku in ne predlaga kakšnega premika. Želi besedo predstavnik vlade?</seg>
                <note>Ne želi.</note>
@@ -1115,11 +1098,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg159">Skupina poslancev s prvopodpisanim Jakobom Presečnikom je zboru predložila predlog zakona o spremembah in dopolnitvah zakona o urejanju naselij in drugih posegov v prostor in predlaga, da ga sprejme po hitrem postopku. Matično delovno telo ne podpira sprejem predloga zakona po hitrem postopku. Želi besedo predstavnik predlagatelja zakona? Gospod Presečnik, prosim.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ2.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg160">Hvala lepa za besedo. Kolegice in kolegi! Kot sem že pri predlogu za umik točke z dnevnega reda komentiral, menim, da je razlog za hitri postopek, predvsem bom navedel en razlog: možnosti izgradnje železniške infrastrukture proti Madžarski in drugega tira proti Kopru. To je eno. In pa dogovor, da skupno z vlado razrešimo problematiko in pripravimo na odboru za infrastrukturo med postopkom same seje tudi ustrezne amandmaje in dopolnitve za drugo obravnavo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg161">Hvala lepa, gospod Presečnik. Želi besedo poročevalec matičnega delovnega telesa, ki je v tem primeru ista oseba? Lahko ima, seveda matično telo ima jasno stališče, ne podpira sprejem zakona po hitrem postopku. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg162">Predstavnik vlade?</seg>
@@ -1127,11 +1110,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg163">Predstavniki poslanskih skupin? Gospod Veber, prosim.</seg>
             </u>
             <note type="speaker">JANKO VEBER:</note>
-            <u who="#SDZ2.VeberJanko" ana="#regular">
+            <u who="#VeberJanko">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg164">V imenu poslanske skupine Združene liste socialnih demokratov bi želel povedati, da podpiramo sklep, ki je bil izglasovan na odboru za infrastrukturo in okolje, ki nasprotuje hitremu postopku, pa tudi sicer razlogom, ki so navedeni za to, da bi hitri postopek vendarle bil, in se nanašajo predvsem na zagotavljanje sredstev za plačilo odškodnine zaradi spremembe namembnosti kmetijskih in gozdnih zemljišč. Je povsem primeren čas, da se ta problem reši pri sprejemanju proračuna in ni treba sprejemati tega zakona po hitrem postopku. Kajti dvomim, da bo vlada dala jasno stališče okoli tega in je veliko primernejše reševanje problematike skozi sprejemanje državnega proračuna, ki je že v proceduri, in bo prav gotovo hitreje zaključen kot pa ta razprava, kjer ne pričakujemo jasnega mnenja vlade. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg165">Hvala lepa. Želi besedo še katero od poslanskih skupin? Gospod minister je zamudil možnost. Ali ste bil prej odsotni? Ste bili zunaj? Prezrl? Torej na glasovanje dajem. Želi predstavnik predlagatelja dodatno obrazložiti svoj predlog?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg166">Torej prehajamo na glasovanje o predlogu, da se zakon o spremembah in dopolnitvah zakona o urejanju naselij in drugih posegov v prostor sprejme po hitrem postopku. Ugotavljamo prisotnost!</seg>
@@ -1145,13 +1128,13 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg171">Želi predlagatelj zakona besedo? Prosim, gospod Miroslav Mozetič.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg172">Drage kolegice, spoštovani kolegi. Gre za kratko spremembo, majhno spremembo zakona o ustavnem sodišču in predvsem za to, da bi ustavne sodnike volili z dvo tretjinsko večino v parlamentu.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg173">Dosledno poslovniško, in tukaj sem v določeni težavi, dosledno poslovniško niso povsem vsi razlogi, ki jih zahteva poslovnik za sprejem zakona po hitrem postopku. To priznam. Dosledno poslovniško.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg174">Je pa predlog povsem skladen z ustaljeno prakso, že bivšo, da ne govorim o tej, ki se uveljavlja v tem mandatu. Torej skladu s prakso, ki se uveljavlja v tem državnem zboru, tudi danes v prvih dveh glasovanjih in v naslednjih glasovanjih in računam, da se bo tudi pri tem pokazala, so pa razlogi za hitri postopek. Ker zavrnitev hitrega postopka pri sprejemanju spremembe tega zakona pomeni isto, kot glasovati proti zakonu. Ker, če ta zakon ne bo sprejet v najkrajšem času, predno se bodo začeli postopki za imenovanje in volitev ustavnih sodnikov, potem tega zakona ni enostavno potrebno več imeti, vsaj 5 ali 6 let. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg175">Hvala lepa gospodu Mozetiču. Želi besedo poročevalec matičnega delovnega telesa - odbora za notranjo politiko in pravosodje? Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg176">Želi besedo predstavnik vlade? Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -1166,30 +1149,30 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg181">Poslanec Ivan Kebrič je zboru predložil predlog zakona o spremembah in dopolnitvah zakona o pokojninskem in invalidskem zavarovanju in predlaga zboru, da ga sprejme po hitrem postopku. O tej temi je v uvodu že razpravljala gospa Zbačnikova, glede samega postopka, oziroma možnosti, da se sestavne matično delovno telo. Želi predlagatelj predloga zakona besedo? Gospod Kebrič, prosim.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ2.KerbičIvan" ana="#regular">
+            <u who="#KerbičIvan">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg182">Hvala gospod predsednik za besedo. Spoštovane kolegice.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg183">Po razpravi.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ2.KerbičIvan" ana="#regular">
+            <u who="#KerbičIvan">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg184">Kolegi. Takrat nisem bil, da se uvrsti po hitrem postopku na izredno sejo, kajti želel sem, da naša procedura, naše redne seje tečejo čimbolj nemoteno. Sedaj pa, če ste pogledali današnje poročilo ali včerajšnja, ste lahko spoznali, da so upokojenci letos z ozirom na lanskoletni izračun pokojnin zopet prizadeti za 1%.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg185">Plače so v decembru porastle za 5,7%. Z ozirom na to, da je ostala februarska formula, katero jaz z mojim predlogom za spremembo 160. člena spreminjam, bi pokojnine morale porasti enako za 5,7%. So pa, kot sem dejal, porastle samo za 4,7%.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg186">Poglejte, zadeva se vleče iz leta 1996, ko so naši predhodniki 25. januarja sprejeli spremembo 160. člena, ki je upokojence že dve leti zaporedoma tako močno hudo prizadel. Sedaj, če ne bomo po dveh letih v tem hitrem postopku vsaj letos sprejeli tega predloga, če bi šlo po normalnem postopku sem pesimist, da bi ga letos sploh lahko uveljavili oziroma sprejeli in bi še eno leto, najmanj, nadaljevali to prizadetost oziroma prikrajšanje upokojencev za usklajevanje pokojnin s plačami. Menim, da bo matično delovno telo imelo še čas, dokler pride ta točka na dnevni red našega zasedanja državnega zbora, da sprejme določene predloge, ki so bili dodatno zgrajeni. Na drugi strani pa menim, da je še čas in dogovorjen sem s predstavniki delojemalcev za danes teden, da se sestanem z njimi in poskušam doseči določeno soglasje v zvezi z njihovimi tremi pripombami. Te pa so, sicer nasprotujejo skrajšanemu postopku, vendar sem jim povedal, da to ni njihova stvar, ampak da je to, ali bomo kaj sprejemali po takem ali drugačnem postopku edino zadeva državnega zbora. Samo mi smo kompetentni, da si določimo način dela kako bomo kaj obravnavali, kako bomo kaj sprejemali.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg187">Drugi dve pripombi, ki se nanašata na črtanje druge alinee, to se pravi kratko povedano, predčasno upokojevanje tehnoloških viškov in pa sestav skupščine, kateremu predstavniki delojemalcev nasprotujejo. To sta dve točki, za kateri sem prepričan, da se bomo, če že ne čisto uskladili, vsaj znatno približali. Zato vas prosim, da sprejmete na znanje moje izvajanje in da izglasujemo hiter postopek, saj se zadeva vleče že dve leti, če ne bomo tako poslovali. Menim pa, da ravno s takim načinom lahko pospešimo naše delo, da bomo prišli tudi do drugih točk, do drugih predlogov, do drugih zakonov, ki nas čakajo v našem nadaljnjem delu. Upam, da sem bil z argumenti prepričljiv in da boste izglasovali hitri postopek. Hvala, da ste me poslušali.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg188">Hvala, gospod Kebrič, za vaše besede. Želi besedo poročevalec matičnega delovnega telesa? Prosim? Proceduralni predlog, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg189">Hvala lepa. Gospod predsednik, jaz sem razumel, da ste po razpravi gospe predsednice Zbačnikove in po moji rekli, da ko bo vprašanje hitrega postopka, boste dali najprej na glasovanje ali se pri tem sestane matično delovno telo. Jaz prosim, da to naredite, ne pa da najprej vso vsebinsko razpravo opravimo, ker to bomo opravili, če bo sprejet sklep, da se ne sestane. Drugače pa najbrž ni treba, da vsebinsko razpravo o tem vodimo zdaj na državnem zboru in tako, kot je bilo prej, bi prosil, da najprej o tem glasujemo, kasneje bomo pa vsebinsko razpravljali, če bo, kot pričakujemo, modra koalicija sklenila, da odbor ni potreben.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg190">Sam sem mislil ubrati drugo pot, da bi videl kakšno je stališče poslanskih skupin in potem dal ta predlog na glasovanje. Vse točke dnevnega reda so v principu enake.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg191">Predlagam, da tudi za to točko veljajo vse te možnosti, ki jih določa poslovnik glede hitrih postopkov. Do sedaj ni bila praksa, da bi se med sprejemom dnevnega reda sestajala delovna telesa in odločala o hitrem postopku seveda. Te prakse do sedaj ni bilo. O tej možnosti poslovnik ne govori. Že prej pa sem dal predlog gospoda Špiletiča glede umika dnevnega reda določene točke, da se pred odločitvijo o tem sestane matično delovno telo. Poslovnik govori samo o razširitvi. Bom tudi sedaj dal torej predlog, v tem primeru gospoda Potrča, da se pred odločitvijo o tem, ali bomo obravnavali predlog zakona o spremembah in dopolnitvah zakona o pokojninskem in invalidskem zavarovanju po hitrem postopku sestane tudi matično delovno telo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg192">Torej, ta proceduralni predlog dajem na glasovanje. Ugotavljamo prisotnost!</seg>
@@ -1201,31 +1184,31 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg195">Torej ta predlog ni bil sprejet. Besedo je imel predlagatelj zakona. Sedaj ima besedo poročevalec oziroma poročevalka matičnega delovnega telesa, če želi besedo. Gospa Zbačnikova, prosim.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg196">Še enkrat lep pozdrav. Sedaj mislim, pa dodatno smo prejeli mnenje sekretariata, kjer še dodatno potrjuje, da ne izpolnjuje vse pogoje za hitri postopek, in menim še dodatno, da bi moralo matično delovno telo razpravljati še preden smo se odločali o hitrem postopku. To je eno. Drugič pa, sam predlagatelj je povedal, da na ekonomsko-socialnem svetu se sindikati še niso uskladili in tudi to je eden od razlogov, da bi se delovno matično telo moralo opredeliti. Naj vam še enkrat preberem. "Državni zbor je na 19. izredni seji 27.1.1998 sprejel sklep, po katerem je sam sebe zavezal, da bo pred obravnavo vsakega zakona, ki zadeva pravice socialnih partnerjev, zahteval poročilo predlagateljev zakona o tem, ali je doseženo soglasje med socialnimi partnerji o določenem predlogu in če ne, zakaj ni bilo doseženo in kje so odprta vprašanj in tudi poročilo odbora." Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg197">Hvala lepa gospa Zbačnikova. Želi besedo predstavnik sekretariata? Prosim, gospa Bitenčeva.</seg>
             </u>
             <note type="speaker">TINA BITENC-PENGOV:</note>
-            <u who="#SDZ2.BitencPengovTina" ana="#regular">
+            <u who="#BitencPengovTina">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg198">Gospod predsednik, cenjeni zbor! Glede na to, da ste pravkar prejeli pisno mnenje sekretariati, bi pravzaprav smo še enkrat dodatno utemeljila to, kar je pravzaprav napisano že. Sekretariat se seveda nima pravice opredeljevati v zvezi s tem, ali so podani pogoji za hitri postopek, zato smo pravzaprav samo ugotovili, da obrazložitve o hitrem postopku ni in tudi niso utemeljeni razlogi. Mi seveda razlogov nismo dolžni presojati, ampak to utemeljitev, ki smo jo pa podali pravzaprav v našem mnenju, pa posega pravzaprav samo na to, da predlagatelj v samem predlogu zakona, ki ga je pisno odložil, ni sploh, bom rekla, postopil obrazlagati razlogov za hitri postopek v skladu s poslovnikom. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg199">Hvala lepa gospe Bitenčevi. Želi besedo predstavnik vlade? Državna sekretarka gospa Belopavlovičeva, prosim.</seg>
             </u>
             <note type="speaker">NATAŠA BELOPAVLOVIČ:</note>
-            <u who="#SDZ2.BelopavlovičNataša" ana="#regular">
+            <u who="#BelopavlovičNataša">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg200">Vlada podpira hitri postopek zaradi tega, ker mislimo, da so razmere na tem področju take, da zahtevajo hitro ukrepanje in sicer po vseh vprašanjih, ki jih ta predlog zakona ureja; tako glede usklajevanja kot glede predčasnega upokojevanja, dokupovanja let in obremenjevanja določene kategorije zavarovancev. Tako da vlada, še enkrat ponavljam, tak postopek podpira.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg201">Hvala, gospa Belopavlovičeva. Želijo besedo predstavniki poslanskih skupin? Gospod Potrč, gospa Zbačnikova, gospod Kebrič.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg202">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi! Spoštovani kolega, gospod Ivan Kebrič, vsaj nas, v poslanski skupini ni prepričal, čeprav je prosil, da naj bi bili prepričani, da ima prav, da zakon vlaga po hitrem postopku. Poslanska skupina še vedno nasprotuje hitremu postopku za obravnavo tega zakona. Še več, prepričana je, da bi bil sprejem tega zakona po hitrem postopku doslej najbolj grob primer kršitve poslovnika državnega zbora. Bila bi nesprejemljiva zloraba vladne večine, da se sproti prilagaja pravila ravnanja in državni zbor spreminja v orodje za uresničevanje svoje volje in svojih interesov. Poslanska skupina Združene liste še vedno upa, da bodo opozicija, predsednik in generalna sekretarka državnega zbora, pa tudi vsaj nekateri poslanci koalicije spoznali, da take zlorabe poslovnika niso dopustne in da le škodujejo delu in ugledu državnega zbora. Da bodo spoznali, da še tako pomembni cilji, v narekovajih, ki si jih zastavi koalicija, vlada ali posamezna stranka v njej, ne morejo opravičevati nedemokratična ravnanja, saj je demokracija in spoštovanje dogovorjenih pravil temelj parlametarnega dela in demokratične države. Trdimo, da je predlagani zakon pripravljen v nasprotju z drugim odstavkom 175. člena poslovnika, saj v njem niso navedene finančne posledice. Trditi o tem, da 2., 3., 4., 5. in 6., ne bom razlagal vsebine, da ne bo predolgo, členi zakona nimajo bolj ali manj bistvenih finančnih posledic na sklad pokojninskega in invalidskega zavarovanja, posredno pa tudi za državni sporazum, za državni proračun je neresnica. Kdor upa to trditi, naj pride za govornico. Če pa imajo in jaz trdim, da imajo finančne posledice, potem morajo biti te finančne posledice navedene v zakonu. Če v zakonu niso navedene, gospod predsednik, je vaša dolžnost, da v skladu s četrtim odstavkom 52. člena poslovnika ugotovite, da zakon ni vložen v skladu s poslovnikom in ga vrnete predlagatelju. Do takrat, dokler ga ne popravi, pa zakonodajni postopek o tem zakonu ne more teči. Pričakujem, da boste danes to ugotovili.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg203">In drugič. Pričakujem, da boste ugotovili, da se ne more odločati tudi o zakonu po hitrem postopku, ker ni izpolnjen formalni pogoj, to je obrazložitev, zakaj so sploh podani razlogi za hitri postopek.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg204">Tudi s tega razloga bi že vi kot predsednik državnega zbora moral ugotoviti, da se o tem sploh glasovati ne more in ne sme, seveda, če bi spoštoval poslovnik, ne pa delal v korist koalicije.</seg>
@@ -1233,25 +1216,25 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg206">Gospod predsednik, veliko veliko je še razlogov, jaz bom o njih, ko bo ta zakon prišel na dnevni red, dodatno govoril. Najbolj bi pa rad poudaril naslednje. Moralno je nesprejemljivo, da se tako zlorablja državni zbor in tudi javnost in mene veseli, da je gospod Kebrič bil iskren in je danes povedal, da nesprejem odločitve njegove pomeni 1% manj za upokojence ali pa približno 4 milijarde sredstev pokojninskega sklada. Poudarjam to iz razloga, ker je še pred tednom dni vlada prihajala k vam, gospod predsednik, na kolegij in trdila, če ne bo takoj Kebričev zakon sprejet, bo prišlo do škode, ker bodo pokojnine večje in bo višja uskladitev. Naj enkrat ta vlada vsaj vsak teden dni ne spreminja stališč in ve, kaj dejansko hoče. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg207">Hvala lepa. Gospod Potrč je nekoliko presegel rok za razpravo, ampak je zaključil misel, tako da mislim, da bomo sprejeli to z razumevanjem. Torej, jaz bi rad povedal samo naslednje. Vprašanje hitrih postopkov in utemeljitev tako vlade ali poslancev, vemo, da je vedno lahko zelo vprašljiva zadeva in zadeva ocene. Gospod Kebrič je napisal naslednji stavek oziroma dva stavka: "Na predlogu 201. člena poslovnika državnega zbora Republike Slovenije predlagam, da predlog zakona državni zbor obravnava po hitrem postopku. Predlog za tak postopek utemeljujem s tem, da je sprejem sprememb zakona nujen, ker bo sicer prišlo do težav pri izvajanju zakona o pokojninskem in invalidskem zavarovanju." O utemeljenosti in zadostnih razlogih boste pa, spoštovane kolegice in kolegi, odločali vi. Kar se tiče ocene financ, o tem res govori točno 175. člen poslovnika državnega zbora, da mora predlog zakona vsebovati tudi med drugim oceno finančnih sredstev državnega proračuna. Predlog zakona govori obširno o finančnih posledicah, točno o številki ne govori, govori pa o finančnih posledicah. Tudi zato sem ta zakon dodelil tudi odboru za finance. Pričakujem, da ga bo skozi ta vidik tudi odbor za finance pogledal.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg208">Predlagatelj ima določbo v zakonu v obrazložitvi, ki govori o finančnih posledicah. Zato sem pač, kot predlagatelj dnevnega reda ocenil, da državni zbor lahko o tem zakonu odloča oziroma se odloča, ali ga bo sprejel po hitrem postopku ali ne. Ali so pa utemeljeni razlogi za hitri postopek, bomo pa odločili čez nekaj minut. Naslednji, ki se želi oglasiti je gospa Zbačnikova v imenu poslanske skupine socialdemokratov. Prosim za posluh v dvorani.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg209">Še enkrat lep pozdrav. Po vsem tem, zlasti potem ko smo prejeli mnenje sekretariata, tudi naša poslanska skupina je še bolj prepričana, da zakon nima pogojev za hitri postopek, ampak menimo, naj se zakon sprejme po rednem zakonodajnem postopku. Namreč, ostro posega v pravice aktivnih zavarovancev. To je ena. Drugič pa tudi sekretariat opozarja, da je treba preveriti ustavno dopustnost učinkov predlaganih sprememb in dopolnitev zakonov v posameznih zakonodajnih fazah. Namreč, predložena novela zakona vsebuje tudi take sistemske spremembe, ki restrektivno posegajo v posamezne občutljive mehanizma pokojninskega in invalidskega zavarovanja in so po strokovni strani zahtevni, zapleteni in katerih spremembe zato terjajo pozorno in analitično obravnavo in tehtanje njihovih ustavnih in sistemskih učinkov. Tako menimo, da so dani vsi pogoji, da se iz hitrega prekvalificira v redni zakonodajni postopek. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg210">Hvala lepa gospa Zbačnikova. Želi še katera od poslanskih skupin besedo? Gospod Kebrič, v imenu poslanske skupine Desus.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ2.KerbičIvan" ana="#regular">
+            <u who="#KerbičIvan">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg211">Hvala za besedo. Spoštovane kolegice in kolegi! Poslanska skupina Demokratične stranke upokojencev Slovenije podpira ta predlog za hitri postopek in sicer iz naslednjih razlogov. Ne bom ponavljal svoje argumentacije predhodne, ampak bom povedal naslednje. Koristi upokojencev in pokojninske blagajne s spremembo tega zakona se vsaj izravna, če ne gre že v korist tako rekoč pokojninske blagajne, predvsem iz razloga, da bodo plačevani tisti prispevki, ki so do sedaj bili v najnižji možni vrednosti, na drugi strani pa bodo upokojenci dobili tisto, kar upravičeno zahtevajo. Kar se tiče finančnega izračuna sem sedaj v stanju tega predložiti. Bom predložil finančni efekt na odboru, pa tudi na državnem zboru z ozirom na to, da so sedaj poznani najnovejši podatki. To je poslanski kolega Potrč že povedal, približno 4 milijarde. Na drugi strani pa bomo dokazali, da s spremembo tega zakona preostalih stvari bo priteklo v pokojninsko blagajno vsaj toliko denarja, če ne več. To je to, kar so upokojenci na vseh svojih zborovanjih, pa tudi protestnih pred to skupščino pred dvemi leti zahtevali, da se pravičneje razdelijo prispevki, tudi tisti, ki so se sedaj, da rečem po štajersko, "špekulirali" in zbrali svoje najnižje možne stopnje za plačilo prispevkov.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg212">Nenazadnje pa ravno razlogi iz navajanj poslanskega kolega gospoda Potrča, da se zadeva vleče že dve leti. Sedaj pa imamo to možnost iz praktičnih razlogov presekati in dokončati ter odpreti vrata za hitrejše delovanja našega državnega zbora. Za druge tudi enako, ali pa za koga bolj pomembne zakona za približevanje Evropi. Zato še enkrat v imenu poslanske skupine, prosim, da podprete ta hitri postopek, saj bomo s tem razrešili veliko problemov. Pokazali se bodo finančni efekti in postali bomo, kot ustava pravi, če že ne čisto, ampak vsaj bolj enakopravni tudi pri dolžnosti plačevanja prispevkov v pokojninsko blagajno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg213">Hvala gospod Kebrič. Želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg214">Ker je gospod Kebrič kot zadnji razpravljalec govoril, pričakujem, da ne bo v imenu predlagateljev še enkrat nastopil.</seg>
@@ -1379,11 +1362,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg280">Prosim.</seg>
             </u>
             <note type="speaker">FRANC ČEBULJ:</note>
-            <u who="#SDZ2.ČebuljFranc" ana="#regular">
+            <u who="#ČebuljFranc">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg281">Hvala. Gospod predsednik, žal prehitro izklopite navzočnost v dvorani, in bi prosil, če ponovimo glasovanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg282">Se opravičujem, gospod Čebulj. Na glasovanje dajem predlog, da glasovanje o tem sklepu ponovimo. Ugotovimo sklepčnost!</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg283">Kdo je za, da ponovimo glasovanje o tem, da se ta zakon sprejme po skrajšanem postopku?</seg>
                <note>45 poslancev.</note>
@@ -1401,14 +1384,14 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg291">Vlada Republike Slovenije je v obravnavo zboru predložila predlog zakona o spremembah in dopolnitvah zakona o skladu kmetijskih zemljišč in gozdov, in predlaga zboru, da ga sprejme po skrajšanem postopku. Proceduralno, prosim gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg292">Gospod predsednik, hvala lepa. Jaz sem se tokrat pravočasno oglasil in bi prosil, res ker ste pol stavka povedal, se opravičujem in bi prosil, če bi vašo ugotovitev, da se ta zakon umakne iz dnevnega reda, dali na glasovanje. Moj predlog je namreč, da vsaj v prvi obravnavi na dnevnem redu ostane, nobenega razloga, to je mogoče narediti. Vi veste, da je takšen presedan bil že opravljen pri zakonu o skladu kmetijskih zemljišč in gozdov, čeprav ne pravočasno, ampak kasneje.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg293">Razlogi so pa naslednji. Jaz sem pričakoval, da se bo kaj takega zgodilo, ker me koalicija ne čudi in ne preseneča nikoli. Ampak mi imamo tri različne zakone v proceduri.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg294">Mojega; zakon, ki smo ga skupaj podpisali nekaj poslancev s prvopodpisanim gospodom Žnidaršičem; in vlada. Ga še ni vložila, ampak nas prepričuje in nam dopoveduje, da bi že dolgo časa želela pripraviti določene spremembe in na nek način zaokrožiti problem žrtev vojnega nasilja.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg295">Mislim, da je pametno, da če ste se že odločili, da ne gremo po skrajšanem postopku, čeprav bodo upam, da vam izgnanci za to hvaležni, ker bo še naprej ostalo stanje takšno, da bodo morali čakati tri, štiri in pet let po sprejemu zakona na pravico, ki ste jo jim formalno dali, ampak tako pač je. Tako je koalicija odločila, da vsaj prvo obravnavo začnemo opravljati, da bo v pol leta ali letu dni, končno ta zakon urejen. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg296">Hvala gospod Potrč. Omenjali ste eno podobno situacijo, nekaj sej nazaj. Ni bila povsem enaka kot današnja. Takrat je šlo za umik zakona z dnevnega reda in potem na podlagi odločitve državnega zbora je eden od poslancev predlagal, da se ta zakon ponovno uvrsti na dnevni red.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg297">Torej gospod Potrč predlaga, proceduralno, da se predlog zakona o spremembi in dopolnitvi zakona o žrtvah vojnega nasilja uvrsti tudi na to sejo in sicer, jasno po rednem postopku. Ta proceduralni predlog gospoda Potrča dajem na glasovanje. Ugotavljamo prisotnost!</seg>
                <note>63 prisotnih.</note>
@@ -1423,33 +1406,33 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg303">Želi besedo poročevalec matičnega delovnega telesa? Gospod Potočnik, prosim.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg304">Hvala lepa za besedo. Gospod predsednik je že povedal, da matično delovno telo soglaša s tem, da se predlog tega zakona obravnava po skrajšanem postopku.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg305">Oglasil sem se pa zato, ker je bila pač v prejšnjih razpravah podana opazka, da je poročilo dvomljivo napisano. Moram reči, da je poročilo korektno pripravljeno, da se služba odbora za kmetijstvo, gozdarstvo in prehrano trudi vedno, da zapisnik in poročila res dobro pripravi, in tudi to poročilo je tako sestavljeno. Sklep je pa jasen: odbor predlaga Državnemu zboru Republike Slovenije, da predlog zakona o spremembah in dopolnitvah zakona o skladu kmetijskih zemljišč in gozdov Republike Slovenije obravnava na 8. seji zbora po postopku, kot ga predlaga predlagatelj, to je po skrajšanem postopku.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg306">Hvala lepa, gospodu Potočniku. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg307">Za besedo poslanskih skupin se je že oglasil gospod Veber, v imenu poslanske skupine Združene liste socialnih demokratov.</seg>
             </u>
             <note type="speaker">JANKO VEBER:</note>
-            <u who="#SDZ2.VeberJanko" ana="#regular">
+            <u who="#VeberJanko">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg308">Hvala še enkrat za besedo. V poslanski skupini Združene liste socialnih demokratov nasprotujemo skrajšanemu postopku in sicer iz naslednjih razlogov.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg309">Če pogledamo vsebino predlaganega zakona ugotovimo, da v 1. členu želi sklad še enkrat potrditi že dano zakonodajno možnost, da je financiranje iz državnega proračuna - to že ima v osnovnem zakonu - ponovno hoče to doseči v tej spremembi zakona, tako da je ta nejasnost, zakaj dvakrat zapisati to določbo v zakon, še vedno prisotna. Potem se seveda moramo ustaviti tudi pri nejasnosti glede pogodb, na katere se sklicuje sklad in pravi, da zaradi nesklenjenih pogodb z nekdanjimi opravljalci družbenih zemljišč ne more vpisati lastnine, državne lastnine v zemljiško knjigo, ni pa natančno jasno, za kakšne pogodbe in kakšno vsebino pogodb naj bi šlo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg310">Nadalje je zelo velika nejasnost tudi glede tega, da sicer poskuša ta zakon vračati nezazidana stavbna zemljišča občinam; seveda jim ne vrača nič, kajti vrača jim samo tisto, kar občine že imajo. Poleg tega pa seveda je nejasna tudi določba, ki govori o tem, da je sklad zavezanec v postopku denacionalizacije in seveda v tem zakonu se ta zadeva ne opredeljuje natančno in po skrajšanem postopku bo seveda verjetno da težko najti pravo rešitev.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg311">Poleg tega pa bi še enkrat želel opozoriti na nejasnost med 14. členom v sedaj že veljavnem zakonu in v predlagani spremembi 22. člena. Namreč v 14. členu veljavnega zakona govorimo o tem oziroma zakon govori o tem, da postanejo, da se štejejo za kmetijska zemljišča in gozdove tista nezazidana stavbna zemljišča, ki 11.3.1993 niso bila določena kot takšna v prostorskem izvedbenem aktu. Tukaj bi opozoril vse župane ali pa sploh tiste, ki želijo, da bi se dejansko nezazidana stavbna zemljišča vrnila občinam, da bo 14. člen preprečeval izvedbo 22. člena, ki naj bi sicer omogočal vrnitev nezazidanih stavbnih zemljišč, ki so opredeljena v družbenem planu. V kolikor 14. člen ostane nespremenjen, 22. člena ne bo možno izvajati in občine zopet ne bomo dobile nič, in 14. člena seveda, če je skrajšani postopek, ni možno spreminjati, ker ga vlada nima v tem predlogu. Zato mislim, da obstajajo izredno utemeljeni razlogi, da se skrajšani postopek ne sprejme in da je edini primerni postopek redni postopek, na kar pa tudi opozarja sekretariat za zakonodajo in pravne zadeve. Gre seveda tudi za zelo pomembno dejstvo, da so določbe okrog koncesij za gospodarjenje z državnimi gozdovi v tem zakonu protiustavne. V kolikor se bo z glasovanjem vseeno šlo s predlogom vlade naprej, v skrajšanem postopku ne bo možno dobiti mnenja ali pa ponovnega preverjanja ustavnosti te določbe s strani ustavnega sodišča, kajti ustavno sodišče po skrajšanem postopku najbrž da teh zadev ne bo obravnavalo in bi bilo možno ta problem seveda ustrezno rešiti samo, če bi ta zakon tekel po rednem postopku. Zato mislim, da se vendarle moramo kot državni zbor, in v poslanski skupini seveda opozarjamo na to, da moramo spoštovati veliko bolj kot smo do sedaj, mnenja sekretariata za zakonodajo in pravne zadeve, ki opozarja na vse te pomanjkljivosti in seveda lepo piše, da predlagane rešitve v vsebinskem pogledu so takšne narave, da niso podani pogoji v smislu 204.a člena poslovnika državnega zbora, da bi lahko ta zakon tekel po skrajšanem postopku. Zato nasprotujemo v poslanski skupini skrajšanemu postopku in seveda podpiramo edino redni postopek. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg312">Hvala lepa, gospod Veber. Želi še katera od poslanskih skupin? Gospod Lešnik v imenu poslanske skupine DeSUS.</seg>
             </u>
             <note type="speaker">ZORAN LEŠNIK:</note>
-            <u who="#SDZ2.LešnikZoran" ana="#regular">
+            <u who="#LešnikZoran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg313">Gospod predsednik, kolegice in kolegi! Ne bom govoril na široko, ker je kolega Veber marsikaj od tega, kar sem imel namen povedati, povedal. Rad bi rekel samo to, da naša poslanska skupina nasprotuje skrajšanemu postopku in predlaga, da gre zakon v obravnavo v normalnem postopku. To iz preprostega razloga, ker ni niti enega resnično utemeljenega vzroka, da bi o spremembah in dopolnitvah razpravljali in sklepali po skrajšanem postopku in pa seveda, tu se pa močno sklicujemo tudi na mnenje sekretariata za zakonodajo in pravne zadeve. In ne nazadnje, v tem zakonu, čeprav gre za spremembo malega števila členov, gre za korenite spremembe, ki bodo povzročile določene posledice, uporabil bom besedo: tudi brigade na novo nezaposlenih ljudi. Ne uganjam demagogije, to lahko dokažem in vsakemu lahko to dokažem. Zaradi tega še enkrat poudarjam, da predlagamo, da ta točka dnevnega reda ne gre po skrajšanem postopku, ampak po normalnem in vas prosim, da ta predlog podprete.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg314">Hvala lepa. Želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg315">Želi predlagatelj dodatno obrazložiti svoj predlog za skrajšani postopek, v tem primeru je predlagatelj vlada?</seg>
@@ -1457,11 +1440,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg316">Želi? Gospod But. Državni sekretar, gospod But.</seg>
             </u>
             <note type="speaker">FRANC BUT:</note>
-            <u who="#SDZ2.ButFranc" ana="#regular">
+            <u who="#ButFranc">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg317">Hvala lepa. Mi kljub vsemu menimo, da gre za na eni strani vendarle manjše spremembe po obsegu, na drugi strani pa menimo, da gre za nujno potrebo, da sklad pridobi vse možnosti, da lahko funkcionira normalno, kot se to od njega pričakuje. Seveda pa, če mi je dovoljeno, v vsakem primeru tudi vprašanje vzpostavitve večje konkurenčnosti pri pridobivanju del v državnih gozdovih je pomembno vprašanje, ki narekuje k takemu načinu postopka. To, da je za 20 let zagotovljeno samo bivšim izvajalskim gozdnim podjetjem možnost pridobivanja del v javnih gozdovih, pomeni, da 20 let ni mogoče ničesar skoraj narediti pri tem, da bi kakorkoli - v končni fazi tudi omogočili recimo kmetijam, ki živijo na demografsko ogroženih področjih, da bi pridobile recimo v najem gozdna zemljišča. In mi govorimo o tem, da moramo razviti demografsko ogrožena področja, in to je možno samo ali na eni strani z denarjem iz državnega proračuna, ki ga je zelo težko v dovolj visoki višini dati, ali pa tudi s pomočjo, kot ga omogoča zakon o spremembah zakona o skladu kmetijskih zemljišč in gozdov. In tudi to je argument, da je tukaj potrebno narediti nekoliko drugačno rešitev, kot je sedaj predvidena. In nenazadnje zagotovo bodo pri tem, ko bo nekdo pridobil koncesijo za izvajanje del v javnih gozdovih, zagotovo bodo to opravljali ljudje, delavci, in zagotovo tukaj ne more biti govora o kakršnikoli armadi nezaposlenih in mislim, da tukaj v vsakem primeru lahko delo opravijo samo ljudje in nihče drug.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg318">Hvala lepa gospodu Butu, državnemu sekretarju.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg319">Na glasovanje dajem predlog za sprejem predloga zakona o spremembah in dopolnitvah zakona o skladu kmetijskih zemljišč in gozdov, po skrajšanem postopku. Navedeni predlog ne bo sprejet, če mu bo nasprotovalo najmanj ena tretjina navzočih poslancev. Ugotavljamo prisotnost!</seg>
                <note>59 prisotnih.</note>
@@ -1473,11 +1456,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg323">Gospod Potočnik, imate proceduralni predlog? Prosim.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg324">Spoštovani! Glede na to, da skrajšan postopek ni bil sprejet, predlagam, da se prva obravnava tega zakona opravi na tej seji, kot 34. točka dnevnega reda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg325">Hvala lepa. Predlog gospoda Potočnika, proceduralni predlog dajem na glasovanje. Predlagam pa, kdaj se bo to obravnavalo? Na 8. seji seveda. Dajem proceduralni predlog gospoda Potočnika na glasovanje, da se predlog tega zakona obravnava v prvi obravnavi na 8. seji. Ugotavljamo prisotnost!</seg>
                <note>57 poslancev.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg326">Kdo je za proceduralni predlog gospoda Potočnika?</seg>
@@ -1538,11 +1521,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg356">Izčrpali smo obravnave in odločanje o hitrih in skrajšanih postopkih. O skrajšanem roku smo se že izjasnili. Sprašujem kolegice poslanke in kolega poslance, ali želi v zvezi z dnevnim redom še kdo besedo? Gospod Hvalica in gospod Špiletič želita besedo.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg357">Hvala lepa gospod predsednik. Spoštovani kolegi! Druga točka dnevnega reda obravnava Strategije Republiko Slovenije za vključevanje v Evropsko unijo. Obravnava strategije, tako piše. V poslovniku državnega zbora 166. člen, jaz nisem našel opredelitve za takšen postopek. Ker smo se mi v državnem zboru že zapletli v podobnih primerih, bi želel, da se do tega opredelimo, da ugotovimo pravzaprav, kaj bomo obravnavali, kaj bomo sprejemali, česar ne bomo sprejemali. Ta zadeva je silno nejasna. Čigav akt je to? Na seji delovnih teles smo slišali, da je to akt vlade. Čemu potem obravnava? Kaj naj prispeva k temu aktu obravnava, če ni možnost sprejemanja tudi dopolnil in sprememb? Skratka, na podlagi 166. člena poslovnika želim, da pred pričetkom obravnave te točke dnevnega reda, ugotovimo kaj je pravzaprav pristojnost državnega zbora za takšen način obravnave in kaj bodo, jasno, posledice? Sicer, če naj tu samo ponovimo tisto, kar smo že slišali, potem ne vem, čemu to služi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg358">Hvala lepa gospod Hvalica. O vprašanjih, o katerih ste vi razpravljali, je že bila razprava na nekaterih delovnih posvetih, prav tako pa tudi na delovnem telesu, ko se je ukvarjalo s tem vprašanjem.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg359">Druga točka se glasi: "Obravnava strategije Republike Slovenije za vključevanje v Evropsko unijo in predlog sklepov in stališč strategij." Torej strategija je osnova za sklepe in stališča, ki jih bo državni zbor sprejel. Kajti kot dokumente državnega zbora, člen poslovnika, ki ste ga citiral, izrecno govori tudi o sklepih, katere lahko sprejema državni zbor.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg360">Mislim pa, da je v dopisu vlade jasno razvidno, da je strategija Republike Slovenije za vključevanje v Evropsko unijo akt Vlade Republike Slovenije.</seg>
@@ -1550,14 +1533,14 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg362">Gospod Špiletič, želite besedo?</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg363">Gospod predsednik, jaz ne vem, če je sedaj pravi čas, ali bi lahko kasneje se oglasil. Vendar želim opozoriti na dejstvo, da je na dnevnem redu 66. točk, da so posamezne točke izredno, izredno obsežne in pomenijo sistemsko urejanje posameznih izredno pomembnih področij naše države.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg364">Zaradi tega bi jaz rad nedvomno in jasno vas prosil, da poveste, kdaj bo katera točka na obravnavi, da se bomo lahko v poslanskih skupini za božjo voljo dogovorili, kakšno stališče bomo do posameznih zakonov zavzeli. Morate vedeti, da nismo vse poslanske skupine v istem položaju. Nekatere poslanske skupine imate državnega sekretarje, ki sodelujejo pri pripravi teh zakonov in vas na hitro inštruirajo, drugi se moramo skozi obilico gradiva prebijati sami.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg365">Zato vas resnično prosim in apeliram, dajte zagotoviti normalen potek tek dela, dajte v naprej napovedati katere toče se bodo obravnavale. Opozarjam pa, da na način dela, kot se je začel današnji dan, to ne bo mogoče. Danes ob 8.30 uri zjutraj je bila ena izredna seja odbora za mednarodne odnose, ob 13.00 uri je druga izredna seja odbora za delo, družino in socialne zadeve in ne vem koliko teh izrednih sej vmes bo še.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg366">Če mislite na ta način izčrpavati delo državnega zbora tudi za ceno tega, da bodo obravnave manj kvalitetne, površne, in da bo večina izsilila svoje odločitve, je to prav, vendar imamo pravico tudi poslanci opozicije pridobiti čas za kvalitetno obravnavo in aktivno sodelovanje pri obravnavi posameznih predlogov zakonov.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg367">Hvala gospod Špiletič. Predno bi odgovoril na vaše vprašanje in na vašo pobudo, ki jo podpiram, bi želel pozdraviti delegacijo odbora za zunanjo politiko danskega parlamenta, pod vodstvom predsednice tega odbora, gospe Helle Degn, ki je te dni na obisku v državnem zboru. V okviru programa obiska so imeli naši gostje vrsto razgovorov z različnimi predstavniki državnega zbora, pa tudi pogovore z vladnimi predstavniki. Danes se vračajo na Dansko in upamo, da od nas odhajajo z dobrimi vtisi, ter da bomo sodelovanje z danskim parlamentom na različnih ravneh uspešno nadaljevali tudi v prihodnje. <gap reason="inaudible"/>
                </seg>
                <note>Aplavz.</note>
@@ -1579,7 +1562,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg379">Prehajamo na 1. TOČKO DNEVNEGA REDA - OBRAVNAVA PREDLOGA ZA ZAČETEK POSTOPKA ZA SPREMEMBO 82. ČLENA USTAVE REPUBLIKE SLOVENIJE. Predlog je v obravnavo zboru predložilo več kot 40.000 volivk in volivcev. Sprašujem, če želi predstavnik predlagateljev besedo? Besedo ima gospod Janez Janša.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SDZ2.JanšaJanez" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg380">Spoštovani gospod predsednik, kolegice in kolegi! Po svoje je seveda nenavadno, da državni zbor o začetku postopka za spremembo ustave, skratka o predlogu, ki ga je podprlo več kot 40.000 volivk in volivcev, razpravlja na seji kot o eni izmed 68 točk dnevnega reda. Ampak ne glede na to bi želel opozoriti na to, da obravnavamo predlog, ki ga ni vložil v parlamentarno proceduro en poslanec ali ena poslanska skupina, ampak da gre za predlog, ki ga podpira po javnomnenjskih raziskavah absolutna, skoraj plebiscitna večina v slovenski javnosti in da gre za predlog, pod katerega se je neposredno v skladu z zakonom podpisalo velikansko število volivk in volivcev.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg381">Konkretno je več kot 40 tisoč slovenskih volivk in volivcev predlagalo, da se načelo osebne odgovornosti poslancev do volivcev ter pravica volivk in volivcev do odpoklica poslanca zapiše tudi v slovensko ustavo, in zaradi tega je potem v skladu z zakonom o referendumu o ljudski iniciativi prišlo tudi do začetka postopka za spremembo ustave Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg382">Konkretno predlagamo, da v ustavi Republike Slovenije spremenimo prvi odstavek 82. člena, tako da glasi: "Poslanci so predstavniki ljudstva, odgovorni so volivcem, ki so jih izvolili. Zahtevo za odpoklic poslanca s predčasnimi volitvami v okraju lahko da ena tretjina volivcev tistega volilnega okraja, v katerem je bil izvoljen poslanec. Poslanec je odpoklican z dnem, ko državni zbor potrdi mandat na predčasnih volitvah izvoljenemu poslancu. Odpoklic poslanca pred iztekom mandata ureja zakon, ki ureja volilni sistem."</seg>
@@ -1605,11 +1588,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg402">Kakorkoli, glede na to, da v sedanji ustavi, pa tudi na začetku tega člena, ki ga predlagamo kot spremenjenega, piše, da smo poslanci vsega ljudstva, predlagam, da se danes tako tudi opredelite. Kot sem že prej rekel, po vseh merjenjih javnega mnenja, po vseh merjenjih volje tega ljudstva, pa tudi glede na veliko podporo, ki jo je ta akcija doživela, ko smo zbirali podpise, 90% ljudi v Sloveniji zahteva takšno možnost kot jo mi predlagamo. Skratka, če smo res poslanci vsega ljudstva, potem bomo to voljo upoštevali. Ravno v tej točki se bo pokazalo, ali je to, kar so nekateri omenjali in navajali kot glavni razlog, kot glavni argument za zavrnitev tega predloga, ali gre tukaj za spoštovanje volje ljudstva ali gre za kaj drugega. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg403">Hvala lepa gospodu Janezu Janši, ki je spregovoril v imenu predstavnikov predlagateljev. Predlog je obravnavala ustavna komisija državnega zbora kot matično delovno telo in dovolite mi, da v funkciji njenega predsednika podam poročilo.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg404">Spoštovane kolegice in kolegi! Ustavna komisija državnega zbora Republike Slovenije je na svoji 5. seji, 17. oktobra 1997 obravnavala in se opredelila do predloga več kot 40.000 volilk in volilcev za začetek postopka za spremembo ustave za odpoklic poslanca. Na prošnjo predsednika ustavne komisije so strokovnjaki pravne fakultete univerze v Ljubljani dr. Franci Grat, dr. Igor Kavčič in mag. Miro Cerar pripravili strokovno mnenje o odpoklicu poslanca in ga na seji še dodatno utemeljili. Rad bi povedal še naslednje, da sem se obrnil tudi na nekatere druge pravne strokovnjake, ki pa se vabilu, da bi strokovno sodelovali pri tem vprašanju, niso odzvali.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg405">Vlada Republike Slovenije je na svoji seji 3. julija 1997 obravnavala predlog za začetek postopka in tudi podala svoje mnenje. Mnenje ste prejeli tudi danes s sklicem k tej točki dnevnega reda, s predlogom pa se vlada ne strinja.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg406">Na kratko bi rad povzel poročilo, ki ste ga vsi tudi prejeli. Predstavnik predlagateljev je najprej predstavil predlog za začetek postopka za spremembo 1. odstavka 82. člena ustave Republike Slovenije, nato so člani strokovne skupine predstavili strokovne poglede na to vprašanje. Nato je sledila razprava. Strokovna skupina, torej vsak strokovnjak iz svojega področja je predstavil mnenje. Vsebino razprave ali stenogram ste lahko, če vas je to zanimalo, prejeli. Iz same razprave bi rad omenil naslednje. Predvsem je šlo za nekatera odprta poslovniška oziroma proceduralnavprašanja, še posebej, na kakšen način se obravnava spremembo ustave. Namreč, šlo je za vprašanje 2. odstavka 168. člena ustave Republike Slovenije, katere določba obravnava način odločanja državnega zbora. Na sami seji prisotni takratni predsednik sekretariata je pojasnil, da državni zbor odloča o predlogu z dvotretjinsko večino navzočih poslancev, kar konkretno pomeni, da mora dve tretjini poslancev glasovati za predlog. Bilo je še nekaj drugih vprašanj proceduralne narave, ki so bila potem vsa razrešena s samim glasovanjem.</seg>
@@ -1617,7 +1600,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg408">Zato, po opravljeni razpravi in glasovanju o predlogu več kot 40.000 volivcev za začetek postopka za spremembo prvega odstavka 82. člena ustave, ustavna komisija državnemu zboru Republike Slovenije predlaga, da glasuje o naslednjem sklepu: "Na podlagi predloga več kot 40.000 volivk in volivcev se začne postopek za spremembo prvega odstavka 82. člena ustave Republike Slovenije in se ga zavrne." Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg409">Sprašujem, če želi besedo predsednik sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg410">Ali želi besedo predstavnik vlade?</seg>
@@ -1625,20 +1608,20 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg411">Gospod Marušič, minister za pravosodje.</seg>
             </u>
             <note type="speaker">TOMAŽ MARUŠIČ:</note>
-            <u who="#SDZ2.MarušičTomaž" ana="#regular">
+            <u who="#MarušičTomaž">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg412">Predsednik, hvala lepa. Spoštovane poslanke in poslanci! Vlada je stvar obravnavala na svoji seji dne 3.7. lanskega leta in po proučitvi stvari podala svoje mnenje, da pobuda 40.000 volivk in volivcev ni sprejemljiva.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg413">Hvala lepa gospodu ministru. Prehajamo na besede predstavnikov poslanskih skupin. Predlagam pa, da državni zbor pred nadaljevanjem, torej pred možnostjo, da spregovorijo predstavniki poslanskih skupin, prekine z delom in nadaljuje ob 14.30 uri. Prosim za prijavo. Gospa Zbačnikova, želite pojasnilo oziroma opozorilo?</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg414">Še enkrat prosim vse člane odbora za zdravstvo, delo in družino, da se takoj sedaj sestanemo za 10 minut v veliki dvorani na Tomšičevi 5. Za 10 minut. Hvala lepa.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 13.00 uri in se je nadaljevala ob 14.54 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg415">Kolegice in kolegi, nadaljujemo z 8. redno sejo. Ugotavljamo prisotnost!</seg>
                <note>40 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg416">Ponovili bomo glasovanje. Ugotavljamo prisotnost!</seg>
@@ -1647,7 +1630,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg418">Smo pri 1. točki dnevnega reda - pri predlogu za začetek postopka za spremembo 82. člena ustave Republike Slovenije. Prišli smo do razprav poslanskih skupin. K razpravi se je prijavil v imenu poslanske skupine Slovenske ljudske stranke, gospod Leon Gostiša in mu dajem besedo.</seg>
             </u>
             <note type="speaker">LEON GOSTIŠA:</note>
-            <u who="#SDZ2.GostišaLeon" ana="#regular">
+            <u who="#GostišaLeon">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg419">Hvala za besedo. Spoštovani kolegi in kolegice.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg420">Državni zbor Republike Slovenije se drugič v tem sklicu srečuje s pobudo za začetek postopka za spremembo ustave.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg421">Sprejem 68. člena ustave je predlagala vlada. Tokrat pa predlagatelji posredujejo predlog več kot 40 tisoč volivk in volivcev, ki so s svojimi podpisi podprli predlog za odpoklic poslanca. Veljavna ustava Republike Slovenije instrumenta odpoklica poslanca ne vsebuje. Namen predlagatelja, da se na ta način uveljavi načelo neposredne odgovornosti poslanca do volivcev, je posledica dejstva, da je preverjanje delovanja poslancev možno le post festom, na volitvah v času trajanja mandata pa so njegove odločitve osebne oziroma v našem parlamentarnem sistemu običajno podrejene zahtevam politične stranke, ki ga je kandidirala.</seg>
@@ -1657,11 +1640,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg425">Predlog pa odpira še eno pomembno vprašanje, ki se nanaša na ustavo in poslovnik državnega zbora. V danem primeru se bo verjetno zgodilo, da bo odločitev državnega zbora v nesoglasju s predlogom volivcev. Kaj je več vredno na tehtnici? Dvotretjinska odločitev državnega zbora, ali ustavno zagotovljena pravica instituta ljudske pobude. Potreben je torej korenit razmislek in harmonizacija ustave in poslovnika, s katero bi natančno opredelili pristojnosti državnega zbora v takem primeru.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg426">Hvala lepa gospodu Gostiši. V imenu poslanske skupine Združene liste socialnih demokratov dajem besedo gospodu Potrču.</seg>
             </u>
             <note type="speaker">MIRAN PORTČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg427">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi, poslanska skupina Združene liste socialnih demokratov soglaša z ugotovitvami ustavne komisije državnega zbora, utemeljene v mnenju pravnih strokovnjakov, da predlagane spremembe 82. člena ustave Republike Slovenije niso sprejemljive. Predlagane spremembe bi namreč bistveno posegle v temelje naše ustavne ureditve, saj bi v veljavni predstavniški mandat, ki je značilen za parlamentarne demokracije v Evropi, uvedle pomembne elemente imperativnega mandata. Poslanci smo namreč po slovenski ustavi formalno predstavniki vsega ljudstva, ne pa le predstavniki svojega volilnega okraja. Delovati naj bi bili dolžni v skladu z interesi vsega ljudstva, ne pa na podlagi navodil kogarkoli, tudi ne le svoje stranke in tudi ne le volivcev svojega volilnega okraja. Predlagane spremembe pa bi bilo mogoče poleg tega uveljaviti le, če bi ob njihovi uveljavitvi bistveno posegli v veljavni volilni sistem.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg428">Razrešitev poslanca bi namreč pomenila, da se morajo nadomestne volitve opraviti le v volilni enoti in to po večinskem volilnem sistemu. To bi pomenilo vnašanje tudi v veljavni volilni sistem dodatnih elementov večinskega sistema, poleg tega pa bi nadomestne ali pa ponovne volitve v posameznih volilnih okrajih potencialno porušile temeljno razmerje med strankami, kakršno je bilo vzpostavljeno z volitvami.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg429">Nobenega dvoma torej ni, da ti predlogi niso v skladu z veljavnim ustavnim konceptom parlamentarne demokracije, predstavniškega mandata in vloge državnega zbora ter da bi pomenili bistven poseg v ustavo in veljavni sistem volitev v državni zbor. To je končno razumljivo tudi z vidika ciljev predlagateljev, saj se moramo spomniti časa, ko je bila pobuda državljanov zbirana. Zbrana je bila namreč istočasno s predlogi za referendum o volilnem sistemu, o predlogu socialdemokratske stranke Slovenije, da se v Sloveniji uvede dvokrožni večinski volilni sistem. Vse to so razlogi, zaradi katerih poslanci Združene liste ne bomo podprli predloga za spremembo 82. člena ustave Republike Slovenije.</seg>
@@ -1675,7 +1658,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg437">Spoštovane kolegice in kolegi! Vem, verjamem, da se nam je vsem skupaj ali pa marsikomu zdelo poslušati to, kar sem govoril, zoprno, in da ste mnenja, da pravzaprav ne kaže ponavljati tega, ker s tem smo neprijazni drug do drugega. Vendar se nam je zdelo prav, da hkrati ob sporočilu, da ne bomo podprli predloga za spremembe 82. člena ustave, povemo tudi nekaj teh opozoril. Z njimi smo želeli poudariti, da je prav, da tudi poslanke in poslanci razumemo, v čem in zakaj so bile zahteve volivk in volivcev, ki so v tako velikem številu podpisali pobudo za ustavne spremembe in zahtevali večjo odgovornost, če je treba tudi odpoklic poslancev državnega zbora. Prepričani smo, da je ta njihova zahteva vsebinsko več kot upravičena, formalno pa težko izvedljiva ali nezmožna. Zato upamo, da danes, ko bomo odločali o tem, ne bomo to zahtevo le formalno zavrnili, takšno bo vsaj naše glasovanje, ampak da bomo vsaj malo poskušali, če drugače ne, vsaj ob tej točki, če že ob naslednji ponovno ne, ugotoviti, da je tudi na nas precej, da bi lahko zagotovili drugačno kvaliteto dela državnega zbora in tudi naš skupni drugačen odnos do tistih, ki so nas izvolili. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg438">Hvala lepa gospodu Potrču. Želi še katera poslanska skupina besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg439">Potem prehajamo na besede oziroma možnost, da spregovorijo poslanke in poslanci. Pisnih razprav ni bilo. Tisti, ki se niso pisno prijavili k razpravi, tistim bom omejil na 5 minut. Kdo želi besedo? Ne želite besede? Potem pomeni, da smo razpravo zaključili. Zaključil bi splošno razpravo in bi prešel na glasovanje.</seg>
@@ -1693,11 +1676,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg449">Kdo je za predlagani? Torej, nihče se ni oglasil. Mislim, da sem korektno vodil in sem zaključil razpravo. Proceduralno ? Ampak med glasovanjem smo. Torej, gospod Špiletič ne morem vam dati besedo.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg450">Gospod predsednik samo prosil bi, če še enkrat jasno in glasno poveste, o čem glasujemo. Namreč enkrat ste obrnil vprašanje pozitivno, enkrat ste ga negativno. Prosim, dajte jasno povedati, o čem glasujemo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg451">V svojem drugem posegu sem povsem jasno povedal. Državni zbor glasuje o naslednjem sklepu: "Na podlagi predloga več kot štirideset tisoč volivk in volivcev se začne postopke za spremembo prvega odstavka 82. člena Ustave Republike Slovenije." O tem sklepu državni zbor glasuje. Še enkrat bomo ugotavljali prisotnost. Ugotavljamo prisotnost!</seg>
                <note>61 poslancev.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg452">Kdo je za navedeni sklep?</seg>
@@ -1709,7 +1692,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg456">Prehajamo na 2. TOČKO DNEVNEGA REDA - NA OBRAVNAVO STRATEGIJE REPUBLIKE SLOVENIJE ZA VKLJUČEVANJE V EVROPSKO UNIJO TER PREDLOGA SKLEPOV IN STALIŠČ. Strategijo je v obravnavo zboru predložila Vlada Republike Slovenije. Matično delovno telo pa je v obravnavo in sprejem zboru predložilo predlog sklepov in stališč. Sprašujem, ali želi predstavnik vlade besedo? Želi. Besedo dajem ministru za evropske zadeve, gospodu Igorju Bavčarju.</seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SDZ2.BavčarIgor" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg457">Spoštovani gospod predsednik! Spoštovane poslanke in poslanci, gospe in gospodje! Ko nas bodo vnuki spraševali, kaj smo počeli ob koncu 20. stoletja, ali jim bomo lahko odgovorili: "Delali smo državo". In ko bodo hoteli vedeti, kaj vendar pomenijo te težke besede, jim bomo morali znati povedati, da so se ob koncu 20. stoletja na novo postavljali temelji njihove nove prihodnosti. Da se bo treba znati odločiti, kam in kako. Težo naših dejanj bodo sicer merili tako novinarji kot zgodovinarji. Toda prav pravi razsodniki bodo šele naše vnukinje in vnuki.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg458">To seveda ne pomeni, da ni že danes mogoče preverjati lastnih odločitev. Ne. To, recimo počnemo prav danes. Pomeni pa, da se zavedamo vprašanj, ki bodo pestila tudi njih. Ali bodo še vedno na svoji zemlji, ali bodo s svojim znanjem še vedno prednjačili na svetovnih univerzah, ali bodo izvažali Software, ali bodo lahko s Prešernom rekli, da ne vrag le sosed bo mejak, ali bodo, z dvema enostavnima besedama, živeli bolje? Skozi to perspektivo je treba brati Strategijo Republike Slovenije za vključevanje v Evropsko unijo in voditi današnjo razpravo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg459">Strategija je nedvomno eden ključnih dokumentov, ki ga je slovenska vlada sprejela in ki ga bo ta državni zbor, upam, potrdil za varno prihodnost naših novih rodov. Prav zato je treba biti do nje kritičen. A ne morda zato, da bi s "cefranim" odstavkom kupovali čas za parlamentarno razpravo, temveč zato, ker si z njo vsi skupaj krepimo pomen v prihodnosti. Načrtujemo odločitve v vsakem posameznem vladnem resorju, v vsakem segmentu našega gospodarskega, političnega in družbenega življenja. Vlada bo za to skrbno prisluhnila vsem stališčem.</seg>
@@ -1725,11 +1708,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg469">In mi državo imamo, kar je tretji poudarek, ki bi ga rad izpostavil na koncu. Narod pridobi svojo nacionalno samozavest, ko dobi svojo državo. Odslej se nacionalni ponos krepi z razvijanjem državnih in drugih ustanov in z meddržavno uspešnostjo. Če bomo to orodje znali pravilno uporabljati, nas ne sme biti strah izzivov, ki so pred nami. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg470">Hvala lepa, gospodu ministru Bavčarju. V imenu vlade želi spregovoriti tudi minister za ekonomske odnose in razvoj, dr. Marjan Senjur. Prosil bi podpredsednico, gospo Okretičevo, če me nadomesti pri vodenju seje.</seg>
             </u>
             <note type="speaker">DR. MARJAN SENJUR:</note>
-            <u who="#SDZ2.SenjurMarjan" ana="#regular">
+            <u who="#SenjurMarjan">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg471">Spoštovani predsednik, poslanke in poslanci! Dogovorili smo se, da bi bila predstavitev vlade v dveh delih: najprej minister Bavčar, potem pa še jaz. Jaz ne bom govoril o formalnih vidikih strategije Republike Slovenije za vključitev v Evropsko unijo, niti o njeni dispoziciji, niti o njenem povzetku, temveč bom govoril o nekaterih vsebinskih vidikih, ki jih mora Slovenija uresničiti, da se bo lahko pravočasno in, kar je pomembno, enakovredno vključila v Evropsko unijo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg472">Najprej želim opozoriti na izhodiščno postavko vseh naših razprav o Evropski uniji. Slovenija se želi vključiti v Evropsko unijo zaradi svojih lastnih interesov. Slovenija želi izpolniti pogoje za vstop v Evropsko unijo, ker je to v njenem lastnem interesu; ker Slovenija želi doseči življenjsko raven razvite Evrope, ker Slovenija želi civilizacijsko, kulturno in gospodarsko živeti, tako kot razviti v Evropi, upoštevaje pri tem, seveda, slovenske kulturne in etnične značilnosti Slovenije. Torej, mi se vključujemo v Evropsko unijo zaradi nas samih.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg473">Govoril bom predvsem o ekonomskih vidikih strategije in sicer o naslednjih vidikih</seg>
@@ -1763,11 +1746,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg497">In za zaključek. Ni ključno vprašanje razmerja med Slovenijo in Evropsko unijo vprašanje kapitala. Ključno vprašanje je vprašanje ljudi, kako se bodo naši podjetniki, menedžerji, naši znanstveniki, strokovnjaki, naši uradniki, naši delavci obnesli glede na tuje - to je bistveno vprašanje. Upam, da smo Slovenci dober kader, da se bomo uspešno po eni strani kosali in po drugi strani uspešno sodelovali z Evropejci. Res je, da se želimo vključiti v Evropsko unijo zato, da bi s tem pridobili. Res je pa tudi, da bomo tudi mi prispevali k Evropski uniji in to se od nas tudi pričakuje. Stopimo zato v Evropsko unijo samozavestni, zaupajoč v svoje sposobnosti. Če te sposobnosti še niso zadostne, se potrudimo, da jih bomo še razvili. Če danes še nismo sposobni stopiti v Evropsko unijo, to ne pomeni, da čez pet let ne bomo. Ključ našega vstopanja v Evropsko unijo je razvoj, razvoj nas in našega gospodarstva, in to mislim, da je osnovna misel strategije Republike Slovenije za vključevanje v Evropsko unijo.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg498">Hvala gospodu ministru. Strategijo Republike Slovenije za vključevanje v Evropsko unijo je obravnavala tudi komisija za evropske zadeve kot matično delovno telo. Prosim poročevalca, da predstavi poročilo komisije o strategiji ter predlog sklepov in stališč. Besedo ima gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg499">Hvala lepa, spoštovana gospa podpredsednica, spoštovane kolegice in kolegi! Komisija za evropske zadeve je kot matično delovno telo obravnavala strategijo, se z njo seznanila, sprejela sklepe in stališča. Glede na to, da ste prejeli to poročilo, ne bom reproduciral vsega, kar tukaj piše, bi pa rad opozoril na nekatere poudarke, ki so jih dali v konstruktivni kritični razpravi člani naše komisije. Ti so opozorili na premalo natančno opredeljene realne ocene posledic vključitve Slovenije v Evropsko zvezo, opozorili na pomanjkljivo enotnost metodološkega pristopa, na odsotnost časovne dimenzije izvajanja reform. Tudi na to, da strategija ni pregledna glede kadrovskih in finančnih posledic izvajanja ukrepov, da niso opredeljene pozitivne oziroma konkurenčne prednosti Slovenije pred pridruženimi državami in da niso zajeti zaščitni ukrepi. Povedana je bila tudi misel, da strategija ni razvojno naravnana in posebej je bilo postavljeno vprašanje napovedane stopnje inflacije. Eden od poslancev je menil, da je odsotnost časovne opredelitve lahko pozitivna z vidika pogajalske taktike. Eden od poslancev pa je tudi opozoril, da strategija ne opozarja dovolj na negativne posledice vključevanja Slovenije v Evropsko zvezo in ne daje dovolj pozornosti področju izobraževanja.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg500">Prisotni minister za evropske zadeve gospod Bavčar in direktor Urada Republike Slovenije za makroekonomske analize in razvoj sta na nekatera vprašanja odgovorila oziroma jih komentirala. Na koncu je komisija tudi zavzela odnos do mnenj zainteresiranih delovnih teles in jih povzela oziroma sprejela. Tako ponuja komisija po tej razpravi sklepe</seg>
                <note>ne bom bral vseh, ampak samo nekatere izvzamem</note>
@@ -1777,13 +1760,13 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg503">Toliko s strani komisije. Komisija ni mogla zavzeti stališča do mnenj oziroma sklepov in stališč delovnih teles, ki so imela seje potem, ko je komisija že sklepala, ker je želela ujeti rok za to razpravo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg504">Hvala. Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg505">Želijo besedo predstavniki poslanskih skupin? Kot prvoprijavljena poslanska skupina je Združena lista. Prosim, gospod Horvat ima besedo.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg506">Hvala za besedo, gospa podpredsednica. Spoštovane kolegice, kolegi, spoštovani predstavniki vlade, predstavniki medijev! Dovolite mi, da najprej podam nekaj načelnih stališč do strategije, ki jo obravnavamo, in potem v nadaljevanju tudi nekaj konkretnih pripomb in tudi nekaj predlogov za oblikovanje stališč, ki naj bi jih sprejel državni zbor, pa tudi nekaj predlogov za nadaljnje ravnanje, predvsem vlade in tudi državnega zbora pri izvajanju te strategije, kajti to bo predvsem bistveno v procesu pridruževanja oziroma priprav na članstvo v Evropski uniji.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg507">Najprej želim reči, da ocenjujemo, da sta procesa vključevanja Slovenije v Evropsko unijo in krepitve državnosti Slovenije komplementarna oziroma dopolnjujoča se procesa, ne pa izključujoča. Zato ni možno reči, eden je zdaj prioriteten, drugo pride potem. Zato menimo, da mora Slovenija v tem obdobju pogajanj in priprav na članstvo pogodbeno in drugače krepiti svojo državnost, varnost in druge atribute državnosti.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg508">Drugič. Ocenjujemo, da je najpomembnejši kriterij uspešnosti vključevanja v Evropsko unijo vsestranska pripravljenost in usposobljenost Slovenije in njenih ljudi za življenje v novi skupnosti, ne pa hitrost zaključka pogajanj. Torej ne za vsako ceno rok; to ne pomeni, da predlagamo drugačne roke, ampak obratno, zelo insistiramona tem, da je treba vsa opravila opravljati zelo organizirano, zelo strokovno, zelo temeljito, da ne bi hitrost šla na račun kakovosti.</seg>
@@ -1800,11 +1783,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg519">Ob koncu bi se še zavzel za to, da vlada dejansko čim bolj vključi socialne partnerje v nadaljnji proces priprav in po možnosti tudi v pogajanja, če je možno v pogajalske skupine ali pa vsaj v posvetovalna telesa ob pogajalskih skupinah. Poudaril bi še pomen večje aktivnosti z javnostjo, obveščanje javnosti in priprave javnosti na vključitev v Evropsko unijo in nenazadnje zastavil bi vprašanje, ali smo v državnem zboru ustrezno organizirani, da bomo zmogli obseg in dinamiko nalog, ki izhajajo iz te strategije in iz rokov, ki so kot željeni roki za vključitev v Evropsko unijo. Zato tudi podpiramo pripombe in predloge stališč posameznih delovnih teles, da je tudi temu delu potrebno v tej razpravi in v stališčih državnega zbora in pa seveda predvsem v konkretnem delu in planiranju dela v zboru dati večji poudarek, tako pri določitvi prioritet oziroma pri določitvi programa dela državnega zbora, v pripravljenosti in ustrezni organiziranosti strokovnih služb, ne samo pravne ampak tudi pri delovnih telesih in drugih, problem prevajanja, problem usposobljenosti poslancev in strokovnih sodelavcev, in pa seveda tudi vprašanje poslovnika oziroma procedure obravnave in sprejema prioritetnih aktov, ki izhajajo iz te strategije oziroma iz državnega programa. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg520">Hvala. V imenu poslanske skupine Socialdemokratske stranke se je k razpravi prijavil gospod Ivo Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg521">Hvala lepa, gospa podpredsednica. Spoštovani kolegi, spoštovani maloštevilni ministri - pardon, ministra, prej je bil še <gap reason="inaudible"/> aha, trije ministri, hvala</seg>
                <note>eden je bil tako nizko dol, da ga nisem videl</note>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg522">.</seg>
@@ -1826,11 +1809,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg536">In zato je tudi ne moremo, tudi če želimo, sedaj trenutno nismo v stanju, da bi to strategijo naredili takšno, kakršna bi morala biti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg537">Hvala gospod Hvalica. V imenu poslanske skupine Slovenskih krščanskih demokratov, dajem besedo gospodu Peterletu.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg538">Hvala za besedo spoštovana gospa podpredsednica! Spoštovane poslanke in poslanci.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg539">Rad bi povedal na začetku, da sem vesel, kljub temu, da smo mogoče začeli eno od zadnjih rednih sej v letošnjem letu, sem vesel, da obravnavamo vsaj na drugem mestu strategijo Slovenije za vključevanje v Evropsko zvezo. Kajti na ta dan smo vsaj nekateri dolgo čakali.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg540">Mi bi morali s to obravnavo opredeliti stališča do, po mojem mnenju, ključnega dokumenta slovenske politike ob koncu tega stoletja s posledicami, vsaj na prva leta naslednjega stoletja. Rad bi opozoril, da je čas, o katerem razpravljamo o tej strategiji, močno drugačen od leta 1990, od leta 1991 pa tudi od junija leta 1997, potem ko smo doživeli oceno evropske komisije in kasneje tudi vabilo za začetek za vključitev v pogajanja za polnopravno članstvo.</seg>
@@ -1851,11 +1834,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg555">Slovenski krščanski demokrati menimo, da je strategija, taka kot je, potrebna bistvenih dopolnitev, bistvenih izboljšav. V tem smislu podpiramo predlog, naj se strategija dopolni, in seveda želimo, da bi državni zbor imel lahko tisto vlogo, kot mu, v skladu z našo zakonodajo, gre in da ne bi bil samo občasno ali parcialno obveščan o procesu, ki zadeva vso državo in tudi njegovo zakonodajno telo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg556">Hvala, gospod Peterle. Pisnih prijav k razpravi s strani poslanskih skupin, torej njihovih predstavnikov, nimamo več. Želi še kateri predstavnik poslanske skupine besedo? Ugotavljam, da ne želijo, zato dajem besedo prijavljenim poslancem k razpravi. Kot prvoprijavljeni ima besedo gospod Jože Zagožen.</seg>
             </u>
             <note type="speaker">DR. JOŽE ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženJože" ana="#regular">
+            <u who="#ZagoženJože">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg557">Spoštovana gospa podpredsednica, drage kolegice in kolegi! Vsaj po naslovu sodeč obravnavamo izjemno pomemben in daljnosežen dokument, kar bi morala biti vsaka strategija. Žal pa imam vtis, da pozornost v družbi temu vprašanju ni temu ustrezno velika. Ko smo na odboru za gospodarstvo o tem razpravljali, sta bila, na primer, samo dva predstavnika medijev, deset metrov naprej pa je bila seja o dveh domnevnih vohunih, kjer pa jih je bilo približno trideset; po tem se vidi, kakšna je teža nekega dejanja v družbi.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg558">Naj grem na resno temo. Menim, da je bilo v to materijo vloženega kar precej resnega in tudi strokovnega dela. Vendar pa gradivo in tudi predhodne ustne predstavitve so bile predstavljene izključno v optimističnem duhu, kjer so bile prikazane zlasti prednosti, malo ali skoraj nič pa ni bilo slabosti. Moj vtis je, da se slabosti na tem področju podcenjujejo, enako se podcenjujejo tudi nevarnosti.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg559">Najprej bi dal eno metodološko pripombo. Gradivo ima naslov "strategija". Že po sami definiciji, po opredelitvi, gre pri strategiji za to, da je to pot do cilja, se pravi, kako, na kakšen način bomo cilje dosegli. Gre za optimalno alokacijo nekih dejavnikov, resursov za dosego nekih ciljev. Doslej pa smo poslušali in brali predvsem druge stvari, manj pa to, kako bi te cilje dosegli. Tudi gradivo, ki smo ga prejeli, je prej nek časovno nedeterminiran program, za katerega so sicer značilne splošne naloge za izvedbo, manj pa ostalo. Očitek je bil, da ni dovolj rokov in pa nosilcev nalog. To, menim, da je bolj stvar programa oziroma neke politike, v tem primeru pa bolj, kot sem že rekel, vprašanje, kako cilje doseči. Na tem področju je opazna precejšnja sektorska neusklajenost znotraj vladnih resorjev. Vtis je, da avtorji posameznih poglavij niso bili preveč skupaj in se na nakaterih mestih ponavljajo. Tako smo prišli do teksta, ki je mnogo preveč razvlečen in dolgočasen, da bi lahko bil tudi učinkovit. Metodološki pristop, ki je na začetku sicer opredeljen, se nato v tekstu docela izgubi oziroma razvrednoti in ni razviden v potrebni meri. Vtis je sicer, da je ekonomski del te strategije pripravljen nekoliko bolje kot drugi. Prisotna je tudi matrika ukrepov ekonomskih politik, vendar bi se vse te stvari ali vsaj večina teh stvari že morala zgoditi oziroma se bodo morale v vsakem primeru, ne glede na vstop Slovenije v Evropsko unijo - so torej od tega dokaj neodvisne. Morda je celo prav, da nekaterih bistvenih odgovorov na vprašanje, kako v Evropsko unijo, ni napisanih, ker jaz razumem, da vse ne more biti javno. Vendar bi bilo dobro, da bi se to vsaj v ustnih obrazložitvah prej tudi povedalo.</seg>
@@ -1867,11 +1850,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg565">Na koncu naj rečem še to, da je zame izjemno pomembno to, kako bomo to zavest, to znanje, ki ga je premalo, pripeljali do ljudi, do vsakogar izmed nas, v prvi vrsti pa do ministrov, poslancev in ostalih strokovnjakov v vladi, ki na tem področju sodelujejo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg566">Hvala, gospod Jože Zagožen. Besedo ima gospod Borut Pahor.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg567">Hvala lepa, gospa podpredsednica. Najprej, da kasneje ne pozabim, podpiram nastop ministra Bavčarja, zato ker mi je pri njem všeč to, da ni bil pretirano pedanten v iskanju dilem in odgovorih nanje, ampak je poskušal zelo kratko in jasno definirati tisto, kar je naša primerjalna prednost in element, na katerega se velja najbolj zanesti, ko bomo poskušali pametno in preudarno vstopiti v klub bogatejših, vplivnejših narodov in držav, ki obeta tudi nam boljšo prihodnost - to je znanje. Če prav razumem, je torej ministrovo geslo: "Več Evrope, več znanja". To geslo je potrebno v tem državnem zboru močno podpreti, ker je, mislim, pravzaprav edina deviza, ki jo kot primerjalno prednost Slovenci na pragu evropskega kluba imamo. Seveda to ne pomeni, da podpiram politiko vlade v celoti. Ne podpiram take evropske politike, ki si je v vseh zadnjih letih zadala za edini cilj, da čimprej, za vsako ceno vstopimo v klub evropskih držav, s čimer naj bi dokazala pred domačo javnostjo, da je uspešna. Mislim, da je danes skrajni čas, ko je potrebno opozoriti, najprej seveda slovensko vlado, ta državni zbor in vso slovensko javnost, na veliko naivnost in tudi škodljivost politike, ki bi si zaradi prestižnih razlogov zadala za svoj edini cilj, da čimprej vstopimo v klub bogatejših, vplivnejših držav, v klub držav, ki obetajo, kot rečeno, tudi nam boljšo in uspešnejšo prihodnost.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg568">Ali morda ni preveč drzno spomniti, kar je storil že kolega Peterle, na razpravo izpred slabih dveh let? Takrat je tukaj vlada na vse kriplje poskušala prepričati - in na koncu je tudi dosegla - državni zbor, da je potrebno zapisati, da je leto 2001 tisto leto, v katerem želi Slovenija vstopiti v Evropsko unijo. Več stvari je, ki so me takrat in me tudi danes zaradi te naivnosti skrbijo. Najprej, seveda, neko tiho mnenje, da vlada pravzaprav ne razume, kaj se dogaja v Evropski uniji, da presoja, da je pravzaprav najbolj odvisno od nas samih, kdaj bomo vstopili v ta klub; da pravzaprav ne razume, da se je Evropska unija odločila najprej konsolidirati svojo institucijo in šele nato odpreti vrata novim državam, in da to ne bo trajalo samo nekaj let, kot nas je skušala pred dvema letoma prepričati; da bo torej to neko dolgo obdobje, ki je pa za Slovenijo velika prednost, prednost, ki nam daje čas, da se temeljito pripravimo. To je ta konceptualni ugovor, ki ga je vedno znova potrebno v državnem zboru ponavljati: ni tako bistvena hitrost, bistvena je pripravljenost. Bistveno je, da znižamo socialne in vse druge narodnogospodarske stroške, ki bodo nastajali z vključitvijo v Evropsko unijo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg569">Strategija našega vključevanja v Evropsko unijo poskuša dati odgovor na dve temeljni vprašanji: kako bomo Slovenci krepili svojo identiteto v pogojih mednarodnega sodelovanja, mednacionalnega povezovanja, celo nadnacionalnega povezovanja, in drugič, kako naj uredimo našo družbo, ki bo odprta družba, da bo družba enakih možnosti. Da bomo torej imeli vsi Slovenci, ne glede na razlike med nami, vsaj približno enake možnosti za to, da uspemo v življenju, da uspemo v izobrazbi, poklicu in v vseh drugih oblika življenja in dela. Odgovor na ti dve vprašanji sta pravzaprav v strategiji modernizacije oziroma evropeizacije Slovenije.</seg>
@@ -1881,20 +1864,20 @@
                </seg>
             </u>
             <note type="speaker">PREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg573">Jaz bi prosila, če prisluhnemo razpravljavcu. Mislim, da motite govor.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg574">Tisto, kar je po moje danes naša ključna naloga, je oblikovanje soglasja v tem državnem zboru, da se vladi na vse mogoče načine omogoči, da na najbolj odgovoren način sintitizira vse možne izkušnje, znanja, energijo in ambicije, ki so v slovenski družbi in ki spričo svoje ustvarjalnosti obetajo, da se bomo v prihodnjih letih dobro pripravili na vstop v Evropsko unijo in s tem znižali socialne stroške in narodnogospodarske stroške te vključitve. Mislim, da je prav tako pomembno iz nastopa ministra Bavčarja, da opozarja na ljudi, mislim, da je predvsem od njih odvisno in od njihove organizacije ter, kot rečeno, znanja, kako bodo v naslednjih letih vodili pogajanja. Kot je v imenu poslanske skupine povedal kolega Feri Horvat, se mi zavzemamo za to, da bi slovenska politika čimprej imenovala glavnega pogajalca, njegove sodelavce in da bi to storila na tak način, da bomo dobili ljudi, ki jim bo lahko zaupala vsa slovenska politika, torej tudi opozicija, da bodo imeli potrebno kredibilnost pri trdih in neizprosnih pogajanjih v Evropski uniji, pa seveda hkrati doma tudi nek prostor kritike in samoizpraševanja, kako naprej, ko se bo potrebno odločiti na mnogih križiščih, za katere odločitve se bomo postavili, mnoge od teh odločitev pa bodo ireverzibilne. Tudi tiste evropske države, ki so v zadnjih letih vstopile v Evropsko unijo, imajo danes nekaj izkušenj, ki jim pravijo, da bi se lahko glede nekaterih vprašanj, glede nekaterih predmetov pogajanj bolje pripravili. Če so tega prepričanja danes države, ki so v priprave na Evropsko unijo vložile veliko več, kot to dela danes Slovenija in če so bile že v osnovi socialni, gospodarski in drugi veliko bolj kompatibilne z Evropsko unijo, kot je to Slovenija, potem se mi zdi, da je skrajni čas, da se zavemo izjemne resnosti in izjemne odgovornosti projekta, ki se ga lotevamo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg575">Torej končujem, spoštovana gospa podpredsednica. V Sloveniji že dolgo časa ni več vprašanja, ali v Evropsko unijo ali ne. Evropska unija ne sme biti predmet strahu, ki kot neka mora leži pred našo prihodnostjo, kot neka mora, ki naj bi se zajedala v našo nacionalno identiteto, je predvsem ena velikanska priložnost, ki jo bomo verjetno izkoristili zgolj v tolikšni meri, kolikor se bomo nanjo z vso svojo pametjo in seveda tudi marljivostjo ter pedantnostjo pripravili. Je torej priložnost in ne strah in s tem obetom velja oblikovati ta nacionalni konsenz. Zato podpiram ta dovolj prepričljiv uvodni referat ministra Bavčarja. Imam nekaj kritičnih konceptualnih ugovorov na delo vlade, predvsem pa, kot rečeno, ocenjujem, da je ta dokument prava priložnost, da se torej med nami oblikuje trdno politično zavezništvo, da bomo poskušali v Sloveniji oblikovati in sintetizirati vsa tista znanja, energije, ambicije in ustvarjalnost, ki nam bodo omogočili, da bomo torej Slovenci vstopili v klub, v katerem bomo spričo svoje organiziranosti lahko vplivali tudi na našo usodo, predvsem pa seveda uredili svojo družbo kot družbo enakih možnosti, kot torej svobodno, strpno in odprto družbo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg576">Hvala, gospod Pahor. Naslednji poslanec, prijavljen k razpravi, je gospod Rudolf Petan.</seg>
             </u>
             <note type="speaker">RUDOLF PETAN:</note>
-            <u who="#SDZ2.PetanRudolf" ana="#regular">
+            <u who="#PetanRudolf">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg577">Gospa podpredsednica, spoštovane kolegice in kolegi! Ta strategija, ki jo imamo danes pred sabo, sem prepričan, da bi si verjetno zaslužila malo več pozornosti, mogoče celo malo več spoštovanja in pa mogoče malo več blišča, kajti da je to 2. točka od 66, je mogoče malo nespoštljivo do tega dokumenta, ki bo gotovo imel za Slovenijo posledice, ne samo sedaj, ampak v naslednjem tisočletju. Pa, dobro, pustimo to ob strani.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg578">Prav tako menim, da bi to strategijo ali pa vsaj podoben dokument morali obravnavati že pred časom, mogoče prej, preden smo se sploh pogovarjali o pridružitvenem sporazumu, ki smo ga obravnavali lani, pred približno pol leta. Namreč, ni vseeno, v kaj se spuščamo, s kom se družimo, istočasno, ko pa danes po tem, ko smo že pridružitveni sporazum dali skozi, se pogovarjamo o strategiji, se pravi, ko pri tem jasno opredeljujemo cilje, kot je bilo rečeno, se moramo istočasno pogovarjati tudi o oceni posledic našega vključevanja v Evropsko unijo. Navsezadnje sedaj, ko je pridružitveni sporazum že skozi, je verjetno naš cilj popolnoma jasen, kam želimo, s kom se družimo. Je pa po drugi strani res, da verjetno na področju informiranja pa malce šepa. Verjetno bi se lahko zgledovali po drugih državah, ki so se kasneje priključevale prejšnji, tisti osnovni šesterici. Pretok informacij verjetno ni takšen, kot bi si ga želeli. Tudi druge države so postopale drugače; predstavljale so tiste, kamor se pač določena država želi vključiti. Mi si verjetno tudi malo pavšalno predstavljamo Evropsko unijo. Verjetno Evropska unija ni samo naša severna soseda, sedaj, po novem ali pa še prej, Nemčija, ki jo vsi poznamo, ostale države pa verjetno nekoliko manj. Prav bi bilo, da bi se tudi s tem spoznali, s kom se bomo družili, s kom bomo vključeni, s kom bomo tesno povezani. Vsekakor pa je pri tem pomembno, kako bomo to dosegli, da se bomo vključili, kaj vse bomo morali storiti in pa seveda tudi oceno posledic, ki jih bomo morali nekako prevzeti nase, kaj bomo morali za to plačati in kdo bo to plačal. Veliko se govori, da bo verjetno kmetijstvo tisto, ki bo moralo največ plačati. Jaz sicer nisem čisto prepričan, da je to tako; verjetno bodo tudi druga področja gospodarstva morala nositi težo tega vključevanja. Zato je prav, da bi tudi o oceni posledic kaj rekli.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg579">Seveda bo potrebno spremeniti tudi del zakonodaje. Šele danes smo dobili na mizo plan vlade, kdaj bomo določeno zakonodajo sprejemali. V glavnem lahko rečemo, da smo pač pri tej zakonodaji na začetku. In kaj je tisto, na kar bi želel opozoriti, da se ne bi tu našli v časovni stiski? Do sedaj smo praktično sprejemali vse dokumente, ki so v povezavi z Evropsko unijo ali pa z drugimi strukturami, v katere se želimo vključevati, vedno v časovni stiski. Verjetno se še vsi spomnite, ko smo celo dobivali fakse iz Bruslja, da če do tiste in tiste ure naslednji dan ne bomo sprejeli tega dokumenta, potem se nam slabo piše ali pa lahko ostanemo pred zaprtimi vrati. Seveda tega ne jemljem preveč resno, ampak to se je dogodilo. Žal, je bila zadeva resna, čeravno posledica ali pa vzrok je bil hudo neresen. Pomembno je tudi, kaj prinašamo v Evropsko unijo, kaj je naša dota, ki jo prinašamo v to skupnost in kakšna je naša startna pozicija. Ni vseeno, kakšni pridemo v to Evropsko unijo, v to skupnost, ali smo pripravljeni na to ali nismo. Glede na to, da običajno vse delamo v časovni stiski, to ravno ni najbolj pozitivno in verjetno neke visoke ocene si pri naših partnerjih verjetno nismo zaslužili. Ko sem prej govoril o tem, kdo bo to plačal in kakšna bo naša cena, se lahko vprašamo, na kar so nekateri danes že opozorili, ali sploh imamo strategijo gospodarstva. Gospodarstvo je sigurno steber, na katerega plečih se bo verjetno to naše vstopanje v Unijo dogajalo. Sedaj pa se pojavlja vprašanje, ali so ti plani, ki jih imamo, če jih sploh imamo, kakšna naj bo rast našega gospodarstva, ali so realni. Danes smo že slišali, da verjetno ta naša rast v tem trenutku ne zadostuje, da bi lahko vzdržali ta pritisk tržnega gospodarstva v državah, ki je že nekako sto let, v primerjavi s temi našimi poskusi začetka trženja gospodarstva. Lahko se vprašamo, ali ta strategija obstaja ali pa je to mogoče v gospodarstvu bolj tako "kakor pač pade." Res je, da vsako leto naredimo plan razvoj gospodarstva. To se pravi, rast gospodarstva toliko, potem pa če nam "rata" nam "rata". Tako je bilo običajno do sedaj. Če pa ne, pač dobro, pač to ne gre. To pomeni, da bomo tudi v Evropski uniji zaostajali. Nekaj o tem je danes že govoril eden od predlagateljev, tako da ta strah nekako ni neupravičen. Navsezadnje se lahko tudi vprašamo, ali je ta naša gospodarska politika res prava politika, ali temelji na nekih strateških usmeritvah ali pa je to vse skupaj bolj nekako opredeljeno našemu lastninjenju, zaključku lastninjenja ali tranziciji. V tem trenutku niti ne moremo reči, kakšna je naša gospodarska moč in kakšno bo naše dohitevanje naših partnerjev v tej združbi, ki se ji reče Evropska unija. Poleg tega nisem slučajno omenil ocene teh posledic. To se pravi, na tem temelji tudi, kakšno zaščitno zakonodajo bomo pri tem imeli. Vsi, ki so pristopali k Evropski uniji, so imeli v tem prehodnem obdobju, dokler niso postali polnopravni člani, zaščitno zakonodajo. Verjetno je popolnoma normalno, da imamo tudi v Sloveniji takšno zaščitno zakonodajo. Pa mi dovolite, da vas samo spomnim, ko smo en del te zaščitne zakonodaje že sprejemali ob ratifikaciji tega sporazuma v lanskem letu, pred pol leta, ko smo tisti, ki smo zahtevali določene zaščitne ukrepe, bili nekako okarakterizirani za tiste, ki nekaj izsiljujejo. Mi smo vas, seveda, prepričevali, da to ni tako. Želeli bi, da se ne bi ponavljalo, da bi to bila neka stalnica slovenske politike pri vključevanju v Evropsko unijo. Seveda potem, ko smo polnopravni člani, pa vse te zaščitne bariere padejo, to je popolnoma jasno. Ampak do takrat pa so si vse evropske članice, ki so kasneje pristopale k Uniji, to vzele. Verjetno je potem popolnoma normalno, da bi se to zgodilo tudi pri naši državi.</seg>
@@ -1906,21 +1889,21 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg585">Še enkrat pa nekako postavljam vprašanje, ali to pomeni stečaj naših železarn takrat, ko bo ta datum, ki je tu zastavljen, nekako prišel. Če je to tako, potem rajši povejmo resnico naprej in pa naj bo to vzorec, kako se ne dela pri vstopanju v Evropsko unijo. Zelo mi je bila všeč tista misel, ko jo je uvodničar povedal, da ni vseeno, ali bomo na svoji zemlji ali ne. To pomeni, ali bomo imeli svoje gospodarske obrate ali ne ali bomo samo delovna sila za "lohnarbeit" tistim, ki so nekako bolj sposobni, ki vedo, kaj hočejo in ki imajo strategijo pripravljeno tudi takrat, ko še ni časovna stiska. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg586">Hvala, gospod Petan. Naslednji razpravljavec je gospod Čeligoj.</seg>
             </u>
             <note type="speaker">VLADIMIR ČELIGOJ:</note>
-            <u who="#SDZ2.ČeligojVladimir" ana="#regular">
+            <u who="#ČeligojVladimir">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg587">Hvala lepa. Spoštovani! Strategija vstopanja Slovenije v Evropsko unijo je eden od temeljnih aktov v procesu približevanja Slovenije k Evropski uniji. Ugotavljam, da so v priloženi strategiji zapisana predvsem pozitivna pričakovanja in pozitivna dejstva, ki nas čakajo v polnopravnem članstvu. Premalo so upoštevana dejstva in negativne posledice, ki bodo sledile sočasno. Predvsem pogrešam v predloženem dokumentu večjo zavzetost za nacionalne interese, za katere se moramo opredeliti že pred pričetkom pogajanja z Evropsko unijo. Tako opredeljenim nacionalnim interesom moramo dati prioriteto, prioritetno mesto za sam začetek pogajanj. Predvsem opozarjam na ohranitev slovenske narodnostne identitete in pomen narodnostne kulture kot temeljnega nosilca identitete. Kaj pa slovenski jezik in ohranitev slovenske pisane besede? Teh odgovorov strategija ne zajema in jih ne daje.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg588">Tudi pri sprejemanju in spreminjanju zakonodaje mora dobiti prednost tista zakonodaja, ki varuje in ščiti nacionalne interese. Danes smo sicer dobili spisek zakonodaje, ki jo bo državni zbor sprejemal v tem letu in naj bi pomenila bistven korak naprej v smislu prilagajanja evropski zakonodaji.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg589">Iz priloženega spiska zakonov se razen naslovov ne da razbrati njihove vsebine in obsega v smislu varovanja in ščitenja narodnostnih interesov. Večina nas pogreša prikaz oziroma sliko, ki bo pokazala oziroma predstavila, kaj lahko pričakuje povprečen Slovenec, ko bo slovenska država polnopravna članica Evropske unije. V čem bo slovenski človek na boljšem in v čem bo na slabšem? To so vprašanja, na katera mora vlada odgovoriti še pred koncem letošnjega marca oziroma pred predvidenim datumom začetka pogajanj. Od vlade oziroma pristojnega ministra za evropske zadeve pričakujem pravočasno in sprotno informiranje in poročanje državnemu zboru o vseh bistvenih dogajanjih in potezah, ki so v zvezi s procesom pogajanj in vstopanja v Evropsko unijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg590">Hvala lepa. Naslednji razpravljavec je gospod Tomažič Branko.</seg>
             </u>
             <note type="speaker">BRANKO TOMAŽIČ:</note>
-            <u who="#SDZ2.TomažičBranko" ana="#regular">
+            <u who="#TomažičBranko">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg591">Hvala za besedo. Spoštovani zbor! V imenu kluba primorskih poslancev dajem naslednjo pobudo vladi.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg592">Primorski poslanci dajemo pobudo vladi Republike Slovenije, da pri dokončni obravnavi in sprejemanju strategije Republike Slovenije za vključevanje v EU, pri točkah 3, 2, 1 in 4 politika mednarodnih ekonomskih odnosov, harmonizacija z evropskim sporazumom, ukrepi za prost pretok blaga, dopolni alineo, ki se glasi:</seg>
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg593">Sprejete ukrepe za izvajanje priporočila sveta za carinsko sodelovanje iz leta 1960, ki se nanašajo na prostocarinske prodajalne, dovoliti njihovo bodoče odpiranje v pristaniščih in letališčih, dopolni z besedilom:</seg>
@@ -1929,7 +1912,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg596">Navedeno priporočilo le priporoča odpiranje prostih carinskih prodajaln v primorskih lukah in na letališčih. Ničesar ne prepoveduje in ne govori o zapiranju obstoječih prostocarinskih prodajaln. Noben od sprejetih dokumentov torej ne govori o zapiranju obstoječih prostocarinskih prodajaln, ampak gre za negativno formulirano obveznost vzdržati se od odpiranja novih tovrstnih prodajaln. Zato je potrebno ob obravnavi strategije vključevanja Republike Slovenije v Evropsko unijo nujno razmejiti ukrepe, ki jih mora Slovenija sprejeti in spoštovati v času pridružitvenega statusa, od ukrepov, ki jih bo morala Slovenija izpolniti v trenutku vstopa v Evropsko unijo in skupni trg, ko bo uživala tudi prednosti skupnega trga, katerega v času pridruženega statusa ne more. Predhodno zaprtje prostih carinskih prodajaln bi pomenilo izjemno gospodarsko in fiskalno škodo in izgubo dela za večje število zaposlenih. Zaradi navedenega predlagamo, da vlada posredovano pobudo obravnava in jo sprejme ter temu primerno strategijo Republike Slovenije za vključevanje v Evropsko unijo dopolni. Spodaj podpisani primorski poslanci.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-02-18.seg597">Hvala gospod Tomažič. Naslednji razpravljalec je gospod Izidor Rejc. Premalo časa imate? Potem pa predlagam, da za danes zaključimo. Torej prekinjam 2. točko dnevnega reda. Samo še obvestilo za jutri. Nadaljujemo z 2. točko, nato po dnevnem redu 3., 4., 5., 6. točka, od 7. točke, torej ratifikacije, do vključno 20. točke in naprej 25., 28., 27. itd., torej tisto, kar bo potem pripravljeno gradivo v celoti.Prijeten večer in nasvidenje.</seg>
             </u>
             <note type="time">SEJA JE BILA PREKINJENA 18. FEBRUARJA 1998 OB 17.56 URI.</note>

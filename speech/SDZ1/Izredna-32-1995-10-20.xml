@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ1-Izredna-32-1995-10-20"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">32. izredna seja (20. 10. 1995)</title>
-            <meeting n="32"
-                     corresp="#SDZ1-Izredna-32-1995-10-20.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="32" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="1" corresp="#DZ" ana="#parl.term #DZ.1">1. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,26 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje
                      avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">32. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="session">D2A3EE86C664F291C1257832004838B2</idno>
-                  <idno type="URI">D2A3EE86C664F291C1257832004838B2</idno>
-                  <imprint>
-                     <date when="1995-10-20">(20. oktober 1995)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>32. izredna seja (20. 10. 1995)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1995-10-20"/>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="46"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="11"/>
                <tagUsage gi="seg" occurs="137"/>
             </namespace>
@@ -230,25 +214,21 @@
                <date when="1995-10-20" ana="#parl.sitting">20. 10. 1995</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ1-Izredna-32-1995-10-20.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">32. izredna seja</head>
-            <docDate>(20. oktober 1995)</docDate>
             <note type="chairman">Sejo je vodil Vladimir Topler, podpredsednik zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 12.00 uri.</note>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg1">Spoštovane kolegice poslanke, spoštovani kolegi poslanci, gospe in gospodje! Pričenjam 32. izredno sejo Državnega zbora Republike Slovenije. Obveščen sem, da so zadržani, in se današnje seje ne morejo udeležiti, naslednje poslanke in poslanci: Ivan Oman, Miroslav Mozetič, dr. France Bučar, Alojz Peterle, Jožef Školč, dr. Bojan Korošec, Ivan Sisinger, Feri Horvat, Janez Kopač, mag. Janez Jug, dr. Janko Predan, Jurij Malovrh, dr. Dušan Bavdek, Irena Oman, Marjan Stanič, Jadranka Šturm-Kocjan, dr. Peter Tancig, Maria Pozsonec, Tone Partljič, dr. Mateja Kožuh-Novak in Žarko Pregelj. Prosim pa ostale, da ugotovimo prisotnost v dvorani. Še vedno ugotavljamo prisotnost v dvorani. Ugotavljam, da je navzočih 53 poslank in poslancev; zbor je sklepčen in lahko odloča.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg2">Na to sejo sem vabil predsednika Vlade Republike Slovenije doktorja Janeza Drnovška, ministra za finance mag. Mitja Gasparija ter druge člane Vlade, guvernerja Banke Slovenije dr. Franceta Arharja, generalnega direktorja Zavoda za pokojninsko in invalidsko zavarovanje gospoda Janeza Prijatelja in generalnega direktorja Zavoda za zdravstveno zavarovanje Slovenije gospoda Franca Koširja ter vse prav lepo pozdravljam.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg3">Določitev dnevnega reda 32. izredne seje Državnega zbora. Sejo sem sklical na predlog Vlade Republike Slovenije in na podlagi rokovnika za sprejem državnega proračuna. Želi v zvezi z dnevnim redom kdo besedo? Imamo samo eno točko, to je PREDSTAVITEV REDLOGA PRORAČUNA  REPUBLIKE SLOVENIJE ZA LETO 1996 IN PRORAČUNSKEGA MEMORANDUMA ZA LETO 1996,</seg>
@@ -266,7 +246,7 @@
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg10">Gre za prvo dejanje obravnave in sprejemanja državnega proračuna v Državnem zboru, in sicer na podlagi četrtega odstavka 215. člena poslovnika Državnega zbora, ko predsednik Vlade in minister za finance predstavita proračunski memorandum in predlog državnega proračuna. Ob tej predstavitvi ni razprave. Ob tej priliki bodo poslankam in poslancem spregovorili o temeljnih vprašanjih z delovnega področja institucij, ki jih predstavljajo in se nanašajo na obravnavo tematike, tudi guverner Banke Slovenije doktor France Arhar, generalni direktor Zavoda za pokojninsko in invalidsko zavarovanje gospod Janez Prijatelj in generalni direktor Zavoda za zdravstveno zavarovanje Slovenije gospod Franc Košir. Prosim predsednika Vlade Republike Slovenije, doktorja Janeza Drnovška, da predstavi predlog proračuna Republike Slovenije za leto 1996. Prosim, gospod predsednik.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ1.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg11">Gospod predsedujoči, spoštovane poslanke in poslanci! Slovenska vlada je pred dnevi Državnemu zboru predložila v obravnavo proračunski memorandum in proračun za leto 1996. S skrajšanjem predhodnih postopkov in s skrajšanjem časa priprave proračuna, pa tudi prehodnega koalicijskega usklajevanja, nam je letos uspelo bistveno zmanjšati vsakoletne zamude pri sprejemanju letnega proračuna, ki so se prenašale iz leta v leto in so povzročale določene motnje pri financiranju proračunskih porabnikov. To je še toliko bolj pomembno, ker se v pripravah proračuna za leto 1996 srečujemo s številnimi zapletenimi vprašanji in dodatnimi potrebami.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg12">Leto 1996 bo zelo zahtevno in pomembno proračunsko leto in od njega bo v veliki meri odvisno, kakšen bo tok naših državnih financ v naslednjem obdobju. Vlada je morala že v tej fazi razpravljati o številnih prioritetah, ki so vsaka sama zase pomembne, vendar, ko jih seštejemo, so takšen zbir ciljev in želja, ki jih je nemogoče financirati z realnimi proračunskimi sredstvi oziroma v okviru še sprejemljivih konsistentnih proračunov. Vlada je morala upoštevati različne naložbene prioritete, ki jih je s posebnimi zakoni že do zdaj določil Državni zbor</seg>
                <note>naložbe v šolstvo, program graditve avtocest, obramba</note>
@@ -297,13 +277,13 @@
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg35">Čeprav je razumljivo in na nek način legitimno, da bi vsak minister, vsak poslanec v naslednjem letu želel zagotoviti čimveč sredstev za tisto porabo, za tisti interes, ki ga zastopa, moramo vsi skupaj ohraniti in zagotoviti toliko samokontrole, treznosti in odgovornosti, da sprejmemo proračun v vzdržnih okvirih in da s tem omogočimo potrebno finančno trdnost našemu gospodarstvu in tudi vsem prihodnjim generacijam. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg36">Hvala lepa predsedniku Vlade Republike Slovenije doktorju Janezu Drnovšku za predstavitev predloga proračuna.</seg>
                <note>Ploskanje v dvorani.</note>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg37">Prosim ministra za finance magistra Mitjo Gasparija za dodatno predstavitev predloga proračuna Republike Slovenije za leto 1996. Gospod minister, izvolite.</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ1.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg38">Gospod podpredsednik, gospe in gospodje, poslanke in poslanci! Predlog proračuna za leto 1996 in pa globalne bilance javnega financiranja za leto 1996 izhajajo iz osnovnih predpostavk, ciljev in smeri ukrepov ekonomske in socialne politike, kot so opredeljeni v proračunskem memorandumu za leto 1996 in jih je že pojasnil predsednik Vlade.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg39">Doseganje globalnih ciljev makroekonomske politike v letu 1996 terja uravnoteženost javnih financ in ne dopušča oblikovanja večjega javnofinančnega primanjkljaja. Pospešena gospodarska rast in pa povečana konkurenčna sposobnost podjetij pa zahteva hkrati tudi posege na razbremenitvi stroškov delovne sile. To so ključne predpostavke, ki so zaznamovale proračun za prihodnje leto.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg40">Če pogledamo izhodišča, ki stojijo pred nami za izvajanje proračuna v naslednjem letu, je treba pri izvrševanju letošnjega proračuna oziroma vseh oblik javne porabe, ki ne tvorijo državnega proračuna, povedati naslednje ugotovitve: državni proračun se izvaja v okviru predvidevanj in bodo njegovi prihodki, po naših ocenah, približno takšni, kot so bili tudi predvideni s proračunom za leto 1995. Odhodki gotovo ne bodo presegli zneska 510 milijard slovenskih tolarjev oziroma se bomo potrudili, da bodo ti odhodki še nekoliko nižji. Na drugi strani ugotavljamo, da se tako v blagajni zdravstvenega obveznega zavarovanja, kot tudi v blagajni pokojninskega obveznega zavarovanja, da so gibanja bistveno drugačna od tistih predvidenih ob sprejemanju proračunov teh dveh blagajn.</seg>
@@ -345,11 +325,11 @@
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg67">To je politika, ki bo omogočala doseganje zastavljenih ciljev, ki so bili omenjeni v referatu predsednika Vlade in pa pogoje za postopno vključitev Slovenije v Evropsko unijo oziroma v uravnotežen gospodarski in socialni razvoj Repuplike Slovenije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg68">Hvala lepa gospodu ministru. Besedo pa dajem guvernerju Banke Slovenije dr. Francetu Arharju. Izvolite.</seg>
             </u>
             <note type="speaker">DR. FRANCE ARHAR:</note>
-            <u who="#SDZ1.ArharFrance" ana="#regular">
+            <u who="#ArharFrance">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg69">Hvala za besedo. Cenjeni parlament, gospod podpredsednik, Vlada, dovolite mi, da ob dejstvih, ki sta jih navedla gospod predsednik in minister za finance, še sam dodam nekatera dodatna dejstva in informacije s področja denarne politike, ki jo vodi Banka Slovenije. Dejstvo je, in tega se ves čas zavedamo, da je pravzaprav stabilnost in skrb za stabilnost in s tem za zdravje slovenskega tolarja tista prioritetna in dominantna naloga, ki se je Banka Slovenije ves čas svojega delovanja zelo zaveda. Namreč, pot naprej h gospodarski rasti je lahko samo na stabilnosti. To dokazujejo domači dogodki, predvsem pa dogodki, ki se odigravajo v naši neposredni soseščini. Že predsednik Vlade je omenil, da je Slovenija letos sprejela deklaracijo o konvertibilnosti tolarja; izredno pomemben akt, ne toliko za domače razmere ampak predvsem za mednarodno skupnost. Namreč poti nazaj ni. To je popolnoma jasno. Ni poti k nekonvertibilnosti, je samo pot s pomočjo zdravljenja, ki ga običajno opravlja Mednarodni denarni sklad. Nekatere države, ki so v tranziciji, predvsem v naši soseščini, so že zašle v take težave, da poti brez pomoči tega sklada ni. In ob dejstvu, da je Republika Slovenija v letošnjem letu postala članica Mednarodne svetovne trgovinske organizacije, je prav to dejstvo tisto, ki Slovenijo pred mednarodno javno skupnost postavlja v še večjo odgovornost, kajti članstvo v tej eminentni organizaciji predstavlja za nas dodaten obligo in  predvsem v smer liberalizacije trgovinskih tokov, liberalizacije kapitalskih tokov, skratka v smer nadaljnjega odpiranja meja in trgov.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg70">Prav to dejstvo pa je hkrati seveda velika nevarnost, velika nevarnost za domače gospodarstvo, ki se prilagaja. Domače gospodarstvo, ki se prilagaja, vidi v delovanju denarne politike predvsem eno stično točko, ki se običajno imenuje tečaj. Tečaj tolarja, ki naj bi bil neprimeren, ki naj bi bil previsok, po katerem mišljenju naj bi bil tolar pretrden in zaradi tega naj bi prav to dejstvo povzročalo dodatne izgube, ki jih ima slovensko gospodarstvo, predvsem pa izgube na zunanjih trgih. Že oba predhodnika sta opozorila, kaj vse vpliva na tečaj. Tečaj je samo navzven izražena cena. In na ceno, kot vemo, se spozna vsak Slovenec, ne glede na to, koliko se spozna na druge agregate denarne politike. Vendar, če si pogledamo, kaj se je v letošnjem letu dogajalo doma, kaj se je v letošnjem letu dogajalo v tujini, in to je seveda tudi naš namen, potem lahko ugotavljamo, da so politiko in da politiko tega tečaja tolarja kreirajo tako domači kot zunanji činitelji. Prvič. Vsem je jasno, in s tem problemom se ukvarja mednarodna finančna skupnost, da to, kar se je dogajalo v letošnjem in se še dogaja na svetovnem finančnem trgu, razmerje med ameriškim dolarjem in nemško marko, je streslo ne le majhne države, ampak stresa velike ekonomske kolose. V odvisnosti od razvoja tega razmerja</seg>
                <note>ameriški dolar - nemška marka</note>
@@ -387,11 +367,11 @@
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg94">Dovolite mi, da končam to razmišljanje s preprosto mislijo. Namreč, sliši se: tolar je naš, skrb za njegovo zdravje je pa skrb Centralne banke. Ne strinjam se seveda s takim mnenjem, ker skrb za njegovo zdravje mora biti skrb nas vseh in edino na ta način se lahko nadejamo nove prosperitete, novih priznanj in nove konkurenčne sposobnosti doma in na zunanjih trgih. Najlepša hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg95">Hvala lepa guvernerju Banke Slovenije dr. Francetu Arharju. Besedo pa dajem generalnemu direktorju Zavoda za pokojninsko in invalidsko zavarovanje gospodu Janezu Prijatelju. Izvolite.</seg>
             </u>
             <note type="speaker">JANEZ PRIJATELJ:</note>
-            <u who="#SDZ1.PrijateljJanez" ana="#regular">
+            <u who="#PrijateljJanez">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg96">Spoštovani gospod podpredsednik, cenjene poslanke in poslanci! Letošnje in prihodnje leto bosta v pokojninskem in invalidskem zavarovanju prelomni, lahko pa tudi usodni. V celoti se namreč uresničujejo slabe napovedi, ki smo jih za primer, če ne bodo pravočasno sprejeti ustrezni ukrepi in zakonske spremembe, poslancem Državnega zbora postopno podajali že v svojih zadnjih treh nastopih in prikazali to problematiko pred Državnim zborom.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg97">Lani decembra sem pred Državnim zborom izrecno poudaril pesimizem glede pričakovanega razvoja na tem področju. Ta je temeljil na dejstvu, da večina memorandumsko napovedanih zakonskih sprememb ni bila uresničena. Opozoril sem, da bo to dejstvo, ob zahtevah po nespremenjeni ali celo znižani prispevni stopnji, povzročilo vse slabše, čez čas morda celo kritične finančne pogoje za izvajanje predpisanega zavarovanja. Navedel sem tudi, da dolgi postopki za spremembo zakonodaje in vsebinska razhajanja, zlasti glede usklajevanja pokojnin, povzročajo, da ne pride do nekaterih nujnih zakonskih sprememb, ki smo jih prikazali že v prejšnjih nastopih in ponovili tudi lansko leto.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg98">Tudi letos lahko ponovim lansko misel, da glede razvoja pokojninskega in invalidskega zavarovanja že nekaj let ponavljamo približno enake kritike, ugotovitve in napovedujemo pomembne sistemske spremembe, zakonodaja pa ostaja v glavnem enaka. Pri tem pravno niti še ni bil dokončno zaokrožen sistem iz leta 1992, saj še niso bili sprejeti nekateri s temeljnim zakonom določeni zakoni, in sicer: zakon o dodatnih zavarovanjih, zakon o obračunavanju, plačevanju nadzora in izterjavi prispevkov, zakon o zavarovalni dobi, ki se šteje s povečanjem, zakon o vrednotenju dobe političnim zapornikom in tako dalje.</seg>
@@ -413,11 +393,11 @@
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg113">Spoštovani gospod podpredsednik, cenjene poslanke in poslanci! Glede na to, da sem v svoji uvodni predstavitvi obravnaval zlasti temeljna vprašanja sedanjega in bodočega izvajanja obveznega pokojninsko invalidskega zavarovanja ter njegove perspektive, manj pa govoril o pomenu in obsegu dejavnosti ter številčnih podatkih, vam pisno prilagam aktualne statistične podatke ter poročilo o finančnem poslovanju zavoda v I. polletju 1995 z oceno poslovanja do konca leta, s katerimi bo celovito zaokrožena slika trenutnega in bodočega stanja na tem področju. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg114">Hvala lepa  generalnemu direktorju Zavoda za pokojninsko in invalidsko zavarovanje gospodu Janezu Prijatelju. In prosim, da predstavi proračun tudi generalni direktor Zavoda za zdravstveno zavarovanje Slovenije gospod Franc Košir. Izvolite.</seg>
             </u>
             <note type="speaker">FRANC KOŠIR:</note>
-            <u who="#SDZ1.KoširFranc" ana="#regular">
+            <u who="#KoširFranc">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg115">Gospod podpredsednik, cenjene poslanke in poslanci Državnega zbora, gospodje ministri! Ob sprejemanju proračunskega memoranduma za leto 1995 konec lanskega leta smo v predstavitvi razvojnih usmeritev in nekaterih dilem v nadaljnjem razvoju zdravstvenega zavarovanja v naši državi poudarili, da je tako kot povsod v razvitih državah le-ta odvisen od obsega in možnosti javno finančnega sektorja, ki jih narekujejo strateške usmeritve hitrejšega gospodarskega razvoja ter uravnotežen ekonomsko socialni razvoj države. Podčrtali smo, da če želi Slovenija dosegati hitrejšo gospodarsko rast, večjo konkurenčnost gospodarstva, vključevanje v evropske integracije ter doseči trajno obstojnost gospodarskega razvoja z okolnega, socialnega in nacionalno kulturnega vidika, mora pretehtati stanje in odnose na področju zdravstvenega varstva ter določiti politiko, cilje in možnosti nadaljnjega razvoja na zdravstvenem področju.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg116">Pričakovati je bilo, da bo s tako naravnano vsebino in opredelitvijo ciljev že letos sprejet plan zdravstvenega varstva do leta 2000 in nekateri drugi zakonski akti kot pravne podlage za ugotavljanje dosegljivega zdravstvenega standarda vsem prebivalcem. Ker se to ni zgodilo, se uresničujejo napovedi in stališča skupščine Zavoda za zdravstveno zavarovanje Slovenije, da je v letu 1995 že resno vprašljivo financiranje programov zdravstvenih storitev in denarnih prejemkov zavarovancev, ki jim jih zagotavlja zakon, in da se bodo še posebej ti problemi zaostrili v letu 1996. Skupščina zavoda je glede na izhodišča in možnosti financiranja programa obveznega zdravstvenega zavarovanja sprejela ob tem usmeritve in smernice za uravnavanje izdatkov zavoda s pričakovanimi prihodki.</seg>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg117">Ker se tako v strokovni kot širši javnosti večkrat pojavljajo različne interpretacije nekaterih aktivnosti in ravnanj zavoda pri uresničevanju sklepov skupščine, mi dovolite, spoštovane poslanke in poslanci, da v uvodu te razprave k sprejemanju proračunskega memoranduma oziroma proračuna za leto 1996 pobliže predstavim nekatere probleme v stanju in odnosih v sistemu financiranja zdravstvenih dejavnosti in opozorim na vprašanja razhajanj med razpoložljivimi sredstvi, ki jih uokvirja sedanja oziroma novo predlagana prispevna stopnja in potrebnimi sredstvi za izvajanje sklenjenih pogodb z izvajalci zdravstvenih storitev.</seg>
@@ -444,7 +424,7 @@
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg135">Dovolite, da zaključim s stavkom, da tudi z zdravstvenim zavarovanjem želimo biti v Evropi, biti razumljivi z razviti ter sodelovati v približevanju ravnotežja ekonomskega in socialnega razvoja. Premislek, kaj hočemo, kaj zmoremo, kako bomo odpravljali dosedanje neusklajenosti, mora biti temeljit in odgovoren. Ne smemo se sprijazniti s eksperimentiranjem in zdravstveno službo prepustiti izključno tržnim zakonitostim in tako imenovanemu zdravstvenemu trgu. S tem bi tudi formalno obrnili hrbet dostopnosti vseh ljudi do dosegljivega, to je plačljivega zdravstvenega standarda, kar je temelj pravičnega zdravstva, ki je potreben vsem nam. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg136">Hvala lepa generalnemu direktorju Zavoda za zdravstveno zavarovanje Slovenije gospodu Francu Koširju.</seg>
                <note>Ploskanje.</note>
                <seg xml:id="SDZ1-Izredna-32-1995-10-20.seg137">Še enkrat se zahvaljujem vsem vabljenim predstavnikom inštitucij in Vlade in s tem zaključujem 32. izredno sejo Državnega zbora. Varno vožnjo domov in prijeten vikend vam želim!</seg>

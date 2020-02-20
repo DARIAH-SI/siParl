@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 24. zasedanje</title>
             <meeting n="24"
-                     corresp="#VsiZbor.1992-09-10.z024-01.DruzPolZb #VsiZbor.1992-09-10.z024-01.ZbObc #VsiZbor.1992-09-10.z024-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="90"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="31"/>
                <tagUsage gi="seg" occurs="181"/>
             </namespace>
@@ -275,23 +266,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1992-09-10.z024-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-09-10.z024-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-09-10.z024-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -301,16 +275,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE KOT 45. SEJA DRUŽBENOPOLITIČNEGA ZBORA, 51. SEJA ZBORA ZDRUŽENEGA DELA IN 45. SEJA ZBORA OBČIN</head>
             <head type="session">24. zasedanje</head>
             <docDate>10. september 1992</docDate>
             <note type="chairman">Sejo je vodil Ivan Bizjak, predsednik Zbora občin.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 11.10 uri.</note>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg1">Spoštovane poslanke in poslanci, gospe in gospodje, cenjeni gostje! Pričenjam skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg2">Skupno zasedanje smo sklicali predsedniki zborov po medsebojnem sporazumu na podlagi 83. člena Poslovnika Skupščine Republike Slovenije, upoštevajoč dogovor na sestanku vodij poslanskih klubov danes zjutraj.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg3">Predlagam, da bi zbori v skladu z drugim odstavkom 82. člena Poslovnika Skupščine Republike Slovenije na skupnem zasedanju obravnavali in tudi sprejemali predlog zakona o Državnem svetu, ki so ga v obravnavo v skladu s 314. členom Poslovnika Skupščine Republike Slovenije predložili poslanci vseh treh zborov, in sicer: Anton Peršak iz Družbenopolitičnega zbora - Demokratska stranka, Ignac Polajnar, Družbenopolitični zbor - Slovenski krščanski demokrati, Marjan Podobnik, Družbenopolitični zbor - Slovenska ljudska stranka, dr. Hubert Požarnik, Družbenopolitični zbor - Zeleni Slovenije, Andrej Muren, Zbor združenega dela - Socialdemokratska stranka Slovenije, Franc Gradišar, Zbor združenega dela - Neodvisni, mag. Dušan Semolič, Družbenopolitični zbor - Socialistična stranka Slovenije, Roberto Battelli, Družbenopolitični zbor - Italijanska in madžarska narodnost, Miran Potrč, Družbenopolitični zbor - Stranka demokratične prenove, Anton Tomažič, Družbenopolitični zbor - Narodni demokrati in Danijel Starman, Zbor občin - klub poslancev Demosa.</seg>
@@ -406,35 +384,35 @@
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg62">V vsakem zboru je potrebno, da bi bil zakon ali posamezni amandma sprejet, zbrati glasove 54 poslancev. Želi besedo predstavnik predlagateljev? Gospod Peršak - Družbenopolitični zbor - želi besedo? Prosim.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg63">Mislim, da je v zvezi s tem zakonom več ali manj vse jasno. Sam sem se nekako oklical za predstavnika predlagateljev, ker sem prvi podpisani na tem predlogu. Vi veste, kako je do tega dogovora prišlo. Zaradi tiste nerodnosti pri glasovanju včeraj, predvsem v imenu vodij poslanskih klubov, ki so pokazali interes, da se ta zakon sprejme in da se na ta način omogoči izvedba volitev tudi za Državni svet po novi zakonodaji in v predvidenem, z ustavnim zakonom predpisanim rokom, apeliram na vse poslance, da pokažejo dobro voljo in odgovornost ter ta zakon danes izglasujejo, tako kot so danes tudi vodje poslanskih klubov podpisali sporazum v predloženem besedilu. 11 vodij poslanskih klubov se nas je zavezalo, da ne bomo predlagali sprememb zakona, nobenih amandmajev, ampak bomo predložili poslancem, da se zakon izglasuje, tako kot je predložen.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg64">Predložen je pa tako. Vključeni so tisti amandmaji, ki so bili včeraj izglasovani kot pozitivni pri tem zakonu in črtana sta 64. in 67. člena, kar je bila materija amandmajev, ki jih je predlagala najprej Liberalna stranka, potem pa na delovni skupni seji Zbor občin. Tako da je tisto, kar je bilo sporazumno potrjeno na ustavni komisiji in klubih, sedaj vključeno v zakon in kot tak je zakon predložen. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg65">Hvala lepa. Svoje mnenje v zvezi s predlogom zakona o Državnem svetu je posredovala tudi Vlada Republike Slovenije. To mnenje ste dobili. Vlada se s predlogom zakona strinja. Ali želi besedo predstavnik vlade?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg66">Potem odpiram razpravo. K razpravi se je prijavil gospod Golija - Družbenopolitični zbor.</seg>
             </u>
             <note type="speaker">FRANC GOLIJA:</note>
-            <u who="#SSK11.GolijaFranc" ana="#regular">
+            <u who="#GolijaFranc">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg67">Spoštovane poslanke in poslanci! Zaradi pomembnosti volilne zakonodaje in njenega sprejemanja in zaradi tega, da bi enkrat Slovenija postala pravna država, prava demokracija, ne taka, o kateri mi danes samo govorimo, smo se v Liberalni stranki odločili, da bomo k zakonu o volitvah v Državni svet predložili tako imenovani udbovski amandma, ki ga v prvotni proceduri nismo vložili.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg68">Za nas so amandmaji, ki včeraj niso bili izglasovani, velikega pomena. Da je to tako, priča 119 glasov za ta amandma, ki jih je včeraj oddal ta parlament. Zaradi tega še naprej vztrajamo pri teh dveh amandmajih, udbovskem in domicilnem in nas tudi naša načelnost zavezuje, da bomo do konca sprejemanja te volilne zakonodaje tako ravnali. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg69">Hvala lepa. Gospod Štefančič iz Zbora občin je naslednji razpravljavec.</seg>
             </u>
             <note type="speaker">MARCEL ŠTEFANČIČ:</note>
-            <u who="#SSK11.StefancicMarcel1937" ana="#regular">
+            <u who="#StefancicMarcel1937">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg70">Hvala lepa. Spoštovane poslanke in poslanci! Izrazil bi samo eno željo. Rad bi vsaj potipal, če mi že ni dano, da preberem, da vidim na lastne oči, tako kot je približno Tomaž naredil nekoč, v neki preteklosti, da je hotel nekaj potipati. Tudi sam bi rad. Naj mi bo dovoljeno, da pred glasovanjem potipam ta novi zakon o volitvah v Državni svet.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg71">Hvala lepa. Vsekakor bomo poskusili, da pridejo dokumenti tudi na klop. Gospod Grašič iz Zbora združenega dela želi razpravljati.</seg>
             </u>
             <note type="speaker">FRANC GRAŠIČ:</note>
-            <u who="#SSK11.GrasicFranc1941" ana="#regular">
+            <u who="#GrasicFranc1941">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg72">Spoštovane poslanke in poslanci! Ob sprejemanju tega zakona o Državnem svetu želim izpostaviti le določena dejstva, ki so danes prisotna in bodo še določen čas pri zagotavljanju zastopanja interesov gospodarstva v Državnem svetu.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg73">Za odločanje o udeležbi gospodarstva v Državnem svetu si je potrebno predstaviti strukturo slovenskega gospodarstva danes in v prihodnjih nekaj letih. Dejstvo je, da je, ne glede, kako je organizirano institucionalno danes, pretežno organizirano v zbornici za celotno gospodarstvo in obrtniški zbornici.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg74">Društva in združenja delodajalcev so v nastajanju in zastopajo manjša nova podjetja in zasebne nosilce firm. Struktura slovenskega gospodarstva po privatizaciji bo taka, da bo pretežna organizacijska oblika delniška družba in ne firma z enim lastnikom. Lastniki kapitala bodo torej zelo razpršeni, udeležen bo državni kapital, kapital delničarjev, obrtnikov in zasebnih podjetnikov.</seg>
@@ -443,87 +421,87 @@
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg77">Pri izvedbi 24. člena tega zakona, ki ga sedaj obravnavamo, je treba upoštevati materialno stanje, kakršno je in kakršno v bodoče bo. To pa je, da so lastniki kapitala trenutno nedefinirani. Vrši se postopno prehajanje v nov sistem in bo tudi v bodoče potrebno organizirati zastopstvo tega kapitala na racionalen in na logično edino mogoč način. Formalno-pravni razlog pa je dejstvo, da sta danes Gospodarska zbornica in Obrtniška zbornica edina zakonita zastopnika gospodarstva. Delodajalci na Slovenskem so in bodo firme organizirali na racionalen način, in v zelo skromnem materialnem obsegu individualni podjetniki. Število novo organiziranih podjetij resnično hitro narašča, vendar skupaj v celoti to niso delodajalci, ampak so individualne firme z enim zaposlenim, četrtina od teh pa je celo spečih. Na ta dejstva sem predvsem želel opozoriti pri izvedbi 24. člena zakona, ki ga zdaj obravnavamo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg78">Hvala lepa. Želi še kdo razpravljati? Prosim. Replika gospod Golija iz Družbenopolitičnega zbora.</seg>
             </u>
             <note type="speaker">FRANC GOLIJA:</note>
-            <u who="#SSK11.GolijaFranc" ana="#regular">
+            <u who="#GolijaFranc">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg79">Franc Golija, Liberalna stranka. Moram pač reagirati na mnenja in trditve mojega predgovornika, ki stvari ne gleda tako kot se stvari razvijajo v svetu. Mislim, da zbornice ne morejo podpisovati kolektivnih pogodb in da ne morejo zastopati gospodarstva drugače kot po strokovnih in drugih plateh. Če se bomo odmikali od tega, da Društvo delodajalcev ne bo dobilo pravega mesta, tako kot ga ima v zahodnih ekonomijah, se mi tem ekonomijam nikoli ne bomo približali. Trditev, da lastniki-delničarji ne bodo v bližnji prihodnosti lastniki več kot polovice slovenskega kapitala, je zmotna. Če bo to res tako, se mi nikoli ne bomo izmotali iz tega realsocialističnega gospodarstva. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg80">Hvala lepa. Gospod Gradišar Franc iz Zbora združenega dela se javlja k besedi.</seg>
             </u>
             <note type="speaker">FRANC GRADIŠAR:</note>
-            <u who="#SSK11.GradisarFranc1945" ana="#regular">
+            <u who="#GradisarFranc1945">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg81">Na svoje kolege apeliram oziroma jim predlagam, da sprejmejo po tem sistemu, ki je pri nas v navadi, zakon o Državnem svetu v taki obliki in v takem besedilu, kot je predlagan. Se pravi, brez amandmajev in brez teh levo-desnih odstopanj. Obenem pa še predlagam, mogoče malo prehitevam, da to glasovanje izvedemo tako kot včeraj: z imenskim, javnim in tako naprej. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg82">Hvala lepa. Gospod Lukač iz Zbora občin je naslednji razpravljavec.</seg>
             </u>
             <note type="speaker">JANEZ LUKAČ:</note>
-            <u who="#SSK11.LukacJanez1931" ana="#regular">
+            <u who="#LukacJanez1931">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg83">Hvala lepa. Spoštovane kolegice, kolegi! Predsednik naše stranke je sopodpisnik tega predloga zakona. Včeraj je bil o teh dogodkih dosežen sporazum med vsemi parlamentarnimi strankami in načenjanje teoretičnih razprav danes bi bilo zelo nevarno.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg84">Da pa ne bi bil napačen vtis in občutek v tem domu o vsem tem, kar je povedal gospod Grašič, je treba povedati naslednje; Gospodarska zbornica res združuje podjetja, toda z lastnino v družbeni lastnini. To pomeni danes že v nekako uveljavljenem pojmovanju, da gre za lastnino vseh državljanov Slovenije. Dalje to pomeni, da so ti državljani Slovenije že predstavljeni v svojem zboru in tam odločajo. Paralelno bi pa potem vzpostaviti mehanizem paradržavnega odločanja o njihovi lastnini. To je treba zelo paziti in zato trdim, da je bolje, da to opustimo, ker bi se drugače zapletli v težave, iz katerih spet danes ne bomo našli izhodov. Zato je prav, da pristanemo na nekaj, kar nismo čisto dorekli, ampak smo se sporazumeli, da je v tem prehodnem obdobju edino mogoče. Zato se zavzemam, da ta zakon danes sprejmemo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg85">Hvala lepa. Prijavljenih razpravljavcev je več. Gospod Žagar iz Družbenopolitičnega zbora se zdaj javlja.</seg>
             </u>
             <note type="speaker">ZVONE ŽAGAR:</note>
-            <u who="#SSK11.ZagarZvone" ana="#regular">
+            <u who="#ZagarZvone">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg86">Hvala lepa za besedo. Najprej želim izjaviti, da zavračam način voljenja in dogajanje na včerajšnji seji, ko je skupščina postala neka mučilnica in vse skupaj farsa. Poslanski klubi oziroma predstavniki poslanskih klubov pa so odločali o tem, kako bomo poslanci glasovali, tako da bi bilo ceneje, če včeraj poslancev ne bi bilo in bi kar poslanski klubi oziroma predstavniki poslanskih klubov sprejeli oba volilna zakona.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg87">Glede zakona o volitvah v Državni svet želim reči naslednje; takemu zakonu, kot je predlagan, nasprotujem predvsem iz razlogov, da gre za posredne volitve. V bistvu gre za tajne volitve in zaradi tega bodo na vodilna mesta v državi oziroma v Državnem svetu prišli tako imenovani svetniki brez splošnih volitev, brez javnosti, brez volilne kampanje oziroma popolnoma neznani ljudje, ki bodo klub temu bistveno vplivali na potek dogajanja in na politiko. Kako bodo vplivali na to, je bilo že povedano. Ti svetniki bodo preprosto določeni v zaprtih krogih.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg88">Zato predlagam, spoštovani kolegi in kolegice, v razmislek, da kljub časovni stiski še enkrat premislimo in tudi za Državni svet v celoti predpišemo neposredne volitve ali pa vsaj, da bi poleg že obstoječega sistema določanja kandidatov oziroma tako imenovanih posrednih volitev obstajala tudi možnost kandidiranja na nek način dodatnih kandidatov in ti kandidati, skupaj z že določenimi, bi bili po predlogu zakona oboji v zadnji fazi preizkušeni na splošnih volitvah z volivci oziroma konfrontirani z mnenji volivcev. To stališče ni novo. Je že nekaj časa prisotno. Delno smo ga rešili z amandmajem, ki zdaj omogoča, da se za del Državnega sveta, to je za predstavnike lokalnih interesov, uvede nek način neposrednih volitev, zato še enkrat predlagam, da še kdo pove svoje mnenje o celotnem neposrednem volilnem sistemu za Državni svet. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg89">Hvala lepa, gospod Žagar. Besedo ima gospod Gradišar iz Zbora združenega dela.</seg>
             </u>
             <note type="speaker">FRANC GRADIŠAR:</note>
-            <u who="#SSK11.GradisarFranc1945" ana="#regular">
+            <u who="#GradisarFranc1945">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg90">Imel bi samo kratko repliko na izvajanje kolega Žagarja. To, kar je on tukaj predstavil, da naj kar vodje poslanskih klubov sprejemajo ta in drugi zakon, je v tem, to kar danes delamo, malo drugače. Ta dogovor, ki smo ga pač kot vodje sprejeli, smo potem verificirali v svoji sredini, pri svojih kolegih in šele na osnovi te verifikacije smo podpisali to. To pomeni, da je stvar popolnoma čista, da smo danes, glede na včerajšnji dan, normalen parlament. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg91">Tisti očitek gospoda Žagarja tako in tako zavračam v imenu nas treh, ki smo sklicali ta sestanek. Na tem sestanku smo se hoteli zgolj pomeniti, kako razvozlati klobčič, ki smo ga včeraj dodobra zavozlali.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg92">Sedaj ima najprej besedo gospod Ocvirk iz Družbenopolitičnega zbora, nato pa gospod Partljič.</seg>
             </u>
             <note type="speaker">MOJMIR OCVIRK:</note>
-            <u who="#SSK11.OcvirkMojmir" ana="#regular">
+            <u who="#OcvirkMojmir">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg93">Hvala lepa. Prav tako kot vsa naša stranka, se izrazito zavzemam za to, da bi čimprej sprejeli zakon. Vendar pa bi želel povedati nekaj stvari.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg94">Reakcija danes Liberalne stranke se mi zdi tako rekoč že skoraj neverjetna. Znova se pogovarjamo oziroma želeli bi se pogovarjati o stvareh, ki smo jih na teoretski ravni - če pustimo nekaj tistih stvari, ki jih nismo razrešili - razreševali skozi marsikatero komisijo in tudi tu pred parlamentom. Na nek način moram izraziti svoj protest proti temu, da se nam najprej dogaja to, kar se nam je včeraj in kjer gospod Žagar ni bil prisoten, ker smo bili sami tisti, ki smo vsi skupaj ogrožali delo in zaman sedeli tu. Gospod Žagar in njegova stranka so pa izrazito pozitivno delovali.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg95">Prosim, da bi se držali dnevnega reda, se pravi predloga zakona in da ne bi širili tematike.</seg>
             </u>
             <note type="speaker">MOJMIR OCVIRK:</note>
-            <u who="#SSK11.OcvirkMojmir" ana="#regular">
+            <u who="#OcvirkMojmir">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg96">Hvala lepa. Skratka. Podpiram ta zakon, kot sem ga podpiral tudi včeraj in trdim, da če ta zakon danes ne bo šel skozi, bi bilo zelo žalostno, da bi se ponovila igra, ki smo jo imeli tudi včeraj, da se je obtoževala za to pozicija. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg97">Hvala lepa. Naslednji ima besedo gospod Tone Partljič iz Zbora občin.</seg>
             </u>
             <note type="speaker">TONE PARTLJIČ:</note>
-            <u who="#SSK11.PartljicAnton1940" ana="#regular">
+            <u who="#PartljičAnton">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg98">Predlagam, da - če so ljudje že lahko potipali - gremo čimprej h glasovanju.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg99">Drugič - izražam vendar kritiko na vodstvo skupščine, ker vidim, da že drugič spomladi sklicuje skupščino ob polni luni in vedno več dokazov je, da to vpliva na ljudi. Če ne bi rad žalil opozicije, vsaj na nas je vplivalo - nismo glasovali oziroma smo napak glasovali o tistih amandmajih in prosim, da to malo pogledate v prihodnje.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg100">Še nekaj bi prosil. Razumem, da tisti, ki so dali pobudo za udbovski amandma, na njem vztrajajo; zdi se mi legitimno in danes bomo videli, kako bo kazalo glasovanje. Če pa bi že imel kakšen predlog takšnem amandmaju, bi morda le predlagal, da si mi, ki smo sedaj poslanci, podpišemo, da ne bomo več kandidirali, ker se bo to slovenskemu narodu zdelo najboljše - bolj kot to, kdo je bil udbovec.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg101">Hvala lepa. Še gospod Kolešnik iz Družbenopolitičnega zbora je prijavljen za razpravo.</seg>
             </u>
             <note type="speaker">CIRIL KOLEŠNIK:</note>
-            <u who="#SSK11.KolesnikCiril" ana="#regular">
+            <u who="#KolesnikCiril">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg102">Ker je tudi gospod Partljič govoril o polni luni, imam tudi sam vprašanje o polni luni. Namreč, 24. člen je tisti člen, za katerega menim, da je zelo bistven. Prav zato, ker sem ga prebral, bi postavil samo vprašanje oziroma bi opozoril nanj. Ne gre za nič drugega - strinjam se z vsem tistim, kar ste povedali, da je treba čimprej sprejeti in tako tudi sam menim. Vendar, da ne bo potem kakršnihkoli pripomb o zaupanju in nezaupanju, bi samo prebral zadnji odstavek: "Vsaka gospodarska zbornica in vsako združenje delodajalcev izvoli v volilno telo po enega predstavnika na vsakih dopolnjenih 10.000 delavcev, zaposlenih pri članih Gospodarske zbornice oziroma združenja delodajalcev." Brez komentarja! To je vam in nam v vednost. Upam, da vemo, za kaj gre in da imamo pač to, kar imamo, s to vsebino zapisano. Opozarjam pa, da imamo še vedno zakon, po katerem vsako podjetje z družbenim kapitalom mora biti član Gospodarske zbornice. Dokler tu ni sprememb, mislim, da tudi bistvenih sprememb o tistem, kar smo včeraj govorili, ne bo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg103">Hvala lepa. Prijavljenih za razpravo ni več. Razpravo zaključujem!</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg104">Prehajamo na odločanje. Predložen imamo en amandma. Še enkrat opozarjam, da je v skladu z ustavnim zakonom za sprejem amandmaja oziroma zakona v celoti potrebna dvotretjinska večina, to je v tej fazi sedaj 54 glasov poslancev iz vsakega zbora.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg105">Prehajamo torej najprej na glasovanje o amandmaju, ki ga je predložil gospod Golija in ki bi ga prebral; mislim, da ga v tem času še niso uspeli razmnožiti. Glasi se tako: v besedilu zakona o Državnem svetu se v tretjem delu "Prehodnih in končnih določb" za 69. členom doda nov 69a. člen, ki se glasi: "Pri prvih volitvah v Državni svet mora kandidat za člana Državnega sveta ob sprejemu kandidature predložiti tudi pisno izjavo, s katero odgovori na vprašanje: Ali ste do volitev sodelovali s Službo državne varnosti ali s katerokoli drugo, tudi tujo tajno službo; in če ste, s katero in kdaj? Kot sodelovanje s Službo državne varnosti ali s katerokoli drugo tudi tujo tajno službo se šteje: biti agent službe, biti redni ali občasni delavec ali sodelavec službe. Pisna izjava kandidata se kot javna listina deponira pri republiški volilni komisiji. V primeru, da se pozneje s sodno odločbo dokaže, da izjava ni resnična, njen podpisnik izgubi mandat."</seg>
@@ -532,11 +510,11 @@
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg108">Zato najprej dajem na glasovanje predlog, da se o amandmaju glasuje poimensko. Glasujemo po zborih. Gospod Štefančič iz Zbora občin želi besedo iz proceduralnih razlogov.</seg>
             </u>
             <note type="speaker">MARCEL ŠTEFANČIČ:</note>
-            <u who="#SSK11.StefancicMarcel1937" ana="#regular">
+            <u who="#StefancicMarcel1937">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg109">Če sem dobro slišal je bilo rečeno, da se predlaga amandma za 69. členom kot 69a. člen. Mislim, da je nekaj narobe, ker ta zakon ima samo 68. členov, torej ni 69. člena, ki bi mu dajali 69a. člen, kvečjemu bi bil dodatek za 68. členom 69. člen.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg110">To imate prav, gospod Štefančič. Prosim predlagatelja amandmaja, da ga ustrezno popravi, da bo amandma imel smisel. Za 67. členom, če vam lahko pomagam, nov 67a. člen. Je tako? Dobro. Na ta način ta amandma popravljamo.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg111">Glasujemo najprej o tem, da bomo o tem amandmaju glasovali poimensko. Najprej o amandmaju. Potem pa bom ločeno dal na glasovanje, da tudi o predlogu zakona glasujemo poimensko. Glasovati moramo po zborih.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg112">Ugotovimo prisotnost: Družbenopolitični zbor - 68 poslancev; Zbor občin - 64 poslancev; Zbor združenega dela - 57 poslancev.</seg>
@@ -589,12 +567,12 @@
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg143">O amandmaju gospoda Golije glasuje Zbor občin. Če sem prav videl gospod Schwarzbartl želi obrazložiti svoj glas. Ni nujno, videl sem roko. Prosim, gospod Schwarzbartl iz Zbora občin.</seg>
             </u>
             <note type="speaker">MAG. ERVIN ANTON SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg144">Hvala lepa za besedo, čeprav sem malo dolgo čakal. Hotel sem že prej sprožiti proceduralno vprašanje. Mi smo včasih sila pravoverni, včasih pa zelo radi kršimo in po bližnjicah rešujemo probleme. Problem je v tem, da pri amandmaju, ki je bil vložen, nimam mnenja vlade. Ne vem, ali je to potrebno ali ne. Gre pa še za preprosto vprašanje odgovora na mnenje gospoda Partljiča, da naj bi vsi podpisali neko izjavo kako smo nekompetentni, nesposobni in neprimerni za ta parlament. Osebno se s tem ne strinjam in mislim, da take izjave ne bi podpisal tudi, če se ne bom javil več za kakršnokoli funkcijo v parlamentu.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg145">Zakaj to povem? Zato, ker želim, da gredo procedure tako kot so predpisane. Če je potrebno za takšen amandma mnenje vlade, potem bi rad to mnenje vlade vsaj slišal, če ga že nimam pisno opredeljenega. V kolikor pa poslovnik tega ne določa, tega ta trenutek res ne vem, potem je pa verjetno procedura pravilna in sem zaman prišel za to govornico. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg146">Hvala lepa. Na ta proceduralni ugovor bi rekel to. O tem amandmaju se je vlada že izrekla, čeprav pri drugi proceduri. To je prvo.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg147">Drugo pa, kolikor sem doslej študiral poslovnik, ta eksplicitno ne zahteva, ne obvezuje, da je o vsaki stvari potrebno imeti mnenja tega in onega.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-09-10.z024-01.seg148">Mislim, da ne grešimo, če delamo tako kot delamo. Glasujemo o amandmaju, ki ga je v Zboru občin vložil gospod Gros. Prisotnost Zbora občin, prosim.</seg>

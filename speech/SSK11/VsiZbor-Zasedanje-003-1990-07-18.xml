@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 3. zasedanje</title>
             <meeting n="3"
-                     corresp="#VsiZbor.1990-07-18.z003-01.DruzPolZb #VsiZbor.1990-07-18.z003-01.ZbObc #VsiZbor.1990-07-18.z003-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="10"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="5"/>
                <tagUsage gi="seg" occurs="118"/>
             </namespace>
@@ -212,23 +203,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1990-07-18.z003-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-07-18.z003-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-07-18.z003-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -239,22 +213,26 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">3. zasedanje</head>
             <docDate>18. in 31. julija 1990</docDate>
             <note type="chairman">Sejo sta vodila: Jože Zupančič, predsednik Zbora združenega dela in dr. Ludvik Toplak, predsednik Družbenopolitičnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 11.25 uri.</note>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg1">Gospod predsednik predsedstva Republike Slovenije, g. predsednik Izvršnega sveta, dragi člani predsedstva in člani Izvršnega sveta, dragi vsi vabljeni, posebej pa še novinarji. Pričenjam skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg2">Na skupnem zasedanju bomo najprej poslušali UVODNO OBRAZLOŽITEV K PREDLOGU, DA SE ZAČNE POSTOPEK ZA SPREJEM USTAVE REPUBLIKE SLOVENIJE, ki jo bo podal g. Milan Kučan, predsednik Predsedstva Republike Slovenije. V nadaljevanju, takoj po tej uvodni obrazložitvi, bo imel ekspoze k programskim usmeritvam Izvršnega sveta Skupščine Republike Slovenije g. Lojze Peterle, predsednik Izvršnega sveta Skupščine Republike Slovenije. Po ekspozeju ne bo razprave, tako da bomo nadaljevali naše delo po zborih, vsak za sebe.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg3">Iskreno prosim g. Milana Kučana, da poda svojo uvodno obrazložitev k predlogu, da se začne postopek za sprejem ustave Republike Slovenije. Prosim, Milan Kučan, predsednik Predsedstva Republike Slovenije.</seg>
             </u>
             <note type="speaker">MILAN KUČAN:</note>
-            <u who="#SSK11.KucanMilan1941" ana="#regular">
+            <u who="#KucanMilan1941">
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg4">Spoštovani predsednik, poslanke in poslanci! Predsedstvo Republike Slovenije je na temelju ustavnega pooblastila in v prepričanju, da izraža občo, od sprejemanja dopolnil k Ustavi Republike Slovenije, večkrat javno in nedvoumno izpričano voljo slovenskega naroda ter državljanov Slovenije, sklenilo, da predlaga slovenski skupščini začetek postopka za sprejem ustave Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg5">S sprejetjem ustave Republike Slovenije bo uresničen politični ideal demokratičnih in patriotičnih sil o svobodni, suvereni, samostojni demokratični Republiki Sloveniji, ki po svoji volji, na podlagi svojih avtentičnih interesov ureja svoja razmerja in svoj položaj v odnosih z drugimi narodi Jugoslavije in v mednarodni skupnosti.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg6">Tisočletne težnje in boji Slovencev za svobodo in suverenost dobivajo v današnjem času, v sedanjih jugoslovanskih in mednarodnih političnih razmerah novo vsebino in podobo. Pri tem so nam v oporo dosežki v zgodovini uveljavljanja slovenske državnosti, posebej še dogajanja ob koncu prve svetovne vojne in pa zlasti temelji slovenske državnosti, ki so bili položeni med narodnoosvobodilnim bojem slovenskega naroda na strani protifašistične zveze združenih narodov. Najvišji predstavniški organi, ki so bili tedaj oblikovani, in njihove odločitve, ki so bile sprejete, so dokaz, da se slovenski narod nikdar ni odpovedal svoji samostojnosti in svobodi. Jugoslovansko idejo je sprejemal izključno in vedno kot zamisel o svobodni, prostovoljni skupnosti enakopravnih narodov, v kateri se nacionalna bit vsakega naroda in vseh skupaj v vzajemnem interesu potrjujeta in razvijata.</seg>
@@ -311,12 +289,12 @@
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg57">Gospodu Milanu Kučanu, predsedniku Predsedstva Republike Slovenije se za uvodno obrazložitev, da se začne postopek za sprejem naše nove slovenske ustave, iskreno zahvaljujem.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg58">Sedaj bi poslušali EKSPOZE K PROGRAMSKIM USMERITVAM IZVRŠNEGA SVETA SKUPŠČINE REPUBLIKE SLOVENIJE, ki ga bo podal gospod Alojz Peterle, predsednik Izvršnega sveta Skupščine Republike Slovenije. Prosim, gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg59">Spoštovano predsedstvo, spoštovane poslanke in poslanci, gospe in gospodje, dragi gostje, posebej še tisti iz slovenskih pokrajin zunaj Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg60">Če bi bile razmere pri nas normalne, bi danes tukaj zastopal normalen program, neke normalne vlade in predstavil bi tudi nek normalen ekspoze. Ker pa zadeve v tej deželi niso normalne, tudi ta ekspoze ne bo normalen in namesto programa ponujamo programske usmeritve.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg61">Ko smo začeli prvi dan svojega vladanja nas je čakalo na mizi sporočilo, da je 225 slovenskih podjetij pred stečajem in to ne majhnih. To je eno od nenormalnih dejstev, naštel bom še nekaj drugih.</seg>
@@ -375,7 +353,7 @@
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg114">Gospodu Lojzetu Peterletu, predsedniku Izvršnega sveta, se za podani ekspoze iskreno zahvaljujem.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg115">S tem zaključujemo skupno zasedanje vseh treh zborov in nadaljujemo delo vsak za sebe.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-18.z003-01.seg116">Družbenopolitični zbor prične z delom ob 13.15 uri,</seg>

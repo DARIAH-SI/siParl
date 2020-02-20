@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 29. seja</title>
             <meeting n="29"
-                     corresp="#VsiZbor.1992-01-15.s029-01.DruzPolZb #VsiZbor.1992-01-15.s029-01.ZbObc #VsiZbor.1992-01-15.s029-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="128"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="15"/>
                <tagUsage gi="seg" occurs="240"/>
             </namespace>
@@ -343,23 +334,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1992-01-15.s029-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-01-15.s029-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-01-15.s029-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -369,16 +343,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA</head>
             <head type="session">29. seja</head>
             <docDate>15. januar 1992</docDate>
             <note type="chairman">Sejo je vodil: Dr. France Bučar, predsednik Skupščine Republike Slovenije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 16.50 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg1">Poslanke in poslanci! Začenjam 29. skupno sejo vseh zborov Skupščine Republike Slovenije, ki je sklicana na podlagi 134. člena Poslovnika Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg2">Najprej bomo ugotovili sklepčnost; in prosim, da potrdijo svojo navzočnost; najprej poslanci Druženopolitičnega zbora</seg>
                <note>51 poslancev</note>
@@ -455,7 +433,7 @@
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg50">Prosim poročevalce komisij, ki so v skladu s 112. členom ustave Republike Slovenije vodile razgovor s kandidatom za to funkcijo in ugotovile njegova stališča in program. Prosim!</seg>
             </u>
             <note type="speaker">IGNAC POLAJNAR (DPZ):</note>
-            <u who="#SSK11.PolajnarIgnac1948" ana="#regular">
+            <u who="#PolajnarIgnac">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg51">Hvala lepa, gospod predsednik. Naša Komisija je bila skupna, sestavljena iz Komisije za družino ter iz Odborov za zdravstvo in za delo, zaposlovanje in socialno politiko in tam se je minister predstavil, kakor zdaj predvideva 112. člen slovenske ustave.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg52">Na podlagi 112. člena ustave Republike Slovenije se je predlagani minister za zdravstvo, družino in socialno varstvo, dr. Božidar Voljč, pred odločanjem o njegovem imenovanju v Skupščini Republike Slovenije predstavil dne 15. januarja 1992 pristojnim delovnim telesom Skupščine Republike Slovenije. Uvodoma je dr. Voljč obrazložil svoj pogled in svoje delovanje v ministrstvu do teh izjemno zahtevnih in perečih področij. Posebej je poudaril, da je pripravljen prevzeti te odgovorne naloge in da se ob tem zaveda težavnega položaja teh dejavnosti. Izpostavil je nekaj sklopov vprašanj, za katera meni, da bodo zahtevala vsestransko pozornost in prioritetno reševanje. To so: delovanje ministrstva, sistem zdravstvenega varstva, ekonomika zdravstva, zdravstvene ustanove in zdravstveno osebje, problematika družine in problematika socialnega varstva.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg53">V nadaljevanju je odgovoril na več konkretnih vprašanj, ki so se nanašala na prioritete v zdravstvu, vlogo Univerzitetnega kliničnega centra v okviru razvoja zdravstva v Sloveniji, uveljavljanje privatne prakse v zdravstvu, možnosti zaposlovanja mladih zdravnikov in drugih profilov delavcev v zdravstvu, o zagotavljanju pogojev za uveljavljanje ženske in matere in na nekatera vprašanja o socialni varnosti.</seg>
@@ -465,7 +443,7 @@
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg57">Delovna telesa menijo, da se glede na uspešno predstavitev, dr. Voljča lahko izvoli za ministra za področje zdravstva, družine in socialnega varstva. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg58">Hvala lepa. Želi kdo o tem predlogu razpravljati? V kolikor ne, prehajamo na glasovanje. Opozarjam vas, da je po določbi tretjega odstavka 26. člena, sedaj veljavnega Poslovnika Skupščine Republike Slovenije o izvolitvi oziroma imenovanju članov vlade določen tak red, da se glasuje lahko ali javno, pri čemer, če se odločimo za javno glasovanje, se glasuje poimensko, ali da glasujemo tajno, z listki. Torej, kolikor bi šlo za tajno glasovanje, z listki mislim, da je ta procedura bolj enostavna in krajša, bi dal najprej predlog na glasovanje, namreč jaz osebno postavljam predlog, da gremo na tajno glasovanje, z listki.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg59">Prosim, kdo je za ta predlog?</seg>
                <note>144 poslancev.</note>
@@ -489,7 +467,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 17.05 uri in se je nadaljevala ob 17.25 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg72">Nadaljujemo s sejo.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg73">Predno nadaljujemo s sejo, si dovoljujem, da vas obvestim še o naslednjem.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg74">Če preberem seznam držav, ki so nas priznale, je ta seznam sledeč: Hrvaška, Litva, Gruzija, Latvija, Estonija, Ukrajina, Islandija, Švedska, Nemčija, Vatikan, San Marino, to je bilo do včerajšnjega dne. Ravnokar pa sem dobil sporočilo iz zunanjega ministrstva, ki ga je podpisal Zoran Thaler, danes je bil z Nemčijo podpisan sporazum o navezavi diplomatskih odnosov in o ukinitvi viz.</seg>
@@ -518,41 +496,41 @@
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg89">Želi kdo o predlogu razpravljati? Gospod Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS, Liberalna stranka (ZO):</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg90">Zanima me, če je ta gospod tisti gospod, ki je bil pri gospodu Harmanu na SZDL za neke notranje zadeve in tako naprej. Mogoče bo lahko gospod Smole odgovoril. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg91">Želi predstavnik predlagatelja ali komisije na to vprašanje odgovoriti?</seg>
                <note>Ne želi.</note>
             </u>
             <note type="speaker">VITOMIR GROS (ZO):</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg92">Ugotavljam, da je ta oseba očitno v tej skupščini popolnoma neznana in zato bom glasoval proti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg93">Hvala lepa. Želi še kdo razpravljati? Jaša Zlobec.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC (ZZD):</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg94">Kolega Gros je že neštetokrat glasoval o neznanih osebah. Lahko rečem, da sem med vojno za Slovenijo kar nekajkrat bil na Ministrstvu za informiranje, kjer je Mirko Fabčič preživel povprečno 20 do 24 ur na dan na nogah in opravljal svoj posel, kot je treba. Pri vas nisem bil gospod Gros, tako da ne vem, kaj ste vi tisti čas delali.</seg>
             </u>
             <note type="speaker">VITOMIR GROS (ZO):</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg95">Moram povedati, da nekateri "šetinasti zlobci" zelo pikro razpravljajo. Jaz sem samo hotel vedeti informacijo. Informacije od uradnih oseb nisem zvedel, zato sem ravnal tako, kot sem ravnal. To kar ste pa vi povedal, se mi pa zdi, da ni bilo čisto popolnoma primerno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg96">Hvala lepa. Dajem ta predlog na glasovanje. Prosim.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER (DPZ):</note>
-            <u who="#SSK11.LavtizarBeblerDarja1950" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg97">Hvala lepa. Gospod predsednik, spoštovane kolegice, spoštovani kolegi. Mislim, da je prav, da tukaj zastavim tudi besedo v prid, že samo zaradi samega dejstva, ker je bilo tukaj trikrat izraženo nasprotno stališče oziroma negativno stališče. Tudi meni ni všeč, da se včasih tako pogovarjamo o osebnostih ali osebah.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg98">Zato naj samo to povem. Nekaj let sem bila kolegica gospoda Mirka Fabčiča na bivši Socialistični zvezi. Kar sem bila jaz njegova kolegica, je ves čas delal pri Svetu za informiranje in samo nekaj časa kot šef kabineta bivšega predsednika Republiške konference SZDL, gospoda Franca Šetinca. Kolikor vem, bila sem veliko let v strokovni službi Republiške konference socialistične zveze, se nikdar ni ukvarjal s stvarmi, ki bi sodile v resor notranjih zadev. Samo toliko. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg99">Hvala lepa. Zaključujem razpravo o tem vprašanju in prehajamo na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg100">Kdo je prosim za to, da se imenuje Mirko Fabčič za namestnika ministra za informiranje, prosim da glasuje.</seg>
                <note>85 ZA</note>
@@ -763,12 +741,12 @@
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg237">Prosim gospoda ministra, da prebere prisego.</seg>
             </u>
             <note type="speaker">DR. BOŽIDAR VOLJČ (Minister za zdravstvo, družino in socialno varstvo):</note>
-            <u who="#SSK11.VoljcBozidar1939" ana="#regular">
+            <u who="#VoljčBožidar">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg238">Spoštovani gospod predsednik, spoštovane poslanke in poslanci! Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANC BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg239">Ugotavljam, da je skupna seja odločila o vseh zadevah dnevnega reda, zato zaključujem to 29. skupno sejo vseh zborov Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-01-15.s029-01.seg240">Tukaj imam eno obvestilo: vsi poslanci so naprošeni, da ostanejo v dvorani, ker bodo nadaljevali z delom na usklajevalni skupni seji.</seg>
             </u>

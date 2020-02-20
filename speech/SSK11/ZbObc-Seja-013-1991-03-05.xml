@@ -9,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Skupščine Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Zbor občin: 13. seja</title>
-            <meeting n="13"
-                     corresp="#ZbObc.1991-03-05.s013-01.ZbObc"
-                     ana="#parl.meeting.regular"/>
+            <meeting n="13" corresp="#ZbObc" ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +27,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +40,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +61,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="200"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="132"/>
                <tagUsage gi="seg" occurs="575"/>
                <tagUsage gi="gap" occurs="2"/>
@@ -673,13 +662,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="ZbObc.1991-03-05.s013-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -690,16 +672,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>ZBOR OBČIN SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">13. seja</head>
             <docDate>5., 6. in 7. marca 1991</docDate>
             <note type="chairman">Sejo so vodili: Ivan Bizjak, predsednik Zbora občin, Janez Lukač, podpredsednik in Anton Rojec, predsedujoči zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.10 uri.</note>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg1">Spoštovane delegatke in delegati! Pričenjam 13. sejo Zbora občin Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg2">Za današnjo sejo zbora so se opravičili: podpredsednik zbora Janez Lukač, Janez Juh, Ivan Kuhar, Albin Kac, Matjaž Jež in Vika Potočnik. Po podatkih službe je na seji prisotnih 60 delegatov. Prosim, da ugotovimo še, kakšna je prisotnost v dvorani. Prosim, da pritisnete tipko.</seg>
                <note>50 prisotnih.</note>
@@ -728,15 +714,15 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg20">Želi o predlogu izvršnega sveta kdo razpravljati? Prosim, gospod Zakonjšek.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg21">Gospod predsednik, spoštovani zbor! Predlagam, da toči 8 in 9 ne uvrstimo na dnevni red, predvsem pa ne po hitrem postopku. Po moji oceni ni podana ustavna podlaga za hitri postopek pri sprejemanju obeh zakonskih aktov. Vi ste danes dobili zakon na klop, jaz sem ga videl včeraj, ker je bil razdeljen na seji Zakonodajno-pravne komisije. Zakon zelo posega v pravice in obveznosti na področju pokojninskega in invalidskega zavarovanja in zahteva temeljito obravnavo celotnega kompleksa vprašanj, ki se odpirajo ob financiranju pravic iz tega naslova, predvsem ustreznega delovnega telesa in tistih teles, ki so po pravilniku zadolžena, da dajo svoja stališča in mnenja k predlogom zakonskih aktov. Ne bi razpravljal o vsebini predloga, vendar ne morem mimo konstatacije, da je predlog - po moji oceni - nedomišljen in da si skupščina ne bi smela dovoliti, da v skrajšanem postopku obravnava tako pomembno socialno in politično vprašanje. Zato predlagam, da zbor ne sprejme predloga, da se oba akta obravnavata po hitrem postopku oziroma predlagam, da ju ne obravnavamo na današnji seji skupščine. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg22">Prosim, Marko Štrovs, pomočnik republiškega sekretarja Republike Slovenije za delo.</seg>
             </u>
             <note type="speaker">MARKO ŠTROVS:</note>
-            <u who="#SSK11.StrovsMarko1950" ana="#regular">
+            <u who="#StrovsMarko1950">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg23">Govorim v imenu predlagatelja teh dveh zakonov, gre pa za resno vprašanje, ki se ga ne da odlagati. Od sredine lanskega leta se namreč veča nesorazmerje med sredstvi in obremenitvijo pokojninskega in invalidskega zavarovanja. Pokojnine za februar je bilo možno izplačati samo s tem, da je SPIZ najela 600 milijonov bančnega kredita, praktično vsa razpoložljiva bančna sredstva. V marcu pa je prišlo do trenutka, ko je nujno odločiti, kako naprej.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg24">Ocenjujemo, da bo pokojninsko in invalidsko zavarovanje ob koncu marca razpolagalo s 300 milijoni din. Obveznosti, kakršne izhajajo iz sedanjega zakona, so pa 3 milijarde din. Tega manjka z nobenim kreditom ni mogoče prekriti. Alternativa je jasna. V današnjih gospodarskih razmerah je očitno, da ni možno ponovno povečati prispevnih stopenj za pokojninsko in invalidsko zavarovanje, ki so bile v začetku leta že povečane za 11,8%. Že zdaj dosegajo prispevne stopnje iz pokojninskega in invalidskega zavarovanja 28,8% bruto osebnega dohodka. Če to preračunamo na čisto plačo, je to 46% mase čistih plač v Sloveniji vseh zavarovancev.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg25">V izvršnem svetu zato predvidevamo dve rešitvi: najprej predlagamo, da Skupščina Republike Slovenije po hitrem postopku sprejme zakon o odložitvi in obročnem poplačilu refundacije prispevkov iz dohodka za lansko leto v višini 1.400 milijonov din, ki jih je SPIZ dolžna vrniti po določbah zakona, ki ga je skupščina sprejela na prejšnji seji. Gre za drugačno določitev davčne osnove za lansko leto. Tudi s tem se ne bomo mogli izogniti posegu v pričakovane pravice upokojencev, saj bo za izplačilo pokojnin ob koncu meseca še vedno manjkalo 1.300 milijonov din. Tega zneska ni mogoče pokriti z bančnimi krediti, ker ob rastočem nesorazmerju med vsakomesečnimi prilivi v pokojninsko zavarovanje in obveznostmi ni nobenih realnih zagotovil, da bi bilo možno te velike kredite sploh vrniti do naslednjega plačilnega dne za pokojnine. Zato kot drugo rešitev Izvršni svet Skupščine Republike Slovenije predlaga spremembo zakona o pokojninskem in invalidskem zavarovanju.</seg>
@@ -745,114 +731,114 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg28">Spoštovani zbor, odločiti se je treba še ta mesec. Če bo ostal v veljavi sedanji sistem usklajevanja pokojnin, bo ob koncu meseca prišlo do zloma. Ta zlom bi rešila samo drastično povečana prispevna stopnja ali nek dodaten vir, ki ga v Sloveniji ne moremo najti, kakor v kakšnem drugem okolju. Gre za rešitev nekega gibanja, ki se je kazalo že celo lansko leto, bilo je že očitno, kam vse skupaj vodi, ker ni bilo prej politične moči, d bi ta tok spremenili. Zdaj je to nujno določiti, drugače je vprašanje, od kod dobiti sredstva za izplačilo rednih pokojnin, kakršne so bile izplačane za januar tega leta ob koncu letošnjega marca. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg29">Hvala. Prosim, gospod Vodopivec.</seg>
             </u>
             <note type="speaker">IVAN VODOPIVEC:</note>
-            <u who="#SSK11.VodopivecIvan" ana="#regular">
+            <u who="#VodopivecIvan">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg30">Spoštovani kolegi!</seg>
                <note>Vodopivec, Socialistična stranka.</note>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg31">Moram reči, da sem odločno proti takemu načinu interventnega sprejemanja zakona, ki dejansko bistveno posega na področje ter ljudi, ki so bili 40 let v delovnem razmerju. Predvsem pa poglejte, lani oziroma nekaj let je vlada zelo širokogrudno delila pravico do dokupa let. Lansko leto, podatki kažejo, smo na vrat na nos ljudi spravili v penzijo tudi s pomočjo proračunskih republiških sredstev, ko smo dokupovali leta, in mislim, da sedaj, da je vlada morala predvidevati, da bo prišlo s tem velikim povečanjem sredstev, torej upokojencev, tudi do teh težav. In mislim, na vrat na nos, čez noč spreminjati neke pravice ne gre. Vlada bi morala najprej dati strategijo razvoja na pokojninskem področju, kajti ne nazadnje, kot smo včeraj ljudi na vrat na nos spravili v penzijo, danes pa se govori, da bomo še podaljševali delovno dobo. Mislim, da vlada nima jasnega koncepta na tem področju, ampak z interventnim zakonom, pod pritiskom, ko smo že vsi navajeni, če tega ne boste sprejeli na hitro, bo prišlo do katastrofe. Predlagam, da vlada pripravi strategijo na tem pokojninsko-invalidskem zavarovanju vnaprej in hkrati po normalni proceduri obravnavamo tudi ustrezne izvedbene akte, odloke, ki spadajo zraven. Najprej moramo imeti dolgoročno strategijo, katere mislim, da na tem področju vlada nima. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg32">Hvala. Gospod Grošelj je naslednji prijavljen.</seg>
             </u>
             <note type="speaker">LEOPOLD GROŠELJ:</note>
-            <u who="#SSK11.GroseljLeopold1941" ana="#regular">
+            <u who="#GrošeljLeopold">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg33">Spoštovane delegatke, delegati! Sicer sem član Odbora za delo, zaposlovanje in socialno politiko na ravni skupščine, vendar nisem poročevalec, zato mi dovolite, da podam svoje poglede na ta zakon. Odbor je sicer včeraj zasedal, vendar po večurni razpravi ni prišel do svojih končnih stališč niti ne do zaključkov, tako da bo svoje delo nadaljeval v teh dneh, ko bomo tukaj v skupščini. Vendar, ne glede na to bi predlagal, da ta zakon obravnavamo po rednem postopku. Prvič zaradi tega, kar je zdajle pred mano navedel predstavnik izvršnega sveta, ni zadeva tako nujna, ki bi vplivala na izplačevanje pokojnin, prvič zaradi tega, ker denarja preprosto ni za izplačilo poračuna oziroma za ta valorizirani znesek pokojnin iz preteklih mesecev niti ni novega. Drugič mislim, da gre tukaj za drug problem, gre za problem, ali podjetjem refundirati ta prispevek takoj, že 10. aprila, ali pa se bomo med razpravo dogovorili, da mogoče odložimo to za kakšen mesec, glede na problematiko, ki je prisotna.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg34">Ne nazadnje, mi se s to problematiko srečujemo skoraj na vsakem zasedanju, zato mislim, da je prav, da se o tem pogovorimo resno in tudi pametno, ne na hitro, in bi predlagal, da me delegati poskušate podpreti, da obravnavamo oba zakona po rednem postopku. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg35">Hvala lepa. Gospod Atelšek ima naslednji besedo.</seg>
             </u>
             <note type="speaker">IVAN ATELŠEK:</note>
-            <u who="#SSK11.AtelsekIvan1928" ana="#regular">
+            <u who="#AtelsekIvan1928">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg36">Gospod predsednik, spoštovani! Jaz tudi nasprotujem sprejemanju oziroma da sprejmemo, da damo to na dnevni red današnje skupščine. Nekaj vprašanj pa bi postavil.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg37">Vsaka zadeva je takoj katastrofalna, ko se nekomu mudi, posebej pa izvršnemu svetu. Ali se zavedate, da je to zelo občutljivo področje, ne samo socialno, ampak tudi politično poseganje s takim zakonom, posebej pa še po hitrem postopku, kot da bi imeli danes na meji sovražnika. Menim, da je neupravičeno, zato predlagam, da zbor ne sprejme. Posebej še zaradi tega, ker imamo veliko protestov upokojencev iz vse Slovenije. Ali si predstavljamo, da ta skupščina ustvarja še večjo nervozo med ljudmi, ker je že tako dovolj velika. In glede samostojnosti te domovine, o kateri smo dosti govorili, kaže, da nimamo trdnih temeljev za to samostojnost.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg38">Strinjam se, da je treba povsod štediti, vendar na takšen način in na tak način sprejemanja brez argumentov, in samo denarja je zmanjkalo, denarja vsepovsod zmanjkuje. To ni argument za sprejemanje takega zakona. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg39">Hvala. Gospod Schwarzbartl.</seg>
             </u>
             <note type="speaker">MAG. ANTON ERVIN SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg40">Tale zakon sem na hitro malo preletel, pa me skrbi, bom kar rekel, takšno afrontno nasprotovanje opozicije obravnavi tega zakona. Skrbi me zato, ker mislim, da mora tu biti nekaj v ozadju, tako pač sam razmišljam. Ne želim razpravljati o zakonu, imam pa nekaj pomislekov pri tem.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg41">Problematika, ki jo zakon predlaga, o načinu poračuna SPIZ-a in spremembe, nam je znana, saj smo jo že dostikrat obravnavali in slišali. Vemo tudi za posledice tako imenovanega Grašičevega zakona, ki smo ga na zadnjem zasedanju tako hitro sprejeli. Zato mislim, da so razmerja med pokojninami in plačami vprašljiva. Vemo, kako je to v svetu. Hkrati tudi poznamo, kakšni so trendi povečevanja upokojencev. In ne bi se želel spuščati v vsebino tega zakona, bi pa predlagal, da zakon uvrstimo na dnevni red in si tako zagotovimo razjasnitev nekaterih stvari, ker kaže, da niso razjasnjene. Stališča se bodo razjasnila v sami razprav, in bomo imeli osnovo za neko odločanje o tej zadevi. V kolikor pa tega zakona sedaj ne uvrstimo, niti ne omogočimo, da po hitrem postopku lahko sprejmemo, če je res to potrebno, kar bomo videli iz razprave, smo si odvzeli možnost, da bi rešili problem, ki je, kot kaže, nujen. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg42">Hvala. Gospod Atelšek.</seg>
             </u>
             <note type="speaker">IVAN ATELŠEK:</note>
-            <u who="#SSK11.AtelsekIvan1928" ana="#regular">
+            <u who="#AtelsekIvan1928">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg43">Naše dejanje, gospodu bi odgovoril, naše dejanje je vid v socialni problematiki tega sloja prebivalstva Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg44">Gospod Malešič, prosim.</seg>
             </u>
             <note type="speaker">MATIJA MALEŠIČ:</note>
-            <u who="#SSK11.MalesicMatija1933" ana="#regular">
+            <u who="#MalesicMatija1933">
                <note>Podpredsednik izvršnega sveta.</note>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg45">Spoštovani gospod predsednik, predsedstvo, spoštovani poslanci! Menimo, da razpravo o perečih vprašanjih pokojninskega zavarovanja moramo odpreti v tej skupščini, kajti v zadnjem času se je zvrstila vrsta stvari, ki vplivajo na to, da bo ta sistem pokojninskega zavarovanja dobesedno razpadel, če ne bomo ukrepali.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg46">Ni slučaj, da vežemo razpravo o predlogu zakona o spremembah in dopolnitvah zakona o pokojninskem zavarovanju s predhodno razpravo o tako imenovanem Grašičevem zakonu, da poenostavljeno povem, saj vemo, kaj se je zgodilo. Dejstvo je, če bomo uveljavljali ta zakon, pokojnin ne bo več mogoče redno izplačevati. Obveznost pokojninskega sklada, direktor Pokojninske skupnosti je tukaj, je taka, da brez izplačil razlik za nazaj rabimo v mesecu marcu 2 in pol milijarde dinarjev. Vračilo milijarde 400 milijonov iz že plačanih prispevkov, to je tistih prispevkov, ki so dejansko že pri upokojencih, pomeni, da pokojninski sistem v bodoče ne bo mogel funkcionirati, če dodam samo še podatek, da potrebujemo mesečno od 600 do 700 milijonov kreditov in da bi učinek takega zakona pomenil, da bi v mesecu marcu zbrali samo 300 milijonov dinarjev. Mislim, da je razlogov dovolj, da se soočimo s to situacijo in da pogledamo, kakšne so posledice takšne odločitve. Zavedam se, da je to eno od najbolj občutljivih vprašanj, saj smo mu s socialnim programom namenili dosti pozornosti, vendar zatiskati oči pred to problematiko, mislim, da ne bi bilo dobro.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg47">Zato menim, da je nujno potrebno, da prideta oba zakona na dnevni red, da se vidijo pozitivni in tudi negativni učinki in da na podlagi take razprave sprejmete odločitev. Ob takšnih odločitvah skupščine vlada ne more sama sprejemati odgovornosti, ali bo mogoče tekoče izplačati pokojnine ali ne. Mislim, da je dovolj razlogov, da to uvrstite na dnevni red. Ker sem pa slišal, da ste razpravljali tudi o tem, da je treba pripraviti strategijo pokojninskega in invalidskega zavarovanja, vam sporočam, da je skoraj do konca pripravljen že celoten nov pokojninski zakon, s katerim vas bomo v kratkem seznanili. Naj omenim samo to, da se stvari bliskovito spreminjajo. Tudi s socialnim programom smo načrtovali, da bo meja 400.000 upokojencev dosežena konec leta 1992 ali v letu 1993. V tem trenutku imamo od 780.000 zaposlenih 403.000 upokojencev. To pa pomeni, da bomo morali poseči tudi v starostno dobo in temeljito pregledati cel sistem. Sistem imamo pripravljen. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg48">Hvala. Gospod Glavič.</seg>
             </u>
             <note type="speaker">DR. PETER GLAVIČ:</note>
-            <u who="#SSK11.GlavicPeter1940" ana="#regular">
+            <u who="#GlavicPeter1940">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg49">Gospod predsednik, spoštovani zbor! Razumem, da je prišlo do velikih težav v pokojninskem sistemu, zato bi podprl razpravo o tem, da se pogovorimo o poračunu obveznosti, ker je to zadeva, ki jo je treba rešiti in če ima vlada tu resne pripombe do stvari, ki smo jih sprejeli na zadnji seji, sem za to, da te stvari pogledamo in se o njih pogovorimo. Kar pa se tiče predloga o spremembah in dopolnitvah zakona o pokojninskem in invalidskem zavarovanju, pa menim, da bi se danes dogovorili za razpravo o osnutku in bi potem sprejemali predlog skupaj s predlogom poračuna.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg50">Menim namreč, da je potrebno vse tri glavne obveznosti, to je proračun republike, proračun občin in plan Skupnosti za pokojninsko in invalidsko zavarovanje, sprejemati skupaj v paketu, ker je to obremenitev, ki čaka gospodarstvo in ki jo moramo reševati skupaj. zato bi dal kompromisni predlog, da bi se danes pogovorili o problemih in videli, kje so možne rešitve, potem naj bi vlada pripravila skupaj s predlogom proračuna tudi predlog tega zakona. To bi dalo tudi možnost za zadostno javno razpravo in osvetlitev argumentov, ki jih morda mi v tem trenutku ne poznamo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg51">Hvala. Gospod Zakonjšek.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg52">Gospod predsednik, spoštovani zbor! Razprava me je na nek način prepričala, da vztrajam pri predlogu, da gre predlog zakona v redni postopek. Tudi razprava predstavnika Odbora za socialno politiko kaže, da je potrebno nekatera vprašanja še razčistiti in da ni podana osnova, ki bi zahtevala, da se že na tem zasedanju skupščine zakon sprejme.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg53">Hvala lepa. Gospod Schwarzbartl ima repliko.</seg>
             </u>
             <note type="speaker">MAG. ANTON ERVIN SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg54">Moja replika gre samo v to smer. Če bomo mi samo razpravljali, ne bomo pa imeli hkrati možnosti, da na osnovi teh razprav in ugotovitev tudi sklepamo, potem je to jalovo delo; takega jalovega dela pa je bilo v tej skupščini že veliko. Zato menim, da je treba sprejeti pobudo, da uvrstimo to na dnevni red, tako kot je predlagano, ker je najbrž izvršni svet imel dovolj strokovne osnove, da je tako predlagal. Ko bomo pa videli med razpravo, da mogoče ni umestno to sprejeti, takrat se bomo pa odločali. Če pa že a priori odločimo o tem, da bomo samo razpravljali in ne bomo dali možnosti, da bi po hitrem postopku potem tudi oba zakona lahko sprejeli oziroma obe točki uveljavili, potem smo si to možnost zapravili. To sem že prej tudi povedal. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg55">Hvala. Gospod Klavora.</seg>
             </u>
             <note type="speaker">FEDJA KLAVORA:</note>
-            <u who="#SSK11.KlavoraFedja1940" ana="#regular">
+            <u who="#KlavoraFedja1940">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg56">Podprl bi obravnavo tega zakona. Zakaj? Zelo preprosto, ker se mi zdi, da le poskušamo malo demagoško zavajati sami sebe. Mi smo na zadnjem zasedanju Grašičev zakon na tem zboru odbili po razpravi, kakršnakoli je pač bila. Na skupnem zasedanju pa smo se obnašali dokaj brezglavo. Res, da so bile razmere čudne in je tam prav naš zbor brez argumentacij zakon podprl. Hočem samo to reči, da ima prav tisti, ki danes trdi, da moramo to stvar temeljito proučiti, vendar naj to velja od začetka in se resno obnašajmo, ne pa zdaj v tretjem polčasu začenjati resno, prej smo pa delali brez glave. Mislim, da je prav, da se stvari lotimo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg57">Hvala. Gospod Malešič.</seg>
             </u>
             <note type="speaker">MATIJA MALEŠIČ:</note>
-            <u who="#SSK11.MalesicMatija1933" ana="#regular">
+            <u who="#MalesicMatija1933">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg58">V imenu izvršnega sveta moram vztrajati pri predlogu, ki smo ga dali. Menim pa takole. Na vsak način je treba vsebinsko razpravo odpreti in naj bo na podlagi vsebinske razprave odločitev zbora, ali iz predloga prekvalificirate zakon v osnutek. Mislim, da je to najbolj pametno. Težina problema je pa taka, da si resnično ne moremo zatiskati oči pred problemom, ki je tukaj. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg59">Hvala. Gospod Prijatelj, generalni direktor Skupnosti pokojninskega in invalidskega zavarovanja.</seg>
             </u>
             <note type="speaker">JANEZ PRIJATELJ:</note>
-            <u who="#SSK11.PrijateljJanez" ana="#regular">
+            <u who="#PrijateljJanez">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg60">Želel bi podpreti, da predlagam tudi v imenu SPIZ razpravo v vseh zborih. Do te razprave je prišlo prav na našo pobudo in mi smo obvestili izvršni svet in republiško skupščino o posledicah zakona, ki je bil sprejet. Ta zakon praktično pomeni razpad pokojninskega sistema. V kolikor ne bo kakršenkoli ukrep sprejet v tej skupščini, marčevskih pokojnin ne bo. To pomeni, da moramo reči dvoje. Ali sprejeti zakon, po katerem bo omogočen pritok prispevkov v to skupnost, zakaj prispevkov, vi veste iz informacij, ki jih pošiljamo že od oktobra meseca lanskega leta. To situacijo, ki je nastala danes, je naša skupnost praktično napovedala, kajti mi smo že oktobra meseca napovedali, da v kolikor se bo stanje v gospodarstvu nadaljevalo kakršno je, v kolikor ne bo večje finančne discipline, če ne bo federacija poravnala svojih dolgov, da bo praktično prišlo do tega nelikvidnega stanja, kakršno danes je. Drugo dejstvo je rast števila upokojencev, o kateri je gospod podpredsednik izvršnega sveta govoril, padec števila zaposlenih. Mislim, da je stvar dejansko toliko dramatična, da bi vsakršna razprava, ki je danes ne bi bilo, bila bolj škodljiva kot tista, ki bo. Zaradi tega mislim, da bo treba zlasti v tej smeri govoriti, ali omogočiti skupnosti dotok sredstev, ki je potreben za vzdrževanje pravic 400.000 upokojencev, ali pa poseči na drugi strani, kar mi že od oktobra naprej opozarjamo, v razmerje med pravicami in možnostmi te ekonomije, ki jo imamo. Jaz ne navijam ne v eno in ne v drugo smer, kajti dejansko je treba objektivno stvari povedati, zlasti pa mislim, da je treba to ogorčenje, ki danes vlada med delavci in upokojenci, nekako pomiriti. Mi imamo danes v zvezi s pokojninami črno-belo slikanje dejanskega stanja. Na eni strani trditev o previsokih pokojninah, na drugi strani trditve upokojencev, da gmotni položaj ni v redu. Mislim, da je prav, da se poskuša v slovenskem parlamentu postaviti realna slika, kaj je tisto, za kar slovenski parlament danes sodi, da je v tej gospodarski krizi primerna raven pokojnin. Teh zakonov in teh problemov vsekakor ne bi smeli obravnavati ločeno. Če bi obravnavali najprej Grašičev zakon in ga ne bi spremenili, praktično to pomeni, da je treba sprejeti zakon o intervencijah v pokojnine. Če sprejmemo najprej pokojninski zakon in znižano raven pokojnin oziroma usklajevanje za naprej, pomeni, da ni treba sprejeti Grašičevega zakona, ker bo to pomenilo manjše obveznosti. In tretje, mi smo predlagali še en zakon, ki pa ni na dnevnem redu, to je zakon, po katerem bi bile organizacije oziroma podjetja dolžna sproti plačevati prispevke. Mislim na tiste, ki še dobro poslujejo in na tiste, ki imajo težave, kajti le redno plačevanje prispevkov bi omogočilo redno izplačevanje pokojnin. Da ne bom predolg, saj je to že malo vsebinske razprave, v to širino sem šel zato, da vam predočim, da je stanje tako katastrofalno oziroma bi lahko bilo katastrofalno. Če ne bi sprejeli nekih ukrepov, praktično to pomeni razpad sistema.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg61">Naj povem še to, da je situacija popolnoma taka, kot v dveh informacijah, ki smo jih dali v parlamentu že pred časom. Mogoče je bila prav to napaka, da smo opozorila jemali nekoliko premalo, ne bi rekel resno, ampak mogoče so bila takrat premalo aktualna, mogoče je takrat kdo upal, da se bodo stvari še popravile, toda stvari so šle tako nezadržno v nezaželeno smer, da bo treba sprejeti neke ukrepe. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg62">Hvala lepa. Za razpravo ni več prijavljenih. Prehajamo na odločanje o tem predlogu za razširitev.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg63">Najprej dajem na glasovanje predlog izvršnega sveta, da razširimo dnevni red s predlogom zakona o načinu poračuna obveznosti SPIZ Slovenije po zaključnem računu za leto 1990. Najprej o sami uvrstitvi. Prosim?</seg>
                <note>Glas iz dvorane.</note>
@@ -901,12 +887,12 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg90">Izvršni svet predlaga, da zbor obravnava naslednja dva akta v skladu s 312. členom poslovnika Skupščine Republike Slovenije, to je po skrajšanem postopku. Gre za predlog za izdajo zakona o spremembah in dopolnitvah zakona o prekrških, s predlogom zakona, in pa predlog za izdajo zakona o cenah. Dobro, ta drugi je preložen, zaradi tega o postopku obravnave ne bi sklepali. Gre samo še predlog za izdajo zakona o spremembah in dopolnitvah zakona o prekrških, s predlogom zakona. Torej, predlagan je skrajšani postopek. Želi o tem predlogu kdo razpravljati? Prosim, gospod Gale.</seg>
             </u>
             <note type="speaker">JANEZ GALE:</note>
-            <u who="#SSK11.GaleJanez1931" ana="#regular">
+            <u who="#GaleJanez1931">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg91">Drage kolegice in kolegi, cenjeno predsedstvo! Jaz bi dal stališče izvršnega sveta do predloga zakona o spremembah in dopolnitvah zakona o prekrških, in sicer sklep izvršnega sveta, da bi predlagal sprejem amandmaja na 44.a člen in sicer<gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg92">To je pravzaprav vsebinska razprava, to bomo opravili pod točko dnevnega reda, če imate kaj v zvezi z uvrstitvijo ali neuvrstitvijo na dnevni red. Dobro, potem bi takrat pri obravnavi tega zakona. Hvala lepa. Če ne želi nihče razpravljati, potem dajem ta predlog, da se navedeni zakon obravnava po skrajšanem postopku, na glasovanje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg93">Kdo je za?</seg>
                <note>54 delegatov.</note>
@@ -918,35 +904,35 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg97">Izvršni svet Skupščine Republike Slovenije predlaga tudi, da zbor obravnava predlog za izdajo zakona o spremembah in dopolnitvah zakona o gozdovih, z osnutkom zakona, in pa predlog za izdajo stanovanjskega zakona, z osnutkom zakona. V skladu z 265. členom poslovnika, da se prva in druga faza zakonodajnega postopka združita, se pravi, predlog za izdajo obravnava hkrati z osnutkom. Želi o tem predlogu izvršnega sveta kdo razpravljati? Prosim, gospod Kramarič.</seg>
             </u>
             <note type="speaker">TONE KRAMARIČ:</note>
-            <u who="#SSK11.KramaricTone1947" ana="#regular">
+            <u who="#KramaricTone1947">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg98">Na Klubu poslancev smo zavzeli stališče predlagati, da se stanovanjski zakon umakne. Ker je nanj vrsta pripomb, bi bilo bolje, če se vse pripombe zberejo in se upoštevajo v nadaljnji razpravi pri pripravi zakonodaje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg99">Hvala. Ker ne želi nihče več razpravljati, dajem ta predlog - prosim, gospod Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg100">Glede stanovanjskega zakona sem dobil mnenje gospoda Tomažiča, ki je predsednik Zakonodajno-pravne komisije, da preložimo obravnavo stanovanjskega zakona na jutri, ko ga bo ta skupščinska komisija še enkrat pregledala. Včeraj namreč ni bila sklepčna in ni mogla podati mnenja. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg101">No, to ni razlog, da ne bi uvrstili na dnevni red. Dobro, normalno. Gospod Miha Jazbinšek, republiški sekretar za varstvo okolja in urejanje prostora.</seg>
             </u>
             <note type="speaker">MIHA JAZBINŠEK:</note>
-            <u who="#SSK11.JazbinsekMiha1941" ana="#regular">
+            <u who="#JazbinšekMiha">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg102">Jaz nisem prej razumel predloga o umaknitvi. Mogoče je to pomenilo o trofaznosti postopka. To bi bilo treba najprej precizirati, če pomeni trofaznost postopka, mi smo na stališču, da je dejansko prva faza, ki se reče predlog za izdajo zakona, faza, v kateri je treba ugotoviti, ali zakon mora iti v spremembo ali ne, ali rabimo nov zakon. Seveda, v tem okviru se ugotavlja tudi načela in smer, v katero naj gre zakon. In verjetno seveda moram reči, da je odločitev o tem, da zakon mora iti, verjetno dosti lahka. Glede načel moram pa tole povedati. Mi smo seveda na stališču, da bo to dvofazni postopek, se pravi predlog za izdajo zakona in osnutek skupaj, ker vi veste, da je ta zakon že bil posredovan v obliki predloga za izdajo zakona poslancem. Vi veste, da je bila na tem področju že obsežna, tako formalna kot neformalna razprava, in dejansko vprašanje pri tem je, ali gre za vsebinske zadržke ali ne. Moram povedati to, da so matični odbor in drugi odbori te skupščine dali več ali manj dovolj ugodna poročila za fazo osnutka in daje od osnutka do predloga seveda čas za to, da se te stvari korigirajo. Osebno ocenjujem, in izvršni svet tudi, da bi trofaznost pomenila, da imamo na tem področju, bi rekel, neko stanje nedoločnosti, ki ni v prid nikomur. Mi pa smo, kot sem povedal, o vsebinskem smislu dolgo razpravljali, veliko stvari smo vključili v ta osnutek, tako da z naše strani menimo, da bi bilo primerno, da gre zadeva v dvofazni postopek, še posebej, ker predlog za izdajo zakona je samo sklepanje o potrebnosti ali nepotrebnosti zakona in mislim, da bi si skupščina tudi delala po nepotrebnem sama sebi težave glede svoje učinkovitosti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg103">Hvala lepa. Prosim, gospod Dragovan.</seg>
             </u>
             <note type="speaker">SLAVKO DRAGOVAN:</note>
-            <u who="#SSK11.DragovanSlavko1961" ana="#regular">
+            <u who="#DragovanSlavko1961">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg104">Apeliram na vse poslance, da ta zakona sprejemamo po normalnem trofaznem postopku, ker je tudi pri zakonu o gozdarstvu nekaj stvari, o katerih bi se morali še temeljito in pa načelno pogovarjati. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg105">Hvala. No, jaz sem dal v obravnavo odločitev o tem, da združimo prvo in drugo fazo. Predlog gospoda Kramariča je šel v drugo smer, da bi pravzaprav ta zakon danes umaknili z dnevnega reda, ker umakniti osnutka zbor ne more, to je stvar predlagatelja, če bi to storil, zaradi tega, če gospod Kramarič vztraja - dobro, prekvalificira ta svoj predlog v to, da gre osnutek po trofaznem postopku, se pravi, da se ne združita prva in druga faza.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg106">Zato bi dal zdaj vsakega od teh dveh aktov posebej na glasovanje, torej na glasovanje dajem najprej predlog, da se predlog za izdajo zakona o spremembah in dopolnitvah zakona o gozdovih obravnava z združitvijo prve in druge faze, se pravi predlog za izdajo z osnutkom zakona. Najprej torej zakon o gozdovih.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg107">Kdo je za?</seg>
@@ -967,11 +953,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg116">Torej, za današnji dnevni red, s tem predlagam tak dnevni red, kot ste ga dobili, s tem da smo preložili točko 7, drugo pa je tako, kot je na tem predlogu, ki ste ga dobili na klop. Želi o tem celotnem predlogu dnevnega reda še kdo razpravljati? Prosim, gospod Feltrin.</seg>
             </u>
             <note type="speaker">FRANCI FELTRIN:</note>
-            <u who="#SSK11.FeltrinFranci1943" ana="#regular">
+            <u who="#FeltrinFranci1943">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg117">Spoštovani! Mi smo na zadnjem zboru sprejeli 100. amandma z dvotretjinsko večino. Predlagam, da nekaj ukrenemo. Ali je treba usklajevalni postopek oziroma da predlagamo, da gre to na skupno sejo, ker dva zbora tega nista sprejela. Tako pa mislim, da ne more ostati. Nekaj moramo reči, če smo rekli "a", recimo še "ž".</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg118">Hvala. No, v zvezi s 100. amandmajem, kot veste, smo ostali neusklajeni. Predsednik skupščine in predsednik ustavne komisije je tedaj predlagal preložitev usklajevanja, s tem, da ni določil roka. Če lahko razumem gospoda Feltrina, kot predlog, da se na tej seji opravi usklajevanje, potem lahko o takem predlogu odločimo. Torej, odločamo v tem primeru o zahtevi našega zbora, da se v okviru te seje opravi usklajevalni postopek za 100. amandma, kar pomeni, da se najprej ustanovi usklajevalna komisija. Mi smo naš del izvolili. Tako, da z naše strani, če se odločimo tako, ni nobenih zadržkov za usklajevanje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg119">Torej dajem to posebej na glasovanje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg120">Kdo je za?</seg>
@@ -996,7 +982,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 11.05 uri in se je nadaljevala ob 11.50 uri.</note>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg132">Nadaljujemo našo sejo. Preden začnemo delo po 1. točki dnevnega reda, bi želel, da opravimo še dve stvari: prva, kot ste opazili in sem vam že prej povedal, tudi danes je odsoten podpredsednik zbora - v Beogradu imajo na nekih odborih razpravo o znanih zveznih zakonih. Zato bi bilo dobro, da ponovno izvolimo nekoga za pomoč pri vodenju seje. Prosim, gospod Černej.</seg>
                <note>Se ne sliši!</note>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg133">Dobro, predlog je, da je ponovno gospod Rojec. Ali kdo nasprotuje temu predlogu?</seg>
@@ -1019,7 +1005,7 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg144">V tem primeru pričenjam razpravo. Kot rečeno, razpravljamo najprej o vseh treh predloženih gradivih skupaj. K razpravi se je prvi prijavil gospod Jože Zakonjšek, ki ga kar vabim, da prevzame besedo.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg145">Gospod predsednik, spoštovani zbor! Gradivo "Razvojna politika Slovenije na začetku devetdesetih let" je po moji oceni dokument, ki dovolj razčlenjeno podaja temeljne razvojen cilje in okvire ekonomske politike, projicirane v prihodnji eno do dveh let in tako v bistvu predstavlja program (vsaj jaz ga tako ocenjujem) vlade za to obdobje. Kot je iz gradiva razvidno, se je izvršni svet v največjem delu usmeril na opredelitev tako imenovanih splošnih, ekonomskih, socialnih, organizacijskih, kadrovskih in drugih sistemskih pogojev in se ni pustil zavesti v definiranje panožnih in drugih prioritet. To je po mojem mnenju kvaliteta tega gradiva. Ustrezno so, po mojem mnenju, vgrajene tudi usmeritve v tržno, v svet in v Evropo odprto gospodarstvo ter definirani splošni in posebni pogoji za uresničevanje takšne razvojne politike. Mislim pa, da je na mestu opozorilo, da bo uresničevanje takšne razvojne politike zahtevalo zelo usklajeno delovanje vseh političnih, gospodarskih, socialnih in drugih subjektov politike ter tudi visoko stopnjo odzivnosti na impulze, ki jih bo razvojna politika posredovala podjetjem, zavodom, občinam in drugim udeležencem v razvoju.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg146">Zakonske podlage za takšno usmerjanje razvojne politike se za večino področij gospodarskega in družbenega dogajanja nasploh šele oblikujejo, vzpostavljeni pa tudi še niso ustrezni mehanizmi in institucije, ki naj ta dogajanja spremljajo, zagotovijo nadzor nad materialnimi in finančnimi tokovi ter pravno in finančno kontrolo teh procesov. Mislim na davčne, finančne in podobne institucije, ki morajo nujno spremljati in nadzirati uresničevanje takšne politike.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg147">In drugič. Kljub vladinem opredeljevanju za "politiko preživetja" je mogoče gradivu pripisati določeno preoptimistično noto glede materialnih, finančnih in kadrovskih pogojev za uresničevanje nakazanih smeri in kvalitet razvojne politike. Verjetno je na mestu opozorilo, da ti pogoji, vsaj v nekaj naslednjih letih, ne bodo najbolj ugodni, posebej glede na sedanje okoliščine, ki so znane, in na razmere tako v Sloveniji kot v Jugoslaviji in v svetu nasploh.</seg>
@@ -1034,11 +1020,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg156">Kar zadeva socialno politiko mislim, da je izvršni svet odnosno Zavod za plan predstavil zelo kvalitetno analitično gradivo, ki je glede splošne usmeritve sprejemljivo in bo lahko zelo koristna osnova za razpravo o posameznih aktih s tega področja, ki jih bo izvršni svet predložil skupščini. Ne nazadnje tudi za razpravo o zakonu, o katerem smo pri sprejemanju dnevnega reda mnogo diskutirali, o pokojninskem in invalidskem zavarovanju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg157">Hvala lepa, gospod Zakonjšek. Naslednji ima besedo dr. Vivod.</seg>
             </u>
             <note type="speaker">DR. IVAN VIVOD:</note>
-            <u who="#SSK11.VivodIvan1926" ana="#regular">
+            <u who="#VivodIvan1926">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg158">Spoštovano predsedstvo, spoštovani zbor!</seg>
                <note>Vivod, Socialdemokratska stranka Slovenije.</note>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg159">V imenu kluba delegatov poslancev Socialdemokratske stranke želim prispevati nekatera stališča, ki se nanašajo na proračun, in sicer na prometne zveze s posebnim poudarkom na cestno problematiko.</seg>
@@ -1046,11 +1032,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg161">V tem smislu v celoti podpiramo zahteve za promet in zveze gospoda Marjana Kranjca ter zahtevamo namensko porabo celotnega zneska 6.799.000.000 in tako naprej. Prav tako naj se namensko zbrana sredstva namensko nakazujejo na poseben račun, iz katerega jih Sekretariat za promet in zveze oziroma od njega pooblaščen organ neposredno plasira. Zahtevamo tudi, da se poraba sredstev za ceste mora kontrolirati s strani Skupščine Slovenije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg162">Hvala lepa. Naslednji ima besedo gospod Ivanušič.</seg>
             </u>
             <note type="speaker">ZVONKO IVANUŠIČ:</note>
-            <u who="#SSK11.IvanusicZvonko1959" ana="#regular">
+            <u who="#IvanusicZvonko1959">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg163">Pod pojmom gospodarska politika razumem odločanje o temeljnih ciljih gospodarstva z izborom odgovarjajoče strategije in struktur za dosego teh ciljev. Mislim, da so cilji v okviru gospodarske politike za leto 1991 v glavnem realno postavljeni, postavljena strategija za dosego teh ciljev pa me ne prepričuje, da bodo ti cilji doseženi. Tudi zakon o združenem delu je bil na videz zelo dober, vendar ker ni bil izvedljiv, je bil slab. Torej cilj preživetja v času osamosvajanja Slovenije ne bo izvedljiv brez pospešenega spreminjanja gospodarske strukture z ustrezno strategijo in brez razbremenitve gospodarstva že v letu 1991.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg164">V tem trenutku je v Sloveniji registrirano približno 12.500 malih podjetij, ki še sedaj niso zaživela. Že v letu 1991 bi bilo potrebno izvajati celovit program za oživitev teh in nastajanje novih proizvodnih podjetij. Parcialne rešitve niso dovolj. Nekaj ugodnih zakonskih rešitev v tej smeri je bilo v zadnjem času že sprejeto, vendar se obstoječi in potencialni podjetniki srečujejo še naprej z velikimi problemi. Ti problemi so, na primer prevelik normativizem pri nastajanju in funkcioniranju podjetij ter nezmožnost hitre pridobitve kreditov za financiranje začetka proizvodnje. Dotlej, ko kredit dobiš, ti lahko trg že pobegne. Moramo vedeti, da dobri podjetniki vse poslovne funkcije prilagodijo funkciji trženja oziroma funkciji prodaje. Naslednji tak problem so visoke spreminjajoče se obrestne mere, tako da ne veš, kaj te v prihodnosti čaka. Jaz mislim, da bi tukaj morala veljati valutna klavzula in obrestne mere v višini 5 do 10% v odvisnosti od ponudbe in povpraševanja po kapitalu, ker večina proizvajalcev svoje cene kalkulira v dinarski protivrednosti na marke.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg165">Nadalje, v Sloveniji ni institucije, ki bi dajala kompletne informacije in nasvete podjetnikom o kapitalu, trgih, postopkih za ustanavljanje podjetij in tako naprej. Potencialni podjetniki se srečujejo z velikimi stroški za plačevanje gospodarske infrastrukture, še preden začnejo podjetja funkcionirati. Tako mora na primer podjetnik pred pridobitvijo uporabnega dovoljenja plačevati visoke stroške, na primer elektrosoglasja, kar zamene pomeni, da mora ta podjetnik že prej plačevati kupcu oziroma prodajalcu eno ceno, da lahko od njega nekaj kupuje. Mislim, da so stroški daljnovodov in tako naprej elementi cene.</seg>
@@ -1060,11 +1046,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg169">In na koncu mislim, da je gospodarska politika celovita in vseobsežna, cilji te politike so v glavnem dobri. Potrebno pa bi bilo še doreči strategijo za dosego teh ciljev, ki morajo biti bolj sistematični ob upoštevanju načela postopnosti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg170">Hvala lepa. Besedo ima dr. Gregurec.</seg>
             </u>
             <note type="speaker">DR. SLAVKO GREGUREC:</note>
-            <u who="#SSK11.GregurecSlavko1948" ana="#regular">
+            <u who="#GregurecSlavko1948">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg171">Spoštovano predsedstvo, spoštovani zbor! Razvojna politika Slovenije vsebuje strategijo vlade z uresničevanjem razvojno političnih ciljev republike na ključnih področjih vključevanja v tržno gospodarstvo, mednarodno delitev dela ter združevanje v Evropo in svet. Predlagam, da razvojna strategija daje dobre osnove za prestrukturiranje za druge gospodarske sestave ter sanacijo uničenega okolja. Krepitev konkurenčne sposobnosti gospodarstva s finančnimi razbremenjevanjem, razreševanjem problemov presežkov delovne sile, osvajanjem tržišča, gospodarsko infrastrukturo ter tehnološkim transferom gospodarstva je lahko uspešno, če ima vlada za to ustrezen resurse in moč.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg172">Mislim, da za sicer realno zastavljene smotre in cilje obstajajo resne ovire za njihovo uresničitev. Prvič, imamo še vedno realsocialistično strukturo gospodarstva z dominantno družbeno lastnino. V taki situaciji vlada ne more z učinkovitimi intervencijami in prerazdeljevanjem družbene lastnine odigrati vlogo lastnika, ker za to nima ustreznih sredstev in virov.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg173">Drugič, današnja družba in gospodarstvo sta postala preveč kompleksna in diferencirana, da bi ju lahko obvladovali z enega mesta.</seg>
@@ -1077,11 +1063,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg180">In zadnje. Projekt samostojne učinkovite in ekonomsko uspešne Slovenije bo uresničen, če ga bodo podprle vse stranke parlamentov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg181">Hvala lepa. Besedo ima gospod Železnik.</seg>
             </u>
             <note type="speaker">ANDREJ ŽELEZNIK:</note>
-            <u who="#SSK11.ZeleznikAndrej1944" ana="#regular">
+            <u who="#ZeleznikAndrej1944">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg182">Spoštovano predsedstvo, spoštovani delegati! Nekaj besed o problematiki, ki zadeva celotno to točko, ki jo obravnavamo in se nanaša predvsem na energetsko in ekološko problematiko, ker pač prihajam iz Zasavja, ki je, bi rekel, ekološko in gospodarsko po mojem eno najbolj ogroženih področij v zadnjih letih. V dokumentu o gospodarski in razvojni politiki je sprejeta opredelitev oziroma predlagana opredelitev, ki odgovarja temu, o čemer smo že govorili v tej skupščini, kar se tiče energetike, da je potrebno zastaviti takšno politiko, ki bo seveda zagotavljala energijo, ki ne bo več uporabljala ekološko oporečnih surovin. Absolutno podpiramo takšno usmeritev, vendar to pomeni v trenutni situaciji, predvsem za rudnike rjavega premoga v Sloveniji (od tega trije največji v Zasavju in trije manjši na drugih območjih Slovenije), da se ta proizvodnja zmanjšuje in sicer skokovito v določenem krajšem obdobju, da je predviden trend upadanja te proizvodnje zlasti v Zasavju. Predloženo je zapiranje štirih rudnikov rjavega premoga v Sloveniji: Laško, Senovo, Kanižarica in Zagorje. To zapiranje se je dejansko že pričelo v Laškem; poteka že prva faza tega postopka. V Kanižarici in delno v Zagorju pa se bo v letu 1991 to tudi pričelo izvajati. Vendar je treba pri tem poudariti, da v tem dokumentu manjka še nekaj poleg tega, da bomo zapirali te rudnike; manjka namreč to, da je treba poleg zapiranja napraviti še nekaj drugega. Zagotoviti prestrukturiranje tega dela rudarjev, ki seveda ne bodo mogli ostati v tej panogi in bodo ostali dejansko brez dela, čeprav smo na teh področjih že v zadnjem letu zmanjšali število zaposlenih v rudnikih za okrog 900, kar je število enega največjih rudnikov rjavega premoga v Sloveniji.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg183">Na področju investicij ni predvideno nobenih bistvenih vlaganj v te rudnike, razen dokončanja investicije v Hrastniku, ki naj bi v perspektivi, dokler bo obstoječa Termoelektrarna Trbovlje še delovala, seveda bil poleg Trbovelj tisti rudnik, ki bi dajal premog za to elektrarno.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg184">Pri tem je treba povedati, da bodo rudniki morali vzdrževati proizvodnjo s prihodki od prodaje premoga ter proračunsko subvencijo, ki jo tudi ta osnutek proračuna predlaga za dogovorjeno proizvodnjo. Ta proizvodnja je seveda omejena s potrebami. Kot sem prej rekel, s trendom nadaljnjega zmanjševanja. Ta politika je prav gotovo restriktivna in zaradi tega bi samo poudaril, da predloženi del, ki se nanaša na naš problem, samo predstavlja dejansko minimalne pogoje za preživetje. Ob tem, da ni rešeno vprašanje izgub iz leta 1989 in iz leta 1990. O razlogih ne bom govoril, ker sem v tej skupščini o tem že govoril. No, pri tem pa bi poudaril, da je vprašanje, ki bi ga rad postavil.</seg>
@@ -1096,38 +1082,38 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg193">Imel bi konkreten predlog. Na območju Trbovelj zaradi zelo velikega števila obolelih predšolskih otrok, kar je dokazano tudi s posebno študijo, za te otroke vsako leto z nabiralno akcijo, ker inštitucije nimajo dovolj denarja, organiziramo zdravljenje, zlasti astmatikov na Malem Lošinju. To je skupina 40 do 50 otrok, ki so res najbolj ogroženi in predlagamo, da bi se v nacionalni program zdravstvenega varstva vnesla tudi skromna postavka sofinanciranja zdravljenja teh obolelih otrok z območja četrte stopnje onesnaženosti. Menimo, da takšen problem in ta stvar ne more biti samo skrb občine, ki je dejansko v vse težji gospodarski situaciji in da bi v tem nacionalnem programu zdravstvenega varstva bilo že 200.000 dinarjev dovolj za pomoč vsaj s tega vidika, če že drugače ne pridemo v te programe. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg194">Hvala lepa. Mislim, da je čas, da gremo na odmor, s tem, da bi opozoril člane komisije za delo, zaposlovanje in socialno politiko, da je ob 12.30, se pravi že pred petimi minutami, seja tega odbora. Odrejam 45 minut odmora.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 12.35 uri in se je nadaljevala ob 13.30 uri.</note>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg195">Predlagam, da nadaljujemo našo sejo. Smo v razpravi o 1. točki dnevnega reda in glede na prijave je naslednji na vrsti gospod Šonc.</seg>
             </u>
             <note type="speaker">METOD ŠONC:</note>
-            <u who="#SSK11.SoncMetod1938" ana="#regular">
+            <u who="#SoncMetod1938">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg196">Pri prvi temi bi se ustavil samo pri poglavju energetika. Menim, da je nujno in potrebno, da v tem okviru nekaj rečemo o nuklearni energetiki. Kot je razvidno iz tega programa, je v njem samo tekst, da predvidevamo zapiranje Žirovskega vrha. Že lansko leto, ko smo sprejemali programske usmeritve izvršnega sveta, tam, kjer je pisalo, da bomo nuklearno zaprli do leta 1995, sem zahteval, da se sprejme program zapiranja. Ker to ni tako preprosta in poceni zadeva, menim, da bi bilo treba tudi v tem gradivu o tem nekaj reči in imam občutek, da se izvršni svet pravzaprav te problematike izogiba, ne vem zakaj. Menimo, in jaz tudi, da je treba nujno sprejeti program, kjer bo najmanj rešeno to, kje bo trajno odlagališče nizko in srednje radioaktivnih odpadkov, kaj se bo zgodilo z visoko radioaktivnimi odpadki, kako se bomo dogovorili o renti, kako bomo pripravili sredstva za zapiranje nuklearne elektrarne, to je po nekaj izračunih nekaj milijard dolarjev, to ni tako preprosto in zastonj. In seveda se mi zdi, da bo treba tudi uskladiti stališče z Republiško Hrvaško. Kot vemo, ona je investitor polovice in nje ni nihče vprašal o vsej tej politiki, ki jo vodimo v Sloveniji.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg197">Drugo bi se ustavil pri proračunu, in sicer prvič, pri prihodkih. V interesu zniževanja in razbremenjevanja gospodarstva bi predlagal, da se črtata prvi dve postavki pri virih, in to je davek na dobiček in davek na izplačane osebne dohodke, kar je v masi proračuna približno še celo manj kot 5%. Vendar imate ta davka svojo vsebino, veliko večjo kot je videti sama številka, in sicer davek na dobiček v tem smislu, da bi podjetjem dovolili in pustili, da dobiček prikažejo in da z njim prosto razpolagajo, da en bi bilo potrebne vedno nekakšne manipulacije in skrivanja ter prikrivanja. In drugič, davek na izplačane osebne dohodke, vemo dobro, kako negativno in zelo obremenjujoče deluje pri vsakomesečnem zbiranju sredstev za osebne dohodke, tako da so firme v velikih težavah. Ponavljam, oba davka zneseta samo 5% proračuna in bi po mojem brez škode bila iz finančnega vidika črtana.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg198">Dotaknil bi se tistega, kar so že rekli v naši stranki. Ne moremo se strinjati in ne pristajamo na to, da se tako imenovani cestni dinar ne uporabi za ceste. Kot Dolenjec pa bi rekel, da si ne morem zamišljati, da bi se nehala Dolenjska delati. Minister Kranjc, kako se boste na Dolenjsko pripeljali, če bo še takšna cesta, kot je? Bolj počasi. Tu čisto resno mislimo in apeliramo in smo že tudi rekli, da v taki obliki, če se proračun tako sprejme, pravzaprav ne bomo glasovali za njega.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg199">Druge postavke proračuna - menim, da če hočemo imeti samostojno državo Slovenijo, je potrebno tista poglavja, ki govorijo o državi in vojski, policiji in diplomaciji, podpreti, ker mi vemo, kaj to je. Kar se pa tiče zmanjševanja v nekaterih postavkah, je moje mnenje, da so v marsikateri postavki še rezerve, tudi v tistih postavkah sociale, posebno v postavki sociale, kjer sociala ni pomoč, ampak je vir dohodka. In tega zlahka zreduciramo in postavimo na druge osnove. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg200">Hvala lepa. Besedo ima gospod Peskar.</seg>
             </u>
             <note type="speaker">MATJAŽ PESKAR:</note>
-            <u who="#SSK11.PeskarMatjaz1963" ana="#regular">
+            <u who="#PeskarMatjaž">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg201">Spoštovani predsednik, spoštovani zbor! Dolžan sem vas seznaniti z nekaterimi sklepi in stališči Skupščine občine Jesenice. Ostro protestiramo k osnutku zakona o proračunu Republike Slovenije za leto 1991, in sicer v tistem delu, v katerem so predlagana sredstva za gradnjo in posodabljanje cest manjša za 2,3 milijarde din od dejansko zbranih iz tega vira. In hkrati že takoj postavljam tudi vprašanje, kam bo usmerjeno teh 2,3 milijarde din, zaenkrat še namensko zbranega denarja? V občini Jesenice namreč ugotavljamo, da predlagana višina sredstev 4,5 milijarde din pomeni drastično zmanjšanje obsega potrebnih del ter bi seveda povzročilo dolgoročne posledice tako pri obnovi in vzdrževanju kot tudi pri novogradnjah. Tukaj nam je vsem jasno, ta naš slovenski cestni križ, od katerega bo prej ali slej ostal res samo še križ. In da je tudi cestna infrastruktura predpogoj za razvoj drugih delov gospodarstva. Sama ustavitev del pa bi bistveno povečala stroške kot pa nadaljevanje del, če pri tem ne upoštevamo tudi drugih posledic takega ukrepa.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg202">Ob tem opozarjamo, da za občino Jesenice ni sprejemljivo nadaljnje odlaganje dograditve avtoceste Hrušica-Vrba in zahtevamo dokončanje vsaj v drugem pogodbenem roku, to je december 1991. Ne moremo pristajati na nobene dodatne obremenitve občanov občine Jesenice. Dokončanje gradnje avtoceste sedaj že tako zamuja v primerjavi s prvotno obljubljenim rokom in v primerjavi z odprtjem predora Karavanke, kar že tudi povzroča probleme v občini Jesenice. Nadaljnje zamujanje odprtja avtoceste, poleg negativnih ekonomskih učinkov, pomeni tudi znatno poslabšanje varnostnih in ekoloških razmer. Zbori občinske skupščine tudi ugotavljamo na podlagi izjav, in zaradi vedno bolj zaostrenih gospodarskih in socialnih razmer v občini, ob tem grozi, da utegne zamujanje dograditve avtoceste povzročiti celo nezaželene politične proteste izven institucij sistema. Zato zahtevamo tako razporeditev sredstev republiškega proračuna, da bodo sredstva za ceste namensko uporabljena in da bo s tem omogočeno nadaljevanje del na avtocesti in spoštovanje tudi pogodbenega roka. Ne nazadnje predlagamo, da imajo prednost vsa tista dela, ki se že izvajajo in ki so tudi sofinancirana iz tujih kreditov. Kaj pomeni ustavitev takih del, nam mora biti tudi jasno. Konec koncev, v jeseniški občini si predore in avtoceste prav gotovo nismo srčno želeli, in lahko bi rekel, da sta se nam zgodila avtocesta in predor. Dogovori in odločitev o gradnji je bila na ravni republiškega in meddržavnega dogovora. In odgovornost za dokončanje te investicije mora prevzeti država sedaj s svojim integralnim proračunom.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg203">Dodatnim bremen ne moremo nositi prebivalci mesta in občine, sicer pa na splošno, kar se tiče cest. Zelo zgovorna prispodoba je tista, ki pravi, da Slovenija kar se mrtvih tiče sploh ne potrebuje vojne, mi imamo ceste.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg204">In pa še en predlog ob osnutku proračuna. Glede na to, da občina sedaj ob spremenjenih pogojih gospodarjenja, spremembe, zlasti pa spremembe sistema financiranja javne porabe, iz svojih virov ni sposobna zagotoviti potrebnih sredstev, predlagajo izvršnemu svetu pa tudi zborom, naj v predlogu proračuna republike za 1991 upošteva obveznosti, ki jih je potrebno poravnati v zvezi z izgradnjo primarne komunalne infrastrukture, ki so predpogoj za izdajo uporabnega dovoljenja za mejni plato Hrušice ob Karavanškem predoru. Tukaj je predvsem mišljena dograditev kolektorja in čistilne naprave Jesenice. Ta sredstva so predvidena v višini 4,5 milijona din. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg205">Hvala lepa. Besedo ima gospod Vodopivec.</seg>
             </u>
             <note type="speaker">IVAN VODOPIVEC:</note>
-            <u who="#SSK11.VodopivecIvan" ana="#regular">
+            <u who="#VodopivecIvan">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg206">Spoštovani poslanci! Ko sem čital to razvojno politiko, z navdušenjem sem prebral ta dokument, ker ne nazadnje vsebuje toliko tržne, evropske in ne vem kakšne dimenzije. Morda bi bilo na koncu, ko so vse te storitve, potrebno v tej razvojni politiki stave, dva še o morda obrambi in racionalizaciji te države, kar bo ne nazadnje precej vplivalo na uresničevanje te razvojne politike. Kaže pa, da avtorji tega dokumenta in proračuna niso prav sodelovali, kajti poudarek na razvojni politiki in potem odražanje tega v proračunu, v financah, ni adekvaten.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg207">Bi pa na samo razvojno politiko nekaj vprašanj oziroma pripomb podal. V prvem poglavju razvojnih ciljev je postavka oziroma usmeritev o sanaciji bank oziroma bančnega sistema in ta je tudi reflektirana v tem proračunu. Vendar, v zadnjih dneh, ko poslušamo zaključne račune vseh teh naših slovenskih bank, se vsi hvalijo, kakšne dobičke imajo in tudi pravijo, da en potrebujejo nobene sanacije bank in tudi demantirajo, torej vodstva teh bank, to, kar je finančni minister izjavil, koliko denarja, dolarjev bo treba vložiti v sanacijo bank. Zato sprašujem, kaj je s to postavko, če to ni potrebno? Mislim, da bi bilo umestno, da denar, ki je v proračunu namenjen ali dati za odpiranje novih delovnih mest oziroma prestrukturiranje gospodarstva ali kot vložek države za kapital v ustanavljanje novih bank, ki se pojavljajo in ki bodo, upamo, pod ugodnejšimi obrestnimi merami delile kredite za razvoj gospodarstva.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg208">Ustvarjalne razmere za prestrukturiranje na mikroravni so v zadnjem odstavku te točke a), kjer govori o subvencioniranju, kreditiranju, davčnih oprostitvah in tako naprej. Predlagal bi še dodatek in sicer, da podjetje in obrtniki, ki se bodo na novo ustanovili oziroma zaposlili nezaposlene delavce, bodo za obdobje dveh let oproščeni prispevkov za socialno varnost. To utemeljujem s tem, da trend nezaposlenih - pravimo, da jih je 65.000 in da bo trend do konca leta hitro naraščal in da bodo morali dobiti ti ljudje neke vrste socialne podpore, ali take ali drugačne, na Zavodu za zaposlovanje, potem pa ne bodo nič ustvarjali.</seg>
@@ -1144,21 +1130,21 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg219">In na koncu še to. Na Odboru za finance samo proračun zelo podrobno obravnavali kar dva dni in imeli številne, tudi drobne pripombe, ki zneskovno ne pomenijo veliko, vendar skozi vse postavke proračuna in je bil sklep Odbora za finance ta, da naj vlada torej na osnovi teh pripomb in vseh drugih pripravi nov osnutek proračuna. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg220">Hvala lepa. Gospod Kovač je na vrsti.</seg>
             </u>
             <note type="speaker">MAG. FRANC KOVAČ:</note>
-            <u who="#SSK11.KovacFranc" ana="#regular">
+            <u who="#KovacFranc">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg221">Dal bi nekaj načelnih pripomb k osnutku proračuna.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg222">Najprej. Proračun, ki obsega okrog 60 odstotkov družbenega proizvoda, je prevelik, in se zavzemam za to, da je ta proračun vsaj za 10% manjši. V tem sklopu je seveda treba začeti racionalizacijo v sami skupščini. Mislim pa, da v tem zmanjševanju ne bi kazalo zmanjševati sredstev, ki so namenjena najprej za ceste, ker gre za dejavnost, ki je vpeta v gospodarstvo in se v ceste vložen denar tako ali drugače neposredno vrača v gospodarstvo. Tudi menim, da je treba dati podporo obrambnemu proračunu, ker ne dvomim, da je v fazi osamosvajanja ta lastna obrambna moč temeljna in nujna.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg223">Dal bi tudi pripombo k poglavju 3. točke, ki govori o sredstvih, prenešenih na družbenopolitične skupnosti. Predlagam, da bi ta sredstva oziroma da bi proračunsko porabo po občinah uravnavali enakomernejše. Trenutno pride do takih razlik, da je recimo proračunska poraba na prebivalca v nekaterih občinah tudi 100% večja kot v drugih občinah. Glede na to, da smo sprejeli nacionalne programe v šolstvu, zdravstvu in tako naprej, mislim, da je to nesprejemljivo in bi to približevanje nekemu republiškemu povprečju po občinah po mojem mnenju lahko odstopalo plus-minus 10%. V načelu pa podpiram ta osnutek proračuna.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg224">Hvala lepa. Besedo ima gospod Mesiček.</seg>
             </u>
             <note type="speaker">IVAN MESIČEK:</note>
-            <u who="#SSK11.MesicekIvan1933" ana="#regular">
+            <u who="#MesicekIvan1933">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg225">Spoštovano predsedstvo, dragi kolegi! Nastopam v imenu občine Pesnica in poudarjam, da se ta moja predhodnika, delegat z Jesenic in pa gospod Vodopivec, povedala vrsto stvari, o katerih sem mislil govoriti in zdaj zaradi štednje s časom ne bom govoril. Več konkretno.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg226">Pesnica je planirala letos gradnjo ceste od Šentilja do Počehove, teh sredstev pa ni. Sredstva, ki so bila odobrena, bodo zadostovala le za začetek gradnje. Posledice bodo take, kakor ste že slišali v drugih primerih.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg227">Dovolite, da posredujem pripombe k osnutku proračuna Republike Slovenije za leto 1991, kakor jih je posredoval Izvršni svet občine Pesnica.</seg>
@@ -1172,11 +1158,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg235">5. Stališča izvršnega sveta je, da se Sklad za demografsko ogrožena območja ne krči. V kolikor se proračun krči, je mnenje izvršnega sveta Pesnice, da se naj krčijo naslednji programi: kotizacija za JLA, intervencije v gospodarstvo, pokrivanje izgub v javnih podjetjih, kjer je republika večinski lastnik, ta pa morajo bistveno več kot sedaj skrbeti za povečanje obsega storitev. Kakršnakoli večja centralizacija povzroči zmanjšanje zaposlenih na obrobnih območjih. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg236">Hvala lepa, gospod Mesiček. Gospod Schwarzbartl je na vrsti.</seg>
             </u>
             <note type="speaker">MAG. ANTON ERVIN SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg237">Takole sem si zapisal. Ne morem oceniti pravilnosti in smotrnosti delitve sredstev iz integralnega proračuna v globalu. Pri tem nimam toliko in takšnih informacij, kot jih ima Izvršni svet Republike Slovenije. Moram in znam pa oceniti posledice, ki jih bo utrpel razvoj moje občine, pri tem pa mislim, da nismo ravno revna občina, in smo pa še bomo veliko prispevali v proračun republike. Ne zahtevamo vračila v istem razmerju kot vlagamo. Pričakujemo pa modrost, po kateri se konj, ki vleče, ne ubija, ampak dobro krmi.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg238">Glede cestnega gospodarstva. Če se sredstva v ta namen krčijo, bodo povzročene posledice ne samo cestnemu gospodarstvu, ampak se bodo povečali posledično tudi drugi stroški, ki niso produkcijski, ampak jih podjetniki vkalkulirajo posredno v svoje cene. V tem primeru, če bo krčenje tako občutno, kot je nakazano, ne bomo začeli nobenih novih del na našem območju, med drugim tudi ne začeta dela na avtocesti Celje-Ljubljana, na tretjem pasu Trojane, ne bomo pripravljali del za štiripasovnico Črnuče-Domžale. Bistveno bomo zmanjšali realna sredstva na področju rednega vzdrževanja, odpravo črnih točk in tako dalje. Naj samo na primer omenim, da smo v letu 1990 za Domžale prejeli za vzdrževanje 210 kilometrov cest le 1.900.000 dinarjev. Če izpadejo na tem področju, na tem sektorju, v tej dejavnosti, sredstva iz proračuna, bodo izpadla dela na tretjem pasu Trojane, za katerega menimo, da je zelo pomemben vsaj za 50% Slovenije. Izpadla bodo dela za cesto Domžale-Črnuče, štiripasovnica M-10, ki je po nekaterih ocenah najbolj prometno obremenjen odsek v Sloveniji, poudarjam: najbolj prometno obremenjen odsek v Sloveniji! Pa seveda ustrezni deleži sredstev za obvoznice in križišča na magistralni cesti. Ne bi posebej navajal, kakšno katastrofalno stanje je na območju prometa in prometne varnosti na cesti Ljubljana-Celje, saj se o tem lahko vsakdo prepriča. Republiški sekretariat za notranje zadeve pa ima na razpolago zelo natančne podatke o številu žrtev prometnih nesreč na in ob tej magistralni povezavi.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg239">Gradimo in planiramo cestne in avtocestne povezave v tistih predelih, ki so bistveno prometno manj obremenjeni kot je pa cesta Črnuče - Trzin, kjer imamo preko 20.000 vozil na dan.</seg>
@@ -1197,11 +1183,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg254">Sicer pa mislim, da so usmeritve iz tega predloženega osnutka proračuna prave in jih podpiram posebno, kakorkoli me boste že za to ocenili, še tisti delež, ki je namenjen obrambni sposobnosti naše države in menim, da ga ne bi smeli v tem času in tem trenutku zmanjšati.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg255">Hvala lepa. Besedo ima gospod Atelšek.</seg>
             </u>
             <note type="speaker">IVAN ATELŠEK:</note>
-            <u who="#SSK11.AtelsekIvan1928" ana="#regular">
+            <u who="#AtelsekIvan1928">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg256">Spoštovani gospod predsednik, spoštovani poslanci in poslanke! Razvojna politika v letu 1991 z aspekta usmeritev, menim, da je vredna pohvale. Mislim, da je ta strokovni del izvršnega sveta gotovo prisluhnil nam poslancem, ko smo opozarjali na določene usmeritve, kaj bi bilo treba storiti in kje so lahko možnosti nadaljnjega razvoja Slovenije. Vendar nekatere zadeve bi posebej poudaril.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg257">Mislim, da manjka v vsem zaključku scenarij izvedbe posameznih nalog, torej scenarij, ki nam kaže, ker drugače je to lahko tako kot gre v kavbojskem filmu, da junak nikoli ne pade. Prvič s tega aspekta gledam po posameznih poglavjih, ki zajemajo od gospodarskih do infrastrukturnih usmeritev, do socialnih usmeritev, nekje so konkretizirane in vrednotene ter modernizirane ter se usmeritve praktično delajo, mislim, da ta scenarij absolutno manjka. Predvsem pa menim, da je v tem scenariju zelo pomembno, ali v vsej usmeritvi, kako oživiti produkcijo oziroma proizvodnjo, torej v sami proizvodnji je rešitev nadaljnjega razvoja Slovenije. V nadaljnji produktivnosti, v izkoriščanju kapacitet, od človeka do izvršnega sveta, do vsega, kar se kjerkoli dogaja, namreč iz aspekta štednje večje proizvodnje, manjših stroškov na vseh področjih. Strinjam se s predsednikom, ki je v ekspozeju napovedal, in mislim, da je treba jasno in glasno povedati, za življenje mora najprej skrbeti človek sam za sebe, torej ne glede, kje se pojavlja. To vprašanje je treba posebej izpostaviti in ne more samo čakati na socialno politiko, na razrešitve preko socialne politike, da bo nekdo za njega skrbel. Menim, da je to prvi pogoj.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg258">Drugo, če želimo pripeljati kapital v deželo, potem potrebujemo ekonomsko in politično stabilnost. Ali je ta država svobodna ali ni, če je, potem moramo tudi tako klimo ustvariti in zagotoviti tujim partnerjem, da bodo prišli s svojimi vložki v to državo. Postaviti moramo take odnose, seveda na vsem političnem in ekonomskem področju, davščine, davki, davčna politika ne more biti samo fiskalni način, ampak mora biti tudi razvojni aspekt, kajti brez tega ni razvoja v državi.</seg>
@@ -1218,11 +1204,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg269">Drugače pa mislim, da bo dosti diskusij in verjetno bo izvršni svet upošteval te zadeve, ki jih imamo poslanci, da se ne bi tako zgodilo, kot se je zgodilo z davčno politiko, da bi potem vseh tistih 50 ali 100 amandmajev, ki smo jih imeli, vsi nazaj potegnili. Mi ne dajemo amandmajev zato, da bi nagajali, mogoče je nekaj takih, ki niso dobri, ki jih ni moč sprejeti, ampak v glavnem dajemo z dobro vero, da bi pomagali in izboljšali situacijo, ki jo nekdo predlaga. Mislim, da je to upoštevanja vredno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg270">Hvala lepa. Gospod Grošelj ima besedo.</seg>
             </u>
             <note type="speaker">LEOPOLD GROŠELJ:</note>
-            <u who="#SSK11.GroseljLeopold1941" ana="#regular">
+            <u who="#GrošeljLeopold">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg271">Spoštovano predsedstvo, spoštovani poslanci in poslanke! V svoji razpravi želim opozoriti predvsem na tri stvari, ki se nanašajo na osnutek zakona o proračunu Republike Slovenije in sicer: kot prvo, načelo nadgradnje in konkretizacije posameznih dokumentov, pri čemer mislim predvsem na konkretizacijo izvedbenih aktov, glede na predhodne načelno opredeljene dokumente, kot drugič, načelo enakosti izhodiščnih osnov pri sestavi proračuna in kot tretjič, načelo uporabe sredstev po namenih, za katere se sredstva zbirajo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg272">Pri opredelitvi načina nadgradnje ali pa dodelave in komplementarnosti aktov imam v mislih dokument "Gospodarska politika v letu 1991" in pa osnutek proračuna Republike Slovenije za leto 1991. Za oba dokumenta menim, da bi jih bilo potrebno obravnavati kot celoto, pri čemer je proračun izvedbeni akt gospodarske politike za leto 1991. V sedanjem osnutku proračuna pa nekatere naloge gospodarske politike niso vidne in so, če se seveda ne motim, zajete v postavkah, ki so samo načelno opredeljene.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg273">Če konkretno navedem predvsem za občino Hrastnik, dokument "Gospodarska politika" opredeljuje naloge za naše območje na področju toplotne energije, gre za kurjenje premoga v kotlih z vrtinčastimi tokovi in na področju investiranja v rudarske objekte, to je jašek Hrastnik, drugič to, kar je bilo že danes omenjeno, vendarle obeh nalog osnutek proračuna eksplicitno ne zajema in ju tudi ne kvantificira.</seg>
@@ -1238,11 +1224,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg283">Ne nazadnje bi tudi predlagal, da se za vse namene porabe v Republiki Sloveniji izvedejo razpisi ali natečaji in da sredstva pridobijo tisti, ki jih bodo na osnovi dokumentacije v letu 1991 resnično koristno porabili, to seveda velja le za sredstva, ki se zbirajo za posamezni namen. Namreč mislim, da ni koristno objavljati spisek želja (to, kar imamo v Poročevalcu,priloga 6/II) oziroma podatkov, ki so bili zbrani na osnovi ankete, pri tem pa zanemariti resnične potrebe. V naši občini so potrebe po sredstvih predvsem za ureditev deponije, kurišč, zaščito vodnih virov, zajetju pitne vode in na programu čiščenja reke Save. Hočem to povedati, da smo za vsa ta področja za sofinanciranje v letu 1990 predložili vso dokumentacijo, rezultat pa je bil ničen - za noben namen nismo uspeli pridobiti republiških sredstev. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg284">Hvala lepa. Besedo ima gospod Žunter, Demokratska zveza Slovenije, Mozirje.</seg>
             </u>
             <note type="speaker">DR. ANTON ŽUNTER:</note>
-            <u who="#SSK11.ZunterAnton1949" ana="#regular">
+            <u who="#ZunterAnton1949">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg285">Spoštovani predsednik, spoštovani zbor! Opravičujem se kolegom, ki so že v Poljčah poslušali tale moj apel. Nekateri v tej dvorani se mogoče še spomnite novembrskih katastrofalnih poplav - vsi prav gotovo ne - ki so Zgornjo Savinjsko dolino uničile do te mere, da predstavlja škoda 216% družbenega proizvoda naše občine. To je dvoletni družbeni proizvod. Za primerjavo naj povem, da je druga najbolj prizadeta občina Celje imela škodo, ki znaša 30% družbenega proizvoda. Ne bom ponavljal, v kolikšni meri je v občini uničena industrija, obrt, gozdovi in tako naprej. Rad bi vas samo spomnil, da so bili odplavljeni vsi mostovi na Lučnici, skupaj sedem, na Lubnici štirje, in vsi mostovi na Savinji, od Luč do Ljubnega, skupaj šest, in nekaj mostov na Dreti.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg286">Poleg tega je bila skoraj povsem uničena republiška cesta Ludno-Luče ter cesti Ludno-Ter in Luče-Podvolovjek. Te ceste so zdaj smrtno nevarne, ker so tako spodkopane, da vsak dan z grozo čakamo, kdaj bo v Savinjo zgrnil prvi avtobus.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg287">Po poplavah nam je bilo obljubljeno s strani gospoda Peterleta, gospoda Kučana in številnih ministrov, ki so prihajali v Luče, da bodo spremenjene prioritete odsekov za večje rekonstrukcije in da bo obnova ceste Ludno-Luče ter izgradnja mostu na Ludnem na vrhu te prioritetne liste. Podobno velja za sanacijo doline Podvolovjek in še za po en most na Savinji in Dreti.</seg>
@@ -1257,11 +1243,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg296">Prepričan sem, da bi lahko brez škode še veliko prihranili tudi pri drugih porabnikih, vključno s skupščino pa tudi z zdravstvom, kjer razmere najbolj poznam. Zato predlagam, da izvršni svet prouči možnosti za zmanjšanje proračuna še za 5 do 10%. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg297">Hvala. Besedo ima gospod Bukovec.</seg>
             </u>
             <note type="speaker">JANOŠ BUKOVEC:</note>
-            <u who="#SSK11.BukovecJanos" ana="#regular">
+            <u who="#BukovecJanos">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg298">Spoštovano predsedstvo, spoštovane kolegice, kolegi! Jaz bi na kratko o razvojni politiki Slovenije za 1991. leto, kjer je zapisano, da bodo programi in ukrepi aktivne politike zaposlovanja usmerjeni tudi v občine z visoko stopnjo brezposelnosti. Ker ima naša občina, to je lendavska občina, trenutno 26,2% brezposelnost, v republiki je to povprečje 6,1%. Prav gotovo sodimo v te občine, v katerih je problematika brezposelnosti zelo pereča. Menimo, da so ukrepi oziroma zakonske rešitve za razreševanje te problematike premalo učinkoviti, predvsem na območjih z nadpovprečno visoko stopnjo brezposelnosti. Saj obubožano gospodarstvo ni sposobno ustvarjati novih delovnih mest. Ob plačilni nesposobnosti, neizterljivih terjatvah, padanju proizvodnje, se zmanjšujejo že obstoječa delovna mesta. Za odpiranje novih delovnih mest vsaj v naši občini kapitala ni, ne v družbenem ne v zasebnem sektorju. Zato sofinanciranje novih delovnih mest ne bo moglo veliko koristiti, saj nimamo niti začetnega kapitala za nova delovna mesta. Ob tem je še vlada zapisala, da bo sanacijo gospodarstva prepustila gospodarstvu in trgu. Gospodarstvo ne propada samo zaradi subjektivnih, temveč tudi zaradi objektivnih razlogov, pogojenih z razmerami v državi. Prepustiti samemu sebi to gospodarstvo je neodgovorno.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg299">Pri tem ne smemo pozabiti, da ne živimo v razvitem tržnem gospodarstvu, temveč v razmerah, kjer vladajo pravni nered in finančna nedisciplina. Res je, da se vsi skupaj borimo za to, da bi čimprej prišli na obliko tržnega gospodarjenja, vendar žal nam to bolj malo uspeva.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg300">Do vzpostavitve normalnih razmer so intervencije v gospodarstvu predvsem finančno potrebne. Znesek, ki je v proračunu za to namenjen, je glede na potrebe gospodarstva preskromen. Sredstev, ki so namenjena demografsko ogroženim območjem, pa v občinskih središčih ni možno koristiti. Torej tam, kjer so že delovna mesta in ta sredstva, ki so namenjena za ta območja, se sploh ne morejo koristiti, ker so občinska središča po zakonu o demografsko ogroženih območjih izvzeta iz tega zakona. Ker pa smo na žalost do nedavnega razvijali samo to občinsko središče - zdaj govorim predvsem o našem občinskem središču v Lendavi - je bil center industrijskega razvoja prav občinsko središče, hkrati seveda je bila dnevna migracija zelo velika, ker so vse druge vasi tudi blizu temu občinskemu središču in ker je bila tam že zgrajena infrastruktura, so te tovarne propadle oziroma večina jih je že šla v stečaj. Upam, da ni samo - mislim, to ni najbolje izraženo - da ne propadajo samo tovarne v lendavski občini, ampak vem za težave v vsej Sloveniji. Pri tem velja še povedati, da bo potrebno sredstva za intervencije v gospodarstvu tudi regionalno razdeliti, drugače lahko pride do popolnega propada gospodarstva na posameznem območju ter praznitve takega prostora.</seg>
@@ -1273,27 +1259,27 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg306">In na koncu še, da je projekt italijanske narodnosti potrebno prilagoditi razmeram na obalno-istrskem območju, vendar hkrati komisija opozarja, da je potrebno zagotoviti pogoje na navedenem območju, da bo projekt sploh zaživel. Komisija meni, da mora sedež podjetja ostati na navedenem območju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#chair">
+            <u who="#RojecAnton1937" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg307">Hvala, gospa Štular. Gospod Urbančič.</seg>
             </u>
             <note type="speaker">MILOŠ URBANČIČ:</note>
-            <u who="#SSK11.UrbancicMilos" ana="#regular">
+            <u who="#UrbancicMilos">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg308">V mojem imenu in v imenu poslanca Janeza Krambergerja, Ivana Pučnika in Petra Kranerja, bi dal k proračunu naslednji amandma. V proračunu je javna gozdarska služba predimenzionirana, zato predlagamo, da se zmanjša obseg službe in proračun za najmanj dve tretjini od predlagane. Primerjava s kmetijsko pospeševalno službo je planirano 300 zaposlenih, za gozdarstvo pa kar 947 zaposlenih. Mnenja smo, da se hoče lep del bivše megalomanske gozdne organizacije prenesti na financiranje iz proračuna. Zahtevamo, da se vse službe obnašajo racionalno v teh kriznih časih. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#chair">
+            <u who="#RojecAnton1937" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg309">Hvala. Gospod Dragovan.</seg>
             </u>
             <note type="speaker">SLAVKO DRAGOVAN:</note>
-            <u who="#SSK11.DragovanSlavko1961" ana="#regular">
+            <u who="#DragovanSlavko1961">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg310">Želel bi dati nekoliko načelnih pripomb pri obravnavi tako imenovanega socialnega programa slovenske vlade. Pri oceni predlaganega socialnega programa je treba izhajati iz dejstva, da je pisan v razmerah težke in še vedno nepredvidljive situacije, v kateri je trenutno slovensko gospodarstvo in v tem vidimo enega od razlogov za relativno splošen pristop. Realno gledano pa bi vsak celovit socialni program ob dejstvu velike nezaposlenosti in splošnih gospodarskih težavah zahteval veliko materialno zaledje. Dosedanja socialna blaginja je bila v mnogočem navidezna, kupljena s krediti, forsirano polno zaposlenostjo in pokrita z idilo samoupravnega odločanja. Zato je čas streznitve, ki se pokriva s časom večjih socialnih pretresov, pri treznih analitikih pričakovan. Na nas vseh je, pa čeprav v veliki večini nismo odločali o številnih zavoženih gospodarskih in drugih investicijah, ki so ne nazadnje povzročile današnje stanje, na nas vseh je torej, da se solidarno lotimo nakopičenih težav. Ob tem bi želel poudariti samo dva aspekta pri socialnem programu. Problematika brezposelnih. Podpiramo predlog iz vladnega programa, to je tako imenovano aktivno politiko zaposlovanja. Na primer javna dela, druga oblika so programi za usposabljanje brezposelnih za različne vrste domače in druge obrti. Problematika mladih. Med brezposelnimi je še vedno veliko mladih s poklici oziroma z diplomami. Menimo, da gre za zelo občutljivo problematiko. V vladnem socialnem programu pogrešamo celovito obravnavo le-tega. Ne moremo si obetati zdravega razvoja naroda, če bo mladina ostala ujeta v neperspektivnost, apatičnost in duhovno brezciljnost. Pa ne nazadnje tudi slabšo možnostjo zaposlitve. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#chair">
+            <u who="#RojecAnton1937" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg311">Hvala. Gospa Štular.</seg>
             </u>
             <note type="speaker">VOJKA ŠTULAR:</note>
-            <u who="#SSK11.StularVojka1946" ana="#regular">
+            <u who="#StularVojka1946">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg312">Vsem prav lep pozdrav! V svojih razmišljanjih bom zelo konkretna in bi za prvo točko, to je razvojna politika Slovenije na začetku 1990 let podala konkreten predlog za področje "Politike razvoja družbenih dejavnosti".</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg313">V ciljih in politiki posameznih področij družbenih dejavnosti, konkretneje na področju vzgoje in izobraževanja je izpuščeno področje predšolske vzgoje. Zato predlagam, da bi resorji, ki so za nas zadolženi pred točko osnovnega izobraževanja vnesli tudi področje predšolske vzgoje, ker je to del sistema vzgoje in izobraževanja in zelo pomembna dejavnost za naš nadaljnji razvoj. O tem problemu smo govorili tudi na Komisiji za žensko politiko in Komisiji za družino in obe sta ta predlog podprli, kar je razvidno tudi iz dokumentov, ki smo jih danes dobili na klop.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg314">Rada pa bi tudi spregovorila kot članica Odbora za vzgojo in izobraževanje ter telesno kulturo. Ker je poročilo priloženo, mi dovolite, da izpostavim samo dve ali tri misli.</seg>
@@ -1305,11 +1291,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg320">Cesta na tem odseku, zlasti pa Strunjan-Valeta, je za 40% preobremenjena. Strokovnjaki, ki se na to spoznajo, so mi povedali, da je to dovolj visok procent, ki omogoča uvrstitev na prednostno listo. Pomena cest ne bom povezovala samo z varnostjo, ampak tudi z nadaljnjim gospodarskim razvojem in z razvojem turističnega področja, ki je za nas zelo pomembno. Iz gradiva sem razbrala, da se je možno, v kolikor je vsa potrebna dokumentacija nared, o določenih stvareh pogovarjati in spremeniti. Strokovnjaki, ki se s tem področjem ukvarjajo, so mi zagotovili, da je po prvi varianti možno z deli začeti takoj. Zato resnično apeliram na poslanke in poslance, da se odsek Jagodja do tunela pri Luciji vnese v proračun za leto 1991, tako kot je bilo v planu za letošnje leto že opredeljeno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg321">Hvala lepa. Naslednji ima besedo gospod Rojec.</seg>
             </u>
             <note type="speaker">ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#chair">
+            <u who="#RojecAnton1937" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg322">Gospod predsednik, spoštovane poslanke, spoštovani poslanci! Moja diskusija se nanaša na proračun Republike Slovenije.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg323">1. Podpiram in zahtevam namensko porabo cestnega dinarja. Le takšna poraba cestnega dinarja je zakonita. Drugačne pravne interpretacije, ki sicer obstajajo, ne vzdržijo neke resne pravne kritike. Oba specialna zakona, zakon o cestah, zakon o povračilu za ceste ob ceni naftnih derivatov, kot specialna zakona še veljata in imata prednost pred vsakim eventuelnim drugim zakonom. Cestnega dinarja, skupaj je predvideno 6,7 milijarde dinarjev, proračun pa predvideva manjšo porabo za približno 2,3 milijarde din, torej cestni dinar se preliva drugam.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg324">2. Niso sprejemljive prioritete, kot izhajajo iz prilog proračuna. Tam postavljene prioritete na pristojnem organu, torej Skupščini Republike Slovenije, niso bile niti razpravljane kaj šele sprejete. To je bilo zahtevano jeseni lanskega leta. Postavljena prioriteta, kot v proračunu in prilogi stoji, diskriminira severovzhodni del Republike Slovenije in en sledi osnovni ideji povezovanja Republike Slovenije v celoto.</seg>
@@ -1324,11 +1310,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg333">In še nekaj. Razprava v tej skupščini o občinski problematiki in pogoste razprave v tej smeri, me navajajo, da je nujno treba spremeniti sistem financiranja posameznih področij delovanja Republike Slovenije in jih prenesti na občine oziroma na regije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg334">Hvala lepa. Naslednji ima besedo gospod Tomaž Pavšič.</seg>
             </u>
             <note type="speaker">TOMAŽ PAVŠIČ:</note>
-            <u who="#SSK11.PavsicTomaz1931" ana="#regular">
+            <u who="#PavsicTomaz1931">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg335">Spoštovano predsedstvo, drage kolegice in kolegi! V zvezi s to točko imam dve stvari, in sicer najprej o zapiranju rudnika, potem pa še nekaj o srednjem šolstvu in še nekaj drugega, malega.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg336">Danes smo slišali že več razprav v zvezi z zapiranjem rudnikov. To je zdaj aktualna tema pri nas, najbrž tudi v velikem delu Evrope. Idrija se je znašla pred to težavo pred 14, 15 leti, in takrat je bilo to kar dobro urejeno; mislili smo, da bo držalo. Ampak zdaj, prav v teh težkih kriznih časih, se pojavlja novo vprašanje zaradi zapiranja rudnika, kajti del finančnih sredstev za zapiranje, tisti del, ki ga je po zakonu o preprečevanju posledic rudarjenja v rudniku živega srebra v Idriji dolžna dajati občina, povzroča velikansko težavo. Po eni strani so samoupravni sporazumi in družbeni dogovori zdaj že nekako zgodovina, je pa še nekaj drugega. To bi razložil v dveh točkah. Podjetja v idrijski občini so obremenjena s prispevkom za rudnik, kar poleg vsem znanim težkim pogojem gospodarjenja dodatno slabi konkurenčno sposobnost gospodarstva, ki že dalj časa ni pripravljeno odplačevati tega prispevka. To se zdaj vleče že dve leti. Nova davčna zakonodaja ne pušča občini niti formalnih možnosti, da bi zagotovila ta sredstva v svoji pristojnosti v smislu predpisovanja prispevkov oziroma davkov; so namreč prenešena na republiko. In sredstev, ki jih je dolžna plačevati občina, je letos 13 milijonov!</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg337">No, poleg vsega tega se seveda odpirajo še druga težka vprašanja, ki jih prinašajo čas, nova zakonodaja in nove razmere. To pa vidimo v naslednjem.</seg>
@@ -1350,11 +1336,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg353">2. Odbor se zavzema za upoštevanje mednarodnih standardov, ki določajo, koliko sredstev nacionalnega dohodka je nujno potrebnih za znosno delovanje posameznih področij. Pri nas kultura ta merila dosega komaj do 30%. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg354">Hvala lepa. Besedo ima gospod Boris Jež.</seg>
             </u>
             <note type="speaker">BORIS JEŽ:</note>
-            <u who="#SSK11.JezBoris1959" ana="#regular">
+            <u who="#JezBoris1959">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg355">Spoštovano predsedstvo, dragi kolegi! Želel sem nekaj spregovoriti o izgradnji cestne infrastrukture, in pa po novem nenamenskem cestnem dinarju, pa se bom temu delu razprave odrekel, ker so pač o tem govorili že številni kolegi pred menoj, še posebej bi podprl gospoda Vodopivca, ki je apeliral na pristojne vladne resorje, naj se pač potrudijo, da se pridobijo možni krediti iz Italije za izgradnjo osimskih cest, ki potekajo tudi s tega dela Slovenije, se pravi od italijanske meje do središča naše slovenske države.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg356">Bi pa nekaj spregovoril o razvojnih ciljih slovenske agrarne politike. S temi smernicami sem kolikor toliko zadovoljen, ker imajo funkcionalno usmeritev in podpirajo tehnološki razvoj, podpirajo prestrukturiranje gospodarstva, poseljenost sedaj deagrariziranih območij in tako naprej in ne podpirajo zgolj posameznih panog ali pa celo posameznih podjetij.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg357">Potreb po kapitalu v našem kmetijstvu je zaradi zgodovinskega razvoja našega agrara ogromno, denarja v proračuna pa malo, zato bo, kot je rekel prej predsednik Peterle, lov, ki je odprt, verjetno še toliko bolj ogorčen. Kljub nasprotovanju nekaterih, predvsem Zelenih, pa naj mi ne zamerijo, za nadaljevanje hidromelioracij predvsem pa melioracij ter namakanja in tako naprej, bi želel apelirati, da se vsaj začeti objekti, se pravi kot je namakanje v Vipavski dolini, sfinancirajo. Čeprav je v proračunu za 5-krat več potreb po sredstvih, kot pa je razpoložljivega namenskega denarja za razvoj podeželja, agromelioracije v hribih, agromelioracije v trajnih nasadih, akumulacijo, osuševanje in pa program komasacij. Prebral bi pismo, ki ga pošiljajo kmetijci z našega področja. Od leta 1982 je potekalo v Vipavski dolini intenzivno urejanje površin. To so bila prva obsežna dela po vojni na tem področju, saj je ves razvoj bil vse dotlej usmerjen v industrializacijo. Sami začetki ureditvenih del pa segajo že v predvojni čas. Želeti je bilo, da se površine ureja tako, kot so urejene v sosednji Furlaniji oziroma furlanski nižini. To je v smislu osuševanja in kot logična posledica tega potem tudi namakanja.</seg>
@@ -1366,11 +1352,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg363">Želel bi, da se v tem smislu zadeva obravnava v naslednjem proračunskem obdobju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg364">Hvala lepa. Besedo ima gospod Štefančič:</seg>
             </u>
             <note type="speaker">MARCEL ŠTEFANČIČ:</note>
-            <u who="#SSK11.StefancicMarcel1937" ana="#regular">
+            <u who="#StefancicMarcel1937">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg365">Spoštovano predsedstvo, spoštovane poslanke, poslanci! Najprej želim obvestiti gospoda poslanca Ervina Schwarzbartla, da ni tako osamljen, kar zadeva redčenje upravnih vrst v občinskih upravah; tega smo v Logatcu nekaj že storili, nekaj tudi še bomo, tako da smo, bi rekel, v isti liniji.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg366">Kar zadeva neinteres pošt, da ne bi rade zbirale denarja, na kar je opozarjal gospod Atelšek, bi dejal še to, da ne samo da pošte nočejo zbirati denarja, tudi nočejo raznašati pošte, in to ne pisem ne časopisov, ne revij, kaj šele knjige. Namreč, dogaja se popoln anarhizem. In kdo je vzpostavil ta red na poštah, mi ni jasno. Na vsak način bi bilo morda kdaj potrebno pritegniti kako razpravico v skupščini tudi o tej poštni problematiki.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg367">No, toliko na rob. Sicer smo poslušali tu velike teme, so pa seveda v tej razvojni politiki v Republiki Sloveniji vgradili neke male teme, jaz bi morda na tako malo temo opozoril.</seg>
@@ -1380,11 +1366,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg371">Druga mala tema je osnovnošolska mreža. Piše zopet v istem gradivu: Po manjših krajih, oddaljenih, hribovskih in tako naprej, naj ostanejo majhne šole, ki da so sicer drage, vendar bi njihovo zapiranje povzročilo veliko in trajno škodo. Zaustavilo bi odseljevanje in tako naprej. Vendar tu bi opozoril in rad zastavil še droben korak. Ne le to, da en bi zapirali teh šol, treba bo ponovno odpreti šole tam, kjer so že zaprte in so tako že povzročile veliko in še vedno trajajočo škodo, zaradi katere ne ugašajo le ognjišča, ampak naš dobršen del civilizacijskega duha. To je moje stališče. Stališče Izvršnega sveta Skupščine občine Logatec do proračuna pa prilagam posebej v dopisu.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg372">Hvala lepa, gospod Štefančič. Besedo ima gospod Gradišar.</seg>
             </u>
             <note type="speaker">DR. CVETKO GRADIŠAR:</note>
-            <u who="#SSK11.GradisarCvetko1938" ana="#regular">
+            <u who="#GradisarCvetko1938">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg373">Ker je bila dostikrat danes omenjena beseda samostojna Slovenija, demokracija in oblast, kakršno pač imamo, ne bo odveč, da malo asociramo, da je to tudi majhno otroče, ki še ni shodilo, kot vemo, pa se otroka ne meče ob steno, da en bi nastal spaček, ki smo ga imeli 40 let. Usoda samostojne Slovenije je seveda odvisna tudi od naše osamosvojitve, odhoda iz Jugoslavije, ker bi se pozneje v naslednjih tisoč letih srečali na domačem dvorišču, potem, ko bodo tudi naši sosedi, bivši a sedanji, podprli svoje lastne zunanje in notranje plotove na skupnem dvorišču.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg374">Sorazmerja v Jugoslaviji so seveda sprevržena, obrnjena praksa. Ker sem zdravstveni delavec, naj mi bo dovoljena prispodoba, da pomeni operacija pacienta, ki pride z bulo v ambulanto, tako da obrežejo pacienta, bulo pa pustijo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg375">Tretja stvar, ki se mi zdi pomembna, da bi dosegli tudi v našem Zboru občin in skupščini skupaj strankarski konsenz. V razvoju gre za vitalna vprašanja, temeljna vprašanja, torej obstoja preživetja in pa tudi naprejšnjega razvoja, in da bi tukaj dosegli konsenz, da ne bi bilo kakšnih čudnih strankarskih miksov, preigravanj s tistim avtogolom, ki sem ga omenil ali pa morda v smislu političnega piskrovezništva. To počnemo takrat, kadar so črepinje namesto skupnega duha in skupnih moči.</seg>
@@ -1408,19 +1394,19 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg393">7. Zdravstveno varstvo ne more biti le poslušen privesek družbe, ampak aktivni udeleženec pri razvoju produktivnosti, socialne varnosti ljudi, organizirano po tržnih načelih, konkurenca in selektivnost. Še morda ta medresorski: zdravstveni in cestni dinar se pojavljata skupaj, minister za zdravstvo tega ni vedel, jaz sem ga vprašal. Izračuni kažejo, sem šel delati analize, da je pri 1.000 mrtvih čez 20-letnih samo na odseku Višnja gora-Bregana rizična cesta in 2.000 težko ranjenih, to so mladi, produktivni ljudje. Preračunano na slovensko, od 4 do 7-letni ciklus, bi pokrili celoletni proračun cest. Da ne more ta vlada, ta družba najti premostitve in bodoče nesreče, bodoče zelo boleče gorje premostiti. Tu so tudi te stvari, ki jih je treba izpostaviti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg394">Hvala lepa. Besedo ima gospod Senčur.</seg>
             </u>
             <note type="speaker">MILOŠ SENČUR:</note>
-            <u who="#SSK11.SencurMilos1957" ana="#regular">
+            <u who="#SencurMilos1957">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg395">Spoštovani! Dotaknil bi se samo področja kulture in vprašal predlagatelja po razlogih in kriterijih, ki so botrovali, da za tako imenovani Šeškov dom v občini Kočevje - je iz zgodovine bolj poznan kot kraj, kot objekt, kjer se je stkala slovenska državnost - niso predvidena niti sredstva za obnovo in celo za investicijsko vzdrževanje ne. Namreč, Šeškov dom je bil proglašen v letu 1988 za kulturni spomenik, v stanju je pa takem, da prireditve v njem niso mogoče. Iščejo rešitve za preselitev muzeja, za izvedbo so že izdelani projekti, predračunska vrednost je 5 milijonov dinarjev in glede na ta dejstva, s katerimi je predlagatelj proračuna bil tudi seznanjen, in glede na to, da so dogovori iz preteklosti o morebitni obnovitvi tega objekta, kot pomembnega zgodovinskega objekta, padli v vodo in glede na to,da smo šele v fazi osnutka, predlagam, da se za obnovo tega kulturnega spomenika v proračunu predvidi pokritje polovice predračunske vrednosti, to je za 2,5 milijona dinarjev, potrebnih za njegovo obnovo. Navsezadnje pa tudi manjši namenjeni znesek od zahtevanega, ki bi ga republika namenila, bi, če nič drugega, dal vedeti, da se je na področju Kočevja oziroma da se je na to področje prenehalo gledati skozi zatemnjena očala. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg396">Hvala lepa. Gospod Jamnikar ima besedo.</seg>
             </u>
             <note type="speaker">PETER JAMNIKAR:</note>
-            <u who="#SSK11.JamnikarPeter1959" ana="#regular">
+            <u who="#JamnikarPeter1959">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg397">Spoštovani zbor! Jaz bi povedal nekaj stališč v okviru te 1. točke dnevnega reda, in želim, da se jih razume kot dodatek k materialom, ki smo jih dobili. Najprej imam pripombe k razvojni politiki Slovenije v začetku 90 let. Načelne pripombe bom oddal pisno, imam pa nekaj konkretnih pripomb k poglavju "Cilji in politika po posameznih področjih". Tukaj bi se dotaknil dveh področij, to je otroško varstvo in telesna kultura.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg398">1. Otroško varstvo. Ugotavljamo, da je predšolska vzgoja z vsebinskega vidika iz dokumenta v glavnem izpuščena. Sprašujemo se, ali se predlagatelj zaveda pomena te dejavnosti, ker se področja samo delno dotika, to je razmejitev zagotovljenega in dopolnilnega programa, vzgojne subvencije k otroškemu varstvu in podobno, kaj več o dejavnosti predšolske vzgoje pa ne govori, čeprav je to v obliko družbene dejavnosti vključeno nekaj manj kot 50% vseh slovenskih predšolcev. Iz gradiva sklepamo le, da se področje otroškega varstva širi na skrb za družino. To pa je po našem mnenju tako velik zalogaj, da ga nismo sposobni uresničiti v krajšem obdobju. Družinska politika namreč ni le varstvo matere in novorojenca ter družbena pomoč vzgoje in varstva predšolskih otrok. Začeti se mora pri načrtovanju družine, vsebovati skrb od prenatalnega obdobja, razvoja otroka, do zaposlitve, stanovanjske politike, varstva okolja in podobno. Bojimo se, da bo s tako široko zastavljeno razvrednoteno že doseženo na področju predšolske vzgoje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg399">2. Kar se tiče telesne kulture, so predlagatelji zreducirali politiko na področju razvoja telesne kulture na samo nekaj alinei. To je skrb za racionalnejše in učinkovitejše uresničevanje programov, potem odpravo organizacijskih pomanjkljivosti in večtirnosti ter na upoštevanje specifičnosti. Mislim pa, da bi o politiki na področju športa v Sloveniji morali zapisati vsaj še naslednje:</seg>
@@ -1440,11 +1426,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg413">Na koncu imam še dodatno pripombo. Predlagamo, da se znotraj sredstev, namenjenih za kmetijstvo, posebej definira postavka sklada za alternativno pridelovanje hrane, in sicer v višini 2% sredstev, namenjenih za kmetijstvo oziroma za proizvodnjo hrane. Sklad naj bo namenjen za subvencioniranje alternativnih kmetovalcev. Utemeljitev bom dal pisno. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#chair">
+            <u who="#RojecAnton1937" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg414">Hvala lepa. Gospod Novak.</seg>
             </u>
             <note type="speaker">BRANKO NOVAK:</note>
-            <u who="#SSK11.NovakBranko1938" ana="#regular">
+            <u who="#NovakBranko1938">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg415">Spoštovani! Nekaj pripomb k proračunu v letu 1991.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg416">Šport in rekreacija. Slišali smo že, da za šport letos ni dovolj denarja, po mojih podatkih celo manj kot v preteklem letu. Temu dodajam še problem rekreacije, zlasti planinarjenja. Ker zagovarjanje koristnosti športa in rekreacije ni potrebno, naj predlagatelj ponovno prouči subvencioniranje teh področij, ker tu običajno ne gre za prevelike denarje. V ta sklop težav sodijo tudi davčne olajšave za visokogorske planinske postojanke. Brez takih olajšav bodo te postojanke finančno propadle, seveda, če ne bodo neposredno subvencionirane.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg417">S področja varstva naravne in kulturne dediščine imam pripombe na to, ker novih regijskih parkov v proračunu ni najti. Kriv je baje zastarel zakon iz leta 1985. Mislim, da bi kljub pičlim sredstvom, namenjenim za varstvo naravne in kulturne dediščine, morali delo pri realizaciji novih slovenskih regijskih parkov nadaljevati, in to bolj intenzivno. Čakanje na nov zakon je samo izgovor.</seg>
@@ -1453,11 +1439,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg420">V Kamniku pogrešamo tudi aktivno republiško podporo razvoja železniške proge Ljubljana-Kamnik. Če in ko bo proga posodobljena, bo to pomemben ekološki dosežek, ker bo prevzela velik del potniškega in tovornega prometa, ki zdaj obremenjuje ceste in onesnažuje okolje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#chair">
+            <u who="#RojecAnton1937" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg421">Hvala. Gospod Režun.</seg>
             </u>
             <note type="speaker">JANEZ REŽUN:</note>
-            <u who="#SSK11.RezunJanez" ana="#regular">
+            <u who="#RezunJanez">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg422">Spoštovano predsedstvo, spoštovane kolegice in kolegi! Nisem imel namena ponavljati se o cestni problematiki. Mislim, da smo v tem zboru vsi enotnega mnenja o cestnem dinarju in o cestni problematiki, ampak spodbudila sta me kolega iz Kamnika in iz Mozirja.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg423">Iz tega proračuna so izpadle obvoznice, ne glede na to, kakšne obvoznice so, ker gospoda iz Mozirja bi spomnil, da je bil v Zagorju leta 1987 plaz, ki je bil naravna nesreča ali rudarska nesreča, ne vem, kakšna nesreča je bila, v glavnem plaz je podrl hiše, tovarno in tudi cesto Zagorje-Trbovlje, regionalno cesto. Tudi ta cesta je še v tistem z zvezdico obvoznice po javnem natečaju, čeprav vemo, da to ni obvoznica, to je regionalna cesta, ki jo moramo zgraditi. To je povezava, veste, kje smo v Zasavju s temi povezavami z Ljubljano in z drugimi kraji Slovenije, tako da mislim, da sploh ni primerno, da se vse obvoznice enačijo in tlačijo v isti koš. Na tej obvoznici je sedaj zasilni beli most, vsi tisti, ki smo bili pri vojakih vemo, kaj pomeni beli most in ne vem kaj, če se sedaj odcepimo od Jugoslavije, ali bosta Janša in Kacin naredila nov most ali bomo tega zadržali za sebe? Stvar je v tem, da mislim, da te stvari niso dorečene. Samo to sem hotel glede cest, drugače pa drži vsa tematika, kar je bilo prej povedano o cestnem dinarju in povezava predvsem z Zasavjem preko Litije, ker mi rabimo povezavo tudi preko Litije do Novega mesta. In mislim, da nima smisla si zatiskati oči - in Maribor in vse rabimo. Toliko, da smo si na jasnem!</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg424">Jaz sem dal pismeno pripombo predvsem na razvojno gospodarsko politiko, bolj kot na proračun, ker vemo, da je ta proračun integralni, na eni strani bi ga radi raztegnili, na drugi strani bi ga radi zmanjšali. Rad bi se dotaknil energetike.</seg>
@@ -1465,11 +1451,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg426">Lastništvo tega, se pravi, da je to državno, in pa drugič, da se pristopi k temu, da se podjetništvo spodbudi ne samo v občinah, kjer smo zainteresirani, da dobimo nova delovna mesta, ampak tudi v republiki. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#chair">
+            <u who="#RojecAnton1937" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg427">Hvala. Gospod Žampa.</seg>
             </u>
             <note type="speaker">JANEZ ŽAMPA:</note>
-            <u who="#SSK11.ZampaJanez1929" ana="#regular">
+            <u who="#ZampaJanez1929">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg428">Spoštovano predsedstvo, spoštovane poslanke in poslanci! Menim, da podpremo razvojne smernice Republike Slovenije in pa tudi proračun. Res pa je, če bi si hoteli to danes razdeliti in tako narediti, da bi bili vsi zadovoljni, potem bi verjetno v tem trenutku iz tega, ki je vzel pet hlebov in dve ribi in so bili vsi siti. Ker pa tega nimamo, potem si moramo to malo, kar je vlada po svojih močeh ustvarila, napisala, medsebojno razdeliti. zato bi se v tem trenutku le zadržal, kar je v programu napisano zlasti na področju kmetijstva, ne samo občine Ptuja, ampak slovenskega prostora.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg429">Prvo je zapisana zdrava hrana. Zdravo hrano smo v Sloveniji imeli in jo še tudi imamo, hvala bogu, danes do neke mere. Ampak to so vse pridelovale naše slovenske kmečke družine. Mi smo si postavili tudi program ali kmečko ali sploh družino. Družina je, naj bo kmečka za kmetijstvo, delavska ali malomeščanska, srce, katero da življenje nekemu telesu in to telo da tudi potem nek proizvod, neko skupno življenje nekemu narodu. Zato menim, da je nujno, če hočemo imeti zdravo hrano, potem moramo tudi - v programu je pod 2. točko zapisano - ohraniti zemljišča. To gre skupaj, to vse dela družina. Postavljam pa vprašanje vladi, če vztraja na tem, da bomo imeli v Sloveniji v bližnji bodočnosti le družinske kmetije ali bomo še iz proračuna naprej financirali ali kreditirali socializem na vasi, če se lahko tako izrazim, velike sisteme, ki jih še imamo. Če ne bomo imeli tega, potem je to, kar sem rekel, nujno potrebno, da se opredelimo in zavzamemo verjetno v tem koščku denarja, ki ga je kmetijstvu vlada namenila, določila. Kmetijci, če se pač kaj razumem na kmetijstvo, ne moremo od siromaštva več zahtevati, ampak bi verjetno kazalo znotraj tega porazdeliti v malo bolj koristne namene. In to bi verjetno bilo eno od tega, ker je pred nami tudi to opevano zadružništvo, denacionalizacija, pa lastninjenje in prav gospod Schwarzbart in še sem slišal prej, so rekli, o velikih farmah prašičev na eni strani, na drugi strani pa tudi govejih farm, ki najbrž dolgo, če hočemo imeti zdravo pitno vodo, če hočemo imeti zdravo okolje, dolgo ne bomo mogli zavlačevati, se bo morala naša vlada verjetno malo bolj resno zavzeti. Da je to postavljeno, sem prej slišal, na 1993. leto, kar muči v Ptuju in Domžalah in kjerkoli so ti veliki sistemi. Menim, da tukaj nimamo kaj dosti novega domisliti. Država je poklicala ljudi na razseljevanje, program na kmetije; k temu programu je treba čimprej pristopiti.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg430">Bilo je govora o raznih čistilnih napravah, če sem znal pravilno prebrati gospoda dr. Leskovška, ko prvi, da delajo neko čistilno napravo v Belgiji in je še ta poskusna, potem smo mi še daleč za temi. Rad pa bi rekel to, kar pa zelo natančno poznam, sosednja Avstrija letno priredi ali spita okrog 5 milijonov prašičev. Naši sosedje čisto ob meji, združeni po štirje, spitajo letno 450.000 prašičev, ki jih zakoljejo. To vodi gospod Poziger s šestimi strokovnjaki in v tej verigi je vključenih malo manj kot 3.000 kmetij. Potem menim, da nimamo kaj odkrivati Amerike in govoriti o težkih milijardah za čistilne naprave, če imajo naši sosedje že 20-letno prakso. Nekaj korakov je do njih in si to mirno pogledamo. Prav tako imamo toliko družbene zemlje v zaledju teh farm, ki bi jih lahko oblikovali v nove družinske kmetije in bi to nevoljo, ki je nastala na naših slovenskih tleh v nekaj letih, na primeren način spravili tja, kjer imajo to druge razvite dežele. Tu je verjetno še nekaj rezerv.</seg>
@@ -1481,11 +1467,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg436">In še za konec. Podravje ima dva visoka jeza, dve elektrarni. Ko so to gradili, je bilo takrat projektirano za namakanje teh površin. V Ptuju in Podravju imamo brezposelne tako kot vsi po Sloveniji, to so številne majhne kmetije in bi šli na povrtninarstvo, na namakanje, bi naši ljudje hitro kakšen dinar zaslužili. In kot mi sosedje Avstrijci pripovedujejo, uvažajo 30% povrtnin. Na dravsko-ptujskem polju, pa še kje drugje, pa dinar mimo teče. Z majhnim vlaganjem bi hitro ublažili to težko stanje, kot je. Jaz bi se zahvalil za pozornost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg437">Hvala lepa, gospod Žampa. Na vrsti je gospod Jaklin.</seg>
             </u>
             <note type="speaker">JOŽE JAKLIN:</note>
-            <u who="#SSK11.JaklinJoze1952" ana="#regular">
+            <u who="#JaklinJoze1952">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg438">Gospod predsednik, spoštovani poslanci! V razmerah zaostrovanja gospodarskih razmer v državi je prav gotovo med najpomembnejšimi ukrepi republiške vlade izvajanje aktivne socialne politike, ki bo ublažila pričakovane težave v začetku izvajanja tržne ekonomije in procese prestrukturiranja gospodarstva. Zaradi tega pričakujemo tudi pospešeno delo pri pripravi in sprejetju sistemske zakonodaje na področju izvajanja socialne politike. Podpiramo socialni program, ki je zasnovan na zavarovalniškem sistemu in uveljavljanju razlik med zajamčenim osebnim dohodkom in nadomestili za osebni dohodek.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg439">V skladu s politiko skladnejšega regionalnega razvoja Republike Slovenije naj se v sklopu spodbujanja gospodarskega razvoja prioritetno odobravajo sredstva za stimuliranje nastajanja novih delovnih mest in s tem širijo zaposlitvene možnosti tega območja, kjer je problem brezposelnosti največji v republiki. Glede na to, ker se val brezposelnosti v Sloveniji naglo širi, je nujno potrebno operacionalizirati gospodarsko in razvojno politiko republike, v projekciji obsega denarnih nadomestil pa je potrebno v celoti upoštevati tudi pri zagotavljanju sredstev, to je v republiškem proračunu.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg440">Opozarjamo tudi na razlike, ki nastajajo pri uveljavljanju pravic in pokojninskega zavarovanja za kmete, ki uveljavljajo te pravice na osnovi zavarovanja združene kmetijce in združeni kmetje. Menimo, da bi se obseg teh pravic moral izenačiti in razlike poračunati tudi za nazaj. Izračun za uveljavljanje pravic iz naslova socialne varnosti, ki bazirajo na osnovi čistega osebnega dohodka občine, niso primerljive. Ob spreminjanju davčne zakonodaje imajo davčne olajšave na odmero davka od osebnih prejemkov in s tem na višino neto osebnih dohodkov delavcev, zato za določanje raznih cenzusov niso realne. Zaradi enotnejšega ugotavljanja osebnih dohodkov je primernejši bruto osebni dohodek delavcev, zmanjšan za prispevek za pokojninsko in invalidsko zavarovanje, zdravstveno varstvo in zaposlovanje.</seg>
@@ -1499,22 +1485,22 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg448">Kaj še nadalje predlagamo, in kot smo bili obveščeni, je bilo tudi že dogovorjeno z republiškimi organi (ne bom čital, da vas ne bom dolgočasil), zato se vam zahvaljujem za pozornost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg449">Hvala lepa. Besedo ima gospod Jerina.</seg>
             </u>
             <note type="speaker">JANEZ JERINA:</note>
-            <u who="#SSK11.JerinaJanez" ana="#regular">
+            <u who="#JerinaJanez">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg450">Spoštovani! Odločno protestiramo zaradi izračuna zagotovljene višine sredstev, ki so za leto 1991 predvidena za proračun občine Vrhnika. Iz podatkov Republiškega sekretariata za finance pri odstotku finančne izravnave, ki znaša za našo občino 25,6% in je s tem najnižja v Sloveniji, sledi, da naša občina potrebuje najnižji delež izravnave.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg451">Ali to hkrati tudi pomeni, da smo najbogatejša občina v Sloveniji? Kot obljubljanska občina vedno izgubljamo. Sam primer sedežnega principa je odnašal prispevke za gospodarsko infrastrukturo v veliki meri v Ljubljano, tako da je po podatkih Republiškega sekretarja za finance indeks razmerja med domicilno maso bruto osebnih dohodkov in sedežno maso za občino Vrhnika 182,64. Višjega imata samo Grosuplje in Šentjur, hkrati pa nam zagotavljate le 70% lanskih sredstev za kolektivno komunalno rabo in stanovanjsko solidarnost. Tako ne moremo izpeljati programskih smernic, ki smo jih poskušali čim bolj realno pripraviti, če ne osiromašimo seveda našega prebivalstva. To pa pomeni zniževanje osebnih dohodkov družbenih dejavnosti, uprave, preklic napovedanih investicij in še marsikaj.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg452">Zahtevamo, da se v osnovi za leto 1990, ki je merilo za 1991. leto, upoštevajo polni podatki za gospodarsko infrastrukturo, hkrati pa se izravna tudi delež, ki smo ga doslej izgubljali zaradi sedežnega principa. Menimo, da bi v osnovo za leto 1990 morali šteti tudi prispevke, ki so v občinske proračune pritekali še v letu 1991 na osnovi terjatev zaostalih plačil prispevka na OD, izplačano v mesecu decembru za november, ter praznitve iz naslova uprave za družbene prihodke.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg453">Zahtevamo, da izvršni svet naše zahteve realno oceni in nanje odgovori. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg454">Hvala lepa. Naslednji je na vrsti gospod Frelih.</seg>
             </u>
             <note type="speaker">LEOPOLD FRELIH:</note>
-            <u who="#SSK11.FrelihLeopold1945" ana="#regular">
+            <u who="#FrelihLeopold1945">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg455">Spoštovano predsedstvo, spoštovani poslanci! Jaz bi imel dve pripombi, in sicer na sam proračun, predvsem z vidika dopolnjevanih občin. Predlagamo, da bi v primeru spremljave, ko bo prišlo do izravnave proračuna, vlada le sprejela stališče, da bo sproti spremljala in korigirala obveznosti za te dopolnjevane občine. To velja predvsem za občino Cerknica.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg456">In drugo pripombo imamo na sredstva, ki so predvidena za demografsko ogrožena območja. Menimo, da je preteklo obdobje le dalo tak pečat slovenski pokrajini na teh demografsko ogroženih območjih, da so predvidena sredstva občutno preozko zastavljena, v višini 932 milijonov dinarjev, se pravi niti milijarda dinarjev, tu pa so potrebna velika vlaganja, če hočemo to odseljevanje zaustaviti.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg457">Glede na usmeritve pa tri pripombe. K usmeritvam o zmanjšanju stroškov na enoto proizvoda menimo, da je skozi sredstva, ki jih tu predvideva dohodkovna in fiskalna politika, potrebna nujna korekcija. Predvsem korekcija v tej smeri, da se pospešuje reinvestiranje in drugo, da se delež produktivnih delavcev občutno povečuje v primerjavi z deležem neproduktivnih delavcev. Še vedno menimo, da so te stvari neprecizno zastavljene.</seg>
@@ -1523,22 +1509,22 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg460">In ne nazadnje, pridružujem se ugotovitvi gospoda Žampe. Mi smo v tem dokumentu, bom rekel, ne da skoraj pozabili, ampak precej pozabili na razvojne ambicije turizma. Mislim, da je sama analiza pokazala, da imamo skromne ambicije, da nadaljujemo z neambicioznimi željami 20 let, da je kompleten turizem močno povezan s prometno infrastrukturo in z vso cestno problematiko, o kateri je bilo to že večkrat izpostavljeno, da je problematika turizma tesno povezana z razvojem terciarnih dejavnosti in s prestrukturiranjem gospodarstva, da je povezana z ekologijo, s kulturo, in ne nazadnje s kmetijstvom. Zato predlagam, da vlada da večji poudarek nadaljnjemu razvoju turizma. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg461">Hvala lepa, gospod Frelih. Naslednji je gospod Franko.</seg>
             </u>
             <note type="speaker">KAREL FRANKO:</note>
-            <u who="#SSK11.FrankoKarel1919" ana="#regular">
+            <u who="#FrankoKarel1919">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg462">Spoštovano predsedstvo, spoštovani kolegi! V situaciji, v kateri se je znašla nova naša, upam, mlada študentska država, z več let hirajočim gospodarstvom, pa vendar z zahtevnimi potrošniki, bi z zadovoljstvom sodeloval v razpravi, v kateri bi vsak vsaj dal pobudo, kako zadovoljiti s čim manjšim kosom iz tega proračunskega kolača, ne da bi pri tem ogrožal obstoj posameznika ali pa določenih dejavnosti. Ker pa vsi nastopate v nasprotni smeri, bom tudi jaz.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg463">V Poročevalcu št.6/91, na strani 32, je napisano: regresiranje dela obresti za kreditiranje v kmetijstvu, 300 tisoč dinarjev. To je zelo malo, če pogledam podatke, da ima pomursko kmetijstvo ali pomurske kmetijske zadružne organizacije za lansko drugo polletje terjatev do republike 22 milijonov dinarjev. Na 31. strani pa je zapisano, da je za 300 pospeševalcev namenjenih 144.000 dinarjev in za javno gozdarsko službo (947 zaposlenih) pa 435.000 dinarjev. Ne omenjam drugih postavk, katerih upravičenost je vprašljiva.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg464">Predlagam, da se v nadaljnjem postopku v proračunu proučijo posamezne postavke in njihova upravičenost. Če pravimo, da je proračun pripravljen po nekem evropskem vzorcu, se ga je potrebno držati, tudi evropskih norm pri trošenju proračunskih sredstev. To pa na vseh področjih. Predlagam strogo kontrolo nad trošenjem proračunskih sredstev. Če bomo nadaljevali tako, kot smo vajeni, jih ne bomo nikoli imeli dovolj.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg465">Kar se tiče infrastrukture, je severno-vzhodna Slovenija bila vsa leta nazaj in tudi sedaj je zapostavljena. Menimo, da v nekaterih glavah v Sloveniji obstoja neka meja ali na Trojanah ali vsaj na Muri, ki jo deli v privilegiran in zapostavljen položaj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg466">Hvala lepa. Besedo ima gospod Kramarič.</seg>
             </u>
             <note type="speaker">TONE KRAMARIČ:</note>
-            <u who="#SSK11.KramaricTone1947" ana="#regular">
+            <u who="#KramaricTone1947">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg467">Gospod predsednik, gospe in gospodje delegati! Izvršni odbor Slovenske demokratične zveze je obravnaval osnutek proračuna Republike Slovenije. Ugotovil je, da Slovenija letos prvič v svoji zgodovini sprejema celovit državni proračun in da je strateška prioriteta republike Slovenije, ki mora biti razvidna iz proračuna republike, proces osamosvajanja republike. Izvršni odbor SDZ je na tej podlagi predlagal, da vlada pred zasedanjem skupščine ponovno opravi razgovor o proračunu in sprejme stališča, za katerimi bo stala celotna vlada. Nadalje ugotavlja, da je napačno, da je za izhodišče letošnjega proračuna uporabljen lanski proračun, ki je tako kvantitativno kot kvalitativno neprimerljiv dokument. Zaradi tega izhodišča je šele šesti osnutek proračuna vključil tudi kotizacijo za minimalno funkcioniranje federacije.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg468">Izvršni odbor SDZ meni, da zaradi odsotnosti prave proračunske razprave v vladi niso dovolj jasne posledice dejstva, da letošnji proračun sprejemamo v razmerah, ko Republika Slovenija nima neposredne suverenosti na področju monetarne politike. S tem v zvezi je problematično vprašanje emisije denarja, ki je v pristojnosti Narodne banke in na kar Republika Slovenija nima nobenega vpliva. Na to je SDZ neprestano opozarjala. V takih razmerah bi morala vsaka proračunska razprava izpostaviti dileme in variantne rešitve simulacije določenih stanj, do katerih lahko pride in bo očitno tudi prišlo. To posebej zadeva razmere v plačilnem prometu, ki so skrajno zaostrene, ki neposredno vplivajo na likvidnostno situacijo v slovenskem gospodarstvu in s tem na napajanje proračuna.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg469">Proces osamosvajanja Republike Slovenije vnaša tudi v razpravo o proračunu nekatere izrazito politične momente. Pri tem gre zlasti za delež sredstev Republike Slovenije za JLA. Izvršni odbor zato meni, da je to postavka, ki je izrazito povezana s celim sklopom vprašanj, ki bodo prišla do izraza na pogajanjih o razdružitvi, če bo do njih prišlo. Ker je Republiki Sloveniji do tega, da do razdružitve pride na sporazumen način, o tej postavki ni moč razpravljati poenostavljeno.</seg>
@@ -1563,16 +1549,16 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg488">Da se bomo delegati lažje odločili o proračunu Republike Slovenije za tekoče leto, zlasti pri delu proračuna, ki zadeva področje ljudske obrambe, vas prosim za pisni odgovor, poslan vsem delegatom do sprejema zakona. Odločitev je vezana tudi na kotizacijo zveznega proračuna. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg489">Hvala lepa. Glede na to, da smo lep čas delali, predlagam, da gremo za 10 minut na odmor, s tem, da bi se resnično čez 10 minut dobili zopet tukaj, da potem vsekakor končamo razpravo. Trenutno je še šest prijavljenih za to razpravo. Moramo se zavedati, da smo šele v razpravi o 1. točki dnevnega reda, tako da ne bi preveč lahkotno to jemali. Se pravi, čez 10 minut, lepo prosim, da se srečamo.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 17.00 uri in se je nadaljevala ob 17.20 uri.</note>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg490">Spoštovane kolegice in kolegi! Dovolite nam, da nadaljujemo z našo sejo in nadaljujemo razpravo ob 1. točki dnevnega reda. Naslednji je na vrsti gospod Aurelio Juri.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SSK11.JuriAurelio1949" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg491">Spoštovani kolegi! Ne bom vas dolgo moril, ker je težko poslušati vse te razprave, vendarle bom tudi jaz nekaj naložil tej nedvomno težki nalogi, domači nalogi, ki jo bo z današnje seje nesel domov izvršni svet. Dodal bi nekaj razmišljanj Obalne skupnosti. Glede na to, da kolega Starmana ni, bom jaz to opravil.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg492">Na Obali ugotavljamo, da so opredelitve v načinu gospodarjenja in ustvarjanja pogojev za kvalitetnejše življenje premalo konkretne in usmerjajoče ter da specifične naloge, ki so značilne za obalno območje in so republiškega pomena, kot je to pomorsko gospodarstvo, turizem, varstvo morja in še kaj, nimajo ustreznega mesta v konceptu razvojnih dokumentov republike. Pri obravnavi proračuna pa so ugotovitve in pripombe po preverjanju posameznih postavk po področjih naslednje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg493">Ugotavljamo, da je v prilogi proračuna seznam cestnih odsekov, ki ga je predložil Republiški sekretariat za promet in zveze. Glede na to, da bodo sredstva na razpolago za izgradnjo cest nižja, je nujno, da ponovno opozorimo na to, da je analiza obremenjenosti cestnih odsekov pokazala, da so nedograjeni odseki obalne ceste najbolj obremenjeni v Sloveniji. Prometno varnostne razmere zahtevajo dokončanje začetih investicij: križišče Koper, križišče Ankaran ter nadaljevanje izgradnje obalne ceste od Jagodja do Lucije, kot je kolegica Štulerjeva že povedala. Izgradnja avtoceste v Italiji do Škofij je v zaključni fazi in bo razmere na obalni cesti s strani mejnega prehoda Škofije že v tej turistični sezoni še poslabšala. Kljub temu, da smo opozarjali na nemogoče razmere, je odsek mejni prehod Škofije-križišče Ankaran izpadel iz programa za letošnje leto. Zahtevamo, da se nadaljuje izgradnja cestnega križa na smeri Šentilj-Koper ter uresničuje sprejeto proklamirano politiko policentričnega razvoja Slovenije in pomorske usmeritve republike in zagotovi povezava Slovenije z obalnim morjem, torej z morjem na Obali. Glede na izredne naloge na področju izgradnje cest podpiramo pobudo, d se sredstva, zbrana namensko, porabijo za investicije za cestne odseke. Torej, to ni nič novega.</seg>
@@ -1582,11 +1568,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg497">Na koncu bi še opozoril, da ugotavljam, da je iz investicij v gospodarsko infrastrukturo v proračunu odviselo sofinanciranje gradnje BIC centra, torej Business Inovation Center v Ankaranu. Sprašujem, ali to pomeni, da iz tega projekta republika izstopa ali pa, da se išče drugačna rešitev. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg498">Hvala lepa. Besedo ima gospod Marjan Dvornik.</seg>
             </u>
             <note type="speaker">MARJAN DVORNIK:</note>
-            <u who="#SSK11.DvornikMarjan1949" ana="#regular">
+            <u who="#DvornikMarjan1949">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg499">V osnovnih prioritetah strategije politike Slovenije pogrešam našo temeljno politično opredelitev, da bo Slovenija samostojna država. Trdim, da dokler bomo za del Jugoslavije vojni plen, ni mogoče na drugačen način opredeljevati strategije v našem okolju. Okrog naselij naših Romov imajo vsi kmetje pse na verigah, ki grizejo, zato da lahko svoje kokoši in zajce sami jedo. In mislim, da bi morali tudi v naših opredelitvah po tej kmečki logiki urejati tudi svoj program in svojo strategijo. Kljub temu pa bi rekel, da to še ni nobena bianco menica za sekretariate, ki organizirajo te državotvorne resorje, da bi lahko kakorkoli trošili sredstva, ne da bi imeli nad njimi kontrolo. Osebno sem prepričan, da je možno tudi z nižjimi sredstvi doseči enako dober efekt ali celo boljši.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg500">V globalni politiki republiškega proračuna za leto 1991 se zavzemam za vsaj 10% znižanje celotnega obsega, pri čemer bi na drugi strani pri virih predlagal, da tako kot je, mislim, že nekaj govorcev reklo, odpravimo davek na plače. V strukturi proračuna je velik del namenjen temu, da se na tak ali drug način vrača v gospodarstvo preko intervencij, prestrukturiranj, sanacij, in bi prosil, da posamezni resorji, predvsem pa gospodarski, ugotovi, koliko je mogoče ta segment znižati. V globalnem pogledu to pomeni, da se državni proračun veča, je pa v bistvu samo fiktivno večji, ker se sredstva vračajo v isto gospodarstvo. Mislim, da gre za politiko prerazdeljevanja, ki ni vedno nujna, v našem konkretnem primeru, vsaj nekaterih delov.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg501">Poseben problem oziroma posebna tema je financiranje izgradnje infrastrukture, ker meni, da je izgradnja infrastrukture tisti del, ki omogoča ponoven zagon in ponovno oživitev gospodarskih panog, pri čemer pa je zelo pomembno, da v tej strategiji pogrešam načine odpravljanja privilegijev monopolnih izvajalcev, ki še v veliki meri niso naredili tistih reorganizacijskih korakov, ki pomenijo zniževanje stroškov poslovanja. Tako bi za cestno infrastrukturo rekel to, da je njen izvajalski del, se pravi, Republiška uprava za ceste tisti del, ki bi ga lahko poimenoval kot zavoro, ker je izvršni svet opredelil, da objekte, ki nimajo ustrezne dokumentacije, ne morejo dati v program. In moram reči, da smo dali iz naše občine zahtevo za izdelavo dokumentacije pred 20 leti, nič ne pretiravam, pred 20 leti, pa v sedanjem osnutku še vedno piše: "Dokumentacije še ni." Mislim, da jih je šlo ta čas tudi že nekaj v penzijo v tisti službi, ko so te projekte delali, vendar kljub temu nismo prišli do tega, da bi uspeli strokovne prioritete, ki so nedvomne, realizirati skozi dokumentacijo. Ob tem bi rekel še to, da je naša občinska skupščina zadolžila oba poslanca, se pravi, mene in Stanislava Bevca, da predamo protestno izjavo ob tem programu izgradnje cest in bi iz tega navedel samo dva podatka in sicer, da je bilo v planskem obdobju 1986 do 1990 na magistralki realizirano le 23% programa. To so bile v glavnem rekonstrukcije, na regionalkah pa 42%, da ne ponavljam vsega tistega, kar je gospod Gradišar prej omenjal.</seg>
@@ -1598,11 +1584,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg507">In na koncu samo še eno retorično vprašanje. Prvič imamo integralni proračun. Na strani porabnikov so praktično povsod indeksi negativni, pa trdimo in dejansko je to res, da je gospodarstvo zaradi tega preobremenjeno. Vprašujem, kje je resnica? Vsi dobijo manj, gospodarstvo pa daje več. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg508">Hvala lepa, gospod Dvornik. Naslednji ima besedo gospod Protner.</seg>
             </u>
             <note type="speaker">MAG. JOŽE PROTNER:</note>
-            <u who="#SSK11.ProtnerJoze1944" ana="#regular">
+            <u who="#ProtnerJože">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg509">Razpravljati želim o predlogu proračuna in začenjam s tem, o čemer je gospod Dvornik nehal. Predlog proračuna namreč po mojem ne spoštuje sklepov Skupščine Republike Slovenije z decembra 90. Takrat je ta sklep bil, da proračun naj se omejuje na 37% družbenega proizvoda. Proračun je sam sicer 34% družbenega proizvoda, če pa k temu prištejemo še izvirne prihodke občinskih proračunov s pokojninami vred, potem to predstavlja 55,5% ocenjenega družbenega proizvoda.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg510">Temeljno vprašanje je, ali gospodarstvo in davkoplačevalci prenesejo takšen obseg. Odgovori, če povzamem samo nekaj, kar izhaja iz gradiva Gospodarske zbornice Slovenije in iz mnenj gospodarstvenikov, ljudi, ki delajo v gospodarstvu, je, da ne prenese gospodarstvo takega proračuna davkoplačevalcev. Torej, treba ga je znižati - za 20% je predlog Gospodarske zbornice. Dodajam v globalu za 20% ne linearno, celo trdim, da so znotraj nujni in tudi možni premiki. Eden od teh je bil danes že večkrat omenjen in ga podpiram, to je namenska raba cestnega dinarja. Kje torej je v predlogu proračuna to možno storiti?</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg511">1. Najprej, v prenosu funkcij iz federacije bi pričakovali, da bo več prihranka denarja, kot ga je.</seg>
@@ -1618,7 +1604,7 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg521">In še čisto na koncu moja osebna pripomba. Proračunske postavke, ki zadevajo področje kmetijstva, so razdelane dejansko do potankosti, zato je tudi na te potankosti precej pripomb. Če pa pogledamo celotno prilogo 62, pomeni v proračunu 0,42%. Na drugi strani pa imamo visoke postavke pod splošnimi imeni, ki pa dejansko porabo marsikje zakrivajo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg522">Preden gremo naprej, bi želel, da uredimo še dve organizacijski zadevi.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg523">Prva stvar je, medzborovska skupina za pripravo sklepov naj bi se sestala jutri ob 8.00 uri v salonu v prvem nadstropju. Predlagam, da to skupino pooblastimo tudi za usklajevanje dnevnega reda, ker mislim, da to ne bo prav velika naloga in da ne bi imenovali dveh skupin in da bi se dobili potem, predlagam, tudi to in dam ta predlog tudi na glasovanje, da ne bo ta stvar tudi sporna. Poglejmo zato prisotnost.</seg>
                <note>47 prisotnih.</note>
@@ -1642,16 +1628,16 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg534">Naslednji je na vrsti gospod Mlaker.</seg>
             </u>
             <note type="speaker">DR. MARJAN MLAKER:</note>
-            <u who="#SSK11.MlakerMarjan1945" ana="#regular">
+            <u who="#MlakerMarjan1945">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg535">Spoštovani predsednik, delegatke in delegati! Tudi jaz se ne morem strinjati z nekaterimi postavkami v proračunu Republike Slovenije. V proračunu namreč niso zajete gradnje prepotrebnih odsekov avtoceste na Štajerskem območju oziroma v celotni severovzhodni Sloveniji. Ker je bilo to območje že dosedaj zapostavljeno pri tovrstnih gradnjah, bi jih bilo potrebno zajeti v novem proračunu. V proračunu tako ni zajeta izgradnja najpotrebnejše ceste od Šentilja do Hajdine, naprej do Maribora, potem pa še do Ptuja.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg536">Prepotrebna bi bila tudi kompletna izdelava avtocestnega križa na območju Dravskega polja, to je med Mariborom in Ptujem, za cestno povezavo med severom in jugom in med vzhodom in zahodom, to je od Kopra proti Prekmurju in na Madžarsko. Varčevanje pri izgradnji cestne infrastrukture je gotovo varčevanje na napačnem kraju, tako z vidika domačega gospodarstva kot upoštevanju, da hočemo postati razvita turistična dežela. Odločno nasprotujem zapostavljanju celotne severovzhodne Slovenije pri izgradnji cestne infrastrukture. V sedanji gospodarski situaciji se bo res treba marsičemu odpovedati. Pa se ne bi enkrat ozrli, kje so skrite notranje rezerve, razbohotena administracija, predimenzionirane porabne dejavnosti, ne pa zavirati gospodarski razvoj s preprostim črtanjem planiranih gradenj cest. Hvala za pozornost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg537">Hvala, gospod Mlaker. Naslednji je gospod Oven.</seg>
             </u>
             <note type="speaker">EDVARD OVEN:</note>
-            <u who="#SSK11.OvenEdvard1950" ana="#regular">
+            <u who="#OvenEdvard1950">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg538">Spoštovani kolegi in kolegice! Poskusil bom na kratko povedati, kar sem mislil ob tej razpravi o razvojni politiki in proračunu. Verjamem, da izhaja razvojna politika, ki jo sedaj oblikujemo, iz nemogočega obstoječega stanja. namreč, več kot 100% inflacija, še enkrat večja stopnja brezposelnosti, kot v lanskem letu, več kot 10% padec industrijske proizvodnje, dejstvo, da je skoraj vsako drugo podjetje v Sloveniji v izgubi, da je vsako drugo podjetje in še eno vmes v likvidnostnih težavah, da imamo zelo visoko stopnjo zadolženosti, tako gospodarstva kot države, in vse dodatno obremenjujejo še jugoslovanske politične razmere in zdrahe ter izguba jugoslovanskega trga. Vsemu temu na vrh sodi pa še sistem davkov, ki je izvirna domislica nove demokratične oblasti. Edino, kar je dobro v izhodiščih, po mojem, je to, da imamo spremenjeno organizacijsko strukturo podjetij, kar 15.000 novo ustanovljenih podjetij v lanskem letu, od tega 80% privatnih, in da smo prenehali financirati federacijo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg539">Vendar pa ne verjamem, da tudi v teh razmerah vlada ne more postaviti gospodarske politike v letu 91 zelo jasno, na primer z enim samim stavkom: "Vlada bo potrdila vse ukrepe k oživljanju slovenskega gospodarstva, tako da bo slovenska država, država podjetniške svobode, ustvarjalnosti in varnosti tako domačega kot tujega kapitala." Tega nam seveda ne obljublja, ampak nam ponuja zopet resolucijske puhlice, kot so: "Temelji gospodarske politike v letu 1991 so: zmanjševanje stroškov na enoto produkta." Moram reči, da je super teza, vendar takoj na to predpiše država dodatne davke in s tem povečuje stroške proizvodnje, še več, reče to: "Vsa ekologija bo dosledno obremenila samo račune onesnaževalcev." Mislim, da bodo s tem onesnaževalci zelo zmanjšali stroške na enoto produkta. Seveda, res pa je, da se vlada opere ekološke problematike.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg540">Trdnost valute - lep cilj, vendar v letu 1991, mislim, da je utopičen. DEM je 13 din. Podpredsednik vlade, gospod Mencinger, je napovedal inflacijo, mislim, da v letu 1991 ni nobene možnosti, da bi imeli trdno valuto, ne slovensko ne kakšno drugo.</seg>
@@ -1660,11 +1646,11 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg543">Vsi se spomnimo obljub, da bo prenehanje financiranja federacije bistveno pocenilo stroške slovenske države, še posebej, če lahko preberemo, da nas je stal Beograd po lanskih ocenah v lanskem letu cca 13 milijard din. Osnutek proračuna slovenskega pa kaže, da politične obljube hitro zbledijo v borbi za denar in da v ekonomskem smislu ni razlike, ali je center države v Beogradu ali v Ljubljani. Prav politični konsenz, tako pozicije ali opozicije, po tem, da se sprejme predlagani proračun, je za mene nesmisel. Saj nima konsenza gospodarstva, ki je najbolj odločilen faktor pri odločanju o proračunu. Zato tudi razprava o tem, ali v minimalnih niansah spremenimo proračun, nima smisla. Namreč, zagotavljanje tako visokega proračuna ni več problem gospodarstva, ampak problem slovenske vlade. Saj gospodarstvu je vseeno, ali znaša proračun 70 milijard ali 170 milijard, ker ga v vsakem primeru ne more plačati in zato je za mene ta proračun utopičen. Edina svetla v tem proračunu je mogoče možnost, da bodo tako zbrana sredstva večinoma končala v gospodarskih podjetjih in jim tako omogočila nov življenjski ciklus. Zato se mi pojavlja vprašanje, ali je predlagani proračun največja ekonomska prevara v obdobju nove demokracije ali je to najbolj genialna poteza nove slovenske vlade. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg544">Hvala lepa, gospod Oven. Besedo ima gospod Glavič.</seg>
             </u>
             <note type="speaker">DR. PETER GLAVIČ:</note>
-            <u who="#SSK11.GlavicPeter1940" ana="#regular">
+            <u who="#GlavicPeter1940">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg545">Gospod predsednik, gospe in gospodje! Gospodarska in razvojna politika Slovenije za 90. leta sta napisani tako, da v grobem ustrezata vsem, zato najbrž ni bilo nekih hudo kritičnih pripomb. Tudi moje bom podal pisno in jih ne mislim razlagati. Problem se pojavi v tistem trenutku, ko hočemo taka stališča konkretizirati in to se je dogodilo v proračunu. Če lahko rečemo za prvi dokument, da je primerna osnova za usklajevanje, je drugi neprimerna osnova za usklajevanje. Pokazalo se je pač, da tako kot so bile sestavljene želje, slovenska država ni cenejša, kot je bila skupaj slovenska in jugoslovanska, ampak je ali bo vsaj naslednje leto celo dražja. Pri tem je treba reči, da je v proračunu velika pomanjkljivost, namreč domneva, da bo zvezna vlada ostala pri tistih štirih in nekaj milijardah dinarjev, ki jih je namenil proračun. Dejansko se seveda to ne bo zgodilo, kar je v prvih dveh mesecih zvezna vlada napravila z ohlapno finančno politiko, ki je omogočila vdor v finančni sistem v prvi fazi, v drugi fazi smo bili nato priča dodatnemu tiskanju denarja za vojsko in pravkar se pripravlja dodatno tiskanje denarja za spomladansko setev. Po mojih ocenah bo samo ta emisija pomenila za Slovenijo dodatnih 6 milijard din in zato seveda je potrebno s temi odlivi računati, kajti v trenutku, ko ne računamo z njimi, se prelijejo v obremenitev gospodarstva, ki se kaže v nadaljnjem zmanjšanju obratnih sredstev in nadaljnjem odlaganju nove faze razvoja, ki bi morala pomeniti stabilizacijo gospodarstva. V tem trenutku ne moremo govoriti o nekem razvoju, ampak bi morali ustaviti negativne trende. Tako se mi zdi, da je projekt trdnega dinarja problem projekt solventnosti, likvidnosti, projekt donosnosti, ki smo ga ves čas zahtevali v protiinflacijskem programu, vse bolj oddaljen.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg546">Zato sem zelo skeptičen do tega proračuna in mislim, da ga je treba zastaviti popolnoma drugače. Prihranek, ki je nastal s prenosom zveznih obveznosti v republiko, dejansko pomeni prihranek v višini 6,5 milijarde dinarjev, ki jih je sedaj po eni strani zvezna vlada že skoraj pobrala nazaj, po drugi strani ga je republiška vlada razdelila med potencialne uporabnike proračuna, predvsem tiste, ki so v vladajoči koaliciji. Zaradi tega je situacija taka, da smo ponovno na tem, da nadaljujemo s propadom, ki traja sedaj že 11. leto. Pri tem je svoboda trga in suverenost državljana podrejena nacionalni suverenosti in na ta način uspeva spraviti v življenje dokumente, ki sicer ne bi mogli iti v realizacijo. želim opozoriti na to, da bo pri virih proračuna treba iti na zmanjšanje, za katerega vidim, da je tako pri plačilni listi kot tudi pri proračunu, če sem prav bral poročila iz Poljč, neka pripravljenost, ki jo je prav gotovo potrebno pozdraviti. Vendar bo treba dodati k temu še to, kar smo mi že sprejeli v tem zboru, to je zahtevo po oprostitvi davka pri reinvestiranju dobička.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg547">Zadeva, ki mene moti pri tej zadevi, je to, da premalo zaupamo v tisto gospodarsko strukturo, ki jo imamo. Verjamem, da bodo podjetniki, privatniki, obrtniki, pa tudi kmetje, ko si bodo pridobili več zemlje, lahko spremenili to zadevo. Vendar, to bo zahtevalo določen čas. Mogoče 10 let, da se bo to počasi preusmerilo, prevzelo težo razvoja. V tem trenutku pa je teža razvoja na podjetjih, ki jih imamo, srednjih in velikih, na managerskem kadru, ki ga premoremo in seveda na zakonodaji, ki bi morala biti v naših rokah in bi morala odpravljati deviacije, ki onemogočajo gospodarstvu, da bi vsaj ustalilo svoje delovanje. Zato menim, da je napačno vse sile staviti na to, kar bo čez deset let, čeprav seveda to moramo podpirati in zanemariti tisto, kar lahko in kjer moramo v tem trenutku napraviti določene premike. V to sodi tudi zaupanje v slovenski kapital, v primerjavi s tistim, kar si obetamo od tujega kapitala, kajti ta kapital ni izkoriščen in ne bo izkoriščen, dokler bomo delali tako, kot delamo zdaj. Zato tudi jaz v celoti podpiram stališča Gospodarske zbornice, imam tudi konkreten izračun, ki kaže, da bi lahko v tem trenutku za 15% znižali predloženi proračun in ko bi prenesli še druge obveznosti iz zveze v republiko, bi še za 5% znižali proračun, kar bi dalo tistih 20%, kot minimalno osnovo za nadaljnji razvoj. Seveda se je pri tem popolnoma jasno pokazalo, da je potrebno napraviti določene ukrepe. Najprej je treba tudi gospodarstvu preprečiti, da bi olajšave, ki bi jih z zmanjšanjem proračuna, z znižanjem davčnih obvez dobili, prelilo v osebne dohodke, kar se pri nas redno dogaja. Zato predlagam, da sprejmemo,<gap reason="inaudible"/> recimo 20% popust pri vseh dajatvah za tista podjetja, ki se priključijo enakemu načinu obračunavanja osebnih dohodkov, kot je sprejeto za javno porabo, se pravi, vezava na obdobje april-junij prejšnjega leta z ustreznimi usklajevanji. Kdor pa ima dovolj denarja, naj si izplačuje večje osebne dohodke. Na ta način bi zaščitili kapital, ki ga ves čas sproti porabimo, kolikor ga ustvarimo.</seg>
@@ -1673,15 +1659,15 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg550">Predlagam torej, da izvršni svet ponovno razmisli o višini proračuna in ga zniža za 15% prvo leto in še 5% v naslednjem letu; da napravi ustrezno prerazdelitev tako kot je bilo tu omenjeno. Veliko je postavk, ki bi jih lahko še znižali. Povsod tam, kjer bi prišlo do povečanja, naj ustrezno argumentira te stvari, tako kot je gospod Protner lepo povedal. Ne da bo en resor dal celo želje, ki so bile sporočene, drugi ne bo o predvidenem proračunu povedal nič. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg551">Hvala lepa gospodu Glaviču. Naslednji ima besedo gospod Klavora.</seg>
             </u>
             <note type="speaker">FEDJA KLAVORA:</note>
-            <u who="#SSK11.KlavoraFedja1940" ana="#regular">
+            <u who="#KlavoraFedja1940">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg552">Spoštovani, ker upam, da sem zadnji ali pa vsaj me zadnjimi, bom kratek. Dolžan sem prenesti pripombe iz občine, od koder prihajam, zato tega ne bi bral. Morda bi dodal k temu odprtemu lovu na sredstva, ki jih bomo letos pobrali v republiki in jih namenili za vse naše potrebe, katerih bo zelo malo, samo še en poudarek, ki je mogoče hkrati tudi utemeljitev, da le rabimo drugačno mesto in več posluha za tista sredstva in tiste potrebe na komunalnem področju iz sredstev, ki so namenjena občinam. Gre za že znane podatke oziroma znane zahtevke, ki ste jih številni pred mano posredovali izvršnemu svetu (gre za to znano delitev sredstev občina-republika, 30-70%) in jasno ne zagotovljenih 30% za občinske namene. Dodal bi samo še ugotovitev, da naj bi se iz teh planiranih sredstev proračuna v višini 175 milijonov plačevalo tudi še neporavnane obveznosti na mednarodnih kreditih, ki zapadejo v tem letu, in to v višini preko 80 milijonov dinarjev. Ob tako planirani delitvi sredstev ostane torej za sofinanciranje komunalnih investicij v občinah v letu še toliko manj denarja. Ugotavljam, da je to le še utemeljitev in razlog več, da se morda to razdelitev sredstev prerazdeli v korist občinam v nekoliko ugodnejši meri.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg553">Hvala lepa. Poskušali smo obvestiti gospoda Žuntarja, ki je predhodno odšel, ker ima nocoj dežurstvo, pa ga žal nismo uspeli dobiti, in ker ima očitno ponoči dežurstvo, bi veljajo še njega zamenjati v tej skupini, ker bi verjetno težko prišel sem. Se pravi, bi namesto njega veljalo imenovati nekoga novega. Gospod Pavšič, lahko vi pridete jutri ob 8.00 uri zjutraj sem?</seg>
                <note>Lahko.</note>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg554">No, še kakšen drug predlog? Če ne, bi dal to na glasovanje. Ugotovimo prisotnost!</seg>
@@ -1695,7 +1681,7 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg558">Dobro, z enim glasom več kot nas je, torej gospod Tomaž Pavšič je izvoljen. Dobro, šalo na stran. Gremo naprej z razpravo. Naslednji ima besedo gospod Deželak.</seg>
             </u>
             <note type="speaker">JANKO DEŽELAK:</note>
-            <u who="#SSK11.DezelakJanko1945" ana="#regular">
+            <u who="#DeželakJanko">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg559">Spoštovani predsednik, spoštovani kolegi! Dovolite mi, resnično ne nameravam ponavljati zadeve. Sem mnenja, da je vlada danes, v kolikor to pedantno evidentira, dobila marsikako dobro idejo, na podlagi katere bodo nadaljnje faze zakonodajnega postopka lahko res temeljito obdelane. Po definiciji je pa tako, da pozicija nekako argumentira predlog proračuna, nekako ga ofenzivno ali defenzivno brani, opozicija ga pa poskuša rušiti in to je normalna situacija v vsaki parlamentarni demokraciji in ni nič tragičnega. Mislim, da je to tisti kibernetski mode, ki lahko poraja neke pozitivne posledice. Vendar ob posameznih alineah o zmanjševanju proračuna o tem ne nameravam govoriti, ker je to nesporno. Mnenja sem, da imamo pred sabo na strani prihodkov tega proračuna že splet zakonodaje, ki smo jo sprejeli, ki že poraja neke posledice. V mislim imam kompletno davčno zakonodajo, ki oblikuje prihodke na strani proračuna in na desni strani je splet odhodkov na strani, ki jo seveda moramo gledati na bilančen način. Generalna ugotovitev po mojem je, da je sleherni proračun v svojem odvijanju (formirano in koriščeno), ki res locira v upadanju fizičnega obsega industrijske proizvodnje ali v zaostajanju gospodarske aktivnosti, seveda alarmantna točka, v kateri mora sleherni racionalno koncipiran sistem neke države reagirati. Menim, da ta država mora reagirati v takem primeru, da vsi tisti segmenti, o katerih ste prej govorili, davek na dobiček, ki je enim trn v peti, tudi meni, priznam, potem davek na plačilno listo, različni viri na strani prihodkovne strani, vse to je na razpolago, da država reagira, ker v takem primeru seveda mora reagirati. Zdaj, ko pogledamo odhodkovno plat proračuna, ko pogledamo tiste participante na tej strani, je situacija seveda drugačna. Proračun, takšen kot je, razdeljen na tekoči del in investicijski del in intervencijski del, je seveda prvi takšen akt v zgodovini te države. Jaz to ocenjujem tudi kot nek civilizatorični efekt. Nedvomno. Kot takšen je ta proračun, ki je seveda suma sumarum rezultat zadnjih načrtov in ciljev za letos in za vsa naslednja leta, se pravi, tako operativno akcijsko strateški, je konsistenten, zajema vse prihodke in vse odhodke (tudi tega ne poznamo doslej), in če je konsistenten, pomeni, da je kontrolabilen, da ga bomo lahko na ravni različnih kontrolnih teles v okviru Skupščine Republike Slovenije dovolj učinkovito kontrolirali; tudi tega skoraj nihče ne omenja. To so vsaj neki novi momenti, ki zame osebno predstavljajo neko kvaliteto. Torej je pregleden. Torej vlada, prepričan sem, da v kolikor se bodo porajale vse tiste negativne posledice, tisti negativni efekti, o katerih ste moji predhodniki govorili, da bo ustrezno reagirala. Zanesljivo ni njen interes upadanje fizičnega obsega industrijske proizvodnje, upadanje družbenega proizvoda in tako dalje. To je potem seveda konec te vlade in vlade danes po svetu nastajajo in padajo skozi proračune in ta diskusija seveda ni nič drugega kot to in potrjuje staro resnico.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg560">Osebno vidim stvar, ki mene moti in bom povedal, v čem namreč še vedno ohranjamo, nekdo bo rekel po načelu kontinuitete, vendar jaz trdim, da to ni tako, ali pa vsaj je v preveliki meri poudarjeno. Namreč, kontinuiteto na področju državnega intervencionizma v gospodarstvu. Mi imamo primer negativnih efektov takih pristopov celih 45 let nazaj. Mislim, da je to nesporno in smo vsi o tem govorili. Mi pa v proračunu še vedno ohranjamo državne intervencije na precejšnjih milijardah.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg561">Diskusija o nižjem energetskem pragu, o nižji energetski ali pa sproščeni energetski bilanci te države, tudi ni bila izvedena, po mojem mnenju, na dovolj korekten način. Mi še vedno operiramo z določenimi predpostavkami o potrebni energiji, ki jo distribuiramo nujno potrebnim, neobhodnim končnim porabnikom, ki te energije ne plačujejo. Ostaja pa vprašanje, kaj je s kratkoročno in dolgoročno preusmeritvijo slovenskega gospodarstva; bomo to prepustili stihiji ali bomo to kontrolirano nadzirali. Namreč, gotovo je jasno, da so gotove panoge in to cele panoge, skupine, podskupine, popolnoma nesposobne preživetja, ne ob konfrontaciji z evropskimi standardi, ampak ob konfrontaciji z afriškimi standardi. Za njih mi zagotavljamo energijo, na dovolj visoki napeti energetski bilanci, in vanjo usmerjamo milijarde. Torej, v tem vidim vakuum, kar pomeni, da ga tudi vlada vidi, očitno ga vidi, kar bo morala izkoristiti in zgrabiti kot instrument v primeru, da bo davčni sistem torej zajemanje prihodkov proračuna, rezultiral na vseh tistih negativnih efektih, o katerih sem govoril.</seg>
@@ -1703,35 +1689,35 @@
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg563">Jaz bi zaključil s predlogom, da vlada upošteva vse te pripombe, tudi pripombe Odbora za proračun in javne finance, ki je domicilni odbor, ki ima nalogo po poslovniku skupščine, da kontrolira tako levo kot desno stran prihodke kot odhodke, namembnost, konsistentnost, transparentnost proračuna in tako naprej, da ga kontrolira po potrebi, ne samo na vsak kvartal in da se v nadaljnji zakonodajni fazi, torej pri pripravi predloga proračuna, te pripombe tudi smiselno upoštevajo - to je moje osebno mnenje. Mislim,da na ta način le pospešimo zakonodajni postopek, da ne izgubimo prepotrebnega časa vračanja postopka na začetno fazo, ker se mi zdi (to je moje osebno mnenje), da pridobimo čas, kar bo lahko zelo koristno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg564">Hvala lepa. Besedo ima še gospod Slejko.</seg>
             </u>
             <note type="speaker">VLADIMIR SLEJKO:</note>
-            <u who="#SSK11.SlejkoVladimir" ana="#regular">
+            <u who="#SlejkoVladimir">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg565">Govorimo o dobrem proračunu, kakšen bo, bomo videli na koncu. Ali ga bomo morali spreminjati, kakšno bo ostalo naše gospodarstvo? Sedaj se verjetno borimo za ali proti, to je samo zastopanje nekih interesov, za katera pa ne vemo, kako se bodo končali. Vemo, da smo v popolnoma nestabilnem stanju, proračun pa je najbolj statično postavljen, tako da se celo leto ne bo nič spremenil. Vsak dan sonce vzhaja in zahaja - nobene vojne, nobenega brezposelnega več, nobeno podjetje ne bo propadlo. Mislim, da v tem proračunu ne računamo na to, da bomo imeli letos 100 ali pa 150 tisoč, mogoče celo 200 tisoč brezposelnih. Ne računamo, da zaradi nezaupanja v državo, pa bom rekel tudi v politike, ne bomo imeli spremljave finančnega sistema. Tudi ljudje, ne bom rekel poslanci, tukaj naprej ne zaupajo več tej državi, ki jo sami ustvarjajo. Zaradi tega, ker mi ne zaupamo državi, tudi verjetno drugi ne bodo zaupali bankam in bodo denar pobirali ven. Zato ga imajo tudi v tuji valuti in ga nimajo v domači in to je največja škoda za naše gospodarstvo. Mi podpiramo Nemčijo, mi smo največji financer Avstrije, Avstrijci ne vedo, kam bi z denarjem. Ampak, v tem proračunu, če bi postavili oziroma če bi prišli do tega, da bi ljudje začeli zaupati tej državi, bi dosegli največ. Verjetno pa tega s tem proračunom ne bomo dosegli. Ko se najdeš na dnu v morju, potem moraš če hočeš splavati, spuščati balast dol - najprej malo, pa malo in malo, ko pa splava, pa vidiš, da gre počasi gor, pa gre vedno hitreje, potem pa mu spet dodajaš in gledaš, da se ne bo utopil, da bo šel gor, da bo splaval. In to moramo v tem trenutku upoštevati. Če bomo vse obesili gor, kar si želimo, potem ne vemo, do kje bo konj zdržal, mogoče bo že na začetku "krepnil", sploh naprej ne bo šel. Mislim, realna ocena je tukaj, kaj si predstavljamo, da to gospodarstvo zmore! Zato pravim, da bo potrebno viseče planiranje, ali pa dinamično planiranje tukaj. Kaj pomeni, če v tem trenutku to spremenimo in koliko se bo zaradi tega nacionalni dohodek povečal? Govorimo o davku na dobiček. Za novo leto smo sprejemali deset procentne olajšave na reinvestiranje dobička in na razno razna vlaganja, s tem, bomo dobili cca 4,5% proračuna. Tri dni smo pa sklepali o tem. Če bi oprostili gospodarstvo 100%, stavim, da bi bil efekt za proračun dosti večji kakor pa tako. Cilj poslovanja bo ničelni dobiček. Mi imamo v letošnjem planu, da bo vse slovensko gospodarstvo z dva milijona ljudmi prineslo 500 milijonov mark dobička - to je 250 na osebo. Tak je plan, pravijo pa, da bo še višji oziroma da bo še nižji dobiček. Nismo pa razmišljali o tem, da bomo sprejemali novo ustavo, da bomo racionalizirali delo poslancev, upam, da nas bo manj. Ne vem, če kdo razmišlja, razen tega, da bomo nove občine postavljali, oziroma novo regionalizacijo, nihče ne razmišlja, koliko nas bo to stalo in koliko bodo te spremembe prinesle dobička. Nihče ne razmišlja o tej možnosti, da bi dosedanjo občinsko strukturo in skupščinsko strukturo racionalizirali na najbolj efektivno stopnjo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg566">Pred 14 dnevi smo dobili zakon o demografsko ogroženih območjih. Ali ga je mogoče kdo vnesel v svoje plane, v svoj proračun? Ne vem, če so ga vsi, jaz na občini razmišljam, da je komaj prišel do nas, šele sedaj ga bomo uvajali. Mogoče tisti, ki ste bolj pri koritu, bolj poznate te zadeve. Potem je pa še tukaj prometni davek na električno energijo in telefonijo. Zjutraj sem si zapomnil, ko je predsednik vlade rekel, da je - oziroma celo napisal, da je davek za ceste prometni davek in se uporablja, kjer se hoče. Čez eno leto bomo prav tako trdili za davek na telefonijo in na ne vem kaj še. Vem, da ga bomo uporabili prav tam, kjer nam bo prav prišel, upam, da ga ne bomo za vojsko uporabili. To me najbolj moti, čeprav vem, da moramo v določenem trenutku imeti svojo vojsko. Lahko gradimo tako vojsko, da bomo gradili velikega žandarja male države ali pa približno take vojske, kot jo ima San Marino ali pa Luksemburg ali pa so drugi večji subjekti naš varovalni faktor. Zagovarjanje določenih postavk v proračunu, kar se vojske tiče pa verjetno ni samo to, kar so trenutno omenili za vojsko, ampak po moje so še določene skrite postavke, ki bodo šle v vojaške namene. V tem trenutku je mogoče celo dobra investicija za nekatere, s tem se ustvarja delo za nekoga in delamo, delamo, kaj nam pa to prinese, je pa drugo vprašanje. Umrli bomo, bom rekel, tako kot smo imeli včasih zakon o atomskih zakloniščih, kmalu pa bi lačni umrli v njih.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg567">Še nekaj bi omenil na koncu, kar se tiče samega financiranja. Finančna politika in gospodarstvo. Če na tem področju ne bomo naredili reda, zakonodaje, da bo na eni strani tisti, ki dajejo in tisti, ki jemljejo, enako odgovorni, ne bomo prišli nikamor. Če nimamo bančnega sistema, ki bi spremljal to stvar, če nimamo tujih investicij, ki bi prišle k nam z zaupanjem v to državo oziroma zaupanjem v njen sistem, potem ne bomo dosegli nič. Sami se iz tega gotovo ne bomo več skopali. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg568">Hvala lepa, gospod Slejko. Prijavljenih za razpravo ni več - aha, gospod Tomaž Pavšič.</seg>
             </u>
             <note type="speaker">TOMAŽ PAVŠIČ:</note>
-            <u who="#SSK11.PavsicTomaz1931" ana="#regular">
+            <u who="#PavsicTomaz1931">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg569">Oprostite, da se že drugič javljam. Bom čisto kratek. Nekaj sem pozabil in se moram popraviti. Ko sem govoril o poročilu Odbora za kulturo in varstvo kulturne dediščine, je bila tam neka trditev, ki jo je naš odbor dal in podpisal predsednik Šeligo, namreč, da je privilegirana kulturna dediščina. Takšnega mnenja so bili nekateri, jaz sem bil tam v manjšini in sem temu nasprotoval, ker sem pač edini s tega področja. Mislim, da dediščina ni privilegirana, tudi če bi bila, je to vendarle dobro, kajti zamislimo si, kaj bi bilo z našo dediščino, ki je že tako in tako skromna, če je ne bi varovali. To je eno.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg570">In potem še druga stvar glede srednjega šolstva, glede prepovedi vpisa v dislocirane oddelke. Temu apelu šestih poslancev, se je potem pridružil še Janez Režun iz Zagorja, in prav tako Kokošinek s Koroškega, ki je tudi sam dal zadevno šel razpis za nove vpise, zato bi bilo nujno nekaj ukreniti, če hočemo to urediti še pred tem razpisom. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg571">Hvala lepa. Gospod Kokošinek.</seg>
             </u>
             <note type="speaker">ERVIN KOKOŠINEK:</note>
-            <u who="#SSK11.KokosinekErvin" ana="#regular">
+            <u who="#KokosinekErvin">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg572">Spoštovane delegatske in delegati! V proračunu nismo zasledili postavke, da pridemo k epilogu te Bistrice. Mi smo v tej skupščini govorili o Bistrici, Skupščina občine Radlje je sprejela sklep, Bistrice ne damo pod nobenimi pogoji, kajti njo obvezuje krajevni referendum. Republiška skupščina je sprejela sklep: Bistrico damo šele potem, ko bodo odpravljene vse pomanjkljivosti, to so bile te študije o varnosti Nabrežin in o varnosti jezu in tako dalje. Te študije so končane. Dr. Buser je zagotovil, da je jez varen, da ljudje pod jezom lahko varno živimo. Mislim, zahvalimo se lahko Zelenim, da je sploh ta stvar prišla v republiško skupščino, da ni ostala kar na nivoju občine, ker ni subjekt mednarodnega prava, in skratka, Zelenim najlepša hvala. Zdaj pa seveda sledi epilog.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg573">V zaključnem računu oziroma v tem proračunu Republike Slovenije ni nobene postavke. Mi računamo, da bodo verjetno sedaj tako kot bo elektrika koristila, izkoriščala, tako bo tudi sedaj nadomestila, 80% nadomestil za ljudi, ki živijo v toku reke Bistrice, bi naj zagotovila Avstrija, 20% pa Republika Slovenija. Ker seveda v proračunu te postavke ni, mi računamo, da bo verjetno prišlo do kakšnih razgovorov o električni energiji, da bi mogoče ti ljudje v ustju reke Bistrice, ki so najbolj ogroženi in prizadeti, dobivali nekaj let to elektriko, ki jo bomo proizvajali po nižji ceni ali pa celo zastonj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg574">S tem smo dejansko izčrpali vse prijavljene k razpravi. Vsega skupaj je bilo 42 razpravljalcev, lahko ugotovimo, da je bila to zelo izčrpna, tehtna, široka razprava, ki je nismo v nobenem pogledu omejevali. Mislim, da so nekateri poudarki precej jasno vidni in da bo skupina, ki se bo lotila priprave sklepov na osnovi razprave, lahko temu primerno identificirala tiste poudarke, ki jih bi v teh sklepih navedli, kot našo usmeritev izvršnemu svetu pri pripravi predloga proračuna. Pri tem seveda računam, in tudi iz same razprave zaključujem, da ni posebnih razlogov, da ta osnutek ne bi bil sprejet, seveda s temi dodatnimi sklepi, ki bi določili popravke v tej fazi do izdelave predloga.</seg>
                <seg xml:id="SSK11-ZbObc.1991-03-05.s013-01.seg575">Kot že rečeno, skupina za pripravo sklepov se bo sestala jutri ob 8.00 uri v salonu. S tem prekinjam to točko dnevnega reda, hkrati prekinjam tudi to sejo. Dobimo se jutri zjutraj ob 10.00 uri v veliki dvorani, kjer bo najprej usklajevalna skupna seja, nato redna sklicana skupna seja, potem pa seveda nadaljujemo sejo zbora. Zahvaljujem se vam za sodelovanje in nasvidenje jutri!</seg>
             </u>

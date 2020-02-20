@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 20. zasedanje</title>
             <meeting n="20"
-                     corresp="#VsiZbor.1991-12-11.z020-01.DruzPolZb #VsiZbor.1991-12-11.z020-01.ZbObc #VsiZbor.1991-12-11.z020-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="7"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="3"/>
                <tagUsage gi="seg" occurs="32"/>
             </namespace>
@@ -123,23 +114,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-12-11.z020-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-12-11.z020-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-12-11.z020-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -149,20 +123,24 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">20. zasedanje</head>
             <docDate>11. december 1991</docDate>
             <note type="chairman">Sejo je vodil Jože Zupančič, predsednik Zbora združenega dela</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.10 uri.</note>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-12-11.z020-01.seg1">Pričenjam skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora, na katerem bomo poslušali UVODNO OBRAZLOŽITEV K LETNEMU POROČILU SVETA ZA VARSTVO ČLOVEKOVIH PRAVIC IN TEMELJNJIH SVOBOŠČIN ZA OBDOBJE SEPTEMBER 1990 - SEPTEMBER 1991, ki jo bo podal dr. Ljubo Bavacon, predsednik Sveta za varstvo človekovih pravic in temeljnih svoboščin. Prosim, gospod dr. Bavacon.</seg>
             </u>
             <note type="speaker">DR. LJUBO BAVCON:</note>
-            <u who="#SSK11.BavconLjubo1924" ana="#regular">
+            <u who="#BavconLjubo1924">
                <seg xml:id="SSK11-VsiZbor.1991-12-11.z020-01.seg2">Spoštovana predsednika, spoštovane poslanke in poslanci, naj se vam najprej zahvalim za priložnost, da lahko na skupnem zasedanju predstavim z uvodno besedo delo Sveta, ki mu predsedujem, in poskušam obenem tudi pokazati ali dati nekaj elementov za vašo oceno, o stopnji spoštovanja človekovih pravic in pravne varnosti državljanov Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-12-11.z020-01.seg3">Samo naključje je, da prihajajo človekova pravica na dnevni red Skupščine Republike Slovenije ob 10. december, mednarodnem dnevu človekovih pravic. Toda to bi bilo lahko tudi simbolično in lahko bi bilo tudi koristno, če bi sprejeli mojo misel, da moramo zdaj na Slovenskem ta dan počastiti predvsem delovno, se pravi tako, da bi si izprašali našo individualno in našo kolektivno vest glede stopnje spoštovanja človekovih pravic in pravne varnosti državljanov. Vaši predstavniki bodo morali v začetku prihodnjega leta pred evropskim parlamentom odgovarjati lahko tudi na zelo neprijetna vprašanje, ki se tičejo te teme in morda je to tudi priložnost za to, da bi se oborožili.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-12-11.z020-01.seg4">Vprašanje človekovih pravic je takšno, da jih kršijo povsod na svetu, tudi v najbolj razvitih in najbolj demokratičnih državah. Tisto vprašanje, ki je relevantno, je, kaj je storila država, kaj je storila oblast za učinkovito varstvo človekovih pravic in ali je omogočila svobodno delovanje vseh institucij civilne družbe, ki pri tem varstvu pomagajo.</seg>
@@ -196,7 +174,7 @@
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-12-11.z020-01.seg32">Dr. Bavconu bi se za njegovo obrazložitev iskreno zahvalil in s tem zaključil skupno zasedanje vseh treh zborov. Zbori takoj nadaljujejo z delom v svojih prostorih. Hvala lepa.</seg>
             </u>
             <note type="time">Seja je bila končana 11. decembra 1991 ob 14.38 uri.</note>

@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 16. zasedanje</title>
             <meeting n="16"
-                     corresp="#VsiZbor.1991-07-17.z016-01.DruzPolZb #VsiZbor.1991-07-17.z016-01.ZbObc #VsiZbor.1991-07-17.z016-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="6"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="3"/>
                <tagUsage gi="seg" occurs="46"/>
             </namespace>
@@ -137,23 +128,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-07-17.z016-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-07-17.z016-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-07-17.z016-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -163,21 +137,25 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">16. zasedanje</head>
             <docDate>17. julij 1991</docDate>
             <note type="chairman">Sejo je vodil Ivan Bizjak, predsednik Zbora občin.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.33 uri.</note>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-17.z016-01.seg1">Spoštovane delegatke in delegati, gospe in gospodje! Pričenjam skupno zasedanje vseh treh zborov Skupščine Republike Slovenije, na katerem bomo poslušali uvodno BESEDO IZVRŠNEGA SVETA SKUPŠČINE REPUBLIKE SLOVENIJE K NASLEDNJIM AKTOM: PREDLOGU ZAKONA O ORGANIZACIJI, FINANCIRANJU VZGOJE IN IZOBRAŽVANJA; PREDLOGU ZA IZDAJO ZAKONA O POKOJNINSKEM IN INVALIDSKEM ZAVAROVANJU Z OSNUTKOM ZAKONA, PREDLOGU ZA IZDAJO ZAKONA O ZDRAVSTVENI DEJAVNOSTI Z OSNUTKOM ZAKONA, PREDLOGU ZA IZDAJO ZAKONA O ZDRAVSTVENEM VARSTVU IN ZDRAVSTVENEM ZAVAROVANJU TER K PREDLOGU ZA IZDAJO ZAKONA O LEKARNIŠKI DEJAVNOSTI Z OSNUTKI ZAKONOV.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-17.z016-01.seg2">Uvodno besedo bo podal gospod Matija Malešič, podpredsednik Izvršnega sveta Skupščine Republike Slovenije. Besedo ima gospod Matija Malešič.</seg>
             </u>
             <note type="speaker">MATIJA MALEŠIČ:</note>
-            <u who="#SSK11.MalesicMatija1933" ana="#regular">
+            <u who="#MalesicMatija1933">
                <seg xml:id="SSK11-VsiZbor.1991-07-17.z016-01.seg3">Spoštovano predsedstvo, spoštovane poslanke in poslanci! Za današnje zasedanje smo vam predložili pet zakonov, ki so skupaj z nekaterimi drugimi izredno pomembni pri izgrajevanju slovenskega pravnega reda in socialne države. Danes začenjamo razpravo o popolnoma novem zdravstvenem in pokojninskem sistemu. V fazi predloga boste obravnavali zakon o financiranju in organiziranju šolstva, v fazi osnutka je bil že sprejet zakon o raziskovalni dejavnosti, predlog pa smo vam prav tako že predložili. Zakone o socialnem varstvu, o družinskih dajatvah in o predšolski vzgoji vam bomo predložili v kratkem. Zakon o zavodih in novi davčni zakoni pa so že sprejeti in uveljavljeni. Če jih gledamo kot celoto, so ti zakoni tisti okvir, ki bo omogočil pluralizacijo in s tem tudi privatizacijo dejavnosti, ne da bi hkrati te dejavnosti tudi popolnoma prepustili tržnemu obravnavanju. Na ta način vpeljujemo v naš sistem kategorije zavodov kot neprofitnih institucij, zavarovanja in zavarovalništva kot načina zagotavljanja socialne varnosti in plačevanja zdravstvene dejavnosti, zasebne prakse v vseh dejavnostih in dodatnega ter prostovoljnega zavarovanja na komercialni osnovi.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-17.z016-01.seg4">Družbene dejavnosti namreč v spremenjenem političnem, družbenem in gospodarskem sistemu ne morejo več delovati tako, kot so v preteklosti, pa tudi tako ne, kot delujejo sedaj. Zato je vlada že v svojih programskih usmeritvah nakazala temeljne smeri razvoja na teh področjih. Družbene dejavnosti so pomemben element in cilj razvoja celotne družbe. Zato jih ne obravnavamo kot porabo, temveč kot pomemben razvojni dejavnik, ki zagotavljajo višjo izobrazbeno, zdravstveno in kulturno raven celotnemu prebivalstvu in socialno blaginjo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-17.z016-01.seg5">Izvršni svet je že pred letom dni sprejel "Smernice za novo delovanje in organiziranost družbenih dejavnosti", Skupščina pa "Socialni program", ki določa spremembe na področju socialne politike. S takšnim pristopom so bila za to področje opredeljena nova izhodišča, ki zagotavljajo sistemsko skladnost na tem področju in vplivajo na smotrno organiziranost družbe kot celote.</seg>
@@ -223,7 +201,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-17.z016-01.seg45">V zvezi s tem naj povem, da uresničujemo načrte glede preoblikovanja družbenih dejavnosti na posameznih področjih. Pričakujem, da boste v razpravi, ki se je dejansko že začela, osnutke dopolnili, da jih dopolnimo potem še v javni razpravi in tako omogočimo ob koncu leta ali z novim letom prehod na nov sistem financiranja in delovanja družbenih dejavnosti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-17.z016-01.seg46">Zahvaljujem se podpredsedniku Izvršnega sveta gospodu Malešiču za podano uvodno besedo in s tem zaključujem skupno zasedanje vseh zborov Skupščine Republike Slovenije. Hkrati pa vas opozarjam, da je takoj po tem skupnem zasedanju, se pravi, takoj se začenja skupna seja vseh zborov. Hvala lepa.</seg>
             </u>
             <note type="time">Seja je bila končana 17. julija 1991 ob 10.55 uri.</note>

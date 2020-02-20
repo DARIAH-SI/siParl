@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Izredna-23-1998-07-08"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">23. izredna seja (8. 7. 1998)</title>
-            <meeting n="23"
-                     corresp="#SDZ2-Izredna-23-1998-07-08.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="23" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">23. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|598488D977EC2830C125663D003E2753</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=598488D977EC2830C125663D003E2753</idno>
-                  <imprint>
-                     <date when="1998-07-08">(8. julij 1998)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>23. izredna seja (8. 7. 1998)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1998-07-08"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=598488D977EC2830C125663D003E2753</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="162"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="97"/>
                <tagUsage gi="seg" occurs="290"/>
                <tagUsage gi="gap" occurs="12"/>
@@ -420,25 +405,21 @@
                <date when="1998-07-08" ana="#parl.sitting">8. 7. 1998</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Izredna-23-1998-07-08.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">23. izredna seja</head>
-            <docDate>(8. julij 1998)</docDate>
             <note type="chairman">Sejo je vodil Janez Podobnik, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.06 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje! Pričenjam 23. izredno sejo državnega zbora Republike Slovenije, ki sem jo sklical na podlagi prvega in drugega odstavka 51. člena in 54. člena poslovnika državnega zbora.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg2">Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in naslednji poslanci: gospod Feri Horvat, mag. Franc Žnidaršič, mag. Marijan Schiffrer, Aleksander Merlo, Roman Jakič, Richard Beuermann, Jelko Kacin, Franci Rokavec do 11. ure, Roberto Battelli.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg3">Prosim, da ugotovimo prisotnost v dvorani! Ena od poslanskih skupin državnega zbora še ni prisotna. Ugotovimo prisotnost!</seg>
@@ -449,7 +430,7 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg7">Gospod Jelinčič. Prosim. Predlogi za umik.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg8">Hvala lepa, gospod predsednik! Zahtevam, da se z dnevnega reda današnje 23. izredne seje umakne 3. točka dnevnega reda - vladni predlog zakona o spremembah in dopolnitvah zakona o ustanovitvi občin ter o določitvi njihovih območij</seg>
                <note>EPA 520-II</note>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg9">.</seg>
@@ -458,7 +439,7 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg12">Sprejem te točke na dnevni red ne pomeni le eklatantne kršitve mojih poslanskih pravic, ampak gre tudi za kršitev 1. in 2. člena slovenske ustave, kar pomeni, da Slovenija ni ne demokratična ne pravna država, in s tako hipoteko, ne vem, kako naj se Slovenija približuje Evropi. Zato ponovno zahtevam, da se vladni predlog umakne z dnevnega reda, dokler državni zbor ne odloči o mojem predlogu zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg13">Hvala lepa, gospod Jelinčič, za vaš predlog. Gospod Jelinčič je torej predlagal, da bi se z dnevnega reda umaknila 3. točka dnevnega reda. O sami vsebini zadeve pa bi vam rad pojasnil naslednje.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg14">Sam sem tudi pisno obvestil gospoda Zmaga Jelinčiča o razlogih, ki so me privedli do tega, da sem se odločil in na dnevni red uvrstil zakon, ki ga je predlagala vlada. Dovolite mi, da to stališče tukaj tudi še enkrat povzamem.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg15">V zvezi s predlogom zakona o spremembah in dopolnitvah zakona o ustanovitvi občin ter o določitvi njihovih območij, ki ga je gospod Zmago Jelinčič vložil v obravnavo v državni zbor 20. aprila leta 1996, je bilo ugotovljeno, da pobud, ki jih vsebuje ta predlog zakona, ni mogoče obravnavati, ne da bi bile vključene v postopke, ki jih predvideva zakon o postopku za ustanovitev občin ter za določitev njihovih območij; ta zakon je bil objavljen v Uradnem listu številka 44, leta 1996, sprejet pa je bil konec julija 1997. Opozarjam, da je v skladu s tem zakonom poleg obveznega dokumentacijskega gradiva, ki je spremljajoče gradivo vseh predlogov za začetek postopka za ustanovitev občin ter za določitev oziroma za spremembo njihovih območij, pred obravnavo ustreznega zakona treba izvesti predhodni postopek z referendumom za ugotovitev volje prebivalcev. Šele nato je mogoče začeti postopek za sprejem ustreznega zakona.</seg>
@@ -466,13 +447,13 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg17">Sedaj smo torej pri predlogu, da se ta zakon umakne z dnevnega reda. Gospod Jelinčič! Ali ugovarjate moji razlagi? Prosim.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg18">Hvala lepa za pojasnilo, gospod predsednik. Ta dopis, ki ste ga tukaj prebrali, sem jaz dobil na mizo pred približno 1 uro. Moram pa odgovoriti na to, da sem svoj predlog zakona vložil 20. marca 1996. Zato zanj ne more veljati sklep iz julija meseca naslednjega leta, to se pravi 1997.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg19">In drugič. Tudi po tem sklepu, ki je bil sprejet konec julija 1997, ni potreben noben referendum za spremembo statusa občine. Namreč pri mojem predlogu gre pa samo za to, da se status občine spremeni. In to na predlog občanov Pirana sem predlagal in dokumentiral na 11-ih straneh spremembo statusa občine Piran v mestno občino. Ampak še enkrat, v popolnem nasprotju s pravnim redom je sklep, ki ste mi ga poslali, in tudi odločitev oziroma mnenje sekretariata za zakonodajo in pravne zadeve je v bistvu nesprejemljivo. Kajti, kot vemo, v pravnih državah določeni zakoni in sklepi, sprejeti kasneje od predhodnih, ne morejo veljati za nazaj. To je osnovno pravilo pozitivne evropske zakonodaje. In zato, gospod predsednik, sodim, da bi morali vi umakniti ta predlog iz postopka, dokler recimo jaz ne umaknem svojega predloga.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg20">Moram pa povedati, da me nihče tudi na razpravo o tem ni poklical in pač nisem mogel niti sodelovati niti nisem mogel recimo pokazati dobre volje, da bi lahko umaknil, če bi pač želel umakniti. Sicer pa sodim, da bi moral državni zbor že zdavnaj razpravljati o spremembi statusa občine Piran, vendar od prejšnjega mandata do danes ni hotel razpravljati o tem zaradi tega, ker v določenih strankah koalicije ni bilo politične volje, da bi se status občine Piran dvignil in spremenil v status mestne občine. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg21">Hvala lepa. Torej je še kakšen predlog za umik z dnevnega reda?</seg>
                <note>Ni predlogov.</note>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg22">Prehajamo na predloge za razširitve. Je kakšen predlog za razširitev dnevnega reda? Ne želi nihče besede.</seg>
@@ -495,11 +476,11 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg32">Želijo besedo predstavniki poslanski skupin? Prosim, gospod Zmago Jelinčič v imenu poslanske skupine Slovenske nacionalne stranke.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg33">Hvala lepa. Gospod predsednik, jaz bi še enkrat opozoril na vse tisto, kar sem povedal prej, in mislim, da bi bilo najbolj smiselno, da ta zakon umaknete iz procedure vi, zaradi tega, ker gre za kršitev tako poslovnika državnega zbora kot ustave Republike Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg34">Hvala lepa. Želi besedo še katera od poslanskih skupin?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg35">Na glasovanje dajem predlog za sprejem predloga zakona o spremembah in dopolnitvah zakona o ustanovitvi občin ter o določitvi njihovih območij po skrajšanem postopku. Navedeni predlog ne bo sprejet, če mu bo nasprotovala najmanj ena tretjina navzočih poslancev. Ugotavljamo prisotnost!</seg>
@@ -513,24 +494,24 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg40">Za današnjo sejo tako predlagam dnevni red, kot ste ga prejeli s sklicem. Na glasovanje dajem predlagani dnevni red v celoti. Želite obrazložiti svoj glas? Gospod Pukšič, prosim.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ2.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg41">Lep pozdrav, spoštovane poslanke in poslanci, gospod predsednik državnega zbora in vsi ostali prisotni! Gospod predsednik, predlagam, da bi dnevni red začeli s točko 2 - predlog zakona o spremembah in dopolnitvah zakona o lokalni samoupravi, pred točko 1 - predlog zakona o spremembah in dopolnitvah zakona o financiranju občin.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg42">Razlog, da začnemo s točko 2, je naslednji: V 4.a členu spremembe zakona o lokalni samoupravi piše: "Za drugo alineo se doda nova tretja alinea, ki se glasi: - načrtovanje prostorskih, razvojnih, v skladu z zakonom o izvajanju nalog na področju posegov v prostor in graditvi objektov ter zagotavljanje javnih služb gospodarjenja s stavbnimi zemljišči".</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg43">V 33.a členu pa piše: "Zakon, ki ureja naloge, ki se nanašajo na razvoj mest, je treba uskladiti s tem zakonom v enem letu po njegovi uveljavitvi". V zakonu o spremembi financiranja občin pa to ni zajeto, kar pomeni, da bomo s spremembo zakona o financiranju občin po sedanjem zakonu o lokalni samoupravi sprejeli, potem pa bo sprememba zakona o lokalni samoupravi, ki bo občinam prinesel dodatno delo, ne bo pa to v prenesenem pomenu, torej da bi država to prenesla na občine in za to zagotovila tudi sredstva, ampak bodo to enostavno dela in naloge lokalne samouprave.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg44">Iz tega razloga predlagam, da začnemo s točko 2 in ne s točko 1. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg45">Hvala lepa, gospod Pukšič. Predlagam, da se najprej odločimo o dnevnem redu, potem bom pa dal na glasovanje v skladu s poslovnikom proceduralne predloge glede obravnave vrstnega reda; ta predlog je bil nekoliko prezgoden, ker sem dal besedo za obrazložitev glasu.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg46">Prosim, gospod Zmago Jelinčič.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg47">Gospod predsednik, ravnali ste v neskladju s 64. členom poslovnika državnega zbora, ki pravi: "Pri določanju dnevnega reda državni zbor najprej odloča: o predlogih, da se posamezne zadeve umaknejo z dnevnega reda..." in tako naprej. Tega niste dali v obravnavo, zato bom glasoval proti dnevnemu redu.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg48">Poleg tega vas pa še obveščam, da bo Slovenska nacionalna stranka zaradi kršitve poslovnika državnega zbora in ustave državnega zbora v tem primeru sprožila ustavni spor. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg49">Hvala lepa, gospod Jelinčič. Dovolite mi kratko pojasnilo. Jaz sem razumel vaše legitimno stališče glede odločitve, da se vaš zakon ne uvrsti na dnevni red oziroma da se uvrsti zakon, ki ga je predlagala vlada, kot vprašanje, ki je v bistvu proceduralne narave, in sem v tem smislu tudi svoje stališče obrazložil. Zato se potem nisem odločil, da bi šel po postopku, ko poslanec predlaga umik z dnevnega reda. To, kar ste napovedali, je pa vaša pravica in lahko to tudi uveljavite.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg50">Torej, na glasovanje dajem dnevni red, kot je bil predlagan, v celoti. Ugotovimo prisotnost!</seg>
                <note>77 prisotnih.</note>
@@ -543,27 +524,27 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg55">Sedaj prehajamo na obravnavo posameznih točk. Dovolite mi, da, preden dam na glasovanje predlog gospoda Pukšiča, ki ga je podal v skladu s poslovnikom, povem, da je predlagani dnevni red in tudi vrstni red točk bil predlagan na seji kolegija. Izrecno je večina članov kolegija predlagala tak dnevni red, kot je predlagan, torej, da je 1. točka sprememba zakona o financiranju občin, nato potem lokalna samouprava, potem zakon o ustanovitvi občin in 4. točka je pa sklad Sveta Evrope za socialni razvoj. Če bomo izglasovali vaš predlog, gospod Pukšič, bi vas rad še obvestil, da je včeraj popoldan oziroma zvečer komisija za lokalno samoupravo zasedala in obravnavala točki 2 in 3 in danes poročila poslanci še nimamo na klopeh. Sicer pa, to je samo kot obvestilo. Če bi torej izglasovali vaš predlog, potem je potrebno počakati, da se to gradivo pridobi. Imamo pa že prijavljene razpravljalce v splošni razpravi pri zakonu o financiranju občin. To razpravo smo pričeli na 9. redni seji in bi predlagal, da vsaj pričnemo z obravnavo te točke in se potem kasneje odločimo. V tem času bo pa tudi čas, da se pripravi gradivo. Ampak prvi proceduralni predlog, ki je bil od gospoda <gap reason="inaudible"/> Gospod Sovič pravi, da ima proceduralni predlog, ki rešuje predlog gospoda Pukšiča, ampak spoštujmo poslovnik in najprej dajemo na glasovanje, torej <gap reason="inaudible"/> Ali še vztrajate pri vašem predlogu? Ali bi ga umaknili ob mojem pojasnilu? Prosim, gospod Pukšič, če dopolnite vaš proceduralni predlog.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ2.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg56">Se zahvaljujem, gospod predsednik, za besedo. Seveda pri predlogu ostajam, pa vendar želim slišati, vedno sem za to, če je kakšna boljša rešitev in če gospod Sovič predlaga kakšno rešitev, preden boste dali predlog na glasovanje, torej dovoljujem, da date za proceduralni predlog možnost gospodu Soviču.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg57">Gospod Pukšič, to lahko samo jaz dovolim, vi ne morete.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ2.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg58">Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg59">Torej jaz razpravo gospoda Pukšiča razumem, da umika svoj proceduralni predlog in s tem dajem možnost gospodu Soviču, ki bo predlagal drug proceduralni predlog. Prosim, gospod Sovič.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg60">Cenjene dame, spoštovani! Jaz bi vljudno predlagal, če bi lahko točko 1 obravnavali za tem, ko bi bila točka 4 že končana, torej, da bi vrstni red točk bil takšen, da začnemo z 2., 3.,4. in potem 1 <gap reason="inaudible"/> Predlog utemeljujem s tem, da je 1. točka tako pomembna, da bi potrebovali stališča vlade do problematike, ki jo obravnava, pa tudi stališča stalne konference lokalnih skupnosti v Republiki Sloveniji, ker gre za vprašanje, ki se tudi na njih v veliki meri nanaša. Torej moj predlog bi bil, da bi vrstni red obravnave bil takšen: točke 2, 3, 4 in 1. Če pa je problem tudi s pripravljenostjo točke 2, potem pa se lahko tudi točki 2 in 3 zamenjata. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg61">Gospod Sovič, vaš predlog ni bistveno drugačen od predloga gospoda Pukšiča. Seveda ga bom dal na glasovanje. Toda, poglejte, mi smo na 9. redni seji prekinili razpravo o spremembah in dopolnitvah zakona o financiranju občin. Imamo prijavljene tri replikante: gospoda Mogeta, Soviča in Zamernika, nato pa prijavljene k splošni razpravi: gospoda Pukšiča, Sama Bevka, Aurelia Juria, Jožeta Avšiča in Borisa Soviča. In preden se odločamo in pričnemo glasovati o posameznih amandmajih, se lahko potem kasneje, poslanske in poslanci, odločite, da bi eventualno, če bo razprava pokazala, spremenili vrstni red obravnave posameznih točk dnevnega reda.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg62">Ponovno vas opozarjam, da je v celoti pripravljena 1. točka dnevnega reda z gradivom matičnih delovnih teles. Zato bi želel, da bi vendarle pričeli s 1. točko dnevnega reda in opravili vsaj splošno razpravo. Umikate vaš predlog? Ja, gospod Sovič sedaj vztraja torej, da glasujemo. Gospod Sovič je dal na glasovanje naslednji vrstni red. Najprej obravnavamo točko dva, tri, štiri in nato točko ena.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg63">Sedaj bom dal ta predlog na glasovanje. Ugotovimo prisotnost!</seg>
@@ -576,11 +557,11 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg67">Gospod Kramberger ima besedo.</seg>
             </u>
             <note type="speaker">JANEZ KRAMBERGER:</note>
-            <u who="#SDZ2.KrambergerJanez" ana="#regular">
+            <u who="#KrambergerJanez">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg68">Spoštovane kolegice in kolegi! Prosil bi, če lahko ponovimo glasovanje, ker sem se zmotil, resnično.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg69">Hvala, gospod Kramberger.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg70">Na glasovanje dajem predlog gospoda Krambergerja za ponovitev glasovanja o proceduralnem predlogu gospoda Soviča. Ugotovimo prisotnost!</seg>
                <note>73 prisotnih.</note>
@@ -599,35 +580,35 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg78">Državni zbor torej prehaja na 2. TOČKO DNEVNEGA REDA - NA PREDLOG ZAKONA O SPREMEMBAH IN DOPOLNITVAH ZAKONA O LOKALNI SAMOUPRAVI. Predlog zakona je v obravnavo zboru predložila vlada Republike Slovenije. Ali želi predstavnik vlade besedo? Prosim. Gospod minister mag. Grafenauer.</seg>
             </u>
             <note type="speaker">MAG. BOŽO GRAFENAUER:</note>
-            <u who="#SDZ2.GrafenauerBožo" ana="#regular">
+            <u who="#GrafenauerBožo">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg79">Hvala lepa, gospod predsednik. Preden je bil zakon vložen v prvo branje, oziroma v času postopka so bila pridobljena tudi mnenja vseh občin, kot je to v skladu s 94. členom zakona o lokalni samoupravi. To povem zaradi tega, ker je okrog tega zakona bilo izredno dosti razprav in usklajevanj, tudi, da lahko rečem, v vsaki poslanski skupini.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg80">Po prvem branju je državni zbor sprejel stališča, ki so dokaj jasno nakazovala in narekovala vladi, kaj mora upoštevati pri pripravi zakona za drugo branje. Lahko ugotovim, da so bila stališča takšna, da je v največji meri vlada lahko upoštevala ta stališča. Ugotoviti bi še tudi želel, da je razprava, ki je bila opravljana v komisiji za lokalno samoupravo, šla v smeri, da je podprla vladni predlog oziroma se strinja s tem vladnim predlogom. Jaz pa lahko rečem, da se vlada strinja tudi s tistimi amandmaji, ki jih je sprejela komisija za lokalno samoupravo. Samo to, hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg81">Hvala lepa gospodu ministru. Predlog zakona je obravnavala komisija za lokalno samoupravo kot matično delovno telo. Proceduralno? Saj bom sedaj vprašal gospoda Trofenika, kaj je z gradivom, če ste to želeli. Prosim, gospod Mozetič.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg82">Jaz verjamem, da boste vprašali, ampak jaz se prej nisem hotel vključevati, ne pri glasovanju, ne pri tistih smešnih debatah o spremembi dnevnega reda. Ampak to je pač problem vodstva državnega zbora, ne moj problem.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg83">Ampak sedaj nimamo niti materialov, prosim. Nobenih stvari. Dajte prekiniti sejo, prosim, vsaj da bodo materiali. Tudi včeraj, ko je bil dan rezerviran za poslanske skupine, je bila ob 10.00 uri seja komisije za lokalno samoupravo. Jaz sem s predsednikom govoril, ni je mogel sklicati popoldne, ker so bile vse sobe zasedene. Ampak material smo dobili včeraj, predvčerajšnjim, komisija je govorila včeraj. Poslanske skupine niso imele časa niti, da se o čemerkoli pogovorijo. Jaz verjamem, da so se vse zmenili v vladi, ampak vlada še ni parlament. Vladajoče stranke tudi še niso parlament. Vse poslanske skupine skupaj in vsi poslanci predstavljamo parlament. Ne bom prosil ne za odmor, nič ne bom prosil. Prosim pa, da predsednik državnega zbora dejansko ugotovi, da ni pogojev za delo in da vsaj toliko prekine, da bodo ustvarjeni vsebinski pogoji za delo na teh zakonih.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg84">Hvala lepa gospodu Mozetiču. Vsekakor bomo to storili. Seveda pa zavračam kakršnokoli odgovornost vodenja državnega zbora. Če kdo od poslancev predlaga spremembo točk dnevnega reda in če večina državnega zbora tako odloči, jaz pri tem nimam nič. Lepo vas prosim, da ste korektni tudi do predsedujočega.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg85">Sprašujem predsednika komisije za lokalno samoupravo, če lahko pojasni, kdaj bo pripravljeno gradivo. Kajti smo v drugi obravnavi tega zakona in je razumljivo, da poslanke in poslanci morajo imeti pred seboj tudi pregled amandmajev poleg poročila matičnega delovnega telesa. Prosim, gospod Trofenik.</seg>
             </u>
             <note type="speaker">VILI TROFENIK:</note>
-            <u who="#SDZ2.TrofenikVili" ana="#regular">
+            <u who="#TrofenikVili">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg86">Hvala za besedo. Jaz sem pač v zadregi. Gradivo se je delalo sinoči v pozne nočne ure, služba nadaljuje in jaz predlagam, da prekinete sejo. Komisija se je potrudila, kljub temu, da so bile take razmere, da smo se morali preseliti v to dvorano, ker ni bilo primernega prostora v celi zgradbi državnega zbora, in ne vidim drugega izhoda, kot da se seja prekine.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg87">Kolegice in kolegi! Sejo prekinjam do 12.00 ure. Nadaljujemo ob 12.00 uri. Z 2. točko dnevnega reda.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 10.40 uri in se je nadaljevala ob 12.11 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg88">Smo pri 2. točki dnevnega reda. Preden odprem razpravo, bi prosil, da ugotovimo prisotnost v dvorani. Ugotavljamo prisotnost. Prosim, da se umirite. Ugotovimo prisotnost!</seg>
                <note>56 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg89">Ugotavljam, da je državni zbor sklepčen in lahko nadaljuje delo in odloča.</seg>
@@ -640,25 +621,25 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg93">Prosim, gospod Trofenik.</seg>
             </u>
             <note type="speaker">VILI TROFENIK:</note>
-            <u who="#SDZ2.TrofenikVili" ana="#regular">
+            <u who="#TrofenikVili">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg94">Hvala za besedo. Uvodoma bom pač povedal, da moje poročilo ne bo tako dolgo, da bi razdelili gradivo, ker enostavno ni razlogov za to.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg95">Komisija za lokalno samoupravo je ugotovila, da je predlagatelj v pripravi po prvem branju, to se pravi zakona za drugo branje, upošteval praviloma večino pripomb, ki so bile izražene v prvi obravnavi zakona v državnem zboru.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg96">Glede na pripombe sekretariata za zakonodajo in pravne zadeve je komisija povzela nekatere pripombe kot lastne amandmaje, ki so redakcijske narave. In seveda pri tem prevzela tudi nekatere amandmaje, ki so jih predlagali poslanci, kot svoje, s tem, da s sprejetimi amandmaji, ki jih sprejema komisija ne glede, ali so posledica redakcijskih naporov ali gre za ideje, ki so jih predlagali kolegi poslanci, pa s temi amandmaji ne posega v koncept samega zakona.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg97">Komisija predlaga državnemu zboru, da predlog zakona skupno z amandmaji matičnega delovnega telesa sprejme, in seveda, če bo sprejet v drugem branju in predloženi amandmaji, tudi predlaga komisija državnemu zboru oziroma vodstvu državnega zbora, da se uvrsti zakon v tretje branje v najkrajšem možnem času, po možnosti na izredno sejo, ki bi bila še v mesecu juliju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg98">Hvala lepa, gospod Trofenik. V tem času, v zadnjih minutah dobesedno dežujejo dodatni amandmaji k zakonu o spremembah in dopolnitvah zakona o lokalni samoupravi, druga obravnava. Okrog 10 novih amandmajev smo prejeli.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg99">Spoštovane kolegice in kolegi! Predlagam, da se odločimo o naslednjem <gap reason="inaudible"/> Očitno so tri točke dnevnega reda povezane praktično z enim od delovnih teles državnega zbora, ki je zelo obremenjeno. Prav tako se je pojavilo nekaj tehničnih težav pri samem programu Lotus Notes, prek katerega se vlagajo amandmaji. Nekateri amandmaji, ki so bili sedaj vloženi v zadnji uri, so tudi po ocenah strokovnih služb državnega zbora pomanjkljivo vloženi oziroma napačno vloženi. Prav tako so nekateri vsebinske narave, in če bi želeli poslanke in poslanci dobiti celovit pregled vseh amandmajev v enem tekstu, potem sedaj ne moremo nadaljevati dela.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg100">Toda preden bi se odločili, kako bomo nadaljevali delo, pa se pojavlja še eno vprašanje. Glede na vsebino teh amandmajev, ki jih je tudi že pregledal sekretariat za zakonodajo in pravne zadeve državnega zbora, le-ta meni, da bi bilo smotrno in logično, da se do njih opredeli tudi matično delovno telo. Torej, da ne bi prišlo potem do tega predloga ob 14.30 uri, ampak da to sedaj naredimo.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg101">Bi lahko prosil gospo Bitenčevo, če želi pojasniti.</seg>
             </u>
             <note type="speaker">TINA BITENC-PENGOV:</note>
-            <u who="#SDZ2.BitencPengovTina" ana="#regular">
+            <u who="#BitencPengovTina">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg102">Gospod predsednik, spoštovani zbor! Amandmajev je bilo v kratkem času pred tem trenutkom precej vloženih. Sekretariat jih ni uspel vseh pregledati, ali so v formalnem smislu pravilno locirani v zakonski tekst in ali, bom rekla, so skladni s konceptom, kakršnega prinaša predlog zakona. Ena od naših sugestij je bila, da se ti amandmaji pregledajo v matičnem delovnem telesu, kjer tudi mi lahko ustno sodelujemo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg103">Hvala lepa, gospa Bitenčeva. Dovolite mi, da sam torej predlagam tudi proceduralni sklep, da se pred nadaljevanjem seje, ki bo ob 14.30, sestane matično delovno telo, torej komisija državnega zbora za lokalno samoupravo in se do vloženih amandmajev tudi opredeli.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg104">Gospod predsednik Trofenik predlaga, da je seja te komisije ob 13. uri v sobi 217. Bomo preverili, v katerem prostoru.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg105">Torej ta proceduralni predlog dajem na glasovanje. Ugotovimo prisotnost!</seg>
@@ -672,17 +653,17 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 12.20 uri in se je nadaljevala ob 14.55 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg110">Pravkar smo imeli sejo kolegija, na kateri smo se poskušali dogovoriti za dnevni red 10. redne seje.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg111">Ugotovimo prisotnost! 62 poslank in poslancev. Državni zbor je sklepčen in lahko odloča.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg112">Smo torej pri 2. točki dnevnega reda, pri obravnavi predloga zakona o spremembah in dopolnitvah zakona o lokalni samoupravi. Državni zbor je to točko prekinil ob proceduralnem sklepu, da se ponovno sestane matično delovno telo in obravnava ter se opredeli do vloženih amandmajev. Prosim predsednika komisije, gospoda Trofenika, da poda poročilo.</seg>
             </u>
             <note type="speaker">VILI TROFENIK:</note>
-            <u who="#SDZ2.TrofenikVili" ana="#regular">
+            <u who="#TrofenikVili">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg113">Hvala za besedo. Komisija za lokalno samoupravo se je sestala in obravnavala vložene amandmaje, ki so jih vložili poslanci oziroma poslanske skupine. Moram povedati, da je bilo naknadno vloženih 23 amandmajev k predlogu zakona o spremembah zakona o lokalni samoupravi. Komisija ni podprla nobenega izmed amandmajev, ki so bili vloženi naknadno, oziroma je nekatere zavrnila soglasno, nekatere pa z večino, tako da ne predlaga državnemu zboru, da sprejme kateregakoli izmed naknadno vloženih amandmajev, ki so priloga k poročilu, ki ste ga dobili na dopoldanskem delu seje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg114">Hvala lepa gospodu Trofeniku. Poslanci smo prej na klop prejeli tudi poročilo matičnega delovnega telesa o spremembah in dopolnitvah zakona o lokalni samoupravi. Poročilo vsebuje tudi opredelitev do amandmajev, ki so bili vloženi ob prvi obravnavi v komisiji. Sedaj je gospod Trofenik tudi povedal stališče komisije do dodatno vloženih amandmajev.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg115">Sprašujem poslanke in poslance, ali se strinjate, da državni zbor prične z obravnavo, da torej nadaljujemo z obravnavo te točke dnevnega reda, da najprej pogledamo poročilo, ki je pisno, in da skrbno obravnavamo tudi vsa vložena dopolnila, ki so prišla kasneje na mizo, da ne bi bilo kakršnekoli nejasnosti pri odločanju o amandmajih. Ne vidim nasprotovanja. Zato predlagam, da se lotimo dela.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg116">Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
@@ -719,7 +700,7 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg135">Za nov 4.a člen je komisija vložila amandma, ki se glasi: V 20. členu se črta besedilo "in druga". Amandma je uskladitvene narave. Želi kdo besedo o novem a4. členu? Prosim, gospod Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg136">Hvala lepa. Spoštovani državni zbor! Amandma k 4.a členu, če dovolite, bi malo komentiral. Dejansko je vlada predlagala oziroma je verjetno tudi odbor to sprejel, da bi se 21. člen spremenil. Ampak po moji presoji, ko sem poskušal te stvari narediti čim bolj transparentne, sem ugotavljal, da ni umestno kar tako sredi 21. člena dodati neko besedilo oziroma priključiti k obstoječemu besedilu določeno novo besedilo, ki tako rekoč mogoče s tisto alineo, ki je tukaj predlagana, ki je obstoječa v osnovnem zakonu, nima nobene zveze. Menim, da je zelo nerodno, če to, kot je opredeljeno v 21. členu - dovolite, da preberem: "omogoča pogoje za gospodarski razvoj občine". To je ena alinea, ki občinam dovoljuje oziroma omogoča, da urejajo tudi gospodarske probleme v občini. Ker sem pač menil, da bi k tej alinei bilo zelo primerno, če bi se dodalo - kar je že bilo enkrat, kot se spomnim, ko sem bil v komisiji za lokalno samoupravo, kjer smo se pogovarjali, da bi bilo dobro, da bi zraven vključili, k tej alinei ali pa vsaj nekako v zakon uvrstili, tudi ukvarjanje občine z malim gospodarstvom oziroma drobnim gospodarstvom. Seveda v ta resor spada potem tudi gostinstvo in turizem. Trdno sem prepričan, da občina pri zagotavljanju vseh teh pogojev delovanja malega gospodarstva, gostinstva in turizma ne more peljati neke svoje lokalne politike, ampak da mora tukaj upoštevati oziroma biti usklajena z državnimi organi in ministrstvi, in da bi bilo prav, da je ta alinea tako rekoč zaključena.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg137">No, seveda sem pa tudi predlagal, da bi za področje kmetijstva pa dali novo alineo, kajti menim, da je področje kmetijstva tisto, ki si zasluži novo alineo, svojo, in ne more biti vključeno pod alineo gospodarskega razvoja in malega gospodarstva. Seveda, tako kot sem tudi v obrazložitvi napisal, kmetijstvo do zdaj v osnovnem zakonu in tudi v občinskih statutih, predvsem pa v osnovnem zakonu ni bilo opredeljeno. Mislim, da si zasluži to, da bi bila posebna alinea za področje kmetijstva, ker je tudi ministrstvo popolnoma drugače oblikovano oziroma imamo posebno ministrstvo za izvajanje nalog s področja kmetijstva. Tako, da sem v bistvu samo malo bolj transparentno hotel narediti iz tistega predloga, ki ga je predlagala vlada, kjer je napisala, da bi se - če zdajle preberem celotno alineo, kar je vlada predlagala, bi se glasila: "- omogoča pogoje za gospodarski razvoj občine in v skladu z zakonom izvaja naloge s področja gostinstva, turizma in kmetijstva." Mislim, da se to lepo ne sliši, in zdajle me zanima, čeprav je komisija za lokalno samoupravo nekako ta amandma razglasila kot nesprejemljivega, bi prosil vlado, če meni oziroma naj obrazloži, če meni, da ni bolj pravično in bolj pošteno, pa tudi bolj pregledno, da bi ti dve dejavnosti, se pravi, gospodarstvo in kmetijstvo, bili v alineah ločeni. Po mojem mišljenju bi bilo prav, da se to ločeno napiše, da ne bi bilo vse stlačeno v eno alineo.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg138">Jaz bi prosil za mnenje vlade; če ne nasprotuje, naj pač tukaj pove. Potem naj tudi državni zbor v skladu z mnenjem vlade oblikuje oziroma sprejme odločitev.</seg>
@@ -728,16 +709,16 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg141">Menim, da bi bilo prav, da se ta moja sprememba upošteva oziroma predlog poslanske skupine SDS in da sprejmemo nekoliko boljšo opredelitev, kot je bila opredeljena v predlogu, ki ga je predlagala vlada. Samo toliko o tem in prosim za obrazložitev vlade, če ne bo predolgo trajalo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg142">Hvala lepa, gospod Kelemina. Torej v državnem zboru je kot v čebelnjaku. Prosim, da bi poskušali poslušati razpravljalce. Po drugi strani mi je pa razumljivo, da tudi poskušate pozorno slediti razpravi in tudi slediti amandmajem k spremembi zakona o osnovnem zakonu.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg143">Prosim za pozornost in potrpežljivost. Sedaj smo preleteli, smo pri novem a4. členu. Gospod Kelemina je razpravljal že o amandmaju, ki ga je vložil k 4.a členu. Torej vaša razprava bo pač upoštevana, ko bomo prišli do amandmaja k 4.a členu. Želi kdo besedo o novem a4. členu in amandmaju, ki je bil vložen? Predlagam, da se najprej do tega opredelimo, potem pa nadaljujemo. Proceduralno, gospod Špiletič.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg144">Predsedujoči! Jaz bi zgolj opozoril, da je izredno težko slediti kakršnemukoli glasovanju, ker amandmajev oziroma pregleda amandmajev še vedno nimamo na mizi. Imamo sicer gradivo matičnega delovnega telesa, kjer so pa seveda lepo našteti tisti amandmaji, ki jih matično delovno telo podpira. Nimamo pa vseh in glasovati brez pregleda je težko, ker v nasprotnem bomo vsi brskali, da bomo na mizi sploh izpraskali amandma, o katerem bomo glasovali. V nasprotnem bomo glasovali na pamet. In menim, da tak način dela ni korekten, pa kljub temu, da smo danes že zapravili 3 ure zaradi tega, ker gradivo ni bilo pripravljeno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg145">Hvala lepa. Jaz sem prej vprašal, da bi pričeli, da bi prebrali vsak amandma, se do njega opredelili. Če boste nasprotovali, pač ne bomo mogli nadaljevati. Kot vam je znano, je bilo vloženih tik pred zdajci več kot 20 amandmajev, to je razumljivo, da je nemogoče v trenutku potrem pripraviti pregled. Obstaja možnost, da o vsakem členu preberemo vse amandmaje in se do njih opredelimo.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg146">Jaz se obvežem, da to naredim. Se strinjate? Hvala lepa. Torej vse amandmaje bomo prebrali, tako, da ne bi nihče imel občutka, da smo kakorkoli z proceduro želeli ustvariti še večjo nejasnost, kot v bistvu je, ker je materija zelo zapletena.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg147">Smo pri a4. členu. Opozarjam a4. členu. To je v bistvu amandma za nov a4. člen, predlagatelj je komisija za lokalno samoupravo. Razlika je med a4. in 4.a. Saj je to zelo jasno. Najprej bomo glasovali o tem, saj potem se bo itak preštevilčilo za tretje branje. To je naša običajna praksa. Želi še kdo besedo?</seg>
@@ -752,22 +733,22 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg152">Skupina poslancev s prvopodpisanim Avšič Jožetom je vložila tudi amandma, ki se glasi: Doda se novi 4.a člen, ki se glasi: "16.a člen se črta." 16.a člen osnovnega zakona. Gospod Avšič.</seg>
             </u>
             <note type="speaker">JOŽE AVŠIČ:</note>
-            <u who="#SDZ2.AvšičJože" ana="#regular">
+            <u who="#AvšičJože">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg153">Gospod predsednik, vložen je amandma tudi k 4. členu zakona, ki je povezan s tem, tako da se ta sploh ne more brez amandmaja k 4. členu obravnavati, ker je smiselno vezan na 4.a člen. Sprememba <gap reason="inaudible"/>
                </seg>
                <note>Posvetuje se sekretarko.</note>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg154">Še eden je.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg155">Kolegice in kolegi, ugotavljam, da ne bo možno na ta način nadaljevati z delom, kajti stvari so preveč zapletene. Amandmaji še vedno prihajajo tako rekoč na člene, ki jih obravnavamo. Tako bom prisiljen, da bom to točko prekinil, da pripravimo kvaliteten pregled amandmajev. To so zelo pomembne zadeve. Sedaj nastopi vprašanje, s katero temo lahko nadaljujemo. Imamo prestavljeno 1. točko dnevnega reda. Ni pripravljeno gradivo. Trenutek, kolegice in kolegi. Prekinjam 2. točko dnevnega reda. Nadaljevali jo bomo, ko bomo prejeli pregled amandmajev. Opozarjam, da za ta zaplet ne krivim strokovnih služb komisije za lokalno samoupravo. Predlagam pa, danes je državni zbor izglasoval sklep, da po 2. točki gremo na 3. in potem na 4. Ker nimamo pripravljenih gradiv za 3. in 4. točko dnevnega reda, je edina možnost, da državni zbor opravi obravnavo o 1. točki dnevnega reda vsaj splošno razpravo. Gospod Bajc ima proceduralni predlog.</seg>
             </u>
             <note type="speaker">JOSIP BAJC:</note>
-            <u who="#SDZ2.BajcJosip" ana="#regular">
+            <u who="#BajcJosip">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg156">Hvala lepa gospod predsednik. Dejansko si povzel to, kar sem hotel predlagati, to je proceduralni predlogda glede na to, da nimamo kompletnih gradiv, to smo sami ugotovili, za 2., 3. in 4. točko, to se pravi, naslednja točka, za katero pa imamo popolna gradiva s pregledom vloženih amandmajev, da pristopimo k 1. točki dnevnega reda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg157">Hvala lepa. Ali kdo nasprotuje temu predlogu? Proceduralni predlog gospoda Bajca dajem na glasovanje. Ugotavljamo prisotnost! Državni zbor se lahko z novim glasovanjem odloči drugače, seveda. Spoštovane kolegice in kolegi, da bo jasno, v nasprotnem primeru danes danes zaključimo z delom, kajti nimamo nobenih drugih točk pripravljenih. In mislim, da imamo za 1. točko, ker smo na 9. seji razpravo odprli, prijavljene razpravljavce, da ni nobenih razlogov, da ne bi opravili splošne razprave o tem zakonu. In šele, ko pridemo do glasovanja o amandmajih, vidim smisel, da se odločamo o nadaljnjem delu. Mislim pa, da so vsi pogoji, da državni zbor opravi vsaj splošno razpravo k 1. točki dnevnega reda.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg158">Torej predlog gospoda Bajca, da državni zbor preide na 1. točko dnevnega reda, dajem na glasovanje. Ugotavljamo prisotnost.</seg>
                <note>54 prisotnih.</note>
@@ -785,48 +766,48 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg167">Gospod Rudi Moge ima besedo.</seg>
             </u>
             <note type="speaker">RUDOLF MOGE:</note>
-            <u who="#SDZ2.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg168">Predsedujoči, hvala lepa za besedo. Mislim, da to, kar se dogaja v državnem zboru v zadnjem času ni v čast ne nam poslancem in ne - ne nam poslancem - govorim nasplošno, kajti odločanje, zdajle o zakonu o financiranju občin, brez tega, da imamo mnenje vlade, kjer se gre za ogromne milijarde, ker je vprašanje o tem, kaj bo s slovensko kulturo, da o drugih stvareh ne govorim, je po mojem milo rečeno <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg169">Prosim, gospod Moge.</seg>
             </u>
             <note type="speaker">RUDOLF MOGE:</note>
-            <u who="#SDZ2.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg170">Ja, ne najdem pravega pridevnika ali pa glagola, kakorkoli bi temu rekel, ampak milo rečeno je tale reč, to kar zdajle počnemo z občinami in kar delamo je "rang" otroškega vrtca, ne pa državnega zbora. Opravičujem se otroškim vrtcem, ampak ne pa državnega zbora Republike Slovenije. Da sam, ko repleciram gospodu Trofeniku, govorim to, da to, kar je govoril na seji odbora za kulturo, šolstvo in šport, to kar je potem povzel na klubu moj kolega Janez Kopač, to kar je govoril potem minister za kulturo tudi na klubu gospod Jožef Školč, kaže na to, da situacija okoli amandmaja k 19.c členu in tista dohodnina od 30 na 35, še zdaleč niso takšne, da je poslancem bilo jasno o čem sploh lahko odločajo, kajti vsak ima, iz magnetogramov se da videti, drugačno mnenje o tem, o čem bodo lokalne skupnosti odločale, in kakšne ingerence bo še na tem področju imelo ministrstvo za kulturo. Mislim, da je treba kulturo razumeti, jo spoštovati, ne pa zapostavljati. In to slednje, ravno predlagatelji 19.c amandmaja delajo - bom tudi tiho kolega Vili Trofenik. Jaz se teh razprav tukajle, dokler ne bo mnenja vlade, ne bom udeleževal več, ne bom hodil gor, se mi zdijo deplasirane in tisti, ki pa mislijo, da so sposobni, zdaj v tem trenutku ta zakon sprejemat, brez tega, da bi se vlada o njem dogovorila, kaj o njem misli, pač naj to ravnanje, pa zaključke, ki bodo iz tega sledili, vzamejo na svoj hrbet.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg171">Jaz se v takšnem parlamentu, kjer kot poslanec nimam te možnosti, da bi dobil mnenje vlade k tako važnem zakonu, kot je to, in da bi o tem potem lahko razsodil, jaz se tegale tukaj ne mislim več udeleževat.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg172">Hvala lepa, za vašo repliko, gospod Moge. Ko smo pričeli s prvo obravnavo v okviru hitrega postopka, smo dali možnost, da bi predstavniki vlade spregovorili. Bili so prisotni in niso te možnosti izkoristili. Če se bodo predstavniki vlade želeli oglasiti, bodo dobili takoj besedo. Replika, gospod Boris Sovič. Ja. In gospod Trofenik. Prosim.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg173">Cenjene dame, spoštovani! Že zadnjič sem se prijavil za besedo, da bi repletiral spoštovanemu kolegu Trofeniku. Verjamem, da je predlog tega zakona nastal v dobri veri, nameri, da bi se v Sloveniji uredilo področje financiranja občin. Tudi jaz se strinjam, da je to področje bilo podvrženo mnogim spremembam, dopolnitvam in še marsičemu, kar gotovo ni izboljšalo transparentnosti ureditve. In tudi sam se strinjam, da so na tem področju problemi, ki jih kaže rešiti. Želel bi si pa, da bi te probleme reševali na ta način, da bi na neki osnovi, strinjam se, da je to, kar je gospod Trofenik predlagal, lahko osnova, vendarle odločali tako, da bi vključili tiste, ki so za to zainteresirani in pristojni. Mislim, da je velika pomanjkljivost, da v tem trenutku nimamo stališča vlade Republike Slovenije do tega kar ta zakon prinaša, zlasti pa do amandmajev, ki so v velikem številu na ta zakon bili vloženi.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg174">To onemogoča na nek način odločanje zlasti zaradi tega, ker nimamo podatka, kaj ta zakon pomeni za uresničevanje vladne politike na posameznih področjih. Vlada, mislim, da je dolžna, da nam pravzaprav predstavi, kaj to pomeni, tako za področje komunalnega gospodarstva kot za področje kulture, sociale in vseh ostalih vidikov. Dokler takšnega mnenja vlade nimamo, mislim, da ne bi bilo primerno, da bi o tem odločali.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg175">Drugo. Mi bi morali dobiti tudi mnenje stalne konference lokalnih skupnosti v Sloveniji. Če pri socialnih in nekaterih drugih zakonodajah plediramo za to, da bi dobili mnenje socialnih partnerjev in jih tudi respektirali, potem moramo tudi v tem primeru respektirati mnenje občin. Mi v tem trenutku ne poznamo, kakšno je mnenje občin v Republiki Sloveniji, izraženo skozi to njihovo organizacijo, stalno konferenco mest. Mi preprosto ne vemo, ali se občine s tem strinjajo ali ne. Z vsem spoštovanjem, seveda, do tukaj prisotnih županov, vendar bi težko rekli, da tukaj prisotni župani sami po sebi lahko v celoti predstavljajo vse slovenske občine, lahko v celoti izražajo mnenje, ki ga te občine imajo. In ker je stalna konferenca mest in občin oziroma lokalnih skupnosti v Sloveniji bila tista, ki je pravzaprav osnovni zakonski predlog tudi obravnavala, in kolikor vem, celo soglašala z njim, mislim, da bi bilo korektno, da bi ta organizacija bila seznanjena tudi z amandmaji, s sedanjo podobo zakona, in da bi imela možnost, da se o tem izreče. Če tega ne naredimo, potem velikemu številu slovenskih občin onemogočimo, da bi izrazile svoje mnenje k tej problematiki. Ker pa s tem v veliki meri posežemo, da ne rečem zarežemo v substanco mnogih občin, mislim, da takšno odločanje ne bi bilo korektno.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg176">Zaradi tega bi bil tudi moj predlog, da bi, preden se obravnava začne, torej preden se sklepanje začne, pridobili mnenje vlade Republike Slovenije in stalne konference lokalnih skupnosti v Republiki Sloveniji. Šele na tej osnovi bi potem lahko korektno, z mirno vestjo odločali o tej zelo pomembni problematiki. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg177">Hvala lepa. Gospod Sovič, če se strinjate, vaš predlog bom dal na glasovanje, preden bomo začeli odločati o posameznih amandmajih. Hvala lepa.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg178">Replika, gospod Mirko Zamernik.</seg>
             </u>
             <note type="speaker">BOGOMIR ZAMERNIK:</note>
-            <u who="#SDZ2.ZamernikBogomir" ana="#regular">
+            <u who="#ZamernikBogomir">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg179">Hvala lepa za besedo. Vprašal bi vas, kaj mislite, kaj si mislijo navadni smrtniki - podeželska politika, kot se je nekdo pred nedavnim izrazil, katere predstavnikov nas je vendarle veliko tukaj - ko gledajo te kontradiktorne zadeve.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg180">Pri 1. točki pri financiranju občin dajemo stimulacijo za združevanje občin, 3 oziroma 6%, pri 3. točki iste izredne seje pa delamo 35 novih občin! Zato me ne čudi, če se že tu pri zakonodaji poslužujemo take kontradiktornosti, da sta si spoštovana kolega, vodja poslanske skupine in predsednik komisije za lokalno samoupravo tudi v kontradikciji. Vodja poslanske skupine Slovenske ljudske stranke je dejal v imenu poslanske skupine, da bo potrebno s posebnimi zakoni ali pa s tem zakonom, ki ga zdaj obravnavamo, zagotoviti obstoj tudi tistim območjem, ki z lastnimi sredstvi ne bodo mogla preživeti. Predsednik komisije za lokalno samoupravo, cenjeni kolega Trofenik - zaradi tega tudi repliciram - pa je v svojem izvajanju dejal, da predlog zakona jemlje finančno izravnavo tistim, ki do le-te niso bili upravičeni.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg181">Govoril bom na svojem primeru, žal pa to ni edini primer; če bi bil edini primer, bi ga lahko enostavno rešili. A veste, kako? Glejte, Dars imamo fiktivno v Celju. Kakšne stroške to povzroča, vemo vsi. Na enako fiktiven način bi lahko preselili recimo polovico državnih sekretarjev v našo občino; s tem bi pridobili v proračun občine, če vemo, da je bruto plača državnega sekretarja 800.000 tolarjev mesečno, letno bi pri teh 35% pridobili približno, če bi upoštevali, da je tam 30 državnih sekretarjev, 27 milijonov tolarjev - plus 47, kolikor imamo zdaj lastnih prihodkov krat dva, ker do tega smo upravičeni pri finančni izravnavi, in prišli bi na tistih 145 milijonov, 148 milijonov, kolikor je po izračunu ob primerni porabi. Tako pa zadeva ni taka. Ampak se občinam, kakršna je naša, v prvem letu glede na izračunano porabo jemlje 20 milijonov, ker pa je bilo milostno in se je potem še dal stolpec, ki govori o dodatni finančni izravnavi, 20 milijonov, ne vem, na osnovi česa, zakaj ne 30, zakaj ne 40 ali 15. Tako v prvem letu izgubimo 12 milijonov, potem pa, to je za tisto prehodno obdobje, v naslednjih štirih letih pa pridemo na 89 milijonov. Pravim, da žal to ni edini primer in zato mi zadeva ne gre skupaj. Ta zakon bo začel veljati takoj, ker se sprejema po hitrem postopku in nima smisla sanjati o nekem posebnem zakonu, o katerem je govoril vaš vodja poslanske skupine, da se bodo zadeve rešile.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg182">Zato se strinjam, da bi bilo stvar potrebno premisliti in iti z normalnim postopkom.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg183">Hvala, gospod Zamernik, za vašo repliko. Z repliko se oglaša gospod Trofenik, za njim gospod Mozetič.</seg>
             </u>
             <note type="speaker">VILI TROFENIK:</note>
-            <u who="#SDZ2.TrofenikVili" ana="#regular">
+            <u who="#TrofenikVili">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg184">Hvala lepa. Ne bom na vse stvari, ki so netočne in za katere človek težko ugotovi, ali izhajajo iz nepoznavanja ali pa namerno zavajajo. Ali so namerno zavajajoče, ampak vseeno.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg185">Kolega Moge, nikakor ni možno pristati na vašo vrednostno oceno, da nekdo nima razumevanja kulture in da je ogrožena kultura zaradi nekaterih rešitev, ki so v tem zakonu predvidene. Veste, če je bilo slovenskim občinam v celoti zaupana skrb za predšolsko vzgojo, tako v pomenu in obsegu, finančnem, potem bilančni premik približno 5 milijard tolarjev v cenah leta 1996 ne more ogroziti kulture in to enostavno ni res. Odrekate odgovornost in sposobnost odločati o nekaterih, poudarjam, o nekaterih kulturnih programih, katerih ustanovitelji izvajalcev so lokalne skupnosti istim ustanoviteljem, to se pravi odrekate jim opravilno sposobnost. Povejte lepo, se vam opravičujem, zelo direktno, da se borite za pridobljene pravice sredine, iz katere izhajate in te pridobljene pravice so daleč nad slovenskim povprečjem. Na žalost je to čista resnica in jo povejmo v obraz, ne da jo zavijamo v nek drug celofan.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg186">Podobno, kolega Sovič, spoštovani, enostavno ne razumem, da si izmišljujete "kvazi" argumente. Jaz sem član predsedstva stalne konference. Na žalost stalna konferenca o lokalni skupnosti ne zastopa pretežnega dela slovenskih lokalnih skupnosti in zato na žalost ne more biti partner na relaciji vis-a-vis državi, vladi ali državnemu zboru. Oprostite, to ni noben, jaz bi si želel, da bi bila asociacija, katerakoli, odgovoren partner, vendar v danem trenutku stalna konferenca ni. Drugič ste, spoštovani kolega Sovič, prezrli, da je prvič od uvedbe lokalne samouprave bilo izkoriščeno zakonsko določilo, da gredo zakoni, ki se tičejo lokalnih skupnosti, v razpravo v lokalne skupnosti. Ta razprava je, če se ne motim, bila zaključena tudi o tem zakonu 19., mislim da februarja letošnjega leta. In vse lokalne skupnosti oziroma njihovi organi so imeli možnost se odgovorno opredeliti do predvidenih zakonskih rešitev.</seg>
@@ -834,33 +815,33 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg188">Seveda je zakon o financiranju eden izmed zakonov, ki utemeljuje oziroma omogoča denarno podlago ali pa materialno podlago. Drugi je seveda zakon, kakorkoli bomo rekli o skladnejšem regionalnem razvoju ali kakorkoli čemu drugemu. To je zakon, ki je na poti in ki je nujno potreben in za tem ni nobene špekulacije. Se opravičujem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg189">Hvala lepa, gospod Trofenik. Replik je še kar nekaj. Sledi gospod Mozetič, za njim gospod Kontič.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg190">Hvala lepa za besedo. No, jaz bom gospodu Mogetu - ampak niti ni toliko replika, je bolj neka dopolnitev, ali pa moja misel na njegovo misel, ki jo je tukaj izrekel. V večini se v bistvu strinjam s tistim, kar je on povedal. Jaz nisem bil nikoli v otroškem vrtcu, tako da ne vem direktno, tudi moji otroci ne, ne vem, kako je v otroškem vrtcu. Vendar, če je tako kot je danes v državnem zboru, se nič ne čudim, da potem zrastejo taki poslanci kot smo zrasli. Ker to dejansko kaže, ampak ne zaradi poslancev, ne zaradi državnega zbora, pač pa zaradi vseh spletov teh okoliščin, kako ta zadeva teče. V vsakem otroškem vrtcu so vrtnarice, rečejo na Koroškem, mi rečemo negovalke. Če so vrtnarice slabe, potem verjetno je tudi kaj drugega slabega.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg191">Ampak glede tistega amandmaja, ki ga je gospod Moge povedal. Jaz mislim, niti se ne spuščam v vsebino tistega amandmaja, ampak jaz mislim, da ga dejansko v tem zakonu ne moremo sprejeti. Zakon govori o financiranju občin, mi pa posegamo v nek drug zakon, zakon o kulturi ali ne vem, kako se bo imenoval, kateri bo to stvar uredil, vsebinsko, matično. Če bo prenesel na občino pristojnost, potem bo jasno potrebno posledično, posledica tega bo, da bo treba zagotoviti tudi finance. Mi pa zdaj s finančnim zakonom prenašamo tudi neke pristojnosti. Jaz mislim, da je pravno sistemsko tak amandma nesprejemljiv, ne glede na vsebino in jaz se strinjam s tem, da je občina morda v določenih segmentih ali pa, če ne že vse, večina, glede na moč, ki jo imajo, celo morda bolj sposobni kulturo zagotavljati kot, ne vem, imaginarna država, ampak to je čisto drugo vprašanje.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg192">Zdaj, jaz bi pa rad še eno drugo stvar. Tukaj se dajejo ocene, da je zakon za ene občine dober iz te formule, za druge slab, za ene tako, za druge drugače. Po drugi strani pa, in finančno ministrstvo in tudi tukaj sem slišal, da ni jasnih podatkov, da se v resnici ne da točno izračunati. Kar pomeni, to se ocenjuje, morda bo boljše, morda ne bo boljše. Tako da izračunov pa ni, izračunov ni, ne za vse formule, ne za vse načine, ne za vse amandmaje.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg193">In samo še eno. Danes smo pozdravili predstavnike, ki so na tej mednarodni konferenci, o dilemah in težavah pri vodenju parlamentov. Škoda, da sedijo dol v teh dvoranah in razpravljajo o svojih teoretičnih zadevah. Če bi sedeli na našem balkonu, bi imeli praktično izkušnjo, kako se parlamenta ne vodi in kako se v parlamentu ne dela.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg194">Hvala lepa, za vašo repliko. Repliko ima gospod Kontič, za njim gospod Partljič. Vsekakor pa gospod Mozetič, bomo zelo resno preučili vaše mnenje o naravi amandmaja za novi 19.c člen. Prosim, gospod Kontič.</seg>
             </u>
             <note type="speaker">BOJAN KONTIČ:</note>
-            <u who="#SDZ2.KontičBojan" ana="#regular">
+            <u who="#KontičBojan">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg195">Hvala lepa, gospod predsednik. Lep pozdrav vsem prisotnim. Da zadeve res ne tečejo v tem državnem zboru, tako kot bi morale, lahko podkrepim že s tem, da so se posamezni poslanci za repliko prijavili na 9. redni seji, besedo so dobili pa na 23. izredni seji. Kar mislim, da že pove svoje.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg196">Naslednje, podpiram - in zato sem se tudi prijavil k repliki - razpravo poslanskega kolega Soviča. Da bi tu bilo potrebno stališče vlade, čeprav jaz mislim osebno, da tu ne gre samo za stališče oziroma mnenje vlade, ampak da bi ta zakon kot takšen morala pripraviti vlada, kot izvršilna veja oblasti, in bi verjetno zakon tudi nekako drugače lahko obravnavali. Zato pa sedaj prihaja do zapletov. Vsekakor pa v primeru, ko je predlagatelj skupina poslancev, oziroma poslanec, pa bi potrebovali mnenje vlade, čeprav bi rad opozoril tudi na to zadevo.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg197">Včeraj sem spremljal Odmeve na televiziji Slovenija in sem imel priložnost, gospoda ministra dr. Grafenaurja spremljati pri tem, ko je razlagal, kako nastajajo nove občine. In je tudi nekako bilo iz tega moč razbrati, da vlada že predlaga pametne rešitve, ampak da posamezni poslanci in potem državni zbor pa sprejemajo določene neumnosti, za katere pa ni odgovorna vlada.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg198">Jaz mislim, da tak način dela v tem državnem zboru ni sprejemljiv. Ravno zaradi tega sem želel na to opozoriti in se zato tudi prijavil k repliki.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg199">V bistvu je bila to replika na izjavo gospoda ministra v Odmevih. Repliko ima gospod Partljič, za njim gospod Moge. Tako sem vas razumel. Prosim gospod Partljič.</seg>
             </u>
             <note type="speaker">ANTON PARTLJIČ:</note>
-            <u who="#SDZ2.PartljičAnton" ana="#regular">
+            <u who="#PartljičAnton">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg200">Gospod Trofenik, poskusil vam bom korektno replicirati.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg201">Ni naš namen z vztrajanjem, da naj se dobi mnenje vlade, poskus, da se ta zakon ne sprejme ali da ga zminiramo. To bi rad rekel prvo. Drugo, ne bom, zadnjič sem nekaj govoril o kulturi in o mariborskem SNG, če ga sedaj primerjam s to dohodnino, ki bi več prišla. Mislim, da se to na neki točki tudi razrešuje in ne bi sedaj diskutiral na ta način. Morda ni več niti potrebno.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg202">Strinjam se tudi z vami in s politiko gospoda Školjča, ki jo je povedal pri tako imenovanem "hearingu". Da misli, da je treba kulturo decentralizirati, dati več denarja, tako kot se reče, na teren, s čimer pa tudi malo več možnosti, malo več pravic in kompetenc. Tudi s to politiko se strinjam in a priori, torej ne nasprotujem temu, kar govorite vi, ampak vam pritrjujem. Seveda sem v zadregi okoli vaših izračunov o tem, da so pri izravnavi nekatere občine dobile neprimerno več in druge manj in ob vašem dokazovanju, da gre pri tem za Maribor.</seg>
@@ -871,30 +852,30 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg206">Mislim pa, da so to resne stvari in če pri drugih stvareh zahtevamo ta mnenja, da je nemogoče brez tega naprej. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg207">Hvala lepa, gospod Partljič. Ko govorite o mnenju vlade, ali pričakujete ustno stališče vlade? Tukaj imamo predstavnike vlade, ki so za to točko pooblaščeni in jim bom dal tudi besedo.</seg>
             </u>
             <note type="speaker">ANTON PARTLJIČ:</note>
-            <u who="#SDZ2.PartljičAnton" ana="#regular">
+            <u who="#PartljičAnton">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg208">Ne. Jaz pričakujem, da povemo na glas, da prenehamo v kulturnih resorjih pripravljati nacionalni kulturni program. Predlagam, da to pregledamo, se mu odpovedujemo, če ga mi danes tu izpostavljamo. Sam sem se udeležil nekaj resornih sestankov, ki jih ministrstvo vodi po posameznih področjih za pripravo kulturnega programa. Danes je imel minister soočenje z direktorji zavodov, ki so bili v Ljubljani in sem jih na ulicah srečeval in so mi poročali, kaj so z ministrom Školčem govorili. Mi pa da ne bi bili tu informirani s prve roke od ministra za kulture - tega si ne znam predstavljati in bom tudi nehal. Mislim, da je to nekompetentno delovanje tudi z vidika ministra, ki bi moral tu sedeti in mi dati tu odgovor. Jaz ne dvomim v kompetence gospoda Grafenauerja, niti malo, ampak imamo tudi kulturnega ministra in me njegovo mnenje zanima. Dvomim, da si boste vi tvegali govoriti v imenu ministra za kulturo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg209">Hvala lepa, gospod Partljič. Replika, gospod Moge, za njim gospod Sovič. Tudi gospod Kelemina in gospod Zamernik sta prijavljena.</seg>
             </u>
             <note type="speaker">RUDOLF MOGE:</note>
-            <u who="#SDZ2.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg210">Predsednik, prav lepa hvala za besedo. Prav v tem je tisti "catch 22", kot je Partljič govoril. Sam kot poslanec, če sprejemam neke odločitve, moram biti potem, ko sem sprejel, ljudem sposoben razložiti, kaj sem sprejel. Ne pa, da sprejemam nekaj, o čemer sploh ne vem, kaj naj bi sprejel. Vi me silite, gospod Vili Trofenik, v odločitve, ki jih ne znate strokovno utemeljevati s področja kulture. Še enkrat vam to povem. On je meni govoril o kulturni reči to, da imam jaz narobe to, kar trdim o kulturi in da on s temi rečmi zna vse to razložiti in povedati, da sem jaz proti centralizaciji kulture.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg211">Poglejte, vi ob tem, ko se bodo spremenili statusi vseh teh javnih zavodov, niste niti stroke vprašali, niti kulturniške zbornice, niti sveta za kulturo, niti ministrstva, niti javnih zavodov o tem; jaz pa skoraj od vseh javnih zavodov dobivam poročila. Tukaj je samo eno izmed poročil, ki ga je skupnost muzejev Slovenije dala, ki pravi tole: "Mnenja smo, da ta novo predlagani zakon ni dober za nas, zato apeliram na vas, da skušate v parlamentarni razpravi opozoriti na vse negativne stvari, ki jih v zvezi s tem vidimo muzealci in s tem preprečite njegovo sprejetje. Tako pomembno dejanje kot je financiranje kulturnih ustanov, ne more biti rešeno mimogrede z zakonom o financiranju občin, kajti financiranje povleče za seboj tudi vsebinsko opredelitev oziroma programe delovanja."</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg212">Minister je imel danes, vsaj kot so mi povedali, "relata refera", sestanek z direktorji javnih zavodov na področju gledališča v Cankarjevem domu in je tam drugačne reči pripovedoval, kot to, kar ste predlagatelji tega amandmaja pripovedovali. Pravi, da bi šel v soustanoviteljstvo zavodov, da se ne bi financiranje preneslo vse na občine, ampak da bi on zadržal programski del. To pomeni, da že tukaj notri prihaja do razhajanj in da je tako poenostavljeno reševanje kulturne politike, kot je v tem zakonu, zame tukaj vsaj nesprejemljivo. To je ad 1.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg213">Ad 2. Gospod Hrastelj, tudi vi ste omenili, da se pač gleda lokalno in da se zavzemam za Maribor. Jaz bi samo tole želel povedati. V Mariboru pred leti, ko je ostal na dnu s TAM-om, s temi rečmi in tako naprej, z vsemi tistimi delavci - 20 tisoč zaposlenimi, bomo pač reševali, kakor smo mislili. Ampak ko so prišle volitve, gospodje moji, ko so prišle volitve, je pa ena stranka prišla v Maribor, je podpisala s študenti, kaj bo pomagala, je podpisala z županom mestne občine, na vseh nivojih je bila gor, na vseh panojih v Mariboru in zdajle, če daste tak amandma, po katerem dobijo dohodnin 50, 500 milijonov tolarjev ali 600, vzamete jih pa na področju kulture milijardo in pol, se mi zdi čisto golo sprenevedanje. Jaz bom pred temi ljudmi stal tamle in povedal, da sem se zavzemal, da to, kar bi sprejeli v takšnih dikciji, kot je tukajle, ni pošteno, vi, ki ste pa pogodbo podpisali s človekom, ki je gospod Trofenik bil danes z vami in z mano v tem zboru in ki vam je povedal, boste imeli pa popolnoma drugo vlogo pri drugih volitvah. Treba je tudi pogledati s te strani in Maribor, prosim, pustite s te strani zunaj take razprave.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg214">Hvala lepa, gospod Moge. Predlagam, da ohranimo normalne decibele pri komuniciranju. Besedo ima gospod Sovič za repliko, za njim gospod Zamernik. Prosim za mir v dvorani, kolegice in kolegi!</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg215">Hvala lepa. Zelo resno jemljem pripombe, ki jih je dal gospod spoštovani kolega Trofenik, zato ker mislim, da je <gap reason="inaudible"/> Ja, če bi vi malo tišje poslušali, bi bila stvar lažja. Skratka hotel sem povedati, da zelo resno jemljem pripombe, ki jih je dal spoštovani kolega Trofenik. Moram pa reči, da sta me dve zbodli. Prva je ta pripomba, ki na neki način meri na to, da smo na neki način skeptični do rešitev, ki jih ta zakon, zlasti pa amandmaji, prinaša, da smo pač skeptični zato, ker gledamo interese mesta, iz katerega izhajamo. Jaz tega seveda ne zanikam, seveda, v zakonu sem zelo skrbno pregledal in zlasti v amandmajih, ki so bili narejeni, kaj ta zakon in amandmaji prinašajo mestu Maribor. Predpostavljam, da je tudi vsak od vas to isto naredil za okolje, iz katerega prihaja in smo si verjetno tukaj enaki. In res je, da sem bil zelo zaskrbljen, ko sem videl, da ta zakon in nekateri amandmaji, ki so pripravljeni, mojemu mestu precej jemljejo. Mislim, da je razlika približno 10% in v mnogih razpravah sem poudaril, da si težko predstavljam, da lahko katerokoli mesto zelo enostavno prenese tako veliko razliko v financiranju, zlasti, če je mesto, tako kot Maribor, soočeno z resnimi gospodarskimi in socialnimi problemi.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg216">Vendar bi na tem mestu rad opozoril na nekaj drugega. To, kar se zdaj dogaja z Mariborom, s temi zakoni, s tem zakonom in amandmaji, ki so pripravljeni, se lahko jutri, spoštovani, zgodi s katerimkoli drugim mestom ali občino v Sloveniji. Izračuni, ki jih imamo, temeljijo na podatkih za leto 1996. Mi ne vemo, kaj bodo prinesli podatki za leto 1997. Mi ne vemo, kaj to pomeni lahko za naslednja leta. Torej tudi tisti, ki danes ocenjujejo, da jim ta zakon kaj prinaša, so lahko že v naslednjem letu v hudi zmoti. In seveda, če bi naj veljala predpostavka, da bi ljudje gledali predvsem na interese svojih občin, pač vljudno hočem opozoriti na to, da bodite previdni tudi tisti, ki ste v tem trenutku zadovoljni.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg217">Rad bi pa povedal še nekaj drugega. Kolega Trofenik je omenil, da je zakon bil v obravnavi v občinah. Že mogoče in že res, vendar so amandmaji, ki so zdaj pripravljeni, tako dramatično spremenili položaj v posameznih občinah in tudi v celoti, da je to, kar imamo zdaj pred seboj, nekaj čisto drugega. In mislim, da je korektno, če je že takrat, bi rekel bila občinam dana možnost, da se o tem izrečejo, da se izrečejo tudi zdaj; da preprosto najprej dobimo izračune k posameznim amandmajem, kaj pravzaprav ti amandmaji pomenijo za posamezne občine in za celoto, in da na nek način občinam in ljudem damo možnost, da se o tem izrečejo. Zlasti pa, in mislim, da je ta stvar zelo tehtna, da vidimo, kaj to pomeni na posameznih področjih. Nekorektno je, da mi sprejemamo nacionalne programe in še marsikaj drugega za posamezna področja, potem pa te z mnogimi drugimi akti do te mere razvrednotimo, da nimajo več nobenega smisla. Jaz sem že takrat, ko smo sprejemali zakon o programih na področju kulture opozoril - mislim, da je korektno, da je eden od poslancev opozoril na to, da je to sicer ena zgodba, druga zgodba so pa vsakokratni proračuni. Ampak zato mislim, da je pošteno, da ko te programe sprejemamo, to tudi vemo; in ni korektno, da danes kar z levo roko dramatično spreminjamo razmerje na posameznih področjih. Mi smo to že nekajkrat naredili in se nam to ni obneslo.</seg>
@@ -902,11 +883,11 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg219">Pa še to povem čisto odkrito: seveda, če nismo v stanju tega na nek način upoštevati, sem tudi jaz zelo skeptičen okoli tega, ali je smiselno zakon, takšen kot je zdaj pripravljen, z amandmaji, kot so na mizi, sploh sprejeti - ali ne bi bilo boljše to zadevo odložiti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg220">Hvala, gospod Sovič. Replika, gospod Zamernik, za njim gospod Trofenik.</seg>
             </u>
             <note type="speaker">BOGOMIR ZAMERNIK:</note>
-            <u who="#SDZ2.ZamernikBogomir" ana="#regular">
+            <u who="#ZamernikBogomir">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg221">Hvala za besedo. Gospod Trofenik me je prej, po mojem mnenju, neupravičeno obdolžil, da sem iztrgal njegovo izjavo iz konteksta.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg222">Tukaj sem dobil magnetogram s seje 30.6., kjer je bilo rečeno takole</seg>
                <note>seveda z vaše strani, cenjeni kolega Trofenik</note>
@@ -914,22 +895,22 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg224">Jaz bi vam zelo rad verjel in bi se hitro strinjal, če bi trditev, da sem stvar iztrgal iz konteksta, držala. Vendar je tu razpredelnica, ki je tudi prišla od vas, ki v naslovu pravi "Izračunan obseg finančne izravnave, ki bi se zagotavljala občinam ob upoštevanju predloga sprememb in dopolnitev zakona o financiranju občin". Spet bom govoril na svojem primeru, ker ga pač najbolje poznam, žal pa to ni edini primer, ampak je takih občin veliko, še več jih boste pa na naslednji točki ustanovili. Poglejte! Občina, o kateri govorim, je imela po starem, po vaši tabeli, razpoložljivih prihodkov 121 milijonov 800 tisoč tolarjev. To je bilo malo, vendar s pravilnim obračanjem denarja, s tem, da se iz tolarja naredita dva, s samoprispevki krajanov, se je vendarle dalo marsikaj narediti in se tudi je, ampak ne bom o tem. Po tisti znameniti formuli primerne porabe - klobuk dol tistemu, ki je to formulo poštudiral! - ste izračunali, da bi taka občina, ki je prej dobivala po starem 121 milijonov, za normalno funkcioniranje potrebovala 145 milijonov. Vse lepo in prav - do tu! Vendar potem pa rečete, lastnih prihodkov ima pa občina samo 44 milijonov in je upravičena do 100% finančne izravnave, kar pride 88. Potem pa za to prehodno obdobje milostno dodelite -kar sem že prej rekel, ne vem, po kakšnem ključu - še dodatnih 20 milijonov, kar skupaj znese 109 milijonov tolarjev, in to je že prvo leto 12 milijonov tolarjev manj, kot je bilo prej, ko je že tudi bilo premalo! Po štirih letih pa izgubi še teh 20 milijonov tolarjev. Sedaj vam jaz izjave, da jemljete finančno izravnavo tam, kjer do nje niso upravičeni, trgam iz konteksta. Gospod Trofenik, ne morem se strinjati s tako trditvijo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg225">Hvala lepa. Replika gospod Trofenik, za njim gospod Kopač.</seg>
             </u>
             <note type="speaker">VILI TROFENIK:</note>
-            <u who="#SDZ2.TrofenikVili" ana="#regular">
+            <u who="#TrofenikVili">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg226">Gospod Zamernik! Ponavljam! Jemlje finančno izravnavo tistim, ki do tega niso v skladu z zakonom upravičeni. Finančna izravnava je razlika med primerno porabo, če definicijo uporabim, in lastnimi prihodki. Vendar je omejena največ na 100% lastnih prihodkov. Komu jemlje? Jemlje tistim, ki imajo lastne prihodke večje, kot je primerna poraba in je ta razlika celo negativna. Tistim jemlje! To so vse tiste bogatejše ali finančno močnejše občine, kakorkoli hočete, teh je 18, če se ne motim, po izračunu. In še vedno ste odtrgali tisti del, iz konteksta oziroma ste uporabili tako kot vam ustrezna. Pa vam ne zamerim. Vi se vsaj odkrito borite za lastno sredino, kar spoštujem.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg227">Vendar v uvodu sem povedal dve bistveni vsebini sta v tem zakonu. Da preprečuje subjektivno porazdelitev, njim kvazi meril in omejuje finančno izravnavo. To je bistvo. Ne sestavlja stroškov, ne sestavlja računov na drug račun. Drugo so pa prehodne določbe. Sedaj, seveda po nepotrebnem kritik, konkretnih na rešitve praktično ni. So samo bilance, koliko mi prinese, koliko izgubim. Ker se hvala bogu te bilance v pozitivne dajo napraviti. 1994 leta ni bilo nobenih bilanc in nobenih primerjav in se je šlo takole nekam, brez, da bi vedeli kam se gre. Šlo se je pa tako, da je vzet brez imenovanja občin - ampak ministrstvo za finance, pa tudi v javnosti občinam so ti podatki, če se po arhivih zbrska - po merilih z leta 1995, ko so bile formirana, bi ena izmed občin iks dobila določeno kvoto, ki je pomenila približno nekaj čez 30% gledano na nivo povprečne porabe v Sloveniji. Ker je bil v tem državnem zboru dobro namerno, ampak potem zlorabljeno izglasovano določilo zakonsko, da pa morajo vsi imeti 90% nivo, ne glede, če to potrebujejo ali ne, se je tej sredini dopolnjevalo "amblok" 58%. Ampak teh 58% in podobni procenti po drugih so se sešteli, vendar tega ni dala država, dale so tiste občine, ki so jim lahko vzeli, vzeti pa niso mogli bogatim, vzeli so pa tistim, ki so dobivale finančno izravnavo. To je bistvo problema in rak rana sistema, ki se je v 4 letih samo še potenciral oziroma so se škarje odpirale.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg228">Ta spopad za kulturo je tu umetno ustvarjen in je nepotreben. Zelo sem razočaran, ker sem prepričan, da vsi, ki ta spopad delajo, vedo, da je to umetno ustvarjeno in je to zelo popularno sredstvo, kako preprečiti eventuelno sprejetje zakona oziroma korenitih sprememb. Ne gre za poseganje v noben področni zakon. V kulturi je pač tako, da področnega zakona s področja kulture, ki bi razmejeval pristojnosti financiranja med občinami in državo, enostavno ni, in se ne posega v noben zakon, ne posega se v noben nacionalni program, ker nacionalni program je nekaj drugega. Nasprotno! Izvaja se smiselna korekcija, da ustanovitelj tudi pretežno financira. Mi imamo pa dualizem - eden ustanavlja, drugi financira. To je posledica preobrazbe države, preobrazbe družbe, pa tudi nepotrebnega centralizma, ki je bil pri tem prisoten. Ki je pač napravil to, da so nekatere sredine bile sposobne ustanoviti kulturne inštitucije, niso jih pa sposobne financirati, ker je država pri oblikovanju integralnega proračuna najprej 89-90, potem pa 94-95, pobrala po nepotrebnem, iz nekih pokroviteljskih teženj in še kakšnih drugih, o katerih bi lahko razglabljali, potrebne vire.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg229">Ta spopad - jaz se strinjam, kar kolega Mozetič verjetno iz svoje stroke, s pravnega vidika postavlja pod vprašaj določilo 19. člena, ampak to gre za prehodne določbe, kot varovalka, ki je povezana; če gre dohodnina s 30 na 35, je treba prevzeti stroške. Samo to je prehodnega karakterja, do sprejetja področnega zakona. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg230">Hvala, gospod Trofenik. Replika, gospod Kopač, za njim gospod Bevk, gospod Pukšič, potem pa gospod Moge.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOPAČ:</note>
-            <u who="#SDZ2.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg231">Hvala za besedo. V dosedanji razpravi je bilo izrečenih kar nekaj neresnic oziroma tudi jaz lahko rečem, trditev, ki izvirajo iz nepoznavanja, nekaj pa iz namernega zavajanja.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg232">Najprej javna obravnava. Javna obravnava je potekala in odbor za finance, ki je s svojimi amandmaji pravzaprav zasnoval zakon delno na novo, je povzemal sugestije iz javne obravnave. Tisti, ki diskutirate o tem zakonu, bi bilo korektno, da bi sledili nastajanju tega zakona od oktobra lanskega leta naprej, pa morda še kakšen mesec nazaj, kajti takrat je bil vložen. Javna obravnava je bila, in ko smo na odboru oblikovali amandmaje, smo pred seboj imeli snopič, debel snop povzetkov pripomb iz javne obravnave; bilo je navedeno, kdo jih je dal, kakšen je, na kateri člen se nanaša - in po tistem smo se zgledovali. Jasno je, da so nekatere pripombe iz javne obravnave bile med seboj kontradiktorne - občinski svet te in te občine je predlagal to, župan druge občine je predlagal nekaj popolnoma nasprotnega. V takih primerih je seveda potrebno slediti neki lastni logiki, ki izvira iz filozofije zakona, ki mislim, da jo je gospod Trofenik tu že večkrat predstavil. Če bi nadaljevali z javno obravnavo, bi se dogajalo ne samo to, kar se dogaja v državnem zboru, ampak to, da se nikoli ne bi nič zgodilo.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg233">Zato ker vedno, vedno ima o vsakem členu, o vsaki ideji ena sredina eno mnenje, druga sredina drugačno mnenje. Zato je pomembno stvari čim bolj abstrahirati in jih spraviti v sklad z neko osnovno filozofijo tega zakona. Ta pa je: spodbujanje lastnih prihodkov, avtonomija občin pri oblikovanju strukture lastnih proračunov, potem ne brezglavo ustanavljanje občin, brez kakršnekoli možnosti samostojnega financiranja in tako naprej.</seg>
@@ -938,19 +919,19 @@
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg236">5 minut.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOPAČ:</note>
-            <u who="#SDZ2.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg237">Se opravičujem, takoj bom končal. Ne pa igrati vlogo poštarja. To je degradacija ministrstva za kulturo in takega ministrstva za kulturo res ne potrebujemo. Rabimo pa ministrstvo za kulturo, ki bo imelo aktivno kulturno politiko. Ravno to, pa kombinacija 35% dohodnine in 19.c člena šele omogoča. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg238">Hvala, magister Kopač. Replika, gospod Bevk, za njim gospod Pukšič. Ja, in potem gospod Moge. Medtem ko redni razpravljavec naslednji je gospod Potočnik.</seg>
             </u>
             <note type="speaker">SAMO BEVK:</note>
-            <u who="#SDZ2.BevkSamo" ana="#regular">
+            <u who="#BevkSamo">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg239">Hvala za besedo, gospod predsednik. Spoštovani zbor! Govoril bom predvsem seveda o financiranju kulturnih zavodov v državni oziroma o spopadu za kulturo, kot se je izrazil kolega gospod Trofenik. Vložil sem amandma na amandma komisije za lokalno samoupravo k razvpitemu 19.c členu, predvsem zaradi tega, ker se v številnih kulturnih ustanovah po občinah, predvsem pa v tistih zavodih, ki skrbijo za varstvo naravne in kulturne dediščine, pojavlja bojazen, da bi bila njihova usoda odvisna od vsakokratnega posluha lokalnih skupnosti za ta vprašanja. Taka radikalna sprememba, kot jo prinaša amandma komisije na 19.c člen, je v nasprotju s predlaganim hitrim postopkom za spremembo tega zakona. Moje mnenje je, da bi se morali v zvezi s tako pomembnimi vprašanji najprej opredeliti v dialogu med ministrstvom za kulturo in stroko oziroma med posameznimi kulturnimi dejavnostmi ter občinami. Seveda, če bi imeli tudi pokrajine, pa še z njimi, in tako določiti mrežo kulturnih ustanov in njihovih ustanoviteljev ter s tem seveda tudi njihovega financiranja. Brez poglobljene razprave ne moremo tako mimo grede samo z enim členom in še to po hitrem postopku, spremeniti način financiranja kulturnih zavodov v državi.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg240">Moj predlog je, da se iz tega člena oziroma amandmaja komisije izločijo tiste kulturne ustanove, ki se ukvarjajo z varstvom premične in kulturne dediščine, to je muzeji, galerije in zavodi za varstvo naravne in kulturne dediščine.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg241">Kulturna dediščina je namreč ustavna obveznost, saj o njej govorita 5. in v celoti 73. člen ustave Republike Slovenije. Država namreč mora skrbeti za ohranjanje naravnega bogastva in kulturne dediščine ter ustvarjati možnosti za skladen civilizacijski in kulturni razvoj Slovenije. Prav tako smo zato vsi skupaj, tako posamezniki lokalne skupnosti, kot država, dolžni v skladu z zakonom varovati naravne znamenitosti in redkosti ter kulturne spomenike in tako skrbeti za ohranjanje naše naravne in kulturne dediščine. Tej odgovornosti se tudi država ne more odreči. Veljajo pa te ugotovitve tudi za vse druge kulturne zavode v državi, ki jih danes financira državni proračun. Predvsem z vidika, da prav v tem času potekajo oziroma se je končal prvi del diskusije v zvezi s pripravo nacionalnega kulturnega programa, ki ga v drugem poglavju zelo natančno opredeljuje krovni kulturni zakon. Nihče še v tej razpravi tega zakona ni citiral. Gre za zakon o uresničevanju javnega interesa na področju kulture. Njegov 7. člen pravi, bom citiral: "Nacionalni kulturni program določa temelje kulturne politike in opredeljuje obseg dejavnosti na področju kulture, ki se financira oziroma sofinancira iz državnega proračuna in iz drugih javnih ter zasebnih sredstev". Zelo natančno pa krovni kulturni zakon v petem poglavju govori tudi o financiranju programov iz državnega proračuna. Zato mi dovolite, da citiram še 18. člen tega zakona, ki pravi, da "minister predpiše postopke ter merila in kriterije za izbiro predlogov kulturnih programov ali projektov iz prvega odstavka na osnovi nacionalnega kulturnega programa in da minister določi normative in standarde za financiranje ali sofinanciranje kulturnih programov oziroma projektov na osnovi nacionalnega kulturnega programa". V osmem poglavju tega istega zakona so natančno opredeljeni tudi javni zavodi na področju kulture. Zato bi rad citiral še 36. člen, ki govori, da "država lahko ustanovi javni zavod skupaj z lokalno skupnostjo. Če država ustanovi javni zavod skupaj z lokalno skupnostjo, prispeva sredstva za izvajanje osnovnih programov. Lokalna skupnost pa praviloma prostorske pogoje in sredstva za neprogramske stalne stroške. Država ustanavlja javne zavode v skladu z merili, določenimi v nacionalnem kulturnem programu" - ponavljam.</seg>
@@ -960,49 +941,49 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg244">.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg245">Prosim, prosim dokončajte misel.</seg>
             </u>
             <note type="speaker">SAMO BEVK:</note>
-            <u who="#SDZ2.BevkSamo" ana="#regular">
+            <u who="#BevkSamo">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg246">In se potem odpovedal tudi svoji razpravi. 5% povečanje dohodnine in amandma komisije k 19.c členu, tudi nista pravična do tistih občin, ki bodo morale financirati delovanje kulturnih zavodov. Kajti vse tiste občine, ki nimajo kulturnih zavodov, bodo 5% dohodnino porabile za druge naloge. Tako se občine dodatno segredirajo na dva različna dela.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg247">Na koncu bi rad naštel nekaj teh občin. Prvič, ki so brez kulturnih zavodov in ki jih danes financira država. To so recimo Bled, Brezovica, Cerknica, Črnomelj, Domžale, Grosuplje, Hrastnik, Ilirska Bistrica, Izola in tako dalje po vrsti abecede. Nekaj je občin, ki bodo večji del teh 5% povečane dohodnine porabile za financiranje kulturnih zavodov. To pa so Ajdovščina, Brežice, Celje, Kamnik, Idrija, Piran, Škofja Loka, Maribor in tako dalje. Zato zaključujem in pravim, da se mi zdi zelo čudno, da do tega razvpitega 19.c člena ni zavzelo jasno stališče in ga nam posredovalo tudi ministrstvo za kulturo. Do celotnega besedila zakona pa nimamo niti mnenja Vlade Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg248">Hvala lepa, gospod podpredsednik, ker ste mi dovolili v tem času zaključek.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg249">Hvala lepa. Replika, gospod Pukšič.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ2.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg250">Hvala lepa za besedo. Glejte, jaz repliciram gospodu Viliju Trofeniku glede obrazložitve teh tabel in namena, kje in komu se je, in kje in komu se bo jemalo.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg251">Glejte, jaz sem že velikokrat rekel, da bi moral biti zakon o spremembi financiranja skupaj za manjše občine, za tiste občine, ki nimajo dovolj lastnih sredstev, torej v dvojčku z zakonom o skladnejšem regionalnem razvoju. Pa ne samo, da sem to rekel, to so mi potrdili tudi poslanci vladajoče koalicije na raznih odborih, medsebojnih razgovorih in tako dalje. Nesmiselno je vztrajati pri takšnem hitrem postopku sprejema spremembe zakona o financiranju občin, ki kakorkoli, po tem, kar je šlo skozi odbor za finance, prinaša že v tem trenutku - pa ne bom konkreten, tako kot je bil prej kolega Zamernik - minuse, negativne pojave. Ampak čez določen čas, čez štiri leta, pa še 60 ali 70 občinam te minuse. Še enkrat, okrog formule izračunane primerne porabev primerjavi s tem, kar je sedaj, torej po merilih - mimogrede povedano, ali je že čas, da dobijo občine merila ali še ne, mogoče ne, ker lansko leto smo jih dobili decembra, tako da bodo do decembra zadeve zamrznile, ker izgleda, da nekaterim političnim veljakom v slovenski vladi ne ustreza, da bi dobili ta merila, jih pač ne dajo in zavirajo, da bi lahko občine normalno funkcionirale. Ampak, poglejte, z razliko med primerno porabo in lastnimi prihodki, ki so sedaj po merilih, izgubljajo občina Beltinci, občina Brdo, občina Canjkova-Tišina, občina Črenševci, Črna na Koroškem, naša občina Destrnik-Trnovska vas, Dobrepolje, občina Dornava, občina Duplek, občina Gornja vas-Poljana, potem Gornja Radgona, Gornji Grad, Gornji Petrovci, Hodoš-Šalovci, potem izgublja občina Juršinci, občina Kobarid, občina Kobilje, občina Kočevje, potem občina Kozje, občina Kungota, občina Kuzma, občina Laško, občina Ljubno, občina Ljutomer, občina Loški potok, občina Loška dolina, občina Lukavica, občina Moravske Toplice, občina Muta, občina Odranci, občina Ormož, občina Osilnica, občina Pesnica, občina Podčetrtek, občina Podvelka-Ribnica, občina Puconci, občina Ribnica, občina Rogaševci, občina Rogatec, občina Semič, občina Sevnica, občina Slovenska Bistrica, občina <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg252">Gospod Pukšič, se opravičujem, moramo malo umiriti dvorano. Gospodje poslanci, prosim, da se umirite, poslušajmo razpravljavca. Kdor ne želi poslušati, naj se potem kam drugam usmeri. Prosim, gospod Pukšič.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ2.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg253">Hvala lepa, gospod popredsednik. <gap reason="inaudible"/> občina Sveti Jurij, občina Šentjernej, občina Šentjur pri Celju, občina Škocijan, občina Šmarje pri Jelšah, občina Štore, občina Turnišče, občina Velike Lašče, občina Vipava, občina Vitanje in občina Zagorje ob Savi.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg254">Poglejte, seveda bo replika na to, da z dvigom dohodnine iz 30 na 35% bodo nekatere od teh občin izpadle, torej ne izgubljajo po tej novi formuli toliko. To je točno. To je res. Ampak novi izračun, ki ga imamo, z dodatno finančno izravnavo in s pripadajočo finančno izravnavo ob upoštevanju teh 75% te primerne zagotovljene porabe na prebivalca, to je 50.800 ali 900 pa nekaj, bi seveda moral biti narejen tudi, sicer pa si ga lahko naredite sami poslanci med razpoložljivimi prihodki po starem ter primerno porabo in 100% korigirano finančno izravnavo. Vendar že iz tega dokumenta, ki ga imamo sedaj, pa seveda v trenutku, škoda, ne bom imel dovolj časa, po štirih letih izgubljajo te občine, kjer imate tam dodatno finančno izravnavo do 75%, ker to bo veljalo za štiri leta. Tako piše v teh amandmajih, ki so sprejeti.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg255">No, in glejte, zakaj sem zjutraj ob 10. uri, ne brez razloga in ne brez zveze, predlagal spremembo dnevnega reda? Danes bomo sprejeli, torej ne danes, pod točko 1 spremembo zakona o financiranju občin, potem pa ustanavljali. Če bomo ustanavljali po vladnem predlogu občine, vsaj za nekatere sam osebno vem, da enostavno po tem zakonu o financiranju, ne da ne morejo preživeti, ne pokrijejo niti zagotovljene porabe, ker danes v sklopu druge občine pač porabijo bistveno več, kot pa so njihovi lastni prihodki, na katere bodo dobili 100% finančno izravnavo, ampak to bo imelo mogoče za 30, 40, 50% premalo, da bi sploh pokrili zagotovljeno porabo. Na koncu se mi postavlja vprašanje, kaj pravzaprav s to Slovenijo hočemo. Ali smo se odločili in bomo naredili število občin, kot se je tu za govornico obljubljalo, po volji ljudi, po njihovih željah, izraženih na referendumu, po drugi strani pa z zakonom o financiranju pa na ta način zapiramo to možnost. Skratka: roditi in potem ne dati kruha in mleka, je pač neodgovorno. Ta državni zbor si takšnih zadev, po moje, ne bi smel privoščiti. Ali pa bo po tem zakonu sprememba zakona o ustanavljanju občin pri točki 3. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg256">Hvala. Replika, gospod Moge.</seg>
             </u>
             <note type="speaker">RUDOLF MOGE:</note>
-            <u who="#SDZ2.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg257">Predsedujoči, hvala lepa za besedo. Spoštovani kolega Vili, mislim, da moram ugovarjati tvoji izjavi, ki jo dobesedno citiram. Praviš: "Spopad za kulturo je umetno ustvarjen." To sploh ni res. Ta spopad se je ustvaril samo zaradi tega, ker se je cela procedura peljala zelo amatersko oziroma neprofesionalno. Kar nas je, ki nas je slovenska kultura zanimala, smo poskušali okrog posledic sprejetja 19.c amandmaja pogledati, kaj se bo na področju kulture zgodilo. Zato smo poprosili predsednika odbora za kulturo, šolstvo in šport, da je sklical sejo in smo to obravnavali. Ampak na to sejo si prišel samo ti, nikogar ni bilo iz ministrstva, da bi nam kompetentno razložil, kaj se v tem primeru dogaja. Torej smo izviseli za neko strokovno mnenje oziroma za mnenje ljudi, ki po svoji moralni in etični plati to področje pokrivajo. Potem smo se pogovarjali o tem 19.c členu, da je bolje, da ga ni notri, sta oba z Janezom Kopačem, zdaj ne vem, kdo je predlagatelj zakona, kdo pa sveti temu zakonu, rekla, da ta 19.c člen je pa eden bistvenih členov, kajti, če se tistih 5% dohodnine odbije in ta 19.c člen ne sprejme, tak zakon ni za sprejeti. Tukajle pa kolega Janez Kopač "urbi et-orbi" pred vsemi razlaga, da ta 19.c člen sploh ni potreben v tem zakonu in zaradi tega je poseganje v kulturno sfero brezpredmetno, torej se odpovedujete temu členu. Če se temu členu odpovedujete, jaz ne bom nič več govoril o kulturi, kajti ministrstvo in tudi odbor in še poslanci bi morali biti tisti, ki bi to politiko tako peljali, kot bi bilo potrebno. Ker pa jaz ministra ne morem dobiti sem, ne v državni zbor, ne mnenja vlade, ker ne pride niti na odbor in tukaj sprašujem tudi o tem, kaj se na tem področju dogaja, mi pa kolega Janez Kopač pove, dobesedno ga citiram: "Ni res, da ministrstvo za kulturo nasprotuje temu, minister je temu naklonjen." Torej se je on z ministrom kot kolega pogovarjal in nas tu prepričuje s to lahkotnostjo argumentiranja, naj mi temu verjamemo. Jaz mislim, da tako delo državnega zbora nikamor ne vodi in se pri tisti prvi oceni tega dela v zboru tukajle pridružujem. Še več, kolega Janez Kopač, ko mu repliciram, je tudi rekel, da tak amandma ministrstva obstaja, jaz pa o tem nič ne vem. Pravi celo, jutri bo v vladni proceduri, mi ga bomo dobili. Ja, lepo vas prosim! Kultura je za Slovence še kako pomembna, poleg svojega jezika. Mi, ki odločamo o tem zakonu, bi pred sprejetjem tega zakona morali vedeti, kaj se bo na tem področju zgodilo in kaj tak amandma pomeni. Če bi vedeli in če bo ministrstvo pametno predlagalo ali če bi vedeli natanko zagovarjati, kaj tak 19.c člen kulturi pomeni, vseh teh debat ni bilo. Teh debat nismo poslanci umetno ustvarili, kot vi trdite, ampak nekdo drug. Če pravite, da boste vi nasprotovali sprejemu 19.c člena, jaz obljubim, da se ne bom več na to temo o kulturi tukajle oglasil. Če pa ne, je tak zakon zame, dokler vlada in ministrstvo ne bosta povedala, kaj se bo zgodilo z javnimi zavodi, z njihovi statusi in z njihovim financiranjem, zame tak amandma, in potem, če je tak amandma sprejet, tudi tak zakon zame ni sprejemljiv. Če lahko država gradi svojo prihodnost na šolah, ki so državne, od srednjih šol pa do visokih, bi država tudi na področju kulture morala držati nad določenimi zavodi roko in torej vsem krajem Slovenije, ne pa samo ožji Ljubljani, omogočiti to, da bi imeli kulturo, ki je vredna tega naroda.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg258">Hvala. Replika, gospod Trofenik.</seg>
             </u>
             <note type="speaker">VILI TROFENIK:</note>
-            <u who="#SDZ2.TrofenikVili" ana="#regular">
+            <u who="#TrofenikVili">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg259">Hvala. Bom pri kolegu Pukšiču začel. Kolega Pukšič, edino ta tabela je prava in uradna, izračun. Tisto, kar ste pa vi za to govornico brali, pa ne vem, od kod. Ste zavedli, za 95% občin, ki ste jih našteli, to ne drži. Našteli ste vse od tistih 110-ih, ki po domače povedano, profitirajo. Gre za totalno zavajanje, ker ne moremo govoriti 30 in 35, intenca predloga zakona je 35% dohodnine. To je po zelo napornih iskanjih rešitev, skozi to bilančni zasuk in jaz z vami ne bom polimiziral, ker zlorabljate tabele. To ni prvič! In ste tu brali občine iz seznama 110-ih, ki imajo milijon in pol prebivalcev skupno sešteto in ki prihajajo s tem zakonom v bistveno pravičnejšo porazdelitev javnih sredstev na področju občin in boljše, kot so bile v preteklosti.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg260">Kolega Bevk! Spoštovani, jaz spoštujem vašo umirjenost in skrb za kulturo, vendar gre za nerazumevanje. Poskušali ste argumentirati s krovnim zakonom o kulturi, da je ta zakon navzkriž. V nobenem delu - država financira in sofinancira zavode - ni nobenega navzkrižja.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg261">Drugič, vaša ocena o nepravičnem bilančnem premiku 5%, ne zameriti, je zgrešena. Hvala bogu, pravim, da je porazdelitev taka, da je 5% dodatna dohodnina, odstopljena lokalnim skupnostim, preseže potrebne prihodke ravno v tistih okoljih, kjer so praviloma kulturne institucije. Tam gre res za prevzem obveznosti financiranja iz države v lokalno skupnost. To, kar ste pa našteli in v nekaterih debatah so mi tudi na hodniku to razlagali, kako je to krivično. Vsi bodo dobili 5%. Ja, dragi ljudje! Tisti, ki bodo dobili pa nimajo teh kulturnih institucij, to se pravi, ne prevzemajo obveznosti financiranja, so praviloma finančno podhranjeni. In za toliko bodo dobili manjšo finančno izravnavo. Bilanco smo vam povedali: 5% bilančnega prenosa pomeni 9 milijard. Teh 9 milijard prenosa na občine se kompenzira s 5 milijardami prevzema kulturnih obveznosti ali kulturnih institucij, za 2 milijardi se zmanjšuje finančna izravnava, 2,1 milijarde pa ostaja dodatnih sredstev občinam. In ne operirajte s takimi operacijami, ker so nepoštene in neresnične. In mogoče vas zavede, ne me napačno razumeti, vaša skrb ali da se bolj ozko posvečate enemu problemu oziroma želite, se bojite oziroma je nek prastrah za področje kulture.</seg>
@@ -1010,72 +991,72 @@
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg263">Katere institucije bo prevzelo financiranje in kateri del stroškov, podrobneje država in katere lokalne skupnosti, to bo opredelila vlada. Jaz nisem za to poklican, ampak bilančna projekcija je narejena in ni nobene grožnje za kulturo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg264">Hvala, gospod Trofenik. Replika gospod Kebrič.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ2.KerbičIvan" ana="#regular">
+            <u who="#KerbičIvan">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg265">Drage kolegice in kolegi! Sprememba sistema prinaša za ene nekaj ugodnejšega na račun drugih. Vsak sistem, ko se spreminja, prinaša za določene zelo velike skrbi, med ostalimi tudi za mesto Maribor. Nihče ne govori tako kot gospod Trofenik, kajti tudi drugi argumenti marsikaj dokazujejo. Menim, da če hočemo te stvari pripeljati sploh do konca, se moramo lotiti amandmajev. Problem pa je, da so bile v prvi razpravi predhodno dane mnoge konstruktivne, konkretne pripombe, predlogi, ki jih pa, žal, snovalci oziroma predlagatelji sedaj niso upoštevali, zato se srečujemo s takim številom amandmajev. Če hočemo zadevo pripeljati do konca, se moramo lotiti teh amandmajev, pa če nam je ljubo ali ne, kajti splošna razprava lahko traja še dva dni, ko se bomo tako ali drugače z bolj konkretnimi ali manj konkretnimi, s takimi ali drugačnimi številkami, kakršne bodo nekomu bolj, drugemu manj ustrezale oziroma vsak bo navajal tiste, ki gredo njemu v prid.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg266">Menim, da bi zato morali, ker so določene občine čez noč s sprejetjem tega zakona hudo prizadete, imeti določen posluh, da bi moralo biti določeno prehodno obdobje - še enkrat se ponavljam - da vsak sistem nekomu bolj ustreza oziroma drugače rečeno - v danih pogojih nekomu trenutno bolj ustreza, drugemu pa manj. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg267">Hvala, gospod Kebrič. Replika, gospod Tomažič.</seg>
             </u>
             <note type="speaker">BRANKO TOMAŽIČ:</note>
-            <u who="#SDZ2.TomažičBranko" ana="#regular">
+            <u who="#TomažičBranko">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg268">Hvala za besedo. Spoštovani zbor! Gospodu Mogetu bi rad repliciral. Kulturo je potrebno doživeti in občutiti. Doživeti in občutiti je potrebno tudi financiranje občin po zdajšnjem zakonu o financiranju občin. Po zdajšnjem zakonu so bile po mojem mišljenju kršene temeljne človekove pravice, temeljne pravice lokalnih skupnosti, ker so bile občine različno - glede zakona je bila zagotovljena poraba, po drugi strani pa vemo, da nekatere občine niso pridobile niti 30% zagotovljene porabe. Po zdajšnjih merilih, ki jih uvaja nov zakon, pa te občine močno pridobijo.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg269">Ker smo pri kulturi, morda nekaj podatkov. Ajdovščina dobi na prebivalca po zdajšnjem zakonu o financiranju občin 2.900 tolarjev za kulturo, Maribor 4.400, Ljubljana 4.800, Vipava 1.600, Destrnik 896, Škofja Loka 4.000, Ormož 3.000, Laško 2.000, Ptuj 5.000. Ne vem, kje je tu enakost. Ne bom se spuščal, kaj imajo vse te občine in ta mestna središča. Ravno tako pri športu - glede na prebivalca dobi Ljubljana 3.000, Ormož 1.400, Ajdovščina 1.100, Vipava 1.000, Destrnik 800 tolarjev, Maribor 3.000, Črnomelj 800 tolarjev, Laško 1.000. Kje je tista poštenost in tista enakost, ko ste si nekateri v prejšnjem mandatu zagotovili določene koristi, določene privilegije, ki jih sedaj z novim zakonom nočete izpustiti?! Z novim zakonom, po moje, nobena občina ne bo izgubila, ampak se bo zakon začel uresničevati v praksi, ker bodo vse občine dobile tisto, kar jim pripada, glede na število prebivalcev, glede na ceste, komunalno infrastrukturo in vse ostale stvari, ki jih ne bom našteval, ki so lepo prikazane. Moti me to, da so sedaj nekatere občine dobile na prebivalca 40.000 ali celo 35.000, kot je občina, ki je bila najbolj nizko dotirana, ki je izgubljala v štirih letih okrog 300.000, ker bi v štirih letih lahko naredila vse šole, ki jih ni upala, ker ni imela iz česa, ker so nekateri začeli spraševati, zakaj ne more občina nečesa narediti, ker ni imela tega denarja; nekateri pa so lahko imeli 65.000 in so lahko denar, ki je bil za družbene zadeve, namenjali za nogomet, v druge dejavnosti, nekatera okolja pa se niso upale narediti niti osnovnih stvari, kot so telovadnice, igrišča in tako naprej in tako naprej. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg270">Hvala, gospod Tomažič. Replika, gospod Pukšič.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ2.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg271">Hvala lepa. Dokler sem lahko fin, sem fin, ko pa to ne gre, potem pa nisem.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg272">Gospod Vili Trofenik, to, kar ste izjavili za to govornico, je, enostavno povedano, laž! Dokumenti, ki jih imam, so od Vlade Republike Slovenije. To so edini dokumenti, ki so verodostojni, tisti pa, ki jih imate vi, in jih ponujate, pa so podpisani od mag. Janeza Kopača, in ti niso od vlade! Torej to, kar ste rekli, je laž!</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg273">Ste končali?</seg>
                <note>Da.</note>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg274">Hvala. Zdaj dajem repliko gospodu Trofeniku.</seg>
             </u>
             <note type="speaker">VILI TROFENIK:</note>
-            <u who="#SDZ2.TrofenikVili" ana="#regular">
+            <u who="#TrofenikVili">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg275">Gospod Pukšič, na vašo drugo laž bi bilo treba drugače reagirati, ampak ne bom, ker se mi to zdi pod vsakim nivojem. Vi ste pošiljali to po Sloveniji - neavtentične dokumente. V kontekstu predloženega zakona je samo ta tabela, tisto je pa delovno gradivo, ki je prikazovalo ilustracijo v fazi nastajanja. Seveda, vsa gradiva nosijo - so jih izračunali v ministrstvu, čeprav sem jaz imel za sebe izračun, svoj privatni izračun, ampak nobenega privatnega nisem nikomur dal! To, kar vi, s svojo napako, ki ste jo naredili, ker ste pošiljali po Sloveniji neustrezno tabelo, zdaj poskušate mene na laž postaviti - veste, taka laž ima zelo kratke noge!</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg276">Hvala. Replika, gospod Moge.</seg>
             </u>
             <note type="speaker">RUDOLF MOGE:</note>
-            <u who="#SDZ2.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg277">Predsedujoči, hvala lepa za besedo. Spoštovane poslanke in poslanci, spoštovani kolega Vili! Mislim, da to, kar si govoril, zopet ni resnica. Praviš, da ta 19.c člen ureja financiranje na področju kulture in tudi stanje na področju kulture in da je to prva pomoč, kasneje bo pa sprejet področni zakon o kulturi, ki bo urejal financiranje med lokalnimi skupnostmi in med državo. Jaz nobenega takega področnega zakona ne poznam, minister ga niti ni obljubil, ampak je osnova za financiranje to, kar si ti že prej povedal - to je sprejem nacionalnega programa. In zdaj to manipuliranje ljudi tukaj, da si bomo nalili čistega vina - 9 milijard tolarjev je država leta 1996 dala v javne kulturne zavode na območju</seg>
                <note>to imam jaz tam, lahko prinesem tudi tabele vlade</note>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg278">- za teh 9 milijard bi se dohodnina povečala, si mi ti rekel. Od teh 9 milijard bi približno 2 milijardi šli za javne nacionalke, ki so v pretežni večini v Ljubljani, ostalo bi pa potem s tem prenosom krile občine, ko bi dobile 5% dohodnine. Ali drugače, recimo v občini Domžale, ki nima nobenega javnega zavoda, dobi 5% zraven v globalu za pokrivanje kulture in ji teh 5% ostane, razen če se ne bodo odločili, da bodo kulturne zavode ustanavljali, pa če se bodo sploh odločili, da bodo ta denar dali notri. Druge velike občine, kot je pa recimo Maribor, sem pa že prej povedal. S tem poseganjem, ker sta imela vidva - minister, kot sem slišal, kot je pravil gospod Kopač - drugačno mnenje o realizaciji tega amandmaja v praksi, pomeni to poseganje, prvič, v status teh javnih zavodov, s financiranjem se pa pri statusu urejata dva akta, ki sta temeljna v teh javnih zavodih. Prvi akt je sporazum o delitvi dohodka. Ta mora dati soglasje; zdaj ga je dalo ministrstvo za kulturo, zdajle bo moral dati mestni svet ali pa občinski svet. Drugi akt je akt o sistemizaciji, doslej ministrstvo za kulturo, zdajle lokalna skupnost. Tretji akt, ki pa ne vem, zdaj sem pa razdvojen, prvo pravite, da bi tole tudi občina dala, to je soglasje k programu, zdajle, ko sem poslušal kolega Kopača, bo pa ministrstvo razpisalo javne programe, na katere se bodo javni zavodi priglasili in jih bodo potem oni financirali. Zaradi tega, ker je nekdo tako rekel, drugi je takole rekel, nikjer nimam napisano in nikjer nimam garancije, da bo tale reč potem res tako potekala, se mi zdi odločanje in debatiranje o tem 19.c členu v zraku. Jaz bi bil strahotno vesel, da bi se tu minister za kulturo pojavil, pa da bi povedal mnenje vlade. Zato bi prosil, da ministra za kulturo povabimo, če je mogoče, in naj nam on to debato razložili, verjetno bomo drugače razpolagali in lahko potem o tej temi nadaljujemo razpravo. Torej proceduralno predlagam, če je mogoče, da minister za kulturo pove natanko, kaj misli o amandmaju na 19.c člen.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg279">Hvala, gospod Moge. Bomo poskušali obvestiti ministra, da je želja, da pride v parlament. Sicer pa predstavniki vlade so tukaj, pooblaščeni in zapisani, lahko odgovarjajo, bomo pa poskrbeli, kot sem dejal, da bo gospod kulturni minister tudi slišal, da ga želimo v parlamentu. Replika, Samo Bevk.</seg>
             </u>
             <note type="speaker">SAMO BEVK:</note>
-            <u who="#SDZ2.BevkSamo" ana="#regular">
+            <u who="#BevkSamo">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg280">Hvala za besedo, gospod podpredsednik. Kljub temu se mi zdi, da predlagatelj zakona, vsaj s kulturnega področja, ni upošteval obstoječe in tudi nastajajoče področne kulturne zakonodaje. Zato bom citiral zakon o kulturni dediščini, ki smo ga malo pred tem v prvi obravnavi sprejeli v državnem zboru. 77. člen zakona o kulturni dediščini govori o ustanoviteljstvu zavodov za varstvo kulturne dediščine in o matični službi. Pravi, da bo šele z uveljavitvijo tega zakona Republika Slovenija postala ustanoviteljica zavodov za varstvo naravne in kulturne dediščine itn., da ne bom v celoti bral tega člena, ki je zelo dolg. Isto govori naslednji člen, to je 78. člen, ki govori o ustanoviteljskih pravicah in dolžnostih nad muzeji. Ta pa konkretno pravi: "Vlada Republike Slovenije v roku šestih mesecev od uveljavitve tega zakona določi, kateri muzeji imajo status državnega muzeja in katere bo Republika Slovenija ustanovila skupaj z lokalnimi skupnostmi." To je zakon v nastajanju, ki smo ga mi v prvi obravnavi sprejeli. Mi pa v bistvu mimo tega zakona o kulturni dediščini v nastajanju kar z nekim amandmajem komisije za lokalno samoupravo k 19.c členu spreminjamo način financiranja kulturnih ustanov oziroma zavodov v državi. Tako se mi zdi, da je ta zadeva malo deplasirana.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg281">Glede bilančnega prenosa bi pa samo eno vprašanje imel in samo dve občini bom primerjal, pa me prosim, gospod Trofenik, popravite, če bom napačno interpretiral. Občina Grosuplje, ki ima 14.000 in pol prebivalcev, bo na podlagi 5%-ne povečane dohodnine dobila 77 milijonov več tolarjev sredstev za svoje delovanje. Občina Idrija, ki ima malo manj prebivalcev, 12 tisoč prebivalcev, pa bo dobila 57 milijonov več tolarjev na račun 5% povečane dohodnine, s tem, da bo polovica te vsote šla za delovanje mestnega muzeja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg282">Hvala gospod Bevk. Replika gospod Pukšič. Proceduralno gospod Mozetič.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg283">Hvala lepa. Jaz bi sicer moral uživati, kot opozicijski poslanec, da se predvsem koalicija med seboj malo še prepira in se prepričuje. Vendar ker nočem, da bi bil parlament otroški vrtec, predlagam naslednji sklep.</seg>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg284">Ker sem slišal od gospoda Kopača, ki je nek pooblaščen predstavnik vlade tudi v parlamentu, da bo vlada jutri o tem problemu, o katerem v glavnem sedaj beseda teče, razpravljala, pod 1.a točko, predlagam, da se do časa, dokler vlada ne odloči o tem, pošlje tudi v parlament pisni papir, kaj je odločila, prekine obravnava te točke.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg285">Hvala za predlog. Torej slišali smo proceduralni predlog, da se 1. točka prekine in nadaljujemo, ko dobimo stališče vlade. Ugotavljamo prisotnost!</seg>
                <note>55 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-23-1998-07-08.seg286">Kdo je za predlog gospoda Mozetiča?</seg>

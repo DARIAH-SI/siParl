@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 2. zasedanje</title>
             <meeting n="2"
-                     corresp="#VsiZbor.1990-07-02.z002-01.DruzPolZb #VsiZbor.1990-07-02.z002-01.ZbObc #VsiZbor.1990-07-02.z002-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="6"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="3"/>
                <tagUsage gi="seg" occurs="45"/>
             </namespace>
@@ -139,23 +130,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1990-07-02.z002-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-07-02.z002-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-07-02.z002-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -166,20 +140,24 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">2. zasedanje</head>
             <docDate>2. julij 1990</docDate>
             <note type="chairman">Sejo je vodil dr. Ludvik Toplak, predsednik Družbenopolitičnega zbora</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričelo ob 12.00 uri.</note>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.z002-01.seg1">Delegatke in delegati, gospe in gospodje, pričenjam skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora Skupščine Republike Slovenije. Na skupnem zasedanju bomo poslušali prvič - UVODNO BESEDO K STALIŠČEM KOMISIJE ZA USTAVNA VPRAŠANJA SKUPŠČINE REPUBLIKE SLOVENIJE K OSNUTKU AMANDMAJEV K USTAVI SFRJ, ki jo bo podal Vitodrag Pukl, podpredsednik Skupščine Republike Slovenije in drugič, kratko informacijo glede nadaljnjega dela. Besedo predajam gospodu Vitodragu Puklu.</seg>
             </u>
             <note type="speaker">VITODRAG PUKL:</note>
-            <u who="#SSK11.PuklVitodrag1930" ana="#regular">
+            <u who="#PuklVitodrag">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.z002-01.seg2">Spoštovano predsedstvo, spoštovane delegatke in delegati. Komisija Skupščine Republike Slovenije za ustavna vprašanja je obravnavala osnutka amandmajev k Ustavi SFRJ na treh sejah. Prvo sejo je vodil predsednik Skupščine in predsednik komisije dr. Bučar, ostali dve seji pa je vodil podpredsednik komisije Miran Potrč.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.z002-01.seg3">V razpravah o osnutku ustavnih amandmajev SFRJ je prišlo do različnih mnenj, razlag in različnih predlogov. Naša skupščina bi morala v bistvu odločiti o treh vprašanjih, ki dvoje izključuje ena drugo, dočimer bi bilo tretje skladno z eno izmed teh vprašanj. Namreč, odločiti bo treba, ali te amandmaje k ustavi sploh obravnavamo oziroma jih v celoti zavračamo. Če se bomo odločili, da jih bomo obravnavali, pa je potem potrebna nadaljnja odločitev, ali jih obravnavamo selektivno, to se pravi posamično in v obsegu, kot je komisija do njih zavzela z raznimi dopolnili stališča in to ne glede na zahtevo, da so amandmaji, katere bi sprejeli, vezani na ukinitev pristojnosti Zveznega zbora Skupščine SFRJ in na prenos te pristojnosti Zbora republik in pokrajin Skupščine SFRJ oziroma na odločitev, da se odločanje o vseh skupnih interesih v Jugoslaviji sprejema izključno na podlagi soglasja skupščin republik in skupščin avtonomnih pokrajin brez možnosti sprejemanja izrednih ukrepov in brez preglasovanja. Da se bosta lahko o tem zelo važnem vprašanju odločili, pa bom predstavil stališča, ki so se glede prvega vprašanja oblikovala v komisiji, in sicer gre za dvoje stališč. Prvo stališče je v tem, da se ustavni amandmaji ne obravnavajo in da se sploh ne da mnenje k osnutku teh amandmajev. Zagovorniki tega stališča razlagajo svoje odločitve oziroma svojo odločitev sledeče:</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.z002-01.seg4">1. Menijo, da je najprej potrebno sprejeti republiško ustavo in se na tej podlagi pogajati o novi konfederativni ureditvi Jugoslavije.</seg>
@@ -221,7 +199,7 @@
                <seg xml:id="SSK11-VsiZbor.1990-07-02.z002-01.seg40">Gre pa še za tretjo odločitev, ki bi se pokazala morda potrebna po razpravi, katero bi opravili, in sicer za odločitev, ali bi mi selektivno obravnavali in dali mnenje k nekaterim amandmajem kljub temu, če ne bi dosegli soglasja glede mnenja in sklepa, da se amandmaji obravnavajo in se daje mnenje le pod pogojem, da se ukine pristojnost zveznega zbora skupščine oziroma da se sprejmejo inštrumenti, da bi pri vseh odločitvah enakopravno sodelovale republike in pokrajine, in da se odpravi možnost izrednih ukrepov. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-07-02.z002-01.seg41">Hvala lepa gospodu Puklu. S tem smo zaključili 1. točko.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.z002-01.seg42">Pri 2. TOČKI pa samo nekaj tehničnih obvestil.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-07-02.z002-01.seg43">V tej dvorani, v tej sestavi se bo nadaljevala skupna seja. Takoj po zaključku skupne seje se bodo zbori razporedili takole: zbor združenega dela ima 30 minutno pavzo, takoj po zaključku skupne seje, Zbor občin začne s pavzo 30 minut po zaključku in traja pavza 30 minut, Družbenopolitični zbor pa začne pavzo 60 minut po zaključku skupne seje. Kdaj bomo zaključili skupno sejo, bomo videli.</seg>

@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 30. seja</title>
             <meeting n="30"
-                     corresp="#VsiZbor.1992-02-12.s030-01.DruzPolZb #VsiZbor.1992-02-12.s030-01.ZbObc #VsiZbor.1992-02-12.s030-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="163"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="53"/>
                <tagUsage gi="seg" occurs="247"/>
             </namespace>
@@ -350,23 +341,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1992-02-12.s030-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-02-12.s030-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-02-12.s030-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -376,16 +350,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA</head>
             <head type="session">30. seja</head>
             <docDate>12. februar 1992</docDate>
             <note type="chairman">Predsedoval: dr. France Bučar, predsednik Skupščine Republike Slovenije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 17.15 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg1">Začenjam 30. skupno sejo zborov Skupščine Republike Slovenije, ki je sklicana na podlagi 134. člena Poslovnika Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg2">Najprej ugotavljamo sklepčnost. Prosim najprej poslance Družbenopolitičnega zbora, da posvedočijo svojo navzočnost.</seg>
                <note>43.</note>
@@ -397,16 +375,16 @@
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg6">Predlog dnevnega reda ste prejeli. Želi o predlogu dnevnega reda kdo razpravljati? Prosim, gospod Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg7">Spoštovani! Zahtevamo, da v okviru razpravljanja in določanja dnevnega reda 30. skupne seje vseh zborov Skupščine Republike Slovenije predložite v razpravo in odločanje naslednji predlog razširitve dnevnega reda kot 3. točko SODELOVANJE Z REPUBLIKO HRVATSKO.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg8">Obrazložitev: v zadnjem času se je večkrat odprlo vprašanje sodelovanja z Republiko Hrvaško. Odprta so vprašanja gospodarskega sodelovanja na splošno in še posebej vprašanje problematične zapuščine skupnega sožitja v pokojni Jugoslaviji kot, npr. vprašanje javnega dolga, reševanje plačilnega presežka Republike Slovenije, vprašanje plačilnega sporazuma in še posebej vprašanje meja in mejnega režima. Liberalna stranka pogreša kakršnokoli informacijo o ukrepih vlade in drugih organov Republike Slovenije v zvezi z obravnavo in reševanjem teh vprašanj. Nevzdržno je, da je Skupščina Republike Slovenije o dogajanjih o tako pomembnih področjih seznanjena le s skopimi informacijami o njih, le iz javnih in še to običajno potem, ko so razgovori že opravljeni ali določeni koraki že podvzeti. Zadnji tak primer je bil podpis sporazuma o gospodarskem sodelovanju z Republiko Hrvaško, ko je mimo vseh določil dogovorjenega postopka prišlo celo do podpisa sporazuma. Nujno je obravnavati to problematiko na skupni seji vseh zborov, da bi se določila izhodišča za obravnavanje odnosov z Republiko Hrvaško. To predlagam zlasti zaradi tega, ker je Skupščina Republike Slovenije sprejela tudi sklep, da se morajo obravnavati vse štiri meje Republike Slovenije enakovredno in predlagam, da moj oz. predlog Liberalne stranke podprete in vas prosim za podporo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg9">Hvala lepa. Želi še kdo razpravljati o predlogu dnevnega reda? Gospod Žagar.</seg>
             </u>
             <note type="speaker">ZVONE ŽAGAR:</note>
-            <u who="#SSK11.ZagarZvone" ana="#regular">
+            <u who="#ZagarZvone">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg10">Hvala lepa za besedo. Spoštovani! Želel bi podpreti predlog za razširitev dnevnega reda iz naslednjih razlogov:</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg11">1. S podpisom gospodarskega sporazuma s Hrvaško si je vlada prevzela, po našem mnenju, pristojnosti, tukaj gre predvsem za trgovinsko unijo, ki so v bistvu, v osnovi v pristojnosti skupščine in bo šele post festum zahtevala ratifikacijo. To je en razlog. Drugi razlog, proceduralni razlog je v tem, da je Skupščina na 17. skupni seji vseh zborov 9.5.1991 sprejela sklep, da nihče ne sme podpisovati določenih aktov, ki bi obremenjevali republiko itn. brez soglasja skupščine.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg12">Nadaljnji razlogi za to, da se točka uvrsti na dnevni so: Splošna usmeritev ali v carinsko unijo s kom, kako, trgovinsko-politične zveze itd.</seg>
@@ -420,39 +398,39 @@
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg20">Če na kratko ponovim: problematika z Republiko Hrvaško je tako velika predvsem zato, ker je to eden od velikih zunanjetrgovinskih partnerjev, da bi bilo potrebno, da ga obravnavamo na skupni seji vseh zborov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg21">Hvala lepa. Ali želi še kdo razpravljati? Gospod Peterle, predsednik Vlade Republike Slovenije.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg22">Spoštovane poslanke in poslanci, nasprotujem predlogu, da bi razpravljali o teh zadevah sedajle. Ratifikacija, kakor jaz razumem, je vedno post festum. Potem, ko je nekaj predloženo, da se ratificira, predloženo v skupščini, takrat naj se tudi opravi razprava o tem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg23">Hvala lepa. Gospod Šinkovec.</seg>
             </u>
             <note type="speaker">MAG. MATJAŽ ŠINKOVEC:</note>
-            <u who="#SSK11.SinkovecMatjaz1951" ana="#regular">
+            <u who="#SinkovecMatjaz1951">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg24">Spoštovani, tudi sam nasprotujem razpravi danes v plenumu o teh zadevah. Po zakonu o zunanjih zadevah je jasno, da vse mednarodne sporazume ratificira ta naš parlament. Torej, noben sporazum ne velja, dokler ga ne ratificira parlament. Prišlo je pač do nesrečnega primera sklenitve sporazuma o gospodarskem sodelovanju s Hrvaško, kjer smo ugotovili, da vlada pač ni upoštevala tistega postopka, torej da ni pobude najprej obravnavala Komisija za mednarodne odnose. Vendar prav gotovo ta sporazum ne bo veljal, dokler ne bo ratificiran v parlamentu in ta sporazum gre sedaj v ratifikacijo najprej v delovno telo in potem tudi v zbore. Pobuda za sklenitev sporazuma o meji bo obravnavan na naslednji seji Komisije za mednarodne odnose čez teden dni. Kot vem, bodo vprašanja meje obravnavana tudi na Komisiji za pomorstvo. Odnosi z Republiko Hrvaško nasploh bodo tudi obravnavani na naslednji seji Komisije za mednarodne odnose čez teden dni. Mislim, da danes ni pogojev za takšno razpravo v tem plenumu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg25">Hvala lepa. Ali želi še kdo razpravljati?</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SSK11.PregeljZarko1956" ana="#regular">
+            <u who="#PregeljZarko1956">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg26">Spoštovani zbor, pozdravljeni! Saj ni problem ratifikacija. Vemo vsi, kako poteka. Problem je v bistvu v tem, ali ima naš parlament, kar se tiče odnosov s sosedami, izdelano dokončno stališče, se pravi, izdelano nekakšno platformo. Tega v bistvu ni. Verjetno bi bil že čas, da parlament o tem spregovori in sprejme dokončno stališče. Verjetno bo s tem rešeno veliko nesporazumov. Ali je danes primeren dan za to ali ne, to je drugo vprašanje. Za tako razpravo je treba imeti tudi primerno gradivo. Predlagam, da ta zbor danes sprejme sklep, da o problemu odnosov s sosednjo Hrvaško, tudi s sosednjimi državami, razpravlja na prihodnji skupni seji. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg27">Hvala lepa. Še kdo, gospod Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg28">Kot predstavnik Liberalne stranke predlagam, da sprejmemo sklep, ki ga je predlagal gospod Pregelj, in sicer se tudi mi strinjamo, da se ne more razpravljati kar brez papirjev. Vendar, treba je vedeti, da skupščina mora o tej zadevi nekaj povedati. Ne more se obravnavati državno pravne zadeve tako, da se briskira odločitve skupščine. Ta skupščina je sprejela sklep, da ne sme nihče podpisati ničesar, kar bi bilo v škodo Republiki Sloveniji. Ta sporazum, ki je bil podpisan v Zagrebu zadnjič, naša stranka ocenjuje, da je bil podpisan v škodo Republike Slovenije. Zato predlagamo, da se o zadevi odpre razprava in podpiram predlog gospoda Preglja, da se to uvrsti na prihodnjo sejo kot posebna točka dnevnega reda, seveda s primernimi pisnimi graditvi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg29">Hvala lepa. Ali želi še kdo razpravljati? Vašo intervencijo razumem, da odstopate od svojega predloga, da danes uvrstimo na dnevni red, pač pa da sprejmemo sklep, kot ga je predložil gospod Pregelj.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg30">Predlog gospoda Preglja dajem na glasovanje. Se pravi, da se skupščina zavezuje, da bo na prvi prihodnji seji vseh zborov obravnavala zunanjepolitično problematiko, posebej glede na odnose s sosednjimi državami.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg31">Kdo je za ta sklep, naj glasuje?</seg>
@@ -490,19 +468,19 @@
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg51">PREDSEDNIK VLADE PREDLAGA, DA SKUPŠČINA RAZREŠI MAKSA BASTLA DOLŽNOSTI ČLANA VLADE IN DOLŽNOSTI MINISTRA ZA TRGOVINO. Predlog ste prejeli, tudi mnenje Komisije za volitve, ki predlog podpira. Želi besedo predstavnik predlagatelja. Ne želi. Želi o predlogu kdo razpravljati? Prosim, gospod Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SSK11.PodobnikMarjan1960" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg52">Spoštovani! Želel bi samo eno pojasnilo v zvezi z mnenjem k predlogu za razrešitev in imenovanje ministra za trgovino, ki ga je podala Komisija za volitve, imenovanja in administrativne zadeve. Namreč v tretjem odstavku tega mnenja je malo nejasno napisano, nekako vloga naše stranke pri teh zadevah bi po vsem, bi kar prebral: "Namreč, Slovenska ljudska stranka se ne čuti odgovorno za problematiko sklenjenih pogodb s Slovinom, kot piše v tem mnenju. Smo pa povedali, da se čutimo odgovorni za to, ker smo bili pač predlagatelji ministra gospoda Bastla, da se kadrovsko te stvari uredijo in smo za to tudi ob tej priliki posredovali, samo toliko v pojasnilo". Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg53">Hvala lepa. Želi še kdo, gospod Kopač.</seg>
             </u>
             <note type="speaker">JANEZ KOPAČ:</note>
-            <u who="#SSK11.KopacJanez1961" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg54">Hvala za besedo, upam, da bo moj predlog v skladu s proceduro. Predlagam, da se ob tej točki dnevnega reda razpravlja tudi o ustanovitvi preiskovalne komisije na podlagi 93. člena Ustave, za kar je predlog dala Liberalno-demokratska stranka. Sam predlog sklepa ste poslanci dobili, obravnavala pa sta ga dva skupščinska odbora oziroma Komisija za volitve, imenovanja in administrativne zadeve, ki je predlog sklepa podprla in Odbor za javne finance in proračun, ki sicer ni bil sklepčen, ampak je več kot polovica prisotnih članov predlog sklepa podprla. Hvala lepa. Dajem pa pobudo v razpravo, upam, da ni mimo procedure.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg55">Želi še kdo razpravljati? Potem dajem najprej na glasovanje predlog, da se s tem problemom ukvarja posebna raziskovalna komisija po 93. členu ustave. Če smo za to, prosim, da prej glasujemo o tem, potem bi se pa morali zmeniti tudi, da Komisija za volitve in imenovanja imenuje posebno komisijo. Hvala. Če smo za ta predlog, prvič, da se uvede preiskava.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg56">Kdo je, prosim, za?</seg>
                <note>126 poslancev.</note>
@@ -522,11 +500,11 @@
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg65">&gt;PREDSEDNIK VLADE PREDLAGA, DA SKUPŠČINA IMENUJE JOŽEFA JERAJA ZA MINISTRA ZA TRGOVINO. Predlog ste prejeli, tudi mnenje komisije, ki predlog podpira. Želi predstavnik predlagatelja pojasniti. Ne. Poročevalec komisije, tudi ne. Prosim predsednika odbora za splošne in gospodarske zadeve, Franca Grašiča, da skupščini poroča o predstavitvi kandidata za ministra temu zboru.</seg>
             </u>
             <note type="speaker">FRANC GRAŠIČ:</note>
-            <u who="#SSK11.GrasicFranc1941" ana="#regular">
+            <u who="#GrasicFranc1941">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg66">Spoštovani predsednik, poslanke in poslanci! V skladu z drugim odstavkom 112. člena Ustave Republike Slovenije se je na seji Odbora Skupščine Republike Slovenije za splošne in gospodarske zadeve 11. februarja 1992 pred imenovanjem za člana Vlade Republike Slovenije in ministra za trgovino predstavil gospod Jožef Jeraj in odgovarjal na vprašanja članov Odbora. Uvodoma je gospod Jeraj predstavil svoje poglede in smeri delovanja Ministrstva za trgovino in pri tem poudaril, da se bo zavzemal za tržno gospodarstvo, za tržno oblikovanje cen, za aktivno sodelovanje z Gospodarsko zbornico in drugimi strokovnimi institucijami, za varstvo potrošnikov, za oblikovanje Sveta za trgovino kot posvetovalnega organa, za uspešno delovanje inšpekcijskih služb ter da bi si Ministrstvo za trgovino pridobilo večjo vlogo pri zagotavljanju stabilnosti na trgu. V razpravi je gospod Jeraj odgovarjal na vprašanja članov odbora glede bodočega vodenja politike cen, uvoza, odpravljanja lokalnih monopolnih organizacij, delovanja državnih rezerv in postavljanja ravnovesja na tržišču ter o smotrnosti združevanja opravil pri notranjih in zunanje-trgovinskih poslih v enem vladnem resorju. Na podlagi opravljene predstavitve odbor podpira predlog predsednika Vlade Republike Slovenije, da se gospoda Jožeta Jeraja izvoli za člana Vlade Republike Slovenije in imenuje za ministra za trgovino. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg67">Hvala lepa. Želi o predlogu kdo razpravljati. Če ne želi, potem prehajamo na glasovanje. Po določbah 2. in 3. odstavka 26. člena začasnega poslovnika se o izvolitvi oz. imenovanju članov vlade glasuje javno, razen, če skupna seja na predlog predsednika Skupščine ali poslanca sklene, da se glasuje tajno. Če se glasuje javno, potem se glasuje s posamičnim izjavljanjem. Torej jaz predlagam, da o tem predlogu glasujemo tajno, predvsem glede na to, da imamo potem še nekaj drugih predlogov, ker bi uporabili približno enako metodo. Če ste za to, da bi bilo tajno, dajem predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg68">Kdo je za?</seg>
                <note>166 poslancev.</note>
@@ -555,11 +533,11 @@
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg83">Nadalje PREDSEDNIK VLADE PREDLAGA, DA SKUPŠČINA IMENUJE DR. NACETA POTOČNIKA ZA NAMESTNIKA MINISTRA ZA MALO GOSPODARSTVO. Predlog ste prejeli, tudi mnenje komisije, ki pa predloga ne podpira. Želi besedo predstavnik predlagatelja? Prosim, gospod Brezar.</seg>
             </u>
             <note type="speaker">VIKTOR BREZAR, minister za malo gospodarstvo:</note>
-            <u who="#SSK11.BrezarViktor1943" ana="#regular">
+            <u who="#BrezarViktor1943">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg84">Spoštovani poslanci in poslanke! Glede na to, da je Komisija za imenovanja dala negativno stališče na imenovanje Naceta Potočnika za mojega namestnika, ob tem pa ni dala nobene obrazložitve, pač pa je o tem samo glasovala menim, da je vseeno prav, da vam pojasnim, v kakšnim okoliščinah je prišlo do tega mojega predloga predsedniku vlade. Delo namestnika ministra ni enostransko. Delo namestnika je interdisciplinarno in zahteva velik obseg znanj. In sicer predvsem pravna, sociološka, psihološka, tudi tehnična znanja. Po drugi strani pa gre tudi za širok profil, ki zahteva določene osebnostne oziroma karakterne lastnosti. Predvsem je potrebna razvojna naravnanost, ustvarjalnost in glede na to, da je Nace Potočnik opravil najvišje šole, ki jih določa Vatikanska država in tudi teološka fakulteta v Ljubljani, menim, da tem mojim mnenjem in mojim zahtevam odgovarja. Glede na to, da je tudi Republika Slovenija priznala Teološko fakulteto kot enakopravno šolo v Sloveniji, menim, da smo tukaj in zdaj tudi mi na preizkusu, ali je to zares ali ne. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg85">Prosim, želi kdo razpravljati o tem predlogu. Ne želi. Če ne želi potem prehajamo na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg86">Kdo je za ta predlog?</seg>
                <note>92 poslancev.</note>
@@ -586,128 +564,128 @@
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg99">Ob tej priložnosti želi minister za zdravstvo, družino in socialno varstvo dr. Božidar Voljč nekaj spregovoriti.</seg>
             </u>
             <note type="speaker">DR. BOŽIDAR VOLJČ, minister za zdravstvo, družino in socialno varstvo:</note>
-            <u who="#SSK11.VoljcBozidar1939" ana="#regular">
+            <u who="#VoljčBožidar">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg100">Spoštovani gospod predsednik, spoštovane poslanke in poslanci! Zahvaljujem se vam za izkazano zaupanje, ker ste potrdili kandidaturo prof. Maroltove. Rad bi se zahvalil gospodu predsedniku Peterletu in vodstvu Skupščine za pospešen postopek. Ker pa menim, da je prav, da profesorico spoznate glede na to, da bo večkrat stopila za ta oder, upam uspešno, ko bo branila stališča Ministrstva za zdravstvo, bi vam jo rad predstavil.</seg>
                <note>Ploskanje.</note>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg101">Prosim, gospa Marolt - Gomišček, namestnica ministra za zdravstvo, družino in socialno varstvo.</seg>
             </u>
             <note type="speaker"> PROF. DR. MARICA MAROLT - GOMIŠČEK:</note>
-            <u who="#SSK11.MaroltGomiscekMarica" ana="#regular">
+            <u who="#MaroltGomiscekMarica">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg102">Hvala lepa za zaupanje. Upam, da bom skupaj z gospodom ministrom kar največ naredila za zdravje državljanov Slovenije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg103">Naslednje. PREDSEDSTVO REPUBLIKE SLOVENIJE PREDLAGA, DA SKUPŠČINA IZVOLI ZA SODNIKE USTAVNEGA SODIŠČA REPUBLIKE SLOVENIJE: DR. MILANA GASPARIJA, DR. IVANA KRISTANA IN MAG. JANEZA SNOJA. Predlog ste prejeli, prav tako tudi mnenje Komisije za volitve. Želi besedo predstavnik predlagatelja? Ga ni tukaj, poročevalec komisije ne želi. Želi o predlogih kdo razpravljati? Prosim, gospod Feltrin.</seg>
             </u>
             <note type="speaker">FRANCI FELTRIN:</note>
-            <u who="#SSK11.FeltrinFranci1943" ana="#regular">
+            <u who="#FeltrinFranci1943">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg104">Spoštovano predsedstvo, spoštovane delegatke in spoštovani delegati! Vprašanje imam, ne samo jaz osebno, vprašujem predsedstvo v imenu tistih telefonskih klicev, ki jih dobivam zadnje čase. Bo morda res nova slovenska vlada sestavljena iz, bom zelo grdo rekel, tistih, ki so še takrat, ko so tu grmele puške in ko so v Beogradu govorili proti Sloveniji, se odločali o njej, spreminjali ustavo, sodelovali z njo, postali naši usodni ljudje, ki bodo o nas odločali po ustavni zakonodaji. Zavedati se moramo, da smo kot nova država z novo ustavo dobili druge regerence in ti ljudje nam bodo devet let lahko krojili usodo, dobro ali slabo, tudi po ustavni zakonodaji. Bom kar spomnil ta zbor, da sem jaz osebno predlagal amandmaje pri ustavi in ki niso bili niti malo podprti z nobene strani, samo povem, da jih imam napisane, zato tudi menim, da je tu dr. Ivan Kristan za mene osebno in za tiste, ki so me klicali, nepristojen za tako mesto v naši državi. Nič ne rečem, ko bo minilo devet let, ko bodo en mandat dali skoz, da naj se ne javi. Ampak preizkušnja je treba. Poglejte, tudi na zboru, na Gospodarski zbornici se pojavljajo ljudje, ki so do zadnjega služili dol. Mislim, da se tu moramo zavedati, ne govoriti zdaj o stroki, imamo strokovne ljudi tudi v Sloveniji. Kaže kot da so tisti, ki govorijo o stroki, kaže kot da so samo strokovnjaki v Beogradu, v Sloveniji smo pa sami tepci. Imamo veliko strokovnjakov v Ljubljani in je treba tiste poiskati, ki so bili v Ljubljani za ves čas in so ves čas gradili našo Slovenijo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg105">Hvala lepa. Želi še kdo razpravljati? Gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg106">Hvala lepa za besedo. Ne bi se oglasil, če bi kdor koli drug v tej dvorani po takem govoru dvignil roko. Vi, ki dosti sveto pismo čitate in govorite o tistih kamnih, ki jih je treba metati, si takih govorov ne bi smeli dovoliti. V zadnjih časih je bilo o kandidaturi prof. Kristana dosti diskusij. Zdi se mi korektno, ker je tokrat mogoče priložnost, da se del teh stvari le razčisti, da se zgodbe povedo. Ena zgodba je, da kroži del dokumentov Ustavnega sodišča iz Beograda po različnih pisarnah. Pošiljajo jih nepodpisani zainteresirani, da pač gospod Kristan ne bi bil izvoljen. Ni problem, če se pošiljajo dokumenti, problem je, ker se ne pošiljajo celi dokumenti. Se pravi, ne pošilja se tisti del dokumenta, kjer oba ustavna sodnika iz naše republike izražata ločeno mnenje do spornih odločitev Ustavnega sodišča. Na račun drugih pa seveda kasirata tisto, za kar sta tudi z zavezo republiškega vodstva delala v Beogradu. Natančno se spomnim, da so sodniki in drugi spraševali, kaj jim je storiti, ali še hoditi tja po plebiscitu ali ne. Tja so hodili z zavezo republiškega vodstva. Za predsedstvo vem gotovo, za druge ne vem. Korektno bi bilo, če bi se oglasil tukaj tudi gospod Lojze Peterle, ki je nastopil v primeru Drobnič. Mislim, da gre tukaj tudi za odnos do tega, kako je ta država nastala in povedal, ali je hodil tja proti volji vlade ali ne.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg107">Kar se pa tiče zaslug za to t.i. slovensko pomlad, bi pa marsikdo, ki je sodeloval tudi pri pisateljski ustavi, ki je sedaj na neki način inkriminirana, lahko povedal, da je bil gospod Kristan tisti, ki nas je prvi podprl v tem zboru za ustavo, na osnovi katerega v prvem delu so nastali ustavni amandmaji in on je bil vodja tiste strokovne skupine, ki je vodila zunaj skupščine ljudi, da so vztrajali na tem, da je potrebno spremeniti volilni sistem in druge stvari, zato da je lahko prišlo do volitev, kakršne so bile. Vodja druge skupine za pripravo nove ustave, če se ne motim, je bil prof. Bučar. Vse pa je bilo pod kapo Zbora za ustavo in to lahko zelo vehementno trdim, ker sem ga nekaj časa jaz vodil, pozneje pa gospod Igor Bavčar. S tega stališča bi bilo korektno, da se to tem ljudem prizna, da ne govorijo, kje je kdo bil, kadar je za kakšno stvar bilo. Verjamem, da si je vsak po svoje za to prizadeval. Gospod Kristan si je pa za to javno prizadeval in zato si ne zasluži takih diskvalifikacij. Če pa gre za to, da je potrebno sprostiti mesta za druge, potem je treba razpravljati o ključih, ne pa diskvalificirati ljudi, ki tukaj nastopajo kot kandidati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg108">Hvala lepa. Gospod Starman.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg109">Spoštovano predsedstvo, drage kolegice in kolegi! Poslanski klub Demos je danes razpravljal o predloženih kandidatih Predsedstva za ustavne sodnike. Ob tem smo širše obravnavali problematiko statusa Ustavnega sodišča po novi ustavi, ki ga verjetno predsedstvo, ki je 20.12.1991 oblikovalo ta predlog, ni moglo tako daleč predvideti. Menimo namreč, da je funkcija pristojnosti Ustavnega sodišča, da ne moremo imeti v sestavu Ustavnega sodišča pretežno, da ne rečem v večini, sodnikov, ki se ukvarjajo z ustavnim pravom, celo z mednarodnim primerjalnim ustavnim pravom, ampak da nujno potrebujemo zaradi t.i. ustavne pritožbe strokovnjake s področja civilnega in tudi kazenskega prava. Poleg tega smo ugotovili, da v predlogu in dosedanjem sestavu ni nobene sodnice. Menimo namreč, da ob tem, da ima Slovenija več kot polovico žensk v pravosodju, med njimi tudi izjemno dobre juristke, v mislih imam profesorico Pravne fakultete za civilno pravo, Ado Polajnar - Pavčnik, in še vrsto drugih bi lahko naštel. Ne mislim pa pri tem predsednice Vrhovnega sodišča ali Družbeno pravobranilko samoupravljanja. Zato na podlagi teh izhodišč in na podlagi tega, da je Ustavno sodišče in ustavni sodniki zaradi kompentenc, ki jih imajo, izjemno homogen in trdno določen organ in da po ustavi praktično ni mogoče zamenjati ustavnega sodnika in da ustavni sodniki odločajo o zadevah tudi nad državnim zborom, kadar gre za razlago mednarodnih pogodb, smo ocenili, da je tak predlog, kot je, z argumenti, ki so bili v nekem smislu že podani, danes nesprejemljiv in nepopoln. Zato smo se odločili, da ne podpremo dveh kandidatov, in sicer dr. Milana Gasparija in dr. Ivana Kristana in da je potrebno za ta dva kandidata dobili druge, tudi sodnice. Zato predlagam, da teh dveh ne podpremo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg110">Hvala lepa. Ali želi še kdo razpravljati? Gospod Bekeš.</seg>
             </u>
             <note type="speaker">PETER BEKEŠ:</note>
-            <u who="#SSK11.BekesPeter1946" ana="#regular">
+            <u who="#BekesPeter1946">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg111">Gospod predsednik, spoštovane kolegice in kolegi! Ne bom branil teh kandidatov, ker jih njihovo delo brani, je pa korektno dodati še nekaj stvari k temu in tudi opozoriti na nekatere notranje kontradikcije v izvajanju mojega nekdanjega tovariša Starmana. Govorim zgolj dejstva. Zanimivo je, da daje prednost kandidatu, ki je dosegel nižjo akademsko stopnjo, skratka magistru pred dvema doktorjema znanosti. Zanimivo je, da pridejo predlogi, ki so prav gotovo legitimni, danes na skupni seji pred nas, ko je vendar bil čas prej, da se jih predloži. Osebno tudi mislim, da bo dobro priti do kandidatk, vendar mislim, da je v tem postopku v tej fazi nekoliko pozno priti s temi predlogi. Zanimivo je, da nam kolega Starman predlaga, naj ne podpremo kandidata, ki je vodilni slovenski strokovnjak za primerjalno ustavno pravo. Mimogrede, v Sloveniji tudi sicer ni veliko teh strokovnjakov. Imel sem vtis, da v tej skupščini podpiramo tisti kriterij kvalitete, ki je grajen na mednarodnih primerjavah. V svetu nekaj velja samo tisto, kar doživi potrditev v širših mednarodnih okvirih. Prepričan sem, tudi sam sem nekaj let delal kot svetovalec Ustavnega sodišča, da mora biti zastopan v ustavno sodni praksi ta primerjalni kriterij. Na najboljši možen način je zastopan, če pri njegovem uveljavljanju kot sodnik sodeluje vodilni slovenski strokovnjak, vsaj v stroki mu to zaenkrat priznavamo. Rad bi slišal argumentiran ugovor zoper to stališče. To je tudi razlog, zaradi katerega bom osebno podprl to zadevo.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg112">Glede dr. Gasparija bi rad rekel, da je dolga leta delal kot praktik v pravosodju kot civilni sodnik. Pozneje je delal na Ustavnem sodišču in tam lep del svoje strokovne kariere preživel kot strokovni sodelavec. Delal je v tej skupščini kot predsednik Zakonodajno-pravne komisije in s tega vidika obvlada tisto fazo nastajanja prava, ki je zelo dragoceno,oziroma je znanje vedno izredno dragoceno pri ustavno sodnem delu. Skratka, je človek točno s tisto strokovno in teoretično izkušnjo in širino pogleda, ki je potrebna za uspešno delo tukaj. To so razlogi, zaradi katerih me tudi ta dva kandidata prepričata in povedal sem jih zato, ker mislim, da je prav, da jih vsi poznamo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg113">Hvala lepa. Gospod Starman želi replicirati.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg114">Mislim, da je replika kolegu več kot utemeljena, ker je že s samim pozdravom nastopil strankarsko. Moje izhodišče in moji argumenti temeljijo strogo na profilu, ki ga zahteva sedanji ustavno pravni status Ustavnega sodišča. Mislim, da si tudi težko predstavljamo Ustavno sodišče brez profila, kot ga nam ponuja - ker smo zelo omejeni v kadrih - prof.dr. Janez Kranjc. Med sedanjimi izvoljenimi strokovnjaki so praktično vsi, ki poznajo vsaj toliko kot dr. Kristan, mednarodno primerjalno pravo. To smo videli tudi v oblikovanju ustave. Zato strogo zagovarjanje kompetenc oziroma stališč, ki jih je iz izkušenj dobil kolega Bekeš, ko je sodeloval pri oblikovanju raznih samoupravnih odločb, ki jih je oblikovalo dosedanje Ustavno sodišče, ne more biti kriterij za podporo tem kandidatom. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg115">Hvala lepa. Gospod Zabukovec.</seg>
             </u>
             <note type="speaker">ZDRAVKO ZABUKOVEC:</note>
-            <u who="#SSK11.ZabukovecZdravko1940" ana="#regular">
+            <u who="#ZabukovecZdravko1940">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg116">Spoštovani, iz ocene v uvodu je videti, da smo vsi tisti, ki smo se za slovensko stvar borili tudi zunaj Slovenije, sumljivi. Imeli smo pač to srečo, da smo bili malo prej in malo bolj v prvih vrstah. Moram reči, da bilo je med ljudmi, s katerimi sem delal, zelo malo takih, ki so zatajevali slovenske koristi. Bilo je predvsem vprašanje občutka, tehnike, strategije, ki jo bomo uporabljali. Cilj pa nam je bil precej jasen in precej enak, najprej ne na začetku, pozneje pa se nam je vedno bolj kristaliziral, kakor bolj so bile hude okoliščine, v katerih smo delali. V malo ljudi sem podvomil in med njimi prav gotovo ni bilo prof. Kristana. Res pa je, da se je boril za slovensko stvar nekoliko bolj vzvišeno, na neki bolj strokovni ravni, morda ne tako štirioglato, kot sem npr. počel jaz, ali pa, ker smo morali tako početi v nekaterih trenutkih, smo pa spremljali z dovolj strokovnim pristopom, tudi za vsak primer, ker mednarodna javnost zgolj štirioglatih načinov uveljavljanja svojih koristi ne priznava. Nazadnje sem bil s prof. Kristanom skupaj, ko sem bil pooblaščenec Republike Slovenije v sporu o veljavnosti ali neveljavnosti tistega zakona, ki je razveljavil kosovsko skupščino.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg117">Kot vem, je znano je Slovenija sprožila ustavni zbor. Kljub močnim pritiskom je bila podana s strani obeh naših ustavnih sodnikov in tudi s strani sodnika poročevalca, na katerega sta tudi ona dva vplivala, zelo primerna ocena in zelo primerno stališče. Torej, na splošno kolikor sem se srečeval s prof. Kristanom in konkretno, jaz ne dvomim o njem in bom glasoval "za". Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg118">Hvala lepa. Besedo ima gospa Darja Lavtižar Bebler.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR BEBLER:</note>
-            <u who="#SSK11.LavtizarBeblerDarja1950" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg119">Hvala lepa za besedo. Spoštovane poslanke, spoštovani poslanci! Ne bi mogla iz te dvorane mirne vesti, če ne bi poskušala prispevati k temu, da se vendar le nekaj konkretnega pove, ne samo tako mimo grede, v zvezi s kandidaturo dr. Milana Gasparija, kajti samo omenjen je bil kot neprimeren, ni pa bilo slišati nobenega tehtnega argumenta. V prid gospoda prof. Kristana so drugi govorili, jaz se v to ne bom spuščala, tudi se ne bom spuščala v kvalifikacijo dr. Feltrina. Mislim pa, da kar zadeva stališče v zvezi z dr. Gasparijem kot kandidatom, bi rada povedala oziroma opozorila na en argument. Namreč, Ustavno sodišče je z novo ustavo dobilo dodatno pristojnost, in sicer da odloča v primeru ustavne pritožbe, kadar gre za kršitve človekovih pravic in temeljnih svoboščin.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg120">Dr. Milan Gaspari je med vidnejšimi strokovnjaki, ki se je do sedaj teoretično ukvarjal s problematiko človekovih pravic in temeljnih svoboščin. Moram povedati tudi to, da je v komisiji, ki sem jo vodila v okviru ustavne komisije, se pravi v okviru komisije za poglavja o človekovih pravicah in temeljnih svoboščinah, zelo tvorno sodeloval in nam s svojim strokovnim znanjem zelo konkretno in temeljito pomagal. Zato ne bi rada videla, da bi tukaj ostal vtis, da dr. Milan Gaspari ni primeren za ustavnega sodnika. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg121">Hvala lepa. Besedo ima gospod Feltrin.</seg>
             </u>
             <note type="speaker">FRANCI FELTRIN:</note>
-            <u who="#SSK11.FeltrinFranci1943" ana="#regular">
+            <u who="#FeltrinFranci1943">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg122">Moram javno povedati, da jez nisem noben doktor in te diskvalifikacije ne bi bilo potrebno, ampak sem se svojemu kolegu dr. Buserju opravičil, če je pa pomota prišla pri tisku, tukaj pa ni moja krivda in bi se morala opravičiti javna sredstva, ne pa jaz. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg123">Hvala lepa. Prosim, gospa Lavtižar Bebler.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR BEBLER:</note>
-            <u who="#SSK11.LavtizarBeblerDarja1950" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg124">Gospod Feltrin, potem sem vam jaz dolžna opravičilo. Nisem vedela, čitala sem v časopisu in se vam torej opravičujem, če niste doktor.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg125">Želi še kdo razpravljati? Besedo ima gospod Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg126">Jaz se pa o takšnih zadevah ne bi pogovarjal, o raznih diskvalifikacijah, kot je gospa Beblerjeva govorila. Jaz nisem nič slišal, da bi gospod Feltrin koga diskvalificiral, ampak bi predlagal, da se na list, ki smo ga prejeli, popravi ustavna podlaga. Tam piše še na osnovi stare ustave in sicer bi predlagal, da se na podlagi 143. člena Ustave Republike Slovenije, te, ki smo jo sedaj sprejeli, Predsedstvo predlaga in tako naprej, da bo pač zadeva v skladu z ustavo, da ne bomo prišli v kakšen ustavni spor. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg127">Hvala lepa. Opozorilo, mislim, da je na mestu in bomo Predsedstvu sporočili, da mora v prihodnje svoje predloge temeljiti na pravih ustavnih členih. Želi še kdo razpravljati? Prosim, gospod Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg128">Spoštovane kolegice in kolegi, ne bom govoril o razlogih, zakaj bom jaz glasoval za predložene kandidate. Rad bi pa povedal nekaj argumentov, ki govorijo, po mojem mnenju, zelo prepričljivo zoper to, da bi bilo možno sprejeti v tej skupščini utemeljitev, da si prof. dr. Ivan Kristan ne zasluži izvolitve na to funkcijo, ker je imel neustrezen odnos do osamosvajanja Republike Slovenije. Nekaj teh argumentov je že kolega Školč povedal in z njimi se v celoti strinjam, to je aktivnost dr. Kristana v Zboru za ustavo, to so njegovi zelo kritični teksti o ustavnih dopolnilih iz leta 1988, ki jih je zelo ostro, veliko ostreje kot drugi kolegi, ocenil kot poskus ponovne centralizacije in unitarizacije Jugoslavije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg129">Rad bi vas opozoril, čeprav se mi zdi, da bi nekateri od vas te tekste lahko poznali, da je dr. Kristan v Novi reviji, v dokaj znameniti 95. številki, ki govori o samostojni Sloveniji, objavil članek o slovenski samoodločbi in tukaj na osrednjem mestu, z ustavno pravnega in še nekaterih drugih vidikov, utemeljuje trajnost pravice slovenskega naroda do samoodločbe. Če torej upoštevamo besedila dr. Kristana o ustavnih amandmajih, o samoodločbi v zvezi z nastajanjem nove slovenske ustave in pa že omenjena ločena mnenja zoper vse tiste odločbe Ustavnega sodišča Jugoslavije, katerega član je bil, ki so poskušali onemogočati osamosvajanje Republike Slovenije, potem seveda lahko ugotovimo, da je utemeljitev zoper njegovo kandidaturo, ki bi kakorkoli povezovala to z neustreznim odnosom do osamosvajanja Slovenije, čista izmišljotina. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg130">Hvala lepa. Besedo ima gospod Šeligo.</seg>
             </u>
             <note type="speaker">MAG. RUDI ŠELIGO:</note>
-            <u who="#SSK11.SeligoRudi1935" ana="#regular">
+            <u who="#SeligoRudi1935">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg131">Spoštovani predsednik, spoštovani poslanci, poslanke! Nisem mislil govoriti, nisem strokovnjak za to področje. Ta moja priglasitev je izsiljena. Najmanj dva govorca sta citirala položaj oziroma delež prof. Kristana pri tako imenovani pisateljski ustavi.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg132">Glede na vse, predvsem glede na to, da mislim, da to gibanje hočeš nočeš, najbolj poznam, moram na kratko opredeliti ta položaj. Gibanje se je začelo 1987 leta, meseca marca v Cankarjevem domu v zvezi z amandmaji k zvezni ustavi. Takrat je bil prof. Kristan ostro proti temu gibanju, proti formulacijam, ki so prihajale ne samo iz pisateljskega društva, ampak tudi od drugih slovenskih intelektualcev. Druga faza je bila izdaja knjižice - če tako rečem - "Prispevki k slovenski ustavi", tisto čemur smo rekli zametek slovenske ustave, nato je bila sklicana konferenca oziroma razprava na centralnem komiteju; takrat je prof. Kristan ostro nasprotoval temeljnim zamislim. Čez nekaj mesecev se je o svojem mišljenju, svojem prepričanju tudi za mene dosti radikalno obrnil in je dejansko začel podpirati, od takrat naprej bi kar jaz rekel od konca 1988 leta, zamisli tako imenovane pisateljske ustave in celotno gibanje. To je najbrž samo za premik v taktu.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg133">To kar je govoril gospod Školč, bi rad malo dopolnil na ta način: Zbor za ustavo, teklo je na ta način, bi lahko rekel, da se je gibanje začelo na društvu, prelilo se je v Zbor za ustavo, ki ga je na začetku vodil gospod Školč, pozneje gospod Bavčar in ta zbor se je na nek način, ne direktno, pa vendarle transformiral v ta parlament, ki ga imamo. Tako imenovana pisateljska ustava je prestopila parlamentarni prag na ta način, da se je iz 1988 leta v december 1990 leta tukaj pojavila kot osnutek nove slovenske ustave. Ta osnutek je bil v tem parlamentu v prvi fazi zavrnjen, po enem letu se je duh te ustave vrnil, tako da smo 26. decembra sprejeli Ustavo Republike Slovenije, ki je po svojem duhu enaka pisateljski ustavi, tako imenovani pisateljski ustavi iz 1988. leta. To je okvir in ta okvir se mi je zdelo potrebno povedati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg134">Gospod Peterle, predsednik Vlade Republike Slovenije.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg135">Spoštovane poslanke in poslanci! Ne vidim potrebe po paralelah med Drobničem in gospodom Kristanom ali kom drugim iz spiska predlogov za ustavne sodnike. Priključil bi se samo na dve besedi, ki sta jih dva predgovornika rekla. Eden se je vprašal po ključu, drugi po kriterijih. Tudi mene to zanima, tako doma kot po svetu. Vprašal sem na najpristojnejšem mestu, kako urejajo te zadeve po svetu, posebej glede na to, da naš predlog nikakor ni prišel skozi, in sem ugotovil, da po svetu upoštevajo pri tako pomembnih funkcijah ne samo strokovne kriterije oziroma kriterij strokovnosti in delovnih izkušenj, ampak upoštevajo tudi kriterij nazorske sestave prebivalstva. To je povsem legitimen in legalen kriterij in vidim v obrazložitvi Predsedstva, da gre samo na delovne izkušnje in na stroko, vtis pa imam, da stvar tendira k preizkušenim kadrom. Taka je moja ocena. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg136">Hvala lepa. Če ni več razpravljalcev, potem razpravo zaključujem in dajem ponovno samo v preveritev sklep, da tudi o teh treh predlogih glasujemo tajno.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg137">Prosim, kdor je za ta predlog?</seg>
                <note>160 poslancev.</note>
@@ -721,7 +699,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 18.15 uri in se je nadaljevala ob 18.35 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg143">Prosim poslance, če bi prišli v dvorano. Predlagam, da nadaljujemo sejo. Najprej moramo ugotoviti sklepčnost. Prosim poslance Družbenopolitičnega zbora, da ugotovimo prisotnost.</seg>
                <note>39 poslancev je prisotnih.</note>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg144">Premalo. Zbor občin?</seg>
@@ -879,14 +857,14 @@
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg237">Dovolite mi, da v imenu vseh poslancev in v svojem imenu čestitam gospodu Jožetu Jeraju k imenovanju ministra za trgovino. V skladu s 113. členom Ustave Republike Slovenije, izreče minister po imenovanju prisego. In prosim gospoda ministra, Jožeta Jeraja, da da prisego.</seg>
             </u>
             <note type="speaker">JOŽE JERAJ, minister za trgovino:</note>
-            <u who="#SSK11.JerajJozef1938" ana="#regular">
+            <u who="#JerajJožef">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg238">Spoštovani zbor! Zahvaljujem se vam za zaupanje. Tako kot vi, si tudi jaz predstavljam, da bo Slovenija v bodoče pravi most med Sredozemljem in severno in vzhodno Evropo, tako kot tudi most med Zahodom in Balkanom. Tu vidim mesto, ki smo si ga izborili v zgodovini in želim, da ga naprej ohranimo in ker je trgovina ena tistih dejavnosti, ki je najbolj prožna in ki tudi je najbolj prispevala k razvoju, želim, da mi pri tem pomagate, tako kot zbor in kot tudi ustrezne komisije. Hvala lepa še enkrat.</seg>
                <note>Ploskanje.</note>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg239">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močni deloval za blaginjo Slovenije.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg240">Hvala lepa. Naslednje, preberem poročilo, iz glasovanja za izvolitev treh sodnikov ustavnega sodišča Republike Slovenije. Komisija za izvedbo glasovanja, ki je potekalo na skupni seji vseh zborov Skupščine Republike Slovenije, dne 12. februarja 1992 je ugotovila: glasovanja se je udeležilo 181 poslancev, oddanih je bilo 181 glasovnic, neveljavna je bila samo ena. Kandidati so dobili naslednje število glasov: dr. Milan Gaspari 87 glasov, dr. Ivan Kristan 78 glasov, mag. Jože Snoj 150 glasov.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-02-12.s030-01.seg241">Komisija ugotavlja, da je bil na podlagi 163. člena Ustave Republike Slovenije v povezavi z 2. členom ustavnega zakona za izvedbo Ustave Republike Slovenije in 72. ustavnim amandmajem k Ustavi Republike Slovenije leta 1974, izvoljen za sodnika Ustavnega sodišča Republike Slovenije mag. Janez Snoj, ki je dobil potrebno večino glasov vseh poslancev.</seg>
                <note>Ploskanje.</note>

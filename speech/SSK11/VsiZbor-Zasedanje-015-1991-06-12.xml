@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 15. zasedanje</title>
             <meeting n="15"
-                     corresp="#VsiZbor.1991-06-12.z015-01.DruzPolZb #VsiZbor.1991-06-12.z015-01.ZbObc #VsiZbor.1991-06-12.z015-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="17"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="7"/>
                <tagUsage gi="seg" occurs="84"/>
             </namespace>
@@ -175,23 +166,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-06-12.z015-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-06-12.z015-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-06-12.z015-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -202,16 +176,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">15. zasedanje</head>
             <docDate>12. junij 1991</docDate>
             <note type="chairman">Sejo je vodil dr. Ludvik Toplak, predsednik Družbenopolitičnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 16.15 uri.</note>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg1">Spoštovane poslanke, spoštovani poslanci, gospe in gospodje, cenjeni gostje in spoštovani predstavniki sredstev obveščanja!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg2">Pozdrav velja tudi gostom, predsedniku Zveznega izvršnega sveta gospodu Anteju Markoviću s sodelavci.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg3">Pričenjam skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora Skupščine Republike Slovenije. Predsedniki zborov smo skupno zasedanje sklicali v skladu s 83. členom poslovnika Skupščine Republike Slovenije.</seg>
@@ -221,7 +199,7 @@
                <note>ploskanje</note>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg7">Spoštovani zbrani! Jaz vas bom moral prvič s tega mesta prositi za nekaj potrpljenja. Že četrt ure hodi expoze iz Izvršnega sveta sem, ker smo še ene popravke napravili, nimam še tukaj pisanega teksta, rad bi pa si s tistim tekstom pomagal, čeprav mi ne bi bilo težko govoriti tudi drugače.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg8">Spoštovane poslanke in poslanci,</seg>
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg9">Tisztelt kepvišelok tisztelt holgyeim es uraim,</seg>
@@ -262,13 +240,13 @@
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg44">Hvala lepa gospodu Lojzetu Peterletu. Besedo ima gospod Ante Marković, predsednik ZIS.</seg>
                <note>ploskanje</note>
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg45">.</seg>
             </u>
             <note type="speaker">ANTE MARKOVIĆ:</note>
-            <u who="#SSK11.MarkovicAnte1924" ana="#regular">
+            <u who="#MarkovicAnte1924">
                <note>Prevod</note>
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg46">Spoštovane poslanke, spoštovani poslanci! Dovolite mi, da se na vas obrnem v imenu Zveznega izvršnega sveta in v svojem lastnem imenu in da vam izrazim svoje zadovoljstvo, ker imam priložnost, da govorim v Skupščini Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg47">Moram najprej razložiti kako je sploh in zakaj je prišlo do tega pogovora in prav tako bom prisiljen razložiti še nekatera druga vprašanja povezana z današnjimi temami ter s predhodnim govorom. Ideja in razlogi, kako naj se organizira pogovor z vašo skupščino so prišli med pogovorom predstavnikov Republike Slovenije in predstavnik ZIS-a, ki je bil neposredno po obisku predstavnikov Evropske skupnosti v Jugoslaviji in pogovorov, ki smo jih takrat imeli.</seg>
@@ -296,11 +274,11 @@
                <note>ploskanje</note>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg69">Hvala lepa gospodu Anteju Markoviću. Besedo ima gospod Andrej Ocvirk, podpredsednik Izvršnega sveta Skupščine Republike Slovenije.</seg>
             </u>
             <note type="speaker">DR. ANDREJ OCVIRK:</note>
-            <u who="#SSK11.OcvirkAndrej1942" ana="#regular">
+            <u who="#OcvirkAndrej1942">
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg70">Spoštovano predsedstvo, spoštovani poslanci in poslanke! Čuli ste, da se bo gospodarstvo v treh mesecih znašlo v kriznem, nemogočem stanju. Včeraj smo bili v gospodarstvu Novega mesta; imeli razgovor s ključnimi gospodarstveniki Dolenjske regije in uporabili so izraz: dajte že kaj narediti, kajti to gospodarstvo ugaša. To se pravi izraz "ugaša", mislim, da je to bolj kot pričakovati krizo šele čez tri mesece. Ker se to gospodarstvo, slovensko, še vedno nahaja v okviru izvajanja reformskega programa ZIS-a, bi se najprej oslonil na par izhodišč in par ocen tega in mogoče tudi repliko na to. Jaz sem res danes, mislim, da je mesec dni kar sem tu, ne čitam veliko, ampak prebral sem precej telexov, ki so šla iz kabineta podpredsednika vlade v Beograd, kjer je urgiral določene posege v gospodarski politiki. To se pravi, se je poskušalo komunicirati tudi na tem področju, ampak ni bilo pravega odziva.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg71">ZIS ocenjuje, to so mnenja, da je bila prva faza uresničevanja reforme v letu 1990, to je do polovice lanskega leta, usmerjena v zmanjšanje inflacije, da je bila ta faza uspešna. Za svoje ukrepe ekonomske politike in slabe gospodarske rezultate v drugi polovici leta 1990, ter v prvem kvartalu letošnjega leta, navaja naslednje osnovne razloge: politične razmere v Jugoslaviji in samostojno ukrepanje posameznih republik in nesprejetje predlaganih ustavnih amandmajev v celoti, ali vsaj tisti del, ki omogoča minimalno funkcioniranje enotne države. ZIS je v oceni posledic lanskega programa premalo kritičen in jih sorazmerno pristransko prikazuje. Kot rešitve za izhod iz nastalega položaja ponuja programe 11 + 3 temeljnih skupnih premis, na katerih bi morala obstajati skupna država do dogovora republik in pokrajin o prihodnosti države, kot izhodišče. In ZIS vztraja na pravilnosti prvotnega protiinflacijskega programa in išče vzroke za neuspeh izven sebe. Rešitve, ki jih v nekaterih primerih predlaga, so nekonsistentne glede na temeljne principe, ki jih je sam vseskozi poudarjal pri zagovarjanju svojih ekonomskih reform.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg72">Že v 1. fazi protiinflacijskega programa je prišlo do neustreznega ukrepanja in do globokih neravnotežij, ki so se sredi leta s preboji osebnih dohodkov in ponovno rastjo cen, le še poglabljali. Prvič: monetarna politika je bila vodena nekonsistentno, po načelu hladno - vroče, premalo restriktivna - prvi mesec po sprejetju programa in preveč v kasnejših mesečnih, ko so se cene že hitro umirjale, kar je poleg drugih vzrokov, dodatno zmanjšalo gospodarsko aktivnost. Jasen dokaz o neprimernosti monetarne politike je zatekanje gospodarstva v naturalno menjavo. Drugič: tečaj dinarja je bil precenjen že v prvi polovici lanskega leta. ZIS pa je vztrajal na fiksiranem tečaju vse do konca leta, ko je bilo že nekaj mesecev več kot očitno, da je plačilna v temeljnem neravnovesju. Strinjamo se, da je del tega neravnovesja nastal tudi zaradi negotovosti spričo zaostrenih političnih razmer. Vseeno pa so čisto ekonomsko tehnične pomanjkljivosti protiinflacijskega programa daleč pomembnejše. Nobena država namreč ne more zdržati pritiska na plačilno bilanco ob tako visokem odstopanju efektivnega tečaja tujih valut od, ravnotežnega, na kar so mesečno opozarjali vedno slabši podatki v jugoslovanski zunanjetrgovinski menjavi, ki je najbolj zanesljiv indikator stanja plačilne bilance.</seg>
@@ -319,7 +297,7 @@
                <note>Ploskanje</note>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-06-12.z015-01.seg84">Hvala lepa. Po programu zaključujemo skupno zasedanje vseh treh zborov; nadaljevanje bo v ločenih zborih, na ločenih zborih. Hvala.</seg>
             </u>
             <note type="time">Seja je bila končana 12.junija 1991 ob 17.40 uri.</note>

@@ -9,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Skupščine Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Zbor združenega dela: 9. seja</title>
-            <meeting n="9"
-                     corresp="#ZbZdruDel.1990-11-08.s009-01.ZbZdruDel"
-                     ana="#parl.meeting.regular"/>
+            <meeting n="9" corresp="#ZbZdruDel" ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +27,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +40,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +61,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="169"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="72"/>
                <tagUsage gi="seg" occurs="290"/>
                <tagUsage gi="gap" occurs="6"/>
@@ -433,13 +422,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="ZbZdruDel.1990-11-08.s009-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -450,16 +432,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>ZBOR ZDRUŽENEGA DELA</head>
             <head type="session">9. seja</head>
             <docDate>8. november 1990</docDate>
             <note type="chairman">Sejo je vodil Jože Zupančič, predsednik zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 14.10 uri.</note>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg1">Spoštovane poslanke in poslanci, dragi gostje in vsi ostali sodelavci. Današnjo sejo smo sklicali na podlagi 94. člena poslovnika Skupščine Republike Slovenije z namenom, da obravnavamo in uskladimo različne odločitve zborov, in sicer: predlog zakona o izdaji obveznic za pospeševanje izvoza v letu 1990, predlog zakona o spremembah in dopolnitvah zakona o RTV Slovenija, predloga zakona o dopolnitvi zakona o začasni prepovedi sečnje v gozdovih v družbeni lastnini in začasni prepovedi prometa z nepremičninami v družbeni lastnini, predlog za izdajo zakona o turistični taksi z osnutkom zakona in eventualne druge zadeve iz nedokončanih dnevnih redov 7. seje Družbenopolitičnega zbora in Zbora občin.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg2">Hkrati vas obveščam, da smo na klop prejeli predlog zakona o posebnem prispevku solidarnosti za odpravljanje posledic poplav v letu 1990 in predlog stališč Skupščine Republike Slovenije do nekaterih zakonov iz pristojnosti Zveznega zbora Skupščine SFRJ. S tema dvema točkama vam bomo predlagali, da razširimo dnevni red današnje seje Zbora združenega dela.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg3">Obveščam vas tudi, da bo ob 14.30 v veliki dvorani Skupščine Republike Slovenije skupno zasedanje vseh zborov, ki ga bo vodil predsednik Družbenopolitičnega zbora dr. Ludvik Toplak. Na skupnem zasedanju bomo poslušali informacijo predsednika IS Skupščine Republike Slovenije gospoda Lojzeta Peterleta o stanju in posledicah poplav v Republiki Sloveniji ter o predlogu ukrepov. Na klopi ste prejeli stališča Predsedstva Republike Slovenije v zvezi s poplavami.</seg>
@@ -468,11 +454,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg6">Želi predstavnica Republiškega sekretariata za varstvo okolja in urejanje prostora v zvezi s tem kaj povedati?</seg>
             </u>
             <note type="speaker">SONJA AHČAN:</note>
-            <u who="#SSK11.AhcanSonja" ana="#regular">
+            <u who="#AhcanSonja">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg7">Ja, jaz mislim, da gre za znano tako pomembno zadevo s katastrofalnim obsegom škode, da je nujno, da se že danes dogovorimo o delu sredstev, ki ga je potrebno zbrati poleg rednih virov, zato prosim, da ta predlog sprejmete.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg8">Želi še kdo razpravljati? Če ne, bi zaključil v zvezi s tem razpravo. Najprej dajem na glasovanje predlog za razširitev dnevnega reda s to točko.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg9">Kdo je za?</seg>
                <note>42 delegatov.</note>
@@ -511,7 +497,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 14.20 uri</note>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg31">Pred formalnim pričetkom še neformalno obvestilo. Prosim vas, da glede naslednje seje, ki je sklicana za 20. in 21. november 1990 vzamete na znanje dvoje: 1. da bomo mi zasedali v mali dvorani v poslopju Skupščine Republike Slovenije in ne tako kot je bilo navedeno (ker mi smo na vrsti, da gremo sedaj v malo dvorano, da se ne bomo iskali).</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg32">2. če ste prejeli in pregledali dnevni red, je za 20. in 21. predvidena dvodnevna seja. Če ne bomo zaključili z vsemi točkami bomo nadaljevali to sejo v torek 27. novembra. Tako da tudi torek, 27. novembra, nekako rezervirate čas za delo v skupščini. To se pravi dvoje. Tam bomo v mali dvorani Skupščine in da si tudi rezervirate še čas za 27. november, če bomo pa dobro delo opravili v vseh treh zborih, pa bo 27. naš delovni dan v delovnih organizacijah.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg33">1. TOČKA DNEVNEGA REDA - OBRAVNAVA IN USKLAJEVANJE RAZLIČNIH ODLOČITEV ZBOROV. NAJPREJ V ZVEZI S PREDLOGOM ZAKONA O IZDAJI OBVEZNIC ZA POSPEŠEVANJE IZVOZA V LETU 1990.</seg>
@@ -560,25 +546,25 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg61">Sedaj pa prosim poročevalca Komisije za informiranje, da nam poda eventualni predlog za uskladitev neusklajenih oziroma spornih vprašanj med zbori. Pisno ste prejeli. Gospod Franček Rudolf, prosim.</seg>
             </u>
             <note type="speaker">FRANČEK RUDOLF:</note>
-            <u who="#SSK11.RudolfFrancek1944" ana="#regular">
+            <u who="#RudolfFrancek1944">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg62">Ker z 31. decembrom poteče veljavnost zakona - ki je bil julija sprejet ravno v tej skupščini in ki je zahteval, da se nova skupščina RTV na podlagi zakona, ki je bil sprejet marca, preden smo mi nastopili mandat - je izredno važno, da je ta zakon o spremembah zakona o RTV čimprej sprejet in da je sprejet. Zato ni posebno ne pametno ne smotrno, da je prišlo do razkoraka pri sprejemanju teh sprememb, ki so vendarle začasnega značaja in ki vseeno pomenijo samo to, da se vodstvo televizije zamenja v skladu s pluralistično situacijo. To povem v uvod zato, da se zavedate, kako nima nobenega smisla zavlačevati stvari z nekimi spremembami, ki so deloma formalnega značaja, ki pa poslovne situacije prav nič ne spreminjajo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg63">Jaz bi predlagal, da enostavno ta zbor poskuša sprejeti nekako tisto, kar je sprejel ZO: da se približa temu, kolikor se pač lahko približa. Jaz mislim, da tale določba o tretjini ni naletela na razumevanje v ostalih dveh zborih; problem je tudi tole razmerje treh ali petih, ki jih imenuje kolektiv RTV. Komisija za informiranje je o tem zelo razpravljala in imela deljena mnenja. Jaz trdim, da če 5 članov sprejme komisija, mislim, tudi če povečamo število članov pa o tem odloča Skupščina, ni nobenega problema in se ravnotežje ravno tako ohrani; dobro, v drugih zborih niso tega mnenja. Samo te stvari niso tako grozno važne in niso tako strašno usodne, da jih ne bi mogli ta hip uskladiti. Mislim, da je vseeno bolje, da na nek način to zadevo uskladimo, kot pa da televizijo puščamo v negotovosti in ustvarjamo zmedo na tem področju. Danes se je komisija sestala. Člani komisije pri eni in drugi strani pač ne popuščajo; razlike so precej hude. Da bi prišli do nekega jasnega soglasja ne bi bilo mogoče. Jaz mislim, da bo ta medzborovska komisija prišla do nekega soglasja. Samo vseeno bi bilo bolje, če bi samo zbor nekako sprejel sklepe, ki bi že nakazovali pot k poenotenju tega zakona.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg64">To je pravzaprav vse, kar lahko povem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg65">Hvala. Vi veste iz neposrednih razgovorov s poslanci iz ostalih dveh zborov, da so tu dejansko kar precejšnje razlike. Tako Zbor občin, ko je obravnaval, ni sprejel niti enega našega amandmaja, ampak je ostal pri svojih. Enako je storil tudi DPZ in mi moramo po našem poslovniku in ustavi o teh predlogih, ki smo jih mi sprejeli zadnjič na zadnji seji, ponovno glasovati, jih spremeniti ali pa potrditi in to na tak način, da moramo to proceduro opraviti od začetka do zaključka, potem pa, glede na to kako vse skupaj kaže, tudi imenovati komisijo, ki naj pripravi enoten predlog. O tem enotnem predlogu bomo glasovali v celoti; če ga bomo sprejeli ga bomo, če ga ne bomo, ga ne bomo. Takšna je danes pravno-formalna procedura. Ne gre. Mi moramo formalni postopek izpeljati tako, da bo neoporečno. Glede na informacijo gospoda Rudolfa želi kdo razpravljati? Prosim gospod Zlobec.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg66">Bil bi čisto kratek. Ne vem namreč, ali je moj vtis čisto takšen, kot je bil Frančkov. Gre za to, da Zbor občin (o DPZ sploh težko govorimo, ker je zavrnil predlog v celoti) ni pristal niti na tiste amandmaje in celo na neobvezna priporočila, ki jih je soglasno sprejela sama komisija za informiranje. Se pravi, da Zbor občin doslej ni pokazal niti najmanjše želje do kakršnegakoli kompromisa, in če se ne bo nič spremenilo, se v tem trenutku - če bi naš zbor začel po polemikah, natezanjih in medsebojnih prepričevanjih spreminjati naše sklepe - pridružujem pismenemu predlogu Frančka Rudolfa oziroma njegove komisije, da se na tem zboru ne bi spuščali v nove debate, ker smo že na zadnjem zasedanju povedali tako rekoč vse, kar smo imeli za povedati. In predlagam, da bi se zbrali člani medzborovske komisije, ki je po mojem v tem trenutku sploh edina možna - če je kdorkoli zmožen - najti kompromis. Predlagal bi, da ne bi šli glasovat od točke do točke, ampak da bi eno glasovanje potrdilo to, kar smo potrdili na prejšnjem zasedanju, hkrati pa dali proste roke komisiji, da poskuša najti najboljši kompromis.</seg>
             </u>
             <note type="speaker">IVAN DRETNIK:</note>
-            <u who="#SSK11.DretnikIvan1921" ana="#regular">
+            <u who="#DretnikIvan1921">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg67">Mene preprosto zanima samo to, ali je mogoče dovoljeno po poslovniku o eni in isti stvari, kar smo že izglasovali, še ponovno glasovanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg68">Da, seveda, še celo tretjič bomo, celo moramo. Je pa seveda tu predlog gospoda Zlobca, in jaz prosim, da o tem še kdo kaj pove, da dejansko ne bi razpravljali. Tu sta seveda potem dve možnosti: prvo je;</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg69">Mi moramo sprejeti zdaj najprej v celoti naš predlog s tema dvema spremembama, ki smo ju opravili, zato moramo glasovati o zakonu v celoti z obema spremembama amandmajev najprej. Ste razumeli?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg70">In zato, ker gre zdaj za to odločanje, vas še enkrat prosim, da ugotovimo našo prisotnost. Prosim.</seg>
@@ -602,11 +588,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg81">Mi smo zadnjič že imenovali to komisijo za usklajevanje, vendar se mi zdi, da je prav, da še enkrat preberem, in sicer: Milan Aksentijević, Roman Jakič, Andrej Muren, Franc Erce in Franček Rudolf. Kdo je za to komisijo? Gospoda Murna ni, ali predlagate nekoga iz njegove stranke? Gospod Šter Andrej.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg82">Samo nekaj bi rad vprašal? Ali mora ta komisija tam zagovarjati stališča, ki smo jih tukaj sprejeli?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg83">Da. Kdo je za tak sestav komisije?</seg>
                <note>49 delegatov.</note>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg84">Je kdo proti?</seg>
@@ -626,91 +612,91 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg93">Pričenjam razpravo. Kdo želi razpravljati? Ali ima Izvršni svet že kakšno mnenje glede na amandmaje odbora? Prosim, Marija Ferlež, republiška podsekretarka v Republiškem sekretariatu za finance.</seg>
             </u>
             <note type="speaker">MARIJA FERLEŽ:</note>
-            <u who="#SSK11.FerlezMarija" ana="#regular">
+            <u who="#FerlezMarija">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg94">K zakonu menim, da ni potrebno dajati posebnih pojasnil. Gre za dva enodnevna zaslužka v mesecu novembru in decembru. Predlagani amandma odbora za proračun in javne finance se nanaša na to, da lahko delavci organizirajo dodatno delo za izpolnitev te obveznosti do konca novembra oziroma decembra in v tem primeru ne plačajo enodnevnega zaslužka iz čistega osebnega dohodka, ampak ta dodatni dan namenijo za odpravo posledic poplav. Izvršni svet temu amandmaju ne nasprotuje.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg95">Drugi amandma pa je redakcijski in tudi temu Izvršni svet ne nasprotuje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg96">Ugotavljam, da Izvršni svet amandmajema Odbora za proračun in javne finance ne nasprotuje. Ali želi še kdo razpravljati? Prosim, gospod Arzenšek.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg97">Prosim predlagatelja sledeče: v 9. členu piše: "Sredstva solidarnosti, zbrana po tem zakonu, se ne uporabljajo za gospodarsko infrastrukturo republiškega pomena in za dejavnosti, ki so v pristojnosti Republike Slovenije in se financirajo iz republiškega proračuna". Sprašujem, zakaj ne oziroma kateri pa so tisti viri sredstev, da bomo reševali posledice v teh dejavnostih?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg98">Hvala. Želi še kdo? Prosim, Marija Ferlež.</seg>
             </u>
             <note type="speaker">MARIJA FERLEŽ:</note>
-            <u who="#SSK11.FerlezMarija" ana="#regular">
+            <u who="#FerlezMarija">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg99">Že v uvodu predsednika Izvršnega sveta in gospoda Bogataja ste slišali, za kakšen obseg škode gre. Govorili smo o številkah med 8 do 10 milijard dinarjev. Skupaj s sredstvi solidarnosti, ki se zbirajo po zakonu o oblikovanju sredstev, torej tisti redni vir, ki ga imamo na razpolago v višini 220 milijonov dinarjev in sredstev po tem zakonu, ki je danes predmet obravnave, bi imeli na razpolago okoli 700 milijonov dinarjev. To pomeni, da bi lahko le zelo majhen delček namenili oziroma usmerili v prizadeta področja. Zato je predlog Izvršnega sveta tak, da bi za tisti del dejavnosti, kjer so sredstva namenjena v republiškem proračunu, izločili ta del in iz republiškega proračuna pomagali tem dejavnostim, medtem ko tam, kjer vira v republiškem proračunu ni, pa bi z rednimi sredstvi in s posebnim zakonom usmerili lahko večji del sredstev solidarnosti; gre za promet, zveze, za elektro in vodno gospodarstvo. V komunalnem in stanovanjskem gospodarstvu bi moralo priti do sofinanciranja (pomeni tudi en del teh sredstev, o katerih se danes pogovarjamo), medtem ko za obrt, gozdarstvo, kmetijstvo in ostalo pa bi morali v celoti pokriti iz republiških sredstev solidarnosti.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg100">Hvala. Želi še kdo razpravljati? Mogoče bi v zvezi s tem vseeno predlagali Izvršnemu svetu, ne da bi sedaj spreminjali zakon in delali težave, ampak da bi verjetno bilo potrebno za te dejavnosti, ki se financirajo iz proračuna, najti druge oblike pomoči, na primer, da vsem najbolj prizadetim, ali pa bolj prizadetim dejavnostim, to so v zdravstvu in šolstvu, da se dejansko na primer ukinejo vsi prispevki iz osebnih dohodkov, najrazličnejše finančne zadeve, ki prihajajo v naše delovne organizacije, potem pa se zopet vračajo. Mogoče bo kdo rekel, da bi s tem načeli cel sistem, ampak po vsej verjetnosti ne gre za napad, na sistem proračunskega financiranja, ker na koncu niso vsi maksimalno prizadeti. Šolam in bolnicam pa bi morali nuditi nekaj več in bi lahko te prispevke odpisali; enako velja tudi za občinske. Verjetno bi se dalo tudi kaj pogovoriti za plačilo stroškov, ki sedaj nastajajo, saj bodo začeli prihajati računi za elektriko, za vodo (ki smo jo sedaj morali pretirano uporabljati) in še kaj. To je cel splet, kjer gre samo za pretakanje denarja iz enega žepa v drug žep. Ta denar naj tem delovnim organizacijam, ki so bile najbolj prizadete, ostane, ne pa, da ga bomo vračali - in s tem bi lahko marsikaj naredili. To dajem v premislek. Tu je gotovo več možnosti in se mi zdi, da je ta dvodnevni zaslužek odločno premalo. Prosim, gospa Ferlež.</seg>
             </u>
             <note type="speaker">MARIJA FERLEŽ:</note>
-            <u who="#SSK11.FerlezMarija" ana="#regular">
+            <u who="#FerlezMarija">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg101">Tukaj moram povedati, da v bistvu mi danes nimamo zaključene finančne konstrukcije za pokritje celotne škode in da bo potrebno vas informirati o vseh virih, za katere se trenutno še pogajamo. Predsednik Izvršnega sveta je govoril o medrepubliški pomoči, pogovarjamo se z Mednarodno banko, tukaj gre za en del sredstev, pogajajo se s sosednjimi republikami, danes govorimo o tem posebnem zakonu, do prestrukturiranja bo prišlo v republiškem proračunu, predvsem ti nacionalni programi, kjer bodo narejene korekcije. To kar predlagate, bo verjetno moralo biti tudi predmet razgovora, ko bomo enkrat imeli pred očmi celotno sanacijo. Trenutno pa govorim o tem: mi moramo na ogroženem območju takoj plasirati en del sredstev, da preprečimo nadaljnjo škodo in zavarujemo premoženje prizadetih ljudi.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg102">Hvala. Prosim gospod Arzenšek.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg103">Sprašujem zaradi tega, ker sem recimo slišal, da so ta sredstva iz rezerv približno 300, 400 milijonov dinarjev. Po prvih ocenah, govorim samo za celjsko bolnico, brez zdravstvenega doma in ostalega, je tam približno blizu milijarde DIN škode s tem, da bi se ta stvar sanirala postopno. Zdi se mi preveč pomanjkljivo in zelo odprto reševanje teh stvari. Zato tudi prosim predsednika, da bi z naše strani mogoče dali dve pobudi (če ni sedaj prilika) in dejansko pokazali stvari, kako izgledajo v slikovnem materialu in bi se o tem vsaj delno prepričali.</seg>
             </u>
             <note type="speaker">KAREL VUKOVIČ:</note>
-            <u who="#SSK11.VukovicKarel1942" ana="#regular">
+            <u who="#VukovicKarel1942">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg104">Ni vprašanje, ali ta solidarnost ja ali ne, vendar mene zanima, zakaj je to neto OD, ker ljudje bi pričakovali, da če že nekaj delajo, da dajejo v celoti, da je to bruto OD. Zakaj je potrebno tudi iz tega solidarnostnega dela OD plačati tudi vse prispevke? Po mojem mnenju bi bilo bolj primerno, ali je enodnevni bruto OD ali je pa tudi dvodnevni bruto OD. In bodo ljudje to zelo z razumevanjem sprejeli, ker bodo ugotovili, da država oziroma ostale dejavnosti niso tudi na ta del solidarnostna sredstva, svoj delež vzele in nič prispevale k tej solidarnosti.</seg>
             </u>
             <note type="speaker">MARIJA FERLEŽ:</note>
-            <u who="#SSK11.FerlezMarija" ana="#regular">
+            <u who="#FerlezMarija">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg105">Glede te pobude bi rekla naslednje: iz OD plačujemo prispevke za pokojninsko, zdravstveno in druge dejavnosti. Če se tu odpovemo, potem tu zmanjka. Kako naj vam rečem: če se odpovemo rednim virom nastane nekje deficit. Zato pa se predlaga, da če gre za primer dodatnega dela, to se pravi tistega, ki je nad rednim delovnim časom, vplačilo za to solidarnost v bruto znesku. V nasprotnem primeru moramo dodatno zagotavljati sredstva za pokojninsko zavarovanje ali za zdravstveno zavarovanje ali za druge dejavnosti, za katere se sredstva zagotavljajo s prispevki iz OD. To sta dva sistema, ki se prepletata eden v drugem. Hvala.</seg>
             </u>
             <note type="speaker">IVO DANEU:</note>
-            <u who="#SSK11.DaneuIvo1937" ana="#regular">
+            <u who="#DaneuIvo1937">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg106">Da, nekaj bi vprašal, ker slučajno poznamo zadeve iz prejšnjih let, da kar se je v družbene dejavnosti natekalo viška iz teh prispevkov, so potem v proračunu to prerazporejali; nikoli ni dobilo ne zdravstvo ne, recimo, telesna kultura oziroma šport, v katerem delam. Če se je nateklo več denarja, so tisti denar dali nekam drugam; ni šel v zdravstvo ali pa v šport, ampak je šel v neke druge namene. Torej, verjetno ne bo držalo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg107">Če se nateče, mislim, za dva bruto OD v dveh mesecih, je verjetno umesten predlog gospoda Vukoviča, da gre vse za solidarnost. Samo toliko, ali pa, če mogoče lahko pojasnijo iz našega IS, če to ni res.</seg>
             </u>
             <note type="speaker">STANISLAV BERGLEZ:</note>
-            <u who="#SSK11.BrglezStanislav1936" ana="#regular">
+            <u who="#BrglezStanislav1936">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg108">Jaz bi želel opozoriti na to, da bo najbrž se marsikateri kolektiv trudil, da najde dodatna sredstva, da pravzaprav ta dan izplača in se bo na ta način pravzaprav tam pač, kjer bo to možno, masa povečala. To je razlog več, da seveda vztrajamo na tem, da je to bruto.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg109">Zdaj, če se izide z enodnevnim bruto, bi bila verjetno najboljša varianta, če pa to ne, če sta pa že dva dneva, bi pa zopet bilo prav, da sta bruto, ker sicer bo vendarle, je možno predvidevati, teh sredstev za tiste, ki jih niso planirali, nekoliko več. In mislim, da ni čisto pošteno, da tako nesrečo pravzaprav zdaj malo zlorabljamo še zato, da bo še komu drugemu kaj padlo. Hvala lepa.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg110">Mislim, da je to zelo enostavno. Kolegica z IS je prišla na dan z logiko, ki mi ni všeč, ker je preveč državotvorna. Vsi namreč razumemo, da če je nekje luknja in jo prelagamo, bo ta črna luknja zmeraj ostala. Ampak jasno je, da če pride do take katastrofe, da je treba to luknjo pokriti - in vsem nam je logično, da bomo mi s svojim zaslužkom to luknjo pokrivali - se nam zdi vsem, da je to logično, o tem ni nihče izrazil senčice dvoma. Da pa predstavnica države reče: "Država si pa ne more sama privoščiti, ker bo nekje drugje zmanjkalo", se vprašam, a mi si pa moramo vsi privoščiti, da nam bo zmanjkalo v proračunu. V redu, privoščimo si brez enega samega mrmranja, ampak na takšen način argumentacije države pa res ne morem pristati.</seg>
             </u>
             <note type="speaker">VALENTIN PRELOVEC:</note>
-            <u who="#SSK11.PrelovecValentin1934" ana="#regular">
+            <u who="#PrelovecValentin1934">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg111">Na hitro sem preletel tale zakon tukaj, na mizo je prišel vsem, tudi meni, zaradi tega mogoče nisem opazil ali pa mogoče nisem videl dobro: prilično dobro je razdelana tehnologija zajemanja pomoči, to se pravi, od kje bomo vzeli, približno koliko bomo vzeli, ne morem pa zaslediti tehnologije kontrole razdeljevanja, mogoče prednostnih list itd.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg112">Jaz mislim, da točno toliko je važno kdaj komu dati in kako dati, kakor zbrati; tu ne smemo delati nobene razlike. Ravno danes sem bil na neki seji, ki je obravnavala škodo malega gospodarstva na tem področju in seveda pravijo: prvo je treba reševati delovna mesta, kjer bomo ustvarjali dohodek, da se začne delati, in tako dalje, in tako dalje. Jaz sem namreč iskal po tem materialu da vidim, če je kaj rečeno, kje, kako se bomo lotevali tega, pa tega notri ne morem zaslediti. Jaz bi rad to slišal tukaj.</seg>
             </u>
             <note type="speaker">MARIJA FERLEŽ:</note>
-            <u who="#SSK11.FerlezMarija" ana="#regular">
+            <u who="#FerlezMarija">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg113">Kot je že gospa Ahčanova povedala, je v konstrukciji zagotavljanja sredstev za odpravo posledic te elementarne nesreče gotovo tudi republiški proračun. Tako da ne moremo reči, da proračun ne bo ničesar prispeval. Za naslednje leto bo pokrivanje te škode v raznih oblikah prav gotovo zajeto. Zato se opravičujem, ker sem hotela samo plastično povedati, da je pravzaprav obseg škode tako velik, da ga ne moremo pokriti v republiški pristojnosti. To je gotovo začetek pokrivanja in odpravljanja posledic te škode. Zagotovo pa ne moremo naenkrat in s tem, da vse druge dejavnosti podfinanciramo, to reševati. Najbrž to tudi ni namen predlagatelja. Amandma odbora za proračun pa ravno govori o tem, da če pa gre za dodatno delo, če se organizira dodatno delo izven rednega obsega, pa se plača ta dan v bruto znesku v celoti za solidarnost. Glede kontrole razdeljevanja in porabe teh sredstev, je gospa Ahčanova sicer že natančno obrazložila. Mislim pa, da se bodo uporabljale vse določbe zakona o sredstvih solidarnosti in družbenega dogovora o načinu uporabe in upravljanja s temi sredstvi. Drugi odstavek 9. člena k predlogu zakona, če sem prav razumela, pomeni ravno to, to je: da bo proračun vstopil v vse druge strukture financiranja na področju gospodarske infrastrukture. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg114">Hvala. Še kdo? Prosim.</seg>
             </u>
             <note type="speaker">JOŽE FURLAN:</note>
-            <u who="#SSK11.FurlanJoze1940" ana="#regular">
+            <u who="#FurlanJoze1940">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg115">Jaz bi tako rekel. Mislim, zakon je pomemben. Mislim, da ga sprejmemo, vendar ne bi smeli vztrajati na tem, da to iz čistih osebnih dohodkov damo. Mislim, če lahko odločamo v imenu delavcev, da bodo morali plačati ta del prispevka, lahko danes parlament tudi odloči, da tudi tisti drugi del bruto gre za ta namen takoj. Ker kdor hitro da, dvakrat da, pravimo. Potem dajmo vsi skupaj; bruto namenimo za to; potem se bomo odločali o drugih stvareh, kako bomo dalje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg116">Prosim, gospod Židanik.</seg>
             </u>
             <note type="speaker">DR. ANTON ŽIDANIK:</note>
-            <u who="#SSK11.ZidanikAnton1942" ana="#regular">
+            <u who="#ZidanikAnton1942">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg117">Da, jaz sem tudi za to, da se v celoti prispeva, se pravi tudi iz bruto OD, vendar bi v tem trenutku morali spremeniti tisti drugi odstavek tistega 9. člena, ki pravi, da se sredstva solidarnosti ne uporabljajo za dejavnosti, ki se financirajo iz republiškega proračuna. Namreč, v tem trenutku to pomeni, da bomo za zdravstvo pokrili vse te stroške ali izgubo, ki jo imamo v teh poplavljenih področjih iz republiškega proračuna. Torej bi republiški proračun potreboval tudi prispevek iz bruto osebnega dohodka iz teh dveh dni, da lahko ta dodatni strošek krije. V tem trenutku bi seveda bilo potrebno, da se da ta bruto v proračun, ki financira ostalo, kar je v njegovi domeni. Ne vem, če me razumete. Isto je za občinski proračun. Seveda je tukaj sedaj izjema. Če je bilo 35 občin prizadetih, potem bi vsekakor morali tisti svoj del proračuna za družbene dejavnosti pokriti, ostale občine, ki niso bile prizadete, pa bi bilo nesmiselno, da se jim zbira iz tega dne še za njihove družbene dejavnosti.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg118">Če lahko še sam povem tri stavke. Mi smo zdaj tu, o čemer se v našem zboru večkrat pogovarjamo. O tem, kaj gospodarstvo da, kaj družbene dejavnosti potrebujejo in tako naprej. Skratka, tu se začenja razprava, ki ima lahko velike razsežnosti in lahko zopet govorimo o tem, več ur. O teh stvareh smo se že pogovarjali in jaz ne bi želel, da bi ob tej priliki načenjali to vprašanje. Zdi se mi mogoče, da napravim kompromis. V tem smislu, da mi zdaj skušamo zakon z amandmajema sprejeti in tako, kot sem že prej dejal zaradi teh prispevkov, in vse te stvari, tudi s to razpravo o bruto in neto, naj Izvršni svet do 20. tega meseca, te stvari ovrednoti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg119">Ampak ne v tistem smislu, na katerega je opozoril gospod Zlobec. Jaz tudi sam ne morem več sprejemati te administrativne in birokratske logike, ki je je še vedno v Izvršnem svetu tako strašno veliko. Vsi samo kupčkajo. Iz enega zornega kota, iz ene pisarne gleda in samo gledaš, aha, tu mi bo zmanjkalo, tam bom imel viške in govoriš predvsem o tistih luknjah, o viških nikoli (kar smo slišali tudi kar je gospod Daneu povedal) in zato zahtevamo, da se tudi v Izvršnem svetu začenja miselnost iz te kamene dobe spreminjati. In zato morajo oni priti z bolj konkretnimi, bolj življenjskimi predlogi.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg120">Veste, mi smo tu, tudi takšni, ki smo osebno prizadeti, tudi takšni, ki smo po podjetjih in šolah fantastično prizadeti. In ne moremo prenašati mirno kupčkanja s tem denarjem gor ali pa dol. Glavno je, da so zdaj ljudje, delavci, intelektualci ogromno delo opravili in jaz mislim, da bi se morali najprej tem posameznikom zahvaliti, kako fantastično so delali. Ti ljudje so garali - ostale službe so seveda pomagale - ampak na te posameznike, ki so po 12, 14, 20 ur delali, na te smo pa skoraj pozabili. In zato se mi zdi, da ta razprava malo že prehaja v nek drug okvir, ki, mislim ni v čast razpravi, da ne govorim o tem, da ne koristi vsem tem ljudem, ki so bili strašno prizadeti. Jaz bi predlagal, da tu ne bi več razpravljali o tem neto in bruto, zato ker moramo zopet čakati na oba ostala zbora in usklajevati in ne vem kaj še vse skupaj. Sprejmimo, ampak zahtevajmo, da na naslednji seji</seg>
@@ -718,11 +704,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg121">dobim zopet pod 1. točko (bomo pač spremenili te stvari), kaj bo Izvršni svet še konkretno potegnil v zvezi s to pomočjo; ker vemo sami, da ni denarja toliko kolikor je škode. Gre za milijardo mark oziroma dolarjev najmanj. In to je tak znesek, ki se nam vsem skupaj zavrti v glavi in zato bi predlagal, da bi, če res kdo nima zares zelo pomembnega predloga, da bi prekinili razpravo. Prosim, gospod Puc.</seg>
             </u>
             <note type="speaker">VLADO PUC:</note>
-            <u who="#SSK11.PucVlado1941" ana="#regular">
+            <u who="#PucVlado1941">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg122">Namreč, poglejte, mislim, da se mi ne razumemo. Gospa Izvršnega sveta je hotela povedati tole: ali je smisel, da šole en dan več učijo in spet nek denar gre za šolstvo, je bruto, ali je bolje, da nič ne učijo in da gre direktno denar. Ali pa recimo ena občinska uprava eno soboto dela, ko nihče ne bo prišel delat, torej je bolje, da damo direktno. Zato je to normalno, da tukaj je neto zaslužek pri teh upravnih organih, glede na to, da pač bo on dobil toliko manj plače ali pa v šoli isto, medtem ko delavec v tovarni naj bi en dan ali pa dva dneva več delal, in je zame popolnoma logično.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg123">Še mogoče kdo? Zdi se, da ne. S tem bi, če dovolite, zaključil razpravo. Lahko? Potem bi najprej glasovali o predloženih amandmajih, prvem, ki je redakcijski in o četrtem, ki je vsebinski. Izvršni svet, ste pa slišali, nima nič proti tema dvema amandmajema in ju sprejema.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg124">Prvi amandma k 1. členu: v drugi alinei drugega odstavka se beseda "edini" nadomesti z besedo "redni".</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg125">Kdo je za ta amandma?</seg>
@@ -751,7 +737,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg139">Zdaj, pod to točko bi pa jaz prosil vseeno gospodar Arzenška, dajmo mu posvetiti nekaj minut, da bo nas na kratko seznanil z dejanskimi razmerami iz enega kolektiva. Zdi se mi, da je prav, da mi kot poslanci ZZD te stvari bolj vidimo in občutimo. Prosim, Jože.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg140">Spoštovano predsedstvo, spoštovani zbor! Jaz sem prinesel z ozirom na našo odločitev, prvo informacijsko gradivo, pa bi vam ga mogoče zdaj vmes najprej posredoval in prosil predsednika zbora, da bi ga potem posredoval tudi samemu predsedstvu, da se s tem seznani.Pustil bi ga tu, ker bi se potem spet vrnil na svoje delovno mesto, če lahko.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg141">Zadolžen sem, da naj bi dal dve zahtevi oziroma pobudi. Preden bi pa to podal, bi povedal sledeče. Od dneva, to se pravi 1. do 2. dneva, to je od 1.11. na 2.11. se je začela kriza oziroma kritična situacija okrog 15. - 16. ure, s tem da je celotna zdravstvena dežurna ekipa začela z reševanjem določenih stvari že okrog 9. ure. Zanesla se je na poročila radijskih postaj, ki so pripovedovala, da se pojavljajo težave, da pa v tem celjskem prostoru trenutno v danem momentu še ne grozi taka nevarnost. Glede na to, da so kasneje ta poročila dobila nekoliko višjo stopnjo, se je seveda pristopilo k reševanju vsega, kar se je dalo iz tistih prostorov, ki bi naj bili ogroženi. Celjska bolnišnica je, po zagotovilih urbanistov in drugih, zgradila okrog sebe tako imenovane membrane (to bo vedel verjetno gospod Bolič) membrano, ki naj bi zaščitila praktično pred vsakršno poplavo, razen meteorske vode ali če bi Savinja, ki je samo delno regulirana, prestopila bregove. Moram dati podatek, če drži, ki sem ga dobil, da je bil vodostaj v Celju 7 metrov višji od normalnega.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg142">Potem smo se odločili v drugi stopnji, ko smo ugotovili, da nas je voda že precej zalila, za evakuacijo sami in z javnim vpoklicem vseh predstojnikov, da smo premestili vse paciente iz pritličja v prvo nadstropje. Za tistim je v roku pol ure voda prišla tako visoko, da je segla tudi do pritličja. Glede na to, da je veliko stvari (od garderob, nekih ambulant, vseh instalacij in še kaj) postavljeno v kleteh, je seveda praktično vse uničeno.</seg>
@@ -766,7 +752,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg151">Zahvalil bi se tudi vsem zdravstvenim ustanovam, zavodom - najbližjim in pa daljnjim, ki so takoj reagirali na to stanje, tako da npr. dializa, (imamo 80 dializnih bolnikov) poteka trenutno na ta način, da jih vozimo v bolnico Trbovlje, Maribor, Ljubljano, Slovenj Gradec in Novo mesto; in še in še. Morali smo praktično poskrbeti za vse. Hvala za pozornost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg152">Hvala, gospod Arzenšek. Mogoče, če lahko zaključim to točko s takšnim našim stališčem. Mi smo že tako in tako pred sprejemom tega zakona opozarjali na nekatera nerazčiščena vprašanja, npr. bruto pa neto OD, glede opravičevanja, ali pa oprostitve prispevkov iz republiškega, pa iz občinskega, pa še marsikaj drugega. Zdaj je tu konkretna pobuda gospoda Arzenška in jaz bi predlagal, da damo mi to pobudo tudi ostalima dvema zboroma in da jo imamo kot skupno 1. točko 20. novembra v veliki dvorani Republiške Skupščine. Problematika je tako pereča, jaz mislim, da bi bilo skoraj nečloveško, če ne bi tega predloga sprejeli, in bi na tak način naprej o tem razpravljali, potem pa še o vseh ostalih stvareh.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg153">Jaz mislim, da bi bilo to sežeto. No, in v tem predlogu, ne samo razpravi, ko mora IS priti s konkretnimi potezami, aktivnostmi, bi bilo - glede plačevanja carine, to verjetno naši ne bodo mogli narediti sami - ampak, da bi šla vsaj akcija takoj naprej, da dobimo potem že iz Beograda to potrditev, da bi teh carin ne plačevali in še marsikaj drugega. Mislim, da so tu možne, sam sem že včeraj na odboru za šolstvo ugotavljal, da smo kar uspešni pri ocenjevanju, pa tudi pri nekih akcijah, ki jih sami vodimo, potem pri potezah, ki morajo slediti kratkoročnemu in dolgoročnemu načrtovanju smo pa velikokrat zelo šibki. In tu se začenja potem tisto mencanje in cincanje. In da bi to cincanje nekako presekali, predlagam, da naš zbor sprejme pobudo gospoda Arzenška kot pobudo Zbora združenega dela. Želi kdo o tem razpravljati?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg154">Vprašam vas, kdo je za predlog, da je pobuda gospoda Arzenška tudi pobuda ZZD.</seg>
@@ -780,19 +766,19 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg159">Imamo pobudo ZZD, da razpravljamo 20.11. pod prvo točko o tej problematiki. Ne samo načelno. Tudi konkretno. Akcijske poteze morajo biti tudi zapisane. K temu še gospa Anka. No, prosim.</seg>
             </u>
             <note type="speaker">ANKA OSTERMAN:</note>
-            <u who="#SSK11.OstermanAnka1940" ana="#regular">
+            <u who="#OstermanAnka1940">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg160">Predlagam, da bi se aktivnosti za neplačevanje carine, ko stoji avto na meji, lahko začele že takoj. Prav tako bi mi lahko 20. 11. že imeli kakšno informacijo o tem. Take formalnosti se mi zdijo v tem primeru, v tej katastrofi banalne.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg161">Se popolnoma strinjam. Hvala. Še prosim.</seg>
             </u>
             <note type="speaker">PETER STARC:</note>
-            <u who="#SSK11.StarcPeter1943" ana="#regular">
+            <u who="#StarcPeter1943">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg162">Imam še en predlog. Predhodno je bilo rečeno, da moramo hitro pomagati poplavljenim pa mi je prišlo na misel, da bi tudi poslanci dali svoj prispevek. Predlagam, da bi prispeval vsak posameznik po 1.000,00 DIN, da to ne bi pobirali, ampak bi od dnevnic ali našega nadomestila takoj poslali prizadetim in za ta znesek zmanjšali naš žiro račun. Na ta način bi nekaj le pomagali, saj bi od vseh poslancev Skupščine lahko zbrali cca 220.000,00 DIN.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg163">Želi še kdo razpravljati o tem? To je sedaj zelo konkreten predlog. Predlagamo, da prispevamo vsi poslanci takoj po tisoč DIN in da naj se to odtrga od tistega prispevka, ki ga pač prejemamo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg164">Kdo je za ta predlog?</seg>
                <note>48 delegatov</note>
@@ -804,25 +790,25 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg168">Še kdo? Če ne, bi zaključil.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg169">Najprej nisem mislil o tem govoriti, ampak zdaj, ko smo videli te fotografije iz celjske bolnišnice, me je pa stvar razjezila resnično do konca. Ne vem, koliko poslanci berete časopise, ampak glede na to in glede na informacijo, da je bila kolegica Katja Boh tudi sama fizično v celjski bolnišnici, da smo pa danes lahko prebrali v Delu kratko izjavo z njenega obiska v izolski bolnišnici, kjer je rekla, citiram, ker je zelo kratko: "Iz celjske bolnišnice so v minulih dneh odpustili 400 bolnikov. Odšli so domov, kot kaže, brez velike škode. Verjamem, da jih je dobršen del odšlo po sili razmer, vendar nikomur ni bilo doma tako hudo, da bi prišel nazaj. Seveda ne trdim, da so vsi po nepotrebnem ležali v bolnišnici, prav gotovo pa primer daje misliti". Osebno sem zgrožen ob tem, ne predlagam nobenega stališča, nobenega glasovanja, samo jeza mi resnično dobesedno ni dala miru, da ne bi protestiral proti takšni izjavi.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg170">Poglejte. Jaz sem v uvodu povedal te stvari. Mislil sem, da daje take izjave kompetentna oseba. Ena od teh kompetentnih oseb je tudi prof. dr. Katja Boh, ki jo jaz v osnovi spoštujem. Ko je prišla tja na lice mesta, je prvo rekla - katastrofa. Povedati vam moram, da nismo imeli pogojev, da bi lahko paciente zadržali, da niso bili pripravljeni iti domov, da nam je dal pomoč Maribor, da bi lahko vseh 200, 300 kanalizirali tja, pa se pacienti, nekateri s tem niso strinjali oziroma <gap reason="inaudible"/> pri nas ocenili, da bomo vzpostavili pač pogoj, da se lahko vrnejo, ko bodo za to dani pogoji. Jutri bomo obvestili, da so za to dani omenjeni pogoji. Odpustili smo pa tiste, zdravniki in drugi vedo, ko bi morali biti zaradi posledic po operaciji, zaradi postoperativne nege, recimo, po poškodbah in podobnih stvareh, še kakšna dva dni do tri v bolnici, pa smo jih poslali domov. Konkretno za naš dermatološki oddelek. Vem, da sem poslal domov z vročino <gap reason="inaudible"/>, luskavičarja, ko je bil ves rdeč. Če to ni indikacija. Moram reči, da je zelo zelo nekompetentna izjava.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg171">Rekel sem, da te izjave naj dajo tisti ljudje, ki se na to spoznajo. Rekel sem, da naj bi se to upoštevalo, zato bomo pripravili poročilo. Moram reči, da sem prizadet zaradi tega, še posebno ob izjavi prof. Bohove, ki ju je dala po sredstvih javnega obveščanja in po TV, da si ni znala predstavljati, da je to sploh mogoče. To je bilo pretekli ponedeljek. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg172">Dobro, človek je pač zaprepaden. Zlasti tisti, ki smo prizadeti in ki smo vse to opazovali. Razmišljam celo, kakšne bodo tudi psihične posledice. Ljudje, ko so gledali, kaj se z njihovim premoženjem dogaja, osebnim in družbenim premoženjem, bom rekel, ko si bil totalno nemočen, ko si videl okrog svojih oken, npr. kaj vse je plavalo, kako so se cisterne prevračale, kako je bila voda oljnata, grda, s svinjami, kravami, z debli in ne vem kaj še. Ko si gledal, kako je voda tekla v tvoje prostore, ki si jih 30 ali 40 ali pa 50 let delal, zbiral denar in si gledal, kako to propada, mislim, da bodo psihične posledice fantastične. Mlajši bodo to že bolje preživeli, tisti pa, ki so celo življenje garali in v teh dveh ali pa treh urah izgubili praktično vse, zanje pa je to grozljivo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg173">To so nekateri dogodki, ki jih dejansko ni mogoče opisati. Mislim, da bi morali imeti vrhunske pisce realiste, zdaj bi jih moral človek poklicati nazaj, da bi te stvari znali opisati in na tak način, ne bi hotel biti več preveč sentimentalen zaradi tega, ker vsi smo se pač tudi tolažili, da bomo delali, da smo zdaj nekaj izgubili, zdaj bomo, tako kot je pri nas tudi običaj, le stopili skupaj, pa bomo premagali tudi te težave. Je pa hudo. Veste, jaz ne maram preveč te besede, ampak dejansko se je pojavila kopica mrhovinarjev, ki so prihajali in npr. tam, ko so nosili ljudje iz kleti ozimnico in te stvari to ozimnico, ki je bila totalno pokvarjena, pobasali, jo umivajo in jo bodo zdaj nekje prodajali, mogoče tudi tukaj v Ljubljani ali pa v Kopru ali pa kjerkoli, ker niso bili prizadeti, pa bodo prizadeti sedaj, ker so odnašali najrazličnejše stvari od tam, kamor je mestna snaga odvažala ves ta zaliti material. Tam je bila kopica ljudi, s policijo je bilo treba stražiti vse te odvržene stvari in to je nepojmljivo, kakšni so lahko ljudje. In tako, da se mi bojimo vsi, ki smo te stvari doživljali, da bodo posledice dolgoročne, ne samo te materialne, ki so zdaj, ampak se bodo začele pojavljati nekje, ko nihče več ne bo pričakoval. Vseeno bi želel, da bi to točko počasi zaključili. Prosim.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg174">Samo en stavek bi še dodal. Poglejte bi še to rekel. Dali smo komunike. Nihče čez noč, ko ni bila možna evakuacija, ker je bila voda pred bolnico približno meter in pol, nihče od pacientov niti od osebja ni bil ogrožen. Mislim, da je dobro, da zve javnost, da smo z gasilskim avtomobilom, ki se lahko potopi do te vode, pa z vojaškim, vseeno opravili 3 porode čez noč v tej ustanovi, pa operirali enega otroka po preiskavi vranice. Moram reči, da dobro okreva in če si zato zaslužimo tako izjavo, je treba reči, da je najmanj nekorektna.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg175">Hvala. Jaz mislim, da smo v našem zboru vseeno dovolj o teh stvareh razpravljali. Spremeniti zdaj ne moremo več ničesar, delali bomo, pomagali si bomo in jaz upam, da si je tudi gospod Arzenšek - povedati moram, on je praktično od prvega dne do danes spal le dobrih 8 ur, ker je šef bolnice, da si potem lahko predstavljate kakšno trpljenje je dal skozi - že malo opomogel, je pa živ, to je pa že veliko.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg176">Zaključil bi to 2. točko in predlagam, da bi še obravnavali 3. točko, potem bi pa videli, kako daleč so usklajevalci. Ste za to, da gremo k 3. točki? Dobro.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg177">3. TOČKA DNEVNEGA REDA - STALIŠČA SKUPŠČINE REPUBLIKE SLOVENIJE DO NEKATERIH ZAKONOV IZ PRISTOJNOSTI ZVEZNEGA ZBORA SKUPŠČINE SFRJ.</seg>
@@ -840,27 +826,27 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg189">Ali želi kdo razpravljati? Prosim, gospod Starc.</seg>
             </u>
             <note type="speaker">MARJAN STARC:</note>
-            <u who="#SSK11.StarcMarjan1942" ana="#regular">
+            <u who="#StarcMarjan1942">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg190">Da bi vsaj malo bolj otipljivo vedeli dimenzije tega odločanja. Vemo, da je ta demonstracijski efekt pri močnem zvišanju plač zvezne administracije sprožil plaz vsesplošnega povišanja plač v pretežnem delu Jugoslavije in da je to tudi bil začetek konca Markovičevega programa. To smo tudi včeraj po televiziji slišali od avtorja tega programa. Ker so te posledice in odgovornosti zelo velike in je nacionalna škoda, da smo žrtvovali 5 do 10% družbenega proizvoda in da smo sedaj z našo inflacijo tam, kjer smo bili pred letom in pol, me zanima, kakšne so dejansko te plače v absolutnem znesku in o kakšnih zneskih se pogovarjamo v tem znižanju. Ali ni to samo blef vse skupaj? Če je možno to informacijo dobiti.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg191">Želi še kdo besedo? Ali bi lahko morda gospod Pučko odgovoril na to vprašanje?</seg>
             </u>
             <note type="speaker">DANIJEL PUČKO:</note>
-            <u who="#SSK11.PuckoDanijel" ana="#regular">
+            <u who="#PuckoDanijel">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg192">Prosil bi, da od ustreznih služb dobite informacije. Jaz lahko kvečjemu kakšen individualni primer navedem, kar pa prav gotovo ni odločujoče za opredeljevanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg193">Se strinjam s tem tudi jaz in predlagamo to pobudo naprej. Prosim.</seg>
             </u>
             <note type="speaker">MARIJA LONČAR:</note>
-            <u who="#SSK11.LoncarMarija1947" ana="#regular">
+            <u who="#LoncarMarija1947">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg194">Samo tole bi pripomnila, da smo mi na eni izmed zadnjih sej tudi sprejeli pobudo, da zahtevamo sploh pregled osebnih dohodkov, tudi po institucijah, po organih v Republiki Sloveniji in isto velja za zvezo, kjer je bila, po mojem, upoštevana vojska in vsi ti organi. Ker to, kar se dogaja na področju osebnih dohodkov je dejansko nekaj, kar buri duhove in menim, da bomo imeli v najkrajšem času maso ljudi na ulicah, ker proizvodnja osebnih dohodkov ne more deliti, kolektivnih pogodb v bistvu vse panoge še nimajo podpisanih, tako da je to resen problem. Menim, da moramo zahtevati, da dobimo na naslednji seji odgovor na vse tisto, kar smo že zadnjič postavili.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg195">Hvala. Še želi kdo razpravljati? Če ne, bi predlagal, da zaključim razpravo in glasujemo o sklepu, ki sem ga prebral. Mislim, da je korektno sestavljen in da daje vse možnosti za delo naše delegacije.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg196">Kdo je za predlagani sklep?</seg>
                <note>45 delegatov.</note>
@@ -880,12 +866,12 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg205">S tem smo zaključili dnevni red, moramo pa še počakati na usklajevalne postopke. Mi imamo tudi več stvari, več vprašanj odprtih in preden bi odredil odmor, bi bilo dobro, da če bo še kaj neusklajenega, če je še kaj, da v teku razprave, ena komisija je že prišla, vse uskladimo. Gospod Grašič, lepo vas prosim, mi smo zdaj ravno sprejeli odlok in sklep v zvezi z "beograjskimi" zadevami in vem, da imate tudi posebno pobudo in ker ste prišli, mislim, da kljub temu, da sem zaključil, da ne bo nihče zameril, ker je pač bil drugje in je delal sočasno za nas, če bi povedal svojo pobudo, ki bi jo kot ZZD predlagali našemu IS. Lahko? Prosim.</seg>
             </u>
             <note type="speaker">FRANC GRAŠIČ:</note>
-            <u who="#SSK11.GrasicFranc1941" ana="#regular">
+            <u who="#GrasicFranc1941">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg206">Spoštovani predsednik, poslanke in poslanci. Kot ste mi sporočili, je sprejet odlok, s katerim je med drugim potrjena tudi veljavnost spremembe zakona o računovodstvu za področje Slovenije. Ta sprememba opredeljuje namreč to, da davki in prispevki ne morejo biti večji od dobička. To je sprememba, ki je že veljala v tem zakonu do 27. julija, pa je bila potem ukinjena, zdaj se ponovno vpeljuje.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg207">V času, ko je veljala, je bilo precej nesporazumov kaj zdaj, to je, kateri je tisti dobiček, katerega davki in prispevki ne smejo preseči. Zaradi tega predlagam sklep, da bi IS (oziroma sekretariat za finance) Skupščine Republike Slovenije zadolžili, da naj dajo jasno in razumljivo tolmačenje, kateri je tisti dobiček, od katerega davki in prispevki ne smejo biti višji. Razlog zakaj, sem pa obrazložil.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg208">Jaz mislim, da je to prav, ker je tu pa tam kakšna nejasnost. Želi kdo o tej pobudi in o tem dodatnem sklepu razpravljati? Ker ni razprave predlagam, da o dodatnem sklepu glasujemo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg209">Kdo je za sprejem dodatnega sklepa?</seg>
                <note>49 delegatov</note>
@@ -898,11 +884,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg214">No in ker bo pri zakonih potrebno usklajevanje še po 306. členu poslovnika Skupščine Republike Slovenije oziroma 362. prečiščenega besedila Ustave Republike Slovenije, predlagam, da IZVOLIMO ČLANE ZA SKUPNO KOMISIJO, ki bo pripravila predloge za uskladitev spornih vprašanj. Kot člane komisije iz našega zbora predlagam: Franca Gradišarja, Marjana Vilfana, Barbaro Zupanc, Petra Starca in Vinka Drčo. Kaj menite? Mislim, da tudi po tem kar ste sami slišali, verjetno ste nekateri tudi sami prebrali, da mi, baje, marsikaj ne izpeljemo do kraja. Jaz mislim, da smo dosedaj resnično vse korektno izpeljali. Možno je, da nič ne bo treba delati, da se prav razumemo, možno pa, da veliko. Gospod Starc.</seg>
             </u>
             <note type="speaker">MARJAN STARC:</note>
-            <u who="#SSK11.StarcMarjan1942" ana="#regular">
+            <u who="#StarcMarjan1942">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg215">Tam je en Franc Starc. Verjetno en tretji Starc. Tule sta Peter pa Marjan.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg216">Peter! Kdo je za to komisijo, ki bi naj te skupne zadeve obravnavala z ostalima dvema zboroma?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg217">Kdo je za?</seg>
                <note>48 delegatov.</note>
@@ -913,37 +899,37 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg220">Verjetno je, da boste danes še kje zasedali, bomo videli. Sedaj bi pa morali skupaj ugotoviti z ostalima dvema zboroma, kje smo. Ali lahko tudi vi nekaj več poveste? Prosim.</seg>
             </u>
             <note type="speaker">MAJDA OBLAK:</note>
-            <u who="#SSK11.OblakMajda1946" ana="#regular">
+            <u who="#OblakMajda1946">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg221">Jaz se opravičujem, ne vem do kam je ta zbor prišel z razpravo, imam pa predloge IZ OBČINE ŽALEC GLEDE POPLAVNIH PODROČIJ, menda ste ta zakon oziroma ta predlog že zaključili. Sedaj, jaz ne vem, ali ima to smisel, je pa prav, da vsaj zbor informiram o tem, kakšne so pobude občine Žalec; žal nisem bila prej prisotna, da bi bilo pravočasno. Gre za predlog, ki bi ga naj naslovili Izvršnemu svetu, in sicer, da bi pri nabavi materiala za sanacijo oprostili plačila davka od prometa proizvodov in storitev vsaj fizične in pravne osebe, ki so bile prizadete pri elementarni nesreči 1. nov. in pa, da se začasno odloži plačilo davkov in prispevkov iz dohodka in OD vsem pravnim osebam iz prizadetih območij, ki so utrpele škodo. To je pobuda oziroma sugestija IS, da naj bi to uredil. Še ena pobuda, enako iz Skupščine občine Žalec, in sicer, da bi se enodnevni bruto zaslužek zaposlenih v SR Sloveniji v mesecu nov. uvedel. To je v zakonu itak predvideno, še več, dva; upam da ste tako sprejeli v tem zakonu? Ja, no ne vem, se opravičujem, ker nisem bila zraven; je še pobuda da bi v okviru realizacije tega sklepa Skupščina Republike pooblastila skupščino občine, v kateri je prizadetost večja, to je Žalec, Celje in Mozirje in verjetno še neke druge občine, da nameni enodnevni zaslužek vseh delavcev te občine za sanacijo razmer po elementarni nesreči v tisti občini. Se razumemo, zaslužki tistih delavcev v tisti občini direktno v občinskem saniranju, vse ostalo pa usmerjati tako, kot je v zakonu predvideno v skupni akciji.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg222">Bom povedal še dva stavka. Mi smo se o tem tudi pogovarjali. Z zahtevo, da naj te stvari do 20.11. IS pripravi konkretno, ker bomo imeli skupno zasedanje in s prvo točko dnevnega reda s temi zadevami, ki ste jih tudi vi povedali. Je korektno. Vi ste bili na delu v komisiji in na tak način tudi niste vedeli, da smo to dodali. Dobro. Prosim, da vidimo, kako daleč ste prišli.</seg>
             </u>
             <note type="speaker">FRANC GRAŠIČ:</note>
-            <u who="#SSK11.GrasicFranc1941" ana="#regular">
+            <u who="#GrasicFranc1941">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg223">Ja, mi smo bili zadolženi, da poskušamo uskladiti stališča do zakonov o obveznicah, vezanih na izvozno gospodarskih in stališča predloga za izdajo zakona z osnutkom zakona o turističnih taksah. Najprej glede prvega zakona o obveznicah.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg224">Najprej smo na usklajevalni skupini ugotovili, kakšno je stanje. Na kratko ga samo ponovim. DPZ je sprejel zakon z vsemi amandmaji IS, ZZD smo sprejeli ta zakon z amandmaji IS, ki so do takrat bili, ker smo mi že 25. oktobra to sprejemali, in pa z amandmajem gospoda Studenčnika. ZO je sprejel sicer amandmaje, ni pa zakona. Že na zadnji seji Odbora za splošne gospodarske zadeve je bil dan predlog gospodu Kranjcu, republiškemu sekretarju za finance, da naj bi IS ponovno obdelal in preveril, ali obstoji kakšna možnost, da bi rešili osnovni problem, ki smo ga videli v teh amandmajih IS, da bi bil tečaj, po katerem se vrednost obveznice, izražene v nemških markah, preračuna v dinarje pri plačilu davkov in prispevkov s temi obveznicami ne na dan izdaje obveznic, ampak na dan plačila. Ker je v tem času s strani IS prišel nov amandma, mi smo ga dobili, s katerim je korak v to smer narejen, ker je s tem amandmajem predlagano, da se za plačilo davkov in prispevkov s temi obveznicami uporabi tečaj na dan plačila davkov in prispevkov - res je, da je poleg tega še ustrezna diskontna stopnja, vendar smo na usklajevalni skupini ugotovili, da je s tem amandmajem zakon primeren za sprejem, tak kot je predlagan, z vsemi amandmaji IS.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg225">To pa seveda za naš zbor pomeni, da spremenimo odločitev o sprejetju amandmaja Odbora za splošne gospodarske zadeve (da tega zavrnemo) in da spremenimo odločitev o sprejetju amandmaja gospoda Studenčnika (ga tudi zavrnemo) in da sprejmemo ta dva nova amandmaja IS, od 30. oktobra in današnjega. Taka odločitev je bila sprejeta na usklajevalni skupini z večino glasov.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg226">Hvala. Želi kdo o tem sporazumnem predlogu skupne komisije razpravljati? Gospod Studenčnik, kje ste, kaj menite? Se strinjate? Ja. Gospod Grašič kot predstavnik odbora, se vi tudi strinjate s tem?</seg>
             </u>
             <note type="speaker">FRANC GRAŠIČ:</note>
-            <u who="#SSK11.GrasicFranc1941" ana="#regular">
+            <u who="#GrasicFranc1941">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg227">Ja, tu je zdaj korak narejen v smer in tako stališče je sprejemljivo na osnovi razprave tudi za odbor za splošne gospodarske zadeve.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg228">To se pravi, da se oba strinjata in potem imamo, sprejmemo potem samo amandmaje IS in potem pa zakon v celoti s temi spremembami. Je v redu tako?</seg>
             </u>
             <note type="speaker">FRANC GRAŠIČ:</note>
-            <u who="#SSK11.GrasicFranc1941" ana="#regular">
+            <u who="#GrasicFranc1941">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg229">Da, samo zdaj ne vem kakšna je procedura glede amandmajev, ki smo jih že sprejeli, pa jih moramo zavrniti.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg230">Amandma Studenčnika in odbora. Samo vi umikate. O tem moramo glasovati, kljub temu, da predlagatelja umikata. (Da bom zdaj prav povedal. Da, saj je prav, samo iščem primerno besedo, zaradi tega, ker moramo glasovati).</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg231">Kdo je najprej za umik amandmaja gospoda Studenčnika? Kdo je za umik tega amandmaja?</seg>
                <note>48 delegatov.</note>
@@ -977,11 +963,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg248">Ali lahko zdaj razpravljamo O PREDLOGU ZA IZDAJO ZAKONA O TURISTIČNI TAKSI Z OSNUTKOM ZAKONA? Prosim, gospod Grašič.</seg>
             </u>
             <note type="speaker">FRANC GRAŠIČ:</note>
-            <u who="#SSK11.GrasicFranc1941" ana="#regular">
+            <u who="#GrasicFranc1941">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg249">Stanje na tem področju je sledeče: Tako DPZ kot ZO sta sprejela predlog za izdajo zakona z osnutkom zakona, ZZD ni sprejel predloga za izdajo zakona z osnutkom zakona. V razpravi v tej komisiji smo ugotovili, da so tudi v razpravi o predlogu za izdajo zakona in z osnutkom zakona povsem podobni predlogi sprememb in dopolnitev tudi v ostalih dveh zborih, kot smo jih mi dali. In prav zaradi tega smo sprejeli sklep da o tem v ZZD ponovno odločamo s predlogom, da bi v našem zboru sprejeli predlog za izdajo zakona z osnutkom zakona - seveda vzporedno gre vse tisto kar je bilo v obravnavi predlagano, omenjeno, da je to potrebno, da se upošteva pri oblikovanju predloga - in še posebej sklep, da se predlagatelj zavezuje, da pri izdaji predloga najde stik oziroma da skupaj z angažiranjem predstavnikov turistične zveze to naredi. Predstavnik predlagatelja, ki je bil tudi prisoten na tej usklajevalni komisiji, je prosil, da opravičimo napako, ki se je dogodila, ko ni bil prisoten obrazlagalec tega predloga na našem zboru. Predlagam, da poskušamo ta korak narediti, da bi bili usklajeni in da sprejmemo sklep o sprejetju predloga zakona z osnutkom zakona.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg250">Hvala. Želi kdo o tem predlogu razpravljati? Če ne želi, bi zaključil razpravo in glede na pobudo komisije za usklajevanja predlagam, da glasujemo. Kdo je za to, da sprejmemo predlog komisije, da pride do izdaje zakona o turistični taksi z osnutkom zakona? Jaz mislim, da smo si na jasnem, za predlog za izdajo zakona o turistični taksi z osnutkom zakona in tudi s tem posebnim sklepom, ki ga je gospod Grašič jasno opredelil. Mislim, da mi ni treba še enkrat vsega ponavljati, ker je to zajeto in mislim, da bi bilo prav. Kaj menite? Ja? Predlagam, da glasujemo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg251">Kdo je za ta predlog in poseben sklep, oboje?</seg>
                <note>47 delegatov.</note>
@@ -996,15 +982,15 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 17.15 uri).</note>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg258">Spoštovane poslanke in poslanci. Bi nadaljevali. Mi naj bi danes zvečer še marsikaj postorili, kot se temu reče in predlagam, da to, kar lahko zdaj storimo, ne odlašamo. Mi imamo zdaj najprej možnost, da se izjasnimo glede zakona o RTV Slovenija. Komisija za usklajevanje je opravila svojo nalogo in prosim gospoda Štera, da najprej poroča v imenu komisije, kaj predlagajo in kaj so sklenili.</seg>
             </u>
             <note type="speaker">ANDREJ ŠTER:</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg259">Torej, poročilo komisije bo zelo kratko. Skupna komisija, ki se je sestala na podlagi 73. amandmaja k ustavi, v dokaj burni razpravi ni oblikovala nobenega predloga, ki bi ga lahko predložila zboru. Komisija je pooblastila člane iz posameznih zborov, da v svojih zborih predlagajo, naj zbor poda zahtevo, da se opravi skupna seja vseh zborov Skupščine Republike Slovenije za uskladitev spornih vprašanj, v skladu s četrtem odstavku 73. amandmaja k Ustavi Republike Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg260">Hvala. Slišali ste poročevalca. Želi kdo razpravljati? Glede na to, da to ni usklajeno, predlagam, ker je Zbor občin o tem tudi razpravljal in je že sporočil pisno zahtevo po skupni seji, da se tudi naš zbor s tem strinja. Predlagam:</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg261">1. da sprejmemo poročilo, in</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg262">2. da se strinjamo s skupno sejo, na kateri bi obravnavali problematiko predloga o spremembah in dopolnitvah zakona o RTV Slovenija.</seg>
@@ -1024,11 +1010,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg273">Sečnja je že tukaj. Gospod Perko, bi še vi povedali svoje?</seg>
             </u>
             <note type="speaker">MAG. FRANC PERKO:</note>
-            <u who="#SSK11.PerkoFranc1942" ana="#regular">
+            <u who="#PerkoFranc1942">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg274">USKLAJEVALNA KOMISIJA JE obravnavala to problematiko, ki je nastala, in z večino glasov sprejela sklep, da se zavrne amandma gospoda Grosa in predlaga vsem trem zborom da storijo isto. Če ne bo doseženo soglasje, bo potrebno skupno zasedanje, da gre tudi ta točka na skupno zasedanje. Zaenkrat pa je predlagano, da to vsebino, to je zavrnitev tega amandmaja, ponovno obravnavajo vsi trije zbori. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg275">Slišali ste poročilo. Naše stališče v zboru, se spomnite, je jasno; podpira ga tudi IS in enak sklep so sprejeli tudi pri DPZ, tako da je samo vprašanje ZO, da se opredeli do tega. Želi kdo razpravljati o tem? Predlagam, da glasujemo o poročilu gospoda Perka s tem, da mi ostanemo pri tem, kar smo pač izglasovali in da, če ne pride do uskladitve, je ta skupna seja še danes. Ja, zbor zahteva, da se to še danes opravi.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg276">Kdo je za ta predlog?</seg>
                <note>55 delegatov.</note>
@@ -1049,12 +1035,12 @@
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg286">Še gospod Jakič, prosim.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg287">Poslanci ste dobili na mizo POBUDO POSLANSKEGA KLUBA ZSMS in v imenu predlagateljev umikam pobudo o podpori Skupščine Republike Slovenije Predsedstvu Republike Slovenije o proučitvi ustavnosti in zakonitosti sklepa Predsedstva SFRJ, da poveljstvo nad TO Republike Slovenije prevzame poveljstvo 5. armadnega območja.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg288">Umik pobude utemeljujem s tem, da se predlagatelji predhodno nismo posvetovali s strokovno službo pri Predsedstvu Republike Slovenije; namreč, zvezno ustavno sodišče je z zavrnitvijo pobude Predsedstva Republike Slovenije - s tem formalnim ugovorom, da je za to pristojna Skupščina in iskanjem edinega sogovornika v slovenskem parlamentu - želelo in želi anulirati pristojnosti Predsedstva Republike Slovenije s področja teritorialne obrambe, ki mu ga je Skupščina z ustavnimi zakoni oziroma temi amandmaji dala, zato pobudo umikam. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg289">Hvala. Na ta način to črtamo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1990-11-08.s009-01.seg290">Praktično smo s tem zaključili. Komisijo za nadaljnje usklajevanje imamo in imamo pa dve točki na skupni seji, ki jo bo vodil gospod Toplak. Zdaj je vprašanje, kdaj bo skupna seja. Jaz mislim, da bomo na skupni seji danes verjetno kar kmalu ugotovili, kaj bo možno napraviti in kaj ne. Dogovorimo se o naslednjem: zdaj nas je zanesljivo 51; lepo vas prosim, mi moramo tam na seji biti sklepčni, in zato vas lepo prosim, še enkrat, da gremo res tja zaradi tega, da ne bo očitka, da ne moremo razpravljati in sklepati o teh dveh zakonih zaradi tega, ker naš zbor ni sklepčen; verjetno bi nam bilo vsem skupaj nerodno. Vzemite vse stvari in gremo v veliko dvorano republiške skupščine.</seg>
             </u>

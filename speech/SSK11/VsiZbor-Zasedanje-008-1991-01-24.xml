@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 8. zasedanje</title>
             <meeting n="8"
-                     corresp="#VsiZbor.1991-01-24.z008-01.DruzPolZb #VsiZbor.1991-01-24.z008-01.ZbObc #VsiZbor.1991-01-24.z008-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="89"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="78"/>
                <tagUsage gi="seg" occurs="222"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -323,23 +314,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-01-24.z008-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-01-24.z008-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-01-24.z008-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -350,21 +324,25 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">8. zasedanje</head>
             <docDate>24. in 30. januar 1991</docDate>
             <note type="chairman">Sejo je vodil Ivan Bizjak, predsednik Zbora občin</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seje se je pričela ob 17.00 uri</note>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg1">Spoštovani delegati, gospe in gospodje, pričenjam skupno zasedanje Družbenopolitičnega zbora, Zbora občin in Zbora združenega dela Skupščine Republike Slovenije. Na podlagi 82. člena Poslovnika Skupščine Republike Slovenije bi na skupnem zasedanju najprej poslušali uvodno besedo, ki jo bo podal dr. Dimitrij Rupel, republiški sekretar za mednarodno sodelovanje V ZVEZI S KRIZNIMI ŽARIŠČI V SVETU, ter njihov vpliv na položaj Slovenije. Gospod Igor Bavčar, republiški sekretar za notranje zadeve pa bo podal INFORMACIJO O TRENUTNEM VARNOSTNEM POLOŽAJU V REPUBLIKI SLOVENIJI IN JUGOSLAVIJI.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg2">Na skupnem zasedanju bomo tudi razpravljali o teh problemih in sprejeli ustrezna stališča. Besedo dajem gospodu dr. Ruplu, republiškemu sekretarju za mednarodno sodelovanje. Prosim.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SSK11.RupelDimitrij1946" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg3">Gospe, gospodje, spoštovani zbor! Mednarodni položaj v zadnjih dneh določajo vojna v zalivu, intervencija sovjetske armade v Litvi in Latviji ter odnos mednarodne skupnosti do teh problemov. Svet se po daljšem času spet nahaja v situaciji, v kateri je prišlo do izbruha vojne večjih razsežnosti. Obenem je s posegom sovjetske armade v Litvi in Latviji prišlo do uporabe sile za zadušitev demokratičnih procesov, kar je v Evropi prvi primer po razpadu realsocialističnih sistemov v vzhodnoevropskih državah. Nasilje v Pribaltiku in izbruh vojne v Zalivu vnaša negotovost tudi v jugoslovanske razmere. Ob takšnih situacijah dobiva posebno težo tudi reakcija Skupščine SFRJ ob slovenskem plebiscitu ter ukaz Predsedstva SFRJ o razorožitvi tako imenovanih paravojaških formacij.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg4">Dejstvo je, da se dogodki v Pribaltiku odvijajo v senci zalivske vojne. Mogoče je domnevati, da je splet takšnih mednarodnih okoliščin Sovjetska zveza ocenila za primeren, da z neposredno uporabo vojaške sile ponovno vzpostavi svojo kontrolo nad tremi pribaltskimi republikami: Litvo, Latvijo in Estonijo. Vojaško intervencijo sovjetske vojske v Litvi in Latviji je obsodil pretežni del mednarodne javnosti. Zvezni organi Jugoslavije pa so bili pri tem zadržani. Vse izrazitejši so uradni protesti evropskih držav in Združenih držav Amerike, ki opozarjajo na nesprejemljivost uporabe sile v razreševanju notranjih problemov v Sovjetski zvezi ter na nevarnost, da lahko takšna sovjetska politika resno ogrozi doseženo stopnjo medsebojnega zaupanja in sodelovanja. Evropska skupnost je v zvezi s tem že napovedala možnost ukinitve pomoči in zamrznitve gospodarskega sodelovanja s Sovjetsko zvezo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg5">Enako predlaga, kot vemo, tudi predstavniški dom kongresa Združenih držav Amerike. Izvršni svet Skupščine Republike Slovenije je na svoji izredni seji obsodil vojaško akcijo sovjetske vojske v Litvi in izrazil polno solidarnost, demokratično izvoljeni vladi Litve in vsem litovskim ljudstvom. V zvezi s tem je Republiški sekretariat za mednarodno sodelovanje poslal protestno noto veleposlaniku Sovjetske zveze v Beogradu. Predlagali smo, da takšen protest izrazi tudi zvezni sekretariat za zunanje zadeve in da to storijo tudi druge jugoslovanske republike.</seg>
@@ -384,11 +362,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg19">V primeru resne nevarnosti vojaške intervencije v Sloveniji bi morala Skupščina oziroma Izvršni svet seznaniti pristojne faktorje v tujini z odločitvijo Slovenije, da se taki intervenciji upre in jih pozvati, da s svojim posredovanjem vplivajo na preprečitev takšne intervencije. O takšnih namerah smo mednarodno javnost že obveščali. V primeru vojaške intervencije bo Izvršni svet uporabil vse možnosti za obveščanje mednarodne javnosti o dogajanjih v Sloveniji in o stališčih slovenskih oblasti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg20">Zahvaljujem se za podano uvodno besedo. Prosim gospoda Igorja Bavčarja, republiškega sekretarja za notranje zadeve, da poda informacijo.</seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SSK11.BavcarIgor1955" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg21">Spoštovane poslanke, spoštovani poslanci! Trenutne varnostne razmere v Sloveniji opredeljujeta predvsem dve dogajanji, eno je to, o katerem je govoril kolega Dimitrij Rupel v zalivu. Vi tudi sami vidite, da je Izvršni svet v okviru svojih pristojnosti sprejel nekatere ukrepe zato, da bi preprečil teroristične akcije, ki so napovedane, ki jih je mogoče pričakovati tudi na našem ozemlju. Ni jih izključiti, zato so ukrepi, ki ste jim biti bodisi priča bodisi, da ste jih zasledili v sredstvih javnega obveščanja in zadevajo predvsem poostren nadzor nad nekaterimi prometnicami in pa poostren nadzor nad gibanji v okolici letališča na Brniku in pa seveda poostren nadzor nad mejo in prehajanjem čez mejo, povsem normalni ukrepi v takih razmerah. Drug sklop dogodkov, ki v tem trenutku vznemirja naše prebivalce, pa ne samo v Sloveniji, pač pa tudi v drugih krajih Jugoslavije, posebej na Hrvaškem, zadeva relacijo oziroma odnose z JLA in nekatere ukrepe, ki jih je JLA sama, bodisi Predsedstvo Jugoslavije sprejelo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg22">Stanje, ki smo mu danes priča, prav ta konkretna zaostritev, ki smo ji danes priča, se je začela z ukazom z odvzemom orožja, ki je bil skrajno dvoumen, nedorečen, kljub izrečenim besedam celo članov Predsedstva SFRJ ni bil preciziran in iz tega je mogoče potegniti zaključek, da je prav nedorečenost tega ukaza smisel tega ukaza, da bi se sprovocirala javnost in tudi oblasti na Hrvaškem in v Sloveniji. Igrice s podaljševanjem roka za oddajo orožja so dodatno zameglile razmere in stopnjevale vzdušje ogroženosti in neizogibnosti konflikta. Hrvaška oblast je zaradi tega sprejela določene preventivne ukrepe. Nanje je odgovoril zvezni Sekretariat za ljudsko obrambo, povečal je napetost do skrajnih meja, kajti poleg ultimatov o razorožitvi je na celotnem 5. vojaškem območju, kot je napovedal, uvedel polno bojno pripravljenost.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg23">Mi imamo nekaj izkušenj z odnosom do JLA z razmerami, v katerih ta armada dela in tudi s stališči ključnih ljudi v JLA. V Sloveniji se s takimi razmerami srečujemo že najmanj nekaj zadnjih let, vendar bi rad rekel, da polne bojne pripravljenosti na območju Slovenije še ni bilo. Polna bojna pripravljenost pomeni, da so enotam razdelili ostro strelivo, da so posebej okrepljene in posebej pripravljene oklepne in specialne enote JLA na celotnem 5. vojaškem območju, to se pravi tako na Hrvaškem kot tudi v Sloveniji.</seg>
@@ -404,22 +382,22 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg33">Izvršni svet Republike Slovenije hkrati predlaga vsem trem zborom, da že danes obravnavajo in sprejmejo osnutek zakona o obrambi in zaščiti, ki ga je Izvršni svet predložil Skupščini že novembra lanskega leta. S tem bi bilo omogočeno, da pristojni organi v najkrajšem času pripravijo predlog zakona, tako da bi lahko Skupščina Republike Slovenije v primeru potrebe pravočasno zagotovila ustrezno pravno osnovo za uporabo in razširitev teritorialne obrambe in drugih obrambnih sil Republike Slovenije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg34">Gospodu Bavčarju se zahvaljujem za podano informacijo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg35">Preden začnemo z razpravo, vas obveščam, da ste danes sprejeli, v zvezi z obravnavanimi zadevami, informacijo Republiškega sekretariata za mednarodno sodelovanje o možnostih reševanja oziroma saniranja nastale škode ali težav slovenskih podjetij zaradi zalivske krize. Tu na seji ste prejeli tudi predlog stališč glede vojne v zalivu in predlog stališč glede dogodkov v Pribaltiku. Navedena stališča je pripravila delovna skupina, ki so jo predlagali vodje klubov delegatov, v delovni skupini pa so bili: Matjaž Šinkovec, Borut Pahor, Franco Juri, Danijel Starman, Franci Feltrin in Zoran Thaler.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg36">Na eventualna vprašanja bosta odgovarjala, če bo potrebno, tudi sekretar za ljudsko obrambo, gospod Janša in njegov namestnik gospod Kacin. Pričenjam razpravo, pri tem bi vas seveda pozval k racionalnosti pri tej razpravi, ker edino na ta način bomo v nekem doglednem času lahko sprejeli tudi ustrezna stališča.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg37">K razpravi se je prvi prijavil gospod Matjaž Šinkovec.</seg>
             </u>
             <note type="speaker">MAG. MATJAŽ ŠINKOVEC:</note>
-            <u who="#SSK11.SinkovecMatjaz1951" ana="#regular">
+            <u who="#SinkovecMatjaz1951">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg38">Ker smo bili ravnokar pozvani k racionalnosti, sprašujem, če je sploh potrebno predstaviti ta stališča glede vojne v zalivu in glede dogodkov v Pribaltiku tudi ustno. Mislim, da bi s tem skrajšali to razpravo, ker imate itak pismeno in se ta trenutek odpovedujem razpravi in bi se kasneje vključili k razpravi.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg39">Hvala lepa, naslednji je na vrsti gospod Danijel Starman.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg40">Cenjeno predsedstvo, drage kolegice in kolegi poslanci! Poslanski klub Demos je po preučitvi predlogov nekaterih poslancev opozicijskih strank o vprašanjih vojne v Zalivu in razprav o siceršnji nevarnosti za mir in svoboden razvoj narodov v Pribaltiku in v neposredni bližini, to je na Hrvatskem, ocenil, da bi bilo primerno, če bi o vprašanju varnosti države Republike Slovenije v sedanjem trenutku razpravljali zbori na skupnem zasedanju. V zvezi s tem predlagamo sprejem naslednjih stališč.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg41">Dne 28. januarja bo predvidoma Predsedstvo SFRJ v razširjeni sestavi obravnavalo temeljna izhodiščna vprašanja rešitve jugoslovanske krize. Ker je eno od bistvenih vprašanj hitrejše mirne razrešitve in preureditve SFRJ status in obseg JLA, je potrebno takoj pristopiti k postopkom preureditve JLA kot nadnacionalne in predimenzionirane vojaške organizacije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg42">Znano je, da Zvezni sekretariat za ljudsko obrambo nadaljuje z izvrševanjem ukazov predsedstva SFRJ in je včeraj, to je 23. januarja, sporočil, da bo prišlo do razorožitve vseh enot v Republiki Hrvatski, ki niso organizirane v okviru enotne JLA. Ker iz teh razlogov obstaja neposredna nevarnost za poseg tudi v Republiko Slovenijo, poslanski klub Demosa predlaga, da Skupščina sprejme naslednje sklepe:</seg>
@@ -433,20 +411,20 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg49">Gre za sledeče: čeprav je gospod Aksentijević ob neki priliki dejal, da zastopa v tem parlamentu JLA, menim, da je ta izjava sporna, ker je njegovo volilno telo sestavljeno tako in uniformiranih vojaških oseb, kot tudi civilnih vojaških oseb, civilnih oseb, ki služijo v enotah JLA. Zato bi bilo prav, da kdaj tudi tistim drugim posveti svojo zunanjo podobo in prepričan sem, da bo lepo izgledala. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg50">Gospod Voljč želi replicirati.</seg>
             </u>
             <note type="speaker">DR. BOŽIDAR VOLJČ:</note>
-            <u who="#SSK11.VoljcBozidar1939" ana="#regular">
+            <u who="#VoljčBožidar">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg51">Spoštovani gospod predsednik, spoštovane poslanke in poslanci! Čeprav sem po strankarski pripadnosti član Demosa, vendarle moram reči, da se ne morem strinjati s 3. točko teh stališč, in sicer s tistim delom te točke, ki govori o tem, da naj se orožje razproda. Večino orožja namreč kupuje tretji svet, za katerega vemo, da je veliko bolj potreben gospodarske, zdravstvene in tehnološke pomoči. Nikakor ne smemo s prodajo orožja zmanjševati njihovih možnosti za boljše življenje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg52">Prodaja orožja je prodaja nasilne smrti, bede in nasilja. Z vsakim kosom prodanega orožja moramo videti lačne otroke, sirote brez staršev, za delo nesposobne invalide, bolezni zaradi revščine in lakote, visoko umrljivost otrok in nizko kakovost življenja. Ne verjamem, da bi kdorkoli od nas kaj takega želel. Zato predlagam, da tretji odstavek izpustimo, stroški preureditve JLA, kadar bo do njih prišlo, pa naj se krijejo iz kakšnih drugih virov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg53">Hvala lepa. Naslednji ima besedo gospod Franco Juri.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg54">Spoštovane poslanke, spoštovani poslanci! Najprej ne morem mimo proceduralne kritike zaradi ravnanja Izvršnega sveta, ki je, kot sem že nekje tudi napisal, ravnal mimo stališč te Skupščine, pravzaprav takih stališč nismo imeli v odnosu do zalivske krize. Zgodilo pa se je, da je Izvršni svet sprejel sklep, ki dejansko vpleta Slovenijo in potencialno tudi državljane Slovenije v neposredni zalivski spopad.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg55">V prvem sklepu Izvršnega sveta je bilo izrecno povedano, da Slovenija, in to je tudi zdaj ponovil gospod minister Rupel, ponuja protiinvazijski koaliciji pomoč z reševalnimi in zdravstvenimi ekipami. To se seveda lahko tudi tolmači, da je možno pošiljanje prostovoljcev v žarišče. Upam da ne. Mislim, da bomo to dilemo danes rešili z resolucijo, ki smo jo malo pred to sejo pripravili.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg56">Vendar, zdaj z zadovoljstvom ugotavljam, da se je končno ta skupščina sestala in da spregovori o kriznih žariščih, tako v Zalivu, kot drugod po svetu. Žal na zadnjem skupnem zasedanju tega nismo naredili, kar je bil simptom določene provincialnosti vseh nas do najbolj perečih problemov. Seveda z vsebinskega vidika podpiram delno ravnanje Izvršnega sveta; iz vsebinskega. To pomeni, da v odnosu do tega spopada, vsaj politično ne morem biti nevtralen, dejansko Sadam Husein je izvirni krivec, to nedvomno, soglašam tudi s tistimi, ki ga delno vzporejajo z vlogo führerja, Hitlerja v 30. letih, vendar mislim, da tudi situacija kljub temu ni črno-bela, kot nam jo prikazujejo ameriški mediji, kot nam jo prikazujejo vojaški in vojni lobiji v tem trenutku. Iz krutega spopada naredijo spektakel in celo neko novo estetiko za našo mladino, nam ponujajo spektakularne raketne in letalske dvoboje, ki nam dokazujejo, da ko se nakopiči toliko orožja v rokah nenacionalnih ljudi na vseh straneh, ko se nakopiči toliko negativne energije, se prej ali slej ta energija sprosti in poči. Takrat ni važno, kdo je začel, kdo je kriv, ampak je važno, kakšne so posledice za tiste ljudi, za civilno prebivalstvo, za vojake, za cel svet.</seg>
@@ -456,11 +434,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg60">V zvezi z referatom gospoda ministra Bavčarja bi rekel, da popolnoma soglašam tudi z resolucijo, vendar mi nekaj ni bilo jasno. Ali je mislil s predlogom, da bi danes sprejeli zakon o obrambi resno, saj mi smo o tem zakonu v fazi razprave. Zakon je zelo zapleten, kompleksen, bilo je veliko kritik. Ne bi pa jaz izkoristil take izredne situacije, kakršna je ta, ki jo živimo tudi v Jugoslaviji za plasiranje spornih, vsaj zame spornih zakonov. Zato bi se od drugega dela izvajanja gospoda Bavčarja tudi distanciral. Ne bi sprejel, sprejmem pa prvi del resolucije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg61">Hvala lepa. Besedo ima gospod Jože Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg62">Izvajanja sekretarja za mednarodne odnose Dimitrija Rupla in sekretarja za notranje zadeve Igorja Bavčarja so zame sprejemljiva in jih podpiram.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg63">Če začnem o naših notranjih odnosih. Naj mi sekretar Pirnat ne zameri, bom v srbohrvaščini citiral sporočilo Službe informiranja Sekretariata za narodno obrambo tako, kot je objavljeno v "Politiki", ker je pač v celoti objavljeno. Osnovna poanta je na naslednjem. Citiram: "Ako se na području Republike Hrvatske odmah ne raspuste svi mobilisani oružani sastavi, Jugoslovenska narodna armija će postupajući po odredbama tačke 47 naredbe Predsedništva SFRJ podići borbenu gotovost svojih jedinica na nivo, koji će garantovati sprovo|enje na zakonu zasnovanog krivičnog postupka izvršenja sudskih odluka".</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg64">Na to stvar je opozoril že sekretar Igor Bavčar. Jaz ne poznam v 45 letih noben primer, da bi se na tak način grozilo z JLA in z njeno borbeno pripravljenostjo. Zato glede tega predlagam, da bi na skupni seji vseh treh zborov sprejeli jasno stališče v podporo Republiki Hrvaški, ki ima vse legitimne pravice, da oborožuje svojo milico in svojo teritorialno obrambo. Potrebno je, da v teh zaostrenih trenutkih pokažemo solidarnost. Drugič, da sprejmemo poseben sklep, s katerim se obrnemo na Predsedstvo SFRJ in protestiramo proti takim grožnjam. Formalno jih je izrekla Služba za informiranje Zveznega sekretariata za ljudsko obrambo, vendar je vsakomur, ki kakorkoli pozna stvari, da ne gre tu samo za službo, ampak gre za stališče Sekretariata za ljudsko obrambo in verjetno tudi za stališča predsednika Predsedstva SFRJ Jovića.</seg>
@@ -477,11 +455,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg75">Kaj se danes v Sovjetski zvezi glede pribaltskih republik dogaja? Konec koncev je bil Gorbačov tisti, ki je dovolil, da sta se Nemčiji združili. Tisti, ki je umaknil strateške interese Sovjetske zveze in Vzhodne Evrope. Pa to so fantastične zadeve. V 70-tih letih se o tem sploh ni moglo razpravljati. Jaz sem za najostrejšo obsodbo vsega, kar zadeva vojni poseg v pribaltskih republikah, sem pa seveda za zelo umirjeno oceno, kar zadeva politiko Gorbačova. In zato plediram, da mi te stvari razdvojimo. Kar zadeva samoodločbo,pravico narodov, smo tukaj seveda zelo jasni in konsekventni, da pa ne bi iz tega delali nekega generalnega napada na politiko Gorbačova.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg76">Hvala lepa. Naslednji ima besedo gospod Borut Pahor.</seg>
             </u>
             <note type="speaker"> BORUT PAHOR:</note>
-            <u who="#SSK11.PahorBorut1963" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg77">Hvala. Spoštovano predsedstvo, kolegice in kolegi! Uvodoma je vendarle treba omeniti, da je bil ekspoze gospoda Rupla, sekretarja za mednarodno sodelovanje Republike Slovenije prvi ekspoze od novega sestava Vlade in da to po sedmih, osmih mesecih dokazuje, da je Skupščina doslej namenila zunanji politiki zelo malo pozornosti. Upam, da to ne navaja na neko mentaliteto, ki podcenjuje ukvarjanje z zunanjo politiko in da bo Skupščina poslej več časa namenila tudi tej temi.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg78">Svet se globalizira, v nekem smislu se manjša in stvari, ki se zgodijo na enem koncu, vplivajo na stvari, ki se zgodijo na drugem koncu. Zato je seveda mentaliteta, da je treba najprej stvari urediti doma in šele nato pogledati čez prag, slaba in škodljiva in za republiko, ki skuša peljati državotvorno politiko, tudi, po moje, nesmotrna.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg79">Drugič pa ob tem, ko ugotavljamo, da zunanja politika ni neka eksotična politična tema, in da jo je treba večkrat pripeljati na ta govorniški oder, ponovno treba izraziti po celoviti zunanjepolitični strategiji Slovenije in še enkrat rečem, da je treba to temo čimprej sprožiti v tej Skupščini.</seg>
@@ -489,11 +467,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg81">Kar se tiče 4. točke stališča glede vojne v Zalivu pa bi rekel naslednje. Glejte, eden redkih dokumentov, ki ga je Komisija za mednarodne odnose vendarle obravnavala, ki ga je predložil Izvršni svet, je vendarle, mislim da na drugi strani tega dokumenta govoril o nameri Republike Slovenije, da vodi nevtralno zunanjo politiko. Mi se takrat nismo več časa zadržali pri tej nameri, dejali pa smo, da je nujno temu nameniti več pozornosti in kot je opozorila vlada v senci v svojem sporočilu, je sklep bil z vidika te namere sporen in je morda tudi tako, kot je zdaj formuliran, sporen. Morda pa seveda tudi ne. No ob 4. točki pa bi za konec še opozoril na pobudo skupine Amnesty Interncional, sekcije Slovenije, ki je na Skupščino Republike Slovenije naslovila sugestijo za ureditev zbirnega centra za begunce in opredelitev begunske politike v samostojni in neodvisni državi Sloveniji. Jaz vsekakor apeliram na ta spoštovani zbor in na predsedstvo Skupščine in seveda tudi na ustrezni vladni organ, da tej pobudi nameni vso pozornost in jo tako tudi obravnava. Hvala!</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg82">Hvala lepa, naslednji ima besedo gospod Emil Milan Pintar.</seg>
             </u>
             <note type="speaker">EMIL MILAN PINTAR:</note>
-            <u who="#SSK11.PintarEmilMilan1944" ana="#regular">
+            <u who="#PintarEmilMilan1944">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg83">Spoštovano predsedstvo, spoštovane kolegice in kolegi! Situacija v Jugoslaviji se očitno slabša. Na Hrvaškem so po nekaterih informacijah razmere celo dosegle stopnjo dramatičnosti. Očitno je, da je čas treznega razmišljanja in da je čas vojne. Vojna se ne začne takrat, ko začne govoriti orožje, temveč takrat, ko se neha trezno razmišljanje in ko se neha trezno reagiranje. Zato je situacija na Hrvaškem dramatična, ker je očitno, da na eni in na drugi strani se prenehava trezno reagirati in razmišljati, ampak nastopi visoka stopnja nervoze. Takrat, ko se to zgodi, je nasilje le še vprašanje časa, tako imenovana zakonita posledica dejstva, da se je treznost porazgubila. Bojim se, da smo pravzaprav na robu take situacije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg84">Osebno menim, da je slovenska vlada doslej, kar zadeva situacijo v svetu - pa tudi ta del, ko se nanaša na nas - trezno reagirala kljub temu, da se pridružujem tisti sporni zadevi, ali je pametno ali ni pametno tako hitro in tako enostransko zavzeti stališče o tem. No, svojo oceno, da je trezno reagirala, utemeljujem na tem, da ni izgubljala sposobnosti za normalno reagiranje. Tudi današnja nastopa obeh ministrov kažeta na treznost pristopa, čeprav v prvem, ko nam je gospod Rupel govoril o mednarodnih odnosih oziroma razsežnostih še kako pogrešam pozitivnih informacij o tem, ali je Vlada uspela skleniti doslej na mednarodnem nivoju kaj bolj otipljivega kot izmenjavo informacij, ko gre za možne posledice mednarodnega konflikta na jugoslovanskem oziroma slovenskem ozemlju. Zato bi postavil dvoje vprašanj: prvič, če nam lahko gospod Rupel kaj več pove, ali imamo kje kakšen pozitiven odgovor, če bi se tu situacija še naprej poslabševala. Mislim, da smo v Skupščini, kjer lahko precej odkrito o teh stvareh spregovorimo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg85">Drugo vprašanje, ki bi ga postavil, bi postavil gospodu Janši. Ali lahko kaj več zvemo o tem, kaj se dejansko dogaja na Hrvaškem, kajti informacije, ki jih imamo so protislovne, nekatere alarmantne, druge pomirjujoče. Ob teh dveh vprašanjih bi imel še dva predloga. Vemo,da je treznost reagiranja seveda tudi stvar informacij, ki jih imamo. Posebej bomo na očeh mi, poslanci. Ne vem, kako reagirajo nekateri, za sebe vem, kadar se zgodi kaj posebnega, dežujejo telefonska vprašanja itd. Mi smo premalo informirani, vsaj zase lahko tako trdim.</seg>
@@ -505,11 +483,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg91">In v peti točki. Ne vem natančno,na koga se pravzaprav nanaša, kdo je subjekt pete točke. Spričo odprtih kriznih žarišč, pravi točka, Skupščina Slovenije meni, da je potrebno vse politične stranke, zastopane v Skupščini, obveščati itd. Verjetno to Skupščina sama sebi. Mislim, da je mogoče tu, da se da precizneje, nisem prepričan, ali je treba ali ne. Bi pa popravil tisti del predloga, ko teče naprej, zastopane v Skupščini. In sicer, da rečemo: kontinuirano in enakopravno obveščati o aktualnem mednarodnem položaju v svetu in v Jugoslaviji ter o korakih itd. To se pravi, ne gre samo za obveščanje v svetu, temveč gre tudi za obveščanje v Jugoslaviji in ne samo stranke kontinuirano, ampak tudi vse stranke enakopravno. Mislim, da gre za vprašanje, kjer je še kako pomembno, da imamo enake ali točneje rečeno, iste informacije, če se bomo hoteli o nekaterih stvareh dogovarjati.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg92">Hvala lepa. Naslednji ima besedo gospod Šinkovec.</seg>
             </u>
             <note type="speaker">MAG. MATJAŽ ŠINKOVEC:</note>
-            <u who="#SSK11.SinkovecMatjaz1951" ana="#regular">
+            <u who="#SinkovecMatjaz1951">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg93">Spoštovani! Sedanji trenutek, v katerem hoče Republika Slovenija doseči svojo popolno samostojnost in suverenost in mednarodno uveljavitev ter v končni fazi tudi mednarodno-pravno priznanje, tem prizadevanjem ni najbolj naklonjen. Poleg stalnih napetosti v svetu, ki sedaj z večjo, zdaj z manjšo intenzivnostjo prihajajo na površje, smo danes priča vsaj dvema kriznima dogajanjima v svetu, ki pritegujeta največji del pozornosti in zaskrbljenosti svetovne javnosti in o katerih smo govorili že danes.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg94">Čeprav si Republika Slovenija zelo prizadeva navezati tesne stike z Evropo in tudi formalno postati njen sestavni del, ne samo v geografskem pomenu besede, in se tako približevati ostalemu zahodnemu svetu, ne smemo pozabiti, da smo teritorialno zelo blizu tudi Vzhodu, kar čutimo čedalje bom tudi v našem vsakdanjem življenju. V Sloveniji se zavzemajo za spoštovanje načela suverenosti, načela nevmešavanja. Zato se ne strinjamo z okupacijo suverenih držav, kot je npr. Kuvajt s strani katerekoli sile, ki jemlje pravico v svoje roke in jo kroji po svoji meri. V tem kontekstu je verjetno tudi upravičena akcija mednarodnih sil v Zalivu, ki bi spet vzpostavila prejšnje stanje, seveda ob upoštevanju želja kuvajtskega prebivalstva, ki so že bile izpričane. Tudi ponujena humanitarna pomoč tem silam s strani slovenske vlade sodi v ta okvir in je nedvomno izraz naših stališč do zalivske vojne. Vendar pa je skupščinska komisija za mednarodne odnose menila, da bi načelno o tem morala odločati slovenska skupščina, ki bi morala obenem definirati tudi način našega ravnanja v takih primerih.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg95">Republika Slovenija je vedno izražala svoje prepričanje, da je treba spore reševati na miren način, brez uporabe sile, zato z zaskrbljenostjo spremljamo dogajanje v Zalivu. Taki dogodki pa so primeren trenutek tudi za to, da začnemo resneje razmišljati tudi o definiranju naše mednarodne politike v smislu statusa suverene Slovenije v času vojaških spopadov, namreč, ali želi Slovenija postati nevtralna država ali pa se želi v okviru vključevanja v Evropo vključiti tudi v evropske vojaške povezave.</seg>
@@ -522,17 +500,17 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg102">Dovolite, da omenim še vprašanje, ki ga je sprožil - mislim - gospod Starman v zvezi s predlogom glede prodaje orožja JLA v tujino. Jaz temu nasprotujem, čeprav menda do tega že prihaja in se dejavnost JLA že financira s to prodajo. To orožje je bilo tudi financirano z našim slovenskim denarjem in ne razumem, zakaj bi to počeli. Ko je gospod Pahor govoril o stališčih glede vojne v zalivu, mislim da sem prav razumel, da je omenil tudi, da bi sprejeli sklep, da je Izvršni svet kršil ustavo. Jaz sem proti temu. Mislim, da s predlogi v 4. členu stališč to vprašanje ustrezno rešujemo in dajemo podporo Izvršnemu svetu, sodelovanje v tem konfliktu pa omejujemo, saj govorimo da državljani Republike Slovenije ne bi odhajali na področje Zaliva. V zvezi s stališči glede Pribaltika je pač naša Skupščina dejansko že sprejela vrsto stališč. Spomnite se, lansko leto, eden prvih aktov, ki je bil sprejet v tej hiši, je bilo neko priznanje teh treh držav; pred dvema tednoma je tudi Komisija za mednarodne odnose sprejela ustrezna stališča in mislim, da ni treba imeti nekih strahov, kot je omenil gospod Smole, da bi se s tem lotevali Gorbačova nasplošno. Govorimo samo o obsojanju posega sovjetske vojske v Litvi in Latviji. Hvala lepa.</seg>
             </u>
             <note type="speaker">MAG. VIKTOR ŽAKELJ:</note>
-            <u who="#SSK11.ZakeljViktor" ana="#regular">
+            <u who="#ZakeljViktor">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg103">Spoštovane tovarišice in tovariši, gospe in gospodje poslanci! Jaz se oglašam v prepričanju, da je seveda trenutek resen in da se bodo zaključki, ki so ponujeni, verjetno dograjevali, v kolikor ne, seveda potem moj prispevek ni potreben, v načelu pa seveda predlagane rešitve podpiram. V kolikor pa bi prišlo do dograditve teh zaključkov, pa seveda predlagam, da se smiselno morda upošteva naslednje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg104">Nujno je, da se na nek način ta stališča razširijo zaradi jugoslovanske in seveda tudi svetovne javnosti približno v naslednjem, smiselno naslednjem. Da je predsedstvu SFRJ, ki ga vodi doktor Jović, v manj kot letu dni uspelo vzeti dovčerajšnji Jugoslovanski ljudski armadi tako njeno ljudskost kot očitno tudi njeno jugoslovanskost. JLA je tako postavljena v funkcijo uveljavljanja interesov sedanje srbske vrhuške, ki pa seveda nosi pretežni del odgovornosti za sedanja dogajanja v zaenkrat še skupni državi. S tem Predsedstvo SFRJ nosi vso odgovornost za vse bolj nevaren razplet jugoslovanske krize. Po vsem tem, kar se zadnje čase dogaja, mislim zlasti na današnji dan, dokazuje, da sta se federalno predsedstvo, kot Jugoslovanska ljudska armada, dejansko postavila proti interesom jugoslovanskih narodov in posebej poudarjam, tudi srbskega interesa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg105">Jugoslovanska ljudska armada v Sloveniji zanesljivo izgublja tudi slovenski značaj, če je res, kar tu stoji - tudi fizično. To je po moji sodbi razlog več, da se Republika Slovenija pospešeno in še bolj organizirano začne odklapljati od razpadajoče Jugoslavije, tudi za ceno še večjih ekonomskih stroškov, ki jih to odcepljenje nosi, ter v tem smislu, da se čimprej organizirajo vse funkcije slovenske države in če strokovnjaki in ta parlament meni, tudi lastna obrambna funkcija. In še mislim, da bi kazalo upoštevati naslednje: če se v toku zaostrovanja sedanje krize pokaže potreba, naj Predsedstvo, naša skupščina ali njen izvršni svet po potrebi to problematiko internacionalizira, če bomo skupaj presodili, da bi to dejanje preprečilo morebiten krvavi razplet jugoslovanske krize. Dalje predlagam, ker smo zlasti stranke v opoziciji povsem odrezane od relevantnih informacij, da Predsedstvo, tako kot v času pripravljanja našega skupnega plebiscita, koordinira, vodi sodelovanje relevantnih slovenskih političnih sil, da bi tako bila dejanja naše oblasti konsezualna, torej soglasna. In končujem: glede na dramatičnost, ki se kaže, predlagam, da sprejmemo sklep, naj Predsedstvo, Skupščina - morda smo mi kar pravšnji pozove državljane Republike Slovenije, da naj ne nasedajo provokacijam, ki bodo v naslednjih dneh in urah zanesljivo sledile, ker so železni del sanacija. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg106">Hvala lepa. Naslednji ima besedo Jožef Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg107">Jaz seveda nisem običajno najbolj blag. Tokrat sem imel namen stvari le v nekem delu razelektriti, ampak to, kar počne gospod Žakelj, se mi zdi, da pač ne pelje enostavno nikamor. Če hočemo, da ljudje res ne bodo nervozni, potem tu ni treba mahati z nekimi scenariji, ker bi ga jaz pozval tako, kot smo svoj čas od tukaj pozivali ljudi v Beogradu, da pokažejo scenarij o albanski kontrarevoluciji, na osnovi katere so potem ljudi preganjali in zapirali. In to pač ne pelje nikamor. Niti ne morem resno jemati njegovega predloga o internacionalizaciji jugoslovanske krize, ker smo to, če se boste spomnili, ravno zadnjič poskušali na nek način kot eno od možnosti uveljaviti ravno iz naše stranke, ampak samo kot možnost in seveda smo bili s te skrajno desne strani pohojeni.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg108">Kakorkoli, zdi se mi, da je treba res iti od teh diskusij, ki govorijo o nervozi in ki jih je načel gospod Pintar in rekel bi tudi, da se nervoza seveda poloteva vseh in žal tudi nas, ki govorimo naj ljudje ne bodo nervozni in nenazadnje se mi zdi z vsemi temi telefoni in dodatnimi stvarmi tudi gospoda Pintarja. Tako da bi bilo zelo lepo, da bi v takih razmerah se poskušali obnašati čimbolj normalno in čimbolj racionalno in da bi se držali stvari, ki jih imamo na dnevnem redu.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg109">Popoldne, ko smo govorili o tem, ali uvrstimo to gor ali ne, je bila diskusija seveda samo najprej o tem angažmaju o zalivski krizi oziroma o odnosu Republike Slovenije do zalivske krize, kasneje seveda o Baltiku in sedaj govorimo o vsem, in če bo še nekaj tako junaško nastrojenih nastopov, ni daleč trenutek, ko bo že tukaj kdo predlagal, da kar komu preventivno vojno napovemo. Zato bi jaz prosil, da se držimo tistih stvari, ki so bile predlagane in poskušamo o njih govoriti. Žal, seveda se bom zato držal teh treh stvari in moram reči, da če jih danes tukaj sprejmemo, bi pač rekel na to, kar je govoril gospod Bavčar, da bi bilo ravno tako zelo korektno, če bi Izvršni svet reagiral na tisto, kar smo mi predlagali včeraj, da se zamrzne odhod vseh nabornikov v JLA do takrat, ko se te stvari rešijo. Izvršni svet na to ni reagiral, to je bilo v glavnem v dveh zborih sprejeto, v tretjem, Zboru združenega dela pa kot pobuda, da se to prouči. Mislim, da bi del ljudi, ki se jih najbolj neposredno lahko tiče, še kako se dotikalo.</seg>
@@ -544,28 +522,28 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg115">Če misli, kakor je rekel, v tej protiinvazijski koaliciji ponudit pomoč, reševalne ekipe in tako naprej, potem reševale ekipe ne morejo biti reševalne ekipe v Sloveniji, ampak so lahko samo tam in iz tega sprašujem, kdo bo pač tja šel in ali bo šel prostovoljno, ali se ga bo mobiliziralo, kakšna sredstva bo zahtevalo in se mi zdi, da je ta formulacija več kot nevarna in zato bi bilo bolje, da pač Skupščina eksplicitno reče, da ne stoji za tem sklepom in da predlaga, da Republika Slovenija ostaja nevtralna v tej vojni. To bo dopuščalo tudi manever za kasnejše diskusije o tem, ali imamo vojsko ali ne, in o tem, kako bomo pozicionirali Republiko Slovenijo v okviru Evrope. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg116">Besedo ima gospod Dretnik.</seg>
             </u>
             <note type="speaker">IVAN DRETNIK:</note>
-            <u who="#SSK11.DretnikIvan1921" ana="#regular">
+            <u who="#DretnikIvan1921">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg117">Spoštovane članice in člani tega parlamenta! Na pripombo poslanca, gospoda Starmana, bi imel kratek, a zelo zanimiv podatek. Ker sem že bil član slovenskega parlamenta že v prejšnji mandatni dobi, sem na tem mestu že večkrat stal, lahko vam povem tole. Tudi v prejšnji mandatni dobi je imela JLA svojega delegata, ki pa ni bil stalen v prejšnjem sistemu. Bila sta dva ali trije, tega ne vem. Vem pa, da je vsak delegat na seji prisostvoval v civilu.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg118">Hvala lepa. Naslednji je gospod Andrej Magajna.</seg>
             </u>
             <note type="speaker">ANDREJ MAGAJNA:</note>
-            <u who="#SSK11.MagajnaAndrej1952" ana="#regular">
+            <u who="#MagajnaAndrej">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg119">Spoštovani! Vesel sem odločitve Slovenije, da nudi humanitarno pomoč prizadetim v zalivski vojni.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg120">Na tem mestu se ne bi spuščal v polemiko, kateri organ Slovenije je pristojen za take odločitve,čeprav to ni nepomembno vprašanje. Prav je, da humanitarna pomoč ne bo izvedena na način, da bi morali naši državljani odhajati na področje Zaliva. Zanima pa me, komu bo namenjena. Komu bomo nudili pomoč. Z gotovostjo lahko trdimo, da bo največ civilnih žrtev in prizadetih med Iračani in Kuvajtčani. Bodo naše pomoči deležni tudi iraški otroci in begunci tega naroda, ali pa bo selekcionirana po drugih političnih kriterijih. To vprašanje ne razumite kot očitek, samo kot opozorilo in upam, da ni bilo potrebno.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg121">Hvala lepa. Besedo ima gospod Franc Lovšin.</seg>
             </u>
             <note type="speaker">FRANC LOVŠIN:</note>
-            <u who="#SSK11.LovsinFranc" ana="#regular">
+            <u who="#LovsinFranc">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg122">V tem primeru ne bom govoril v imenu nobene stranke pač pa izključno v lastnem imenu.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg123">Nekaj je, kar me muči in ni rešeno. Kakšen je obraz, kakšna je prava podoba te zalivske vojne. Je to pravična vojna za zaščito neke suverene države, ali pa je to vojna iz koristoljubja? Zalivska vojna je nastala neposredno po tem, ko se države niso mogle sporazumeti o ceni nafte. Sodček nafte, to je tista odločilna stvar, ki je bistveno vplivala na to vojno in še druga stvar, tisočletja stara mržnja med Izraelci in sosednjimi narodi. Če bi se šlo za pravično vojno, potem menim, da bi jo bilo mogoče končati na drugačen način. Ker pa je vojna povsem drugačna in za to vojno stoji sodček nafte, potem ugotavljam, da gre tukaj za vojno iz koristoljubja. Zalivska vojna ni nič drugega kot spopad kapitala. Zato sem prepričan, da zalivske vojne mi, Slovenci, ne smemo podpihovati, ker nam in človeštvu neposredno škoduje. Ne smemo je opravičevati, ker je nasilna kot vsak vojna, ki prinaša take posledice, kot jih je lepo označil že dr. Volč. Povsem soglašam s stališčem gospoda Školča, da se ne smemo vezati na nobeno stran, pač pa si moramo prizadevati za nevtralnost Slovenije, za prekinitev sovražnosti v Zalivu, za pomoč trpečim, in to na obeh straneh, kolikor tako pomoč kot majhen narod lahko nudimo in do katere višine jo lahko nudimo. Vemo, da doma v našem slovenskem zdravstvu manjka denarja celo za naše ljudi. Prepričan sem, ko bo vojna v zalivu končana in bo dosežena sprava, ne samo mir v obliki tišine po množici eksplozij, bo tudi Slovenija hitreje stopila na pot gospodarskega razvoja in splošne blaginje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg124">Glede orožja: kuhinjski nož je nevarnejše orožje od brzostrelke, pa ga običajno ne uporabljamo. Torej, če ne uporabljamo strelnega orožja, tudi to orožje ni drugega kot blago, ki se kupuje in prodaja. In če je nekdo resnično tako željan orožja, katerega posledice bo tudi sam trpel, naj ga kupuje. Sem pa proti temu, da bi pospeševali vojno industrijo in služili denar z orožjem. Celih 45 let smo govorili čez tiste, ki so orožje izdelovali in ga prodajali, češ da delujejo proti človeštvu in proti miru. V tem primeru pa naj bi sami zagrešili tako dejanje. S tem se ne morem strinjati.</seg>
@@ -575,11 +553,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg128">Končam svoje razmišljanje s tem, da so tudi v JLA končno samo ljudje, ki jim ni do smrti. Prepričan sem, da je v njih in v nas še vedno živo slovansko bratstvo, ki mora braniti svobodo in življenje vsakogar in upam, da bo to doseženo. Hvala!</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg129">Hvala lepa. Naslednji ima besedo gospod Tomažič Anton.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg130">Naj takoj povem, da bom govoril o stališčih glede vojne v Zalivu. In naj povem, da se mi zdi ta prvotna verzija kar dobro pripravljena in v končni fazi predlagam, da kar takšno sprejmemo ali morda s popravki, ki jih je dal po mojem mnenju zelo tenkočutno gospod Franco Juri. Vendar - sprva se jaz še nisem mislil oglasiti, ko pa je gospod Školč predlagal, da bi napisali, da bo Slovenija nevtralna v tej zalivski vojni, pa sem se odločil, da se moram oglasiti. Kajti mislim, da je ta zalivska vojna lahko tudi pomembna preizkušnja za Slovenijo in za njeno novo demokratično oblast.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg131">Bistveno vprašanje je sedaj, ali si lahko privoščimo, da Republika Slovenija v zvezi s to vojno v Zalivu ostane nevtralna in da pošilja le deklarativna in abstraktna mirovna sporočila in pozive, lekarniško natančno odmerjene obema stranema. Pozitiven odgovor na gornje vprašanje bi po mojem mnenju pomenil, da še vedno nismo naredili bistvenega miselnega premika od stare, več desetletij trajajoče nenačelne, prakticistične, kvazi-neuvrščene miselnosti, ki se kaže tudi v tem, da moramo biti vedno nekaj posebnega. To pa bi hkrati seveda pomenilo, da se že v naprej in prostovoljno izključujemo iz družine zrelih, odgovornih narodov in da bo naša prisotnost v Evropi še naprej le geografska. Kajti, v nasprotju od gospoda Lovšina, po mojem mnenju tu ne gre le za nafto, ampak gre pri tej vojni za spopad tudi med prakticističnim aziatskim despotizmom in načelno zahodno demokracijo. Izid tega spopada bo zgodovinski procedens za odnose med narodi, pomemben tudi za našo malo domovino. Če se bo končal tako, kot se mora, potem si nobena država več ne bo upala napasti druge, pa če je še tako močnejša od nje. Okrepila se bo tudi vloga Združenih narodov in njenih resolucij, ali - kot je dejal ameriški predsednik Buch - citiram: "pred nami je priložnost, da ustvarimo zase in za bodoče rodove nov svetovni red, svet, v katerem ureja ravnotežje držav vladavina zakona,ne pa zakon džungle."</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg132">V tem konkretnem primeru bi bilo krivično, da bi se obrnili na obe nasprotujoči si strani z enako intenziteto in ne upoštevaje bistveno drugačnega ravnanja v preteklosti. Relevantna dejstva za to našo oceno pa so naslednja: na strani Iraka - pod diktatorskim vodstvom Sadama Huseina in izkoriščajoč verski fanatizem, preizkušen v desetletni vojni z Iranom, je brutalno okupiral mirno sosednjo državico, članico Združenih narodov.</seg>
@@ -589,55 +567,55 @@
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg136">Hvala lepa. Med tem govorom so se štirje prijavili za repliko. Jaz bi samo opozoril na to, ker so vsi štirje gospodje že imeli besedo, da naj bo to stroga replika ter mislim, da bom upravičeno prekinil tak nastop.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg137">Zdi se mi, da sem upravičen do replike, ker se je res to name nanašalo in mislim, da del stvari je bila stvar nesporazuma. Jaz sem jasno distinkcijo izvedel med tem, kar je naredil Irak in med tem, kar se dogaja zdaj v tekstu, da pač obsojamo invazijo na Kuvajt in obžalujemo začetek vojne. Mislim, da je to distinkcija več kot jasna in da ne gre za nobeno lekarniško tehtanje, da je to vsakemu natančno jasno. Ne mislim ponavljati stvari, ki vam jih je tukaj Tone Partljič svoj čas že povedal, da pač junaki ne umirajo v Skupščini in drugje in da ima vsak svojo priliko.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg138">Mislim pa, da je treba še na drugo stvar odgovoriti. Tukaj ste vi govorili o aziatskem despotizmu in zahodni demokraciji, ki se neposredno ubijata. Jaz nič ne rečem, tudi tako je mogoče interpretirati in zelo lepo se sliši, ampak jaz bom v istem jeziku rekel, to je pač Huseinov jezik, da se razumemo. Boli me pa tista točka, ki se pač reče, če se v neki vojni ne postaviš na neko stran, potem si mevža. To enostavno ni resno. Vsi se v vseh vojnah ne morejo bojevati. Nenazadnje se tukaj kar naprej oziroma po Švici in Avstriji in to sta dve državi, s katerimi se najraje primerjamo, vsaj če bi šli gledati te magnetograme in vi ste strokovnjak za tovrstne analize, imate celo računalniški program, potem boste ugotovili, da je največ referenc seveda na to, kar na ta status pač Švice in Avstrije. In poglejte, to sta dve državi, ki sta nevtralni v vseh vojnah. Ali ni to nekako čudno? In seveda jim zavidamo. Ta stvar okrog svobode in demokracije seveda ni tako enostavna. Tam ne gre za boj, za svobodo in demokracijo. Če bi šli od tam, kaj se je dogajalo v Kuvajtu, potem je bilo to ena urejena zatokla srednjeveška kneževina, ki ni dopuščala nobene svobode in nobene demokracije, ampak to še ne opravičuje nobenega, da bi posegal v suverenost in nedotakljivost samostojne države. Za to se pač gre.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SSK11.PahorBorut1963" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg139">Strinjam se s kolegom Školčem. Tudi tako je moč videti stvari, toda tisto, kar je bistveno za stališče te skupščine je, da v celoti spoštuje mednarodni pravni red in da se na njega tudi sklicuje ter tako obsoja agresije na suverene države in tudi agresijo Iraka na Kuvajt ter pozdravlja napor organizacije združenih narodov za rešitev zalivske krize. In dovolite mi takoj amandma. Pri 3. točki bi za prvim stavkom za piko, skupaj s kolegom Smoletom vložila naslednji stavek: "Skupščina Republike Slovenije meni, da diplomatska sredstva v zalivski krizi niso v celoti izčrpana. zato poziva k prekinitvi spopada in apelira za pogajanja, potem pa se tekst nadaljuje.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg140">Moram replicirati kolega Tomažiča. Želja, da bi zalivski spopad tolmačili kot spopad med imenovano zahodno demokracijo in aziatskim spotizmom, je prav tisto, na kar cilja Huseinova strategija s tem, ko hoče na vsak način zaplesti izraelsko državo v to vojno. Gre prav za to manihejsko interpretacijo zalivske krize in če bi mi sprejeli taka stališča in če bi na to krizo gledali tako, kot predlaga kolega Tomažič, bi postregli prav Huseinu in bi ustvarili to svetovno holarizacijo, zato ni sprejemljiva ta logika. Ne pozabimo konec koncev, da je Husein imenitna zahodna kreatura. Leta in leta je Huseina oboroževal t.i. demokratični Zahod v spopadu z Iranom, ko je Zahod bil prepričan, da je Husein tako, kot je bil Hitler ščit pred boljševizmom, je bil Husein ščit pred muslimanskim integralizmom. No, stvari so se hitro obrnile in zdaj z istim zahodnim orožjem Husein vrača pomoč zahodni demokratični koaliciji. Mislim, da ste razumeli, da nimam nobenih simpatij do Sadama Huseina, nimam niti za druge nasprotne jastrebe, zato podpiram logiko miroljubne rešitve tega spopada in še enkrat opozorim, da taka stališča podpihujejo rasistični odnos do vprašanj konfliktov v Zalivu in tudi odnos ljudi, navadnih evropskih ljudi do državljanov in prebivalcev, ki prihajajo iz tistega konca sveta. Konec koncev sedaj smo priče vala beguncev, na to opozarja tudi Amnesty Internationale, opozarja tudi na nevarnost, da bi neselektivno gledali in se ravnali do teh beguncev. Nekateri begunci so vsekakor in teroristi in ekonomski begunci in politični begunci, ki so žrtve tistih režimov, recimo represij v Maroku ali v drugih državah tretjega sveta.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg141">Zato dajmo, poskusimo ostali racionalni in podpirati tiste predloge, ki prihajajo iz zahodne demokracije iz evropske skupnosti, iz Francije npr., ko je predlagala čisto racionalno, da ne bi ta spopad postal spopad med arabskim svetom in Zahodom in bi skušali tudi z intervencijo mednarodnih mirovnih sil arabskih držav, kar bi bilo zelo pametno, ker bi preprečili ta kratek stik med dvema tako različnima kulturama na tistem delu sveta in potem bi se začeli končno pogajati o globalni rešitvi. Hvala!</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg142">Hvala lepa. Gospod Zupančič.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#regular">
+            <u who="#ZupancicJoze1936">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg143">Gospod Franco je omenil besedo racionalno. Jaz vas spoštovane poslanke in poslanci sprašujem, kaj je z nami? Tu nas zdaj sedi ob tej izredno pomembni tezi s tremi razsežnostmi točno še 88. Vsi ostali so ali zunaj ali kjerkoli drugje. Včeraj, ko smo se pogovarjali o tem, da bomo to temo obravnavali na skupnem zasedanju, smo v našem zboru menili, da ni prav, da zasedamo. Danes, ko so se spremenile razmere pri nas v Jugoslaviji, smo to zahtevo podprli in smo tudi prišli sem in zato bi predlagal, vsi tisti poslanci, ki ste že razpravljali, da se zamislite, kam in komu razpravljate, ali samo še sami sebi ali komu drugemu. Zato bi bil, da smo tudi v razpravah dejansko racionalni, se pogovorimo, kar je treba in odidemo delati.</seg>
                <note>Ploskanje.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg144">Hvala lepa. Še gospod Lovšin se je prijavil za repliko.</seg>
             </u>
             <note type="speaker">FRANCE LOVŠIN:</note>
-            <u who="#SSK11.LovsinFranc" ana="#regular">
+            <u who="#LovsinFranc">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg145">Zahvaljujem se predgovorniku, ki je lepo povedal, da je treba vedeti, zakaj razpravljamo. In prav zato sem se prijavil. Namreč smešno ali ne. Smešno je samo v tem trenutku in za nas. Vprašanje pa je, kako bo smešno za tiste, ki bodo doživljali tisto, kar lahko pride.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg146">Spomnimo se samo na eno resnico iz zgodovine: vedno so propadli najmočnejši. In presekam zgodovino skozi 1000 let pa vas vprašam samo to, ali bi Slovenci ne imeli večjega napredka, da se nikoli v zgodovini niso vezali na noben blok za časa Karla Velikega? Slovenci so izgubili samostojnost samo zaradi tega, ker so se vezali na bloke. In zato, če v vsem podpiram gospoda Tomažiča in druge, ne podpiram v tem, da bi se vezali na katerikoli blok. Bodočnost Slovenije je samo v nevtralnosti. Kdor se tega ne zaveda, naj se spominja tega, ko bo prepozno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg147">Besedo ima gospod Toplak.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg148">Gospe in gospodje! Postavljeni smo pred dejstvo. Predlagam, da se povrnemo na izhodiščno poročilo predstavnikov Vlade. Mislim, da je filozofije dovolj, za kaj gre v Zalivu. Dejstvo je, da gre za oblast, ne za zverinsko, za človeško oblast, ki daleč preseže vsako zverinsko potrebo po moči in oblasti in mislim, da v veliki meri se ta nekulturna potreba po oblasti, danes žal tukaj afirmira s tega mesta, ko gre za veliko resnejše stvari iz ust govornikov, zato bi predlagal, da se povrnemo na izhodiščna vprašanja.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg149">Hvala lepa. Naslednji ima besedo gospod Milan Aksentijević.</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ:</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg150">Spoštovani kolegice in kolegi!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg151">1. Odločno protestiram in ugovarjam na podtikanja na račun JLA, s strani gospodov socialistov Smoleta in Žaklja. Zdi se mi, da smo dobili nove jastrebe.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg152">2. Gospod Starman me je izzval. Izkušeni politiki vedo, da poteze na eni strani izzivajo adekvatne poteze na drugi strani. Ko sem predlagal ta moratorij, sem resno mislil, da je to poteza, ki bi bila edina prava v tem političnem trenutku na tem našem prostoru. Zato sedaj vztrajam na tem predlogu. Okoli te naše uniforme, mala "ispravka" gospoda, jaz sem pripadnik JLA, ali sem poslanec zaposlenih v oboroženih silah. Hvala.</seg>
@@ -645,29 +623,29 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg154">3. Nekaj o zalivski krizi. Res sem presenečen, da nam minister za zunanje zadeve ni predlagal, da podpremo resolucijo, zahtevek ene od neuvrščenih, da našemu ministrstvu za zunanje zadeve, to se pravi zveznem, in tukaj je naš minister kot predstavnik ali predsedujoči, neuvrščenih, sprožimo postopek za prenehanje vojne v Zalivu. Še je čas, da ne bi "stradalo" nedolžno prebivalstvo ene in druge strani, najmanj vojaki in da se Irak umakne iz Kuvajta. Še je čas, nikoli ni prepozno. To me res preseneča, da to šanso minister ni izkoristil in nam predlagal, zato jaz predlagam, da mi to naredimo in damo zahtevek našem ministrstvu za zunanje zadeve. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg155">Hvala lepa. Naslednji ima besedo, gospod France Tomšič.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg156">Spoštovano predsedstvo, spoštovane poslanke in poslanci! Jaz bi najprej repliciral to,kar je kolega Jože Smole predlagal in se popolnoma strinjam z njegovim predlogom, da mora ta skupščina pač sprejeti neke vrste podporo temu, kar se dogaja, torej podporo hrvaškemu narodu, da obsodimo najostreje to kar dela JLA danes na Hrvaškem, jutri seveda lahko tudi kod drugod. Zakaj je to potrebno? Sami veste, kako smo pred dvemi leti pričeli z demokratičnim procesom tukaj, naenkrat so bili ti možje iz opozicije tukaj v Ljubljani, mi smo bili tam, pričeli smo, da smo prišli do tukaj in jasno, že takrat smo vedeli, da mi dosežemo novo kvaliteto edino skupno, s tem pa ne rečem, da smo mi proti Srbom. Lahko bi bilo ravno obratno, če bi se v Srbiji pričela ta pomlad takrat, ko so, oni so prej pričeli, kako se je imenoval ta njihov apel pet let nazaj, če bi oni bili prej, bi bili verjetno mi zvezani s Srbi. Skratka v tem slučaju mislim, da moramo podpirati drug drugega.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg157">Zakaj je to potrebno? Prvič, zaradi tega, ker se JLA opira na neko povelje predsedstva, torej predsedstva, ki za mene že vsaj eno leto in pol ni več legitimni predstavnik jugoslovanskih narodov. Vi sami veste, mi smo tudi enkrat rekli, že večkrat, da ne more biti tako, da ima od 8 članov predsedstva štiri člane en narod, če računam, da so pač Srbi in Črnogorci en narod, ker to večkrat pravijo. Namreč, rešitev tega gordijskega vozla je, kaj je s tem predsedstvom. Kako je možno dejansko ta slučaj rešiti? Mislim, da je Skupščina Slovenije tudi tisto telo, ki bi morala zavzeti neka stališča. Mislim, da bi morali reči, da je to predsedstvo za nas nelegitimno in da od sedaj naprej priznavamo, torej pri tej razvezi, edino še predstavnike šestih republik, to naj bi bilo naše predsedstvo v bodoče in mi bi jim pri tej razvezi tudi "šenkali" vso legitimnost. Če bomo pa tako še naprej glavo stiskali v pesek, seveda bomo vedno znova presenečeni. Bistvo je, da to predsedstvo, moramo reči, da ni legitimno. In s tem bi polovico stvari že rešili. Vem, da se sliši morda skoraj nesprejemljivo za marsikaterega, ker si mislite, mi lahko tukaj naredimo in sklenemo kar hočete, oni bodo le naprej. Vendar začeti moramo. Mislim, da bi dobili podporo, na Hrvaškem tako in tako, tako v Srbiji in tudi v Makedoniji. To bi bila prva stvar, ki bi jo morali tukaj danes sprejeti, torej podporo hrvaški državi pri teh zadevah.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg158">Glede tega, kar je bilo rečeno, da bi mi postali nevtralna država in da sicer podpiramo resolucijo Združenih narodov, vendar tako mlačno postopamo - mislim, da to ne gre. Kolega Tomažič je dobro povedal, da se dobro ve, kdo je agresor. Vemo tudi, da imajo verjetno Američani tudi druge stvari v ozadju, vendar bi rekel, če zunanjo politiko ameriško ocenjujemo zadnjih dvajset, trideset let, je to verjetno ena zadeva, kjer so pa res na tisti pravični strani. In se popolnoma strinjam s tem, da mi tukaj lahko nudimo tudi kot nevtralna dežela neko humanitarno pomoč. Toliko bi imel jaz k temu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg159">Hvala lepa. Gospod Franco Juri bi spet rad malo repliciral.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg160">Samo malo potrpljenja. Ampak, ker mi nimamo niti televizije niti radia in pravzaprav ne vemo, kaj se točno dogaja na Hrvaškem, pa tu je govora sedaj o nekih dogodkih na Hrvaškem, o izjavah solidarnosti s Hrvaško, imamo pa ministre, imamo Vlado tu prisotno. Jaz sprašujem, ali se je res kaj takšnega zgodilo, ali imate "vročo" linijo z vašimi hrvaškimi kolegi. Govorice so pač krožile, da je eksplodirala bomba v rokah nespretnega specialca. To je vse. Zato bi jaz prosil, da damo besedo ministrom - za informacijo, da nadaljujem potem na podlagi teh informacij razpravo o jugoslovanskih razmerah.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg161">Ja, ravno je na vrsti za razpravo gospod Jelko Kacin, namestnik republiškega sekretarja za ljudsko obrambo.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SSK11.KacinJelko1955" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg162">Spoštovano predsedstvo, delegatke in delegati! Želim pojasniti nekaj stvari, ker so bila zastavljena vprašanja ozioroma dileme v razpravi poslancev.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg163">Najprej prva tema Srednji vzhod oziroma vojna v Iraku. Izvršni svet Republike Slovenije je preventivno ukrepal že pred začetkom te vojne. Sestali so se organi, ki bi bili vpleteni v preprečevanje in odpravljanje morebitnih posledic te vojne, ko gre za kontaminacijo, v primeru uporabe velikih količin kemičnega, biološkega ali atomskega orožja. V tem kontekstu smo najprej podrobno ažurirali vse ukrepe, ki so namenjeni uporabi v primeru nesreče v Jedrski elektrarni Krško, vzpostavili smo zelo natančen monitoring sistem na celotnem ozemlju Slovenije in postavili dodatno opremo tudi v tistih predelih Slovenije, kjer do sedaj te opreme ni bilo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg164">S pomočjo Hidrometeorološkega zavoda že ves čas zelo natančno spremljamo gibanje zračnih mas, zato ocenjujemo, da potrebuje kakršnakoli kontaminacija do Slovenije najmanj 4 dni. V tem času pa seveda opravljamo tudi druge konkretne ukrepe. Dogovorjeni so ukrepi v raziskovalnih inštitutih, v drugih specializiranih organizacijah za zaščito in reševanje, v zdravstvu, opravljeni so osnovni dogovori, nabavljene surovine za izdelavo medikamentov, ki bi blažili posledice tovrstnih zastrupitev. Toliko o prvi temi.</seg>
@@ -681,38 +659,38 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg172">Danes, ko pa je bil obravnavan zakon o vojaški dolžnosti in bil sprejet na Zboru občin in v Zboru združenega dela, pa je eden od sklepov tudi ta, da Izvršni svet zagotovi sočasno obravnavo obeh zakonov v Skupščini in v tem kontekstu se nam zdi pomembno, da omogočimo, da se tudi ta druga faza osnutka čimprej obravnava, da bi lahko v primeru potrebe, takoj predložili Skupščini oba zakona, o tem, ali se zakona sprejmeta ali ne, pa v vsakem primeru odloča ta Skupščina. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg173">Besedo ima gospod Franko.</seg>
             </u>
             <note type="speaker">KAREL FRANKO:</note>
-            <u who="#SSK11.FrankoKarel1919" ana="#regular">
+            <u who="#FrankoKarel1919">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg174">Spoštovano predsedstvo, spoštovani delegati! Naslavljam vprašanje na vas, ali se vam ne zdi, da že preveč časa razglabljamo o vojni v Zalivu. Kakor da pozabljamo na svoje probleme. Predlagam amandma k 4. točki stališča glede vojne v Zalivu, ki naj bo naslednji - "za št. 678 se postavi pika", nadaljnje besedilo tega člena, te točke pa se črta. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg175">Besedo ima Sonja Lokar.</seg>
             </u>
             <note type="speaker">SONJA LOKAR:</note>
-            <u who="#SSK11.LokarSonja1948" ana="#regular">
+            <u who="#LokarSonja1948">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg176">Rada bi samo nekaj predlagala. Mislim, da se še enkrat potrjuje, da noben človek, nobena skupnost, nobena država, ni otok, da smo vsi del celine, in da ko zvoni, pravzaprav nam zvoni, ko teče kri v Litvi, ko teče v Zalivu, teče v bistvu naša lastna kri oziroma utegne teči še danes ali jutri. tega dejstva se še posebej živo zavedamo ženske, ker je tisočletna zgodovina človeštva bila in ostaja v tej zgodovini naša naloga, da nosimo, da rodimo, da negujemo, da varujemo in ohranimo. Ne oblast, ne ideologije, ne nacijo, ne državo, ampak čisto preprosto "življenje, človeka vredno življenje". Ko smo se v Jugoslaviji spustili v nastajanje demokracije in v preurejanje odnosov med republikami, smo se prenovitelji ves čas zelo močno zavedali, da lahko pride tudi do urejanja konfliktov in teh konfliktnih interesov s silo. V Jugoslaviji je že od začetka krize, ki se pravkar nagiba v dramatičen razplet, nastajalo tiho in javno zavezništvo med politično angažiranimi ženskami v odločenosti, da bomo storile vse, da se sporna vprašanja v tej državi razrešujejo v mirnem dialogu in po demokratični poti. ta trenutek sta v Jugoslaviji samo dva tabora, tabor golobov, če lahko tako rečem, in tabor jastrebov, tabor tistih, ki so se odločili konflikte interesov urejati z dogovori in tistih, ki hočejo svoj prav uveljaviti s silo. Ženske smo po naravi stvari, kot sem že rekla, v taboru golobic, in čas je, da se povežemo in da zahtevamo, zahtevamo takojšnjo ustavitev vseh razkazovanj moči, vseh medsebojnih izzivanj, vseh dejanj, ki nas lahko iz miru pripeljejo v vojno.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg177">Zahtevamo takojšen dogovor vseh predsedstev ali predsednikov republike in federacije in zveznega izvršnega sveta o mirnem urejanju ustavne krize v Jugoslaviji in o umiku vojske iz politike. Morda tudi dogovor o zagotavljanju minimalnih sredstev za normalno funkcioniranje hladnega pogona - če temu lahko tako rečem - Jugoslovanske ljudske armade. Morali bi zaustaviti vsa razkazovanja vojaške moči in zamrzniti vsa dejanja, ki prejudicirajo bodočo obrambno ureditev konfederalnih držav ali samostojnih držav na ozemlju današnje Jugoslavije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg178">Dve možnosti imamo, da to storimo kot delegacija poslank, ki se poveže z ženskimi skupinami v Sloveniji in to pobudo sprožimo tudi po vsej Jugoslaviji, ali pa, da to naredimo izven Skupščine. Sama mislim, da bi bil domet naše pobude večji, če bi šla iz Skupščine. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg179">Gospod Janko Halb ima besedo.</seg>
             </u>
             <note type="speaker">JANKO HALB:</note>
-            <u who="#SSK11.HalbJanko1957" ana="#regular">
+            <u who="#HalbJanko1957">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg180">Spoštovani! Imam čisto konkretna vprašanja za Vlado in na slovensko javnost. Gospoda Bavčarja bi vprašal, ali preventivni ukrepi Republike Slovenije tangirajo tudi iraške državljane, ki so trenutno in če sploh so v Sloveniji? Gospodu ministru in pa namestniku za ljudsko obrambo pa bi postavil sledeče vprašanje: ali je možno takoj odpoklicati slovenske vojake iz JLA, mogoče tudi oficirje in jih z zakonsko abolicijo oprostiti vseh odgovornosti, ki bi iz tega nastale, saj jih je na služenje v JLA poslala Republika Slovenija? Samo v primeru tuje agresije ali vojne nevarnosti Jugoslavije od zunaj, bi branili skupno domovino, sicer pa bi rešili tudi svojo nevtralnost pred nasilnim reševanjem jugoslovanske nevarnosti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg181">Ponovno bi aktualiziral svojo pobudo, ki sem jo izrekel na prvem zasedanju tega parlamenta ministru Janši, da nemudoma demobilizira vse poslance, ki imamo trenutno doma vojaško opremo, da bi v tem usodnem ali kakršnemkoli nepredvidenem trenutku lahko delovati iz pozicije miru, ne pa pod orožjem. Še en apel za mirno kri ljudi v Sloveniji, je tudi ta, da naj v trgovinah ne pokupijo vse - soli, olja, sladkorja, bencina na črpalkah, ker bodo kratko potegnili tisti, ki imajo malo denarja. Iz bank pa smo verjetno že vsi dvignili svoj denar, razen mogoče gospoda podpredsednika Mencingerja, ki je javno za tem pultom rekel, da ima denar v LB. Pa še apel gospodu Juriju, naj ne izrablja te vojne tragedije v Zalivu za naslovne karikature v časniku Delo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg182">Besedo ima predsednik Izvršnega sveta, gospod Alojz Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg183">Spoštovane poslanke, poslanci! Stvar je že tako resna, da mi gre že malo na smeh. Dovolite torej nekoliko neresnega načina pri tako resni temi. Jaz se počutim kot v pedagoški akademiji, ali pa nekje na poti od net do literarnega salona. Toliko pouka sem doživel spet danes, kar je tudi sicer običaj v tej skupščini, da sem poln novega znanja. Obnovil sem zgodovino, obnovil sem marsikaj drugega, zoologijo od golobic in grlic itd. Prav dobro se počutim.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg184">Druga zadeva. V Ljubljani so okulisti, so zdravniki, ki pomagajo k pravi dioptriji in v tem smislu bi želel, da bi tisti, ki jim vid peša, nabavili primerne pripomočke in prav brali, kar je napisano. Ker sicer ne bi bilo treba demantirati zadev, ki jih pač ni mogoče demantirati, ker niso bile zapisane. Sem zelo blizu izjavi,ki jo je dal danes gospod Tominc, čeprav se seveda ne strinjam z njim glede vsebine.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg185">Namreč, mi nikjer nismo zapisali, da je treba hiter postopek za zakon. Pozabilo se je, da je ta zakon 3 mesece v postopku. Seveda pa se bo ob tej pozabi, proti pozabi pomaga česen, se bo zahtevalo od Vlade, da zelo hitro ukrepa in da ni bila učinkovita. V Skupščini pa je ta zakon 3 mesece in ne gre, da se sprejme zakon, kot je bilo tukaj trikrat rečeno. Prosili smo, predlagamo, da se sprejme osnutek, in to se nanaša samo na en zbor. Prosim res za pravo branje, ker izgubljamo besede za to, da potem zgubljamo čas.</seg>
@@ -722,49 +700,49 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg189">No še nekaj bi rekel. Glede prostovoljcev je bilo nekako v zraku razumeti, sedaj bom pa jaz nekoliko simuliral, češ da si Vlada pridružuje neko pravico, da bi nekoga tudi na silo tja dol poslala. In tukaj je tudi sklep formuliran v tej smeri, naj ja ne bi šel nihče dol. Mislim, zelo majhno zaupanje bi imela ta Vlada, če bi ta parlament, ki jo je postavil z nemajhnim številom glasov, pripisovala kakšne take namene. Če bo šel kdo dol, bo šel lahko samo kot prosotovoljec, so pa celo taki ljudje, ki so se za tako službo že javili brez razpisa. Se opravičujem za nekolikšno drugačnost ob tem času, pa vseeno hvala za poslušanje.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg190">Hvala lepa. Besedo ima gospod Požarnik.</seg>
             </u>
             <note type="speaker">DR. HUBERT POŽARNIK:</note>
-            <u who="#SSK11.PozarnikHubert1937" ana="#regular">
+            <u who="#PozarnikHubert1937">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg191">Opravičujem se, ampak tukaj je bilo nekaj vprašanj zastavljenih, verjetno bo še nanje odgovor. Zastavil bi še eno vprašanje, ne svoje, ampak to, ki ga je včeraj nek poslanec iz našega Družbenopolitičnega zbora zastavil, pa še nismo dobili odgovora, je pa zelo relevantno. Namreč, vprašal bi sledeče: V tujih časopisih piše, da je tista tankovska divizija itn. južno od Ljubljane. To so potem poslanci locirali, da gre verjetno za Vrhniko, da je v celoti sestavljena samo iz državljanov ali narodnosti Srbov. Tako piše v tujih časopisih. In ker imamo tukaj polkovnika, ali pa naše ministre, kako je s tem?</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg192">Besedo ima gospod Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg193">Jaz sem do zdaj spoštovanega predsednika Izvršnega sveta, Lojzeta Peterleta, smatral za tolerantnega človeka. Moram pa reči, da mi način njegovega reagiranja govori, da se tu nekaj čudnega dogaja. To, kar sem jaz govoril, je bilo govorjeno v zelo konstruktivnem stilu. Če predsednik Vlade ni v stanju sprejeti nobene kritike, potem je pač to njegov problem in ne moj. Nista pa odgovorili na osnovno vprašanje. Ali bo Izvršni svet vodil zunanjo politiko v skladu z določili in sklepi te Skupščine, ali bo pa to skupščino kontinuirano ignoriral. Jaz sem to vprašanje zastavil tudi sekretarju za zunanje zadeve. Vsi se tej točki izogibate in prosim, da na tem skupnem zasedanju o teh zadevah dobimo kompetenten odgovor predsednika Izvršnega sveta.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg194">Besedo ima gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg195">Všeč mi je, da nas gospod predsednik Peterle natančno posluša, ampak mislim, da je bila tu še ena stvar, na katero bi bilo vredno odgovoriti. In sicer je šlo za eksplicitno ponudbo za mir s strani gospoda Aksentijevića. Jaz sem pričakoval, da bo v istem trenutku nekdo od Izvršnega sveta vstal in sprejel ponujeno roko. Lahko bi bilo to narediti kasneje. Zdi se mi, da bi tak pomirjujoč nastop naredil veliko več, kot da se tu med sabo prerekamo. V Izvršnem svetu so briljantni analitiki vseh teh stvari, ampak se mi zdi, da vsaka prilika, ki jo tukaj dobimo, ponudbo za mir na javnem mestu jo je potrebno vzeti.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg196">Gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg197">Nisem navajen replicirati, pa vendar bom. Glejte, jaz ne čutim potrebe, da bi se izražal, da sprejemam usmeritve, ki smo jih tukaj sprejeli oziroma ki jih je predložila Vlada. Zame so te smeri tudi na zunanjepolitičnem področju jasne in zavezujoče. Kar zadeva predlog gospoda Aksentijevića, sem ga včeraj z velikim veseljem vzel na znanje, ampak vzel sem ga v smeri tega, kar Vlada ves čas tudi počne. Kakorkoli gledate, naše izjave, so vse za demokracijo, za dialoški način in miroljuben način reševanja. Poskusili smo različne poti, da bi se te stvari ustavile tudi v tej smeri, kakor je predlagal gospod Aksentijević in zato tudi ne vidim formalnega razloga, da bi zdaj pa Vlada sprejemala ta predlog kot nekaj novega. Ne vidim tukaj neke posebne novosti.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg198">Bi se dalo odgovoriti še na postavljana vprašanja s strani gospoda Halba in Požarnika? Sicer je spisek prijavljenih izčrpan.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SSK11.KacinJelko1955" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg199">Eno vprašanje je bilo sicer naslovljeno gospodu polkovniku Aksentijeviću, ampak vseeno mislim, da boste verjeli tudi meni. Oklepna brigada na Vrhniki, o kateri govorite oziroma je bilo zastavljeno vprašanje, ni enonacionalno sestavljena in v njej so tudi Slovenci, tudi med starešinami, med civilnimi osebami na službi v JLA in med vojaki so tudi Slovenci.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg200">Kar pa zadeva drugo vprašanje, ali ne bi bilo ta hip potrebno odpoklicati starešine iz JLA, pa tudi vse naše vojake, bi še enkrat povedal stališče Izvršnega sveta. Mislimo, da ta hip ni potrebno zaostrovati odnosov, da je potrebno iskati preseganje obstoječega stanja, se sporazumevati.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg201">O tem, ali bi tak ukrep bil potreben v določenem trenutku, o tem seveda ni dvoma. Tudi o tem bi se morali pogovarjati in odločati, ampak trdim, da ta hip še daleč nismo tam, da bi se morali zatekati k tako radikalnim rešitvam. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg202">Hvala lepa. Spisek prijavljencev za razpravo je izčrpan, zato razpravo zaključujem. Preden bi karkoli razmišljali, kako lahko zaključimo oziroma kaj lahko storimo z vsemi predloženimi zadevami, mislim, da je potrebno, da ugotovimo, ali smo še sklepčni, da ne bi zaman trošili moči v razmišljanju o tem, kako in kaj sprejeti in kaj ne. Lepo prosim <gap reason="inaudible"/> Ja, jaz sem nekajkrat pritisnil na tipko za poziv, pa očitno verjetno tega niso prav za res vzeli, kar je izgleda, že kar navada v tej Skupščini.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg203">Torej poglejmo najprej prisotnost Družbenopolitičnega zbora. Ali ste vsi pritisnili?</seg>
                <note>41 prisotnih.</note>
@@ -777,49 +755,49 @@
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg207">Trenutno torej nismo sklepčni. Preden predlagam, da bi imeli pet minutno pavzo, da vidimo, če se da kaj popraviti. Je brezupno. Dobro, potem pa, ker seveda ničesar ne moremo skleniti, mi bomo imeli očitno nadaljevanje seje naslednji teden in zaradi tega ne gre drugače, kot da bomo morali na osnovi te razprave tedaj. Bi pa vseeno, torej to je predlog, ki ga bomo poskušali speljati, čeprav za to ne bo posebnega mandata tega zbora, torej bilo potrebno, da ta skupina, ki je delala na pripravi teh stališč, dela naprej in poskuša upoštevati to, kar je bilo v razpravi, nakar mislim, da bi bilo potrebno pred sejo, da se dobijo vodje klubov in da na nek način verificirajo, kolikor se to da, da bi po možnosti brez večje razprave to sprejeli. To je moj predlog, javljata se pa dva s tem v zvezi. Gospod Smole prosim.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg208">Spoštovani predsednik, kolegi, kolegice; gre za tako pomembno zadevo, da se jaz pridružujem vašemu predlogu. Dajmo narediti 5-minutno pavzo, dajmo vse iz bifejev povabiti nazaj, ker mislim, da če bomo mi to temo zaključili danes brez nekih stališč, da bo to zelo slabo v Sloveniji in Jugoslaviji. Dajmo 5 minut, pa najbrž bomo zagotovili neko večino.</seg>
             </u>
             <note type="speaker">PETER BEKEŠ:</note>
-            <u who="#SSK11.BekesPeter1946" ana="#regular">
+            <u who="#BekesPeter1946">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg209">Jaz bi posebej opozoril poslance Družbenopolitičnega zbora, da naj ne odhajajo in tudi Zbora združenega dela. Jaz podpiram predlog tovariša Smoleta, da se seja nadaljuje, da aktiviramo četrti zbor, to je ta zbor kolegov, ki v bifeju zasedajo. Tam po izkušnji vemo, da približno 15% navzočih tam deluje, kar je lahko koristno, otežuje pa sklepčnost.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg210">Drugič, da za tretjo temo, mi imamo delovno skupino za predlog sklepov o baltski situaciji in o zalivski situaciji, da oblikujemo še delovno skupino, ki bi obdelala te sklepe, ki jih je Izvršni svet predložil in klub Demosa, da bi tukaj v sodelovanju med klubi skušali dobiti eno ponudbo, ki bi bila čim širše sprejemljiva za vse.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg211">In tretjič, da ne bi delali odmora, ker zadeva ne bo boljša, ampak da ta čas vmes izrabimo za oblikovanje te skupine.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg212">Ja, nadaljevati ne moremo, ker nimamo kaj posebnega početi, nekdo je še dvignil roko, če je kakšen izredno konstruktiven predlog. Prosim, gospod Halb.</seg>
             </u>
             <note type="speaker">JANKO HALB:</note>
-            <u who="#SSK11.HalbJanko1957" ana="#regular">
+            <u who="#HalbJanko1957">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg213">Poglejte, stalno se pogovarjamo, da nas Vlada noče poslušati, da ne prihaja na seje. Zdaj pa, ko so vsi meritorni gospodje iz Vlade tukaj, pa nas poslancev ni.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg214">Še enkrat bi apeliral na vas, zdaj smo pa pokazali svoj pravi obraz slovenski javnosti in tistim, ki so nas volili, da o tako usodnih odločitvah ne moremo sklepati. Ja pa kakšna smo mi potem Skupščina? Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg215">No jaz bi odredil pavzo 5 minut. V tem času prosim vse vodje klubov, da poskušajo najti svoje eventualne prisotne poslance. Zbor združenega dela pa naj se zbere ta čas v spodnji dvorani, takoj. Čez pet minut tukaj.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 19.35 uri in se je nadaljevala ob 19.50 uri.</note>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg216">Ali kdo ve še za koga, ki je zunaj, pa ni prišel? So še? Ja lepo prosim, da jih poskušate dobiti sem, ker nimajo kje drugje kaj delati trenutno. Pet minut pa je že poteklo. Mi ne sejemo več, vi boste pa tukaj še kakšno rekli.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg217">Čakam, da pride nazaj tisti, ki jih je šel iskat. Ne bi šli po vrsti. Ali je to vse? Še 5? No, poglejmo prisotnost Zbora občin, da vidimo, če smo vsaj približno na dosegu. Prosim, da vsi iz Zbora občin pritisnete na tipko. Smo 26. Ugotavljam, da Zbor občin ni sklepčen in zaradi nesklepčnosti prekinjamo skupno zasedanje vseh treh zborov. Prosim, gospod Starman.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg218">Ne glede na to, da ne moremo odločati, predlagam, da predsedstvo današnjega zbora posreduje stališče Demosovih poslancev predsedniku Predsedstva in dr. Drnovšku, da s temi stališči nastopata v Predsedstvu Jugoslavije. Gre za veliko politično telo teh stališč, saj gre za kompleten Klub poslancev Demosa in so vsi podpisi zbrani. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg219">Hvala. No, v vsakem primeru prekinjam to sejo, s tem, da se Zbor združenega dela takoj dobi ob 20. uri spodaj, ker so možnosti, da bi bil sklepčen, Družbenopolitični zbor pa v tej dvorani nadaljuje z delom.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg220">Prosim, gospod Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg221">Pa ne more se posredovati stališče Demosovih poslancev! Mislim, da smo tu v razpravi bili zelo jasni v nekaterih osnovnih stališčih in je treba potem ta osnovna stališča posredovati, ne pa Demosova.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-01-24.z008-01.seg222">Tega jaz nisem komentiral, je pa povsem jasno, da je to približno isto, kot če kar klub pošlje na določene naslove ta stališča. Mislim, da je procedura vendarle vsem jasna. Kar ni sprejetega na seji, tisto ima enako težo, če pošlje kar nek osnovni pošiljatelj ali pa če pošljem jaz, ki sem slučajno vodil ta zbor. Hvala lepa.</seg>
             </u>
             <note type="time">SEJA JE BILA PREKINJENA 24. JANUARJA 1991 OB 20.00 URI IN SE JE NADALJEVALA 30. JANUARJA 1991 OB 14.20 URI.</note>

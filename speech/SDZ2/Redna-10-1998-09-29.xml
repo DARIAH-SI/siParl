@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Redna-10-1998-09-29"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">10. redna seja (29. 9. 1998)</title>
-            <meeting n="10"
-                     corresp="#SDZ2-Redna-10-1998-09-29.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="10" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">nadaljevanje 10. seje</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|767161F2DA10899EC1256690004389DC</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=767161F2DA10899EC1256690004389DC</idno>
-                  <imprint>
-                     <date when="1998-09-29">(29. september 1998)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>10. redna seja (29. 9. 1998)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1998-09-29"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=767161F2DA10899EC1256690004389DC</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="134"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="63"/>
                <tagUsage gi="seg" occurs="253"/>
                <tagUsage gi="gap" occurs="7"/>
@@ -359,23 +344,21 @@
                <date when="1998-09-29" ana="#parl.sitting">29. 9. 1998</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Redna-10-1998-09-29.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">nadaljevanje 10. seje</head>
-            <docDate>(29. september 1998)</docDate>
             <note type="chairman">Sejo je vodil Andrej Gerenčer, podpredsednik.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.07 uri.</note>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg1">Spoštovane kolegice poslance, kolegi poslanci! Gospe in gospodje. Pričenjam nadaljevanje 10. seje državnega zbora Republike Slovenije. Obveščen sem, da so zadržani in se današnje seje je ne morejo udeležiti naslednje poslanke in poslanci: Rudolf Moge, Štefan Klinc, dr. Helena Hren-Vencelj, Jakob Presečnik za pričetek seje, Jurij Malovrh od 17.00 ure dalje, Ivan Božič, Leon Gostiša, Jelko Kacin, Roman Jakič za pričetek seje.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg2">Prosim, da ugotovimo prisotnost v dvorani!</seg>
                <note>55 prisotnih.</note>
@@ -385,16 +368,16 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg6">Predlog zakona je v obravnavo zboru predložil poslanec Miran Potrč. Želi predlagatelj predloga zakona besedo? Prosim gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg7">Hvala lepa gospod podpredsednik. Spoštovane kolegice in kolegi!</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg8">Rad bi v krajšem uvodu k drugi obravnavi zakona poudaril.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg9">Kolegice in kolegi, prosim za mir v dvorani, da lahko normalno delamo. Lepo prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg10">V krajšem uvodu k predlogu zakona za drugo obravnavo bi rad poudaril, da sem trdno prepričan, da je ta zakon mnogo temeljiteje kot večina podobnih zakonov obravnavan v državnem zboru in tudi v strokovni javnosti. Zakon je bil vložen v ta državni zbor že septembra 1996 leta. Torej pred več kot 2 leti. Takrat po hitrem postopku. Upal bi si trditi, da je malo zakonov, ki so vloženi po hitrem postopku in katerih procedura traja tako dolgo. V aprilu letos smo imeli v državnem zboru prvo obravnavo tega zakona in takrat so se po zakonu izrekle poslanske skupine Socialdemokratske stranke, liberalne demokracije, DeSusa, Slovenskih krščanskih demokratov in Združene liste socialnih demokratov. Vseh teh 5 poslanskih skupin in še mnogi poslanci, ki so razpravljali, smo zakon podprli.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg11">Zakon je takrat podprlo 60 poslancev, nihče ni bil proti. Od prve obravnave do danes je zakon doživel skrbnejšo obravnavo v javnosti in v državnem zboru, kot večina drugih zakonov.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg12">Na zahtevo odbora za finance in predvsem njegovega predsednika je bilo pripravljenih vrsto konkretnih odgovorov na nekatera ekonomska vprašanja, ki so se pojavljala ob zakonu. O zakonu so v državnem zboru razpravljala tri delovna telesa, poleg odbora za finance še odbor za gospodarstvo in odbor za infrastrukturo in okolje. Slednja dva sta zakon podprla. Mnogo je bilo odgovorov, ki so jih dali strokovnjaki, posebej tudi vlada. Trdim torej lahko, da je zakon za razpravo v državnem zboru dobro pripravljen, da so bila postavljena mnoga vprašanja, vendar so za njih pripravljeni tudi ustrezni odgovori; če ne, se lahko dajo tudi še na današnji seji.</seg>
@@ -406,11 +389,11 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg18">Predlagam torej, da predlog odbora za finance zavrnemo in da državni zbor podpre predlog zakona v drugi obravnavi skupaj s predloženimi amandmaji. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg19">Hvala, gospod Potrč. Želi besedo predstavnik odbora za finance in monetarno politiko kot matično delovno telo? Gospod Kopač, prosim.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOPAČ:</note>
-            <u who="#SDZ2.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg20">Hvala lepa. Vsebina razprave na odboru je pravzaprav relativno podrobno povzeta v poročilu z dne 12. maja letos in verjetno ni smiselno, da jo zelo natančno obnavljam, morda samo na kratko. Da je razprava na seji odbora nakazala več sugestij oziroma mnenj. Med drugim, da - ne morem reči, da je to zdaj mnenje odbora, ampak to je bila obrazložitev sklepa odbora ali pa razprava, ki je pripeljala do sklepa odbora. V tej razpravi je bilo poudarjeno, da so z ekonomskega vidika možne boljše alternativne rešitve v zvezi s potrebami energetskega sistema, pri čemer ta ocena ne zajema socialnih posledic morebitne drugačne odločitve, da je močno vprašljiva napoved načrtovalcev o trendih v energetiki čez približno 15 let, kajti take trende je verjetno zelo težko ocenjevati. Da je pomembno pri odločitvi o tej gradnji ekološko vprašanje, ki je verjetno rešljivo z ustrezno drago tehnologijo; da naj bi bila poraba termoelektrarne Trbovlje 3 letno okrog 950.000 ton premoga, za kar pa je potrebnega približno 5.300 ur obratovanja letno, in šele tako obratovanje, tudi zagotovilih načrtovalcev, omogoča rentabilno poslovanje, kjer pa je vprašljivo, koliko je dejansko možno sprejeti letnih obratovalnih ur iz termoelektrarne Trbovlje 3 v elektroenergetski sistem, v primeru, da bo trg z elektriko odprt, da bo možno mednarodno trgovanje in da bo uveljavljena direktiva Evropske unije v zvezi z energetskim trgom v Evropi do časa, ko naj bi termoelektrarna Trbovlje 3 zafunkcionirala.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg21">Postavilo se je vprašanje, kdo bo kril izgubo oziroma kako se bo pokrivala izguba, ki bi jo po definiciji moral proizvajati Rudnik Trbovlje-Hrastnik v letih med 2000 in 2004, ko naj bi zafunkcionirala termoelektrarna Trbovlje 3, ob verjetni predpostavki, da bo po letu 2000 edini ali pa praktično edini odjemalec premoga iz Rudnika Trbovlje-Hrastnik termoelektrarna 2, ki porabi približno 650 do 700.000 ton premoga na leto, kar bistveno podraži cene premoga v relaciji na giga joule proizvedene energije.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg22">Izraženo je bilo mnenje, da se bo problem ukinitve nekaterih rudarskih delovnih mest, vsaj tistih v separaciji, v Rudniku Trbovlje-Hrastnik pojavil že v kratkem, ne glede na gradnjo termoelektrarne Trbovlje 3; da je vprašljivo planiranje potreb po električni energiji v letu 2004 predvideno v investicijskem programu, če po drugi strani upoštevamo sklep vlade, da se bo v letu 2004 zaprla elektroliza B v Kidričevem, s čimer naj bi se sprostilo 100 megatov kapacitet in bila izražena sugestija, da naj bi podaljšali raje življenje obstoječe termoelektrarne toplarne 2 do konca leta 2010, seveda z vgraditvijo odžveplevalne naprave in z drugimi potrebnimi vzdrževalnimi deli, s čimer bi reševali tudi problem delovnih mest v rudniku. Predstavniki vlade in tudi predstavniki investitorja, ki so bili na seji vlade, so na te pomisleke sicer v resnici poskušali odgovoriti, nekatere od teh mnenj ali pomislekov so poskušali tudi v celoti zavrniti. Kljub temu je odbor sprejel predlog sklepa, po katerem predlaga državnemu zboru, da se predlog zakona vrne v prvo obravnavo. Jaz kot predsedujoči sem predlagal, ker se mi je zdelo konsistentno s tem predlaganim sklepom, ki sam po sebi nič ne rešuje, da bi sugerirali tudi, da se predlog zakona, ko pa bi že bil vrnjen v prvo obravnavo, pa tudi ne sprejme. No, za tak sklep sem glasoval sam, drugi pa so bili, ali proti ali vzdržani.</seg>
@@ -418,13 +401,13 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg24">Torej v imenu odboru lahko rečem samo to, da predlagam, da zbor sprejme sklep, kakršnega je odbor predlagal, drugih sugestij iz odbora ta hip ni. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg25">Hvala lepa, gospod Kopač. Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg26">Želi besedo predstavnik vlade? Prosim, gospod minister Metod Dragonja. Potem bomo pa glasovali o sklepu matičnega delovnega telesa.</seg>
             </u>
             <note type="speaker">METOD DRAGONJA:</note>
-            <u who="#SDZ2.DragonjaMetod" ana="#regular">
+            <u who="#DragonjaMetod">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg27">Predsednik, spoštovane poslanke in poslanci! Državni zbor je ob obravnavi predloga zakona o zagotavljanju sredstev za zaprtje rudnikov rjavega premoga, dne 24. decembra 1994 sprejel sklep, s katerim je naložil vladi Republike Slovenije, da pripravi študijo izvedljivosti v zvezi z nadaljnjo usodo termoelektrarne Trbovlje. S to študijo naj bi bili opredeljeni ekonomski, ekološki in drugi vidiki nadaljnjega obratovanja termoelektrarne Trbovlje. Že takrat je državni zbor ocenil, da je nadaljnja usoda rudnikov Trbovlje in Hrastnik vezana na nadaljnje obratovanje termoelektrarne Trbovlje oziroma na možnost porabe premoga kot energetskega goriva za proizvodnjo električne energije.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg28">Navedena študija je bila izdelana v mesecu juliju 1995 in je odgovorila na nekatera ključna vprašanja glede možnosti umestitve termoelektrarne Trbovlje 3 v energetski sistem Slovenije. 3. septembra 1996 je poslanec, gospod Miran Potrč, vložil v zakonodajni postopek predlog zakona o poroštvu Republike Slovenije za najetje posojil za izgradnjo termoelektrarne Trbovlje 3, katerega je v prvem branju obravnaval državni zbor Republike Slovenije, 24. aprila 1997 in ga z veliko večino, po mojih podatkih samo z enim glasom proti, tudi podprl. Na tej osnovi je v pripravi zakona za drugo branje vlada Republike Slovenije oblikovala svoje stališča in amandmaje na zakon in jih dne 17. septembra 1997, to je več kot pred enim letom, predložila v obravnavo državnemu zboru Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg29">Od septembra 1997 do septembra 1998 pa je zaradi različnih blokad državni zbor prelagal obravnavo zakona v drugem branju, kar kaže na težje odločitve, hkrati pa je potrebno opozoriti tudi na posledice takega zavlačevanja, predvsem v matičnem delovnem telesu državnega zbora. Poudarjamo, da so od septembra 1997 na razpolago predpisane podlage za delo odborov v skladu z določili poslovnika državnega zbora. Dana so bila tudi številna pojasnila in gradiva ter študije, ki so bile izdelane kot podlaga v postopku sprejemanja odločitve o tej investiciji. Pozitivno so se k predlogu zakona za drugo obravnavo izrekli: komisija državnega sveta za gospodarstvo, dne 28.7.1997; državni svet Republike Slovenije, dne 3.4.1998; odbor državnega zbora za infrastrukturo in okolje, dne 7.5.1998; odbor državnega zbora za gospodarstvo, dne 11.5.1998. Matično delovno telo, odbor za finance in monetarno politiko pa je na seji, dne 8.5. sprejel sklep, naj se zakon vrne v prvo bravnavo</seg>
@@ -454,11 +437,11 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg53">Zato predlagamo, da državni zbor Republike Slovenije projekt podpre, v okviru obravnave zakona pa tudi amandmaje, ki jih je predložila vlada Republike Slovenije ter da pristopi k drugemu branju zakona. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg54">Hvala, gospod minister. Kolegice in kolegi poslanci! Najprej bom dal na glasovanje sklep matičnega delovnega telesa, ki glasi: - dobili ste ga tudi v poročilu - "Predlog zakona o poroštvu Republike Slovenije za najetje posojil za izgradnjo termoelektrarne Trbovlje 3, druga obravnava, se vrne v prvo obravnavo." Želijo predstavniki poslanskih skupin besedo? Gospod Henigman, poslanska skupina Slovenskih krščanskih demokratov.</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ2.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg55">Spoštovani podpredsednik! Kolegice in kolegi. Spoštovani gospod minister.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg56">Poslanska skupina Slovenskih krščanskih demokratov bo glasovala za predlog matičnega delovnega odbora, se pravi odbora za finance, da se zakon vrne v prvo branje. Razlogi, ki nas navajajo k temu so več plastni.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg57">Prvič. Zakon, ki je bil predlagan po prvem branju in amandmaji vlade ter obremenitve, finančne obremenitve države, se pravi direktno proračuna, pa tudi sama študija, investicijska študija nas ne prepričujejo, da je projekt dober za razvoj celotne Slovenije. Sprašujemo se in imamo velike pomisleke: Ali je projekt tako, kot je zastavljen dober tudi za samo Zasavje oziroma za to regijo? Imamo vtis, da vlada bistveno odgovornost prenaša na parlament. V trenutku, ko bi morala sama zastaviti vse svoje politično in strokovno znanje. Predvsem strokovno znanje. Vemo pa, da je stroka pri tem projektu zelo razdvojena. Menimo, da je danes od parlamenta odvisno, tudi kakšen je nadaljnji razvoj gospodarski, ekonomski in tudi ekološki ter vsakršni razvoj Slovenije. Zavrnitev tega predloga in ponovno odprtje obravnave v prvem branju, bi nam dalo tudi nekoliko več časa, da pretehtamo vse tiste pozitivne, predvsem pa negativne efekte, ki se kažejo iz tega projekta. Nenazadnje gre za približno milijardo mark bruto težek projekt v cenah. Neposredno pa je ta obremenitev 60 milijard, če odštejemo 10 milijard lastne investicije TET 2, je skoraj to potem 50 milijard. To pa je cena, ki sigurno zahteva bolj natančno preučitev in bolj poglobljeno odločanje tudi v državnem zboru.</seg>
@@ -469,28 +452,28 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg62">Nismo za sprejem zakona, kjer imamo občutek, da gre sedaj za vse ali nič. Se pravi, da parlament spravimo na točko, ko je treba pritisniti tipko in na ta način kar tako z levo roko dati 60 milijard tolarjev denarja, ki pripada vsem davkoplačevalcem v vsej državi, ne pa samo ozko, mogoče, ne bom rekel, reševanje socialne varnosti v Zagorju, ampak očitno tako kot je stvar pripravljena, lobiju okrog termoelektrarne in zasavskih rudnikov. Vlada mora priti z boljšimi rešitvami, argumentirano in mislim, da mora upoštevati stroko v Sloveniji bolj celovito, kot je bilo to predstavljeno sedaj, saj smo nenazadnje v javnih medijih od upoštevanja vrednih strokovnjakov ekonomske in tudi ekološke stroke slišali ravno obratna mnenja, kakor jih predstavlja minister gospod Dragonja, ki pa seveda predstavlja vlado v celoti. Ni nam neznano tudi, da so pomisleki v sami vladni koaliciji oziroma med ministri. Pa ne glede na to, mislim, da je odločitev, pred katero smo, pretežka, da bi jo v tem trenutku sprejemali za toliko let naprej, pod pogoji, kateri so nam dani na mizo. Hvala. Toliko zaenkrat.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg63">Spoštovane kolegice poslanci, kolegi poslanci! Mi smo splošno razpravo opravili v prvi obravnavi. Sedaj razpravljamo samo o predlogu matičnega delovnega telesa, to je, da se predlog zakona vrne v prvo obravnavo. Če bo ta sklep sprejet, bo priložnost za ponovno razpravo. Sicer pa bomo prešli na drugo obravnavo in amandmaje. K besedi se je prijavil doktor Jože Zagožen, poslanska skupina Socialdemokratske stranke. Ni vsebinske, ampak prosim o tem predlogu.</seg>
             </u>
             <note type="speaker">DR. JOŽE ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženJože" ana="#regular">
+            <u who="#ZagoženJože">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg64">Hvala lepa, gospod podpredsednik. V naši poslanski skupini smo skrbno pretehtali to zadevo, prisluhnili smo tudi tako predlagateljem, kot tudi kritikom in naj pri tem omenim odgovor vlade na predlog sklepa odbora za finance. V tem odgovoru je na strani 2 rečeno naslednje, da glede na resolucijo o strategiji rabe in oskrbe Slovenije z energijo in glede na nacionalni energetski program, je ta projekt, o katerem se danes pogovarjamo, suboptimalen, to pomeni, da je podoptimalen. In nadalje pravi vlada, smatramo, da je ta kriterij preozek in da odločitev o izgradnji objekta ali njegovi nadomestitvi s katerokoli drugo alternativo, ki bi imela za posledico ukinitev RTH, zahteva širšo presojo. Upoštevati je treba, da opredelitev za izgradnjo TET 3 ali proti njej povzroča stroške, ki izhajajo iz zadovoljevanja širših družbenih potreb, kar se kaže predvsem v interesu države, da iz strateških in socialnih razlogov ohranja proizvodnjo RTH. Skratka vlada priznava, da projekt ni ekonomičen, da pa ga podpira zaradi socialnih in drugih razlogov.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg65">To nekako, ta argument nekako diši po političnih tovarnah iz preteklosti. Iz teh razlogov in tudi iz drugih, ki jih tokrat ne bom našteval, glede na vaše opozorilo, smo v naši poslanski skupini mnenja, da je v resnici potrebno stvar še bolj pretehtati, kajti sama vlada priznava neekonomičnost tega projekta. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg66">Hvala dr. Zagožen. Besedo dajem gospodu Borisu Soviču, poslanska skupina Združena lista socialnih demokratov.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg67">Cenjene dame, spoštovani. Mi smo pred obravnavo in odločanjem o zelo pomembnem sklepu. Sklepu, ki bo odločal o tem, ali bo materija, ki je danes na dnevnem redu, se vrnila v prvo obravnavo ali ne. Mislim, da je smiselno si temeljiteje pogledati, kaj pravzaprav taka ali drugačna odločitev pomeni. Mislim, da je tudi zelo simptomatično dejstvo, da kot smo ravnokar slišali, je ta problematika povezana z mnogimi stališči in še več, s spreminjanjem teh stališč. Prav zanimivo je poslušati predstavnike posameznih poslanskih skupin. Še bolj zanimivo pa je primerjati to, kar so danes povedali za tem, kar so povedali pri prvi obravnavi. Ampak kakorkoli. Ko razmišljamo o tem projektu, mislim, da je treba operirati s korektnimi podatki. Predvsem tudi prisluhniti argumentom, ki so in se do njih opredeliti tako ali drugače. Ampak težko je poslušati zelo obširno utemeljitev ministra za gospodarske dejavnosti in kasneje poslušati v razpravi vprašanja, ki so takšna, kot da tega uvoda sploh ni bilo, ali kot da je tisti, ki je kasneje diskutiral, bil takrat nekje drugje in ni poslušal, kar je bilo govorjeno. Dovolite mi zato, da samo na kratko v treh segmentih poskušam analizirati ta projekt. Ne da bi šel v vsebinsko razpravo.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg68">Prosim.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg69">Samo, da bi utemeljil, ker so tudi nekateri drugi razpravljavci to možnost imeli.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg70">Če govorimo o energetskih vidikih tega projekta, je treba upoštevati dejstvo, da Slovenija potrebuje energijo kot vsaka druga razvita ekonomija. Upoštevati je potrebno tudi dejstvo, da je v Sloveniji raba električne energije na prebivalca za približno 14% nižja kot v Evropski zvezi. Kljub vsem Talumom, železarnam in vsem ostalim industrijskim in drugim projektom in tovarnam, ki jih v Sloveniji imamo. Torej, govoriti o tem, da bi ukinitev proizvodnje v teh, če se bo kdo za to odločal, dramatično spremenila energetske razmere v Sloveniji tudi v primerjavi z Evropsko zvezo, ni korektno. Zlasti pa ni korektno se ne zavedati dejstva, ki je iz mnogih materialov, ki jih je ministrstvo za gospodarske dejavnosti pripravilo razvidno, da bo Slovenija do leta 2010 morala ustaviti za 350 megavatov kapacitet v elektroenergetskih objektih. Do leta 2023, če ne upoštevam nuklearne elektrarne, še nadaljnjih 800 megavatov.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg71">Spoštovani! Tudi, če se danes nič ne zgodi za rabo električne energije, če bi Slovenija bila edina država v svetu, kjer raba električne energije ne bi rasla. Če pa je v zadnjih poletjih rasla z 2,2% letno, bomo zaradi ustavitve nekaterih obstoječih objektov, ki so na koncu življenjske dobe, morali do leta 2023 nadomestiti približno 1.350 megavatov. Lepo vas vprašam, od kod bo to ta država storila? Nekdo je prej rekel, hidroenergija. Lepo prosim, hidroenergija je v vseh energetskih scenarijih, ki so narejeni, upoštevana že do maksimuma; upoštevana je dogradnja spodnje Soče, upoštevana je obnova zgodnje Drave, upoštevana je izgradnja spodnje Save, upoštevane so projekcije za srednjo Savo, obnova zgornje Save, upoštevana so razmišljanja okoli Mure, čeprav je ocena, da se na Muri kaj dosti ne bo dalo narediti, upoštevane so male hidroelektrarne. Zato vas vprašam, ali mislite prebiti Triglavska jezera, pa tam narediti elektrarne?! Od kod torej še dodatna voda v Sloveniji? Seveda ob tem poudarjam, da je smiselno upoštevati čim večji razvoj malih hidroelektrarn. Mi smo tudi vložili zakon - jaz upam, da bo ta tudi deležen podpore. Ampak v Sloveniji preprosto takšnih hidroenergetskih potencialov znotraj sedanje okoljevarstvene matrike in prostorske matrike ni. Kaj je alternativa? Ali boste gradili nove nuklearne elektrarne v Republiki Sloveniji? Jaz prosim heroja, ki ima takšne namene, da pride ven, pa pove! Ali boste gradili kakšne druge tehnologije, ki v tem trenutku nimajo neke realne izvedljivosti?</seg>
@@ -509,30 +492,30 @@
                </seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg84">Gospod Sovič, prosim.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg85">Se opravičujem <gap reason="inaudible"/> in zato je smiselno ta projekt podpreti, zato je smiselno razpravo nadaljevati, zato je nesprejemljivo zavlačevati iz političnih razlogov in zato bo naša poslanska skupina proti predlogu matičnega odbora, v želji, da bi v kasnejši obravnavi, tudi amandmajev, lahko prišli do zakonskega teksta, ki bo konsistenten, ki bo odražal realne potrebe v prostoru in tudi na nek način nacionalne interese te države. Vljudno vas prosim, da iz dnevnopolitičnih razlogov ne zanemarimo ravno tega, nacionalnih interesov. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg86">Hvala. Prosim mir v dvorani! Besedo dajem dr. Francu Zagožnu, Slovenska ljudska stranka.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg87">Spoštovani zbor! Slovenska ljudska stranka bo podprla predlog matičnega delovnega telesa, da se zakon vrne v prvo obravnavo. Mnenja smo, da je treba take investicije, ki imajo ekonomske, socialne in ekološke posledice za cela desetletja naprej, veliko bolj temeljito premisliti. Mislimo, da je slikanje apokalističnih scenarijev, če se sedaj in takoj ne odločimo za to investicijo, demagoška poteza.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg88">Zelo dobro se zavedamo predvsem stiske Zasavja. Predvsem trboveljske občine in občine Zagorje, ki sta v gospodarski krizi. Ta kriza, v kateri sta se regiji znašli v tem času, prvič, ni od včeraj, že kar lep čas traja in dolgo se je pripravljala in mislimo, da ima vzroke prav v tem. Namreč, v tem, da je to regija, kjer se je kopal premog sorazmerno slabe kvalitete. Pred desetletji se je kuril še po vsej Sloveniji. Iz ekoloških, in ekonomskih in drugih razlogov se je poraba pretežno omejila na nekaj energetskih objektov in tudi tu je tako ekonomsko kot ekološko zadeva zelo sporna. Reševati krizo tako, da obnavljamo industrijske proizvodne kapacitete, zaradi kakršnih je regija v krizi, najbrž ni dobra poteza. Gre dejansko za to, če bi bila ta razprava pred štirimi desetletji, najbrž ne bi bilo teh dilem. Sedaj pa je ta čas enostavno minil.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg89">Gre predvsem za to, kako najti pravo rešitev za reševanje gospodarske krize za odpiranje produktivnih delovnih mest v Zasavju in mislim, da v veliko manjši meri za reševanje energetskega problema.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg90">Če bi o tem odločal elektroenergetski sistem Slovenije, se najbrž ne bi odločil za tako investicijo, ampak za drugačen pristop, vsekakor za cenejše in ekološko manj sporne vire energije. Prav gotovo se v tem sistemu morajo zavedati, da v nedogled ne bo mogoče tudi poljubnih cen električne energije prenašati na porabnike ali na proračun. Poglejte, če obstajajo energetski viri, ki lahko dajejo električno energijo za nekaj 10% ceneje, in znašajo potem letni zneski po nekaj milijard tolarjev, potem je seveda neupravičeno govoriti, da je ta investicija zaradi energetskega sistema nujna, še manj pa seveda tudi zaradi reševanja ekonomskih in socialnih problemov regije, ker so v teh alternativah lahko tudi tako veliki prihranki, da je mogoče Zasavju s tem denarjem zagotoviti bistveno kvalitetnejši razvoj. Navsezadnje tudi prebivalci Zasavja najbrž nimajo ambicije, da bi bili tudi v naslednjih desetletjih odvisni predvsem od državnih ukrepov in subvencij, ampak si želijo možnosti za normalen razvoj, za normalno perspektivo, tako kot drugi deli Slovenije. To so dileme, zaradi katerih bomo podprli predlog matičnega delovnega telesa in pričakujemo seveda, da bo v nadaljnji razpravi mogoče najti tako za državo kot za regijo kot tudi za elektroenergetski sistem boljše rešitve, ker zanesljivo tudi obstajajo. To, kar smo zdaj dejansko dobili, je, ali TET 3 ali brez TET 3 druga alternativa podaljšanja delovanja sedanje termoelektrarne, ampak na isti energetski vir, kar je seveda, to verjamem, še slabše od novogradnje, ampak mislim, da sta to dve slabi alternativi. Državni zbor pa ni imel še priložnosti razpravljati o mnogih drugih, med katerimi bi lahko bile tudi bistveno boljše. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg91">Hvala, doktor Zagožen. Besedo dajem gospodu Miranu Jeriču, poslanska skupina LDS.</seg>
             </u>
             <note type="speaker">MIRAN JERIČ:</note>
-            <u who="#SDZ2.JeričMiran" ana="#regular">
+            <u who="#JeričMiran">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg92">Hvala za besedo gospod podpredsednik! Spoštovane poslanke, spoštovani poslanci. Poslanska skupina Liberalne demokracije Slovenije predlog matičnega delovnega telesa, da se zakon o poroštvu Republike Slovenije vrne nazaj v prvo obravnavo, ne bo podprla. To pomeni, da bomo podprli predloženi zakon, skupaj z vloženimi amandmaji, ki jih je na sam zakon vložila vlada Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg93">Glede na to, da so moji predhodniki v imenu poslanske skupine zašli tudi na polje splošne razprave, tudi meni dovolite, da v imenu poslanske skupine povem nekaj argumentov, zaradi katerih ne bomo podprli sklepa matičnega delovnega telesa.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg94">Res je, da zakon za drugo obravnavo vsebuje oziroma vlada predlaga investicijsko podporo v višini 150 milijonov mark, kar ni bilo v prvi obravnavi zakona oziroma predloženi zakon tega ne vsebuje. Res je tudi, da v prvi obravnavi, zakon je bil sicer vložen v septembru leta 1996, prva obravnava se je zgodila konec meseca aprila 1997, da so vse poslanske skupine predloženi zakon, poudaril sem, da ni vseboval investicijske podpore, v splošni razpravi podprle in da je bil na koncu tudi sprejet sklep, da je zakon primerna podlaga za drugo obravnavo in da naj zakon za drugo obravnavo skupaj s predlagateljem, to je z gospodom Potrčem, pripravi vlada Republike Slovenije. Od prve obravnave pa do danes se v javnosti oziroma nasploh pojavljajo mnogi dvomi o upravičenosti gradnje objekta, tako iz energetskega, ekološkega in ekonomskega vidika. Dileme se predvsem nanašajo na kakovost pod narekovajem, uporabljenih podatkov, za izdelavo investicijskega programa, ki je bil tudi osnova za vključitev v osnutek nacionalnega programa na področju energetike.</seg>
@@ -543,11 +526,11 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg99">Na podlagi vsega povedanega je po mnenju naše poslanske skupine potrebno zavrniti sklep matičnega delovnega telesa in seveda podpreti zakon v drugi obravnavi, skupaj s predloženimi amandmaji matičnega delovnega telesa. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg100">Hvala, gospod Jerič. Še beseda predlagateljev zakona. Gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg101">Hvala lepa. Kot pri mnogih drugih vprašanjih sem jaz prepričan, da tudi tokrat ne gre predvsem za to, ali se bomo strokovno prepričali ali ne, ampak v glavnem za to, kaj kdo od nas politično misli ali ne. Rad bi zato opozoril povsem na kratko na temeljne dileme, ki so bile povedane.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg102">Prvič. Za vsakega, ki to želi, je odločitev danes mogoča. Kdorkoli je menil, da v zadnjih dveh letih ni dobil ustreznih podatkov in argumentov za ali proti, ne govori resnice. Lahko jih je dobil, če jih je želel dobiti, tudi v zadnjem tednu, štirinajstih dneh so bili pripravljeni predstavniki elektrarne, rudnika, predstavniki inštituta Milan Vidmar in podobno obiskati vse poslanske skupine in dati odgovor na katerokoli vprašanje, ker smo vedeli, da odgovorov na strokovna vprašanja na seji državnega zbora enostavno dovolj natančno ni mogoče dati. Trditev, da želite imeti boljše podlage, torej ni resnična, je izgovor - možen, ampak političen izgovor.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg103">Drugič. Odločitev je potrebna. Če se želi nadomestiti termoelektrarna Trbovlje z novim objektom, potem je gradnja takšnega objekta najmanj štiri leta, in to po mnenju vseh strokovnjakov. Če ne bo opravljena koncem leta 2003, sedanja termoelektrarna Trbovlje 2 preneha obratovati. Če želimo še naprej po dveh letih razprav o tem zakonu s tem še odlašati, bomo pač prišli do tega, da bo prišlo do spontane variante, po kateri enostavno nadomestnega objekta ne bo več smotrno in mogoče graditi, da ne govorim o tem, da je gradnja v določenem smislu zelo tesno povezana tudi z obnovo ceste, da je treba tam sprejemati odločitve in podobno.</seg>
@@ -558,11 +541,11 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg108">Zato spoštovane kolegice in kolegi, odločitev je možna, je potrebna, je ekonomsko, razvojno, energetsko, regionalno, socialno in še kako utemeljena. Jaz si bom drznil reči, ni res, da bo odločitev za elektrarno pomenila politično odločitev. Obratno, kdor danes ne bo želel odločati, se bo odločal izključno iz političnih razlogov, ker ima ali sam nek interes nekega drugega lobija, predvsem pa zato, ker ne želi iz političnih razlogov, tudi zaradi interesov znotraj koalicije in podobno, take odločitve sprejeti. Jaz vas zato prosim, da premislite in da ne podprete še enkrat predloga, ki ga je dalo matično delovno telo. Če kdo, je tokrat matično delovno telo tudi z, da uporabim ta izraz, z vztrajnostjo ali sitnobo ali celo zlorabo svojega položaja predsednika dobilo vse podatke, ki jih je želelo dobiti. Servisirano je bilo z vsem, kar je bilo potrebno, in odločitev bi lahko bila vsebinska sprejeta, ne pa s ponovnim odlaganjem. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg109">Hvala gospod Potrč. Kolegice in kolegi, glasujemo o sklepu, ki se glasi: "Predlog zakona o poroštvu Republike Slovenije za najetje posojil za izgradnjo termoelektrarne Trbovlje 3, druga obravnava, se vrne v prvo obravnavo." Ugotovimo sklepčnost. Obrazložitev glasu gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg110">Hvala lepa za besedo gospod podpredsednik, spoštovane poslanke in poslanci. Vse kar smo slišali doslej govori za razumen sklep, ki ga je predlagal matični delovni odbor, naj se zadeva vrne v prvo branje. Zadeva nima ekonomske računice, nima ekološke računice, ima očiten politični interes, ni imela alternative resno pripravljene, ima slabo pokrit surovinski vidik, ima slabo pokrit evropski vidik, ki ga pred 10 leti, ko sem prvič sodeloval pri teh razpravah, ni bilo. Takrat ni bilo kiota in nismo bili tik pred evropsko zvezo. Oboje ni upoštevano, kot ni upoštevano mnenje ljudi, kot sta dr. Miha Tomšič, nekdanji minister za energetiko, ali dr. Lojze Sočan, naš predstavnik po znanstveni plati in znan gospodarstvenik z ugledom v Bruslju. Torej stroka se je tukaj povozila. Ne govorim proti temu, da je treba nekaj narediti, ampak ne narediti na tak način. Tukaj manjka temelj in temelj je ekonomika. Tega podatka, da se bo to izplačalo, v stanju, kakršno je v Zasavju, pri tej kvaliteti, pri teh dejstvih v zvezi s samim premogom, se preprosto ne da priti do pozitivnega rezultata. Mene to spominja samo na nekaj, to se pravi politična tovarna, ta čas v imenu dveh strank.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg111">Zame je izredno zanimivo dejstvo, ne samo zanimivo, pomembno, ali pa zaprepaščujoče, da se koalicija ni poenotila glede tega projekta, da ena stranka tega ne podpira. Gospodje, v milijardo mark ne moremo iti tako. Naša vlada je imela razvojno skupino za Zasavje in za Maribor. Drnovšek je pri priči ukinil v prvi vladi oboje. Danes bi imeli lahko alternativne koncepte, imeli bi razvojni program za celoto, ne pa nadaljevanje preteklosti s sumljivimi oziroma škodljivimi posledicami take investicije. Čemur smo priča sedaj, nalašč verjetno tampirano pred volitvami, je spet politika izvršenih dejstev. Samo eno je, kakor je bilo včasih, volili smo lahko samo enega, ni bilo alternative, tudi sedaj ni alternative in povsem mimo ušes gre vprašanje, kaj bi se lahko za polovico takega denarja ali pa za ves ta denar zgodilo. Tukaj nas očiten politični interes dveh strank ali pa celo nekaterih njenih glavnih ljudi tišči v nekaj, zaradi česar ne bo bolela glava samo Posavja oziroma Zasavja, ampak vso Slovenijo.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg112">Nihče ni resno odgovoril, kaj pomeni to z vidika energetskega koncepta ob našem vstopanju v Evropsko zvezo. Jasno pa je naslednje: Kiota še nismo podpisali oziroma ratificirali. Kioto in ta investicija ne gresta skupaj. In brez Kiota ne pridemo v Evropsko zvezo, kot vam je znano. Tukaj je kup neodgovorjenih vprašanj, na katera se še da odgovoriti v prvi obravnavi, čeprav menim, da stvar tudi za prvo obravnavo ni oziroma o takem projektu se ne bi smeli v tej hiši odločati, če želimo skrbeti za osnovne elemente ugleda te hiše.</seg>
@@ -571,20 +554,20 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg115">Sam bom podprl predlog tega matičnega delovnega telesa in mislim, da ta hip preprosto nimamo boljše rešitve. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg116">Hvala. Obrazložitev glasu gospod Izidor Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg117">Spoštovani gospod podpredsednik, gospe in gospodje! Na matičnem delovnem telesu, kjer sem tudi sodeloval, smo se veliko ukvarjali tja do poznih ur. Menim, da smo bili zelo zahtevni in tudi tisti, ki smo hoteli imeti podatke, ne samo te, ki so nam bili na voljo, ampak še nekatere druge, iz razpoložljivega gradiva, me niso prepričali gospodje iz vlade in tudi iz vladnih institutov. Ekonomski izračun in vsa ostala dejstva, ki bi zagotovila oziroma bi nekako zagotovila zeleno luč za izgradnjo TE 3, niso bila prepričljiva. Mi smo tudi rekli in zahtevali, da naj dajo dodatna gradiva, dodatna pojasnila, dodatne izračune, dodatne zagotovitve. Jaz osebno nisem nič takega dobil. Imam samo tisto gradivo, ki smo ga prejeli na seji in tisto analizo, ki je bila narejena iz aprila tekočega leta.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg118">Menim, da je to, kar sedaj delamo - podprl bom mnenje oziroma predlog matičnega delovnega telesa - je res tiščanje glave v pesek. Če mi neko energetsko strategijo delamo ali jo zagovarjamo izpred toliko let in jo vlečemo skozi čase, med tem pa se mnoge stvari spremenijo, to bomo še kasneje kaj povedali, potem se ne zavedamo, kje smo, kam hočemo iti. V nobenem primeru in iz vseh podatkov, ki so mi bili na voljo, iz kvalitete tega vira, ki vemo, kakšen je in ki preseneča, ko se operira z zelo natančnimi meritvami in kapacitetami, kar je lahko za nekoga v drugem razredu ali v prvem razredu osnovne šole prepričljivo, vse to meni pomeni, da mi nekam tiščimo. Tiščimo neko strategijo, ki je taka ali drugačna. Slišali smo, da mora biti kup nekih virov, kup energetskih osnov, potem bomo lahko imeli in živeli. Ne bom tega podprl oziroma bom podprl predlog matičnega delovnega telesa, da priskrbi vlada oziroma ministrstvo, ki je pristojno, dodatna gradiva in z odprtimi pristopi dokaže, kje je ta upravičenost. Imamo mnogo ugovorov, tudi pred menoj so jih nekateri povedali, osebno pa sem jih zelo veliko pripravil in jih bomo lahko potem tudi še poslušali, če bo eventualno zadeva dana na dnevni red. Sem za to, da se da v prvo obravnavo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg119">Hvala gospod Rejc. Obrazložitev glasu gospod Pavle Rupar.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ2.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg120">Spoštovani predsedujoči! Kolegice in kolegi! Če zelo na kratko in hitro izračunate investicijo v TET 3, potem je v primerjavi z investicijami v bio maso, v mestih, zelo hitro izračunate in dobite, da bi za ta denar, za to energijo nadomestili oziroma z bio maso opremili 60 občin. 60 občin! Zakaj to govorim? Zato ker je lesna industrija v Sloveniji v krizi, v hudi krizi, ker imamo ogromno obnovljivih virov, tako v gozdovih, kot na poljih, pa v ta namen ne delamo nič. Zakaj še to govorim? Tudi zato, ker v srednji Evropi ne najdete države, ki bi v zimskem obdobju porabila toliko električne energije za ogrevanje, kot jo porabi Slovenija. To so dejstva.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg121">Enostavno lahko sklepamo, da je ta investicija zgolj političnega pomena. Pa še nekaj. Ali naj bi se torej termoelektrarna 3 gradila predvsem zato, da bi se ohranila delovna mesta v Zasavju v teh premogovnikih. Jasne in natančne projekcije energetske bilance kljub številnim urgencam, žal, še nismo prejeli. Še danes ne vemo povsem zanesljivo, kaj bi na področju ponudbe električne energije v Sloveniji pomenil izpad TET 3. Na drugi strani pa so prisotne v strokovni in tudi laični javnosti velike kritike tega projekta. Očita se mu, da bi stal veliko več kot omenjenih 600 milijonov mark, s tem, da se očitno prikrivajo tudi izgube, ki bi nastajale kot posledica obratovanja TET 3. Cena te elektrike bi namreč stala 7 pfeningov na kilovatno uro več, kot iz drugih virov</seg>
                <note>se opravičujem, ker govorim v tuji valuti, ampak za razumevanje pa je morda to dobro</note>
@@ -593,32 +576,32 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg124">Ob prelomu tisočletja niti iz strokovnih niti iz moralnih razlogov ne morem podpreti izgradnje tako imenovanih političnih tovarn. Želim si, da bi ljudje v Zasavju imeli delo, vem, da bi se s tem denarjem lahko marsikaj drugega zgradilo, predvsem pa jim želim, da bi končno zadihali tak zrak, kot ga lahko dihamo v drugih mestih. Smo torej za to, da se ta denar nameni za delovna mesta, za ohranitev delovnih mest, za razvoj Zasavja; skratka, ni prepričljivih strokovnih argumentov za to gradnjo, je pa po mnenju tudi drugih kolegov iz poslanske skupine ta denar potrebno gotovo nameniti Zasavju, vendar v povsem druge ekološko nesporne zadeve. Zato bom seveda glasoval tudi za predlog, ki je predlagan. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg125">Hvala. Kolegice in kolegi, ne govorimo za ali proti zakonu, govorimo samo o obrazložitvi glasu ob tem sklepu. Zato prosim, da to upoštevate.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg126">Gospod Zamernik, obrazložitev glasu.</seg>
             </u>
             <note type="speaker">BOGOMIR ZAMERNIK:</note>
-            <u who="#SDZ2.ZamernikBogomir" ana="#regular">
+            <u who="#ZamernikBogomir">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg127">Hvala lepa, gospod podpredsednik. Glasoval bom za predlog odbora, da se zadeva vrne v prvo obravnavo. Bi pa želel to malce širše obrazložiti. Predgovornik je že govoril o bio masi, o energiji, ki je na zahodu zelo pomembna in ki ji dajejo precejšnjo mero pozornosti tam, kjer so kakšen korak pred nami. Zato sem se iskreno razveselil dopisa, ki sem ga dobil iz tega istega ministrstva, ki danes predlaga zakon o TET 3, se pravi iz ministrstva za gospodarske dejavnosti, da naj naša občina</seg>
                <note>mimogrede, preko nje se seveda vozi predsednik vlade v Logarsko dolino</note>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg128">razmisli o tej bio masi. Prej smo kurili na premog, premog iz Trbovelj, premog iz Velenja in seveda takrat nikogar ni to nič motilo. Ko pa smo se odločili, da bomo šli na plinofikacijo kraja, smo dobili iz ministrstva, ki sem ga prej omenil, dopis, da naj ponovno razmislimo o naravnih danostih naše občine, naj upoštevamo razvojno vizijo Evropske unije, Kiotsko konvencijo, h kateri je pristopila Slovenija, in slovensko nacionalno razvojno strategijo in razmislimo o lesu kot domačem energentu, ki utrjuje gospodarsko stabilnost občine, denar za ogrevanje pa ostaja doma in tako povečuje kupno moč domačinov, čisti zrak pa je zagotovilo za zdravo življenje prebivalcev kraja in pomemben sestavni del turistične ponudbe. In Luče bi s tem utrdile ugled in pripomogle k izboljšanju energetskih in gospodarskih razmer v Sloveniji. Zdaj pa TET 3. Zato seveda ne morem biti za zakon, zato bom podprl predlog odbora in na koncu bi mogoče še samo misel, ki sem jo slišal v teh dneh, da je triumf demagogov kratkotrajen, posledice so pa lahko večne ali pa v našem primeru vsaj zelo dolgotrajne.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg129">Hvala. Gospod Kelemina bo obrazložil svoj glas.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg130">Hvala lepa, cenjeni podpredsednik, državni zbor, predstavniki vlade. Podprl bom predlog matičnega delovnega telesa, da se vrne obravnava izgradnje termoelektrarne TET 3 v prvo obravnavo. Seveda moram navesti razloge, zakaj sem se tako odločil. V prvi vrsti in na prvem mestu so to ekološka vprašanja. Čeprav nekateri danes ekologijo še tako zagovarjajo, tudi pri nas, so danes na to pozabili, kajti mislim, da je vpliv na okolje že v sedanjih razmerah bil na osnovi rezultatov, s katerimi razpolagamo dovolj uničujoč in da se mora to čimprej ustaviti, tudi v skladu z vsem ostalim, kar je bilo že danes povedano. Kmetijstvo na tem področju je izredno prizadeto, zdravje ljudi je ogroženo in pa seveda tudi samo počutje ljudi ni najbolj prijetno. Kajti prav gotovo si vsi najbolj želimo v tej državi živeti v naravnem, čistem okolju in to tudi imamo po ustavi zagotovLjeno.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg131">Drugi razlog, ki ga jaz postavljam sicer na drugo mesto, je pa prav gotovo enako pomemben ali pa še skoraj bolj, je pa seveda ekonomski razlog. Ne samo to, da so se spremenile razmere financiranja v drugi obravnavi, kar je tako rekoč tudi bistveno spremenilo sam koncept zakona, ampak na osnovi podatkov, s katerimi seveda razpolagamo zaradi visoke cene produkcije premoga, zaradi visoke cene električne energije, ki bo izhajala iz tega objekta. Vemo, da je recimo iz Vrhovega cena električne energije približno 4 tolarje, če se ne motim, iz nuklearke približno 6 tolarjev, tukaj bo pa tako rekoč dvakrat višja cena. Iz tega razloga je absolutno nesprejemljivo. Prav tako je bilo po nekih študijah ugotovljeno, vsaj strokovnjaki so tako zagotavljali, da cena ne bo pokrivala niti lastnih stroškov. Kje so pa tukaj odplačila kreditov, kje so tukaj stroški za razgradnjo, kje so tukaj odškodnine za rento, za zdravje ljudi na tem področju, kje so tukaj stroški za zapiranje rudnikov, ki bodo tako ali tako sledili v nekem obdobju. Torej cela vrsta odprtih vprašanj, na katere dejansko danes nismo dobili odgovora.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg132">Na koncu moram reči samo to, da me čudi, da ni drugih alternativnih programov in da smo dejansko postavljeni minuto pred dvanajsto pred izvršena dejstva, tako rekoč pred zid in da se moramo pred slovensko javnostjo odločiti, kot da odločamo o usodi Slovenije. Mislim, da je to nesprejemljivo in da taki pritiski niso upravičeni. Moram reči da pogrešam dejansko te programe na področju zaposlovanja, kot so že bili omenjeni, prav tako pa programe na področju nadomestnih virov. Seveda lahko nekdo reče, zakaj pa niste vi pripravili teh programov. Lahko rečem samo to, niti nimam kadrovskih, niti finančnih možnosti, da bi pripravil alternativne programe. Te alternativne programe bi moral pripraviti tisti, ki je predlagal tudi ta zakon in tisti, ki ve, kaj se lahko v prihodnosti oziroma kaj naša država v prihodnosti pričakuje in tudi potrebuje. Torej glasoval bom za predlog in upam, da se bom pravilno odločil. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg133">Hvala. Gospod Demšar bo dobil svoj glas.</seg>
             </u>
             <note type="speaker">VINCENCIJ DEMŠAR:</note>
-            <u who="#SDZ2.DemšarVincencij" ana="#regular">
+            <u who="#DemšarVincencij">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg134">Lep pozdrav in pozdrav tudi gospodu podpredsedniku in predstavnikom vlade.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg135">To področje, o katerem se danes pogovarjamo, jaz priznam, da poznam nekaj iz študija geografije, kaj več pa ne. Ampak zakaj se potem oglašam? Zaradi tega, ker imamo na našem področju žal rudnik Žirovski vrh. Zgodba, ki se danes tu ponuja, me spominja na leta po letu 1960, ko smo za vsako ceno hoteli imeti svoj lastni vir energije. Vlagali smo velike denarje, da bomo imeli svojo energijo, svojo atomsko energijo za potrebe, ki smo jih takrat načrtovali. Žal mi je, da sem pozabil nekatere številke. Ampak zanesljivo vem, da mi je direktor rudnika Žirovski vrh, gospod Uršič, povedal, da je energija iz nuklearke dvakrat cenejša, kot tista, ki jo dobimo iz premoga. Zadosti imamo na trgu drugih energij in jaz ne razumem, zakaj sedaj za vsako ceno hočemo s tem premogom, ko vemo, kako se tudi po Evropi zapirajo rudniki, na vsak način sedaj tu nekaj takega delati, za kar se bojim, da se bo čez leta dogajalo to, kar se dogaja z rudnikom Žirovski vrh.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg136">Jaz sem hvaležen ministru Gantarju, ki tu zelo dobro stoji pri zapiranju rudnika Žirovski vrh. Ampak rad bi vas spomnil, letos bo šlo čez 600 milijonov za potrebe, ampak samo letos. Kaj bo to pomenilo, ko bomo sedaj tu investirali, potem pa bomo šli stvari zapirat in ne bodo več primerne ekološko ali kako drugače. Namreč podatek, ki ga je tu povedal tudi predstavnik LDS danes, da se bodo povečale emisije ogljikovih dioksidov. To je povedal. Če bomo hoteli biti kolikor toliko primerljivi z ostalo Evropo, je potrebno vprašanje, ali nas to pelje tja ali v neko zapiranje. Povem samo osnovni podatek. Še enkrat ga ponovim. Če je energija iz nuklearke toliko cenejša od tiste, ki jo dobimo iz premoga, potem ne vidim razloga, da bi morali iti na neko samozadostnost pri teh energijah, ko jo je tako po svetu več kot zadosti.</seg>
@@ -626,50 +609,50 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg138">Zato iz tega razloga ne morem podpreti želja, ki so bile tu danes izražene, želja, da se uvrsti ta termoelektrarna na proračun te države, ampak bom podprl stališče, ki ga je sprejel matični odbor. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg139">Hvala. Gospod Sovič. Gre za obrazložitev glasu. Prosim, poslanci, še malo potrpljenja.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg140">Hvala. Mislim, da je za odločitev pomembno, da upoštevamo korektne podatke. Ta investicija ni, kot bi kdo narobe razumel, vredna milijardo, ampak pol manj. Ne gre za 500 rudarjev, kot bi kdo narobe mislil, ampak za 1500 denarjev in ne gre za povečevanje emisij CO2, ampak za zniževanje teh emisij, kar je skladno z določili protokola iz Kiota. Gre za specifične emisije.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg141">In še nekaj. Če ta objekt obstaja, je tudi uvozna ranljivost Slovenije nižja. To pomeni, tudi če bo Slovenija še nekaj energije uvažala, bo zaradi tega tudi sam uvoz cenejši. Ker če imaš nekaj resursev, si manj odvisen od zahtev, ki ti jih postavljajo pač tisti, ki ti energijo prodajo. Če pa tega nimaš, te lahko izsiljujejo in je zato tudi cena dosti višja. Mislim, da so razlogi za to, ki govorijo o tem, da je smiselno zavrniti sklep matičnega odbora in se zelo temeljito lotiti amandmajev, ki so predloženi, da bi potem lahko prišli do čimbolj kvalitetnega zakona. Zato bom glasoval proti sklepom matičnega odbora. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg142">Hvala. Gospod Brenčič.</seg>
             </u>
             <note type="speaker">STANISLAV BRENČIČ:</note>
-            <u who="#SDZ2.BrenčičStanislav" ana="#regular">
+            <u who="#BrenčičStanislav">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg143">Hvala lepa. Spoštovani zbor! Le malo časa nazaj so evforično padali dnevni, tedenski, mesečni in tudi letni rekordi na izkopu premoga v teh revirjih. Posledica tega je to, kar danes ti revirji občutijo: težka gospodarska, strukturna in tudi zaposlitvena kriza. Bojim se, da vse evforično nastopanje, ki je bilo danes tu prisotno v prid tega projekta, rojeva za to okolje podaljševanje tega stanja oziroma te krize. Zame je odločitev za ta projekt, vsaj iz ekonomskih in okolnih vidikov, neodgovorno dejanje in poslabšanje ali nadaljevanje krize v tem revirju, v tem okolju. Zato tega ne želim niti Zasavcem in nobenemu okolju v naši državi. Podprl bom sklep matičnega telesa iz naslova, da se pridobi čas za dodatno argumentiranje ali iskanje rešitev, ki bi bilo za to okolje dobrodošle.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg144">Hvala, gospod Brenčič. Kolegice in kolegi, prehajamo <gap reason="inaudible"/> Še gospod Hvalica. Upam, da je zadnja obrazložitev glasu.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg145">Hvala lepa, gospod podpredsednik. Spoštovane kolegice in kolegi, glasoval bom za predlog matičnega delovnega telesa. Gre za izrazito predvolilni projekt, gospod minister Dragonja. Torej jaz ne razumem, kako lahko vztrajate na popolnoma nekonkurenčnem zasavskem premogu? Jaz tega ne razumem! Pri čemer pa bi pozval tudi gospoda, ki kandidirata ponavadi v revirjih v Zasavju, eden sedi tu, eden pa v predsedniški palači, da pravzaprav pojasnita, kako si upata na takšen način diskriminirati ljudi iz Zasavja. Torej Zasavci <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg146">Gospod Hvalica, ne moreta pojasniti, ker gre za <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg147">Ne, ne, jaz pojasnjujem, kako bom glasoval, ampak utemeljujem to. Zasavci torej lahko požirajo ta strup, Ljubljančanom ni dober, Ljubljančani uvažajo indonezijski premog. Torej to je podcenjevanje lastnih volivcev. Upam, da bodo spregledali. Ne nazadnje se mi vsiljuje še nekaj. Jaz ne odrekam Zasavju tega denarja, davkoplačevalci naj bi s tem projektom dajali od 50 do 100 milijonov DEM mesečno. Mesečno! Ali veste, kaj lahko naredimo s tem denarjem? Koliko štipendij, koliko delovnih mest bi lahko odprli, predvsem pa ne bi ljudi porivali v umazane jaške. Ostal mi je v spominu slučajno slišan radijski program 18. julija 1998. leta, ne, 21. avgusta je bilo to, imam več podatkov tu, kjer je rudar rekel, ta je sedaj ubogi tam v domu onemoglih in pravi: "Namesto da delal na zraku, na soncu, sem moral delati v temi in smradu." To je rekel varovanec doma, ki je hotel postati vrtnar, pa so ga s silo vrgli v luknjo, v rudarsko luknjo. Zato bom glasoval za. Če bi bilo kakšno drugo glasovanje, bi lahko tudi, ne samo ta zakon vrnil v prvo obravnavo, ampak bi glasoval proti temu zakonu. Glasoval pa bom za ta predlog. Danes, ko ves svet dela kogeneracije, danes, ko se vsi obračajo k plinu, danes, ko v Sloveniji še nismo izkoristili naših rek, sigurno ne verige savskih elektrarn, se gremo stvari s premogom, ki ni niti premog, ki je v bistvu nekaj med lignitom in rjavim premogom. Ja, za božjo voljo, kaj bi radi naredili še kakšne železarne? Kaj bi radi naredili še kakšen TAM? Ta država ima dovolj denarja, ampak ne pa toliko, da bi ga vi non-stop zmetali in metali skozi okno. Zato bom glasoval za predlog matičnega delovnega telesa. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg148">Hvala. Kolegice in kolegi, prehajamo na odločanje. Bomo še dali besedo naši dami, gospa Zbačnikova.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg149">Hvala lepa, gospod predsedujoči. Lep pozdrav! Tudi sama bom glasovala za predlog odbora, in sicer zato, ker menim, da nimamo pravice, da tam v Zasavju omogočimo še naprej, da bodo dihali tako slab zrak, saj vemo, kaj pomeni premog s tega področja. Vemo, kakšni so stranski učinki za zdravje, bila tudi narejena zdravstvena študija. Vemo tudi, da - naj zaključim z besedami Cicerona - zdravje je najvišji zakon. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg150">Hvala.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg151">Prehajamo na odločanje. Ugotovimo prisotnost!</seg>
                <note>74 prisotnih.</note>
@@ -681,11 +664,11 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg155">Gospod Rupar, proceduralno.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ2.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg156">Spoštovani, prosil bi za ponovitev, ker sem se zmotil. Prosim.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg157">Dobro. Dajem predlog gospoda Ruparja za ponovitev glasovanja na glasovanje. Ugotovimo prisotnost!</seg>
                <note>74 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg158">Kdo je za to, da ponovimo glasovanje?</seg>
@@ -790,38 +773,38 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg215">Tudi ta člen je spremenjen, o njem ne bomo glasovali. Smo pri členu 4, predlog, da se člen črta. Želi kdo besedo? Gospod Špiletič.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg216">Hvala za besedo. 4. člen, ki ga vlada predlaga, za katerega vlada predlaga črtanje, se glasi takole: "Vlada Republike Slovenije bo zagotavljala ceno električne energije na pragu javnega podjetja Termoelektrarna Trbovlje d.o.o. v višini, ki mu bo pokrivala tudi lastni delež sredstev za investicijo in odplačilo obveznosti iz najetih posojil." To pomeni, da so predlagatelji zakona, v prvem branju izhajali iz tega, da termoelektrarna ne bo obratovala racionalno in da bo treba oblikovati ceno električne energije tako, da bo skozi stranska vrata prečrpan del sredstev, zato da se bodo lahko minusi pokrili. Sedaj vlada predlaga črtanje. To pomeni, da bo termoelektrarna poslovala z izgubo in da bo vsako leto ta izguba bremenila proračun. Jaz to razumem samo tako in nič drugače. In tukaj, gospod minister, lepo prosim za pojasnila, koliko bo vsako leto proračun Republike Slovenije obremenjen iz tega naslova. Če boste rekli, da ne, bi pa prosil, da daste pisno obrazložitev in z vašim podpisom, da boste v primeru, če se sedaj to uresniči, odstopili, če ne vi, pa še kdo drugi. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg217">Hvala. Gospod minister.</seg>
             </u>
             <note type="speaker">METOD DRAGONJA:</note>
-            <u who="#SDZ2.DragonjaMetod" ana="#regular">
+            <u who="#DragonjaMetod">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg218">Hvala lepa. Spoštovani! Ta člen oziroma predlog vlade, da se ta člen črta, velja razumeti v tem smislu, da vlada, kar se tiče pristojnosti glede cene električne energije, direktno ne prevzema te obveznosti v tem delu kot regulator trga oziroma regulator cene električne energije. Tukaj vlada upošteva razvoj trga energetike oziroma električne energije in svojo opustitev vloge cenovnega regulatorja na trgu energije in dejstvo, da se bodo ti odnosi urejali pogodbeno znotraj elektroenergetskega sistema, kar je tudi bistvo direktiv Evropske unije na tem področju. Se pravi, da bo vprašanje cene na pragu te elektrarne vezano predvsem na dolgoročne pogodbene odnose, ki jih bo elektrarna morala skleniti znotraj elektroenergetskega sistema s tisto organizacijo, ki bo na nacionalnem nivoju zadolžena za koordiniranje ne samo tekočih reprodukcijskih vprašanj ampak tudi nekaterih drugih dolgoročnih vprašanj. V tem smislu meni vlada, da ta določba ni potrebna oziroma da zaveza vlade Republike Slovenije ni potrebna. To pa ne pomeni, da investitor ne bo v situaciji, da bo to vprašanje moral urediti; vendar ga bo urejeval na drug način, na način, kot se bo urejanje razmer na trgu električne energije urejalo v bodoče.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg219">V podlagah za odločitev, v študijah in v drugih pojasnilih, pa je ta stroškovna cena določena, ta cena na pragu določena, to smo podali v uvodni obrazložitvi. Ob predpostavkah iz investicijskega programa je ta cena na nivoju 13,5 pfenigov za kilovatno uro energije, proizvedene v tej elektrarni. Na mestu je vprašanje, kaj če ta cena ne bo dosežena, kaj če te realizacije termoelektrarna Trbovlje ne bo mogla realizirati iz takšnih ali drugačnih razlogov. To lahko pomeni dejansko izgube v tem podjetju. Te izgube lahko ogrozijo servisiranje obveznosti, lahko ogrozijo tudi servisiranje obveznosti na osnovi tega zakona, in v tem primeru bi se lahko tudi državna poroštva potem aktivirala. Vendar bo potrebno zagotoviti v reguliranju teh vprašanj predvsem prioritetno pokrivanje tistega dela cene električne energije, ki bo zagotavljal financiranje obveznosti; predvideno pa je, da bo v času obratovanja celotna realizacija realizirana na trgu. Ni predvideno subvencioniranje te cene oziroma se elementi cenovne konkurenčnosti energije iz tega objekta zagotavljajo iz tega zakona, to se pravi v času izgradnje z investicijsko podporo temu objektu, ne pa v času njegovega obratovanja.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg220">Hvala, gospod minister. Gospod Špiletič, prosim.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg221">Gospod minister, jaz sem pazljivo poslušal vaš odgovor, ampak verjemite mi, nisem razumel. Vi ste sicer veliko govorili, povedali niste nič. Če predlagatelji izhajajo iz predpostavke, da je potrebno skozi višjo ceno električne energije zagotoviti dodaten denar, da bo mogoče odplačati ta kredit, to pomeni s črtanjem tega člena prevalitev tega bremena neposredno na proračun. Jaz bi rad neko jamstvo, da se to ne bo zgodilo. Vi, gospod minister, ste rekli, če se pa nekaj ne bi zgodilo, bo pa to to. Če je vlada predlagala črtanje tega člena, potem ga je morala na podlagi nekih dejstev, nekih trdnih argumentov. In te argumente, jaz lepo prosim, če jih obrazložite, če jih predstavite, da bomo lahko glasovali za ali proti temu členu. Lepo prosim, bolj natančno, kot ste to storili doslej, ko ste sicer politično leporečili, vendar odgovora niste podali. Jaz bi pa rad jamstvo, da ta garancija ne bo unovčena v breme proračuna. Samo to, gospod minister in resnično prosim za podrobnejši odgovor.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg222">Hvala. Gospod minister.</seg>
             </u>
             <note type="speaker">METOD DRAGONJA:</note>
-            <u who="#SDZ2.DragonjaMetod" ana="#regular">
+            <u who="#DragonjaMetod">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg223">Hvala lepa. Poskušal sem biti precizen, ker ta člen nalaga vladi določene pristojnosti, ki jih vlada v bodoče, glede na novo in že v parlamentu predloženo ureditev reguliranja dejavnosti na področju tudi cenovnih pristojnosti, ne bo imela. To je odgovor v tem delu.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg224">V izvedbenem delu pa mislim, da ne moremo poenostavljati situacije tako, da je cena energije na vseh objektih, elektroenergetskih objektih v Republiki Sloveniji že danes ali bo v bodoče enaka. Zaradi različnih tehnoloških, stroškovnih in drugih elementov ima vsak elektroenergetski objekt svojo polno stroškovno ceno na pragu elektrarne. Ta je pri hidroobjektih nižja, kot je pri termoobjektih oziroma je kompozit različnih virov tak, da da neko povprečno "miks" ceno energetskih virov za elektroenergetski sistem Slovenije. Znotraj tega bo potrebno zagotoviti pokrivanje stroškovne cene tudi za to termoelektrarno.</seg>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg225">Kar se tiče jamstev, katera izpostavljate, ali bodo poroštva unovčena. Zakon in politika vlade bazirata na tem, da poroštva ne bodo unovčena. To dokazujemo z našim delom v obdobju zadnjih 2 let, ko se poroštva, dana za gradnjo elektroenergetskih objektov, zadnje je bilo unovčeno sredi leta 1996, ne unovčujejo več. Če boste pogledali realizacijo proračuna v tem obdobju, ni uvnovčevanj tovrstnih poroštev v breme proračuna oziroma velja predpostavka, da bo celotna polna stroškovna lastna cena morala biti pokrita na trgu oziroma znotraj tako imenovanih stroškovnih in vrednostih elementov internih odnosov elektroenergetskega sistema. To na koncu koncev jamči vsak minister in tudi jaz osebno, direktno s svojo glavo v tem obdobju, ko sem na tem mestu. Mislim, da te bomo vidike zastopali tudi v bodoče oziroma bodo morali biti vgrajeni v bodočo vladno politiko, kar se tiče izpostavljenosti proračuna in javnih financ za tovrstna poroštva oziroma garancije.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg226">Hvala. Prehajamo na odločanje. Ugotavljamo prisotnost!</seg>
                <note>50 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg227">Kdo je za amandma?</seg>
@@ -853,11 +836,11 @@
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg242">Gospod Peterle, proceduralnoProsim.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg243">Hvala za besedo. V imenu poslanske skupine SKD prosim za uro in pol odmora za posvetovanje.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg244">Saj smo končali, smo glasovali o zakonu. Smo izglasovali - izglasovali smo ga. Samo še sklep imamo <gap reason="inaudible"/> Smo, smo! Samo malo! Trenutek, prosim! Amandma vlade je bil k predlogu zakona o poroštvu Republike Slovenije za najetje posojil za izgradnjo Termoelektrarne Trbovlje 3, druga obravnava, da se naslov zakona spremeni tako, da se glasi: "Predlog zakona za zagotavljanje sredstev za sofinanciranje izgradnje in o poroštvu Republike Slovenije za najetje posojil za izgradnjo Termoelektrarne Trbovlje 3." To je bilo izglasovano, s tem smo spremenili tudi zakon.</seg>
                <note>Ugovori poslancev iz klopi.</note>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg245">Z amandmajem smo spremenili v celoti naslov zakona.</seg>
@@ -871,20 +854,20 @@
                <note>Ugovori poslancev iz klopi.</note>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <note>Govori iz klopi.</note>
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg250">Naš predlog je bil jasen, da imamo pravico do odmora, in prosim, da se to upošteva.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg251">Gospod Peterle, prosim, povejte, zakaj potrebujete odmor, še enkrat, prosim. Prosim, pridite pa povejte, pa bomo potem odločali. Gospod Peterle, prosim.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg252">Spoštovani! V skladu s poslovnikom zahtevam 1 uro in pol odmora, da se bo poslanska skupina SKD posvetovala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANDREJ GERENČER:</note>
-            <u who="#SDZ2.GrenečerAndrej" ana="#chair">
+            <u who="#GrenečerAndrej" ana="#chair">
                <seg xml:id="SDZ2-Redna-10-1998-09-29.seg253">Kolegice in kolegi! Poslanska skupina slovenskih krščanskih demokratov prosi za eno uro in pol odmora. To pomeni, bo 18.00 ura, danes potem končujemo to sejo.</seg>
             </u>
             <note type="time">SEJA JE BILA PREKINJENA 29. SEPTEMBRA 1998 OB 16.32 URI.</note>

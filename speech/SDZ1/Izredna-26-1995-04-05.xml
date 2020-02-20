@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ1-Izredna-26-1995-04-05"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">26. izredna seja (5. 4. 1995)</title>
-            <meeting n="26"
-                     corresp="#SDZ1-Izredna-26-1995-04-05.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="26" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="1" corresp="#DZ" ana="#parl.term #DZ.1">1. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,26 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje
                      avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">26. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="session">572F7448BA25F83FC1257832004838AC</idno>
-                  <idno type="URI">572F7448BA25F83FC1257832004838AC</idno>
-                  <imprint>
-                     <date when="1995-04-05">(5. april 1995)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>26. izredna seja (5. 4. 1995)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1995-04-05"/>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="33"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="24"/>
                <tagUsage gi="seg" occurs="91"/>
                <tagUsage gi="gap" occurs="5"/>
@@ -185,50 +169,46 @@
                <date when="1995-04-05" ana="#parl.sitting">5. 4. 1995</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ1-Izredna-26-1995-04-05.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">26. izredna seja</head>
-            <docDate>(5. april 1995)</docDate>
             <note type="chairman">Sejo je vodil Jožef Školč, predsednik Državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 14.03 uri.</note>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje! Prosil bi vas, če lahko zasedete svoja mesta. Pričenjam s 26. izredno sejo Državnega zbora Republike Slovenije. Obveščen sem, da so zadržani in se seje ne morejo udeležiti naslednje poslanke in poslanci: dr. Dušan Bavdek, gospod Miroslav Geržina, gospa Jana Primožič, gospod Geza Džuban, dr. Bojan Korošec, gospa Irena Oman, gospod Andrej Lenarčič, gospa Danica Simšič in gospod Igor Omerza. Zadnja dva se bosta v dobri uri seje tudi udeležila.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg2">Še enkrat bi vas prosil za pozornost v dvorani. Ugotavljamo sklepčnost! Gospe in gospodje, prosil bi vas, če zasedete svoja mesta. Ugotavljamo sklepčnost! Kot predsedujoči bi se nadvse dobro počutil, če bi se usedli v svoje klopi in dali mir za nekaj časa. Gospe in gospodje, lepo vas prosim, če zasedete svoja mesta. Ugotavljamo sklepčnost! Prisotnih je 58 poslank in poslancev. Ugotavljam, da je zbor sklepčen in da lahko odloča.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg3">Na to sejo sem vabil predsednika Vlade Republike Slovenije dr. Janeza Drnovška, ministra za finance mag. Mitjo Gasparija ter druge člane Vlade, guvernerja Banke Slovenije dr. Franceta Arharja, generalnega direktorja Zavoda za pokojninsko in invalidsko zavarovanje gospoda Janeza Prijatelja in generalnega direktorja Zavoda za zdravstveno zavarovanje Slovenije, gospoda Franca Koširja. Vse prav lepo pozdravljam.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg4">26. izredno sejo Državnega zbora sem sklical na predlog Vlade Republike Slovenije in na podlagi rokovnika za sprejem državnega proračuna. Predlog dnevnega reda ste prejeli s sklicem 26. izredne seje z dnem 3.4.1995, in sicer predlagam eno samo točko, to je predstavitev predloga proračuna Republike Slovenije za leto 1995. Sprašujem, če želi kdo v zvezi z dnevnim redom besedo? Gospod Janez Podobnik.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg5">Spoštovani gospod predsednik, poslanke in poslanci! V skladu s poslovnikom predlagam, da bi izredno sejo Državnega zbora dopolnili z dodatno točko dnevnega reda, na kateri bi razpravljali o problematiki vidnosti in slišnosti televizijskega in radijskega signala RTV Koper-Capodistria in TV Slovenije 1 na območju Primorske in v zamejstvu, na območju, kjer živi slovenska manjšina v Italiji. Predlog s to vsebino je tudi v skladu s poslovnikom podpisalo 23 poslancev Državnega zbora. Osebno menim, da gre za zelo občutljivo problematiko, ki je tudi časovno vezana, in ker je danes sklicana izredna seja, menim, da ni nobenega razloga, da ne bi Državni zbor uvrstil te točke na dnevni red. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg6">Hvala lepa. Spoštovane kolege in kolegice sem dolžan obvestiti, posebej pa tudi gospoda Podobnika, da smo o tej pobudi razpravljali  na seji kolegija, predvsem da bi ocenili, ali so predlagani sklepi pripravljeni v skladu s pristojnostmi Državnega zbora in ali jih je potrebno v sodelovanju s službami Državnega zbora popraviti in dopolniti tako, da bo o njih možno odločati v skladu s poslovnikom in v okviru pristojnosti Državnega zbora. Moje mnenje je namreč bilo, da je ta predlog materiala pripravljen neustrezno in da zato ne zadošča, da zato pač ni mogoče opraviti razprave v Državnem zboru. Na kolegiju so se kolegi, ki tam sedijo, večinsko strinjali, da to vrnemo predlagateljem. Gospa Breda Pečanova, ki vam je naklonila čast, da daste to pobudo pred zborom, to zelo natančno ve. Z njo smo opravili tudi nekaj drugih pogovorov in menim, da tudi če bi to v tem trenutku uvrščali na dnevni red te seje, danes ne bi mogli končati. Od predlagateljev bom še naprej zahteval, da pripravijo tak material, ki je usposobljen za obravnavo na Državnem zboru. Hkrati bi vas rad obvestil, da sem se v sodelovanju s podpredsedniki in drugimi ljudmi, ki so v vodstvu zbora, odločil, da povabimo v ponedeljek na razgovor o tej problematiki tistih pet ljudi, ki jih je Državni zbor izvolil v Svet RTV Slovenija, da jim predstavimo te probleme in jih prosimo, da to sprožijo na za to ustreznem mestu. Seveda bodo na ta sestanek povabljeni tudi predstavniki predlagateljev te izredne seje.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg7">Menim, da ni pogojev za odločanje o tem predlogu, zato niti ne bi odpiral o tem razprave in s tem zavlačeval. Samo število podpisov pa menim, da ni zadosten argument, da Državni zbor spustimo v neko razpravo.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg8">Želi v zvezi z dnevnim redom še kdo predlagati kaj drugega? Gospod Podobnik, imate drug predlog? Ne o tej pobudi. Opozarjam vas, da sem o tej pobudi dal dosti pojasnil, o njej smo razpravljali in ne bo razprave na Državnem zboru. Izvolite gospod Podobnik, imate nov predlog.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg9">Gospod predsednik, pravkar sem dobil vaš odgovor, ki ste ga posredovali prvopodpisani pobudnici za to točko dnevnega reda, ki ga je sicer oblikovala skupina primorskih poslancev. Dovolite mi, da izrečem misel.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg10">Gospod Podobnik, prosil bi vas, da o tem ne razpravljamo in vi ste dvignili roko in ste rekli, da o tem pač ne boste razpravljali in bi prosil, da držite besedo. Jaz vas ne bom prekinil, gospod Podobnik, toda prosil bi vas, da držite besedo. O tem se pač ne razpravlja.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg11">Torej držal bom besedo. Problematika, ki jo ta točka odpira, je tako pomembna, da <gap reason="inaudible"/>
                </seg>
                <note>predsednik Jožef Školč: Prelomil ste besedo, gospod Podobnik.</note>
@@ -236,72 +216,72 @@
                   <gap reason="inaudible"/> Državni zbor. In mislim, da ste kot predsednik Državnega zbora sprejeli zelo veliko odgovornost, ker ne daste na glasovanje . Samo to želim od vas, da ta predlog, ki ga je podpisalo 23 poslancev, ki je opremljen povsem v skladu s poslovnikom, so sklepi, je gradivo, da ga daste na glasovanje. To je osnova demokracije. Lepo prosim, da ta predlog daste na glasovanje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg13">Gospod Podobnik, v demokraciji je pomembno tudi to, da se med seboj poslušamo in če vi meni daste besedo, da pač o tem ne razpravljamo, potem jo morate držati ne glede na to, kaj si seveda o mojih predlogih mislite. Seveda je drug problem, da je potrebno predloge za Državni zbor pripraviti tako, da Državni zbor lahko odloča. Jaz sem bil zelo temeljit v pisnem odgovoru, ki ga gotovo poznate, kjer sem povedal, kaj vse je potrebno pripraviti za to, da lahko o tej zadevi razpravlja Državni zbor.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg14">Lahko vam povem še več, da se v enem delu ta razprava odpira tudi na Odboru za mednarodne odnose in lahko vam povem, da je o tem problemu napovedan sestanek med predstavniki Vlade in RTV Slovenije. Menim, da je potrebno, ko se bo Državni zbor v to vključil, imeti materiale, ki se dotikajo odgovornosti Državnega zbora. Samo to je moja zahteva do predlagateljev in obljuba na kolegiju, ko bodo materiali pripravljeni tako, da se lahko skliče posebna izredna seja.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg15">Želi še kdo v zvezi z dnevnim redom? Gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg16">Spoštovani predsednik, spoštovani zbor! Citiram del 85. člena ustave: "Predsednik Državnega zbora mora sklicati izredno sejo, če to zahteva najmanj četrtina poslancev Državnega zbora ali predsednik republike." Nič ne govori o tem, da je imel predsednik pravico razsojati o tem, ali je seja potrebna, ali je ustrezno pripravljena itd. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg17">Predvidevam, da vsak, ki je pooblaščen, da predlaga sklic kakršnekoli točke, mora to predlagati na način, ki pritiče Državnemu zboru. Predvidevam, da se v bistvu ne more predložiti kot material parlamenta nekaj iz opusa bratov Grimm.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg18">Želi še kdo v zvezi z dnevnim redom? Gospod Kopše.</seg>
             </u>
             <note type="speaker">JOŽEF KOPŠE:</note>
-            <u who="#SDZ1.KopšeJožef" ana="#regular">
+            <u who="#KopšeJožef">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg19">Gospod predsednik, gospe in gospodje! Predsednik Državnega zbora ne more predvidevati, temveč se mora držati Poslovnika Državnega zbora. In če skupina predlaga točko, jo mora dati na glasovanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg20">Čisto tako ni. Tisti, ki nekaj predlaga, mora predlagati v skladu s pooblastili, ki jih ima Državni zbor in seveda na tem vztrajam. Ne bi želel, da vodimo okoli tega razpravo, ker smo vse dileme s tem materialom razčistili in se mi zdi, da bi bilo zelo nekorektno, da bi moral nase vzeti tisto, kar predlagatelji niso pripravili.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg21">Če ne želi nihče več v zvezi z dnevnim redom, potem ugotavljam sklepčnost, zato da sprejmemo <gap reason="inaudible"/>
                </seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg22">Gospod Podobnik želi besedo.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg23">Zaradi stvari, ki so se sedaj zgodile, prosim v imenu poslanske skupine Slovenske ljudske stranke, da se pred glasovanjem o dnevnem redu omogoči 15 minutni odmor. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg24">Sejo nadaljujemo ob 14.40 uri.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 14.17 uri in se je nadaljevala ob 14.35 uri.</note>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg25">Spoštovane poslanke in poslanci! Nadaljevali bomo s sejo Državnega zbora in za začetek ugotavljam prisotnost. Prosil pa bi za mir v dvorani. Ugotavljamo navzočnost v dvorani, gospe in gospodje!</seg>
                <note>53 prisotnih.</note>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg26">Zbor je tako sklepčen in lahko nadaljuje z delom.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg27">Pozivam predstavnika poslanske skupine Slovenske ljudske stranke, da pove, kaj so natuhtali.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg28">Spoštovani gospod predsednik, poslanke in poslanci! V poslanski skupini Slovenske ljudske stranke menimo, da bi na podlagi zadnjega odstavka 51. člena poslovnika lahko predlagatelji izredne seje tudi sami sklicali izredno sejo. Prav tako ugotavljamo oziroma obžalujemo, da zaradi občutljive teme z vidika slovenskih nacionalnih interesov, saj gre za vprašanje signala slovenske televizije v zamejstvu, torej obžalujemo, da predsednik Državnega zbora predloga za dodatno točko ni dal na dnevni red. Toda, ob posvetu v poslanski skupini in tudi v posvetu s poslanci Kluba primorskih  poslancev predlagamo, da je točka s to vsebino ena od sestavnega dela dnevnega reda prve naslednje seje Državnega zbora. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg29">Hvala lepa. Gospod Podobnik, če bi me prej pozorno poslušali, bi lahko razumeli, da je mogoče sklicati tudi izredno sejo na to temo takoj, ko bodo predloženi za zbor ustrezni materiali, in to bo lahko na izredni seji, lahko pa tudi na redni seji. Hkrati pa še enkrat pozivam predlagatelje, da material pripravijo v skladu s pristojnostmi, ki jih ima Državni zbor.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg30">Želi še kdo v zvezi z dnevnim redom? Ampak, ne s to točko. Gospa Pečanova.</seg>
             </u>
             <note type="speaker">BREDA PEČAN:</note>
-            <u who="#SDZ1.PečanBreda" ana="#regular">
+            <u who="#PečanBreda">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg31">Hvala za besedo. Gospod predsednik! Glede na to, da sem dobila vaš odgovor šele danes na mizo, vam lahko samo v imenu podpisnikov, ker ste ta dopis naslovili na mene, kot na prvo podpisano, povem, da bomo <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg32">Gospa Pečanova! Govorimo o dnevnem redu, o ničemer drugem.</seg>
             </u>
             <note type="speaker">BREDA PEČAN:</note>
-            <u who="#SDZ1.PečanBreda" ana="#regular">
+            <u who="#PečanBreda">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg33">
                   <gap reason="inaudible"/> Ja, bomo dopolnili sklepe oziroma stališča tako, kot ste od nas zahtevali. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg34">Obžalujem, da se vodijo polemike z menoj na seji zbora, glede na to, da so bile te stvari prezentne že prej in je tudi pisarna, kot veste, vsakemu, ki hoče kakšno stvar na Državnem zboru urediti, na stežaj odprta.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg35">Želi še kdo v zvezi z dnevnim redom? Če ne, potem dajem predlog, da danes opravimo predstavitev predloga proračuna Republike Slovenije za leto 1995, na glasovanje. Ugotovimo sklepčnost!</seg>
                <note>63 prisotnih.</note>
@@ -315,7 +295,7 @@
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg41">Najprej prosim predsednika Vlade Republike Slovenije, dr. Janeza Drnovška, da predstavi predlog proračuna Republike Slovenije za leto 1995.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ1.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg42">Gospod predsednik, spoštovane poslanke in poslanci! Veseli me, da razprava o letošnjem državnem proračunu poteka v razmerah zelo ugodnih tekočih gospodarskih gibanj. Podobna ocena velja za kratkoročne konjunkturne napovedi. Slovenija je država z eno najvišjih stopenj gospodarske konjunkture v Evropi.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg43">Dovolite mi, da se v kratkih obrisih spomnimo gospodarskih rezultatov v preteklem letu in jih primerjamo z letošnjimi četrtletnimi rezultati. Trenutno so že poznane prve ocene rasti proizvodnje v letu 1994 po posameznih dejavnostih, ki kažejo na zelo ugodne ekonomske rezultate. Gospodarsko leto 1994 je Slovenija zaključila s 6,4% stopnjo industrijske rasti, 11,8% stopnjo rasti obsega gradbenih del in 9% rastjo števila nočitev turistov. Porast prodaje v trgovini na drobno znaša 9,6%, v trgovini na debelo pa 6,8%. Dejavnosti transporta, skladiščenja in zvez v letu 1994 beležijo 1% realno rast, ugodne pa so tudi prve najave rasti kmetijstva, ki so precej višje od jesenskih prognoz.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg44">Kakšen je bil lanskoletni skupni poslovni rezultat bodo pokazali zaključni računi za leto 1994, ki še niso dokončno obdelani. Prve ocene kažejo, da rast dohodka sicer ne bo dosegla rasti industrijske proizvodnje, vendar ne bo nižja od napovedane 5% rasti družbenega proizvoda.</seg>
@@ -345,11 +325,11 @@
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg68">Spoštovane poslanke in poslanci! Želim vam uspešno delo pri usklajevanju proračuna in izražam pripravljenost Vlade, da seveda v najbolj konstruktivnem dialogu skušamo te proračunske rešitve sprejeti oziroma jih, če je možno, tudi še zboljšati. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg69">Hvala lepa. Prosim še ministra za finance, gospoda Mitja Gasparija za dodatno predstavitev predloga proračuna.</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ1.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg70">Spoštovani gospod predsednik, spoštovane poslanke in poslanci! Predlog državnega proračuna za leto 1995 izhaja iz osnovnih predpostavk, ciljev in smeri ukrepov ekonomske in socialne politike, ki jih je začrtal proračunski memorandum, katerega je Državni zbor sprejel v mesecu decembru. Temeljni cilji tega memoranduma so bili naslednji: znižanje inflacije na okoli 10% letno, nadaljevanje hitre gospodarske rasti na ravni okoli 5% letno, povečanje nacionalnega varčevanje kot podlago za večje investiranje, povečanje konkurenčne sposobnosti gospodarstva preko nadaljnjega fiskalnega razbremenjevanja in pa ohranjanje dosežene ravni socialne varnosti.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg71">Proračunski memorandum je predvideval primanjkljaj javnega sektorja v višini 16 milijard slovenskih tolarjev oziroma približno 0,7% bruto domačega proizvoda. Vendar pa zaradi možnosti realizacije zadolžitve predvsem v tujini ter v upoštevanju presežka o plačilni bilanci države, presežne ponudbe deviz in na podlagi tega, apreciacije tolarja, sodimo, da je potrebno bilanco javnega financiranja uravnotežiti ter s tem zvezati potrebo po zadolževanju predvsem v tujini. Poleg tega seveda je potrebno, da bi poleg prebivalstva začeli v slovenskem nacionalnem gospodarstvu varčevati tudi drugi sektorji, med njimi tudi javni sektorji.</seg>
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg72">Uravnoteženje bilance javnega financiranje je bilo doseženo predvsem z znižanjem proračunske porabe države, deloma pa tudi občin, dočim so ostale porabe ostalih blagajn, pri čemer mislimo na pokojninsko in zdravstveno, skoraj nespremenjene v primerjavi z globalno bilanco javnega financiranja ob predstavitvi oziroma sprejemu memoranduma. Pri tem je potrebno opozoriti, da v memorandumu še niso bili upoštevani prenosi med državnimi in občinskimi proračuni. Danes ugotavljamo, da prenosi, v kar vštevamo tudi del porabe, ki do sedaj ni bil prikazan v okviru bilance javne porabe, kot na primer prihodki geodetskih uprav, povprečnine sodnikov, prihodki veterinarskih uprav in zavodov in podobno, povečujejo državni proračun za dobrih 20 milijard slovenskih tolarjev.</seg>
@@ -373,7 +353,7 @@
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg90">Hkrati bi rad opozoril, da je Vlada v tem kontekstu sklopa ukrepov, ki jih bo predlagala sicer pred začetkom razprave o proračunu, že predlagala in parlament je že sprejel nekatere zakone, ki gredo v enak sklop zakonodaje, ki rešuje nekatera vprašanja na tem področju. Gre za zakon o jamstvih Republike Slovenije, ki ga je parlament sprejel pred kratkim; zakon o spremembah in dopolnitvah zakona o davku na dobiček je bil prav tako pred kratkim sprejet; zakon o izplačanih deviznih hranilnih vlogah, s katerim je končan postopek intervencije države na področju bančnega sektorja, in nekatere druge zakonske projekte, ki so se ukvarjali s posameznimi večjimi gospodarskimi kompleksi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#chair">
+            <u who="#ŠkolčJožef" ana="#chair">
                <seg xml:id="SDZ1-Izredna-26-1995-04-05.seg91">Hvala lepa gospod minister. Spoštovane poslanke, poslanci in drugi gostje, s tem je ta izredna seja zaključena. Želim vam obilo užitkov v branju teh proračunskih aktov.</seg>
             </u>
             <note type="time">Seja je bila končana 5. aprila 1995 ob 15.13 uri.</note>

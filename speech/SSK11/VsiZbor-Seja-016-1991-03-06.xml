@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 16. seja</title>
             <meeting n="16"
-                     corresp="#VsiZbor.1991-03-06.s016-01.DruzPolZb #VsiZbor.1991-03-06.s016-01.ZbObc #VsiZbor.1991-03-06.s016-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="183"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="111"/>
                <tagUsage gi="seg" occurs="318"/>
                <tagUsage gi="gap" occurs="5"/>
@@ -422,23 +413,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-03-06.s016-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-03-06.s016-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-03-06.s016-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -449,16 +423,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA</head>
             <head type="session">16. seja</head>
             <docDate>6. in 7. marec 1991</docDate>
             <note type="chairman">Predsedoval: dr. France Bučar, predsednik Skupščine Republike Slovenije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 11.40 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg1">Torej začenjam 16. skupno sejo vseh zborov Skupščine Republike Slovenije, ki je sklicana na podlagi 364. člena ustave in 134. člena poslovnika.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg2">Najprej ugotavljamo sklepčnost. Prosim, Družbenopolitični zbor!</seg>
                <note>34 delegatov.</note>
@@ -499,7 +477,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg26">Predlagatelj tega zakona je ustavna komisija; dobili ste njeno obrazložitev priloženo k samemu predlogu zakona. Ali želi morda besedo predstavnik izvršnega sveta? Prosim!</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg27">Gospod predsednik, spoštovane poslanke in poslanci! Dovolite mi, da kljub temu, da ste mnenje Izvršnega sveta dobili v prilogi, nekatere stvari vendarle dodatno pojasnim.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg28">Družbenopolitični zbor in Zbor občin Skupščine Republike Slovenije sta 23.1.1991 sprejela zahtevo, Zbor združenega dela pa pobudo Komisije za ustavna vprašanja Skupščine Slovenije, da se dopolni ustavni zakon za izvedbo amandmajev XCVI in XCVII k Ustavi Republike Slovenije na področju ljudske obrambe, in sicer tako, da se uveljavi moratorij za napotitve nabornikov v JLA iz Republike Slovenije. Moratorij naj bi veljal do sprejema nove ustave oziroma do sklenitve morebitne konfederalne pogodbe. Pobudo je obravnavala in podprla tudi Komisija Skupščine Republike Slovenije za mirovno politiko 12.2.1991.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg29">Vsi trije zbori te skupščine pa so 30.1.1991 ob obravnavi varnostne situacije v Republiki Sloveniji in v Jugoslaviji v stališčih in sklepih pod 5. točko predlagali Predsedstvu SFRJ, da proglasi moratorij na služenje vojaškega roka. Izvršni svet Skupščine Republike Slovenije ugotavlja, da so zahteve in pobude, ki so jih zbori Skupščine Republike Slovenije sprejeli 23.1.1991, vsebinsko drugačne, kot pa sklepi in stališča zborov 30.1. V odločitvah zborov gre za sklepe, medtem ko gre v odločitvah vseh zborov za pobudo Predsedstvu SFRJ. Ta pobuda je bila predsedstvu poslana, vendar odgovora na to še ni.</seg>
@@ -518,38 +496,38 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg42">Predlagani ustavni zakon uveljavlja moratorij torej zgolj na pošiljanje nabornikov v JLA, kar pomeni, da bomo v primeru, če bo danes sprejet, marčevski generaciji obveznikov, ki že ima pozive, le-te preklicali. Izvršni svet Skupščine Republike Slovenije podpira tako rešitev in s tem predlog ustavne komisije ter predlaga zborom te skupščine, da ustavni zakon sprejmejo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg43">Hvala lepa. Tu je še poročilo Komisije za mirovno politiko, ki je poročilo dala pisno. Ali želi predstavnik komisije še ustno poročati?</seg>
             </u>
             <note type="speaker">DR. JANEZ REMŠKAR, predstavnik Komisije za mirovno politiko.</note>
-            <u who="#SSK11.RemskarJanez1947" ana="#regular">
+            <u who="#RemskarJanez1947">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg44">Spoštovani predsednik, spoštovani poslanci! Komisija se je sestala danes zjutraj, pregledala ustavni zakon in sprejela določena stališča, ki so bila sestavljena tik pred našim zasedanjem. Lahko rečem, da so bila na komisiji stališča različna. Vendar, po zaključku smo vendarle sprejeli naslednje poročilo, v katerem bi vas opozoril na naslednje spremembe, ki so nujne. Namreč v 4. odstavku ne bi vsega v celoti še enkrat bral, ker mislim, da ste vsi to dobili na klop. V 5. odstavku bi bil tekst naslednji: "V razpravi se je kot temeljno vprašanje izpostavila dilema, kaj je nevarnejše za Slovenijo v trenutni politični situaciji, v Jugoslaviji: ali uvedba popolnega moratorija na odpošiljanje nabornikov v JLA ali pa uvedba načina obveznosti, kot ga določa predloženi ustavni zakon o spremembah in dopolnitvah ustavnega zakona." Nadaljnji tekst bi črtali.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg45">Dobro, dajem zakon v obravnavo. Želi kdo besedo? Prosim, Mile Šetinc.</seg>
             </u>
             <note type="speaker">MILE ŠETINC:</note>
-            <u who="#SSK11.SetincMile1956" ana="#regular">
+            <u who="#SetincMile1956">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg46">Spoštovani, za predlogom republiškega Sekretariata za ljudsko obrambo, zanj v tem primeru gre, to nam je vsem jasno, ne pa za ustavno komisijo, ki je zgolj formalni predlagatelj, se skriva nekaj, žal, neprijaznih, čeprav prozornih manipulacij. Prva je v tem, da se ustavni zakon mirno sklicuje na pobudo, ki so jo na predlog naše stranke, Liberalno-demokratske, sprejeli vsi zbori, ne da bi navedel, v čem je bil smisel oz. argumentacija za to pobudo. Naj vas na kratko spomnim, za kaj je šlo. Razlog našega predloga je bila ocena, da bo v tem letu prišlo do korenite spremembe celotnega vojaško obrambnega sistema v Jugoslaviji oz. do popolne ustavitve pošiljanja nabornikov iz Republike Slovenije v JLA, razen morebitnih izjem na podlagi konfederalne pogodbe. Vse to bi postavljalo tiste nabornike, ki bi bili v naslednjih mesecih še napoteni v JLA, pa četudi v enote na območju Slovenije, v izrazito neenakopraven položaj v primerjavi s tistimi, ki ne bodo napoteni v JLA zgolj za to, ker Zvezni sekretariat za ljudsko obrambo ne spoštuje odločitev Skupščine Republike Slovenije oz. morda nikoli ne bodo odšli na služenje vojaškega roka, če bo seveda sprejet t. i. mirovni člen nove slovenske ustave. Poleg tega tudi ni jasno, po kakšnih kriterijih bi bilo mogoče zbirati tiste nabornike, ki bi morali igrati vlogo žrtvenih kozlov v zadnjih mesecih pred izločitvijo Slovenije iz jugoslovanske federacije. Še več, če ne bi prišlo do sporazumnega dogovora o razdružitvi jugoslovanske federacije, bi bila Slovenija prisiljena enostransko uresničiti plebiscitne sklepe o samostojnosti in neodvisnosti, na ta način bi se še povečalo število državljanov Slovenije, ki bodo tudi po preteku 6-mesečnega roka za izvedbo plebiscita odločitve ostali pod jurisdikcijo federalne oblasti in tako ne bodo mogli v celoti uveljaviti svojih pravic kot državljanov samostojne in neodvisne države.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg47">Zato smo predlagali moratorij na pošiljanje nabornikov iz Republike Slovenije v JLA, ki naj traja do sprejema nove ustave Republike Slovenije, ki mora rešiti do konca dilemo, ali Slovenija potrebuje lastne oborožene sile ali ne, oz. do morebitne sklenitve konfederalne pogodbe, ki bo na novo opredelila tudi področje obrambe in varnosti tudi oboroženih sil. Skratka, eden od temeljnih razlogov za to pobudo je t. i. predlagani mirovni člen nove slovenske ustave, ki bo, če bo sprejet, ne samo ukinil sleherno pošiljanje slovenskih obveznikov v JLA, ampak bo pomenil tudi začetek prehodnega obdobja, v katerem bo za varnost Slovenije skrbel le obstoječi, torej ne z novimi obvezniki povečani obrambni potencial Slovenije. Smisel pobude kajpak ni bil v tem, da bi pred JLA rešene, če tako rečem obveznike, preusmerili v slovensko teritorialno obrambo ali policijo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg48">Predlagana formulacija ustavnega zakona je nesmiselna tudi s praktičnega vidika. Začetek usposabljanja teh obveznikov v teritorialni obrambi je predviden za jesen, do takrat pa bo skoraj zagotovo sprejeta nova slovenska ustava, in če bo v ustavni razpravi pač zmagal vojaški in ne mirovni člen, bo pač mogoče že na podlagi nove ustave začeti usposabljanje v teritorialni obrambi. Sedanja formulacija je vsekakor nesprejemljiva, vsekakor pa ne naključno prejudiciranje izidov ustavne razprave. Zato predlagam ustavni komisiji, da to formulacijo ustavnega zakona umakne in jo nadomesti z besedilom, ki bo določalo zgolj moratorij napotitve nabornikov v JLA iz Republike Slovenije. Naslednja manipulacija predlagatelja je sklicevanje na domnevno velike probleme obveznikov zlasti študentov v primeru, da ne bodo poslani v nobeno vojsko, ne v jugoslovansko, ne v slovensko.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg49">Gospod poslanec, moram vas prekiniti, zmerjanje ustavne komisije kot formalnega predlagatelja, češ da vrši tukaj razne mahinacije, oprostite, takega obnašanja si ne moremo tukaj dovoliti. To je eno. Drugič, ustavna komisija mislim, da j lahko toliko zaupamo, da verjamemo v njeno integriteto, da vendarle ve, kaj predlaga ne pa da se tukaj dezauira pred celotno skupščino. Tega si ne dovolim.</seg>
             </u>
             <note type="speaker">MILE ŠETINC:</note>
-            <u who="#SSK11.SetincMile1956" ana="#regular">
+            <u who="#SetincMile1956">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg50">Dobro, spoštoval bom to opozorilo, tudi nimam več nobene besede manipulacija v tekstu. Skratka, gre za praktična vprašanja, ki jih bo po morebitnem sprejemu mirovnega člena treba ustrezno rešiti, imajo jih pač že sedaj tisti obvezniki, ki bi morali biti doslej napoteni JLA, pa zaradi znanih razlogov niso bili. Njihov položaj je še toliko slabši, ker ta hip ne vedo, ne kdaj ne kam, če sploh kdaj in če sploh kam bodo poslani na služenje vojaškega roka. Kar pa zadeva študente, je bolje, da izgubljeno leto izgubljajo s priložnostnimi zaslužki in pripravo na študij, kot pa da zapravljajo čas, energijo in pa duha v vojašnicah.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg51">Na koncu bi rad samo še protestiral, ker je predlagatelj toliko časa zavlačeval s pripravo ustavnega zakona o moratoriju. Pobuda je bila namreč sprejeta že 23. januarja in je bilo povsem dovolj časa, da bi sprejeli ustavni zakon za moratorij, ki bi veljal že v celoti in nesporno za celotno marčno generacijo obveznikov. Kljub temu pa utegne priti prav do tega, kar smo hoteli preprečiti s pobudo za moratorij, da bi se povečalo tudi tisto število žrtvovanih, ki bi tudi po preteku plebiscitnega roka ostali pod jurisdikcijo federalnih oblasti. Pri čemer je povsem nepomembno, ali gre za enote JLA v Sloveniji ali kje drugje. Zato sem z zadovoljstvom sprejel informacijo republiškega sekretarja za ljudsko obrambo, da bi bilo mogoče preklicati že odposlane pozive za marčne obveznike in zato sprašujem predlagatelja, ali to velja v celoti 100 % za vse marčne pozive, ker kolikor bi človek sklepal tudi iz osebnih izkušenj, se pošiljanje začne že v začetku tistega meseca, ko gre generacija v vojsko. Ker če ne bi bilo tako, če bi torej vsaj del te mlajše generacije vendarle šel v JLA, bi vendarle s tem predlagatelj žal dokazal, da ga pri vsej stvari zanima predvsem človeški material za vojsko, ki jo sam ustanavlja. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg52">Želi predstavnik Izvršnega sveta repliko prosim.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg53">Torej se seveda ne bom spustil na ta nivo in govoril o manipulacijah. Tekst zakona, ki ga imate pred sabo, je bil v resni in polemični razpravi na ustavni komisiji. Izglasovan je bil sicer z večino glasov, ne s konsenzom, ampak to je predlog ustavne komisije. Pobudnik za moratorij ni bil izvršni svet niti ne sekretariat, ampak zbori skupščine. Uradni predlagatelj tega zakona je ustavna komisija. In izvršni svet je tekst pripravil šele potem, ko je po sklepih zborov ustavna komisija to Izvršnemu svetu naložila. To okrog formalnih zadeva.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg54">Pripravili smo pa tak tekst, ki po naši oceni omogoča z obvladljivimi težavami - ne brez težav, ampak z obvladljivimi težavami reševanje tega problema. Tekst, kot je predlagan, ni nikakršno prejudiciranje ustavne razprave. Kdo lahko trdi, da tisto kar je v osnutku ustave in tisto kar lahko še bo enkrat predlagano z ustavo, da bo to dejansko sprejeto in se na to, kar naj bi še bilo, sklicuje. Vlada, izvršni organi morajo delati na podlagi zakonodaje, ki obstaja.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg55">Konec septembra lanskega leta, je ta sestav skupščine na podobni seji sprejel ustavni zakon za izvedbo amandmajev 96 in 97, kjer je že sprejeto, kar zdaj ponovno piše v 1. členu tega ustavnega zakona, da teritorialna obramba izvaja vojaško usposabljanje tistih obveznikov, ki se jih ne pošlje v JLA. Hkrati pa je ta sestav na ločenih sejah zborov sprejel julija lanskega leta obvezo, obvezo za določene organe, republike, da usposablja vse tiste, ki jih pošljemo v JLA. Torej, mi ravnamo po tistem, kar že piše v ustavi in ustavnem zakonu ne po tistem, kar naj bi šele bilo v nekem mirovnem členu. Vprašanje, če bo to sprejeto. Lahko bo tudi kaj drugega. Ne prejudiciramo ničesar, samo do takrat, dokler ni sprejeto, velja ta ustava z amandmaji in ustavnimi zakoni, ki jo imamo in prosim, da se to upošteva in da se ne deli očitkov levo in desno.</seg>
@@ -560,68 +538,68 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg60">Na nek način se vedno na teh razpravah o problemu nacionalne varnosti zapletamo v stvari, ki naj bi šele bile sprejete, niso pa še sprejete. Zato predlagam, tudi tokrat v tej razpravi, da ostro ločimo tisto, kar je že sprejeto, za kar obstaja zakonska osnova in tisto, kar naj bi šele nekoč bilo ali v ustavi ali v zakonih. Če bomo stvari na ta način prejudicirali, ne bomo nikamor prišli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg61">Hvala Lepa. Kuhar.</seg>
             </u>
             <note type="speaker">IVAN KUHAR:</note>
-            <u who="#SSK11.KuharIvan1945" ana="#regular">
+            <u who="#KuharIvan1945">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg62">Spoštovano predsedstvo, spoštovane kolegice in kolegi! Komisija za obrambo sicer predloga ustavnega zakona o spremembah in dopolnitvah ustavnega zakona za izvedbo ustavnih amandmajev 96 in 97 ni obravnavala, zato bom razpravljal kot delegat Socialistične stranke Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg63">Želel bi vas spomniti, da velja v posameznih republikah v Jugoslaviji različni pravni red. Prav tako velja, na podlagi zvezne ustave in zveznih zakonov, zvezni pravni red. Z ustavnimi amandmaji, ki smo jih sprejeli v Skupščini Republike Slovenije k Ustavi Republike Slovenije v septembru 1990, smo uredili vodenje in poveljevanje v teritorialni obrambi v miru in izrednih razmerah in urejanje vojaške obveznosti. Gre za 96. ustavni amandma in ustavni zakon ter za 99. amandma k Ustavi Republike Slovenije, s katerim smo razveljavili vse tiste zvezne zakone in z ustavo prenešene obveznosti, ki jih je federacija opravljala do sedaj na področju obrambe in vojaške dolžnosti. S tem smo vzpostavili pravni red, ki naj bi veljal na tem področju v Republiki Sloveniji. Spomniti bi vas želel na dokaj široko razpravo o predlogu za izdajo republiškega zakona o ljudski obrambi in zaščiti in za predlog za izdajo zakona o vojaški dolžnosti. Menim, da smo v teh razpravah porabili veliko časa. Danih je bilo veliko predlogov, pobud, dopolnitev, še zlasti tistih, ki so zadevale vprašanje civilnega služenja vojaškega roka, zaradi različnih vzrokov. Najbolj množični pa so bili predlogi za ureditev ugovora vesti. Oba zakona sta v fazi priprav predlogov in menim, da bomo še v tem mesecu govorili o njiju v tej skupščini. Zakon o splošni ljudski obrambi je že bil posredovan skupščini, zakon o vojaški dolžnosti pa bo v nekaj dnevih.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg64">Rad bi vas obvestil tudi o tem, da sem se včeraj, kot predsednik Komisije za obrambo, udeležil Odbora za ljudsko obrambo Zveznega zbora Skupščine SFRJ, kjer smo obravnavali dva zakona, in sicer zakon o spremembah in dopolnitvah zveznega zakona o ljudski obrambi in predlog spremembe in dopolnitve zakona o vojaški dolžnosti. Moram vam povedati, da omenjena zakona urejata vprašanja, ki zadevajo bivšo splošno ljudsko obrambo in tudi vojaške dolžnosti. Gre za predlagane rešitve, ki JLA dajejo suvereno oblast na področju obrambe in vojaške dolžnosti, za prevzemanje nalog JLA, kot so bile urejene zlasti na področju vojaške obveznosti pred letom 1987, ko je v bistvu jugoslovanska armada imela v rokah celotne naborne zadeve. To pa pomeni prevzem zdravstvenih pregledov v zdravstvenih ustanovah JLA, izvedbo celotnega nabora in opredelitev vojaških sposobnosti, napotitev in vojaško inšpekcijo ter kazni. Z našimi rešitvami v Republiki Sloveniji, s sprejetjem ustavnih amandmajev in z zakoni, ki so v pripravi, ubiramo pot, ki smo si jo začrtali. V tako imenovanem prehodnem obdobju, ki ga ne moremo časovno opredeliti, kaže podpreti predlagatelja in danes sprejeti predlog ustavnega zakona, saj smo te zadeve vzpostavljali že takrat, ko smo govorili o ustavnih amandmajih 96 in 97 in 99. Gre preprosto za to, da pravno praznino, ki je bila še nedorečena s temi spremembami dorečemo. Zadeve so dovolj konsistentno urejene. Zato podpiram argumente, ki jih gospod J. Janša, republiški sekretar za ljudsko obrambo, navaja. Če sprememb ne sprejmemo, se vprašajmo, ali je naša univerza sposobna sprejeti dve generaciji v istem šolskem letu. Vprašajmo se, kaj bo z mlado generacijo, ki ne bo šla nikamor in bo ostala v bistvu na cesti. Zaposlitve ni, za študij ni možnosti, v JLA ni možno oditi, zato mislim, da so predlagane rešitve, za to obdobje, popolnoma umestne in podpiram predlog, da danes predlog sprememb in dopolnitev ustavnega zakona sprejmemo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg65">Hvala lepa. Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg66">Jaz sem se za to diskusijo prijavil, ker je stvar začela teči tako kot je. Čeprav sem član kluba Slovenske demokratične zveze, govorim zgolj v svojem imenu, ker nismo posebej razpravljali o tem zakonu. Mislili smo, da ne bo treba braniti tega zakona, saj se nam je zdelo razumljivo, da bo sprejet. Opozoril bi na to, kar sta sicer veliko bolje že povedala tako gospod minister kot zdaj poslanec Kuhar. Ta zakon ureja dvoje: ureja moratorij za pošiljanje v JLA in ureja služenje vojaškega roka v slovenski teritorialni obrambi. Zato se mi zdi nepotrebno in tudi nesprejemljivo mešati v to diskusijo vprašanja v zvezi z načrtovano oziroma zaželjeno delimitarizacijo in podobno. Mislim pa, in zaradi tega sem se pravzaprav prijavil, da gre za diskusijo, ki zadeva nekaj več, kot je vprašanje, ali zdaj poslati še eno generacijo v JLA ali ne. Gre preprosto za vprašanje, ali smo mi res pripravljeni svojo, še ne priborjeno suverenost v resnici tudi braniti ali je nismo pripravljeni braniti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg67">Jaz ne verjamem, da mnogi racionalni razlogi, se pravi računarski razlogi, govorijo za to, da so druge stvari bolj pomembne in da na prvi pogled ni pametno sprejemati take odločitve. Po drugi strani pa je dejstvo, da seveda ni države, ali vsaj skoraj ni države, ki bi nastala in ostala in se ji ne bi bilo treba v dobro svoje državnosti kdaj pa kdaj soočiti z nasiljem in tudi odgovarjati na to nasilje; če ne drugače, pa s pripravljenostjo, da se temu nasilju upre. Če je kdo mislil, da se mi prej ali slej ne bomo soočili s tem vprašanjem, se je najbrž motil. Vprašanje je samo, ali smo že pripravljeni vzeti nase takšno odločitev ali ne. Sam sem prepričan, da mi verjetno danes ne bi več sedeli tukaj in razpravljali, tako kot razpravljamo, če ne bi že v tem času doslej kazali pripravljenosti, da se branimo v primeru nekega nasilnega posega. Prepričan sem, da bi stvari že nekaj časa potekale drugače, kot potekajo, če ne bi, naj bo videti vse to včasih nasilno ali kakorkoli že, pravzaprav opozarjali tudi na usposobljenost in opremljenost naše teritorialne obrambe, in če ne bi takrat zadržali tistih 60 % orožja teritorialne obrambe, ki smo ga zadržali lani maja. Zdi se mi, da nam mora biti jasno tudi to, da bo to neodvisnost treba na tak ali drugačen način varovati še precej časa. Osebno sem prepričan, da tudi še kakšno desetletje. Še zlasti, če bo recimo ostali del Jugoslavije ostal bolj ali manj združen. Brez kakršnihkoli nepotrebnih obtožb se bojim, da bo še zmeraj ostal kdo, ki bo v Sloveniji tudi videl svojo 19. pokrajino, ki zgodovinsko pripada njemu in bo to hotel na tak ali drugačen način uresničiti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg68">Po drugi strani pa bi opozoril še na to, da po mojem prepričanju prav dejstvo, da mi opozarjamo na to, da smo se pripravljeni braniti in da smo to še nepridobljeno suverenost pripravljeni tudi z orožjem braniti, odvrača tiste poskuse, ki bi želel to suverenost ukiniti ali izničiti in to tudi zaradi tega, ker iz mednarodnega prostora že prihajajo opozorila, da svet zavrača kakršnokoli možnost nasilnega preprečevanja teh procesov. Zaradi tega mislim, da ta zakon ne govori samo o tem, o čemer navidezno govori, ampak govori o veliko bolj daljnosežnih zadevah, in da se mi danes odločamo tudi o teh daljnosežnih zadevah in zato se seveda odločno zavzemam za to, da se sprejme. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg69">Hvala lepa. Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg70">Spoštovane kolegice in kolegi poslanci! Tukaj je bilo povedano, da za tem predlogom ustavnega zakona stoji ustavna komisija. Jaz bi rad kot član te ustavne komisije povedal, tega dejstva ne osporavam, ampak da ta ustavna komisija ni nek enovit blok, ki bi navdušeno glasoval in predložil ta ustavni zakon, kot je mimogrede tukaj že namignil vsaj gospod Janša. Če se prav spomnim, je bilo glasovanje takšno, da je od 14 prisotnih članov 8 glasovalo za ta zakon, 1 je bil proti, drugi pa so bili vzdržani.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg71">Bilo pa je to glasovanje po dokaj temeljiti ali vsaj obsežni razpravi, ki je pokazala na velike razlike in nerazčiščena vprašanja. Jaz sem bil že prepričan, da nisem uspel s svojim predlogom, da je že ta razprava pokazala, da ustavni zakon ne sme biti predložen skupščini na takšen način in v takšnem besedilu, če želi tukaj dobiti potrebno 2/3 večino, ampak je treba iskati drugačno rešitev. Prepričan sem, da je bistvo spora v naslednjem: Ko je šlo za moratorij na služenje vojaškega roka JLA je seveda motiv, zakaj je kdo od nas glasoval za takšen moratorij, lahko različen. Prepričan sem, da je precejšen del te skupščine glasoval za ta moratorij zato, da bi vojake preusmerili iz JLA v slovensko vojsko. Upoštevati pa morate, da je velik del te skupščine izglasoval ta moratorij tudi zato, ker smo pristaši procesa demilitarizacije in nam torej ni šlo samo za moratorij na služenje v JLA, ampak na služenje vojaškega roka sploh. Seveda je kvaliteta drugačna, če nekdo služi v JLA ali pa če služi v teritorialni obrambi in v notranjih zadevah v Sloveniji. Seveda, še večja razlika je pa v kvaliteti, če nekdo služi ali če sploh ne služi vojaškega roka. Zavzemanje za proces demilitarizacije ni neka osamljena zadeva, ni stvar, ki bi jo podpiral samo en majhen del državljanov, je stvar, ki ima široko politično podporo in veliko podporo med državljankami in državljani Slovenije. In tega po moje ta predlog ustavnega zakona ne upošteva. Menim, da je ta prva osnovna določba 1. člena, ki pravi: "Dolžnost služenja vojaškega roka se izvršuje v teritorialni obrambi in v organih za notranje zadeve", pač izpeljava tiste ideje, da je moratorij namenjen temu, da se preusmeri služenje z JLA v slovensko vojsko. Ni pa tukaj ne duha ne sluha o demilitarizaciji in nobenih resnejših poskusov, da bi tudi ta del politične volje velikega dela Slovencev upoštevali pri oblikovanju tega zakona in pri tej rešitvi. Prepričan sem da so tukaj možne vmesne rešitve, prepričan sem, da iz gradiv, ki jih je predložil izvršni svet, iz njegovega mnenja izhaja, da gre tukaj za zelo občutljiva vprašanja. Strinjam se, da se o teh stvareh ne moremo odločati na hitro in na pamet, zlasti se je mene posebej prijelo opozorilo izvršnega sveta, ki pravi, da bi bilo nevarno ta trenutek prenašati težišče spopada med JLA in recimo demokratično ureditvijo ali legitimnimi predstavniki s Hrvaške na slovensko ozemlje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg72">Nikakor pa ne morem sprejeti logike in takšnega načina vsiljevanja tega ustavnega zakona, ki bo približno takšna: tisti, ki je za ta ustavni zakon, je za to, da se brani slovenska pomlad in demokracija in tisti, ki je proti,je pa proti temu. Na tak način je škoda, da se začenja razprava. Ne gre za vprašanje, kdo je pripravljen braniti veljavno slovensko ureditev, gre za vprašanje, na kakšen način se uspešnejše brani. Morda bo to nekorektno, ampak jaz bom citiral gospoda Zagožna iz Poljč, ko je pozval, namenjeno je bilo nam, strankam opozicije, pozval nas je na strnitev sil, ker je ta strnitev političnih sil v preteklosti bila tista, ki je odvračala pritiske od Slovenije. Seveda je možno meniti in morda je kdo subjektivno popolnoma prepričan, da je popustil oborožen pritisk takrat, ko smo demonstrirali vojaško silo, ko so pred vsemi našimi institucijami stali oboroženi vojaki. Jaz osebno sem bil bolj prepričan, sem pa že večkrat povedal, da je odvračanje bilo odvisno od tega, kakšna je bila stopnja enotnosti političnih sil, ko je šlo za bistvena vprašanja osamosvajanja Slovenije. Zaradi tega bi tudi pri izdelavi tega ustavnega zakona pričakoval več občutka za to, da se išče sporazumna rešitev in da se ne gre zelo na lahko roko, brez kakršnegakoli popravka, niti vejice niti obrazložitve preko resnih pripomb, ki smo jih imeli na ustavni komisiji. Jaz mislim, da je stvar zrela, da se vrne na ustavno komisijo, da se tam o teh stvareh še enkrat resno pogovorimo in da pripravimo predlog, za katerim bomo lahko s čisto vestjo stali tudi tisti, ki se zavzemamo za postopno demilitarizacijo Slovenije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg73">Hvala lepa. Janša, repliko prosim!</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg74">Ogromno sprenevedanja je tukaj. Nekaj nenamernega, ker gre za komplicirane zadeve, nekaj pa namernega, ker ta razprava je šla skozi ustavno komisijo. (Vmes nekdo iz klopi - se ne razume) Lahko. In tam smo šli skozi ta vprašanja, zdaj bom seveda argumentiral, kar sem rekel.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg75">Prvi člen ustavnega zakona, ki je predlagan, v prvih dveh odstavkih samo povzema tisto, kar že piše v ustavnem zakonu, ki se ga s tem zakonom spreminja. Samo povzema. Na ustavni komisiji sem tudi pojasnil, zakaj je to še enkrat napisano: zaradi tretjega odstavka. Tretji odstavek 1. člena tega ustavnega zakona namreč piše, da je v Republiki Sloveniji priznana pravica do ugovora vesti vojaški dolžnosti, na podlagi te pravice je mogoče dolžnost služiti vojaški rok nadomestiti služenje v civilnih službah. Tisti, ki se spomnite ali pa imate pred seboj ustavni zakon, ki že velja, lahko pogledate in vidite, da za tem odstavkom v zakonu, ki že velja, pride še določba, da civilna služba ne sme biti daljša od vojaške službe. Namen tega člena je, da se ta dodatek na nek način briše in da se s tem hkrati, ko urejamo to vprašanje o moratoriju, izognemo tudi problemu, ki se je pokazal ob sprejemanju osnutka zakona o vojaški dolžnosti. Tam je bil največ razprave o kriterijih, na podlagi katerih se bo ugotavljal ugovor vesti. Takrat smo povedali, da če ustavni zakon spremenimo in če enakost služenja v civilni in vojaški službi ni ustavna obveza, potem je lahko glavni selektivni kriterij daljši rok civilne službe. Da pa bi seveda bil člen razumljiv, sta v njem tudi 1. in 2. odstavek, drugače sta pa to enako besedilo, kot že velja in mi s tem ničesar ne prejudiciramo in s tem ne preusmerjamo vojake iz JLA v slovensko vojsko. To so neresnične trditve.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg76">Poleg tega je seveda danes prepozno, da se sprašujemo, ali je osamosvojitev nevarna, kot piše v stališčih mirovne komisije ali kot je bilo tu na nek način povedano. Mi smo že na tej poti. Srečujemo se s takimi in drugačnimi težavami, te težave je potrebno upoštevati. Strinjam se, da je najboljša obramba proti temu enotnost političnih sil v Sloveniji in da je bil glavni razlog, zaradi katerega so pritiski, ki so bili zelo močni, konec novembra in začetku decembra lanskega leta popustili, da je bil dosežen konsenz o plebiscitu. Naslednji dan ni bilo več ultimatov, ni bilo nobenih zahtev bojna pripravljenost enot JLA je padla na normalno, mirnodobno raven in tako naprej. To je dejstvo. Vendar pa s tem seveda močno povezujem vprašanje dejanske izvedbe tega, kar je bilo sprejeto na plebiscitu. Plebiscitna odločitev brez tega, da slovenska država dobi efektivno oblast na svojem ozemlju, nič ne velja. Junijski rok bo mimo, te osamosvojitve, razdružitve ali česarkoli pa seveda ne bo nikjer. Niti nekaj korakov naprej ne bomo, dokler seveda te efektivne oblasti ne bo, ne glede na lepe besede, ki jih je tudi gospod Ribičič prej veliko uporabljal, je to dejstvo. Če kdo misli, da lahko to efektivno oblast doseže s tem, da podpisuje deklaracijo za hitro enostransko razorožitev, potem jo naj podpisuje, ampak čez pet mesecev bo jasno, za kaj gre.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg77">Kar se tiče tega očitka, tudi prisotnega v nastopu gospoda Ribičiča, češ da s tem, ko sprejemamo ta ustavni zakon, na nek način prenašamo težišče konflikta s Hrvaške na Slovenijo, je treba reči, da je to ena od stvari, na katere je izvršni svet opozoril v tem mnenju; hkrati pa je seveda treba vedeti, da ta konflikt ne bo bistveno manjši, če ostanemo pri tem, kar sedaj velja, in tako lahko pošljemo 20 % generacije. Med 20 % in nič za JLA ni kakšne velike razlike, se pravi, konflikt v tem primeru ne bo bistveno večji. Je pa jasno, da je to naslednja točka spora, ki pa je objektivno nujna, če gremo v osamosvojitev. Drugače lahko čakamo, da nam zvezna skupščina "požegna" plebiscit, kar se pa najbrž ne bo zgodilo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg78">G. Janša opozarjam, to je replika, to ni samostojen prispevek k diskusiji.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg79">Zdaj prispevam k temu, da bi bila razprava krajša. Kar se tiče predlagatelja oziroma sestavljalca besedila, predlagatelj je ustavna komisija, ničesar ne zgubimo, če v 1. členu črtamo 2 in 3 odstavek. Ničesar. Tisti, ki se zdi nekaterim najbolj sporen, ker pravi, da se s tem uvaja neka nova slovenska vojska. Ker ta dva odstavka sta že napisana v ustavnem zakonu, ki že velja. Tukaj sta samo ponovljena zaradi tega, da se približno ve, na kaj se nanaša 4 odstavek, oziroma 3. vsebinski odstavek. Če je potrebno, da se ustavna komisija za to sestane in za to odloči, sem jaz tudi za to. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg80">Hvala. Gospod Franco Juri. Prosim, res samo repliko.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg81">Ne bi odgovarjal na druge stvari, čeprav so bile sporne. Ta predlog se mi zdi smiselen, ker bi ustavna komisija lahko še enkrat preverila, kje gre za nesporazume, kje pa za replike. Hotel pa sem reagirati samo na eno stvar, in sicer na kvalifikacijo mirovne deklaracije, ki se ta trenutek podpisuje po Sloveniji. Kvalificirati to mirovno deklaracijo, ki so jo podprle mnoge stranke, mnogi posamezniki, ugledni javni in drugi delavci, kot deklaracijo o takojšnji enostranski razorožitvi, zdaj to ni rekel gospod Janša, ampak razumeti je bilo kot deklaracijo pristašev tistih, ki so za to, da položimo orožje in se predamo pred nasprotno silo, je po mojem mnenju skrajno vprašljivo politično dejanje. Na ta način bomo ne samo sprožili tukaj nepotrebne polemike, to je takšna kvalifikacija deklaracije in njenih podpisnikov, ki pravzaprav ne more voditi v konstruktivne razprave. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg82">Hvala lepa. Franco Juri.</seg>
             </u>
             <note type="speaker">FRANCO JURI:</note>
-            <u who="#SSK11.JuriFranco1956" ana="#regular">
+            <u who="#JuriFranco">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg83">Oglašam se tudi kot član ustavne komisije in tudi jaz lahko potrjujem, da je bila razprava polemična, vsekakor korektna. Večina ni bila tako močna, osem na štirinajst prisotnih. Vendar sta se soočala dva koncepta, ki sem ju že takrat opredelil kot popolnoma legitimna. Koncept zagovornikov poti do suverenosti s pospešeno pripravo obrambnega sistema in stališče tistih, ki bolj poudarjajo političen konsenz, torej politično enotnost v slovenskem prostoru in skupni nastop do drugih sogovornikov, ki izvajajo pritisk nad slovensko suverenostjo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg84">Jaz sem takrat glasoval proti ustavnemu zakonu tudi v imenu stranke in mislim, da je kolega Šetinc že izčrpal naše argumente. Na kratko bi pa repliciral gospodu Janši, ki je prej govoril o prehodnem obdobju, za katerega naj ne bi vedeli, koliko lahko traja. Mislim, da je tudi Šetinc bil zelo jasen, pa moram tudi jaz nekaj ponoviti. Pri našem ugovoru temu ustavnemu zakonu glede tako imenovanega prehodnega obdobja, kjer naj bi uveljavili moratorij, govorimo o obdobju do sprejetja nove slovenske ustave in smo prepričani, hočemo biti prepričani, da to obdobje ne bo nekaj let, ampak nekaj mesecev. Zato zadeva ni sporna.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg85">Kompromisna rešitev je uveljavitev moratorija, takojšnji pogovori za postopen umik enot JLA iz Slovenije. V tem času do nove slovenske ustave ali vsaj do ljudskega referenduma, kjer naj bi odločali o nadaljnjih potezah Republike Slovenije glede obrambnih vprašanj, lahko uveljavimo moratorij, lahko dovolimo tej generaciji nabornikov, naj ostanejo doma in s tistim delom proračuna, ki bi ga sicer namenili usposabljanju teritorialcev, rednih vojakov v naši republiki, si lahko privoščimo marsikatero potezo v prid profesionalnemu profiliranju te generacije in seveda tudi k integriranju te nesrečne, jaz bi lahko rekel srečne generacije, v svet dela in proizvodnje.</seg>
@@ -629,12 +607,12 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg87">Seveda to ne pomeni, da so tudi druga stališča, tista, ki jih je prej izrazil kolega Peršak, prav tako legitimna. Vendar, ker smo v pluralni družbi in ker ta zakon potrebuje dvetretjinsko večino, pogrešam predvsem maksimalni konsenz o tem zakonu. Zato podpiram predlog kolege Ribičiča, naj se še enkrat usedemo in naj skušamo dobiti tiste kompromise, ki bodo zagotovili maksimalno politično enotnost v tem trenutku. Hvala.</seg>
             </u>
             <note type="speaker">DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg88">Hvala lepa. Sedaj bi si moral še jaz dovoliti, preden dam naprej diskusijo, repliko na dosedanji način polemiziranja z ustavno komisijo. Nihče ni ugovarjal, da ne bi bil predlog ustavne komisije legalen, v skladu s poslovnikom. Seveda, res je, da imamo opravek s tako imenovano količinsko demokracijo, drugačne danes v svetu ne poznamo. Glasovi se ne tehtajo, ampak se štejejo. Na žalost, s tem ni rečeno, da niso drugi argumenti bolj tehtni kot eni kot drugi, ampak preprosto drugega inštrumentarija demokracija, ki jo danes pozna svet, ne pozna. Zato ni treba s tem polemizirati. Če je občutek, da je premajhna večina bila na ustavni komisiji, to je čisto mogoče. Potem bi pozval člane ustavne komisije, da se sej udeležujejo, ki se jih pa ne.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg89">Besedo ima Vika Potočnik. Saj ste napisani.</seg>
             </u>
             <note type="speaker">VIKTORIJA POTOČNIK:</note>
-            <u who="#SSK11.PotocnikViktorija1957" ana="#regular">
+            <u who="#PotočnikViktorija">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg90">Spoštovani delegati oziroma spoštovani poslanci! Dovolite mi, da naredim prvi uvod v zaščito komisije, kateri predsedujem, to je Komisija za mirovno politiko. Gospod Janša, v tem trenutku se preverja, ali je šlo iz te hiše tudi vabilo za vaš sekretariat oziroma za Izvršni svet. Obvestilo je, da je, tako da počakajmo in potem delimo etikete, ali ste bili vabljeni ali ne.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg91">Drugič pa mislim, da na to komisijo ni nujno, da ste bili vabljeni, kajti predlagatelj tega ustavnega zakona je ustavna komisija in njeni predstavniki oziroma službe so bile na tem sestanku.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg92">Drugič. Mislim, da ste nekorektno polemizirali s tistim delom poročila komisije - zavedam se, da je bil zelo kratek rok, danes zjutraj smo o tem razpravljali - ko podtikate, da se komisija sprašuje, ali je osamosvajanje nevarno ali ni. To ni res in niti v enem stavku komisija ne postavlja to kot dileme. Postavlja pa sicer kot dilemo, kako to vprašanje, ki ga danes obravnavamo, reševati, na kakšen način.</seg>
@@ -646,30 +624,30 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg98">In še čisto na koncu. Boli me in mi je težko, da se v tem parlamentu delimo in da smo tisti, ki zagovarjamo koncept demilitarizacije, malodane narodovi izdajalci. Ali pa celo, da smo proti osamosvojitvi Slovenije. Mislim, da so to nevarne in zelo manipulativne teze, če vemo ob dejstvu, da še v tem parlamentu nismo sprejeli celovitega nacionalno-varnostnega koncepta. In normalno se nam neprestano dozdeva, da nekdo hoče skozi leva vrata ali druga vrata pripeljati nekaj, kar v tem parlamentu še skoraj ni dogovorjeno in postaja že vprašanje nekega prestiža ali tehtanja ali grdega obmetavanja, ki smo ga deležni zagovorniki demilitarizacije tudi v javnosti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg99">Hvala lepa. Aurelio Juri.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SSK11.JuriAurelio1949" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg100">Spoštovani kolegi, bom kratek. Mislim, da vprašanje polemiziranja z ustavno komisijo ne gre jemati na tak način. Mislim, da je bilo samo opozorjeno, da razmerja, ki so v ustavni komisiji, se potem zrcalijo na razmerjih v parlamentu, da je jasno, da če takega širšega konsenza že v sami ustavni komisiji ne dosežemo, da bo padel tudi zakon, ki naj bi ga danes sprejeli, ker takega razmerja ni. Pridružujem se torej tisti zahtevi, da se ustavna komisija še enkrat sestane, ker vendarle ta problem - in jaz nočem gledati problema skozi vprašanje ustvarjanja nove vojske, ampak skozi vprašanje reševanja problemov teh 12.000 nabornikov, ki z moratorijem obvisijo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg101">Na sam ustavni zakon imam tudi jaz svoje pomisleke. Kot je že nekdo povedal, osebno sem tudi tolmačil moratorij kot prvi konkretni korak k demilitarizaciji. Vidim pa, da gre učinek tega moratorija nekako v drugo smer. In argument seveda je tudi vprašanje delovnih mest, vprašanje vpisov na univerzo itn., ki ne bi pripomogli k temu, da bi teh 12.000 mladih ljudi, ki nas danes gledajo in se sprašujejo ter čakajo, kaj bomo rekli, ali jih bomo poslali v teritorialno obrambo ali v JLA ali ne, ali bodo ostali doma. Jaz mislim, da bi večinoma vsi najraje ostali doma, prepričan sem. No, v nadomestilo temu zakonu bi predlagal izdelavo programa za alternativno civilno služenje vojaškega roka. Vika Potočnik je že nekaj konkretnega nakazala. S temi sredstvi bi odprli marsikatero novo mesto na univerzi, verjetno bi ta sredstva tudi bolje uporabili v trenutku, ko gremo na rizik zaostritve in ustvarjanja določene konfliktne situacije z vrhom JLA. Če gremo v ta rizik z moratorijem, potem gremo tudi v bolj namensko in pametno razporejanje tega denarja. Še enkrat, pridružujem se predlogu, ki je bil že dan, da se ustavna komisija še enkrat usede in najde rešitev, ki bo ustrezala več ali manj vsem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg102">Hvala lepa. Starman.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg103">Sem član Komisije za ustavna vprašanja in kot tak bi želel, da se mi osebno opraviči gospod Šetinc za očitke, ki jih je rekel, da smo manipulirani. Ne prihajam iz Kopra na ustavno komisijo in puščam delo zato, da bi bil predmet manipulacije. To posebej izpostavljam zato, ker sem skoraj prepričan, da bo razprava gospoda Šetinca v naslednji prilogi Dela. Zakaj? Sodi med tiste, ki imajo priviligiran položaj v tem časopisu. Drugo. Gospod Ribičič pravi, da se je treba v ustavni komisiji ponovno dogovoriti glede samega teksta ustavnega zakona. Mislim, da bi morala opozicija, če bi mislila konstruktivno, ponuditi predmet teksta, še posebej, če gre za ustavne teoretike, in da bi to lahko že v okviru ustavne komisije, ko smo razpravljali, tudi obdelali. Če tak tekst obstoja, sem pripravljen, da bi danes ponovno zasedali, zakaj, odgovornost je velika, če bi prišlo do tega, da ustavni zakon ne bi bil sprejet s potrebno večino.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg104">Drugo. Slišali smo z levo roko odpravljene probleme o tem, da bi ostala praktično cela generacija študentov na ulici. Najbrž je gospod Šetinc svojo idejo gradil še na tem, da bo sprejet zakon o zasebnem delu in da bo pod tem naslovom lahko zaposlil to mlado generacijo. In drugo: prepričan sem, da gospa Potočnikova in tudi Aurelio ne poznata konkretnih razmer - konkretno govorim za Pravno fakulteto, kjer ima izmed 500 vpisanih študentov 60 - 70 študentov sedeže in da eno uro zjutraj čakajo, da dobijo sedež. Kje se lahko v takem razmerju sil, v takih pogojih ustvarja nova delovna mesta, novi pogoji za študij, ko nimamo pogojev za študente, ki so danes vpisani in danes študirajo. Prosim vse razpravljalce oziroma stranko kot celoto - Liberalno demokratsko stranko, da izpolni del tistih svojih obljub pred volitvami, ko je pozivala nabornike, naj vrnejo pozive in po volitvah, ko so ti pozive prinesli na sedež stranke v Koper, jih je pošiljala na Odsek za narodno obrambo. Naj izpolni svojo obljubo samo v tem smislu, da vztraja na tem, da Predsedstvo SFRJ skrajša vojaški rok za fante, ki danes služijo, da se bodo lahko resnično pripravili za jesensko delo na univerzi. Menim, da je razprava o tem zakonu resnično dilema o tem, ali je ta parlament za suvereno Slovenijo ali za neodporno, hibridno, nedržavno tvorbo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg105">In razprava, ki je bila tudi včeraj v zvezi s proračunom glede dela za narodno obrambo in notranje zadeve, kaže tudi ta segment oz. ta defekt. Zato se strinjam s tistimi, ki podpirajo, da bi dejansko morali globalno razčistiti v naši skupščini odnos do obrambe kot enega od bistvenih segmentov državnosti. Čeprav sem prepričan, da večina Slovencev v to ne dvomi, da država potrebuje tudi normalno samoobrambno organizacijo, in to je pri nas usposobljena teritorialna obramba, izpopolnjena z naborniki, ki morajo služiti vojsko, ker živimo pač v takem svetu. Zato, če je večinsko stališče članov ustavne komisije, tudi jaz podpiram idejo, da bi se dobili, pogledali, v čem je sporna formulacija sedanjega ustavnega zakona. Ker po mojem mnenju tisto, kar je dejala gospa Potočnikova, da formulacija, ki se glasi: "Če bi naborniki zašli v neugoden položaj", kaže, da se bo subjektivno obravnaval problem vojaške obveznosti, kaže na visoko civiliziran odnos do tega segmenta človeške in državljanske dolžnosti, da se bo individualno obravnavalo glede na posameznika, ali bo šel v ta ali ta sestav. Naša generacija te izbire ni imela in zato mislim, da je treba tak ustavni zakon, kot je - ne glede na to, da je bilo glasovanje v ustavni komisiji resnično tesno - podpreti in ga sprejeti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg106">Hvala. Lukač.</seg>
             </u>
             <note type="speaker">JANEZ LUKAČ:</note>
-            <u who="#SSK11.LukacJanez1931" ana="#regular">
+            <u who="#LukacJanez1931">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg107">Spoštovani predsednik, predsedstvo, spoštovane kolegice, kolegi! Pripravili oz. porinili ste me v dilemo, ali "razvojačenje" ali udejanjenje odločitev plebiscita. Hoteli to ali ne - ta dilema je v tem hipu tu bila vnesena in pričela deliti poslance na tiste, ki so za uresničitev plebiscitnih odločitev, in na tiste, ki so za mirovno gibanje. Mislim, da to ni prav, kajti mirovno gibanje je proces, ki se mu tudi jaz ne odpovem in mislim, da imajo Liberalni demokrati vso pravico, da to svoje gibanje uveljavljajo, ampak ne na škodo odločitev Republike Slovenije v tem trenutku, v katerem se ona danes nahaja. In ne na škodo, da bi ta skupščina, ki se je zavezala realizirati plebiscitne odločitve, odstopila od te svoje obveze. Mi smo z ustavnim zakonom sprejeli obvezo, da bomo te svoje odločitve tudi realizirali in smo zato k temu zavezani. Ali je to sedaj ta oblika, kot jo predlaga ustavni zakon, ali ne - v tem trenutku ni dilem. Samo tako, kot je predlagano v ustavnem zakonu, je v dani situaciji Republika Slovenija sposobna realizirati že sprejete odločitve.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg108">Opozoriti pa moram tudi, da je ta parlament dolžan še nekaj, in sicer spoštovati obstoječo slovensko ustavo. Da je ne bom jaz tolmačil, si bom vzel to pravico in bom prebral 299. člen, ki velja za vse, ki so državljani Slovenije in tudi za nas, ki v njihovem imenu sedimo v tem parlamentu: "Nedotakljiva in neodtujljiva pravica in dolžnost slovenskega naroda, italijanske in madžarske narodnosti, delovnih ljudi in občanov Republike Slovenije je, varovati in braniti neodvisnost, suverenost, teritorialno neokrnjenost in z ustavo določeno družbeno ureditev Republike Slovenije." Da bom popoln, sledi še tekst, ki smo ga z amandmajem 99, točka 2 razveljavili, in sicer: "in Socialistično republiko Jugoslavijo". To pravico smo z 2. točko tega amandmaja razveljavili oziroma odvzeli to pravico.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg109">Sedaj pa naprej. Centralna oblast oz. federalni organi, katerim smo mi, z našim amandmajem odvzeli pooblastila, pripravljajo v zadnjem času cel sistem ukrepov, s katerimi skušajo Republiko Slovenijo in verjetno tudi nekatere druge dele v Jugoslaviji podrediti direktnemu, neposrednemu nadzoru zveznih organov oblasti. Imate v razpravi dva vojaška zakona, policijski zakon, zakon o tržni inšpekciji, zakon o sodiščih, zakon o zveznem senatu za prekrške in tako naprej, ki celovito pripravljajo ureditev, v kateri legitimne organe Republike Slovenije skuša izdvojiti iz procesov izvrševanja oblasti na ozemlju Slovenije in jih prenaša na zvezne organe. Zvezni organi niso naši skupni organi. V zveznih organih, čeprav se vedno kolegi iz Srbije v Beogradu, kadar tam nastopam, jezijo - je situacija taka: 80% oficirskega, poveljujočega kadra je iz Srbije in čez 90% kadra iz Srbije je v organih federacije. Pomeni, da je hočeš-nočeš v danem trenutku srbska republika preko te svoje federalne organizacije, katero tudi vedno zelo podpira in zato tudi z vso vehemenco trdi, da je za federalno državo, ta bo dobila, če se Slovenija ne upre temu, direktno oblast na ozemlju Slovenije.</seg>
@@ -677,135 +655,135 @@
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg111">Hvala lepa. Kolešnik.</seg>
             </u>
             <note type="speaker">CIRIL KOLEŠNIK:</note>
-            <u who="#SSK11.KolesnikCiril" ana="#regular">
+            <u who="#KolesnikCiril">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg112">Spoštovani kolegice, kolegi! V tem parlamentu postaja že moderno, da se reče, da nisem mislil razpravljati, pa ker so me drugi spodbudili, bom nekaj besed povedal posebej, ker je polovica ustavne komisije že govorila. Ker sem član ustavne komisije, je prav, da tudi sam povem nekaj mnenj, ker se je na račun ustavne komisije tu tako ali drugače govorilo, ne preveč lepo, pa tudi ne preveč vsebinsko tako, kot je ustavna komisija delovala in kot deluje. Ne bom branil v tem imenu ustavne komisije, ampak samega sebe, ker hočem na pošten način delati v njej. Rečem pa tole. Gospod Lukač je zelo dobro postavil okvir. On je točno ustavno omejil, kakšna je zadeva o tem, hkrati je pa tudi povedal, da smo dolžni braniti to ustavo, sicer delamo proti ustavi in mislim, da ta parlament proti lastni ustavi ne bo delal.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg113">Osamosvojitev, za katero smo se odločili, je naša skupna odločitev. Tu mislim, da ni dileme. Do te osamosvojitve pride lahko po različni poti. Tu smo si različni in tako, kot se bomo dogovorili in kot se dogovarjamo, bomo šli po njej. Samo, to o tej osamosvojitvi pa ne odločamo samo oz. po tej poti do te osamosvojitve ne moremo sami, ampak smo nekje omejeni. In to omejitev in to objektivno situacijo moramo upoštevati, k temu so zbori zavezali ustavno komisijo, da pripravi ustrezni predlog in ta ustavni predlog za rešitev tega problema, ki pa je nujen, ga je tudi naredila in prišla z ustreznim tekstom. Na tej seji ustavne komisije smo o tem veliko razpravljali. Gre za zelo občutljivo temo, ki pa ima tako, kot je gospod minister povedal, dve plati. Ena je ta trenutni problem, ki ga moramo razrešiti in drugo to, kar predlagajo liberalni demokrati, mirovniki, to je problem in proces demilitarizacije, ki je veliko širši in ga ne moremo na takšen način, kot oni predlagajo, v trenutku razrešiti. To dejansko je in, če bi ga na tak način, kot se predlaga, razreševali, podcenjujemo ta problem. Mi pa ga ne moremo reševati na ta način prav zaradi te generacije, na katero se sklicujejo. Predlagani ustavni zakon je zelo jasen in zato ga ni treba delati še nejasnega. Vanj ne sodi vsa mogoča kramarija zaradi takšnih ali drugačnih računov ali pa garancij.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg114">K temu bi rad še tole povedal. Osebno sem za Gandhijev princip in ga bom tudi z vso gorečnostjo podpiral, samo v ta okvir pa težko umestim vse tiste, ki se zavzemajo za mirovno politiko. Pa za konec gospod Ribičič je bil zelo jasen. On je pošteno povedal, glede moratorija - celo jaz sem eden tistih, ki je gospoda Krefta podprl, kar se smatra kot sopredlagatelja, ker sem imel drugačen predlog in sem potem odstopil in sem se strinjal, da je to ta moratorij. On je točno povedal, da tisti, kateri - vsaj nekaj nas je, pa bi rekel, kar precejšnja večina, ki smo glasovali, tule, v tej skupščini za moratorij, da smo, tako kot je gospod Ribičič povzel, razmišljali o moratoriju. To ni generalni moratorij in zato, gospa Vika Potočnik, ne posploševati za vsaj nekaj nas, ki smo glasovali za moratorij, ampak, se ve, kakšen moratorij. Toliko, da bi bilo o tem jasno. Čisto za konec pa, mir z vami in nami vsemi, da pridemo do osamosvojene Slovenije, suverene in samostojne Slovenije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg115">Hvala lepa. Prosim.</seg>
             </u>
             <note type="speaker">MILE ŠETINC:</note>
-            <u who="#SSK11.SetincMile1956" ana="#regular">
+            <u who="#SetincMile1956">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg116">Replika g. Starmanu, ki je celo zahteval tako pomembno, dramatično stvar, kot je osebno opravičilo. Jaz se ne mislim opravičevati ne njemu, ne komu drugemu, ne osebno, ne kako drugače. Lahko debatiramo zdaj, ali je manipulacija žaljiva beseda ali ni. Jaz mislim, da ni, mislim, da je to legitimni del sleherne politike oziroma politične igre, in že ljudstvo s svojimi izreki je dalo davno vedeti, da ve, da je politika precej pokvarjena stvar po definiciji. In, pač smo v to vsi vpleteni. No, ampak, ker je stvar sporna, jo bom imenoval drugače, jo bom imenoval "ono". Namreč, "ono", zakaj sem jaz to "ono" uporabljal. Gre za tri stvari, ki so nesporne, pa mogoče niso bile čisto dovolj jasno poudarjene. Eno je, da ustavni zakon vtika k moratoriju urjenje v teritorialni obrambi in v policiji, kar je tudi po mnenju predlagatelja že sedaj mogoče, po sedanjem sistemu. Skratka, da stvar ni tako nedolžna, kot kaže prvi pogled, ker bi verjetno popolni moratorij vendarle predstavil neko določeno pravno situacijo, kot takrat, ko je šlo za napotitve v Slovenijo - ali izven nje. Drugo je, to ni popolni moratorij, kot je bilo predlagano. Ker ostaja pomemben del, ne tako majhen del obveznikov, ki bodo še vedno hodili v JLA. Ne samo, ne mislim samo na oficirske šole, ampak na tisto, kar je že Vika opozorila, to je tiste, za katere bi bil lahko položaj neugoden. Iz tega materiala, ki je bil nam na voljo, sem razbral le to, da bi se to nanašalo na 500, 2500 študentov, jesenskih, ker bi jih po materialih, ki smo jih imeli na voljo, lahko teritorialna obramba, pod pogojem, da vojska sprazni kasarne, usposabljala 2000. Ostali bodo verjetno v neugodnem položaju, t.j. - iz tega izhaja, ker bodo pač izgubili leto, ko bodo šli v JLA. To pa vsekakor ni majhna številka in to precej zmanjšuje na videz velik oziroma popoln moratorij. In na koncu z levo roko, skozi mala vrata, preprosto ukinja tisto, kar je bilo že stvar zelo živahne in zelo ostre debate, to je pa problem dolžine služenja oziroma nadomestnega služenja v civilni službi. To pa je preprosto naenkrat izpadlo. Skratka, zaradi teh treh stvari še vedno mislim, da je stvar mogoče imenovati z "onim" imenom.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg117">Hvala lepa. Zakonjšek - ga ni. Aksentijević.</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ:</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg118">Spoštovani kolegi i kolegice! G. Starman, prosim, da mi ne mešate znanja slovenskog jezika, komaj sem se naučil, da je oddelek za ljudsko obrambo, a ne oddelek za narodnu obrambu. Da ostanemo na slovenskem. Vojska in vojaški zakoni so malo bolj resna zadeva, kot jo nam ponuja ta scenarij. In stališče mirovnikov, ali so za demilitarizacijo ali ne. Ne može i volk sit i koza cela. Cincanja nema. To smo videli v Zalivski vojni. Zavezniki so izpolnjevali obveznosti, ki so bile mnogo milije kot odredbe zakonov, pa čeprav so umirali. Obrazložitev tega ustavnega zakona je takšna, da se zakon može protumačiti, kot da je naperjen protiv Neslovencev, ker jim se daje možnost, da služijo v JLA, tuji vojski. Po besedah g. Janše, do tega zakona i slovenski vojski - oprostite, razumeo sam ga tako, naj mi pove, če ni tako. Po temu zakonu več ne slovenski vojski, to se pravi, okupatorski vojski. Kaj misli o nama, slovenskim državljanima, ki smo v tej in bomo ostali u tej vojski kot aktivne starešine ali pa civilne osebe v službi JLA? To me malo spominja na naše otroke na Koroškem, ki imajo možnost ali ki se jim omogoča, da hodijo v šolo, da se učijo materinščine, ampak ustvarjeni so taki pogoji, da se ne smejo odločiti, da se šolajo v materinščini. Zato predlagam, da zakon dovoli vsem vojakom, da se odločijo, ali bodo šli služiti vojaški rok v teritorialno obrambo in v enote za notranje zadeve ali ne, da ga damo bolj demokratično. S tem se izognemo vsemu, kar se nam v njem ponuja. Konkreten scenarij se mi zdi, da sloni na nekih argumentih, ki niso argumenti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg119">Prvič, umetna je dilema na moratorij odločitve naše skupščine od 23.1. ali 31.1. Dilema je umetna. Jaz sem razumel ta, drugi naš moratorij, da je moratorij na vse vpoklice za vse vojske v Jugoslaviji. Zdi se mi, ker je sprejet v skupščini za tem prvim, da ima tudi zakon neko logiko, veljavo zadnjega akta, da on velja za vse vojske na našem območju.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg120">Drugič. Ne vem, koliko je modro, da zakon sloni na samo enem "če". Pogodbeni način dovoljuje možnost, če je; a kaj, če ne bo ZSLO sprejel scenarija, ki mu ga ponujamo? Kam bomo te vojake potem dali? Kje se bodo urili? Strinjam se z mnenjem tovarišice Vike, to pot je tovarišica, včasih je gospa itn., za vprašanje študentov, to je umesno vprašanje. Še celo sam bi se ponudil, da grem k nadrejenim, da pregovarjamo, da tistim študentom, ki nimajo kje sedeti, odstopimo del izpraznjenih kasarn, mi smo v Ljubljani vojsko skoraj na pol zmanjšali. Se pravi, jaz bi prosil te moje nadrejene, da dovolijo, da študentje tam študirajo, če je to problem. Pa se mi zdi, da bi kolegi profesorji iz fakultete imeli malo več dela in normalno bi bili bolje nagrajeni, če bi tem študentom dali, da študirajo v tem času.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg121">Še drugo. Mislim, da je to scenarij nadaljnjega razbijanja in zaostrovanja odnosov v SFR Jugoslaviji in prevzem štafetne palice iz Hrvaške v roke nam v Sloveniji. Zakaj? In ne nazadnje, rad bi vam nekaj povedal, naj rečem, stavil na srce. O politiki in njeni odločitvi na poti konfrontacij. Naša politika iz tega prostora, je politika konfrontacij, ne politika iskanja skupnih poti v našem jugoslovanskem prostoru. Menim, da je podobno stanje kot v SFRJ bilo v ČSSR ali na Češkem in Slovaškem, namreč, težnje na Moravskem in Slovaškem so podobne težnjam na Slovenskem. Še pred kratkim smo brali, da hočejo Slovaki odcepitev od Češke, pa so se v treh mesecih pomirili in potem so bili sprejeti kot skupna država ČSSR v Evropo. Oni pa so na ta način dobili možnost svojega nadaljnjega razvoja kot enakopraven evropski narod v Evropski skupnosti. Iz tega primera bi se lahko tudi mi nekaj naučili in našim narodom ne bi naprtili težkega gorja, ki se nam ponuja s tem zakonom. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg122">Hvala lepa. Janšo je prosil za repliko.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg123">Ne toliko replika ampak odgovor trem, ki očitno niso prebrali obrazložitve k zakonu, ki je čisto kratka. V obrazložitvi na koncu drugega odstavka jasno piše naslednje: "Samo naborniki, ki bodo prosili, da gredo na služenje vojaškega roka ali da gredo v JLA, bodo napoteni na služenje vojaškega roka ne glede na ustavni zakon". Se pravi samo tisti, ki bodo sami povedali, da so zašli v neugoden položaj in da želijo na služenje vojaškega roka v JLA. Tudi takih je nekaj. Ob lanski napotitvi študentov je bilo nekaj deset takih primerov in nobenega razloga ni, da se tem ne dovoli.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg124">Ker imam repliko, mi dovolite samo dva stavka. Teh besed, nasprotniki, izdajalci osamosvojitve itd. niste slišali iz mojih ust. Tudi nihče tistih, ki so podpisali ta zakon, jih ni izgovarjal. Jih pa stalno polagate v naša usta. Pazite malo s tem, sicer se to res lahko prime. Nasprotno pa jaz nenehno poslušam, da smo militaristi, da delamo nekaj, kar je prejudic, kar še ni sprejeto, kar ne bo v ustavi. Tudi v tej skupščini sedijo ljudje, ki so izgovarjali te besede. Nisem militarist, sem pa za to, da se demilitarizacija izvede kot proces, ki bo realen. Povejte mi evropsko državo, ki je v enem letu zmanjšala izdatke za vojsko za 40 %, težko jo boste našli. Mi to letos delamo in upam, da nam bo to uspelo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg125">Glede replik o manipulaciji moram reči, da s tem, kar je pojasnil gospod Šetinc, nisem zadovoljen. Nobene teh treh točk ni pojasnil v tem smislu, da bi argumentiral to svojo besedo. Nobene! Vse to, kar nam očita, je bilo predmet razprave na ustavni komisiji in vse te stvari smo tam pojasnili. Tudi predstavniki Liberalno-demokratske stranke so bili tam in so celo glasovali proti staremu zakonu. To pomeni, da so seznanjeni s temi razlogi, zakaj zakon ponavlja člene oziroma določbe, ki so že sprejete, medtem ko sem jaz prej jasno dokazal besedo, ki sem jo uporabil, to je, sprenevedanje. Za mene je sprenevedanje, če nekdo polemizira s tistim, kar naj bi se s tem zakonom sprejemalo, če ve, da je bilo to že sprejeto in da je sam celo glasoval za to.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg126">Hvala lepa. Jaša Zlobec.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg127">Lep pozdrav. Mislim, da je osnovni problem ta, ki ga je že nekaj predgovornikov omenilo, namreč da nimamo osnovne strategije nacionalne varnosti. In zato si vsak nekaj predstavlja po svoje tako ali približno in prihaja do hudih nesporazumov, ki segajo od velikih zgodb pa do navideznih podrobnosti, o katerih pa pregovor pravi, da v njih tiči hudič. V stališču Izvršnega sveta in v predlogu ustavne komisije ni odgovora na celo vrsto zelo perečih vprašanj v zvezi s tem ustavnim zakonom, ki ga bomo zdaj sprejemali. oz. k amandmajema.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg128">Kaj je s slovenskimi vojaki, ki so zdaj v JLA? Kaj je s, citiram: "predpostavko o najnujnejših prostorskih zmogljivostih", kot je povedal tudi Janez Janša za predvidenih 5000 obveznikov? Kje in kakšne so najnujnejše prostorske zmogljivosti za 5000 ljudi in nekaj 1000 voditeljev tehničnega in pomožnega osebja? To seveda ni majhna stvar. Na to kaže tudi osnutek proračuna, na to namreč, da to ni majhna stvar, saj je za to usposabljanje nabornikov predvidenih 2,6 milijarde dinarjev ali 520 starih milijard po glavi na leto. V tej luči je seveda argument o brezposelnosti ničen. Ker s 520 starimi milijardami na leto na človeka bi lahko še kaj drugega naredili.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg129">Kar se pa tiče študentov, je treba stvari razčistiti s številkami. V obrazložitvi ustavne komisije namreč piše, da se na univerzi lahko dvigne vpis za 25 %, 2500 študentov pa bo treba napotiti na služenje vojaškega roka. Ker pa je v eni generaciji študentov moškega spola manj kot 50 % študentske populacije, to pomeni, da bi se lahko na univerzo ob 25 % možnem povečanju vpisa vpisalo 1500 od 2500 brucov moškega spola. Ampak seveda to niso ključni argumenti, to je samo španska stena. V resnici gre za de facto ustanovitev nove vojske v Sloveniji. Tako usodne odločitve - zdaj sem pa pri stvari - pa po mojem in tudi po prepričanju Liberalno-demokratske stranke ni mogoče sprejemati pod parolo o moratoriju pošiljanja nabornikov v jugoslovansko vojsko. Mi smo ta moratorij sprejeli zato, da naši vojaki ne bi služili v tuji vojski. Zdaj se pa pod parolo o realizaciji tega moratorija uvaja nova vojska. Se pravi, mi smo bili za to, da se jugoslovanska vojska umakne iz Slovenije in da slovenski vojaki v slovenski državi ne služijo v tej vojski, zdaj smo pa skozi stranska vrata dobili novo vojsko, in tu bi rekel tako Janezu Janši kot Antonu Peršaku, da mislim, kako ni dobro, da se mešata pojma, kot je vojska in kot je obrambna sposobnost. To sta dve različni stvari.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg130">Mi imamo lahko obrambno sposobnost, ne da bi imeli tudi vojsko v najbolj klasičnem smislu besede. Zdaj sem se tukaj sam osebno znašel, in prepričan sem, da še marsikdo v tej skupščini, v dobesedno neznosnem položaju. Če ne bi glasoval za te ustavne amandmaje, bi bil odgovoren, da dobesedno pošiljam slovenske državljane v jugoslovansko vojsko, ki v tem trenutku, je treba reči, nikakor ni naša vojska, in to v nobenem pogledu. Če bom glasoval za, bom s tem glasoval za novo vojsko, čeprav sem v resnici proti njej. Ne moremo biti, tega pa ne govorim v svojem imenu, ampak v imenu cele skupščine, po mojem ne moremo biti za vojsko, ne da bi se o tem explicite odločili, in to v drugačnem kontekstu in v drugačnem pogovoru. Mislim, da se mora zato najprej skupščina jasno izraziti o nacionalni varnosti in šele potem bomo lahko sprejemali take dolgoročne in usodne ukrepe, saj je sam obrambni minister večkrat izjavil, da proces nastajanja vojske traja najmanj 10 do 15 let. Da pa ne bi končali samo z nekim kontraprojektom, ves čas predlagam, kot je že tudi ne eden predlagal pred menoj, da se sestane ustavna komisija ali pa morda vodje poslanskih klubov in vsi skupaj najdejo sprejemljivo rešitev, ki jo bomo jutri zjutraj ali pa danes popoldne sprejeli na skupnem zasedanju. Vsi se spominjate, kako smo se po nepotrebnem zaradi trmoglavosti nekaterih ure in ure prepirali v zvezi z ugovorom vesti. Ko je bil dosežen na takem sestanku kompromis, pa smo besedilo sprejeli brez debate, z enim glasom proti in dvema vzdržanima. In res predlagam, da bi v to usmerili vse naše napore, ker se bomo sicer znašli v pat položaju.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg131">Hvala. Roman Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg132">Končno hvala za besedo. Seveda replika po nekaj diskusijah že nima več tiste ostrine, ki bi jo imela takoj. V bistvu, sem želel replicirati na gospoda Starmana in njegovo izvajanje v zvezi s študentsko populacijo in seveda vseh drugih, ki govorite o študentih. Sem predstavnik ljubljanske univerze v tem parlamentu in seveda predstavnik teh sedanjih 14.000 študentov in pa najbrž tudi te generacije, ki prihaja. Veseli me, da gospod Starman pozna razmere na ljubljanski univerzi, predvsem na pravni fakulteti, zato upam, da je včeraj ob proračunu podprl predlog, da se zvišajo sredstva, namenjena za vzgojo in izobraževanje. Tudi jaz poznam razmere na ljubljanski univerzi, toda povem vam in mislim, da sem včeraj tudi tako podobno simulacijo nekih številk prikazal v Zboru združenega dela, da bi z denarjem, ki ga vsi omenjamo, teh 2,6 milijarde, ki bi bile namenjene za usposabljanje, lahko marsikaj naredili. Naj vam samo omenim oz. povzamem izračun od včeraj. Gre za to, da je od teh 12.000 nabornikov 2500 študentov. Če damo, tako z levo roko, ker zdaj dajejo 70.000 din po glavi študenta, če damo v bistvu več kot to in pomnožimo z 2500 študentov, dobimo številko 166 milijonov din, ki bi jih bilo treba dati na študenta. Zaokrožimo na 200 in potem rečemo, da pa drugim 9500 nabornikom omogočimo pripravništvo in financiramo kot se financira iz Zavoda za delo, pripravništvo v roku 6 mesecev, toliko kolikor bi trajalo tudi to usposabljanje v slovenski vojski, pridemo do številke, ob predpostavki, da je to v višini 3000 din mesečno, do številke 171 milijonov din in, če to dvoje seštejemo, dobimo šele številko okoli 400 milijonov oz. natančneje 337 milijonov 750 tisoč din. Če bi to odšteli, nam še vedno ostaneta dve milijardi, ki jih namenjamo in s tema dvema milijardama bi pa seveda lahko najeli prostore oz. prosili gospoda Aksentijevića, da se zmeni v kasarnah, oz. najeli nekje drugje prostore in celo plačali še profesorjem delo s temi študenti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg133">Hvala lepa. Še France Tomšič.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg134">Gospod predsednik, hvala za besedo. Spoštovani! Na dnevnem redu je torej ustavni zakon, ki šele omogoča postopno osamosvajanje Slovenije. Vsi vemo, da s tem, ko smo sprejeli deklaracije - in teh je bilo kar nekaj - še nismo v bistvu nič naredili. Nekateri ste rekli, da je potrebno efektivno nekaj na tem področju narediti. Torej ne da bi izglasovali ta ustavni zakon, naredimo sekretariatu za obrambo medvedjo uslugo, seveda pa tudi tistim nabornikom, ki čakajo njihove rešitve. S tem samo dajemo problematiko na klop in ne bi prav nič rešili. Skratka, ta ustavni zakon moramo sprejeti. Ni potrebno, da v tej obliki, v tem besedilu kot je. Sem za to, da se dopolni. Vendar, danes moramo na nek način to poglavje zaključiti. Tisti pa, ki se ta trenutek, ko lastne slovenske vojske, lastne slovenske obrambe fizično nimamo, prizadevate za razorožitev, fizikalno nečesa česar ni - jaz se strinjam z Demokratsko-liberalno stranko popolnoma podpiram te stvari. Ampak ne danes, pa morda tudi ne drugo leto, gotovo bo prišel čas, morda v 3 letih, ko bomo resno razpravljali; sedaj je pa za mene velik absurd, da se toliko časa razpravlja o razorožitvi nečesa, česar nimamo, proti nam pa stoji do zob oborožena JLA, in ta JLA ne gre prav nič po zakonih, mi vidimo, kaj je bilo narejeno v Kninu. Torej vedno so podpirali tiste, kateri so bili pravzaprav do sedaj v brezpravnem položaju. Skratka, govorijo o uporu legitimne republike, o uporu neke manjšine - o Kninu govorim - pa ne govorijo. Namesto da bi javni tožilec, federalni, takoj pričel s procesom proti kninskim upornikom, se je spravil na Hrvaško legitimno oblast. To je nekaj nezaslišanega, tako razmišlja seveda tudi celotna Evropa, vendar tistih scenaristov prav nič ne briga, da je tako.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg135">Zdaj bomo pa pogledali, ali bi scenariste zanimalo, če se mi razorožimo in mahamo z oljčno vejico in z nageljni? Mislim, prav nič, večina bi razmišljala, kakšen narod je to, ki niti lastne svobode ne more braniti? Za to gre danes. Pa prav nič drugega. Jaz sem že razmišljal, kateri narod pa je danes lahko resnično za razorožitev in za ne vem kakšne mirovne shode in pogodbe. To bi bila Švica. Švica ima že 150 let meje zagarantirane. Vsi jo priznajo. Benelux, prav nič se jim ne bo naredilo, Avstrija podobno, ampak smešno bi pa bilo, mi bi se vsi smejali, če bi danes Baltiške dežele, ki so v istem položaju kot mi, bile za to, kar so nekateri. Jaz ne želim slabo politično Demokratsko-liberalni stranki, absolutno ne, vendar v tem pogledu morate pač spregledati, da ta čas še ni prišel in moramo skupaj prijet za konec. To sem že tukaj večkrat rekel. Primimo nekaj časa za isti konec. To je naša nacionalna politika in ne pojdimo se politikante, ker ni prava tema. Tako kot smo se osamosvojili pri davčni zakonodaji, se moramo tudi tukaj. Jaz podpiram, da se sestane ustavna komisija, in to mislim čim prej, in dopolnimo to tako, da bomo to soglasno, da bomo to s konsenzom sprejeli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg136">Hvala. Potrč, pardon, replika Aksentijević.</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ:</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg137">Gospod predsednik, oprostite lahko uporabim besedo podtikanje? Predhodnik pa res ne z argumenti ampak z nekimi svojimi scenariji podtika in išče sovražnika tam, kjer ga ni. Res, ne iščite sovražnika tam, kjer ga ni.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg138">In prepričan sem, kolikor so vaša nacionalno opredeljena čustva ali samo čustveno opredeljena diskusija, ko argument ne bo sprejet med ljudmi. Gospod Tomšič prosim vas, kdaj vam je armada grozila, kdaj vas je armada proglasila neveljavnega, zakaj podtikate? Kaj je lahko armada storila v kninski situaciji? Armada je 16 ljudi zaprla v kninski situaciji. To vi nočete videti. Zaprla i pod istragom i pred sudom so tisti, ki so prekršili zakone, ki so takrat to orožje odvzeli. To naj armada dela po zakonih, a vi se borite, da se zakoni spremenijo v Jugoslaviji, ne pa od lastne armade praviti sovražno - to pa je res, da ne rečem kaj gršega, skregano je z neko pametjo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg139">Hvala lepa. Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg140">Hvala lepa. Najbrž je to ena od priložnosti, kjer pač priprava, kakor teče, povzroči razpravo potem v zboru ob vsem spoštovanju vseh formalnih postopkov, ki so bili korektno izpeljani. Poglejte, nobenega dvoma ni, da smo se, ne v skupščini, ampak državljani Slovenije na plebiscitu opredelili za samostojno in neodvisno državo Republiko Slovenijo, ki ne bo več v sestavu SFRJ. Namenoma, da točno citiram, ker je takšen bil ta sklep. Vendar mislim, da je bilo v tistem času spoznano v skupščini, da so o načinu realizacije možne seveda mnoge modifikacije, da se bodo razmere spreminjale, da so lahko te bile 23. decembra, druge so lahko 23. februarja, druge aprila in da bo treba seveda o teh stvareh resno in mirno razpravljati. In sedaj enostransko sklicevanje na občutek ali pojmovanje vsakega zase, ki ga je ob tem imel, kako bo to zelo težko in zelo lepo, ali brez velikih problemov, gospodarskih ali političnih ali eventualno tudi s potrebo uporabe protisile ali sile - to je stvar za razpravo. Hočem pri tem opozoriti, da mislim, da je razlog, da mi o tem, kako plebiscit izvajati, v tej skupščini nismo dali na dnevni red, tudi eden od razlogov, da v tem primeru o teh stvareh diskutiramo in imamo pravico vsak imeti svoje mnenje. Na to sem opozoril tolikokrat, da mi je že neprijetno, ampak obljubil sem, da bom opozarjal, kadarkoli bo za to priložnost, ker je to pač nespoštovanje lastnega zakona, ki ga je ta skupščina sprejela in ni bil sprejet ne vem kdaj, v kakšnem drugem času.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg141">Druga stvar. Sem za to, da se sklicujemo v razpravah na določene že sprejete odločitve. Mislim pa, da moramo biti hkrati korektni, da imamo seveda pravico tudi določene že sprejete odločitve ponovno oceniti in eventualno dopolniti. In tudi v tem primeru formalno sklicevanje, da smo nekaj že sprejeli v drugih okoliščinah, za mene res ni argument, ker bi potem ta argument morala vlada uporabljati tudi v vseh drugih primerih, ne pa, da nam v drugih primerih pove, da pravzaprav celo tistega, kar smo sprejeli, ni treba spoštovati, da smo v prehodnem obdobju in da bomo prilagajali vsak trenutek vsako odločitev neki trenutni situaciji. Ne sprejemam, da imamo različne kriterije za različne stvari, kakor pač nekomu v nekem trenutku ustreza. Popolnoma soglašam z gospodom predsednikom v njegovi oceni o nujnosti odločanja na ustavni komisiji. Prav ima. To je pač, kot je sam rekel, kvantitativna demokracija. Bi ga pa opozoril seveda na to, da ta kvantitativna demokracija velja glede sprejemanja ustave tudi v zborih te skupščine in da ta kvantitativna demokracija pomeni 2/3 in da je zato, kljub vsem formalnostim, stvar naše skupne odločitve, ali bomo kakršnokoli pripravljenost to doseči imeli ali pa bomo mislili, da je lahko neko glasovanje, ki ima formalno vse osnove, sprejeto. In potem sprejmemo tveganje, da bo to tako ali drugače uspelo na seji skupščine, s tem da gre za pomembna vprašanja; in če se pri tem še pojavljajo vse dileme, ki so jih nekateri bolj, nekateri manj, nekateri tudi malo zlonamerno poskušali uporabljati danes, kaj pravzaprav odločanje o tem pomeni za slovensko suverenost, za pripravljenost obrambe, za biti zaveden Slovenec ali kaj drugega, za biti odgovoren do fantov, ki bodo naslednji dan ali naslednje tedne morali v vojsko, ali ne - potem je to stvar, ki bi jo morali res bolje pripraviti, ne pa na ta način o njej odločati.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg142">Zato mislim, da smo se le prepričali, ali bi se, po mojem, lahko že zdavnaj, da gre tudi za mnoga, ne samo koncepcijska, ampak tudi nekatera konkretna vsebinska vprašanja, pa tudi mnoge nejasnosti v zvezi s predlogom, ki je dan in da če bi želeli, bi lahko že sprejeli odločitev, da je to stvar še treba proučiti na različne načine, predvsem pa formalno na ustavni komisiji in potem ne bi bilo treba govoriti še nadaljnji dve uri o teh stvareh.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg143">Mislim, da gospod Starman ve, da amandmaje ne moremo predlagati na seji zborov, ampak da je, kadar gre za ustavni tekst, o tem treba razpravljati na ustavni komisiji. Hkrati ve, da imajo najmanj enako obvezo predlaganja amandmajev, kot jo ima vsak član ustavne komisije, tudi tisti, ki so bili formalno za to zadolženi in ki so bili na mnoga vprašanja opozorjeni na ustavni komisiji. Odgovarjali pa so približno z argumenti kakor danes, s katerimi kaže, pač tistih, ki so imeli pomisleke, niso prepričali. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg144">Hvala lepa. Gospod Glavič.</seg>
             </u>
             <note type="speaker">DR. PETER GLAVIČ:</note>
-            <u who="#SSK11.GlavicPeter1940" ana="#regular">
+            <u who="#GlavicPeter1940">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg145">Gospod predsednik, spoštovani zbor! Dovolite mi, da osvetlim še en vidik predlaganega ustavnega zakona. Predlagani ustavni zakon dejansko prejudicira proračune Republike Slovenije za vnaprej. V tem smislu je bilo na včerajšnji razpravi v našem zboru več pripomb, ki so bile proti taki politiki, ki bi bila v trenutku, ko bi sprejeli ta predlog, samo še obveza izvršitve.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg146">Da ne bi razpravljali o abstraktnih zadevah, želim prikazati nekaj številk. Če sprejmemo predračun, ki omogoča realizacijo tega ustavnega zakona, potrebujemo za to 100 dolarjev na prebivalca za oboroževalne namene, izvzemam civilno zaščito, gasilce in podobne zadeve. S tem bi v vojsko vlagali bistveno več kot v Evropi vlagajo Romuni, Albanci, Maltežani, tj. po velikosti 50 dolarjev na prebivalca in bi se približali Madžarom in Ircem, ki vlagajo nekaj nad 100 dolarjev na prebivalca. Poleg teh 100 dolarjev, ki jih namenjamo za usposabljanje naših fantov, namenjamo še 100 dolarjev za JLA, kar pomeni, da so stroški oborožitve 200 dolarjev na prebivalca. S tem prehitimo Bolgarijo, Avstrijo in tudi Jugoslavijo v povprečju. Kajti Jugoslavija daje bistveno sredstev manj na prebivalca.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg147">V naslednjem letu se po predlogu sekretariata ta vsota zviša na 260 dolarjev na prebivalca in ta znese <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg148">Gospod Glavič, gospod Glavič! To je razprava o proračunu, jo boste lahko tam opravili.</seg>
             </u>
             <note type="speaker">DR. PETER GLAVIČ:</note>
-            <u who="#SSK11.GlavicPeter1940" ana="#regular">
+            <u who="#GlavicPeter1940">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg149">Saj to je prav moja trditev, gospod predsednik, da je to prejudiciranje nečesa <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg150">Ne, ne, ne. Sedaj razpravljamo o tem zakonu, ko gre za ali moratorij ali ne. Vaša razprava je popolnoma na mestu, ampak sodi v proračun. Vsaka stvar je z vsem povezana, če tako vzamemo, to je gotovo.</seg>
             </u>
             <note type="speaker">DR. PETER GLAVIČ:</note>
-            <u who="#SSK11.GlavicPeter1940" ana="#regular">
+            <u who="#GlavicPeter1940">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg151">Mislim, da je popolnoma jasno, da odbijanje oboroženega spopada zahteva vlaganja, ki so bistveno večja, najmanj 1000 dolarjev na prebivalca skozi 10 let, da bi tu prišlo do kakršnekoli enakopravne borbe. Zato ni mogoče sprejeti tega izziva, da damo nekaj sredstev za potencialnega agresorja, pa nekaj sredstev proti potencialnemu agresorju. Mislim, da je prav vojna v Zalivu pokazala, da so take kalkulacije nerealne in da danes niso izvedljive niti zunaj Evrope, kaj šele v Evropi.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg152">Bilo je omenjeno 40% znižanje stroškov za vojsko, kar seveda ni točen podatek, kajti mi smo še vedno zvezani z monetarnim sistemom v Jugoslaviji. Jugoslavija preliva sredstva iz Slovenije prisilno, med drugim tudi s plačevanjem, kot veste, dveh milijard dinarjev za JLA. Pred tem je bil srbski vdor, povezan s hrvaško pomočjo. Za tem sledi setev, ki je že napovedana in bo šla mimo odločitev slovenske skupščine. Torej, je zelo težko govoriti o tem, da res zmanjšujemo sredstva za teh napovedanih 6 milijard. Po moji oceni smo teh 6 milijard že vplačali preko inflacije zvezi nazaj.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg153">Zato predlagam, da se sprememba ustavnega zakona odloži do sprejema proračuna in med tem časom razčisti vse sporne zadeve, ki so bile danes prikazane. Želim poudariti, da v Evropo lahko pridemo z znanjem, dobrim delom, z varčnostjo in podjetnostjo, težko bomo prišli v njo z vojsko in policijo. Dovolite mi, da predlagam, da ta denar resnično namenite za univerzo, pri tem bom kot član Univerze v Mariboru in tehniške fakultete povedal, da pred dobrim letom, ko smo morali takorekoč celo generacijo strojnikov in elektrotehnikov vzeti v šole dodatno in, kolikor vem, je to najštevilčnejši del študentske populacije, te največje fakultete so praktično 100 % zasedene z moško populacijo, nismo doživeli nobene posebne pozornosti in tudi letos je proračun za univerzo celo zmanjšan, čeprav vemo, da se bo velik del te študentske populacije preusmeril na univerzo in ne bo šel v vojsko.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg154">Zato mislim, da so bili argumenti, ki so bili tu razloženi, v veliki večini primerov neupravičeni. Moram reči, da smo na Univerzi v Mariboru ta prehod od odhoda v vojsko pred izobraževanjem na univerzi na obdobje po izobraževanju praktično že opravili. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg155">Hvala lepa. Mislim, da je, da prosim, Šuklje.</seg>
             </u>
             <note type="speaker">BORUT ŠUKLJE:</note>
-            <u who="#SSK11.SukljeBorut1958" ana="#regular">
+            <u who="#ŠukljeBorut">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg156">Gospod predsednik, hvala za besedo. Gospe poslanke in gospodje poslanci! Mislim, da so temeljna izhodišča poslancev, ne glede na našo politično držo, identična. Samostojna slovenska država republikanske oblike. O tem pa v vseh diskusijah v zadnjem letu ni več nobenega dvoma. Ob konstituiranju take države se bomo seveda soočali z različnimi dilemami in pristopi. Zelo slabo bo, če bomo legitimne razlike, ki bodo ob tem nastopale, ki pa vodijo v skrajni konsekvenci k istemu cilju, vsakič posebej ocenjevali s tem, ali je nekdo ali neka stranka proti temu cilju ali ga zavira ali ga noče vzeti na znanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg157">Zato bi bilo tudi danes ob predlogu ustavnega zakona verjetno najslabše, če bi tega postavili samo kot dilemo ali demilitarizirana Slovenija ali samostojna država. Saj pravzaprav to vsi vemo, odprta je tudi ta opcija, torej možnost Slovenije, kot samostojne države v demilitarizirani Evropi. Današnja razprava kaže, da lahko pomemben zakon, ki bo v tem trenutku omogočil tudi preklic že poslanih nabornih pozivov, torej realizacijo enega sklepa odločitev slovenske skupščine, da tak zakon lahko glede na način sprejemanja ne bo sprejet.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg158">Zato podpiram predlog, in ga dajem tudi kot svoj predlog, poslanca Jaše Zlobca, da se ponovno sestaneta tako ustavna komisija kot vodje poslanskih klubov, saj bo le to omogočilo večinsko sprejemanje zakona, ki ga v tem trenutku nujno potrebujemo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg159">Hvala lepa. Če ni več prijavljenih, zaključujem razpravo. Preden bi prešli na kakršnokoli glasovanje, moramo najprej ugotoviti, če smo sploh sklepčni. Tako za nekatera proceduralna vprašanja, o katerih moramo glasovati, da ne govorim o samem zakonu.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg160">Poglejmo najprej koliko je: Družbenopolitični zbor.</seg>
                <note>36.</note>
@@ -822,76 +800,76 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg166">Imamo tudi potrebni kvorum za eventualno kvalificirano večino. Zdaj naj bi predlagal najprej v odločanje predlog, da se sestane najprej ustavna komisija, drugi predlog, da se sestanejo klubi in o teh stvareh razpravljajo. Torej, osebno sem proti temu, da se sestane ustavna komisija, ker ustavna komisija nima o čem odločati. Ni bil postavljen noben amandma, zaradi katerega bi se morala ustavna komisija sestati. To je prvo. Drugič, menim, da bi s tem ustvarili, po mojem mnenju, absolutno nedopusten precedens. Kakorkoli naj zdaj ugotavljamo z drugih vidikov spornost odločitev ali predloga ustavne komisije, češ, da ni dosti prepričljivo njeno stališče, ker je bilo sorazmerno malo članov, to je sicer točno in o tem lahko razpravljamo, vendar osebno menim, da ne moremo dopustiti primera, če je nek predlog čisto formalno izglasovan, formalno sprejet v nekem skupščinskem telesu, potem se pa tista preglasovana manjšina, ki se po svojih predstavnikih niti ni v celoti udeležila seje, sklicuje na to, češ, da ni potrebnega konsenza, tega stališča ne moremo sprejeti. Drugače kršimo, se pravi, da postavimo na glavo celoten skupščinski sistem. Zato mislim, da s tega stališča absolutno ni nobenega razloga, da bi mi glede tega ponovno razpravljali na ustavni komisiji. Drugo pa je seveda stvar, če menite, da stvar ni zrela politično, ker gre za politično vprašanje, tu pa ustavna komisija nima praktično kaj razpravljati. Gre za izrazito politično odločitev, ker je potrebno, da se sestanejo klubi in o tem sprejmejo stališče. Ta predlog je pa umesten. Zato dajem najprej na glasovanje. Kolešnik, prosim!</seg>
             </u>
             <note type="speaker">CIRIL KOLEŠNIK:</note>
-            <u who="#SSK11.KolesnikCiril" ana="#regular">
+            <u who="#KolesnikCiril">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg167">Dovolite mi, da v skladu s 125. členom povem, za kaj bom glasoval. Glasoval bom proti, da se ustavna komisija sestane. To, kar je gospod predsednik povedal, je en del zadeve. To je strahoten pritisk na ustavno komisijo, da mora vsako odločitev soglasno sprejemati. To ne more biti, ker vse, kar smo tam glasovali, je bilo legitimno in v redu. Na to tudi vsi tisti, ki so glasovali proti, to je bil eden, in pet se jih je vzdržalo, niso imeli pripombe. Če danes sprejme ta skupščina takšen sklep, da se ustavna komisija ponovno sestane, da pripravi predlog, je precedens za vse presedan za vse bodoče primere. To je pritisk na ustavno komisijo. Tako kot član ustavne komisije razumem. Kar se pa tiče drugega, da ne bom potem še enkrat, mi dejansko imamo slovensko vojsko, mi jo imamo, ker smo s 1. členom ustave to sprejeli, v tem, ki zdaj velja. In drugič, na ustavni komisiji smo to zadevo premleli od a do ž. Več ni moč premleti razen, da nekdo reče, da greši v celoti. Mislim pa, da nismo grešili. Hvala lepa!</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg168">Hvala lepa! Prosim, da Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg169">Gospod predsednik, če bi rezultat bil, ne popolnoma takšen, kot ga je gospod Kolešnik opisal, ampak če bi ta odločitev pomenila le sugestijo ustavni komisiji, da seveda mora upoštevati, kaj bo to potem pomenilo za odločanje na zborih, potem bi bil zelo vesel, da bi to dali na glasovanje in da bi takšen sklep sprejeli, ker bi to nam olajšalo delo. Drugič, imam pomisleke, da se sestanejo vodje klubov in to rešujejo. Nimam nič proti, bom glasoval za, ampak mislim, da sami ne morejo rešiti vprašanja. Če pa ne bo sprejet sklep, da se ponovno odpre razprava na ustavni komisiji, potem prosim in predlagam, da se pred glasovanjem odloča še o predlogu, da se odloži odločanje o tej točki danes z dnevnega reda in da danes še to prej preizkusimo, preden glasujemo o samih amandmajih. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg170">Hvala lepa. Bekeš!</seg>
             </u>
             <note type="speaker">PETER BEKEŠ:</note>
-            <u who="#SSK11.BekesPeter1946" ana="#regular">
+            <u who="#BekesPeter1946">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg171">Spoštovane kolegice, spoštovani kolegi! Kar bom povedal, je bolj replika na razpravo kolege Kolešnika in hkrati argumentacija, do katere imam pravico zdaj s svojim glasovanjem. Precedens oziroma presedenčna vrednost odločitve, če bo izglasovan sklep, da naj se ustavna komisija ponovno sestane, ima lahko pozitiven pomen, po mojem mnenju. Namreč, na nitki visi vprašanje, ali je ta naša skupščina sposobna opraviti svojo vlogo konstituante ali ne. In to v zvezi s tem vprašanjem. Za ustavno materijo in posege vanjo je pač potrebna 2/3 večina. Pogajalske tehnike, tehnike približevanja stališč skozi strpen dialog, organizacija dela, zlasti v ustavni komisiji, ki bi morala to omogočati in prispevati k temu, seveda zahteva drugačne prijeme, kot si jih lahko privoščimo oz. jih lahko uporabljamo, ko gre za materijo, ki jo z navadno večino sprejemamo. Količinska demokracija, o kateri je gospod predsednik prej utemeljeno govoril, tukaj zahteva drugačne količine in drugačne tehnike in tudi večjo količino strpnosti in pripravljenosti na približevanje. Pozivi na enotnost, brez pripravljenosti tehtnega obravnavanja argumentov, tudi tistih, ki so lahko dvomljivi, seveda sami po sebi ne bodo dali rezultata, če se to tudi v proceduri ne pokaže. Sedaj pa poglejmo, kako je bilo: od 25 članov ustavne komisije jih je sodelovalo komaj toliko, da je bila sklepčna. In v tisti sestavi je bil sklep sprejet z minimalno možno večino. Ta odločitev ni z ničemer jamčila, da bosta 2/3 plus en glas potrebni za odločitev tukaj, danes, potrebni. Zaradi tega mislim, da bi bilo dobro stvari ponoviti. Ne zaradi prestiža te ali druge strani, ampak zato da se te stvari pripravijo in ugotovijo. Če bi bile tako pripravljene, tudi ne bi danes tukaj tri ure in še nekaj čez porabili za te stvari. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg172">Hvala. Janša. Sedaj gre za proceduralna vprašanja in prosim, da to upoštevate.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg173">Gospod predsednik, jaz se z vašim mnenjem glede ustavne komisije strinjam; ni bil dan noben amandma, zato ne vidim razlogov, da se ustavna komisija ponovno sestaja. Vidim pa v vsem skupaj veliko nevarnost, da zakon ni sprejet. In edina posledica tega, da zakon ni sprejet, bo to, da bodo v naslednjem tednu začeli ljudje odhajati v vojsko; to bo edina praktična posledica tega zakona, nič drugega. Do jeseni se bo še marsikaj drugega zgodilo. Zato predlagam, da se le sestanejo predsedniki poslanskih klubov in da to vprašanje poskušamo odgovorno rešiti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg174">Hvala. Buser.</seg>
             </u>
             <note type="speaker">DR. STANKO BUSER:</note>
-            <u who="#SSK11.BuserStanko1932" ana="#regular">
+            <u who="#BuserStanko1932">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg175">Spoštovani! Podpiram predlog gospoda Bekeša. Vedno je treba do konca vztrajati in se do konca boriti. Prepričan pa sem, da bomo danes ta zakon tukaj sprejeli. Vendar naj se sestane komisija še enkrat, dodajam še to, da se ji morda priključijo tudi predsedniki poslanskih klubov, in da se ponovno sestanemo morda čez eno uro. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg176">Hvala. Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg177">Spoštovani poslanci, spoštovane poslanke! Plediram, da poiščemo način, da se v tem trenutku o tem ne odloča, ker se mi zdi, da tako, kakor je stvar pripravljena, ne more biti izglasovana. In če ne bo izglasovana, bo prišlo do tega povprečnega obtoževanja, kdo je za to kriv, da gre kdo v vojsko. Gospod Janša, ves skeč je v tem, da ste vi pod krinko ustavnega zakona in pod krinko ustavne komisije ves čas delali za to, da pripeljete denar in tudi nabornike v te svoje centre za usposabljanje. Zato se mi zdi, da so tukaj tri možnosti. Eno je, kar je predlagal gospod Glavič in kar se natančno ujema z argumentacijo tudi gospoda Janše. Mi nimamo nekih drugih stvari razrešenih in če nimamo ustavnih zakonskih podlag, potem ne moremo glasovati o tem in razrešimo druge stvari. Lahko bi ubrali to formalno logiko, ki se mi zdi zadosti razumljiva, ampak v tistem trenutku smo popolnoma blokirani. Mislim, da je ta predlog kljub vsemu korekten, ker nam omogoča, da razčistimo tudi druge stvari in da na koncu o tem glasujemo. Kar se tiče argumentov za to, da bi se ustavna komisija lahko sestala, jih je kar nekaj, in to ne tako nepomembnih. Tukaj je bilo generalno nasprotovanje rešitvi, ki jo je ustavna komisija predlagala, glede na pobudo o moratoriju. Mi smo poleg moratorija na odhod v JLA dobili še nekaj drugega, t.j. glavni spor, in tukaj so bile pobude, da se ta ustavni zakon napiše tako, da pač (po domače rečeno) vsi, dokler se stvari o varnostnem konceptu, slovenske ustave itn. ne razrešijo, sedijo doma. Se pravi, pobude za to, da se ustavna komisija sestane, so dobre in se lahko sestane, lahko o tem razpravlja in razpravlja o rešitvi, kako izpeljati popoln moratorij, ne pa moratorij, ki pripelje nekaj tretjega. In šele v zadnji varianti se mi zdi smiselno, da se eventualno sestanejo tudi vodje poslanskih klubov. Mislim pa, da je treba najti način, da se v tem trenutku to odločanje odloži, ker bi bila cena glasovati za prevelika glede na vse to, kar bi dodatno dobili.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg178">Hvala lepa. Ribičič je še prosil.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg179">Povsem kratko, jaz bi rad pomagal tistim, ki vidijo, da je politično smiselno, da naj se glasuje in se poišče nove rešitve, mislijo pa da proceduralno to ni najboljše. Jaz sem danes že doživel tukaj očitek, da kot ustavno pravni strokovnjak bi lahko vedel, da moram priti tukaj direktno z amandmajem. Vem, da mora to iti preko ustavne komisije, ampak en amandma, ki je bil tukaj že povedan, lahko ga tudi damo pisno in celo imamo pozitivno mnenje gospoda Janše, da je sprejemljiv, bi se glasil: prva dva odstavka 1. člena tega ustavnega zakona se zbrišeta.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg180">Drugi amandma, če s tem seveda to ni doseženo, je predlagala Komisija za mirovno politiko: treba je tako oblikovati ustavni zakon, da bo odprta možnost za demilitarizacijo Slovenije in jasno opredeljen začasni značaj tega zakona. Bile so pa še druge ideje, ki so seveda bile amandmajskega značaja, čeprav ni bil pisno vložen amandma. Mislim, da je tudi iz proceduralnega razloga kar veliko utemeljitev za to, da se sestane ustavna komisija, in jaz se strinjam tokrat izjemoma, da se v začetku te seje ali pa v razširjeni sestavi sestane s predsedniki poslanskih klubov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg181">Hvala. Ivan Tomše.</seg>
             </u>
             <note type="speaker">IVAN TOMŠE:</note>
-            <u who="#SSK11.TomseIvan1942" ana="#regular">
+            <u who="#TomseIvan1942">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg182">Spoštovani predsednik, spoštovane poslanke in poslanci! Sprašujem generalnega sekretarja, da pove, v katerem členu poslovnika je možno ponovno odpirati razpravo, ko smo z razpravo zaključili in se je gospod Kolešnik samo izjasnil, kako bo glasoval v skladu s 125. členom, mi pa ponovno odpiramo razpravo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg183">Hvala. To je skoraj kritika name. Moram reči naslednje: razprava je res samo o tem postopku in smo jo res zaključili. S tem moram povedati gospodu Ribičiču, da se amandmaji vlagajo do konca razprave in sicer v pisni obliki, kar je pozneje, pravnoveljavno ni mogoče sprejemati. Prosim. Janez Remškar.</seg>
             </u>
             <note type="speaker">DR. JANEZ REMŠKAR:</note>
-            <u who="#SSK11.RemskarJanez1947" ana="#regular">
+            <u who="#RemskarJanez1947">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg184">Samo replika glede mirovne komisije, mislim, da ni šlo za amandma.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg185">Hvala lepa. Potem dajem najprej na glasovanje predlog, ali naj se ustavna komisija ponovno sestane in ponovno obravnava predlog tega zakona.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg186">Kdo je, prosim, za to, da se sestane komisija?</seg>
                <note>90 delegatov.</note>
@@ -922,64 +900,64 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg203">Nadalje: Sodni svet Republike Slovenije predlaga Skupščini Republike Slovenije, da izvoli Bogdano Žigon-Roth za sodnico Vrhovnega sodišča Republike Slovenije. Vladimirja Balažica, Aleša Butalo in Natašo Jelušič za sodnike Višjega sodišča v Ljubljani. Sama Plantana za sodnika Temeljnega sodišča v Novem mestu, da ponovno izvoli Franca Dobrovnika, Barbaro Knol in Darjo Maček za sodnika Temeljnega sodišča v Ljubljani, da ponovno izvoli Marijo Pristovnik za sodnico Temeljnega sodišča v Mariboru. Predlog Sodnega sveta ste prejeli, prav tako pa tudi predlog naše komisije. Želi predstavnik Sodnega sveta besedo? Ni videti. Poročevalec komisije? Tudi ne. Želi o predlogu kdo razpravljati? Da, prosim.</seg>
             </u>
             <note type="speaker">DR. RAJKO PIRNAT:</note>
-            <u who="#SSK11.PirnatRajko1951" ana="#regular">
+            <u who="#PirnatRajko1951">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg204">Gospod predsednik, spoštovane poslanke in poslanci! Sodni nadzor nad upravo je ena najpomembnejših pridobitev demokracije in prepričan sem, da ga moramo tudi v našem sistemu okrepiti zlasti z visoko strokovnostjo ljudi, ki naj ga opravljajo. Zaradi svojega pomena je sodni nadzor posebej tudi omenjen v osnutku nove ustave, sodni nadzor nad upravo in osnutek ustave, kot veste, tudi predvideva posebna upravna sodišča, ki naj bi ta sodni nadzor opravljala.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg205">Sedaj opravlja ta sodni nadzor tako imenovani upravni oddelek Vrhovnega sodišča Slovenije v postopku, ki se imenuje upravni spor in ki je enoinstančen, torej to je v bistvu edina v veliki večini primerov edina instanca, ki odloča o tej zadevi. Zato menimo, da je zlasti v luči ustavnega razvoja, torej v luči krepitve sodnega nadzora nad upravo potrebno že sedaj pri kadrovanju sodnike vrhovnega sodišča, ki naj bi opravljali dela na tem področju, torej, ki naj bi delali v oddelku za upravne spore, da je treba upoštevati zelo visoke strokovne tako praktične kot tudi teoretične zahteve pri izvolitvi teh sodnikov. Sekretariat za pravosodje in upravo ocenjuje, da ti pogoji pri kandidatki Bogdani Žigon-Roth niso izpolnjeni. Glede na to ni mogoče pritrditi mnenju Vrhovnega sodišča, na katerega se je (poudarjam) oprl tudi Sodni svet, da delo kandidatke v občinski premoženjsko-pravni službi in pozneje pri pripravljanju zelo pomembnih pravnih predpisov (to so občinski odloki), pomeni tako strokovno prakso, ki naj usposablja kandidatko za sodnico vrhovnega sodišča. Zlasti pa se sekretariat opira na dejstvo, da na področju teoretičnega udejstvovanja v upravni znanosti in upravnem pravu kandidatka niti približno ne izpolnjuje tistih visokih zahtev, ki naj bi bile izpolnjene za sodnika vrhovnega sodišča na tem področju. Sodelovanje pri zbirki pravnih mnenj nikakor ne zadošča - in tu verjemite mi, govorim kot strokovnjak s področja upravnega prava - nikakor ne zadošča za to visoko strokovnost, ki naj bi bila pri tem izpolnjena.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg206">S temi razlogi je naš sekretariat seznanil tudi Sodni svet, vendar jih Sodni svet ni sprejel. Zato tu na tem mestu ponovno poudarjam, da Sekretariat za pravosodje in upravo odločno nasprotuje izvolitvi kandidatke Bogdane Žigon-Roth za sodnico Vrhovnega sodišča. Hkrati kot poslanec Slovenske demokratične zveze, želim pojasniti, da bom tudi iz teh razlogov sam glasoval proti njeni izvolitvi, pa seveda za izvolitev vseh drugih, ki jih je predlagal Sodni svet, in pozivam tudi vse druge poslance, da ravnajo podobno. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg207">Hvala, želi še kdo razpravljati. Prosim dr. Strohsack.</seg>
             </u>
             <note type="speaker">DR. BORIS STROHSACK:</note>
-            <u who="#SSK11.StrohsackBoris" ana="#regular">
+            <u who="#StrohsackBoris">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg208">Spoštovani predsednik, spoštovani zbor. Sem dr. Boris Strohsack, predsednik Sodnega sveta. O pomislekih, ki ste jih pravkar slišali, je razpravljal Sodni svet in sem dolžan pojasniti, zakaj je kljub tem pomislekom z večino glasov (z dvema tretjinama, kar je predpisano po našem poslovniku) vendarle predlagal kandidatko Rothovo v izvolitev skupščini. Dolžan sem malo bolj pojasniti ves postopek. Nosilec razpisa za prosta mesta je Republiški sekretariat za pravosodje. Na dve prosti mesti so se prijavili štirje kandidati. Eno od teh mest je prosto mesto na upravnem oddelku, na katero sta se prijavila dva kandidata. Soglašam s tem in Sodni svet tudi, da zahtevamo za kandidata za sodnika Vrhovnega sodišča visoko strokovnost. Moram povedati, da za delo na upravnem oddelku Vrhovnega sodišča veljajo še dodatne zahteve, predvsem to, da kandidat obvlada tudi sodno delo, s katerim se običajno upravni juristi nimajo priložnosti seznaniti, da torej ima pravosodni izpit in tako naprej. Takega kandidata, moram povedati, je težko dobiti. To kažejo izkušnje že iz prejšnjih let. Vendarle, kot je bilo že omenjeno, je kandidatka dolga leta delala v upravni službi, ne bom ponavljal, kar je gospod sekretar že povedal, torej ne samo običajno tekoče upravno delo, ampak je tudi opravljala upravni nadzor na različnih upravnih področjih, izobraževala upravne delavce in tako naprej, kar je trajalo več kot 10 let, od 1984. leta naprej, torej več kot 6 let pa je strokovna sodelavka pri vrhovnem sodišču oziroma pri upravnem senatu in se je v tem svojstvu seznanjala z zahtevami upravnega spora.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg209">Tu je kot strokovna sodelavka pripravljala referate, pisala odločbe za senat itd., da teh tehničnih podrobnosti ne ponavljam. Vodi evidenco sodne prakse na upravnem področju, kar ni tako preprosto, in tudi ni preprosto kot soavtor sodelovati pri taki zbirki odločb upravnega spora, kot je bilo že omenjeno. S tem je vendarle izkazana njena sposobnost za delo tudi na teoretičnem področju. Moram tudi povedati, da je bila kandidatka dve mandatni dobi neprofesionalna predsednica Senata pri sodišču združenega dela v Ljubljani, kjer je tudi dobivala potrebno sodno rutino. Vse to je upoštevalo sodišče, ki skladno z zakonom o rednih sodiščih daje mnenje o kandidatih, ki so se prijavili na razpis, v tem primeru občna seja Vrhovnega sodišča, ki jo sestavljajo vsi sodniki Vrhovnega sodišča in je Rothovo soglasno predlagala Sodnemu svetu v izvolitev. Sodni svet je po dopolnitvi mnenj sprejel te ocene in z 2/3 večino predlagal kandidatko v izvolitev. Menili smo, da kandidatka izpolnjuje zahtevane pogoje. Seveda se strinjam, da se za tako mesto zahteva izjemno visoka strokovnost, ne samo v praktičnem, tudi v teoretičnem pogledu, ampak ne da bi zmanjševal strokovni renome kandidatke, moram povedati, da je v sedanji situaciji, ko ljudje, med drugimi tudi visoki strokovnjaki, v tako velikem številu odhajajo iz sodstva - to imate lahko slišite na vsakem zasedanju - tudi zaradi neustreznih osebnih dohodkov, da torej v taki situaciji ni nobenega realnega pričakovanja, da bi se na tako mesto prijavili izjemno dobri strokovnjaki iz upravnega prava.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg210">Kandidatka Rothova je z dosedanjim delom izkazala svojo strokovnost in s tem sposobnost, da ji lahko zaupamo sodniško mesto. Predlog za njeno izvolitev zato podpira Sodni svet. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR.</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg211">Hvala lepa. Prosim, Pintar.</seg>
             </u>
             <note type="speaker">EMIL MILAN PINTAR:</note>
-            <u who="#SSK11.PintarEmilMilan1944" ana="#regular">
+            <u who="#PintarEmilMilan1944">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg212">Hvala lepa. Spoštovane kolegice in kolegi! Nisem pravnik, gospe Rothove v tem času z nesrečnim priimkom ne poznam, me pa moti naslednja zadeva, in vi veste, da sem se v te razprtije doslej spustil samo enkrat, ko je šlo za poskus politične diskvalifikacije nekega sodnika iz Kranja. Zadnjič, ko smo takorekoč popolnoma brez razprav diskreditirali nek strokovni svet, nisem tudi reagiral na to, vendar me moti naslednja zadeva. Ne glede na to, kar je če sem prav razumel, se opravičujem, če sem narobe, predsednik Sodnega sveta pojasnil, me je prepričalo. Moti me pa tole. Če je gospod minister zelo lepo začel z ugotovitvijo, da gre za to, da nekdo, ki je za to kvalificiran, opravlja neke vrste nadzor nad upravo, da torej ne gre samo za vprašanje neodvisnosti sodstva, ampak njegove, recimo v tem primeru, primarnosti, ko gre za državno upravo, potem seveda postane prav smešno - in ne vem, kakšen izraz naj uporabim - da si ta državna uprava jemlje pravico, da si določa, kdo naj bo tisti, ki bo zdaj nad njo opravljal neke vrste kontrolo. Upam, da ne bomo šli še korak naprej in drugič zahtevali tudi pogodbo s pravosodnim ministrom in deponiranim mnenjem o njem, da bo lahko kdo kandidiral za to, da bo opravljal sodni nadzor.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg213">Še enkrat rečem, jaz je ne poznam, ampak v tem primeru se mi zdi primerno mnenje Sodnega sveta. Kajti to je strokovno mnenje in če mi predsednik reče, da tu ni nobenih novih informacij, da so to vedeli, da so slišali, da so pregledali in z 2/3 večino glasovali, potem upam, da bomo počasi začeli tudi mi ločiti stranko od države, da bom jaz enkrat uporabil formulacijo, ki jo tako radi uporabljamo, ne tako kot v preteklosti. In polagomo dali stroki prednost pred političnimi manipulanti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg214">Hvala lepa. Ker ni, da prosim, Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg215">Liberalna stranka. Moram se oglasiti na, ne vem, kako bi to rekel, na izzivanje gospoda Emila Milana Pintarja, ko je govoril o nekem sodniku iz Kranja. Moram povedati, da sva o tem sodniku z gospodom Šterom povedala tisto, kar sva vedela. In če pristanemo na logiko gospoda Pintarja, poslanci sploh ne smemo nič več govoriti v tej skupščini in jaz mislim, da ne moremo sprejeti takega mišljenja, kot ga zagovarja gospod Pintar. Sodni svet je ugotovil, da sodnik ni bil primeren za sodnika in zato ga je tudi umaknil. In zato prosim ne vlecite zadeve naprej. Tudi gospod Peter Bekeš je takrat dal peticijo in je ugotovil, da zadeva z njegove strani ni v redu in je pač zadeva zamrla. Torej, sodnik je bil legalno umaknjen. In zato prosim, ne vlecite tega naprej. Kar je g. minister povedal, z njim se popolnoma strinjam, ker ne more biti upravna uradnica kar naenkrat sodnik Vrhovnega sodišča. Da bomo vendar to inštitucijo degradirali na nulo. Mora biti, vsaj mislim kot nepravnik, da mora tam biti sodnik, ki ima večletno prakso, ki se na zadeve razume in da pač takega človeka potrdimo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg216">Opozarjam, da je razprava izključno o predmetu. Andrej Šter.</seg>
             </u>
             <note type="speaker">ANDREJ ŠTER:</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg217">To je povsem točno, torej v zvezi z izvajanjem poslanca Pintarja bi samo nekaj rekel. Žal sem, ampak bo videti kot da namenoma, pred tremi dnevi iz kovčka odložil zajetno kuverto, ki sem jo doslej nosil s seboj. Kaže, da sem to storil prezgodaj. Zato bom skušal po spominu povedati dejstva v zvezi s tem. Po sklepu te skupščine, kar je razvidno iz zapisnika, sedaj ne vem citirati številko seje, sem bil dolžan Sodnemu svetu pisma argumentirati svoje trditve, to sem storil. Sodni svet je o zadevi razpravljal in o tem odločil. O svoji odločitvi je pisno seznanil Komisijo za volitve, imenovanja, to je tudi razvidno iz zapisnika te komisije, jo seznanil z odločitvijo, da bo predlagal na to mesto drugega sodnika in tudi obrazložil svoje mnenje. To so dejstva. Lahko jih seveda vlečemo, ampak potem je to politizacija problemov. In to pa verjetno res ni v dobro naši skupščini.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg218">Še enkrat opozarjam, samo o predmetu razprave.</seg>
             </u>
             <note type="speaker">EMIL MILAN PINTAR:</note>
-            <u who="#SSK11.PintarEmilMilan1944" ana="#regular">
+            <u who="#PintarEmilMilan1944">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg219">Imam samo dva stavka, jaz se v toliko opravičujem. Bolj po nesreči, zato da bi pojasnil, da kljub temu sem prej odprl razpravo, sem omenil tisti kranjski primer. Ne da bi ga hotel obnavljati. Moram reči, da sta ti dve dopolnili g. Grosa in Štera v tem smislu seveda dopolnilo k tistemu, kar sem rekel. Pokazali sta, da je takrat razprava šla na Sodni svet in da je ta kot strokovni organ končno odločil o zadevi in smo se vsi podredili mnenju, ki ga je Sodni svet tu dejansko uveljavil. Jaz se opravičujem, da sem odprl ta kranjski del, ne bom ga več odprl. Mislim pa, da je to seveda javno priznanje strokovnosti Sodnega sveta in da se tudi v tem primeru obnašamo tako kot smo se takrat. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg220">Hvala lepa. Prosim, Bekeš.</seg>
             </u>
             <note type="speaker">PETER BEKEŠ:</note>
-            <u who="#SSK11.BekesPeter1946" ana="#regular">
+            <u who="#BekesPeter1946">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg221">Jaz kandidatke tudi ne poznam, kar štejem pravzaprav za prednost v tej zadevi. Ob oporekanju strokovnosti bi rad opozoril na osnovno stvar. Zakon postavlja dva pogoja, diploma pravne fakultete in pravosodni izpit. Tretji pogoj, ki ga postavlja Sodni svet, za kar je pristojen, so izkazane sposobnosti na osnovi delovnih referenc. Uprava je zelo širok pojem, tisti, ki smo kdaj delali v njej, že to vemo in tisti, ki ste začeli, spoznavate sedaj. Upravni uradnik ne more biti izraz, s katerim se strokovno delo v upravi razvrednoti. Mislim, da g. Gros ne bi bil zadovoljen, če bi kdo postavil drugačno primerjavo. Včeraj obrtnik, danes župan in republiški poslanec. Jaz bi tudi zoper to protestiral. In bo drugič ščitil g. Grosa, če bo kdo skušal s takšnimi primerjavami razvrednotiti njegovo delo. Želel sem biti samo nazoren, do kakšnih absurdov nas lahko take stvari pripeljejo. Skratka, treba je pogledati, kaj je človek zares delal. Sodni svet je sestavljen tako, v njem je tudi g. minister, da zaenkrat uživa moje zaupanje tudi z odločitvijo o tistem spornem primeru, kjer je zame prepričljivo z argumenti, ki sem jih sprejel na podlagi odgovora na vprašanje, ki sem ga zastavil, odgovoril. Kar je bilo korektno itn. Korektna je bila tudi administrativna komisija, medtem ko g. Šter, ki je bil tretji imenovan za to, da da odgovore, recimo te korektnosti ni pokazal. Dodatne akademske kvalifikacije, kot so magistrska in doktorska stopnja, so seveda zaželene. Vendar je situacija na področju pravnih znanosti naslednja. Nekaj doktorjev znanosti je v pokoju. Nekateri so angažirani sedaj na javnih funkcijah. Recimo g. Pirnat je minister za to področje. Njihova sedanja dela na teh funkcijah niso združljiva s sodniško funkcijo. Poleg tega nekateri ljudje s temi kvalifikacijami nimajo izpolnjenega posebnega pogoja po zakonu. Nimajo pravnega pravosodnega izpita, ki se za sodniško delo zahteva; kot pravico tudi za vrhovno sodišče, kjer so izjeme sicer možne, ampak niso zaželene. In tretja resnica je ta o materialni stimulaciji. Za odgovorno vrhunsko strokovno delo so dohodki taki, kot so, ki niso primerljivi s plačami za podobna dela na zahodu, in seveda so prijave take, kot so. Moram to reči, Sodnemu svetu zaupam, da je z vso vestnostjo presodil, podobno zaupam občni seji Vrhovnega sodišča in bom podprl to kandidaturo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg222">Glasujemo o predlogu za izvolitev Bogdane Žigon-Roth za sodnico Vrhovnega sodišča Slovenije, pardon kot celota govorim.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg223">Kdo je za?</seg>
                <note>72 delegatov.</note>
@@ -1066,42 +1044,42 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg274">Komisija za volitve, imenovanja in administrativne zadeve predlaga, da Skupščina Republike Slovenije razreši Milico Ozbič dolžnosti guvernerke Narodne banke Slovenije s 1. aprilom 1991 in imenuje dr. Franceta Arharja za guvernerja Narodne banke Slovenije s 1. aprilom 1991, imenuje mag. Igorja Omerzo za generalnega direktorja Službe družbenega knjigovodstva v Republiki Sloveniji. Predlog ste prejeli danes. Ali želi besedo predstavnik predlagatelja, oziroma jaz bi mu sam najprej postavil vprašanje, ali je potrebno, da razpravljamo o razrešitvi, kolikor sam po sebi ne preneha mandat z določenim datumom.</seg>
             </u>
             <note type="speaker">JANEZ LAMPRET:</note>
-            <u who="#SSK11.LampretJanez" ana="#regular">
+            <u who="#LampretJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg275">O razrešitvi je treba odločati zaradi tega, ker ji mandat poteče šele čez dva meseca in pol.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg276">Prosim. Bolj na glas, nisem razumel.</seg>
             </u>
             <note type="speaker">JANEZ LAMPRET:</note>
-            <u who="#SSK11.LampretJanez" ana="#regular">
+            <u who="#LampretJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg277">Čez dva meseca in pol ji poteče mandat, zato je treba razrešiti. Je v poročilu napisan kompleten razlog.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg278">Prosim, če ga poveste še tukaj na glas.</seg>
             </u>
             <note type="speaker">JANEZ LAMPRET:</note>
-            <u who="#SSK11.LampretJanez" ana="#regular">
+            <u who="#LampretJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg279">Komisija Skupščine Republike Slovenije za volitve, imenovanja in administrativne zadeve je razpravljala o predlogu, ki ga je predložila Komisija Izvršnega sveta Skupščine Republike Slovenije za kadrovske in administrativne zadeve, s katerim predlaga, da se Milica Ozbič razreši dolžnosti guvernerke Narodne banke Slovenije. Narodna banka Slovenije prevzema bistveno razširjene naloge v okviru osamosvajanja Republike Slovenije. S tega vidika se postavlja v celoti nov sistem, zato naj bi se že v začetku imenoval nov guverner, ki bi ta proces izvajal. Glede na to, da guvernerki Narodne banke Slovenije poteče mandat na tej dolžnosti dne 24.6.1991, je primerno, da se zamenjava opravi že sedaj. Pri oblikovanju predloga za razrešitev, kateri guvernerka Narodne banke Slovenije ne nasprotuje, je bilo dogovorjeno, da bo Milica Ozbič do 24.6.1991 opravljala primopredajne posle v Narodni banki Slovenije ter izkoristila redni letni dopust. Po tem pa izpolnjuje pogoje za upokojitev. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg280">Hvala lepa. Želi kdo o stvari razpravljati? Prosim, Sonja Lokar.</seg>
             </u>
             <note type="speaker">SONJA LOKAR:</note>
-            <u who="#SSK11.LokarSonja1948" ana="#regular">
+            <u who="#LokarSonja1948">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg281">Moram nasprotovati v imenu prenoviteljev predlogu za razrešitev Milice Ozbičeve, guvernerke Narodne banke Slovenije. Danes smo že imeli priložnost videti, kako deluje SZDL-jevska, pardon, Demosova kadrovska koordinacija pri takšnih zoprnih zadevah. Vendar mislim, da je treba zelo jasno povedati naslednje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg282">Da smo predlog za takšen kadrovski ukrep prejeli šele danes za mize. Da je bil postopek kaj nenavaden, kajti Komisija za volitve, imenovanja in administrativne zadeve je o tem sklepala včeraj, ne da bi prej o tej zadevi kakorkoli obvestili vodje klubov ali o tem razpravljali v strankarskih klubih, kar je doslej vendarle bila neke vrste dobra navada, ki se je uvedla v skupščini. Razen tega, predlog za razrešitev guvernerke, ko smo o njem prvič na komisiji razpravljali, ni bil opremljen z nobeno utemeljitvijo. Dano je bilo samo ustno pojasnilo, da gospa Ozbičeva razrešitvi izrecno ne nasprotuje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg283">Utemeljitev novega imenovanja, če ste jo danes prebrali, saj jo je tudi gospod Lampret povedal, je še bolj čudna. Namreč, kmalu da bo sprejet nov zakon o Narodni banki Slovenije in da je zato tudi treba imenovati novega guvernerja. Na komisiji je gospod Verlič duhovito pospremil to utemeljitev s primerjavo, kako bi se počutili, če bi, na primer, vodstvo RTV zamenjali, preden je bil sprejet zakon o RTV.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg284">Torej tovarišica Milica Ozbič, in to ji priznavajo tudi vsi v Demosu, vsaj javno so tako izjavljali, je svoje delo opravljala in ga opravlja visoko strokovno. Do konca njenega mandata so še trije meseci, pardon, dva in pol meseca. Novi človek, proti kateremu nimam prav nič, bi se prav lahko uvajal v novo delo tudi drugače in ne tako, da na vrat na nos razrešimo guvernerko, ki bo za povrh čez nekaj kratkih mesecev šla v pokoj. Tak kadrovski postopek je zame, in mislim da za vse poslance prenoviteljev, neprepričljiv. Dokazuje najmanj nedemokratičnost in nehumanost Demosove kadrovske politike. Mene ne skrbi to, da tako početje strankam Demosa ni v čast. Takšno ravnanje jim bodo volilci že obračunali na naslednjih volitvah. Mislim pa, da mora SDP povedati, da se s takšnim ravnanjem ne more strinjati in da bo vedno, kadar se bo kaj takega dogajalo, nasprotovala, pa čeprav bo to, kot je pač navada v tej skupščini, bob ob steno. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg285">Hvala lepa. Samo vprašanje. Je Milica Ozbič soglasna s tem predlogom? Je. Dobro, prosim, Jože Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg286">Spoštovani! Po mojem mnenju gre za zelo nekorekten postopek do guvernerke Narodne banke tovarišice Milice Ozbič. Njej poteče mandat, kot tu piše, 24.6. In jaz ne vem, zakaj se ne omogoči zelo uspešni guvernerki, da to delo normalno dokonča do 24.6. t.l. Do sedaj nisem slišal nobenih pripomb na delo guvernerke Milice Ozbič in se čudim, zakaj sedaj takšno predčasno ukrepanje. V tem smislu sem razumel tudi vprašanje, ki ga je postavil predsednik skupščine gospod Bučar. Če govorimo o povečanih nalogah Narodne banke Slovenije, in to ni sporno, potem se mi zdi povsem racionalno in normalno, da k tej razširjeni funkciji največ prispeva sama dosedanja guvernerka. Zato predlagam, da se novega guvernerja dr. Franceta Arharja imenuje z dnem 24.6.1991, ko bo potekel normalen mandat sedanji guvernerki.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg287">Tisto, ali se je tovarišica Ozbič strinjala ali ne, si predstavljam, da gredo stvari takole. Najprej te pokličejo in rečejo, veš kaj, ti se moraš umakniti in potem <gap reason="inaudible"/>
                </seg>
@@ -1111,41 +1089,41 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg289">Brez skrbi. Predlagam, bodimo resni. Predlagam, da dosedanja guvernerka, tovarišica Ozbič normalno konča svojo funkcijo s 24.6.1991 in da potem prevzame novi guverner dr. France Arhar. Z njegovo kandidaturo se strinjam.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg290">Hvala lepa. Želi še kdo razpravljati? Ciril Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg291">Najkrajše. Podpiram to, kar je tovariš Jože Smole tukaj predlagal. Mislim na ta predlog, da se danes ne izognemo niti imenovanju niti razrešitvi, ampak da to datumsko postavimo s tistim rokom, ko se izteče mandat. Meni bi se to zdela kar neka častna rešitev, pa tudi dela bi najbrž bilo za oba dovolj v teh mesecih.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg292">Mislim, da smo bili nekorektno obveščeni o neki stvari. Ali dosedanja guvernerka soglaša ali ne nasprotuje, to seveda ni eno in isto. Sonja Lokar trdi, da je formulacija: ne nasprotuje. Tukaj je na intervencijo predsednika skupščine prišlo obvestilo, da soglaša. In prosim za pojasnilo, da bo stvar korektno izpeljana. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg293">To pa ugovarjam, na kakšen način sem jaz interveniral? Samo vprašanje sem postavil. Ni bilo nobene intervencije z moje strani in si tudi ne dovolim, da bi jaz interveniral. Nimam te pravice.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg294">Se opravičujem. predsednik skupščine ni interveniral in umikam to formulacijo. Na njegovo vprašanje, ali kandidatka soglaša, je bilo potrjeno. Tisti, ki so bili pri tem postopku pa trdijo, da to ni res. In prosim, če se nam da korektno pojasnilo, zato da bo korektno izpeljan postopek. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg295">Hvala lepa. Peterle, prosim. Majčkeno prosim, se ne razumemo. Halo. Se ne razumemo. Za..</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg296">Predsednik Izvršnega sveta. Spoštovane poslanke in poslanci! Jaz se vam opravičujem ker sem - ne vem kako naj ta vlada vlada, če se mora zagovarjati takorekoč za vsak predlog, ki ga ponudi. Mislim, da tu ne gre zgolj za človekoljubnost, ampak da gre za krokodiljo človekoljubnost.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg297">Predlog je šel skozi komisijo. Navedeni so razlogi, navedena so dejstva in sedaj se počutim kot na zaslišanju, kaj nam je bilo, da smo si upali. Vi veste, pred kakšnimi dejstvi je ta država ali Slovenija. Znano je, da je območje oziroma področje kreditno-monetarne politike eno ključnih v tej zvezi. In vlada je gotovo resno premislila, preden se je odločila za to, da je predlagala tukaj novo ime. Če bi bila ta vlada tako grda, kot se jo želi predstaviti, potem bi to kruto dejstvo, ki se ga želi kot takega ponuditi, opravila drugi dan po svojem nastopu in bi imela vso pravico do tega. In, ko sedaj barantamo za te dneve, naj povem, da se mi zdi pametno, da bi se ta rok potegnil do tistega datuma, ker ima gospa Ozbičeva tudi še redni letni dopust. Zato smo s polno zavestjo ponudili datum, kakor smo ga, njej se status ne spreminja, ne bo postala svetovalka ali kaj drugega; v tem času bo, dokler ne nastopi dopusta, opravila ta primopredajni posel, ki mora tudi nekaj časa trajati. Če bi bil formalist, bi rekel, da ta datum, ki ga predlagate, ni mogoč, ker si po tem formalno ne moremo, recimo, zagotoviti niti primopredaje, kot bi si želeli. Vlada vztraja na tem, da se to zgodi na ta datum. Z gospo Ozbičevo pa se je o tej stvari večkrat pogovarjal podpredsednik Mencinger, ki je pač podpredsednik za gospodarstvo in skrbi tudi za to področje in se je tako z njo dogovoril. Prosim, da mi verjamete.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg298">Hvala. Avberšek je želel besedo.</seg>
             </u>
             <note type="speaker">MAG. FRANC AVBERŠEK:</note>
-            <u who="#SSK11.AvbersekFranc1947" ana="#regular">
+            <u who="#AvberšekFranc">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg299">Jaz moram reči, da sem bil potem, ko sem v časopisu prebral za te predloge, razočaran. Pa ne zaradi imen, ampak zaradi predloga, kako se je pojavil. Prejšnji teden, v petek smo imeli sejo komisije za monetarne zadeve in na njej smo obravnavali zakon o Narodni banki Slovenije. Precej časa smo namenili tudi točki, ki govori o tem, kako se imenuje guverner Narodne banke. Predlog, tako je menda sprejela tudi v predlogu vlada, ki je pred tem zakon obravnavala, ni takšen, torej, postopek ni takšen, kot ga obravnavamo sedaj, ampak je malo drugačen. Seja je bila zaprta, skrivnostna, kot da se bo nekaj dogajalo, dva dni zatem pa iz časopisov izvemo nekaj drugega. Jaz predlagam, da s poslanci, torej, v tem primeru pa res ne manipulirate, ampak nam ne kradete časa, temu parlamentu pa denarja, zato da hodimo na seje, ki so res nepotrebne.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg300">Hvala lepa. Želi še kdo razpravljati? Če ne želi, moram ugotoviti, zdaj je bil tukaj postavljen predlog, da se zadeva preloži. Ne preloži oziroma da se umakne, dokler ne poteče rok, ne, to je bil približno predlog. Ja, datum, ja, se razume, ne. Torej, ker je ta predlog konzumiran najprej oziroma prejudiciran s tem, da glasujemo zdaj najprej, ali podpiramo ta predlog ali ne. Če ne bo sprejet, potem pride do glasovanja o tem predlogu. Zato dajem zdaj najprej na glasovanje predlog, tako kot je postavljen. Na glasovanje dajem predlog za razrešitev Milice Ozbič z dolžnosti guvernerke Narodne banke s 1. aprilom 1991.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg301">Kdor je za, prosim, da glasuje!</seg>
                <note>109 delegatov.</note>
@@ -1156,11 +1134,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg304">Predlog je dobil potrebno večino. S tem odpade potreba po glasovanju o drugem predlogu. Prosim!</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg305">Meni je neprijetno, jaz bom vas vprašal, pa še koga, če hočete, ampak res, kolikor vem, kadar je dan sklep, in je dan amandma na sklep, ali pa na kakršnokoli odločitev, je res, da se najprej o tem amandmaju glasuje. Zdaj smo ravnali točno drugače, ker amandma je bil o datumu razrešitve. In mislim, da niste prav ravnal. Samo toliko, da opozorim. Jaz ne zahtevam, da morate karkoli drugega narediti, ampak, mislim, da se lovimo in bomo vsakokrat drugače odločali, kar bo potem škoda in bo povzročalo slabo voljo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg306">Dobro, če hočete, formalno lahko tudi ponovimo glasovanje. Toda, in še enkrat ponavljam, to je samo racionalizacija, kajne. Zdaj bi dvakrat glasovali. Torej, dobro je, torej, ste za to, da anuliramo glasovanje?</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg307">Ne. Dobro je. Hvala. Torej, potem dam na glasovanje predlog za imenovanje dr. Franceta Arharja za guvernerja Narodne banke Slovenije s 1. aprilom 1991.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-06.s016-01.seg308">Kdo je, prosim, za?</seg>

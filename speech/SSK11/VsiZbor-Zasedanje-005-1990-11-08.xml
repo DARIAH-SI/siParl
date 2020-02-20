@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 5. zasedanje</title>
             <meeting n="5"
-                     corresp="#VsiZbor.1990-11-08.z005-01.DruzPolZb #VsiZbor.1990-11-08.z005-01.ZbObc #VsiZbor.1990-11-08.z005-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="8"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="5"/>
                <tagUsage gi="seg" occurs="29"/>
             </namespace>
@@ -120,23 +111,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1990-11-08.z005-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-11-08.z005-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-11-08.z005-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -147,22 +121,26 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">5. zasedanje</head>
             <docDate>8. november 1990</docDate>
             <note type="chairman">Sejo je vodil dr. Ludvik TOPLAK, predsednik Družbenopolitičnega zbora</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.40 uri.</note>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg1">Dragi delegati, gospe in gospodje. Pričenjam skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora Skupščine Republike Slovenije. Na skupnem zasedanju bomo poslušali INFORMACIJO O STANJU IN POSLEDICAH POPLAV V REPUBLIKI SLOVENIJI, S PREDLOGI UKREPOV.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg2">Informacijo bosta podala gospod Lojze Peterle, predsednik Izvršnega sveta Skupščine Republike Slovenije, in gospod Miran Bogataj, poveljnik Republiškega štaba za civilno zaščito. Delegati so v zborih na klop dobili ugotovitve, stališča in predloge, ki jih je Predsedstvo Republike Slovenije že sprejelo ob obravnavi informacije Republiškega štaba za zaščito o posledicah poplav na Slovenskem.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg3">Prosim za besedo gospoda Mirana Bogataja.</seg>
             </u>
             <note type="speaker">MIRAN BOGATAJ:</note>
-            <u who="#SSK11.BogatajMiran1948" ana="#regular">
+            <u who="#BogatajMiran1948">
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg4">Spoštovano predsedstvo, spoštovani zbor! V obdobju od 26. do 31. oktobra je glavnina padavin na območju Republike Slovenije padla v zahodni in osrednji Sloveniji, manj je bilo padavin na Dolenjskem, v Beli Krajini ter severovzhodni Sloveniji. V zahodni Sloveniji je v tem času padlo padavin od 80 pa tudi do 300 litrov na kvadratni meter. Drugod, v severni in osrednji Sloveniji, so se te padavine gibale v količinah od 50 do 120 litrov na kvadratni meter, drugod so bile manjše. Največ padavin je padlo v noči od 1.11. na 2.11. in 2.11. preko celega dne. Ponekod so bile presežene doslej izmerjene maksimalne 24-urne količine padavin. Visoke vode, ki so vsled teh padavin nastopile v območju Slovenije 1.11. in 2.11., so bile katastrofalne v srednjem in spodnjem toku reke Save, v pretokih Sora, Kamniška Bistrica in na celotnem porečju Savinje do vodno od naselja Luče.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg5">Prav tako so izjemno visoko porasli dravski pritoki, predvsem desnega brega, in nekateri drugi vodotoki, vključno z zgornjim delom Idrijce. Kamniška Bistrica je presegla višino 100-letnih voda na območju Kamnika, Sava pri Radečah in Sora pri Suhi. Nedvomno posledice, ki so nastale zaradi tako visokih vodostajev, predstavljajo izjemno veliko naravno nesrečo. Najbolj prizadeta območja so del Koroške, celotno območje celjske kotline, območja vzdolž Save, vse dol vodno od Ljubljane, zgornji deli Poljanske in Selške doline, določeni deli Gorenjske, Cerkljanskega in druga območja. V celoti ocenjujemo, da je bila prizadeta skoraj 1/3 območja teritorija Republike Slovenije. V 33 najbolj prizadetih območjih so nastale izjemno velike škodljive posledice divjanja te naravne ujme. Iz stanovanjskih objektov je bilo izseljenih 555 občanov, od tega trajno 51; žal sta 2 osebi izgubili tudi življenje. Poplavljenih je bilo preko 5.100 stanovanjskih objektov in drugih pomožnih objektov.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg6">Trajno je bil poškodovan 101 objekt. Poplave so prizadele oz. je hudourna voda vdrla v 314 podjetij in obratovalnic, od tega je 10 objektov v bistvu onesposobljenih oz. tako poškodovanih, da jih ni mogoče sanirati. Zaradi poplav je bilo prizadetih 46.000 oz. skoraj 47.000 hektarjev kultiviranih kmetijskih površin. Poškodovana sta bila 302 mostova, od tega so uničeni 103. Izjemno velika škoda je nastala na drugi prometni infrastrukturi, na vodno-gospodarskih objektih in ostalih infrastrukturnih objektih. Prišlo je do kontaminacije 11 večjih vodovodnih sistemov zaradi zakalitve in podobnega. Zaradi poprave, zlasti na območju Celja, ki je obsegala okoli 700 hektarjev, je prišlo do razpada energetskega in PTT sistema; sprožilo se je nad 400 zemeljskih plazov - točno število ta trenutek niti ni znano. No, poleg tega so nastale še tudi druge posledice, za katere bomo dokončno stanje videli v parih dneh.</seg>
@@ -173,11 +151,11 @@
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg11">Ne glede na probleme, obseg, težave in seveda tudi pomanjkljivosti, ki so nastajale pri našem delovanju, skupnem delovanju v minulih osmih dneh, mi dovolite, da se zahvalim vsem: pripadnikom civilne zaščite in gasilskim organizacijam ter njihovim članom, pripadnikom organov za notranje zadeve, delavcem rednih služb in dejavnosti in pripadnikom JLA ter vsem za doslej opravljeno izredno požrtvovalno in prizadevno delo pri izvajanju zaščitnih in reševalnih aktivnosti. Mislim - in naj mi bo dovoljeno reči -, da bi bilo odveč ta trenutek ocenjevati, kdo je v teh nalogah nosil večji delež. Dejstvo je, da smo s skupnimi napori obvladali nesrečo, naravno nesrečo, ki jo morda posamezna generacija doživi le enkrat v svojem življenju. Dejstvo tudi je, da se je potrdila pravilnost usmeritev, s katerimi poskušamo dograjevati celoten sistem zaščite in reševanja v enotno organizacijsko in funkcionalno delovanje. Zelo hitro in organizirano so stekle tudi aktivnosti za pomoč prizadetim, tako ljudem kot tudi posameznim dejavnikom. Seveda te oblike pomoči v teh dneh šele dobivajo svojo celovito podobo, posebej, ker se tudi šele v zadnjih dneh potrebe kažejo zadosti konkretno, zadosti kvantificirano. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg12">Hvala lepa. Besedo ima gospod Lojze Peterle, predsednik IS.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg13">Spoštovani predsedujoči, spoštovane poslanke in poslanci! Najprej bi vam rad povedal, kako je organizirana pomoč na republiški ravni, da bo lažje razumeti vso to dejavnost. Gre za tri ravni delovanja.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg14">Najprej gre za Republiški štab za civilno zaščito, ki deluje predvsem v prvi, krizni fazi. Potem je tukaj Odbor podpisnikov dogovora o upravljanju sredstev solidarnosti za odpravljanje posledic naravnih nesreč v Republiki Sloveniji (ta deluje pri Sekretariatu za varstvo okolja; njegov predsednik je Miha Jazbinšek). In potem je tukaj koordinacijski odbor za odpravljanje posledic poplave, ki ga je imenoval odbor za odpravljanje posledic poplav, ki ga je imenoval Izvršni svet Skupščine Republike Slovenije. Potem so pa tukaj še sekretariati, ki opravljajo posle vsak v okviru svojih pristojnosti. Na občinski ravni delujejo prav tako občinski štabi za civilno zaščito ter komisije za oceno škode. Posamezne občine sodelujejo preko svojih štabov z Republiškim štabom za civilno zaščito. (Naprej v detajle tega ne bi razlagal.)</seg>
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg15">Republiški štab za civilno zaščito je 31. oktobra popoldne opozoril vse občinske štabe za civilno zaščito na možnost poplav glede na meteorološko prognozo. Štab je bil aktiviran 1.11. v jutranjih urah v operativni sestavi in, kot ste slišali, še deluje. Dne 2.11. je bila izredna seja Izvršnega sveta, ki je začel preko resorjev koordinirati in izvajati vse potrebne aktivnosti; posamezni člani so si tudi ogledali razmere na poplavljenih območjih, potem pa je bil 5.11. ustanovljen poseben koordinacijski odbor. Na tej izredni seji Izvršnega sveta je bilo dogovorjeno, kaj morajo opraviti resorji glede na nastale razmere. Predvsem opozarjam na sklep, da morajo resorji svoje programe prirediti tem novim razmeram, se pravi, da je prišlo do odločitve, da preprogramiramo oz. popravimo plane glede na ta dejstva. Dogovorjeno je bilo tudi, da bomo opravili analizo ukrepanja oz. ravnanja, zato da bi bili naslednjič še bolj pripravljeni. Drugih sklepov tukaj ne bi navajal.</seg>
@@ -196,7 +174,7 @@
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg28">Še kakšno vprašanje? Tukaj je navzoča večina ministrov, ki po resorjih skrbijo za posamezne probleme in so pripravljeni odgovarjati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-11-08.z005-01.seg29">Hvala lepa. Razprava se bo nadaljevala na ločenih sejah. S tem zaključujem skupno zasedanje. Zbori delo nadaljujejo takoj.</seg>
             </u>
             <note type="time">Seja je bila končana 8. novembra 1990 ob 15.05 uri.</note>

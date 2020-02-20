@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDT3-UK-Redna-001-2001-11-13"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje delovnih teles Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the working bodies of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Ustavna komisija: 1. redna seja (13. 11. 2001)</title>
-            <meeting n="1"
-                     corresp="#SDT3-UK-Redna-001-2001-11-13.UK"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="1" corresp="#UK" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="3" corresp="#DZ" ana="#parl.term #DZ.3">3. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,36 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">USTAVNA KOMISIJA DRŽAVNEGA ZBORA REPUBLIKE SLOVENIJE</title>
-                  <title xml:lang="sl">1. seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Nepreverjen zapis seje</edition>
-                  <edition xml:lang="en">Unverified session record</edition>
-                  <idno type="custom" subtype="session">3590A9EB93CB079EC1256AFC004E76AA</idno>
-                  <idno type="custom" subtype="day">53D089DBE5237740C1256B0400445A39</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=magdt&amp;uid=53D089DBE5237740C1256B0400445A39</idno>
-                  <imprint>
-                     <date when="2001-11-13">(13. november 2001)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>Ustavna komisija: 1. redna seja (13. 11. 2001)</title>
+               <edition xml:lang="sl">Nepreverjen zapis seje</edition>
+               <edition xml:lang="en">Unverified session record</edition>
+               <date when="2001-11-13"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=magdt&amp;uid=53D089DBE5237740C1256B0400445A39</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="83"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="75"/>
                <tagUsage gi="seg" occurs="183"/>
                <tagUsage gi="gap" occurs="10"/>
@@ -276,25 +259,21 @@
                <date when="2001-11-13" ana="#parl.sitting">13. 11. 2001</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDT3-UK-Redna-001-2001-11-13.UK"
-                 ana="#parl.committee"
-                 corresp="#UK">
-               <orgName>Ustavna komisija</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>USTAVNA KOMISIJA DRŽAVNEGA ZBORA REPUBLIKE SLOVENIJE</head>
             <head type="session">1. seja</head>
-            <docDate>(13. november 2001)</docDate>
             <note type="chairman">Sejo je vodil Borut Pahor, predsednik komisije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 18.09 uri.</note>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg1">Spoštovane gospe in gospodje, drage kolegice in kolegi, ugotavljam, da je ustavna komisija sklepčna in da lahko odloča. Rad bi vas obvestil, da sta prišli dve pooblastili, kolega dr. Brejca nadomešča kolega Kelemina, kolega Francija Rokavca pa kolega Božič. To sta edini pooblastili, ki ju ta hip imam in ju bomo upoštevali pri odločanju.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg2">Skladno s poslovnikom sem določil dnevni red. Sprašujem prisotne ali kdo predlaga umik te točke. Če ne, potem razumem, da je tak dnevni red sprejet, če tudi ni predloga za širitev. Z današnjim dnem, kolegice in kolegi začenja torej delo ustavna komisija državnega zbora Republike Slovenije. Njena naloga je, da pripravi vse potrebne podlage in predloge za začetek in uspešen konec ustavno revizijskega postopka. Naš cilj je, da pripravimo državnemu zboru za njegovo končno odločitev pravno, strokovno odlične predloge, ki naj seveda uživajo tudi čim širšo politično podporo. V ustavni komisiji sodeluje več kot četrtina vseh poslank in poslancev državnega zbora, to zdaj ne govori samo o njenem pomenu, ampak nas opozarja predvsem na potrebo po taki organizaciji dela komisije, ki naj omogoči kvalitetno razpravljanje in odločanje ob vseh drugih pomembnih obveznostih, ki jih imamo in zato sva s podpredsednikom, kolegom Cukjatijem po svojih najboljših močeh ob sodelovanju strokovnih sodelavcev, tako pripravila tudi otvoritveno sejo.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg3">Poslal sem vam predloge za dogovor o nekaterih vprašanjih dela ustavne komisije s prilogami in predlagam, če se s tem strinjate, da bi najprej proučili dogovor o načinu odločanja ustavne komisije. Veljavni poslovnik državnega zbora namreč nima določb po postopku za spremembo ustave, izhajajoč iz ustavne ureditve in dosedanje prakse, pa kaže najprej sprejeti tak dogovor o načinu dela komisije, kar bi nam omogočilo pregledno in nesporno vodenje obravnav.</seg>
@@ -303,16 +282,16 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg6">Če bi se, spoštovane članice in člani ustavne komisije strinjali, bi prosil svetovalca državnega zbora za ustavna vprašanja, dr. Cerarja, da da nekaj zelo kratkih in izčrpnih poudarkov o naših nalogah in možnih poteh našega dela, da nam bi že pri tem dogovoru bilo to v pomoč. Če nihče ne ugovarja, bi torej prosil dr. Cerarja, da nas seznani z nekaterimi stvarmi, ki so pomembne za naše delo. Prosim, dr. Cerar.</seg>
             </u>
             <note type="speaker">DR. MIRO CERAR:</note>
-            <u who="#SDT3.CerarMiran" ana="#regular">
+            <u who="#CerarMiro">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg7">Hvala lepa, gospod predsednik. Kot ste rekel, bom skušal res na kratko nekako obrazložiti točke 2 do 5 v tem predlogu za možne dogovore te ustavne komisije.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg8">Poudarjam seveda, da gre za, tudi moja obrazložitev v smeri predloga, ki ga mora seveda normalno potrditi potem ustavna komisija. K točki 2 bi dejal takole. Trenutno sta v državni zbor torej vložena dva predloga za začetek postopka za spremembo ustave. In zastavlja se torej vprašanje, kako jih obravnavati, glede na dejstvo, da se tudi vsebinsko delno prekrivata. Gre namreč pri enem in drugem za materijo, ki zadeva lokalno samoupravo. Na kratko lahko rečem, da je dosedanja praksa sledila načelu, da v primeru več predlogov, ki se nanašajo na isto neko ožjo materijo, lahko prioriteto oziroma način obravnave določa ustavnakomisija oziroma potem na njen predlog tudi državni zbor. Se pravi, tukaj nismo vezani nujno na neko časovno zaporedje, glede vložitve obeh predlogov, marveč je tukaj ustavna komisija v tem pogledu avtonomna pri odločitvi. Lahko se odloči za časovno zaporedje, lahko pa tudi zavzame stališča o neki smiselni prioriteti. In ker vemo, da vladni predlog je tukaj širši, je verjetno na mestu tudi razmislek o tem, ali ne bi pač obravnavali, ko bomo prišli do materije lokalne samouprave, oba predloga na nek način vzporedno. Možno, torej dopustno tudi je vzporedna obravnava obeh predlogov, vendar pa mora seveda ustavna komisija na koncu te obravnave, pa odločiti o vsakem predlogu posebej. In kolikor bi recimo potem imela stališče, ki bi ga naslovila na državni zbor, da se mogoče v naslednji fazi, če bi prišlo do nje, obravnavata pa povezano, bi pa o tem zavzela neko stališče. To je glede točke 2.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg9">A lahko prosim pojasnite tudi širše? Prosim.</seg>
             </u>
             <note type="speaker">DR. MIRO CERAR:</note>
-            <u who="#SDT3.CerarMiran" ana="#regular">
+            <u who="#CerarMiro">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg10">Morda samo še to. Treba je seveda, če načelno poudarim, upoštevati tudi določbe ustave. Namreč mi res nimamo še poslovniške ureditve, imamo prakso na tem področju, ki je bolj ali manj zavezujoča, ustava v 168. členu zelo jasno reče, da o predlogu za začetek postopka za spremembo ustave, odloči državni zbor z 2/3 večino navzočih poslancev, kar pomeni, da je treba seveda o vsakem predlogu le odločati ločeno. To bi bilo glede 2. točke.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg11">Glede 3. točke, če lahko nadaljujem, bi dejal, tukaj pač predlagano, da naj bi ustavna komisija organizirala neko javno predstavitev mnenj o teh vloženih predlogih. Gre pravzaprav za predlog, ki sledi možnosti iz poslovnika državnega zbora. Namreč 143. člen poslovnika in potem naslednja dva člena pravijo, da lahko matično delovno telo za pridobivanje informacij, opravi, kot veste vsi, javne predstavitve mnenj. Seveda je tukaj zdaj na ustavni komisiji ali se odloči za to. Seveda je tu zdaj na ustavni komisiji, ali se odloči za to. Se pravi, prva odločitev bi morala iti v to smer, ali sploh je potrebna neka javna predstavitev, ki bi jo organizirala oziroma inicirala ustavna komisija, ob tem, da zagotovo bodo potekali tudi razni drugi posveti, na drugih instancah, v strokovnih združenjih in tako naprej. In če se ustavna komisija odloči za to, je treba seveda tudi opredeliti, glede katerih vsebinskih sklopov iz predloga bi bila smiselna ta javna predstavitev mnenj in v kakšnem zaporedju.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg12">Glede točke 4. Gre za dogovor o sodelovanju strokovnjakov pri delu ustavne komisije. Kot veste, je še v vsakem postopku, ki ga je vodila ustavna komisija, sodelovala takšna ali drugačna skupina strokovnjakov, in skoraj zagotovo bo nujno, da tudi v tem primeru komisija oblikuje takšno skupino.</seg>
@@ -333,13 +312,13 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg26">Toliko zaenkrat. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg27">Hvala lepa, dr. Cerar. Imamo torej od točke 2 do točke 5 predlog dogovorov. Verjetno je preveč ambiciozno pričakovati, da bi dogovore o vseh teh odprtih vprašanjih sklenili že na današnji seji; verjetno bo potreba po posvetovanjih v poslanskih skupinah. Vendar bi izkoristili to otvoritveno sejo za to, da se morda glede tega razčistijo kakšna vprašanja, morda tudi o tem, da se žesporočijo prva pričakovanja glede tega.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg28">Vsekakor se mi zdi pomembno za naše kakovostno delo sprejeti dogovor o načinu obravnave, pač glede na dejstvo, da imamo dva predloga. Tako da bi potem lahko zastavili našo naslednjo sejo že v tem smislu.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg29">In v kolikor se strinjate, bi glede tega najprej vprašal kolegice in kolege, kdo želi besedo v zvezi s tem? Kolega Peterle, prosim.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDT3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg30">Hvala lepa, gospod predsednik. Spoštovane članice in člani komisije, spoštovani strokovnjaki!</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg31">V Novi Sloveniji smo precej natančno obravnavali vprašanje možnih ustavnih sprememb; ugotovili, ne edini, da gre za predloge, kakršni so bili doslej dani, ki ne pomenijo po našem mnenju samo manjših sprememb ustave, ampak pomenijo pravzaprav revizijo ustave in, kot pravijo tudi nekateri pravniki, ki se razumejo na ustavne zadeve, da gre za poskus, bom milo rekel, odprave nekaterih temeljev naše parlamentarne oziroma ustavne ureditve.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg32">Naša stranka ne podpira revizije, podpira po sklepu sveta stranke samo nujne spremembe, ki so potrebne za vstopanje Slovenije v Evropsko zvezo. In ugotavlja, da je tudi glede tega stroka zelo različnih mnenj; mislim, že sami ustavni pravniki imajo na to temo zelo različna stališča.</seg>
@@ -356,29 +335,29 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg42">Sploh bi bilo dobro - in to idejo o javni predstavitvi mnenj nedvomno podpiramo - da bi z neko tako predstavitvijo sploh začeli in bi tam vlada tudi slišala oziroma stranke, kakšna je, bi rekel, širša volja ali so širši odmevi na spremembo stave. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg43">Hvala lepa, kolega Peterle. Samo to naj rečem ob robu vaših predlogov, nekateri glavni je letel tudi na naslov vlade, da, prvič verjetno danes ne moremo pričakovati dokončnega dogovora o vseh štirih odprtih vprašanjih, zato bodo verjetno potrebni posveti v poslanskih skupinah. Drugič pa, da čene bi prišlo do spremembe s strani predlagateljev, ustavna komisija pred seboj ima dva predloga in se mora opredeliti o tem, kako bo ravnala z njimi pri obravnavi in odločanju. Tako, da bi povabil vse, ki še želijo danes uvodoma intervenirati, da seveda to upoštevajo. Kdo želi besedo? Želi še kdo besedo v zvezi s tem? Kolega Anderlič, koleg Janša. Kolega Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDT3.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg44">Saj nisem mislil, da bo takoj na začetku potrebno, ker sem mislil, da gremo vendarle po poti tistega, kar smo pravzaprav vsi pričakovali in kar smo dobili na klop ali pa že prej v poslanske skupine. Mi smo pričakovali, da bo danes predvsem dogovor o tem, da evidentiramo kaj imamo na mizi, da se dogovorimo kako s tistimi predlogi, ki se nekako najavljajo kot dodatni predlogi poslancev in pa seveda, da se na nek način opredelimo, to kar je gospod Cerar pravzaprav že rekel, kako pozvati zainteresirano javnost, da se v to razpravo vključi in da mogoče na osnovi tega potem tudi zares izoblikujemo tisto število in obseg vprašanj, ki bo potem v obravnavi in v končnem oblikovanju teksta za spremembo ustave.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg45">Tudi glede na točko 1 in 2 v tem osnutku predloga se vsaj, kar se tiče mene in naše skupine, moramo še pač pogovoriti, ker smo dobili na mizo in nismo prej bili vključeni v pripravo dela te komisije. Na prvi pogled je to sprejemljivo, kakor tudi predlogi za dogovore. Prvega smo tako ali tako že realizirali, o ostalih bo verjetno treba še nekaj vprašanj reči. V tem trenutku je točno samo to, kar ste gospod predsednik rekli, da imamo dva predloga, ki sta na mizi. Ustavno komisijo smo ustanovili in ji opredelili obseg dela. In mislim, da je to tisto, kar nas mora voditi. Jaz sem pogledal po dvorani in vidim, da tudi predstavnika vlade ni tukaj. Nisem pričakoval, da bo tako vprašanje zastavljeno, ali naj vlada že kar se umakne s temi predlogi ali ne. Jaz mislim, da je ta predlog, tako kot je, povsem legitimen in da ga je treba obravnavati, če pa bomo ugotovili, da podpore pač ni zadostne, bomo kasneje verjetno se odločili, ali bomo vladi to "vrnili" ali pa bomo to vzeli kot osnovo in spreminjali v sami komisiji ob sodelovanju tudi vlade. Tako da jaz vendarle predlagam da gremo naprej na način, da "pripoznamo" dva predloga, ki sta na mizi in da pozovemo seveda v nekem roku vse tiste zainteresirane poslance, ki so že najavljali ali pa se na nek način ve javno, da razmišljajo o še nekaterih predlogih, da to sporočijo. Da v poslanskih skupinah prediskutiramo ta vprašanj, ki so bila tukaj izpostavljena in da se v prihodnjem tednu ali v nekem času do njih tudi konkretno opredelimo. Ostalo pa mislim, da je v tem trenutku preveč za to komisijo oziroma za ta sestanek, ker je, vsaj tako smo mi razumeli v poslanski skupini, bilo tako napovedano za današnjo sejo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg46">Hvala lepa. Kolega Janša in kolega Peterle, Potrč, pardon.</seg>
             </u>
             <note type="speaker">IVAN (JANEZ) JANŠA:</note>
-            <u who="#SDT3.JanšaJanez" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg47">Hvala za besedo. Glede na to, da je to dogovor bolj o načinu dela komisije in da se o predlagane, predlaganih pet točk oziroma pet sklopov tega dogovora, bi jaz predlagal še 6. točko, za katero mislim, da in če bi jo sprejeli v tej obliki kot jo predlagamo, da bi ustavni komisiji, pa najbrž tudi državnemu zboru prihranila veliko časa. Mi predlagamo, da potem ko se bo natančno pregledalo in ugotovilo koliko je teh kvalificiranih predlogov, če se bo ta rok podaljšal, kot je bilo zdaj predlagano, potem bo treba še nekaj časa počakati in da se potem znotraj teh kvalificiranih predlogov, enostavno skuša že na samem začetku ugotoviti, kateri so tisti predlogi, ki imajo neko solidno 2/3 podporo v državnem zboru in da se teh lotimo najprej. Za vse ostale, ki so pa sporni, pa predlagam, da jih damo v drugi del in da se o njih pogovarjamo ali pa pogajamo kasneje.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg48">Zdaj ta predlog utemeljujem tudi s tem, da mi enostavno ne vidimo v tem trenutku nobenih nujnih potreb države, zaradi katerih bi bilo treba ustavo spreminjati na hitro. Ko gre za te tako imenovane evropske člene, imamo nekaj let časa, da to spremenimo in ta čas je treba tudi vzeti za to, da bodo odločitve premišljene. V vsakem primeru pa predlagam, da vse predloge razdelimo v dva sklopa in da se najprej lotimo tistega, okrog katerega je možno doseči neko lagodno 2/3 podporo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg49">Kolega Potrč, za njim kolega Peče.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDT3.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg50">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi. Jaz sem tudi sam mnenja, da se držimo okvirnih vprašanj o metodah dela ustavne komisije, kakor so bila predlagana in smo jih tudi dogovorili ob dnevnem redu.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg51">Jaz najprej zelo resno jemljem in spoštujem opozorilo, ki ga je dal dr. Cerar, da se ustavna komisija mora v čim večji meri, mislim, da je bila približno takšna formulacija dana, držati predlogov ali pa predloga za začetek postopka. To razumem v najmanj dvojnem smislu. Skratka, da mi ne smemo presegati s predlogi za spremembe ustave, globalni okvir, ki ga dani predlogi formalni dajejo. In drugič, da se moramo, če prav tolmačim, o celoti danih predlogov tudi odločati.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg52">In v tem drugem delu bi prosil, če je, glede na to, da govorimo o metodah dela, možna eventualno tudi kakšna dodatna precizacija načina razumevanja, ker je povezana tudi ta precizacija z idejami, da se določen krog vprašanj iz danih predlogov obravnava prioritetno, določen krog kasneje. In seveda ne govorim o tem, kasneje da ali ne Kasneje je mogoče, ker ne bomo vsako stvar obravnavali na isti seji, ampak odločitev pa vprašanje, če je možna z različnimi časovnimi termini ali mora biti hkrati potem v nekem postopku sprejemanja. To se mi zdi važno in bi želel v tej smeri dovolj jasno pooblastilo ali pa dogovor za naše delo.</seg>
@@ -387,53 +366,53 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg55">Drugo. Nam se zdi smotrno, da se razmišlja o javni predstavitvi in nam se zdi smotrno, da se ustavna komisija opredeli za to, da angažira strokovnjake, lahko tudi po sklopih vprašanj, ki so bili predlagani. Ampak mislim, da popolno detajliranje morda danes tudi še ni nujno potrebno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg56">Hvala lepa. Preden dam besedo kolegu Pečetu, naj vas obvestim, da kolega Sušnik s pooblastilom nadomešča kolega Janšo. Imate besedo. Kolega Peče, prosim.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDT3.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg57">Hvala lepa za besedo, predsednik. Za slovensko ustavo nekako velja, da je toga ustava. To pomeni, da ni podvržena prehitrim spremembam in je zaščitena z dveh strani. Torej prvič, s strani kvalificiranih predlagateljev, ki lahko predlagajo spremembe ustave, najsi bo vlada, 20 poslancev ali 30.000 volivcev.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg58">In po drugi strani, je potrebno, vsaj pri vprašanju sprememba ustave in pa ob tem, kar se danes pogovarjamo v osnovi razrešiti in tu bi rad s strani gospoda Cerarja izvedel, ali govorimo o novi Ustavi Republike Slovenije, ali govorimo o spremembi ustave. TO sta dve bistveni razliki. Če bomo mi odprli, recimo temu lov na spremembe Ustave Republike Slovenije, za katero moram pod drugim povedati, da v tem trenutku Slovenska nacionalna stranka ne čuti potrebe, potem se moram zavedati, da bomo k vsem desetim poglavjem obstoječe Ustave Republike Slovenije prišli na novo materijo oziroma željo po novi materiji. S tem, po našem mnenju posegamo na področja nove Ustave Republike Slovenije in ob tem se je za vprašati, kdo je tisti organ, ki lahko k temu pristopi. Ali je to ustavodajni organ in ali je ta organ državni zbor. Če govorimo samo o spremembi ustave, potem po našem mnenju ustave ne bi smeli menjati v toliko napovedanih področjih, kot jih je priča, najsi bo iz napovedi poslanskih skupin, najsi bo iz pregleda želenih sprememb, ki smo jih danes dobili na mizo ali s strani Vlade Republike Slovenije s spremembami, s katerimi smo bili, recimo temu nekako obdarjeni med časom. V Slovenski nacionalni stranki bi se nam zdelo tudi smiselno, vsaj v tej točki, pa če zaenkrat govorim o spremembi ustave, ne o novi ustave. Kajti, če bi šli na področje nove ustave, potem mi nismo ta organ, ki to lahko spreminja. To mislim, da si moramo biti na jasnem in da nam bo gospod Cerar tudi to potrdil. Smiselno se je vsaj vprašati, ali gre za spremembe ustave v njeni materialni ali pa njeni formalni obliki. Da bi bilo smiselno s strani, recimo tako imenovane pravne stroke s področja ustave tudi izvedeti, kateri so tej, skozi desetletja nastali ustavni običaji Republike Slovenije. Kajti, če že pristopamo k spremembi in če smo se odločili, da imamo pisano ustavo, ki v svoji vsebini v bistvu nosi kazalo zakonodaje Republike Slovenije, je smiselno, da recimo nastajajoče ustavne običaje vključimo v element ustave. Nikakor pa ne moremo iti, vse kar se tiče Slovenske nacionalne stranke mimo treh temeljev, na katerih bi morala, torej naša komisija in pa delo naše komisije temeljiti. Prvič je to, da bi morali odpreti po našem mnenju rok. Rok, s katerim bi, najsi bodo kvalificirani predlagatelji, podali predloge. Torej ne, da bi se srečali, ko bi mi že začeli z dejanskim delom še z novo pobudo, še z novim predlogom spremembe, ampak torej, da bi v določenem trenutku in to mislim, da bi lahko našli konsenz med političnimi strankami, lahko konkretno začeli s spremembami, da bi venem momentu imeli te spremembe, ki so resno mišljene, katere prihajajo s strani kvalificiranih predlagateljev. Da bi zadeve, torej spremembe podredili vsem desetim poglavjem obstoječe ustave in da bi na podlagi teh desetih poglavij se tudi mi sprehajali.Torej od prvega, do desetega. Nakazali, na kaj se določena sprememba nanaša in jih skozi ta način uvrstili v nov ustavni zakon oziroma akt, s katerim bomo ustavo spreminjali.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg59">Drugo, zdi se nam zelo smiselno in to bi tudi prosil, da gre kot 2. točka v zapisnik današnje seje, je da se za to materijo opravi javna predstavitev. Veliko je želja za spremembo Ustave Republike Slovenije, nekatere utemeljene, nekatere neutemeljene, ki ne izpolnjujejo pogojev, da bi se uvrstili kot, recimo temu uradni predlogi. Ampak mogoče se v njih skriva kaj dobrega. In to lahko dejansko izvemo skozi javno predstavitev.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg60">Tretja zadeva, ki se nam bi zdela zelo smiselna, to je neke vrste ustavodajni referendum, ki bi bil izveden po koncu naše razprave. Ne smemo pozabiti, da v primeru spreminjanja Ustave Republike Slovenije gre za najvišji pravni, politični, vsebinski in družbeni akt, ki se poraja v naši državi. Toliko za enkrat. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg61">Želi še kdo uvodoma zdaj besedo? Prosim, gospod podpredsednik.</seg>
             </u>
             <note type="speaker">FRANCE CUKJATI:</note>
-            <u who="#SDT3.CukjatiFrance" ana="#regular">
+            <u who="#CukjatiFrance">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg62">Lep pozdrav vsem prisotnim! Nakazujeta se že dva sklopa oziroma dva različna pristopa k tej materiji, ali obravnavati samo nujno materijo za tako imenovano evropsko, ali vso materijo, ki se je pokazala kot potrebna sprememb.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg63">Kot sem razumel gospoda Cerarja, je naloga naše komisije, da pripravimo predlog za obravnavo na državnem zboru. To seveda pomeni, da bomo obravnavali vse kvalificirane predloge. Sprašujem se pa, v kolikor bomo šli po sledeh predloga vlade, bomo jasno posegli na vsa področja, ne samo tista, ki jih je nujno zaradi evropskega pravnega reda treba spremeniti. In potem se pojavlja vprašanje, kakšen status imajo predlogi civilne iniciative oziroma vse tiste pobude, ki niso še kvalificirane ali pa morda nikoli ne bodo.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg64">In tu se moramo dogovoriti, ali bodo ti predlogi, ki so tukaj in smo jih že prejeli v kopiji, samo kot nek material za razpravo, ali bomo o njih nujno razpravljali ali ne, da vemo. Morda pa bi ta ali ona stranka dala takemu predlogu pečat kvalificiranosti za obravnavo na naši komisiji. V vsakem primeru menim, da teh predlogov ne smemo zanemariti; ustava je široka zadeva, v njo se mora vključiti tudi - predvsem če bomo šli v to širino, kot je nakazana v vladnem predlogu - moramo civilno iniciativo upoštevati, o njej razpravljati in se seveda tudi dogovoriti, na kakšen način jo bomo vgradili v ves ta postopek. Ne znam si predstavljati učinkovitega dela, če te dikcije, da mi pripravimo predlog za obravnavo v državnem zboru, ne razumem tako, da pravzaprav našakomisija iz teh gradiv pripravi nek koherentni predlog ali vsaj nek predlog, o katerem seveda potem odloča državni zbor. Sicer bomo imeli zagotovo kar nekaj predlogov, ne samo dveh za obravnavo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg65">Hvala lepa. Kolega Bernik, imate besedo.</seg>
             </u>
             <note type="speaker">DR. JOŽEF BERNIK:</note>
-            <u who="#SDT3.BernikJožef" ana="#regular">
+            <u who="#BernikJožef">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg66">Hvala lepa, gospod predsednik. Spoštovane dame in gospodje! Vesel sem, da imamo tu strokovnjake - ne vem, koliko jih je, gospoda Cerarja poznam, če je še kdo drug, pa ga tudi pozdravljam. Vendar bi tu rad imel nekaj pojasnil, kar se tiče naših strokovnjakov.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg67">Prvič, kdo je klient dr. Cerarja trenutno, medtem ko sedi med nami, in kdo ga plačuje?</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg68">Drugič, ali je dr. Cerar, in ostali strokovnjaki, ki utegnejo priti na dan, sodeloval pri pripravi predloga, ki smo ga dobili od vlade? Če je tako, potem se seveda postavlja resno vprašanje konfliktov interesov.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg69">Tretjič, naj omenim, da ko smo nekako neformalno govorili o poslovniku, je prišlo na dan, da so pozicijske stranke prosile oziroma pripeljale notri pravnega svetovalca, ki jim je svetoval glede njihovih stališč. Seveda, ko sem vprašal, kdo je to najel in kdo je plačal, mi je bilo rečeno, da je to šlo na račun državnega zbora. Če je tako, potem bi rekel, da je to zloraba oblasti, kajti opozicija ni imela iste možnosti, sploh nismo vedeli, da za to gre. Tu nočem ničesar imputirati strokovnjakom in tako naprej, ampak mislim, da moramo imeti zelo jasna pravila igre, tako da bomo vedeli, kdo komu svetuje, zakaj mu svetuje in v kakšni funkciji mu svetuje. In dokler tega ne razrešimo, bi mislil, da imamo problem, ki je resen in ki se ga v našem zboru ne obravnava dovolj resno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg70">Hvala lepa. Preden dam besedo naprej kolegu Delaku, naj samo pojasnim status dr. Cerarja. Je zunanji sodelavec državnega zbora za ustavna vprašanja. Sodeloval je v pripravi na to sejo, in če ne bo drugače odločeno, bo sodeloval z nami tudi poslej; gre za njegove nasvete procesne narave, ne za njegovo sodelovanje pri političnih odločitvah. Za vse druge strokovnjake pa se bomo verjetno, kot je bilo danes že rečeno, po posvetu v poslanskih skupinah odločili verjetno na naslednji seji.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg71">Kolega Delak, imate besedo.</seg>
             </u>
             <note type="speaker">ANTON DELAK:</note>
-            <u who="#SDT3.DelakAnton" ana="#regular">
+            <u who="#DelakAnton">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg72">Hvala za besedo. V naši poslanski skupini smo tudi obravnavali začetke spremembe ustave. In naše stališče je, da se seveda ustava ne spreminja vsak dan, ampak v daljših časovnih obdobjih, in zaradi tega je naše mnenje, da moramo enkratno spremeniti ustavo, ne pa tako, kot je bilo rečeno, da nekaj bomo v začetku naredili, nekaj pa mogoče čez, kaj vem, pol leta ali eno leto pozneje.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg73">Torej, naš predlog je, da obravnavamo kompletno vse zadeve in, če po domače povem, v eni rundi rešimo vse stvari. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg74">Hvala lepa. Želi še kdo, preden bi <gap reason="inaudible"/> ? Da, kolega Podobnik, prosim.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDT3.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg75">Hvala za besedo. Gospod predsednik, opravičilo za zamudo, bil sem na neki drugi združitvi.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg76">V poslanski skupini SLS + SKD - Slovenske ljudske stranke ocenjujemo, da je pri odločitvi za spremembo ustave potrebno najprej ugotoviti, da ima Republika Slovenija dobro ustavo.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg77">Predlagamo, da tudi današnji sklepi in same usmeritve nikakor ne pospešujejo klime, ki bo spodbujala legitimne predlagatelje za pobude oziroma celo predloge za spremembo ustave. To bi bila po našem mnenju napačna pot. Pričakujemo drugačno sporočilo - zelo premišljen pristop in odločitev, kateri vsebinski sklop ustave je potrebno spremeniti.</seg>
@@ -443,34 +422,34 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg81">V poslanski skupini podpiramo predlog, da bi sodelovali strokovnjaki pri delu ustavne komisije. Imamo dve izkušnji sprememb ustave, šlo je za dva zelo majhna sklopa, ki sta se pa potem pokazala kot vsebinsko zelo zahtevna. Ker izhajamo iz dejstva, da pač Slovenija premore toliko in toliko ustavnih in drugih strokovnjakov, je potrebno, da zelo premišljeno tudi izberemo strokovnjake. Tudi če kdo misli, da jih ne potrebujemo, se bo prej ali slej izkazalo, da jih potrebujemo. Zato torej predlagamo, da se odločimo in da povabimo strokovnjake k delu ustavne komisije. Prav tako ocenjujemo, da je potrebno, da se dogovorimo kdaj in na kakšen način bi zelo dobro pripravili javno predstavitev mnenj po vloženih predlogih za pričetek postopka za spremembo ustave oziroma njihovih posameznih vsebinskih sklopih. Ko bo taka javna predstavitev mnenj potekala, je potrebno, da v tistih dnevih v državnem zboru ni rednih sej in drugih obveznosti. TO je zelo zahtevna materija. Predlagam, da jo zelo dobro predlagamo. Toliko za sedaj. Hvala lepa, predsednik.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg82">Hvala lepa. Želi še kdo uvodoma predstaviti svoja stališča?</seg>
                <note>Ne.</note>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg83">Potem mislim, da je mogoče s teh prvih nastopov povzeti nekaj poudarkov. Najprej, z nastopom ni bilo mogoče slišati ugovora predlogu, da bi ob primerni priložnosti sklenili organizirati javno predstavitev mnenje. Če bi se članice in člani ustavne komisije tako strinjali, bi za drugo sejo pripravili predlog sklica take javne predstavitve mnenj. Treba je namreč določiti cilje, predlog vabljenih in seveda določiti pravi datum. Strinjam se, da bi poskrbeli za to, da takrat drugih obveznosti ne bi bilo in bi se potem poslanske skupine, ta predlog bi dobili s sklicem za drugo sejo, lahko dokončno odločili na drugi seji.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg84">Drugo vprašanje je bilo vprašanje rokov za vlaganje, torej drugih dodatnih predlogov s strani morebitnih kvalificiranih predlagateljev. Tukaj se zastavlja vprašanje, ali lahko ustavna komisija lahko določi rok, kako bi bilo smiselno glede tega ravnati, če to ni ovira. Potem bi bilo smiselno med nami oblikovati na naslednji seji dogovor o roku. Tako, da bi med ostalimi vprašanji, ki so letela na dr. Cerarja imel tudi sam to procesno vprašanje. Na koncu je bila dana tudi pobuda, da bi poskušali na neki način ugotoviti stopnjo podpore, ki jo imajo predlogi za spremembo ustave. To bi bil eden od kriterijev za razvrstitev in prioriteto na obravnavo. Ker je bilo tudi nekaj drugih procesnih vprašanj, vas prosim, dr. Cerar, če lahko odgovorite nanje. Prosim.</seg>
             </u>
             <note type="speaker">DR. MIRO CERAR:</note>
-            <u who="#SDT3.CerarMiran" ana="#regular">
+            <u who="#CerarMiro">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg85">Hvala lepa. Če sledim nekako temu zaporedju vprašanj, kot so bila postavljena, bi najprej ponovil, da je res, kot je rekel gospod Potrč, lahko se obravnava predlog recimo vlade, po posameznih sklopih, v različnih zaporedjih, vendar pa na koncu mora ustavna komisija sprejeti odločitev o vseh delih tega predloga. Kajti ustava pravi: O predlogu odloči državni zbor. Torej, o tem predlogu začetek postopka. In to seveda pomeni na predlog komisije.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg86">Drugo. ALi lahko, torej kot smo rekli, paralelno obravnava predloga za lokalno samoupravo? Lahko, vendar pa to velja, dokler sta oba predloga, ali če se bo pojavil še kakšen predlog za začetek postopka, dokler sta v isti fazi. Mi se zdaj nahajamo v iniciativni fazi, če jo tako delovno imenujem. Šele, ko bo državni zbor na predlog ustavne komisije, če ga bo, sprejel predlog za začetek postopka, takrat se ta faza zaključi. Do takrat pravzaprav, če odgovorim na naslednjo vprašanje, lahko vsak, ki je legitimiran predlagatelj, vloži nov predlog. Inse bo obravnaval lahko še hkrati s temi, ki so zdaj v tej iniciativni fazi. Ko pa bo enkrat državni zbor sprejel, če ga bo, spet poudarjam, predlog za začetek postopka za spremembo ustave glede obstoječih predlogov, se bo odločil. Od takrat naprej pa seveda vsi naknadno sprejeti predlogi, imajo drug status, so še vedno v iniciativni fazi, s temi prvimi smo pa v naslednji. Zelo verjetno bi bilo primerno, jaz to tudi mislim, da bi komisija določila neki rok, v katerem bi pričakovala morebitne še druge predloge 20 poslancev volivcev, ali recimo vlade na določene teme. Vendar pa opozarjam, da glede na odlok, po katerem komisija deluje, glede na njegovi drugi razdelek, ki pravi, da komisija obravnava predloge za začetek postopka in pripravi predlog za spremembo,ni mogoče sklepati, da bi bil ta rok pravno zavezujoč. To bi bil neki instrukcijski rok napotilen politični pomen bi imel seveda velik. Ne bi imel pa tega. Kajti, kadarkoli pravzaprav lahko kdorkoli je po ustavi legitimiran, predlaga začetek postopka s spremembo ustavo.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg87">Gospodu Pečetu bi na kratko odgovoril, da seveda v tem primeru ne gre za celovito revizijo ustave. Gre samo za delno revizijo. Morda celo toliko dodam, da se ustava tukaj v temeljih ne spreminja, gre pa kljub temu za zelo pomembne vsebinske sklope, ki imajo seveda, kot ste sami ugotovili, zelo velik politični pomen in se bo do njih politika dokončno izrekla.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg88">In nazadnje, če se še odzovem na vprašanje gospoda Cukjatija oziroma na njegove ugotovitve glede statusa teh civilnih iniciativ, če sem pravilno razumel, ponavlja, da seveda spet po odloku, po katerem komisija deluje, ni predvideno, ni izrecno predvideno, da bi komisija to obravnavala. Komisija obravnava samo predloge za začetek postopka in predlog za spremembe ustave. Seveda, to po moje ne more biti obveza, da se o tem ne spregovori beseda. Vendar pa le mislim, da bo morala komisija o tem zavzeti bolj jasno stališče, na kakšen način bo, če bo obravnavala te številne iniciative, ki se bodo verjetno še množile v prihodnje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg89">Hvala lepa. Kolega Peterle je želel besedo. Prosim.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDT3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg90">K dvem stališčem gospoda dr. Cerarja bi rad zavzel stališče. Najprej k vprašanju roka. Jaz bi bil še bolj natančen glede tega. Ne bi tvegal, da bi ustavna komisija kakršen koli rok, četudi samo inštruktiven rok ali kako bi rekel, sprejemala, ker mislim, da nimamo za to prav nobene podlage. Rok je odprt. MIslim, da bi bilo najbolj pošteno, da je slovenski jasno, s kakšno dinamiko bo ustavna komisija delala. In to bo nedvomno jasno, se pravi, do kdaj bo ta iniciativna faza trajala. Nimamo pa mi nobene podlage, da pozivamo koga, da do takrat da, če misli še kaj dati. Tukaj bi si želeli v Novi Sloveniji popolne transparentnosti in seveda tudi spoštovanja ustave.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg91">Druga zadeva, glede revizije. Glejte, gospod Cerar, če vi sami pravite, da gre za velik politični pomen, to meni govori seveda, da gre za revizijo in po našem mnenju pri predlogu s strani vlade gre za revizijo in gre za nekaj velikih političnih pomenov. To niso male spremembe.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg92">Hvala lepa. Naprej ima besedo kolega Školč, za njim kolega Anderlič.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDT3.ŠkolčJože" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg93">Hvala lepa. Tudi sam se pridružujem tistim ki pravijo, da je težko postavljati neki rok, do katerega je mogoče vlagati kvalificirane predloge. Če bi bilo temu tako, potem zdaj roka ni bilo in predlogov ne bi imeli, da stvari zaostrimo do konca.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg94">Kar se tiče vlaganja pobud je seveda vprašanje, ali so dovolj utemeljene in ali imajo dovolj možnosti, da doživijo neki uspeh v tej razpravi in v morebitnih spremembah ustave. S tega vidika je kvečjemu mogoče, ker tu danes govorimo predvsem o procesnih stvareh doreči to, da se bo eventualno te predloge obravnavalo po vrsti, kot so prihajali. Tako, da če bo še kdo prišel, da računa, da bo zadnji. Ali pa, da se eventualno po nekih sklopih, ki jih ti predlogi odpirajo, kjer se stvari prekrivajo obravnavajo. To so stvari, ki jih mogoče velja v zakolisju te komisije premislite, pa predlagati v odločitev.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg95">Tisto, kar je ostalo neodgovorjeno in bo ključno in sem jaz pričakoval, da se bomo danes zmenili, so tako imenovana procesna vprašanja. Tu je bilo nedvoumno rečeno, da imamo dva predloga in da se moramo na koncu odločiti o dveh predlogih. Zato zna biti zelo velik nesporazum vis a vsi tistih, ki pričakujejo, da imamo več predlogov. Nekateri, ki so pač, podpredlogov, da bom uporabil termine, ki jih uporablja, ne pobude, govorimo o predlogu vlade, ki odpira veliko število vprašanj in bihipotetično lahko bil razdeljen tudi v več predlogov, pa ni. Pričakovanje tu je, da se ta predlog preveri na način, da se ga obravnava kot skupek nekih predlogov. Zato je neko, se zastavlja neko vprašanje ali je vlada kot predlagatelj, pripravljena to razdeliti v skupino predlogov in odpreti možnost za to, kar sta govorila tu kolega Janša, kolega Peterle, Podobnik, pa če se ne motim tudi Peče in v nekem delu bi se dalo celo gospoda Cerarja razumeti, da je možno tako voditi razpravo.</seg>
@@ -478,11 +457,11 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg97">Ampak če hočemo da bodo te stvari do konca jasne in da se ne bomo čez čas pisano gledali, potem se mi zdi, da je treba najprej in predvsem to razčistiti.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg98">Hvala lepa. Kolega Anderlič, za njim kolega Peče.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDT3.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg99">No, jaz mislim, da je v tem trenutku nesporno jasno, da imamo dva predloga v proceduri in da je seveda mogoče razpravljati ali bomo razdelili to še na kakšna podpoglavja ali ne. To mislim, da lahko naredimo šele v naslednji fazi, ko bomo sploh vsebinsko začeli razpravljati in vlada bo takrat najbrž tudi ocenila ali želi to razdeliti na več predlogov ali ne.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg100">Tako, da mislim, da v tem trenutku je malce preuranjeno, ampak jaz sem se oglasil predvsem v zvezi z dvema sklepoma, ki sta bila predlagana. In sicer javna predstavitev in rok za nove predloge. Ja, jaz mislim, da je seveda tukaj ključno vprašanje, da se dogovorimo ali bomo imeli eno javno predstavitev, torej predstavitev tega, kar je vloženo in se je govorilo pogojno, da je to en sklop. In pa seveda tistih dodatnih, ki naj bi še eventualno bilo. Jaz bi, seveda se strinjam s tistimi, ki pravite, da tukaj je težko postavljati roke in kar bo prišlo, bo prišlo, ampak najbrž je razumljivo, zato da bi delo lahko potekalo organizirano, da je to neka napoved sedaj s to sejo komisije, da je komisija začela delati in ko se bo lotila prvega predloga oziroma prvih dveh, mogoče jih bo celo združila v enega, če bo prišlo do kakšnih sprememb pri podpisih ali kakorkoli in se bo to obravnavalo. Ker oba predloga obravnavata tako rekoč isto vprašanje, v enem delu na drugačen način sicer. In da bo lahko, če se danes dogovorimo, da recimo čez mesec dni, bo komisija ugotovila to, kajti danes še zares tudi nismo ugotovili nič, kaj imamo na mizi vsebinskega in kaj je tisto, kar bomo zares obravnavali.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg101">In jaz sem zato, da javnost obvestimo, sami sebe konec koncev, da bomo tisto, kar bo prišlo v mesecu dni ali v treh tednih, obravnavali v prvi rundi. Ostalo bo pa pač tako, tako kot bo prišlo, obravnavala po svojem postopku. Drugače si jaz ne znam pač tega predstavljati tistega. Se pa, da lahko prihajajo, ker konec koncev, mi imamo to, ta predlog od mislim, da23 poslancev že nekaj let v proceduri, pa smo ob tem spreminjali ustavo v enem delu s predlogom, ki je bil podan vzporedno ali kasneje in ni in takratna obravnava ni vsebovala vsega, kar je bilo vloženega.</seg>
@@ -491,20 +470,20 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg104">To se mi zdi, da je ob tem kljub vsemu treba povedati.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg105">Hvala lepa. Najprej ima besedo kolega Peče, za njim kolega Potrč.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDT3.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg106">Ravno zaradi togosti slovenske ustave, torej zaradi načina sprejemanja, na prvi strani torej predlagatelji in po drugi strani zaradi načina kvoruma glasovanja, mislim, da bi tu morali drugače ravnati. Da bi ta ustavna komisija in pa ta državni zbor moral določiti, kdaj se konča tako imenovana iniciativna faza, če smo jo na začetku tako opredelili, in da je vse,kar pride v tem iniciativnem času oziroma v obdobju iniciativne faze, enakovredna materija, s katero se bo srečala ta ustavna komisija. To je edini način, po moje, če nočemo, doseči tega, da bomo imeli napovedano že drugo spremembo ustave pa tretjo za njoin da se bomo vrteli zdaj v tem obdobju samo s spremembami ustave. Če tega ne bomo naredili, bo nam v tokratnem delu te komisije osnova za spremembo izključno in pa le predlog vlade. Jaz pravim, da določimo datum, in to močnejši od enega meseca oziroma daljši od enega meseca, ki bo ločeval torej začetek postopka od iniciativne faze. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg107">Samo, da ne bo nesporazumov, mislim, da je šlo lingvistični lapsus - imamo dva predloga, o tem ni dvoma. Da.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg108">Kolega Potrč ima zdaj besedo in nato kolega Bernik.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDT3.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg109">Hvala lepa. Moj predlog je, gospod predsednik, da evidentiramo nekaj vprašanj še mogoče dodatnih, povemo h kakšnemu od danih vprašanj svoje poglede, potem pa pričakujemo in prosimo, da bi predlogi, kako reševati proceduralna vprašanja, bili eventualno domišljeni, pripravljeni do naslednje seje in da bi jih potem na naslednji seji sprejemali, ker dvomim, da bo vse precizno mogoče danes dogovoriti.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg110">Jaz bi do vprašanj, ki so doslej bila evidentirana, povedal svoje mnenje ali pa predlog, kako se opredeljevati okoli treh stvari.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg111">Eno je vprašanje pobud, ki jih imamo. Jaz sem za to, da imamo absolutno spoštovanje do njih, ampak mislim, da moramo vedeti, da so dane nam poslancem te pobude zaradi tega, da bi vedeli, da smo dolžni v nekem času, kakršnemkoli, rokovno ga opredelimo ali ne, oblikovati formalne predloge z našo pomočjo, kot strank in kot poslancev. Dokler formalnih predlogov ni, so te pobude nam hvaležna in spoštljiva informacija, ampak za obravnavo na ustavni komisiji,vsaj po mojem, niso zrele in jih ni mogoče vsak trenutek, bi rekel, kuvertirati pa reči, prosim, da se o tej ali pa o drugi stvari razpravlja. Prosil bi, da o tem na nek način imamo opredelitev, ker so stvari zanimive, ampak zanimive morajo delovno postati, ko bodo imele formalne predlagatelje. To je pa lahko 20 poslancev, lahko je vlada, lahko je zbiranje podpisov.</seg>
@@ -516,29 +495,29 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg116">Vendar še enkrat, gospod predsednik, kot ideje za to, da se pripravijo ti predlogi, sam bi se bal danes jih definitivno formulirati, ker tudi sam ne bi tega znal. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg117">Hvala lepa. No, saj, kot rečeno, danes verjetno dokončnih sklepov v zvezi s temi vprašanji ne bomo sprejemali.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg118">Predlagam, da poskušamo slišati oziroma da poslušamo še druga stališča, ki so zdaj prijavljena za besedo - kolega Bernik, kolega Battelli, kolega Podobnik - in potem izluščimo nek dogovor o nadaljevanju dela in o tem, kdaj bomo te sklepe sprejeli.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg119">Kolega Bernik najprej, za njim kolega Battelli.</seg>
             </u>
             <note type="speaker">DR. JOŽEF BERNIK:</note>
-            <u who="#SDT3.BernikJožef" ana="#regular">
+            <u who="#BernikJožef">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg120">Hvala lepa, gospod predsednik. Se opravičujem, ker ponavljam vprašanje, ki sem ga prej zastavil. Z vsem spoštovanjem do vas osebno kot tudi do vaše funkcije, moram reči, da odgovor, ki sem ga dobil, ni vaš odgovor, ampak prosil sem za odgovor gospoda Cerarja. Če gre tukaj za etnično vprašanje, odvetniške etike, potem mislim, da je edini, ki lahko na to odgovori, je on. In ne vem ali je sodeloval prej v komisiji, ki je pripravljala predloge in če bi hotel to oziroma rad bi vedel, a bomo poslušali odvetnika, ki je bil vladni svetovalec prej, sedaj je pa naš. In če je to, potem se, je seveda zame to povsem nesprejemljivo, zato ker sem zelo občutljiv za odvetniško etiko in vem, da po svetu se to prakticira, <gap reason="inaudible"/> pri nas pa ne bom rekel. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg121">Kolega Battelli in kolega Podobnik za njim. Prosim.</seg>
             </u>
             <note type="speaker">ROBERTO BATTELLI:</note>
-            <u who="#SDT3.BattelliRoberto" ana="#regular">
+            <u who="#BattelliRoberto">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg122">Hvala lepa, gospod predsednik. Glede splošnih procesnih vprašanj. Jaz imam vtis, da se ta vozel v zvezi z roki, je navidezen, kajti rokov ne more biti za kvalifirane predlagatelje. Ampak vendarle, da bi se dalo zadevo obrniti na način, da se pa določi v kolikšnem času mora ustavna komisija obravnavati kvalificiran predlog.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg123">Hvala lepa. Kolega Podobnik.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDT3.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg124">Hvala lepa. Jaz menim, da je ustavna komisija delovno telo državnega zbora. In kot delovno telo smo povsem suvereni kako se bomo odločili. Lahko bi celo uporabili analogijo s komisijami in odbori državnega zbora. V principu obravnavajo predloge zakonov, ne pa neke ideje in koncepte in usmeritve zakonov. Ustavna komisija se je ustanovila zato, ker sta dva, ker je prišlo v državni zbor, dva kvalificirana predloga. Samo zato smo se ustanovili.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg125">Glede samih pobud, je vsekakor to sekundarno vprašanje in menim, da nas pri našem delu to, ta problematika ne bi smela preveč obremenjevati.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg126">Drugič, glede roka. Ne vidim, ne v poslovniku, ne v ustavi, nobene podlage, da bi si sami postavljali kakršnekoli roke, razen v smislu organizacije našega dela. Ampak še to, še to je s tem, ko imamo danes sejo, je signal dan. Jaz menim, da bi s kakršnimikoli javnimi roki, po nepotrebnem in po mojem mnenju, dali napačno, napačen signal. Pričnimo s pobudami za spremembo ustave. To bi se zgodilo. In menim, to ne bi bilo dobro.</seg>
@@ -547,16 +526,16 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg129">To so vprašanja, o katerih se bo potrebno opredeliti tudi ob pomoči strokovnjakov, ki jih bo naša ustavna komisija pri svojem delu <gap reason="inaudible"/> Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg130">Želi še kdo besedo? Potem prosim dr. Cerarja, če odgovori na eksplicitno vprašanje. Prosim za mir.</seg>
             </u>
             <note type="speaker">DR. MIRO CERAR:</note>
-            <u who="#SDT3.CerarMiran" ana="#regular">
+            <u who="#CerarMiro">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg131">Hvala lepa. No, ker je gospod Bernik zahteval eksplicitno vprašanje, bom z veseljem odgovoril na kratko. Torej jaz sem zunanji svetovalec državnega zbora, nisem v delovnem razmerju tukaj. Delam po pogodbi za državni zbor in se štejem za nekakšnega neodvisnega svetovalca. Seveda pri tem vedno pazim, da je moja vloga glede na vsebino materije, s katerim se ukvarjam, korektna, tako do zbora, poslancev, kot tudi do služb. In tudi v tem primeru se trudim na ta način. Namreč poglejte. Res je. Jaz sem sodeloval v vladni, pardon, v vladni, kako bi rekel, v strokovni skupini, ki je na podlagi vladnih izhodišč, pripravila besedilo možnih ustavnih sprememb in je potem na podlagi tega besedila, spet vlada to obravnavala in sprejela ta predlog za začetek postopka.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg132">Jaz sem pač bil povabljen tja kot strokovnjak za področja referenduma v tem primeru, zato ker se s tem ukvarjam že od kar imamo novo ustavo in sem štel, da pač kot zunanji neodvisni strokovnjak, torej s pravne fakultete, lahko tudi to vlogo tam igram. Ravno zaradi tega sem pa tukaj v dogovoru s predsednikom ustavne komisije in tudi ostalimi absolutno pristal na sedanje svetovanje samo pod pogojem, da ne bom član kakršnekoli strokovne skupine, ki se bo tukaj izrekala o teh rešitvah, ki so na dnevnem redu po vsebini. Torej svetujem tukaj samo v smislu kot ga je predsednik prej nakazal. Svetovanje glede procesnih vprašanj, koordinacije med strokovnimi delavci tukaj in drugimi ustavnimi strokovnjaki. Me pa prav, moram reči, to bi pa rad videl kaj se bo zgodilo, zanima kako boste oblikovali skupine strokovnjakov, ne da bi v njih povabili tudi nekatere druge, ki so morda že, kot tudi na nek način neodvisni fakultetni profesorji, strokovnjaki, sodelovali pri vladnem predlogu. Poglejte, saj imate ustavne pravnike tam, za lokalno samoupravo, avtoritete, ki jih v Sloveniji ni, so bili vsi tam zbrani na nek način. Tako da mislim, da tukaj verjetno ne boste mogli glede ostalih, no zdaj glede mene boste sami odločili, zavzeti zelo radikalnih stališč, če boste hoteli imeti stroko, ki je relevantna lahko, pa ob seveda številnih drugih, ki tudi niso bili udeleženi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg133">Hvala. Jaz mislim, da je bilo za prvo izmenjavo mnenj, pogledov, predlogov v zvezi z našim delom, danes opravljenega dovolj dela in da ima zdaj vodstvo komisije dolžnost predlagati sklic 2. seje z oblikovanjem predlogov za naslednja stališča, sklepe poleg tega, ki smo ga danes že sprejeli. To je način odločanja ustavne komisije.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg134">Samo, da ne bo nesporazumov, naj še enkrat povem. Bil je sprejet odlok o naši ustanovitvi. In v razpravo sta nam dodeljena dva predloga. Predlog za začetek postopka za spremembo ustave Republike Slovenije, ki ga je dne 5.2.1999 vložila v postopek sprejemanja skupina poslancev. In predlog za začetek postopka za spremembo ustave Republike Slovenije z osnutkom ustavnega zakona, ki ga je 26.7.2001 v postopek sprejemanja predložila vlada Republike Slovenije. Drugih predlogov nimamo.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg135">Jaz bi se, razen če bi tako sklenili na naslednji seji, izognil dajanju instrukcijskih rokov in bom tudi povedal zakaj. Tisti, ki bi lahko bili kvalificirani predlagatelji, niso neka neobveščena javnost. Oni vedo, da se je danes z delom ustavne komisije začelo neko zelo zahtevno in odgovorno delo. Čas ni najpomembnejši kriterij za naše odločitve, kvaliteta prav gotovo v ospredju. Vendar je jasno, da seveda želimo opraviti svojo nalogo in da zavlačevali z razpravljanjem po nepotrebnem ne bomo. Torej, danes je začela z delom ustavna komisija. Kdor meni, med morebitnimi predlagatelji, da bi lahko postal kvalificiran predlagatelj, bo to tudi storil in mi ga vabimo z današnje seje, da to stori čimprej.</seg>
@@ -566,147 +545,147 @@
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg139">Če bi se tako lahko organizirali za naprej, potem bi poskrbel, da bi zelo hitro, kmalu v poslanske skupine prišli prvi predlogi sklepov o dogovoru o načinu dela od točke 2 do točke 5. Kolega Peče.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDT3.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg140">Jaz moram povedati, da v moji poslanski skupini temu nasprotujemo. Ker s tem, kar ste ravnokar povedali, ste zaprli oziroma prišli z osnovne faze v fazo, recimo temu odločanja oziroma zaprtih sprememb. V tem roku sta dejansko samo dve spremembi. To je sprememba vlade in to je sprememba iz 1999. leta. Ravno zaradi vseh argumentov, ki sem jih prej povedal, zaradi togosti ustave, zaradi tega, ker je to politični akt in pa zaradi tega, ker ga poskušamo obdržati za dalj časa, je smiselno k temu pristopiti na ta način, da je možnost pristopa k spremembam ustave zagotovljena tudi ostalim kvalificiranim predlagateljem. Zakonodaja je posebej izpostavila količino oziroma potrebno kvalifikacijo, da nekdo pristopi kot predlagatelj. Ravno zaradi števila, torej najsi bo večih podpisov poslancev, 30.000 volivcev, se s tem izkaže neki <gap reason="inaudible"/> Torej, če nekdo izpolnjuje te pogoje, za nujnost, ali pa recimo, za potrebo po zahtevi te spremembe. Na to ta komisija mora pristati. Drugače se bo izjalovilo to, kar pač žal v tem trenutku ne mislimo, da se ustavna komisija odločila samo in pa izključno to, da bomo v tem trenutku obravnavali samo ustavne spremembe, ki jih je v vlado dala tako imenovana stroka Liberalne demokracije. TO se nam ne zdi pošten način ob sprejemanju Ustave Republike Slovenije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg141">Samo, da razčistiva, kolega Peče, ali gre za nesporazum ali za kaj drugega. Imamo dva predloga. Mi smo začeli z delom ustavne komisije na pooblastilu, ki smo ga dobili od državnega zbora, da pričnemo z delom pri teh dveh predlogih. Če bo v času dela do sklepa, ki ga bo glede tega na naš predlog zavzel državni zbor prišel še kakšen predlog, smo ga dolžni obravnavati. Če ga ne bo, ne moremo čakati nanj. V tem smislu vidim nesporazum. Z delom pričnemo. Želi še kdo? Prosim. Cukjati, prosim.</seg>
             </u>
             <note type="speaker">FRANCE CUKJATI:</note>
-            <u who="#SDT3.CukjatiFrance" ana="#regular">
+            <u who="#CukjatiFrance">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg142">Če dovolite. Mogoče bi pa dodali k temu, da bi vendarle sedaj pokazali potek, da bi, če ne bomo določali roka, do kdaj bomo sprejemali kvalificirane predloge, ampak da poslanci dobijo neki občutek oziroma člani komisije, v kolikem času pa je vendarle potreba te stvari urediti, da ne bo potem zmeda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg143">Jaz mislim, da je to zelo težko storiti. Vsekakor bi jutri, pojutrišnjem storil vse, navsezadnje tudi v sodelovanju najprej z vami in tudi z ostalimi članicami in člani komisije, jasno s posveti, kdaj bi bila naslednja seja. Na tej naslednji seji bi nekatere predloge morali prekvalificirativ sklepe, seveda s potrebno procesno večino. Bi se pa zavzel za to, da bi relativno hitro slišali uvod obeh predlagateljev glede sprememb. Da bi nam to omogočilo tudi odločitev o tem, kako bomo vodili razpravo o tem. To nam bi tudi omogočilo da, če bi biltak konsenz oziroma večina za to, da bi povabili javnost, da se pridruži delu komisije skozi javno predstavitev mnenj. To bi bil, kar se mi danes zdi mogoče, lahko neki napoved dogodkov vnaprej. Se pravi, mislim, da bi lahko bila naslednja seja ustavne komisije, takoj v začetku decembra, ki bi se s temi vprašanji dokončno soočila, nekateri sklepi tudi dokončno rešila in tudi sprejela odločitev o predstavitvi mnenj, o strokovnjakih in seveda lahko povabila tudi predlagatelje, da svoje predloge predstavijo. Mag. Vizjak, prosim.</seg>
             </u>
             <note type="speaker">MAG. ANDREJ VIZJAK:</note>
-            <u who="#SDT3.VizjakAndrej" ana="#regular">
+            <u who="#VizjakAndrej">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg144">Ja, hvala lepa. Jaz bom čisto kratek. Jaz ne vidim razloga, zakaj ne bi bili konkretni. Dejstvo je, da je ta ustavna komisija suverena in da ima tudi pravico odločati in določati kako bo delala. In zato ne vidim razloga zakaj ne bi jasno sprejeli, da bo ta sestava ustavne komisije, obravnavala predloge, ki bodo prispeli do tega in tega dne. Jaz ne vidim, zakaj bi bilo to sporno. Ustavno sporno ali kakorkoli sicer tudi drugače sporno. In s tem jasnozačrtamo obseg našega dela in tudi jasno postavim do kdaj. Mi nič ne vidimo <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg145">Ja. Jaz pa vidim problem tukaj, mag. Vizjak. Namreč, ne vem ali imamo to pristojnost, da določimo tak rok in da izključimo vse tiste predloge, ki bi prišli za njim, iz obravnave. Prosim.</seg>
             </u>
             <note type="speaker">DR. MIRO CERAR:</note>
-            <u who="#SDT3.CerarMiran" ana="#regular">
+            <u who="#CerarMiro">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg146">A dovolite samo? Hvala lepa. Samo eno pojasnilo. Kot sem že prej rekel, možno je, da se sprejme nek tak sklep, da rečete, pač do nekega dne bomo sprejemali vse te predloge, ki bodo takrat prišli. Vendar sem rekel, to je seveda sklep, ki pravno ne zavezuje. Namreč, še vedno lahko pridejo naslednji kvalificirani predlogi, ki pa jih lahko potem komisija po politični volji pa, kot je bilo prej omenjeno, recimo tudi ne obravnava na nek način ali pa zavrne. To je pa možno. Ne more, pa da jih ne bi, da bom tako rekel, akceptirala kot vložene.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg147">Ravno ta primer, s tem predlogom, ki je bil že pred vložen, glede sprememb, na področju lokalne samouprave, da bi se črtal 143. člen, ki ga je prvotno vložil takratni poslanec gospod Ribičič, je doživel to usodo, da pravzaprav ga je prehitel nek drug predlog. To drži. In to je bilo ravno v smislu te avtonomije ustavne komisije, seveda je potem stvar korektnosti, koliko dolgo pustiš nek predlog ležati, a ne to, o tem je bilo tudi že govora. Ampak kot sem rekel, možno je, ni nujno. Pravno je treba pa tudi gledati kaj pravi odlok in ustava. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg148">No, seveda, mi lahko z nekim rokom pokažemo naš interes, vendar bi mogel in še enkrat opozoriti na to. Seveda. Vendar vas potem sprašujem, ali želite vi tvegati s predlogom za rok, mag. Vizjak. Prosim.</seg>
             </u>
             <note type="speaker">MAG. ANDREJ VIZJAK:</note>
-            <u who="#SDT3.VizjakAndrej" ana="#regular">
+            <u who="#VizjakAndrej">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg149">Poglejte, vi mi <gap reason="inaudible"/> postavljate v skušnjavo, ali jaz kaj želim tvegati ali ne. Jaz želim prispevati k konstruktivni razpravi te ustavne komisije in želim predlagati nekaj, da ne bo dvoma. In jaz sploh nisem razmišljal v tej smeri, kot je razmišljal gospod Cerar, ki je govoril, da bi mi vzporavali vloženost ali kakorkoli zavrgli celo nekatere predloge. Mi lahko samo sklenemo to, da bo taustavna komisija v tej strukturi obravnavala, poudarjam, obravnavala predloge prispele do takrat in takrat. In daleč od tega, da bi kogarkoli pri tem, poglejte, taka dejanja so bila že narejena, saj smo spreminjali ustavo in nismo sprejemali kvalificiranega predloga iz leta 1999. To smo že storili. Ustavna komisija se je takrat odločila, da ga pač ne bo obravnavala. In ne vidim, zakaj bi bilo sedaj bolj sporno, da se odločimo, da bomo pač te predloge obravnavali, ki prispejo. To se mi še bistveno bolj korektna odločitev, kajti ne izločimo nobenega, ki je že prispel.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg150">Kar se tiče pa čakanja. Saj predlog iz leta 1999 je čakal praktično več kot dve leti. In sedaj, če bo en predlog prišel po nekem določenem roku, bo pač tudi verjetno kaj čakal. Saj prav je, da se z ustavo <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg151">Kolega Peče in kolega Peterle. Prosim. Ne.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDT3.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg152">Torej danes je nastopil tudi moment, ko zaključimo, tako jaz namreč razumem to iniciativno fazo, ki je drugače tudi potekala od leta 1999. Torej dve leti, se je zdaj čakalo na to, kdaj bojo prišle na vrstni red predlogi za spremembo ustave iz leta 1999. Zakaj na današnji moment? Zato, ker je prišel s strani vlade Republike Slovenije predlog za spremembo ustave. Torej, če smo čakali dve leti, danes pa člani komisije vidite problem, ostali člani komisije, če bi zdaj počakali še mesec dni in poskušali, rečmo temu vsebinsko in pa politično popolno pristopiti k spremembi ustave. Torej očitno je moment, ki vodi delo te komisije, samo kaj je dala vlada Republike Slovenije in pa kdaj. Iz tega se lahko samo to razbere.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg153">Kolega Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDT3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg154">Spoštovani. Jaz predlagam, da se ne mešamo sami sebe z roki, ker bomo prišli, če bomo, prihajali v težave. Ker praksa je pokazala, da čas vložitve ni noben argument. Je dejstvo, ni pa argument. Zato si ne natikajmo zadev, ki nam ne bodo koristile. Zdajle imamo dva predloga. Zmenili smo se ali se bomo še, kako jih bomo obravnavali. In če bomo zdaj sami govorili do takrat pa je še odprto, iz tega nič ne izhaja. In jaz predlagam, da sploh takih sklepov ne sprejemamo. Ko bo nek predlog prišel, se bo nekaj z njim zgodilo oziroma se mora nekaj z njim zgoditi. Ali pride na mizo ali ne pride na mizo. In res ne vidim podlage za to, da sploh v to smer debato poglabljamo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg155">Kolega Podobnik.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDT3.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg156">Hvala lepa. Podpiram razmišljanje kolega Peterleta. Tudi sam ne vidim razlogov za to razpravo. Jaz predlagam rešitev. Naša ustavna komisija bo obravnavala vse tiste predloge, ki nam bodo dodeljeni v skladu s poslovnikom. Točno se ve, kateri so nam lahko dodeljeni.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg157">To je jasno. To naša obveznost. Kolegi, jaz bi poskušal zaključiti današnjo otvoritveno sejo. V, najkasneje 14 dneh, bom poslal predlog sklepov, ki bi rešili vprašanja povezana z dogovorom o načinu obravnave. Javne predstavitve mnenj, sodelovanja strokovnjakov in poteku obravnave predlogov. Tako, da bi ob prvih posvetih poslanskih skupin o ustavni materiji lahko pred začetkom, pred 2. sejo ustavne komisije, poslanske skupine imele jasna stališča glede zaključkov, glede sprejemanja sklepov na ustavni komisiji.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg158">Na naslednji seji bi torej rešili ta vprašanja v celoti in se odločili za 3. sejo ustavne komisije, na kateri bi povabili predlagatelje, da postavijo predloge, na 2. bi torej tudi odločili o javni predstavitvi mnenj, o času, ciljih in vabljenih. Tako približno bi teklo delo. Kolega Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDT3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg159">Z ozirom na to, kar je odprl, mislim z vso potrebno občutljivostjo za etični vidik, vprašanje angažiranja strokovnjakov, bi rad povedal, da bomo pri Novi Sloveniji na to zelo občutljivi in mi vidimo veliko razliko. Ali dela strokovnjak za neko politično opcijo, ki sodeluje skupaj v vladi, kar se pomeni, del političnega spektar, ki ta čas vlada, ali pa dela kot strokovnjak, kot svetovalec za celoten parlament. Ker tukaj ne svetuje samo vladajoči koaliciji, ampak svetuje parlamentu v celem. Če hočemo biti malo pozorni na delitev med zakonodajno in izvršilno oblastjo, mislim, da je argument oziroma občutljivost ali akcent, ki ga je dal gospod dr. Bernik, ki je specialist za to področje, vreden upoštevanja, razmisleka in tudi, bi rekel, malo večje občutljivosti, kot doslej. Ker se lahko res zgodi, da bodo eni in isti ljudje plačali, da bodo zastopali isto stvar na vladi in na parlamentu. Meni se zdi to malo neokusno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg160">Prosim, dr. Cerar.</seg>
             </u>
             <note type="speaker">DR. MIRO CERAR:</note>
-            <u who="#SDT3.CerarMiran" ana="#regular">
+            <u who="#CerarMiro">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg161">Oprostite. Moram se odzvati, gospod Peterle, ker je to očitno zopet vsaj tudi na mene letelo. Jaz bi prosil, razumem, to je res lahko načelni problem. Tudi jaz se ga zavedam in sem se ga zavedel skozi. Jaz sem poudaril, v kakšni vlogi sodelujem tukaj, do katere mere. In bi lepo prosil, če imate pomisleke glede moje vloge, da jih zelo jasno poveste. Potem naj pač komisija oziroma pristojni odločajo. Jaz sem se pripravljen kadarkoli umakniti s predloga, če je komisija mnenja, da nekako ni primerno, da jo zastopam. Jaz osebno sem o tem vprašanju razmišljal. Mislim,da kot neki, bi rekel docent na pravni fakulteti, ki se ukvarja z različnimi problemi, ta hip ne kršim nobenega etičnega principa. Če pa bo komisija tega mnenja, se bom pa takoj umaknil, ni problem, ker absolutno ne bi želel delovati, kot ste rekli, v vlogi neke opcije. To nisem nikoli deloval in tudi nikoli ne mislim, ampak delujem pač kot strokovnjak. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg162">Hvala. Kolega Battelli ima repliko. Prosim. Mislim, da zdaj ne bi bilo potrebno narediti nekega kroga diskusije <gap reason="inaudible"/> Prosim.</seg>
             </u>
             <note type="speaker">ROBERTO BATTELLI:</note>
-            <u who="#SDT3.BattelliRoberto" ana="#regular">
+            <u who="#BattelliRoberto">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg163">Ne, ampak vendarle. Najprej ta zadeva sploh ne bi smela priti v razpravo, zaradi tega, ker ni na dnevnem redu. Ampak dobro. Kar pa zadeva to logiko, ki se skuša zdaj uvajati. Zdaj to pomeni, da vlada ne sme neodvisnega strokovnjaka nič vprašati. Oziroma, čim vlada nekoliko kontaktira, ta človek ima berufsverbot za vse ostale, kako bi rekel, potrebe, ki naj bi se pojavile glede razprave o določenih zadevah. Lepo vas prosim! To ni zadeva, kako bi rekel, odvetniške etike, to je tista druga logika. Popolnoma druga logika je vloga odvetnikov in sodnikov in tako naprej in tistih odvetnikov, ki so v določenem sodnem postopku, ali pa to, kar se dogaja v zvezi z delovanjem komisij državnega zbora in pa tudi delovanja vlade. Nekateri, ki smobili zraven pri izdelavi Ustave Republike Slovenije, od vsega začetka vemo, da zmeraj in povsod je strokovna pomoč, ne samo da prav prišla, ampak je bila seveda absolutno nujna za to, da smo vedeli, v vseh možnih razsežnostih, o čem odločamo in kako. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg164">Kolega Anderlič ima repliko in potem kolega <gap reason="inaudible"/>
                </seg>
                <note>Glas iz ozadja.</note>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg165">Ja. Ampak to so, če prav razumem, še replike na vaš nastop, kolega Anderlič. Prosim.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDT3.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg166">Gospod Gaber bo nadaljeval. Ampak jaz lepo prosim, da gospod predsednik, ne vodite seje tako, da se bo katerikoli od strokovnih sodelavcev ali strokovnjakov, ki je povabljen na to komisijo, branil tukaj, zagovarjal pred nekimi vprašanji. To razčistite, če je kakšno vprašanje, ali pa dajte točko na dnevni red, kdo lahko sodeluje, v kakšni obliki in tako naprej bomo ta seznam naredili. Naprej bo pa gospod Gaber.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg167">Bom pojasnil. Kolega Školč, kolega Gaber.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDT3.ŠkolčJože" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg168">Moj predlog bi bil zelo podoben. Jaz se natančno spomnim, in dela v prvi ustavni komisiji, ki je pač ta tekst pripravila, pa tudi na ustavnih spremembah Ustave Socialistične Republike Slovenije, ki je de facto omogočila pravzaprav volitve in spremembe. V obeh primerih je bilo predvsem dobrodošlo, da so sodelovali ljudje z univerze, s pravne in drugih fakultet. Tako, da menim, da je pot za urejanje, da pripravimo neki predlog te strokovne skupine z eventualnim sekretarjem, če ga bo pač ta skupina imela in da se takrat te stvari razčiščujemo S tem, da se je meni zdelo precej dobrodošlo, če bi v tej skupini in to govorim gospodu Berniku, ki mogoče ne ve, gospod Peterle se bo tega spomnil, če bi v njej sodeloval tudi dr. Cerar, ki je bil pri dr. Bučarju takrat sekretar ustavne komisije in ima najbolj natančen pregled od teh, ki sedimo za to mizo v tem trenutku o diskusijah in vprašanjih in dilemah, ki so bile ob takratnem sprejemanju te ustavne materije. Ampak, kakorkoli že, zelo nevarno je, če začnemo to diskusijo z sumičenji, da ima kdo kaj s kom in proti komu. Jaz bi bil za to, da se pogovarjamo, kot smo se prej zmenili, o dveh konkretnih predlogih za spremembo ustave in ravno tako o konkretnih predlogih za strokovno pomoč pri vodenju te ustavne komisije. Da pa vse drugo pustimo esejistični žilici in, bom rekel, možnosti, da se to objavlja v najrazličnejših časopisih, ki bodo tega zelo veseli in ni za dvomiti, da se bodo vključevali v take vrste diskusije.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg169">Tudi nimam zdaj, se naprej opravičujem, če kdo to jemlje osebno, ampak dajmo biti profesionalci. Imamo dva predloga. Zmenili smo se, kaj je potrebno za drugič pripraviti. Ena od stvari, ki jo je potrebno pripraviti je ta strokovna skupina. O njej naj se na formalen način odloči in gremo s stvarmi naprej.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg170">Prijavljene imam tri replike. Kolega Gabra, kolega dr. Bernika in kolega Peterleta.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg171">Dovolim si samo dati naslednje pojasnilo, pa bo morda prispevalo k temu, da jih ne bo več. Dr. Cerar je, kot sem povedal zunanji sodelavec državnega zbora za ustavna vprašanja in je pomagal tako pri pripravi te seje, kot seveda s tem statusom sodeluje na njej. Ker se je odprlo vprašanje strokovnih sodelavcev med ostalimi dogovori, te diskusije nisem prekinil. Sem pa poskušal pojasniti dr. Berniku, zakaj je dr. Cerar tukaj. Dal sem pa možnost dr. Cerarju, ker je tako želel, da je odgovoril na nekaj vprašanj, in mislim, da bi ravnal napačno, če mu ne bi dal te možnosti. Predlagam, da te diskusije ne vodimo naprej, kajti to je ena od stvari, o katerih se bomo še dokončno dogovorili; gre za strokovno sodelovanje pri delu ustavne komisije. Tako da bi pozval diskutante, da imajo to v vidu. Želite besedo, dr. Gaber?</seg>
             </u>
             <note type="speaker">DR. SLAVKO GABER:</note>
-            <u who="#SDT3.GaberSlavko" ana="#regular">
+            <u who="#GaberSlavko">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg172">Gospod predsednik, vendarle bi rekel, pravzaprav na liniji, ki jo sami ponujate, dva stavka.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg173">Osebno verjamem, da v Sloveniji ni prav veliko zelo resnih strokovnjakov in še posebej ne za vsa številna vprašanja, ki jih odpira materija, ki je pred nami. Zato bi bilo zelo dobro, če bi tudi naš odnos do njih bil takšen, da bi bili pripravljeni sodelovatipri delu in da bi se sami zelo potrudili, da bi veljalo pri tem načelo resne strokovnosti in strokovne moči teh ljudi.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg174">V Sloveniji se nam zelo dostikrat zgodi, da kot strokovnjake za posamična vprašanja jemljemo ljudi, ki imajo naslove z določenih področij. To pomeni, da ko je nekdo pravnik po poklicu, potem je naenkrat strokovnjak za vsa vprašanja, ki se kakorkoli dotikajo tega polja. Velja tudi za druge stroke enako; to, da je nekdo sociolog, ga še nič ne kvalificira za to, da razpravlja na primer o vprašanjih regionalizma, če o vprašanjih regionalizma ne ve kaj dosti.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg175">Če uporabimo to načelo, potem je žal pač potrebno vedeti, da je intelektualna potenca te nacije takšna, da če izključimo vse, ki so doslej sodelovali pri pripravi teh predlogov, potem preprosto ni res, da je mogoče te garniture nadomestiti z drugimi garniturami, če bi hoteli imeti strokovno pomoč. Osebno sem tudi globoko prepričan, da je to bolj vprašanje strokovne etike, da ni vprašanje odvetniške etike, to so druga polja. Predlagam pa da ravnamo previdno s temi ljudmi, ki dostikrat delajo v resnici tudi zastonj, tudi za ta državni zbor, in so samo občasno za to tudi plačani. Ne govorim "ad personam", govorim v tem primeru "ad rem", in se strinjam, da to ni prav posebej velika diskusija, ki bi jo kazalo tu prav dolgo vleči.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg176">Kolega Bernik, želite besedo?</seg>
             </u>
             <note type="speaker">DR. JOŽEF BERNIK:</note>
-            <u who="#SDT3.BernikJožef" ana="#regular">
+            <u who="#BernikJožef">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg177">Hvala. Namreč, zaprepaščen sem nad to diskusijo.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg178">Čisto enostavno sem rekel, tu je pravni svetovalec, tu je klient. Če imate to razmerje, potem je razumljivo, morate vprašati, od kod prihaja ta pravni svetovalec, kje je bil prej in kaj je svetoval. Ne vem, če boste vi šli nekaj takega na svoje delati, boste gotovo to naredili. Ampak tu pa, izgleda, te logike ni.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg179">Problem pa, ki ga imamo, če ne vem, zakaj vlada mora poklicati pri pripravi teh predlogov deset strokovnjakov. Prvič je to zelo drago, drugič imaš pa potem - so pa čisto onemogočeni, če so plačani, prosim, so pa čisto onemogočeni, da bi svetovali kakšnemu drugemu klientu, ki je morebiti v nasprotju z državo. Dajmo si enkrat dopovedati, da imamo neko etiko. In tudi vi, gospod predsednik, ko ste prej rekli, upam, da ne boste preveč <gap reason="inaudible"/> ", ne vem, kakšno besedo ste uporabili, ostri ali kaj, ko boste premišljevali o strokovnjakih. Ja, za božjo voljo, če pa tu ne moremo biti dosledni pa etični, potem pa lahko gremo domov. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg180">Kolega Peterle. Počasi bomo zaključili sejo. Prosim še trenutek pozornosti. Kolega Peterle ima besedo.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDT3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg181">Hvala lepa. Glejte, so že padle značilne besede, ki so povsem nepotrebne, "berufshverbot" in take zadeve. Jaz nisem vedel, recimo, dokler ni odgovoril dr. Cerar sam, da je bil svetovalec tudi za vlado. Do tega trenutka tega nisem vedel. Razumem pa občutljivost dr. Bernika. In razumem tudi, kaj je vsebinsko delo, pa kaj je procesno delo. In če tu ni nobenega problema, nimam nič proti temu, da nam gospod Cerar svetuje še naprej, kot nam je, mislim, v marsičem dobro svetoval doslej. Tu nobenega ne preganjamo, tudi nobenega ne napadamo, ampak dajmo biti čisto jasni: če je vlada angažirala tako rekoč vso stroko, kot pravijo nekateri, za te svoje predloge, potem se malo vprašam, kako je z vlado in kako je s stroko in kako je z nami, če nimamo nobenega, ki bi ga lahko vključili sem, ki ni bil že vsebinsko angažiran pri vladi. To je pa prav hudo za vso našo stroko, če parlament ne more dobiti nobenega, bomo rekli temu, od vlade neodvisnega strokovnjaka, da nam tu svetuje.</seg>
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg182">In jaz bi seveda rad, glede na to, da je ta veja vendar posebna veja slovenske oblasti, da bi imeli tudi nekoga, ki od vlade ni bil angažiran; če je ta ambicija huda za koga, potem pa se bojim, kako je z našo demokracijo. In zdaj eni pravijo že, da je problem z univerzo, da strokovnjaka rabimo - seveda jih rabimo, samo mi smo jasen kriterij postavili: če se le da, jaz upam, da se vendar da, nekoga dobiti, ki ni bil angažiran od vlade, da nam bo svetoval pri posameznih strokovnih vprašanjih. To je vse.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDT3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDT3-UK-Redna-001-2001-11-13.seg183">Gospe in gospodje, preden se za nocoj poslovimo in končamo otvoritveno sejo ustavne komisije, mi dovolite reči, da bom v štirinajstih dneh poslal članicam in članom predloge sklepov za vsa štiri vprašanja, o katerih smo danes govorili. Tako da bi se lahko dogovorili za naslednjo sejo. Predlagam, glede na to, da je tu več kot četrtina poslank in poslancev, da močno pazimo na to, da se držimo dnevnega reda, da diskutiramo o stvareh, ki so predmet razprave, in da z nepotrebnimi povišanimi toni ne vplivamo na neko atmosfero, ki mora biti zelo delovna in tudi konstruktivna za tako delo. Hvala lepa.</seg>
             </u>
             <note type="time">Seja je bila končana 13. novembra 2001 ob 20.03 uri.</note>

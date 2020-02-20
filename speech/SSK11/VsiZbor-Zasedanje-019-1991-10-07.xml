@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 19. zasedanje</title>
             <meeting n="19"
-                     corresp="#VsiZbor.1991-10-07.z019-01.DruzPolZb #VsiZbor.1991-10-07.z019-01.ZbObc #VsiZbor.1991-10-07.z019-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="6"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="3"/>
                <tagUsage gi="seg" occurs="18"/>
             </namespace>
@@ -109,23 +100,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-10-07.z019-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-10-07.z019-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-10-07.z019-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -135,21 +109,25 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">19. zasedanje</head>
             <docDate>7. oktober 1991</docDate>
             <note type="chairman">Sejo je vodil Ivan Bizjak, predsednik Zbora občin.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 16.15 uri.</note>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-10-07.z019-01.seg1">Spoštovane delegatke in delegati, gospe in gospodje! Pričenjam skupno zasedanje vseh treh zborov Skupščine Republike Slovenije, na katerem bomo poslušali UVODNO BESEDO PREDSEDNIKA IZVRŠNEGA SVETA SKUPŠČINE REPUBLIKE SLOVENIJE K PREDLOGU ZAKONA O DENARNI ENOTI REPUBLIKE SLOVENIJE, PREDLOGU ZAKONA O UPORABI DENARNE ENOTE REPUBLIKE SLOVENIJE, PREDLOGU ZA IZDAJO ZAKONA O SPREMINJANJU DEPONIRANIH DEVIZNIH VLOG OBČANOV PRI NARODNI BANKI JUGOSLAVIJE V DOLG REPUBLIKE SLOVENIJE IN IZDAJANJU OBVEZNIC NA PODLAGI DEVIZNI VLOG OBČANOV PRI BANKAH V REPUBLIKI SLOVENIJI Z OSNUTKOM ZAKONA.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-10-07.z019-01.seg2">Uvodno besedo bo podal predsednik Izvršnega sveta. Najprej pa naj vas opozorim, da bodo zbori navedene tri zakone obravnavali v skladu z drugim odstavkom 435. člena in tretjim odstavkom 436. člena poslovnika, to je brez prisotnosti javnosti in predstavnikov sredstev javnega obveščanja. Zato jih prosim, če je kdo slučajno prisoten, da zapusti dvorano. Prosim predsednika Izvršnega sveta Skupščine Republike Slovenije, gospoda Lojzeta Peterleta, da poda uvodno besedo.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-10-07.z019-01.seg3">Spoštovane poslanke in poslanci! Z iztekom trimesečnega moratorija Republika Slovenija uveljavlja sistemske zakone, ki smo jih sprejeli junija letos. Vzpostavljamo lastno denarno, kreditno in devizno politiko, ki jo določa in vodi Banka Slovenije kot monetarna oblast v Republiki Sloveniji. Dogajanja v Jugoslaviji v obdobju moratorija narekujejo, da predlagamo rešitve, ki bi slovensko gospodarstvo in občane v čim večji meri zaščitile pred posledicami naraščajočega razvrednotenja dinarja in diskriminatornimi ukrepi ekonomske politike federacije. Te se kažejo v nekontroliranem emisijskem financiranju, razpadu pravnega reda in ekonomskega sistema, ki je bil temelj tako imenovanega enotnega jugoslovanskega trga, blokadi Slovenije v oskrbi z gotovino in predvsem rekordni precenjenosti dinarja do konvertibilnih valut. Vse to je vodilo Izvršni svet v odločitev, da predlaga uvedbo slovenske denarne enote kot edinega zakonitega plačilnega sredstva v Republiki Sloveniji. Zato smo predložili predlog zakona o uvedbi denarne enote Republike Slovenije in predlog zakona o uporabi denarne enote Republike Slovenije in za oba predlagamo obravnavo in sprejem po hitrem postopku. Prav tako smo predložili v obravnavo predlog za izdajo zakona o spreminjanju deponiranih deviznih vlog občanov pri Narodni banki Jugoslavije v dolg Republike Slovenije in o izdajanju obveznic na podlagi deviznih vlog občanov pri bankah v Republiki Sloveniji z osnutkom zakona. S prvim zakonom, se pravi z zakonom o denarni enoti Republike Slovenije predlagamo, da se odloči klas kot denarna enota Republike Slovenije in da se klas deli na sto stotinov. S tem zakonom se prav tako določa, da so bankovci in kovanci, ki se glasijo na denarno enoto Republike Slovenije edino zakonito plačilno sredstvo na območju Republike Slovenije. Zakon pooblašča Banko Slovenije, da določi tečaje tujih valut na dan uveljavitve tega zakona. Zakon o uporabi denarne enote Republike Slovenije določa, da se v Republiki Sloveniji uporabljajo bankovci in kovanci, ki se glasijo na klas kot zakonito plačilno sredstvo. Pri določitvi imena je Izvršni svet upošteval naslednja merila: ime slovenskega denarja naj bo kratko, jasno, lahko izgovorljivo tudi za tujce. Ime naj se ne prekriva z imeni denarnih enot drugih držav. Ime naj po svojem izvoru ne bo obremenjeno z zgodovinsko odvisnostjo slovenskega naroda od drugih narodov. Tukaj gre za vrsto imen, ki so vezana na naše življenje v Avstro-Ogrski. Ime naj bo izvirno slovensko in naj bo sinomin za kako vrednoto. Do izdaje bankovcev in kovancev, ki se bodo glasili na klase, se uporabljajo kot zakonito plačilno sredstvo vrednostni boni Republike Slovenije. Vrednostne bone je izdala Republika Slovenija v imenu in za račun Banke Slovenije. Z dnem uveljavitve tega zakona bo Banka Slovenije vzela iz obtoka bankovce in kovance, ki se glasijo na dinarje. Mogoče je tudi med poslanci še kdo, ki ni slišal pojasnil, zakaj vrednostni boni. Izvršni svet je že v letu 1990, izhajajoč iz črne predpostavke, da bo mogoče potrebno zamenjati denar, na hitro pripravil pač vrednostne bone, ki so lahko za določen čas normalno plačilno sredstvo v Sloveniji. Seveda takrat ni bilo Banke Slovenije. Ta banka bo začela formalno delovati lahko po izteku moratorija in če bi bili strogi formalisti, ne bi mogli do jutri, oziroma do danes opolnoči, narediti na tem področju ničesar, ker ne bi imeli formalnega kritja, vsaj kar zadeva banke kot denarnega zavoda. Zato je torej vlada te stvari pripravila prej in so zdaj na razpolago.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-10-07.z019-01.seg4">Za začetno menjalno razmerje klasa do dinarja predlagamo razmerje ena proti ena. Takšno razmerje omogoča hitro in smotrno izvedbo zamenjave brez dodatnih obračunov in evidenc in ne povzroča stroškov dodatnega tiskanja bonov v "apoenih" manjših od ene enote. Takšnemu menjalnemu razmerju ustreza tudi že pripravljena količina in struktura bonov Republike Slovenije. Banka Slovenije bo določila startno osnovo izhodiščnega tečaja na osnovi razmerja med dinarjem in nemško marko, ki je bil vzpostavljen maja 1988. Iz znanih razlogov vam sedaj tega tečaja ne morem povedati, povem lahko, da bo tečaj oblikovan tako, da bo vzpodbujal izvoz. Kot sem že večkrat rekel, takih zadev se v širokem krogu in v naprej ne pojasnjuje. Je to pač pridržano izvršni oziroma denarni oblasti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-10-07.z019-01.seg5">Z dnem uveljavitve zakona se bodo cene izkazovale v denarni enoti Republike Slovenije in prevedli nato v denarno enoto zneski vseh stanj in depozitov, vrednostnih papirjev, nalogov plačilnega prometa, zneskov v predpisih, splošnih aktih ter vrednosti v obračunih in evidencah. Banka Slovenije je tudi pooblaščena za določitev načina in postopka prilagoditev depozitnih in kreditnih razmerij. Predlagani zakon je Izvršni svet Skupščine Republike Slovenije pripravil v sodelovanju z Banko Slovenije. Za uvedbo nove denarne enote in lastnega denarnega sistema sta Izvršni svet Skupščine Republike Slovenije in Svet Banke Slovenije sprejela iz svoje pristojnosti naslednje podzakonske akte:</seg>
@@ -162,7 +140,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-10-07.z019-01.seg12">Mislim, da bi lahko s tem zaključil. Hvala lepa za pozornost.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-10-07.z019-01.seg13">Zahvaljujem se gospodu Lojzetu Peterletu za podano uvodno besedo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-10-07.z019-01.seg14">Po dogovoru vseh treh predsednikov zborov bi zbori imeli sedaj odmor, da bi v tem času lahko svoje delo opravila Zakonodajno-pravna komisija in pa Odbor za kreditno monetarni sistem. Predsednik Zakonodajno-pravne komisije sklicuje to komisijo takoj po zaključku tega skupnega zasedanja v sobi številka 212.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-10-07.z019-01.seg15">Predvidevam, da bo potreben odmor najmanj 45 minut.</seg>

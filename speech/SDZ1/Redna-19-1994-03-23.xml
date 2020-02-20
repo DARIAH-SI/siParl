@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ1-Redna-19-1994-03-23"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">19. redna seja (23. 3. 1994)</title>
-            <meeting n="19"
-                     corresp="#SDZ1-Redna-19-1994-03-23.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="19" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="1" corresp="#DZ" ana="#parl.term #DZ.1">1. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,35 +34,26 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje
                      avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">19. seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="session">A8689337ED1A994EC1257832004838F5</idno>
-                  <idno type="URI">A8689337ED1A994EC1257832004838F5</idno>
-                  <imprint>
-                     <date when="1994-03-23">(23., 24., 25., 29. in 30. marec ter 6., 7., 14., 15., 19., 20., 21.
-               in 22. april 1994.)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>19. redna seja (23. 3. 1994)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1994-03-23"/>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="245"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="62"/>
                <tagUsage gi="seg" occurs="403"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -513,23 +496,21 @@
                <date when="1994-03-23" ana="#parl.sitting">23. 3. 1994</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ1-Redna-19-1994-03-23.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">19. seja</head>
-            <docDate>(23., 24., 25., 29. in 30. marec ter 6., 7., 14., 15., 19., 20., 21. in 22. april 1994.)</docDate>
             <note type="chairman">Sejo so vodili: mag. Herman Rigelnik, predsednik zbora, Vladimir Topler, Miroslav Mozetič in dr. Lev Kreft, podpredsedniki zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 16.16 uri.</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg1">Spoštovane kolegice poslanke in kolegi poslanci, gospe in gospodje! Pričenjam 19. sejo Državnega zbora Republike Slovenije. Obveščen sem, da so zadržani in da se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Dušan Bavdek, Bojan Korošec, Nada Skuk, Dragan Černetič, Ciril Ribičič, Ivan Oman, Igor Omerza, Tone Anderlič, Ignac Polajnar.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg2">Prosim, ugotovimo prisotnost v dvorani. Ugotavljam, da je navzočih 48 poslank in poslancev. Zbor je sklepčen in lahko odloča. Na to sejo sem vabil tudi predstavnike Vlade Republike Slovenije in jih lepo pozdravljam.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg3">Ker se je 18. seja Državnega zbora šele končala, zapisnik 18. seje zboru na tej seji ne bo predložen. Zato ga bo zbor sprejemal na 20. seji. Želi v zvezi s tem kdo besedo? Če ne, prehajamo na sprejem zapisnika 4. izredne seje. Zapisnik ste prejeli. Ali kdo zahteva spremembo ali dopolnitev oziroma ima kakršnokoli drugo pripombo na zapisnik? Ker na zapisnik 4. izredne seje Državnega zbora Republike Slovenije ni pripomb, prehajamo na odločanje o sprejemu zapisnika. Ugotovimo sklepčnost!</seg>
@@ -561,13 +542,13 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg19">Predlagatelj navedenih predlogov zakonov je Vlada Republike Slovenije, ki obenem predlaga, da jih Državni zbor sprejme po hitrem postopku. Vlada Republike Slovenije mi je danes pisno sporočila, da predlaga, da se predloga zakona o usklajevanju denarnih nadomestil za čas porodniškega dopusta, denarnih nadomestil za čas odsotnosti z dela zaradi bolezni nad 30 dni, denarnih nadomestil za čas brezposelnosti, pokojnin, zajamčene plače in predlog zakona o določitvi višine invalidskih prejemkov uvrstita na aprilsko zasedanje Državnega zbora, pri čemer Vlada Republike Slovenije predlaga, da se oba omenjena zakona obravnavata in sprejmeta po hitrem postopku. Želi besedo predstavnik matičnega delovnega telesa? Prosim, gospod Kociper.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg20">Hvala lepa, gospod predsednik. Spoštovane gospe in gospodje, poslanke in poslanci! Glede predlogov, za katere Vlada predlaga, da jih Državni zbor obravnava na aprilski seji, seveda sam nimam pravice, da predlagam Državnemu zboru, da jih prestavimo na aprilsko sejo. V veliki vnemi seveda, ker je Vlada vložila te postopke in predlagala hitri postopek, je matični odbor tudi ta dva zakona obravnaval na včerajšnji seji in tudi sprejel sklepe, ki smo jih predlagali. Skratka, Vlada ima verjetno utemeljene razloge in osebno tudi menim, če je tako, da potem ta dva zakona ne uvrščamo na to sejo.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg21">Bi pa na kratko obrazložil, zakaj je potrebno dodatno uvrstiti predlog odloka o stopnji prispevka za porodniško varstvo. Ta predlog odloka je Vlada tudi precej pozno vložila, tako da ni bil v osnutku in smo ga lahko šele včeraj v odboru obravnavali. Državnemu zboru seveda predlagamo, da ga uvrsti na to sejo, da ga pa uvrsti prav na začetek dnevnega reda zato, da bi odlok lahko skupaj z odlokom za zdravstveno zavarovanje objavili pravočasno v Uradnem listu, tako da bi veljal že s 1.4.1994. S tem bi tudi z istočasno obravnavo obeh prispevnih stopenj prihranili nekaj stopenj delodajalcem. To je glede odloka.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg22">Vlada pa je Državnemu zboru  predložila tudi predlog zakona o pogojih za refundiranje prispevkov, ki ji plačujejo delodajalci za socialno zavarovanje in prav tako predlaga hitri postopek. To je eden treh zakonov v tem paketu, za katere je Vlada predlagala hitri postopek. Odbor ocenjuje, da je tukaj hitri postopek utemeljen in da ima tak predlog predvsem pozitivne posledice, zato odbor predlaga, da ta zakon obravnavamo na tej seji in  po hitrem postopku. Toliko za sedaj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg23">Hvala lepa gospod Kociper. Želi morda predstavnik Vlade besedo?</seg>
                <note>Ne želi</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg24">. Želi besedo predstavnik sekretariata?</seg>
@@ -610,11 +591,11 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg45">Želi besedo poročevalec odbora? Ste že povedali, gospod Kociper. Izvolite še enkrat.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg46">Se opravičujem. Še enkrat moram govoriti. Predlog odloka o stopnjah prispevkov za obvezno zdravstveno zavarovanje je predlagan pod 43. točko. Prej sem pozabil dati predlog, da ta odlok in odlok, ki ureja porodniško varstvo, obravnava Državni zbor skupaj in to prav na začetku seje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg47">Hvala lepa, gospod Kociper. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg48">.</seg>
@@ -649,11 +630,11 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg67">Komisija po zakonu o nezdružljivosti opravljanja javne funkcije s pridobitno dejavnostjo predlaga, da zbor razširi dnevni red z obravnavo spremembe poročila o gospodarskih družbah, podjetjih ali zavodih, za katere velja prepoved poslovanja z državo, javnimi podjetji in javnimi zavodi. Želi besedo poročevalec komisije? Prosim, gospod Pucko.</seg>
             </u>
             <note type="speaker">CIRIL PUCKO:</note>
-            <u who="#SDZ1.PuckoCiril" ana="#regular">
+            <u who="#PuckoCiril">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg68">Hvala lepa, gospod predsednik. Spoštovane poslanke in poslanci! Komisija predlaga razširitev dnevnega reda z omenjeno točko iz preprostega razloga, ker pač prihaja do imenovanja novih državnih sekretarjev. Iz tega razloga tudi do sprememb in potrebno je spremeniti tudi poročilo oziroma naknadno uvrstiti določeno podjetje na ta seznam podjetij, družb, ki ne smejo poslovati z državo. Prav iz razloga, da bi zakon tekoče izvajali, predlagamo to razširitev. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg69">Hvala lepa, gospod Pucko. Želi besedo predstavnik Vlade?</seg>
                <note>Ne želi</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg70">. Želi besedo predstavniki poslanskih skupin?</seg>
@@ -672,30 +653,30 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg78">Razširitev dnevnega reda. Ima še kdo predlog? Prosim, gospod Poljšak in potem gospod Potrč ter gospod Ribičič.</seg>
             </u>
             <note type="speaker">MARIJAN POLJŠAK:</note>
-            <u who="#SDZ1.PoljšakMarijan" ana="#regular">
+            <u who="#PoljšakMarijan">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg79">Štirje poslanci smo pred mesecem dni vložili predlog zakona o začasnem državnem upravljanju pravnih oseb, ki prirejajo posebne igre na srečo. Ta zakon je bil prvotno v delovnem gradivu napisan, da bo prišel na dnevni red sedanje seje, potem je bilo pa to zavrnjeno z obrazložitvijo, češ, da obravnavana materija sodi v isto vsebinsko zaokrožen okvir kot zakon o lastninskem preoblikovanju podjetij, ki prirejajo posebne igre na srečo.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg80">Razumem, zakon, ki smo ga vložili, se ukvarja s tem, da se uvede začasna uprava v igralnicah. Na kratko, če povem, začasna državna uprava v igralnicah zato, kot je tudi v obrazložitvi in v   oceni stanja napisano, da se najprej opravi revizija. Se pravi, da se stvari pregledajo, da se stvari uredijo in da se potem izvede lastninjenje v tem smislu, kot smo sprejeli že včeraj amandmaje na prejšnji seji. Ker gre za državno upravo in ne za lastninjenje, menim, da sta to dovolj različni materiji, čeprav sta sorodni in se ukvarjata z isto stvarjo in menim, da bi bilo dobro in pametno, da bi ta zakon sprejeli, ker bi potem pač z državno upravo v igralnicah naredili stvari čiste in bi potem lahko preprosto lastninili. Zato vztrajam oziroma predlagam, da se ta zakon sprejme na dnevni red oziroma se razširi dnevni red s to točko. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg81">Hvala lepa, gospod Poljšak. Gospod Poljšak, vi veste, da sem dal posebna zaprosila našemu sekretariatu glede mnenja in da smo dobili mnenje, da gre za isto vsebino in po poslovniku ne moreta biti dva zakonska projekta na isti seji v obravnavi.  Zato te točke ne moremo sprejeti na dnevni red oziroma o njej glasovati.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg82">Gospod dr. Ribičič, naslednji predlog.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ1.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg83">Spoštovani! Na podlagi mnogih predlogov, ki smo jih dobili iz občin, je komisija zadolžila posebno usklajevalno skupino, da poskuša doseči soglasje glede predloga, da bi z ustavnim zakonom podaljšali mandatno dobo občinskim skupščinam. Obstajajo še posamezni pomisleki v zvezi s tistimi občinami, ki ne delujejo, ampak vendar je stopnja soglasja takšna, da mislimo, da je realno, da bi bil ustavni zakon lahko sprejet in predlagamo zelo enostavno, da se z ustavnim zakonom podaljša mandatna doba občinskim skupščinam in skupščinam posebnih družbeno političnih skupnosti do konca letošnjega leta. Zato smo zbrali več, kot je potrebnih 20 podpisov, in predlagamo, da se razširi dnevni red s to točko dnevnega reda. Se pravi, obravnava predloga za začetek postopka za spremembo ustavnega zakona za izvedbo ustave Republike Slovenije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg84">Hvala lepa, gospod dr. Ribičič.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg85">Želijo besedo predstavniki poslanskih skupin v zvezi s to tematiko? Želijo v zvezi s predlogom, ki ga je dal gospod dr. Ribičič, razpravljati vodje poslanskih skupin? Prosim, gospod Janez Podobnik.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg86">Spoštovani gospod predsednik, poslanke in poslanci! V poslanski skupini Slovenske ljudske stranke podpiramo predlog, ki ga je dal gospod dr. Ribičič. Ocenjujemo, da je bila tako imenovana usklajevalna komisija, da ji tako rečem, Komisije za lokalno samoupravo uspešna, da se je našel nek dogovor in da se je našla možnost, da bo Državni zbor z ustavnim zakonom podaljšal mandate občinskim skupščinam in posebnim družbenopolitičnim organizacijam. Zato podpiramo predlog, da se to uvrsti na dnevni red 19. seje Državnega zbora. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg87">Hvala lepa, gospod Podobnik. Želi še kdo besedo v imenu poslanskih skupin? Če ne želi nihče več, potem dajem ta predlog za razširitev dnevnega reda na glasovanje. Ugotovimo sklepčnost!</seg>
                <note>62 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg88">Kdo je za?</seg>
@@ -706,40 +687,40 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg91">Besedo dajem gospodu Rejcu. Moram reči, da ga nisem videl, držal je že prej roko, se opravičujem.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg92">Gospod predsednik, gospe in gospodje! V zvezi s predlogom, ki ga je gospod Marijan Poljšak prej dal, oziroma zahteval, da se da na dnevni red predlog zakona o začasnem državnem upravljanju pravnih oseb, ki prirejajo posebne igre na srečo. Moram reči, da smo že dopoldan govorili o 4. sklepu Komisije za spremljanje in nadzor lastninskega preoblikovanja v katerem je nedvomno povedano, da Vlada ni za novembrsko sejo pripravila po hitrem postopku za Državni zbor zakona o prepovedi lastninjenja v podjetjih, ki opravljajo igre na srečo. Ta zadeva ni bila izvršena. Od tod sledi seveda tudi razlaga, ki smo jo prejeli s strani Sekretariata za zakonodajo in pravne zadeve.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg93">Moram reči, da v 174. členu poslovnika Državnega zbora piše, da predsednik Državnega zbora zadrži dodelitev predloga zakona, če še ni končan zakonodajni postopek o predlogu zakona z enako ali podobno vsebino. Trdim, da predlagani zakon, ki smo ga že zadnjič zavrnili oziroma, ki je bil že zadnjič zavrnjen na Državnem zboru, ni zakon z enako ali podobno vsebino, ampak je zakon, ki v bistvu pomeni realizacijo sklepa Državnega zbora in seveda neizvedeno nalogo Vlade Slovenije.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg94">Gre za to, da smo tudi 11. novembra lanskega leta, ko smo sprejemali memorandum za leto 1994, sprejeli sklep, v katerem smo ugotovili, da se zaradi spornega lastninjenja v igralnicah začasno podržavijo podjetja, ki se ukvarjajo z igrami na srečo. To bi pomenilo tudi dodatna sredstva za proračun. Tako zveni ta sklep. Na osnovi tega sklepa je ta skupina pripravila predlog zakona, ki ga imate pred seboj in ki govori o tem, da je začasno državno upravljanje pravnih oseb, to je, začasno državno upravljanje, preden pride v veljavo zakon o lastninskem preoblikovanju podjetij, ki jih prirejajo igre na srečo. Gre za to, da tu ni govora o tem, da je to lastninjenje. To je samo in točno je opredeljeno v 5. členu, da se dobiček deli seveda po določenem procentu, 40 za državni proračun, 40 za proračun občinskih skupščin za določene namene, 10% za pokojninski in invalidski sklad in seveda 10% za odškodninski sklad. To pa seveda ni lastninjenje. To je samo začasna razporeditev dobička, ni pa to lastninjenje in zaradi tega menim, da tolmačenje Sekretariata za zakonodajno in pravne zadeve ni pravilno in kot sem že dopoldan rekel, da je bolj politično kot strokovno. Menim, oziroma vztrajam pri temu, da ta zakon ni enak ali podoben  tistemu, ki smo ga dopoldan s sklepom Državnega zbora dali nazaj Vladi in razdelili v dva dela in s tem seveda namenili za drugo obravnavo. Zato vztrajam, da se sprejme na dnevni red predlagani zakon po hitrem postopku. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg95">Hvala lepa. Gospod Rejc, bom ponovil isto, kot sem že prej gospodu Poljšaku, da gre po mnenju sekretariata, katerega sem zaprosil za mnenje, za isto tematiko in seveda v skladu z našim poslovnikom ne moreta biti dva zakonska projekta v obravnavi. Danes je v obravnavi tisti, ki je prej v Državnem zboru. V tem primeru nimam drugega, kot da tako ravnam.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg96">Prosim, gospod Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg97">Spoštovani predsednik, gospe in gospodje! Vztrajam da se o predlaganem zakonu glasuje. Pred tem pa seveda, da da ponovno svoje stališče Sekretariat za zakonodajo in pravne zadeve. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg98">Prosil bi gospoda Baškoviča, ali je sekretariat morda spremenil svoje mnenje, glede na tisto, ki sem ga jaz dobil. Prosim.</seg>
             </u>
             <note type="speaker">MILAN BAŠKOVIČ:</note>
-            <u who="#SDZ1.BaškovičMilan" ana="#regular">
+            <u who="#BaškovičMilan">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg99">To mnenje smo dali na izrecno željo predsednika Državnega zbora, ker sicer ni to naša pristojnost, da bi mi odločali o teh stvareh, ampak pomagamo s stališčem, v tem primeru vodstvu zbora, ki je potem naše mnenje pač upoštevalo. Hočem reči, da smo natančno preverjali  in primerjali vsebino zakona, ki je bil v proceduri in ki je še v proceduri in tega posebnega zakona, ki je bil naknadno vložen. Poslovnik pravi, da ne moreta biti istočasno v postopku dva zakona, ki se nanašata na isto ali podobno vsebino. Značilno je tudi po členih, če primerjate oba zakona, namreč oba zakona se ukvarjata z lastninjenjem, z lastninskim preoblikovanjem. To je že globalno isti okvir. Seveda prvi s celim sistemom, drugi pa z nekim hitrejšim posegom. Ampak okvir, vsebina, namen je v istem okviru. Oba zakona se ukvarjata z revizijskimi postopki, z revizijo kot institucijo v tem postopku. Šel sem po členih, sta tu dva, tam sta dva itn. člena, ki se s tem ukvarjata. Seveda eden malo drugače, ampak vendarle z revizijo, to je tudi vsebina, ki je ista. Ravno tako  se oba zakona nanašata na organe upravljanja, na nekakšen suspenz poslovodnih in upravnih organov in oba uvajata začasno upravo v tem prehodu. Tudi tukaj ne moremo govoriti, da tu ne gre za podobno oziroma celo ponekod povsod enako materijo. Značilno je pa tudi to, kar smo poudarili v našem mnenju, če ga berete, če ga imate pred seboj, dopoldne smo ga imeli, zdaj ga nisem s seboj jemal, ker nisem na to računal. Ampak s kasnejšimi amandmaji pri obravnavi tega zakona v drugi obravnavi je bila vrsta amandmajev, ki so bili pravzaprav skoraj prepisani v ta posebni zakon. Se pravi, po dveh tirih iste določbe - amandmajsko in v tem zakonu. To je bil za nas poseben kazalec, da gre za najmanj podobno, če ne celo za isto vsebino in celo rešitve so ponujene v enaki smeri v vrsti točk. Z amandmaji se je poskušalo dopolnjevati ta zakon, ki je v proceduri na enak način, kot je hkrati nastajal v tem posebnem zakonu. Lahko bi to locirali čisto po točkah.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg100">Končno pa še to, da ta posebni zakon, kasneje vložen, v 6. členu, to je predzadnjem, se pa izrecno vklaplja nazaj v skupni zakon o lastninjenju, ko pravi, da preneha veljati ta zakon v nekem roku, ki je tam napisan, po uveljavitvi zakona o lastninskem preoblikovanju podjetij, ki se ukvarjajo z igralnicami. Se pravi, da celo svojo usodo veže potem na usodo tega zakona.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg101">Tako da smo morali po vseh teh elementih čisto strokovno zaključiti, ne politično, da se vsebina tu v glavnem prekriva. Sklep, ki sledi iz tega, je pa druge narave, ampak naše strokovno mnenje je šlo do tu in nič  več. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg102">Hvala lepa, gospod Baškovič. To zadevo smo obravnavali tudi na kolegiju in sklenili, da kolegij predsednika Državnega zbora ne predlaga te širitve na tej seji zato, ker je v obravnavi že zakonski projekt. Šlo bi za zakonski projekt, ki ima enako oziroma podobno  vsebino. Prosim, gospod Žare Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg103">Spoštovani! Predsednik, verjamem, da ste se posvetovali s kolegijem, verjamem, da ste se posvetovali s sekretariatom, ampak odločitev je vaša. Zato vas sprašujem, zakaj ne izpolnjujete sklepa Državnega zbora, ko je zadolžil Vlado in od nje zahteval, da pripravi tak interventni zakon za čas, dokler ne bo sprejet zakon o lastninskem preoblikovanju podjetij, ki se ukvarjajo z igrami na srečo. To je zbor sprejel. Vlada bi morala ta zakon pripraviti in ker tega ni naredila, je to naredila skupina poslancev iz te komisije. Sprašujem, s kakšno pravico ne dovolite niti tega, da bi zbor o tem ponovno odločal.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg104">Gospod Žaro Pregelj, odgovor je relativno enostaven. Zato, ker ni v skladu s poslovnikom in mi imamo v postopku potem dva enaka oziroma podobna zakonska projekta, kar seveda  ni v skladu <gap reason="inaudible"/>
                </seg>
                <note>Vmes Pregelj iz klopi: zakonskega projekta, kar seveda ni v skladu s ... (motnje!</note>
@@ -750,22 +731,22 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg108">Prosim za mir v dvorani!</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ1.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg109">Gospod predsednik, spoštovane kolegice in kolegi! Poslanska skupina Združene liste je predlagala razširitev 19. seje Državnega zbora Republike Slovenije s točko "Poročilo Vlade Republike Slovenije o ugotovitvah dejanskega stanja in odgovornosti pristojnih organov za nasilni odvzem prostosti Smolnikar Milanu v Depali vasi". Ob predložitvi te točke dnevnega reda smo želeli opraviti tudi razgovor s koalicijskimi partnerji, kar pa med odmorom, na žalost, ni bilo mogoče. Zato vas v imenu poslanske skupine prosim za pol ure odmora, da bi to lahko storili. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg110">Hvala lepa. Odrejam odmor do 17.30 ure.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 16.50 uri in se je nadaljevala ob 17.36 uri.</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg111">Nadaljujemo sejo. Prosim, ugotovimo prisotnost v dvorani! Ugotavljamo prisotnost v dvorani!</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg112">Ugotavljam, da je navzočih 58 poslank in poslancev. Tako je zbor sklepčen in lahko odloča.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg113">Besedo dajem gospodu Potrču.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ1.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg114">Spoštovani gospod predsednik! Spoštovane poslanke in poslanci! Poslanska skupina Združene liste je predsedniku Državnega zbora, mag. Hermanu Rigelniku, podala predlog za razširitev dnevnega reda 19. seje Državnega zbora Republike Slovenije s točko "Poročilo Vlade Republike Slovenije o ugotovitvah dejanskega stanja in odgovornosti pristojnih organov za nasilni odvzem prostosti Smolnikar Milanu v Depali vasi".</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg115">O tem smo napisali najkrajšo obrazložitev, ki se glasi:</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg116">"Nasilni odvzem prostosti gospodu Milanu Smolnikarju, dne 20. marca 1994 zvečer, v Depali vasi je močno vznemiril javnost. O oceni dogodkov in razlogih zanje je v javnosti več interpretacij. Upravičeno se postavljajo vprašanja, ali in v kolikšni meri so bili pri tem kršeni ustava in zakoni in kdo je za morebitne kršitve odgovoren. Predsednik Vlade dr. Janez Drnovšek je že imenoval komisijo, ki naj oceni okoliščine in posledice tega dogodka. Glede na politične razmere, v katerih je prišlo do nasilnega odvzema prostosti, in glede na upravičen sum, da so za kršitve pozitivnih predpisov odgovorni državni organi, mora poročilo Vlade o tem dogodku obravnavati Državni zbor. Predlagali smo, da se zadolži Vlada Republike Slovenije, da Državnemu zboru predloži potrebna gradiva za to točko dnevnega reda, obrazložili poslovniške pogoje za njo in hkrati predlagali, naj se točka dnevnega reda uvrsti pred točko "Razrešitev - imenovanje ministrice za delo, družino in socialne zadeve".</seg>
@@ -773,21 +754,21 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg118">Hkrati smo ocenili, da če ne bo predlogov, ali če poslanske skupine treh strank ne bomo zadovoljne z oceno in predlaganimi ukrepi Vlade, da bomo zahtevali, da se takoj skliče izredna seja Državnega zbora, ki naj to zadevo obravnava. V Združeni listi - naši poslanski skupini smo prepričani, da je na seji Državnega zbora o teh vprašanjih treba razpravljati in odločati, da pa bi - taka je tudi skupna ocena predstavnikov treh strank - zagotovili možnost Vladi, da danes v miru odloči in sprejme potrebne ukrepe in da bi se ji dalo čas - zamujenega pa ni nič, ker lahko takoj zahtevamo tudi sklic izredne seje - umikamo predlog o razširitvi točke dnevnega reda, kakor sem jo prebral. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg119">Hvala lepa, gospod Potrč. Besedo dajem gospodu Toplerju.</seg>
             </u>
             <note type="speaker">VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#regular">
+            <u who="#ToplerVladimir">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg120">Spoštovane kolegice, spoštovani kolegi! Gospod predsednik, hvala za besedo. V tem odmoru smo se tudi mi posvetovali s predstavniki nekaterih poslanskih skupin in z dr. Jankom Predanom vztrajava pri tem zakonu - to je predlog zakona o spremembah in dopolnitvah zakona o posebnem davku na določene prejemke - in ga predlagava po hitrem postopku. To pa predvsem zaradi tega, ker so društva danes v nemogočem položaju. In prosim, da bi tudi drugi podprli ta zakon.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg121">Hvala lepa, gospod Topler.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg122">Poslanca dr.Topler in Janko Predan predlagata razširitev dnevnega reda z obravnavo predloga zakona o spremembah in dopolnitvah zakona o posebnem davku na določene prejemke. Poslanca tudi predlagata, da zbor navedeni zakon sprejme po hitrem postopku. Želi besedo predstavnik Vlade? Želi besedo predstavnik Sekretariata za zakonodajo? Želijo besedo predstavniki poslanskih skupin?</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg123">Gospod Janez Podobnik, prosim.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ1.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg124">Spoštovani gospod predsednik, kolegice in kolegi! Poslanska skupina Slovenske ljudske stranke podpira predlog kolegov Toplerja in Predana, da se razširi dnevni red 19. seje Državnega zbora s predlogom zakona o spremembah in dopolnitvah zakona o posebnem davku na določene prejemke. Prepričan sem, da ste tudi vi, spoštovani kolegi in kolegice, dobili od društev, predvsem od društev, številne apele in klice, naj Državni zbor vendarle s to spremembo popravi nerodnost</seg>
                <note>da tako rečem</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg125">, ki se nam je vsem zgodila, ko smo sprejeli ta zakon. Ta zakon je namreč na nek način zelo prizadel društva, sindikate - in tu piše "tudi politične stranke", ampak mi poudarjamo predvsem društva in sindikate. Kajti v teh se glavnina dela opravlja na prostovoljen način. S tem je bilo prostovoljno delo, ki je po našem mnenju zelo pomembno, in društva s svojim prostovoljnim delom pomenijo pomemben segment stabilnosti, sploh delovanja v državi, so bila s tem zakonom prizadeta, kajti 25% jim pač vzame ta davek</seg>
@@ -800,34 +781,34 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg129">Torej še enkrat - kljub temu nemiru - podpiram predlog gospoda Predana in gospoda Toplerja, da se to uvrsti na dnevni red te seje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg130">Želi še kdo besedo v imenu poslanskih skupin? Gospod Zmago Jelinčič, prosim.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ1.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg131">Hvala lepa. Tudi naša poslanska skupina popolnoma podpira predlog zakona obeh kolegov poslancev in misli-</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg132">mo, da je skrajni čas, da je prišel ta predlog zakona v parlament. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg133">Hvala, gospod Jelinčič. Želi še kdo besedo v imenu poslanske skupine? Gospod Kopač, prosim.</seg>
             </u>
             <note type="speaker">JANEZ KOPAČ:</note>
-            <u who="#SDZ1.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg134">Hvala za besedo. Jaz bom sicer najprej rekel, da predloga ni obravnaval matični odbor, ampak drugo pa je, da ne vem, če ste vsi, ki zagovarjate tako vehementno in z veliko čustvenih izjav ta zakon, vključno s predlagateljema, ta zakon sploh prebrali? Ta zakon namreč govori - se opravičujem, ker moram govoriti o vsebini, čeprav je sedaj točka o dnevnem redu - v 1.členu  ta zakon uzakonja nekaj, kar že velja. V 2. členu pa uzakonja nekaj, proti čemur sem jaz vsebinsko zelo proti, sploh se pa nanaša na problematiko ali pa na žulj, ki dejansko žuli društva. To pa je zakon o dohodnini. To pa zaradi tega, ker je Ministrstvo za finance napisalo tolmačenje, ki ga slovenski SDK oziroma centrala v Ljubljani noče izvajati, ker pravijo, da po njihovem mnenju to ni v skladu z zakonom. Jaz sicer ne vem, koliko daleč se je zapletel ta spor, ampak stvar oziroma problem je v zakonu o dohodnini. Jaz mislim, da tudi tam ni. Problem je v SDK. Ampak to, kar pa vi želite reševati tukaj, je pa urejeno. Zato jaz nasprotujem temu zakonu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg135">Gospod Kopač, govorili</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg136">ste v imenu poslanske skupine.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg137">Besedo ima gospod Peršak v imenu poslanske skupine.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg138">Jaz bom v imenu poslanske skupine podprl uvrstitev tega zakona na dnevni red. Ne glede na to, da se mu mogoče v tem trenutku še da izreči kakšen očitek, ampak to je zakon, ki ima tri člene in se ga da korigirati. Mislim, da je res to, če smem nepolemično reči, da je problem tudi v zakonu o dohodnini in problem je tudi v zakonu o davku na dobiček pravnih oseb. Marsikje je problem, ampak tudi v tem zakonu je problem in to za društva in tiste, ki berete - predpostavljam pa, da marsikdo od vas bere revijo Denar. V 4. številki ste lahko prebrali zelo ilustrativen kratek članek, ki dokazuje, da je tudi ta zakon problem. Celo za podjetja, ne samo za društva in za take organizacije, kot so v tem zakonu navedene. Sega pa seveda, glede na to, da je kratek zakon in da je urgenten za marsikoga, da ga je v tej obravnavi, tudi skozi obravnavo na odboru, ustrezno še dopolniti in sami se bomo tudi potrudili, da bomo prispevali k temu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg139">Hvala. Želi še kdo v imenu poslanske skupine? Če ne, zaključujem razpravo in na glasovanje dajem predlog za razširitev dnevnega reda z navedenim predlogom zakona. Ugotovimo sklepčnost!</seg>
                <note>68 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg140">Kdo je za?</seg>
@@ -920,11 +901,11 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg192">Če ne, prehajamo na obravnavo k predlogu za hitri postopek. Skupina poslancev, in sicer Benjamin Henigman, Štefan Kociper, Nada Skuk, Ciril Pucko, Jožef Kocuvan, Jurij Malovrh in Ivan Oman so predložili predlog zakona o lastninskem preoblikovanju podjetij z družbenim kapitalom, ki opravljajo turistično dejavnost in katerih nepremičnine se nahajajo na območju Triglavskega narodnega parka, in predlagajo zboru, da ga sprejme po hitrem postopku. Kolegij predsednika predloga za sprejem navedenega zakona po hitrem postopku ne podpira. Želi predstavnik predlagatelja besedo? Gospod Henigman.</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ1.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg193">Spoštovani! Predlagatelji se glede na razpravo v delovnih telesih strinjamo s tem, da bi šel zakon po rednem postopku v prvo obravnavo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg194">Želi predstavnik Vlade besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg195">Želi besedo poročevalec matičnega delovnega telesa?</seg>
@@ -942,21 +923,21 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg202">Poslanka Metka Karner-Lukač in poslanec Žarko Pregelj sta predložila predlog zakona o spremembah in dopolnitvah zakona o lastninskem preoblikovanju podjetij in predlagata zboru, da ga sprejme po hitrem postopku. Kolegij predsednika predloga za sprejem navedenega zakona po hitrem postopku ne podpira. Želi predstavnik predlagateljev besedo? Gospa Metka Karner-Lukač.</seg>
             </u>
             <note type="speaker">METKA KARNER-LUKAČ:</note>
-            <u who="#SDZ1.KarnerLukačMetka" ana="#regular">
+            <u who="#KarnerLukačMetka">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg203">Spoštovani predsednik, spoštovani zbor! Res so veliki razlogi, da uvrstimo ta zakon na dnevni red in sicer po hitrem postopku. Sedajle sem prišla iz Agencije za privatizacijo in prestrukturiranje, kjer so mi povedali, da od takrat, ko so se pojavile te naše spremembe, ki sva jih s predlagateljem predlagala, Agencija ni dobila v odobritev nobenega programa več. To vsekakor ni bila želja predlagateljev in iz tega razloga je zelo nujno, da ta zakon sprejmemo po hitrem postopku in da ga obravnavamo in naj ta zbor reče, kar misli reči, ne pa da v tej neodločeni situaciji pustimo naša podjetja. Hvala lepa.                          </seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg204">Hvala, gospa Lukačeva.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg205">Želi besedo poročevalec matičnega delovnega telesa?</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg206">Prosim, gospod Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg207">Spoštovani predsednik, gospe in gospodje! Mi smo že za prejšnjo sejo pripravili ustrezno poročilo. Moram povedati, da je bilo tudi glasovanje na seji komisije za to, da pride na dnevni red. To moram povedati tako, kot je bilo. S tem pa seveda, da so bile v razpravi mnoge stvari podane drugače, in sicer v tem, da ta zakon seveda pomeni poseg v določeno razmerje, določene možnosti pri notranjem odkupu in seveda v to, da bi  potem pri tistih, ki so že dali svoj program oziroma že lastninijo, nastala določena nerazmerja in seveda edina stvar, ki je bila, ki smo jo tudi podprli, je v tem, da bi bilo potrebno lastniniti oziroma določiti, da se lahko lastninijo tudi podjetja, ki so na Skladu. To je tisti del zakona, ki ga je komisija podprla. Vendar komisija je pri glasovanju izglasovala to, da se da na dnevni red. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg208">Hvala, gospod Rejc.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg209">Želi besedo predstavnik sekretariata?</seg>
                <note>Ne</note>
@@ -965,20 +946,20 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg211">. Želijo besedo predstavniki poslanskih skupin? Prosim, gospod Jožef Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg212">Hvala lepa. Zelo na kratko. Takemu hitremu postopku nasprotujem. Argument, o katerem je govorila gospa Lukačeva, pač kvečjemu govori, da bi bilo pametno, da se tak zakon sploh umakne z dnevnega reda, če ovira te stvari. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg213">Hvala lepa, gospod Školč. Želi še kdo v imenu poslanske skupine razpravljati?</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg214">Prosim, gospod Žarko Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg215">Spoštovani! Poslanska skupina Slovenske ljudske stranke podpira uvrstitev tega zakona po hitrem postopku, ker meni, da bo le tako uresničen namen tega zakona. Če se uporablja običajni, počasni, trifazni postopek, se utegne razvodeneti smisel in lahko bi povzročili občutno ekonomsko škodo. Da je tak zakon potreben, dokazuje vrsta dodatnih sporočil prav iz podjetij, ki se lastninijo. To so predvsem dobra podjetja in zelo velika, katerim bi v bistvu te možnosti, ki jih ta zakon ponuja, še kako prav prišle in hkrati bi tudi tak način lastninjenja nekako pomagal ohraniti večjo vrednost v našem gospodarstvu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg216">Hvala, gospod Žarko Pregelj. Želi še kdo v imenu poslanskih skupin?</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg217">Želi predlagatelj dodatno obrazložiti svoj predlog?</seg>
                <note>Ne.</note>
@@ -1159,13 +1140,13 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg330">. Predlog zakona je obravnaval tudi Odbor za zdravstvo, delo, družino in socialno politiko kot matično delovno telo. Želi poročevalec odbora besedo? Prosim, gospod Kociper.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg331">Hvala lepa. Odbor Državnega zbora za zdravstvo, delo, družino in socialno politiko je na svoji 32. seji, 22. marca 1994, obravnaval predlog odloka o stopnjah prispevkov za obvezno zdravstveno zavarovanje, ki ga je Državnemu zboru predložil v obravnavo Zavod za zdravstveno zavarovanje Slovenije. Na podlagi opravljene razprave je odbor sprejel sklep, ki ga predlaga Državnemu zboru: "Odbor za zdravstvo, delo, družino in socialno politiko podpira predlog odloka o stopnjah prispevkov za obvezno zdravstveno zavarovanje in predlaga Državnemu zboru, da ta odlok v predlaganem besedilu sprejme".</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg332">Odbor pa je oblikoval in sprejel še naslednji predlog dodatnega sklepa, ki ga predlaga Državnemu zboru prav tako v sprejem.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg333">"Državni zbor Republike Slovenije nalaga Vladi Republike Slovenije, da do konca leta 1994 predloži Državnemu zboru celovito sistemsko rešitev, ki bo predstavljala enakomerno in uravnoteženo obremenitev vseh kategorij zavarovancev v zvezi s plačevanjem prispevkov za obvezno zdravstveno, pokojninsko in invalidsko zavarovanje". Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg334">Hvala gospod Kociper. Želi besedo predstavnik Sekretariata za zakonodajo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg335">Želi predstavnik Vlade besedo?</seg>
@@ -1176,19 +1157,19 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg338">Prosim gospod Jelinčič, se opravičujem, vas nisem videl.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ1.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg339">Hvala lepa. Mislim, da gre zgolj za povišanje dajatev za Zavod za zdravstveno zavarovanje Slovenije zato, ker se nekako navezuje na nekakšno povečanje oziroma oceno o rasti plač v letu 1994. Nikjer pa ne piše, da je konec koncev v državi Sloveniji tudi inflacija. Sem proti temu, da bi sprejeli take nove stopnje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg340">Hvala lepa, gospod Jelinčič. Želi še kdo besedo? Prosim, gospod Kociper. Kakor sem razumel, gre za znižanje prispevne stopnje.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg341">Ravno to bi rad gospodu Jelinčiču pojasnil, da gre za znižanje in da bi malo prej pogledal. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg342">Želi še kdo besedo? Toliko je raznih materialov, da človek ne ve več, kje je znižanje in kje je zvišanje. Želi še kdo besedo?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg343">Ker ne želi nihče več razpravljati, zaključujem razpravo in dajem na glasovanje predlog odloka o stopnjah prispevkov za obvezno zdravstveno zavarovanje. Na glasovanje dajem predlog odloka v celoti. Ugotovimo sklepčnost!</seg>
@@ -1214,12 +1195,12 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg355">Predlog odloka je obravnaval tudi Odbor za zdravstvo, delo, družino in socialno politiko. Gospod Kociper, želite besedo?</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg356">Hvala lepa. Odbor je na isti seji, torej 32. seji, obravnaval tudi predlog odloka o stopnji prispevka za porodniško varstvo, ki ga je Državnemu zboru predložila v obravnavo Vlada Republike Slovenije. V uvodu je predstavnik predlagatelja povedal, da je predlog odloka pripravljen v skladu z določilom 11. člena zakona o družinskih prejemkih in ob upoštevanju ocene mase bruto plač, izražene v povprečnih cenah za leto 1994, in ocene mase potrebnih sredstev za denarna nadomestila za čas porodniškega dopusta, prav tako izražene v povprečnih cenah leta 1994. Predlagana stopnja prispevka pa ne zagotavlja nujno potrebnih sredstev za zagotavljanje pravice do nadomestila plače za čas porodniškega dopusta, zato se bodo manjkajoča sredstva morala zagotavljati iz drugih virov, se pravi, iz proračuna.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg357">Odbor Državnega zbora za zdravstvo, delo, družino in socialno politiko zato predlaga Državnemu zboru, da ta predlog odloka sprejme in da zagotovi objavo tega odloka v Uradnem listu še v mesecu marcu. Hvala lepa. Tokrat pa gre za povišanje - toliko v vednost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg358">Hvala, gospod Kociper. Želi besedo predstavnik Sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg359">Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -1238,7 +1219,7 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg368">Prosim, gospod Henigman.</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ1.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg369">Predsedujoči, gospod predsednik, spoštovane kolegice in kolegi! Pri sprejemanju dnevnega reda smo predlagatelji odstopili od hitrega postopka pri tem zakonu, iz preprostega razloga, ker je pri obravnavah na Odboru za infrastrukturo in na Komisiji za lastninsko preoblikovanje podjetij prišlo do bistvenih pripomb. Pripombe sta dala tudi Vlada in Sekretariat, zato menimo, da je umestno, da se zakon obravnava tako, kot je sprejel zbor, v normalnem postopku. Smo pa zadovoljni, da je končno zakon prišel v proceduro.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg370">Prva verzija zakona je bila vložena že v septembru prejšnjega leta. Šla je skozi proceduro Državnega sveta in Komisije za lastninsko preoblikovanje podjetij, ki je v sklopu tega zakona sprejela tudi določena stališča. Ta stališča smo predlagatelji, skupno z Ministrstvom za ekonomske odnose in razvoj, s predstavniki občin in Zavoda Triglavski narodni park usklajevali in poizkušali uskladiti; 16. februarja pa smo vložili novo, popravljeno verzijo tega zakona. Ker je zakon sedaj v prvi obravnavi, ne bi šel podrobno v same člene in v podrobnosti, ampak bi omenil samo nekatere važnejše poudarke oziroma tisto, kar je potrebno pri tem zakonu opozoriti.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg371">Zakon je nadaljevanje sistemskega zakona o lastninskem preoblikovanju podjetij in ima osnovo v 5. členu tega zakona, kjer govori, da je potrebno za vsa podjetja s turističnim kapitalom, za vsa družbena podjetja s tega področja, sprejeti poseben zakon. Zakon je potrebno hitro sprejeti, zato smo predlagatelji predlagali tudi hitri postopek, ker je blokada lastninjenja podjetij na tem področju, ker je potrebno upoštevati poseben zakon.</seg>
@@ -1257,22 +1238,22 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg384">Zakon je v bistvu kompromisni predlog treh pristopov lastninjenja podjetij. En pristop je strogo radikalen v smislu celotnega podržavljenja. Ta pristop je bil viden predvsem s strani Agencije za privatizacijo. Drugi pristop je bil strogo liberalen oziroma s strani podjetij, kjer so vložili svoj predlog zakona, da ni potreben poseben zakon, ki ureja lastninjenje na tem področju. Po mnenju predlagateljev tako stališče v bistvu pomeni nerazumevanje nacionalnega parka in omejitev, ki iz tega izhajajo, in je v bistvu s strani predlagateljev nesprejemljiv. Tretji predlog pa je ta kompromisni, katerega je potrebno obravnavati in v prvi obravnavi nedvomno sprejeti. To je bilo - kot sem že povedal - mnenje vseh, ki so v postopku do sedaj sodelovali. Je pa res, da ima Vlada Republike Slovenije oziroma Ministrstvo za ekonomske odnose in razvoj v tem trenutku večje pripombe, vendar te pripombe so razumljive v smislu hitrega postopka, kjer so pripombe na posamezni člen, če bi bil zakon sprejet po hitrem postopku. Sicer pa menim, da je možno nesoglasja oziroma tiste sporne zadeve, ki se tičejo predvsem prednostne pravice prebivalstva procentualnih deležev pri lastninskem preoblikovanju in pa posebne pravice po posebnem pooblastilu posameznih družb ali zadrug na zaključenem področju Triglavskega narodnega parka. Menim, da je možno te zadeve v kasnejših fazah uskladiti, dopolniti in sprejeti zakon v smislu intence predlagateljev in osnovnega zakona o Triglavskem narodnem parku. Toliko za uvod.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg385">Hvala, gospod Henigman. Predlog zakona je obravnavala tudi Komisija za spremljanje in nadzor lastninskega preoblikovanja. Želi poročevalec besedo? Prosim, gospod Izidor Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg386">Spoštovani predsednik, gospe in gospodje! Komisija za spremljanje in nadzor lastninskega preoblikovanja družbene lastnine je tudi obravnavala omenjeni predlog zakona o lastninskem preoblikovanju podjetij, ki opravljajo turistično dejavnost in katerih nepremičnine so na področju Triglavskega narodnega parka. Kot je povedal predstavnik predlagateljev, gospod Benjamin Henigman, je že komisija na 18. seji v novembru obravnavala prvi predlog in seveda sedaj na svoji 29. seji 17. marca predlog, ki je predmet te obravnave. Kot vidite, smo se opredelili za to, da je postopek redni in seveda nastale so komplikacije na področju nadaljevanja tega postopka in nosilstva. Predlog je bil predlagatelju, da naj predlagatelj skupaj z Vlado in z mnenjem Vlade, Sekretariata za zakonodajo in pravne zadeve, Komisije za lastninsko preoblikovanje pripravi predlog za drugo obravnavo. Potem je bil izglasovan na komisiji drugačen predlog, ki ste ga dobili v stališčih in predlogih, s tem, da se je vseeno vrinila napakica, ki smo jo naknadno popravili. V tistem delu, ko nalagamo, da Vlada s predlagatelji upošteva mnenje Vlade, potem Sekretariata za zakonodajo in pravne zadeve in seveda Komisije zaspremljanje in razvoj lastninskega preoblikovanja in pripravi zakon za drugo obravnavo.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg387">Namreč to določilo, ki je bilo sprejeto, je v toliko sporno, ker v tem primeru kaže na to, da pobudo oziroma nosilstvo tega zakona nosi naprej Vlada, kar mislim, da nekako ni v skladu s poslovnikom oziroma da mora biti to soglasje. Sicer pa menimo, da je ta predlog zakona mogoče pri obravnavi obdelati in pripraviti za naslednjo stopnjo in da je to seveda tudi predlog zakona, ki ga čakamo in ki tudi predstavlja potem sestavni del celovitosti lastninske zakonodaje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg388">Hvala, gospod Rejc. Izvolite, gospod Žarko Pregelj. Ali je bilo vaše mnenje upoštevano ali ni bilo upoštevano?</seg>
                <note>Ni bilo.</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg389">Izvolite.</seg>
             </u>
             <note type="speaker"> ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg390">Spoštovani! Nastopam v imenu Odbora za infrastrukturo in okolje, ki se je pri tem zakonu razglasil za zainteresirano delovno telo. Svoja stališča je seveda sporočil matičnemu odboru. Žal ta odbor, ali je dobil prepozno ali pa ni uspel uvrstiti teh stališč, zato mi dovolite, da jih na kratko predstavim.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg391">Odbor za infrastrukturo je obravnaval ta zakon predvsem iz naravovarstvenega stališča, stališča varstva okolja in stališča infrastrukture. Ni se dotikal posebej lastninskih rešitev, ki jih predlagatelji zakona ponujajo. Tako je odbor poslušal mnenje predstavnika Zavoda za varstvo naravne in kulturne dediščine, gospoda Breginca, ki je opozoril, da zakon premalo upošteva že veljavni zakon o Triglavskem narodnem parku. Poslušali smo tudi predstavnika Ministrstva za okolje, to je ministra Gantarja in predstavnika za promet in zveze, ki sta opozorila na nedorečenost pri lastninjenju predvsem infrastrukturnih objektov, ki bi jih bilo predhodno potrebno nekako razmejiti na infrastrukturne objekte javnega značaja in na infrastrukturne objekte turističnoposlovnega značaja. Gre za žičnice na tem področju. Člani odbora so nato predlagali, da naj predlagatelji s pomočjo Vlade in ob upoštevanju mnenj Sekretariata za zakonodajo, Zavoda Republike Slovenije za varstvo naravne dediščine ter Ministrstva za okolje in prostor pripravijo zakon za drugo obravnavo. Pri tem naj posebej proučijo vse probleme, ki se nanašajo na primarno zagotavljanje ekoloških in naravovarstvenih funkcij parka. Potem na razmejitev infrastrukturnih objektov, na objekte javnega značaja in objekte turistično-poslovnega značaja. Potem na oblike status in pravice pooblaščenih razvojno-turističnih delniških družb in razmerja med deleži delniškega kapitala v Skladu za razvoj Triglavskega narodnega parka.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg392">Odbor je sprejel tudi stališča in sklepe. Ker v stališčih matičnega odbora ni posebej omenjeno, da naj bi predlagatelji pri pripravi zakona za drugo obravnavo upoštevali tudi stališča Odbora za infrastrukturo in okolje, predlagamo, da se ta stališča doda in da se sprejmejo stališča in sklepi, ki jih je sprejel Odbor za infrastrukturo, predvsem drugo, tretje in četrto stališče. Kajti prvo stališče je bilo v bistvu danes že konzumirano z uporabo zakona oziroma za obravnavo zakona po rednem postopku.</seg>
@@ -1282,20 +1263,20 @@
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg396">To stališče je odbor predvsem sprejel v tem smislu, ker se zaveda, da bodo rešitve pri oblikovanju takega sklada verjetno prezidenčne tudi za podobne rešitve pri drugih parkih, ki jih bomo v kratkem ustanovili. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg397">Hvala gospod Pregelj. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg398">Želi besedo predstavnik Vlade? Prosim, gospod Rop.</seg>
             </u>
             <note type="speaker">MAG. TONE ROP:</note>
-            <u who="#SDZ1.RopTone" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg399">Spoštovane poslanke, spoštovani poslanci! Mnenje Vlade je pisno priloženo, zato ga ne bi posebej razlagal. Tisto, kar se mi zdi bistveno povedati ta hip je to, da pravzaprav podpiramo stališče Komisije za spremljanje zakona o lastninskem preoblikovanju podjetij. Bistvo tega je, da se podpira mnenje in stališče Vlade. To je bistveno za nas in  seveda tudi, da Vlada pripravi predlog zakona za drugo obravnavo. V kolikor seveda bo to tako sprejeto, potem mi podpiramo, da se sprejme zakon v prvi obravnavi. Je pa seveda problem proceduralne narave, da mora verjetno predstavnik predlagateljev soglašati s tem, da Vlada skupaj s predlagatelji pripravi ta predlog zakona za drugo branje. V kolikor to ni tako, potem moramo seveda nasprotovati temu zakonu iz številnih vsebinskih razlogov. Potrebno je povedati, da je bila Vlada vseskozi aktivno angažirana pri pripravi tega zakona in tudi Ministrstvo za ekonomske odnose in razvoj, da smo prišli do praktično usklajenega mnenja, da pa so predlagatelji v zadnji fazi spremenili ta predlog in prišlo je do številnih vsebinskih razlogov. Tako v tem kontekstu pravzaprav lahko samo nasprotujemo temu.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg400">Morda samo nekaj osnovnih vsebinskih razlik. Prva je ta, da mora biti po mnenju Vlade lastninjenje na območju Triglavskega narodnega parka prilagojeno pogojem in kriterijem, ki so sprejeti v programih zavarovanja Triglavskega narodnega parka kot nacionalnega parka. Skratka, za nas je bilo vseskozi bistveno to, da se Triglavski narodni park kot nacionalni park posebej upošteva, posebej lastnini in da se te stvari posebej upoštevajo pri lastninjenju. Vsekakor smo priznali in tudi uskladili tista stališča, ki govore o tem, da je treba prebivalcem Triglavskega narodnega parka omogočiti določene kompenzacije zaradi omejitev pri gospodarjenju na tem območju. Vendar pa so tudi te koncesije, ki so dane prebivalstvu, prilagojene dejstvu, da govorimo o nacionalnem parku. V tem kontekstu in zato se mi zavzemamo, da ima večinski delež in odločanje na tem območju, tudi po vzpostaviti nove lastniške strukture, država, da pa imajo prebivalci seveda ustrezen vpliv, tako preko Sklada za razvoj Triglavskega narodnega parka kot tudi preko drugih oblik lastninjenja v okviru podjetij, kar je posebej rešeno v tem kontekstu in je bilo v okviru tistega predloga tudi rešeno.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg401">Posebej nasprotujemo konceptu in predlogu pooblaščenih investicijskih družb, ki dejansko na tak način, kot so definirane, sedaj deformirajo že obstoječi zakon o vzajemnih skladih oziroma investicijskih skladih in družbah za upravljanje, ki se ravno te dni začenja uresničevati, na katerem Agencija za trg vrednostnih papirjev že aktivno dela. Jasno je, da imamo nesoglasja tudi v zvezi s kmetijskimi zemljišči in gozdovi, za katere se zavzemamo, da ostanejo v okviru Sklada kmetijskih zemljišč in gozdov. Prav tako je npr. nesoglasje v zvezi z nacionalizacijo nepremičnin, ki so v lasti tujcev, brez poprejšnje preveritve, kakšne finančne posledice ima to za proračun. In gre za problem, da je treba preveriti tudi eventualno reciprociteto v primeru, da gre za določene države in da imajo drugje Slovenci ali slovenska lastnina podrejen položaj.</seg>
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg402">Skratka, ne predlagamo nič drugega kot to, da Vlada, skupaj s predlagatelji, pripravi predlog za drugo obravnavo. Vendar je ključno pri tem to, da predlagatelji na to pristanejo. Če pristanejo, smo seveda pripravljeni skupaj z njimi pripraviti to verzijo predloga. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-19-1994-03-23.seg403">Hvala, gospod Rop. Naporen dan je za nami. Prekinjam to točko dnevnega reda in vam želim miren večer.</seg>
             </u>
             <note type="time">(SEJA JE BILA PREKINJENA 23. MARCA 1994 OB 19.01 URI IN</note>

@@ -11,9 +11,18 @@
     
     <xsl:output method="xml" indent="yes"/>
     
+    <!-- vstavi ob procesiranju nove verzije -->
+    <xsl:param name="edition">2.0</xsl:param>
+    <!-- vstavim CLARIN.SI Handle, kjer bo korpus shranjen v repozitoriju -->
+    <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1300</xsl:param>
+    
+    <xsl:variable name="source-united-speaker-document">
+        <xsl:copy-of select="document('../speaker.xml')" copy-namespaces="no"/>
+    </xsl:variable>
+    
     <xsl:template match="documentsList">
         <xsl:result-document href="../speech.xml">
-            <teiCorpus xmlns:xi="http://www.w3.org/2001/XInclude">
+            <teiCorpus xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="sl" xml:id="siParl">
                 <teiHeader>
                     <fileDesc>
                         <titleStmt>
@@ -27,6 +36,11 @@
                             <title type="sub" xml:lang="en">Working bodies of the National Assembly of the Republic of Slovenia: from the 2nd to the 7th legislative period 1996-2018</title>
                             <title type="sub" xml:lang="sl">Kolegij predsednika Državnega zbora Republike Slovenije: od 2. do 7. mandata (1996-2018)</title>
                             <title type="sub" xml:lang="en">Council of the President of the National Assembly: from the 2nd to the 7th legislative period 1996-2018</title>
+                            <xsl:for-each-group select="//meeting" group-by="@n">
+                                <meeting n="{current-grouping-key()}" corresp="{current-group()[1]/@corresp}" ana="{current-group()[1]/@ana}">
+                                    <xsl:value-of select="current-group()[1]"/>
+                                </meeting>
+                            </xsl:for-each-group>
                             <respStmt>
                                 <persName>Andrej Pančur</persName>
                                 <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -52,20 +66,24 @@
                                 <resp xml:lang="sl">Urejanje seznama govornikov</resp>
                                 <resp xml:lang="en">Editing a list of speakers</resp>
                             </respStmt>
+                            <funder>DARIAH-SI</funder>
+                            <funder>CLARIN.SI</funder>
                         </titleStmt>
                         <editionStmt>
-                            <edition>1.0</edition>
+                            <edition>
+                                <xsl:value-of select="$edition"/>
+                            </edition>
                         </editionStmt>
                         <extent>
                             <xsl:variable name="measures">
                                 <xsl:for-each select="folder/teiHeader/fileDesc/extent/measure">
                                     <xsl:choose>
-                                        <xsl:when test="@unit='file'">
-                                            <files>
+                                        <xsl:when test="@unit='texts'">
+                                            <texts>
                                                 <xsl:value-of select="@quantity"/>
-                                            </files>
+                                            </texts>
                                         </xsl:when>
-                                        <xsl:when test="@unit='word'">
+                                        <xsl:when test="@unit='words'">
                                             <words>
                                                 <xsl:value-of select="@quantity"/>
                                             </words>
@@ -76,13 +94,13 @@
                                     </xsl:choose>
                                 </xsl:for-each>
                             </xsl:variable>
-                            <measure unit="file" quantity="{sum($measures/tei:files)}">
-                                <xsl:text>Število TEI datotek: </xsl:text>
-                                <xsl:value-of select="translate(format-number(sum($measures/tei:files),'#,###'),',','.')"/>
+                            <measure unit="texts" quantity="{sum($measures/tei:texts)}">
+                                <xsl:value-of select="translate(format-number(sum($measures/tei:texts),'#,###'),',','.')"/>
+                                <xsl:text> texts</xsl:text>
                             </measure>
-                            <measure unit="word" quantity="{format-number(sum($measures/tei:words),'#')}">
-                                <xsl:text>Število besed zapisnikov sej: </xsl:text>
+                            <measure unit="words" quantity="{format-number(sum($measures/tei:words),'#')}">
                                 <xsl:value-of select="translate(format-number(sum($measures/tei:words),'#,###'),',','.')"/>
+                                <xsl:text> words</xsl:text>
                             </measure>
                         </extent>
                         <publicationStmt>
@@ -90,19 +108,15 @@
                                 <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                                 <orgName xml:lang="en">Institute of Contemporary History</orgName>
                                 <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-                                <address>
-                                    <street>Kongresni trg 1</street>
-                                    <settlement>Ljubljana</settlement>
-                                    <postCode>1000</postCode>
-                                    <country xml:lang="sl">Slovenija</country>
-                                    <country xml:lang="en">Slovenia</country>
-                                </address>
                                 <email>inz@inz.si</email>
                             </publisher>
                             <distributor>DARIAH-SI</distributor>
                             <distributor>CLARIN.SI</distributor>
-                            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-                            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+                            <xsl:if test="string-length($clarinHandle) gt 0">
+                                <pubPlace>
+                                    <xsl:value-of select="$clarinHandle"/>
+                                </pubPlace>
+                            </xsl:if>
                             <availability status="free">
                                 <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                                 <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -116,16 +130,14 @@
                         </publicationStmt>
                         <sourceDesc>
                             <bibl>
-                                <title>Portal Državnega zbora Republike Slovenije</title>
+                                <title type="main">Website of the National Assembly</title>
+                                <title type="sub">Hansard</title>
                                 <idno type="URI">https://www.dz-rs.si</idno>
+                                <date from="1990-05-05" to="2018-06-22"/>
                             </bibl>
                         </sourceDesc>
                     </fileDesc>
                     <encodingDesc>
-                        <projectDesc>
-                            <p xml:lang="sl">Infrastrukturni program Raziskovalna infrastruktura slovenskega zgodovinopisja</p>
-                            <p xml:lang="en">Infrastructure Programme Research infrastructure of Slovenian Historiography</p>
-                        </projectDesc>
                         <tagsDecl>
                             <namespace name="http://www.tei-c.org/ns/1.0">
                                 <xsl:for-each-group select="//tagUsage" group-by="@gi">
@@ -384,7 +396,7 @@
                                     <catDesc xml:lang="sl">
                                         <term>Predsedujoči</term>: predsedujoči zasedanja</catDesc>
                                 </category>
-                                <category xml:id="regular">
+                                <!--<category xml:id="regular">
                                     <catDesc xml:lang="en">
                                         <term>Regular speaker</term>:</catDesc>
                                     <catDesc xml:lang="sl">
@@ -395,7 +407,7 @@
                                         <term>Unauthorized speaker</term>: unauthorized intervention in the speech of the main speaker.</catDesc>
                                     <catDesc xml:lang="sl">
                                         <term>Neavtorizirani govornik</term>: Neavtorizirana intervencija v govor glavnega govornika.</catDesc>
-                                </category>
+                                </category>-->
                             </taxonomy>
                         </classDecl>
                     </encodingDesc>
@@ -411,93 +423,117 @@
                         <settingDesc>
                             <setting>
                                 <name type="city">Ljubljana</name>
-                                <name type="country" key="YU" notAfter="1991-06-25">Yugoslavia</name>
-                                <name type="region" notAfter="1991-06-25">Slovenia</name>
-                                <name type="country" key="SI" notBefore="1991-06-25">Slovenia</name>
-                                <xsl:for-each-group select="//setting/date" group-by=".">
-                                    <date ana="#parl.term" notBefore="{current-group()[1]/@notBefore}" notAfter="{current-group()[1]/@notAfter}">
-                                        <xsl:value-of select="normalize-space(current-group()[1])"/>
-                                    </date>
-                                </xsl:for-each-group>
+                                <name type="country" key="YU" from="1990-05-05" to="1991-06-25">Yugoslavia</name>
+                                <name type="region" from="1990-05-05" to="1991-06-25">Slovenia</name>
+                                <name type="country" key="SI" from="1991-06-25" to="2018-06-22">Slovenia</name>
+                                <date from="1990-05-05" to="2018-06-22"/>
                             </setting>
                         </settingDesc>
                         <particDesc>
-                            <org xml:id="SK" ana="#parl.regional #parl.national #par.multi">
-                                <orgName from="1990-06-23" to="1992-12-23" xml:lang="sl">Skupščina Republike Slovenije</orgName>
-                                <orgName from="1990-06-23" to="1992-12-23" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
-                                <orgName from="1963-06-24" to="1990-06-23" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
-                                <orgName from="1963-06-24" to="1990-06-23" xml:lang="en">Assembly of Socialist Republic of Slovenia</orgName>
-                                <listOrg xml:id="chambers">
-                                    <head xml:lang="sl">Zbori Skupščine Republike Slovenije</head>
-                                    <head xml:lang="en">Chambers of the Assembly of the Republic of Slovenia</head>
-                                    <org xml:id="DruzPolZb" ana="#par.chamber">
-                                        <orgName from="1974" to="1992-12-23" xml:lang="sl">Družbeno-politični zbor</orgName>
-                                        <orgName from="1974" to="1992-12-23" xml:lang="en">Socio-Political Chamber</orgName>
-                                    </org>
-                                    <org xml:id="ZbObc" ana="#par.chamber">
-                                        <orgName from="1974" to="1992-12-23" xml:lang="sl">Zbor občin</orgName>
-                                        <orgName from="1974" to="1992-12-23" xml:lang="en">Chamber of Municipalities</orgName>
-                                    </org>
-                                    <org xml:id="ZbZdruDel" ana="#par.chamber">
-                                        <orgName from="1974" to="1992-12-23" xml:lang="sl">Zbor združenega dela</orgName>
-                                        <orgName from="1974" to="1992-12-23" xml:lang="en">Chamber of Associated Labour</orgName>
-                                    </org>
-                                </listOrg>
-                            </org>
-                            <org xml:id="DZ" ana="#parl.national #par.lower">
-                                <orgName xml:lang="sl">Državni zbor Republike Slovenije</orgName>
-                                <orgName xml:lang="en">National Assembly of the Republic of Slovenia</orgName>
-                                <listOrg xml:id="workingBodies">
-                                    <head xml:lang="sl">Delovna telesa Državnega zbora Republike Slovenije</head>
-                                    <head xml:lang="en">Working bodies of the National Assembly of the Republic of Slovenia</head>
-                                    <xsl:for-each-group select="folder[matches(@label,'SDT')]/teiHeader/profileDesc/particDesc/org/listOrg[@xml:id='workingBodies']/org" group-by="@xml:id">
-                                        <xsl:sort select="current-grouping-key()"/>
-                                        <org xml:id="{current-grouping-key()}" ana="#parl.committee">
-                                            <orgName>
-                                                <xsl:value-of select="normalize-space(current-group()[1])"/>
-                                            </orgName>
+                            <listOrg>
+                                <org xml:id="SK" role="parliament" ana="#parl.regional #parl.national #par.multi">
+                                    <orgName from="1990-06-23" to="1992-12-23" xml:lang="sl">Skupščina Republike Slovenije</orgName>
+                                    <orgName from="1990-06-23" to="1992-12-23" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
+                                    <orgName from="1963-06-24" to="1990-06-23" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
+                                    <orgName from="1963-06-24" to="1990-06-23" xml:lang="en">Assembly of Socialist Republic of Slovenia</orgName>
+                                    <event from="1963-06-24" to="1992-12-23">
+                                        <label xml:lang="en">existence</label>
+                                    </event>
+                                    <idno type="wikimedia"
+                                        >https://sl.wikipedia.org/wiki/Skup%C5%A1%C4%8Dina_Socialisti%C4%8Dne_republike_Slovenije</idno>
+                                    <listEvent>
+                                        <head>Legislative period</head>
+                                        <event xml:id="SK.11" from="1990-05-08" to="1992-12-23">
+                                            <label xml:lang="sl">11. sklic</label>
+                                            <label xml:lang="en">Term 11</label>
+                                        </event>
+                                    </listEvent>
+                                    <listOrg xml:id="chambers">
+                                        <head xml:lang="sl">Zbori Skupščine Republike Slovenije</head>
+                                        <head xml:lang="en">Chambers of the Assembly of the Republic of Slovenia</head>
+                                        <org xml:id="DruzPolZb" ana="#par.chamber">
+                                            <orgName xml:lang="sl">Družbeno-politični zbor</orgName>
+                                            <orgName xml:lang="en">Socio-Political Chamber</orgName>
+                                            <event from="1974" to="1992-12-23">
+                                                <label xml:lang="en">existence</label>
+                                            </event>
                                         </org>
-                                    </xsl:for-each-group>
-                                </listOrg>
-                            </org>
-                            <listPerson type="speaker">
+                                        <org xml:id="ZbObc" ana="#par.chamber">
+                                            <orgName xml:lang="sl">Zbor občin</orgName>
+                                            <orgName xml:lang="en">Chamber of Municipalities</orgName>
+                                            <event from="1974" to="1992-12-23">
+                                                <label xml:lang="en">existence</label>
+                                            </event>
+                                        </org>
+                                        <org xml:id="ZbZdruDel" ana="#par.chamber">
+                                            <orgName xml:lang="sl">Zbor združenega dela</orgName>
+                                            <orgName xml:lang="en">Chamber of Associated Labour</orgName>
+                                            <event from="1974" to="1992-12-23">
+                                                <label xml:lang="en">existence</label>
+                                            </event>
+                                        </org>
+                                    </listOrg>
+                                </org>
+                                <org xml:id="DZ" role="parliament" ana="#parl.national #par.lower">
+                                    <orgName xml:lang="sl">Državni zbor Republike Slovenije</orgName>
+                                    <orgName xml:lang="en">National Assembly of the Republic of Slovenia</orgName>
+                                    <event from="1992-12-23">
+                                        <label xml:lang="en">existence</label>
+                                    </event>
+                                    <idno type="wikimedia"
+                                        >https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
+                                    <listEvent>
+                                        <head>Legislative period</head>
+                                        <event xml:id="DZ.1" from="1992-12-23" to="1996-11-27">
+                                            <label xml:lang="sl">1. mandat</label>
+                                            <label xml:lang="en">Term 1</label>
+                                        </event>
+                                        <event xml:id="DZ.2" from="1996-11-28" to="2000-10-26">
+                                            <label xml:lang="sl">2. mandat</label>
+                                            <label xml:lang="en">Term 2</label>
+                                        </event>
+                                        <event xml:id="DZ.3" from="2000-10-27" to="2004-10-21">
+                                            <label xml:lang="sl">3. mandat</label>
+                                            <label xml:lang="en">Term 3</label>
+                                        </event>
+                                        <event xml:id="DZ.4" from="2004-10-22" to="2008-10-14">
+                                            <label xml:lang="sl">4. mandat</label>
+                                            <label xml:lang="en">Term 4</label>
+                                        </event>
+                                        <event xml:id="DZ.5" from="2008-10-15" to="2011-12-15">
+                                            <label xml:lang="sl">5. mandat</label>
+                                            <label xml:lang="en">Term 5</label>
+                                        </event>
+                                        <event xml:id="DZ.6" from="2011-12-16" to="2014-07-31">
+                                            <label xml:lang="sl">6. mandat</label>
+                                            <label xml:lang="en">Term 6</label>
+                                        </event>
+                                        <event xml:id="DZ.7" from="2014-08-01" to="2018-06-21">
+                                            <label xml:lang="sl">7. mandat</label>
+                                            <label xml:lang="en">Term 7</label>
+                                        </event>
+                                    </listEvent>
+                                </org>
+                                <xsl:for-each select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listOrg/tei:org[not(@role ='parliament')]">
+                                    <xsl:copy-of select="." copy-namespaces="no"/>
+                                </xsl:for-each>
+                                <xsl:copy-of select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listOrg/tei:listRelation" copy-namespaces="no"/>
+                            </listOrg>
+                            <listPerson>
                                 <head xml:lang="sl">Seznam govornikov</head>
                                 <head xml:lang="en">List of speakers</head>
-                                <personGrp xml:id="SSK11.unknown">
-                                    <state>
-                                        <desc xml:lang="sl">Neidentificirani govornik</desc>
-                                        <desc xml:lang="en">Unidentified speaker</desc>
-                                    </state>
-                                </personGrp>
-                                <xsl:for-each select="folder/teiHeader/profileDesc/particDesc/listPerson/person">
-                                    <xsl:sort select="tokenize(@xml:id,'\.')[2]"/>
+                                <xsl:for-each select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listPerson/tei:person">
                                     <person xml:id="{@xml:id}">
-                                        <persName>
-                                            <xsl:choose>
-                                                <xsl:when test="persName/*">
-                                                    <xsl:for-each select="persName/*">
-                                                        <xsl:element name="{node-name(.)}">
-                                                            <xsl:value-of select="."/>
-                                                        </xsl:element>
-                                                    </xsl:for-each>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:value-of select="persName"/>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </persName>
-                                        <xsl:if test="sex">
-                                            <sex value="{sex/@value}"/>
-                                        </xsl:if>
+                                        <xsl:for-each select="*">
+                                            <xsl:copy-of select="." copy-namespaces="no"/>
+                                        </xsl:for-each>
                                     </person>
                                 </xsl:for-each>
                             </listPerson>
                         </particDesc>
                         <langUsage>
-                            <language ident="sl" xml:lang="sl">slovenski</language>
-                            <language ident="sl" xml:lang="en">Slovenian</language>
-                            <language ident="en" xml:lang="sl">angleški</language>
-                            <language ident="en" xml:lang="en">English</language>
+                            <language ident="sl">Slovenian</language>
+                            <language ident="en">English</language>
                         </langUsage>
                     </profileDesc>
                 </teiHeader>

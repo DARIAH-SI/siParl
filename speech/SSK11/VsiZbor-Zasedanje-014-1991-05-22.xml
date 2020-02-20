@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 14. zasedanje</title>
             <meeting n="14"
-                     corresp="#VsiZbor.1991-05-22.z014-01.DruzPolZb #VsiZbor.1991-05-22.z014-01.ZbObc #VsiZbor.1991-05-22.z014-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="7"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="3"/>
                <tagUsage gi="seg" occurs="19"/>
             </namespace>
@@ -110,23 +101,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-05-22.z014-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-05-22.z014-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-05-22.z014-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -137,21 +111,25 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">14. zasedanje</head>
             <docDate>22. maj 1991</docDate>
             <note type="chairman">Sejo je vodil Ivan Bizjak, predsednik Zbora občin</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 11.16. uri.</note>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-22.z014-01.seg1">Spoštovane delegatke in delegati, gospe in gospodje! Pričenjam skupno zasedanje vseh treh zborov Skupščine Republike Slovenije, na katerem bomo poslušali uvodno besedo predstavnika Izvršnega sveta Skupščine Republike Slovenije k PREDLOGU ZA IZDAJO ZAKONA O RAZISKOVALNI DEJAVNOSTI Z OSNUTKOM ZAKONA IN ZNANSTVENO RAZISKOVALNI IN TEHNOLOŠKO RAZVOJNI POLITIKI SLOVENIJE.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-22.z014-01.seg2">Uvodno besedo bo podal dr. Peter Tancig, član Izvršnega sveta Skupščine Republike Slovenije in republiški sekretar za raziskovalno dejavnost in tehnologijo. Besedo ima dr. Peter Tancig. Prosim.</seg>
             </u>
             <note type="speaker">DR. PETER TANCIG:</note>
-            <u who="#SSK11.TancigPeter1944" ana="#regular">
+            <u who="#TancigPeter">
                <seg xml:id="SSK11-VsiZbor.1991-05-22.z014-01.seg3">Cenjene dame, cenjeni gospodje, spoštovane poslanke, spoštovani poslanci, predsedstvo Skupščine Republike Slovenije! Najprej naj se vam mimo teksta, ki ga imate večinoma pred seboj na klopeh, zahvalim za uvrstitev problematike raziskovalne dejavnosti v vaš vse prenapolnjeni urnik. Ker sicer je vaša glavna naloga se ukvarjati z osamosvojitvenimi akti, zakoni, vendar iz tega sklepam, da tudi z obravnavo tega zakona delite moje globoko prepričanje, da je dobro urejena raziskovalna dejavnost (kar je verjetno širši termin za znanost in tehnologijo), da je predpogoj za funkcioniranje sodobne države, zlasti pa še države, ki hoče biti samostojna - tako kot si danes mi vsi skupaj želimo. Vemo, da smo vsi skupaj na prelomnici in povrhu vsega še sredi krize, ko se odločamo, katere možnosti bomo realizirali in na kakšen način dosegali temeljne cilje, ki si jih pač vsaka sodobna in relativno uspešna družba želi. Blaginjo prebivalstva, blaginjo in kulturno identiteto v najširšem smislu od materialne do duhovne in civilizacijske, vse to želimo imeti kot pogoj za odprtost v evropsko okolje in želimo si v to okolje reintegrirat na način, ki nas seveda v naših osnovnih atributih ne bo ogrožal. Vsi se zavedamo, da je tak scenarij zahteven; to se pravi ni enostavno vračanje v Evropo, ki je v tem času naredila tak razvoj, zlasti še za majhen prostor, kot je naš, to se pravi brez velikih koncentracij kapitala, brez kritičnih koncentracij intelektualnih potencialov, obenem pa, kot že rečeno, v ozadju gospodarske in sistemske krize. Vlada in Skupščina sta se te zapletene problematike lotili s kompleksnimi razvojnimi strategijami, katerih bistveni sestavni del je - malce pristransko, bi rekel, iz luči mojega resorja gledano - tudi raziskovalna dejavnost oziroma znanost in tehnologija. Vsi se zavedamo, da je pred Slovenijo več takoimenovanih scenarijev. Z velikim zanimanjem sem bral študijo Studia Marketing o scenariju A, ki govori, da je to odrasel, adolescenten program (verjetno mu lahko rečeno moderna inovacijska družba) in takrat bo šele tisti neokusen plakat izpred plebiscitnega obdobja, ko smo se hvalili s 4 milijoni rok, verjetno dobil pravo vsebino, da se lahko pogovarjamo o 2 milijonih možganskih polovic. Skratka znanost in razvoj tehnologij in inovativnost, nas uči razviti svet, so ključni dejavniki tovrstnih strategij razvoja, seveda ne izolirano, ampak v kontekstu modernizacije družbenih struktur. To pomeni po eni strani generiranje domačega znanja, po drugi strani pa vzpodbujanje možnosti za transfer tujega znanja, ki ga moramo vgrajevati oziroma pretakati v normalno podjetniško poslovno okolje, kjer dosega osnovne efekte, ki so podlaga potem za vse tiste temeljne cilje, ki smo jih omenili v začetku. Tule bom, dovolite, citiral Alena Pompiduja (to sem že storil ob drugih prilikah in se mi zdi smiselno tudi ob sprejemanju tega zakona), sina bivšega francoskega predsednika, ki je malo patetično rekel, da bo Evropa 2000 znanstveno tehnološka ali pa je ne bo. Jaz vedno pripomnim, kadar ta rek ponovim, da je struktura tega stavka nam nekam sumljivo znana, vsebina pa nikakor ne.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-22.z014-01.seg4">To so bila osnovna izhodišča, to kar sem sedaj govoril, na osnovi katerih smo pristopili k, bi rekel, dokaj aktivnemu formiranju politike tega resorja, kajti po mojem čvrstem prepričanju se je s spremembo oblasti tudi spremenila, dogodila sprememba fokusa oziroma vloge posameznih ministrstev, ki ne reagirajo več na impulze iz okolja, ampak morajo pri svojem delu prevzeti aktivno pobudo. No, tako smo se lotili študije oziroma elaborata o slovenski znanstveno raziskovalni in tehnološki razvojni politiki in rezultat tega dela je naša takozvana bela oziroma modra knjiga, katere posnetek je tudi v skupščinskem poročevalcu. Želeli smo pri tem aktivnem odnosu do naše sfere trasirati take vsebinske in seveda njim odgovarjajoče organizacijske poudarke, ki naj bi, enostavno povedano, omogočali večji razvojni splen za potrebe Slovenije v raziskovalnem subsistemu. Tu moram priznati, da smo nekoliko pod vplivom, tudi pri operativnih izvedbah, kratkoročnih potreb, ker nas ta situacija sili, da tudi iz tega sektorja družbe skušamo dobiti več v kratkem času, čeprav se je treba zavedati, da je to praviloma vsaj srednjeročna, če ne dolgoročno usmerjena aktivnost, katere se enostavno ne da pričakovati čez noč.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-22.z014-01.seg5">Osnovno izhodišče naših razmišljanj in tudi akcij je enostavno dejstvo, da v Sloveniji primanjkuje kvalitetne ponudbe, ki bi nam omogočala bolj mirno življenje oziroma bolj mirno perspektivo pri integraciji v zahodno Evropo. Verjetno vas večina pozna ocene dr. Sočana oziroma njegovega Inštituta za ekonomsko raziskovanje, ki ugotavlja, da je tretjina naše ponudbe že mednarodno sposobna, tretjina se lahko temu približa, tretjina pa je zelo vprašljiva. To je vsekakor, kot se na prvi pogled sliši neugodno, izredno ugodno razmerje, zlasti v primerjavi z ostalimi srednje in vzhodno evropskimi državami, ni pa to razmerje tako, da bi lahko bili povsem mirni in mora država tudi svoj del prevzeti pri pomaganju, - recimo tisti drugi tretjini, da je enostavno sposobna nuditi več konkurenčnih proizvodov, storitev in skratka kvalitete, ki je edina danes tržljiva na Zahodu. No, zaradi tega vidimo pomen oziroma celo preživetveni pomen znanosti in tehnologije, če se seveda odločimo za ta scenarij odraslosti oziroma moderne družbe, v več smereh: transfer znanja v inovacije za gospodarstvo, za gospodarstvo po eni strani, po drugi strani sistemsko upravljanje družbe, se pravi več znanstvenih oziroma strokovnih podlag pri naših odločitvah, potem komuniciranje s svetom na novih zahtevnejših ravneh znanja - tu smo precej konkurenčni na nizu sektorjev; obenem seveda z roko v roki s tem mora iti vzgoja vrhunskega strokovnega kadra, ki je zmožna tega komuniciranja s svetom.</seg>
@@ -170,7 +148,7 @@
                <note>Ploskanje v dvorani.</note>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-22.z014-01.seg18">Doktorju Petru Tancigu se zahvaljujem za podano uvodno besedo in zaključujem skupno zasedanje vseh treh zborov Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-22.z014-01.seg19">Naj vas še obvestim, da ima Zbor občin zdajle petinštiridesetminutni odmor, ostala dva zbora pa takoj nadaljujeta z delom.</seg>
             </u>

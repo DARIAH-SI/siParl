@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Izredna-03-1997-02-27"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">3. izredna seja (27. 2. 1997)</title>
-            <meeting n="3"
-                     corresp="#SDZ2-Izredna-03-1997-02-27.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="3" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">3. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|AB45C7774F00FBFDC12564650048E632</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=AB45C7774F00FBFDC12564650048E632</idno>
-                  <imprint>
-                     <date when="1997-02-27">(27. februar 1997)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>3. izredna seja (27. 2. 1997)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1997-02-27"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=AB45C7774F00FBFDC12564650048E632</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="201"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="153"/>
                <tagUsage gi="seg" occurs="472"/>
                <tagUsage gi="gap" occurs="7"/>
@@ -566,25 +551,21 @@
                <date when="1997-02-27" ana="#parl.sitting">27. 2. 1997</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Izredna-03-1997-02-27.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">3. izredna seja</head>
-            <docDate>(27. februar 1997)</docDate>
             <note type="chairman">Sejo je vodil Janez Podobnik, predsednik Državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.04 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje. Pričenjam 3. izredno sejo Državnega zbora Republike Slovenije, ki sem jo sklical na podlagi prvega odstavka 69. člena in prvega odstavka 51. člena ter 54. člena poslovnika Državnega zbora. Obveščen sem, da se je gospod Jazbec Franc opravičil za približno pol ure zamude, drugih zadržanih poslank in poslancev na današnji seji ni. Zato prosim, da ugotovimo prisotnost v dvorani.</seg>
                <note>75 poslank in poslancev.</note>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg2">Tako je zbor sklepčen in lahko odloča.</seg>
@@ -595,11 +576,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg7">Želi v zvezi z dnevnim redom kdo besedo? Gospod Lojze Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg8">Spoštovani gospod predsednik, spoštovani kandidati za ministre, spoštovani gospod mandatar, poslanke in poslanci! Lep pozdrav vsem skupaj. Znano vam je, da v dosedanjem poslanskem delu takorekoč nisem uporabljal možnosti, da bi se oglašal proceduralno. Danes to storim, ker mislim, da moram storiti, kajti mislim, da je odgovornost poslancev najprej v tem, da skrbijo za pravnost lastne države, in nenavadno bi bilo, če bi v samem državnem zboru, kot zakonodajnem telesu, prišlo do dejstev oziroma dejanj, ki s pravno državo ne bi bila v skladu. Zato bi, spoštovani gospod predsednik, želel tukaj uradno pojasnilo, na kakšni podlagi, na kakšni pravni podlagi je bil podaljšan rok za predlaganje liste kandidatov za ministra. Državni zbor je v listi kandidatov za ministre prvič glasoval 6. februarja 1997. Desetdnevni rok v skladu s poslovnikom, 266. členom, se je iztekel 16. februarja 1997. Gospod Drnovšek pa je predlog kandidatov predložil šele dne 17. februarja 1997. Jaz ne bi rad govoril na pamet, da predsednik Državnega zbora ni imel pravice sam odločati o podaljševanju roka. To besedo, kot mi je znano, je sam uporabil. Se pravi, da je šlo za podaljšanje. Ker ne bi bil rad v nejasnosti, ali sploh imamo danes tukaj formalno predsednika Vlade ali ga nimamo, želim, da se to najprej pojasni. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg9">Hvala lepa. Gospod Lojze Peterle, vaš nastop razumem kot vprašanje predsedujočemu, predsedniku. Na vaše vprašanje dajem naslednji odgovor.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg10">Na podlagi prvega odstavka 266. člena poslovnika Državnega zbora, ki ste tudi vi, gospod Peterle, v vašem nastopu že omenili, mora mandatar predsedniku Državnega zbora predložiti nov predlog za imenovanje ministrov najkasneje v desetih dneh od prvega glasovanja. V procesni zakonodaji pa velja splošno pravilo, da se roki, šteti v dnevih, v primerih, ko bi se iztekli na nedeljo, praznik ali drugi dan, ko organ ne dela, iztečejo prvi naslednji dan. Ker je bilo prvo glasovanje o predlogu za imenovanje ministrov v četrtek, 6. februarja 1997, in je desetdnevni rok začel teči v petek ter bi se iztekel v nedeljo, 16. februarja 1997, ob polnoči, se je z uporabo navedenega procesnega pravila rok iztekel v ponedeljek, 17. februarja 1997, ob polnoči. To je moj odgovor na vaše vprašanje. Seveda ne gre nikakor za vprašanje, o katerem lahko odloča predsednik Državnega zbora oziroma da bi predsednik Državnega zbora podaljšal rok, ampak gre za načelo procesne zakonodaje, ki je bilo seveda v Državnem zboru ob takih primerih velikokrat doslej že uporabljeno. Mislim, da tudi na seji kolegija o tem vprašanju ni bilo govora.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg11">Želi še kdo glede dnevnega reda besedo? Če ne želi, potem prehajamo na določitev dnevnega reda oziroma na glasovanje o predlogu dnevnega reda v celoti.</seg>
@@ -617,7 +598,7 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg20">Želi predsednik Vlade dr. Janez Drnovšek dodatno obrazložiti svoj predlog? Prosim, dr. Drnovšek.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ2.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg21">Gospe in in gospodje poslanci in gospod predsednik! Danes drugič predlagam vlado temu državnemu zboru. Kot vsi veste, prvi predlog ni dobil zadostne podpore, glasovanje v tem parlamentu je bilo izenačeno, 45 glasov za in 45 glasov proti. Takšno glasovanje je bilo odraz političnega razvoja, političnih razmer v Sloveniji v zadnjih mesecih od volitev naprej. In bilo je odraz vseh dosedanjih poizkusov, iskanj političnih povezav in pa politične rešitve, ki bi pripeljala do neke stabilne vlade v Sloveniji po zadnjih volitvah. Pokazalo se je, da sta se po volitvah formirala dva približno enaka ali skoraj povsem enaka bloka, v zvezi strank poslancev, od katerih ne eden ne drugi ni mogel vzpostaviti samostojno vlade. Prišlo je do izvolitve mandatarja, potrdili ste me za mandatarja slovenske vlade in ob tej priložnosti se vam za to še enkrat zahvaljujem, vendar naslednji korak, torej, izvolitev vlade na osnovi takratnega razmerja sil, ni bil možen, ni dal rezultata. V nastali situaciji sem bil kot predsednik vlade, kot mandatar, pred dilemo, ali ponoviti takšno glasovanje ob enakem predlogu, seveda z veliko možnostjo, da pride ponovno do neuspešnega glasovanja, ali pa poiskati neko povsem novo možnost, neko pot iz nastale politične blokade, iz nastale politične situacije, ki traja že predolgo, ki traja dobre tri in pol mesecev od volitev naprej, in končno priti do predloga vlade, ki bi bila sprejeta in ki bi bila dovolj stabilna, ki bi imela dovolj stabilno podporo tega državnega zbora v naslednjem obdobju. Mislim, da je takšna situacija narekovala prvenstveno mojo odgovornost kot mandatarja, kot predsednika vlade, da najdem pot iz te blokade in da začnemo iskati povsem novo možnost, novo pot. To je bilo možno edino na ta način, da se na nek način oba dosedanja bloka razformirata, da se dosedanje povezave na nek način anulirajo in da se povsem na novo postavijo razmerja, tako kot so izhajala iz zadnjih volitev. To je bilo možno storiti z dogovorom dveh največjih strank po volitvah - Liberalne demokracije Slovenije in Slovenske ljudske stranke, ob podpori nekaterih poslancev oziroma tudi poslanske skupine DeSUS-a. Takšna odločitev je bila težka za obe strani, tako za LDS kot tudi za Slovensko ljudsko stranko. Po eni strani so nas vezale dosedanje povezave, po drugi strani pa imamo oboji in vsi skupaj veliko odgovornost, da najdemo pot iz te situacije. Mislim, da, ne naši državljani, ne tujina, enostavno ne razumejo več, da bi še po treh mesecih in pol, ali še naprej, v Sloveniji ne bi imeli vlade. Že v svoji zadnji razpravi ob prejšnjem predlogu vlade sem opozoril na to, da nas to lahko pripelje praktično v neko opravilno nesposobnost, v situacijo, kjer bi izgledalo, da Slovenija sploh ne more politično delovati, da ne more vzpostaviti institucij političnega sistema.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg22">To je seveda najhujše, kar se lahko državi zgodi, ob tem, da vsak naslednji teden, vsak naslednji mesec pomeni tudi izgubo časa v gospodarstvu, v mednarodni politiki, v temeljnih strateških ciljih Slovenije, ki so še vedno odprti, ki so še vedno pred nami in jih moramo reševati. Zato smo začeli s takšnimi novimi pogajanji na teh povsem novih predpostavkah in ta pogajanja so dala rezultat. Prišlo je do predloga te vlade, ki jo danes predlagam Državnemu zboru. Mislim, da je šlo ob tem in tudi v zadnjih mesecih v Sloveniji za veliko vprašanje in za naše medsebojno preverjanje in odločanje o tem, kako bo šel v prihodnosti politični razvoj Slovenije. Ali se bosta formirala dva bloka, na koncu morda dve stranki, ki si bosta vedno med seboj konfrontirali, nasprotovali, od katerih bo enkrat morda zmagal en blok, drugič spet drugi blok, pri čemer se bosta najbrž, tako je tudi sedaj kazalo, oba bloka med seboj močno demonizirala, iskala medsebojna nasprotja, vse skupaj bi najbrž poglabljalo razlike in nasprotja tudi med slovenskimi državljani. Moja ocena je bila vedno in tudi sedaj, da razlike med Slovenci niso takšne, da razlike med strankami niso takšne, da bi jih lahko za vedno zavezali v dva bloka, ki si a priori med seboj nasprotujeta. Obstaja precej programskih sličnosti, precej sorodnih prizadevanj med različnimi strankami in da stranke lahko te svoje cilje, svoja prizadevanja tudi v interesu državljanov, ki jih zastopajo, uresničujejo na različne načine, v različnih povezavah, ne samo v eni povezavi, ki se bo konfrontirala z neko drugo povezavo. To je drugačen tip demokracije, parlamentarne demokracije. Takšen, kot se je razvil zlasti v nekaterih skandinavskih državah, kjer imamo vedno več strank, ki nastopajo v različnih koalicijah, kjer so precej pogoste celo manjšinske vlade in kjer si stranke med seboj ne nasprotujejo tako a priori, da bi to vzbujalo celo medsebojno sovraštvo, veliko strasti, napetosti med njimi in na koncu seveda tudi med državljani. Mislim, globoko sem prepričan, da smo Slovenci zreli za takšno vrsto, po mojem mnenju, bolj razvite, bolj zrele demokracije. Da stranke zastopamo različne skupine ljudi, različne interese, vendar si ti interesi ne nasprotujejo, med sabo se ne izključujejo, ampak se lahko povežejo v iskanju tudi velikokrat kompromisnih rešitev, ki so na koncu v interesu večine državljanov.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg23">Mislim, da je ta situacija, ki je sicer trajala nekaj mesecev in kjer smo skupaj šli skozi različne razvojne faze pripeljala do tega, da se lahko danes odločamo o neki takšni obliki, tudi obliki povezave med strankama, ki sta si do sedaj nasprotovali, kjer je bila ena v poziciji, druga v opoziciji, kjer bo takšna povezava pomenila, da bo potrebno seveda delati kompromise, iskati vmesne rešitve, kar je navsezadnej prav, ker vsaka stranka zastopa del državljanov, da bo pri tem potrebno veliko zmernosti, veliko strpnosti, tudi medsebojnega razumevanja in da bo morda to, kar smo v teh mesecih skupaj dali, ko smo se pogovarjali z različnimi strankami o vseh možnih povezavah, tudi osnova za nek nadaljnji politični dialog na višjem nivoju, z večjo strpnostjo, z večjim medsebojnim razumevanjem. Če bo rezultat teh mesecev, teh političnih prizadevanj in aktivnosti v Sloveniji v takšni bolj zreli parlamentarni demokraciji, potem mislim, da ti meseci niso bili zaman, da niso šli v prazno, ampak da utegnejo prinesti Sloveniji in slovenskemu političnemu življenju neko višjo kvaliteto, neko novo dimenzijo.</seg>
@@ -626,7 +607,7 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg26">Upam, da bo naš politični razvoj vnaprej šel v tej smeri, na tak način, da bomo v Sloveniji utrdili tiste rezultate, dosežke, ki smo jih dosegli z osamosvojitvijo, od osamosvojitve naprej in da bo Slovenija resnično postala ena izmed najbolj razvitih sodobnih demokracij. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg27">Zahvaljujem se predsedniku vlade dr. Janezu Drnovšku za dodatno obrazložitev svojega predloga.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg28">Predlagani kandidati so se predstavili matičnim delovnim telesom in odgovarjali na vprašanja članov odborov in komisij. Predsedniki odborov in komisij so predsedniku Državnega zbora in predsedniku Vlade Republike Slovenije posredovali mnenja o predstavitvi kandidatov za ministre. Iz mnenj izhaja, da so bile na podlagi prvega predloga predstavitve kandidatov za ministre mag. Antona Ropa, gospoda Metoda Dragonje, gospoda Jožefa Školča, dr. Pavla Gantarja, dr. Slavka Gabra in gospoda Zorana Thalerja ustrezne. Predstavitvi mag. Mitje Gasparija in gospoda Janka Kušarja pa sta bili neustrezni. Predsedniki delovnih teles so menili, da niso potrebne ponovne predstavitve istih kandidatov na podlagi drugega predloga predsednika vlade.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg29">Na podlagi drugega predloga predsednika vlade so se predstavili: gospod Marjan Podobnik, dr. Marjan Senjur, gospod Ciril Smrkolj, gospod Mirko Bandelj, gospod Tit Turnšek, gospod Tomaž Marušič, mag. Anton Bergauer, dr. Marjan Jereb, dr. Lojze Marinček in mag. Božo Grafenauer. Iz mnenj delovnih teles izhaja, da so bile njihove predstavitve ustrezne.</seg>
@@ -637,26 +618,26 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg32">Želijo besedo predstavniki poslanskih skupin? V imenu Poslanske skupine Slovenske ljudske stranke dajem besedo gospodu Francu Potočniku.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg33">Spoštovane dame in gospodje! V Slovenski ljudski stranki menimo, da je vedno potrebno iskati najboljše rešitve in na koncu izbrati najboljšo možnost. Vendar je to v politiki zelo težko predvsem zato, ker so mnenja o tem, kaj je najboljša rešitev, pogostokrat zelo deljena. Zato se v Slovenski ljudski stranki držimo tudi drugega pravila, in sicer, da se moramo izogibati oziroma se izogniti najslabši varianti.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg34">Slovenija potrebuje novo vlado. Morda za koga predlagana vlada ni najboljša. V Slovenski ljudski stranki menimo, da prav gotovo ni tudi najslabša možnost. Zato bomo poslanci Slovenske ljudske stranke to vlado podprli oziroma bomo glasovali zanjo. Danes je prisotnih 18 poslancev Slovenske ljudske stranke, torej bo 18 glasov za. Nenazadnje smo poslanci Slovenske ljudske stranke tudi podpisali izjavo, da podpiramo to vlado, to uravnoteženo vlado. Pobuda za te podpise je nastala spontano, ker so se pač v javnosti pojavili namigi, da so različna gledanja na to, vendar s tem smo želeli javnosti povedati, da smo v poslanski skupini enotni in da bomo tudi tako glasovali. Torej, Slovenska ljudska stranka bo to predlagano vlado podprla.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg35">Hvala lepa gospodu Potočniku. K razpravi se je v imenu poslanske skupine DeSUS prijavil gospod Anton Delak.</seg>
             </u>
             <note type="speaker">ANTON DELAK:</note>
-            <u who="#SDZ2.DelakAnton" ana="#regular">
+            <u who="#DelakAnton">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg36">Hvala za besedo. Gospod predsednik, spoštovani Državni zbor! Ko sem že pred precej časa bil povabljen k predsedniku države, gospodu Kučanu, na posvetovanje, koga naj določi za mandatarja vlade, in ko sem bil vprašan, kakšni opciji bi pravzaprav dali podporo, sem tistikrat odgovoril, da bomo dali podporo takšni vladi, ki bo v parlamentu imela izdatno večino. Ko me je vprašal, kateri so tisti problemi, ki so po mnenju naše stranke najbolj aktualni, sem povedal, da je čisto sigurno eden izmed takšnih problemov zagon gospodarstva, zaposlovanje in izboljšanje standarda, da je čisto sigurno eden izmed takšnih problemov lastninjenje oziroma dokončanje, denacionalizacija, ogromne investicije, ki se naj bi opravljale v Sloveniji na področju avtocest, železnic, elektrarn in tako dalje. Problem je tudi reforma pokojninske zakonodaje, in končno, na zunanjepolitičnem področju, problem vključitve v Evropo.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg37">Mi smo seveda tem mislim, o katerih sem zdaj govoril, tudi sledili. Danes imamo pred seboj vlado, v katero bo po našem mnenju Liberalna demokracija vnesla izkušnje in pa znanje, Slovenska ljudska stranka pomladni veter in DeSUS starostno umirjenost, ob tem pa seveda tudi močno opozicijo za kontrolo te vlade.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg38">Spoštovani Državni zbor! Pred seboj imamo takšno vlado in naša poslanska skupina bo seveda takšno vlado podprla. Mislimo v nadaljevanju konstruktivno delovati in naši pogledi so usmerjeni naprej, ne nazaj. Prepričani smo, da bo takšna vlada lahko zelo uspešno vodila Republiko Slovenijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg39">Hvala lepa gospodu Delaku. Besedo dajem gospodu Miroslavu Mozetiču, ki bo spregovoril v imenu poslanske skupine Slovenskih krščanskih demokratov.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg40">Hvala lepa, gospod predsednik, za besedo. Drage kolegice, spoštovani kolegi, spoštovani kandidati za ministre! Nesporno je, da Slovenija potrebuje vlado, o tem ni dvoma. Vendar Slovenija ne potrebuje vlade Janeza Drnovška. Slovenija potrebuje verodostojno vlado, to pa po mnenju poslanske skupine SKD vlada Janeza Drnovška ni. Zato bo poslanska skupina SKD glasovala proti predlagani vladi. Zakaj?</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg41">Gospod mandatar je na prejšnji seji, ko smo imeli predlog o imenovanju vlade, s svojim predlogom pogorel. Prihaja z novim predlogom. Res je, da mu pravico do popravnega izpita daje poslovnik Državnega zbora, a normalneje bi po našem mnenju bilo, da bi po prvem neuspehu svoj mandat vrnil. Tako bi se vzpostavilo začetno stanje in nova dejanska možnost za pogovore o različnih povezavah, ki ne bi dišali po izigravanju prvotnih partnerjev. O tem več pozneje.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg42">SKD smo opozicijska stranka. V vseh parlamentarnih demokracijah vlado postavlja ali izreka zaupnico vladna koalicija in ne opozicija. To ne pomeni, da je opozicija nedržavotvorna, kajti državotvornost opozicije se ne izraža v tem, da slepo podpira vse, kar vlada predlaga, kot sicer mislijo nekateri iz vrst LDS, pač pa se državotvornost opozicije kaže predvsem v nadzoru, v kontroli vladnega početja. Če to ne bi bilo tako, potem opozicija ni potrebna, potem bi bili verjetno tam, kjer smo nekoč že bili. Vsaka vlada je politična in zato je tudi njeno imenovanje politično dejanje. Zato je odločitev tako tistih, ki vlado podpirajo, kot tistih, ki ji nasprotujejo, politično. Da je vsaka vlada in zlasti njeno imenovanje političen akt, dokazuje tudi nastajanje te vlade. Stranka, ki je pred 14 dnevi ostro nasprotovala vladi istega mandatarja in je v večini primerov nasprotovala tudi posameznim ministrom, kateri tudi sedaj sestavljajo na novo predlagano vlado, bo sedaj glasovala za vlado. Gre za istega mandatarja. Gre za polovico istih ministrov, toda sedaj je za to stranko vlada sprejemljiva. Najbrž zato, ker je pač zraven. S tem nočem trditi, da ta stranka nima pravice tako ravnati. Ima vso pravico. Povedati hočem le, da je izvolitev take ali drugačne vlade čisto politično dejanje. Podobno, le v drugačni vlogi, bosta verjetno drugi dve stranki.</seg>
@@ -668,11 +649,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg47">Zaključujem. SKD vlade, ki jo v ponovljenem poskusu in v drugačni koalicijski in personalni postavi predlaga gospod mandatar Janez Drnovšek, ne podpira. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg48">Zahvaljujem se gospodu Mozetiču. Besedo dajem gospodu Hvalici, ki bo spregovoril v imenu Poslanske skupine Socialdemokratov.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg49">Hvala lepa. Gospod predsednik, kolegice, kolegi, gospodje kandidati! Socialdemokrati obžalujemo to, kar se bo danes tu zgodilo. Zakaj obžalujemo? Obžalujemo zato, ker je prišlo do tega s kršenjem nič koliko moralnih kriterijev vrednot.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg50">Vsak ima pravico, da se odloči kakorkoli, pa vendar je to, kar se bo tu zgodilo, moralno vprašljivo. Gre tako za moralni vidik mandatarja, kot tudi za moralni vidik nove koalicijske stranke, ki je imela s strankami slovenske pomladi podpisano koalicijsko pogodbo. To ni bil sporazum, to je bila pogodba. Torej, vprašljiva je z moralnega vidika vsa zadeva.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg51">Povedati moram pa še nekaj glede na špekulacije, ki krožijo občasno v javnosti, da je bil verjetno sklenjen nek dogovor. Nikakršnega dogovora ni bilo z nami. Mi za to ne vemo. Jaz sam sem to zaslutil na pepelnično sredo zvečer, seveda sem že prej tudi predpostavljal, da je možno, da se to zgodi. Zdaj mi je sicer marsikaj tudi jasno in uradno smo potem dobili obvestilo v ponedeljek. Torej slej ko prej imamo mi pravzaprav iste pripombe na to vlado, gledano strukturalno, kot smo jih imeli 6. februarja. Ker ne bi rad posploševal in, ker to ni moja navada in tudi ni navada naše stranke, bom konkretiziral zadeve z imeni in priimki.</seg>
@@ -688,11 +669,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg61">Kakorkoli že, opozicija je zbrana tu sedaj v eni vrsti, v enem nizu, ne bo številčna, to ste videli že na zadnji seji, ko se je nekajkrat pojavila številka 24, 25, takšna bo. Razloge sem povedal. Mi bomo glasovali projektno od primera do primera. Socialdemokrati obljubimo, da bomo predvsem državotvor,a opozicija, drugače pa bomo še kako gledali pod prste. Privlekli bomo na dan tudi tiste stvari, ki so še vedno aktualne in niso bile v prejšnjem mandatu razjasnjene, se tičejo pa predvsem stare LDS-ove garniture. Kakorkoli, verjetno ste razbrali že iz mojega govora, da Socialdemokrati ne bomo podprli te vlade. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg62">Hvala lepa, gospod Hvalica. Besedo dajem gospodu Miranu Potrču, ki bo spregovoril v imenu poslanske skupine Združene liste socialnih demokratov.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg63">Hvala lepa. Spoštovani gospod predsednik, spoštovani kandidati za ministre nove vlade in gospod ministrski predsednik! Žal mi je, da ne morem pozdraviti nobene kandidatke za ministrico, ker jo pač niste predlagali, in cenjene kolegice in kolegi poslanci. V Združeni listi socialnih demokratov smo ves čas poudarjali in tudi delovali tako, da bi bila glede na volilne rezultate za Slovenijo najboljša čim širša koalicija, sestavljena iz strank obeh polov političnega spektra v Sloveniji. Koalicija, ki bi zahtevala njihovo medsebojno sodelovanje, koalicija, ki bi zaradi sodelovanja strank zagotavljala politično stabilnost v državi in ki bi zaradi zadostne podpore v Državnem zboru zagotavljala tudi učinkovito uresničevanje nalog, ki jih ima naša država. Takoj po volitvah smo pričakovali, da se bodo takoimenovane pomladne stranke, vse tri ali del njih, dogovorile z LDS za skupno vlado in da bomo opozicijska stranka. Ko zaradi popolne nepripravljenosti takoimenovanega trojčka za sodelovanje ni bilo mogoče izvoliti nove vlade, sestavljene iz obeh polov političnega spektra v Sloveniji, smo bili, da bi presegli polarizacijo in nezmožnost sestaviti vlado, pripravljeni sodelovati v vladi s podporo 46 poslank in poslancev. Rad bi rekel, da to vlado nismo šteli za noben politični pol, niti ne za enobarvno, ampak v njej smo bili pripravljeni sodelovati. Ob tem nas ni prevevalo nobeno posebno navdušenje ali zmagoslavje in zavedali smo se tudi mnogih slabosti takšne vlade. Ko ta vlada ni bila izvoljena zaradi enega samega prebežnika, se nam ni sesul svet. Doktor Drnovšek nas ni posebej presenetil, ko je enostransko in brez razlogov kršil z nami podpisana koalicijska sporazuma. Zaradi tega nismo igrali užaljencev ali prevaranih in nismo nikogar obtoževali zaradi nepoštenja ali nemorale v politiki. Tudi danes želimo predlagano vlado ocenjevati predvsem racionalno. Pojasniti želimo svoje poglede in ocene o njej, da bi prevedli svoj pogled na to in da bi nekaj svojega pogleda dali tudi volilkam in volilcem, predvsem zato, ko bomo skupaj kasneje, čez mesec, leto, dve, ocenjevali delovanje te vlade.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg64">In kaj se nam zdi bistveno? Zdi se nam, da je prav in dobro, da sta LDS in Slovenska ljudska stranka pred dogovorom o koaliciji sestavili sporazum o sodelovanju, da je ta javen, da lahko o njem govorimo, čeprav bi rad poudaril, da se nam prvi poudarki v sredstvih obveščanja, da je to prvi javni sporazum, niso zdeli ravno korektni. Javni sporazum je bil namreč tudi že sporazum, ki smo ga mi sklenili s predsednikom vlade v začetku februarja.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg65">Drugič. Koalicijo naj bi podpiralo, tako slišimo, 52 poslank in poslancev, 25 iz LDS, 19 oziroma po novem, danes, 18 iz Slovenske ljudske stranke, 5 iz DeSUS-a, 2 poslanca narodnosti in poslanec Ciril Pucko. To je solidna večina, to je večina, ki lahko uspešno deluje v Državnem zboru. To je hkrati večina, ki se mora glede pomembnih projektov, kot so ustavne spremembe, volilna zakonodaja, poslovnik Državnega zbora, povezovati tudi z opozicijo, sicer jih ne more uresničiti, kar je tudi dobro, da ne bi, bi rekel, bila premočna. Želimo si torej, da bi glede normalnega delovanja bilo 52 ali pa 51 poslank in poslancev in da bi bila to res trdna koalicija, čeprav imamo elemente za oceno, da najbrž tega s popolno gotovostjo ni mogoče že vnaprej trditi. Zato bi pa radi, da bi nova koalicija svojo večino in enotnost preizkusila in potrdila tako danes kot tudi v kasnejšem delovanju in da bi končno prišli v Sloveniji v situacijo, v kateri bi se vedelo, kdo vlada in kdo je v opoziciji, kdo je odgovoren za odločitve, kdo je tisti, ki jim je oporekal, in da bi na naslednjih volitvah državljanke in državljani lahko po tem, ne pa po dopadljivosti izjav posameznih prvakov strank volili tudi bodoče stranke. Mi bomo v opoziciji, pripravljeni bomo sodelovati pri dobrih projektih, tako s predlogi vlade kot tudi z opozicijskimi strankami. Ali bodo pripravljene za to tudi opozicijske stranke, bomo kasneje videli, če ne, bodo pač najbrž nosile krivdo za to, da bo opozicija manj močna, kot bi lahko bila.</seg>
@@ -721,11 +702,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg88">Cenjene poslanke in poslanci! Na vsa ta vprašanja sem v imenu poslanske skupine opozoril, da se tudi nova vladna koalicija prikaže realno. Realno zato, da bi lahko dosegala potrebno enotnost, da bi lahko presegala razlike, da je ne bi idealizirali vnaprej in da bi lahko tudi uspešno vladala. Vsako idealiziranje, ki ga je nekaj prisotnega v javnosti sedaj, kot da je to edina rešitev in da nobene druge za Slovenijo nikoli ni bilo in da sta pravzaprav oba predsednika za to rešitev vedela že nekaj let pred tem, pa je doslej nista mogla uveljaviti, namreč ne bi imelo kakšnega posebnega pomena. Želimo si zato, da bi realno delali, realno ocenjevali, želimo si, da bi nova vlada uspela zagotoviti to, kar si tudi volilke in volilci od nje želijo, toda da je ne kujemo v oblake že prej, preden je pokazala, kaj zna in zmore. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg89">Hvala gospodu Potrču. V imenu poslanske skupine Slovenske nacionalne stranke dajem besedo gospodu Zmagu Jelinčiču</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg90">Prav lep dober dan vsem skupaj. Gospod Potrč je zelo podrobno analiziral pogodbo med obema glavnima strankama bodoče vlade, za katero sem prepričan, da bo danes izvoljena, kajti nedvomno govori o 52 glasovih, ki bodo glasovali zanjo. Skrbijo me nekatere teze v tem sporazumu, kajti imam občutek, da se rimskokatoliški cerkvi odpirajo vrata na stežaj, da bo posegala v državno upravo. Bojim se, da ne vem, kako bo s slovenskimi gozdovi, kako bo z nepravilno in nekorektno in nepravično denacionaliziranim premoženjem Republike Slovenije in bojim se še za marsikaj drugega, vendar me pa po drugi strani ta pogodba ne skrbi kaj dosti, kajti podpisali sta jo dve stranki, ki ne spoštujeta dogovorov, ne izpolnjujeta podpisanih sporazumov in ne držita besede. To se pravi, da lahko tudi na tem področju malo lažje zadihamo, ker ni rečeno, da bo izpolnjeno vse tisto, kar je napisano v pogodbi.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg91">Slovenska nacionalna stranka je ob tistem času, ko je bilo potrebno za to, da bi se formirala vlada, ponudila roko in pomoč takratnemu mandatarju in bila pripravljena vstopiti v vlado. Seveda se je zaradi določenih političnih usmeritev zadeva spremenila in Slovenska nacionalna stranka bo ostala tisto, kar praviloma je, torej opozicijska stranka. Pred časom, pred dnevi smo poslušali celo vrsto hearingov, za katere v naši stranki sodimo, da niso ravno smiselni, kajti ne glede na rezultat, se tistega kandidata potrdi in se mu izkaže zaupanje. Zato mislim, da bi bilo smiselno to urediti tako, da teh hearingov pač ne bi več poslušali.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg92">Morda se bo v tej vladi le kaj spremenilo. Morda se bodo zadeve, ki smo jih štiri leta videvali in doživljali v slovenskem gospodarstvu, v slovenskem političnem prostoru in v slovenskem kulturnem prostoru spremenile. Upam, da bo v sedanji vladi urejeno tako, da ne bo več mogoče, da se bodo slovenska podjetja potapljala in uničevala do te mere, da morajo tožiti državo za vse tisto, kar je država po nezakoniti in nelegalni poti storila, če govorim samo o podjetju SPIKE iz Kopra, da se ne bo več dogajalo, da bo slovenska država in slovenska politika preferirala hrvaška, celo vojaška podjetja na istem področju, to je recimo Brodospas, in da se ne bo več dogajalo to, da bo slovenska vlada kot konkurenco hrvaškim podjetjem uvajala italijanska podjetja. Upam, da se ne bo dogajalo to, kar se je dogajalo z Delamarisom, da je v bistvu slovenska vladna birokracija prepovedovala in odsvetovala antidumpinške postopke proti hrvaškim podjetjem, seveda zopet na škodo slovenskih podjetij. Upam, da se ne bo dogajalo to, kot se je dogajalo recimo s podjetjem Porsche Slovenija, ki mu je slovensko ministrstvo oziroma slovenska politika dovolila, da za nemško državo oziroma za nemško podjetje uvede "by pass" firmo preko Slovenije, kar je bilo mogoče storiti samo še na Slovaškem. In če gremo v Evropo, mislim, da bo take zadeve potrebno gledati še toliko bolj podrobno. Upam tudi, da v bodoči vladi ne bo prišlo do uničevanja slovenskih letalskih prevoznikov. V teh dneh naj bi zopet odprodali del letalske flote slovenskega nacionalnega avio prevoznika. Upam, da se ne bo zgodilo to, kar se pripravlja, da bo Mercator odprodal Nizozemcem svoje najboljše firme, tiste, ki najbolje stojijo in ki prinašajo slovenski državi denar. Primer odprodaje imamo v tobačni tovarni. Smo namreč edina država v svetu, ki monopolno podjetje proda tujcu; da ne govorim o Elanu, upam, da se tudi take zadeve ne bodo več ponavljale. Upam, da se ne bo dogajalo to, da bomo kupovali nekakšne siemensove radarje za kontrolo letalskega prometa, ki še danes v kleti ne delujejo. Upam, da bo kontrola zračnega prostora pod slovensko komando, ne pod komando hrvaške zračne uprave v Zagrebu</seg>
@@ -744,54 +725,54 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg104">Mislim, da v tem času, ko so prve pomladanske pozebe požgale tiste prehitro zrasle rožice, upam, da ne bo pozeba požgala še vsega ostalega slovenskega cvetja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg105">Hvala gospodu Jelinčiču. Ko je gospod Jelinčič omenjal smotrnost predstavitev oziroma hearinge kandidatov, bi rad povedal, da v ustavi piše v 112. členu: "Predlagani minister se mora pred imenovanjem predstaviti pristojni komisiji Državnega zbora in odgovarjati na njena vprašanja." Torej, če bi želeli tako rešitev spremeniti, potem je potrebno tudi spremeniti ustavo. V imenu poslanske skupine Liberalne demokracije Slovenije bo spregovoril gospod Tone Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg106">Spoštovani! V politiki k sreči ni trajnega zavezništva ali trajnega nasprotovanja, ampak so le interesi in le-ti lahko pripeljejo do koristnih in konstruktivnih rešitev, ki so potrebne za državo, ki so potrebne zato, da se določene stvari urejajo skladno z ustavo in zakoni. V Sloveniji je k sreči prišlo do tega dogovora mogoče prej, kot so nekateri pričakovali, drugi so mogoče to pričakovali še prej <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg107">Prosim za mir v dvorani, gospod Jelinčič, prosim!</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg108">Čas, ki je nastopil, je čas za dogovarjanje, čas za iskanje dogovorov, ki pa, upam, da bo v prihodnje v to prepričal tudi skeptike, ki mogoče v tem trenutku s pretirano vehemenco zavračajo ta dogovor, ta sporazum med strankama Liberalne demokracije in pa Slovenske ljudske stranke, ob podpori DeSUS-a ter poslancev, ki so bili tukaj že omenjeni. Mi smo prepričani, da so programski dogovori in pa konkretne kadrovske rešitve s predstavitvami na ustreznih odborih zadostna garancija, da bo Slovenija lahko začela uresničevati naloge, ki so pred njo. Prav gotovo ni potrebno posebej poudarjati, da tako na zunanjepolitičnem kakor notranjepolitičnem področju je vrsta vprašanj, ki ne trpijo odlaganja, ki ne trpijo iskanja nekih drugih formul, ki v končni fazi že po tem štirimesečnem obdobju bodo morala v prihodnjem obdobju dobiti hitrejši tempo reševanja. Zagotovo je, da ni bilo vsega slišanega na predstavitvah kandidatov, celotnih programov na posameznih področjih, kajti to je tudi nemogoče storiti v tistih dveh urah, kot je tam časa na voljo.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg109">Poslanci Liberalne demokracije bomo predlagani kabinet zagotovo podprli, ker menimo, da so bile vse predstavitve take, da so vsi kandidati dali zagotovila, s svojo predstavitvijo namreč, da bodo sposobni dojemati potrebe časa in seveda potrebe področij, katere bodo pokrivali. To pa je zadostna garancija, da se v prihodnje lahko zanesemo, da bo vlada kos nalogam, ki so pred njo, in zato bomo seveda glasovali danes za vlado.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg110">Hvala lepa gospodu Anderliču. V imenu poslanske skupine italijanske narodne skupnosti dajem besedo gospodu Robertu Battelliju, potem pa še v imenu poslanske skupine madžarske narodnosti, gospe Marii Pozsonec. Prosim.</seg>
             </u>
             <note type="speaker">ROBERTO BATTELLI:</note>
-            <u who="#SDZ2.BattelliRoberto" ana="#regular">
+            <u who="#BattelliRoberto">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg111">Hvala, gospod predsednik. Spoštovani! Podprl bom to vlado zaradi tega, ker vem, da bo minister za kulturo občutljiv za potrebe narodnih skupnosti na področju kulture, ker vem, da bo minister za šolstvo še naprej občutljiv za potrebe narodnih skupnosti na področju vzgoje in izobraževanja, ker vem, da bo minister za notranje zadeve občutljiv za vprašanja, ki skozi tisti del uprave, ki spada pod notranje zadeve, neposredno izvaja ustavne norme na področju jezikovnih pravic narodnih skupnosti in nenazadnje bom glasoval za to vlado zaradi tega, ker imam trdno zagotovilo tako predsednika vlade kot tudi gospoda Marjana Podobnika, da bo v programske usmeritve vnešen tisti del obstoječega programskega dogovora med LDS in Združeno listo, ki govori o tem, da se bodo dosledno izvajale ustavne norme na področju narodnostnih pravic in se bodo spoštovale tudi vse osamosvojitvene in predosamosvojitvene obljube na tem področju. Glasoval bom tudi za to vlado, ker vem, da bo minister za zunanje zadeve občutljiv za vprašanja narodnih skupnosti, posebej še italijanske narodne skupnosti, ko se bo soočal s problemi, ki zadevajo nadaljnje urejanje odnosov tako z Italijo kot tudi s Hrvaško. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg112">Hvala. Gospa Maria Pozsonec.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SDZ2.PozsonecMaria" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg113">Hvala. Spoštovani! Vsem prisotnim lep pozdrav! Kot veste, od prvega glasovanja naprej sem podpirala vlado gospod Janeza Drnovška. To sem storila iz globokega prepričanja, da je to v prid bodočnosti in blagostanja celotne Slovenije in tudi narodnosti. Podpirala sem to, ker sem upala, da glasujem za takšno državo, kjer ljudje, in to široka množica, bodo imeli delo in človeško dostojanstvo, da bomo živeli v demokraciji in mladina bo imela prihodnost. Zato nisem želela in nisem pričakovala nobene pogodbe. Moj glas ni bil na prodaj za nobeno pogodbo in tudi ne pridobljen za vse primere in za vselej. Vlado bom podpirala zgolj takrat, kadar bom menila, da dela za dobrobit Slovenije. Sigurno me ne bo zraven oziroma me ne bi bilo zraven, če bi šlo za razprodajo slovenske zemlje in imetja delavcev. Vlade in stranke so minljive, narodnost pa upam, da ostane, zato mora narodnostna poslanka ostati neodvisna, torej zato nisem niti iskala nobene pogodbe in nihče mi je ni ponudil. Ne smem se vezati za nobeno stranko in treba je najti prijatelje za narodnost v vseh strankah in upam, da bo tu v tem državnem zboru tudi tako, kakor je bilo tudi v prejšnjem zboru. Upam, da bo s to širšo koalicijo končno konec zgodbe o narodnosti kot na tehtnici in prav tako bo konec napadov na narodnost. Verjemite, da je bilo zelo nedemokratično in zelo hudo, kajti, če verjamete ali ne, za položaj narodnosti sta odgovorni tako opozicija kakor pozicija in menim, da vsaka demokratična vlada mora zagotoviti že pridobljene narodnostne pravice, mora jih razvijati in menim, da ta naša bodoča vlada bo takšna. Imena ministrov, ki jih poznam, to je približno polovico, in tudi onih, ki jih ne poznam, ter ministrski predsednik so zame garant, da bo vse to doseženo in zato glasujem z mirno vestjo za vlado gospoda Drnovška. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg114">Hvala lepa, gospa Maria Pozsonec. Razpravljali so predstavniki vseh poslanskih skupin in prehajamo na razpravo oziroma besedo dajem poslankam in poslancem. Prvi se je k razpravi prijavil magister Marijan Schiffrer. Prosim, gospod Schiffrer.</seg>
             </u>
             <note type="speaker">MAG. MARIJAN SCHIFFRER:</note>
-            <u who="#SDZ2.SchiffrerMarijan" ana="#regular">
+            <u who="#SchiffrerMarijan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg115">Spoštovani! Predvsem prosim, da mi oprostite, ker sem se tokrat pojavil z listom, zadnjič sem rekel, da se nikoli ne pojavljam z listom v roki. Moram namreč prebrati nekaj citatov. Zadnji politični dogodki v domovini našim izseljencem in zamejcem kratijo spanje. Sami so podrli ograje, ki jih žal večina rojakov v matici postavlja na Karavanke in Goriška Brda, češ, onkraj tega ni nič in nas začeli bombandirati z vprašanji in nasveti. Vse te klice in fakse bi združil v eno samo besedo "razočaranje". Razlogi, vsi podrobni opisi dogodkov so bili bob ob steno. Njihovo mnenje je, da se Sloveniji dela neznanska škoda kot državi, ki je politično popolnoma nestabilna in gospodarsko nepredvidljiva.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg116">Temeljno vprašanje je bilo - seveda, na to vprašanje sem težko odgovoril oziroma nisem mogel odgovoriti - zakaj v vlado ne gre ves "trojček"? Zlasti je veliko razočaranje nad političnimi strankami. V zvezi s tem bom citiral del sporočila, ki sem ga dobil od Slovenca iz Združenih držav. Piše mi: "Že desetletja volim demokrate in če bi živel še 50 let, bi storil isto, ker vem, da stranka svojih pozicij in povezav v tem času ne bo spremenila." Bil sem tudi med zamejci. Še vedno zastonj čakajo na ministra brez listnice, ki jim po resoluciji Državnega zbora, objavljeni v Uradnem listu z dne 5. julija 1996, pripada. Vsi zamejci in izseljenci pa so se strinjali v prošnji: ne delajte več eksperimentov! Ugled Slovenije v svetu trpi, politično in gospodarsko. Slovenija tega ni vredna, preveč jo imamo radi! Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg117">Hvala lepa gospodu Schiffrerju. Besedo dajem gospodu Ivanu Božiču.</seg>
             </u>
             <note type="speaker">IVAN BOŽIČ:</note>
-            <u who="#SDZ2.BožičIvan" ana="#regular">
+            <u who="#BožičIvan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg118">Gospod predsednik, hvala lepa. Spoštovani, vsi prisotni, mandatar, kandidati za ministre, kolegice poslanke, poslanci! Ko sem poslušal vodje poslanskih skupin, sem slišal skoraj vse. Še sreča, da sem se pripravil za majhno zadevo, ampak veliko za Slovenijo in za vse nas. In sicer bi rad povedal nekaj pomislekov in opažanj ob branju sporazuma med strankama Liberalne demokracije in Slovenske ljudske stranke o vladi v naši državi, Republiki Sloveniji. Rekel bom nekaj besed s področja kmetijstva, gozdarstva in prehrane.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg119">Ob primerjavi 12 točk medsebojnih obvez, to je poglavje D sedanjih koalicijskih partneric, se pravi, tako k 12. točkam teksta koalicijske pogodbe med Liberalno demorakcijo Slovenije in Slovenskimi krščanskimi demokrati leta 1993, ugotavljam, da so dikcije v sedaj veljavni pogodbi bistveno splošnejše in manj obvezujoče. Sedanji sporazumi se v prvi in drugi točki pravzaprav nanašajo na sprejeto strategijo, katere izvedba je bila obvezna v triletnem programu in je predvidena tudi v novem štiriletnem programu razvoja kmetijstva; tako ni to nič novega. Dikcije iz druge in tretje točke sporazuma med Liberalno demokracijo Slovenije in Slovensko ljudsko stranko prevzemata glavne trditve iz omenjenih programov in izvajanje proračunske politike v zadnjih letih. Manjka le navedba zneskov proračunske porabe po letih in področjih zaščite. Vse to pa je že vseboval dodatek koalicijske pogodbe v letu 1993. Zato je sedanji sporazum manj obvezujoč od sporazuma z našo stranko. Prav tako sta 4. in 5. točka sedanjega sporazuma: "Za zaščito slovenskega kmetijstva je potrebno doseči ugodne sporazume s članicami CEFTE in vsestransko podporo prestrukturiranju slovenskega zadružništva in predelovalne industrije ob vključevanju Republike Slovenije v Evropsko unijo", bolj splošni in bistveno manj obvezujoči, kot so sklepi Vlade Republike Slovenije in Državnega zbora, ki so že bili sprejeti. Ti sklepi so tudi v izvajanju.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg120">Zahteve po zakonski ureditvi in zagotavljanju pogojev za delovanje javnih služb in izobraževanja so veliko bolj splošni kot so bile pogodbe med Slovenskimi krščanskimi demokrati in Liberalnimi demokrati Slovenije pred štirimi leti. Tako je splošna ugotovitev, da je nova pogodba bistveno manj obvezujoča, kot je bila pogodba z našo stranko. V novi koalicijski pogodbi je povsem izpuščeno področje socialnega položaja kmetov, vključno z višino njihovih prispevkov, kar je že bilo zapisano pred štirimi leti kot veza vlade. Še več. Predvidena je izenačitev obveznosti kmetov, ki pa po moji oceni ni izvedljiva. Čudi tudi to, da je izpuščeno področje skrbi za ohranitev kulturne in poseljene dežele, ki je vendar temelj ohranitve slovenstva in je eden izmed poglavitnih ciljev strategije razvoja našega slovenskega kmetijstva.</seg>
@@ -799,11 +780,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg122">Vse ni samo slabo. Nekaj dobrega je napisano o gozdarstvu in lovstvu. Upam, da bo to naša država Slovenija tudi doživela. O podrobnostih teh stvari, ki sem jih sedaj našteval, pa se bomo začeli pogovarjati tako, kot je vodja poslanske skupine iz stranke Socialnih demokratov povedal, gospod Hvalica, konec maja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg123">Hvala lepa gospodu Božiču. Besedo dajem dr. Cirilu Ribičiču.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg124">Spoštovani! Ko sta prišla dva zaljubljenca sedaj na valentinovo v hotel, pa je vprašal receptor, ali sta poročena, sta se nerodno spogledala in sta rekla, da sta poročena in to oba. Tako približno je izgledal tudi nastanek te koalicije. Oba partnerja, ki sta sklenila novo zvezo nista pretrgala še prejšnjih zvez, nista prekinila prejšnjih sklenjenih pogodb.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg125">Nisem se oglasil zaradi tega, da bi predvsem o tem govoril. Hotel sem, mislim, da se to tudi spodobi, tudi takrat, ko je veliko nesojenih, da se čestita k taki novi politični zvezi in da se ji zaželi vso srečo. Želim obema partnerjema, vladi in dr. Drnovšku, vso srečo in mislim, da bodo to srečo tudi potrebovali.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg126">Kar zadeva analizo je bila zelo realna in objektivna analiza bila narejena. Kolega Miran Potrč jo je tukaj podal. Jaz sem se oglasil zaradi enega drugega razloga. Ko sem prišel danes v parlament, je gospod Gregor Golobič rekel, ti boš pa gotovo glasoval za vlado, glede na tvojo diskusijo, ko si pozival gospoda Peterleta, da naj razmisli in da naj nima vnaprejšnjih sodb do te vlade. Ja, rekel bi, da lahko v celoti vztrajam pri tistem, kar sem prej govoril tukaj o vladi in o posameznih ministrih. Moram pa dejati, da takrat nisem nikogar od ljudske stranke prepričal, niti enega poslanca, da bi dal podporo tej stranki. Rad bi vas spomnil še na nekaj drugega, kar ima mogoče še nekoliko večjo težo. Ko smo volili predsednika te vlade dr. Drnovška se je dr. Drnovšek skliceval na tisto programsko izjavo, ki jo je ob tej izvolitvi dal. Seveda ni dobil glasov poslancev Slovenske ljudske stranke. Doživel je pa nekaj drugega. Glede na to, da danes dr. Zagožna ni tukaj, se bom manj ukvarjal s temi njegovimi osebnimi stališči, domislicami. Nekatere so po mojem bile bolj primerne za to, da se povedano pred tem parlamentom kot v samem parlamentu. Mislim recimo na tisto, ko je rekel: Skrajna desnica v Sloveniji je tista stranka, ki sedi poleg vaše poslanske skupine. Ali pa ko je rekel, 50 je ljudi v tej dvorani, ki bi jih raje podprl za predsednika Vlade. Ali pa ko je govoril o tem, da dr. Drnovšek latino-amerikanizira Slovenijo in podobno. Bolj zanimive so za današnjo politično razpravo tiste ocene, ki jih je dal v imenu poslanske skupine Slovenske ljudske stranke. Kjer je izrecno poudaril, da gre za stališče poslanske skupine, vseh poslancev Slovenske ljudske stranke in ko nihče od teh poslancev seveda tudi tem njegovim ocenam ni ugovarjal, kot ni ugovarjal tudi tistim, ki sem jih že navedel. Mislim, recimo, na oceno, ki jo je dal v imenu poslanske skupine, da dr. Drnovšek cepi in deli Slovenijo že od sredine leta 1992, da teži k dominaciji, hegemoniji in samodrštvu. Mislim na njegove kritike o anarholiberalizmu. Jaz se spomnim kdaj in kako so bile te kritike aktualne. Na kritiko nezakonitega delovanja dr. Drnovška v zunanji politiki. Na to, da Liberalna demokracija z dr. Drnovškom vodi Slovenijo v socialno diferenciacijo, več brezposelnosti in marginalizacijo ogromnega dela prebivalstva. Mislim pa posebej na takšne ocene, da bodo poslanci Slovenske ljudske stranke uporabili vsa demokratična sredstva, da prepričajo poslance in javnost, da dr. Drnovšek ni primer za vladno palačo. Celo v njeno bližino ne bi smeli spustiti dr. Drnovška. In še citiram: "Ne danes, ne jutri, ne kdaj v prihodnje, prizadevali si bomo, da ne danes, ne jutri, ne kdaj v prihodnje ne bo državni zbor odločal se za predsednika vlade, ki lahko odloči o vsem in mu nikogar ni treba poslušati." Sprašujem ali so te ocene še veljavne, ali so to še vedno stališča poslanske skupine Slovenske ljudske stranke, ki je enotno glasovala proti temu, da bi bil dr. Drnovšek predsednik Vlade in to na podlagi takšne obrazložitve. Redko se strinjam s kolegi iz Slovenskih krščanskih demokratov, ampak sedaj, ko smo kolegi v opoziciji, se moram sklicevati na tisti del, ko je bilo tukaj povedano s strani gospoda Mozetiča, da bi bilo korektneje seveda vrniti mandat in ponovno oblikovati vlado in ponovno voliti predsednika Vlade. Ampak je tako kot je. Tudi tako je legalno z vidika ustave in veljavnih predpisov, tudi temu postopku, po mojem mnenju, ni mogoče resneje ugovarjati. Se mi pa zdi, da je za politično higieno, za to kako se v tem državnem zboru pogovarjamo, pomembno kakšna stališča zavzemamo v eni situaciji in kakšna stališča čez en teden ali pa čez štirinajst dni pozneje. In iz tega vidika se mi je zdelo pomembno postaviti to vprašanje, koliko so torej merodajne tiste ocene, ki so jih poslanci ljudske stranke dajali v nedavni diskusiji, v tej isti dvorani in o tej isti temi. Se pravi o temi ali je naj bo predsednik Vlade dr. Drnovšek ali ne. To seveda ni vprašanje samo Slovenski ljudski stranki, je vprašanje tudi Liberalni demokraciji Slovenije in doktor Drnovšku, ali pristaja na skupno koalicijo, ne da bi se umaknile takšne ocene, za katere je doktor Drnovšek sam rekel v tisti razpravi, da so takšne, da jih je težko mogoče vzeti nazaj. Naj s tega vidika rečem, da to, kar je danes rekel gospod Potočnik, seveda ni tisto, o čemer govorim. Seveda je možno stvar tudi poenostaviti do te mere, da se reče, ta vlada ni najslabša, ta vlada ni najboljša in mi bomo enotno glasovali zanjo, samo seveda to ni odgovor na prejšnje, zelo ostre, zelo radikalne, vsestranke kritike doktor Drnovška. Mislim, da to ne bo najboljša podlaga za delo, za skupno delo te vlade. Mene in Združeno listo je seveda ta nov koalicijski sporazum postavil v opozicijo in moja naloga v opoziciji je, da opozarjam na slabosti vladajoče koalicije in ena od teh slabosti je tista, o kateri sem govoril.</seg>
@@ -812,33 +793,33 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg129">No, in sklenil bi s tistim, kar je omenil gospod Tone Anderlič - ne vem, ali je namenoma ali nehote, ko je rekel, v politiki vladajo samo interesi, na srečo ni trajnih zavezništev - tisto, kar mi je bilo zanimivo, je ta dodatek "na srečo", skratka, nekdo je zelo zadovoljen in srečen, da se je stvar iztekla tako, kot se je iztekla, kljub temu, da smo imeli drugačne predhodne dogovore, in da za izvolitvijo predsednika Vlade stojijo drugi glasovi, kot pa je sedanja predlagana sestava vladne koalicije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg130">Hvala lepa dr. Ribičiču. Besedo dajem dr. Jožetu Zagožnu.</seg>
             </u>
             <note type="speaker">DR. JOŽE ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženJože" ana="#regular">
+            <u who="#ZagoženJože">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg131">Spoštovani gospod predsednik, spoštovani gospod mandatar, spoštovani kandidati za ministre, drage poslanke in poslanci! Skoraj štiri mesece je že minilo od volitev. Tisti, ki je potreboval toliko časa, da je uresničil svoj načrt, je lahko kljub vsemu zadovoljen, za razliko od nekaterih drugih je malo obljubljal, a je dosledno uresničil vse, kar je napovedal že lansko leto. Zanj je bilo važno samo to, da bo mandatar dr. Drnovšek in da bosta v vladi LDS in SLS. To je dovolj, da ohrani sedanje smeri tranzicije in da zadrži pozicije v gospodarstvu in v družbi. Ivan Oman je nekoč dejal, da gremo na volitve zato, da zmagamo. Naj dodam, da se gre v vlado zato, da se vlada. Stranka gre v vlado zato, da uresniči svoj politični program. Stranki, ki želita danes skupaj v vlado, sta imeli že do nedavnega zelo različne, celo nasprotujoče si programske cilje. Z vrstami kompromisov, z omejitvami svojih stališč ali preprosto s pozabo nekaterih zahtev, sta na koncu prišli do nekega skupnega papirja. Važnejše od podpisanih papirjev, ki jih ta partnerja rada kršita, je realno razmerje moči v vladi in v parlamentu, ki je pogoj za izvajanje sprememb. Tu pa je SLS v manjšini, Liberalna demokracija jo lahko kadarkoli preglasuje. Vsi ministri bodo morali strogo spoštovati sklepe Vlade. Morda še bolj kot razmerje moči je pomembno, koliko znanja, sposobnosti in politične volje imajo ministri, da bodo uresničevali strankin program. Takšne volje je bilo mogoče bolj malo zaznati na obeh zaslišanjih kandidatov. Visoka strokovnost je pri ministru sicer nujni, ne pa že tudi zadostni pogoj. Minister je zlasti uresničevalec politične volje stranke na nekem strokovnem področju.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg132">Ko smo se še v okviru slovenske pomladi dogovarjali za skupni gospodarski program, smo predvidevali dokaj temeljite konceptualne spremembe. Te smo obljubili volivcem. V Slovenski ljudski stranki so še zlasti poudarjali pomen odprave nepravilnosti in krivic v družbi. In ne samo to. Zavedali smo se, da ne gre samo za strankarsko aritmetiko, pač pa zlasti za epohalne spremembe, kot je zaključek tranzicije in na tej osnovi dolgoročno zacementiranje pozicij tiste družbene strukture, ki si je sedanjo moč pridobila v preteklosti z nedemokratičnimi sredstvi, z revolucijo in dolgoletno enostrankarsko vladavino. Govorili smo o novi zasnovi, na kateri naj temelji javna poraba in proračun. Govorili smo o prenovljeni strategiji gospodarskega razvoja Slovenije, s katero bi morali uskladiti razvojne tolarje. Govorili smo o pripravi standardov javne porabe, o sodobnem davčnem nadzoru, o novih temeljih deviznega nadzora nad poslovanjem gospodarskih družb in bank s tujino, o dodatnih revizijah divjega lastninjenja, o privatizaciji bank, o pospešitvi denacionalizacije, o politiki do tujih vlaganj, o nadzoru nad trgom vrednostnih papirjev, o zaščiti interesov malih delničarjev, o privatizaciji zavarovalnic in podjetij, ki prirejajo igre na srečo in o učinkovitejšem nadzoru nad pranjem denarja. Nadalje smo govorili o temeljitem zmanjševanju števila paradržavnih skladov in agencij in o njihovem nadzoru, o racionalizaciji državne uprave ter konkretno o združitvi Ministrstva za gospodarske dejavnosti in Ministrstva za ekonomske odnose in razvoj. Govorili smo, da bi bilo treba zmanjšati število ministrstev iz 18 na 12, tudi glede na to, da ima na primer Švica le 7 ministrstev, Avstrija pa 12. Namesto tega bomo, kot vse kaže, dobili še nekaj novih ministrstev, tako da jih bomo imeli okoli 20, čeprav se je državna administracije od leta 1991 do 1996 povečala iz 9.800 na 28.600 zaposlenih. Zavzeli smo se za davčno in pokojninsko reformo, za aktivno industrijsko politiko, za vzpodbujanje malega gospodarstva in za ukrepe, ki bodo pospeševali izvoz. Zlasti pa smo v naših razmišljanjih postavljali socialno, tržno in pravno gospodarstvo nasproti ideologiji in praksi surovega liberalizma, kot smo ga poimenovali. Ne na prejšnjem in ne na zadnjem zaslišanju ministrskih kandidatov nismo slišali, kaj bodo bodoči ministri storili, da bodo ti cilji doseženi. Še več, kljub jasnim vprašanjem nismo mogli iz njih izvleči, ali se s takšno politiko sploh strinjajo. Predstavitev kandidata doktorja Marjana Senjurja je bila dosledno okleščena vseh vrednostnih opredelitev, omejil se je na minimalno presečno površino ekonomske stroke, ki naj bi zadovoljevala vse politične opcije. Na vprašanja, kaj misli on osebno storiti, je odgovarjal, kaj pravi o tem ekonomska teorija. Z vso odgovornostjo lahko zatrdim, da iz njegove predstavitve izhaja, da zaradi tega, ker kandidira za Slovensko ljudsko stranko, njegova ekonomska politika ne bo niti za las drugačna kot bi bila, če bi kandidiral na primer za Liberalno demokracijo.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg133">V časopisnem sestavku on ocenjuje, da je Agencija za plačilni promet, nadziranje in informiranje poljubno revidirala podjetja in da je neobjektivno ugotavljala oškodovanja družbene lastnine. S tem naj bi podjetja v določenem času onesposobila. Kot negativno ocenjuje, da so nekateri politiki obtoževali podjetja za kriminal in mafijo. Kandidat je na predstavitvi dejal, da se ne bo boril proti korupciji in kriminalu, ker je za to pristojno pravosodje. Meni, da je v Sloveniji potrebna visoka obrestna mera, da bi spodbudila varčevanje, čeprav je enotno stališče gospodarstvenikov, da se morajo glede na stopnjo inflacije visoke obrestne mere znižati. Ne podpira združitve Ministrstva za ekonomske odnose in razvoj in Ministrstva za gospodarske dejavnosti, pač pa je za krepitev tega ministrstva. On meni, da naj se izvoz spodbuja le z raznimi oblikami promocije, ne pa tudi s finančnimi mehanizmi, kot so subvencije in aktivna tečajna politika. Sodi, da naj se v posamezne gospodarske panoge in v posamezne regije z ničemer ne intervenira. Na tokratnih zaslišanjih, morda z izjemo enega ali dveh kandidatov, žal nismo slišali konceptov in programov dela ter prikaz ključnih sprememb in reform, ki naj bi jih kandidati uresničili.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg134">S tem se Slovenska ljudska stranka po moji sodbi v veliki meri odpoveduje programu, za katerega se je zavzemala v okviru strank slovenske pomladi. To tudi pomeni, da za sile socialistične kontinuitete ne bo nobenih resnih ovir, da bodo lahko dosledno uresničile načrtovano tranzicijo. Še zlasti, ker ima ta stran množico svojih privržencev v velikih podjetjih, v bankah, v skladih, v agencijah, v sodstvu, šolstvu, medijih, v sindikatih in drugod. Še celo vse stranke slovenske pomladi skupaj bi imele velike težave, ena sama pa je zaradi izrazito podrejene vloge vnaprej obsojena na neuspeh. Le čudimo se lahko zakaj se je vodstvo Slovenske ljudske stranke odločilo za ta korak, kljub zelo slabim izkušnjam, ki sta jih pred njo imela Socialdemokratska stranka in Slovenski krščanski demokrati. Ključni resorji, ki so pomembni za tranzicijo, bodo ostali v rokah levega bloka, če bo vlada danes izvoljena. Še več. Tudi večina resorjev, ki jih bo dobila Slovenske ljudska stranka bo politično paralizirana, da o konceptualnih neskladjih sploh ne govorim. Ne le, da Slovenska ljudska stranka na marsikatero ključno stvar ne bo imela nobenega vpliva, prepričan sem, da o mnogih pomembnih stvareh ne bo imela niti nujno potrebnih informacij. Žal mi je le poštenih ljudi, volivcev, ki bodo najbrž morali na uresničitev svojih idealov počakati še nekaj let. Predvsem zaradi spoštovanja volivcev Slovenske ljudske stranke predlagane vlade danes ne bom podprl. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg135">Hvala dr. Jožetu Zagožnu. Besedo dajem gospodu Bogomiru Špiletiču.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg136">Spoštovani gospod predsednik, spoštovani poslanci in vsi ostali prisotni! Moram reči, da me koalicijska pogodba med LDS in Slovensko ljudsko stranko resnično spominja na poroko, kjer se že od vsega začetka ve, kdo bo gospodar v hiši. To izhaja iz tega, da resorji, ki jih pokrivajo ministri, ki pripadajo LDS-u, pravzaprav razpolagajo s 70% vseh proračunskih odhodkov, ostalih 30 pa se nanaša na resorje, ki jih pokrivajo ministri s strani Slovenske ljudske stranke. Moram pa reči še nekaj drugega, kar je mogoče tudi ob pozornem branju te koalicijske pogodbe razbrati, to pa je, da ostajajo določene tabu teme in da nima do njih nihče dostopa niti vpogleda, razen LDS; kot na primer določilo, da se bosta Nova ljubljanska banka in Kreditna banka Maribor lastninili šele potem, ko bo revidiran zaključni račun za leto 1996, da pa bodo revizorja izbirali tako, da bodo o njem šele glasovali soglasno vsi člani Vlade. Ni dvoma torej, da LDS lahko kadarkoli prepreči, da ne bo dobila tistega revizorja, ki bi karkoli razkril, temveč da bo revizor pravi in da se bo še naprej vedelo, kdo je gospodar v hiši in čigave so finance. Namreč, finance so tiste, ki so pomembne in pravzaprav zato tudi ves politični boj, torej osnovni cilj političnega boja. Tako, da pravzaprav iz lepih besed, ki so zapisane v tej koalicijski pogodbi oziroma iz preambole koalicijske pogodbe, kjer je zapisano, da si bosta stranki prizadevali za prevlado zmerne politike in za dobrobit Slovenije, jaz bi rekel drugače: v bistvu gre za to, da bo še naprej prevladoval liberalizem za dobrobit LDS.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg137">Druga ugotovitev iz koalicijske pogodbe je tudi ta, da si bosta stranki prizadevali za učinkovito in transparentno zaključevanje lastninjenja podjetij in izvedbo revizij spornih lastninjenj. Kako naj verjamemo temu zapisanemu reku, ko pa bo pravzaprav nosilec te aktivnosti dr. Senjur, ki je, citiram, v reviji "Kolaps" dobesedno izjavil naslednje: "da je bilo pri revidiranju veliko poljubnosti. Ta poljubnost se je na primer kazala v tem, da je lahko neka državna agencija poljubno revidirala podjetja in zaustavila transformacijo podjetja." Drugi njegov citat pa pravi tako: "da je ta agencija lahko poljubno ugotavljala oškodovanja družbene lastnine", kot da v tej državi ne bi imeli zakona o lastninskem preoblikovanju podjetij, ki je jasno določal, kaj se šteje kot oškodovanje družbene lastnine in kaj se ne šteje kot oškodovanje družbene lastnine, še več, požvižga se celo na ugotovitev Ustavnega sodišča, ki je jasno ugotovilo, da ugotavljanje oškodovanj družbene lasntine, ki jih je opravljala Agencija za revidiranje po zakonu o lastninskem preoblikovanju, pomeni v bistvu zgolj konkretizacijo norm, ki so veljale že v času, ko je bilo storjeno oškodovanje družbene lastnine. Tako, da nikakor ne morem verjeti v to, da se bodo lepe besede, zapisane v koalicijski pogodbi, dejansko tudi izvedle.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg138">Naslednje, kar je pa še bolj problematično, je pa to, da je zapisano v tej koalicijski pogodbi, da se bo okrepil nadzor nad finančno porabo državnih in paradržavnih inštitucij. Moram reči, da sem tukaj iz dneva v dan bolj presenečen. Namreč pred 2. izredno sejo smo poslanci prejeli poročilo Računskega sodišča o Skladu Republike Slovenije za razvoj in tam je Računsko sodišče ugotovilo, da so razmere takšne, da na podlagi listin, ki v tem skladu obstajajo, ni mogoče podati realnega mnenja o tem, ali je tisto kar je izkazano v bilancah Sklada Republike Slovenije za razvoj, res ali ni res. Žal, danes smo poslanci naše poslanske skupine prejeli letno poročilo, ki ga je pri tem istem skladu, za to isto leto opravil komercialni revizor in to vse je seveda plačal Sklad Republike Slovenije za razvoj oziroma proračun, kjer pa komercialni revizorji ugotavljajo, da je po njihovem mnenju vse lepo in prav. Komu sedaj verjeti? Ali Računskemu sodišču, ki je najvišji organ za revidiranje računovodskih izkazov javne porabe, ali naj verjamemo komercialnemu revizorju na drugi strani in kdo se gre to dvojnost, po kakšnem pooblastilu, kdo bo odgovarjal za stroške te revizije?</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg139">Naslednje, kar velja prav gotovo poudariti in zaradi česar sem pa osebno še kako zaskrbljen, je pa pravzaprav dikcija v koalicijski pogodbi, kjer piše, da bo vlada mesečno spremljala in ugotavljala nepravilnosti in zlorabe pri delu upravnih organov. Vse to naj bi počel potencialni minister gospod Mirko Bandelj. Mislim, da je to višek ironije, kajti spomnimo se samo leto dni nazaj, ko si je gospod Bandelj vzel pravico in poslal v agencijo približno 10, 11 ljudi, od tega dva uniformirana policista in celo dva fizična delavca za, ne vem, zaradi tega, da bodo morebiti vdirali v prostore in prisilno odvzeli agenciji pravzaprav strokovno knjižnico in še pet drugih prostorov in jih zapečatili. Višje sodišče je ravno te dni odločilo, da se ugotavlja, da je Vlada Republike Slovenije motila Agencijo Republike Slovenije za plačilni promet v neposredni posesti. Še več, vlado je v 2. točki izreka v bistvu podučilo, da se naj tožena stranka, torej Vlada Republike Slovenije, da se je dolžna v prihodnje vzdržati vseh takšnih in podobnih motitvenih dejanj. To pravi Višje sodišče v Ljubljani. Tudi slike o tem, kako so nas izganjali iz bivše agencije za nadziranje, pa si jih lahko tudi ogledate. In sedaj naj bi taisti človek pravzaprav skrbel za red in disciplino dela upravnih organov. V to preprosto ni mogoče verjeti, zato resnično - ve se kdo je gospodar in gospodar bo isti, kot je bil v preteklosti - zato žal v tej vladi ni niti pomladnega vetra, kaj šele, da bi kaj cvetelo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg140">Hvala, gospod Špiletič. Besedo dajem gospodu Vincenciju Demšarju.</seg>
             </u>
             <note type="speaker">VINCENCIJ DEMŠAR:</note>
-            <u who="#SDZ2.DemšarVincencij" ana="#regular">
+            <u who="#DemšarVincencij">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg141">Hvala lepa za besedo, gospod predsednik. Lep pozdrav iz tisočletnega loškega gospostva. Ker smo danes že nekaj govorili o fevdalizmu, bi rekel, da je bil fevdalizem skoraj tisoč let na Loškem, da je gospodarstvo tam tudi še danes sorazmerno zrelo, zdravo, najmanjša brezposelnost. Mogoče pa tudi političen podatek, da iz tega gospodarstva izhaja 9 poslancev, ki so tu. Pri tem sem štel še 2 ali 3, ki sta v drugem kolenu, izvirata iz tega kraja. Toliko na račun fevdalizma, katerega se nekateri tu tako bojijo.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg142">K besedi sem se pa prijavil predvsem zaradi tega, da bi vas spomnil, da sem zadnjič govoril, kaj je liberalizem in podučen tudi teoretično po knjigi - jaz se gospodu Mogetu zahvalim za knjigo - tudi prebral sem jo, ampak tam je veliko teorije, mi pa tu doživljamo prakso. Nekateri koalicijski partnerji iz prejšnje pogodbe so bili danes silno prizanesljivi. Govorili so o politični higieni. Lahko bi govorili, da je to demokracija, da je modrost, lahko, da je to diplomacija, ampak jaz se sprašujem, kaj pomeni dati besedo in kaj še več nekaj podpisati. Vedno sem bil v prejšnjem sklicu prizadet, ko so grdo in slabo govorili o poslancih, o Državnem zboru, tam se samo prepirajo, tam se gredo politične igre in ravno zaradi tega se mi toliko bolj pomembno zdi, da rečemo, kaj je morala, kaj pomeni držati besedo. Sprašujem se, kaj sedaj ljudje mislijo tudi o tem parlamentu, kako je mogoče. Jaz se samo spomnim, ko smo prvikrat volili predsednika Državnega zbora in ga pač nismo izvolili. Ni minil dober dan, smo ga pa lahko izvolili. To pomeni, da se stvari lahko zelo hitro spreminjajo in počasi bi se skoraj prepričal v to, da v politiki te stvari tako tečejo. Vendar na take načine v nobenem primeru ne želim pristajati in tudi ne bom, zato bom na to moralno podobo, kar pomeni poštenost, znova in znova opozarjal. Seveda se pa bojim, da del tega liberalizma prihaja tudi preko vzgoje in pa preko kulture, zato o šolstvu niti ne bi tu spominjal, to sem že na predstavitvi kandidata za ministra za šolstvo povedal.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg143">Bi pa omenil samo en del iz te koalicijske pogodbe, kjer je govora o kulturi. Jaz verjamem, da se o vsem ne da pisati, vendar je tam v treh točkah v primerjavi z drugimi področji, pa vendar zame zadosti pomembno področje tudi kulture, v treh točkah je povedano, kako bo na področju kulture. Mislim, da bi bilo prav, če bi bilo v nekem sorazmerju z ostalimi področji. Prvo bi omenil, da se tu ne napoveduje iz tega sporazuma nikakršna zakonodajna pobuda na področju kulture. Drugič, da se ne vidi iz tega, da bi se dotikalo to kaj uresničevanja kulture glede televizije. Nadalje ostaja odprto vprašanje organiziranosti in pa financiranje ljubiteljske kulture. Sami vemo, kako je s tem skladom za ljubiteljsko kulturo. Po drugi strani, kot četrto, bi omenil tudi to, da je pred nekaj meseci delegacija ministrstva za kulturo pred ustreznim forumom Sveta Evrope predstavila naše delo - o tem se je tudi veliko govorilo - in da sedaj, v samem sporazumu ni ustreznega odziva na tovrstno vključevanje v Evropo. Kot eno kardinalnih vprašanj se mi postavlja to, da je bilo v prejšnjem dogovoru med pomladnimi strankami zapisano, da bomo do leta 2000 prešli s 3% sredstev iz proračuna za potrebe kulture. Torej, tega tu notri sedaj ni videti in zato se bojim, da se kulturi slabo piše.</seg>
@@ -847,11 +828,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg146">Žal mi je bilo ob vseh predstavitvah sedaj novih kandidatov, za katere sem s strani ljudske stranke prepričan, da so dobri, ampak istočasno sem pa tudi prepričan, da v tej združbi ne bodo uspeli realizirati tistih lepih idej, pobud in sposobnosti, ki jih imajo. Zato moje sožalje Slovenski ljudski stranki. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg147">Hvala lepa gospodu Demšarju. Besedo ima gospod Izidor Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg148">Spoštovani gospod predsednik, gospe in gospodje, gospod mandatar, kandidati za ministre! Začel bom z uvodnimi razmišljanji mandatarja dr. Janeza Drnovška. Rekel je, da je bil oziroma da je bilo potrebno dotedanja bloka razformirati in da to pomeni, da se ustvarja bolj zrelo demokracijo. Kakorkoli bomo to obračali, odgovarjam takole: v vsakem primeru bo bila pozicija in opozicija, v vsakem primeru pa je to dosti pozno rečeno, ker ko smo bili SKD-jevci v Vladi, ni bilo tako ocenjeno, da je s tem bolj zrela demokracija, ampak so bili povsem drugi prilastki. In seveda tista želja, ki je bila na koncu izrečena, gospod mandatar, da bi bila naša demokracija ena najbolj razvitih, menim, da pa je gotovo vrženo kot izjemen up.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg149">Glede tega, kakšna je ta predlagana vlada, hmm, si bom tudi jaz dovolil, da menim, da je brvna, to se pravi, to je brv, nimam je za most, ker tudi menim, da smo ali pa da ste, ko ste načenjali koncept vlade, predvsem šli daleč od tega, da bi bila vlada racionalna, da bi imela evropski izgled in da bi imela recimo tam 12, 14 ministrstev. Ob vsem tem boste gotovo slišali očitke, da niste uspeli pridobiti in pritegniti nobene dame v svoj sestav. Menim pa, da je gotovo ravno to tisto, ta številčnost te vlade, znak tega, bi rekel, računskega pristopa in seveda kupčkanja, da bi se do določene polovice prišlo, pri tem pa seveda obdržati glavne resorje. Mislim, v tem je seveda ta povzetek in ta siže, ko človek gleda predlog sestave vlade. Moram pa reči, da sem bil včeraj, ko sem dobil gradivo za današnjo sejo, strašno presenečen, ko sem šel šteti ministrstva in sem ugotovil, da mi manjkajo ljudje. In ko sem ugotovil, da ni bilo med njimi Marjana Podobnika, seveda me je to spomnilo na tisto, da se še niste med sabo navadili, po eni strani, po drugi strani pa sem tudi ugotovil, da je tudi mandatar velikokrat imel težave s tem, bodisi s titulami ali pa s priimki, skratka, da je ta številčnost res problem in menim, da se jo je treba čimprej iznebiti. Gotovo pa to ni bilo v prid prizadevanju gospoda Marjana Podobnika, ko ni bil niti potem tako upoštevan, da bi ga dali na seznam - danes ste to seveda popravili, vendar ta popravek je gotovo, bi rekel, deluje zelo tako, neprijetno in seveda nikomur v čast.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg150">Zgodba o prehodu, kot temu rečeno, ali o tranziciji, jaz uporabljam ta izraz "prehod", menim, da se sedaj dokazuje v tem, da pač vlada lega v posteljo, katero greje lagodnost, pokrita je s tem liberalizmom, daleč nekje pa je to ljubo slovensko potrpežljivo ljudstvo. Nekaj takega je. In menim, da z ozirom na to, da dobivamo zelo slabe ocene iz bruseljskih daljav, predvsem glede tega vključevanja naše zakonodaje in sploh naših trendov, menim, da smo v velikem zaostanku in ker se danes večkrat pojavlja vprašanje, kje smo in kako smo se osamosvajali, moram povedati, da v tistem letu 1990-1991, smo bili gotovo med najbolj razvitimi tega področja, kamor nas tudi, bom rekel, na vzhod dajejo in da smo to mesto lepo zapravili v teh letih, kar pomeni, da je to veliko opozorilo in resno opozorilo. Menim, da je tudi in to se vidi iz določenih spraševanj in ugotovitev ali pa celo obiskov, ki so bili zadnje čase tu iz tujine, videti, da so mnogi ljudje, ki delajo na področju prilagajanja Evropi, nezainteresirani. Skratka tudi ta Urad za evropske zadeve, vidimo, da ima nosilce, ki so jim cilji in stremljenja drugod in smo pred tem, da bo treba res tja dati ljudi, ki vedo kaj hočejo in ki seveda se jim res tudi čudno mudi in se zavedajo tega. Mnogi ste danes ali pa nekateri ste danes tudi govorili o tem, kako bodimo previdni, pa moram reči, da včeraj je ravno pod to dvorano potekal en proces, eno določeno razglabljanje, razmišljanje o oživljanju gospodarstva in tudi tam je bilo povedano precej takih, bi rekel izrazov in pomislekov o Evropi.</seg>
@@ -863,18 +844,18 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg156">Teh 90 dni oziroma 100 dni, če se 11 oziroma 10 dni še zamiži, menim, da bi lahko prizanesli, če bo ta vlada izvoljena, predvsem tem mlajšim, tem pa, ki seveda izhajajo iz prejšnje vladne strukture, pa gotovo da ne. Moram pa povedati, da gotovo kaj posebnega ne pričakujem. In tudi tista primerjava o izkušenosti, mladostnosti in umirjenosti, je seveda primerjava, ki je stopnjevanje nekega pojma, seveda ob tem se niso leta seštevala, meni bolj vprašljivo v tem smislu, kot sem tudi načel, kako bomo to zaostajanje, to nepribliževanje, vse to, ko smo že v teh štirih, petih letih to zaostajanje očitno dosegli za nekaterimi državami, ki nas prehitevajo v tem vzhodnem delu, ki se trudijo, da pridejo v Evropo - kako bomo to dosegli? Žal, mislim, ne morem dobiti, nimam odgovora z ozirom na to, ker v glavnem gotovo poznam predvsem ta gospodarski del kandidatov in nimam gotovo kakšnega posebnega upanja ali pa kakšnih posebnih, recimo 20, 25 točk, kot sem jih prej slišal, češ upam in tako naprej, da se bo to zgodilo. Menim, da se ne bo nič posebnega zgodilo in da pač nas čaka tak čas. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg157">Hvala lepa gospodu Rejcu. Končali ste točno ob 13.00 uri. Prijavljenih je še nekaj razpravljalcev. Razpravo prekinjam do 14.00 ure.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 13.00 uri in se je nadaljevala ob 14.12 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg158">Poslanke in poslanci! Nadaljujemo sejo. Najprej ugotavljamo prisotnost.</seg>
                <note>57 poslank in poslancev.</note>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg159">Državni zbor je sklepčen in lahko nadaljuje z delom. Nadaljujemo z razpravo, smo pri razpravi poslank in poslancev. Po vrstnem redu, kot ste se prijavili, vam dajem besedo. Naslednji ima besedo gospod Pavel Rupar.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ2.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg160">Spoštovani gospod predsednik, spoštovane kolegice in kolegi, spoštovani kandidati! Jaz kar ne morem od tiste podkupovalne afere preč, zato, ker sem zelo vesel, da je končno dobila tudi svoj, en tak mini epilog. Namreč, znano mi je, da sta človeka, ki sta bila naročena podkupovalca s strani Liberalne demokracije, bila nekako izključena iz te stranke. S tem je priznano dejstvo in se v tem delu tudi zahvaljujem za priznanje tega spektakla, če lahko tako rečem. Škoda, ker to ne dobi epiloga na sodišču, kar bi bilo zelo pošteno in pravično, tudi kakšne posebne komisije za raziskavo tega "trgovskega" podviga ni bilo. Seveda pa se mi pojavlja drugo vprašanje, kaj tukaj počne Slovenska ljudska stranka glede te afere. Kot vem, ste bili zelo kritični do takih poskusov, zelo ste obsojali to zadevo. Po drugi strani pa se mi iz tega magnetograma, ki ga bom verjetno hranil celo življenje, nenehno pojavljajo neka nova spoznanja, na katera žal nismo bili kdove kako pozorni, smo pa zdaj toliko bolj, ker se dejansko ta zadeva odvija po točnem scenariju, ki se je začel zelo kmalu po volitvah. Namreč, Slovenska ljudska stranka - pa se opravičujem, ker bom vzel prispodobo kolega Peterleta - je bila pravzaprav pri začetku zidave mostov sredi vode, sicer ne do grla v njej, ampak stala je na sredini neke reke in je zidala malo na levo, malo na desno; na katerikoli breg bi prej prišla, tam bi bila, ampak prav gotovo že z začetkom trdno odločena, da v vladi sodeluje. Kako lahko to dokažem?</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg161">5. decembra lansko leto je eden od liberalnih demokratov, ki se je zelo trudil ponuditi tiste velike vsote denarja za moj prestop, dejal</seg>
                <note>citiram</note>
@@ -882,21 +863,21 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg163">S tem se pa odpira zelo veliko vprašanj, ne samo moralnih, ne samo koliko ste blefirali ene in druge, koliko ste ljudi vozili. Moje osebno prepričanje je, da načelnosti ni. Škoda. Iz vsega skupaj bi na koncu koncev rad videl še eno drugo zadevo. Namreč kaseto, iz katere je ta magnetogram narejen, ste menda izročili nekim strokovnjakom na Nizozemsko. Od tam se menda ni vrnila. Jaz bi pa res rad videl, kaj so tam strokovnjaki ugotovili, če je sploh do tja prišla in seveda enkrat bi resnično rad videl, da nekdo pove, da je ta kaseta prava in da so vsi ti dokumenti, vse to, kar zdaj berem, kar govorim, resnica in zelo obžalujem, zelo obžalujem potezo, ki ste jo naredili, čeprav sem bil zadnjič, ko sem bil za to govornico, strašen optimist in sem bil pravzaprav zelo vesel, danes lahko rečem, da ta most, ki ste ga gradili, vas je sicer pripeljal nekam, ampak kako boste pa nazaj prišli, to pa ne vem. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg164">Hvala lepa, gospod Rupar. Besedo ima gospod Mirko Zamernik.</seg>
             </u>
             <note type="speaker">MIRKO ZAMERNIK:</note>
-            <u who="#SDZ2.ZamernikBogomir" ana="#regular">
+            <u who="#ZamernikBogomir">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg165">Spoštovani! Prav lep pozdrav tudi v mojem imenu. Pravijo, da je po kosilu najbolj enostavno nastopati, ker vsi dremljajo, tule pa nihče nič ne sliši. V tej kratki parlamentarni karieri imam občutek, da itak malokdo kaj posluša, kaj se tu reče. Pa vendar, mogoče bo pa tisti, katerega izraze bom sedajle uporabljal, pa vendarle prisluhnil temu. Takrat pa se naj sam spozna. Takrat je bilo rečeno takole. "Danes ne odločamo o slovenski vladi, ampak o tem, kam Slovenci kot narod plujemo." Takrat je bilo tudi izraženo veliko skrbi o nekaterih fazah privatizacije, pa o vzpostavitvi pravne države. O tem, kar smo poslušali, kar je povedal govornik pred mano. Zelo smo bili zaskrbljeni, to pa tudi mene osebno najbolj skrbi kot predstavnika takega območja, se pravi demografsko ogroženega, kaj bo s slovenskim podeželjem, da če ne bo odločnega zasuka v smeri enakomernega razvoja, kaj potem bo? Sedaj je v tem koalicijskem sporazumu napisano, da se bo to nekako poskušalo urejati, vendar je napisano tudi to, da morajo poslanci koalicijskih strank glasovati tako, kot z večino odloči vlada. Kakšna je bila politika vlade, ki bo sedaj imela večino v tej vladi, prej do demografsko ogroženih območij, vemo oziroma vsaj mi zelo dobro vemo. Kljub 5-letni vladavini, kljub velikokratnim obiskom, gospod predsednik, v naših krajih - vemo, kakšni kraji so tam gor - kako zapostavljen je ta del Slovenije in sprašujem vas, kako se boste kot ljudje odločali, če se bo vlada odločila drugače, tako kot se je sedaj 5 let. Ali vam bo dala vaša vest, za katero sem trdno prepričan, da jo imate v veliki meri, da glasujete tako, kot vas zavezuje koalicijska pogodba? To pa je tako, kot je večinska odločitev vlade. V mislih imam konkretne primere s Pavlovičevim sedlom in tega, česar je ogromno slišati zadnje čase, vendar žal besedam, retoriki očitno ne moremo več verjeti.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg166">Ob koncu bi uporabil še eno misel, ki je bila tudi že takrat uporabljena - o tem zakonu narave, ki pravi o setvi in žetvi: Kar boš sejal, to boš tudi žel. Sprašujem tega istega, ki je to izrazil takrat, kaj pričakuje, kakšna bo žetev tam, kjer se je sejalo nepoštenje, neiskrenost in pa razdiranje pogodb? Če se je to sejalo, kaj se bo želo?</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg167">Čisto nazadnje, ker vendarle, kot sem že prej rekel, sem trdno prepričan, da obstoja neka vest. Sprašujem predsednika Državnega zbora - tisti črni petek, za katerega je tudi meni zelo žal, da se je zgodil, ste izjavili, ko se je očitalo, da se je na podlagi tega dogovora izvolilo tudi predsednika Državnega zbora, ste temu očitku dejali, da ni noben problem ponuditi tudi odstopa. Takrat ste vi sami to izjavili, drugače vas to ne bi vprašal. Sprašujem, ali boste tudi to umaknili? Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg168">Hvala gospodu Zamerniku. Besedo dajem gospodu Marjanu Podobniku.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg169">Spoštovani! Zahvaljujem se na nek način za dobronamerna opozorila - tista, ki niso bila dobronamerna, vsak sam ve, zakaj jih je na tak način izpostavil - ki govorijo o potrebi velike previdnosti, premišljenosti in skušam tudi razumeti razloge za mnenje, da je seveda poteza Slovenske ljudske stranke, za katero smo se odločili, napačna. Ampak ob vsem relativno pozornem spremljanju razprave niste podali vsi skupaj niti ene alternative - do zdaj je nisem slišal. In to je tisto temeljno vprašanje, zaradi katerega sem se predvsem odločil, da bom odgovoril na nekatere pomisleke in da bom pač izkoristil tudi priliko in povedal stvari, za katere je prav, da jih slovenska javnost ve; da jih ve tudi zato, ker nekateri poslanci strank, ki ste danes tu razpravljali, jih očitno ne veste, ali pa preprosto ste verjeli izjavam, ki niso bile resnične. Jaz jih bom povedal zato, ker sem sam bil pred veliko dilemo. Tudi sam sem se zelo težko odločal, ko je šlo za vprašanja, za glasovanja, tudi na glavnem odboru. Vendar na koncu s povsem mirno vestjo, čisto vestjo in vsakemu izmed vas tukaj in vsakemu, ki nas danes kot član, kot Slovenec, kot slovenski državljan gleda, lahko pogledam v oči v prepričanju, prvič, da nismo prekršili nobene pogodbe.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg170">Slovenska ljudska stranka je obravnavala, torej glavni odbor Slovenske ljudske stranke je obravnaval na svoji seji, potem, ko je padel prvič poskus, da bi sami oblikovali vlado strank slovenske pomladi, ko je propadla možnost oblikovanja vlade narodne enotnosti, ko se je ugotovilo, da očitno ne en ne drug blok ne moreta vzpostaviti sama ustrezne večine, ko se je ugotovilo, da ni pripravljenosti posameznih strank slovenske pomladi, da bi sodelovale v širši vladi, je obravnaval nastale razmere in ugotovil, da koalicijska pogodba, dogovor, ki smo ga podpisali, ne zavezuje več Slovenske ljudske stranke, ker ni nobenih realnih možnosti, da bi člene te pogodbe lahko izvajali. Zakaj je prišlo do tega, da ni bilo možno izvajati koalicijske pogodbe, dogovora med tremi strankami slovenske pomladi? Morda samo na kratko, da naštejem:</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg171">Prvič zato, ker je poslanec Slovenskih krščanskih demokratov zapustil svojo poslansko skupino in s tem preprečil, da bi bila vsaj osnovna možnost, da stranke slovenske pomladi dobijo svojo vlado in jo tudi vodijo.</seg>
@@ -920,11 +901,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg189">Jaz upam, da bo možno sodelovanje, če bo ta vlada potrjena, med vsemi parlamentarnimi strankami. V tem smislu se priporočam za to sodelovanje. Na vseh tistih področjih, kjer so naši predstavniki tudi v preteklosti vodili, ali različne komisije, preiskovalne in druge komisije državnega zbora ali pa na drugih področjih sodelovali, smo popolnoma odprti za sodelovanje z vsemi parlamentarnimi strankami, ne glede na pozicijsko, opozicijsko vlogo oziroma politično prepričanje, kajti žal ni dovolj, da rečemo, ta sedanji predlog je slab. Vendarle je treba vedeti, da ima danes Slovenija hude gospodarske, socialne probleme, težave na zunanje-političnem področju. S sosednjimi državami moramo nekatere zelo zahtevne probleme intenzivno skušati razreševati. Mi smo prevzeli veliko tveganje. Zavedamo se tega tveganja. Veseli bomo, če bo rezultat tega tveganja ta, da bo ob nekoliko manjši razklanosti slovenske politične javnosti prišlo tudi do rešitve vsaj nekaterih ključnih problemov, pred katerimi je Slovenija. In če se bo to zgodilo, potem cena, ki jo bo plačala Slovenska ljudska stranka za to tveganje, zagotovo ne bo prevelika. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg190">Hvala lepa, gospod Marjan Podobnik. Za repliko se je priglasil gospod Lojze Peterle in gospod Potrč.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg191">Spoštovani! Upam, da bom kljub gripoznim težavam z glasom vseeno jasen. Gospod poslanec Podobnik pravi, da ni bilo nobene alternative. Alternative ni, če je ne maraš. Alternativa je bila, ko so se stranke slovenske pomladi odločile, da delajo skupaj. Govorili smo takrat od znotraj ali od zunaj, vendar skupaj. Alternativa je trajala do glasovanja, na katerem je padel prvi predlog Drnovškove vlade, ko se je glasovanje zaključilo 45:45. Takrat, ko smo imeli tako rekoč največ kart v rokah, je nekdo karte vrgel stran. V pokru se menda temu reče "pas", neham in grem drugam.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg192">In kar zadeva pripravljenosti za vlado - mi smo javno to večkrat povedali, nismo šli pa za vsako ceno, to smo jasno povedali in ne bom govoril za Socialdemokrate, ker se bodo gotovo sami oglasili; mi smo rekli: Na tak način ne. Zahtevamo transparentna pravila igre, garancijo, da ne bo tako, kot je bilo v tej rundi, ko se niti enkrat na pol leta, nekaj časa te koalicije nismo mogli srečati v skladu s koalicijsko pogodbo. Od 1. julija lani predsednik Vlade ni več sklical koordinacije obeh koalicijskih partnerjev. Do zdaj dela ta vlada brez te koordinacije, ki je zapisana v koalicijski pogodbi in ne želim, da se to komu ponavlja. Prepričan sem, da bi s 44 glasovi, v primeru, da bi šel tisti glas nazaj - rečeno je že bilo, da naslednjič pa ne bo tako in da bo disciplina. Torej, če bi bila disciplina, bi tisti glas mogoče prišel nazaj, ali pa tudi ne. S 44 glasovi bi mi enotno lahko uveljavljali tisto, čemur se reče demokratična alternativa na Slovenskem. Če pa nekdo zapusti to družbo, ki je bila vezana s sporazumom in s koalicijsko pogodbo in gre na drugo stran, potem se stvari bistveno spremenijo. Prepričan sem, da bi s 44 glasovi v opoziciji dosegli več za to državo, kakor bo zdaj ta koalicija oziroma bo SLS z deloma pomladnim programom, kakor beremo, dosegla v koaliciji, v kateri bo v izraziti manjšini po številu ljudi, po teži resorjev, po kontroli denarja itd.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg193">Omenjen je bil gospod Bajuk. On je že večkrat prosil, naj se ga javno ne omenja, ker to ne želi oziroma niti ne želi sodelovati naprej. Bil je pripravljen sodelovati v primeru, če bi te tri stranke šle skupaj v vlado. V tem primeru bi pustil lepo službo v Parizu in ne bi bil več vezan na zahteve te službe in on se ne želi oziroma tudi ne sme vezati sedaj na kakšne take postranske angažmaje, ker pravila njegove službe to zahtevajo. Zato protestira proti javnim navedbam - mislim, da je bilo tudi v Večeru - Bajuk torej ne svetuje SLS in ne želi biti omenjen kot kakšen svetovalec.</seg>
@@ -934,22 +915,22 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg197">Ne bi želel moralizirati v tej smeri naprej in se bom, mislim, da je zadeva potekla, oglasil še, ko bom dobil redno besedo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg198">Hvala lepa gospodu Peterletu. Repliko ima gospod Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg199">Hvala lepa. Gospod Marjan Podobnik se je korektno potrudil, da bi poskušal opozoriti, kje meni, da nisem bil dovolj natančen v svojih navedbah. Naj najprej povem, jaz imam nepodpisan koalicijski sporazum, ki nosi datum 18.2.1997, ob 19.20 uri - upam, da je pravi, ne garantiram pa in na njega se sklicujem, toliko samo za pojasnilo.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg200">Kar zadeva pa opozorila, ki jih je dal, samo to. V točki 3 na strani 7 v zvezi z denacionalizacijo, jaz seveda berem tako: "na ravni vladnega nadzora se bo mesečno, statistično spremljalo izvajanje upravnih postopkov" - en del, "ob sočasnem", poudarjam, "ugotavljanju nepravilnosti in zlorab". Nepravilnosti in zlorabe se bodo ugotavljale - in tu se konča, nič drugega. To, po mojem, je bistveno manj in tako berem, kot piše; lahko berem s hudobijo, vse se strinjam, ampak berem, kakor piše, tako sem navajen. To je gotovo bistveno manj, gospod Podobnik, od tistega, kar imamo mi v našem sporazumu v točki 11 na strani 4, kjer pravimo: "Priprava in uveljavitev predpisov, ki bodo omogočili revizije zlorab v postopkih denacionalizacije in onemogočili ponovno vzpostavitev fevdalnih odnosov." Pa še enkrat k temu pojasnilo: Vem, da ni nobene dolžnosti, da mora biti vsebina, ena in druga, enaka, zastopite, ampak pravim, samo opozarjam na razlike, ki so dovolj bistvene.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg201">Drugo, kar zadeva kmetijstva. Strinjam se z vami, na eni in na drugi strani so pripombe, zakaj sem jih recimo dal jaz, pa nisem hotel tega posebej prej omenjati, ker sem že predolgo govoril. Poglejte, nam se zdi, da je vsaj toliko problemov kot na področju kmetijstva tudi v industriji oziroma v realnem sektorju sploh. Mi smo izgubili v zadnjih petih letih preko 100.000 delovnih mest na tem področju in mi smo imeli v našem sporazumu obvezo storiti nekaj tudi za sanacijo realnega sektorja gospodarstva. Vi tega enostavno nimate in je problem samo kmetijstvo. Nas ne moti, da je posebno poglavje o kmetijstvu, ampak recimo tudi, ko govorite nasploh o raziskovalni dejavnosti, rečete, s posebnim poudarkom na kmetijstvu. Zakaj pa raziskovalna dejavnost ni pomembna kje drugje? V tem smislu je ta primerjava.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg202">In tretje. Jaz sem hvaležen, da ste, ne toliko zaradi mene, čeprav tudi zame, pojasnili, kako se boste zavzemali glede, vi osebno in vaša stranka, glede narodnih skupnosti in hkrati povedali, da tega res v sporazumu ni. Bi pa opozoril na nekaj. V sporazumu, ki ga jaz omenjam, so "narodne manjšine in drugi" iz temeljne listine. In vi ste, kar zadeva "narodne manjšine", rekel ja, kar zadeva pa "drugih" iz temeljne listine, to so pa tudi borci, to so vojaški vojni invalidi, to so še kdo, toda glede tega niste rekli nič in dopuščam, bi rekel možnost, da tu skepsa pa obstoja in bom vesel, če boste tudi to demantirali. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg203">Hvala lepa, gospod Potrč. Besedo dajem gospodu Rudolfu Petanu.</seg>
             </u>
             <note type="speaker">RUDOLF PETAN:</note>
-            <u who="#SDZ2.PetanRudolf" ana="#regular">
+            <u who="#PetanRudolf">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg204">Spoštovani gospod predsednik, spoštovani kandidati, spoštovane kolegice in kolegi poslanci! Opredelitev za koalicijsko vlado, ki je sestavljena nekako obratno sorazmerno z volilnim rezultatom, prav gotovo ni enostavna. Večinska volilna opcija slovenske pomladi je v tej predlagani vladi v manjšini in če uporabim izkušnje iz preteklosti, ko je služila za pokrivanje legitimitete in kot dežurni krivec za neprijetne ukrepe vlade.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg205">Jaz upam, da se zgodovina kar naprej pa mogoče res ne bo ponavljala. Ob glasovanju pa se mi pojavlja še druga dilema, to je delitev na stare, preizkušene kadre in na nove okrepitve, ki jim verjetno bomo morali dati tisti čas, da se bodo lahko izkazali. Sedaj, ali bo 100 dni dovolj, o tem ne bi želel soditi v naprej. S starimi kadri imamo marsikdaj tudi slabe izkušnje in zato je tudi se okrepil ta program slovenske pomladi in pa tisti, ki so glasovali za ta program slovenske pomladi in ki je tudi zmagal na lanskih volitvah. Vprašanje je prav gotovo, kako bo ta nova sveža kri osvežila staro garnituro, ki pa je v večini. To se sprašujejo tudi številni Slovenci in Slovenke, tistih 500.000, ki so glasovali za stranke slovenske pomladi, ki so glasovali za spremembe, torej za nekaj drugega kot je predstavljala garnitura, ki ima v tej predloženi vladi večino.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg206">Predvsem pa se pojavljajo vprašanja, kaj bo s pomladjo. Veliko se špekulira, v narekovaju, z ugotovitvijo, da je sedaj uspela akcija razbijanja slovenske pomladi. Ali je to res ali ne, pa je potrebno najprej ugotoviti, kaj se sploh skriva pod tem pojmom slovenska pomlad. Za nas je to predvsem program, program za plebiscitarno Slovenijo. Pa da ne bi mislili, kaj si predstavljam pod tem pojmom, bi z drugimi besedami rekel, da za takšno Slovenijo, kot smo jo takrat, ko smo se odločali za svojo državo, imeli v mislih in takrat je večina Slovencev imela v mislih prav gotovo drugačno državo. Verjetno bo držalo, da smo si takrat v evforiji edinstvene priložnosti, ki se nam je ponudila, stvari tudi idealizirali in si zamišljali stvari, ki v praksi mogoče celo niso izvedljive, ali pa zelo težko, vendar nekaj pa je gotovo. To, kar smo doživeli, kar smo preživeli in kar imamo sedaj, je prav gotovo daleč izpod ravni možne realnosti.</seg>
@@ -959,11 +940,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg210">Spoštovani! Smo in ostajamo alternativa za boljšo Slovenijo in pripadamo polu za boljšo in pravičnejšo državo. No, tudi Socialdemokrati smo se pripravljeni pustiti presenetiti. Bojimo pa se, da se bodo vremena Slovencem razjasnila šele z uresničitvijo programa slovenske pomladi, ki mu pri Socialdemokratski stranki stranki ostajamo zvesti. Kljub težki poti, ki nas čaka v opoziciji, smo na to ponosni in pripadamo tistim, ki dajo nekaj nase. Tu mislim na naše besede in na naša dejanja, ne glede na čas ali pred volitvami ali pa po volitvah. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg211">Hvala lepa gospodu Petanu. K razpravi se je prijavila gospa Majda Kregelj-Zbačnik.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg212">Spoštovani! Zopet smo slišali od kandidata za podpredsednika Vlade veliko lepih obljub, vendar se žal od obljub ne da živeti, potrebna so dejanja. Novembrske volitve so mnogim prinesle upanje, upanje, da se je začel nov dan, ko bo v Sloveniji končno jasno, kdo je kdo, in ko bodo maske padle.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg213">Sporočilo, ki so nam ga volitvah posredovali volivci, je bilo jasno. Zahtevali so razvidnost, jasnost in preglednost političnega prostora. Danes, skoraj 3 mesece po volitvah, z velikim razočaranjem lahko ugotavljam, in ne samo jaz, zadnjih 14 dni je odzivov tistih, ki so me izvolili, pa tudi tistih, ki so glasovali za kolege iz Slovenske ljudske stranke, ogromno. Iz njih je moč razbrati, da se ljudje počutijo prevarane, opeharjene in predvsem razočarane. V državah, kjer vladajo moralne norme in so vrednote poštenost, iskrenost ter doslednost, cenjene in spoštovane, je zaupanje v vsakdanjem in poslovnem življenju, pa tudi v politiki nekaj, na čemer temeljijo medčloveški odnosi. Koalicija, o kateri bomo danes glasovali, je nastala na zlorabljenem zaupanju. Kakšni politični partnerji so to, ki danes podpišejo koalicijsko pogodbo, jutri pa na dogovor pozabijo, ga niti ne prekličejo in ne sklenejo novega. Tako sta ravnali obe politični stranki, ki bosta, če bo predlog nove vlade danes potrjen, vodili Slovenijo v zelo odgovornih in težkih časih njenega vključevanja v Evropsko zvezo in v druge mednarodne integracije.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg214">Meni osebno in mnogim mojim volivcem je moralno sporen in nesprejemljiv način, kako je prišlo do te koalicije. Ali bo torej v prihodnje v Sloveniji prevladal tako imenovani totalni pragmatizem, ki danes prelomi besedo, dano včeraj in ki za vsako izdajo najde opravičilo. Takšno je sporočilo takšnega ravnanja mladim generacijam, da cilj opravičuje vsa sredstva. Resnično me skrbi, če bo danes izvoljena predlagana vladna ekipa, kaj bo Sloveniji prinesel jutri. Ne nazadnje, sanjska ekipa doktor Drnovška ni uspela prepričati Evrope. Kako naj sicer drugače razumemo nedavno sporočilo Sveta centra za evropske in politične študije v Bruslju, kjer je Slovenijo glede prilagajanja evropski zakonodaji uvrstilo za Poljsko, Češko, Madžarsko, Slovaško, Litvo, Estonijo, Bolgarijo in Romunijo. Slovenija se je uvrstila na zadnje mesto, skupaj z Latvijo.</seg>
@@ -971,11 +952,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg216">Bodoči slovenski vladi bomo Socialdemokrati vedno držali ogledalo, budno bomo spremljali vse njene korake in odločitve, kajti vse, kar se dogaja v Sloveniji, je tudi naš problem, saj je odgovornost veliko večja, ker bodo posledice čutile tudi prihodnje generacije. Življenje je odločitev. Tudi v politiki je tako. So besede in so tudi dejanja. Zato bom danes glasovala proti predlagani vladni ekipi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg217">Hvala gospe Zbačnikovi. Besedo ima gospod Lojze Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg218">Spoštovani! Mislim, da nima smisla, da dodajam svoj pogled na moralno dimenzijo današnjega pogovora in odločitev, ki so bile sprejete. Jaz samo računam, da se ne bo zgodilo s slovensko državo enako kot se je zgodilo s partnerji, ki so bili mimogrede pozabljeni.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg219">Se bom ustavil najprej pri programu. Do tistega petka, ki sem ga prej omenjal, smo imeli kljub vsem naših prizadevanjem na mizi samo 13 točk oziroma v najboljši varianti 13 točk programa na eni strani. S tega vidika seveda opažam velik napredek, kajti sedaj imamo 13 strani. Vesel bi bil, če bi teh 13 strani odražalo neko, vseprežemajočo vizijo, neko enotno strategijo; žal mi to ne deluje tako, ampak deluje bolj kot lepljenka. Včasih se prepoznamo v programu, ker najdemo notri tudi cele pasuse tega, kar je naša stranka uveljavljala v programu, ki so ga skupaj sestavile stranke slovenske pomladi; tako recimo glede zdravstva. V tem programu piše veliko o nekaterih zadevah, zelo natančno kot recimo o tem, kaj je potrebno storiti z agencijo za sanacijo bank; tam gre program v ta detajl, da bo potrebno spremeniti statut, hkrati pa ima tisto neverjetno napako oziroma dejstvo, ki so ga nekateri že prav brali, da revizij ne bo, kajti edino tukaj je vlada vezana na popolno soglasje. Si ne predstavljam, da bo kdaj do revizije prišlo, pri takem pogoju.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg220">In če grem na nekaj konkretnih zadev. Imam lep spomin na gospoda dr. Senjurja, ki je bil asistent na ekonomski fakulteti, ko sem tam študiral ekonomijo, ampak težko mi gre skupaj tisto, kar je pisal ob koncu lanskega leta o obrestih, ker mislim, da so tista stališča povsem v nasprotju s tem, kar je doslej delala Vlada ali pa kar želi še delati. Mislim, da se Vlada ne bo strinjala s tem, da so za nas primerne visoke obresti. In seveda, zame je vprašanje, kako se lahko tako hitro, bi rekel, neka temeljna linija nekega razmišljanja podredi neki poziciji. Glede kmetijstva je bilo tudi govora. Prej je že gospod poslanec Božič o tem podrobneje govoril. Naj rečem samo naslednje.</seg>
@@ -999,11 +980,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg237">Rad bi povedal še tole: ne glede na to, kaj se je zgodilo, mi želimo tej vladi, ne glede na sestavo, da za Slovenijo dela dobro, zato ker želimo, da se v tej državi ljudem dobro godi. Rezerve, zakaj se bojimo, da temu ne bo tako, smo povedali. Mi bomo v opoziciji zvesti temu, kar je pričakovala večina volilcev na zadnjih volitvah. Bistven del našega opozicijskega delovanja pa bo v tem, da bomo pozicijo držali za besedo. In glede na program, ki ga je dala, jo bomo imeli držati za marsikaj. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg238">Hvala lepa gospodu Peterletu. K repliki se je priglasil gospod Marjan Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg239">Spoštovani! Zelo sem vesel, da je gospod Peterle izrazil spoštovanje do našega vodjo poslanske skupine, dr. Zagožna. Če bi ga morda nekoliko poslušal tudi kdaj v preteklosti, bi bili morda kakšni učinki na kakšnih drugih področjih mnogo boljši, tudi kakšen dober nasvet je kdaj dal. Vendar, kljub vsemu poudarjam, dr. Zagožen je kot dejansko eden od ustanoviteljev naše stranke, poudaril pomen trdnosti in stabilnosti Slovenske ljudske stranke, če želimo, da bo ta vlada lahko naredila del tistega, kar brez dvoma pričakujejo tudi vsi tisti, ki so znotraj Slovenske ljudske stranke večinsko podprli odločitev za to rešitev, za to dvostransko koalicijo. In jaz verjamem, da bo na tej poti tudi sam v veliko pomoč.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg240">Glede dr. Bajuka - meni je žal, da ga moram ponovno omeniti tukaj, ampak moram povedati, da mi je povedal, ko sem zadnjič govoril z njim po telefonu, zelo podobno, ampak nisem bil jaz tisti, ki sem prišel s predlogom vlade v senci, v kateri se je omenil dr. Bajuk, ki je povedal, da je bil pripravljen sodelovati v vladi, v kateri bi bile vse tri stranke slovenske pomladi in to bi bila, ob takem razmerju sil, očitno lahko samo vlada narodne enotnosti. Ampak, ker ste preprečili, da bi nastala, tudi dr. Bajuk ne more sodelovati. Je pa povedal, da bo svoje znanje v okviru pogojev, možnosti, ki jih ima, dal na razpolago, še posebno, ko gre za vprašanje koncepta lastninjenja saniranih bank, in da je pripravljen tu dati dober nasvet, ker gre za potezo, ki je za državo izredno pomembna, in upam, da bomo tudi z njegovo pomočjo prišli do najboljše rešitve.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg241">Glede opozicije - jaz sem si prizadeval že pred volitvami za to, da je prišlo do sodelovanja pri ključnih nacionalnih vprašanjih. Takrat ni bilo sodelovanja, ko je šlo za sukcesijsko vprašanje, nekatera druga vprašanja, in če bi bilo sodelovanje, bi bile rešitve boljše. To je bila ponudba. Če je ne boste sprejeli, bomo seveda to vzeli z razumevanjem. Tudi meni je iskreno žal, da zaenkrat v tem predlogu ni nobene ženske. Moram reči, da sem si za to zelo prizadeval, ampak na koncu se je tako nekako obrnilo in mislim, da še ni vse izgubljeno.</seg>
@@ -1011,27 +992,27 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg243">Še odgovor gospodu Potrču glede vprašanja, ker ob manjšinah nisem omenil vsega. Ne mislim za vsako točko odgovarjati, tudi ne poznam na pamet celotnega programa, ampak mnoge stvari so same po sebi umevne in kar se tiče Slovenske ljudske stranke in verjamem, da to velja za vse koalicijske partnerje, tudi za Liberalno demokracijo in druge, ki podpirajo to koalicijo, govorim pa seveda za Slovensko ljudsko stranko - vsi, ki so se borili proti nacizmu, fašizmu in komunizmu, bodo uživali polno podporo Slovenske ljudske stranke, če v tej borbi ni prišlo do zločinov, do drugih nezakonitosti in glede tega ni nobene nevarnosti, da bi se pravice, ki izhajajo z naslova spoštovanja vseh tistih, ki so nam na tak ali drugačen način pomagali k ohranitvi narodne samobitnosti in osamosvojitve, torej ni nobene nevarnosti, da bi glede tega prišlo do negativnih usmeritev. Bo pa treba neke stvari na nek način še dopolniti, ker nas nekako k temu sili tudi zakonodaja, ki je bila sprejeta v tem Državnem zboru z naslova poprave krivic.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg244">Hvala lepa. Replika na repliko, gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg245">Spoštovani! Pravzaprav ne bo replika, bo samo vprašanje. Slišal sem gospoda Podobnika, ki je rekel, da bodo tisti, ki so se borili proti nacizmu, fašizmu in komunizmu, doživljali oziroma doživeli podporo s strani SLS. Mene zanima, ali tudi LDS?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg246">Replika na repliko, gospod Marjan Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg247">Mislim, da to vprašanje ni bilo namenjeno predvsem meni. Lahko odgovori kdo od predstavnikov Liberalne demokracije, vendar prepričan sem, da je bila prav kongresna deklaracija Slovenske ljudske stranke iz predzadnjega kongresa, na katerem smo izrazili spoštljiv odnos do vseh, ki so se borili proti nacizmu, fašizmu in komunizmu, ena od temeljnih točk preseganja totalne delitve, ki obremenjuje tudi mlade slovenske generacije. Delitve, ki nas je usodno zadela iz časov med in po 2. svetovni vojni in verjamem, da bova obe koalicijski partnerici zmogli to odgovornost, da bomo s takim pristopom nadaljevali usmeritev zmanjševanja teh tragičnih delitev iz naše zgodovine.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg248">Hvala lepa. Besedo ima gospod Jože Jerovšek.</seg>
             </u>
             <note type="speaker">JOŽE JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg249">Spoštovani gospod predsednik, spoštovani zbor! V današnji slovesni poroki bi želel voščiti dolg in srečen zakon mladoporočencema LDS in Slovenski ljudski stranki. Seveda pa je to voščilo skaljeno ob misli in skrbi za nevesto, saj smo slišali, da je ženin že v svojem prvem zakonu s takratno izvoljenko ravnal vse prej kot zaupanja vreden mož. V zakonu ni bilo partnerskega odnosa, čeprav je tudi takrat ženin zagotavljal, da je napredno nepatriarhalno vzgojen in se bo zavzemal za partnerstvo in enakopravne odnose. Skrbi tudi to, da je nevesti izbral poročno pričo kar ženin sam. Priznati moramo, da je LDS poskrbela za spretno poročno pričo, ki se spozna na ženitno mešetarjenje. Nevesti jo je prvič predstavila v obliki rezultata 45 proti 45 ob prejšnjem poskusu glasovanja ženina. Po nasvetu poročne priče si je današnji ženin v zadnjem trenutku premislil, čeprav mu je bila rdečica takratne neveste zelo všeč. Zaradi takih razvad ženina bodo potrebni pogosti obiski v zakonski posvetovalnici. Ker je dolžnost poročne priče, da skrbi za trden zakon, bo poročni boter nevesto vodil, gotovo tolažil, da je v zakonu pač potrebno potrpeti. Čeprav boter do sedaj ni dal mnogo na božjo previdnost, bo nevesti v bodoče gotovo svetoval, da, ko jo udarijo po levem licu, naj nastavi še desnega.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg250">Spoštovani! Takšen je blišč in predvsem beda današnje poroke. Kaj se bo izcimilo iz tega zakona in kakšne bodo posledice za okoličane mladoporočencev? Zavedajoč se duha te koalicije, se Slovenci ne moremo nadejati izboljšanja težkih razmer. Najbolj prizadete socialne skupine pa bodo zagotovo delavci, kmetje in upokojenci. S tem, ko je Liberalna demokracija uspela uveljaviti hegemonističen pristop pri razrezu ministrskih resorjev, je postalo izvajanje sicer pozitivnega programa Ljudske stranke le pobožna želja. Kako si Ljudska stranka zamišlja revizijo divjega lastninjenja? Kako si zamišlja boj proti korupciji in zatiranje gospodarskega kriminala, ob tem da se je odpovedala notranjemu ministrstvu in celo soglašala s predlaganim notranjim ministrom, ki ni pripravljen upoštevati niti razsodb sodišča? Lahko verjamem v dobronamernost Ljudske stranke, vendar se samaritanstvo v politiki ponavadi pokaže kot najslabša rešitev za davkoplačevalce. Na tak način reševati zagato in omajan ogled mandatarja je, milo rečeno, nezrelo.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg251">Spoštovani kolegi iz Ljudske stranke. Nekateri ugledni ljudje v vaši stranki so že spoznali, da je koalicijska pogodba dejansko nova Dolomitska izjava z letnico 1997, ki verificira hegemonijo LDS. S to pogodbo ima LSD odprto in pokrito pot za realizacijo lastninskega pohlepa do preostanka družbene in državne lastnine.</seg>
@@ -1039,63 +1020,63 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg253">Mnogo je bilo meglenega govorjenja o demografsko ogroženih območjih. Vendar pa nihče ni konkretno pojasnil, kateri program bo realiziral. Dva meseca sem potrpežljivo čakal, da bom v kakšnem programu zagledal to, kar je minister Gantar obljubljal med predvolilno kampanjo mojim rojakov v večno poplavljeni dravinjski dolini in zahodnih Halozah. Takrat, ob koncu oktobra, je na licu mesta v Makolah obljubil 100 milijonov tolarjev sredstev za takojšnji začetek reševanja problema toka Dravinje. Preveril sem pri županu ali se je od takrat o tem že kaj oglasil. Seveda se ni. Očitno je bilo to samo predvolilno mešetarjenje. Mnogi ljudje se dobronamerno sprašujejo ali je s tem, kar se bo zgodilo danes, prišlo do hujše pozebe na trti slovenske pomladi. Prepričan sem, da gre le za blažjo zimsko pozebo, ki trte ni načela, osmodila je le nekaj brstov. Trta se bo gotovo v prihodnosti še bolj razrasla. Upam si celo trditi, da bo gnala nov cvet bolj veselo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg254">Hvala gospodu Jerovšku. Mislim, da ima gospod Tone Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg255">Spoštovani! Kar nisem mogel verjeti, da sem prav slišal gospoda Ruparja, zato sem si priskrbel magnetogram in mu nisem repliciral takoj. Kajti namreč izjavil je, da mu je znano, da sta bila človeka, ki sta bila naročena podkupovalca s strani Liberalne demokracije izključena iz te stranke.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg256">Odgovorno tukaj izjavljam, da ne izključujemo v naši stranki članov po nikakršni želji, predvsem pa ne po želji nekega konstrukta, ki je narejen recimo v kakšni drugi stranki. Če je izključevanje zamešal s kakšno drugo stranko, si bo moral to sam pojasniti. Lahko pa rečem, da po tistem konstruktu, ki je bil narejen v javnosti glede podkupovanja, je kar nekaj članov vstopilo na novo v stranko.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg257">In še gospodu Peterletu. LDS se prišteva med evropske antinacistične in antifašistične stranke, če vam še ni do zdaj jasno. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg258">Hvala lepa. Replika, gospod Lojze Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg259">Poglejte, prej, ko sem vprašal gospoda Podobnika, očitno nisem bil dovolj jasen. Mene je zanimalo, če to, kar govori, če je to program koalicije. Ker danes me ne zanima, kaj posamezne stranke zastopajo v odnosu do tega vprašanja, ampak, ali je to program te koalicije. Drugače je pa tudi za našo stranko jasno samo, da mi vse tri omenjamo tako kot SLS, vi ste pa samo dve.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg260">Repliko ima gospod Rupar in gospod Zamernik. Ne? Gospod Rupar.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ2.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg261">Torej repliciram gospodu Anderliču. Konstrukt je nekaj, kar se naredi, kar se ponaredi. To je pa resnica, gospod Anderlič, v katero ste bili vi hudo vpleteni.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg262">Še nekaj bi rad povedal. Gospod Podobnik je v nedeljo na televiziji POP v Argumentih povedal, da mu je gospod Drnovšek zaupal, da ste oba člana izključili in mislim, da ta dokument lahko tudi pogledamo. Tako da bi prosil, da se zmenite med sabo, kaj kdo govori in da to uskladite potem tudi tukaj pred govornico. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg263">Hvala. Replika gospod Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg264">Nesporno jasno lahko zagotovim, da se pri nas z vključevanjem oziroma izključevanjem članov stranke ukvarjajo organi stranke in ne mogoče na željo ali kakršnokoli interno ali drugo obliko komuniciranja, na katero se vi sklicujete. Vi ste namreč v tem svojem nastopu razlagali o tem, da je ta konstrukt oziroma vse to, kar se je dogajalo, potrdilo vaše navajanje in da bi še raje videli, da bi se to na sodišču uredilo. Tudi mi tako mislimo in seveda to vaše vedenje o tem, da je bil nekdo ali da sta bila dva izključena iz naše stranke, pač ni točno, ker nista bila. Seveda je v tem delu vaše izvajanje netočno. Ali je samo nekorektno ali je laž ali izmišljotina, to si sami razčistite. Jaz samo govorim o dejstvih, da iz naše stranke v zadnjega pol leta prav gotovo nismo izključili nobenega člana. Verjamemo pa, da se bo ta celotna afera zaključila na sodišču, tako kot tudi vi to želite. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg265">Hvala lepa. Še enkrat se oglaša gospod Rupar k repliki. Prosim.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ2.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg266">Se ponovno opravičujem. Če si kdo želi to zadevo pripeljati do konca, sem to sigurno jaz. In zelo bi rad videl, da tudi sodišča enkrat delajo tako kot je treba, da ne bomo neprestano govorili o nepravni državi. Enkrat samkrat dokažite - pozivam sodnike - kaj je resnica, samo enkrat!</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg267">Bi pa seveda prosil tu gospoda Podobnika, da poveste, kaj ste izjavil v nedeljo v Argumenti, ker to ni moja izmišljotina. Gospod Anderlič, mi prihajamo iz Socialdemokratske stranke in si ne izmišljujemo!</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg268">Hvala lepa. Besedo ima gospod Marjan Podobnik kot replika.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg269">Torej, znano je, da sem ob imenovanju predsednika vlade povedal, da pričakujem, da se bodo stvari, ki so povezane z vprašanjem poskusa podkupovanja gospoda Ruparja, razčistile in sem tudi povedal, da je bil to razlog, zakaj nisem takrat mogel čestitati izvoljenemu predsedniku vlade. In potem sem na teh pogajanjih nekajkrat izpostavil to vprašanje in po mojem razumevanju je šlo v smeri prepričanja, da bodo ljudje, ki so sodelovali v spornih zadevah, če se te stvari dokažejo, odstopili oziroma da bodo izključeni. Vprašanje, ali je bila stvar speljana že do konca, ali ne, ne vem. Moje razumevanje je bilo tako, da bo, če se bo neka stvar v tem smislu dokazala, ko gre za vprašanje politične odgovornosti, šlo za ta ukrep stranke, ko pa gre za stvar pravne odgovornosti, pa je to stvar sodišča.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg270">Hvala lepa. Besedo dajem gospodu Janezu Janši.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SDZ2.JanšaJanez" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg271">Spoštovani gospod predsednik, spoštovani predsednik vlade, kandidati za ministre, spoštovani kolegice in kolegi! Danes bo ta državni zbor ponovno odločal o vladi. Kadrovski predlog, ki smo ga dobili s sklicem in dnevnim redom, je deloma spremenjen glede na prejšnji propadli poizkus in zajema popoln, po našem mnenju, preštevilen kabinet z nekaterimi povsem nesprejemljivimi in nestrokovnimi posamezniki in z očitno težnjo po nadaljnjem bohotenju državne uprave in administracije. Toda to morda ob današnji odločitvi ni glavna dilema, zagotovo je ena od glavnih dilem, ki jo je potrebno omeniti na prvem mestu programske narave. Ta državni zbor danes namreč pred seboj nima vladnega programa. Odločamo o vladi, vendar pred seboj nimamo nobenega vladnega programa. Še več. V zadnjih mesecih sta bila predstavljena dva teksta programske narave, ki sta vsak zase nepopolna, predvsem pa sta medsebojno neusklajena.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg272">Danes imamo pred sabo predlog vlade, ki je sestavljen iz predsednika vlade, ki ima svoj program, in iz vlade, ki je predlagana na podlagi koalicijske pogodbe, ki je programsko gledano stvar zase. Smernice, ki jih je ob izvolitvi predstavil dr. Janez Drnovšek, so podprli poslanci Liberalne demokracije, Združene liste, DeSUS-a in Slovenske nacionalne stranke. Med najostrejšimi kritiki pa je bila poslanska skupina Slovenske ljudske stranke. Kljub kritikam dr. Drnovšek svojega programskega nastopa ob izvolitvi ni nikoli preklical, niti spremenil. 17. februarja sta Liberalna demokracija in Slovenska ljudska stranka ob blagoslovu DeSUS-a podpisali koalicijsko pogodbo, ki vsebuje številna programska načela in poudarke, ki so v temeljnem nasprotju s smernicami, ki jih je pred izvolitvijo predstavil predsednik vlade.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg273">Prvo vprašanje, ki se postavlja in terja odgovor, je vprašanja, kateri tekst je programska osnova vlade? Oba ne moreta biti, ker sta v nekaterih pomembnih delih v protislovju. Če se je dr. Drnovšek pred podpisom pogodbe s Slovensko ljudsko stranko odpovedal svojim programskim smernicam predstavljenim ob izvolitvi, in ki jih je takrat najbolj kritizirala ravno Slovenska ljudska stranka, potem bi bilo pošteno, da bi vrnil mandat in ponovno kandidiral z novim programom iz koalicijske pogodbe in z novo podporo poslancev iz strank, ki podpirajo to vlado. Tako pa smo dobili predsednika vlade, ki je bil izvoljen na podlagi svojega programa, s podporo povsem drugih strank, in smo dobili predlog vlade s koalicijsko pogodbo, ki je v nasprotju v nekaterih točkah, predvsem pa je neusklajena s koalicijsko pogodbo oziroma s programskimi delom koalicijske pogodbe. To je zame bistveno vprašanje. Za tistega, za katerega to ni bistveno vprašanje, potem program sploh ni važen in se najbrž vse začne in konča pri razdelitvi ministrskih stolčkov, pri fikusih in pri zunanjih simbolih oblasti in prestiža.</seg>
@@ -1145,11 +1126,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg317">Moram pa reči še to, da odslej naprej Socialdemokratska stranka nikomur več ne bo verjela na besedo. Od sedaj naprej bomo terjali dejanja. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg318">Zahvaljujem se gospodu Janezu Janši. Izkoriščam priložnost in se sam priglašam k repliki. Prijavljam se k repliki.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg319">Spoštovane kolegice in kolegi! V repliki bi rad odgovoril na vsaj dve ali tri misli, ki so se dotikale tudi mojega dela in mojega položaja. Tako me je gospod Zamernik vprašal, če še vedno razmišljam o možnosti, da bi odstopil. Prav tako pa je delno bilo o moji funkciji povedano tudi v razpravi gospoda Janše. Najprej naslednje. Točka 6, stran 17 - sporazuma med obema koalicijskima strankama govori naslednje; vkolikor bi v funkcioniranju državnega zbora prihajalo do zastojev, bo koordinacija vodij poslanskih skupin v sodelovanju s pooblaščenimi predstavniki vlade na podlagi programa in stališč vlade odločala o prioritetah pri uvrščanju zadev na dnevni red državnega zbora. Če je kakorkoli to možno razumeti, da bodo imele poslanske skupine vladnih strank kakšno prioriteto pri dnevnih redih, v nasprotju s poslovnikom Državnega zbora, potem pri takem početju mene ne bo zraven, če bom še predsednik državnega zbora. Zagotavljam vam, da bodo poslanske skupine, vse poslanske skupine pač lahko o teh stvareh odločale samo na podlagi poslovnika. Razumljivo pa je in to je praksa vseh koalicij, da se seveda poslanske skupine in vodje le teh usklajujejo, predno se odločajo o dnevnih redih.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg320">Kar se pa tiče poziva, ki sem ga bil v preteklih štirinajstih dneh deležen s strani vsaj dveh predsednikov strank, naj iz moralnih razlogov razmislim o svojem odstopu, pa naslednje. Bil sem počaščen, da so me stranke slovenske pomladi predlagale za predsednika državnega zbora. Kot se spominjate tistega večera, sem dobil 45 glasov. Tudi če bi jih dobil takrat 46 ali pa 47, bi bil, če bi bil izvoljen, potem poslanec vseh poslancev oziroma vseh poslanskih skupin, tako bi deloval. Naslednji dan je prišlo do dogovora in me je za to mesto podprla velika večina tega državnega zbora. In jaz želim v tem smislu delovati naprej, ne kot nadstrankarsko, ampak kot človek, ki imam pomembno funkcijo v Slovenski ljudski stranki, ampak na način, da bom pri svojem delu upošteval poslovnik in interese vseh poslanskih skupin. Če pa boste našli v mojem delu kakšne zadržke o tem, pa so poslovniške možnosti, da predlagate mojo zamenjavo.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg321">Sedaj pa samo še na kratko o nekaterih stališčih, ki so bila izražena v razpravah, še posebej v razpravi cenjenega kolega, gospoda Janeza Janše. Veliko programskih zadev je bilo danes tukaj povedanih. Mislim, da ste poslanci tistih strank, ki pričakujete, da če bo danes vlada izglasovana, da boste v opoziciji, korektno prebrali ta sporazum. In moja ocena, ki sem jo izrekel včeraj v eni od javnih televizijskih oddaj, da če bo danes vlada potrjena, bo dobila Slovenija stabilno vlado in močno in odgovorno opozicijo, še vedno drži. Če se bo to zgodilo danes, potem bomo dobili, po moji oceni, relativno programsko stabilno vlado, politično in programsko stabilno vlado in tudi močno opozicijo, in to ni slabo za Slovenijo, ki jo čakajo pomembne naloge.</seg>
@@ -1159,27 +1140,27 @@
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg325">Skoraj sem prekoračil čas, mislim, da je bilo samo nekaj sekund, se opravičujem! K repliki sta se priglasila gospod Franc Potočnik in gospod Vincencij Demšar.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg326">Dame in gospodje, repliciral bom gospodu Janši in še nekaterim poslancem iz njihove poslanske skupine. Jaz se zahvaljujem Socialdemokratski stranki za veliko skrb, ki jo posveča Slovenski ljudski stranki. Če je to eden od razlogov, da po vseh javnomnenjskih raziskavah Slovenska ljudska stranka stoji pred Socialdemokrati, se za to skrb še naprej priporočamo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg327">Hvala lepa. Repliko ima gospod Vincencij Demšar.</seg>
             </u>
             <note type="speaker">VINCENCIJ DEMŠAR:</note>
-            <u who="#SDZ2.DemšarVincencij" ana="#regular">
+            <u who="#DemšarVincencij">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg328">Hvala lepa za besedo. Gre za bistveno razliko. Krščanski demokrati smo se na svojem kongresu v Škofji Loki dogovorili, da bomo samo skupaj s strankami slovenske pomladi šli naprej. Torej, meni je bil prvi cilj slovenska pomlad in šele potem drugi cilj, kaj bo s Krščansko demokracijo. Meni je bilo to, da se v Slovenij premakne, pa da pridemo do nekega bistvenega premika. Zato vidim in mi je žal, da sva z gospodom Podobnikom imela na prvem mestu postavljeni dve različni srani. In zdaj vidim, zakaj se je potem tudi to dogodilo. Tisto, kar je imel kdo prvi na prvem mestu, tistega se je še naprej držalo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg329">Hvala lepa. Repliko ima gospod Marjan Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg330">Spoštovani! Upam, da bo danes zadnjič omenjeno ime spoštovanega gospoda dr. Bajuka. Jaz seveda verjamem, da izjava, ki jo je dal gospod Janša, ustreza resnici, sam sem pa povedal samo to, o čemer sem se z njim pogovarjal. Namreč, res je povedal, da ne bo sodeloval v taki vladi, na tak način, da je želel, da pridejo vse tri stranke slovenske pomladi skupaj, zato sem si med drugim tudi jaz tako prizadeval za vlado narodne enotnosti, v kateri bi bil lahko tudi dr. Bajuk - imel bi pomembno težo. Res pa je, da mi je na zadnjem pogovoru dejal, da je ob tako pomembnih vprašanjih, kot je vprašanje ustreznega lastninjenja saniranih bank, pripravljen kljub vsemu pomagati z nasveti. Če se je premislil, bom seveda tudi to stvar spoštoval.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg331">Druga stvar. Pragmatizem, amoralo in nenačelnost očitati Slovenski ljudski stranki - bom povedal zelo odkrito: žal niste pravi, niste pravi v tej vrsti, kjer boste, kot pravite, opozicija, če bo danes vlada izvoljena. Jaz ne želim zaostrovati današnje razprave, ampak še enkrat poudarjam: nobene moralne pravice nimate nam tega očitati tisti, ki ste rušili prvega demokratično izvoljenega predsednika slovenske vlade, ki ste sodelovali v vseh možnih koalicijah in ki niste naredili tega, kar bi lahko, da bi prišlo do vlade narodne enotnosti, v kateri bi sodelovale vse te stranke slovenske pomladi. Če bi pol tega naredili, kar sem sam naredil, bi danes to vlado imeli, to trdno verjamem.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg332">In glede vlade narodne enotnosti še to. Razmerje, ki je bilo doseženo na koncu. Seveda lahko rečemo, ali je nekdo mislil resno ali ne, ampak tisto, kar je bil zadnji dogovor pred dokončnim razhodom, je bilo razmerje 10:10, kar je bilo korektno glede na dejstvo, da je bilo natanko na pol razdeljeno tudi volilno telo oziroma poslanci v državnem zboru. Edina stvar, ki ni bila dosežena, je res, je bilo eno od močnejših resorjev, namesto enega od močnejših resorjev bi dobili enega od, po pač naših skupnih ocenah, šibkejših resorjev. To je bila edina stvar, ki v danem trenutku ni bila dosežena in takrat sem predlagal, kar je bilo tudi povedano, da je res, da se lahko, če je znotraj strank problem, se lahko problem reši tudi s kvoto Slovenske ljudske stranke, ampak pač ocene so bile, da to ni rešitev.</seg>
@@ -1187,21 +1168,21 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg334">Sicer pa, kolega Janez Janša, jaz sem te tu v državnem zboru in pred parlamentom branil takrat, ko so te odstavljali. Imel sem pač priliko spoznati marsikaj. Ni mi žal. Če bi bil danes na tem, bi ponovno isto naredil, ponovno bi te branil. Žal, pa nisem imel priložnosti slišati besede hvala v vsem tem času. Je tudi ne zahtevam. Želim pa, da tisto, kar je bilo in kar bo morda dobrega narejenega, da se spoštuje in da ne bomo odkopali sekir, bojnih sekir tam, kjer nam lahko skupno naredijo samo škodo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg335">Hvala lepa. Želi še kdo repliko? Gospod Janez Janša, prosim. Potem je prijavljen še gospod Kelemina.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SDZ2.JanšaJanez" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg336">No, v tem državnem zboru je kar nekaj ljudi, ki vedno, ko je treba govoriti z argumenti, na koncu pravijo, da so me kdaj branili. Jaz upam, da me ne bodo še kdaj aretirali in da ne bo treba še kdaj demonstrirati zame in me braniti in se potem sklicevati na te stvari. Gospod Podobnik, če ti takrat nisem rekel hvala, rečem zdaj. Iskrena hvala. Mislim, da smo se zavzemali za isto stvar. Jaz prej nisem govoril zaradi tega, besed, ki so bile izgovorjene leta 1994, ampak zaradi tega, kar se je zgodilo zdaj in ker mi je žal, da se je to zgodilo. Jaz vam te pravice ne oporekam.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg337">Drži tisto, kar ste rekli, odgovornost je vaša, vi ste si to naložili in čez nekaj časa bo čas pokazal, kdo je imel prav.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg338">Še enkrat ponavljam, jaz bom najbolj vesel, če bo čas pokazal, da ste imeli ob tem koraku vi prav, ne pa mi, ki to kritiziramo. Morate pa seveda v demokraciji dopustiti tudi partnerju, ki je z vami podpisal pogodbo, pa ste jo prelomili, da izrazi svoje nestrinjanje s tem. Argumenti, ki ste jih navedli, so po vašem mnenju taki in držijo, po našem mnenju so drugačni. Vi ste predstavili svoje, mi smo predstavili svoje. Tako da jaz tukaj ne vidim nobene potrebe za tem, da bi se stvar nadalje zaostrovala. Tudi vi ste prvi govorili in pač replicirali na nekatere stvari, ki so bile zelo blago izrečene s strani poslancev Socialdemokratske stranke in Krščanskih demokratov in seveda beseda vedno da besedo. Še enkrat ponavljam v tej repliki na repliko. Mi vas bomo podprli v vseh predlogih, za katere bomo smatrali, da gredo v smeri programa strank slovenske pomladi, in vas bomo kritizirali v tistih točkah, v katerih bomo smatrali, da gre to v drugo smer. In bomo izražali obžalovanje, če bomo videli, da pač v vladi ne morete doseči tistega, za kar jaz verjamem, da zdaj mislite, da boste lahko dosegli in verjamem v to dobronamernost, da si boste v tej smeri prizadevali. Morate pa tudi vi verjeti nam in Krščanskim demokratom, da imamo iz takega sodelovanja svoje izkušnje, da te izkušnje niso ravno dobre, pravica do iluzij, bom rekel, je dovoljena, brez iluzij bi bilo itak težko živeti na svetu, ampak tisti, ki ima neke izkušnje, pač jih menda lahko pove. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg339">Hvala lepa, gospod Janša. S tem dajem besedo zadnjemu prijavljenemu razpravljavcu, gospodu Kelemina Branku. Se opravičujem, gospod Pahor je tudi še prijavljen.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg340">Spoštovani gospod predsednik, poslanke in poslanci, spoštovani kandidati, gospod mandatar! Jaz sem mislil, da me bo doletela ta čast, da bom danes zadnji, pa zgleda da ne bo tako. Nič zato. Tudi jaz bom, tako kot so že nekateri danes rekli, da bomo morda danes po treh in pol mesecih dobili pretežno staro-novo vlado. Ker velik del slovenskih neodvisnih medijev, kot je na primer <gap reason="inaudible"/> , Delo in drugi, to krivdo valijo predvsem na parlament in s tem na poslance, torej branim pač nas poslance kot celoto, češ da so ti nepripravljeni, ali se celo nesposobni dogovoriti karkoli za dobro Slovenije. Menim, da ne bi bilo slabo nekoliko osvežiti spomin, kdo vse je pravzaprav bil odgovoren za sestavo vlade v tem obdobju. Za to, da bo komaj danes mogoče izvoljena ta vlada, obstaja več razlogov. Po moji oceni so najpomembnejši naslednji. Eden od razlogov za zavlačevanje je bil ta, da so vsi, ki so imeli pravico o tem odločati, izkoristili sicer z zakonom in ustavo določene roke takorekoč do zadnje sekunde.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg341">Spomnimo se samo primera predsednika države, ki se je kar nekajkrat sestal s predstavniki strank, pa se ni hotel odločiti, čeprav je že mogoče lani vedel, kdo bo novi mandatar.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg342">Drugi, tudi zelo pomemben razlog je tisti, ki ga je že omenil gospod predsednik Janša, da smo imeli na razpolago 2 kandidata za mandatarja, ki sta bila vkopana in nihče od njiju ni bil pripravljen na kakršnokoli drugo ali tretjo rešitev.</seg>
@@ -1212,11 +1193,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg347">Tukaj danes pred tem parlamentom, pred vlado in tudi pred javnostjo bi predlagal, da bi ustrezni organi državnega zbora izvedli zamrznitev plač in da bi bil to naš prvi prispevek k stabilizaciji političnih in ekonomskih razmer v slovenskem prostoru. Parlament in vlada sta managerja velikega podjetja. To je Slovenije. Vsaka usoda podjetja je odvisna od njenega vodstva, v prvi vrsti od njenega vodstva. Upam, da se tega vsi zavedamo. Zato še enkrat. Usoda Slovenije je v rokah tega parlamenta in te vlade in nikogar drugega. Izkoristimo to priložnost. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg348">Hvala lepa, gospod Kelemina. Besedo ima gospod Borut Pahor, podpredsednik državnega zbora.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg349">Gospoda predsednika, spoštovane kolegice in kolegi! Poglavitni cilj, pred katerim je vsa slovenska politika ne samo vlada, so reforme, ki naj bi Slovenijo utrdile kot stabilno demokracijo, ki naj bi uvedle v Slovenijo socialno tržno ekonomijo in ki naj bi nas kvalificirale za državo, ki lahko stopi v krog najrazvitejših držav. Imam občutek, da se, ne glede na konceptualne razlike med nami, strinjamo, da so v tem smislu pomembne predvsem tri naloge - dvigniti konkurenčno sposobnost slovenskega gospodarstva, izvesti reformo socialne države in poskrbeti za to, da bomo šli v Evropsko unijo in NATO, tako da bomo okrepili našo državnost in ohranili nacionalno istovetnost.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg350">Tisto, kar je bilo morda premalo poudarjeno v tej programski debati in programski debati pred slabimi tremi tedni, je nevarnost, ki preži na te reforme. To je občutek izgube, ki ga ima vse širši krog ljudi, namreč vse manjša je identifikacija s potrebo po teh reformah. Ta občutek za izgubo mora slovenska politika dobro paziti. Ker vse manj ljudje mislijo, da so te reforme potrebne, ker jim ne izboljšujejo njihovega socialnega položaja. V tem smislu se bo morala slovenska politika poskušati v tem mandatu soočiti z vprašanjem, ali zna uvesti socialno tržno ekonomijo, tako da razslojevanje ne bo odvisno od drugih spremljevalnih okoliščin, kot večinoma odloženega dela. Če bi se zgodilo drugače, potem je že moč napovedati, da bodo reforme skrenile s poti in da Slovenijo čaka drugačna prihodnost, kot si jo želi večina Slovencev. Mislim, da je dobro, da za to dobimo vlado.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg351">Strinjamo se, da imamo različne poglede na to, katera vlada bi s temi reformami opravila najboljše. Tisto, kar je za to morda kljub vsemu dobro, da je ta večinska vlada. Ima trdno podporo med poslanci. To obvezuje poslance koalicije, da glasujejo zanjo in daje možnost poslancem opozicije, da brez velike stiske, brez kakšnega morda kakšenkrat preveč konstruktivnega občutka za državotvornost, glasujejo proti vsem tistim predlogom, za katere bodo sodili, da so morda predvsem predmet politične trgovine ali pa da niso v skladu z njihovimi pričakovanji ali interesi njihovih volilcev. Jaz bi opozoril na to veliko prednost, ki jo imamo v tem mandatu, da imamo večinsko vlado in da imamo zelo močno opozicijo. Jaz mislim, da vsemu navkljub to prinaša v Slovenijo nek prepotreben politični mir, kjer se bodo seveda sem in tja iskrili tudi ideološki spopadi, vendar kjer bodo morale politične stranke pokazati, ali znajo ali ne znajo dajati odgovorov na vprašanja, ki zadevajo večino Slovencev. In mislim, da bo parlament tisti prostor, kjer se bodo te diskusije iskrile.</seg>
@@ -1224,7 +1205,7 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg353">Združena lista je opozicijska stranka, kot sem prej rekel, tudi danes njej in drugim ni potrebno razmišljati o tem, da bi podprli vlado, ker ima dovolj glasov. Mi predlagamo, da se torej ta vlada izvoli, da se jutri začenja odštevati 100 dni, ko ima vlada čas, da se konsolidira, in da po stotih dneh naredimo prvo inventuro in začnemo resno politično delo, ki bi, kot smo rekli, Slovenijo kvalificiralo kot uspešno državo, vendar ne samo na ravni statistik, ampak tudi na ravni neke empirične vsakdanje izkušnje večine ljudi, da živijo danes boljše, kot so živeli včeraj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg354">Hvala gospodu Pahorju. Sprašujem, ali je on zadnji razpravljalec? Gospod Pucko želi besedo, prosim. <gap reason="inaudible"/>
                </seg>
                <note>Žvižgi!</note>
@@ -1232,7 +1213,7 @@
                   <gap reason="inaudible"/> Prosim, prosim, besedo ima gospod Ciril Pucko.</seg>
             </u>
             <note type="speaker">CIRIL PUCKO:</note>
-            <u who="#SDZ2.PuckoCiril" ana="#regular">
+            <u who="#PuckoCiril">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg356">Hvala lepa, spoštovani gospod predsednik. Ciril Pucko, samostojni poslanec. Spoštovani gospod predsednik vlade, spoštovani kandidati za ministre, spoštovane poslanke in poslanci! Končno, skoraj štiri mesece po volitvah, se je začelo v Sloveniji uresničevati tisto, zaradi česar sem podprl kandidaturo gospoda Drnovška za mandatarja. Zato, ker je prevladal razum, lahko danes odločamo o imenovanju sredinske vlade, z dokaj solidno podporo v tem državnem zboru. V nasprotju s tistimi eminentnimi predstavniki tako imenovanih spomladanskih strank, te poteze Slovenske ljudske stranke ne štejem za zavrženo, ampak vam, kolegica in kolegi iz Slovenske ljudske stranke, čestitam!</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg357">Čestitam zato, ker ste se vrnili k svojemu programu, zaradi katerega ste dobili takšno podporo na volitvah. Čestitam zato, ker ste znali zavreči lažni krščanski etos in dvojno moralo politike Alojza Peterleta, ki vodi stranko v pogubo. In čestitam zato, ker ste se uprli tako imenovanim desnim Socialdemokratom, ki bi želeli z vašimi rokami loviti kače.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg358">Predlagane kandidate za ministre pa bom podprl predvsem iz naslednjih razlogov. Prvič. Država Republika Slovenija je že skoraj pol leta brez vlade, potrebujemo pa stabilno sredinsko vlado z zadostno podporo, ki se bo sposobna takoj lotiti reševanja realnih gospodarskih problemov, ustreznega reševanja socialnih težav in zagotavljanja socialne varnosti vseh državljank in državljanov Republike Slovenije. To vlado potrebujemo takoj tudi zato, da bomo lahko ustrezno s čimvečjim konsenzom med političnimi strankami razreševali probleme slovenske zunanje politike, in da bomo enakopravno obravnavani pri našem vključevanju v zahodnoevropske integracije in zvezo NATO. Za vlado bom glasoval tudi zato, ker so mi volivke in volivci zaupali mandat za delo in ne zato, da se bodo poslanske skupine, ki jih ni tukaj, prepirale o tem, kje bo kdo sedel v tej dvorani, kje in v kateri pisarni bo posamezni poslanec lahko opravljal tisto delo, ki zelo veliko stane vse davkoplačevalce. To vlado podpiram tudi zato, da bom lahko uresničeval svoj program, ki je namenjen vsem Prekmurkam in Prekmurcem ter razvoju Prekmurja v celoti ter zato, da bomo lahko v okviru kluba pomurskih poslancev čim uspešneje uresničevali naš program.</seg>
@@ -1240,11 +1221,11 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg360">In na koncu. Spoštovane kolegice in kolegi, se zahvaljujem vsem vam. Zahvaljujem se vsem državljankam in državljanom, ki ste razumeli mojo potezo in mi stali ob strani. Sedaj lahko že z gotovostjo rečemo vsaj dvoje; da bi danes ne imeli predsednika vlade in ne vlade same. Vprašanje pa je, ali bi že bil konstituiran parlament s svojimi delovnimi telesi. Še posebej pa se z obžalovanjem, ker ga ni tukaj, zahvaljujem poslancu Alojzu Peterletu za zelo načrtno in vztrajno širjenje laži in podtikanj najslabše vrste. Njegovega organiziranega linča proti meni in njegovega hkratnega pozivanja na človečnost. Svetujem mu, da, če že drugega dokazano ni sposoben početi, črta vsaj iz imena te njegove stranke, zapisano z veliko začetnico, besedo "krščanski", ker je prav zaradi njega ni vredna. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg361">Hvala lepa, gospod Pucko. Če ni dodatnih razpravljavcev, bi vprašal predsednika Vlade, če želi besedo? Prosim, doktor Drnovšek.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ2.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg362">Gospod predsednik, spoštovane poslanke in poslanci! Ob koncu današnje razprave bi želel odgovoriti, komentirati posamezne sklope vprašanj oziroma tudi kritik, ki so se pojavile v razpravi. Kot prvo bi želel poudariti, da danes razpravljamo o Vladi, ki sem jo predložil, in da ste o programu mandatarja v državnem zboru že razpravljali. Ta program je osnova, izhodišče mojega delovanja v tem Državnem zboru tudi v naprej.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg363">Koalicijski sporazum, ki sta ga sklenili Slovenska ljudska stranka in Liberalna demokracija Slovenije, v tistih najbolj bistvenih točkah opredeljuje skupne cilje teh dveh strank pri njunem skupnem delovanju v Vladi. Med tema obema dokumentoma ni temeljnih razlik, gre predvsem za razjasnjenje in preciziranje nekaterih vprašanj, nekaterih ciljev, zlasti tam, kjer so se postavljala vprašanja o tem, ali lahko stranki vzpostavita neko skupno politiko, nek skupen program. Dejstvo je, da program, kakršenkoli progam že, nikoli ni povsem kompleten, dokončen, zaprt in zato smo se že nekako navadili, da so potem običajno razprave o tem, kaj v programu ni napisanega, bolj kot o tem, kaj v programu piše. Tudi danes smo v glavnem poslušali o tem, česa v programu ni. Tisto, česar ni, že piše v ustavi, v zakonih ali bomo še tudi dodatno napisali, če bo treba.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg364">Mislim, da ni treba posebej poudarjati, ponovno poudarjati, vendar bom to storil, da obe stranki podpirata in bosta zagovarjali takšne pravice narodnostnih skupin, kot so zapisane v naši ustavi, kot smo jih zaščitili z našim skupnim dogovorom. Enako velja tudi za vse druge pravice, ki so napisane v temeljni listini ob osamosvojitvi.</seg>
@@ -1261,7 +1242,7 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg375">Torej upam, danes resnično upam po prvem neuspelem poskusu, da bo tokratni poskus glasovanja o vladi uspešen in da lahko začnemo z delom. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg376">Zahvaljujem se dr. Drnovšku. Preden bi dal besedo gospodu Hvalici in gospodu Janši, bi samo vprašal, če dovolite, ali želijo besedo, ker nekako po takem vrstnem redu se gre, kandidati za ministre?</seg>
                <note>Ne želijo.</note>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg377">Še velja replika, gospod Hvalica?</seg>
@@ -1269,7 +1250,7 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg378">Besedo imajo gospod Hvalica, gospod Janša in gospod Peterle.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg379">Hvala. Gospod mandatar, z veliko lahkoto ste prešli preko ministra Gasparija, kandidata za ministra in jasno, tudi sedanjega ministra, ali pa - bom rekel - kar večnega finančnega ministra. Tu nekaj ne drži. Sicer sem za vas slišal, da držite zadeve v šahu tako, da sprete ljudi med seboj.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg380">Zdaj bi vas pa rad spomnil na tisti dan, ko sem bil pri vas na pepelnično sredo in sva se pogovarjala o lastninjenju v igralništvu. Ali se spomnite tega, gospod predsednik? Bil je prisoten tudi gospod Borut Šuklje. Ali veste, kaj ste takrat rekli? Rekli ste, da vas je minister Gaspari zavedel, da vi niste vedeli, da je s tem tako in tako. Oprostite, oprostite - ne zmajevati z glavo, ker verjetno snemate te stvari, pa si dajte prebrati magnetogram. To ste vi meni rekli. Meni ste celo rekli - trudil sem se, da bi registriral vsako besedo, ki ste jo izrekli - rekli ste tudi približno tako <gap reason="inaudible"/>
                </seg>
@@ -1278,20 +1259,20 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg382">Kar se pa tiče vaše ugotovitve glede tega, da je minister Gaspari vrhunski strokovnjak, v to ne dvomim. V Združenih državah Amerike so najbolj vrhunski finančni strokovnjaki utajevalci davkov. To so vrhunski strokovnjaki, ampak v napačni smeri. Vi veste, da so na področju ključavničarstva najbolj vrhunski strokovnjaki vlomilci, ampak to je v napačni smeri! A za vas je pa to <gap reason="inaudible"/> ? Ni važno, v kakšno smer greš, važno je, da si strokovnjak! Hvala lepa za tako strokovnost. Meni je bolj važna poštenost in smer. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg383">Hvala, gospod Hvalica. Besedo dajem gospodu Janši.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SDZ2.JanšaJanez" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg384">Najprej je treba tukaj jasno povedati, da mi nismo veseli ugotovitev bruseljskega inštituta. Nismo veseli, da je Slovenija iz treh predmetov dobila nezadostno, iz enega pa zadostno. In seveda ne sprejemamo tega izgovora, da je ta zamuda nastala zato, ker smo šele pred kratkim podpisali pridružitveni sporazum - oprostite, mi to zakonodajo prilagajamo že vrsto let!</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg385">Leta 1993, se spomnim, na eni od prvih sej vlade, je bil sprejet sklep, da pri vsakem zakonu, pri vsakem predpisu morajo ustrezne vladne službe zraven napisati, ali je ta zakonodaja in v katerem delu v nasprotju z zakonodajo oziroma predpisi Evropske unije. Ta proces poteka v določeni meri že od leta 1991; od takrat, ko pač spreminjamo nekdanjo jugoslovansko in socialistično zakonodajo. Od takrat naprej pravimo, da te stvari prilagajamo Evropi - ne od lanskega leta, od začetka veljavnosti oziroma saj sploh še ne velja, od podpisa pridružitvenega sporazuma. Ta izgovor je zelo prazen, žal, moram to reči, ker mene ne veseli, ko berem te tabele in te analize, ker govorijo o Sloveniji; ne govorijo o dr. Drnovšku in o vladi, to mi govorimo tukaj v parlamentu, ampak govorijo o Sloveniji. In zelo neugodno se človek počuti, ko gre v tujino in vidi Slovenijo poleg Latvije in Romunije, mi pa tukaj pravimo, da smo prva tranzicijska država! Se pravi, prilagoditvena zakonodaja in zgodba s tem se ni začela šele v lanskem letu, ampak poteka že najmanj - in o tem so bili sprejeti ustrezni sklepi vlade in tudi tega državnega zbora in odbora za mednarodne odnose tega državnega zbora - najmanj od volitev leta 1992 - zelo jasne usmeritve so. In zaostanki niso vprašljivi samo zaradi tega, ker nismo prilagojeni evropski zakonodaji in tako naprej, ampak so vprašljivi tudi zaradi tega, ker mi še vedno uporabljamo vrsto zakonov, ki bi jih morali že zdavnaj spremeniti - ne zaradi Evrope, ampak zaradi nas. Še vedno uporabljamo jugoslovanske knjigovodske in računovodske predpise, ki so neustrezni; še vedno ni zakona o prevzemih vrste drugih finančnih zakonov, ki jih rabimo za to, da bo naše gospodarstvo funkcioniralo. In zato ne more biti izgovor, da smo šele lani podpisali pridružitveni sporazum zaradi Italije. Treba je kar povedati, da ima tudi dosedanja izvršna oblast velikansko odgovornost za to, da je temu tako; ne prihodnja vlada ne Vlada, ki jo danes imenujemo, ampak tista, ki je vladala doslej. Oprostite, tudi te zadnje štiri mesece. Vsi uradniki, ki morajo delati na tem: Urad za evropske zadeve, Služba za zakonodajo, vsa ministrstva so v tem času potrebovala proračunski denar. Vsi uradniki so dobivali plače. Ali kdo morda ni dobil plače? Prav vse smo plačali iz davkov v tem času in morajo delati tudi - bom rekel, v tem vmesnem času, ko ni vlade - na teh stvareh. To ni nobeden izgovor, da ni bilo Vlade. Saj je cela uprava bila tukaj, vsi ministri, vsi državni sekretarji do zadnjega uradnika. Oprostite, to so prazni izgovori. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg386">Hvala lepa. Besedo dajem gospodu Peterletu. Kot replika gospod Peterle? Ja.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg387">Spoštovani gospod predsednik, poslanke in poslanci! Bil sem zelo pozoren na to, kar ste rekli, gospod predsednik, in rekli ste: "Te programske smernice so izhodišče mojega dela v Državnem zboru tudi v bodoče."</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg388">Rad bi povedal, da poslej ne boste mogli nastopati v prvi osebi; doslej ste bili mandatar, sedaj pa ste ali boste šef Vlade in mislim, da je zelo pomembno to, na kar so že drugi opozorili, na razlike med temi smernicami in med sporazumom, ki smo ga danes tukaj do neke mere kritizirali.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg389">Omenil bom samo eno stvar. V vaših smernicah so na široko odprta vrata - tako to sam berem - za zadolžitev. V sporazumu ne vidim ničesar o možnostih za zadolževanje. Zame je to velika razlika in takih razlik je še kar nekaj in ne vem, kaj se bo izvajalo. Verjetno, kar se bo sproti dogovarjalo.</seg>
@@ -1299,77 +1280,77 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg391">Očitno minister Kračun razume sporočilo iz Bruslja drugače kot vi, gospod predsednik, kajti ko je prišlo to do njega, je nemudoma napisal pismo vsem ministrom, naj pohitijo s temi deli. Ne vem sedaj, kdo prav politiko in tekoče posle v vladi razume. Mislim, da jih bolj razume Kračun, ker je zaznal, da je zadeva v veliki časovni stiski in problematiziram to obnašanje ravno zaradi posledic. Namreč, v časovni stiski bo seveda treba odločati zelo hitro in takrat bomo lahko sprejemali slabe odločitve. Vi sami ste pa že rekli: bomo videli, kolikšna bo pripravljenost Državnega zbora, da gredo stvari skozi. Torej, slabo pripavljene verjetno ne bodo šle. In ne bi rad, da se praksa nadaljuje, da bo teklo samo tisto delo, ki je v interesu nekaterih ljudi, le samo predsednika vlade. Brez problema je na internet prišel portret predsednika vlade, tudi ta gre iz državnega proračuna oziroma iz žepov davkoplačevalcev, kjer je notri kup neresnic - tudi ta, da ste zmagali na prvih demokratičnih volitvah, kar ni res. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg392">Hvala lepa. Želi besedo predsednik Vlade, doktor Drnovšek?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg393">Gospa Maria Pozsonec najprej. Prosim.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SDZ2.PozsonecMaria" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg394">Hvala lepa. Rada bi tudi povedala svoje mnenje glede gospoda ministra Gasparija.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg395">Smatram, da je ocena o njegovem delu neprimerna in zelo zelo žaljiva. Delo gospoda Gasparija je od bonov do konvertibilne valute - se spominjate, da smo imeli Markovičev denar. Potem smo imeli trištevilčne inflacije in zdaj je ta inflacija enoštevilčna. Imamo uravnotežen proračun, imamo rezerve in bi še lahko nadaljevala. Smatram, da tako ponižati nekoga - strokovnjaka in tudi človeka, ni v skladu s človeškimi normami.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg396">In žagati vejo, na kateri sedimo, je tudi nespametno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg397">Hvala lepa. Besedo dajem predsedniku Vlade.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ2.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg398">Hvala. Od tistega, kar je povedal gospod Hvalica, je res samo to, da sem mu zagotovil, da bo ta nova vlada v najkrajšem času razčistila vprašanje zakona o igralništvu in da se resnično sam za to temo do zdaj nisem veliko zanimal. Vse drugo je zraslo v njegovi bujni domišljiji. Ker sem to predvideval, sem tudi na tisti razgovor povabil pričo, ker se mi je zdelo, da z gospodom Hvalico ni dobro govoriti brez prič, razgovorov pa ne snemamo, če tega ne povemo tistim, ki so prisotni. To se tiče prve replike.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg399">Kar se tiče druge replike gospoda Janše. Resnično vas bom z veseljem spomnil, vas in vse ostale takrat, ko bomo obravnavali tukaj harmonizacijo zakonodaje z Evropsko unijo. Takrat bom skušal potegniti nek kredit iz te vaše velike zavzetosti za harmonizacijo zakonodaje. Je pa to zakonodaja, sprejema jo parlament, ne vlada. In še enkrat bi poudaril, glavni problem Slovenije in tudi glavni zaostanek z vidika sistema zakonodaje je zaprtost nepremičninskega trga, vključno z ustavno omejitvijo. To je tisto, na kar Bruselj že ves čas opozarja in to vam moram seveda tudi tokrat povedati.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg400">In kar se tiče vaše skrbi za ugled Slovenije v svetu; zelo me bo veselilo, če bosta, gospod Peterle in tudi gospod Janša, nehala z očrnjevanjem Slovenije in drugih slovenskih politikov v tujini, v razgovorih s tujimi državniki, s pošiljanjem raznih panfletov na različne naslove po svetu. Če se bo s tem nehalo, bo tudi s tem dan nek prispevek k boljšemu imidžu Slovenije v svetu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg401">Hvala, doktor Drnovšek. Repliko ima gospod Partljič, gospod Hvalica in gospod Peterle.</seg>
             </u>
             <note type="speaker">ANTON PARTLJIČ:</note>
-            <u who="#SDZ2.PartljičAnton" ana="#regular">
+            <u who="#PartljičAnton">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg402">Lep pozdrav vsem skupaj! Imel bi kratko repliko na vas, gospod Lojze Peterle, čeprav mi je na nek način nenavadno, ker nič posebnega ne gojim do vas, da vam že tu večkrat dajem replike. Ampak sem opažal v tem času, kar volimo vlado in mandatarja, ste nekajkrat z daljšimi nastopi kar precej jedko govorili o gospodu Drnovšku. To me čudi, jaz bi si prej mislil, da bi morda lahko uporabili kakšno tako gesto, kot jo je gospod Janez Janša do Marjana Podobnika in mu je rekel: hvala. Kajti, kadarkoli se v naši poslanski skupini kdo pripravlja, da bi vas bodisi napadel bodisi polemiziral z vami, če za to izve gospod Drnovšek, to poskuša zmeraj preprečiti. Vedno reče: nikar po Peterletu, pod njim se število članstva Liberalni demokraciji manjša, število poslancev radikalno zmanjša in je za Liberalno demokracijo zelo dragocen, torej mi ga čuvajte.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg403">Zato vam predlagam, da mu rečete, hvala, ne pa, da ga zmeraj kregate.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg404">Hvala lepa. Besedo dajem gospodu Ivu Hvalici.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg405">Hvala lepa. Gospod mandatar, zdaj pa res ne vem, kaj je z vami - ali ste zavedeni ali niste? Ali veste, kaj ste rekli tu? Da boste poskrbeli za zakon o igralništvu, da ste vi govorili o tem z menoj. Lepo vas prosim, gospod mandatar!</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg406">Ta zakon smo sprejeli 19. maja 1995. leta, ima že brado! Vi pa še zdaj tega ne veste! En dan po najinem rojstnem dnevu - kot veste, sva slučajno oba rojena 18. maja, kot sva ugotovila zadnjič v razgovoru. Torej, vi mi govorite zdaj o zakonu o igralništvu. Ma, lepo vas prosim, to je neresno! Jaz sploh nisem govoril! Zakon o igralništvu, če se ne motim, je imel oznako EPA-196 , tolikokrat sem to izrekel za to govornico, da vem, in smo ga sprejeli - zdaj bo dve leti.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg407">Lepo vas prosim, da ste vsaj pred tem državnim zborom resni, če na vladi ne operirate s številkami in datumi. Jaz sem govoril o zakonu o lastninjenju igralnic EPA-500 in o tem smo se pogovarjali. Glede na vaše negiranje sedaj, bom rekel naslednje - uporabil bom slovenski pregovor: "Kdor laže, tudi krade". Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg408">Hvala lepa. Za repliko se je prijavil tudi gospod Lojze Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg409">Ja, zdaj izgleda, da je stvar zelo resna, kajti tudi gospod predsednik Vlade se je poslužil neresnice. Nobenih pamfletov ne širim po svetu, ne črnim nobenega, če me pa kdo vpraša, kako je pri nas doma, povem tisto, kar povem tudi doma. Ničesar drugega na tujem nisem še povedal. V demokraciji je tako, da človek lahko govori doma in po svetu. Če pa imava različne poglede na našo situacijo, ni to nič narobe, ali je to komu všeč ali ne.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg410">Kar se pamfletov tiče, poglejte za vsak slučaj, kaj je vaša uradna tiskovna predstavnica pisala v Frankfurter Algemeine in mi, prosim, sporočite, ali je to pamflet ali je kaj drugega.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg411">Kar zadeva jedkosti, gospod Partljič: zame je ključni kriterij resnicoljubnost. Po štirih letih sistematičnega ignoriranja koalicijskega partnerja, ki se imenuje SKD, ne morem izreči posebne zahvale za tak odnos, ki sta ga bili deležni tudi drugi dve stranki. Sem pa za temi mikrofoni zadnjič dejal, da sem vesel vsega, kar smo storili skupaj, in so zadeve, ki smo jih tudi skupaj dobro naredili. Pravim pa, koliko bi jih lahko še več, če bi ravnali demokratično, kot delujejo koalicije po svetu, ne pa, da je LDS grobo uveljavljala svojo silo in preprosto partnerja ni upoštevala. Še preprostih delovnih mest nismo mogli zasesti z našimi ljudmi, če tako rečem, ker je bil nek razrez, ko so bili ti tako ali drugače premaknjeni.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg412">Torej, za tak odnos moram reči hvala, za tisto, kar so pa naredili, pa sem vesel, da smo naredili.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg413">Hvala gospodu Peterletu. Repliko ima gospod Boris Sovič.</seg>
             </u>
             <note type="speaker">BORIS SOVIČ:</note>
-            <u who="#SDZ2.SovičBoris" ana="#regular">
+            <u who="#SovičBoris">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg414">Cenjene dame, spoštovani! Rad bi repliciral gospodu Peterletu, ki je rekel, da nič drugega ne govori v tujini kot doma, in to, kar pove doma, pove tudi v tujini.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg415">Rad bi povedal, da sem nekje bral o nekem politiku iz neke druge države, ki je bil znan in zelo oster polemik v domovini in ko je nekoč šel na obisk v drugo državo, so rekli: "No, pa povejte še tukaj nekaj o vaši državi." Rekel je: "Veste, v tujini svoje domovine ne ogovarjam." In bi vljudno prosil, da bi se tudi vsi slovenski politiki držali tega. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg416">Repliko ima tudi gospod Mozetič.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg417">Hvala za besedo. Se opravičujem, da še enkrat stopim sem, vendar, ker sem ta trenutek poslušal to, o čemer je mandatar prej govoril, da naj bi nekateri politiki nehali pripovedovati svoja stališča, sem ga poslušal sicer v pisarni in sem prišel sem zato, da nekaj povem, ker sem se na nek način zgrozil.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg418">Upam, da to ne kaže na to, da se bo začelo v prihodnosti pri nas določati, kaj kdo sme misliti, kaj kdo sme govoriti, kaj kdo sme pisati. Upam, da je obdobje, ko je bilo določeno, kaj kdo sme misliti, kaj kdo sme govoriti, kaj kdo sme pisati ter kako in kje in kaj, mimo. In upam, da se je gospodu mandatarju, gospodu Drnovšku, na nek način to samo zareklo, da to v resnici ne kaže na to in da bomo še vedno v tej državi spoštovali tisto, kar smo rekli, kar je zapisano v ustavi, kar je iz Evropske konvencije o človekovih pravicah, ki smo jo sprejeli, a še ne izpolnili v celoti, da je svoboda misli, govora - svoboda misli vključuje tudi izražanje in širjenje svojih stališč - da bo ta svoboda v tej državi še vedno ostala. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg419">Hvala. Spoštovane poslanke in poslanci! Ali želi še kdo besedo?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg420">Zato razpravo zaključujem.</seg>
@@ -1387,7 +1368,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 18.12 uri in se je nadaljevala ob 19.00 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg429">Spoštovane poslanke in poslanci! Predlagam, da nadaljujemo s sejo. Preden preberem zapisnik o izida glasovanja, prosim, da ugotovimo prisotnost. Ugotavljamo prisotnost! Prisotnih je 81 poslank in poslancev. To pomeni, da je Državni zbor sklepčen in lahko nadaljuje z delom.</seg>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg430">Seznanjam vas z rezultati glasovanja, torej z zapisnikom o ugotovitvi izida glasovanja o imenovanju ministrov. Glasovanje je potekalo 27. februarja 1997 v prostorih Državnega zbora Republike Slovenije. Razdeljenih je bilo 89 glasovnic. Oddanih je bilo 89 glasovnic. Neveljavna ni bila nobena glasovnica. Veljavnih je bilo 89 glasovnic. Za listo kandidatov za ministre je glasovalo 52 poslank in poslancev, proti pa 37 poslancev.</seg>
                <note>Aplavz.</note>
@@ -1398,165 +1379,165 @@
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg434">Prvi bo zaprisegel gospod Marjan Podobnik, minister brez resorja, ki nadomešča predsednika Vlade in koordinira državotvorna ministrstva. Prosim.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikMarjan" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg435">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močni deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg436">Sledi zaprisega ministra za delo, družino in socialne zadeve mag. Antona Ropa. Prosim za mir v dvorani.</seg>
             </u>
             <note type="speaker">MAG. ANTON ROP:</note>
-            <u who="#SDZ2.RopAnton" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg437">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močni deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg438">Minister za ekonomske odnose in razvoj, dr. Marjan Senjur.</seg>
             </u>
             <note type="speaker">DR. MARJAN SENJUR:</note>
-            <u who="#SDZ2.SenjurMarjan" ana="#regular">
+            <u who="#SenjurMarjan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg439">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močni deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg440">Minister za finance, mag. Mitja Gaspari.</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ2.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg441">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg442">Minister za gospodarske dejavnosti, gospod Metod Dragonja.</seg>
             </u>
             <note type="speaker">METOD DRAGONJA:</note>
-            <u who="#SDZ2.DragonjaMetod" ana="#regular">
+            <u who="#DragonjaMetod">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg443">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg444">Minister za kmetijstvo, gozdarstvo in prehrano, gospod Ciril Smrkolj.</seg>
             </u>
             <note type="speaker">CIRIL SMRKOLJ:</note>
-            <u who="#SDZ2.SmrkoljCiril" ana="#regular">
+            <u who="#SmrkoljCiril">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg445">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg446">Minister za kulturo, gospod Jožef Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ2.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg447">Spoštovani zbor! Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg448">Minister za notranje zadeve, gospod Mirko Bandelj.</seg>
             </u>
             <note type="speaker">MIRKO BANDELJ:</note>
-            <u who="#SDZ2.BandeljMirko" ana="#regular">
+            <u who="#BandeljMirko">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg449">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg450">Minister za obrambo, gospod Tit Turnšek.</seg>
             </u>
             <note type="speaker">TIT TURNŠEK:</note>
-            <u who="#SDZ2.TurnšekTit" ana="#regular">
+            <u who="#TurnšekTit">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg451">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg452">Minister za okolje in prostor, doktor Pavel Gantar.</seg>
             </u>
             <note type="speaker">DR. PAVEL GANTAR:</note>
-            <u who="#SDZ2.GantarPavel" ana="#regular">
+            <u who="#GantarPavel">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg453">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg454">Minister za pravosodje, gospod Tomaž Marušič.</seg>
             </u>
             <note type="speaker">TOMAŽ MARUŠIČ:</note>
-            <u who="#SDZ2.MarušičTomaž" ana="#regular">
+            <u who="#MarušičTomaž">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg455">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg456">Minister za promet in zveze, magister Anton Bergauer.</seg>
             </u>
             <note type="speaker">MAG. ANTON BERGAUER:</note>
-            <u who="#SDZ2.BergauerAnton" ana="#regular">
+            <u who="#BergauerAnton">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg457">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in se z vsemi svojimi močmi zavzemal za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg458">Minister za šolstvo in šport, doktor Slavko Gaber.</seg>
             </u>
             <note type="speaker">DR. SLAVKO GABER:</note>
-            <u who="#SDZ2.GaberSlavko" ana="#regular">
+            <u who="#GaberSlavko">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg459">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg460">Minister za zdravstvo, doktor Marjan Jereb.</seg>
             </u>
             <note type="speaker">DR. MARJAN JEREB:</note>
-            <u who="#SDZ2.JerebMarjan" ana="#regular">
+            <u who="#JerebMarjan">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg461">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg462">Minister za znanost in tehnologijo, dr. Lojze Marinšek.</seg>
             </u>
             <note type="speaker">DR. LOJZE MARINŠEK:</note>
-            <u who="#SDZ2.MarinčekAlojzij" ana="#regular">
+            <u who="#MarinčekAlojzij">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg463">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg464">Minister za zunanje zadeve, gospod Zoran Thaler.</seg>
             </u>
             <note type="speaker">ZORAN THALER:</note>
-            <u who="#SDZ2.ThalerZoran" ana="#regular">
+            <u who="#ThalerZoran">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg465">Spoštovani! Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg466">Minister brez resorja, odgovoren za področje lokalne samouprave, mag. Božo Grafenauer.</seg>
             </u>
             <note type="speaker">MAG. BOŽO GRAFENAURE:</note>
-            <u who="#SDZ2.GrafenauerBožo" ana="#regular">
+            <u who="#GrafenauerBožo">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg467">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg468">Minister brez resorja, odgovoren za koordiniranje delovnih teles s področja socialnega varstva, gospod Janko Kušar.</seg>
             </u>
             <note type="speaker">JANKO KUŠAR:</note>
-            <u who="#SDZ2.KušarJanez" ana="#regular">
+            <u who="#KušarJanez">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg469">Spoštovani! Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg470">Hvala lepa. Želi kdo od ministrov spregovoriti Državnemu zboru?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-03-1997-02-27.seg471">Ker so bili poslanci Marjan Podobnik, Metod Dragonja, Ciril Smrkolj, Jožef Školč, mag. Anton Bergauer, dr. Slavko Gaber in Zoran Thaler imenovani za minister, ne morejo več opravljati poslanske funkcije, zato bom o tem takoj obvestil Republiško volilno komisijo in jo zaprosil, da zboru sporoči, kateri kandidati jih bodo nadomestili v skladu s 14. členom zakona o poslancih. Na podlagi obvestila Republiške volilne komisije bo Mandatno-imunitetna komisija zbora pripravila poročilo in predlagala potrditev mandatov že na naslednji seji zbora.</seg>

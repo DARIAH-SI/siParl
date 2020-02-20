@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 18. zasedanje</title>
             <meeting n="18"
-                     corresp="#VsiZbor.1991-09-11.z018-01.DruzPolZb #VsiZbor.1991-09-11.z018-01.ZbObc #VsiZbor.1991-09-11.z018-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="14"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="10"/>
                <tagUsage gi="seg" occurs="30"/>
             </namespace>
@@ -124,23 +115,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-09-11.z018-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-09-11.z018-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-09-11.z018-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -150,50 +124,54 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">18. zasedanje</head>
             <docDate>11. september 1991</docDate>
             <note type="chairman">Sejo je vodil dr. Ludvik Toplak, predsednik Družbenopolitičnega zbora</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.18 uri</note>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg1">Drage poslanke, spoštovani poslanci, gospe in gospodje, cenjeni gostje, spoštovani predstavniki sredstev javnega obveščanja, pričenjam skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg2">Na skupnem zasedanju smo se zbrali, da bi poslušali UVODNO BESEDO K ZAKONU O LASTNINSKEM PREOBLIKOVANJU PODJETIJ, ZAKONU O AGENCIJI REPUBLIKE SLOVENIJE ZA PRIVATIZACIJO IN K ZAKONU O SKLADU REPUBLIKE SLOVENIJE ZA RAZVOJ, ki jo bo podal predsednik IS Skupščine Republike Slovenije gospod Alojz Peterle. Prosim, gospod Peterle. Ja, prosim gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg3">Gospod predsednik, spoštovano predsedstvo, poslanke in poslanci. Ta zbor bi želel opozoriti oziroma skupno zasedanje, da je v skladu s poslovnikom razprava oziroma poslušanje ekspozeja vprašljivo. Gre namreč za to, da dnevni redi zborov še niso določeni. Dnevne rede določajo zbori na začetku seje, v skladu s 104. členom poslovnika. Zbori se še niso odločili, ali bodo uvrstili na dnevni red predlog zakona o lastninskem preoblikovanju podjetij, o Agenciji in o Skladu. Poleg tega imajo zbori formalno predložena še dva zakonska predloga skupin poslancev. Če se bodo - jaz to ne vem, ker razprave o tem ni bilo - odločili, da bodo eventualno uvrstili na dnevni red tudi katerega od teh predlogov, imajo poslanci, ki so predlagatelji teh zakonov, enako pravico obrazložiti ali na zboru ali na skupni seji tudi svoj zakonski predlog. Če mi brez odločitve zbora poslušamo ekspoze vlade, ki ga bo dal njen predsednik gospod Peterle, potem smo drugim skupinam poslancev, ki so predlagatelji zakonov onemogočili, da bi enakopravno zborom razložili svoj predlog in svoj koncept, kar mislim, da je v nasprotju s pravicami, ki jih poslanci imajo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg4">Poleg tega bi opozoril, da je kršitev poslovnika tudi po 82. členu in tretjem odstavku, po katerem zbori sklenejo, da bodo skupaj poslušali ekspozeje. Ne vem, da bi o tem sklepal kakršen koli zbor. Zato predlagam, gospod predsedujoči, da se najprej skličejo zbori, da zbori določijo dnevni red in da zbori tudi sklenejo, da bodo na skupni seji poslušali ekspoze. Gospodu predsedniku Peterletu se opravičujem, to ni njegova krivda. Krivda je vodenja zborov, mislim, da bi bilo prav, da ob zakonodaji, ki je na dnevnem redu tudi ta vidi poslovnika dosledno spoštujemo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg5">Hvala lepa. Gospod Pintar.</seg>
             </u>
             <note type="speaker">EMIL MILAN PINTAR:</note>
-            <u who="#SSK11.PintarEmilMilan1944" ana="#regular">
+            <u who="#PintarEmilMilan1944">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg6">Spoštovane kolegice in kolegi, spoštovani predsednik! K temu, kar je rekel moj kolega poslanec Potrč, samo še dodatni predlog oziroma informacija. Če se bomo vendarle odločili drugače, da bo tu dana možnost za uvodno obrazložitev vladnega predloga zakona o lastninjenju podjetij, potem predlagam, da se enako odločimo tudi za druga dva, toliko prej, ker sem obveščen, da je Zakonodajno-pravna komisija tak sklep sprejela in ga predložila Skupščini, da naj imajo tudi predlagatelji alternativni verzij predloga zakona enako možnost. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg7">Hvala lepa. Prosim, gospod Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg8">Čudi me razpravljanje predstavnikov opozicije, konkretno komunistične stranke oziroma SDP, češ da se stranke še niso odločile in da bi radi enakopravno obrazložili svoje predloge. Imeli so leto in pol časa, vendar niso nič naredili. Zadnji teden ali štirinajst dni so pa dali kar tri konkurenčne predloge zakonov v obravnavo skupščini, delovnim komisijam in to vedno prepozno, potem so se pa jezili, da delovna telesa niso teh predlogov sprejela na svoj dnevni red. Tudi ni res, da je to kršitev poslovnika. Čudi me, gospod Potrč, da niste doslej še nikdar protestirali zoper tako ravnanje skupščinskega vodstva, kajti imeli smo ničkolikokrat take seje, konkretno, kadar je gospod Kučan nastopal tudi nenapovedano, niste nikdar protestirali. Opravičevanje gospodu Peterletu je čisto farizejsko dejanje. Dobro ste vedeli, da je bil tudi gospod Peterle na sestanku, kjer se je govorilo, da bi bil danes njegov nastop na skupnem zasedanju. Da bi pa poslušali obrazložitev predlagateljev konkurenčnih zakonov, se mi zdi skrajno neracionalno, ker teh zakonov sploh še ni obravnavalo nobeno skupščinsko delovno telo, razen na splošno Zakonodajno-pravna komisija, ki pa je sklenila in predlagala predlagateljem, da predlagajo svoje predloge v amandmajski obliki in ne v obliki konkurenčnega zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg9">Tudi jaz hočem povedati, da je gospod Pintar narobe interpretiral sklep Zakonodajno-pravne komisije; sicer je gospod Gros delno to pojasnil. Naše priporočilo je v bistvu bilo predlagateljem, naj svoje predloge preoblikujejo v obliko amandmaja, tako da bodo lahko po poslovniku obravnavali tako kot je treba. Drugih predlogov pa še nismo obravnavali, tudi ni bilo pogojev. Poleg tega bi pa glede na nastop gospoda Potrča opozoril na 83. člen poslovnika, kjer pravi, ne samo da zbore skličejo, torej po sklepu zborov, njihovi predstavniki, ampak tudi po medsebojnem sporazumu, torej predsednikov, sklepam. Če vidim tu gori tri predsednike, mislim, da so se medsebojno sporazumeli in da je v 83. členu v prvem odstavku podlaga za to zasedanje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg10">Hvala lepa. Soglasno stališče predsednikov vseh treh zborov je tako, kot je bilo. Po prvem odstavku 83. člena poslovnika zbore skličejo na skupno zasedanje po njihovem medsebojnem sporazumu predsedniki ali zborov njihovi predsedniki. V konkretnem primeru smo se predsedniki tako sporazumeli in na tem soglasno ostajamo, nadaljujemo delo, besedo ima gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg11">Spoštovane poslanke in poslanci! Tisztelt kepvišelok tisztelt holgyeim es uraim. Spetabili delegate e delegati.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg12">Smo pred zaključno razpravo o skupini zakonov, katerih izvedba bo normalizirala Slovenijo in zaslužijo oznako zgodovinskosti tako z vidika popravljanja preteklih krivic, kot z vidika vzpostavljanja normalnega lastništva.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg13">Cilj gospodarske reforme v Sloveniji je, ustvariti normalno tržno gospodarstvo, kar pomeni, da mora Slovenija čimprej osvojiti prakso, ki se je pokazala za uspešno na zahodu. Hrbtenica tega je privatizacija. Brez privatnega lastništva je slovensko gospodarstvo obsojeno na stagnacijo. Zgodovina družbene lastnine kaže, da vladata tam, kjer ni privatnega lastništva, neučinkovitost in pomanjkanje dinamizma. Še posebej pa velika državna podjetja vse prevečkrat trpijo kronične izgube, ki onemogočajo vzdrževanje makroekonomske stabilnosti s hudimi posledicami za celotno gospodarstvo. S privatizacijo so povezani štirje glavni cilji:</seg>
@@ -216,7 +194,7 @@
                <note>Ploskanje</note>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-09-11.z018-01.seg30">Hvala lepa gospodu Peterletu. S tem zaključujemo skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora. Razprava bo v zborih.</seg>
             </u>
             <note type="time">Seja je bila končana 11. septembra 1991 ob 10.40 uri.</note>

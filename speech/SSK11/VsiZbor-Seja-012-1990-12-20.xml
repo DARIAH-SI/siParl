@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 12. seja</title>
             <meeting n="12"
-                     corresp="#VsiZbor.1990-12-20.s012-01.DruzPolZb #VsiZbor.1990-12-20.s012-01.ZbObc #VsiZbor.1990-12-20.s012-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="110"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="11"/>
                <tagUsage gi="seg" occurs="193"/>
             </namespace>
@@ -293,23 +284,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1990-12-20.s012-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-12-20.s012-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-12-20.s012-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -320,36 +294,40 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">12. seja</head>
             <docDate>20. december 1990</docDate>
             <note type="chairman">Predsedoval: dr. France Bučar, predsednik Skupščine Republike Slovenije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 14 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg1">Spoštovane poslanke in poslanci! Kot vidite, je na klopeh nenavadno skupščinsko gradivo in bi zato pred prehodom na dnevni red prosil pobudnika tega scenarija, da mogoče sam pove nekaj besed.</seg>
             </u>
             <note type="speaker">KAREL FRANKO:</note>
-            <u who="#SSK11.FrankoKarel1919" ana="#regular">
+            <u who="#FrankoKarel1919">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg2">Spoštovano predsedstvo, spoštovani kolegi, poslanci in drugi! Jabolka, ki so pred vami, so dozorela v sadovnjakih Prekmurskega, Goričkega, vejice so iz goričkih gozdov. Za vas so pripravili jabolka kolektiv Sadjarstvo - Kmetijska zadruga Panonka, vejice pa otroci nekaterih tamkajšnjih osnovnih šol. Goričko, severni del občine Murska Sobota, meji na zahodu na Avstrijo, na severu pa na Madžarsko. Ima status demografsko ogroženega območja. Ogroženo je tudi gospodarstvo, saj predvsem v obmejnih krajih kmet seje, divjad žanje. Zato postaja neobljudeno, Goričanci pa so razkropljeni po Sloveniji. Da bi to področje postalo gospodarstvu zanimivo in privlačno, Kmetijska zadruga Panonka na tem področju razvija intenzivno sadjarstvo in vinogradništvo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg3">Spoštovani! Pred nami so božični prazniki. Za nas, kristjane, je božič praznik radosti, mira in upanja. V letošnjih božičnih dnevih se bo ljudstvo Slovenije odločalo o svoji suverenosti in neodvisnosti. Zato naj bo letošnji božič praznik vseh, tudi nevernih. Imam prijetno dolžnost, da vam, vašim družinam, kakor tudi vsem državljanom Slovenije v imenu kolektiva Sadjarstvo pri Kmetijski zadrugi Panonka, zadružnikov KOP ter drugega slovensko in madžarsko govorečega prebivalstva Goričkega zaželim vesele božične praznike in srečno uspeha polno novo leto 1991. Mir, zadovoljstvo, božji blagoslov naj bo z vami v svobodni državi Sloveniji. Želimo, da bi jabolka, vejica, svečke, bili na prazničnih mizah vaših družin.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">UČENKA OSNOVNE ŠOLE V PREKMURJU:</note>
-            <u who="#SSK11.unknown" ana="#regular">
+            <u who="#unknown">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg4">Spoštovano vodstvo Slovenije, gospod Kučan, gospod Bučar in gospod Peterle! Odločilni dnevni slovenskega naroda se bodo združili z bližajočimi se prazniki. Tudi želje prekmurske mladine za uspešno premostitev težavne poti v samostojnost in želje za uspešno nadaljnje delo smo strnili z željami za prijetno praznovanje in srečo v novem letu. Za spodbudo vam izročamo simbolične spominke iz Prekmurja. Prepričana sem, da so naše želje želje mladih vse Slovenije.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSTAVNICA PREKMURSKIH ŠOL:</note>
-            <u who="#SSK11.unknown" ana="#regular">
+            <u who="#unknown">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg5">Spoštovani predsedniki, ministri, poslanke in poslanci! Naša prihodnost je težka in negotova. Pot v boljše in lepše življenje bo dolga in trnova. Uresničevanje naših skupnih ciljev bo zahtevalo od vas, da uspešno opravite številne pomembne in odgovorne naloge. Zato vam želimo v imenu prekmurskih šol v prihodnje veliko uspehov pri vašem delu. Preživite vesele praznične dni v novem letu pa obilo sreče! Prosimo, da gospodu Kučanu predate ikebano, ki smo jo tudi zanj prinesli.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg6">Meni je pripadla ta prijetna dolžnost, da se pobudnikom za to ob priložnostni svečanosti za lepe želje najlepše zahvalim, mislim, da tudi v imenu vseh vas.</seg>
                <note>Aplavz.</note>
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg7">Zdaj pa bi pričeli skupno sejo vseh zborov Skupščine Republike Slovenije, ki se na podlagi 374. člena Ustave Republike Slovenije in 134. člena Poslovnika Skupščine Republike Slovenije. Najprej bomo ugotovili sklepčnost seje in prosim delegate Družbenopolitičnega zbora.</seg>
@@ -429,7 +407,7 @@
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg59">Predloge Sodnega sveta ste prejeli, prav tako tudi mnenja Komisije za volitve, imenovanja in administrativne zadeve k vsem predlogom. Predlog za razrešitev sodnice Ive Štucin pa ste prejeli danes. Želi besedo predstavnik Sodnega sveta? Ne želi. Predstavnik komisije ne želi. Kdo želi razpravljati? Ja, prosim!</seg>
             </u>
             <note type="speaker">FRANC BOŠTJANČIČ:</note>
-            <u who="#SSK11.BostjancicFranc1935" ana="#regular">
+            <u who="#BostjancicFranc1935">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg60">Gospod predsednik, spoštovani zbor! Sem Boštjančič Franc in se ne želim predstaviti kot predstavnik kakršnekoli stranke, ampak se predstavljam kot župan občine Ajdovščina.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg61">Republiškemu sekretariatu za pravosodje in upravo sem poslal naslednje pismo, ki vam ga bom sedaj v celoti prečital. In sicer 29.9.1990 leta, Republiški sekretariat za pravosodje in upravo, v roke sekretarju gospodu, dr. Rajku Pirnatu. Zadeva: izvolitev predsednika Temeljnega sodnika v Novi Gorici. Opozorilo.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg62">"Znano nam je, da se vodi postopek za izvolitev predsednika Temeljnega sodišča v Novi Gorici in da je med prijavljenimi kandidati tudi gospod Žorž Dušan, sedanji vršilec dolžnosti oziroma namestnik predsednika tega sodišča. Ni naš namen kakorkoli vplivati na odločitev pri predlaganju morebitnega kandidata Skupščine Republike Slovenije, pač pa vas želimo še v fazi priprave opozoriti na nekatere probleme v naši občini, ki so vezani na ime Dušan Žorž, ker menimo, da so kadrovski problemi neprimerna snov za razpravo v skupščini. V občini smo pred leti uvedli komasacijske postopke na devetih komasacijskih področjih, med drugim tudi na komasacijskem območju Brje - Žablje. Za to območje je do letošnjega 7. junija, ko ga je skupščina na njegovo željo razrešila, predsedoval komasacijski komisiji Dušan Žorž. V vseh komasacijskih postopkih, pa še v komasacijskem postopku območja Brje - Žablje so številni občani vlagali pritožbe in se pri tem opirali na pomanjkljivo izvedene melioracije, neustrezno kvaliteto pridobljenega zemljišča ipd. Nemalo občanov pa se obrača direktno na občinske funkcionarje, zlasti na predsednika občinske skupščine. več udeležencev v komasacijskem postopku območja Brje - Žablje v teh razgovorih očita pristranost in sorodstvene vezi pri delu predsednika te komisije, Dušana Žorža. V tem komasacijskem območju so namreč udeleženi tudi Žorževi sorodniki in sicer bratranca, ne navajam kateri, posredno pa še drugi bratranec.</seg>
@@ -438,7 +416,7 @@
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg65">In še mimogrede, gospod Žorž Dušan je svojo konkurentko za predsednico Temeljnega sodišča prijavil Sodnemu svetu, da leta 1981 ni končala sodnega spisa v roku, kot ga določa zakon. Zakonito, morda pa ne lepo. Nisem mislil delati nobene svete vojne, tudi se ne spuščam v razmišljanja, ali je ta način volitev sodnikov primeren - ja ali ne. Ampak smatram, da moram preprosto opraviti svojo dolžnost. Vi pa presodite, ali so moji argumenti dovolj tehtni, da jih boste upoštevali pri svoji odločitvi. Hvala lepa!</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg66">Hvala lepa. Želi še kdo razpravljati prosim. Če ne želi nihče razpravljati potem lahko preidemo na glasovanje in dajem na glasovanje predlog za izvolitev Dušana Žorža za predsednika Temeljnega sodišča v Novi Gorici.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg67">Kdor je, prosim, za?</seg>
                <note>12 delegatov.</note>
@@ -597,21 +575,21 @@
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg164">Nadalje Komisija za volitve, imenovanja in administrativne zadeve predlaga, da Skupščina imenuje predsednika in člane upravnega odbora Prešernovega sklada. Predlog ste prejeli. Želi predstavnik predlagateljev besedo? Ne želi. Želi o predlogu kdo razpravljati? Prosim, g. Zlobec.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg165">Zadnje mesece veliko poslušamo o petinštiridesetih letih boljševizma, obenem pa se nam na nekaterih področjih dogaja, da ohranjamo prav strukture, ki bi jim resnično z vso upravičenostjo lahko rekli, da so boljševiške. Gre za upravni odbor Prešernovega sklada in na cel sistem delovanja Prešernovega sklada in Prešernovih nagrad. Naj takoj na začetku povem, da od 14 predlaganih članov in s predsednikom, poznam 14 ali osebno ali po njihovem delu. S strokovnega vidika nimam najmanjših in nikakršnih pomislekov do nobenega od predlaganih, naj bo to povsem jasno. Zdaj bom pa povedal, zakaj se bom glasovanja vseeno vzdržal. Nočem vplivati na glasovanje, ker v zadnjem trenutku ni mogoče več ničesar spremeniti in izboljšati, lahko bi pa prišlo do kulturnega škandala. Mislim pa, da je pravi trenutek, da povem nekaj besed o tem. Zlasti zato, ker se pripravlja nov zakon o Prešernovih nagradah, ki po mojih informacijah sedanjega stanja odločilno ne bo spremenil, zato bi izkoristil to priložnost za načelen pomislek v zvezi s temi nagradami.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg166">Prešernove nagrade so simbol slovenske kulture in čeprav vsi v kulturi dobro vemo, da je z njimi marsikaj hudo narobe, ni do tega trenutka še nihče ničesar storil, da bi se to tudi spremenilo. Prešernove nagrade so bile ustanovljene takoj po vojni, in sicer kot čista kopija sovjetskega vzorca. Gre za izrazito realsocialistično zgodbo. Državna nagrada s prav posebnim statusom itd. To se zdi na prvi pogled celo upravičeno. Če pa na zadevo pogledamo od blizu, se razkrije vsa njena absurdnost. Poglejmo konkretno: člani upravnega odbora so strokovnjaki z različnih področij, od književnosti prek gledališča, likovne umetnosti, glasbe do arhitekture in oblikovanja. V isti skupni skledi sta, recimo, roman in igranje na flavto. Skratka, ustvarjanje in poustvarjanje na popolnoma različnih nivojih. To jasno ne gre skupaj, ampak problem sam je še bolj absurden. Člani upravnega odbora, kot rečeno, sami strokovnjaki, sestavljajo komisijo za posamezna področja. Teh področij je trenutno šest ali sedem. Zdaj pa pazite! Te komisije predlagajo kandidate za glavno Prešernovo nagrado in za nagrade Prešernovega sklada. Kavelj tiči v tem, da so glavne Prešernove nagrade omejene na tri nagrade. Tako da imamo položaj, ko iz komisij pride 10 ali več predlogov, na koncu pa mora upravni odbor odločati o treh glavnih nagradah, o treh izbrancih. Nenadoma mora strokovnjak za literaturo meritorno odločati, ali si Prešernovo nagrado zasluži slikar X, ali si jo bo mogoče zaslužila operna pevka Y. To je več kot nesmiselno in o tem najbrž ni treba zgubljati besed. Zato snovalce novega zakona opozarjam, naj se ponavljajo starih napak. Da pa me ne bi obtožili anarholiberalizma in rušenja, bi predlagal zelo konkreten predlog v razmislek slovenski kulturni javnosti.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg167">Zdi se mi, da bo to delovalo šokantno, ampak mislim, da je edino smotrno in edino pametno. Prešernova nagrada naj postane izključno nagrada za literaturo, eventualno tudi za prevajanje. S tem bo sicer izgubila svojo vsenacionalno avreolo, kar pa je ob siceršnji obilici vsakršne nacionalne patetike čisto dobro in zdravo. Vse druge specializirane nagrade - od gledaliških do arhitekturnih - bi izrazito pridobile na svoji teži, saj v sedanjem položaju vedno hirajo v hladni senci Prešernove nagrade in nikakor ne morejo dobiti nacionalnega statusa. In končno, tudi literatura bi si zaslužila resnično pravo nagrado, ne pa le sodelovanje. Z eno besedo, jabolka in hruške bi končno legle vsaka v svojo košaro, ali kot pravi prijatelj Rudi Šeligo, svinje in maline ne gredo skupaj. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg168">Hvala. Gospod Šeligo.</seg>
             </u>
             <note type="speaker">MAG. RUDI ŠELIGO:</note>
-            <u who="#SSK11.SeligoRudi1935" ana="#regular">
+            <u who="#SeligoRudi1935">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg169">Ne znam latinskega odgovora, da bo lahko odgovoril Jaši Zlobcu. Vsebina tega pregovora bi morala iti v to smer, da bi nekaj rekla o lastni produkciji svoje pomembnosti. To, kar je Jaša govoril, je popolnoma brezpredmetno. V delu je, pripravlja se zakon o Prešernovih nagradah, takrat bo odprt koncept, najbrž, bomo veliko dorekli, sedaj velja še vedno stari zakon in gre samo za to, da imenujemo upravni odbor na osnovi in za zakon, ki pač velja. Torej priporočam, da vseeno ta predlagani odbor sprejme. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg170">Hvala lepa. Želi še kdo razpravljati? V kolikor ne želi, potem prehajamo na glasovanje in dajem na glasovanje predlog, da se za predsednika upravnega odbora Prešernovega sklada imenuje dr. Ivan Sedej.</seg>
                <seg xml:id="SSK11-VsiZbor.1990-12-20.s012-01.seg171">Kdor je, prosim, za?</seg>
                <note>134 delegatov.</note>

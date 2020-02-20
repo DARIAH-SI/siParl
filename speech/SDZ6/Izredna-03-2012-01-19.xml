@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ6-Izredna-03-2012-01-19"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">3. izredna seja (19. 1. 2012)</title>
-            <meeting n="3"
-                     corresp="#SDZ6-Izredna-03-2012-01-19.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="3" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="6" corresp="#DZ" ana="#parl.term #DZ.6">6. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,33 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">3. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|CF754AA7428C0FC7C125798B004FE407</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=VI&amp;type=sz&amp;uid=CF754AA7428C0FC7C125798B004FE407</idno>
-                  <imprint>
-                     <date when="2012-01-19"/>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>3. izredna seja (19. 1. 2012)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="2012-01-19"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=VI&amp;type=sz&amp;uid=CF754AA7428C0FC7C125798B004FE407</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="note" occurs="29"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="13"/>
                <tagUsage gi="seg" occurs="57"/>
             </namespace>
@@ -155,24 +141,21 @@
                <date when="2012-01-19" ana="#parl.sitting">19. 1. 2012</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ6-Izredna-03-2012-01-19.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>REPUBLIKA SLOVENIJA DRŽAVNI ZBOR</head>
             <head type="session">3. izredna seja</head>
             <note type="chairman">Sejo je vodil predsednik Državnega zbora dr. Gregor Virant.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 10. uri.</note>
             <note type="speaker">PREDSEDNIK DR. GREGOR VIRANT:</note>
-            <u who="#SDZ6.VirantGregor" ana="#chair">
+            <u who="#VirantGregor" ana="#chair">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje!</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg2">Začenjam 3. izredno sejo Državnega zbora, ki sem jo sklical na podlagi drugega odstavka 58. člena in drugega odstavka 60. člena Poslovnika Državnega zbora.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg3">Obveščen sem, da se današnje seje ne morejo udeležiti naslednji poslanki in poslanci: dr. Andreja Črnak Meglič, Eva Irgl, mag. Branko Grims, Jakob Presečnik, mag. Dejan Židan</seg>
@@ -190,69 +173,69 @@
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg13">Besedo ima gospod Janko Veber v imenu Poslanske skupine Socialnih demokratov.</seg>
             </u>
             <note type="speaker">JANKO VEBER (PS SD):</note>
-            <u who="#SDZ6.VeberJanko" ana="#regular">
+            <u who="#VeberJanko">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg14">Hvala za besedo. Lep pozdrav v imenu Poslanske skupine Socialnih demokratov.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg15">Ob upoštevanju dejstva, da kandidat za predsednika Vlade v prvem krogu ni dobil zadostne podpore in posledično nimamo oblikovane koalicije in opozicije, ni mogoče upoštevati razmerja med poslanci vladajoče koalicije in poslanci opozicije v delovnih telesih. V Poslanski skupini Socialnih demokratov zato podpiramo odlok, s katerim se razširi pristojnost in sestava Skupnega odbora. S tem se bo Državni zbor lahko odzival na zahtevne mednarodne in domače finančne ter gospodarske razmere. Vlada je že vložila obravnavo Državnemu zboru šest zakonov, s katerimi želi vzpostaviti učinkovitejše mehanizme za obvladovanje javnih financ. In oblikovanje skupnega odbora bo to tudi omogočalo. Naj povem, da tudi v poslanski skupini podpiramo ustanovitev ustavne komisije, saj je bil tudi uradno bila 5. januarja vložen predlog za spremembo Ustavo Republike Slovenije. V skladu s poslovnikom je treba tudi ustavno komisijo v predpisanem roku ustanoviti, zato bomo ustanovitev te komisije podprli. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. GREGOR VIRANT:</note>
-            <u who="#SDZ6.VirantGregor" ana="#chair">
+            <u who="#VirantGregor" ana="#chair">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg16">Hvala lepa.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg17">V imenu Poslanske skupine Državljanske liste gospod Rihard Braniselj.</seg>
             </u>
             <note type="speaker">RIHARD BRANISELJ (PS DLGV):</note>
-            <u who="#SDZ6.BraniseljRihard" ana="#regular">
+            <u who="#BraniseljRihard">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg18">Spoštovani predsednik, kolegice, kolegi!</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg19">Državljanska lista bo podprla predlog sklepa, kot je predlagan. Ustavna komisija, mislim, da ni za nikogar sporna. Kar pa se tiče skupnega odbora, da se ne ponavljam, naj bo ta skupni odbor, ki je začasne narave, pravzaprav nekaj, kar nas bo v bodoče sililo k temu, da čim prej postavimo tiste odbore in komisije, ki jih moramo postaviti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. GREGOR VIRANT:</note>
-            <u who="#SDZ6.VirantGregor" ana="#chair">
+            <u who="#VirantGregor" ana="#chair">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg20">Hvala lepa.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg21">V imenu Poslanske skupine Demokratične stranke upokojencev Slovenije gospod Franc Jurša.</seg>
             </u>
             <note type="speaker">FRANC JURŠA (PS DeSUS):</note>
-            <u who="#SDZ6.JuršaFranc" ana="#regular">
+            <u who="#JuršaFranc">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg22">Hvala za besedo, gospod predsednik. Kolegice in kolegi, lep pozdrav!</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg23">Delovna telesa v Državnem zboru morajo biti ustanovljena za spremljanje stanja na posameznih področjih, za pripravo oziroma sprejemanje odločitev za oblikovanje stališč do posameznih vprašanj in seveda obravnavo zakonov in drugih aktov, ki jih obravnava Državni zbor. Glede na to, da še vedno nimamo vlade, niti oblikovanih resorjev, ki se bodo, kot kaže, korenito spremenili, trenutno še ni smiselno ustanavljati delovnih teles, saj bo treba le-ta prilagoditi novim ministrskim resorjem, ki jih bomo končno dobili. S tem namenom je bil sprejet že osnovni odlok, ki je predvidel zgolj začasno ustanovitev delovanja ključnih delovnih teles, ki omogočajo delovanje samega Državnega zbora, in sicer do sprejetja konsenza o ustanovitvi in nalogah vseh delovnih teles. Za to vmesno obdobje je tako po našem mnenju skupni odbor najbolj smiselna začasna rešitev, ki bo do oblikovanja kompletne vlade poleg Odbora za finance in Odbora za notranjo politiko enotno delovno telo za vse ostale resorje. Rešitev njegove pristojnosti pa je nujna, če naj realiziramo sprejeti dogovor obravnavanja paketa šestih predlogov finančnih zakonov, ki jih je v Državni zbor vložila Vlada. Kar pa se tiče ustavne komisije, pa smo jo po Poslovniku Državnega zbora dolžni ustanoviti, saj je bil v proceduro vložen predlog za spremembo Ustave.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg24">V Poslanski skupini DeSUS bomo predlog podprli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. GREGOR VIRANT:</note>
-            <u who="#SDZ6.VirantGregor" ana="#chair">
+            <u who="#VirantGregor" ana="#chair">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg25">Hvala.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg26">V imenu Poslanske skupine Slovenske ljudske stranke gospod Franc Bogovič.</seg>
                <note>Ga ni.</note>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg27">V imenu Poslanske skupine Nove Slovenije ima besedo mag. Matej Tonin.</seg>
             </u>
             <note type="speaker">MAG. MATEJ TONIN (PS NSi):</note>
-            <u who="#SDZ6.ToninMatej" ana="#regular">
+            <u who="#ToninMatej">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg28">Spoštovane poslanke in poslanci, lepo pozdravljeni!</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg29">V simbolnem smislu današnje spremembe odloka na nek način kažejo, da proces oblikovanja naše vlade še vedno teče prepočasi, a hkrati na drugi strani ta sprememba odloka kaže tudi, da se je slovenska politika sposobna dogovoriti o nekaterih ključnih zadevah. Ko smo na Kolegiju razpravljali, smo v Novi Sloveniji poudarili, da nam je v tem trenutku ljubša ustanovitev začasnih pravih odborov in ne širitev pristojnosti skupnega odbora, ampak demokratična volja na Kolegiju je bila drugačna.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg30">Kar zadeva ustavne komisije, mislim da so na tej točki zadeve jasne in ni kaj dodati. Nas pa veseli, da bo šla tudi Slovenija po poti nekaterih drugih držav, da našo javno porabo vendarle omejimo z ustavo.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg31">Tako lahko na koncu rečem le to, da Nova Slovenija spremembe tega odloka podpira.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. GREGOR VIRANT:</note>
-            <u who="#SDZ6.VirantGregor" ana="#chair">
+            <u who="#VirantGregor" ana="#chair">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg32">Hvala lepa.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg33">V imenu Poslanske skupine Pozitivne Slovenije ima besedo gospod Jani Möderndorfer.</seg>
             </u>
             <note type="speaker">JANKO JANI MÖDERNDORFER (PS PS):</note>
-            <u who="#SDZ6.MöderndorferJankoJani" ana="#regular">
+            <u who="#MöderndorferJankoJani">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg34">Spoštovani predsednik, poslanke in poslanci!</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg35">Poslanska skupina Pozitivne Slovenije podpira tako spremembo odloka kot ustanovitev delovnih teles in bo glasovala "za". Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. GREGOR VIRANT:</note>
-            <u who="#SDZ6.VirantGregor" ana="#chair">
+            <u who="#VirantGregor" ana="#chair">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg36">Hvala.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg37">V imenu Poslanske skupine Slovenske demokratske stranke ima besedo gospod Jože Tanko.</seg>
             </u>
             <note type="speaker">JOŽE TANKO (PS SDS):</note>
-            <u who="#SDZ6.TankoJože" ana="#regular">
+            <u who="#TankoJože">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg38">Hvala lepa za besedo.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg39">Treba je le reči, da se, kar zadeva konstituiranje vlade in tudi odborov Državnega zbora, soočamo s kar veliko zamudo. Bilo je izrečenih veliko prehitrih izjav tako predsednika republike kot kandidata za mandatarja, in to je marsikakšno stvar postavilo na glavo. Zato tudi nimamo ne koalicije ne opozicije, vendar kljub temu delovna telesa ustanavljamo. Menim, da bi lahko v Državnem zboru storili več, da bi lahko ustanovili tista delovna telesa, ki bodo v vsakem primeru nujna, in bi potem, ko bi se stvari ustrezneje uredile, ko bi se oblikovali koalicija in opozicija, te stvari tudi nekako dodelali.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg40">Čez nekaj dni bomo glasovali o mandatarju, mislim, da bo do takega ali drugačnega predloga prišlo. Čez nekaj dni ali pa nekaj dni potem bomo glasovali tudi o Vladi in prav zanima me, kako bomo realizirali hearinge, če bomo imeli en stalen odbor. Ali bosta dve tretjini vladnih ministrov opravili hearinge na tem stalnem odboru oziroma Skupnem odboru. Mislim, da ni nobene potrebe, da bi v tem trenutku formirali nek "mali državni zbor", ki bi z nekim številom glasov odločal pravzaprav o vseh zadevah. Iztekajo se roki, kot sem dejal, nimamo in tudi v predpisanem roku ne bomo imeli niti stalnih komisij Državnega zbora, ki so predvidene po poslovniku, niti drugih stvari. Treba je povedati, da se tam, kjer ni treba, stvari blokirajo, tam, kjer bi pa bilo kaj treba narediti, se po drugi strani forsirajo zadeve, celo predlaga se obravnava na nujnih sejah, in to tam, kjer so zadeve popolnoma netransparentne in neurejene.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg41">Bilo bi dobro, da bi se Državni zbor in tudi tisti, ki smo izvoljeni, stvari pravilno lotili in uredili tako, kot nam velevajo pravila, ki jih imamo zapisana. To, kar počnemo, je zlorabljanje pravil Državnega zbora. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. GREGOR VIRANT:</note>
-            <u who="#SDZ6.VirantGregor" ana="#chair">
+            <u who="#VirantGregor" ana="#chair">
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg42">Hvala.</seg>
                <seg xml:id="SDZ6-Izredna-03-2012-01-19.seg43">Končali smo predstavitev stališč poslanskih skupin. Začenjamo razpravo poslank in poslancev. K razpravi vabim gospoda Franca Juršo.</seg>
                <note>Se odpoveduje.</note>

@@ -9,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Skupščine Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Zbor občin: 25. seja</title>
-            <meeting n="25"
-                     corresp="#ZbObc.1991-09-11.s025-01.ZbObc"
-                     ana="#parl.meeting.regular"/>
+            <meeting n="25" corresp="#ZbObc" ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +27,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +40,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +61,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="481"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="146"/>
                <tagUsage gi="seg" occurs="1059"/>
                <tagUsage gi="gap" occurs="2"/>
@@ -1175,13 +1164,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="ZbObc.1991-09-11.s025-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -1191,16 +1173,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>ZBOR OBČIN SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">25. seja</head>
             <docDate>11. in 12. september in 2., 3., in 24. oktober 1991</docDate>
             <note type="chairman">Sejo sta vodila: Ivan Bizjak, predsednik Zbora občin in Janez Lukač, podpredsednik Zbora občin</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.40 uri.</note>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg1">Spoštovani! Predlagam, da predlog za izdajo zakona o socialnem varstvu obravnavamo skladno z drugim odstavkom 265. člena Poslovnika Skupščine Republike Slovenije, to je, da se združi obravnava prve in druge faze zakonodajnega postopka.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg2">Želi s tem v zvezi besedo predstavnik Izvršnega sveta?</seg>
                <note>Ne.</note>
@@ -1254,7 +1240,7 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg32">Ali želi o predlogu dnevnega reda kdo razpravljati? Prosim, gospod Zakonjšek!</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg33">Spoštovani predsednik, spoštovani zbor! Sem med podpisniki enega od predlogov zakonov o lastninjenju, to je zakon o privatizaciji podjetij, vendar ne bi govoril o tem, temveč glede na okoliščine in dosedanjo razpravo tudi v tej skupščini, pa tudi glede na današnji ekspoze predlagam, da se predlog zakona o lastninski preobrazbi podjetij vrne v fazo osnutka. To bi utemeljil z naslednjim.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg34">Tudi iz ekspozeja predsednika Peterleta izhaja, da so cilji, ki si jih zastavljamo v lastninski preobrazbi in ki jo kot proces in nujnost podpiramo, praktično identični, če pogledamo vse predložene predloge, pa tudi če hočete, če ocenjujemo razpravo, ki je bila morda ekstremna, vendar je kljub temu v svoji osnovi, vsaj pri meni, potrdila skupno voljo po doseganju tistih ciljev, o katerih je v ekspozeju govoril tudi gospod predsednik. To, kar postavlja pod vprašaj današnje sprejemanje tega zakona, je predvsem, po moji oceni dejstvo, da ne soglašamo v dosedanji fazi, da se nismo uskladili glede načina, kako se naj ves proces vodi glede tempa tega procesa, posledično tudi učinkovitosti ali neučinkovitosti predlaganih rešitev.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg35">Ko sem temeljiteje pregledal predlog o privatizaciji podjetij, prej tako imenovani Mencingerjev zakon, in ga primerjal z zakonom o lastninskem preoblikovanju podjetij, sem ugotovil, da gre v bistvu - ne glede na to, da ima ta vladni predlog 60 členov, Mencingerjev zakon 79 členov, ker je nekoliko ekstenzivnejši v nekaterih določbah - 51 členov skupnih.</seg>
@@ -1263,19 +1249,19 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg38">Zato predlagam, da bi ta predlog vrnili v fazo osnutka. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg39">Hvala lepa, gospod Zakonjšek. Gospod Štefančič se je prvi prijavil k razpravi.</seg>
             </u>
             <note type="speaker">MARCEL ŠTEFANČIČ:</note>
-            <u who="#SSK11.StefancicMarcel1937" ana="#regular">
+            <u who="#StefancicMarcel1937">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg40">Menim, da je prav sklicevanje na racionalno obnašanje pravzaprav tisto, ki nas mora usmerjati naprej in ne nazaj. Torej, od osnutka do današnjega dne je bilo vloženih sto in več amandmajev in mislim, da je dozorel čas, da se o predlogu in o amandmajih k temu predlogu izrečemo in da se na tak način skušamo racionalno obnašati. Namreč, stvari in čas, ki ga doživljamo, je čas velikih anarhij, in je, vse tako kaže, določenemu sloju ljudi v velik prid. Anarhičnost. Menim, da bi v imenu demokracije morali anarhiji narediti konec čim prej. Zato sem za to, da ostanemo pri predlogu, da predlog obravnavamo skupaj z amandmaji, ki so ali še bodo predlagani in na taki osnovi in s take predpostavke tudi potem sklepamo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg41">Hvala lepa, gospod Štefančič. Gospod Lukač ima naslednji besedo.</seg>
             </u>
             <note type="speaker">JANEZ LUKAČ:</note>
-            <u who="#SSK11.LukacJanez1931" ana="#chair">
+            <u who="#LukacJanez1931" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg42">Gospod predsednik, spoštovane kolegice in kolegi! Prav je, da ob tem predlogu, ki ga je dala Liberalno-demokratska stranka, povemo naslednje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg43">Ta zbor je sprejel predlog za izdajo zakona, sprejel je osnutek zakona in dal predlagatelju obeh teh aktov usmeritev, kako naj se pripravi zakon. Spomnite se naše razprave, v kateri smo skoraj soglasno zavračali takratni predlog in zahtevali nove rešitve, ki so sedaj v skladu z našimi zahtevami ponudene v predlogu izvršnega sveta.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg44">Ni to bilo tako na hitro, kot skušajo nekateri prikazati, storjeno. Imeli smo leto dni časa, resnih in temeljitih razprav je bilo mnogo. Odločitev je lahko samo hitra in kratka, potem ko smo zaznali vse pozitivne in negativne posledice raznih modelov lastninjenja. Komisija za denacionalizacijo, Komisija za celovito preučitev okoliščin, posledic, pojavov oškodovanja družbenega premoženja in Komisija za preobrazbo družbene in zadružne lastnine so o tem temeljito razpravljale na več sejah.</seg>
@@ -1287,11 +1273,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg50">Zato ponovno opozarjam na poročila skupščinskih komisij, ki so to vsestransko proučile z vseh aspektov in zborom predlagale, da te zakonske projekte oziroma predloge sprejmejo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg51">Hvala lepa. Gospod Gros je naslednji.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg52">Moram povedati, da se z gospodom Zakonjškom sploh ne strinjam, popolnoma nič. Povedati moram tudi to, da so zbori te skupščine dali Izvršnemu svetu nalogo, da pripravi predlog zakona o privatizaciji. Torej, izvršni svet je ravnal po nalogu te skupščine in izvršil svojo dolžnost. Pripravil je papirje, ki jih je predložil skupščini pravočasno v obravnavo. Ni pa res, da bi tudi konkurenčni predlogi morali biti deležni enakega ravnanja, ker so bili vloženi nepravočasno, čeprav so predlagatelji imeli dovolj časa, da jih pošljejo v skupščinsko proceduro pravočasno, pa jih niso iz meni neznanih razlogov.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg53">Imam pa določene domneve, ki jih bom tudi tukaj povedal. Sklep vseh treh lastninskih skupščinskih komisij je bil, da so vsi lastninski zakoni primerni za obravnavo v zborih Skupščine Republike Slovenije kot predlogi. V teh komisijah so zastopane vse stranke in moram reči, da je bil ta sklep sprejet z veliko večino glasov; mislim, da sta bila samo en glas ali dva proti.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg54">Ko se govori o znanstvenikih in njihovih mnenjih itd., moram povedati, da smo tudi mi kontaktirali z določenimi znanstveniki in niso samo tisti trije, ki so včeraj nastopali na televiziji. Posebej tisti trije niso nastopali najbolj bleščeče. Nastopali so po mojem mnenju zelo klavrno - mislim, tisti na desni strani, če gledamo proti napovedovalki.</seg>
@@ -1306,50 +1292,50 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg63">Seveda, vse te prevare trajajo samo določen čas, trajajo mogoče pet, deset let, gotovo pa ne več kot 15, 20 let. Ljudje to ugotovijo in vidijo, da iz tega ni nič in tudi to, kar se zdaj dogaja, je programirala prejšnja oblast, saj je že prejšnja skupščina sprejela sklep, da je treba privatizirati družbeno lastnino, zato, da bi se zopet prikupila ljudstvu z neko novo prevaro, da bi ljudje mislili, da bo spet prišlo do neke lastnine, prek katere bo pač upravljala in prišla do svojega vpliva. Vendar je tista oblast točno vedela, kaj bo s to privatizirano lastnino. Jasno je, da to ne morejo dobiti delavci po njihovih idejah, ampak po predlogu, kot je bil v Skupščini že predlagan, po Mencingerjevem predlogu; in tudi zato je Mencingerjev predlog pravzaprav privatiziral upravljalske pravice z delčkom privatiziranja lastnine.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg64">Gospod Gros, prosil bi, da ne zahajamo preveč v vsebino, temveč da navedete samo argumente za ali proti.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg65">Da, seveda, gospoda Zakonjška niste opozorili in prosim, da tudi mene ne opozarjate, ker je zadeva zelo pomembna. Pravkar sem mislil končati in ne vem, ali ste slutili, da bom končal.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg66">Je pa neprimerno, da poslancem prekinjate misli na ta način.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg67">Ne, počakal sem do konca stavka.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg68">Že, ampak ne do konca misli.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg69">Se opravičujem.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg70">Zdaj je, hvala bogu, prišlo do tega, da imamo v proceduri konkurenčen predlog vlade, ki je upošteval mnenja iz razprave v Skupščini in s tem dopolnil ter delno preoblikoval predlog gospoda Mencingerja. In to, kar sem prej povedal, se je tudi iz včerajšnje razprave na televiziji točno videlo, da se hoče privatizirati upravljalske pravice, da bi bivši oblastniki prek svojih eksponentov v gospodarstvu pač dobili nazaj svoj vpliv, ki ga imajo še vedno in ga v ničemer niso izgubili po volitvah. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg71">Besedo ima Aurelio Juri.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SSK11.JuriAurelio1949" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg72">Opozorilo velja tudi zame. Bom zelo kratek. Mislil sem in upal sem v prvih razpravah, da smo pozabili na teh famoznih 45 let. Kolega Gros me je na to spomnil. Če imamo za seboj 45 let enoumja, vas bi opozoril, delegati, da imamo že 46 let in pol in da je končno pri tem zakonu priložnost, da se vsi skupaj zresnimo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg73">Osebno se ne bom spuščal v materijo, ker je preveč strokovna in preveč usodna, da bi se z mojim neznanjem poglobil v to temo. Ampak ko zagledam 200 amandmajev, ko zagledam tri predloge, ko slišim, da se je pojavil četrti predlog, ko slišim mnenja strokovnjakov, afirmiranih strokovnjakov Gospodarske zbornice, sindikatov, ko ljudje tukaj pred Skupščino protestirajo in avtobusi se vozijo mimo, mislim, da ni pravo vzdušje, da bi danes ali jutri v tej glomazni materiji prišli do resnega končnega predloga. Zato osebno predlagam predlagatelju zakona, da pristane na to, da vse to še enkrat pregleda, da skupno z ostalimi predlagatelji alternativnih zakonov sestavi strokovno skupino, ki bo vse skupaj proučila in podala nov predlog, da se v tem procesu absolutno upošteva, kot partnerja sindikat in Gospodarsko zbornico in da se ponovno dobimo, ko bomo dobili na mizo bolj usklajen predlog.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg74">Zelo na kratko. Osebno ne bi niti sodeloval v taki razpravi, ker menim, da je še vedno osnovni dokument, na katerem bi morali graditi novo družbo, ustava. Te še vedno ni. Z zakoni seveda preoblikujemo kar na hitro ustavo. Mislim pa, da če že ustave nimamo in če gremo v take zelo usodne sistemske zakone, bi morali absolutno poiskati širši konsenz. zato podpiram predlog gospoda Zakonjška, da se predlog zakona vrne v fazo osnutka in še enkrat pregleda vse skupaj. Hvala.</seg>
             </u>
             <note type="speaker">MARKO STADLER:</note>
-            <u who="#SSK11.StadlerMarko" ana="#regular">
+            <u who="#StadlerMarko">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg75">To ni direktna replika, ampak lahko povem, da se v tej dvorani počutim zelo nelagodno zaradi prisotnosti poslanca Aurelia Jurija, katerega delovanje med agresijo na Slovenijo je bilo zelo dvomljivo in sumljivo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg76">Hvala. Mislim, da to ni tisto, o čemer bi razpravljali. Ob takih navedbah je treba stvari razčistiti.</seg>
             </u>
             <note type="speaker">MAG. ERVIN ANTON SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg77">Spoštovano predsedstvo, spoštovane gospe in gospodje poslanci! Gospodu Grosu je, zdi se, vse jasno. Gospodu Aureliu je tudi. Meni je precej jasno, ne pa vedno čisto vse. Ob uvedbi večstrankarskega sistema in te parlamentarne demokracije sem bil prepričan, da smo opravili z neko ideologijo in z nekim razmišljanjem socializma in da smo stopili čez prag kapitalizma. Vidim, da to ni tako, ker ob vsakem malo bolj pomembnem zakonu zatikamo in ob vsakem malo bolj pomembnem zakonu veliko razpravljamo. Osebno se mi zdi škoda in izguba časa, da danes tukajle razpravljamo o tem dnevnem redu in se tako rekoč nekako borimo s tem, ali bomo razpravljali o predlogu,l ki smo ga že obravnavali, ali bomo vključili še več drugih itd. Gre za neke vrste pritisk name kot poslanca. Preprosto sem ga doživel že zjutraj, ko sem prišel v Skupščino in so me ovirale kolone avtobusov, ki so krožile tu okrog in ki jih je omenil tudi gospod Gros. Menim, da v takem vzdušju zelo težko odločam.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg78">Osebno sem prepričan in bi želel zato spregovoriti, zakaj nasprotujem temu, da bi danes te stvari zavlačevali in da bi v proces odločanja vključili nove dodatne predloge, ker mislim, da je to zgolj sprenevedanje. Procesno je stvar jasna. Vemo, da je predlog procesno nesprejemljiv. Sprenevedanja pa ne cenim. Zame je to moralno slaba, negativna drža. Spreneveda se zame kot človek ali potuhnjenec ali bojazljivec ali pa nekdo, ki ima neke prikrite namene. Početje opozicije in pa tistega kroga managementa, ki se skuša na vsak način prebiti do tega, da bi ta zakon, o katerem danes tukajle moramo in bomo razpravljali, nekako odrinili na stranski tir ali ga prestavili v poznejši čas, je sprenevedanje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg79">Na primer, zakaj menim, da to ni potrebno in zakaj je čim prej treba ta zakon sprejeti. Privatni lastnik se nima kaj sprenevedati. V moji občini, v Domžalah, imam zadnje podatke o stanju gospodarstva: velikih, malih, zasebnih, družbenih podjetjih itd. 5,1% zaposlenih v privatnih podjetjih ustvari 52,9% akumulacije. To so točni podatki. Ustvarja 27,7% dobička, 14,7% realizacije, za plače daje samo 4,9%. Povejte mi, za kaj naj se zavzemam: ali za resnično in hitro, čimprejšnjo privatizacijo, da bo vsem bolje in da bodo vsi gospodarili in ustvarjali akumulacijo, ali za neko kvazi podaljševanje samoupravljanja, v katerem bomo še vedno imeli možnost, da bomo riziko prenašali na drugega. Ali je bil res veliki rizik imeti v stari kapitalistični Jugoslaviji premoženje? Bil je velik rizik, zakaj komunistična oblast jim je dobesedno vse to, kar so imeli, vzela.</seg>
@@ -1359,41 +1345,41 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg83">Menim, da je prav, da vse te stvari, ki so še malenkostnega pomena, prepustimo naslednjemu obdobju, ko bomo lahko nekatere stvari izpilili in še mogoče dopolnili. Resno se zavzemam za to, da predlogi, kakršni padajo, niso umestni in menim, da je treba čimprej začeti razpravo o teh amandmajih in nadaljevati delo te skupščine. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg84">Dr. Vivod je naslednji.</seg>
             </u>
             <note type="speaker">DR. IVAN VIVOD:</note>
-            <u who="#SSK11.VivodIvan1926" ana="#regular">
+            <u who="#VivodIvan1926">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg85">Spoštovano predsedstvo, spoštovani zbor! V Klubu socialdemokratskih poslancev smo menili, da bi Skupščina vsekakor morala sprejeti zakon o lastninskem preoblikovanju podjetij že danes oziroma na tem zasedanju. Z zavlačevanjem razprave, z vračanjem zakona v predhodne faze ali z nenehnim pogrevanjem bistvenih konceptualnih razhajanj, ki jih pač ni mogoče uskladiti, gotovo ne bi naredili usluge niti slovenskemu gospodarstvu niti splošnemu političnemu vzdušju med našimi ljudmi, še manj pa prepričali Evropo, da zares želimo vključitev vanjo. Nikdar nismo trdili, da je ta zakon idealen, brez pomanjkljivosti, upali pa smo, da nam ga bo mogoče z amandmaji izboljšati in najti ob njem soglasje. Zato smo imeli sprva namen, da podpremo vse amandmaje, ki zakon izboljšujejo in da sami ne damo nobenih dodatnih amandmajev, ker je njihov kup že sedaj prevelik.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg86">Žal nas pa dosedanja razprava prepričuje, da je zaradi obilice prispelih amandmajev, ki so vsi poleg vsega še močno protislovni, skoraj da nemogoče vso to materijo pregledati, kaj šele uskladiti do te mere, da bi postala vsaj konsistentna. Verjamemo, da je v določenem smislu tudi sama vlada pokleknila pred to nalogo, ki brez računalniške pomoči očitno presega normalno zmogljivost parlamentarne tehnologije. Morda je bil nekaterim to celo namen.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg87">Zato Klub socialdemokratskih poslancev po ponovnem razmisleku ne vidi druge poti, kot da damo vladi še nekaj dodatnega časa, morda kakšen teden, da nam pripravi prečiščeno besedilo zakona, ki bo vključeval vse njene amandmaje, in pa tudi vse tiste pripombe iz današnje razprave, ki niso v direktnem nasprotju z osnovnim konceptom zakona. S tem bi, če ne drugega, dobili pregled nad celoto in se lažje odločali. Poudarjamo, da s tem nikakor ne mislimo na vrnitev postopka v fazo osnutka, temveč le podaljšanje te točke in odložitev dokončnega sklepanja, dokler ne dobimo prečiščenega predloga. Priporočamo pa vladi, da izkoristi to priložnost in morda vnese v besedilo tudi nekatere poenostavitve, ki bi naredile zakon še preglednejši in umnejši tudi za vse preprostejše državljane, ki bodo nenazadnje glavni upravičenci po tem zakonu. Socialdemokrati menimo, da bi poenostavitve lahko dosegli z uporabo teh načelnih rešitev.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg88">Vsa podjetja, ki so predmet lastninskega preoblikovanja, postanejo delniške družbe in se enotno, to je brez delitve na velika, srednja in mala, preoblikujejo po naslednjih načelih: tretjina družbenega kapitala vsakega podjetja se v obliki prednostnih delnic, ki naj prinašajo fiksno dividendo vsaj v višini splošne obrestne mere, prenese na pokojninski sklad.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg89">Gospod Vivod, to je pa tudi že zelo vsebinsko. Prvi del je pomemben tudi za odločitev.</seg>
             </u>
             <note type="speaker">DR. IVAN VIVOD:</note>
-            <u who="#SSK11.VivodIvan1926" ana="#regular">
+            <u who="#VivodIvan1926">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg90">Jaz bi samo poudaril to, da mi nikakor ne mislimo, da bi moral ta zakon v fazo postopka. Predlagamo samo, da bi bilo mogoče pametno, da bi pač dobili prečiščeno besedilo v celoti in menimo, da je to tudi težko v tem kratkem času takoj narediti, čeprav na tem ne vztrajamo. To je samo naše razmišljanje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg91">Hvala lepa, dr. Vivod. Povedal bi v pojasnilo nekaj, kar se mi je sicer zdelo samo po sebi razumljivo glede na dosedanje postopke. Tudi, če bomo obravnavali predlog zakona, s tem ni rečeno, da bomo danes ali jutri glasovali o njem. Sami vidite, da smo tudi pri zakonu o denacionalizaciji in o zadrugah pustili času čas oziroma počakali na to, da smo dobili ustrezna stališča Izvršnega sveta itd. V vsakem primeru, in tudi v tem primeru, če bo sprejeto, da se obravnava tisto, kar je v predlogu dnevnega reda, se pravi predlog zakona, ne bomo na vrat na nos pritiskali na tipke in kar nemudoma izglasovali zakon. Seveda bo potreben čas in potrebno bo, da se iz tega izlušči neka varianta, ki bi bila lahko sprejemljiva. O tem, kako priti do tega, se lahko še pogovarjamo pri sami točki dnevnega reda. Gre pa preprosto za to, da se sedaj odločimo, ali bomo govorili o predlogu, ali že kar sedaj rečemo, da bo potrebno zadevo vrniti v osnutek.</seg>
             </u>
             <note type="speaker">DR. CVETKO GRADIŠAR:</note>
-            <u who="#SSK11.GradisarCvetko1938" ana="#regular">
+            <u who="#GradisarCvetko1938">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg92">Mislim, da imam pravico tudi sam se pridružiti nekaterim iz opozicije ali pozicije, da gre za poskus manipuliranja poslanskih možganov ali "topiranje" poslanske pameti, kako naj odločamo, ali na cesti ali v parlamentu. Mislim, da je prepuščeno vsakemu, da po svoji vednosti, po svojem znanju in odgovornosti odloča za generacije, ki prihajajo in za razvoj, ne pa za antirazvoj, kakršnega smo imeli. Časovno prej ali kasneje. Mislim, da so v igri tudi ti psihološki faktorji, zakaj te stvari odlagati ali zakaj tako pristopiti. Nekaj bi moral reči tudi o tem za tiste, ki bi sprejetje zakona odložili in za tiste, ki bi takoj glasovali.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg93">Menim, da eni in drugi niso manipulirani, ampak nehote gre za neko psihološko igro eksorcizma levega ali desnega hudiča, ali neko ustoličevanje socialnega, elitnega ali nacionalnega ali narcisoidnega boga. To je nasilje, psihološka igra, to je življenje, to moramo poznati. Resnično razumeti, pomeni: ne razlagati. Razlaga tisti, ki ne razume. Kot se v vzhodni filozofiji pravi, da je treba pripeljati svetlobo, luč k vedenju in znanju, ne pa izganjati temo na opozicijski ali pozicijski strani. Če je gospodarski zlom in finančni in socialni požar, je treba odstraniti po Heraklitu ne požar, ampak čezmernosti, to so: inflacija, demagogija, brezposelnost, itn.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg94">Še en podatek, ki ga je kolega Schwarzbartl povedal. Mislim, da moramo čimprej obrniti situacijo, takoj, da 20% firm živi 100% zaposlenih Slovencev, konvertibilne novo ustvarjene vrednosti, vse ostalo je vrtinec, inflacija, tu so škarje in je moralno, materialno, etično neodgovorno, da to odlagamo in se sprenevedamo. Le pravna država in tržni pogoji bodo pripeljali do civilne družbe. Vedno in povsod je bil homo individualis več kot homo ekonomicus ali celo politicus. Treba je preseči mentalitete, zaupam vsakemu od nas na eni in drugi strani, da je mentaliteti osebnega dohodka in rentništva odklenkalo. Treba bo plavati in "strah pred letenjem" ni tako hud kot strah pred letenjem situacije (zlom zdravstva, berite časopise).</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg95">Mislim, da ves ta material le kristalizira te razvojne napore, ni pa karikatura, to kar hočemo, ampak je kristalizacija, seveda z vsemi dodatki, kar jih je treba še ustvariti, da ne govorim o jugoslovanskem skupnem trgu, to je realiteta. Mislim, da je konec tega jugoslovanskega "brodospasa" Titanic. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg96">Hvala lepa. Gospod Starman je naslednji.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg97">Mislim, da bi bilo koristno za zbor, ki je že večkrat dokazal, da odloča s premislekom, s preudarkom, nekaj procesnih pojasnil. Številni razpravljalci so se spuščali v vsebino, v politične ocene stvari, vendar menim, da smo zdaj v fazi, ko moramo odločiti, ali gre za vračilo v fazo osnutka ali damo na dnevni red predlog zakona. Menim, da imamo na dnevnem redu samo in izključno en predlog zakona, ne pa tri ali štiri, kot je med ostalimi govoril tudi gospod Gros. Ne gre za nobene konkurenčne predloge, ampak gre preprosto za ideje, ki so jih nekateri poslanci ali skupine poslancev dali. Če bi hoteli, da pride v fazo sprejetja, bi morali predlagali hitri postopek. Nihče tega do danes ni predlagal.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg98">Zato mislim, da je za nadaljnjo fazo izjemno pomembno, da kvalificiramo vse predloge, ki se štejejo, da ne bi bili konsistentni predlogi zakona kot čisto navadna amandmajska materija in da je potrebno predlagatelje opozoriti - tako je bilo rečeno na skupnem zasedanju - da morajo vse predloge formulirati v obliki amandmajev.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg99">Da se ne bi pozneje oglasil, ker se nisem imel namena oglasiti v razpravi, bi povedal še moj odnos do vsebine teh amandmajskih predlogov. Cenim napore vseh, ki so te predloge pisali. Nekajkrat sem jih prebral, tudi iz pravnega spektra analiziral, vendar moram reči, da imajo ti predlogi edini namen, kar je, je, pustiti tako kot je, kar bo, bo, bomo videli, kaj bo, ostane naj status quo. Temeljni namen vseh opozicijskih predlogov - in vidimo, da se je opozicija prvič po letu in pol v celoti zedinila in nastopila skupaj ob tem zakonu - je ohranitev statusa quo.</seg>
@@ -1402,123 +1388,123 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg102">Zato prosim, naš zbor je že neštetokrat dokazal, da smo državotvorni, da tudi tukaj pokažemo, da hitro rešujemo nujne zadeve. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg103">Hvala lepa. Gospod Feltrin je naslednji.</seg>
             </u>
             <note type="speaker">FRANCI FELTRIN:</note>
-            <u who="#SSK11.FeltrinFranci1943" ana="#regular">
+            <u who="#FeltrinFranci1943">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg104">Spoštovani! Bom kratek. Povedal bom samo, da smo Zeleni obravnavali te zakone in se popolnoma strinjamo z njimi, seveda z določenimi amandmaji. Zanimivo pa je, da so Zeleni pri nas brez mene, ki sem v predsedstvu deloval pri tem zakonu, razpravljali in dali razne amandmaje in potem, ko smo skupno ugotavljali, smo videli, da so ti amandmaji v tem več ali manj upoštevani. Tako smo tudi tako rekoč amandmaje ne umaknili, ampak jih imamo poleg, da vidimo, če se to upošteva. In se.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg105">Nekaj bi pa rekel gospodu Avreliju Juriju kot repliko. Včeraj je Gospodarska zbornica bila 10 ur prisotna na komisiji in moram reči, da je vse pripombe umaknila, kar je z vladne strani bilo povedano, se je z vsem strinjala. Nekatere stvari smo še z amandmaji na amandmaje spremenili in je to zajeto. Prav tako so se Tomšičevi sindikati strinjali in so tudi umaknili amandmaje, ker je vlada pač to zajela v drugih. Treba je samo razlago in ker je bila razlaga točna ali pravilna, ampak razlaga Izvršnega sveta, so potem sami odstopili in to, kot so rekli, od vseh amandmajev. Rekel bi tudi to, da ostalih vzporednih predlogov nismo na komisiji obravnavali, ker ni bilo nobenega predloga. Nekaj pa bi rekel kot kritiko opoziciji.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg106">Imeli smo kar nekaj sej za družbeno preobrazbo in lastninjenje, ampak na seji je bil iz opozicije samo en član. Sploh se niso udeležili. Danes pa je jok in stok in to me resnično boli. Da bi pa prišli na komisijo, da bi se tam "stepli" in skregali ter kaj rekli, uveljavili svoje predloge, pa ne. Mislim, da je večina brala v Mladini članek, v katerem je pisalo, da bo opozicija z vsem upanjem, da bo z novimi volitvami prišla na oblast, vse to, kar mi delamo, ko vračamo družbeno lastnino v privatne roke, vzela nazaj. Včeraj sem slišal - dobil sem telefonski poziv, da so bili tisti, ki so stavkali, plačani. Iz Kamnika se je nekdo oglasil, da so bili posebej plačani tisti sindikalisti oziroma ljudje, ki so bili tu. Zanima me, kdo plačuje avtobuse, ko pa smo tako revna država. Včasih slišiš tu v skupščini, kot da prosimo za košček kruha, potem pa bagatelno razvažamo ljudi okoli. V imenu Zelenih predlagam, da danes sprejmemo tak predlog, kot ga je predlagala Skupščina, torej da se predlog zakona sprejme.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg107">Hvala. Gospod Oven, prosim.</seg>
             </u>
             <note type="speaker">EDVARD OVEN:</note>
-            <u who="#SSK11.OvenEdvard1950" ana="#regular">
+            <u who="#OvenEdvard1950">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg108">Spoštovane kolegice in kolegi, skušal se bom izogniti strankarski pripadnosti in bom gledal na sprejetje tega zakona izključno z vidika podjetništva in stroke. Sam sem delal na privatizaciji nekaterih slovenskih podjetij in tudi naredil model, kjer sem preizkusil rešitve tega predlaganega zakona. Zato bom tudi v razpravi o amandmajih povedal, katere rešitve so dobre in katere niso z vidika same uporabnosti, na vas pa bo, da se boste sami odločali.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg109">Najprej moram reči, da poznam veliko število slovenskih managerjev in večinoma, 99% le-teh, izredno spoštujem in cenim njihovo delo ter napore, da ob teh političnih, vojaških in ekonomskih razmerah obdržijo ali držijo to podjetniško ekonomijo nad vodo, še posebej, če vemo, da je prišlo do ropanja slovenskega premoženja v Srbiji. Znan vam je odlok srbske vlade, s katerim so razveljavljene vse pogodbe po 24. maju, ki so jih sklenili Slovenci bodisi kot fizične osebe, ali kot pravne osebe. Znan vam je odlok hrvaške vlade in v bistvu nismo nikjer podjetniki jokali in prosili, kar bi bilo normalno, da nas rešuje naša slovenska država, ki ni naredila v tem pogledu čisto nič.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg110">Zato bi rekel, da je etiketiranje slovenskih managerjev s klošarji neprimerno za ta parlament in je za mene pomanjkanje kulture in poznavanja sploh ekonomije slovenskega prostora. Upam, da se bo gospod Schwarzbartl opravičil vsaj tistim managerjem, ki tega njegovega etikatiranja ne zaslužijo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg111">Glede samih managerjev. Sestal sem se z njimi, ko smo proučevali ta predlog o lastninjenju oziroma o privatizaciji. Moram reči, da si večina managerjev želi čimprejšnje sprejetje zakona. Prisotna je bila trditev, da je skoraj vsaka rešitev boljša kot podaljševanje obstoječe anarhije. Vendar pa moramo postaviti tak zakon o lastninjenju, ki bo omogočil dobra izhodišča za ustvarjanje neke liberalne ekonomije in za prevladovanje zakona ponudbe in povpraševanja. Med temi managerji, ki niso klošarji, je bilo opozorjeno, da moramo sprejeti tak zakon s tako pravno varnostjo, ki bo onemogočil retrogradno uveljavljanje. Bojijo se, če bi prišlo na volitvah do drugačne porazdelitve politične moči, kaj se bo zgodilo. Sprejeti bodo novi zakoni o lastninjenju z namenom, da se popravljajo krivice, storjene ob odpravljanju krivic. Managerji si v takih pogojih ne želimo delati. Želimo imeti jasne pogoje za naprej. Mislim, da se moramo odločiti glede retrogradnosti. Vsak, ki je delal in se lastninil po določenih zakonih, ki so bili veljavni, ima to pravico. Vemo, da smo edino pri tem zakonu kršili to retrogradnost, sicer z ustavnim zakonom, da smo rekli, da je tisti, ki se je lastninil po Markoviću, bil v bistvu "prevarant" in se mora lastniniti po slovenskem zakonu. Bojim se, da bodo prav to klasifikacijo uporabili potem tudi bodoči politični veljaki in uveljavljali iste rešitve. Zato apeliram na poslance k razumu, potrpežljivosti in strpnosti, da poskušamo preseči te strankarske interese in disciplino in skupaj sprejmemo tak kvaliteten zakon o privatizaciji ali lastninjenju, ki bo nam vsem omogočil dostojno življenje v novi slovenski državi. Prepričan sem, da bomo sprejeli tak zakon, kjer ne bo pomembna politična pripadnost in barva managerjev, ampak bo pomembno njihovo znanje in poslovni uspehi, ki jih dosegajo v podjetjih, ki jih vodijo. Zato še enkrat želim, da razpravljamo o zakonu v tej luči. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg112">Prosim, gospod Frelih.</seg>
             </u>
             <note type="speaker">LEOPOLD FRELIH:</note>
-            <u who="#SSK11.FrelihLeopold1945" ana="#regular">
+            <u who="#FrelihLeopold1945">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg113">Spoštovani predsednik, spoštovani poslanci, najprej moje mnenje. Sem proti medsebojnemu obtoževanju, sem tudi nezagovornik lastnine in sem proti strankarski disciplini. Zato sem tudi zagovornik najširšega konsenza pri tej naši lastninski reformi, predvsem zaradi bodočnosti, pa ne zaradi sedanjosti, še manj pa zaradi preteklosti. Zaradi tega bi razumel to današnjo razpravo kot povsem normalen zaplet, ko se morajo med seboj pogledi soočiti. To soočenje pa zahteva trezno presojo, predvsem zaradi tega, ker smo v zadnjem polletju doživeli razpravo o predlogu, ki pa je skoraj zrušila vlado in od vlade sem pričakoval, da bo tisti trenutek, ko je dobila 200 amandmajev, pri čemer jih je sama pripravila 30, sprejela sklep in nas poslance obvestila, da zadevo odlaga za 14 dni, da bi pripravila strokovno utemeljitev, ne na koncepcijske razlike. Naj ostanejo koncepcijske razlike, je bilo rečeno tudi včeraj v TV oddaji. Če jo strnem, mislim, da se je ta koncepcijska razlika pojavila v vprašanjih, ali delavci dobivajo pravico ali ne, ali je to stvar samo managerske skupine, ali je dokapitalizacija upoštevana ali ni, ali je funkcija države pravilno zastavljena ali ni? To naj ostane za presojo parlamentu. Ne vem, kako bomo razpravljali o 200 amandmajih, spoštovani kolegi, in o 30 vladnih; kako bomo razpravljali o vseh teh amandmajih, kljub temu, da nam je predsednik Ivan Bizjak rekel, da bomo odločali verjetno kdaj kasneje. Verjetno, prepričan sem skoraj 100%, da se to ne bo dalo narediti danes, jutri oziroma v petek. zato menim, da je gospod Vivod dal zelo racionalen predlog, ki je mogoče nekoliko drugačen kot ga je dala Liberalno-demokratska stranka ali del opozicijskih strank, da se najde pametna racionalna rešitev in da skupno delovno telo pripravi tak predlog, o katerem bomo potem gotovo lažje in trezno odločali.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg114">Prepričan sem, da mesec dni zamude ne bo usodno. Če kdo ob tej lastninski reformi lahko to dokaže, da bo po mesecu dni večja katastrofa, kot je sedaj, potem menim, da bi bilo treba o tej zadevi razpravljati. Vendar pa je treba s to zakonodajo preprečiti špekulacije, zato bi predlagal vladi, da naj ne čaka tako dolgo, kot je čakala s spremembo prometnega davka pri uvozu avtomobilov, ko je naredila analizo po letu dni, medtem pa smo že vsi uvozili hrvaške avtomobile, ampak da danes naredi analizo, kaj se dogaja, koliko je teh špekulacij, kakšno je danes lastninjenje managerskih skupin, ki se lastninijo brez kontrole in na osnovi javne, zelo javne interpretacije lahko tudi uspešno izpelje različne sankcijske oblike. S tem v zvezi apeliram na vse nas, da pri odločitvi trezno presodimo, ali smo sposobni s takim predlogom s takim sistemom, kot je danes predlagan, tudi dokončno pripeljati zadevo do konca. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg115">Hvala lepa. Gospod Urbančič je naslednji.</seg>
             </u>
             <note type="speaker">MILOŠ URBANČIČ:</note>
-            <u who="#SSK11.UrbancicMilos" ana="#regular">
+            <u who="#UrbancicMilos">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg116">Že zadnjič sem rekel, da se pri vsakem zakonu prepletajo različni interesi in da nima smisla zaradi tega odložiti zakon iz razprave. Posebno sem pa še proti, da bi odložili razpravo o kakšnem zakonu zaradi raznih političnih pritiskov, kar se je spolitiziralo do skrajnih možnih meja. Sem proti temu, da bi zaradi političnih pritiskov odložili kakšen zakon. Ravno ti politični pritiski dokazujejo, da je treba ta zakon čimprej sprejeti. V včerajšnji oddaji, če je kdo gledal, je na koncu voditeljica vprašala: "Kaj pa, če ne bo sprejeto?" Potem je dr. Ribnikar rekel: "Potem bo pa še slabše." Vladni zagovorniki so se posmejali, oni drugi, ki so pa ves čas razpravljali, da to ni dobro, niso imeli nobene pametne pripombe h končni fazi. To se pravi, ves čas je bilo samo načelno nasprotovanje temu in drugemu, končnega odgovora, kaj bo, če ne bo sprejeto, pa niso našli. To se pravi, da ne moremo sprejetja tega zakona zaradi tega odlagati.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg117">Še nekaj bi rekel. Mednarodni strokovnjak Saeks je poslan od Združenih narodov, da pomaga vsem vzhodnim režimom, da se bodo prelevili iz družbenega upravljanja v normalno kapitalistično upravljanje, ki je bolj učinkovito. In če je mednarodni strokovnjak, potem nekaj velja tudi njegova beseda, na nas pa je, da to čim hitreje naredimo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg118">Hvala lepa. Gospod Franko je naslednji.</seg>
             </u>
             <note type="speaker">KAREL FRANKO:</note>
-            <u who="#SSK11.FrankoKarel1919" ana="#regular">
+            <u who="#FrankoKarel1919">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg119">Spoštovane poslanke, poslanci! Nasprotniki predloženih zakonov se sklicujejo na nekatere strokovnjake in na njihove sposobnosti. Ne povedo pa tega, zakaj se ti strokovnjaki niso uveljavili že v prejšnjem obdobju. Nekateri so znani, in to ne samo slovenski, ampak tudi jugoslovanski javnosti že desetletja. Prav bi bilo, da sami povedo, kdo jim je onemogočal, da svoje sposobnosti niso mogli ali pa hoteli uveljaviti že prej. To, kar počnejo sindikati v podporo nekaterih opozicijskih strank, je obsojanja vredno. Večina volivcev želi, da se ti zakoni sprejmejo še na teh sejah.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg120">Hvala lepa. Še gospod Jug.</seg>
             </u>
             <note type="speaker">MAG. JANEZ JUG:</note>
-            <u who="#SSK11.JugJanez1947" ana="#regular">
+            <u who="#JugJanez">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg121">Poglejte, jutri verjetno ne bom ne manager ne kapitalist, bom pa verjetno mezdni delavec. Zato se bom upal kar nasprotovati levi, desni in srednji. Zakaj? Sem proti sprejetju takega zakona. Zakaj? Gospod Franko je tu kritiziral strokovnjake. Bil sem tudi učenec prof. Ribnikarja, pa približno vem, za kaj gre, pa tudi tisto besedilo, ki ga vi omenjate, poznam. Takole je v tem parlamentu: vsi strokovnjaki nekaj nudijo, mi poslanci smo pa bedaki in gremo v tisto samopostrežbo in vsak si vzame, kar mu ustreza od teh idej. Mi hočemo priti prek Atlantika. Če tega kompasa ne bomo začrtali, smo izgubljeni. Jaz ga hočem začrtati sam zase, pa bom povedal, zakaj.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg122">Tudi ta Sachs je rekel, da je pred privatizacijo treba ustvariti nek milje: to so pa tudi finančne institucije, banke, vsi fondi itd., ki bodo imeli levji delež pri privatizaciji teh podjetij. Govorili smo o sanaciji bank v Sloveniji. Naj mi nekdo danes odgovori, kje je tisti možakar, ki bo prinesel s "kufrom" nekaj milijard dolarjev, da bomo mi to razčistili in dobili pravilne lastnike, poštene lastnike, ki jim bo interes kapital, produktivnost itd. Danes ga nimamo. Se pravi, gremo v neko privatizacijo, ki je povsem zgrešena. Če gremo po tej poti, se bo zgodilo to - deležen sem bil, ko so sprejemali zakon oziroma "delavsko biblijo" v ekonomskem delu - in dosegli smo to, da danes vsi po tem pljuvamo. Samo opozarjam poslance, da se nam ne bo zgodilo, da bodo po nas kmalu vsi skupaj pljuvali prav zaradi teh problemov. Zato sem proti temu sprejetju, pa ne zaradi tega, ker nisem pristaš ne levih ne desnih, ampak hočem samo to reči, da dajmo Slovenci brez Sachsov, sicer poslušajmo druge, ampak mi imamo svoje znanje, svoje korenine, svoje ljudi, sposobnosti, tudi sanirati te zadeve in ne govoriti na pamet.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg123">To, kar se hoče prek države narediti - gospod Peterle naj mi oprosti in vsi skupaj - greste v kontradiktornost. Govorite o veliki učinkovitosti privatizma itd., potem pa hočete skozi državo to zadevo speljati. Vsi vemo, da je država neučinkovita, zato tudi predlaga privatizacijo itd. Mislim, da je to nesmisel. Še enkrat vas opozarjam, ne vračajmo zakona v fazo osnutka, ampak resnično še enkrat premislimo, preden naredimo kakšno neumnost. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg124">Gospod Zakonjšek, prosim.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg125">Jaz sem to razpravo sprožil in če mi dovolite, samo dva ali tri stavke. Za razliko od gospoda Grosa, ki se z menoj ne strinja, se sam z mnogimi njegovimi ugotovitvami zelo strinjam. Predvsem mislim, da je treba absolutno preprečiti t.i. "by pass" procese lastninjenja. Trdim, če pa ne, pa naj država razmisli, so za to instrumenti, organi, ki naj to opravijo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg126">Drugo. Zakaj en bloc zakon? Ko sem se odločil, da podpišem predlog, da gre Mencingerjev zakon v proceduro, še ni bilo amandmajev v taki obliki in v tej količini, kot so sedaj. Trdim tudi, da je Mencingerjev zakon zelo različen od nekaterih drugih predlogov, ki so tudi en bloc, da je celo še bolj trdo kapitalističen in ostreje postavi zahteve po privatizaciji in po kapitalizaciji lastnine kot pa predlog, ki ga ponuja vlada. O tem bomo razpravljali, ko bomo šli skozi amandmaje. Skratka, ne gre za nek združen predlog opozicije, temveč je naša stranka sprejela to zasnovo, vendar po vsem tem so bili oblikovani tudi amandmaji, ki so jih vložili tako Liberalno demokratska stranka kot tudi druge stranke. Po temeljiti proučitvi teh amandmajev, nekaterih amandmajev drugih strank in seveda amandmajev posameznikov, ki jih je, kolikor jih je, in teh, ki so sedaj vloženi, sem osebno prišel do prepričanja, da lahko temu zboru v svojem imenu predlagam, da ne razpravlja o predlogu o privatizaciji, skratka, o Mencingerjevem zakonu; jaz ga umikam. Ostajam pa pri predlogu, da se kljub temu iz drugih proceduralnih razlogov, o katerih se je govorilo, vrne razprava o tem zakonu na osnutek. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg127">Gospod Dvornik, prosim.</seg>
             </u>
             <note type="speaker">MARJAN DVORNIK:</note>
-            <u who="#SSK11.DvornikMarjan1949" ana="#regular">
+            <u who="#DvornikMarjan1949">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg128">Spoštovani poslanci in poslanke! V zadnjem času smo imeli kar nekaj pogovorov o tej lastninski zakonodaji tudi v občinah in moram reči, da smo dobili zadolžitev, vsaj tisti poslanci, ki smo z našega področja sodelovali v teh razpravah, da to zakonodajo čim hitreje uvrstimo na dnevni red, o njej razpravljamo, sprejmemo ustrezne rešitve in jo začnemo uveljavljati v praksi. Zato se bom sam zavzel, da se ta postopek pospeši.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg129">Rad bi pa še repliciral gospoda Juga. Očitno ni dobro prebral zakona ali pa je nasedel nekaterim velikim glasnikom napačnih interpretacij tega zakona. Drugače ne bi uporabljal take terminologije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg130">Naslednji je gospod Šonc.</seg>
             </u>
             <note type="speaker">METOD ŠONC:</note>
-            <u who="#SSK11.SoncMetod1938" ana="#regular">
+            <u who="#SoncMetod1938">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg131">Hvala lepa. Javil sem se k besedi, spodbujen z razpravo gospoda Juga. Namreč, zavzemam se - tako kot naša stranka - da se razprava o predlogu zakona nadaljuje. Izhajam iz tega in upam, da delim tudi vaše mnenje, da so vse politične stranke, vse strokovne organizacije in združeno delo ali podjetja za to, da se lastninski odnosi spremenijo. To potrjujejo vsi. Koliko nekateri mislijo zares, drugi pa bolj deklarativno, to je druga stvar. Vendar smo vsi za to, saj vidimo, da pravzaprav drugega izhoda ni. Zavedamo se, da je to izjemno odgovorno dejanje in da takega zakona ni mogoče perfektno strokovno napisati, ker imajo vsi strokovnjaki pač svoje mnenje. Torej ne gre samo za strokovno zadevo, ampak tudi za politično. In zavedam se, da je to breme na vseh poslancih. Zavedam se ga zelo resno tudi v odnosu do svojih volivcev, kjer sem bil izvoljen v Zbor občin, tako kot vsi vi. Volili so me in delavci in zdravniki in kmetje in profesorji.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg132">Se pravi, ne morem sprejeti politiziranja, ki se je sedaj pojavilo, predvsem pod okriljem sindikata, da se pritiska na poslance, da bodo glasovali tako in tako, kot smo danes videli na transparentih, ki so jih vozili pred Skupščino.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg133">Sprašujem se in javno sprašujem tudi gospoda Semoliča kot poslanca, kaj bi bilo, če bi poslanci, recimo, v Kmečki stranki kmete pripeljali pred Skupščino, če bi gospod minister Bavčar pripeljal policaje pred Skupščino ali pa, če bi gospod Janša pripeljal teritorialno obrambo takrat, ko bi se njegovi zakoni obravnavali. Zame je to žalitev kot poslanca in takega psihološkega pritiska ne sprejemam.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg134">Drugo. Gospod Schwarzbartl, cenim to, kar ste rekli, da so managerji klošarji in potepuhi, niste tako zares mislili in protestiram proti tej vaši izjavi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg135">Gospod Schwarzbartl, replika.</seg>
             </u>
             <note type="speaker">MAG. ERVIN ANTON SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg136">Glede na to, da sem šel ven, sem slišal, da je že prej bilo to omenjeno, ponavljam še enkrat. Mislim, da bo iz stenograma razvidno, da nisem enačil direktorje s klošarji, ampak sem povedal in še enkrat povem, da je to skupina državljanov, ki tako kot klošarji, potepuhi in ostali nimajo kontrole v tej družbi. To je pa bistvena razlika in mislim, da so naši direktorji sposobni, večinoma tudi izredno prodorni ljudje in klošarji v nasprotju ravno te lastnosti nimajo. To so ljudje, ki nimajo energije, ki nimajo volje in jaz jih nisem metal v isti koš, samo primerjal sem glede tega, da nimajo nadzora.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg137">Hvala lepa. Replika, gospod Jug.</seg>
             </u>
             <note type="speaker">MAG. JANEZ JUG:</note>
-            <u who="#SSK11.JugJanez1947" ana="#regular">
+            <u who="#JugJanez">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg138">Da se povsem razumemo. Sem za zelo hiter prehod družbene lastnine v lastnino družbenega kapitala v kapital. Samo način in čas je pomemben. Mislim celo, da nimamo niti več časa, ker ta finančni kolaps, ki ga bomo doživeli, je tukaj in je neizbežen, govoril sem samo o načinu in čakanju, da ni pravilen. Samo to sem rekel.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg139">Hvala lepa. Gospod Protner, imate tudi repliko?</seg>
                <note>Ne.</note>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg140">Gospod Gradišar, replika.</seg>
             </u>
             <note type="speaker">DR. CVETKO GRADIŠAR:</note>
-            <u who="#SSK11.GradisarCvetko1938" ana="#regular">
+            <u who="#GradisarCvetko1938">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg141">Po mojem osebnem prepričanju gre samo za eno stvar, ki je ne bi generaliziral, ampak vendar je zelo zelo prisotna. To so sociokulturni dejavniki. Večkrat sem omenil, mogoče je bil filozof tisti, ki je rekel, da je filozof, v resnici pa je tapetnik, ampak da vzhod poganja konfucizem. To je dejstvo. Sociokultura spodbuja Evropo in razvoj naprej, ne politika, ne stranka, ne ideologija, ne levi, ne desni eksorcizem, ki se naj opravi doma, ne pa v javnosti, v miru in tišini, to zadregljivo samoočiščenje. Vsak naj čisti pred svojim pragom. Vendar, težko je iti od dobrega - in Slovenci imajo dober, soliden standard - k boljšemu, dosti lažje je iti od slabšega k najboljšemu.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg142">Gospod Slejko ima besedo.</seg>
             </u>
             <note type="speaker">VLADIMIR SLEJKO:</note>
-            <u who="#SSK11.SlejkoVladimir" ana="#regular">
+            <u who="#SlejkoVladimir">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg143">Rad bi pokomentiral nekaj izjav mojih kolegov v Skupščini. Že na začetku je eden od njih govoril o prevarah, ki so se dogajale že 45 let. Če sledimo inerciji, potem bo v naslednjem trenutku prišlo do naslednje prevare, po petih pride tudi šesta. Na koncu nekateri zahtevajo, da vsi zaupamo nekomu, ne da bi ga preverjali, ne, da bi konkurirali nekomu, ne da bi mu postavljali ovire.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg144">Vsak si izbere svojega zdravnika zato, ker mu zaupa. Če bi bil iz njegove družine, mu verjetno ne bi zaupal, ali pa po desetih letih, ko vidijo, da je imel toliko neuspešnih primerov, mu tudi ne zaupajo več in rečejo: ta je slab zdravnik. Najboljši zdravnik je vedno tisti, ki pride od neznano kod, od daleč, čim manj se ve o njem, tem bolje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg145">Nikoli nisem trdil, da je Sachsov predlog slab, nikoli nisem trdil, da je Mencingerjev kompletno slab. Vsak ima svoje pomanjkljivosti in v tem trenutku tudi kot član našega Odbora za gospodarstvo mislim, da zakoni o privatizaciji morajo biti sprejeti, da so celo boljši slabi zakoni oziroma slabši kot nobeni. Zato jih čimprej sprejmemo, tem bolje. Samo, dokler imamo še možnost, da jih popravimo, jih vsaj poskušajmo popraviti, saj nenazadnje, če ima Demos pravo večino, mi tukaj samo pljuvamo proti vetru, saj nas bo vse enostavno preglasoval. Bil bi zelo zadovoljen, če bi bil Demos tako enoten, da bi tu brez mene sprejel to odgovornost nase.</seg>
@@ -1527,21 +1513,21 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg148">Na koncu ne zahtevajte od nas, da vas bomo podpirali, če vi nekaj sprejemate. Če smo mi v opoziciji, bomo vedno proti, pa četudi boste predlagali najboljše zakone. To že vnaprej povem, da bom vedno proti glasoval, tudi proti najboljšim zakonom, samo zato, da se boste v vladi disciplinirali in da boste vedno skupaj držali. V tem trenutku, ko eni pravijo, da so za strankarsko, da so proti strankarski disciplini, jaz ravno poudarjam, da ko bo prišlo do prave strankarske discipline, takrat bomo šele imeli pravi parlament. V tem trenutku nas pa žene inercija prejšnjega parlamenta, ko smo morali vsi enako misliti, vedno vsi enako govoriti in tisti, ki tega ni delal, so ga hoteli nekje v ozadju tolči po prstih. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg149">Hvala lepa. Gospod Protner ima naslednji besedo.</seg>
             </u>
             <note type="speaker">MAG. JOŽE PROTNER:</note>
-            <u who="#SSK11.ProtnerJoze1944" ana="#regular">
+            <u who="#ProtnerJože">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg150">Preden bi prešli na glasovanje o tem zakonu, bi želel vendarle glede na dosedanjo razpravo povedati nekaj besed. Vsi smo enotni v prvem, da gre za pomembna vsebinska vprašanja. Nismo si pa več enotni, da ne gre za zavlačevanje, kot je bilo nekajkrat povedano. Zakaj? S čim to utemeljujem? S tem, da smo mi vendarle v tej Skupščini in tudi v tem zboru sprejeli osnutek in pravzaprav dali podporo čimprejšnjemu lastninskemu preoblikovanju. Na podlagi zelo široke in vsebinske razprave smo vendarle dali odprto pot, da bi prišel predlog pravočasno na klop.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg151">S tem seveda odpadejo očitki, da želimo s sprejetjem zavlačevati, če mislimo mogoče o tem nekoliko drugače. Na klop smo dobili sedaj, po šestih mesecih predlog, ki je konceptualno drugačen od osnutka in mislim, da je to treba upoštevati in vedeti. Podpiram čimprejšnje, ampak res čimprejšnje sprejetje celotnega paketa zakonodaje, ki obravnava to področje, ker to ni edini zakon, ki bo spravil v življenje tudi vse to, kar želimo kot posledico lastninskega preoblikovanja. Tudi zaradi tega podpiram čimprejšnje sprejetje take zakonodaje, da bomo vendarle nehali namesto z argumenti govoriti z očitki in verjemite, da kot eden od poslovodnih ljudi zelo težko poslušam očitke o krajah, o ropih in podobno, da ne omenjam tega, kar je prej govoril gospod Schwarzbartl, ker jemljem njegovo repliko, da ni mislil tako. Če sem optimist kot bodoči poslovodni delavec ali direktor, si želim čimprej tistega lastnika, ki bo kontroliral ta dejanja in poslovne odločitve, vendar želim si takega lastnika, ki bo to počel samo z enim namenom, da bo zahteval od poslovodne strukture, torej tudi od podjetja, maksimalno gospodarsko učinkovitost. Da bo to edino, kar bi upravni odbor v imenu lastnikov zahteval, ne pa, da prevladujejo razlogi, ki so bili tudi tukaj navedeni in ki imajo politično ozadje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg152">Moram reči, da sem v tej Skupščini, ko smo govorili o Mencingerjevem osnutku, da ga tako imenujem, bil tisti, ki je šel za to govornico in podprl njegova stališča. Pomeni, da ga je predstavil na ta način, da je rekel, to je moje videnje privatizacije v tej državi, konkretni državi Sloveniji. Drugače jaz tega ne vidim, in če bo kdo videl drugače, bo moral priti in ponuditi drug koncept in to se je zgodilo in to je tudi sinoči Mencinger povedal. Jaz pa ne bi vztrajal na tem proceduralnem razlogu, zakaj osnutek, razlog je, mislim, res vsebinski, ker bi vsaj v fazi osnutka morali glasovati o enem konceptu. Mi pa smo zdaj glasovali o enem konceptu kot osnutku, o drugem konceptu pa bomo glasovali kot o predlogu.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg153">Hvala lepa. Gospod Partljič ima besedo.</seg>
             </u>
             <note type="speaker">TONE PARTLJIČ:</note>
-            <u who="#SSK11.PartljicAnton1940" ana="#regular">
+            <u who="#PartljičAnton">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg154">Imam samo eno repliko na to, kar se je do danes dopoldne dogajalo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg155">Po eni strani se mi zdi razumljivo, ker sem hodil v te šole, v katerih smo bili vzgajani po principih dialektičnega materializma, in so nas učili, da je zaradi lastnine proizvodnih sredstev prihajalo do revolucij, vojn, da je tekla kri in tako dalje. Zato smo mi pri nekem takšnem dejanju - hvala bogu in da to ne teče - ni pa pričakovati, da bo to šlo nekako zlahka. To je prvo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg156">Drugo, povedal bom neko anekdoto: ko se začne jeseni sezona v gledališčih in tako v kulturi, v istem mestu skliče ravnatelj teatra svoje igralce in reče: "Veste kaj, letos pa gremo res na delo, mi se ukvarjamo z umetnostjo. Mi nismo kakšen cirkus". Cirkuški ravnatelj pa skliče svoje in reče: "Veste kaj, mi gremo zdaj delat, mi smo pošten cirkus, nismo kak teater." Ne silite me, da bom jaz sklical gledališče, igralce in bom rekel: "Gremo na delo, mi nismo skupščina".</seg>
@@ -1550,27 +1536,27 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg159">Če obrazložim svoj glas, jaz se bom verjetno vzdržal in ne bom niti s svojimi kolegi iz stranke proti sprejetju, čeprav ne upam prevzeti vse odgovornosti za, še manj pa za odlaganje. Prav tako ne vem, za kateri klobuk naj vtaknem pripombo gospoda Stadlerja na pripombo Aurelia Jurija. Podpiram vašo razpravo. Že prej bi morali o tistem glasovati. Tudi to ni naša stvar, da ocenjujemo. Vemo, da so v vojni ljudje vedno na dveh straneh. Za 45 let nazaj bi radi rekli, da je vojna vedno tragična, sedaj se bomo pa med seboj zasliševali in preštevali. Mi nismo za to tu. Ta nestrpnost se mi zdi nekulturna. Če je pa bila kakšna stvar, pa naj raziščejo tam, kjer je za to mesto. Mi za to nismo tu. Skratka, ne bi diskvalificiral teh nastopov v javnosti kot manipulacijo, četudi lahko je. Bog ve, kakšni pritiski javnosti nas še čakajo in mislim, da mi, ki smo bili izvoljeni od teh ljudi, ki bodo znova volili na nekih volitvah, nimamo pravice se obnašati na tak diskvalifikatorski način. Mislim pa, da je treba čimprej glasovati, ali damo to na dnevni red ali ne.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg160">Gospod Juri, prosim.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SSK11.JuriAurelio1949" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg161">Zelo kratko. Kolega Protner me je na to spomnil. Tudi formalni razlog imamo, da vrnemo ta predlog v fazo osnutka. Kot veste, 282. člen poslovnika govori, da je predlog vsakega zakona treba pripraviti na osnovi osnutka. Mi sami ugotavljamo in sam predlagatelj, distancira se ogromno iz samega osnutka, ki smo ga obravnavali. Člen 282. pa je jasen. Obravnavati moramo najprej osnutek novega koncepta. Hvala lepa.</seg>
             </u>
             <note type="speaker">IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg162">Hvala lepa. Sedaj se moram še sam oglasiti, ker je zadeva proceduralne narave. Gospod Juri se sklicuje na 282. člen. Ta člen se ne nanaša na predlog zakona. 283. člen govori o predlogu zakona in ne navaja nobenih vsebinskih predpogojev, da se zakon lahko obravnava kot predlog. Lahko mi verjamete, da sem tole dobro prebral. Poslovniško ni nikakršnih zadržkov, da zadevo obravnavamo kot predlog in mene je dr. Mencinger, ne naš kolega v zboru, ampak nekdanji podpredsednik vlade, zelo razočaral, ko se je lotil razpravljanja o področju, ki ga slabo pozna, namesto da bi ostal na svojem področju, kjer sem prepričan, da je dober strokovnjak in da je pravzaprav kot glavni razlog navajal proceduralne razloge. Nobenih zadržkov ni, da ne bi o tem zakonskem predlogu razpravljali kot o predlogu. Rokovno so zadeve izpolnjene, tudi o osnutku smo govorili. Ni pa nikjer rečeno, koliko se sme in koliko se ne sme predlog razlikovati od osnutka. O tem moramo biti na jasnem. To ni nikjer definirano. Tudi zelo težko bi bilo to definirati, tako mislim, da formalnih razlogov za to ni.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg163">Toliko kot replika. Gospod Lovšin je še želel besedo.</seg>
             </u>
             <note type="speaker">FRANC LOVŠIN:</note>
-            <u who="#SSK11.LovsinFranc" ana="#regular">
+            <u who="#LovsinFranc">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg164">Spoštovane poslanke in poslanci! Kdor se bori, se pač bori za to, da najhitreje zmaga. Mislim, da smo si v tem enotni. In vsi, ki se borite za to, da ta predlog čim hitreje postane zakon, imate prav gotovo prav.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg165">Ugotavljamo pa lahko vsi, da se izvajajo in se bodo še huje izvajali politični pritiski na poslance, enkrat zato, da se zakon sprejme, drugič pa bodo pritiski zaradi posledic, ki jih bo prinesel zakon.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg166">Razumem ene in razumem druge. Vendar pa ugotavljam, da ta predlog ni rešil poglavitnih in temeljnih vprašanj, po rešitvi katerih bi se lahko izognili pritiskom javnosti! Mislim, da sem v lanskem letu, jeseni in letos, v mesecu marcu, dal dovolj jasna napotila, v katero smer naj gre reševanje pri sestavi novega koncepta tega zakona. Ugotavljam, da ta predlog, ki ga imam, tega ne upošteva in mislim, da smem to tukaj tudi povedati. Torej, da se napotila poslanca niso upoštevala. Vendar, zanemarimo to. Mislim, da je vlada kot pripravljalec tega predloga naredila bistveno napako v tem času. Če smo pri odločitvi o slovenski svobodi in samostojnosti terjali plebiscit, mislim, da je materialna podlaga, podlaga vsakemu človeku enako za njegovo svobodo. In da bi bilo treba v tem primeru rešiti to vprašanje do tega časa. Ljudi bi bilo treba prav tako vprašati, ali se z likvidacijo družbene lastnine strinjajo ali ne. To vprašanje doslej še ni bilo rešeno.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg167">Če bi bilo rešeno, je pritisk javnosti izključen. Zato predlagam, dajem predlog, da se do izvedbe plebiscita o tem vprašanju ta predlog zakona umakne z dnevnega reda. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg168">Hvala lepa. Torej imamo še en predlog. Upam, da ne bomo o tem predlogu enako dolgo razpravljali.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg169">Sedaj je razprava izčrpana, tako da bi dal najprej na glasovanje predlog gospoda Zakonjška, se pravi, da se 2. točka preoblikuje in da obravnavamo osnutek zakona o lastninskem preoblikovanju podjetij. Poglejmo najprej prisotnost.</seg>
                <note>72 prisotnih.</note>
@@ -1594,19 +1580,19 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg180">Prosim, gospod Frelih.</seg>
             </u>
             <note type="speaker">LEOPOLD FRELIH:</note>
-            <u who="#SSK11.FrelihLeopold1945" ana="#regular">
+            <u who="#FrelihLeopold1945">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg181">Spoštovani predsednik, spoštovane poslanke in poslanci! Mislim, da bi morali glasovati o predlogu gospoda Vivoda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg182">Menim, da bomo v okviru razprave morali nekaj reči, ker imamo tudi predlog Odbora za splošne gospodarske zadeve, ki predlaga, da se imenuje neka skupna delovna skupina in tako naprej. Skratka, s tem v zvezi bi lahko rekli, da odločimo takrat in o tem, kdaj bomo odločali in kako se pripravili na odločanje. Natančno bi bilo treba formulirati, o čem sedaj odločamo. Prosim, gospod Oven. To pravzaprav ne zadeva samega dnevnega reda. Točko bomo prekinili takrat, ko jo pač bomo.</seg>
             </u>
             <note type="speaker">EDVARD OVEN:</note>
-            <u who="#SSK11.OvenEdvard1950" ana="#regular">
+            <u who="#OvenEdvard1950">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg183">Gospod predsednik, kolegice in kolegi! Predlagal bi, da bi pred obravnavo te 2. točke omogočili vsem, ki so predlagali drugačne zakonske rešitve, da bi dali vsakemu pet ali deset minut časa, da bi predstavil svoje poglede. Tako bi dobili nekoliko boljšo informacijo o drugačnih pogledih na ta zakon. Mi pa bi o samem zakonu seveda razpravljali kot o edinem zakonu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg184">Dobro, to lahko v okviru same točke dnevnega reda in kot doslej, nisem omejeval časa za razpravo celo o dnevnem redu. Mislim, da tudi ne bomo omejevali časa tudi pri sami obravnavi tako da bo ta predlog realiziran. Tako temu nič ne nasprotujem.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg185">Če ni več nobene razprave, potem dajem predlog dnevnega reda na glasovanje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg186">Kdo je za?</seg>
@@ -1619,13 +1605,13 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg190">Zdaj smo pri obvestilih. Kot prvo obveščam, da bi imeli odmor do približno 12.45, in to pred obravnavo 2. točke dnevnega reda. Drugo, gospod Partljič je želel, da mu dam še besedo za neko drugo obvestilo, ki ni neposredno povezano z našim delom, pa kljub temu prisluhnimo.</seg>
             </u>
             <note type="speaker">TONE PARTLJIČ:</note>
-            <u who="#SSK11.PartljicAnton1940" ana="#regular">
+            <u who="#PartljičAnton">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg191">Prosil me je vaš kolega Ivan Mešiček, ki si zdravi zobe, tako da je že nekajkrat manjkal na seji. On je poslanec občine Pesnica. Jaz sem tam doma, vendar sem poslanec mariborske občine. V Pesnici bodo v nedeljo pripravili množično humanitarno prireditev z naslovom "Za mir", po principu "še pomnite tovariši", pa se ne delam norca. Pripravili so ekskluzivnejše točke tudi o zadnjih dogodkih v Sloveniji, gotovo ste slišali za Pesnico, Štrihovec, Šentilj. Obenem pa bi radi s turističnim veseličnim programom zbrali tudi dovolj sredstev za pomoč štirim družinam, ker so ljudje do smrti invalidi in ne bodo mogli več opravljati svojih dejavnosti.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg192">Zadeva je mišljena kot predstavitev občine, njenega gospodarstva, zlasti lepih krajev in turizma, pa nekoliko za rekreacijo. Če ste pred dvorano vzeli ta vabila, bodo imeli tisti, ki se ne želijo voziti z bicikli, se jim tudi ni treba, bo poskrbljeno za drug program. Vendarle bi vas povabil, ker smo pač poslanci v Zboru občin, sam pa sem član pripravljalnega odbora, v njihovem imenu da se udeležite te prireditve. Moram reči, da ljudje pričakujejo, da bo prišlo veliko ljudi iz vlade in Skupščine. Vabljeni so vsi poslanci in vas vabim, tam se boste lepo imeli, morda se bomo tudi kaj v miru pogovorili in se bolj prijazno srečali.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg193">Torej, v nedeljo od 9.00 ure naprej v Pesnici pri Mariboru, to je 5 km naprej iz mesta, kjer vas bo čakala na istem mestu prva barikada, ki bo iz prijetnejših stvari, kot je bila tista v času vojne.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg194">Hvala lepa. Torej, po tem prehajamo na prvo točko.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg195">1. TOČKA DNEVNEGA REDA - ODOBRITEV ZAPISNIKA 23. IN 24. SEJE ZBORA.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg196">Oba osnutka zapisnikov ste prejeli. Ima morda kdo k tema dvema osnutkoma kakšno pripombo oziroma popravke?</seg>
@@ -1635,7 +1621,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 12.35 uri in se je nadaljevala ob 13.45 uri.</note>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg199">Prav bi bilo, da nadaljujemo z našo sejo. Upam, da nas je že dovolj. Poglejmo prisotnost! Ugotovimo sklepčnost!</seg>
                <note>38 prisotnih.</note>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg200">Ugotovimo sklepčnost!</seg>
@@ -1659,7 +1645,7 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg213">K razpravi se je prijavil gospod Marko Stadler.</seg>
             </u>
             <note type="speaker">MARKO STADLER:</note>
-            <u who="#SSK11.StadlerMarko" ana="#regular">
+            <u who="#StadlerMarko">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg214">Lahko takoj povem, da res nisem mislil, da bom prvi na vrsti. Mislil sem, da je že več prijavljenih razpravljalcev.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg215">O zakonu o lastninskem preoblikovanju podjetij je bilo že veliko napisanega, izrečenega, kritiziranega. Po mojem bi lahko skorajda rekel, da preveč. Opozicija s pomočjo sindikatov napada zakon na vsakem koraku. Gotovo, vsaka opozicija ima to nalogo in vsaki opoziciji - saj osebno tako mislim - je do tega, da bi nekoč prišla na oblast. Navadno opozicija pride na oblast potem, ko vlada dela velike napake. Zato bi kar na začetku povedal, da se mi zdi skoraj nerazumljiv tak grotesken odpor opozicije proti temu zakonu. Zakaj? Če bi opozicija na hitro to podprla, pravijo, da je zakon slab, vlada bi lahko čez nekaj dni, najkasneje čez nekaj mesecev padla, pa bi prišli na oblast. To je v bistvu neka trgovina, s katero bi se dalo tako urediti. Zaradi tega mislim, da ta zakon ni tako slab, kot nekateri pravijo. Kolikor je meni znano, je to eden od najboljših zakonov, ki se jih sedaj sprejema v deželah bivšega realsocializma.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg216">Sindikati se zelo borijo za delavca. Pravijo, da bo delavec zopet opeharjen ipd., da bo premalo oziroma nič dobil, da ga bo država spodjedla. Mislim, da delavec nima v glavnem druge ambicije, kot da dobi dobro plačo. Dobro plačo mu lahko da tisti, ki dobro posluje. Ugotovili smo pa že vsi skupaj, da poslujejo dosti boljše privatna podjetja kot pa dosedanja družbena. Če se spomnimo malo nazaj, še ko sem v šolo hodil, v gimnazijo, pa tudi na fakulteto, so nam razlagali, da so delavci lastniki tovarn. Se pravi, bili so 100% lastniki vsega. Tako so nam razlagali. Imam še sklep in lahko pokažem, da je tako pisalo, da so tovarne last delavcev, kombinati last delavcev ipd. Videti je, da se to ni najbolje obneslo. Če bi se dobro obneslo, sem sveto prepričan, ne bi bilo potrebno teh sprememb v svetu in bi pač funkcioniralo tako, kot so si pač nekateri zamislili, da bi funkcioniralo boljše kot nikoli do sedaj. Kaže, da se to ni obneslo. Tako smo prišli do tega, da je treba spremeniti lastninska razmerja, da ne bo več lastnina last družbe, se pravi nikogar.</seg>
@@ -1668,21 +1654,21 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg219">Nekateri so povedali, kako so avtobusi danes vozili. Jaz sem malo zamudil in nisem tega videl. Včeraj sem pa videl tiste štrajke in me je skoraj malo prizadelo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg220">Hvala. Gospod Rojec ima naslednji besedo.</seg>
             </u>
             <note type="speaker">ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#regular">
+            <u who="#RojecAnton1937">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg221">Gospod predsednik, spoštovane poslanke, spoštovani poslanci! Ne mislim veliko razpravljati o tem zakonu, ki ga imamo sedaj pred seboj, to je o zakonu o oblikovanju lastninskih podjetij, želim pa pred to skupščino navesti primer simulacije in to zato, da se vidi, kako lahko tudi ta zakon, ki je pred nami, učinkuje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg222">V našem mestu smo napravili simulacijo tega zakona in smo vzeli primer v katerem - torej firme ne bom navajal - je knjižna vrednost podjetja po stanju na dan 31.12.1990 4.142.069 din, dobiček, ki ga je ta firma s temi sredstvi ustvarila, pa znaša 9.660.888 dinarjev, kar pomeni, da če ima firma 63 zaposlenih in bo v primeru lastninjenja v njej to lahko s strani delavcev kupljeno in jim bo še ostalo za delitev razlika cca 5.000.000 din. To je primer, kako lahko takšen zakon tudi učinkuje. Naš predlog je, da iz tega, kar tu vidimo, da bi pač ta knjižna vrednost, ki služi za osnovo, ne dala realnega stanja pri lastninjenju. Seveda to zahteva tudi ustrezno korekcijo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg223">Drugo, kar želim poudariti, in v tej zvezi sem tudi predlagal amandma, se nanaša tudi na tiste zavode, ki opravljajo gospodarsko dejavnost. Gospodarske dejavnosti niso opravljala samo podjetja, ampak tudi nekateri zavodi. Tu navajam kot značilen primer takšnih zavodov npr. projektantske organizacije, ki so bile registrirane kot zavodi oziroma so še registrirane kot zavodi, zdraviliške dejavnosti - zdravilišča so registrirana kot zavodi. Mislim, da bi v takšnem primeru takšni zavodi morali biti olastninjeni. Namreč v smislu zakona o zavodih, ki smo ga v tej skupščini sprejeli, se ti zavodi ne morejo registrirati kot zavodi, ampak kot gospodarski subjekti. Te vrste zavodi, ki opravljajo gospodarsko dejavnost - ker so tudi sredstva, s katerimi razpolagajo, ustvarjena z gospodarskimi dejavnostmi, bi morali biti olastninjeni v smislu tega zakona. Zlasti imam pred seboj primer zdraviliške dejavnosti, kjer imamo hotele, celo vrsto naprav, ki so bile ustvarjene predvsem iz turističnih dejavnosti in tudi zdraviliške dejavnosti, ki so v bistvu gospodarska dejavnost. Gre tudi za podjetja, ki se ukvarjajo in delujejo na zunanjetrgovinskem področju in to bi predstavljalo veliko zavoro, kolikor lastninjenje teh dejavnosti oziroma teh zavodov ne bi bilo opravljeno v smislu zakona, ki je pred nami. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg224">Hvala lepa. Gospod Zakonjšek ima besedo.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg225">Gospod predsednik, spoštovani zbor! V načelnem stališču, ki terja podaljšanje strokovne razprave oziroma obravnave projekta o lastninjenju - kar je bilo še dodatno podkrepljeno s podpisi nekaterih naših poslancev na nekatere druge zakonske koncepte, mislim predvsem na predlog zakona "vlade v senci" in tako imenovani Mencingerjev zakon s ciljem, da se v Skupščini omogoči enakopravna obravnava različnih pogledov na proces lastninjenja - smo v Poslanskem klubu LDS vendarle pripravili tudi konkretne amandmaje k predlogu zakona, ki ga je predložila vlada. Pri tem smo izhajali po eni strani iz potrebe po predstavitvi našega pogleda na sistemske rešitve lastninjenja in tudi s tem dodatno utemeljili potrebo po vrnitvi zakona v fazo osnutka, kar v našem zboru ni bilo sprejeto, po drugi strani pa poskušali s konkretnimi amandmaji k zadnjemu predlogu narediti le-tega sprejemljivejšega s tem, da bi iz njega izločili najbolj - po naši oceni - nesprejemljive rešitve. Slednje bi še zlasti prišlo v poštev v primeru, da vrnitev tega predloga v fazo osnutka ne bi bila sprejeta, kar se je zgodilo v tem zboru.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg226">Zaradi navedenega koncept ni povsem identičen s tem, kar bi v LDS želeli, kar je eno od temeljnih vodil, iz katerih smo pri tem pisanju amandmajev izhajali s tem, da v vladni predlog čim manj posegamo, da pa še vedno skušamo odpraviti najbolj sporna določila. Amandmajev je sicer 30, to je zadnji predlog, vendar je bistvenih le nekaj, ostali pa so bodisi usklajevalni glede na te temeljne ali pa povsem redakcijske narave.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg227">Menimo, da nam je z amandmaji, ki jih predlagamo, nekako uspelo združiti vladni in Mencingerjev koncept. Čeprav to ni bil prvotno naš cilj.</seg>
@@ -1699,11 +1685,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg238">To je ena od širših obrazložitev koncepta amandmajev, s tem, da kot sem že pri razpravi o dnevnem redu povedal, s tem umikam svoj podpis oziroma s tem tudi predlog v tem zboru, da se enakopravno obravnava zakon o lastninjenju podjetij. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK JANEZ LUKAČ:</note>
-            <u who="#SSK11.LukacJanez1931" ana="#chair">
+            <u who="#LukacJanez1931" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg239">Hvala. S tem je lista razpravljalcev izčrpana. Se še kdo javi k besedi? Prosim, gospod Protner.</seg>
             </u>
             <note type="speaker">MAG. JOŽE PROTNER:</note>
-            <u who="#SSK11.ProtnerJoze1944" ana="#regular">
+            <u who="#ProtnerJože">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg240">Ker smo prej z glasovanjem odločili, da ne bomo omogočili Pintarju, da predstavi enega od svojih predlogov, bi ga želel, ker sem eden izmed sopodpisnikov tega predloga, vendarle predstaviti. S tem bi želel povedati, da moj podpis na tem predlogu ne pomeni, da ne bi imel sam dovolj svojih lastnih misli o tem, da se bi dalo tudi nekatere stvari reševati drugače.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg241">Drugo. Želel bi reči, da predlog Pintarja, ko sem podpisal, nisem jemal kot predlog "vlade v senci". Če bi bilo tako, potem tu mojega podpisa ne bi bilo. Podpisal sem ga kot eden izmed poslancev, ki se je za to odločil zaradi predstavitve vsebinsko drugačnega pogleda na to lastninjenje, da na koncu pridemo do vsebinsko najboljših rešitev. Vendar bi rad omenil nekaj značilnosti, ki bi naj služile predvsem poslancem pri opredeljevanju do resnično velikega števila amandmajev. Želel bi predvsem na nekaj od teh opozoriti, da ta predlog upošteva, v lastnino podjetja srednjeročne in dolgoročne dolgove podjetja ter omogoča njihovo olastninjenje tako, da podjetje upnikom izroči navadne delnice.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg242">Druga takšna posebnost ali značilnost je, da upošteva delavce kot dejanske solastnike in dopušča podjetjem, da do 35% vrednosti delnic ali razdele delavcem ali pa ponudijo v interni odkup. Po moji oceni je zelo pomembna stvar, da uveljavi razliko med tistimi podjetji, ki so živela predvsem od svojega dela in svojega poslovanja, od tistih podjetij, o katerih smo tudi v tej Skupščini - ki so v zadnjih letih trošila in potrošila mnoge akumulacije drugih, ki so dobile sredstva od države v obliki nepovratnih sredstev, da so lahko životarila. Večino sredstev za prodajo delnic zadržijo v podjetjih, to je ena od značilnosti in iz preostalih sredstev od prodaje delnic predlaga formiranje sklada za pospešeni tehnološki razvoj. Govorili smo že, kakšen je bil odnos posameznih komisij, kako so bile nesklepčne takrat, ko je bilo potrebno zavzeti stališča do predloga lastninskega zakona in so se kasneje trudili s pisnim pristankom "dokopati" do nekih stališč, je bila tudi Komisija za strategijo nacionalnega in regionalnega razvoja. Tam so bila stališča izoblikovana v smislu, da ta komisija predlaga zborom Skupščine Slovenije in Izvršnemu svetu, da vse predloge zakonov in amandmajev obravnavajo enakopravno in korektno.</seg>
@@ -1711,28 +1697,28 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg244">To je bilo stališče, o katerem smo morali iskati potem tudi pisno potrditev. Oglasil sem se v podporo tega predloga, kot celovitega predloga, samo s tem namenom, da v nadaljnji razpravi in mogoče usmeritvah in zaključkih te razprave korektno obravnavamo tudi ta predlog. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK JANEZ LUKAČ:</note>
-            <u who="#SSK11.LukacJanez1931" ana="#chair">
+            <u who="#LukacJanez1931" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg245">Gospod Protner, razčistimo. To ni predlog zakona, ker to nismo dali na dnevni red, ampak so amandmaji. Boste vložili amandma?</seg>
             </u>
             <note type="speaker">MAG. JOŽE PROTNER:</note>
-            <u who="#SSK11.ProtnerJoze1944" ana="#regular">
+            <u who="#ProtnerJože">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg246">Mislim, da bo to vloženo v skladu s stališči kot celovit amandma.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK JANEZ LUKAČ:</note>
-            <u who="#SSK11.LukacJanez1931" ana="#chair">
+            <u who="#LukacJanez1931" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg247">Hvala. Amandma mora biti vložen v pisni obliki. Hvala. Prosim, gospod Dvornik.</seg>
             </u>
             <note type="speaker">MARJAN DVORNIK:</note>
-            <u who="#SSK11.DvornikMarjan1949" ana="#regular">
+            <u who="#DvornikMarjan1949">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg248">Žal sem dobil to gradivo šele sedaj na klop. Gospod Protner je nekaj stvari razlagal kot prednost tega zakona. Uspel sem nekaj stavkov prebrati in moram reči, da to, kar se razlagalcu zdi kot prednost, je očitna slabost nasproti vsem ostalim predlogom, ki sem jih imel priložnost videti. 7. člen govori o tem, da se prenašajo dolgoročne obveznosti upnikom. To so običajno banke in to je običajno Ljubljanska banka. To pomeni, blago rečeno, da podjetja rešimo, banke potopimo. Dejstvo je, da s tem nobenega gospodarstva nismo rešili, ampak smo ga postavili v nezavidljivo luč. Gospodarstvo brez bank ni gospodarstvo. Zakon govori o podjetju kot o subjektu, kot o personi, kot lastniku. Zastavlja se mi vprašanje, kdo je podjetje, ker pravi, podjetje samo odloči, podjetje naredi to in ono. Kdo je podjetje? Ali ni to nek izmislek, tako kot smo rekli, da je družba, družbeni interes tudi neka subjektiviteta, kar ni res.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg249">Kot največjo slabost pa bi ocenil tisti del, mislim, da je 9. člen, ki govori o dokapitalizaciji. Če je kaj slabega v tem zakonu, je to gotovo, in sicer v neposredni povezavi z vlogo managementa oziroma tistega, ki podjetje vodi. Pravi takole: "Z interno prodajo delnic se izvede dokapitalizacija, s ciljem pridobitve sredstev", se pravi, nekega likvidnega denarja, in sicer cca 35% pod zgornjo mejo. Praktično to pomeni, da v tistih podjetjih, kjer so evidentni tehnološki presežki, kjer je evidentna prezaposlenost, bodo delavci prisiljeni svoja delovna mesta kupiti. To ne bo dokapitalizacija, ampak izsiljevanje! Zato taka zakonska rešitev predstavlja izjemno brutalen odnos do delavcev. Ni mi jasno, kako lahko Emil Milan Pintar demonstrira na čelu tistih delavcev in jim laže, da so njegovi predlogi zaščita delavcev, to, kar predlaga vlada, pa ne. Mislim, da je popolnoma evidentno, da je tu povsem obratna situacija.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK JANEZ LUKAČ:</note>
-            <u who="#SSK11.LukacJanez1931" ana="#chair">
+            <u who="#LukacJanez1931" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg250">Moram vas opozoriti, da ste polemizirali s papirjem, ki v proceduro še ni vložen. Gospod Železnik se oglaša k besedi.</seg>
             </u>
             <note type="speaker">ANDREJ ŽELEZNIK:</note>
-            <u who="#SSK11.ZeleznikAndrej1944" ana="#regular">
+            <u who="#ZeleznikAndrej1944">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg251">Spoštovani predsedujoči, spoštovani poslanci! Glede na to, da v razpravi o dnevnem redu ni bil sprejet predlog, da vrnemo gradivo tega zakona v fazo osnutka, bom predstavil amandmaje k predlogu zakona o lastninskem preoblikovanju podjetij našega kluba delegatov Stranke demokratične prenove.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg252">Predlog zakona, ki je na dnevnem redu, je iz nekaterih, zlasti iz treh razlogov za nas nesprejemljiv, ker praviloma ne omogoča tako imenovanega avtonomnega lastninskega preoblikovanja podjetij, kar pomeni vsaj predhodno podržavljanje velike večine družbenega kapitala in ker na podlagi razdelitve delnic delavcem in vsem državljanom ne omogoča upravljanja konkretnih podjetij, temveč le investicijskih družb, kar je dejansko posredno in odtujeno upravljanje v bistvu nekih paradržavnih institucij. Zaradi tega predlagamo 11 amandmajev in v skladu s tem, o čemer sem sedaj govoril, torej o teh nesprejemljivih izhodiščih, predlagamo, da se dopolni koncept zakona, tako da iz lastninjenja niso izvzeta kmetijska zemljišča, da se daje podjetjem možnost, da izvedejo avtonomno privatizacijo z razdelitvijo delnic ali dokapitalizacijo v roku treh mesecev po uveljavitvi tega zakona.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg253">Nadalje, da se v primeru izvedbe avtonomne kapitalizacije sredstva podjetij ne podržavljajo, novi lastniki pa nosijo dejansko polni ekonomski riziko poslovanja podjetja. Dirigirana kapitalizacija, kakor je predvidena po predlogu zakona, naj se izvede samo v primeru, če podjetja v treh mesecih ne opravijo avtonomne kapitalizacije. Nadalje, da za podjetja, ki so opravila to avtonomno kapitalizacijo, veljajo določbe o dirigirani kapitalizaciji, če dve zaporedni leti po avtonomni kapitalizaciji poslujejo z izgubo. Nadalje, da se do 35% delnic sklada razdeli vsem polnoletnim državljanom, ki kot zaposleni ali kot upokojeni niso izkoristili pravice do avtonomne kapitalizacije podjetja. Tako pridobljene delnice lahko državljani Republike Slovenije uporabijo v procesu, se pravi v drugi fazi tako imenovane dirigirane kapitalizacije kot navadno delnico v podjetju, v katerem delajo ali pa so bili upokojeni; lahko pa jo vložijo v investicijskih družbah.</seg>
@@ -1758,49 +1744,49 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg273">Ta delovna skupina bi tudi zbor obvestila o svojem delu. Pri tem pa tudi predlagam, kar ne bi bilo slabo, da delovna skupina tesno sodeluje z Izvršnim svetom. Menim, da bi tak predlog bil prispevek, da prej pridemo do predloga zakona, ki bo potem tudi - ne bom rekel s konsenzom, ampak z večinskim stališčem - sprejet. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg274">Naslednji je gospod Pavšič.</seg>
             </u>
             <note type="speaker">TOMAŽ PAVŠIČ:</note>
-            <u who="#SSK11.PavsicTomaz1931" ana="#regular">
+            <u who="#PavsicTomaz1931">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg275">Spoštovano predsedstvo, drage kolegice in kolegi poslanci! Predlog zakona o lastninskem preoblikovanju podjetij seveda podpiram, ker mislim, da je že skrajni čas, da ga sprejmemo. Imam pa k temu zakonu nekaj amandmajev, in sicer k 3., 20. in 42. členu. Teh amandmajev ne bom bral. Vložil sem jih predvsem kot poslanec idrijske občine, ki je za to zelo zainteresirana, in enake amandmaje je vložil v Družbenopolitičnem zboru Marjan Podobnik in mislim, da v Zboru združenega dela Franc Grašič.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg276">Za kaj gre? Gospodarstvo naše idrijske občine se že dve desetletji uspešno razvija tudi s pomočjo vlaganja tujega kapitala. Z njim je povezanih 2.500 delovnih mest in več kot 70% delež izvoza v proizvodnih podjetjih s tujim kapitalom. V občini imamo tri večja podjetja oziroma tovarne, kot so Eta iz Cerknega, Kolektor iz Idrije in Rotomatika iz Spodnje Idrije. Vsa ta podjetja ustvarjajo toliko izvoza na konvertibilni trg, da je naša občina povprečno udeležena pri tem izvozu 44%, kar je seveda tudi velik delež v regiji, kjer so občine s 6% deležem, 12% in 20%. Mislim, da je republiško povprečje 13%.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg277">Zakon o lastninskem preoblikovanju podjetij lahko bistveno vpliva na interese tujih vlagateljev za nadaljnji razvoj in vlaganja. Ob neustreznih lastninskih rešitvah v že obstoječih vlaganjih pa bo neizbežen umik tujega kapitala imel za posledico izgubo delovnih mest in možnosti tehnološkega razvoja in prodajnega trga doslej uspešnih podjetij.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg278">Torej, zaradi vsega tega vlagamo te amandmaje, kajti naš cilj je, da vloženi tuji kapital obdržimo, oziroma da ustvarimo pogoje za dotok novega. Zaradi tega vabim delegate, da te amandmaje podprejo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg279">Gospod Jug, prosim.</seg>
             </u>
             <note type="speaker">MAG. JANEZ JUG:</note>
-            <u who="#SSK11.JugJanez1947" ana="#regular">
+            <u who="#JugJanez">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg280">Izkoristil bi to priložnost in ker sem na našem delovišču videl ministra Ocvirka, bi vas, gospod Ocvirk, vprašal naslednje: osebno sem prepričan, da smo v procesu lastninjenja še vedno bližje modusu preko finančnega trga oziroma preko banke itd., ker se mi zdi, da bomo le prišli s pomočjo teh institucij, delavcev in drugih do nadzorne funkcije nad podjetji, ki bo učinkovita. Bojim se, da bi s tem, kar je sedaj predlagano, prišli do tistega, da eno neučinkovitost nadzora nadomestimo z drugo in potem nismo ničesar naredili. Konkretno vprašanje pa se nanaša na vaše mnenje o teh zadevah. Tu je povezana tudi sanacija bank, ustanovitev finančnega trga, institucij itd. v naši državi, ker menim, da na tem področju ni ničesar narejenega. Če to ni urejeno, potem je tudi vse ostalo, o čemer sedajle govorimo, nesmisel. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg281">Besedo želi podpredsednik Izvršnega sveta dr. Andrej ocvirk.</seg>
             </u>
             <note type="speaker">DR. ANDREJ OCVIRK:</note>
-            <u who="#SSK11.OcvirkAndrej1942" ana="#regular">
+            <u who="#OcvirkAndrej1942">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg282">Gotovo je sanacija bančnega sistema ključna zadeva, ki mora biti v kontekstu sanacije gospodarstva. Vendar mi računamo, da - kakršenkoli bo odgovor - se del sredstev prek sklada lahko preusmeri v koncept sanacije bančnega sistema in je približno tako tudi napisano. Zakoni za ta del, za agencijo, za sanacijo bančnega sistema so pa že pripravljeni.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg283">Gospod Klavora, izvolite.</seg>
             </u>
             <note type="speaker">FEDJA KLAVORA:</note>
-            <u who="#SSK11.KlavoraFedja1940" ana="#regular">
+            <u who="#KlavoraFedja1940">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg284">Spoštovane kolegice in kolegi, dovolite mi, da dam kratek amandma k 55. členu. Ta opredeljuje položaj podjetij, ki so se že olastninila. V 55. členu določa, da morajo podjetja, ki so se preoblikovala po takem ali drugačnem postopku v take ali drugačne nove oblike, uskladiti lastninska razmerja s tem zakonom v določenem roku oziroma, če tega ne storijo - to je nov amandma Izvršnega sveta - jih preoblikuje sama agencija. K temu besedilu in k temu amandmaju dodajam svojega. Vlada kaže dobršno mero nezaupanja do teh podjetij prav s tem svojim amandmajem, ali pa do ljudi, ki jih vodijo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg285">Prav zato, ker obstajajo tudi takšna podjetja, ki so se v dosedanjih, včasih silno spretnih postopkih obnašala skrajno nekorektno in tudi cinično do družbene lastnine, če jo lahko imenujem tako, predvsem pa do okolja, ki jim je po svojih možnostih sicer vedno pomagalo, ali pa še bolje, do zaposlenih ljudi v lastnem podjetju, ki so po takem lastninjenju ostali izven novega podjetja.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg286">Zaradi vseh teh razlogov dodajam amandma k 55. členu, ki se glasi: "Že izpeljane postopke lastninjenja, za katere se s strokovno presojo ugotovi, da je bila družbena lastnina oškodovana v večjem obsegu, se razveljavi."</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg287">Obrazložitev: V izpeljanih postopkih lastninjenja v preteklem času je bila v marsikaterem primeru ob neustrezni družbeni kontroli oškodovana družbena lastnina, marsikdaj pa oškodovani tudi zaposleni v preostalih delih podjetja, ki v postopke niso bili vključeni. Pravno, predvsem pa finančno, so bili postopki in ocene vrednosti prilagojeni osebnim in ožjim interesom vodstev nekaterih podjetij. Z nepristransko strokovno - pravno, finančno analizo izpeljanih postopkov in cenitev se jih mora stvarno oceniti in ugotoviti vse posledice ter možna oškodovanja družbe in zaposlenih. Razveljavljenje bi bilo v tem primeru zato tudi moralna obsodba. Govorim jasno iz konkretnega primera, to je iz primera lastninjenja hotelov oziroma celega podjetja ATC Bovec, ki je prešlo v novo podjetje Kompas Internacional v Ljubljani. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg288">Naslednji je gospod Deželak.</seg>
             </u>
             <note type="speaker">JANKO DEŽELAK:</note>
-            <u who="#SSK11.DezelakJanko1945" ana="#regular">
+            <u who="#DeželakJanko">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg289">Spoštovane kolegice in kolegi, delegatke in delegati! Prav na kratko bi prezentiral amandmaje Slovenskih krščanskih demokratov, ki smo jih že pred štirinajstimi dnevi dali na svetlo, kot se temu reče, in ki jih je potem vlada tudi upoštevala v nadaljnji proceduri, ob upoštevanju in preučevanju vseh amandmajev, ki so z vseh strani, vseh strank in z vseh institucij prišli na vladin naslov.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg290">Kot prvo predlagamo, da se doda nov 11.a člen - to smo tudi prvi predlagali, čeprav smo bili s strani dela javnih medijev zaradi tega okregani ali pa je en del medijev iz tega bril norce - da preide v neodplačno last zaposlenih 10% premoženja po stanju družbenega kapitala na dan 31.12.1990. V utemeljitvi smo navedli, da je en tak delež kapitala tisti obseg družbenega kapitala, ki lahko zagotavlja primerno stopnjo identifikacije zaposlenih s firmo, v kateri so zaposleni. To ima globlje ozadje tudi v naših pomislekih ob Mencingerjevem modelu, kjer smo vložili popolnoma enak amandma oziroma predlog, da en del premoženja le pride v neodplačno last zaposlenih v podjetjih, kjer naj pač predlagatelj na osnovi načela egalitete ali egalitarnosti in solidarnosti med zaposlenimi da model, ki bo izenačeval vse zaposlene v vseh podjetjih in ustanovah v Republiki Sloveniji.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg291">V 14. členu navajamo, da je potrebno dati zakonodajno kontrolo nad tistimi postopki, ki pomenijo odprodajo podjetij na trgu. Mi razumemo v teh procesih odprodajo podjetij ne kot aktivnost vlade, da sestavi seznam najuspešnejših podjetij v Republiki Sloveniji, gre z njimi na denarni trg, na kapitalski trg v Frankfurt, v Tokio ali New York, da proda vrednost 100 za 5, 10 ali 15. Tega nismo nikoli razumeli v tej vulgarni varianti, ampak razumemo to predvsem kot tisto aktivnost,kjer se znani kupec pogovarja in dogovarja z že znanim prodajalcem, in obratno: znani prodajalec z znanim kupcem, kjer potekajo ti razgovori že morda leto ali dve in kjer pomeni uveljavitev ali konkretizacija te aktivnosti prenos tehnološkega, marketinškega, upravljalskega znanja in prenos kapitala v državo Slovenijo z vsemi pozitivnimi implikacijami, ki jih take migracije kapitala, know-how, znanja itd. pomenijo. Torej, ne najboljša ali ključna slovenska podjetja. In s tem v zvezi takoj povežem vprašanje ekonomske suverenosti in samostojnosti Republike Slovenije, predvsem tisto, kar je v poslovnem svetu najbolj običajno! Po naših podatkih tudi v svetu gredo vsi privatizacijski procesi v tej smeri, da se en del podjetij tudi odproda.</seg>
@@ -1811,27 +1797,27 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg296">In naslednje vprašanje, ki ga postavljam: ali obstaja normalna vlada v neki normalni deželi, ki bi predložila svojemu parlamentu skupek zakonov, ki lahko, če jih realiziramo - kot opozicija eksplicitno navaja - pomenijo praktično postavitev te vlade v out, nadomestitev te vlade z drugo vlado in končno tudi razpustitev tega parlamenta. Verjamem, da to ni tako, da gre za poštene namene, čeprav je bilo danes rečeno, da je s poštenimi nameni tlakovana tudi pot v pekel; tudi to je res, vendar na nas je, ali bomo iz tega predloga znali izluščiti tisto produktivno pozitivno jedro, da rečem malo literarno, da prenehamo z balkaniziranjem tega vprašanja, da spustimo vso stvar na strokovno raven, se pomenimo o vseh stvareh in si vzamemo tudi potrebni čas in da iz procesa lastninjenja izvedemo tisto produktivno bistvo, to pa je, da postanemo tudi na lastninskem, gospodarskem, ekonomskem in finančnem področju normalna primerljiva država, kjer so popolnoma jasno in razvidno in transparentno ločene funkcije lastnikov kapitala, upravljalcev kapitala in sindikata, seveda v drugačni vlogi, kot se danes kaže v tej deželi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg297">Hvala lepa. Želi še kdo besedo? Prosim, gospod Štefančič.</seg>
             </u>
             <note type="speaker">MARCEL ŠTEFANČIČ:</note>
-            <u who="#SSK11.StefancicMarcel1937" ana="#regular">
+            <u who="#StefancicMarcel1937">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg298">To je skoraj napol replika predgovorniku, gospodu Deželaku. Res je, mi smo opozorili, da je bil amandma z druge strani nesprejemljiv. Želeli smo s tem opozoriti Izvršni svet kot predlagatelja ustreznega člena in smo s tem opozorili, da je prav, da prvi in drugi odstavek ostaneta in da amandma, ki je bil predlagan in ki ga je tudi tukaj poskušal zagovarjati gospod Deželak, ne bi dobil ustrezne podpore. Kot smo videli v stališčih Izvršnega sveta do tega amandmaja, kaže, da nam je Izvršni svet prisluhnil.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg299">Gospod Deželak ima repliko.</seg>
             </u>
             <note type="speaker">JANKO DEŽELAK:</note>
-            <u who="#SSK11.DezelakJanko1945" ana="#regular">
+            <u who="#DeželakJanko">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg300">Hvala lepa. Spoštovano predsedstvo, zbor, resnično replika. Se opravičujem. Pozabil sem prej dodati misel, da so interesi bivših lastnikov, to je tudi primer Pivovarne Laško, po predlogu zakona dovolj dobro zaščiteni v okviru 15% odškodninskega sklada. Tu ni nobenih bojazni, da bi poslovodstva, zlasti v velikih podjetjih je to fizično nemogoče, matematično nemogoče, izdala postopke, prek katerih, da zdaj pravilno prenašam, lahko postavijo bivše lastnike v out s tezo: naše podjetje je olastninjeno, ni več nobenega neznanega lastninskega titularja, hvala lepa. Nasprotno, mi smo z njimi sodelovali in bomo sodelovali, gre samo za razčiščevanje nekaterih strokovnih vprašanj in nobene bojazni ni, da bivši lastniki - to je tudi uradno stališče naše stranke, mi jih podpiramo, tudi v zvezi z zakonom o denacionalizaciji - ne bi dobili nazaj svoje premoženje. Naša teza je: predvsem "in natura", šele na koncu, resnično šele na koncu v obliki papirjev, kjer bi bil posredno ali neposredno tangiran proračun te države in s tem izvršen pritisk na davčne stopnje in na davčni sistem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg301">Hvala lepa. Želi še kdo besedo? Prosim, gospod Oven.</seg>
             </u>
             <note type="speaker">EDVARD OVEN:</note>
-            <u who="#SSK11.OvenEdvard1950" ana="#regular">
+            <u who="#OvenEdvard1950">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg302">Spoštovani kolegi! Nisem mislil posebej razpravljati o tem zakonu, ker mislim, da nima smisla, ampak rad bi vas opozoril na dve stvari v tem zakonu. Kje se skriva podržavljanje prek tega zakona in kje se skriva problem denarja oziroma kapitala.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg303">Podržavljanje se skriva v 36. členu, ki pravi, da se v upravnih odborih v podjetjih oblikuje poseben svet pri skladu, ki ga sestavljajo po dva predstavnika Izvršnega sveta, Gospodarske zbornice Slovenije, sindikatov, univerze ter en predstavnik agencije in sklada. Ta svet bo imenoval upravne odbore, ti upravni odbori pa odstavljajo managerje in prevzamejo praktično vse v svoje roke. Ti upravni odbori bodo delovali na ta način vse dotlej, dokler sklad ne bo razdelil vseh delnic. To je pa dolžan do 31.12.1996. Se pravi, če grobo rečem, pet let bo vse upravne odbore večinoma imel v rokah sklad. Kako se ta svet oblikuje in kakšna bo pariteta posameznih članov, je pa stvar osebnega prepričanja ali celo okusa. Vendar se mi prek tega poraja občutek, da se bo lahko podržavljanje izvajalo v najbolj grobem smislu, če se bo hotelo. Zelo želim, da bi se uresničile besede gospoda Deželaka, da resnično obstajajo lepi nameni. Lahko pa bi nekoliko drugače zapisali.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg304">Drug, še pomembnejši problem kot upravljanje je problem kupnine. Mi bomo lahko kupnino dobili od prodaje vseh podjetij po zdajšnjih amandmajih Izvršnega sveta. Tudi delavski odkup bo možen za večja podjetja, 10% kupnine se bo preneslo na odškodninski sklad, 20% pa na pokojninske sklade. Se pravi: 70% kupnine se bo pa preneslo v sklad in kasneje v proračun. Nobene garancije nimamo, za kaj bodo ta sredstva porabljena, se pravi, ta gotovina ali likvidna ali dobra sredstva. Mislim, da bi morali v našem zboru zahtevati, da so ta sredstva namenska, namen pa določi Skupščina.</seg>
@@ -1839,15 +1825,15 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg306">Nimam sicer amandmaja in ga tudi ne bom predlagal, ampak mislim, da so to stvari, o katerih bi morali razmisliti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg307">Hvala lepa. Prosim, gospod Feltrin.</seg>
             </u>
             <note type="speaker">FRANCI FELTRIN:</note>
-            <u who="#SSK11.FeltrinFranci1943" ana="#regular">
+            <u who="#FeltrinFranci1943">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg308">Moram povedati, da je šestmesečni rok določen in da smo včeraj sprejeli amandma, da Skupščina potrjuje te člane, ki jih je imenovala Gospodarska zbornica. Komisija je sprejela amandma, s katerim se je strinjal tudi Izvršni svet.</seg>
             </u>
             <note type="speaker">IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg309">Hvala. Še kdo prosim? Če dovolite bi se na kratko še sam oglasil.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg310">Spoštovane kolegice in kolegi, ne bi predlagal in obrazlagal amandmajev, saj je že v imenu naše stranke amandmaje razložil gospod Deželak. Rad bi dal nekaj opozoril na nekatera vprašanja, ki se mi zdijo pomembna pri odločanju in sestavljanju končne verzije tega zakona.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg311">Predvsem mislim, da se moramo zavedati, da imamo sedaj pred seboj nekakšne lego kocke, nekakšno raztelešeno zadevo, ki jo bo treba sedaj sestaviti. Ne glede na amandmaje vlade in vse kar je bilo danes imamo tukaj toliko gradiva, toliko amandmajev, da tudi če sledimo v osnovi neki rdeči niti, je vendarle še toliko možnih stranpoti, da če se tega ne bomo dejansko zavedali, lahko zgrešimo. Imamo še vedno varovalko usklajevanja, ker pa praktično ni mogoče, da bo vse usklajeno sprejeto, vendar mislim, da se moramo tega zavedati. Predloženi amandmaji so zelo nasprotujoči, en amandma lahko podre vrsto drugih. Pri tem bi opozoril na nekatere stvari, ki mislim, da jih v tej veliki evforiji, kakor koli temu že rečemo, v tej silni razpravi, ki je bila vodena v tej kampaniji, včasih zanemarjamo.</seg>
@@ -1858,7 +1844,7 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg316">Sedaj pa še končna pripomba. Tudi sinoči, ko sem gledal televizijo in danes ob nekaterih razpravah, me je nekaj vendarle presenetilo. Namreč, da se postavlja eksplicitno ali pa vsaj implicitno vprašanje o tem, ali je sploh potrebno kaj lastniniti. To me pa kar malce preseneča. Vendarle se taka stališča do sedaj niso pojavljala oziroma tako vprašanje o potrebnosti samega tega procesa. Morda se s tem pravzaprav najbolj jasno kaže, kaj je cilj nekaterih pripomb k zakonu? Samo vprašanje postavljam. Na koncu tega stavka stoji vprašaj. Mislim, da ne bi bilo treba navajati argumentov, da jih je bilo vendarle že dovolj rečenih, tudi v predhodnih fazah te lastninske zakonodaje. Če pa sedaj ta vprašanja odprto postavljamo, potem je pa res nekaj čudnega pri tej stvari. Potem je vprašanje, če smo doslej vse stvari resno mislili. Hvala lepa.</seg>
             </u>
             <note type="speaker">BORUT RAZDEVŠEK:</note>
-            <u who="#SSK11.RazdevsekBorut1961" ana="#regular">
+            <u who="#RazdevsekBorut1961">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg317">Spoštovano predsedstvo, kolegice in kolegi! Spregovoril bi o lastninskem zakonu, katerega amandmaje k predlogu zakona je naša stranka posredovala Skupščini 5.9.1991. Odgovore smo dobili danes na klop. V glavnem so vsi naši amandmaji zavrnjeni. Mogoče je kakšen konceptualno upoštevan potem v samih predlogih Izvršnega sveta. Sporno z naše strani v zvezi s predlogi pa je to, da je Izvršni svet po našem mnenju amandmaje obravnaval z "levo roko", ali jih ne razume ali ni želel nanje odgovoriti, tako kot pač to ta zakon zahteva. Odgovarjal je preprosto z besedami - je v nasprotju s konceptom. To je v obrazložitvi Izvršnega sveta vse, kar je bilo k našim amandmajem rečeno.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg318">Zato bi želel predstaviti temeljna načela, na katerih temelji naš, z amandmaji predstavljen koncept. To pomeni, da nismo delali nobenega novega zakona, nobenih novih različic, ki krožijo po Skupščini, temveč smo hoteli z amandmaji predstavljen koncept oziroma predlog lastninjenja predstaviti neko drugo amandmajsko videnje. Moram poudariti, da je naš koncept po informacijah, ki jih imamo, blizu gospodarskemu delu vlade in z resno obravnavo naših amandmajev - vsaj tako mi mislimo, bi se dalo predlog, ki ga imamo na klopi, izboljšati. Ker so pa že vsi ti amandmaji zavrnjeni, ne vem, kako bo moja razprava lahko učinkovita. Ta temeljna načela bom prebral za razmislek.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg319">Temeljna načela, na katerih temelji naš, z amandmaji predstavljen koncept, so predvsem naslednji: prvič, izločiti državo iz upravljanja podjetij; drugič, prepustiti odločitev o začetku lastninjenja znotraj zakonsko določenega roka podjetju samem; tretjič, z že lastninjenjem manjšega dela podjetja po znanih individualno določenih lastnikih priti do upravljalcev celotnega podjetja; četrtič, z znižanjem spodnjega praga za konkretno lastninjenje in znotraj tega še posebej za delavski odkup sprožiti dejanski proces lastninjenja; petič, podaljšati proces lastninjenja; šestič, izenačitev podjetij, določena izjema naj velja le za mala podjetja; sedmič, vračanje sredstev, ki se pridobijo v procesu lastninjenja, zopet v gospodarstvo in izločitev proračuna pri tem.</seg>
@@ -1869,20 +1855,20 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg324">To je pa tudi že omenjeno vprašanje obstoja in velikosti novo ustanovljenih skladov investicijskih družb, kot tudi vprašanje popustov za delavski odkup, ki jih mi ne omenjamo, izhajajoč pri tem iz želje po čim manjšem posegu v vladni projekt. Tudi nekatera druga vprašanja kažejo na to, da tudi naš predlog ni popoln in tudi ni imel te ambicije. Dokazal naj bi le nujnost podaljšanja strokovne razprave in verjetno tudi potrebo po določenem političnem konsenzu, vsaj za temeljne predpostavke lastninjenja ter podrejeno služil izločitvi iz vladnega projekta najbolj sprejemljivih rešitev. Najlepša hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg325">Gospod Feltrin je naslednji.</seg>
             </u>
             <note type="speaker">FRANCI FELTRIN:</note>
-            <u who="#SSK11.FeltrinFranci1943" ana="#regular">
+            <u who="#FeltrinFranci1943">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg326">Spoštovani! Prvo kar je, bi izrekel kritiko Izvršnemu svetu, zaradi tega, ker ko sprejme amandma, ne zna razložiti, da ga je povzel. Naj navedem primer: Izvršni svet se z amandmajem vsebinsko strinja in ga daje kot svoj amandma v 14. členu v posebnem odstavku. Mislim, da bi Izvršni svet moral povedati tistemu, ki je amandma dal, da ga sprejema in ga nekako spreminja po svojem konceptu.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg327">Drugo repliko pa imam na izvajanje gospoda Razdevška. Zdi se mi nepošteno, čeprav je res vlada rekla, da se ne ujema s konceptom, anpak nekje je pa v sedmih vrsticah našteto; tu imam amandma, ki ga tudi vlada sprejema. Povejmo po pravici, da jih je kar veliko sprejela vlada, sicer za svoje, da jih je spremenila, tako kot naše. Če je pa svoj koncept imela, pa vašega ne bo sprejela, tako kot ne mojega. Potem pa izzveni v časopisu, ko novinarji to slišijo in upravičeno tako napišejo, češ, vlada je zavrnila popolnoma vse amandmaje, samo svoje je sprejela. Saj ni res! Ne vem, ali ste to dobili ali ne. Kot sem že na začetku rekel, že dvakrat smo razpravljali na komisiji o tem in od vaše stranke ni bilo nobenega. Amandmaje moje stranke sem zagovarjal na komisiji. Tu pa naslavljam kritiko na tiste člane, ki so imenovani v komisijo, na sejah komisije pa jih ni, da bi obrazložili svoje amandmaje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg328">Besedo želi gospod Dvornik.</seg>
             </u>
             <note type="speaker">MARJAN DVORNIK:</note>
-            <u who="#SSK11.DvornikMarjan1949" ana="#regular">
+            <u who="#DvornikMarjan1949">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg329">Želel bi opozoriti na dejstvo, da iz nepravičnih razmer ni mogoče s popolno pravičnostjo narediti pravičnih. Včeraj smo slišali v večerni TV oddaji, da so bile razmere in družba nepravične. Če se spomnite Kocbekovega dnevnika '51 '52 veste, da je prav na začetku napisan citat, ki ga je eden od tedanjih politikov povedal za skupščinskim pultom in je zvenel približno takole: "Kmeta je treba prisiliti, da bo veliko proizvajal in poceni prodajal. Akumulacijo pa je treba preliti v gospodarstvo." Uporabil je še eno tujko. S tega stališča se popolnoma strinjam z včerajšnjo intervencijo enega od predstavnikov Kmečke zveze, da uresničevanje tovrstne politike pomeni pri vzpostavljanju novega sistema dejstvo, da ta zakon spregleda, da so v naša podjetja vlagali prek svoje akumulacije oziroma prek podcenjene prodaje tudi kmetje, ki ne bodo s tem zakonom dobili ničesar nazaj. Zato apeliram, da v teh razpravah ne silimo v absolutno pravičnost, ampak, da poskušamo vzpostaviti sistem, ki bo izvedljiv.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg330">Da se obregnem še ob organizatorje teh demonstracij in protestnih shodov, ob sindikate - trije so, ali ne. V grobem bi povedal naslednje: zagovorniki, pravi teoretiki, ki so vzpostavili to, da so se ljudje odločili za demonstracije, imajo taka stališča. Ribnikar je rekel nekako takole: "Sem proti razdelitvi delnic delavcem. Upravljalske delnice pa naj dobijo samo novi vlagatelji, četudi je ta vložek minimalen." Menim, da to,če nekdo, ki zagovarja to, da delavci ne dobijo ničesar oziroma da dobijo nič, delavci pa zanj hodijo demonstrirat, pomeni milo rečeno, manipulacijo. Enako glede Mencingerjevih izjav, da delnice niso nič vredne, pa tudi če bi jih delili. Še najbolj zanimiv pa je bil Veljko Rus, ki je hotel opredeliti nekakšne vmesne rešitve, ko je rekel, da je treba najti vmesne stopnje, ne pa vzpostaviti končno kapitalistično stanje.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg331">Se pravi, da je tem delavcem bilo sugerirano, da bi morali imeti neke vmesne družbene sisteme med socializmom in kapitalizmom, sockapitalizem ali kaj podobnega. To bi bilo v praksi videti nekako takole. Verjetno bi moj kolega Cveto še bolj jedrnato povedal.</seg>
@@ -1890,18 +1876,18 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg333">Da bi pa še nekoliko ponazoril, kaj se je dogajalo v razpravah o tem zakonu, bi povedal primer, ki se je zgodil na Komisiji za splošne gospodarske zadeve, ko je eden od pozicijskih poslancev rekel takole: "Proti Mencingerjevem zakonu sem bil zato, ker ni imel državljanskih delnic" - se pravi vavčerjev. "Proti Umekovemu sem pa zato, ker jih ima." Potem pa je vstal in šel na demonstracije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg334">Hvala lepa. Prosim, gospod Ivanušič.</seg>
             </u>
             <note type="speaker">ZVONKO IVANUŠIČ:</note>
-            <u who="#SSK11.IvanusicZvonko1959" ana="#regular">
+            <u who="#IvanusicZvonko1959">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg335">Sem iz občine Črnomelj. K zakonu nimam nobenih amandmajev, ker se mi zdi, da nadaljnje dajanje amandmajev že ni več normalno. Moram povedati, da koncept in model tega zakona podpiram, imam pa tudi nekaj pomislekov, predvsem imam pri 36. členu oziroma k tretjemu odstavku tega člena.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg336">Ta odstavek govori, da svet, ki ga sestavlja 12 članov, odloča in imenujejo člani upravnih odborov s strani države. Menim, da je to praktično težko izvedljivo, ker je upravnih odborov približno 6.000. Zato bi bilo potrebno razmišljati, ali v tem zakonu ali mogoče pri izvedbi tega zakona, da se prenese funkcija oziroma operativna zadeva glede imenovanja članov upravnih odborov s strani države na nižje nivoje. To je eno.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg337">Drugo razmišljanje se nanaša na 42. člen oziroma drugi odstavek tega člena. Ta govori, da delnice investicijskih družb eno leto od razdelitve niso prenosljive. V zvezi s tem se sprašujem, v kakšni korelaciji je podjetniška filozofija povprečnega državljana in uspešnost poslovanja vzajemnih in investicijskih skladov. Če je kakšna korelacija in mislim, da je, dokaj velika, moram povedati, da sem pred letom in pol ali dvemi leti, ko sem delal analizo podjetniške filozofije v našem okolju ugotovil, da je ta zelo nizka. Zaradi tega mislim, da bi bilo potrebno v tem odstavku moratorij na prenosljivost delnic povečati z enega leta na več let. To je razmišljanje v tem trenutku, ker bo večja garancija za uspešnost teh skladov, kajti ta filozofija je bila v preteklosti pri nas ovirana in da se ne more v roku enega leta ali ne vem koliko časa dvigniti na višji nivo.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg338">Še o dokapitalizaciji. Sem za dokapitalizacijo, vendar ne takšno, kot jo v nekaterih amandmajih propagirajo, da del kupnine ostane v podjetju. To je ali kraja ali pa ni lastninjenja. Jaz sem za dokapitalizacijo, vendar tako, da se vrača ta kupnina podjetju, ki posluje na osnovi dobrih programov. Samo toliko. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg339">Hvala lepa. Še kdo želi razpravljati?</seg>
                <note>Ne.</note>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg340">S tem bi razpravo o tem predlogu zakona zaključil. Opozarjam in prosim, če ima kdo kakšen amandma, da ga takoj predloži, ker kasneje ne moremo upoštevati amandmajev v skladu s poslovnikom. Prosim, gospod Gros. Vaš amandma oziroma amandmaje vaše stranke smo dobili. Jih imate še? Štejem, da je bil ta amandma, s tem ko ste opozorili nanj, vložen.</seg>
@@ -1910,19 +1896,19 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg343">Tako kot sem že zjutraj napovedal, po vsem tem ne moremo neposredno preiti na glasovanje, ker je potrebno pridobiti še mnenja o tistih amandmajih, ki so bili naknadno vloženi. Pri tem bo potrebno seveda tudi nekoliko uskladiti potem postopek med zbori, tako da bi glasovali takrat, ko bodo dani za to pogoji, ko bomo imeli dokončen pregled vseh amandmajev s stališči Izvršnega sveta in delovnih teles. Potem bi se pač poskušali tudi kako uskladiti z ostalima zboroma in bom to zadevo takrat predložil v odločanje. To bo najbrž nekaj časa trajalo. Danes in jutri bomo lahko le približno ocenili in se eventualno dogovorili, kdaj približno bi do tega lahko prišlo. Kakšnih drugih predlogov ne slišim. Tega ne bi formalno dal kot sklep na glasovanje, če ne bo nasprotovanja, potem bi to smatral kot da se s tem strinjamo. K besedi se javlja gospod Gros prosim.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg344">Odbor za splošno gospodarske zadeve je predlagal medzborovsko delovno telo, vendar to ne more biti delovno telo. Če bo to delovno telo Skupščine, konkretno za obravnavo in usklajevanje oziroma pripravo predloga vladi v zvezi z zakonom o privatizaciji, potem je primerno, da razpustimo komisijo za privatizacijo, ker nima smisla, da ima ena in ista Skupščina dve različni delovni telesi za isti namen. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg345">Hvala lepa. Torej ta intervencija gre natančno v to smer, kot sem predlagal in s čimer se je strinjal tudi gospod Železnik, ki je predlagal nekaj podobnega kot odbor, da je tisto telo, ki bo naredilo, kar je treba narediti, ravno matična komisija, torej Komisija za preobrazbo družbene in zadružne lastnine. To je komisija, ki ji, kolikor vem, predseduje gospod Gros, je tako? Torej, da bi ta komisija zavzela stališča in kolikor se da potem predlagala neko celovito rešitev v glasovanje, če ne, pa pride s stališči do posameznih amandmajev. To je bil moj predlog, ki sem ga dal tukaj kot možnost, kako priti potem do glasovanja. Gospod Zakonjšek.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg346">Spoštovani predsednik, spoštovani zbor, povsem se strinjam s tem predlogom, dodal bi temu samo to, da naj tudi Zakonodajno-pravna komisija opravi svoje delo in da potem dobimo celotno gradivo v odločanje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg347">S tem se strinjam. To je po mojem mnenju samo po sebi razumljivo oziroma stališča Izvršnega sveta moramo imeti, in tudi stališča ZPK, tako da se bo sploh videlo, kaj sodi skupaj, matično delovno telo pa naj na osnovi tega predlaga neko rešitev, glede katere bo dosežena večja stopnja soglasja. Po možnosti seveda, tega ne moremo naprej predpisati.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg348">Se lahko strinjamo s takšno rešitvijo? Nasprotovanja ni, mislim, da o tem ni treba posebej sklepati, to je pač postopek, četudi ne nasprotuje prekinitvi te točke, ki je pač nujno potrebna v tem trenutku, ko še nimamo vseh teh stališč. Dobro, potem to točko dnevnega reda prekinjam.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg349">3. TOČKA DNEVNEGA REDA - PREDLOG ZAKONA O AGENCIJI REPUBLIKE SLOVENIJE ZA PRIVATIZACIJO.</seg>
@@ -1935,11 +1921,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg354">Pričenjam razpravo. Kdo želi besedo? Ugotavljam, da nihče ne želi razpravljati. Torej, če ni razprave, potem bi rekel, da glede na to, da je to eden od spremljajočih zakonov k zakonu o lastninjenju, mislim, da je prav, da tudi o njem glasujemo takrat, ko bomo glasovali o zakonu o lastninjenju. Tako bi tudi to točko dnevnega reda na tem mestu, potem ko smo opravili razpravo, ki je ni bilo, prekinjam in da odločanje odložimo za kasneje. Gospod Schwarzbartl, prosim.</seg>
             </u>
             <note type="speaker">MAG. ERVIN ANTON SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg355">Spoštovani predsednik in kolegi, mislim, da v zvezi s tem zakonom ni potrebno čakati prvega zakona o lastninjenju, zato ker zakon o agenciji govori samo o izvedbi določenih akcij, ki se bodo kot posledica tega izvajale. Mi bi lahko te stvari tukaj zavzeli v okviru usklajevanja, ki pa bo slej kot prej sledilo temu sprejemu. Tako ali tako bomo morali še enkrat zavzemati stališča do tistih sprememb. Tako mi lahko nekatere stvari že opravimo, ker se bojim, da bomo imeli potem ponovno probleme s sklepčnostjo itn., to je pač moje mnenje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg356">Ena stvar je, mi imamo tukaj amandma gospoda Črneja, glede katerega nimamo stališča Izvršnega sveta. Torej, načeloma, po poslovniku, strogo zaupno to stališče ni, zbor lahko o tem odloči, ali ga potrebuje. Torej, kateri predlog naj dam v proučitev? Verjetno je normalen postopek ta, da se točka dokonča.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg357">Se pravi, dajem predlog, da se sklepanje odloži. Če menite, da lahko danes že odločamo o tem, potem ste pač proti temu predlogu. Poglejmo prisotnost? Ugotovimo sklepčnost!</seg>
                <note>49 prisotnih.</note>
@@ -1967,11 +1953,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg371">Dobro. Torej o tem nimamo mnenja. Prosim, gospod Rojec.</seg>
             </u>
             <note type="speaker">ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#regular">
+            <u who="#RojecAnton1937">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg372">Gospod predsednik, javljam se k besedi, ker ni predstavnika Izvršnega sveta. Zadeva posega v sodno sfero in mislim, da je v tem primeru to nesprejemljivo, ker nikakršne pritožbe ni mogoče vlagati na sodišče. Na sodišče se vloži samo tožba ali nek predlog za razrešitev. Zato bom seveda moral glasovati proti takemu amandmaju.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg373">Hvala lepa. Torej glasujemo o tem amandmaju.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg374">Kdo je za?</seg>
                <note>7 delegatov.</note>
@@ -2104,11 +2090,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg461">Izvršni svet se s takšnim amandmajem ne strinja. Prosim, gospod Feltrin!</seg>
             </u>
             <note type="speaker">FRANCI FELTRIN:</note>
-            <u who="#SSK11.FeltrinFranci1943" ana="#regular">
+            <u who="#FeltrinFranci1943">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg462">To je isti amandma, ki ga je Komisija obravnavala, kot pri prejšnjem, ki ni bil sprejet. Gre za to, da pri agenciji kot pri razvoju naredimo inventuro. Ti ljudje so bili postavljeni že prej. Kaj se tam počne in kaj ne, nihče ne ve. V Komisiji nismo razmišljali o tem, da je treba ljudi odstaviti, ampak da je treba začeti znova. Vemo, ali imamo nulo ali kakšen saldo imamo. Tam je 5, 6 ljudi. Obžalujem, prej je izpadel ta amandma. Komisija ga je sprejela samo zaradi tega, da bi lahko imeli kontrolo, da bi dobili tako imenovano ničelno stanje in bi lahko rekli: do takrat, ko smo mi ta zakon o privatizaciji sprejeli, je bilo stanje tako in od sprejetja naprej pa tako in tako. Če bomo pa za seboj potegnili vse negativne posledice teh ljudi oziroma ne govorim o ljudeh, ampak o tem, kar je sedaj sklad počel, pa ne govorim, da je slabo delal, ampak treba je inventuro narediti, tudi če je dobro delal in koliko smo potem mi slabo naredili, da vemo. Samo za to gre. Tega se Izvršni svet zelo brani in se je tudi včeraj na Komisiji.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg463">Hvala lepa. Prehajamo na glasovanje o tem amandmaju.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg464">Kdo je za?</seg>
                <note>31 delegatov.</note>
@@ -2141,7 +2127,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 16.15 uri in se je nadaljevala ob 16.35 uri.</note>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg483">Spoštovane kolegice in kolegi! Nadaljujemo sejo zbora.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg484">5. TOČKA DNEVNEGA REDA - NADALJEVANJE OBRAVNAVE PREDLOGA ZAKONA O DENACIONALIZACIJI.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg485">Na zadnji, 24. seji dne 28. in 29. avgusta 1991, smo opravili in tudi zaključili razpravo o predlogu zakona, zaradi številnih amandmajev pa odložili sklepanje na današnjo sejo. V zvezi s tem ste prejeli pregled amandmajev, ki so bili vloženi k temu zakonu. Danes pa ste na klop prejeli tudi stališče Izvršnega sveta Republike Slovenije do predloženih amandmajev; prav tako ste prejeli dodatna poročila pristojnih delovnih teles Skupščine, ki so obravnavala te amandmaje in se do njih tudi opredelila. Naj še enkrat navedem delegate predlagatelje amandmajev, ki so jih vložili v našem zboru. To so: Ivan Kuhar, Miloš Senčur, Ludvik Kotnik, Borut Razdevšek, Ivan Vodopivec, Janko Deželak, Danijel Starman, Janez Črnej, Zvonko Ivanušič, Marjan Dvornik, Vitomir Gros, Marcel Štefančič, Janez Žampa in Franc Planinšek, Franc Lovšin, dr. Ivan Vivod, Slavko Dragovan in Franci Feltrin. Naknadno, torej že po končani oziroma zaključeni razpravi o predlogu zakona, je amandma predložil še Jože Zakonjšek k prvemu odstavku 88. člena.</seg>
@@ -2164,11 +2150,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg497">Prehajamo najprej na glasovanje o amandmajih. Gospod Janez Črnej.</seg>
             </u>
             <note type="speaker">JANEZ ČRNEJ:</note>
-            <u who="#SSK11.CrnejJanez1935" ana="#regular">
+            <u who="#CrnejJanez1935">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg498">Spoštovani poslanci! Glede na današnji časnik Delo, ki na prvi strani, kjer je pod naslovom Med poslanci sedijo številni razlaščenci, omenjeno tudi moje ime kot zagovornika lobija razlaščencev, bi rad obrazložil moj status razlaščenca. Oče mi je zapustil herbarij s Tolstojevega groba v Jasni Poljani iz 1917. leta. To je bila zapuščina mojega očeta izpred vojne. Po vojni, leta 1972, kot upokojenec bivše meščanske šole v Celju, mi je zapustil 15.000 din za svoj pogreb. Pogreb je pa takrat stal 850.000 din. Prosim poslance, da upoštevajo to, da se zavzemam za razlaščence predvsem zaradi tega, ker bi rad poimenoval lastnike moje zdajšnje države oziroma moje zdajšnje domovine po imenu, in sicer lastnike, ki so bili lastniki zadnjih 40 let. To je moj interes, nikakor pa ni moj materialni interes, ker ga nimam, da bi se boril za razlaščence. Meni gre predvsem za pravico in da resnično postanemo pravna država.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg499">Hvala lepa. Prehajamo na glasovanje o amandmajih. Verjetno ste si že pripravili pregled amandmajev, čeprav v njem še ni stališča Izvršnega sveta, ki sem ga povedal, imate pa ga v posebni prilogi.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg500">K 1. členu imamo amandma, ki ga je v našem zboru predlagal gospod Kuhar. Ta člen naj se spremeni, tako da se glasi: "Ta zakon ureja denacionalizacijo premoženja, ki je bilo podržavljeno s predpisi o nacionalizaciji ter drugimi predpisi in načini, navedenimi v tem zakonu."</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg501">Izvršni svet tega amandamaja ne sprejema. Komisija za denacionalizacijo ga ne podpira. Ugotovimo sklepčnost!</seg>
@@ -2266,11 +2252,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg568">Besedo ima Jože Sedonja, Republiški komite za pravosodje in upravo.</seg>
             </u>
             <note type="speaker">JOŽE SEDONJA:</note>
-            <u who="#SSK11.SedonjaJoze" ana="#regular">
+            <u who="#SedonjaJoze">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg569">Spoštovani zbor, gospe in gospodje poslanci, rad bi vas opozoril, da ste pri 7. členu, kjer sta bila dva amandmaja, glasovali dvakrat za amandma v obeh primerih. Po našem mnenju se ta dva amandmaja izključujeta. Gre za amandma v tem seznamu amandmajev na strani 7 - ne vem, če imamo enak material - pod točko 2, kjer sta bila predlagatelja med drugim tudi gospod Ivan Kuhar in Borut Razdevšek. Glasovali ste s 30 glasovi za amandma, po katerem naj se drugi odstavek 7. člena črta. To je pod točko 3 amandma, v katerem je rečeno, da se v drugem odstavku, se pravi, prej ste glasovali, da se drugi odstavek črta, sedaj je pa pod točko 3 amandma bil tak, da se v drugem odstavku črta besedica "ne", tako da se besedilo tega odstavka glasi: "Dedovanje, ki je povezano z izvajanjem tega zakona, zapade plačilu davka na dediščine." Prosil bi, da se odločite za eno variant, sicer bo nastala v pravu zmeda. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg570">Mislim, da je stvar zelo jasna. Mi smo drugi odstavek črtali, potem smo pa, na kar sem posebej opozoril, sprejeli novo besedilo drugega odstavka. Mislim, da je to bilo jasno. Če kdo od poslancev meni, da ni bilo jasno, lahko to ustrezno ponovimo. Uradno tolmačim tole. Glede na sprejeta oba amandmaja se sedaj drugi odstavek 7. člena glasi: "Dedovanje, ki je povezano z izvajanjem tega zakona, zapade plačilu davka na dediščine."</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg571">Ali je to vsem jasno? Ali smo vsi enotni glede tega, da smo tako glasovali? Dobro. Potem mislim, da ni dvoma. Hvala lepa.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg572">Ostali smo pri amandmaju k 10. členu gospodov Žampe in Planinška: doda naj se nov drugi odstavek, ki se glasi: "Niso pa upravičenci v smislu tega zakona tiste fizične osebe, ki so dobile ali imele pravico dobiti odškodnino za odvzeto premoženje od tuje države."</seg>
@@ -2295,27 +2281,27 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg585">K 14. členu: ta člen naj se črta. To je amandma gospoda Kuharja in Lovšina. Izvršni svet amandmaja ne sprejema, Komisija za denacionalizacijo ga ne podpira. Prosim, gospod Dragovan!</seg>
             </u>
             <note type="speaker">SLAVKO DRAGOVAN:</note>
-            <u who="#SSK11.DragovanSlavko1961" ana="#regular">
+            <u who="#DragovanSlavko1961">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg586">Menil sem, da je Komisija za denacionalizacijo vložila tudi amandma pod št. 3, ki ga je vložil tudi Ludvik Toplak v Družbenopolitičnem zboru. Doda naj se nov tretji odstavek, ki naj se glasi: "Za upravičenca je šteti tudi tisto osebo, ki je z odplačnim pravnim poslom pridobila nazaj svoje premoženje."</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg587">Bomo preverili.</seg>
             </u>
             <note type="speaker">SLAVKO DRAGOVAN:</note>
-            <u who="#SSK11.DragovanSlavko1961" ana="#regular">
+            <u who="#DragovanSlavko1961">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg588">Mislim, da je Komisija sprejela.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg589">Samo trenutek! Vidim, da ga Komisija podpira, vendar pa ne vem, ali ga je tudi vložila v svojem imenu. Ali lahko kdo v imenu Komisije kaj reče? Kdo je poročevalec te Komisije v našem zboru? Iz poročila Komisije tega ni mogoče razbrati, da bi ga privzela. Prosim, gospod Dragovan!</seg>
             </u>
             <note type="speaker">SLAVKO DRAGOVAN:</note>
-            <u who="#SSK11.DragovanSlavko1961" ana="#regular">
+            <u who="#DragovanSlavko1961">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg590">Ali je proceduralno dopustno, da ga sedaj vložim jaz?</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg591">Ne, ni mogoče. Utegne priti do usklajevanja, vendar pa, kolikor je razvidno iz tega poročila, je k 10. členu kot svoj amandma privzela tistega, o katerem smo poprej glasovali o št. 2., o št. 3 pa ni govora v poročilu.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg592">Gremo naprej. Bili smo pri amandmaju k 14. členu, predlagateljev Kuharja in Lovšina. Izvršni svet in Komisija ne podpirata tega amandmaja, ki pravi, naj se ta člen črta.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg593">Kdo je za?</seg>
@@ -2334,12 +2320,12 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg603">Gospod Zakonjšek, prosim.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg604">Cenjeni in spoštovani zbor! Žal mi je, da Izvršni svet tako enostavno "z levo roko" odpravlja ta amandma in verjetno naslednji, ki je temu podoben. Gre za to, da se vrne premoženje tudi pokojninskemu skladu oziroma pokojninskim skladom, kakorkoli se bodo oblikovali. V obrazložitvi k temu zakonu je bilo rečeno, da Izvršni svet dela eno izjemo in jo podpiramo, to je cerkev in verske skupnosti, kot pravne osebe, da pa bodo vse druge stvari morale počakati na nekatere kasnejše odločitve in razprave. Zdi se mi, da če je kje čisti odnos med bivšim premoženjem - tudi dokumentiran - pokojninskih skladov, potem je to na področju pokojninskega zavarovanja.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg605">To ni nikakršna bitka za sedanje upokojence, od tega ne bodo imeli nič. Predlagal bi, da se sporazumemo za drugi amandma, ker govori, da gredo vsa sredstva v sklade, v rezervni sklad. Gre za to, da se začne z novim sistemom pokojninskega zavarovanja. Mi smo o tem zakonu mnogo razpravljali. Bili so predlogi vseh upokojenskih strank v tem smislu, da se v ta zakon ne vnesejo konkretne določbe, kako naj se to vrne, zato mislim, da je mogoče ta amandma gospoda Vivoda nekoliko že preveč konkreten. Torej predlagam, da se samo postavi načelo, da ima pravico do vrnitve premoženja tudi skupnost pokojninskega in invalidskega zavarovanja, kot pravni naslednik pokojninskih skladov in da se to premoženje, ko se bo vrnilo, v procesu lastninjenja vnese v rezervni sklad. Kako se bo potem uporabljalo, na kakšen način, je drugo vprašanje. Gre za načelo, ki ga je treba vnesti v ta zakon. Nisem zadovoljen s tem, kar piše v obrazložitvi. Gre za ogromno in pomembno institucijo, ki je tu in ki bo po mojem mnenju znala s temi sredstvi upravljati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg606">Hvala lepa. Torej, mi imamo dva podobna amandmaja, kot je že navedel gospod Zakonjšek. Najprej glasujemo o amandmaju gospoda Vivoda.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg607">Kdo je za?</seg>
                <note>27 delegatov.</note>
@@ -2498,11 +2484,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg717">Kdo je za? Prosim, gospod Dvornik.</seg>
             </u>
             <note type="speaker">MARJAN DVORNIK:</note>
-            <u who="#SSK11.DvornikMarjan1949" ana="#regular">
+            <u who="#DvornikMarjan1949">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg718">V tem primeru gre za primere predvsem z zemljo in arondacijami in tam, kjer zadruge niso pripravljene v krajših postopkih vračati zemljo lastnikom, ki so upravičeni po tem zakonu. Zato predlagam, da se takšna varovalka v zakon vgradi, ker bo s tem bistveno olajšana pot k vračanju nacionalizirane lastnine. Predvsem pričakujem, da bodo poslanci Kmečke zveze za ta amandma.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg719">Vprašal bi le, ker očitno poznate to zadevo, ali je tukaj besedilo pravilno: "od dneva, določenega v odločbi o nacionalizaciji". Jaz imam tako besedilo sedaj tukaj in če je pravilno, potem je potrebno takega upoštevati in verjetno je primerno o tem glasovati. Če je pa pravilno "denacionalizacija", potem pa naj se oglasi tisti, ki je član te komisije oziroma poročevalec. V Poročilu piše o nacionalizaciji, torej kot uradno besedilo tega amandmaja jemljemo tak amandma, ker verjetno vemo, da je nesprejemljiv.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg720">Tega amandmaja Izvršni svet ne sprejema.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg721">Kdo je za?</seg>
@@ -2733,11 +2719,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg879">K 45. členu imamo amandma gospoda Kuharja in Vodopivca ter Gospodarske zbornice Slovenije in Svobodnih sindikatov. Ta člen naj se po njihovem črta. Prosim, gospod Zakonjšek.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg880">Vprašanje Izvršnemu svetu. V tem členu se določa, da se odškodnina izplačuje oziroma nominira v nemških markah, izplačuje v obveznici na dvajset let s 6% obrestno mero s tem, da so amandmaji deset let in drug amandma zopet z 8% obrestno mero. Odškodnina, ki bo pač izplačana v primerih, ki jih ta zakon določa. Ali je Izvršni svet napravil predračun, kaj pomeni takšna obveznost za proračun, ker proračun jamči za izplačilo odškodnine? Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg881">Hvala lepa. Ali je mogoče na to vprašanje odgovoriti? Lahko kdo s strani Izvršnega sveta odgovori? Dobro, to pomeni, da sedaj ni mogoče odgovoriti. Potem kot je rekel gospod Zakonjšek, bomo dobili odgovor ob usklajevanju.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg882">Smo torej pri amandmaju št. 1. k 45. členu, da se ta člen črta. Izvršni svet in komisija tega amandmaja ne podpirata.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg883">Kdo je za?</seg>
@@ -2883,41 +2869,41 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg979">Izvršni svet ga ne sprejema, komisija ga ne sprejema. Gospod Rojec, želite obrazložiti glas?</seg>
             </u>
             <note type="speaker">ANTON ROJEC:</note>
-            <u who="#SSK11.RojecAnton1937" ana="#regular">
+            <u who="#RojecAnton1937">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg980">V zvezi s prvim odstavkom 88. člena, pred seboj imamo štiri amandmaje. Tematika se nanaša na prepoved razpolaganja z zemljišči, nepremičninami ipd., kar zapade pod ta zakon. V tej zvezi tudi kot predstavnik mesta, v katerem sem, želim opozoriti na posledice, kako bo ta prepoved vplivala na prostorsko planiranje in izvajanje in urejanje prostora. Namreč dejstvo je, da bodo ves naš prostor, v katerem se naša mesta razvijajo, in tudi objekti v tem prostoru, več ali manj padla pod ta zakon. V naših mestih imamo vrsto objektov, hiš, ki so bile nacionalizirane, ki bodo padle pod ta zakon. Enako velja tudi za zemljišča.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg981">Gre za naslednje: kolikor se sprejme to določilo, da se prepove razpolaganje z vsem tem premoženjem, bomo v naših mestih prostorsko načrtovanje, izvajanje prostorskih programov s težavo izvajali. Če je prepoved razpolaganja, pomeni, da ne bo mogoče določenega zemljišča zavzeti za graditev ceste ali ulice ali gradbenega objekta. Če gledam tudi širše: če bomo želeli graditi avtocesto ali neko cesto in bo šla prek takšnega zemljišča, v tem primeru ne bo mogoče s tem razpolagati in ne bo mogoče takšnega gradbenega projekta izvesti. Iz tega razloga menim naslednje: da je pravilno, da se vsi tisti upravičenci iz tega zakona zavarujejo, vendar želim in predlagam, da tudi sami poskrbijo za svoj interes v tem smislu, če so upravičenci iz tega zakona, da zahtevajo zavarovanje svoje pravice in v ta namen naj zahtevajo zaznambo svoje pravice pri sodišču. Če nekdo zahteva vračilo zemljišča, naj hkrati z vlogo, ko postavi zahtevo, da se mu to zemljišče ali objekt vrne, tudi zahteva zaznambo, da se prepove razpolaganje s tem zemljiščem. S tem so upravičenci povsem zaščiteni, hkrati pa, ki v tem prostoru delamo in z njim razpolagamo, tudi vemo, kako ravnati, ne pa, da bo na ta način ves promet, razpolaganje s temi nepremičninami prepovedano. To nas bo oviralo. Zato od vseh treh amandmajev, ki so tu, menim, da je tisti amandma, ki zasluži podporo, pod točko 3 in ta razlog, ki se v tem primeru navaja, da lahko to bistveno onemogoči izvajanje tega zakona, enostavno ne drži. Namreč, ko bo posameznik vložil zahtevo za vračilo zemljišča ali stavbe, bo tudi takoj vložil pri sodišču zahtevo za zaznambo za zavarovanje tega zahtevka. Pred tem pa tako niti občina niti zakonodajalec ne ve, za katero zemljišče, za katero nepremičnino gre.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg982">Moj predlog je, da mi v tem primeru zaradi vseh teh razlogov podpremo tisti amandma, za katero nepremičnino gre.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg983">Moj predlog je, da mi v tem primeru, zaradi vseh teh razlogov podpremo tisti amandma, ki je pod točko 3. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg984">Hvala. Gospod Rojec je kar nekoliko poagitiral, čeprav je imel samo pravico obrazložiti svoj glas. Gospod Kuhar, prosim.</seg>
             </u>
             <note type="speaker">IVAN KUHAR:</note>
-            <u who="#SSK11.KuharIvan1945" ana="#regular">
+            <u who="#KuharIvan1945">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg985">Kot sopredlagatelj amandmaja ravno zaradi enakih razlogov, o katerih je gospod Rojec govoril, in zavoljo zagotovitve pogojev za normalno gospodarjenje in poslovanje in zaradi preprečitve škode, ki bi s tem nastala, je takšna sprememba, kot jo predlagamo v prvem odstavku, nujno potrebna. Zato bom glasoval za predlog, ki smo ga podali. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg986">Hvala lepa. Gospod Senčur.</seg>
             </u>
             <note type="speaker">MILOŠ SENČUR:</note>
-            <u who="#SSK11.SencurMilos1957" ana="#regular">
+            <u who="#SencurMilos1957">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg987">Glasoval bom bodisi za to, da se ta člen črta ali pa podprl 3. točko, na kar je tudi gospod Rojec opozoril in nakazal kot smiselno. Sploh se mi postavlja vprašanje, čemu zavarovanje, ker se mi zdi, da smo že z zakonom o moratoriju zavarovali vse nepremičnine pa tudi z zakonom o kmetijskih zemljiščih.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg988">Opozoril bi vas samo na dodatni amandma, ki ga nimate v pregledu, dobili ste ga pa v pisni obliki. Gre za amandma gospoda Zakonjška, ki pravi: na koncu prvega odstavka se pika nadomesti z vejico in se doda besedilo: "Razen, če to zakon izrecno dopušča."</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg989">Gospod Sedonja ima besedo.</seg>
             </u>
             <note type="speaker">JOŽE SEDONJA:</note>
-            <u who="#SSK11.SedonjaJoze" ana="#regular">
+            <u who="#SedonjaJoze">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg990">Spoštovani zbor! V zvezi s predlogom, da bi se ne omejilo prometa oziroma da moratorij ne bi veljal iz razlogov, ker bi potem zastale vse predvidene gradnje, ki jih predvidevajo družbeni plani oziroma gradnja v različne infrastrukturne objekte itn., naj povem, da to ni ovira, to ni res. Razlastitev je vedno možna in ta 88. člen preprečuje samo pravni promet, ne pa tudi druge posege v lastnino oziroma premoženje sedanjih upravljalcev ali pa bodočih lastnikov. To navsezadnje ni relevantno, ker se razlašča v skladu s prostorskimi izvedbenimi akti in v skladu z družbenim planom.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg991">Druga stvar, če bi bilo samo pet dni ali samo en dan vmes časa po uveljavitvi zakona o denacionalizaciji, zakon o moratoriju oziroma - imenuje se malo drugače - pa uveljavlja prepoved prometa samo do uveljavitve zakona o denacionalizaciji. Se pravi, čim bi bil zakon o denacionalizaciji sprejet in bi veljal že nekaj dni, lahko vsi tisti potencialni prodajalci, upravljalci teh nepremičnin v nekaj dneh, če imajo pogodbe pripravljene, spravijo v promet vse, kar bi želeli. Potem moratorija ne bi bilo več.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg992">V nekaj dneh ni mogoče ugoditi vsem tistim potencialnim interesentom, ki bi si želeli z zavarovanjem svojega premoženja oziroma bodočega svojega premoženja zavarovati z zapisom v zemljiško knjigo, in sicer iz pravno tehničnih razlogov, ker v tako kratkem času ni mogoče izvesti vseh vpisov v zemljiški knjigi, razen tega je še to dejstvo, da zdaj zakon omogoča 18 mesecev, prej je bilo predvideno v osnutku zakona eno leto časa, da uveljavljajo upravičenci svoje zahtevke. Se pravi, ta čas imajo upravičenci na razpolago, drugače bi bil ta predlog v nasprotju tudi s tistim, kar je bilo v zakonu predlagano, 18 mesecev, ali pa, če je to eno leto, pa tudi, če je bilo 6 mesecev, navsezadnje, tisti čas imajo upravičenci na razpolago in ga ni mogoče na ta način siliti, da že naslednji dan predlaga vpis v zemljiško knjigo. Vpis v zemljiški knjigi kot prepoved je vezana na uvedbo nekega postopka, vseeno, ali sodnega ali upravnega. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg993">Hvala, gospod Sedonja.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg994">Dobro, glasujemo torej o amandmaju št. 1 k 88. členu. Izvršni svet in komisija ga ne podpirata.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg995">Kdo je za?</seg>
@@ -2941,11 +2927,11 @@
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg1008">Da, prosim, gospod Zakonjšek.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg1009">Amandma je bil vložen in bi bil smiseln, če bi pri stanovanjskem zakonu bil sprejet amandma o črtanju dveh členov. Jaz bi umaknil ta amandma s tem, da bi se upošteval pri redakcijskem usklajevanju, če bi bil slučajno tak amandma sprejet pri zakonu o stanovanjskem gospodarstvu. Potem bi bilo v bistvu to redakcijsko usklajevanje ne pa vsebinsko. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg1010">Hvala lepa. Gospod Sedonja, lahko kaj rečete? Prosim, dobro, če je umaknjen, ni problema.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg1011">Naslednji je amandma Izvršnega sveta: doda se nov tretji odstavek, ki se glasi: "Določba prvega odstavka tega člena preneha veljati 30 dni po preteku roka iz prvega odstavka 64. člena tega zakona." Komisija ta amandma podpira.</seg>
                <seg xml:id="SSK11-ZbObc.1991-09-11.s025-01.seg1012">Kdo je za?</seg>

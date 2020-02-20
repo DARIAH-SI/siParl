@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 1. slavnostna seja</title>
             <meeting n="1"
-                     corresp="#VsiZbor.1990-12-26.sl001-01.DruzPolZb #VsiZbor.1990-12-26.sl001-01.ZbObc #VsiZbor.1990-12-26.sl001-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.ceremonial"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="12"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="3"/>
                <tagUsage gi="seg" occurs="67"/>
             </namespace>
@@ -161,23 +152,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1990-12-26.sl001-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-12-26.sl001-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1990-12-26.sl001-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -188,16 +162,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SLAVNOSTNA SKUPNA SEJA VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">1. seja</head>
             <docDate>26. december 1990</docDate>
             <note type="chairman">Sejo je vodil dr. France Bučar, predsednik Skupščine Republike Slovenije</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 18.00 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-12-26.sl001-01.seg1">Spoštovane poslanke, spoštovani poslanci, cenjeni gostje! Začenjam skupno sejo vseh zborov Skupščine Republike Slovenije, ki sem jo sklical v skladu z določbami 10. člena zakona o plebiscitu o samostojnosti in neodvisnosti Republike Slovenije. Poleg poslancev vseh zborov so na seji navzoči tudi gostje, ki jih ob tej priliki prisrčno pozdravljam. Posebej pozdravljam g. Milana Kučana, predsednika Predsedstva Republike Slovenije skupaj s člani Predsedstva Republike Slovenije, gospoda dr. Janeza Drnovška, člana predsedstva SFRJ iz Republike Slovenije. Naj velja v naprej tudi moj pozdrav tudi gospodu Lojzetu Peterletu, predsedniku Izvršnega sveta, ki je zaenkrat še zadržan, še ni mogel iz Beograda, ker nekoliko zamuja letalo. Torej pozdravljam vse skupaj s podpredsednikom in člani Izvršnega sveta Skupščine Republike Slovenije. Dr. Alojzija Šuštarja, nadškofa in metropolita ljubljanskega. V posebno veselje mi je, da se je te naše seje udeležilo lahko tudi nekaj članov Slovenskega narodno-osvobodilnega sveta Matija Maležič, Jože Penca, Bogdan Osolnik, Mara Ropena-Osolnik, ki jih lepo pozdravljam. V posebno čast mi je, da lahko pozdravim tudi delegacijo Sabora Republike Hrvatske, ki jo vodi dr. Žarko Domljan, predsednik Sabora. Nadalje pozdravljam predstavnike parlamentarnih političnih strank oz. zvez, predstavnike pravosodnih ustanov republike, predstavnike SAZU, Univerze v Ljubljani in Univerze v Mariboru, člane Zveznega izvršnega sveta in druge funkcionarje v zveznih organih iz Republike Slovenije, g. Gaborja Boghia, generalnega konzula Republike Madžarske in predstavnike slovenskih organizacij iz Avstrije in Italije. Na današnjo sejo smo povabili tudi predsednika Republike Hrvatske, dr. Franja Tu|mana, ki pa se povabilu ni mogel odzvati, pač pa se je predsedniku Predsedstva Republike Slovenije Milanu Kučanu odzval in poslal pozdravno pismo naslednje vsebine: "Z zadovoljstvom sem prejel vaše vabilo za sejo vseh zborov Skupščine Republike Slovenije. Z obžalovanjem vas moram obvestiti, da kljub veliki želji, zaradi prej načrtovanih in neodložljivih obveznosti ne morem prisostvovati slavnostni seji, sklicani za 26. december 1990. Ob tej priložnosti iskreno čestitam prebivalcem Slovenije in vam osebno za rezultat plebiscita o samostojnosti Slovenije. Velika udeležba prebivalcev in rezultati plebiscita kažejo visoko politično zavest in odgovornost Slovencev, ki so s tem dejanjem jasno pokazali, da želijo o svoji bodočnosti in sožitju narodov na jugoslovanskem prostoru odločati kot prebivalci suverene in svobodne Republike Slovenije."</seg>
                <seg xml:id="SSK11-VsiZbor.1990-12-26.sl001-01.seg2">Visoki zbor, spoštovani gostje! Zakon o plebiscitu o samostojnosti in neodvisnosti Republike Slovenije določa, da je odločitev, da Republika Slovenija postane samostojna in neodvisna država sprejeta, če se je zanjo izrekla večina vseh glasovalnih upravičencev. Na temelju poročila republiške volilne komisije, ki je vsem poslancem pisno predložen, ugotavljam, da je za samostojnost in neodvisnost Republike Slovenije glasovalo 88,5% vseh glasovalnih upravičencev. S tem je izpolnjen pogoj, ki ga postavlja 3. člen tega zakona. Ta glasovalni izid mi omogoča, da na temelju 10. člena tega zakona slovesno razglasim pred tem visokim zborom slovensko in jugoslovansko ter vso svetovano javnostjo, da se je slovenski narod na temelju trajne in neodtujljive pravice do samoodločbe odločil, da Republika Slovenija postane samostojna in neodvisna država.</seg>
                <note>Aplavz</note>
@@ -213,7 +191,7 @@
                <note>Aplavz.</note>
             </u>
             <note type="speaker">MILAN KUČAN:</note>
-            <u who="#SSK11.KucanMilan1941" ana="#regular">
+            <u who="#KucanMilan1941">
                <seg xml:id="SSK11-VsiZbor.1990-12-26.sl001-01.seg10">Spoštovani predsednik, spoštovane poslanke in poslanci!</seg>
                <seg xml:id="SSK11-VsiZbor.1990-12-26.sl001-01.seg11">Izid plebiscitarnega ugotavljanja volje Slovencev, državljanov naše Republike in vseh njenih stalnih prebivalcev glede prihodnosti Slovenije je poznan in uradno sporočen. Slovenija je zdaj samostojna in neodvisna država.</seg>
                <note>Aplavz.</note>
@@ -275,7 +253,7 @@
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1990-12-26.sl001-01.seg67">Spoštovani zbor, aplavz, s katerim ste pospremili izvajanje predsednika Predsedstva mi dokazuje, da ta izhodišča sprejemate kot primerna za nadaljnjo izdelavo programa za izvajanje naročila mandata, ki ga nam je dal plebiscit in zato to sejo zaključujem. Hvala lepa.</seg>
             </u>
             <note type="time">Seja je bila končana 26. decembra 1990 ob 19.15 uri.</note>

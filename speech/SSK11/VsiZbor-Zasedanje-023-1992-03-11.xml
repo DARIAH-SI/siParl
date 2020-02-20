@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 23. zasedanje</title>
             <meeting n="23"
-                     corresp="#VsiZbor.1992-03-11.z023-01.DruzPolZb #VsiZbor.1992-03-11.z023-01.ZbObc #VsiZbor.1992-03-11.z023-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="6"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="3"/>
                <tagUsage gi="seg" occurs="29"/>
             </namespace>
@@ -120,23 +111,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1992-03-11.z023-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-03-11.z023-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1992-03-11.z023-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -146,21 +120,25 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">23. zasedanje</head>
             <docDate>11. marec 1992</docDate>
             <note type="chairman">Sejo je vodil dr. Ludvik Toplak, predsednik Družbenopolitičnega zbora</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 11.15 uri.</note>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-03-11.z023-01.seg1">Spoštovani poslanci, gospe in gospodje, cenjeni gostje in predstavniki sredstev obveščanja! Pričenjam skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-03-11.z023-01.seg2">Na skupnem zasedanju bomo poslušali UVODNO BESEDO K OSNUTKU ZAKONA O PRORAČUNU REPUBLIKE SLOVENIJE ZA LETO 1992, ki ga bo podal gospod Dušan Šešok, minister za finance. Prosim, gospod Šešok.</seg>
             </u>
             <note type="speaker">DUŠAN ŠEŠOK:</note>
-            <u who="#SSK11.SesokDusan1953" ana="#regular">
+            <u who="#SesokDusan1953">
                <seg xml:id="SSK11-VsiZbor.1992-03-11.z023-01.seg3">Spoštovano predsedstvo, gospe in gospodje! Vlada Republike Slovenije je predložila Skupščini Republike Slovenije predlog za izdajo zakona o proračunu za leto 1992 z osnutkom zakona konec novembra 1991. Skupščinska razprava o predloženem dokumentu se je zaključila 12. februarja letos. Ob tem je Družbenopolitični zbor, ki je kot zadnji sprejel stališče do obravnavanega dokumenta, sklenil, da Vlada predloži Skupščini novi osnutek do 29. februarja 1992. Vlada je tako 28. februarja dala v nadaljnjo proceduro nov osnutek proračuna, s katerim je skušala upoštevati tudi vrsto stališč, pripomb in predlogov, ki so bili podani v dosedanji skupščinski obravnavi.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-03-11.z023-01.seg4">Ob tem dovolite, da ponovno poudarim, da sta se v več kot dvo-mesečni razpravi pojavljali v isti sapi dve zahtevi: znižanje realnega obsega proračuna in javne porabe in realno povečanje proračunskih sredstev za posamezne namene, odvisno pač od problematike, ki je bližja posameznemu delovnemu telesu Skupščine ali poslancev. Prav zato ostaja možnost ponovitve te razprave tudi ob novem osnutku. Zato dovolite, da že uvodoma izrazim prepričanje, da lahko proračun skupno oblikujemo le s konstruktivnim delovanjem. Žal nam ne pomaga dosti jadikovanje o visoki javni porabi, če se ne moremo dogovoriti, v katerih delih, koliko in kako naj jo znižamo. Ne koristi zahtevanje večjih razvojnih subvencij in intervencij, če za to nimamo denarja. Tudi ravni socialne varnosti dela prebivalstva, ki je povezana s sredstvi republiškega oziroma občinskih proračunov sedanje stanje ne krepi. Celo več, odlaganje odločitve o proračunu bo ob izteku roka začasnega financiranja neposredno onemogočilo nadaljevanje financiranja sedanjih pravic.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-03-11.z023-01.seg5">Namen tega opozorila ni izsiljevati hitrejše odločanje, temveč, zavedajoč se neposredno ali posredne odvisnosti marsikaterega segmenta te družbe od proračuna, opozoriti na posledice odločitev. Prav to spoznanje je vodilo Vlado v odločitev, da oblikuje predlog, ki bi sledil programskim dokumentom in imel glede na prejšnje razprave v Skupščini največje možnosti za pravočasen sprejem.</seg>
@@ -188,7 +166,7 @@
                <seg xml:id="SSK11-VsiZbor.1992-03-11.z023-01.seg27">Spoštovane poslanke in poslanci! Proračun predstavlja enega osnovnih finančnih instrumentov tekoče ekonomske politike vsake države. V njem se določijo sredstva za financiranje funkcij države v najširšem smislu v posameznem letu in le ob sprejetem proračunu lahko država svoje materialne obveznosti, določene z zakon in drugimi dokumenti, tudi izvaja. Tudi nova slovenska država potrebuje ta dokument, posebej še, ker se možnosti pokrivanja obveznosti v okviru začasnega financiranja vse bolj iztekajo. Vrsto novih nalog, ki jih nismo mogli vključiti v začasno financiranje, pa bo možno pričeti uresničevati šele s sprejemom letnega proračuna. Zato vam predlagam, da novi osnutek sprejmete in ga ob sodelovanju skupščinskih odborov oblikujemo v predlog, ki bi bil lahko sprejet v roku, ko bo še možno preprečiti večje motnje v funkcioniranju države. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1992-03-11.z023-01.seg28">Hvala ministru Šešoku. S tem zaključujem skupno zasedanje Zbora združenega dela, Zbora občin in Družbenopolitičnega zbora.</seg>
                <seg xml:id="SSK11-VsiZbor.1992-03-11.z023-01.seg29">Dal bi samo kratko obvestilo: v sobi 311 takoj sedaj zaseda delovna skupina za zakon o zamudni obrestni meri. Hvala lepa.</seg>
             </u>

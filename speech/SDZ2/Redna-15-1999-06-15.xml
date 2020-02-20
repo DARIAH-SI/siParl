@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Redna-15-1999-06-15"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">15. redna seja (15. 6. 1999)</title>
-            <meeting n="15"
-                     corresp="#SDZ2-Redna-15-1999-06-15.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="15" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">15. seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|2071E7545E0C89C6C12567930031649B</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=2071E7545E0C89C6C12567930031649B</idno>
-                  <imprint>
-                     <date when="1999-06-15">(15. junij 1999)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>15. redna seja (15. 6. 1999)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1999-06-15"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=2071E7545E0C89C6C12567930031649B</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="265"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="61"/>
                <tagUsage gi="seg" occurs="405"/>
             </namespace>
@@ -519,23 +504,21 @@
                <date when="1999-06-15" ana="#parl.sitting">15. 6. 1999</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Redna-15-1999-06-15.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">15. seja</head>
-            <docDate>(15. junij 1999)</docDate>
             <note type="chairman">Sejo je vodil Janez Podobnik, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.06 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje! Pričenjam 15. sejo državnega zbora Republike Slovenije, ki sem jo sklical na podlagi 49. člena poslovnika državnega zbora. Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Jože Možgan, Feri Horvat do 16.00 ure, Franc Čebulj, Majda Ana Kregelj-Zbačnik, Rudolf Petan od 17.30 ure dalje, Bogomir Špiletič, Rafael Kužnik, Zoran Lešnik, Jožef Jagodnik, Zmago Jelinčič, Ivan Božič od 15.00 ure dalje, Štefan Klinc in Janez Per.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg2">Prosim, da ugotovimo navzočnost v dvorani!</seg>
                <note>62 prisotnih.</note>
@@ -543,14 +526,14 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg4">Prehajamo na določitev dnevnega reda 15. seje državnega zbora. Predlog dnevnega reda ste prejeli s sklicem dne 8. junija 1999. O predlogu dnevnega reda bomo odločali v skladu z drugim odstavkom 64. člena poslovnika državnega zbora. To pomeni, da najprej prehajamo na predloge za umik posameznih točk dnevnega reda. Nismo prejeli pisnih predlogov za umik posamezne točke dnevnega reda. Predlog za umik ima poslanec, gospod Hvalica. Prosim.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg5">Hvala lepa, gospod predsednik. Predlagam, da se umakne 11. točka dnevnega reda - predlog zakona o prometnem davku od motornih vozil.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg6">Spoštovani kolegi! Davek na dodano vrednost je davek, ki izenačuje pogoje gospodarjenja, poenostavljeno povedano, kot jaz temu rečem, evropska kategorija. Posebni davek, ki ga predlaga vlada, pa izničuje učinke davka na dodano vrednost. To je balkanska kategorija. To poznamo iz prejšnje države, ko so tako optično nižali carine in povečevali davke in tako dalje. Učinek ni bil nikakršen. Gre res izrazito za balkanski način reševanja dajatev na avtomobile. S tem, da se ne imenuje več davek na dodano vrednost, ampak se to imenuje prometni davek. Predsednik, tu je nemogoče govoriti. Vem, da večine ljudi to ne zanima, ker imajo visoke plače in bodo to lahko plačali. Tega ne govorim zaradi nas, ampak zaradi tričetrtine kupcev novih avtomobilov; ti bodo plačali največji znesek. Ker paradoks tega, kar predlaga sedaj finančni minister, je, da se bodo avtomobili najvišjega, luksuznega razreda, če že uporabljamo to besedo, pocenili. Tisti najnižjega razreda pa podražili. Jasno, davek bo udaril ta, pogojno rečeno, nižji ali najnižji sloj, ki kupuje avtomobile do 1000 kubikov. Avtomobil kot prevozno sredstvo, ne avtomobil kot zabava. Avtomobil kot transport, kot prevozno sredstvo. Poleg tega je vlada povzročila še dodatno gospodarsko škodo. S tem, ko je držala potencialne kupce avtomobilov ves čas na "špagi", so le ti hiteli z nakupom avtomobilov. Avtomobil pa ni proizvodno sredstvo. Prenekateri bi lahko ta denar ob nekih normalnih pogojih vložil v kaj drugega. Seveda si je pa mislil, sedaj bo davek na dodano vrednost in udarimo sedaj. "Navalimo" po balkansko na trgovine. Po mojih podatkih, ne vem, če so točni, časopisnih, so letos Slovenci že enormno prekoračili številko, ki je običajna; če se ne motim, gre za 39000 avtomobilov v slabega pol leta. Torej vse to narekuje to, kar sem predlagal, da se to umakne z dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg7">Sicer bi prav rad videl tukaj ministra, kako bo pojasnjeval to njegovo balkansko kategorijo uvajanja davka.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg8">Moj predlog je jasen. Umik 11. točke z dnevnega reda. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg9">Hvala lepa. Poslanec, gospod Hvalica predlaga, da se z dnevnega reda 15. redne seje umakne 11. točka dnevnega reda, predlog zakona o prometnem davku od motornih vozil, hitri postopek. Ali želi besedo poročevalec matičnega delovnega telesa?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg10">Ali želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
@@ -558,7 +541,7 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg11">Besedo želi predstavnik vlade, minister za finance, mag. Mitja Gaspari.</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ2.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg12">Gospod predsednik, hvala lepa. Spoštovane poslanke in poslanci! Sam ne bom uporabljal pridevnikov, ker niso potrebni, bom pa povedal nekaj dejstev, ki, žal, ne gredo v isto smer, kot jih je obrazložil gospod Hvalica.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg13">Prvič. S tem zakonom oziroma obdavčitvijo se skupna obdavčitev posameznih kategorij avtomobilov ne povečuje glede na sedanjo situacijo obstoja prometnega davka in neobstoja davka na dodano vrednost. To se da empirično preveriti, to ni trditev oziroma subjektivna ocena. Mimogrede, če bi bilo tako, bi lobi tistih, ki je v Sloveniji dovolj močan in tudi vpliven, ki prodaja oziroma proizvaja avtomobile, to že ugotovil, pa ni. To je prva stvar.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg14">Druga stvar. V zakonu je za splošno informacijo navedeno, kakšna je izkušnja drugih držav v Evropi, ki imajo vse davek na dodano vrednost. Vse te države, od Nemčije na prvem mestu pa do Grčije na zadnjem mestu, imajo poseben davek še na avtomobile, pri čemer že v davku na dodano vrednost vsi normalno obdavčujejo tudi avtomobile po stopnji, kakršna v posamezni državi velja. V nobeni od teh držav avtomobili niso v znižani stopnji, če imajo znižano, ampak so v osnovni stopnji, in običajno so osnovne stopnje v povprečju Evropske unije zelo podobne slovenskim 19. Torej tudi s tega stališča žal trditve, ki so bile izrečene, niso točne, kot sem pa rekel, pridevnikov pa ne komentiram.</seg>
@@ -568,25 +551,25 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg18">Naj končam. Predlagatelj ne vidi in se ne more strinjati s trditvami, ki tukaj niso bile potrjene z nekimi stvarnimi številkami, da prihaja do večje obdavčitve posameznih kategorij avtomobilov oziroma da prihaja do načina obdavčevanja, ki ni evropski. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg19">Hvala gospodu ministru. Ali želijo besedo predstavniki poslanskih skupin? Želijo. V imenu poslanske skupine socialdemokratov bo spregovoril gospod Ivo Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg20">Hvala lepa, gospod predsednik. Jaz obžalujem, da minister za finance tu zavaja poslance. Ja, za božjo voljo, vse skupaj ste strpali v en koš. Predvsem niste odgovorili na elementarno vprašanja, ki sem ga postavil. Davek na dodano vrednost izenačuje pogoje gospodarjenja, posebni davek pa izničuje ta davek. Jasno! Zakaj pa ste to naredili? Potem govorite tu tudi, oprostite, minister, neumnosti, kako da je to vse v redu, kako da je neutemeljeno kupovanje. To se je zgodilo, to vam je ušlo iz rok in vi prihajate 15 dni pred dnevom uvedbe davka na dodano vrednost sem v parlament z novim predlogom zakona. Ja, lepo vas prosim!</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg21">Poleg tega pa pozabljate nekaj, gospod minister, na carine, kakršne so v Evropi na avtomobile, ki jih večinoma ni, in na dohodke, na dohodke, minister Gaspari, na dohodke, ki jih imajo državljani Evropske unije, zato ne govoriti neumnosti tu. Ne govoriti neumnosti! Oprostite. Vam še enkrat povem. Če je tako, kot pravite, zakaj niste pravočasno, zakaj niste pred šestimi meseci to napovedali, pa bi zakon normalno šel svojo zakonsko pot in tako dalje. Zakaj posiljujete parlament? Zakaj 15 dni? Ali je to evropska kategorija v 15 dnevih zahtevati od parlamenta, da sprejme tak zakon. Povejte, gospod Gaspari! Ali je tu? Ne, to je balkanska kategorija. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg22">Hvala lepa. Predstavnik vlade nima več možnosti odgovoriti na vprašanja, v skladu s poslovnikom, zato prosim, da se poslanske skupine opredelijo za umik te točke z dnevnega reda. Besedo ima gospod Henigman, ki bo povedal stališče poslanske skupine Slovenskih krščanskih demokratov.</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ2.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg23">Spoštovani zbor in predstavniki vlade! Poslanska skupina Slovenskih krščanskih demokratov podpira umik zakona z dnevnega reda, to pa zato, ker smo že na odboru za finance menili, da zakon ni primerna osnova za sprejem in tudi ni primerna osnova, da se sprejema po hitrem postopku. Seveda je najprimerneje, da se že pri dnevnem redu tak zakon zavrne in se da vladi možnost, da razmisli o kakšnem drugem predlogu ali pa pozabi na tak zakon. Ne glede na vse pa smo prepričani, da davek na dodano vrednost v celoti rešuje vprašanje tudi segmenta nakupov osebnih avtomobilov. Zakon, kot je predlagan, pa v bistvu obdavčuje vse povprek, od invalidov do družin z več otroki, in ustvarja davek na davek na davek, kar pomeni, da na osnovno ceno avtomobila plačujemo carino, nato plačamo davek na dodano vrednost, zakon pa predvideva na vso to vsoto še dodaten davek, in je kot tak v bistvu nepravičen, nepošten, ker zida ceno, čemur se pa davek na dodano vrednost želi izogniti. Če je predlagatelj želel obdavčiti kategorijo luksuza, potem bi to lahko storil na drugačen način, da bi izvzel kategorije, ki sem jih prej navedel, in postavil tudi limit, ceno ali karkoli drugega, s čimer bi to dosegel.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg24">Poslanska skupina je na ta zakon vložila za vsak primer tudi celo vrsto amandmajev, o čemer pa bomo govorili, če proceduralni predlog sklepa ne bo sprejet. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg25">Hvala lepa. Želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg26">Ali želi predlagatelj umika dodatno obrazložiti svoj predlog?</seg>
@@ -601,11 +584,11 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg31">Ali je še kakšen predlog za umik? Gospod dr. Jože Zagožen ima predlog za umik. Prosim.</seg>
             </u>
             <note type="speaker">DR. JOŽE ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženJože" ana="#regular">
+            <u who="#ZagoženJože">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg32">Spoštovani gospod predsednik! Predlagam, da se umakne 22. točka dnevnega reda, in sicer predlog zakona o postopnem zapiranju rudnika Trbovlje-Hrastnik, ekološki sanaciji TE Trbovlje 2 in spodbujanju razvojnega prestrukturiranja zasavske regije. Seveda ne nasprotujemo programu postopnega zapiranja rudnika Trbovlje-Hrastnik, prav tako ne nasprotujemo ekološki sanaciji TE Trbovlje 2, pač pa nasprotujemo posebnemu sistemu, posebnim pogojem, posebnemu zakonu o spodbujanju razvojnega prestrukturiranja zasavske regije, in sicer nasprotujemo iz načelnih razlogov, ker menimo, da je treba celovito, za celotno Slovenijo urediti to vprašanje, kot ga ureja tudi zakon o skladnejšem regionalnem razvoju. Menimo, da glede na stopnjo razvoja v slovenskih regijah zasavska regija ni tista, ki je najbolj potrebna posebnega zakona. Nekatere so še bolj in zato vztrajamo pri tem, da se pripravi celovita rešitev za vso Slovenijo, za vse slovenske regije, ki so manj razvite. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg33">Hvala, dr. Jože Zagožen. Njegov predlog je, da se umakne 22. točka z dnevnega reda 15. seje - predlog zakona o postopnem zapiranju rudnika Trbovlje - Hrastnik, ekološki sanaciji TE Trbovlje 2 in spodbujanju razvojnega prestrukturiranja zasavske regije, hitri postopek. Ali želi besedo poročevalec matičnega delovnega telesa?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg34">Ali želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
@@ -615,7 +598,7 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg36">Ali želijo besedo predstavniki poslanskih skupin? V imenu poslanske skupine združene liste gospod Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg37">Hvala lepa. Spoštovane kolegice in kolegi! Poslanska skupina združene liste predlaga, da se zakon o postopnem zapiranju rudnika Trbovlje - Hrastnik, ekološki sanaciji TE Trbovlje 2 in spodbujanju regionalnega razvoja zasavske regije uvrsti na dnevni red.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg38">O problematiki termoelektrarne Trbovlje 2. O tem, ali naj ali ne gradimo nadomestni objekt, ali naj ali ne zgradimo filter oziroma čistilne naprave za to termoelektrarno, ali naj najprej to termoelektrarno oskrbujemo z domačim premogom iz zasavskih premogovnikov, ali naj premogovnike zapremo ali ne razpravlja ta državni zbor tega in prejšnjega sklica že več kot 4 leta.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg39">Mislim, da je prav, da potem, ko se je na podlagi odločitev državnega zbora na referendumu sprejela odločitev, da se ne sprejme sistem financiranja gradnje termoelektrarne Trbovlje 3, tako kot je bil v zakonu predlagan, da vsaj sedaj damo možnost, da se ta odločitev sprejme. Odločitev je potrebna. Potrebno se je odločiti, ali bomo ali ne naprej imeli termoelektrarno. Če jo bomo imeli, potem moramo po mojem prepričanju zgraditi tudi čistilne naprave in odločiti se moramo, ali bomo to termoelektrarno napajali z domačim premogom ali ne bomo. Če ne, potem se moramo takoj odločiti za zapiranje rudnika.</seg>
@@ -623,7 +606,7 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg41">Tak predlog je dan; če ni idealen, ga dajmo popraviti, dopolniti. Prosim pa, da ne zavlačujemo in ponovno ne odlašamo z odločanjem o tem vprašanju. Mi bomo za to, da ta zakon ostane na dnevnem redu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg42">Hvala, gospod Potrč. Želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg43">Ali želi predlagatelj širitve oziroma umika dodatno obrazložiti svoj predlog?</seg>
@@ -631,11 +614,11 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg44">Prosim, dr. Jože Zagožen.</seg>
             </u>
             <note type="speaker">DR. JOŽE ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženJože" ana="#regular">
+            <u who="#ZagoženJože">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg45">Kot že rečeno, mi podpiramo samo ekološko sanacijo in same posege, kar se tiče rudnika kot takšnega. V tem primeru pa gre za razvojno prestrukturiranje celotne regije Zasavja. Gre za to, da naj bi se ustanovil svet za razvoj Zasavja, pooblaščena regionalna razvojna institucija in tu naj bi bile tudi vključene vse občine te regije. Skratka, ne gre samo za premogovnik, ampak gre za regijo, to pa ureja že zakon o skladnejšem regionalnem razvoju in v tem primeru prihaja do dupliranja, podvajanja ukrepov z dvema zakonoma. Zato menimo, da ni potrebno, da se v tem zakonu ureja skladnejši razvoj regije, ampak naj se ureja samo to, kako postopno zapirati rudnik in kako ga ekološko sanirati. Samo v tem delu naj se ta materija obravnava in zato je potrebno, da predlagatelj pripravi drugačno besedilo zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg46">Hvala lepa za dodatno obrazložitev. Na glasovanje dajem predlog za umik 22. točke z dnevnega reda, to je predlog zakona o postopnem zapiranju rudnika Trbovlje-Hrastnik in še nadaljnji naslov zakona. Ugotovimo prisotnost!</seg>
                <note>64 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg47">Kdo je za predlagani umik?</seg>
@@ -648,7 +631,7 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg51">Gospod Jožef Jerovšek, prosim.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg52">Hvala lepa. Spoštovani gospod predsednik, spoštovane kolegice in kolegi! Poslanska skupina Socialdemokratske stranke predlaga umik predloga zakona o spremembah in dopolnitvah zakona o državnem tožilstvu, ki je uvrščen pod 19. točko na dnevni red današnje seje. To predlagamo zato, ker veljavni zakon o državnem tožilstvu v 10. členu določa, da lahko generalni državni tožilec za obravnavo več zahtevnih kaznivih dejanj ali iz drugih zelo tehtnih razlogov določi skupino državnih tožilcev za posebne zadeve. Ker omenjeni zakon daje skupini vso potrebno zakonsko podlago za njeno delovanje, ni treba vnašati dvomov o potrebnosti delovanja skupine.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg53">Drugič. Predlog sprememb zakona prav tako zožuje možnost pregona kaznivih dejanj na področju gospodarskega kriminala, kar je nesprejemljivo v razmerah, ko je to najbolj kritično področje pregona kaznivih dejanj.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg54">Predlog sprememb zakona o državnem tožilstvu prav tako daje dodatne možnosti političnega vmešavanja v izbor vodje skupine za posebne zadeve - in s tem se Socialdemokratska stranka ne more strinjati - da bi se vodja posebne skupine državnih tožilcev imenoval v soglasju z ministrom, ker je to vmešavanje dnevne politike v izbiro, in to ne glede na to, katera politična opcija ima odločilen vpliv v trenutku izbire vodje posebne skupine.</seg>
@@ -657,16 +640,16 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg57">Predlog zakona ima še več spornih in neprimernih rešitev, predvsem pa so v tej luči že vidni napori in tudi realizacija umika in zastaranja kaznivih dejanj s področja gospodarskega kriminala. Ministrstvo za pravosodje bi, v nasprotju s tem, kar želi doseči s tem zakonom, moralo predlagati izboljšavo zakonodaje, ki bo omogočala boljše delo tožilcev in manj političnega vmešavanja v njihovo delo. Zato predlagamo, da se predlog tega zakona umakne z dnevnega reda. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg58">Hvala lepa, gospod Jerovšek. Vaš predlog je, da se s 15. seje umakne 19. točka, to je predlog zakona o državnem tožilstvu, hitri postopek. Ali želi besedo poročevalec matičnega delovnega telesa? Besedo ima gospa Beblerjeva.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER:</note>
-            <u who="#SDZ2.LavtižarBeblerDarja" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg59">Hvala lepa, gospod predsednik. V imenu odbora za notranjo politiko in pravosodje in glede na stališče, ki ga je odbor zavzel, moram ugovarjati predlogu za umik.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg60">Minister za pravosodje je namreč odbor za notranjo politiko in pravosodje prepričal, da je sprememba zakona o državnem tožilstvu potrebna in da je potrebna prav na ta način, kot jo je potem odbor tudi potrdil oziroma sprejel. Glede na stališče odbora temu predlogu ugovarjam. Prepričana pa sem, da bo tudi minister za pravosodje povedal razloge, ki govorijo v prid ugovoru zoper umik te točke z dnevnega reda. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg61">Hvala lepa. Ali želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg62">Ali želi besedo predstavnik vlade?</seg>
@@ -674,22 +657,22 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg63">Minister za pravosodje, gospod Tomaž Marušič, prosim.</seg>
             </u>
             <note type="speaker">TOMAŽ MARUŠIČ:</note>
-            <u who="#SDZ2.MarušičTomaž" ana="#regular">
+            <u who="#MarušičTomaž">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg64">Gospod predsednik, hvala za besedo. Spoštovane poslanke, spoštovani poslanci! V zvezi z novelo zakona o državnem tožilstvu poudarjam, da gre zgolj za spremembo 10. člena tega zakona. Razlogi za to spremembo so naslednji. Obstoječi 10. člen - čeravno je vrhovno sodišče ugotovilo, da je skupina za posebne zadeve, ki je bila ustanovljena na podlagi te zakonske določbe, povsem zakonita - je še vedno povzročal določene pravne dvome o zakonitosti te skupine. Navajam pritožbe raznih zagovornikov v pritožbenih postopkih. Zato, da bi se stvar definirala, da bi ta definicija dobila točno pravno vsebino, smo predložili v zakonodajni postopek novelo 10. člena, s katero smo skušali doseči, da je posebna skupina pristojna za obravnavo določene skupine kaznivih dejanj. Gre predvsem za kazniva dejanja iz organiziranega kriminala, tudi z mednarodnim elementom, gre za kazniva dejanja korupcije, gre za kazniva dejanja pranja denarja, gre za kazniva dejanja proizvodnje in trgovanja z mamili, orožjem, belim blagom, gre za kazniva dejanja ilegalne migracije, skratka za celo paleto tako imenovanega sodobnega kriminala. To smo tudi predstavili na aprilskih "screeningih" pred organi Evropske skupnosti in je bila taka vsebina delovanja te skupine za posebne zadeve tudi s strani Evrope pozitivno sprejeta in seveda ocenjeno, da se lahko samo s tako posebno usposobljeno strokovno skupino borimo zoper organizirani kriminal. Zaradi tega smo dali tako spremenjeno določbo 10. člena s točno določenimi pristojnostmi skupine tožilcev za posebne zadeve v zakonodajni postopek.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg65">Poudarjam, glede očitka vmešavanja izvršilne oblasti v tožilske zadeve, da tožilstvo ni sodna oblast, ampak skozi ves zakon o tožilstvu se prepletajo vplivi, zlasti s področja kadrovanja, na delo državnega tožilstva in nenazadnje je minister za pravosodje tisti, ki je dolžan opravljati po sami zakonski določbi nadzor nad delovanjem uprave, upravnega delovanja, poudarjam, uprave državnega tožilstva. Poleg tega novela tudi določa način imenovanja članov te posebne skupine. Poleg tega tudi to, da je generalni državni tožilec v soglasju z ministrom pristojen za imenovanje vodje te skupine.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg66">Končno želim poudariti to, da taka formulacija in uzakonjenje posebne skupine daje garancijo, da ta skupina ne more postati predmet vsakokratnih odredb in direktiv, glede reševanja posameznih zadev oziroma dodeljevanja zadev vsakokratnega generalnega državnega tožilca. Te stvari so točno določene v zakonu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg67">Hvala, gospod minister. Ali želijo besedo predstavniki poslanskih skupin? Gospod Potrč v imenu poslanske skupine Združene liste socialnih demokratov.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg68">Hvala lepa. V poslanski skupini združene liste mislimo, da je vprašanja, povezana z delovanjem posebne tožilske skupine, prav urediti in precizirati v zakon. Menimo sicer, da je zelo dvomljivo, ali so kakršnikoli upravičeni razlogi za hitri postopek tega zakona. Posebej ob dejstvu, da je vlada po hitrem postopku pred približno pol leta že predlagala zakon z drugačno vsebino, da je tisti zakon po hitrem postopku ležal v državnem zboru približno pol leta, dokler ni pred nekako dvema mesecema vlada novo vsebino predlagala ponovno po hitrem postopku.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg69">Način, kako ravna vlada v tem pogledu, ne opravičuje hitrega postopka in uvrščanje zakona. Prepričuje pa nas, da bi zakon morali uvrstiti in tudi po hitrem postopku sprejeti. Dejstvo je, da vlada svoje odločitve spreminja vsake pol leta in upali bi si trditi, da jih prilagaja konkretnim kadrovskim rešitvam v državnem tožilstvu in tudi v posebni skupini. To je nesprejemljivo. Tako se gospod minister in tako se vlada ne sme obnašati in zato je skrajni čas, da državni zbor obravnava ta zakon in se odloči, kaj bi želel in kako bi želel, da je ta problematika urejena. Zato tudi podpiramo, da ta zakon pride v državni zbor in da se neha samovolja na tem področju, ki jo zganja tudi ministrstvo in vlada. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg70">Ali želi še kdo besedo od poslanskih skupin?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg71">Ali želi predlagatelj umika dodatno obrazložiti svoj predlog?</seg>
@@ -707,12 +690,12 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg78">Vlada Republike Slovenije predlaga zboru, da razširi dnevni red te seje z obravnavo predloga zakona o spremembah in dopolnitvah zakona o jamstvenem skladu ter ga sprejme po hitrem postopku. Ocenjujem, da obstajajo poslovniški razlogi za odločanje na seji državnega zbora o širitvi dnevnega reda s to točko, iz razloga, ker je državni zbor na zadnji seji s sklepom sprejel tudi odločitev, da bo pred glasovanjem o vetu - to je predlog vlade Republike Slovenije za umik zakona o spremembah in dopolnitvah zakona o prisilni poravnavi, stečaju in likvidaciji - da bo pred to točko obravnaval tudi predlog zakona o spremembah in dopolnitvah zakona o jamstvenem skladu. Ob sklicu dnevnega reda te seje tega zakona ni bilo, vlada ga je v proceduro vložila kasneje, in obstajajo poslovniški razlogi, da se odločamo o širitvi dnevnega reda. Ali želi predstavnik vlade besedo? Prosim, gospod minister, mag. Tone Rop.</seg>
             </u>
             <note type="speaker">MAG. ANTON ROP:</note>
-            <u who="#SDZ2.RopAnton" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg79">Hvala. Spoštovane poslanke in spoštovani poslanci! Državni zbor je ob obravnavi zakona o prisilni poravnavi, stečaju in likvidaciji zadolžil vlado Republike Slovenije, da pred ponovnim glasovanjem o tem zakonu na 15. seji državnega zbora pripravi dopolnilo zakona o jamstvenem skladu, s katerim se bo do sprejema zakona o delovnih razmerjih zapolnila pravna praznina, ki bi nastala s sprejemom tega zakona. Prav tako je odbor za zdravstvo, delo, družino in socialno politiko državnega zbora ob obravnavi zakona o starševstvu in družinskih prejemkih zadolžil vlado, da do druge obravnave tega zakona pripravi rešitve glede preživninskega sklada. Ker sta lahko obe zadolžitvi državnega zbora realizirani s spremembo in dopolnitvijo zakona o jamstvenem skladu Republike Slovenije, smo pripravili predlog sprememb zakona o jamstvenem skladu Republike Slovenije, v katerem sta istočasno rešeni obe vprašanji.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg80">Zato predlagamo državnemu zboru, da zakon o spremembah in dopolnitvah zakona o jamstvenem skladu uvrsti na dnevni red in ga obravnava ter sprejme po hitrem postopku pred ponovnim odločanjem o zakonu o spremembah in dopolnitvah zakona o prisilni poravnavi, stečaju in likvidaciji ter tako odpravi pravno praznino, ki bo nastala z uveljavitvijo predlaganega zakona o prisilni poravnavi, stečaju in likvidaciji do sprejema zakona o delovnih razmerjih. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg81">Hvala, gospod minister. Ali želi besedo poročevalec matičnega delovnega telesa?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg82">Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
@@ -780,11 +763,11 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg118">Ali je še kakšen predlog za razširitev dnevnega reda. Gospod Peterle in gospod Janša.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg119">Hvala lepa, gospod predsednik. Spoštovane poslanke in poslanci! Pri svojem predlogu za razširitev dnevnega reda z obravnavo predloga o spremembi zakona o volitvah se sklicujem na 53. in 64. člen poslovnika državnega zbora. Znano vam je, da je bilo na 11. redni seji odločeno, da se zakon preloži na eno od naslednjih sej, ko bodo izpolnjeni pogoji za to. Pogoj pa je bil, da se predsedniki parlamentarnih strank o zadevi dogovorijo. Pred sklicem te seje je bil ta pogoj izpolnjen, kajti na seji predsednikov parlamentarnih strank je do tega dogovora prišlo. Z izjemo eno stranke so bili vsi predsedniki za to, da gre na prvo možno naslednjo sejo. To je bilo znano "urbi et orbi", torej so bili razlogi za sklic oziroma pogoji izpolnjeni. Jaz menim, da gre preprosto za napako in se ne sklicujem v tem primeru na 64. člen. Preprosto se niso upoštevala nova dejstva, zato menim, da bi bilo treba to napako popraviti in razširiti dnevni red z obravnavo tega predloga zakona, za katerega predlagam, da se obravnava kot prva točka dnevnega reda te seje. Vsakršno nadaljnje zavlačevanje ne prinaša pozitivnih političnih posledic in tudi ne prispeva k politični stabilnosti v tej državi. Na volitve se bo treba pripraviti pravočasno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg120">Hvala lepa, kolega Peterle. Kolega Peterle predlaga, da se 15. redna seja razširi s točko dnevnega reda, ki se glasi: "Predlog sprememb zakona o volitvah v državni zbor". Res je, da je državni zbor na 11. oziroma na 12. seji izglasoval proceduralni sklep, da se odločanje o tem zakonu preloži na eno od prihodnjih sej. V tem času so se tudi srečevali predsedniki parlamentarnih strank. Na seji kolegija predsednika državnega zbora nihče od članov kolegija ni predlagal, da bi se ta točka uvrstila na to sejo državnega zbora.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg121">Sam kot predsednik državnega zbora bi v smislu nekega korektnega sodelovanja predvsem plediral za rešitev, da bi bil tudi pisno obveščen o sklepih, ki so jih sprejeli predsedniki parlamentarnih strank. Če bi tako stališče prejel, bi brez dvoma se tudi lažje na kolegiju odločali. Nenazadnje samo iz medijev smo lahko slišali, da so bila odprta nekatera proceduralna vprašanja o odločanju o tem zakonu. Ne bi komentiral to zadevo glede napake vodstva državnega zbora. Mislim, da ni bilo nobene napake v dosedanjem postopku.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg122">Ta točka dnevnega reda ima drugačen status kot druge točke dnevnega reda. Če bo predlagatelj vztrajal, potem ne morem - sam bi omogočil, da se državni zbor z glasovanjem odloči, ali uvrsti na 15. sejo. Mislim, da ne bi prav nič izgubili, če bi bila ta točka sestavni del prve julijske seje.</seg>
@@ -797,21 +780,21 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg126">Ali želijo besedo predstavniki poslanskih skupin? V imenu poslanske skupine socialdemokratov ima besedo gospod Janez Janša.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SDZ2.JanšaJanez" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg127">Spoštovani gospod predsednik! Kolegice in kolegi! Mi podpiramo ta predlog. V bistvu sem se jaz istočasno javil za besedo. Hotel sem predlagati enako širitev dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg128">Po mojem mnenju bi ta točka že tako morala biti na tej seji, kajti mi smo na 12. seji, že dva meseca nazaj, sprejeli sklep, da se druga obravnava izvede na eni od prihodnjih sej, in to je ena od prihodnjih sej. Seveda bo še več prihodnjih sej, ampak mi te odločitve ne moremo vleči do volitev. Ker volivci imajo pravico, kot ste v tej dvorani nekateri poudarjali v prejšnjem mandatu neštetokrat, da so pravočasno obveščeni o tem, po kakšnem volilnem sistemu bodo volili. V tem trenutku tega ne vedo. Dolžnost zakonodajalca je, in tistega, ki vodi zakonodajno telo tudi, da poskrbi, da do teh odločitev pride pravočasno.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg129">Zato je sedaj skrajni čas, da se o zakonu odloča. Zakon je bil že v drugi obravnavi z navadno večino. V drugo obravnavo smo ga izglasovali z dvotretjinsko večino. Z navadno večino ste ga vrnili v prvo obravnavo in zdaj ga moramo, seveda, zopet dati v drugo obravnavo. Takrat, po 12. seji, je bilo začeto pogajanje predsednikov parlamentarnih strank. Na zadnjem sestanku je bil dosežen dogovor - z izjemo ene stranke so bili vsi za to - da se pospeši procedura sprejemanja tega zakona. Celo združena lista, ki se ne strinja z vsebino, je soglašala s tem, da je treba o tem odločiti, zaradi tega, ker se naslednje volitve približujejo. Če se ne motim - mislim pa, da je to razvidno iz zapisnika - je ravno predsednik ljudske stranke dejal, da bo obvestil vodstvo državnega zbora o teh stvareh, prav tako pa da bo sprožena iniciativa o tem, da se preveri, ali je bil sklep o tem, da se zakon z navadno večino iz drugega vrne v prvo branje, sploh korektno sprejet, v skladu s poslovnikom. Mislim, da mi niti ni treba spraševati o tem, ali je bilo to narejeno, ker očitno ni bilo, drugače bi bili obveščeni. Mislim pa, da je skrajni čas, da zakon uvrstimo na to sejo in da o tem odločamo. Pričakujem, da bodo predsedniki parlamentarnih strank držali besedo oziroma da so držali besedo, da so poslanske skupine informirali o dogovoru in da so imeli na tem sestanku mandate za pogajanja, ker drugače nima smisla, da se sestajamo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg130">Hvala lepa. Želi še katera od poslanskih skupin besedo? Gospod Borut Pahor, v imenu Združene liste socialnih demokratov.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg131">Hvala lepa, predsednik. Najbrž ni nikogar med nami, ki ne bi vedel, kakšne pomembne spremembe bo vnesla v slovensko politično življenje sprememba volilnega sistema. Zato se je treba temeljito pripraviti na to pomembno spremembo, zato da bi vsi, ki se bodo potegovali za zaupanje ljudi, dovolj zgodaj vedeli, po katerih in kakšnih pravilih bomo volili po novem. Mi se z vsebino zakona ne strinjamo, strinjamo pa se s tem, da imajo vsi pravico dovolj zgodaj vedeti, po kakšnih pravilih se bodo potegovali za zaupanje ljudi. Zato podpiramo zamisel, da bi na tej seji sprejeli odločitve, ki so povezane s to tako zelo pomembno spremembo volilnega sistema, če bo, seveda, doživela dvotretjinsko podporo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg132">Hvala lepa gospodu Pahorju. Želi še kdo besedo od poslanskih skupin?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg133">Ali želi predlagatelj širitve dodatno obrazložiti svoj predlog?</seg>
@@ -950,11 +933,11 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg205">Gospod Košir ima proceduralni predlog.</seg>
             </u>
             <note type="speaker">JOŽEF KOŠIR:</note>
-            <u who="#SDZ2.KoširJožef" ana="#regular">
+            <u who="#KoširJožef">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg206">Hvala, gospod predsednik. Ko sem gledal na številko 87, nisem pritisnil pravočasno na tipko.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg207">Gospod Košir predlaga proceduralni predlog, da ponovimo glasovanje o hitrem postopku za ta zakon. Ugotavljamo prisotnost!</seg>
                <note>56 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg208">Kdo je za proceduralni predlog gospoda Koširja, da ponovimo glasovanje o tem sklepu?</seg>
@@ -993,18 +976,18 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg229">Prehajamo na razpravo poslank in poslancev. Pisno se je k razpravi prijavil poslanec Ivo Hvalica. Ostale razprave so omejene na 5 minut. Prosim, gospod Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg230">Hvala lepa, gospod predsednik. Nenavadno je, da se ob tako pomembni točki dnevnega reda ne oglasi nihče. Očitno so te stvari postale neke vrste rutina. Nekaj, kar je treba tako skoraj mimogrede sprejeti.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg231">Spoštovane kolegice in kolegi! Pred kratkim sem bil na obisku na drugem koncu Slovenije. Tam mi je nekdo povedal, kako se je njegov znanec, ki je postal sodnik, po tem ko smo ga izvolili tu v državnem zboru, spozabil in je rekel javno: "Sedaj sem preskrbljen do konca svojega življenja". Ne tako kot poslanci, ki so izvoljeni za en mandat in potem si iščejo svoje pravice med navednicami ali pravice tudi brez navednic. Tako je dejstvo. Podeljujemo mandate, trajne mandate brez velikih razmislekov.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg232">Danes sicer volimo 5 članov sodnega sveta. Človek bi rekel, da to, kar sem pravkar rekel, nima zveze s tem, ampak ima. Ker mi podeljujemo trajne mandate po tem, ko nam sodni svet predlaga kandidate. Ne spomnim se, sem poslanec v drugem mandatu, da bi katerega od kandidatov zavrnili. Tu se postavlja neko vprašanje. Ali gre mogoče res za segment samo izjemnih ljudi, ki niso podvrženi napakam oziroma slabostim, ki smo jim podvrženi ostali ljudje, bi tako rekel. Človek mora ugotoviti, da bi bila taka hipoteza na trhlih nogah. Ravno tako so ljudje, ne gre za bogove, ljudje z dobrimi in slabimi lastnostmi, ljudje take in drugače strukture.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg233">Gospod predsednik! Prosim bi, če konferenco LDS v klopi, vodjo poslanskega kluba začasno prekinete. Potem bi nadaljeval.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg234">Prosim, kolega Hvalica. Mislim, da so povsem normalni pogoji za delo. Predlagam, da nadaljujete.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg235">Ne vem, če je to tako navadno, če se tam trije na glas pogovarjajo, da jaz sem slišim. Ne vem. Mogoče je to sedaj postalo tudi to običajno za naš državni zbor.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg236">Glejte, jaz sem tudi do sedaj tabuiziral to zadevo, ampak odločil sem se, da spregovorim ob tej točki dnevnega reda, v trenutku, ko je začelo frčati neko perje</seg>
                <note>sicer to še ni pravo perje, bolj me spominja na to, ko smo se kot otroci obmetavali z vzglavniki, pa je zletelo malo perja ven</note>
@@ -1024,63 +1007,63 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg248">Torej, če že moramo voliti sodnike, če že moramo voliti sodni svet, potem bi bilo dobro, da bi mi temeljito razmislili tudi o tem, kako bi lahko karkoli naredili, da bi se sodstvo samo, znotraj svojih inštitucij, bilo sploh v stanju očistiti in tudi velike napake sankcionirati. Samo to je lahko pot do tistega sodstva, za katerega sem trdno prepričan, da si vsi prizadevamo, se pravi do sodstva kot neodvisne tretje veje oblasti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg249">Hvala lepa, gospod Hvalica. Kdo še želi besedo? Replika ali razprava, gospod Lavrinc? Repliko ima gospod Lavrinc.</seg>
             </u>
             <note type="speaker">MAKSIMILJAN LAVRINC:</note>
-            <u who="#SDZ2.LavrincMaksimiljan" ana="#regular">
+            <u who="#LavrincMaksimiljan">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg250">Hvala, gospod predsednik. Imam repliko ali pa proceduralno opozorilo. Gospod predsednik, mislim, da ste sedajle preširoko tolmačili poslovnik, ker točka dnevnega reda, ki je na vrsti, je izvolitev članov sodnega sveta. Torej, kakšna je vloga sodnega sveta, mislim, da ni sporno; navsezadnje se začne njegovo določanje v 131. členu ustave in potem naprej. Drugo, vse, kar je potrebno v zvezi s posameznimi kandidati, ste poleg gradiva dobili; torej, gre za eminentne ljudi, za katerimi stojijo določene inštitucije. Če je kdo voljan razpravljati o kakšnem posameznem kandidatu - gre za univerzitetne profesorje in tako naprej - potem naj to vrže tu na mizo, še bolje pa bi bilo, če bi se to opravilo že na seji Kviaza. Tako pa mislim, da se je pravzaprav ta točka, kjer naj bi volili najbolj vrhovno oblast znotraj sodne oblasti po kadrovski plati, da tako rečem, se je sprevrgla v nek obračun s sodstvom na sploh. Jaz sem za to - torej ne ocenjujem dela našega sodstva kot najboljše in sem prepričan, da se da marsikaj popraviti, morda je celo nekaj napak tudi v zakonu o sodniški službi, na kar je bilo tu večkrat opomnjeno - ampak predlagam, da se v okviru pobud in vprašanj poslancev postavi takšna pobuda ali vprašanje, in da se okrog tistega vprašanja potem tudi opravi neka razprava. Takole, na nek način zlorabiti volitve sodnega sveta, se mi pa ne zdi korektno, po poslovniku, seveda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg251">Hvala lepa, kolega Lavrinc; hvala tudi za vaše opozorilo meni kot predsedujočemu. Sam sem podobno razmišljal, ko sem poslušal v nekaterih segmentih razprave poslanskega kolega, gospoda Hvalico. Nisem ga prekinil iz razloga, ker sedaj državni zbor na podlagi 131. člena ustave voli sodni svet in vemo, da je ena ključnih nalog sodnega sveta predlagati po postopku, ki je določen z zakonom, sodnike v trajni mandat; in o le-teh se potem prek komisije za volitve, imenovanja in administrativne zadeve glasuje oziroma odloča državni zbor. Zato menim, da je bila razprava poslanskega kolega, gospoda Hvalice, še vedno v širokem okviru te točke dnevnega reda. Gospod Ribičič, razprava, prosim.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg252">Spoštovani, imam razpravo, nimam replike o kakšni zadevi; sem drugačnega mnenja, pa bom takrat, ko bo to na dnevnem redu, spregovoril o tem, ko bo šlo, recimo, za to, koliko se zamenja poslancev, kakšen volilni sistem in tako naprej.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg253">Na dnevnem redu je izvolitev tistega dela sodnega sveta, ki ga na predlog predsednika republike voli državni zbor. Mislim, da izbira ne bo lahka, zaradi tega, ker gre za vse po vrsti kakovostno utemeljene predloge. Gre za štiri nosilce doktorskega naziva, doktorata znanosti, ki imajo vsi štirje naziv visokošolskega učitelja od docenta, izrednega do rednega profesorja in za dva ugledna odvetnika, ki ju predlaga odvetniška zbornica. Mi jih moramo izmed šestih predlogov izbrati pet in s tega vidika glede na kakovostne predloge odločitev ne bo enostavna.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg254">Bi pa rekel, da je smiselno, da ob tej izvolitvi državni zbor kot popotnico izvoljenim članom sodnega sveta pač opozori na to zahtevno pa tudi ne lahko nalogo, ki se je loteva sodni svet in da je s tega vidika smiselno spregovoriti o tem, da je ta naloga posebej zahtevna v današnjih razmerah, ko se krepijo zelo ostre kritike, tudi ne odmerjene kritike in hudi pritiski na pravosodne organe. Zaradi tega mislim, da je z zaupanjem, ki ga izraža državni zbor ob izvolitvi sodnega sveta, to zaupanje treba pospremiti tudi s popotnico in izraziti to zaupanje in prepričanje, da bo izvoljenih pet članov sodnega sveta skupaj s tistimi dodatnimi šestimi, ki prihajajo iz sodniških vrst, sposobno opravljati izredno zahtevno nalogo, ki je povezana z volitvami sodnikov.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg255">Vsa druga sistemska vprašanja o tem, ali je smiselno, da sodnike še naprej voli državni zbor na podlagi kakšnih predlogov in pomisleki v zvezi s trajnim mandatom, za katerega veste, vsaj v teoriji velja, da je ključnega pomena za samostojnost in neodvisnost sodnikov, pa mislim, da ne sodijo na današnjo sejo oziroma ta trenutek niso na dnevnem redu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg256">Hvala lepa, gospod Ribičič. Ali želi še kdo besedo? Želi, gospod Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg257">Hvala lepa za besedo. Spoštovani predsednik, cenjeni državni zbor. Ob točki izvolitve sodnikov v sodni svet bi rad izkoristil to priložnost in povedal svoje razloge, zakaj pač tudi osebno ne bom podprl niti enega izmed predlogov. Jaz sem tako rekoč že na začetku mandata, mislim da za to govornico, opozoril, da se ne strinjam z izvajanjem pravnega sistema v Sloveniji, kajti o vseh problemih je podrobno zdajle razložil gospod Ivo Hvalica, moj kolega, na pomanjkljivosti, na napake, ki se dogajajo v tem sistemu, neodvisni veji oblasti. Od vsega začetka sem že opozoril, da ne bom, dokler se te zadeve ne bodo uredile, nikoli glasoval na nobenega sodnika s strani mandata. To sem tudi ves čas delal. Nisem več hodil za to govornico sporočati temu državnemu zboru, ker sem ugotovil, da ta državni zbor brez vsakega zadržka vsak mandat oziroma vsak predlog, ki je pripeljan v državni zbor, tako rekoč potrdi in izvoli sodnike s trajnim mandatom na funkcije.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg258">Obrazložiti moram še to, da osebno ne glasujem proti sodnikom zaradi nekega osebna poklicnega sovraštva do te strukture. Tako kot nekateri pravniki gojijo poklicno sovraštvo do posameznih kategorij državljanov. Tako proti ključavničarjem, električarjem, delavcem, obrtnikom, podjetnikom in tako naprej. Kot predstavnik delavstva in podjetnikov-obrtnikov, tega poklicnega sovraštva kot sem povedal do pravnikov ne gojim. Gojim pa dvome o konkretnosti vseh, ki so odgovorni za pošten, trden in korekten pravni red v tej državi.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg259">Gospod Ivo, moj kolega, je to tu razložil. Ni problem za razrešiti nekih verbalni delikt, ki se v tej državi zgodi prednostno, nikoli pa ne bodo rešeni, da lahko tako rečem in si tu upam reči, celo zločini proti Sloveniji, slovenskemu narodu, tudi nekaterim posameznikom v tej državi. O tem pa ta sodni sistem ne razpravlja. Dokler ta sodni sistem s svojimi dejanji ne bo odpravil vseh negativnih elementov iz te stroke, ne bo uspešen, tako dolgo bom nepreklicno glasoval proti izvolitvi vseh sodnikov s trajnim mandatom. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg260">Hvala lepa, gospod Kelemina. Ali želi še kdo besedo? Gospod Pukšič.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ2.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg261">Hvala lepa, gospod predsednik. Poslanke in poslanci. Pri izvolitvi članov sodnega sveta izmed naslednjih 6 kandidatov, ki jih je predlagal predsednik države, se voli 5 kandidatov. Vsekakor se mi zdi vmesno opozoriti, da kandidatka Nevenka Šorli, če pogledate na drugi strani, pred njo ni zaporedne številke 6. Nekako bi izgledalo, da se voli prvih 5, 6 ta pa odpade. Skratka, ne zdi se mi popolnoma korektno do vseh kandidatov. Predsedniku državnega zbora predlagam, da se ta pomanjkljivost oziroma napaka v prvi vrsti odpravi.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg262">Drugo. Želel bi vedeti in dobiti informacijo, ali je res, da je eden izmed predlaganih kandidatov za člana sodnega sveta, ki jih voli državni zbor, že v samostojni Republiki Sloveniji imel na nekem strokovnem simpoziju referat v srbohrvaščini? Ta podatek bi želel dobiti. V kolikor ga ni možno, bi bilo dobro, če bi za kakšen dan odločanje oziroma izvolitev sodnega sveta prestavili, da si te informacije pridobimo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg263">Hvala lepa, gospod Pukšič. Vsekakor je v gradivu pred gospo Nevenko Šorli, razumljivo, je številka 6. To je kot 6. kandidat oziroma kandidatka. V skladu z zakonom sem kot predsednik državnega zbora za danes razpisal volitve. In vprašanje, ki je bilo tukaj postavljeno, pričakujem, da je edino korektno, da je bilo s strani vašega predstavnika na delovnem telesu, torej na Kviazu že postavljeno, ker tam je tudi mesto, da se na taka vprašanja odgovori. Replika, dr. Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg264">Repliko imam na to, kar je govoril kolega Kelemina, pa sem počakal, da se je končala razprava, da ne bi prekinjal razprave. Kam nas pripelje ta logika, da ne bomo glasovali za nobenega sodnika, dokler se ne spremeni način volitve sodnikov? Ta logika se nam pojavlja tudi pri drugih delih volilnega sistema. Če se nekdo postavi, v redu, recimo neka politična stranka na stališče, ali bo volilni sistem takšen kot mi menimo ali pa ne bomo sodelovali na volilnem sistemu, to lahko, na volitvah, to lahko ima neko politično logiko. Če bomo pa šli poslanci po tej logiki, dokler ne bo stvar v enem segmentu naše ureditve urejena tako, kot to želim sam, toliko časa ne bom sodeloval, bom bojkotiral volitve. Mislim, da ta logika ne zdrži kritike in prosim kolego Kelemino, da še enkrat premisli, ali bo še naprej na ta način bojkotiral in se vzdrževal glasovanja. Ne da bi me skrbelo, da državni zbor brez njegovega glasu ne bi mogel sprejeti kakovostnih odločitev, ampak mislim, da bi bilo nerodno in slabo, če bi se ta logika razširila. Vsakdo od nas ima poglede, različne poglede na sistemsko ureditev posameznih vprašanj. Jaz osebno se priključujem tistim strokovnim, zelo razširjenim mnenjem, da bi bilo smiselno, da ni več državni zbor tisti, ki voli sodnike in da je to treba urediti na drugačen način</seg>
                <note>Nerazumljivo.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg265">bi rekel, da je smiselno razmišljati o tej spremembi. Ampak mi ne pride na pamet, da bi rekel, da dokler ta sprememba ne bo sprejeta, ne bom hotel sodelovati v nobenem postopku, ki to zadeva. Poleg tega danes ne volimo sodnikov, ampak postavljamo sodni svet, ki ima še toliko odgovornejšo vlogo pri izbiri možnih kandidatov za sodnike, in se moram strinjati s tistim delom diskusije, ki je poudarjala, da je ob trajnem mandatu seveda ta izbira še veliko odgovornejša. Vendar pa ta izbira ne bo boljša, če se bo del državnega zbora odrekel sodelovanja, in s tem tudi odgovornosti za izbiro izmed predlaganih kandidatov, ki vsi po vrsti izpolnjujejo formalne pogoje, ki so predpisani za takšno funkcijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg266">Hvala lepa, dr. Ribičič. Replika, gospod Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg267">Hvala lepa za besedo, spoštovani predsednik. Seveda, spoštovani gospod Ribičič, popolnoma vso pravico imate, da mi na nek način oporekate, ampak jaz nisem nobenega poslanca pozval, naj se odloča tako, kot se odločam sam. Povedal sem samo svoje mišljenje, svoje ravnanje in svoje poglede na to vprašanje. Na nikogar ne apeliram, da naj tako glasuje, na nikogar. Imam pa, seveda, pravico kot vsak poslanec obrazložiti svoj pogled na posamezno vprašanje, kar sem tu tudi storil. Ne bom trdil, kot je tu moj kolega poudaril, da je sedaj popolnoma vse narobe v tem sistemu. Ne, ni, ampak ključne zadeve se pa tudi ne rešujejo; če mi pa lahko dokažete nasprotno, mi pa dokažite, pa bomo po vrsti analizirali določene stvari, če kdorkoli želi polemiko v zvezi s tem, bomo šli od črke do črke, pa bomo skušali ugotoviti, kaj je in česa ni. Ker kot eden izmed 90 poslancev nimam nobene moči v tem državnem zboru, da bi zadeve spremenil v tisto smer, kot mislim, da bi bilo prav, se pač odločam po svoji vesti, in mislim, da to pravico imam. Ne bom trdil, da se včasih tudi negativno ne odločim, ko glasujem proti, in lahko kakšnemu dobremu in poštenemu pravniku naredim veliko krivico; tega se zavedam. Krivično odločanje, ki ga zavzamem v državnem zboru, seveda prevzamem na svoja ramena, če sem slučajno tako ravnal, in se vsem - če sem pri kom tako ravnal - ki so pošteni, dobri, pravični, opravičujem za svoje ravnanje. Vendar bom pri svojem stališču ostal in prosim, da mi te pravice tudi v prihodnje ne jemljete. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg268">Hvala lepa. Želi še kdo razpravljati?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg269">Razpravo zaključujem in v skladu z drugim odstavkom 21. člena zakona o sodiščih prehajamo na volitve.</seg>
@@ -1099,7 +1082,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 16.06 uri in se je nadaljevala ob 17.05 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg278">Spoštovane kolegice in kolegi! Nadaljujemo s sejo. Ugotavljamo prisotnost!</seg>
                <note>59 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg279">Zbor je sklepčen. Objavljam izid glasovanja.</seg>
@@ -1149,7 +1132,7 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg306">S tem zaključujem to točko dnevnega reda. Vodenje prepuščam spoštovani kolegici, podpredsednici državnega zbora.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg307">Hvala.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg308">Prehajamo na 7. TOČKO DNEVNEGA REDA - OBRAVNAVA PREDLOGA ZAKONA O RATIFIKACIJI SPORAZUMA MED VLADO REPUBLIKE SLOVENIJE IN VLADO REPUBLIKE MAKEDONIJE O SODELOVANJU NA PODROČJU VETERINARSKE MEDICINE. Predlog zakona je v obravnavo zboru predložila vlada Republike Slovenije. Želi predstavnik vlade besedo?</seg>
                <note>Ne želi.</note>
@@ -1254,7 +1237,7 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg368">Predlog zakona je v obravnavo zboru predložila vlada Republike Slovenije. Ali želi predstavnik vlade besedo? Prosim. Besedo ima gospa državna sekretarka Milojka Kolar.</seg>
             </u>
             <note type="speaker">MILOJKA KOLAR:</note>
-            <u who="#SDZ2.KolarMilojka" ana="#regular">
+            <u who="#KolarMilojka">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg369">Hvala za besedo. Se opravičujem, ker sem zadihana, sem pritekla. Pred vami je predlog zakona o carinski službi, po hitrem postopku.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg370">Razlogi za predlog omenjenega zakona so naslednji. Kot veste, je pred nami uvedba davka na dodano vrednost in trošarin. Aprila je ta parlament sprejel tudi zakon o spremembah in dopolnitvah carinskega zakona. Te trije ključni vsebinski zakoni drugače opredeljujejo in bolj podrobno način in vsebino nalog, ki jih bo opravljala carinska služba po 1.7. letošnjega leta. Pri spremembah in dopolnitvah carinskega zakona gre predvsem za približevanje carinske zakonodaje smernicam oziroma zakonodaji, ki velja na carinskem področju v Evropski uniji.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg371">To približevanje gre predvsem v smeri poenostavitve postopkov, tako pri uvozu kot izvozu, kar z drugimi besedami pomeni, da ni več potrebno vedno cariniti blaga na carinskih izpostavah oziroma na mejnih prehodih, temveč je omogočeno carinjenje tudi na tako imenovanem dvorišču podjetja. S tem ko se poenostavljajo postopki - imenujemo jih poenostavljeni postopki - in je možno carinjenje blaga tudi na dvorišču podjetij, pa morajo podjetja voditi posebno evidenco in mora imeti carinska uprava posebna pooblastila, da z naknadnim nadzorom ugotovi, ali je carinski uvoznik oziroma zavezanec pravilno prijavil oziroma deklariral postopke pri uvozu. Prav zaradi teh dejstev in te vsebine je treba tudi na novo definirati pooblastila delavcev v carinski službi.</seg>
@@ -1263,11 +1246,11 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg374">To je nekaj bistvenih vsebinskih poudarkov, zakaj je treba sprejeti oziroma spremeniti zakon o carinski službi in znotraj teh nalog in pooblastil tudi notranjo organizacijo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg375">Hvala lepa državni sekretarki. Predlog zakona je obravnaval odbor za finance in monetarno politiko kot matično delovno telo. Prosim poročevalca, da predstavi mnenje odbora o predlogu zakona. Besedo ima predsednik odbora, gospod Janez Kopač.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOPAČ:</note>
-            <u who="#SDZ2.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg376">Hvala za besedo. Odbor je predlog zakona obravnaval devet dni in pred vami je tudi najdaljše poročilo h kateremukoli zakonu, ki ste ga kdajkoli dobili od odbora za finance - ima 22 strani. To pa zato, ker je predlog zakona napisan tako, da je evidentno v nasprotju z ustavo Republike Slovenije, na kar je predvsem in prvi opozoril naš sekretariat za zakonodajo in pravne zadeve v svojem zelo obširnem mnenju. Sekretariat je tudi menil, da ni pogojev za to, da bi se predlog zakona obravnaval po hitrem postopku.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg377">Ko smo se na odboru soočali z dilemo, kaj sedaj s takim besedilom, neuporabnim za odločanje na seji zbora, narediti, smo zamižali na obe očesi v zvezi s poslovniškimi določbami in nismo nasprotovali hitremu postopku, pač pa smo se mukoma poskušali dokopati do besedila členov, ki bi še bila skladna z našo ustavno ureditvijo. Tako smo oblikovali okrog 45 ali nekaj več amandmajev k predlogu zakona, ki ima 92 členov.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg378">V osnovnem predlogu zakona je bilo sporno eno samo poglavje tega zakona, in sicer poglavje z naslovom Pooblastila. V predlogu zakona so bile napisane stvari, zaradi katerih, ne bom rekel, da so nam, članom odbora, šli lasje pokonci, ampak lahko rečem, da smo pač imeli zelo močne pripombe, tako kot tudi sekretariat za zakonodajo.</seg>
@@ -1281,30 +1264,30 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg386">Odbor je obravnaval tudi nekaj amandmajev poslanske skupine združene liste k temu predlogu zakona. Tudi to so amandmaji na poglavje Pooblastila. Dva od teh amandmajev je, kot je razvidno iz pregleda amandmajev, podprl. Vse ostale pa je povzel v svojih amandmajih, zato seveda amandmajev poslanske skupine v teh primerih ne podpira, ker pač predlaga svoje, ki so narejeni na podlagi njihovih. Toliko za uvod. Če bo pa treba dati še kakšno poročilo v imenu odbora, ga bom seveda z veseljem dal. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg387">Hvala lepa predsedniku odbora, gospodu Kopaču. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg388">Želijo besedo predstavniki poslanskih skupin? Prosim, v imenu Slovenskih krščanskih demokratov ima besedo gospod Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg389">Spoštovana gospa podpredsednica, gospe in gospodje! Gospod predsednik odbora za finance in monetarno politiko je v glavnem veliko povedal in je prav, da je to povedal, ker smo res imeli veliko dela s tem zakonom in ga nekako poskušali z izredno dobro voljo in vztrajnostjo dodelati, kar menim, da nam ni v opreko. Tudi mi v naši poslanski skupini smo se pogovarjali o tem zakonu in menimo, da je prav, da prihaja. V bistvu poleg tega, da se pridružuje uvajanju zakona o dodani vrednosti, to se pravi področje, ki zadeva trošarine, tudi vstopa v naslednje obdobje drugega polletja, ko bo treba na meji marsikatero stvar urediti. Poleg tega pa, kot se vidi, ker je to celovit zakon, ki govori o carinski službi, je prišel pa tudi čas, da se tudi posamezne druge stvari celovito uredijo. Problemi, ki so bili in ki se dotikajo velike odgovornosti in področje carinske službe.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg390">Ne bom govoril o tem, skozi kaj smo se prebijali. Prebijali smo se skozi sotesko upravnega reda in primerljivosti z ostalimi zakoni, kar je bilo glavno. Res je, da je zakon z izjemno širokim poročilom, res, da je veliko amandmajev, vendar mislim, da to ne sme ubiti naše volje. V naši poslanski skupini menimo, da naša carinska služba služba mora imeti tak zakon in mora imeti urejene stvari primerljivo z drugimi. Menim, da so bila vsakršna razmišljanja o tem, kako in kaj bodo reagirali in kakšen zakon se sprejme, nepotrebna, ker konec koncev ne bi bilo prav in ni prav, da bi bil kakršenkoli pritisk ob tem trudenju, kot je bil. K temu trudu smo se pridružili tudi krščanski demokrati in menim, da je prav, da zakon v taki obliki, kot ga amandmaji tudi dopolnjujejo, sprejmemo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg391">Hvala lepa, gospodu Izidorju Rejcu, ki je razpravljal v imenu poslanske skupine. Želi še katera poslanska skupina besedo? Prosim, v imenu združene liste ima besedo gospod Horvat.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg392">Hvala za besedo, gospa podpredsednica. Spoštovane kolegice in kolegi, minister, direktor carinske uprave in ostali prisotni. V združeni listi smo zadovoljni, da so sprejeti oziroma podprti nekateri amandmaji, nekateri pa smiselno povzeti. Večina teh amandmajev se nanaša ravno na eno najbolj spornih vprašanj v predlogu zakona, o katerih je govoril tudi kolega Kopač. Razumemo, da so iz vrste razlogov, tako zaradi prilagajanja Evropski uniji in pravilom, ki tam veljajo v carinskih službah, kot tudi iz drugih razlogov, zaradi trošarin, na primer, večja pooblastila potrebna, vendar je pa ob teh pooblastilih treba tudi paziti, da so kolikor se da preprečena možna kršenja človekovih pravic ali pa celo tveganja, da bi posamezne določbe razveljavilo ustavno sodišče. Tako da bomo ob tem zadovoljstvu podprli tudi ostale amandmaje in s tem predlog zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg393">Hvala lepa gospodu Francu Horvatu. Želi predstavnik še katere poslanske skupine besedo? Ugotavljam, da ne. Besedo dajem poslankam in poslancem. Prejeli smo eno pismeno prijavo - besedo ima torej gospod Ivo Hvalica. Razprave ostalih poslancev so omejene na pet minut.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg394">Hvala lepa, gospa podpredsednica. Nenavadno malo zanimanja je za ta zakon. Ne vem, jaz sicer razumem, da prenekatere to ne zanima, ker bi rekel, da carina bolj tangira tiste, ki živimo v obmejnih krajih. Spoštovani kolegi, to pa mora zanimati tudi druge. Odločil sem se, da stopim za govornico pravzaprav malo drugače, ko sem zaslišal, da gospodu Kopaču stojijo lasje; kadar njemu vstanejo lasje, jaz postanem pozoren - to je že nekaj, si mislim. Nakar, jasno, človek ne more mimo tistega, kar je gospod Kopač tu rekel, pravzaprav je govoril tako, kot da bi ta zakon predlagala opozicija. Pa kaj se greste tu? Kdo je pa predlagal? To je vaša vlada predlagala, vi ste pa sesekali ta zakon do konca! Pojdimo po vrsti.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg395">Gospa Milojka Kolar, ki je zelo skopo predstavila ta zakon, je bila zelo enostranska. Rekla je naslednje: "Razlogi, uvedba davka na dodano vrednost, in drugo, pobiranje trošarine." Pa to niso edini razlogi, verjetno je še kakšen razlog. Carinska služba doživlja bistveno spremembo. Zakon, ki sedaj uravnava delo carinske službe, je iz leta 1991. Vemo, v kakšnih pogojih je nastal in zakaj. Danes, po osmih letih te države, bi se pa lahko malo drugače lotili tega zakona, predvsem ne na takšen način.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg396">Prvič, zakona ni predlagala opozicija in zato tu prihajati na takšen način, kot prihaja gospod Kopač, in predlagati 54, če sem dobro preštel, amandmajev, je, milo rečeno, kot jaz temu pravim, nehigienično. Kako da niste, gospod Kopač, prej, ko ste na golažu, ko imate trobenta partij in dupleške koalicije, zakaj se tam ne pogovorite? Sem pridete sedaj s 54 amandmaji in boste zagrenili tu dve ure poslancem ali več, lahko bo trajalo veliko več. To je vaš problem in ne govoriti, da vam opozicija nagaja. Ali naj mi sedaj res verjamemo tem amandmajem? Razen ljudi, ki sodelujejo v odboru za finance. Hvala bogu, tam že dolgo nisem in sem presrečen, da nisem tam. Ne vemo. Ali je to sedaj, kar se prodaja s strani gospoda Kopača, suho zlato. Mogoče pa je suho zlato tisto, kar je v predlogu zakona, v osnutku. Ali so pisali osnovni osnutek bedaki? Kako se upa minister podpisati pod tak osnutek? Nekaj je narobe. Te stvari moramo razčistiti. Če je ta zakon tako zanič, celo krši človekove pravice, kako si upate minister to podpisati? Vi ste prvi podpisani na predlog zakona. Ste ali niste? Gledam vas in vas sprašujem. Povejte! Ali ste? Lahko, lahko.</seg>
@@ -1319,7 +1302,7 @@
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg403">, pomeni, da ste to sprojektirali - in hitri postopek in vse skupaj. Trdno sem prepričan, da boste zakon s temi amandmaji lahko sprejeli, ker imate večino, ampak to ne bo zakon, ki bo zadovoljil uslužbence slovenske carine. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg404">Hvala lepa gospodu Hvalici. Besedo dajem ostalim poslancem, njihove razprave pa omejujem na pet minut. Kdo želi besedo? Ali želi kdo razpravljati? Ugotavljam, da ni razpravljalcev. Ker ni razpravljalcev, zaključujem splošno razpravo.</seg>
                <seg xml:id="SDZ2-Redna-15-1999-06-15.seg405">Ker bo ura 18.00, predlagam, da prekinemo to točko dnevnega reda in s tem prekinjam tudi 15. sejo državnega zbora. Nadaljevali bomo jutri ob 10.00 uri z 2. točko dnevnega reda. To so vprašanja in pobude poslank in poslancev, nato pa bomo nadaljevali s točko, ki smo jo ravnokar prekinili. Vsem želim prijeten večer!</seg>
             </u>

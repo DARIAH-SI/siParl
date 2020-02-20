@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Izredna-33-1999-03-25"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">33. izredna seja (25. 3. 1999)</title>
-            <meeting n="33"
-                     corresp="#SDZ2-Izredna-33-1999-03-25.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="33" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">33. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|44DD71F427A5A35AC12567430034A92C</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=44DD71F427A5A35AC12567430034A92C</idno>
-                  <imprint>
-                     <date when="1999-03-25">(25. marec 1999)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>33. izredna seja (25. 3. 1999)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1999-03-25"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=44DD71F427A5A35AC12567430034A92C</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="42"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="31"/>
                <tagUsage gi="seg" occurs="156"/>
                <tagUsage gi="gap" occurs="2"/>
@@ -250,25 +235,21 @@
                <date when="1999-03-25" ana="#parl.sitting">25. 3. 1999</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Izredna-33-1999-03-25.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">33. izredna seja</head>
-            <docDate>(25. marec 1999)</docDate>
             <note type="chairman">Sejo je vodil Janez Podobnik, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 17.11 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg1">Spoštovane kolegice poslanke in kolegi poslanci! Pričenjam 33. izredno sejo državnega zbora Republike Slovenije, ki sem jo sklical na podlagi 51. člena poslovnika državnega zbora.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg2">Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Jože Možgan, Rafael Kužnik, dr. Helena Hren-Vencelj, Janez Mežan, Štefan Klinc, Jakob Presečnik, dr. Ciril Ribičič, dr. Jože Zagožen, mag. Franc Žnidaršič, Alojz Vesenjak, Franc Pukšič, mag. Janez Kopač, Andrej Fabjan, Peter Hrastelj, Vincencij Demšar in Roman Jakič.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg3">Prosim, da ugotovimo prisotnost v dvorani. Prisotnih je 69 poslank in poslancev; državni zbor je sklepčen in lahko odloča.</seg>
@@ -288,7 +269,7 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg14">V dogovoru s predstavniki vlade bo osrednje poročilo k tej točki podal minister za zunanje zadeve, dr. Boris Frlec, ki ga prosim, če poda poročilo oziroma informacijo.</seg>
             </u>
             <note type="speaker">DR. BORIS FRLEC:</note>
-            <u who="#SDZ2.FrlecBoris" ana="#regular">
+            <u who="#FrlecBoris">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg15">Spoštovani gospod predsednik, spoštovane poslanke in poslanci! Sodim, da je sklic te seje, ki je namenjena podrobnejšemu informiranju poslancev v zvezi z aktualnimi dogodki na Kosovu, koristen in potreben.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg16">Dejstva okrog te operacije so več ali manj znana. Mislim pa, da je prav, da najprej označimo, za kaj gre. Gre za oboroženo vojaško intervencijo, ki so ji sile Nato dale ime Združene sile in ki ima za svoj namen prekiniti tiste vrste nasilja, ki poglablja humanitarno krizo na Kosovu, ustaviti nasilje, ki je v zadnjih 10 letih na področju bivše Jugoslavije povzročilo 400 tisoč mrtvih in več kot 300 tisoč beguncev. To ni akcija, ki bi bila naperjena proti srbskemu narodu, to ni akcija, ki bi kakorkoli osvajala ozemlja. Ampak je akcija, ki naj ustavi silo. Potem, ko so bile izčrpane že vse diplomatske možnosti, ko se beograjska vlada oziroma režim v Beogradu ni odzval na pobude mednarodne skupnosti, da sede za pogajalsko mizo in sprejme ponujeni dogovor, ki ga je albanska stran že sprejela, ni preostalo nič drugega, kot da se intervenira s silo.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg17">Ob taki vojaški intervenciji si upravičeno postavljamo vprašanje: Kakšno je stanje v Sloveniji? Včeraj smo na osnovi prvih vesti o tej intervenciji dali nekatere izjave za javnost. Danes zjutraj se je sestal tudi svet za nacionalno varnost, ki je ocenil razmere v Sloveniji kot varne, kot take, ki normalnega življenja v Sloveniji nikakor ne ogrožajo. Vendar obstajajo nekatere potencialne nevarnosti in ustrezni upravni organi so sprejeli ukrepe, ki zagotavljajo nadaljnjo varnost slovenskih državljanov in vseh tistih, ki so v Sloveniji.</seg>
@@ -303,11 +284,11 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg26">Toliko za uvod in se vam zahvaljujem za pozornost. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg27">Hvala lepa gospodu ministru za zunanje zadeve. Želi še kdo od tukaj prisotnih predstavnikov vlade besedo v tem uvodnem delu? Prosim, gospod Borut Šuklje, minister za notranje zadeve.</seg>
             </u>
             <note type="speaker">BORUT ŠUKLJE:</note>
-            <u who="#SDZ2.ŠukljeBorut" ana="#regular">
+            <u who="#ŠukljeBorut">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg28">Gospod predsednik, gospe poslanke, gospodje poslanci! Dovolite, da vam povem nekaj osnovnih informacij iz včerajšnjega popoldneva in današnjega dne, ki zadevajo delokrog ministrstva za notranje zadeve. V zvezi z vojaškim posegom izvajamo naslednje aktivnosti:</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg29">Včeraj smo ustanovili na ministrstvu delovno skupino, ki je usklajevala aktivnosti policije v času pred in po napadu zveze Nato na izbrane cilje v ZRJ. Danes pa so bili ustanovljeni tudi operativni štabi na ministrstvu in na vseh policijskih upravah Republike Slovenije. Naloge operativnih štabov so predvsem spremljanje varnostnih razmer, usmerjanje policije v zvezi z izvajanjem policijskih nalog, usklajevanje vseh aktivnosti za zavarovanje varnosti ljudi in premoženja, usklajevanje aktivnosti z drugimi državnimi organi in določanje taktičnih rešitev za obvladovanje nastalih varnostnih razmer.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg30">Že pred izvedenim napadom včeraj je vodstvo policije odredilo izvajanje temeljite mejne kontrole na vstopu v našo državo in izstopu iz nje ki se izvaja v koordinaciji s carinskimi organi. Ministrstvu za zunanje zadeve smo tudi predlagali začasno ustavitev izdajanja vizumov državljanom ZRJ, in to je že reagiralo in tudi poslalo ustrezne usmeritve. Hkrati je policija v cilju preprečevanja ilegalnih migracij okrepila tudi varovanje državne meje z Madžarsko in Hrvaško. Ker sta iz vidika tega v tem trenutku najbolj rizični področji policijske uprave Murska Sobota in Maribor, smo v dopoldanskem času na območje teh dveh uprav dodatno napotili policiste, ki so na usposabljanju v policiji. V vseh policijskih upravah smo odredili pripravljenost na domu za policiste posebne policijske enote, katere lahko v primeru potreb takoj aktiviramo in jih napotimo v katerikoli del naše države.</seg>
@@ -319,11 +300,11 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg36">In na koncu, če dovolite, še ocena. S kolegi v ministrstvu na policiji ocenjujemo, da je stanje zaenkrat stabilno in da slovenska policija s svojimi ukrepi in aktivnostmi obvladuje razmere v območju države, povezane z nastalo situacijo v ZRJ. Gospodje poslanci, gospe poslanke, hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg37">Hvala lepa, gospod minister. Minister za obrambo, dr. Demšar. Prosim.</seg>
             </u>
             <note type="speaker">DR. FRANCI DEMŠAR:</note>
-            <u who="#SDZ2.DemšarFranci" ana="#regular">
+            <u who="#DemšarFranci">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg38">Spoštovani! V zvezi s situacijo v Zvezni republiki Jugoslaviji vam ministrstvo za obrambo Republike Slovenije podaja naslednjo informacijo.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg39">Ministrstvo za obrambo intenzivno spremlja s svojimi organi v sestavi in organizacijskimi enotami situacijo v Zvezni republiki Jugoslaviji. Intenzivno sodeluje z ostalimi državnimi organi. Ministrstvo za obrambo je sprejelo v skladu z načrti določene ukrepe za generalštab Slovenske vojske in Slovensko vojsko ter še za nekatere organizacijske enote v povezavi z oceno ogroženosti Republike Slovenije. Ocenjujemo, da Republika Slovenija ni neposredno vojaško ogrožena, vendar situacijo spremljamo. Operativna skupina je usmerjena predvsem v nadzor objektov Slovenske vojske.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg40">V skladu z odobritvijo tranzita prek Republike Slovenije ugotavljam, da je v zadnji noči bilo nekaj preletov tujih vojaških letal, kot je ugotovil že pred mano dr. Frlec, vendar ne moremo potrditi, da je šlo za prelete v zvezi z letalskimi nalogami v Zvezni republiki Jugoslaviji.</seg>
@@ -331,13 +312,13 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg42">Če na kratko povzamem. Osredotočil sem se v glavnem na dve stvari: na oceno ogroženosti s strani Zvezne republike Jugoslavije in na varovanje objektov in pripadnikov Slovenske vojske. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg43">Hvala lepa ministru za obrambo, dr. Demšarju. S tem lahko ocenim, da je izčrpan prvi del, torej informacija s strani predstavnikov vlade. Sedaj bi prešli na stališča oziroma besedo poslanskih skupin oziroma poslancev. Ko smo se danes srečali v opoldanskem času z vodji poslanskih skupin, kjer je bil tudi dan predlog, da se skliče izredna seja, je šel naš dogovor v smeri, da bi poslanske skupine oziroma poslanke in poslanci racionalno izkoristili to možnost nastopa, torej da bi se praviloma oglasil po en poslanec iz vsake poslanske skupine. Seveda pa ni poslovniške določbe, ki bi lahko tako odločitev v celoti zapisala. Tako, da pričakujem, da se boste pač odločili v skladu s smerjo našega dogovora.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg44">Dovolite mi še naslednjo misel. V celoti spoštujem svobodo poslancev in svobodo govora poslancev in poslank, je pa res, da je naša beseda tudi odgovornost zaradi občutljivosti teme in ob dejstvu, da bi lahko bila stališča nas poslancev in poslank napačno razumljena v javnosti. Zato apeliram, da bomo z veliko odgovornostjo uporabili možnost in razpravljali o tej občutljivi tematiki.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg45">Kot prvi se je v imenu poslanske skupine Slovenskih krščanskih demokratov prijavil gospod Alojz Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg46">Hvala lepa za besedo, gospod predsednik. Spoštovane poslanke in poslanci, gospod predsednik vlade in ministri! Najprej bi prosil predsednika državnega zbora, naj ne govori na tak način, kaj bi bilo racionalno. Racionalno je dati poslankam in poslancem besedo, da bodo povedali, kar mislijo, da je treba povedati ob tej priložnosti. Ne govorimo o pirhih - padajo bombe, padajo rakete, 350 kilometrov od nas je padla prva! Jaz se ne bojim raket v Sloveniji, ne morem se pa strinjati z ministrom za zunanje zadeve, kot da Slovenija nima nič s tem. On je rekel, "Slovenija ni vpletena". Vprašajte novinarje, kako je vpletena. Mi smo kot poslanska skupina predlagali izredno sejo odbora za obrambo, ker menimo, da je to tisti odbor, ki je najbolj pristojen za temo, ki jo zdajle obravnavamo, in ne gre samo za vprašanje informacije o intervenciji ter ocene razmer v Republiki Sloveniji. Razmere v Republiki Sloveniji, mislim, da so v zvezi s tem še kar v redu. Zagotovila oziroma ukrepi, ki jih je vlada sprejela, mislim, da so - vsaj ti, ki so bili predstavljeni - pozitivni, in sem vesel, da smo bili o njih informirani. Gre več kot za oceno razmer v Sloveniji, gre za oceno razmer okrog Slovenije, gospe in gospodje, in te, mislim, da niso tako enostavne, kakor so bile v dosedanjih nastopih vladnih predstavnikov predstavljene.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg47">Torej, naša želja je bila povsem v skladu s poslovnikom, da najprej ta odbor obravnava zadeve v prisotnosti visokih predstavnikov vlade, da se dobro obdelajo posamezne dimenzije. Enako bi lahko naredil OMO, enako še kakšna druga komisija ali odbor, potem bi pa prišli pripravljeni na izredno sejo s stališči. Tako se nam ta zadeva lahko konča z informacijo in brez vsakega stališča. Jaz pa mislim, da bi bilo dobro, da bi ta zbor sprejel kaj ob tej priliki, da se ne bi izrazila samo izvršilna veja oblasti.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg48">Mi smo veseli, da je navsezadnje rezultiral naš predlog vsaj v sklic izredne seje. Menimo, da gre za izredno potrebo po odgovornem dialogu v na novo nastalih razmerah, ki so nastale z vojaškim posegom mednarodnih sil v Zvezni republiki Jugoslaviji. Namen ni bil pridobiti samo verodostojne informacije o stanju, ampak tudi o informacijah o presojah vlade, o ozadju za njihove odločitve in tudi o njihovih predvidevanjih in tudi o projektu bodoče politike v tej zvezi. Zadeva se je na nek način šele začela. Torej mi menimo, da gre pri tem posegu za tako dejstvo, v marsičem enkratno ali prvo, oziroma drugačno od drugih, blizu meja naše države, dejstvo, ki bo imelo nedvomno dolgoročne pomembne lokalne, regionalne, nacionalne ali mednacionalne, evropske in tudi čezevropske posledice.</seg>
@@ -353,13 +334,13 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg58">Dovolite, da na koncu izrazim še nekaj. Mislim, da smo dolžni izraziti solidarnost z novinarji, posebej s slovenskimi in srbskimi, ki so bili deležni posebnega obnašanja Miloševićevega režima. Naša poslanska skupina želi ob tej priložnosti izraziti to solidarnost. Kdor je poslušal našega dopisnika iz Beograda, je razumel, v kakšnem položaju so novinarji, ki so že plačali tudi svoj krvni davek k nasilnemu razvoju dogodkov v območju bivše Jugoslavije. Torej, mi si želimo stvarne, resne razprave, ne retoričnih vprašanj, pa tudi ne samo suhoparnih odgovorov, ampak radi bi reakcijo, jasno reakcijo vlade na spremembo, ki se je začela odvijati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg59">Hvala lepa, gospod Peterle. Kar se tiče sklica te izredne seje, sem dolžan kratko pojasnilo.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg60">Kot veste, moj predlog ni bil, da bi bila danes izredna seja. In prosim, da imate komunikacijo med poslanskimi skupinami, vodji poslanskih skupin in člani poslanskih skupin. Jaz sem predlagal, da bi se danes popoldne srečala tri delovna telesa in potem še dodatno, četrto, in da bi na tej skupni seji ugotovili, ali je eventualno potrebno, da pride do izredne seje, na kateri bi se dobro pripravljeni, tudi s sklepi, o teh vprašanjih pogovarjali. Vodje poslanskih skupin ste predlagali drugače in vašo željo in predlog sem tudi upošteval. In prosim, ti očitki so do mene v celoti krivični.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg61">Besedo ima gospod Zmago Jelinčič, v imenu poslanske skupine Slovenske nacionalne stranke.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg62">Hvala lepa, gospod predsednik. Kolegice in kolegi, spoštovani predstavniki vlade! Imam občutek, kot da je ta izredna seja, 33. izredna seja, z naslovom Informacija o intervenciji vojaških sil Nato v Zvezni republiki Jugoslaviji ter ocena razmer v Republiki Sloveniji v zvezi s temi dogodki, sklicana zato, da bi vlada in njeni predstavniki ter predsednik države, gospod Kučan, dobili verifikacijo za svoja stališča tudi v parlamentu.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg63">Včeraj smo poslušali izjave predsednika države in predsednika vlade, ki sta že povedala svoje, ne glede na to, da bi se kdorkoli od njiju ali vsaj predsednik vlade posvetoval z najvišjim zakonodajnim telesom, s parlamentom Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg64">Izjave, ki so jih dajali, zagotovo niso v skladu z razmišljanjem vsega slovenskega naroda. Rekel bi tudi, da ne v skladu z vsemi poslanskimi skupinami in z vsemi poslanci tukaj notri v slovenskem parlamentu. Zato popolnoma razumem izvajanje gospoda Peterleta, ko je rekel, da bi morali najprej razglabljati o zadevi na delovnih telesih, potem se pa pripravljeni spustiti v razpravo tu v državnem zboru in potem sprejeti določena stališča in sklepe, ki bi jih potem lahko posredovali javnosti, tako domači kot mednarodni.</seg>
@@ -373,27 +354,27 @@
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg72">Kolega Jelinčič, predlagam, da ne bi naprej pač predstavljali teh podatkov. Če bo državni zbor v prihodnjih dneh obravnaval ta vprašanja, je to najverjetneje tema za delovno telo, sedaj pa je predvsem govor o informaciji, ki smo jo slišali s strani vlade.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg73">Gospod predsednik, že v samem začetku ste predlagali omejevanje besede poslancem. Proti temu moram najostreje protestirati. Gospod predsednik, kdo vam daje pravico, da kratite poslancem pravico, da povedo svoje mnenje?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg74">Nihče.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg75">Torej?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg76">Poslanec naj se samo drži točke dnevnega reda. Samo to.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg77">Držim se točke dnevnega reda, ki če dovolite, vam jo preberem še enkrat: "Informacija o intervenciji vojaških sil Nato v Zvezni republiki Jugoslaviji ter ocena razmer v Republiki Sloveniji v zvezi s temi dogodki". Mislim da, ko govorimo o intervenciji vojaških sil Nata, je treba povedati, zakaj so te sile napadle, kaj je bil razlog. In ko se bo ta razlog videl, bodo verjetno stališča nekaterih drugačna. Vendar, če mi pač omejujete govor, bom pač to skrajšal, čeprav sodim, da gre za dogovorjeno politiko vladajoče koalicije, ki ne dovoli drugačnega mnenja, ki ne dovoli drugačnega razmišljanja in ki predvsem ne dovoli nobenih dokazov. Jaz se ne postavljam ne na eno ne na drugo stran, vendar me skrbi usoda Slovenije. Če pogledamo o Sloveniji, ki je na vrat na nos pohitela in dovolila prelete Natovih letal, obenem pa bi povprašal - ali je Avstrija dovolila prelete? Ni. Ali je Madžarska, ki je že v Natu, dovolila prelete? Tudi ne. Madžarska je dovolila samo prelete letal v primeru, če je letalo zadeto, to se pravi zasilnih pristankov. Ali je Makedonija, ki ima svoje sile oziroma sile Nata že v Makedoniji, dovolila uporabo zračnega prostora? Tudi ne. Vsaj take so informacije iz slovenskih medijev. Slovenci smo na vrat na nos pohiteli, ne da bi pomislili, kaj se lahko zgodi. Predstavljajte si, da pade na našo ubogo Slovenijo en sam bombnik B-52 z vsemi raketami! Če nič drugega, raketne konice tomahawkov so tudi radioaktivne, narejene so iz osiromašenega urana. Tudi to bi bilo eno od onesnaženj v Sloveniji. Da ne omenjam možnih eksplozij, možnih žrtev in podobnega.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg78">Vprašal bi se, zakaj slovenska vlada zdaj tako vehementno govori o eni humanitarni katastrofi, nikoli pa se ni oglasila o humanitarni katastrofi, ki se dogaja s Kurdi, pa jih je 20 milijonov. Nikoli in nikdar. Konec koncev, zakaj se slovenska vlada ni oglasila, vsaj "post festum", ko se je ugotovilo, da so Združene države Amerike bombardirale tovarno zdravil, če je že v samem začetku tako vehementno ploskala ob tem napadu! Izgleda, da je slovenska vlada pripravljena za vstop v Nato narediti prav vse. In vendar sodim, da se na tak način od Nata samo še odmikamo. Kajti hlapcev ne potrebuje nihče in nikjer. Naša politika, ki jo vodi naša vlada, nikakor ni v skladu z varnostno politiko Republike Slovenije. Že gospod Peterle je rekel in se vprašal, le kaj je govoril svet za nacionalno varnost. Kdo mu je izdelal študije, zopet čez noč, kakor se vse dela čez noč v slovenski vladi. Ali so si morda udeleženci tega sveta za nacionalno varnost zgolj podajali eden drugemu tako ali drugače interpretirane Clintonove izjave, kot smo jih slišali na televiziji? Clinton je en sam, on je povedal svoje. Zakaj hočejo biti predstavniki naše države podobni Clintonu in ponavljati tisto, kar je povedal? Kaj res nimamo svojega lastnega mnenja oziroma ti ljudje nimajo svojega lastnega mnenja?</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg79">Govorjeno je bilo in povedano, da je kontrola na meji povečana. Mislim, da je slovenska meja še vedno ena od najbolj transparentnih in da tiste opombe in tista navodila, ki nam jih daje Evropa o propustnosti naše meje, držijo, zagotovo držijo, in ne vem, če jih bomo uspeli zapreti. Zagotovo ne na tak način in zagotovo ne s tako zakonodajo, kot jo imamo. Mislim, da je Sloveniji namenjena vloga tampona v krizni situaciji na Balkanu, ki se zopet širi. Zagotovo ta situacija ne bo omejena samo na Zvezno republiko Jugoslavijo, še bolj zagotovo ne, ker kakorkoli je Rusija v tem trenutku slaba ali slabotna, ali kakorkoli lahko rečemo, vendarle ima določene generale, ki imajo pod komando raketne konice z atomskim nabojem. Mislim, da te stvari niso kar tako zanemarljive. Bojim se - upam pa, da grešim - da bomo čez čas razpravljali v tej dvorani o kakšni bolj konkretni nevarnosti, o kakšnih že doživetih zadevah, ki jih bomo pa takrat reševali toliko težje in toliko bolj kruto bo vse skupaj.</seg>
@@ -402,11 +383,11 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg82">Mislim, da tak način reševanja krize ni, navkljub temu, da se nekateri poslanci veselo smejijo, ne bom povedal, kateri se veselo smejijo, morda jim je všeč vojna, meni ni, čeprav v tistem času, ko sem se jaz boril, sem se boril, tisti ki se pa danes smejijo tu notri, so se pa skrivali. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg83">Hvala lepa. V imenu poslanske skupine socialdemokratov, gospod Janez Janša.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SDZ2.JanšaJanez" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg84">Spoštovani gospod predsednik! Predstavniki vlade, kolegice in kolegi! Po mnenju poslanske skupine Social demokratske stranke je bil poseg Nata v Jugoslaviji upravičen. Vprašanje pa, če je bil pravočasen in dovolj premišljen in tudi dovolj dobro pripravljen. Po našem mnenju je Slovenija na pravi strani in slovenska vlada je ravnala prav, ko je odobrila določene aktivnosti Nata, ki zadevajo tudi uporabo slovenskega ozemlja oziroma zračnega prostora. Vendar smatramo, da je bolj kot razpravljanje o tem, zakaj se je to zgodilo, danes na mestu presoja o tem, kaj se bo dogajalo. Ker to, kaj se bo dogajalo, bo neposredno vplivalo tudi na nas, na naš varnostni položaj in na vse tisto, kar iz tega izhaja. Po včerajšnjem dnevu so nekatere stvari v širšem smislu jasne. Prvič. Vloga organizacije združenih narodov je razgaljena, sedaj je tudi navzven prikazana kot takšna, kakršna dejansko je. To je neučinkovita organizacija, ki ni sposobna adekvatno odgovarjati na krizne izzive v svetu konec 20-ega stoletja. In obeta se nam iskanje novih formul in novega reda.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg85">Drugič. Jedrsko razoroževanje je vsaj začasno zaustavljeno. To, vprašanje za koliko časa, vendar pa bo včerajšnje dogajanje zagotovo vplivalo in okrepilo tista razmišljanja, ki pač vidijo v jedrskem orožju obrambo šibkejših in ekonomsko manj uspešnih držav, in iz tega izhaja cela vrsta nevarnosti, za katere mislimo, da smo dolgo časa, vsaj v zadnjih letih mislili, da so že za nami. Kdor je danes spremljal dogajanje po svetu, kjer se je marsikaj dogajalo, veliko ocen je padlo glede na ta dogajanja v zvezi s posegom Nato v Jugoslaviji, je verjetno slišal tudi izjavo največje Ruske stranke ruskih komunistov, ki so označili to dejanje Nata za tehnokratski fašizem. To je zgledalo precej smešno, vendar pa je dejstvo, da bodo te sile na prihodnjih ruskih volitvah zaradi teh dogajanj okrepljene in da bo to vplivalo tudi na splošno dogajanje v Evropi. In seveda po včerajšnjem dnevu je vprašanje biti v ali biti izven Nata postalo še mnogo več kot samo neko prestižno politično vprašanje, kar je še do včeraj zgledalo in se je marsikomu zdelo, da gre to za nekaj, kar tako ali tako čez 10 let ne bo več važno.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg86">Tisto, kar je bistveno po mojem mnenju, je tudi za našo presojo, kako ravnati, predvsem za presojo vlade, kako ravnati, pa je vprašanje hitrosti reševanja te krize. Od tega, kako hitro se bo ta kriza reševala, je tudi odvisno, kakšne bodo posledice. Če bo zadeva relativno hitro končana, potem lahko to posredovanje prinese stabilnost v regijo in vse tiste pozitivne posledice, ki izhajajo iz te stabilnosti. Če se bo kriza vlekla, so lahko posledice negativne. Tisto, kar je po našem mnenju problem, je vprašanje končnega cilja.</seg>
@@ -421,11 +402,11 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg95">Še enkrat pa apeliram na to, da ministrstva resno spremljajo to situacijo, kajti zadeva bo resnejša, dlje časa bo trajala, in da prek kanalov, kolikor jih Slovenija ima, ker zdaj je del nekega širšega zavezništva v tej kampanji, skuša s svojimi predlogi vplivati na to, da bo ta akcija ob svoji učinkovitosti čim krajša; ker dalj časa bo trajala, manjša bo tudi njena učinkovitost. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg96">Hvala lepa. V imenu poslanske skupine Liberalne demokracije Slovenije, gospod Jelko Kacin.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg97">Spoštovani gospod predsednik, kolegice in kolegi, člani vlade! V imenu poslanske skupine Liberalne demokracije Slovenije želim opozoriti na dejstvo, da je današnji trenutek, ko poteka skupna mednarodna preventivna akcija proti Jugoslaviji, trenutek, ko bi lahko in mislim da bi tudi morala vlada in parlament manifastirati svojo enotnost.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg98">Nismo v taki situaciji, kot Združene države Amerike, da bi predsednik pozival državljane, naj molijo za vojake in vojakinje na ozemlju, kjer poteka vojskovanje. Ampak vendarle se mi zdi prav, da se spomnimo, da je oddelek naših vojakov ta hip na ozemlju Bosne in Hercegovine, ki je relativno blizu, in zaradi tega je seveda tudi razumljivo, da so naši ljudje občutljivi za vse, kar se dogaja nad Zvezno Republiko Jugoslavijo in v njeni bližini. In iz teh razlogov se mi zdi, da je ta razprava danes tudi na mestu.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg99">Ampak vendarle bi rad ob nekaterih očitkih, ki so bili povedani o tem, da vlada ni dovolj storila za to, da bi zakonodajna veja oblasti bila pritegnjena v razmislek in odločanje, dodal nekaj misli, ki govorijo drugače. Nenazadnje danes zjutraj je bil svet za nacionalno varnost, na katerega je bil povabljen tudi predsednik našega državnega zbora. Tam je sodeloval in na podlagi spoznanj smo se predsedniki nekaterih delovnih teles na njegovo pobudo z njim tudi srečali in razmišljali o tem, kako opraviti vsebinsko razpravo v zvezi s tem.</seg>
@@ -436,23 +417,23 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg104">Zato bi, kolegice in kolegi, priporočil, da se ob koncu dogovorimo tudi za način, kako bomo razvoj dogodkov spremljali v prihodnje in kako bomo kot država, kot parlament in vlada na isti strani enotno nastopali doma in na tujem. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg105">Hvala lepa. V imenu poslanske skupine Združene liste socialnih demokratov ima besedo gospod Pahor.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg106">Hvala lepa, gospod predsednik. Včeraj zvečer se mednarodna skupnost ni odločala med mirom in vojno. Ni bilo te izbire. Že dolgo časa na ozemlju, na katerega je včeraj intervenirala mednarodna skupnost, ni bilo miru. Že 10 let ni bilo miru. V zadnjih mesecih se je nasilje še stopnjevalo in grozilo s humanitarno katastrofo. Bilo je potrebno intervenirati. Nihče nima rad vojne! Nihče! Vsak si želi, da bi bila čimprej končana in k tej želji se priključujemo tudi mi. Vendar je bilo treba oceniti situacijo in ukrepati. Po letih nasilja, ki se je stopnjevalo, je bilo treba ukrepati. Zdaj si lahko samo želimo, da je vodenje tega ukrepa tako, da bo dovolilo, da se prekine tisti hip, ko bi se lahko nadaljevala mirovna pogajanja. Ko bi lahko vojno kot reševanje problema nadomestil mir in ta mir stabiliziral in omogočil, da bi ljudje različnih nacionalnosti, ver, prepričanj živeli skupaj v miru in napredku. In za to gre. Mislim, da mora biti Slovenija na strani tistih sil, na strani tistega dela mednarodnih skupnosti, ki si za to prizadeva. Seveda se tukaj postavljajo mnoge dileme, mnoga vprašanja. O vlogi Varnostnega sveta, o avtorizaciji, o stvareh, ki jih bo kot svojo posledico pustila ta intervencija. Vse to so seveda odprta vprašanja in gotovo bo novo tisočletje tudi v tem smislu prineslo novega duha in novih rešitev in novih navad. Samo treba je bilo poskrbeti za to, da se to tisočletje in to stoletje ne konča z nebrzdanim nasiljem. In v tem smislu pač Slovenija, mislim da, ustrezno s primernimi izjavami vodilnih ljudi sodeluje pri iskanju politične rešitve za ta problem. Mislim, da je prav, da državni zbor oziroma predstavniki slovenske oblasti v svojih izjavah potrdijo, to je vsaj stališče združene liste, da je protektorat pravilna, prava, morda pravična politična rešitev, pravo iskanje rešitve na tem tako zelo občutljivem delu Evrope. Protektorat. Politična rešitev, ki bi omogočila, da bi ljudje različnih nacionalnosti, veroizpovedi, prepričanj živeli skupaj in to na najbolj vihravem delu pod mednarodnim nadzorom z garancijo mednarodnih sil. Protektorat je prava rešitev, sporazum v Rambouilletu in Parizu je šel v to smer, je bil iskanje rešitve v pravi smeri. Mednarodna skupnost je po naši oceni storila vse, da bi s političnimi silami, s političnimi sredstvi dosegla uveljavitev tega sporazuma. Zaradi zelo malomarne politike režima, ki mu ni bilo mar za nasilje, se to ni zgodilo, bilo je potrebno ukrepati.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg107">Seveda bo ukrepala tudi slovenska država. Jaz bi rad v imenu stranke izrazil prepričanje, da slovenska država lahko v teh situacijah, v teh okoliščinah deluje povsem normalno, zavaruje vse naše interese, državne, premoženjske, interese slehernega posameznika, ki je naš državljan ali živi danes pri nas. Apsolutno! Glede tega imajo organi države polno zaupanje. Mi se priključujemo temu, da bi, kolikor je to potrebno, tudi v tej hiši iskali, če bo to potrebno, nacionalni konsenz za to, da se brez velikih političnih prepirov najdejo prave rešitve za sleherne situacije, v katerih bi se lahko znašla naša dežela. Treba je ravnati brez nervoze, neko izkušnjo ta državni zbor, slovenska politika ima. Mislim, da smo dovolj zreli, da lahko vodimo odločitve v skladu s svojimi pristojnostmi seveda, brez nervoze, s takim načinom, da bodo ljudje dobili nek vtis, da bodo prepričani, da obvladujemo zadeve in da je lahko slehernemu posamezniku, bom rekel, živeti brez zaskrbljenosti ali pa brez strahu ali brez neke negotovosti. To se mi zdi zelo pomembno in če današnja seja k temu vtisu, k temu prepričanju pripomore, jo v tem smislu tudi pozdravljamo.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg108">Jaz bi predlagal, predsednik, da morda po koncu te razprave poslanskih skupin sejo prekinemo, če bi se s tem poslanci strinjali, in pozovemo pristojna delovna telesa, da se v miru usedejo in po potrebi sprejmejo potrebne sklepe in odločitve, ki bi jih potem na plenumu tudi obravnavali. Če bi se večina poslancev s tem predlogom strinjala, bi ga v imenu združene liste tudi vložil. Mislim, da si je treba vzeti potreben čas, konsultacije in sprejeti stališča, ki bodo imela rep in glavo in bodo dodatno dobro vodilo za ravnanje v razmerah, v katerih so.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg109">Naj končam. Slovenija se nahaja blizu vojne, ni pa v njej. Mislim, da so naši organi v skladu s svojimi pristojnostmi sposobni odreagirati na sleherno situacijo, v kateri se bomo v prihodnje znašli. Za strateško politiko je najbolj pomembno, da sodelujemo na strani tistih, ki iščejo rešitve, da bi se vojne operacije čimprej končale in da bi sprte strani sedle za pogajalsko mizo. Prej ko bo končana vojaška operacija, tem več možnosti morda je, da bi se poiskala kompromisna rešitev, ki bi ustavila nevarnost razširitve krize na tem tako občutljivem področju. Mislim, da Slovenija sodeluje s tistimi državami in s tisto mednarodno politiko, ki si prizadeva preprečiti še večjo katastrofo, še več žrtev, še več trpljenja med nedolžnim civilnim prebivalstvom, in da je naša politika dobra in prava politika. V tem smislu jo podpira tudi Združena lista socialnih demokratov. Na koncu v imenu poslanske skupine tudi predlagam proceduralni predlog, ki sem ga dal. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg110">Hvala lepa gospodu Pahorju. V zvezi z vašim proceduralnim predlogom, ki je tudi v skladu s poslovnikom, predlagam tudi drugačen razmislek, čeprav pravim, da je taka rešitev možna. Sam sem pripravil predlog sklepa, o katerem bi državni zbor glasoval ob zaključku splošne razprave. Sklep pa vsebuje tudi glavni namen vašega predloga. Torej, če dovolite, bi ta delovni predlog prebral, saj smo ga pripravili tudi na podlagi dosedanjih razprav poslanskih skupin. Morda bi bilo dobro, da se oglasijo še poslanske skupine. Seveda pa je vaš predlog povsem v skladu s poslovnikom.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg111">Predlagam torej, da se najprej oglasijo še poslanske skupine. V imenu Slovenske ljudske stranke, dr. Franc Zagožen. Ali želi še katera potem besedo?</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg112">Spoštovani zbor in spoštovani predstavniki vlade! Mislim, da je prav, da je bila sklicana izredna seja, čeprav nekoliko dvomim o tem, ali je smiselno, da jo podaljšujemo v tem smislu, da bi jo prekinjali, da bi delovna telesa pripravljala predloge stališč in sklepov, in da bi potem državni zbor o tem odločal. Morda ni nujno potrebno in morda bi bilo zadosti, če bi, neformalno seveda, sklenili, da bodo ustrezna delovna telesa spremljala te dogodke, da bodo v stalnem stiku z vlado, z ustreznimi resorji, in po potrebi predlagala tudi plenarno sejo in odločanje.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg113">Jaz bi samo še glede na to, da je bilo v zvezi s krizo na Balkanu in sedanjo intervencijo že veliko povedanega, rekel samo naslednje. Bilo je mogoče vsaj že leta 1991 predvideti, da bo razvoj dogodkov na Balkanu prej ali slej pripeljal tudi do te faze, ko bo potrebna intervencija. Če bi bila mogoča leta 1991, potem bi se lahko izognili tudi večini žrtev, ki so v tem desetletju bile, o katerih je govoril tudi zunanji minister, dr. Frlec. Vendar pa je tudi popolnoma jasno, da je bilo mogoče tak razvoj dogodkov predvidevati tukaj, v Sloveniji, da pa očitno niso bili v stanju, recimo v Bruslju, v Washingtonu in v drugih prestolnicah, razumeti, kaj se je pravzaprav ob koncu prejšnjega desetletja in v začetku tega sprožilo na območju bivše Jugoslavije in kako bodo dogodki potekali.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg114">Tudi vnaprej je seveda zelo težko napovedovati. Kolikor je bila politika Miloševiča predvidljiva v tem smislu, da je dolgoročno bilo mogoče pričakovati, da bodo potrebni tudi taki ukrepi, kot jih sedaj izvajajo sile Nata, pa je vendar ravnal hkrati tako nepredvidljivo, da je bilo res potrebno celo desetletje, ko je mednarodna skupnost, čeprav ne enotno, čeprav varnostni svet ni bil v stanju tega enotno spoznati, ampak vendar je mednarodna skupnost spoznala, da je treba to nasilje ustaviti. Nemogoče je vnaprej imeti neke zanesljive scenarije, kako se bodo stvari odvijale, in zaradi tega seveda je prav, da tako slovenska vlada kot parlament, kot ustrezni odbori, stvar skrbno spremljajo. Tako, da lahko vsaj v primeru potrebe tudi državni zbor pripravljeno razpravlja in odloča.</seg>
@@ -460,11 +441,11 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg116">Jaz sem prepričan, da neke resne nevarnosti sedaj za večjo širitev spopada ni. Saj je namen ravno ta, ne samo, da prepreči humanitarno katastrofo na Kosovu, ampak tudi, da prepreči širitev tega požara v okolico, in v tem smislu mislim, da je povsem prav, če državni zbor kot vlada ali drugi na slovensko javnost lahko delujejo povsem pomirljivo. Skratka, nobenega razloga ni za to, da bi se počutili neposredno ogrožene, potencialnega ogrožanja pa v vsakem primeru mogoče se nanje pripraviti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg117">Hvala lepa, dr. Zagožnu. S tem smo izčrpali nastope poslanskih skupin. K besedi se je priglasil dr. Drnovšek, predsednik vlade, prosim.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ2.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg118">Gospod predsednik, spoštovane poslanke in poslanci! Vlada že nekaj časa intenzivno spremlja dogajanja v zvezi s situacijo na Kosovu in tudi razprave in priprave mednarodne skupnosti za reševanje tega problema. Mi smo ne samo na današnji seji sveta za nacionalno varnost, ampak tudi že na več prejšnjih sejah o tem razpravljali in se pripravljali tudi na takšno situacijo, kakršno imamo sedaj. Jaz mislim, da je ta vaša današnja razprava koristna, in bi se zahvalil za konstruktivne prispevke, ki ste jih dali v tej razpravi. Prepričan sem, da je potrebno v takšnih primerih, vprašanjih, iskati čim večjo enotnost političnih strank, čim večji nacionalni konsenz. Na nek način se strinjam, da gre za zaključevanje procesa, ki se je začel pred približno 10 leti, in ki se je za Slovenijo sorazmerno kmalu in uspešno končal z osamosvojitvijo, ki pa se je drugod na območju bivše Jugoslavije nadaljeval skozi vojne, krize, vse do današnje situacije, upajmo, da zadnje takšne situacije na Kosovu.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg119">Jaz seveda delim zaskrbljenost nad sedanjim stanjem in možnim razvojem dogodkov tudi v prihodnosti. Nekatera opozorila danes so na mestu. Mednarodna skupnost se je znašla pred zahtevnimi izzivi. Situacija nima precedensa. Vzpostavljajo se nove oblike rangiranja mednarodne skupnosti, novi odnosi, številna vprašanja kako bo v naprej, od vprašanj mednarodnega prava, delovanja Organizacije združenih narodov, do vloge in koncepta zveze Nato v takšnih primerih. Mislim, da v tem primeru gre za pomembno prelomnico tudi v mednarodnih odnosih. Mi skušamo biti pri tem zelo konstruktivni in sodelovati z mednarodno skupnostjo. Naš prispevek cenijo še posebej zato, ker menijo, da poznamo situacijo, da imamo svoje izkušnje iz preteklosti, da pa hkrati poznamo tudi pravila mednarodnega delovanja, demokratična pravila, način funkcioniranja zahodnih integracij in da je zato naše mnenje in tudi naše posredovanje lahko še posebej dragoceno. V tem vidimo naš prispevek Slovenije kot dejavnika stabilnosti na tem območju. V tem je naš poseben prispevek tudi v mednarodni skupnosti, ki nas v tej funkciji potrebuje. Ta regija, jugovzhod Evrope, Balkan, območje bivše Jugoslavije bo kljub vsemu, tudi če ne bo vojne, še nekaj časaobmočje nestabilnosti in velikega zanimanja svetovne politike. Naš prispevek, konstruktiven prispevek bo za to vedno cenjen. Zato mi poskušamo v zadnjem obdobju naša prizadevanja usmeriti seveda v dve smeri.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg120">Ena je, da prvenstveno zagotavljamo nacionalno varnost Sloveniji, našim državljanom.</seg>
@@ -475,7 +456,7 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg125">Slovenija je izven kriznega območja, Slovenija je izven vojne nevarnosti. Mi smo sicer preventivno pripravljeni, imamo tudi potrebna varnostna zagotovila, vendar smo izven te situacije, in tudi ne želimo ustvarjati vtisa, ne doma ne v tujini, češ da je Slovenija na nek način še vključena v to jugoslovansko krizo. Mi nismo več; mi danes sodelujemo kot partner mednarodne skupnosti pri iskanju izhoda iz te situacije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg126">Hvala lepa, gospod predsednik vlade. Predlagam, da se opredelimo do predloga gospoda Pahorja, ki je predlagal, da bi po razpravi poslanskih skupin razmislili o možnosti, da bi sejo prekinili, in potem na podlagi delovnih teles pripravili stališča. Dovolite mi <gap reason="inaudible"/>
                </seg>
                <note>Medklic iz klopi.</note>
@@ -487,18 +468,18 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg132">V tem zadnjem delu menim, da sem tudi povzel vaš predlog. Torej nadaljujemo splošno razpravo. Praviloma imajo prednost poslanci, ki, ko se prične razpravljati, so prijavljeni. Potem boste dobil besedo gospod Jelinčič. Poslanci so prijavljeni k razpravi. Ugotavljam, da je v splošni razpravi nastopil tudi dr. Drnovšek. Repliko na njegovo razpravo ima gospod Jelinčič. Prosim.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg133">Hvala lepa gospod predsednik. To, kar je povedal gospod Drnovšek sem v glavnem prebral v Clintonovem govoru, zato bom to pustil in lahko bi tudi izpustil to.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg134">Vendar bi gospoda predsednika nekaj povprašal. Dr. Erhard Busek je predvčerajšnjim na televiziji govoril o tem, da Avstrija je v kriznem območju. Kako je mogoče to, da gospod Drnovšek trdi, da Slovenija ni v kriznem območju?</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg135">Drugo vprašanje je. Gospod Drnovšek je postavil dve trditvi. Naše posredovanje je še posebej pomembno in naš konstruktiven prispevek bo vedno cenjen. Rad bi vedel katera in kakšna posredovanja in kateri konstruktivni prispevki so bili morda tisti, da je gospod Demači bil sprejet pri nas, dva dni za tem so ga iz položaja odstavili?</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg136">Tretja zadeva. Današnji ameriški časopisi prinašajo na prvih straneh dvom v pravilnost operacije in napovedujejo hude težave po clintonski administraciji za ureditev razmer. Imenuje jo operacijo "Aimless operation". Kako pa pri nas gledamo na te zadeve? Zgleda, da smo mi tudi na tem področju nekaj specifičnega in razmišljamo popolnoma drugače.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg137">Hvala lepa. Razpravlja gospod Hvalica. Ostale razprave so poslovniško omejene.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg138">Hvala lepa, gospod predsednik. Spoštovani kolegi! Predsednik vlade - končno. Ministri, predstavniki vlade.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg139">Najprej gospod predsednik moram izraziti moje nestrinjanje s poskusom omejevanja te razprave. Tu je bilo kar nekaj manevrov, da bi delali racionalno in tako dalje. Jaz mislim, da je situacija taka, da je najbolj racionalno to, da se opravi temeljita razprava.</seg>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg140">Druga stvar je seveda sam nastop ministrov. Pravzaprav sem jaz nameraval čisto drugače tu nastopiti. Ampak, sedaj sem pa moj nastop prikrojil pravzaprav kot repliko ministrom in predsedniku vlade. Najprej seveda moram ugotoviti, da se je slovenska vlada zelo pozno odzvala. Kot da je to nekaj tako, ki se je ne tiče. Danes se je sestal svet za nacionalno varnost. Medtem časom smo lahko vsaj prek tujih elektronskih medijev torej poslušali, kako je svet, torej spremljal to oboroženo intervencijo, tudi tisti svet, ki je veliko bolj oddaljen, in ki ni toliko tangiran kot mi.</seg>
@@ -512,7 +493,7 @@
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg148">Ne morem se strinjati tudi s predlogom sklepa, da Slovenija ni v nevarnosti. To enostavno ni res. Zadeva je izjemno dolgoročna in daljnosežna. Začela se je politično, vmes bo zdaj vojna ali pa napad, ali kakorkoli hočete, in končala se bo politično. Gre za dežele, gre za države, ki so v tem rajonu, kot se temu reče v širšem smislu, in mi, hočeš nočeš, smo tangirani. Nenazadnje je bil naš predsednik vlade zadnji predsednik predsedstva z uniformo na Kosovem. To je dejstvo, in verjetno bo tudi zaradi tega velikokrat konsultiran. Poznate stvari. Torej ni to nam neka tuja zadeva, nekaj, kar lahko odpravimo tako z levo roko. Zadeva nas še kako tangira. In nekaj še, kar nisem zaznal in kar se lahko zgodi, ker sumim, kaj se je lahko zgodilo v Šempetru, poznam strukturo ljudi, lahko računamo tudi na notranje probleme v zvezi z novimi državljani. Lahko računamo tudi na to. Ljudje so ljudje, kri je kri, ponos je ponos in čustva so čustva. To nisem zaznal od nobenega, pa vendar je treba računati tudi na to. To se je vedno zgodilo, ko so bile takšne situacije, vedno se je dogajalo in je treba vis-a-vis te možnosti zaenkrat zgolj hipotetično postaviti tudi ustrezno varovalko. Tu opozarjam tako ministra za notranje zadeve, kot tudi ministra za obrambo. Mi smo do zdaj bili tako rekoč imuni za sabotaže itd., ni pa rečeno, da bo to trajalo večno. To je takšen primer, ko se to lahko zgodi. Skratka, da zaključim. Jaz sem razočaran nad tem, kar sem slišal od predstavnikov vlade, sem razočaran, razen tisto, kar sem slišal s strani ministra za notranje zadeve, ki je imel še najbolj neke konkretne stvari, ko je povedal, kaj naj bi naredili v tej situaciji, odpraviti zadevo kar tako z levo roko se mi zdi lahkotno. Ugotavljam, da je odnos do parlamenta s strani vlade neprimeren, neprimeren. Parlament bi moral biti seznanjen. Svet za nacionalno varnost bi se moral sestati po mojem trdnem prepričanju včeraj maksimalno do 20.00 ure. To je po polžje, kar se je zgodilo in zato ne verjamem, da intenzivno in pazljivo spremljate zadevo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg149">Hvala lepa. Kdo želi besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-33-1999-03-25.seg150">Zaključujem potem razpravo in na glasovanje dajem predlog sklepa, ki sem ga prej prebral. Bo pa še nekoliko krajši, prosim, če sledite predlogu: "Državni zbor se je seznanil z informacijo vlade v zvezi z intervencijo vojaških sil Nato v Zvezni republiki Jugoslaviji ter z oceno razmer v Republiki Sloveniji ob teh dogodkih in ukrepih, ki jih izvajajo pristojna ministrstva.</seg>

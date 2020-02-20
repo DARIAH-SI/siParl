@@ -9,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Skupščine Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Zbor združenega dela: 41. seja</title>
-            <meeting n="41"
-                     corresp="#ZbZdruDel.1992-03-19.s041-01.ZbZdruDel"
-                     ana="#parl.meeting.regular"/>
+            <meeting n="41" corresp="#ZbZdruDel" ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +27,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +40,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +61,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="114"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="73"/>
                <tagUsage gi="seg" occurs="312"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -431,13 +420,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="ZbZdruDel.1992-03-19.s041-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -447,16 +429,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>ZBOR ZDRUŽENEGA DELA SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">41. seja</head>
             <docDate>19. in 27. marec 1992</docDate>
             <note type="chairman">Sejo je vodil Jože Zupančič, predsednik Zbora združenega dela.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela od 10.30 uri.</note>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg1">Spoštovane poslanke, poslanci, predstavniki sredstev javnega obveščanja. Pričenjamo 41. sejo Zbora združenega dela Skupščine Republike Slovenije, ki sem jo sklical na podlagi 31. člena začasnega poslovnika Skupščine Republike Slovenije. Na današnji seji je prisotnih 48 poslancev</seg>
                <note>opravičilo se jih je 12</note>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg2">in ugotavljam, da je zbor sklepčen in da lahko pravnoveljavno razpravljamo ter sklepamo.</seg>
@@ -466,14 +452,14 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg6">Predlagam da najprej razpravljamo o PREDLOGU SKUPNE KOMISIJE ZA PRIPRAVO SPORAZUMNEGA PREDLOGA K PREDLOGU ZAKONA O PLAČAH DELAVCEV V JAVNIH VZGOJNO-IZOBRAŽEVALNIH ZAVODIH (39. seja ZZD). Sedaj bi prosil poročevalca skupne komisije, gospoda Rudija Mogeta, da poda zboru poročilo.</seg>
             </u>
             <note type="speaker">RUDI MOGE:</note>
-            <u who="#SSK11.MogeRudi1944" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg7">Spoštovane poslanke in poslanci! Ta skupna komisija je ugotovila, da sta Zbor združenega dela in pa Družbenopolitični zbor sprejela vse amandmaje, ki jih je predložila komisija pred tem sestankom. Edino Zbor občin je bil takšen, da ni sprejel pet priporočil, torej ta Zbor občin ni odstopil od svojih stališč, ki jih je imel prej. Zaradi tega smo poskušali na drugem usklajevanju oblikovati tak predlog, ki bi zadostil tudi nekoliko Zbor občin in ta dva ostala zbora. Vi ste dobili material. V glavnem nismo usklajeni pri 5. členu, ta člen namreč določa koeficient za ovrednotenje osebnih dohodkov učiteljev. Če se spomnite nekako tako smo te koeficiente mi in Družbenopolitični zbor povečali za učitelje s 2,5 na 2,8 v osnovni šoli, v srednji šoli s 3,1 na 3,4 in pa za univerzitetne profesorje. Ko smo glasovali, potem smo glasovali za kompromisne predloge, in sicer je bil en takšen kompromisni predlog da bi se v 5. členu koeficient profesorja srednje šole, ki je bil s strani vlade predlagan s 3,1, mi smo ga dali na 3,4, da bi ta koeficient znižali na 3,3 in pa tudi, ko smo o predlogu glasovali, da bi tudi za docenta, ki je edini ostal kot nosilni izmed nosilnih poklicev, tu od 4,1, da bi povečali na 4,3. Torej glasovali smo o tem, da bi torej profesor s 3,1 šel na 3,3 kar je manj, kot smo predlagali, in pa docent s 4,1 na 4,3. Tukaj ni bilo soglasja, komisija ni prišla do soglasja, torej ta predlog ni bil sprejet.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg8">Potem smo glasovali tudi o tem, da bi se učiteljem s 3,1 koeficient povečal na 3,2 in pa učiteljem vzgojiteljem s 2,65 na 2,7, to se pravi za par procentov povečanja. Tudi ta predlog ni dobil potrebne večine in zaradi tega je komisija prišla do tega zaključka, da mora bodisi Vlada sklicati skupno sejo, ali pa da predlaga en zbor skupno sejo in na tej skupni seji naj bi se okoli teh spornih amandmajev uskladiti, saj v bistvu gre za to, preden bo ta zakon, se bodo osebni dohodki oziroma plače učiteljev v Republiki Sloveniji uravnale. Se pravi, vsak učitelj bi za enako delo v vsakem slovenskem mestu dobil enako plačilo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg9">Ne vem, kaj bo Vlada storila. Ali bo sklicala to skupno sejo ali ne. Potem je še en amandma redakcijske narave k 3. členu ta je pa govoril, če se spomnite, o tem, da bi mi v 3. členu nadaljevali z besedilom, ki je enotno za vse te dejavnosti in za državno upravo in ki jo ugotovi Vlada Republike Slovenije. To pomeni, da naj bi za družbene dejavnosti in za državno upravo enako osnovo postavili. Ta dikcija se je sedaj nekoliko spremenila in predlaga skupna komisija - tu smo se uskladiti z zborom, da bi umaknil ta amandma in bi sprejel k 3. členu naslednji amandma, da bi se k 3. členu dodal drugi odstavek, ki se glasi: "Izhodiščna mesečna plača iz prejšnjega odstavka ne more biti nižja od izhodiščne mesečne plače v drugih negospodarskih dejavnostih in državnih organih."</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg10">Jaz mislim, da je ta amandma bolj redakcijske narave, da ga lahko sprejmemo. Kako bo pa s sprejetjem zakona, bo pa morala odločiti Vlada, oziroma da da en zbor pobudo, da se skliče skupna seja in da potem o teh amandmajih samo o 5. členu, se pravi samo en člen je še sporen, odločamo potem na skupnem zasedanju, tako da lahko potem tudi področje vzgoje in izobraževanja, kar se tiče osebnih dohodkov, normalno funkcionira v novi državi.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg11">Slišali ste poročilo. Želi kdo o tem razpravljati? Tu je pač predlagano samo naslednje: da glasujemo o amandmaju k 3. členu za umik in za sprejem novega, medtem ko smo o ostalih zadevah glede 5. člena ostali neusklajeni in ostane odprto.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg12">Jaz bi tudi predlagal, da bi zbor sprejel sklep, da bi se ta komisija še enkrat sestala po našem odločanju in da bi skušala z Vlado doseči kompromisni predlog in da danes še ne bi imeli skupne delovne seje. Hvala za opozorilo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg13">Predlagam naslednje: Jaz mislim, da bi bilo to pošteno v našem zboru, da sprejmemo to poročilo in ne odločamo o tem predlaganem umiku in seveda tudi sprejemu amandmaja, ampak da počakamo, naj se skupna komisija še enkrat sestane. Ali ste za to? Ali ima kdo kaj proti temu. Ugotovimo sklepčnost!</seg>
@@ -491,19 +477,19 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg21">Mogoče v zvezi s tem želi predstavnik Vlade besedo? Gre za združitev prve in druge faze. Ne! Odpiram razpravo o predlogu združitve faz. Na dnevnem redu imamo, sedaj gre samo za to. Ima kdo kakšno drugačno mnenje? Prosim, gospod Lovrenčič.</seg>
             </u>
             <note type="speaker">FRANC LOVRENČIČ:</note>
-            <u who="#SSK11.LovrencicFranc1946" ana="#regular">
+            <u who="#LovrencicFranc1946">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg22">Pozdravljeni, jaz bi ob razpravi o samem zakonu tako in tako razpravljal. Mislim, da je nesmiselno zadrževati faze zaradi tega, ker je zahteva trgovcev že tako in tako, da bi ob sprejemanju zakona morali biti predloženi tudi vsi pravilniki, torej izvedbeni akti. Teh pa nimamo, oziroma Vlada pravi, da jih pripravlja, zato predlagam da teh faz ne združujemo. Ni take nujnosti, da bi morali to napraviti danes.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg23">Kaj pa če do predloga vlada te stvari pripravi? Prosim, gospod Erce.</seg>
             </u>
             <note type="speaker">FRANC ERCE:</note>
-            <u who="#SSK11.ErceFranc1951" ana="#regular">
+            <u who="#ErceFranc1951">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg24">Spoštovani zbor! Ker sem tudi delegat trgovine, kot moj predgovornik kolega Lovrenčič, bi povedal, da kljub njegovim besedam sprejemam predlog združitve faz, kajti po podatkih, ki so mi na voljo, so vsi ti pravilniki, ki jih zakon o trgovini predvideva, mislim da so štirje pripravljeni, mislim da se je korektno in konkretno vključevalo zbornično združenje trgovine, tako da ne vidim razloga, da ne bi pritrdili zadevi. In tudi, če me spomin ne vara, smo na saj dveh skupščinskih odborih, na Odboru za splošne gospodarske zadeve in mislim, da so bili tudi potrošniki tej pobudi pritrdili, tako da vas pozivam, da podpremo predlog Vlade o združitvi dveh faz pri zakonu o trgovini. Hvala lepa!</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg25">Še želi kdo povedati svoje mnenje. Če ne, zaključujem razpravo. Ugotovimo sklepčnost!</seg>
                <note>46 prisotnih.</note>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg26">Kdo je za?</seg>
@@ -518,14 +504,14 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg32">Osnutek dnevnega reda za današnjo sejo ste prejeli na mizo. Pričenjam razpravo o tako pripravljenem dnevnem redu. Gospod Roman Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg33">Hvala za besedo. Jaz bi prosil poslance in poslanke, da bi prisluhnili razširitvi dnevnega reda z enim sklepom, namreč gre za ustanovitev "ad hoc" delovne skupine za reorganizacijo Vlade in republiške uprave. Naj vam razložim in tudi povem sklep, ki bi ga predložil zborom.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg34">Predlagam ustanovitev ad hoc delovne skupine Skupščine Republike Slovenije, ki bi celovito preučila vprašanja reforme republiške uprave. Kot je znano, bo kmalu v skupščinski proceduri predlog reorganizacije Vlade, ki pa bo uspešna le, če bo del širše institucionalne reforme in ne le rekonstrukcija vladnega kabineta. Vprašanje reorganizacije je sicer načela tudi Vlada sama, vendar ga je omejila na krčenje števila ministrstev in uvajanje novih funkcij, medtem ko bi morala skupščinska delovna skupina obravnavati reorganizacijo celotne republiške uprave. Sodeč po različnih javnih izjavah med parlamentarnimi strankami obstaja precejšnje soglasje v potrebi po takšni reorganizaciji.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg35">Predlagam, da zbor s posebnim sklepom podpre ustanovitev takšne delovne skupine, ki bi jo poleg predstavnikov poslanskih klubov sestavljali tudi trije ali štirje predstavniki republiške uprave, vključno z dr. Brantom, svetovalcem Vlade, ki se s tem vprašanjem ukvarja že dalj časa. In ne nazadnje bi kar predlagal sklep oziroma povedal, kakšna naj bi bila vsebina tega sklepa te točke dnevnega reda:</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg36">Zbor podpira pobudo za ustanovitev posebne skupščinske delovne skupine za vprašanje reorganizacije Vlade in republiške uprave ter nalaga Komisiji za volitve in imenovanja ter administrativne zadeve, da pripravi predlog sestave skupine. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg37">Ali je to potrebno, da imamo točko dnevnega reda, ali lahko po svoje sprejmemo to kot pobudo, ki jo pa seveda podpre tudi Zbor združenega dela in da damo to naprej. Kot pobuda ja, ampak ne kot individualna, temveč zborovska pobuda. Ste za to? Mi pač vsi vemo za kaj gre, da je to velik zalogaj, ki ni tako enostaven, kot si nekateri predstavljajo. Damo pobudo? Slišali ste.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg38">Kdo je za?</seg>
                <note>39 poslancev.</note>
@@ -537,12 +523,12 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg42">Jaz bi predlagal še naslednje. Gospod Drame še.</seg>
             </u>
             <note type="speaker">LEOPOLD DRAME:</note>
-            <u who="#SSK11.DrameLeopold1935" ana="#regular">
+            <u who="#DrameLeopold1935">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg43">Predlagal bi razširitev dnevnega reda s točko: zakon o spremembah in dopolnitvah zakona o bankah in hranilnicah.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg44">To je čisto kratka zadeva. Obrtna zbornica je ta predlog formulirala, ker namreč pri obrtnih zadrugah deluje cca 40 teh hranilno kreditnih poslovalnic. Po 79. členu, če do 30.6. te spremembe ne bo, bodo te hranilno kreditne službe pri obrtnih zadrugah prisiljene prenehati delati, seveda pa se morajo dober mesec pred tem pripraviti za prenehanje delovanja. Edini vir, ki ga imajo obrtniki tako rekoč za premostitve finančnih težav, bi usahnil, in bi bila situacija v obrti še slabša. Zato bi prosil, da bi podprli ta predlog, da bi sprejeli razširitev dnevnega reda s to točko, da se ta zakon v 79. členu popravi, da bi lahko hranilno kreditne službe pri obrtnih zadrugah še naprej delovale.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg45">Kolegu Drametu moramo povedati vsi skupaj, da mi nismo v tej fazi kompetentni, da bi kaj takšnega sprejemali na dnevni red. Gospod Drame mora ta zakon vložiti v skupščinsko proceduro in ga morate najprej dati gospodu predsedniku, dr. Francetu Bučarju. Potem pa gre seveda v normalno proceduro. Tako, da žal tu sedaj v tem primeru nimamo.</seg>
                <note>Gospod Drame govori iz klopi - ni vključen, zato je tekst nerazumljiv.</note>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg46">Dobro, bomo ugotovili, kje je to. Postopek mora biti izpeljan. Mi ne moremo preje obravnavati. Bomo pa pogledali, kje se je zataknilo.</seg>
@@ -615,7 +601,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg93">Pri minimalni izobrazbi je poleg strokovne šole predvideti tudi opravljanje strokovnega izpita pri gospodarski zbornici. Poleg pogojev minimalne izobrazbe predvideti obvezno nadaljnje izobraževanje, sprotno izpopolnjevanje osebja in seznanjanje z novimi dosežki znanosti in tehnike, za kar mora skrbeti tudi trgovina sama. Odbor je opozoril na slabosti minimalnih zahtev pri osnovnem kapitalu, kar predstavlja nevarnost za potrošnike, ki ne morejo uveljaviti odškodnine in druge odgovornosti proti prodajalcu, ki ima premajhna sredstva. V kompletni razpravi pa je Odbor za varstvo potrošnikov predlagal tudi posamezne pripombe. To je nekaj iztekov iz dosedanje razprave v zvezi z zakonom o trgovini z osnutkom zakona. Želi predstavnik Vlade besedo? Prosim, gospod Jožef Jeraj! Najprej lepo praznovanje ob godu in ob prvem nastopu v Zboru združenega dela. Gospod Jožef Jeraj, minister za trgovino.</seg>
             </u>
             <note type="speaker">JOŽEF JERAJ:</note>
-            <u who="#SSK11.JerajJozef1938" ana="#regular">
+            <u who="#JerajJožef">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg94">Spoštovani Zbor, lepo pozdravljeni! Dal bi neka stališča, ki so bila ugotovljena na posameznih odborih, oziroma odgovore na ta stališča in celovit pregled zakona kot takega v čim krajši obliki. Zakon o trgovini je zakon o trgovinski dejavnosti; določa, kaj je trgovinska dejavnost, vrste trgovinske dejavnosti, subjekte ki opravljajo, pogoje ki morajo biti za opravljanje te dejavnosti izpolnjeni. Določeno pa je tudi pravno varstvo za izvajanje določil iz tega zakona. Zakon o trgovini bo nadomestil zakon o blagovnem prometu iz leta 1977, zvezni zakon o trgovini iz leta 1990, ki smo ga z ustavim zakonom za izvedbo temeljne listine o samostojnosti in neodvisnosti Republike Slovenije smiselno prevzeli do sprejema nove zakonodaje, ter deloma zakon o zunanje trgovinskem poslovanju. V okviru novonastajajoče zakonodaje, ki bo urejala menjavo blaga kot pomembne faze ob procesu družbene reprodukcije, bodo to urejali poleg zakona o trgovini še naslednji sistemski zakoni: zakon o cenah, ki je bil sprejet sredi leta 1991; zakon o varstvu konkurence, ki je že v skupščinski proceduri in zakon o varstvu potrošnikov, ki bo prišel ravno kar pred Skupščino.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg95">Pri odločanju o vsebini zakonske ureditve trgovinskega področja smo upoštevali rešitve tujih, zlasti evropskih zakonodaj. V teh državah zakoni z drugimi predpisi določajo pravila za opravljanje trgovine. Najpogosteje se ti predpisi nanašajo na področje reguliranja konkurence in varovanja tržnega načina gospodarjenja, predvsem iz dveh razlogov. Prvi razlog je definiran s stanjem na trgu in z zahtevo po tržnem poslovanju in svobodno konkurenco, tako na strani ponudbe, kot tudi na strani povpraševanja. Drugi razlog pa je, da se preko trgovine kot procesa menjave blaga in storitev deluje usmerjevalno na oblikovanje ustreznih tržnih struktur tako na strani ponudbe kot tudi na strani povpraševanja.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg96">Področje trgovine se v teh državah regulira s predpisovanjem pogojev za nastopanje trgovcev na tržišču. To so pogoji za ustanavljanje podjetij, ki opravljajo trgovino, pogoji ki jih morajo ti subjekti izpolnjevati za določeno obliko prometa. S tem načinom predpisovanja pogojev se teži k optimalni razporeditvi objektov, strukturi objektov, gostoti trgovinske mreže, strukturi in obsegu potrebnega prodajnega prostora predvsem v maloprodaji. Na ta način se usklajuje razvoj trgovinske dejavnosti z zahtevami gospodarskega in urbanega razvoja.</seg>
@@ -637,11 +623,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg112">Gospod predsednik, to je obrazložitev oziroma prispevek k razpravi.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg113">Ali želijo poročevalci delovnih teles mogoče besedo?</seg>
             </u>
             <note type="speaker">FRANC GRAŠIČ:</note>
-            <u who="#SSK11.GrasicFranc1941" ana="#regular">
+            <u who="#GrasicFranc1941">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg114">Spoštovani predsednik, poslanke in poslanci! 28. februarja je Odbor za splošne in gospodarske zadeve kot matično delovno telo obravnaval predlog za izdajo zakona o trgovini z osnutkom zakona in najprej dal podporo ter potrdil potrebo po tem zakonu, kot je bilo že uvodoma rečeno. Ob bogati razpravi pa je tudi oblikoval nekaj konkretnih pripomb. Te so zapisane v poročilu. Najpomembnejše želim na kratko izpostaviti, seveda z namenom in željo, da jih predlagatelj upošteva, ko bo na osnovi današnje razprave oblikoval predlog zakona.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg115">Najprej naša pripomba k 3. členu zakona, v katerem je uporabljen termin "načelno poštena konkurenca". Na odboru je bil izražen pomislek o primernosti tega izraza, ker je bilo rečeno, da je pravno neobvladljiv in ga je po našem mnenju potrebno natančneje definirati.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg116">Naslednja pripomba je pa v povezavi s 5. in 6. členom, kjer so predvidene rešitve, s katerimi bo vlada poskušala preprečiti ogrožanje izvajanja tekoče gospodarske politike. Tukaj smo mnenja, da je najbrž te konkretne mere potrebno nekoliko preučiti. Odbor je sicer mnenja, da to ni mogoče v celoti odpraviti, vendar smo dali pripombo v tem smislu, da naj bi bilo teh možnosti le toliko dano, kolikor je to nujno potrebno.</seg>
@@ -650,22 +636,22 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg119">Da zaključim, podpora temu zakonu z željo, da se pripombe, tudi te, upoštevajo pri oblikovanju predloga zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg120">Hvala, gospod Grašič. Ali še mogoče kdo od delovnih teles? Če ne, odpiram razpravo. Kdo želi razpravljati?</seg>
             </u>
             <note type="speaker">FRANC BAN:</note>
-            <u who="#SSK11.BanFranc1938" ana="#regular">
+            <u who="#BanFranc1938">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg121">Spoštovani zbor, zelo na kratko tri ugotovitve v zvezi z zakonom o trgovini.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg122">Javna razprava v Sloveniji, ki jo je zelo dobro organiziralo Združenje trgovine Slovenije pri zbornici, je ob zaključku ugotovila, da so pripombe trgovinskih organizacij Slovenije v glavnem upoštevane in dejavnost trgovine Slovenije podpira zakon.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg123">Drugič, minister je nekaj o tem že govoril. Ocenjeno je in menimo, da je nujno potrebno sočasno sprejeti ustrezne izvedbene akte, kot temu rečemo. Mislimo tudi, da gre pri tem tudi za zakon o varstvu konkurence, da bi lahko efikasno zakonodaja na tem področju delovala. Tretjič, gre za globalno pripombo, ki je bila nekajkrat in na mnogih mestih izpostavljena, to je predvsem pri zakonu o trgovini - 5. in 6. člen zakona o trgovini, za katerega smo prepričani, da je v nasprotju z načeli tržnega gospodarstva. Gre namreč za kompleks zaščitne politike, za katero mislimo, da mora biti opredeljena in dogovorjena s posebno zakonodajo, upoštevajoč izdelane blagovne bilance in vse tisto, kar je potrebno, da bi tudi to področje bilo po vzoru Evrope, na katero se sklicujemo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg124">Kot tretje, področje ne bi posebej opredeljeval. Gre za nekatere pripombe, predloge in spremembe na 10., 12., 17., 22. in 25. člen in predlagam, da to besedilo, ki je zelo kratko, kar predložim, da ne zavlačujem. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg125">Hvala. Enako je tudi Roman Jakič pisno predložil mnenje za izdajo zakona o trgovini z osnutkom zakona, tako da bomo tudi to upoštevali. Kdo želi naprej razpravljati?</seg>
             </u>
             <note type="speaker">FRANC LOVRENČIČ:</note>
-            <u who="#SSK11.LovrencicFranc1946" ana="#regular">
+            <u who="#LovrencicFranc1946">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg126">Pozdravljeni! Na začetku bi ravno tako ugotovil kot moj predhodnik, da je bila razprava kar široko organizirana. Zato je po moji oceni tudi ta zakon dobro predihan. Škoda, da res nismo pravočasno dobili vseh pravilnikov, ker ti nekatere izvedbene zadeve konkretizirajo in jih je treba precizno pregledati. Ne glede na to bi prečital pripombe trgovcev iz Pomurja in Koroške, katere po tej liniji tudi zastopam ter Podravja, ki jih je manj in jih v tej skupščini zastopam. Nekatere zadeve so seveda tudi že skozi razpravo dogovorjene ali usklajene. Tega sedaj nisem klasificiral, ker ne gre za toliko teh točk, da bi jih moral pri tem izpuščati.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg127">Trgovci Pomurja isto podpirajo, da je potrebno izvedbene akte obravnavati istočasno. To smo danes od ministra že slišali, da bodo predloženi. Pri minimalnih tehničnih pogojih ugotavljajo trgovci Pomurja, ker je verjetno to zanje res posebna specifika, da bi mogoče pri izvedbenih aktih bilo potrebno precizno določevati te tehnične pogoje. Kot primer navajajo, da je recimo nesmiselno za neko podeželsko trgovino - konkretno govorijo za elektronsko tehtnico -, če prodajajo navadne prodajne artikle ali pa, da ima ta trgovina z mešanim blagom kabine za pomerjanje oblačil, pa teh ne prodajajo. To je mogoča še kot sugestija.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg128">Pomisleke imajo okrog uporabe registrskih blagajn v vseh trgovinah. Pomembna se mi zdi ta njihova pripomba, naj bo v 18. členu, ko govori o delu inšpektorjev, da naj bo v nekem izvedbenem aktu ta 18. člen precizno določen, ker sicer bo dopuščal, da bodo inšpektorji sami predpisovali neke evidence ali karkoli in bi zaradi tega lahko prišlo do različnih tolmačenj 18. člena.</seg>
@@ -674,37 +660,37 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg131">Menimo, da bi bil strokovni izpit, razen za ekonomske profile, potreben ne glede na to, da je dosežena ali presežena V. stopnja izobrazbe. To je njihovo mnenje. Splošna pripomba, kljub temu ocenjujejo, da ima po novem zakonu Ministrstvo za trgovino preširoka pooblastila; kljub temu da bi zagotovili večji vpliv na predloge, ki jih vladi daje minister za trgovino. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg132">Besedo ima gospod Erce.</seg>
             </u>
             <note type="speaker">FRANC ERCE:</note>
-            <u who="#SSK11.ErceFranc1951" ana="#regular">
+            <u who="#ErceFranc1951">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg133">Lep pozdrav, spoštovane kolegice in kolegi! Ker sta pred mano govorila kolega, prav tako poslanca s področja trgovine, sta mi pravzaprav vzela velik del stvari, ki sem jih hotel povedati.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg134">Da ne bi ponavljal, se tudi moj del trgovcev strinja z že izrečenim in podpira spremembo oziroma sprejem zakona. Hkrati bi pa tudi jaz poudaril, da vzgledno sodelovanje, ki je bilo pri pripravi zakona in tej obravnavi med Ministrstvom za trgovino, Gospodarsko zbornico Slovenije oziroma Združenjem trgovcev pri njih in tudi ostalih trgovcev, ki so zaenkrat še združeni v drugih asociacijah, bi bilo lahko vzgled sodelovanja pri pripravi drugih zakonov.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg135">Torej, da ne zavlačujem, ker sem tudi v tistem svojem nastopu pri sprejemanju te združitve faz najbrž bil dosti jasen, podpiram sprejem predloga in mislim da tudi pripombe, ki so bile še v današnji razpravi dane, bodo pripomogle k še boljšemu zakonu. Dejansko mi imamo jutri še eno posvetovanje o vlogi potrošnikov v tem našem sistemu, kajti zakon ni samo pisan za trgovce, ampak naj bi predvsem tudi dal tistim, zaradi katerih trgovina obstaja, to je zaradi nas kupcev. Hvala lepa!</seg>
             </u>
             <note type="speaker">DEJAN MURKO:</note>
-            <u who="#SSK11.MurkoDejan1967" ana="#regular">
+            <u who="#MurkoDejan1967">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg136">Jaz nisem s tega področja, kljub temu pa bi omenil v 5. in 6. členu, mislim da je potrebno kar najpodrobneje opredeliti te razloge za zaporo domačega tržišča, ki ga pod posebnimi pogoji lahko predpiše vlada. Taka zaščita je, če ti pogoji ne bodo res natančno opredeljeni, kaj hitro lahko zaščita neracionalnega ali dragega ali ekološko spornega ali nekvalitetnega proizvoda, ki se dela doma, oziroma proizvajalca tega proizvoda. S tem lahko taka zaščita preraste tudi v zaščito njegovih privilegijev na trgu. Taki posegi Vlade, če ne bodo strogo omejeni in predpisani le na redke okoliščine, ki jih lahko povzročijo, bodo pomenili lažno solidarnost in ne bodo delovali spodbujevalno v iskanju cenejših in inovativnejših pristopov v proizvodnji. Tudi ustavno gledano se mi zdijo določila k 5. in 6. členu dokaj sporna, saj po mojem mnenju ne bodo delovali usmerjevalno in predvsem ne v smislu odprte Evrope, ki vse bolj spoznava, da pomeni svobodo trga, svobodo pretoka blaga. Svoboden trg je ali pa ga ni in tukaj je vsako omejevanje tega - z izgovorom neke zaščite ali nacionalnih gospodarskih interesov, ne vem česa - sporno. Želim, da bi se ga posluževali čim manj in da bi predlagatelj čim natančneje predpisal te pogoje, ki jih lahko Vlada predpiše, kadar se loti tega ukrepa. Hvala lepa!</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg137">Prosim, gospod Krajec.</seg>
             </u>
             <note type="speaker">MIRKO KRAJEC:</note>
-            <u who="#SSK11.KrajecMirko1954" ana="#regular">
+            <u who="#KrajecMirko1954">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg138">Jaz bi samo imel eno vprašanje na pravilnik o strokovni službi. Namreč v pravilniku je bilo rečeno, da mora imeti poslovodja najmanj štiriletno poslovodsko šolo in če vemo, da so privatne trgovine odprli pretežno trgovci s triletno šolo, da pa opravljajo poslovodsko funkcijo, dajte mi to obrazložiti, da bom vedel, ali to velja tudi za njih?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg139">Še mogoče kdo od razpravljalcev? Če ni več, bi lahko zaključili z razpravo. Mogoče še gospod minister za trgovino za zaključek.</seg>
             </u>
             <note type="speaker">JOŽEF JERAJ:</note>
-            <u who="#SSK11.JerajJozef1938" ana="#regular">
+            <u who="#JerajJožef">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg140">Najprej pojasnilo na to zadnje vprašanje. To se bo dalo premostiti tudi z dodatnim izpitom pri Gospodarski zbornici, to sem tudi omenil. Potem, glede 5. in 6. člena, tu je dejansko največ razprav teklo ravno do tukaj, pa varstvo potrošnikov. Jaz mislim, mi smo se odločili za tržno gospodarstvo, to se pravi odprto, torej ni namen Vlade niti ministra, da omejuje svobodno trgovanje. Sami veste, tisti, ki trgujete z inozemstvom, da je včasih, ko je blago že prišlo na mejo, bil čez noč sprejet določen ukrep zaščite v drugih državah. Mislim, da v teh primerih, ko gre za reprociteto ali za pomembno zaščito, je treba hitro ukrepati in ne preveč administrirati. V tem smislu je to bilo postavljeno, vendar v kolikor se bo v nadaljnji razpravi oziroma pri iskanju rešitev pokazala potreba, bi se to pač uredilo s posebnim sistemskim zakonom, če bo to potrebno. Predvsem pa mislim, da je tudi v trgovini nasploh potrebno veliko zaupanja in mislim, da je drugače težko poslovati. Upam, da se bo dalo z ustreznimi ukrepi to reševati sproti. Glede evidenc, evidence bodo točno predpisane oziroma bodo formularji in tu inspektor ne bo imel možnosti, da bi jih prekrojeval po svojem. Hvala lepa!</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg141">Predlagam, da zbor sprejme naš že ustaljen sklep, in sicer: predlog za izdajo zakona o trgovini z osnutkom se sprejme, predlog zakona naj pripravi Vlada Republike Slovenije. Pri pripravi predloga zakona naj predlagatelj prouči in ustrezno upošteva stališča in pripombe delovnih teles Skupščine in pripombe ter predloge iz razprave na zboru.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg142">Želi o predlogu sklepa kdo razpravljati?</seg>
                <note>Ne.</note>
@@ -723,7 +709,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg151">Povedati moram naslednje za uvod, poročilo o delu Ministrstva za zunanje zadeve v letu 1992 in elemente za zunanje politično aktivnost Republike Slovenije po mednarodnem priznanju je predložila Vlada Republike Slovenije. To gradivo je obravnavala Komisija za mednarodne odnose. Na klop ste prejeli novo gradivo, ki ga je Ministrstvo za zunanje zadeve poslalo Komisiji za mednarodne odnose in novo poročilo komisije, ter osnutek stališč in sklepov. Osnutek stališč in sklepov imate. Predlagam, da naši člani oziroma vsi poslanci spremljate delo pozorno zaradi tega, ker bomo po tem na zaključku tudi sprejeli stališča in sklepe našega zbora. Ker pa Družbenopolitični zbor ni uvrstil te točke na dnevni red, bomo danes opravili samo razpravo, sklepe in stališča pa bomo sprejemali na nadaljevanju te točke na eni izmed naslednjih sej. Teoretično sem do sedaj vedno tako vprašal. Želi predstavnik Vlade besedo? Gospod predstavnik minister je bil tukaj in je odšel. Naše delo je intenzivno, zato gospod minister predajam vam besedo kot predstavniku vlade za uvod k tej točki.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SSK11.RupelDimitrij1946" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg152">Gospod predsednik, spoštovane poslanke in poslanci! Ministrstvo za zunanje zadeve je pripravilo obsežna gradiva, v katerih je skupaj z zunanjimi sodelavci iz vrst strokovnjakov, ki v naši državi proučujejo in spremljajo mednarodno politiko in mednarodne ekonomske odnose, začrtalo smeri dejavnosti slovenske zunanje politike in diplomacije v prihodnjem obdobju.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg153">Slovenijo je do današnjega dne priznalo 50 držav. Med njimi so tudi že nekatere najpomembnejše evropske in zunajevropske države. Lahko pa rečem tudi to, da po vseh nam dostopnih informacijah prav te dni pričakujemo priznanje Združenih držav Amerike. S priznanjem naše države je sklenjena prva faza strategije slovenske zunanje politike. Če to želimo ali ne, nas ta nova realnost premešča iz bolj udobne in bolj ugodne, imenoval bi jo egocentrične, in tudi evrocentrične zunanje politike v tisti mednarodni prostor, kjer bomo izpostavljeni vsem nevarnostim in izzivom sodobnih mednarodnih ekonomskih, varnostno strateških, kulturnih in drugih tokov, v katere vstopamo. Prioriteta naše zunanje politike mora biti zagotovitev takšne povezave s svetom in takšna razporeditev tujih vplivov, ki nam bodo zagotavljali varnost, ekonomski razvoj in odprtost, toda hkrati tudi ohranitev naše kulturne identitete.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg154">Najprej, če dovolite, par besed v zvezi z vključevanjem v Evropo. Vključevanje v evropske integracije, sisteme kolektivne varnosti v statusu, ki je v tem trenutku sprejemljiv za nas in za partnerje, ostaja najpomembnejša prioriteta naše zunanje politike. Pri tem naj omenim samo nekaj smeri naše dejavnosti. Prvič, sporazum o asociaciji z Evropsko skupnostjo in zagotavljanje sporazumov za prihodnje obdobje. Torej, mi smo s predstavniki Evropske skupnosti, ki so bili tukaj pri nas v Ljubljani, govorili o našem prihodnjem članstvu v Evropski skupnosti, napovedali svojo željo oziroma svoj vstop v Evropsko skupnost, pri čemer smo rekli da si želimo v Evropsko skupnost vstopiti na podoben način, kot so vstopile države trojke, se pravi Madžarska, Poljska in Češka in Slovaška federacija. V času, dokler bodo pogajanja o tem asociranem statusu trajala, pa moramo seveda preživeti, moramo imeti neko osnovo za odnose z Evropsko skupnostjo, in to osnovo bomo dobili s posebnim sporazumom, ki bi bil lahko gotov do maja meseca - če bo seveda naša Skupščina s takšno vnemo in s takšno simpatijo spremljala zunanjo politiko in tovrstne sporazume kot doslej.</seg>
@@ -766,11 +752,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg191">Želim si, da bi v prihodnje lahko bolje koordinirali svoje delo na podlagi zakona, da bi lahko bolje sodelovali s Skupščino, čeprav moram reči, da sodelovanje med skupščinsko komisijo in našim ministrstvom je zgledno in je tudi komisija vedno dajala ustrezne informacije, direktive in tudi podporo našemu ministrstvu, ko je bilo to potrebno. Danes se je tu v Skupščini v neki drugi sobani nekoliko zapletlo v zvezi z razpravo o zunanji politiki, vendar sem vesel, da sem lahko o teh zadevah govoril vsaj pred tem visokim zborom. Za pozornost se vam prav lepo zahvaljujem. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg192">Hvala, gospod minister. Glede na poročilo Komisije za mednarodne odnose, kjer piše Komisija za mednarodne odnose, Matjaž Šinkovec, pa bi v imenu Komisije poročal o ugotovitvah Komisije za mednarodne odnose, bi predlagal, da bi gospod Šinkovec kaj povedal.</seg>
             </u>
             <note type="speaker">MAG. MATJAŽ ŠINKOVEC:</note>
-            <u who="#SSK11.SinkovecMatjaz1951" ana="#regular">
+            <u who="#SinkovecMatjaz1951">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg193">Želel sem malo več spregovoriti, če bi bila priložnost, da bi imeli skupno zasedanje. Ker to, žal, ni bilo omogočeno, bi rekel samo nekaj besed.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg194">Iz predloženih stališč in sklepov, ki jih je Komisija Skupščine Republike Slovenije za mednarodne odnose oblikovala in predlagala v sprejem, je jasno, za kakšno zunanjo politiko naše države se v tem skupščinskem telesu zavzemamo. To je skupščinsko telo, kjer že skoraj dve leti večinoma soglasno oblikujemo temeljne smernice uveljavljanja države Slovenije v svetu.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg195">Tega predlaganega osnutka dokumenta, ki vsebuje 19 konkretnih predlogov sklepov, nima smisla posebej predstavljati, saj je po našem mnenju dovolj jasen in kljub 5 stranem teksta vseeno koncizen. Kljub temu da takšnega temeljnega dokumenta, ki je v razpravi danes, doslej še nismo sprejemali, pa so bila številna stališča in sklepi našega parlamenta, ki smo jih sprejemali ob pomembnih mejnikih našega vstopa v mednarodno skupnost, tudi temeljne zunanjepolitične opredelitve naše države. Med te štejem predvsem tako izjavo o dobrih namenih, predloge Republike Slovenije glede razdružitve, deklaracijo o neodvisnosti, našo odločitev ob koncu moratorija in podobno.</seg>
@@ -779,58 +765,58 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg198">Dovolite, da ob koncu poudarim, da bi zaradi racionalnosti oblikovanja predloga stališč in sklepov želeli, da ste glede predlaganih sprememb kar se da konkretni, tako da bi čimprej lahko opravili tudi končno fazo sprejema tega dokumenta, ki je za našo nadaljnjo mednarodno dejavnost nujen. Kot je razvidno iz osnutka stališč in sklepov, sta gradivi Ministrstva za zunanje zadeve predloženi predvsem v vednost in kot podlaga tem temeljnim usmeritvam. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg199">Hvala lepa. Odpiram razpravo. Kdo želi razpravljati? Prosim, gospa Angelca Žerovnik.</seg>
             </u>
             <note type="speaker">MAG. ANGELCA ŽEROVNIK:</note>
-            <u who="#SSK11.ZerovnikAngelca1944" ana="#regular">
+            <u who="#ZerovnikAngelca1944">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg200">Spoštovani, in posebej spoštovani gospod Rupel, kajti vam bom namenila nekaj vprašanj. Omenili ste, da z mejo in ribolovom v sosednji državi Hrvaški ni vse urejeno. Nato ste naslonili krivdo na Ministrstvo za kmetijstvo. Sprašujem vas, kje je koordinacija med vašim ministrstvom in Ministrstvom za kmetijstvo, kajti ribolov ni samo kmetijska dejavnost, ampak je tudi problem in dejavnost Ministrstva za zunanje zadeve.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg201">Naslednje vprašanje, odnos podrejenih in nadrejenih. Brez argumentov ste ocenjevali nadrejene, celo v odsotnosti nadrejenih. Rada bi vedela, ali pa vsaj meni se zdi, da na tej ravni, če že ne drugo, vsaj lepo vedenje zahteva, da govorimo o nadrejenih oziroma če se pogovarjamo o tem, jih vsaj pokličemo. Omenili ste, da se morate ravnati po zakonu. Vendar nam niste pojasnili, kdo vas sili v to, da se naj ne bi ravnali po zakonu. Podali ste nam poročilo o delu ministrstva za zunanje zadeve, komentirali oziroma dajali pa ste komentarje o vladi, o predsedniku, o izvršnem svetu; torej tudi tu bi rada pojasnilo. Hvala lepa. Še nekaj. Tudi o modrosti ste govorili. Še tu bi rada pojasnilo o nemodrih in modrih na tem področju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg202">Besedo ima g. Moge.</seg>
             </u>
             <note type="speaker">RUDI MOGE:</note>
-            <u who="#SSK11.MogeRudi1944" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg203">Ker že ne razpravljamo o vsebini tega poročila, bi rad tole povedal. Po vesoljni Sloveniji sem hodil, da bi za zelo inteligentne mlade Slovence v starosti 18 let, ki letos končujejo mednarodno maturo, pridobil štipendije. Nisem je dobil niti na Ministrstvu za šolstvo in šport. Moram povedati, da me je edini od vlade poslušal minister Rupel, tudi odgovoril in se za te mlade ljudi zavzel, da bodo šli v inozemstvo s slovensko štipendijo, ne pas štipendijo, ki bi jo mimogrede dobil jaz v Gradcu in bi bili ti mladi ljudje za nas zgubljeni.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg204">Prosim, Andrej Šter.</seg>
             </u>
             <note type="speaker">ANDREJ ŠTER:</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg205">Hvala lepa. Spoštovani, glede strategije, torej dokumenta Ministrstva za zunanje zadeve o mednarodnem priznanju, imam naslednja vprašanja. Mislim, da je tekst nekoliko pomanjkljiv glede finančnega ovrednotenja delovanja naših diplomatskih predstavništev, kot tudi bi želel videti natančnejšo definicijo in obseg našega bodočega diplomatskega angažiranja, če je možno, tudi po posameznih državah. Pri tem mislim na jasno oblikovane kriterije kadrovanja, tudi po posameznih državah, kot tudi glede finančne in socialne varnosti naših predstavnikov. Kako na ta vprašanja vpliva predvideni poseg v proračunska sredstva, iz tega poročila ni razvidno. To priliko izkoriščam tudi za postavitev povsem konkretnega vprašanja. In sicer me zanima, kaj je po 15. januarju 1992 storilo Ministrstvo za zunanje zadeve, ali kar konkretno gospod minister sam, da bi se ponovno aktivirala pogajanja o manjšinski zaščiti Slovencev v Italiji? In, ali je bilo mogoče o tem govor tudi na tistem posvetu (ne vem, kako se je imenoval) - mislim, da so bile reformistične sile iz vzhodnih držav? Zanima me, če je bilo to vprašanje sproženo v kontaktih z ministrom De Michelisom. Iz poročanja medijev namreč o tem ni bilo kaj dosti govora.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg206">Razen tega bi želel opozoriti na eno nalogo, ki se postavlja kot vse bolj nujna; namreč, vse pogostejši so zapleti v zvezi z vlogo predsednika države in njegovimi pristojnostmi na področju zunanje politike. Ta vloga se je s sprejemom nove ustave bistveno spremenila. Prejšnja ustava mu je dajala vse drugačna pooblastila, kot pa mu jih daje ustava, ki jo imamo sedaj. In mislim, da je potrebno začeti postopek za spremembo zakona o zunanjih zadevah. V izogib zapletom, ki so seveda nezaželjeni - jaz jih vsaj tako jemljem - bi bilo smiselno pristopiti k delu takoj. Sedaj me pa zanima, gospod predsednik, ali obravnavamo samo strategijo, ali tudi poročilo o delu?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg207">Tako kot je napisano - "Obravnava zunanjepolitične problematike, s posebnim poudarkom<gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">ANDREJ ŠTER:</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg208">Torej oba dokumenta. Potem mi dovolite, da nekoliko še na kratko povprašam nekatere stvari o poročilu Ministrstva za zunanje zadeve za leto 1991. Moja prva pripomba bi bila podobna prvi pripombi tudi k strategiji - namreč poročilo je pomanjkljivo prav s tega finančnega stališča. Namreč, finančnega obračuna za leto, ki ga opisuje, nimamo v poročilu, mislim pa, da je to ena od pomembnejših sestavin. Poročilo zajema obdobje, v katerem je bil verjetno - predvidevam - prisoten vsaj latenten konflikt med Ministrstvom za zunanje zadeve in Izvršnim svetom - ali v celoti, ali personalno, na katere osebe vezano ne vem. Te razmere, ki so morda tudi vplivale na delo organa, katerega poročilo obravnavamo, so bile na kratko le omenjene v ustnem delu današnjega poročanja. Torej jaz predlagam, da se poročilo ustrezno pisno dopolni. Lažje bi bilo kontaktirati na ta način in mislim, da bi tudi kazalo s tem dopolniti poročilo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg209">V poročilu se mi zdi, da je preskromno ali morda sploh ni zajeta informacija o vrednotenju dosedanjega delovanja predstavnikov Republike Slovenije v tujini. To pomanjkljivost je ugotavljala tudi skupščinska Komisija za mednarodne odnose in predlagala ustrezno dopolnitev poročila. Kazalo bi s tem dopolniti tudi to letno poročilo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg210">In še ena konkretna stvar - seveda so to moja razmišljanja. Poročilo omenja združeno Nemčijo v negativni konotaciji takega ranga kot je recimo vojaška nevarnost z Vzhoda, ali ekonomski in socialni nemiri, ki grozijo Evropi. Po mojem gre torej za vprašljivo ponderiranje neke nove kvalitete v svetovni politiki, kar združena Nemčija vsekakor je. Ali je bila razdeljena Nemčija element stabilnosti Evrope, se seveda lahko vprašamo. Ampak iz tega sledi, da naša politika gradi na tem, kot na negativnem pojavu.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg211">Predlagam, da se ustrezno spremeni stavek tretje alinee na tretji strani, ki o tem govori. Skratka, da se besede "soočena je bila z združeno Nemčijo" iz poročila izločijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg212">Hvala lepa Andrej. Nadaljujemo z razpravo. Kdo želi še razpravljati? Prosim, gospod Prelovec ima besedo.</seg>
             </u>
             <note type="speaker">VALENTIN PRELOVEC:</note>
-            <u who="#SSK11.PrelovecValentin1934" ana="#regular">
+            <u who="#PrelovecValentin1934">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg213">Spoštovani! Imel bi dve zelo kratki stvari, dve kratki vprašanji. Prvo vprašanje: Slišali smo, da je minister za pomorstvo Republike Hrvaške nam postavil (bom ponovil besedo) nož pod vrat, odnosno ne nam, ampak našim ribičem, ki takorekoč čez par dni ne bodo več smeli loviti v vodah Hrvaške. Prihajam z Obale, zaradi tega bom tudi iz prve roke povedal temu zboru, da tisti ribiči, ki ne bodo smeli na hrvaško stran, bodo šli na cesto, na blok in blokirali mejo. To so sporočila ribičev, katerim bi ovirali lov.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg214">Drugo vprašanje se nanaša na tisto izjavo, ki so jo sicer Hrvati predlagali, da bi v obravnavanju in določanju precizne meje morale sodelovati občinske strukture, to se pravi po vsej verjetnosti uveljavljati svoje občinske meje. Na to vprašanje bi imel povedati naslednje: da se s Hrvati popolnoma strinjam, ker prebivalci Obale za to niso bili nič vprašani. Namreč, sporazum Kardelj - Bakarić, menda iz leta 1946, je razrezal piransko občino: dve tretjini Slovencem, eno tretjino Hrvatom. Slovenci so pokupili dobršen del ozemelj na drugi strani, vendar se vpisati v zemljiško knjigo niso mogli, ker je ta zemljiška knjiga še zmeraj v Piranu - to se pravi na območju, ki ga je piranska občina upravljala preko 400 let. Prosim, da se tudi o teh stvareh razmisli, preden se bo rekla zadnja beseda. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg215">Hvala. Še kdo? Besedo ima Jaša Zlobec.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg216">Lep pozdrav! S tem poročilom bi bilo vse v najlepšem redu, če ne bi na par mestih, tako poročila, kot elementih, kot par krat izraženo tudi pri ministru Ruplu, jasno povedano, da manjka koordinacija, da so stvari neusklajene. O tem so eksplicitno ali implicitno spregovorili tudi poslanci pred mano. Dokler ta zadeva ne bo rešena, tudi taka lepa poročila ne bodo stvari razreševala.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg217">Namreč, že zelo hitro so se začeli dogajati na področju zunanje politike konflikti med predsednikom Vlade in zunanjim ministrom, ki so bili danes samo še potrjeni, ki so zmeraj hujši. Politiki med radikalnim delom nekdanjega Demosa in predsednikom Republike, so kulminirali na tistih sejah, ko smo obravnavali brionsko deklaracijo, ko je hotelo radikalno krilo Demosa napovedati vojno celi Evropi, kar bi nas pripeljalo takrat v popolno katastrofo. Včeraj in danes smo eksplicitno, danes malo manj eksplicitno, spet imeli en nov konflikt s strani zunanjega ministra proti Janezu Drnovšku, ki se je seveda sprenevedal, konflikt namreč, in spet ničesar koristnega ne prinaša. Skratka, če te stvari ne bomo razčistili v najkrajšem času (jaz mislim, da se bo lahko razčistilo šele z novo vlado), bomo imeli sicer stalne težave pri zunanji politiki.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg218">Sedaj bi imel par konkretnih pripomb. To poročilo je polikano, ker ne more razkrivati teh žarišč konfliktov. Na 12. strani govori poročilo o Slovencih v zamejstvu in govori o tem, kako so se te stvari izboljšale glede na prejšnjo situacijo. Moram reči, da je situacija med Slovenci v Italiji in Avstriji trenutno zelo slaba, ker so se na tem področju strankarski interesi z vso silo zapičili in so slovensko skupnost v obeh teh državah hudo sprli in razdelili na dvoje. Skratka, tukaj ni govora, da bi lahko govorili o kakšni idilični situaciji.</seg>
@@ -844,47 +830,47 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg226">Tukaj bi se pa strinjal s kolegom Prelovcem v zvezi z občinskimi strukturami v tej razliki med Hrvaško in Slovenijo. Namreč, minister Rupel izhaja iz "Raison d'Etat": zmeraj v interesu republike, v interesu nacije se mora lokalni interes podrediti. Samo ta interes, višji interes lahko postane tudi udoben alibi za neuspešne, konkretno pogajanja. V zvezi s Hrvaško pa je treba reči, da tukaj zadene krivda v veliki meni tudi parlament, ta tukaj, ki se je dve leti obnašal do Hrvaške skrajno poln napuha in se zvišano zmrdoval nad nekimi Hrvati kot delom balkanske Jugoslavije, ki nas Slovence prav nič ne zanima, ker mi gremo v Evropo. Jaz sem na to, in naša stranka, večkrat opozarjal, ampak takrat je to bilo opozarjanje gluhih. V zvezi s Hrvaško bi še eno stvar omenil. Za vsakega potomca v petem kolenu slovenskega izseljenca v Južni ali Severni Ameriki, ki že zdavnaj ne zna niti ene slovenske besede več, govorimo, kot da brez njega Slovenija ne bo mogla preživeti, medtem, ko pa Slovenci na Hrvaškem so nam popolnoma deveta skrb. Ne vemo, koliko jih je, ne zanimamo se zanje, prepuščamo jih popolnoma njim samim in nismo v resnici mrdnili s prstom zadnje, kar se mi zdi škandal posebne vrste. Kar je spet neki drugi minister, ki je za to direktno zadolžen, ampak ker ni nič storil, bi tudi položil na srce Dimitriju Ruplu, naj v zvezi s tem stori kakšno bolj aktivno potezo. Hvala lepa!</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg227">Želi še kdo razpravljati? Gospod Krajec.</seg>
             </u>
             <note type="speaker">MIRKO KRAJEC:</note>
-            <u who="#SSK11.KrajecMirko1954" ana="#regular">
+            <u who="#KrajecMirko1954">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg228">Replika, namreč jaz se popolnoma strinjam z gospodom Zlobcom, samo naj ne bo tako prenapet, namreč da že eno tako informacijo daje v neki svoj predvolilni boj, obenem pa poziva na neko strpnost. Namreč, pri sprejemu Brionske deklaracije vemo, kakšno je bilo glasovanje, vemo, da smo se dobro poenotili in da zato tiste, ki so radikalno mislili, naj pove po pravici in naj ne meče Demosu prepričanju, ker z mojim mnenjem in mojo vestjo, za katero bom tudi tukaj odgovarjal, se nikarte igrati. Še enkrat vas prosim, nikarte se igrati in rajši pometite svoje račune in se ne delajte, da ste po vojni vsi generali. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg229">Načeloma bi bilo dobro, da bi vsi pri tem obravnavali temo vsebine, ki je na dnevnem redu in poleg tega mogoče še samo to, vi imate vsi pisno stališča in sklepe in tudi v zvezi temi 19. točkami, bi bilo verjetno kaj povedati. Če ne, bi pa predlagal, da imamo odprto to področje, da bi tisti, ki čutite potrebo, tudi pisno lahko kaj dodali in bi to komisiji tekom dneva ali jutri zastavili, tako da bi lahko dobili dokončni tekst. Tako in tako ne vemo, kdaj bo Družbenopolitični zbor te zadeve obravnaval. Še kdo želi razpravljati?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg230">Prosim, gospod Erce.</seg>
             </u>
             <note type="speaker">FRANC ERCE:</note>
-            <u who="#SSK11.ErceFranc1951" ana="#regular">
+            <u who="#ErceFranc1951">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg231">Spoštovani zbor! Zelo mi je žal, da nisem utegnil slediti razpravi, to se vnaprej opravičujem, če bom mogoče ponovil, kar je rekel že kdo od predgovornikov. Tema je taka, zanimiva oziroma pomembna, vendarle moram takoj povedati, da nisem nikakršen strokovnjak za to področje, vendar kljub temu mislim, da nisem v manjšini, z veseljem oziroma rad poslušam tako eminentne goste kot je gospod minister, ali pa gospod predsednik Komisije za mednarodne odnose, gospod Šinkovec.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg232">Imel bi samo eno pripombo, ki se nahaja na 5. strani teh elementov za zunanjepolitično aktivnost Republike Slovenije v zadnjem odstavku in jo je tudi gospod minister ob zaključku svojega nastopa omenil. Gre pa za to koordiniranost zunanjepolitičnega nastopa. Jaz mislim, da je edino, čemur mora ministrstvo in ostali vladni organi slediti pri svojih nastopih, so stališča oziroma izhodišča tega parlamenta.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg233">Drugo, ravno tako v tem odstavku zapisano, kjer bi sicer z veseljem oziroma podpiram tako usmeritev, ko govorijo avtorji, čisto formalno, lahko bi rekel dlakocepsko pripombo imam. Moti me pri teh gradivih, pa ne samo pri tem, da sploh ne veš, kdo je avtor; dobro, ministrstvo, v ministrstvu je veliko ljudi. Da se vrnem na to zadevo, ko govorimo, ko je zapisano, da je treba energično zagovarjati načelo strokovnosti, pri čemer bo potrebno širše odpreti vrata novim generacijam diplomatov. To, kot sem že omenil, podpiram, vendar sem pa na žalost informiran predvsem skozi oblike, ki so tudi pri večini naših državljanov prisotne, zgleda, da se ne upošteva še v zadostni meri. Verjamem da v težavah, predvsem ekonomskih, proračunskih ali kakor koli jih že imenujemo, bo najbrž trajalo nekaj časa, da si pridobimo ustrezno število kvalificiranih kadrov, vendar dosedanja praksa pa to trditev oziroma to željo, zgleda, kaže ravno nasprotno. Kadar gledam kakšno televizijsko poročilo, vidim okrog gospoda ministra same znane obraze iz diplomacije preteklega obdobja. Toliko zaenkrat. Hvala lepa!</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg234">Besedo ima Ivo Daneu.</seg>
             </u>
             <note type="speaker">IVO DANEU:</note>
-            <u who="#SSK11.DaneuIvo1937" ana="#regular">
+            <u who="#DaneuIvo1937">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg235">Spoštovani predsednik, gospod Rupel, kolegi in kolegice! Nisem se želel oglasiti, vendar moram povedati svoje mnenje. Menim, da ta tema ni samo za naš zbor in da bi morali tako pomembno dejavnost obravnavati na skupni seji. Vendar če je že sistem tak, upam da v bodoče ne bo in da bodo lahko v novem sistemu odločali čisto drugače, če sem pa že tukaj lahko povem svoje mnenje, da je diplomacija izjemno pomembno področje. Diplomati se rojevajo, se nekaj tudi naučijo. Ne čutim se sposobnega dajati nasvetov ministrstvu in ministru, ker vem, da so do sedaj dobro delali, ogromno delali, tisti ki pa ogromno dela, dela tudi drobne napake. Vendar če sem že pri besedi, bi si želel, da je v tem poročilu morda omenjena tudi besedica sodelovanja športnikov, ker mislim, da lahko tudi preko športa marsikaj dosežemo. Lahko rečem, da sem bil eden prvih, ko smo leta 1957 pred politiki urejali razmere s Kitajci, ker je bila športna delegacija tista prva in upam da v bodoče, do sedaj ste imeli posluh, Ministrstvo za informiranje in ostala, mislim da boste tudi v bodoče športnike malo bolj upoštevali. Hvala lepa!</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg236">Prosim, Polde Drame.</seg>
             </u>
             <note type="speaker">LEOPOLD DRAME:</note>
-            <u who="#SSK11.DrameLeopold1935" ana="#regular">
+            <u who="#DrameLeopold1935">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg237">Spoštovani! Izhodišča za ekonomske odnose s tujino, tu je mišljen predvsem evropski tržni prostor in pa trg bivše Jugoslavije. Sem pač podjetnik in zato me to področje z ekonomskega vidika najbolj zanima. Vse priznanje za prizadevanja in pa za uspehe v politiki. Mislim pa, da je gospodarsko področje, če ne rečem zaostalo, pa malo odrinjeno na stranski tir. Pred kratkim smo navezovali še stare stike, če dam za primer recimo s slovenskimi podjetniki v Baden Württenbergu in pa Zbornico Stuttgarta in so nas pred nekaj dnevi obvestili, da sprejemajo te naše ponudbe in to, kar smo jim mi za promocijo poslali, ampak za nekaj časa naj bodo stvari zamrznjene, dokler se pri nas odnosi ne uredijo; tako je nekako v tekstu pisma. Da je tu zakon o lastninjenu, ki pri nas mogoče moti, pač ta proces v Evropi, da se hitreje v teh gospodarskih tokovih ne vključujemo, mislim pa, da za našo branžo, katero jaz zastopam, mi smo že privatizirani bili tudi v prejšnjem starem sistemu, tudi delamo naprej, manjka nam pa tržišče in plasman naših proizvodov.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg238">No, v drugem delu, to je tržišče v republikah bivše Jugoslavije, mislim, da bi tu bilo potrebno reševanje če se da, hitrejše. Dal bi primer, da nas že hrvatski kupci, s katerimi smo prej sodelovali in pokrivali njihovo tržišče, že pozivajo k nadaljnjemu sodelovanju. Seveda, treba bo ta monetarni ali finančni sistem urediti, kako bo to plačevanje potekano s finančnega vidika in tudi, da bi mi prišli do tistega denarja ki nam je še vedno tam zamrznjen vsled nedogovora na tem finančnem in pa monetarnem področju. Na strani 30 v teh izhodiščih je stvar razdelana, samo mislim, da ni tako konkretno postavljena; ker ti dogovori, tudi naših gospodarstvenikov, se že kar nekaj časa, skoraj 6 mesecev, zavlačujejo, mi smo pa še na mrtvi točki. Ne moremo poslovati, čeprav sta zainteresirani obe strani. Tako mi, ki bi radi svojo proizvodnjo plasirali v te dele bivše Jugoslavije, kot oni, ki to našo proizvodnjo trenutno rabijo. Samo ta finančni del nikakor ne steče in bi prosil mogoče tudi kako pojasnilo, ker nam bo v spodbudo, da vemo, kako se pripraviti in kaj nas čaka jutri. Hvala lepa!</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg239">Hvala. Gospod Danilo Bašin. Potem pa izgleda, da zaključujemo. Še gospod Rupel.</seg>
             </u>
             <note type="speaker">DANILO BAŠIN:</note>
-            <u who="#SSK11.BasinDanilo1943" ana="#regular">
+            <u who="#BasinDanilo1943">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg240">Gospod predsednik, spoštovani kolegi. Jaz bi rad ob tej diskusiji pred našim zborom, mislim, da je le treba reči, jaz v svojem imenu lahko to rečem, da je treba pozdraviti to diskusijo pred zborom in da je bila, kakor poročilo, tako tudi izvedba pred zborom tako s strani ministra, kakor s strani gospoda predsednika komisije zelo podrobna, čeprav se strinjam s tem, da problemi in pripombe in tako naprej v zvezi z vsem tem ostajajo, vendar se mi zdi, da je na tem področju bil izbran za delo pravi pristop, in sicer pristop brez nervoze, brez ihte in z neko modrostjo v smislu razreševanja problemov, ker menim, da razreševati probleme v sklopu nove države že navznoter z nervozo in ihto ne gre, ker ne bomo nič razrešili. Še manj je pa to možno delati na mednarodnem področju, in še posebej z zverziranimi diplomati kot so to Italijani in tako naprej. Tako da jaz mislim, da je to izredno pomembno, da je ta zbor oziroma Skupščina to obravnavala.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg241">Jaz bi se pa glede na to, da izhajam iz območja, ki ima neko precejšnjo navezavo oziroma pri katerim so prisotne posledice mednarodnega sodelovanja ob meji z Italijo, da bi morali neka določena območja oziroma področja v smislu ekonomskega razreševanja pospešiti. In sicer en del je vprašanje dela po avtonomnih računih, to se pravi tržaškem in goriškem, ker tu zadeve še niso učinkovito razrešene in seveda na naši strani to prinaša precejšnjo negativo v poslovanju podjetij, ki po tem delajo in mislim, da je to treba pospešiti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg242">Druga stvar pa je vprašanje razreševanja problema IK banke v Kopru. Jaz moram povedati, da smo vsi tisti, ki smo delali preko IK banke sedaj, šli v tožbo zoper IK banko Koper, ker enostavno v danem momentu je bilo s strani slovenskih operaterjev v lanskem letu precej denarja založenega IK banki za plačila v tujino, vendar IK banka iz znanih razlogov tega ni izvedla, sedaj pa se mi nahajamo v problemu, da nam bodo naši partnerji v tujini zaradi teh neizvajanj začeli rubiti premoženje. In da bi to zadevo na nek način le ustavili, smo šli v tožbo tudi z namenom, da bi prikazali do teh naših partnerjev, da smo nekaj naredili in jaz bi prosil, da se v to problematiko naši organi oziroma tudi zbornica vključijo, da ne bi prišlo do nekih negativnih posledic za naše gospodarstvo.</seg>
@@ -893,11 +879,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg245">Jaz mislim, da tu gre za en problem, ko bi morali upoštevati sprejete dogovore s strani bivše Jugoslavije in Italije s strani Jugoslavije in Italije, glede vprašanja dvojnih obdavčitev, ker namreč z italijanske strani imamo že določene informacije, ker gre v bistvu za proračunske denarje, da bo Italija reagirala in da Italija ne bo pustila, da bi se iz njihovih proračunskih denarjev prelival denar v naš proračun. Tako da tu bi bilo potrebno nekaj zelo hitro narediti. Mi bomo danes predlagali, skupina poslancev, določen ukrep in bi prosil, da bi se ga proučilo in nekaj na tem področju tudi naredilo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg246">Gospod Marjan Starc ima besedo.</seg>
             </u>
             <note type="speaker">MARJAN STARC:</note>
-            <u who="#SSK11.StarcMarjan1942" ana="#regular">
+            <u who="#StarcMarjan1942">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg247">Kolegice in kolegi! Jaz mislim, da je prav, da je ta točka prišla na dnevni red in da je tudi danes ne končamo. Jaz mislim, da si mora ta parlament za to temo vzeti dovolj časa, da to temeljito prediskutira in pa pripravi neko platformo, ker enostavno mi nimamo nobene tradicije niti zgodovine kot samostojni mednarodni subjekt. Šele nastajamo in postavljati temelje res dolgoročne strategije, kako se obnašati kot novi samostojni neodvisni subjekt, je potrebno temeljitega razmisleka. Že to dejstvo, za mene so najpomembnejša ta stališča, ki jih bo ta parlament sprejel in smo jih dobili na mizo in mislim, da moramo to temeljito izpiliti, temeljito dodelati, prediskutirati. Že samo iz tega razloga je dobro, da danes ne prehitevamo z odločitvami, da si vzamemo čas, da te stvari preštudiramo, pripravimo, posebej še, ker smo tudi gradivo, ostalo analizo dobili danes na klop. Jaz bom po svojih diletantskih močeh poskušal pismeno dati določene predloge ali pripombe, ali amandmaje k tem predlogom stališč naše komisije zato, da bomo v nadaljnji diskusiji na naslednjih sejah prišli do ene platforme, za katero mislimo, da je potrebna.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg248">Če smo se že nekje v tej konstalaciji, kar se je dogajalo v zadnjih par letih razpada tega vzhodnoevropskega sistema, znašli v tem, da nam je usojeno, da postanemo samostojna neodvisna država in da smo Slovenci imeli dovolj korajže, odločnosti, razuma in modrosti, da nam je to uspelo in da smo danes praktično postali samostojna, neodvisna in priznana država, da se od tukaj naprej dejansko pravo delo šele začenja na tem področju.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg249">In že če analiziramo delo zadnjih nekaj mesecev na tem področju, ko dejansko začenjamo na novo, se res vidi cela vrsta naših otroških pomanjkljivosti in nerodnosti, začenši pri sami koordinaciji, ki izgleda je tudi sestavni del tega našega začetka, pri sami koordinaciji in dejansko tukaj nekaj ni v redu pri izvajanju naše zunanje politike in mislim, da parlament mora tudi o tem nekaj reči. V tem trikotniku, parlament, predsedstvo, vlada, ministrstvo, da je to treba enostavno opredeliti brez kakšnih posebnih razlogov, ali brez nervoze, enostavno opredeliti v skladu z novo ustavo in da izhodišča morajo biti tista, ki jih sprejme ta parlament. Jaz lahko, samo bi nekaj vnaprej, kolikor mi je uspelo tukaj zaznati po teh točkah, teh predloženih sklepov stališč v točki 3, zadnji odstavek, kjer govori pri našem vključevanju v Evropo in tako naprej, da moramo sprejeti čimprej vse zakone, ki nas bodo evropeizirali, bi povezal tudi z zadnjim odstavkom 4. točke, ki se nekje prepleta. Pogrešam pa tisto temeljno določilo, da mi smo še vedno institucionalni, tudi vsebinsko smo še vedno socialistična družba in kot taka se enostavno ne moremo nikamor vklopiti. Mi moramo to lastninsko reformo dejansko izpeljati in da se kot taki, kot sodobna ekonomija, tržna ekonomija, lahko potem primerjamo z ostalimi.</seg>
@@ -906,11 +892,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg252">Skratka da zaključim, bom skušal pripraviti na ta stališča nekaj svojih pripomb, predlogov, amandmajev v želji, da se te stvari čimbolj diskutirajo, da je to potem ena zdrava platforma za naprej. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg253">Hvala. Jože Arzenšek želi besedo. Glede na to, da približno enako vsi razmišljamo, smo že ugotovili, bi rad pripeljal sejo do zaključka.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg254">Spoštovano predsedstvo, spoštovani zbor. Jaz ne bi rad kratil časa in dobrih namer govornika, predsednika Jožeta Zupančiča, ampak vseeno bi rad nekaj rekel.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg255">Imam občutek z oziroma na to, ne vem, ali imam smisel ali nimam smisla za politiko, moram reči, da v parlament tudi nisem prišel po politični plati, ampak bolj po strokovni in podobno . Imam občutek, da se tudi sedaj porajajo stvari, ki jih beremo v časopisu in sem dolžan, ali pa sam sebi ne bi bil zadosten, če ne bi tega povedal, da nestrpnost in pa, recimo, morda iskanje pravilnih osebnosti, manj pa vsebin je slaba izkaznica za prihodnji boljši jutri. To je ena zadeva in mislim, da so nekateri to že tudi povedali in sem vesel, da je moj predhodnik, ker sem se ga bal, ker ponavadi nastopamo eden za drugim, da bo drugače povedal, pa mi je danes potrdil. Mislim,da je zadnjič razgovor z njim bil pozitiven, ker sem mu lepo povedal in je rekel, da je v redu. To je prva stvar.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg256">Druga stvar. Smatram na primer za zelo pomembne stvari, in nekatere od teh časovno zaostajajo, kot so, recimo, meje, kot je morje, kot je praktično urejevanje stvari, da lahko normalno komuniciramo na primer s Hrvaško. Kar moti, to bi rad posebej poudaril, tudi zdravstvo z ozirom na tako imenovano omejeno in pa časovno nedeterminirano dobavo zdravil in tako dalje in podobno, ampak verjamem v to, da z ozirom na to, da smo preboleli po priznanju, ali bomo v bližnji prihodnosti, tiste otroške bolezni, da bodo te stvari stekle.</seg>
@@ -918,11 +904,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg258">Jaz mislim, da so dejavnosti prva zadeva in da se ne smejo omejevati na to, v primeru, ko nastopi kriza oziroma situacija, to pomeni reševanje vprašanja beguncev, zagotavljanja sanitetnega materiala in zdravil in podobnih stvari, ampak da bi recimo, ko postavljamo prioriteto reševanja, ker vemo, da se ne da kar naenkrat, da praktično je premalo, češ da smo zadržali stike s svetovno zdravstveno organizacijo z drugimi stvarmi, da bomo ob pogoju, da bo ZDA priznala, vložili tudi v OZN prošnjo za članstvo in podobne stvari. Respektiram človekove pravice in vse ostale stvari, ampak če se pogovarjamo o celovitosti, potem naj sodijo te dejavnosti, ki pa mislim, da so tudi vitalnega pomena za vsako državo, tudi med temeljna načela in jih postavimo na ta temeljna načela in tudi že letos vzpostavimo prioritete reševanja teh. Namreč iz sklepov oziroma opredelitev, pa tudi komisije, to ni najbolj razvidno in bi apeliral (ker respektiram tako Ministrstvo za zunanje zadeve, Vlado in komisijo, ki mislim, da zelo dobro deluje), da tudi to v večji meri opredeli in da temu poudarka, vključno s tem, kaj je najbolj pomembno. Pa ne govorim samo za zdravstvo; to je sociala, znanstveno raziskovalno delo, patenti in tako naprej. Ker mislim, da so te stvari zelo pomembne. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg259">Hvala. Andrej Muren ima besedo.</seg>
             </u>
             <note type="speaker">ANDREJ MUREN:</note>
-            <u who="#SSK11.MurenAndrej1953" ana="#regular">
+            <u who="#MurenAndrej1953">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg260">Hvala za besedo. Najprej bi se nekoliko obrnil na ekonomske in politične odnose s tujino. Tukaj bi posebej opozoril, da ne smemo dajati kakšne posebne prednosti ali posebnega statusa bivšim jugoslovanskim republikam. Namreč taka miselnost še precej vlada v naši družbi. To območje je izredno nestabilno politično, gospodarsko šibko in taka situacija se bo nadaljevala še vsaj v naslednjih desetih letih ali pa še dlje. Torej ta del nam ne more biti v neko oporo proti ostalemu svetu, kot nam je bil leta 1918 in leta 1945; sedaj je situacija popolnoma drugačna.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg261">Potem v naših odnosih z ostalimi državami, to se pravi v mednarodnih odnosih, se moramo bolj kot do sedaj zavedati, da so v politiki in v teh odnosih bistveni interesi, ne pa dobri nameni. Mi še vse prepogosto operiramo z dobrimi nameni. Saj je prav, da imamo dobre namene, ampak zastopati moramo pa predvsem svoje interese.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg262">Druga točka bi bila premoženjsko nasledstvo Jugoslavije. Tukaj se moramo orientirati na datum 25.6.1991. Takrat, ko smo sprejeli osamosvojitev in premoženjsko stanje moramo zagovarjati tako, kot je bilo tedaj. Vemo, da je bilo tedaj veliko tega skupnega premoženja zapravljenega, do naše skupne pogodbe bo verjetno že čisto vse. Namreč to govorim pa zato, da ne bomo prehitro prevzemali kakšnih obveznosti in dolgov, ker izgleda, da ostali bodo samo še dolgovi za deliti, mi pa moramo točno vezati to, da smo mi prispevali v skupno jugoslovansko premoženje približno eno četrtino in da moramo tukaj tudi nekaj dobiti ali pa ne moremo prevzeti skupnih dolgov. Že itak bomo prevzeli tiste dolgove, ki so bili porabljeni na našem ozemlju v vsakem primeru.</seg>
@@ -930,11 +916,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg264">Kar se tiče, kot zadnje, odnosov s Hrvaško. Tukaj se pojavlja nova meja, ki je sedaj državna meja, prej je bila samo administrativna. Meja ima tisočletno veljavo, torej ni to nekaj, kar se od danes do jutri lahko spremeni. Zato je tudi ni treba potrjevati in spreminjati in zahtevati na vrat na nos, ampak je treba pustiti čas neki meddržavni komisiji, da to počasi strokovno uredi. Tukaj bi posebej še opozoril na situacijo v Piranskem zalivu, da mi prehitro ne bi odstopili od nečesa, kar je bilo v naši lasti (kot smo danes slišali) že okoli 400 let. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg265">Hvala. Želi še kdo? Če ne, bi po 12. razpravljalcih zaključil to razpravo. Mogoče dam še ministru 10 minut; je to težka odločitev, Dimitrij, kaj - 10 minut.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SSK11.RupelDimitrij1946" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg266">Rad bi odgovoril samo na nekatera vprašanja, za nekatera druga najbrž ne bo časa, za nekatera tretja pa bo treba še malo premisliti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg267">Kar zadeva vprašanje ribolova - to je bilo vprašanje, ki je bilo zastavljeno - in kar zadeva koordinacijo z Ministrstvom za kmetijstvo. Neka minimalna koordinacija je seveda bila. Problem je v tem, da ta stvar še ni bila na vladi; ta sporazum o ribolovu, ki ga zelo dolgo časa meljejo (moram reči), je napovedan za sejo vlade jutri in se bomo, upam, jutri skoordinirali v Vladi glede tega in potem bi po mojem lahko to poslali Hrvatom, čeprav Hrvati pravijo: ja, kako vi nam pošljete sporazum, preden ste nam ga pokazali, preden mi vemo, kaj je v njem. Tako, da je tu res nek fazni problem. Mi bomo sedaj po vsej demokratični proceduri pokazali svojo pogajalsko pozicijo oziroma tisto, kar si želimo. Vprašanje pa je, če bo hrvaška stran to želela in potem bo pač nekdo moral dobiti kompetenco, da se bo izpogajal do konca. Ker mislim, da preprosto ne gre, da imamo mi nek sporazum, ki ga damo skozi odbore, skozi ministrstva, skozi vlado, navsezadnje skozi parlament, skozi komisije, to predložimo Hrvatom, Hrvati niso zadovoljni in potem gremo še enkrat nazaj na ministrstvo, na vlado, na parlament, na komisije. To preprosto ne bo šlo. Tako da je tu, v našem sistemu en problem. No, ampak jaz vendarle upam, da pridemo do kakšnega dobrega sklepa jutri in jaz bom tudi jutri - če bo le mogoče - tam navzoč in bom opozoril, da je ta stvar zelo nujna. Seveda je glede tega ribolova treba reči to, da je Hrvaška pač za nas tuja država, tako kot je tuja država Italija ali katerakoli druga država in da nimamo nobene naravne ali posestvovane (ali kakor se že temu reče) pravice do lova v tuji državi oziroma v teritorialnih vodah tuje države. Mi se moramo za to zmeniti in mislim, da se ne bo tako težko zmeniti. Jaz ne verjamem, da se bo tako težko zmeniti, ampak Hrvati pa v resnici pritiskajo, da se to hitro reši in jaz jih na nek način razumem.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg268">Kar zadeva vprašanje gospe, ki je danes prva spraševala, o nadrejenosti in podrejenosti. Te stvari vendarle niso takšne, kot se na prvi pogled zdijo. Gotovo si nekateri tudi v tem sistemu - podobno kot v prejšnjem sistemu - želijo poslušnosti; jaz v prejšnjem sistemu nisem želel biti poslušen in tudi v tem sistemu ne bom poslušen, ampak bom vedno mislil s svojo glavo in bom tudi to, kar mislim in v kar verjamem, izpovedal. Ta vlada je koalicijska in vsaka stranka oziroma vsak predstavnik Vlade ima pravico do neke določene avtonomije, seveda pa se moramo vsi skupaj držati zakona. Vi ste spraševali, kar zadeva ravnanje po zakonu. Zakon o zunanjih zadevah natančno določa, kakšne so pristojnosti ministrstva, kakšne so pristojnosti predsednika Vlade; o strankah ta zakon ne govori, mi pa vemo, da se na nekaterih mestih - ne bom bolj specifičen - stranke in država mešajo. In zoper to na našem ministrstvu vedno opozarjamo, zoper to vedno protestiramo in jaz osebno zoper to protestiram.</seg>
@@ -957,27 +943,27 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg285">Kar zadeva obdavčevanje pokojnin, smo dali pisno pojasnilo. Naše mnenje, mojih kolegov pravnikov v ministrstvu je, da je dvojno obdavčenje nemogoče. Mislim, da se bo treba tu z našimi davkarji kakšne stvari še dogovoriti. Na splošno pa velja to, kar zadeva ekonomske odnose s tujino - bile so nekatere pripombe, da je morda premalo poudarka na tem. Mi imamo v našem ministrstvu oddelek za ekonomske odnose s tujino, ki šteje 14 ljudi. Iz tega oddelka, ki je slabo plačan, ki je plačan pod kritiko, nam ljudje uhajajo v gospodarstvo, kjer dobivajo 100% višje plače. Tako kot meni tu in tam zavre, ko slišim za kakšne plače in si mislim, kaj pa jaz delam v tem ministrstvu od jutra do mraka in zakaj se grem to kar se grem, tako tudi ti ljudje v našem oddelku enako razmišljajo o sebi in o svojih plačah ter svojem delu itd. Ti ljudje so obremenjeni od jutra do večera. Ta naš sektor je polno obremenjen. Mi se trudimo narediti, kar je mogoče. Predstavljamo si sodelovanje s parlamentom v tem smislu, da dobimo od vas impulze, nasvete, komentarje, predloge, ki jih bomo upoštevali. Kje pa naj dobimo predloge, nasvete in komentarje, če ne v parlamentu? Komu naj služimo, če ne parlamentu? Z velikim veseljem poslušam predloge in komentarje v parlamentu in vse te stvari so zapisane in bodo po možnosti tudi spremenjene v prakso pri nas. Prav lepa hvala.</seg>
             </u>
             <note type="speaker">DR. JANEZ REMŠKAR:</note>
-            <u who="#SSK11.RemskarJanez1947" ana="#regular">
+            <u who="#RemskarJanez1947">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg286">Od gospoda ministra bi zahteval, da vse tu prisotne poslance ne meče v isti koš, kajti vsi smo sicer živeli v preteklosti, res je. Vsi smo bili izpostavljeni virusu. Verjetno smo se tudi vsi inficirali, vendar nekateri ste za krajši čas zboleli, nekateri so zboleli za daljši čas. Vsi pa nismo zboleli.</seg>
             </u>
             <note type="speaker">ANDREJ ŠTER</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg287">: Moram se oglasiti v zvezi s tistim, kaj je res in kaj ni res. Prebral bom celoten stavek. "Zahodna Evropa je bila sicer rešena vojaških groženj z vzhodnega dela kontinenta, soočena pa je bila z združeno Nemčijo in z novimi izzivi, to je razpokami v lastnih vrstah na eni strani, hkrati pa socialnimi, ekonomskimi in drugimi izzivi, ki izvirajo iz nestabilnosti vzhodne in dela srednje Evrope ter na bližnjem vzhodu na drugi strani." Če to ni omenjanje združene Nemčije v negativnem kontekstu, potem dopuščam licencio poetiko, ampak naj bodo take mere, da bomo vsi govorili o isti stvari. Trdim, da je združena Nemčija v negativnem kontekstu.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg288">Govora je bilo o prevelikem šundru, ki ga zganjamo ob slovenskih ribičih. Moram si dovoliti še eno refleksijo na tripartitni sporazum - če takrat ne bi bilo prevelikega šundra, bi bil ta tripartitni sporazum podpisan.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg289">Glede slovenske zunanje politike bi pa bilo zelo zanimivo soočiti današnje gledanje ministra Rupla na zgledno delo slovenske diplomacije z njegovim referatom, ki ga je imel, ko je predstavljal smernice za program dela izvršnega sveta. Mislim, da je bilo to za leto 1991. Govorili so ministrski predsednik Lojze Peterle, podpredsednik dr. Mencinger, ministri Janša, Bavčar in dr. Rupel. Takrat je bilo rečeno, da se slovenska diplomacija začenja z letom 0, da smo prej imeli samo Urad za mednarodne odnose s tujino, nekakšno društvo, ki ga je vodila Cvetka Selšek. Citiram po spominu, magnetogrami so pa vsakomur dostopni.</seg>
             </u>
             <note type="speaker">MAG. ANGELCA ŽEROVNIK:</note>
-            <u who="#SSK11.ZerovnikAngelca1944" ana="#regular">
+            <u who="#ZerovnikAngelca1944">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg290">Na tako nenavaden način sem bila imenovana "tista gospa, ki je prva govorila". Torej, nekako mi ni bilo prijetno, ko sem gospoda Rupla lepo po priimku pozvala k določenim odgovorom. Drugič, nisem govorila o poslušnosti ali neposlušnosti. Nadrejenost in podrejenost je etimološko popolnoma nekaj drugega in o tem tudi nisem dobila odgovora. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg291">Ker ni več razprav, bi predlagal naslednje. Mi s to točko nismo še končali, ampak bi zaključili o tej vsebini pod to točko načelno razpravo. Komisija za mednarodne odnose bo pisne pripombe na osnutek njihovih stališč še sprejemala. Mi bomo pa v nadaljevanju te točke na eni izmed aprilskih sej zbora sprejemali predlog teh stališč in sklepov. Takrat se bomo predvsem usmerili v dopolnjevanje tega predloga. Potem bi imeli ožjo vsebino, ki jo bomo obravnavali še na naši seji. S tem bi za danes prekinil to točko dnevnega reda, s tem, kot sem že povedal, da bi z njo nadaljevali v aprilu.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg292">9. TOČKA DNEVNEGA REDA - POBUDE, PREDLOGI IN VPRAŠANJA POSLANCEV.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg293">Tu smo dobili že dve pobudi gospoda Erceta, ki ju bomo upoštevali. Ena je v zvezi z vprašanjem odklapljanja elektrike, druga pa tudi v zvezi s temi pokojninami z italijanske strani. Tu je potem še nekaj pobud, ki jih boste oddali pisno. Najlepša hvala. Gospod Remškar bi pa rad nekaj povedal, pa gospod Jaklič tudi. Samo toliko bom povedal, da bomo po tej točki lahko zaključili današnjo sejo. Nadaljevanje 40. seje zbora bo pa v sredo, 25.3.1992.</seg>
             </u>
             <note type="speaker">DR. JANEZ REMŠKAR:</note>
-            <u who="#SSK11.RemskarJanez1947" ana="#regular">
+            <u who="#RemskarJanez1947">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg294">V zvezi z včerajšnjo opozorilno stavko bi rad naslovil, ker sam točno ne vem, kdo je pravzaprav odgovoren, na Ministrstvo za energetiko, Ministrstvo za delo, pa predvsem na vodstvo Svobodnih sindikatov vprašanje oziroma tudi zahtevo. Nekaj malega, najprej na rob trije stavki. Dejstvo je, da je včeraj stavkal le del prebivalstva in to pod vodstvom le dela sindikatov. Dejstvo je, da so gospodarske razmere težke in da imajo zaposleni vsekakor pravico do stavke. Vendar z mojega zornega kota je bila stavka vprašljiva, čeprav je res, da je treba dopustiti, da del populacije verjetno tudi naivno pričakuje, da bomo na tak način dosegli razvitost in Evropo. Trdim pa, da je bila stavka slabo organizirana, nekoordinirana in škodljiva, za kar bom navedel razloge kasneje.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg295">Na problem v gospodarstvu gledam s svojega zornega kota, poudarjam - kot predstavnik zdravstva, ki je ves čas kljub velikim težavam in pogosto tudi zelo poudarjenim očitkom o veliki porabi, včasih celo o potrati, praviloma, pa vendarle na račun naših plač, tudi skrbelo za svoj razvoj. Nasprotno je del - poudarjam - del gospodarstva povsem nepripravljen na konkurenco. Zelo malo ali nič je vlagal v svoj razvoj, prodajal svoje izdelke na tržišču na jug, namesto da bi jih v Evropi in ob tem prekrasno živel. Ta del gospodarstva, vsaj tak vtis imam, je ob sedanji stavki stopil v ospredje in ob pomoči svobodnih sindikatov bil najglasnejši.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg296">Da je tako razmišljanje blizu resnice, me je prepričalo tudi včerajšnje poročilo po stavki, ki smo ga imeli možnost vsi skupaj slišati s televizije. Jasno je bilo povedano, da v Mariboru kljub vse večji nezaposlenosti ni nikakršnih programov za nadaljnji razvoj oziroma izboljšanje stanja. Pač, glede na dogodke, ki smo jim vsi priča, trdim, da so vse managerske strukture in poslovodne strukture polne predalov raznih programov o odpuščanju delavcev.</seg>
@@ -985,27 +971,27 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg298">Sprašujem in tudi zahtevam odgovor, kdo je odgovoren za tako ravnanje, kar se je zgodilo konkretno na Inštitutu Golnik? Zahtevam tudi, da je odgovornost prezentirana Skupščini, in tudi, kakšne posledice nosijo odgovorne osebe? Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg299">Prosim, gospod Marko Jaklič.</seg>
             </u>
             <note type="speaker">MARKO JAKLIČ:</note>
-            <u who="#SSK11.JaklicMarko1930" ana="#regular">
+            <u who="#JaklicMarko1930">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg300">Zadnje dni se v časnikih pojavlja novica o zopetnem dovoljenju za dvigovanje deviz iz naših poslovnih bank v znesku 500 DEM. V naši državi, ki ji primanjkuje kapital za lastne potrebe, dvigujejo torej naši državljani določene dovoljene kvote deviz iz naših poslovnih bank in jih nato polagajo v tujo banko, ki ima svoje enote v naši državi. Te devize nato pripeljejo v domicilno banko, torej v tujino, zato sprašujem finančno ministrstvo, kaj je naredilo oziroma ukrenilo, da bi te devize ostale v naši državi oziroma da bi naši državljani te devize polagali v naših bankah, saj je znano, da moramo tuji kapital plačevati tudi 3krat dražje kot ga pa plačujejo tuje banke našim državljanom. Recimo obrestna mera našim državljanom je 4 do 5%, kapital iz tujih bank pa 15 do 20%. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg301">Še želi kdo? Prosim, gospod Vilfan.</seg>
             </u>
             <note type="speaker">MARJAN VILFAN:</note>
-            <u who="#SSK11.VilfanMarjan1931" ana="#regular">
+            <u who="#VilfanMarjan1931">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg302">Postavljam gospodu Igorju Bavčarju, članu Vlade, naslednje poslansko vprašanje: Na medregijskem srečanju Demokratske stranke v Mariboru 13.marca ste, citirano iz časopisa Delo, izjavili naslednje. "Nobenega področja, pomembnega za slovensko politiko in gospodarstvo, demokrati ne smemo prepuščati več tistim strankam, za katere se je med Demosovo koalicijo zdelo samoumevno, da ga pokrivajo na nek sindikalističen način". Pričakujem, da od g. ministra Bavčarja, da prvič, pojasni, katere stranke je imel v mislih, ko je govoril o sindikalizmu in drugič, kako misli Demokratska stranka prevzeti ministrstvo tem t. i. sindikalističnim strankam. No mislim, ker gre za vprašanje za katerega ni treba posebna strokovna priprava, da bo odgovor čim prej. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg303">Hvala lepa. Gospod Berlec.</seg>
             </u>
             <note type="speaker">JOŽE BERLEC:</note>
-            <u who="#SSK11.BerlecJoze1949" ana="#regular">
+            <u who="#BerlecJoze1949">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg304">Pozdravljeni. Imam dve stvari, pa obe sta kratki. Prvo - gospodarstvo. V gospodarstvu prihaja do precejšnjih oziroma zelo velikih motenj in to zaradi dveh disproporcov, do katerih smo prišli v zadnjem času. Vidimo, da so se cene energije bistveno povišale v zadnjem obdobju, istočasno pa nam kurz DEM ali SLT približno stoji. Nekako smo, ali pa so bila podjetja prisiljena v povečanje izvoza. Izvoz povečujemo iz raznoraznih razlogov in ravno zaradi tega povečanja izvoza se nam te škarje zelo zelo približujejo, oba kraka škarij. Namreč, če povišujemo energijo tako silovito, potem moramo tudi spreminjati kurs. Vem, tudi jaz sem za to, da imamo tolar čimbolj trden, toda potem moramo še na oni strani nekaj narediti. Nikakor se ne morem strinjati s tako spremembo cene.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg305">Potem pa še nekaj. V energiji, v električni energiji smo naredili še nekaj, kar mislim, da ne bo dobro. Namreč drugo tarifo ukinjamo za industrijo. Ravno podjetja, ki so večji porabniki energije, so prilagodila svojo tehnologijo tako, da so izkoriščala energijo tudi in predvsem v nočnem času in s tem blažila špice in potrebe naše republike po energiji. Z ukinitvijo tega mislim, da ne bo nobeno podjetje več tako neumno, da bo svoje delavce prisililo, da bi delali ponoči, ker vemo, da je dražje, ampak bodo to energijo enostavno koristili v dopoldanskem času, to je takrat, ko je najbolj primanjkuje.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg306">Prosim ministra za energetiko, da preuči to stran, po drugi strani pa Banko Slovenije, da skupno nekako najdejo z Vlado pravo smer in s pravim disproporcem, ker če gredo ti disproporci ravno v nasprotje eden k drugemu, potem bomo gospodarstvo uničili - povsem uničili. Tudi tistega, ki je izvozno močno usmerjen.</seg>
@@ -1013,16 +999,16 @@
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg308">V planu tekmovanj za letošnje leto, občinskih tekmovanj, je predviden 18. april kot dan za občinska tekmovanja za Vegova priznanja. Ker je to datum, ki velja že nekaj let, bi opozorili na novost, ki je posledica zakona o državnih praznikih. Po novem naj bi uradno praznovali veliko noč. Praznike je slovenski parlament podaljšal na ponedeljek, bojimo se, da bodo učenci želeli praznovati tudi v soboto, kot veste je sicer katoliški praznik že tudi veliki petek in se ne bodo udeležili tekmovanja. Tudi učitelji bi želeli imeti ta dan prosto, zato predlagamo, da tekmovanje preložite. V tem smislu gre potem še naprej, želijo, da se premakne to na katerikoli dan, skratka želijo, da se to korigira. To so poslali pred enim mesecem na Zavod za izobraževanje, pa žal, ravno te dni je izšel urnik tekmovanj, in ta datum ostane. Mislim, da je zelo nekorektno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg309">Poglavje koordinacije. Prosim, g. Andrej.</seg>
             </u>
             <note type="speaker">ANDREJ ŠTER:</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg310">Čisto na kratko, pa upam, da ne bom koga spodbudil k ravnanju, za kar nimam namena. Predlagam Republiški upravi za družbene prihodke oziroma drugemu za to pristojnemu organu Slovenije, da ustrezno spremlja in uredi stanje na področju iger na srečo. Kljub obstoječi in novonastajajoči zakonodaji s tega področja lahko ugotavljamo, da imamo vrsto institucij ali pa posameznikov, razločevanje tega je pogosto zelo težavno, ki povsem brez kontrole izvabljajo denar iz žepa sodržavljanov in ga seveda praviloma plasirajo v tujino. Tukaj imam opravka samo z emisarji, organizatorji so pa tako ali tako tudi sicer iz tujine. Trenutno je v modi igra "cath the cash" Pri tem gre za relativno veliko ali pa zelo veliko obračanje denarja povsem brez nadzora ali obdavčenja. Človeška neumnost je sicer res brez meja in seveda razmere so takim in podobrim oblikam igranja "naklonjene", ampak gre za zaslužke in za izgube na drugi stani, ki pa vendarle morajo biti skrb države. Dodatno naj povem, da so obrazci, pogodbe, obvestila o tej igri praviloma kompletno v nemščini in da gre na eni strani za tekst v tujem jeziku kar je grdo, na drugi strani pa seveda pogodbenik, ki stopi v zelo zelo rigorozno pogodbeno razmerje, praviloma niti ne ve, kaj je podpisal in seveda to drugo je pa nevzdržno. Oboje je pa nezakonito.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg311">Jaz predlagam, da ustrezne službe ustrezno postopajo in seveda preprečijo, da bi čez 2 meseca, podobno kot je bilo v primeru Konkord, organizator insciniral rop na sebe in si dal ukrasti prazen kovček. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1992-03-19.s041-01.seg312">Saj Andrej, pa ja imamo madonca policijo pa te stvari, pa ja lahko te stvari tudi kaj preprečijo. (Tudi to.) No, dobro oprostite, temu mojem ekscurzu. Še želi kdo? Če ne zaključujem 41. sejo po obravnavi vseh točk po dnevnem redu. Najlepša hvala. 25. marca se načeloma zopet vidimo.</seg>
             </u>
             <note type="time">SEJA JE BILA PREKINJENA 19. MARCA 1992 OB 14.00 URI IN SE JE NADALJEVALA 27. MARCA 1992 OB 10.15 URI.</note>

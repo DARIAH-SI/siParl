@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Izredna-48-2000-05-23"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">48. izredna seja (23. 5. 2000)</title>
-            <meeting n="48"
-                     corresp="#SDZ2-Izredna-48-2000-05-23.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="48" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">48. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|8C2080B74C185245C12568EB003F0E42</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=8C2080B74C185245C12568EB003F0E42</idno>
-                  <imprint>
-                     <date when="2000-05-23">(23. maj 2000)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>48. izredna seja (23. 5. 2000)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="2000-05-23"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=8C2080B74C185245C12568EB003F0E42</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="158"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="129"/>
                <tagUsage gi="seg" occurs="481"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -575,25 +560,21 @@
                <date when="2000-05-23" ana="#parl.sitting">23. 5. 2000</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Izredna-48-2000-05-23.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">48. izredna seja</head>
-            <docDate>(23. maj 2000)</docDate>
             <note type="chairman">Sejo je vodil Janez Podobnik, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.09 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje! Pričenjam 48. izredno sejo državnega zbora Republike Slovenije, ki sem jo sklical na podlagi prvega odstavka 51. člena in 54. člena poslovnika državnega zbora.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg2">Zadržanih oziroma opravičenih poslank in poslancev ni. Prosim, da ugotovimo navzočnost v dvorani!</seg>
                <note>86 prisotnih.</note>
@@ -614,7 +595,7 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg12">Prosim dr. Andrej Bajuk, dajem vam besedo.</seg>
             </u>
             <note type="speaker">DR. ANDREJ BAJUK:</note>
-            <u who="#SDZ2.BajukAndrej" ana="#regular">
+            <u who="#BajukAndrej">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg13">Spoštovani gospod predsednik, spoštovane poslanke in poslanci!</seg>
                <note>Nagovor v madžarščini in italijanščini.</note>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg14">Spoštovane državljanke in državljani!</seg>
@@ -672,7 +653,7 @@
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg66">Zahvaljujem se predsedniku vlade dr. Andreju Bajuku za dodatno obrazložitev njegovega predloga.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg67">Predlagani kandidati so se v skladu z 263. členom poslovnika državnega zbora predstavili matičnim delovnim telesom in so tudi odgovarjali na vprašanja članic in članov odborov. Predsedniki odborov so predsedniku državnega zbora in predsedniku vlade Republike Slovenije posredovali mnenja o predstavitvi kandidatov za ministre.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg68">Iz mnenj izhaja, da so bile na podlagi predloga predsednika vlade predstavitve kandidatov Cirilja Smrkolja, Janka Razgorška, dr. Andreja Bručana in dr. Toneta Jerovška ustrezne; predstavitve dr. Jožeta Zagožna, dr. Marjana Senjurja, dr. Petra Jambreka, Barbare Brezigar, Lojzeta Peterleta, Janeza Janše, dr. Mihe Brejca, dr. Lojzeta Marinčka, dr. Lovra Šturma, Rudija Šelige, mag. Antona Bergauerja, dr. Andreja Umka in Zvonka Ivanušiča pa so bile neustrezne.</seg>
@@ -683,7 +664,7 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg71">Prehajamo na razpravo poslanskih skupin. Imamo dve pisni prijavi. Prvi je Anton Delak v imenu poslanke skupine DeSUS, za njim dr. Franc Zagožen.</seg>
             </u>
             <note type="speaker">ANTON DELAK:</note>
-            <u who="#SDZ2.DelakAnton" ana="#regular">
+            <u who="#DelakAnton">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg72">Hvala, za besedo. Spoštovani državni zbor! Pred nami je zelo pomembno tajno glasovanje o vladi. Nekateri celo pravijo, da je to zgodovinsko pomembno. Glede na to, da je glasovanje tajno, bi v samem začetku predlagal, da sprejmemo nek sklep, da volilni lističi ne morejo biti popisani, registrirani itn., kot se je to dogajalo na prejšnjih volitvah.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg73">Predsednik vlade, mandatar, ki pa seveda ne pozna razmer v državi, še manj pa pozna kadrovske potenciale v tej Sloveniji, nam je predlagal kandidate za ministre. Meni je žal, če moram povedati, da nekateri izmed teh kandidatov izžarevajo negativno energijo. Človek ima občutek za nekatere, da so jezni na sami sebe in pa na celi svet. Seveda je med kandidati tudi nekaj spoštovanja vrednih oseb.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg74">Glede na to, kar sem na kratko povedal, je razumljivo, da naša poslanska skupina ne bo podprla te vlade. Razlogi so trije in jih bom na kratko obrazložil. Prvič - kadrovska sestava vlade. Predlagani so trije bivši ustavni sodniki in ena javna tožilka. Po naši oceni so kandidati zato, ker so na ta način dobili plačilo za opravljeno delo. Poleg tega je med ustavnimi sodniki osebnost, kot malteški vitez zavezana cerkvi in papežu, pri nas v Sloveniji, kjer pa imamo po ustavi ločeno cerkev od države, bo ta ista oseba obravnavala laično šolstvo. Presodite sami, kako bo to lahko opravljala.</seg>
@@ -698,11 +679,11 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg83">Na podlagi predstavitve mandatarja in ministrov, branja nekaterih člankov v časopisih, pa tudi razgovorov s posamezniki, je naše videnje naslednje: Vidim pomlad, pravo slovensko pomlad, vse v cvetju, v belem cvetju, vse belo! Vsak Slovenec ima lonček v roki, namreč, cedita se mleko in med. Vidim tudi cerkvenega dostojanstvenika, ki moli, torej bog bo z nami. Čaka nas vse najlepše, srečni Slovenci! Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg84">Hvala, kolega Delak. Stališče poslanske skupine slovenske ljudske stranke predstavlja dr. Franc Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg85">Spoštovani predsednik, spoštovani državni zbor, spoštovani predsednik vlade ter kandidati za ministre! V kratkem nastopu bom skušal predstaviti stališče vseh poslancev SKD + SLS Slovenske ljudske stranke, po dogovoru, čeprav formalno še nimamo registrirane skupne poslanske skupine.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg86">Že ob volitvah mandatarja smo navajali razloge, zakaj je po našem mnenju zelo pomembno za Slovenijo, da dobi vlado s polnimi pooblastili in možnost, da ta vlada in vse druge državne institucije, vse tri veje oblasti, normalno delujejo do rednih volitev. Trenutno ima seveda polno pristojnosti zakonodajna in sodna veja oblasti, ampak država, ki nima v celoti konstituiranih prej treh neodvisnih vej oblasti, ki se med seboj podpirajo in hkrati nadzorujejo, seveda ne more normalno delovati. Gre torej za to, da rešimo to vladno krizo, in to na način, predviden z ustavo. S tem se državni zbor ukvarja že kar lep čas in mislim, da je modro, da to delo tudi zaključi, zaključiti z imenovanjem predlaganih ministrov in ministrice.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg87">Predlog predsednika vlade, ki ga je utemeljil in obrazložil, je doživel seveda različne odzive. To je pričakovano. Nekateri so seveda a priorni, gre pač za to, da se vse politične stranke tudi v parlamentu ne strinjajo z argumenti, da je imenovanje nove vlade boljša možnost, kot pa predčasne volitve. Od tod tudi potem seveda opredelitve, ne glede na predlagane kandidate. To se je dejansko dogajalo v odborih in komisijah državnega zbora kjer je pretežno odločalo razmerje sil. Vendar so se po naši oceni kandidati dobro predstavili, ekipa je strokovno močna in seveda nihče ne pravi, da ni politična. Vsaka vlada je politični organ. In ministrska funkcija je politična funkcija. Zato bi bilopopolnoma neustrezno pričakovati vladno ekipo, ki bi bila apolitična. V tem primeru sploh ne bi bila primerna. Vsaka vlada je začasna. Nekatera vlada je lahko cel mandat, štiri leta, pri nas tudi ni prvič, da prihaja med mandatom do zamenjave vlade. V demokratični ureditvi je to popolnoma normalen proces in normalen postopek in tako je bil tudi izpeljan. Prepričan sem, da bo vladna večina, ki se je vzpostavil ob imenovanju predsednika vlade, izvolila tudi predlagano listo kandidatov za vlado. Seveda ne pričakujemo, da se bo v času do volitev lahko vlada se lotila zelo velikih projektov, ampak ne glede na to, jo čakajo zelo zahtevne naloge. Zelo zahtevne naloge čakajo tudi državni zbor, ki jih le težko ali jih pa sploh ne more opraviti brez pomoči vlade. Vlada je tista, ki vodi vso državno upravo in vlada je tudi tista, ki pripravlja veliko večino zakonskih predlogov, pri tem pa seveda vse tiste, ki so ključni, tudi ko gre za usklajevanja naše zakonodaje z evropsko. Pri tem seveda ne gre samo za zakone, gre tudi za druge pravne akte, ki jih sprejema vlada oziroma ministrstva. Ker nočemo izgubiti celega leta, ker bi ta izguba bila lahko res usodna za naš program vstopanja v Evropsko unijo, za program, o katerem so se zedinile tudi parlamentarne stranke in obstajajo tudi večinsko soglasje med državljani in državljankami, to je, ne samo sprejeti zakonodajo Evropske unije, ne samo izpolniti pogoje, ki jih postavlja Evropska unija za nove članice, ampak več kot to, se tudi pripraviti na ta velik izziv, ki ga kot država, kot nacija moramo sprejeti. To pomeni seveda graditi pravno, gospodarsko, socialno trdnost države - nacije, zagotoviti, da bomo v teh evropskih integracijah in v globalnem svetu v stanju ohraniti svojo nacionalno identiteto. Mislim, da so temeljni pogoji, da to dosežemo, seveda jasno spoštovanje človekovih pravic, pravic manjšin, utrjevanje demokracije. Tudi na tem področju je treba še kaj storiti. Pred nami je prav tako velik izziv, to je, pred rednimi volitvami doseči, da bo zakonodaja na tem področju, volilna zakonodaja, v celoti usklajena z našim ustavnim pravnim redom in tudi za to je potreben čas.</seg>
@@ -710,19 +691,19 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg89">Ob glasovanju za predsednika vlade je bilo razmerje prav tako, kot ob glasovanju prvega predsednika vlade v tem mandatu - 46 glasov "za" in 44 glasov "proti" je bilo tudi za dr. Drnovška. Vendar jaz mislim, da je do pojava te vladne krize vlada delovala, da je deloval državni zbor in pričakujem, da bo ta odločitev, da morajo državni organi, tako zakonodajna veja oblasti kot izvršna veja oblasti, poleg sodne seveda, izpolnjevati svoje zakonske obveze in obveze, ki jih dajejo volivcem, da bo to prevladalo in da bo v naslednjih mesecih delovno vzdušje. Glasovali bomo torej "za". Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg90">Hvala dr. Franc Zagožnu. Stališče poslanske skupne združene liste socialnih demokratov predstavlja Borut Pahor.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg91">Hvala lepa gospod predsednik, za besedo. Če so govorice točno, potem naš kolega Pavle Rupar praznuje okroglo obletnico in mu voščim vse najboljše.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg92">Včeraj.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg93">Spoštovani gospod predsednik, dr. Bajuk, gospe in gospodje, še dve kolegici, vse najboljše vsem, dan je imeniten. Upam, da bo nekaj sonca posijalo tudi v slovensko politiko. Tega bi si verjetno vsi želeli, saj so se v teh pomladanskih dneh, ki sicer v koledarskem smislu vedno prinesejo med ljudi neko novo upanje, zbrale tudi črne nevihtne gmote, tlak je nekoliko padel in sprašujemo se, na kakšen način, tudi v političnem smislu, razvedriti naše nebo.V tem smislu sta se oblikovala v slovenski politiki dva koncepta: koncept predčasnih volitev, za katerega se je zavzela tudi Združena lista socialnih demokratov in vanj še vedno verjame kot boljši izhod, ter s pičlo večino 46 poslank in poslancev, izhod imenovanja prehodne vlade.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg94">Danes bi rad ponovil naše stališče, da je v tej situaciji, ko se je ta vladna kriza kar nekaj mesecev gnetla, da bi se potem z nezaupnico poglobila, prišlo do spoznanja, da je Slovenija na nekem križišču, kjer potrebuje jasno usmeritev ljudi, po kateri poti naj se odpravi naprej. Seveda je legitimno, da pred koncem mandata poskuša neka, kot rečeno, pičla politična večina zasesti oblast in položaje. Nas je ob tem zanimalo vprašanje, ali kaj časa ob tem ostane za reševanje problemov države in ljudi ali je pač ves ta razpoložljivi čas namenjen samo za zasedanje oblasti in položajev ali pa ni nemara boljša pot, da ljudje na volitvah izberejo novo politično ekipo in jo s polnimi pooblastili in avtoriteto napotijo, da vodi državo naslednja štiri leta. Hočem reči, da se je skozi kopičenje problemov v slovenski politiki pokazalo, da je mogoče razvedriti to slovensko politično nebo samo z volitvami.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg95">Tudi če boste, dr. Bajuk, danes dobili soglasje te pičle večine za vlado, se nikar ne zanašajte na to, da bo mogoče veliko teh želja, ki jih je bilo danes slišati v vašem programu, mogoče uresničiti. Čas ni naklonjen temu. Tudi če bi se po svojih najboljših močeh, kot ste prisegli tukaj, s svojo ekipo potrudili in investirali v uveljavljanju programa, se bo pokazalo, da je predvolilni čas tak čas, ki sam po sebi ne dovoljuje ambicioznih in za državo koristnih odločitev.</seg>
@@ -739,34 +720,34 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg106">Združena lista socialnih demokratov je svoje odločitve temeljito premislila. Meni, da se je odločila pravilno. Prepričana je v trdnost svojih argumentov in sprašuje, ali bi s katero od njih prepričali še koga drugega. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg107">Hvala kolega Pahor. Omenjali ste rojstni dan poslanskega kolega Ruparja. Da bo informacija celovita, v teh dneh sta praznovali podpredsednica Eda Okretič-Salmič in poslanka Nada Skuk. Vsem trem vse najboljše!</seg>
                <note>Aplavz.</note>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg108">Stališče poslanske skupine slovenske nacionalne stranke predstavlja kolega Zmago Jelinčič, za njim kolega Luci.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg109">Hvala lepa, gospod predsednik. Kolegice in kolegi, predstavniki bodoče vlade, ali kako naj vam rečem! Najprej čestitka gospodu Janši za izredno dober izbor kandidatov; potem poklon gospodu Stresu za dobro napisan govor, mandatarju za solidno branje in pa mojemu predhodniku za nežno tretjo pot.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg110">Danes naj bi dobili vlado, vlado, sestavljeno, glede na nekatere, iz ljudi vrhovnih strokovnih zmožnosti, znanj, vedenj in tudi njihovih visokih moralnih vrednot. Mene malo skrbi, da bomo dobili vlado, v kateri bodo oziroma da bomo morda dobili vlado, v kateri bodo ljudje, ki kradejo državne arhive, ki pretepajo žene, ki denuncirajo profesorje in prevzemajo njihova delovna mesta, ki organizirajo "leibstandardte" v stilu nacističnih odredov in ki ob velikih količinah alkohola pišejo manifeste civilne družbe. Mislim, da so to grozljive zadeve in bodočnost se kaže v precej temni in žalostni luči. Človeka zgrabi slab okus v ustih in v želodcu in ne ve, kaj bi naredil ob tem, ko pomisli na tako možnost. Nekako spominja na tisto pesem Rainerja Marie Rilkeja "Od štirih do ene", na to spominja - na čudna obdobja, ki jih je Evropa že prehodila, že davno prehodila, mi jih pa zdaj obujamo in poskušamo obujati. Slovenska nacionalna stranka je za pot, ki jo hoče prehoditi v bodočnost, v prihodnost, in to v lepih okoljih, z dobrimi voditelji, z dobrimi vodji, z dobrimi ministri. Zato ne moremo pristajati na takšno vlado, pri kateri se ženske ne bodo smele več odločati za to, ali bodo smele imeti otroke ali ne, ko se bomo morali vsi, ki imamo, ki imajo in ki bodo imeli otroke, odločati za verouk v šolah, in ko bodo glavne procesije po cestah procesije flagelantov, rok koncerti bodo, seveda, ukinjeni. Bojim se, da bomo sčasoma spremenili tudi himno, ki se bo v začetku pela po tisti No tengo di nero in se nadaljevala s tisto, Vamos a la playa. Hvala gospod Rupar, to že dolgo vem.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg111">Mislim, da sem pravzaprav povedal vse, kar sem mislil povedati. Če bi povedal kaj več, ta polovica ne bi razumela. Zato ostanem pri tem in na koncu povem le to, da Slovenska nacionalna stranka ne bo podprla te vlade. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg112">Hvala kolega Jelinčič. Ob vašem nastopu bi izkoristil priložnost in vas pozval, da ste v nastopih kulturni in da pokažete, kaj pomeni biti častno poslanec in poslanka državnega zbora. Tisti, ki bo žalil, veste, te časti ne bo deležen. Nekaj vaših besed je bilo takih, za katere bi bilo bolje, da na tem mestu ne bi bile izrečene, kolega Jelinčič. Ne bom vam dal besede, ker vam je ne morem v tem trenutku. Besedo ima kolega Miroslav Luci, stališče poslanske skupine Socialdemokratov.</seg>
             </u>
             <note type="speaker">MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#regular">
+            <u who="#LuciMiroslav">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg113">Spoštovani gospod predsednik, spoštovane kolegice poslanke, kolegi poslanci, spoštovani gospod predsednik vlade ter kandidati za ministre!</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg114">Poslanska skupina Socialdemokratske stranke se zaveda vseh težav, ki čakajo novo vlado tudi v tem trimesečnem obdobju. Zaostankov, planiranega dela je kar veliko in potrebno bo zgodaj in hitro začeti. Za predsednika vlade lahko rečemo, da je dobro predstavil program ter tudi programe posameznih vladnih resorjev. Predstavil je tudi visoko strokovni in socialno naravnani program Kandidati za ministre so ugledne osebnosti, strokovno priznane osebe. Le strokovno močna vlada lahko uspešno uresničuje delo, ki nas čaka, to je nadaljnje intenzivno delo pristopa v Evropsko zvezo in v evropske obrambne integracije ter pri dokončanju tranzicije. Zadovoljni smo tudi z rednim programom za naslednje tri do štiri mesece, ker ne nakazujejo, da bi ta vlada potrebovala 100 dni za počitek ali kakorkoli že, za usmeritve. Vlada je pripravljena za delo jutri. Zato tudi verjamemo in zaupamo, da si bo pridobila s svojim delom v tri do štirimesečnem obdobju tudi mandat za delo v naslednjem mandatnem obdobju.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg115">Torej Socialdemokratska stranka v celoti podpira mandatarja, v celoti podpiramo programe njegovih ministrov, resorjev in tudi seveda podpiramo nosilce vseh teh programov, to je bodoče ministre. Nismo povsem zadovoljni z zaslišanji, ki so bila. Velikokrat je bilo rečeno, izredno strokovni, močni odgovori na zastavljena vprašanja, dober program, vendar politično jih ne moremo podpreti.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg116">Spoštovani kolegice in kolegi! Socialdemokrati pred štirimi leti nismo ravnali tako. Veliko glasov je šlo prejšnjim ministrom sedanje vlade. Tako bomo ravnali tudi v bodoče. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg117">Hvala lepa. Želi še katera od poslanskih skupin besedo? Stališče poslanske skupine Liberalne demokracije Slovenije predstavlja Anton Andrelič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg118">Spoštovani! Poslanka skupina Liberalne demokracije Slovenije predlagane vladne ekipe ne bo podprla. Razlogov za to je več in prav veliki so.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg119">Najprej naj ponovim znano stališče Liberalne demokracije Slovenije, da je glede na razmere, ki trenutno vladajo na političnem prizorišču, najbolje, da državljanke in državljani čimprej povedo, komu bodo zaupali kolikšen delež priložnosti in odgovornosti za vodenje države v naslednjih štirih letih.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg120">Ni čas za sestavljanje vladnih ekip brez resne podpore v državnem zboru in le za nekaj mesecev. Dvakrat v obdobju šestih mesecev oblikovati novo vlado je nesmiselno in za državo ni dobro. Tisti, ki so državo v ta položaj pripeljali, so ravnali neodgovorno in se verjetno zato otepajo volitev, ki bi bile pred rokom v oktobru oziroma novembru. Pa tako ali tako je ta rok sedaj že šel mimo.</seg>
@@ -785,13 +766,13 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg133">Gospe in gospodje LDS take vlade, vlade ki je ne vodijo državotvorni nameni, vlade, ki prinaša tako sporne kadrovske rešitve, seveda, na bo podprla. Nobenega razloga namreč ni, da bi sodelovali v bojih, ki jo zaznamujejo, saj to niso naši boji in prepričani smo, da tudi boji velike večine slovenskih državljanov ne. Upamo pa, da tudi velike večine v tem državnem zboru ne. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg134">Hvala, kolega Anderlič. Ali želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg135">Prehajamo na razpravo poslancev in poslank. 16 pisno prijavljenih, ostale razprave bodo omejene na 5 minut. Dovolite, da preberem prijavljene: Sašo Peče - prvi, nato mag. Janez Kopač, Jelko Kacin, Miran Potrč, Aurelio Juri, Darja Lavtižar-Bebler, Ivan Kebrič, Bojan Kontič, Samo Bevk, Roman Jakič - kot deseti, Feri Horvat,Jože Avšič, Rihard Beuermann, dr. Ciril Ribičič, Ivo Hvalica in Majda Kregelj-Zbačnik. Prvi ima besedo v razpravi poslank poslancev kolega Peče. Prosim! Pripravi naj se mag. Janez Kopač.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDZ2.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg136">Spoštovani navzoči! Smešno je, kako se v tej naši državi hitro naveličamo - ali naveličate - svoje lastne zgodovine. Jaz verjamem, da celotna zgodovina ni bila po vzoru marsikaterega poslanca, v tem sklicu, prejšnjem sklicu - kakorkoli. Ampak na ta način, da v desetih letih skušamo narediti popolen "salto mortale" iz ene normalne, moderne smeri vodenja, ki na vsak način ni vedno topla, skušamo priti nazaj v tisto obdobje, obdobje inkvizicije. Tisto obdobje, ko bo resnično vsak že ob rojstvu moral imeti za svojim vratom križ in to ne zaradi proste izbire, ampak zaradi tega, ker mu drugo ne bo preostalo.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg137">V Sloveniji so obljubljali - marsikdo - hitro, lepo pot do uspehov. V nekaj letih jim bomo primerljivi z zahodno Evropo. Ampak temu so verjeli samo najbolj naivni. Vsak ekonomist je vedel, da bo ta pot dolga, da bo ta pot taka, da niti približno ne bo ustrezala vsem. No, marsikje smo srečali oviro in te ovire srečujemo; ampak ne pred njimi poklekniti in ne zaradi tega, ker je ovira pred nami, rušiti državo. Ne volivcev okrasti za to, kar ste jih pred kratkim okradli; okradli volivce za volitve, okradli volivce zato, da bi sami izoblikovali vlado, da bi izoblikovali tisto vlado, kakršno so izoblikovali s svojimi glasovi. Ne! Ampak jemljemo si pač to pravico in sami krojimo te zadeve. Seveda marsikdo si prilašča to zadevo k sebi.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg138">Slovenija se, kakorkoli gledano, razvija pozitivno in to močno pozitivno. Le strpen v teh primerih je treba biti. So pa to pot uničili tisti ljudje, ki se bodo, jaz upam, znašli v devetem krogu, tisti izdajalci - upam, da ni nič žalega -, ki so se že, kakor sem prvič povedal, zlagali oziroma izkoristili svoj politični program, da bi prišli v te prostore, danes tu pa podpirali druge; podpirali tiste, katerim niso sorodni. Ampak to naj bo njihova notranja vest.</seg>
@@ -805,11 +786,11 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg146">Še enkrat pa opozarjam vse tiste na levi strani, ki si resnično želijo k temu, da državo vodimo normalno dalje, da razmislijo o ponudbi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg147">Hvala, kolega Peče. Ponovno vas pozivam, kolegice in kolegi, razumljivo je, da boste v vaših razpravah povedali stališča, ki jih imate do predlagane ministrske ekipe, ne bodite pa žaljivi do predlaganih kandidatov. Besedo ima mag. Kopač, za njim Jelko Kacin.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOPAČ:</note>
-            <u who="#SDZ2.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg148">Spoštovani predsednik, spoštovani poslanci in poslanke, kandidatke oziroma kandidatka in kandidati, dr. Bajuk.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg149">Ko ste predlagali, ko ste bili izvoljeni za mandatarja, ste rekli, eden vaših prvih stavkov je bil: "Pri oblikovanje nove vlade, bosta ključni dve merili: strokovnost in poštenost." O strokovnosti še govorite, o poštenosti ne govorite več. To razumem, mislim, razumem, da gre pravzaprav lahko tudi za lapsus ob preobilni uporabi demagogije, zato se mi ta argument ne zdi tako zelo pomemben.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg150">Moti pa me, v resnici moti, vaš odnos do vladanja Republiki Sloveniji, ki ga - oprostite, če bom uporabil trdo besedo - jemljem kot norčevanje. Zakaj? Bom poskušal argumentirati. Vi pravite, danes ste rekli v svojem nastopu, da je treba šestmesečni rok do rednih volitev čim bolj izkoristiti za prevzem pravnega reda Evropske unije. To citiram. Po drugi strani kandidat za ministra za finance, ki smo ga imeli danes na predstavitvi, ni znal ali ni hotel, ne vem, odgovoriti na vprašanje, katere akte bi morali sprejeti v okviru prevzemanja pravnega reda Evropske unije. Vi pravite, to ste ponovno poudarili danes, tudi že v svojem nastopu, preden ste bili imenovani za mandatarja, da je treba pospešiti implementacijo zakonodaje, da je to ključna pomanjkljivost pri prevzemanju pravnega reda do Evropske unije itn. Kandidat za ministra za finance danes ni vedel, katere podzakonske akte na podlagi zakona o javnih financah bi še bilo treba sprejeti, čeprav si je kot ključno nalogo za šestmesečno obdobje zadal prav sprejetje podzakonskih aktov na podlagi zakona o javnih financah. Tudi vi ste danes, verjetno kot povzetek njegovega programa rekli, da je potrebno v tem šestmesečnem obdobju prednostno sprejemati podzakonske akte. Opozarjam vas, da kandidat za ministra za finance ni vedel, kateri bi bili potrebni.</seg>
@@ -825,22 +806,22 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg159">Vaša edina politična valuta v Republiki Sloveniji je, poleg emigrantskega porekla, to, da ste bili visoki uslužbenec v mednarodni finančni instituciji. Kot tak oziroma na tem službenem mestu ste zagotovo potovali po mnogih državah in srečali ali pa se pogovarjali z marsikaterimi predstavniki marsikatere vlade in zagotovo ste spoznali, da je pri delovanju vlade najbolj pomembno - ali pa da sta steber delovanja vlade - dobro uigrana ekipa iz dveh ljudi: predsednik vlade in minister za finance, ne pa, na primer, dobro uigrana ekipa dveh ljudi: predsednik vlade in minister za obrambo. Tak primer morda poznamo v kakšni južnoameriški državi, vendar mislim, da je za delovanje te države bolj pomembna usmeritev vlade, ki bo predvsem skrbela za konsistentnost v sistemu javnih financ in pa za nepretirano obremenitev javnih financ z dodatnimi izdatki. Če bi analiziral vaš današnji nastop, ko ste bili bolj konkretni, kaj bo ta vlada vse naredila, bi vam, sicer po nekaj urah računanja, lahko približno izračunal, kaj vse to v milijardahtolarjev pomeni. Zato moram ugotoviti, da je vaše zavzemanje za uravnotežen proračun, za to, da bi že proračun za leto 2001 imel manj primanjkljaja kot letošnji proračun, za razvojno naravnan proračun, o čemer je bil govor, ko ste bili še kandidat za mandatarja, pravzaprav, po mojem mnenju - zopet se opravičujem za nekoliko trdo besedo - nekoliko blefiranja. Vaše besede med seboj niso konsistentne, to vam želim povedati. In vaše dosedanje ravnanje in izjave v zvezi s sistemom javnih financ so, vsaj zame, neodgovorne že danes. Zato ocenjujem, da ta vlada ni primerna za zaupnico oziroma je vsaj iz tega segmenta, o katerem sem govoril, zrela za nezaupnico in je, seveda, zato tudi ne bom podprl. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg160">Hvala, kolega Kopač. Ugovor oziroma repliko, v skladu z drugim odstavkom 70. člena poslovnika, ima kolega Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg161">Spoštovani gospod predsednik, gospod dr. Bajuk, predlagani kandidati za ministre in ministrico. Ugovor dajem mojemu predsedniku odbora za finance in monetarno politiko.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg162">Ko smo začeli, ko je gospod predsednik začel sejo in seveda pozival, kdo bi še kaj povedal o zaslišanih in po zaporedju, kot je bilo, seveda sem pričakoval, da morda se le bo kdo našel in ker je ta zadeva šla mimo, pa menim, da ni bilo prav oziroma da nekako - milo rečeno -- ne spada sem to, kar je sedaj gospod predsednik našega odbora za finance in monetarno politiko povedal.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg163">Namreč, on se je sprehodil skozi to predstavitev z določenimi stvarmi, ki pa so bile tudi na predstavitvi z moje strani dokaj realno, stvarno, praktično povedane. Sam je rekel, da gospod Ivanušič to zadevo okoli priprav, pač, dela in pripravlja od srede; torej se ve, da lahko v omejenem številu to zadevo uredi. Glavni poudarek je bila na kontroli in je, seveda, res uporabil "urad za kontrolo." Vendar: ali je to urad ali je to inšpekcija - dobro, to mislim, da ne moremo ravno sekati in ne vem kako, bi rekel, mu pretiti ne vem kako ocenjevati. Bistvo je v tem in tu je najbolj zadrhtelo, bi rekel, razmišljanje posameznikov v odboru, ko je rekel, da bo zelo pojačal kontrolo nad finančnimi izdatki in seveda outputom, jaz sem pa tudi sam rekel, da vendar ne smemo biti malo ali preveč domišljavi. Konec koncev je slovenska država ali pa slovenska vlada ali pa, recimo, vlada,ki upravlja s proračunom, ima opraviti s proračunom, za katerega je v bistvu zagotovljen input, problem je samo outputa. In za input je vendar zagotovljeno, saj vendar vemo, od kod so prihodki! Skratka, to je podjetje, veliko podjetje, ki ima sicer nekatere stvari zelo lepo zagotovljene, nobeno drugo podjetje nima tako lepo zagotovljenih kot, recimo, ravno proračun. Seveda, kako pa se to uporablja, v katerem smislu in podobno, in ali je to racionalno, to je pa druga zgodba. Ampak, tu je bil velik poudarek in tudi bil je vprašan gospod kandidat tudi, češ, kaj, ali ne bi prej počakal zaključnega računa, potem bi šele delal proračun. Mislim, to je bila seveda stvar, vprašanje, ki tudi, bom rekel, z logične strani ne gre skupaj, ker ve se, da zakon o proračunu pove, kdaj mora biti in kako je to v zaporedju in kdaj mora biti sprejet, zaključni račun je pa seveda dobro, da se potem kmalu pojavi, ko je leto zaključeno. Ampak to zaporedje je zelo nedvoumno povedal. Skratka, menim - tudi glede teh predpisov in teh uredb in podobno: veste, to je tako, smo malo naprej že prišli. Včasih smo imeli, saj veste, niti svinčnikov ni bilo - ali pa mi smo rekli včasih peresnikov in podobno -, sedaj imajo vsi računalnike in v katerokoli pisarno stopiš, mislim, da tudi na ministrstvu za finance, lahko samo pritiskaš na določeno vprašalno tipko in, seveda, se sprehodiš s tisto miško po zadevah, ki so povsem jasne in točno se ve, kaj je treba narediti, po katerem zaporedju to gre. Skratka, ne vidim tu kakšne posebne, bi rekel, drame,in kot je bila sedaj prikazano. In te stvari smo v glavnem tudi na odboru zelo dokaj dobro razčistili in smo se tudi razšli, pač, z rezultatom osem proti devet v škodo kandidatov. Vendar, s povsem jasnimi stališči, da je gotovo res in tudi sam kandidat jepovedal: v teh petih, šestih mesecih so določene stvari možne, vendar mislim, da je nakazal in prav je nakazal stvari, ki so, kot pravim, na tleh, realne, ki so možne, vendar pa - kot sem sam povedal - slovenski proračun ima ta vhod prihodkov povsem jasnoopredeljen in zagotovljen ter podobno, še celo to smo ugotovili in tudi sam kandidat je povedal, da je bila rast proračuna v zadnjih sedmih, šestih letih hitrejša od rasti bruto domačega proizvoda. Tako da s te stvari je stvari že povsem jasno in nedvoumno povedal.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg164">Skratka, menim, da je bila zadeva v redu, in tudi menim, da če bomo šli po takem zaporedju, potem seveda bomo šli na začetek naše seje in prosim, naj se pojavijo vsi predsedniki odborov in komisij, da bodo zaropotali svoja, bi rekel, svoja videnja in svoje občutke. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg165">Hvala. Besedo ima Jelko Kacin, za njim Miran Potrč.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg166">Hvala za besedo, gospod predsednik. Kolegice in kolegi, gospod Bajuk, gospodje ministri, kandidatka in kandidati za ministre. Moj predgovornik je repliciral, je pač govoril o tem, da se lahko zgodi, da bi predsedniki delovnih teles odropotali svoje nastope. Jaz bom sedaj nastopal kot posameznik, kot poslanec, ne kot predsednik delovnega telesa. Zato bi se rad na začetku izognil morebitnim tovrstnim razpravam oziroma očitkom.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg167">Jaz sem seveda po svoje vesel, ker je gospod mandatar v današnjem nastopu zelo jasno odgovoril na vprašanje v zvezi z dvojnim državljanstvom. To njegovo namero pozdravljam, se mi zdi politično modra, odmerjena, predvsem pa se mi zdi kot dokaz spoznanja, da se vendarle uči in prilagaja našim spoznanjem. Ampak ne glede na to, jaz uvodoma povem, da mu z mojo odločitvijo ne bom delal sile, da uresniči to svojo namero. Povem, da ne bom glasoval za to vlado iz drugih utemeljenih razlogov. Ampak vseeno, še enkrat pohvalim to odločitev, kdorkoli vam je že to svetoval, če je bilo temu tako. Če pa ste do tega spoznanja prišli sam pri sebi, pa je to spoznanje še veliko več vredno.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg168">Ko so vas nam predstavljali, je bilo veliko govorjenja o vaši finančni strokovnosti, o vašem bivanju v Parizu v Medameriški banki, o poznavanju finančnega področja. To preprosto je potrebno verjeti in vzeti v zakup. Ampak tisto, kar se je dogajalo danes dopoldan, pa je dokaz, da kljub tej vaši finančni provinienci niste imeli srečne roke pri predlaganju sestave vlade. Za finančnega strokovnjaka se mi resnično zdi ključno, da ima srečno roko tam, kjer je sam doma - na področju financ. Vi te roke niste imeli na najbolj srečnem koncu, ko je šlo za ta izbor. In ne verjamem tistim, ki bi morda trdili, da je kandidat danes dobil negativno oceno zaradi političnih delitev v tem državnem zboru. Nikakor ne! Negativna ocena je bila posledica njegovega neprepričljivega, lahko pa rečemo tudi zelo prepričljivega nastopa. Kolega Kopač, ki je relativno miren človek, me je danes presenetil, ko ga že dolgo časa nisem videl tako "zelenega". Včeraj sva se pogovarjala, ker sva bila oba v tujini - on se je vračal s skupščine Evropske banke za obnovo in razvoj - in sva se pogovarjala o teh financah in o današnjem zaslišanju, ampak to, kar se je zgodilo na tem zaslišanju, ga je - sedaj razkrivam nekaj, kar ni skrivnost - resnično spravilo na mejo obupa, in bi mu rad izrekel priznanje, ker je njegov nastop vendarle bil veliko bolj odmerjen od tistega, kar smo videli kolegi v poslanskem klubu, ko je s tega zaslišanja prišel.</seg>
@@ -854,11 +835,11 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg176">Bi me pa seveda veselilo, gospod Bajuk, če bi o teh pomislekih odgovorili tukaj v živo in da odgovora ne bi prebrali. Verjamem, da to za vas ni zadrega. Če boste imeli kaj težav s slovnico, bomo tudi to preživeli, ampak mislim, da bi bilo treba nastopiti v živo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg177">Hvala lepa. Zadnji stavek je bil nepotreben, kolega Kacin. Besedo ima Miran Potrč, za njim Aurelio Juri.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg178">Hvala lepa. Gospod predsednik državnega zbora, gospod predsednik vlade, dr. Bajuk, kandidati za ministre.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg179">Poslanci Združene liste socialnih demokratov smo glasovali proti izvolitvi dr. Bajuka za predsednika vlade. Tako smo se odločili zato, ker nasprotujemo poskusom desničarskih strank, da se brez volitev z glasovi javnosti neznanih poslancev radikalno spremeni politična usmeritev vlade in razglasi vlada zgolj desnega političnega pola. Takosmo glasovali tudi zato, ker obljube dr. Bajuka, da bi z izvolitvijo njegove vlade pospešili aktivnosti za sprejem Slovenije v Evropsko unijo, po naši oceni niso bile realne. Prepričani smo, da lahko normalno delovanje slovenskega parlamenta in vlade zagotove le predčasne volitve, na katerih se bo izkazala večinska volja volivcev. To je naša politična usmeritev tudi še danes.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg180">Imeli smo prav. Vse dosedanje aktivnosti pri volitvah predsednika vlade in pri imenovanju njegove vlade so več kot potrdile naše ocene in našo usmeritev. Slovenija je s temi nepotrebnimi aktivnostmi že izgubila več kot mesec dni, prepotrebnega časa za normalno delovanje državnega zbora in vlade v korist državljanov. Sprejemanje evropske zakonodaje ni pospešeno, temveč je zamujeno. Obljube dr. Bajuka, da se bo sprejem te zakonodaje pospešil, so se izkazale ali za nerealne ali pa za zavestno zavajajoče. To je prvo dejstvo.</seg>
@@ -877,11 +858,11 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg193">Iz vseh navedenih razlogov bom tudi tokrat glasoval proti predlaganim kandidatom, tako kot prej proti predlaganemu predsedniku. Upam, da se bo tako odločila tudi potrebna večina poslank in poslancev. Ne bom torej podprl predloga za sestavo vlade dr. Bajuka, ker gre za izrazito politično, desno vlado, ker ta vlada ne more imeti verodostojnosti, saj nima razvidnih niti 46 glasov poslancev, ker ta vlada brez dejanske podpore pri svojem delu ne more biti uspešna in ker dejanski cilj ni delovanje v korist večine državljank in državljanov, temveč prevzem oblasti zaradi ugodnejšega štarta na redne volitve. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg194">Hvala. Replika, kolega Josip Bajc.</seg>
             </u>
             <note type="speaker">JOSIP BAJC:</note>
-            <u who="#SDZ2.BajcJosip" ana="#regular">
+            <u who="#BajcJosip">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg195">Gospod predsednik, kolegice, kolegi, gospod mandatar! Rad bi nekaj ugotovil, nekaj pa tudi repliciral kolegu Potrču.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg196">Kolega Potrč! Tudi poslanci iz Združene liste socialnih demokratov ste pomagali izglasovati nezaupnico vladi dr. Drnovška in mislim, da tudi delno so pomagali ali pa, bom rekel, so povzročili z nekoliko drugačnim pričakovanjem, kaj vse se bo potem zgodilo, da danes, oziroma tako kot ste vi rekli, da je ta državni zbor v tem enomesečnemu obdobju moral se ukvarjati z nečim drugim ne pa s tistim rednim delom.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg197">Drugo. Sprašujem kolega Potrča in mislim, da so še nekateri kolegi rekli za nekatere člane te bodoče vlade, da so člani državljanskega foruma, foruma za zaščito ustave, da je en član v malteškem viteškem redu. Sprašujem se, kolega Potrč, ali je to v naši državi prepovedano! Jaz upam, da ni. Ali pa povejte, da mogoče obstajajo kje kakšni tajni listi, uradni listi iz nekega preteklega obdobja, ki prepovedujejo članstvo v eni od teh oblik civilnega združevanja državljanov naše mlade države.</seg>
@@ -889,75 +870,75 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg199">In na koncu, gospod Potrč! Ne mi reči še tega, da so odbori in komisije strokovno odločali pri glasovanju o primernosti ali neprimernosti kandidatov za ministre. Zgolj politično. Razen v enem odboru, ko ste ugotovili, da gospe Pozsončeve ni moč najti, sta se dva kolega poslanca vzdržala in je tisto glasovanje, mislim, da bilo 8:5, dva sta se vzdržala. Lahko tudi imenujem, ampak mislim, da ni potrebno. Tako da govoriti, da smo poslanci v odborih in komisijah strokovno ocenjevali - nekatera vprašanja, moram reči, tudi od kolegov, iz drugih strank so bila strokovna, nekatera so na nivoju bila, nekatera tudi pod nivojem. Tudi to moramo, mislim, priznati, ampak odločali smo na koncu zgolj politično, ne strokovno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg200">Replika na repliko, Borut Pahor, Miran Potrč in Maria Pozsonec.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg201">Hvala lepa za besedo, gospod predsednik. Gospe in gospodje! Ker je spoštovani kolega Josip Bajc omenil Združeno listo socialnih demokratov, je morda prav, da sam pojasnim razloge za naše ravnanje.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg202">Naprej glede tega, o čemer se, kolega Josip, strinjava. Zagotovo pri imenovanju vlade, ministrov gre za politični odnos do tega vprašanja. Zakaj? Ker je povezan z odgovornostjo, ki jo poslanci, ki podpirajo to vlado, prevzemajo na svoja ramena. 46 poslank in poslancev se je tako nedavno odločilo. Med njimi ni bilo kolegov iz vrst Združene liste socialnih demokratov. Ponavljam razlog: prvič, ne zato, ker seveda ne sodelujemo v tej vladi in ne želimo biti nikoli več v situaciji, ko iz opozicije, bom rekel, podpiramo vlado, na katero ne moremo vplivati, drugič pa, ker ne verjamemo, da je mogoče v tem kratkem času pozitivno spreminjati stvari v tej deželi na bolje in bi bilo koristneje iti na predčasne volitve.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg203">Kar se tiče odgovornosti pri vladni krizi, ki smo ji bili priča, ponavljam še enkrat, čeprav Združena lista socialnih demokratov vlade, ki sta jo sestavljali glavni dve stranki, ljudska stranka in liberalna demokracija, ni podprla na začetku, je vseskozi zelo konstruktivno delala, zaradi česar si je med nekaterimi kolegi prislužila naziv "opozicija pod B". Ponavljam še enkrat, ni bil naš motiv pripeljati vlado v krizo pred volitvami, naše obnašanje je bilo vselej konstruktivno in nismo metali polen v kolesje te vlade. Veliko polen si je, žal, zmetala sama in dosegla krizo, tudi ob obnašanju tvoje stranke, kolega Josip Bajc. To govorim zato, ker mislim, da je tista politična večina, ki je prevzela in ki prevzema odgovornost za vodenje države, dolžna in odgovorna s to večino in s to odgovornostjo ravnati do konca. Žal, prejšnja vlada tega ni bila sposobna in je Slovenijo pripeljala v situacijo, kot je bila. Združena lista socialnih demokratov res v tej situaciji ni mogla prevzeti odgovornostiza delo vlade, kolega Bajc, v kateri sta dve stranki kazali vse več divergentnih interesov in stališč do ključnih, tudi strateških vprašanj. Na tisti točki pa smo ocenili, da te odgovornosti, da bi držali jez, glede tega ne moremo držati, in glede na to, da je ta večina razpadla, tudi nismo mogli, nismo smeli prevzeti odgovornosti za nadaljevanje dela te vlade, ker bi v nasprotnem prevzeli odgovornost za delo, na katerega ne bi imeli vpliva.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg204">Toliko za pojasnilo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg205">Hvala. Replika, Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg206">Hvala lepa. Gospod kolega Bajc! Veseli me, da ste mi dali priložnost, da še enkrat poudarim tisto, kar sem mogoče prej povedal malo premalo jasno. Glede glasovanja stranke ne bom, ker je povedal naš predsednik Borut Pahor, glede ostalega pa naslednje:</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg207">Izrecno sem poudaril, da je za mene popolnoma razumljivo, da je vlada dr. Bajuka politična, da mene to čisto nič ne moti, da me je pa motilo doslej in do danes to, da se je poskušala prek akademskih naslovov in poudarjanja strokovnosti prikrivati političnost te vlade in ustvarjati vtis, kot da gre za ekspertno vlado, ki v političnem smislu pomeni nekaj popolnoma drugega - pomeni vlado, ki je strankarsko nevezana in deluje samo ekspertno za krajši čas.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg208">Drugo. Niti z besedo nisem govoril o tem, da je delovanje raznih združenj - ki ste jih tudi sami omenili, da jih ne bi ponavljal - kakorkoli postavljeno pod vprašanj. Želel sem pa povedati, da imajo vsa ta združenja jasno politično noto; da so se vsa ta združenja doslej jasno politično angažirala, kar ni nič narobe, ampak so se angažirala; da so se angažirala predvsem in izključno samo politično v določeni smeri in da članstvo v teh združenjih pač daje politično legitimacijo članov teh združenj, kar ni nič narobe, samo to se jasno ve. In zato govoriti o tem, da se ne ve za politični profil mnogih kandidatov - nalašč jih nisem našteval, sem pa povedal število, če pa je treba, gospod Bajc, bom to ponovil, pa še imena povedal, ker jih vem. Soglašam, da se v državnem zboru odloča tudi politično o vladi, samo še enkrat trdim, da so moje ocene o predstavitvi kandidatov mnogo objektivnejše od ocen, ki jih je dal dr. Bajuk, ki je pavšalno rekel, vsi so bili krasni, vsi so bili odlični. Predvsem je zelo zelo res, da so njihovi nastopi bili zelo različni in da to kaže, da ta vlada zaenkrat skupnega programa nima. Tudi nastop dr. Bajuka danes, jaz vam lahko iz magnetogramov pokažem, je povzel nekaj stvari, ki so jih govorili ministri v predstavitvah, ne pa da bi ministri iz skupnega programa govorili, kaj pravzaprav je potrebno v posameznem resorju doseči. Drugače pa najbrž si pozabil, še na enem odboru so se trije vzdržali, in to v odboru za družino, delo, zdravstvo in socialno politiko. In tisti trije so bili posebej kritizirani od predsednika vlade, bili so pa iz tvoje stranke. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg209">Hvala. Replika, Maria Pozsonec.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SDZ2.PozsonecMaria" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg210">Hvala lepa, gospod predsednik. Spoštovani. Jaz bi samo gospodu Bajcu povedala to, da jaz nisem spremljala njega, na katerih odborih je sodeloval. In niti jaz ne želim, da me ta čast doleti, da on spremlja moje delo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg211">Replika, Ivo Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg212">Hvala lepa, gospod predsednik. Kolegice in kolegi, spoštovani predsednik vlade! Repliciram gospodu Potrču. Govoriti tu o političnih vladah, jaz vas pravzaprav ne razumem. Vse vlade v Sloveniji, odkar je osamosvojena, so bile politične. Vendar pluralne. Strokovne vlade so bile za časa vaše dominacije, pred letom 1990. Takrat so bile izrazito strokovne vlade. Tudi vi ste bili predsednik skupščine. Skratka, stroka je bila takrat prva in edina. Žal je bila zgolj rdeče barve. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg213">Hvala, kolega Hvalica. Predlagam, da se dogovorimo, da ne bi odpirali teme za nazaj. Josip Bajc želi repliko na repliko. Se želi opravičiti kolegici Pozsončevi. Prosim.</seg>
             </u>
             <note type="speaker">JOSIP BAJC:</note>
-            <u who="#SDZ2.BajcJosip" ana="#regular">
+            <u who="#BajcJosip">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg214">Kolegica Maria, jaz nikakor nisem spremljal, ali ste bili prisotni ali ne. Ampak v odboru za notranjo politiko, ko je bila predstavitev dr. Jerovška. Dve uri prej nas je bilo 8:8. Takrat ste bili tudi zraven. Potem se je pa zgodilo, recimo pri predstavitvi dr. Jerovška, da nas je bilo 15 in se je ugotovilo, da vas ni bilo. Jaz se vam opravičujem, kolikor ste to razumeli, da sem vas jaz iskal oziroma da sem vas jaz pogrešal. Nekateri drugi so vas pa res intenzivno pogrešali in tudi intenzivno iskali.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg215">Hvala lepa. Feri Horvat, replika.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg216">Hvala za besedo, gospod predsednik. Spoštovane kolegice in kolegi, gospod predsednik vlade, kandidatka in kandidati za ministre! Repliciram kolegu Bajcu, dopolnil bom malo manj diplomatsko to, kar je rekel kolega Borut Pahor, in pa potem kolegu Ivu Hvalici.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg217">Najprej moram reči to, da ob teh razpravah in dogodkih čedalje bolj pogosto prihaja predme tukajšnji nastop češkega predsednika Havla v prejšnjem mandatu, ko je govoril o odnosu med političnimi strankami in državo in je izredno močno poudaril, da so politične stranke zato, da služijo državi, ne pa da poskušajo doseči to, da država služi njim. In pri obeh dejanjih, ki sta bili ključni za sedanjo krizo in za sedanje stanje in tudi za posledice, ki bodo gotovo neugodne v prihodnje, se je zgodilo to, da je prevladal strankarski interes nad državnim interesom. Prvo, dragi kolega Bajc in ostali kolegi! Vi ste povzročili prvi krizo vlade, ko ste izstopili iz vlade predčasno, pol leta pred volitvami. Jaz osebno sem to zelo obžaloval, ker prvotno vaše stališče, da se boste obnašali državotvorno in ostali v vladi do volitev, se mi je zdelo zelo korektno in odgovorno ravnanje do države. Žal na predloge, pod pritiski sestrskih strank oziroma njihovih voditeljev ste storili to, kar ste storili, in potem je drugo bilo samo nadaljevanje.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg218">In drugo. Nepripravljenost predvsem teh treh oziroma dveh strank za predčasne volitve še bolj pomeni to, da interese države podrejate interesom stranke, zato da si zagotovite boljšo izhodiščno pozicijo za volitve. To pa mislim, tudi če je legalno in legitimno, da ni odgovorno in da ni korektno. Kajti v takem stanju v državnem zboru, ko imamo določeno pat pozicijo, da na način, ki ste ga vsa leta zelo kritizirali, ko je en poslanec, kolega Pucko, javno povedal, kako bo ravnal, in je ravnal drugače, kot ste pričakovali, in ste ga tudi z nizkimi udarci napadali, sedaj v bistvu na enak način z neke vrste sovražnim prevzemom prevzamete vlado z enim ali dvema glasovoma večine, zato da se pripravljate na volitve. Bolj pošteno in odgovorno bi bilo v tej situaciji prepustiti besedo volivkam in volivcem in zato jaz tudi ne bom podprl te vlade in se s tem tudi že vnaprej odpovedujem razpravi, ki sem jo najavil. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg219">Hvala, kolega Feri Horvat. Vaša replika torej je bila tudi že vsebina vaše razprave, ki je pod številko tam nekje okoli deset.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg220">Replika, Josip Bajc. Upam, da bo zadnja v tej krogu.</seg>
             </u>
             <note type="speaker">JOSIP BAJC:</note>
-            <u who="#SDZ2.BajcJosip" ana="#regular">
+            <u who="#BajcJosip">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg221">Kolega Feri Horvat! Rad bi popravil eno od vaših navedb. Slovenska ljudska stranka ni izstopila iz vlade. Ministri Slovenske ljudske stranke so napovedali izstop. Da pa ni v vladi, še enkrat ponavljam, ste se tudi vi politično odločili, ker ste pomagali zrušiti to vlado, zaradi tega, ker ste ocenili, da bo politično bolj modro, in na koncu te vaše replike ste tudi sami povedali: Mi smo se odločili za predčasne volitve.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg222">Besedo ima kolega Aurelio Juri, pripravi naj se Darja Lavtižar-Bebler.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SDZ2.JuriAurelio" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg223">Hvala, predsednik. Spoštovani gospod mandatar! Ne bodite hudi, če vam še enkrat izkažem moje veliko začudenje, da ste mandatarstvo sprejeli v okoliščinah, v katerih se je slovenska politika znašla, v popolni negotovosti okoli opredeljevanja državnega zbora do pobud, ki bi jih naj imela in posedovala vaša vlada, ob dejstvu, da bi jo naj podpiralo, kot vemo, 28 plus 16, torej 44 poslank in poslancev, plus neznana dva, ter v situaciji, ko bosta, bi rekel, delovno uporabna, če vam bo ekipa potrjena že ta mesec, torej maja, dejansko samo dva meseca, junij in julij, kajti avgust bo že dopustniški, september pa v znaku tudi uradnega pričetka volilnih priprav in vemo, kaj ta čas pomeni in za delo vlade in za delo parlamenta.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg224">Začudenje tudi, ker ste svoje ime vložili v relativno nepopularen posel. Poglejte ankete, javno mnenje, kaj o tem pravi. In javnosti, tudi oni, ki vam je naklonjena, je težko prikriti dejstvo, da vsi gospodje, ki bodo danes ali ob drugem oziroma tretjem poskusu izvoljeni za ministre in to delo opravljali, kot smo videli, le kak mesec, bodo s funkcijo odšli s pravico do polne plače za dobo dodatnih dvanajst mesecev, tako kot sedaj seveda tudi odhajajoči ministri, ki pa imajo vendarle za seboj nekaj več, če že ne zaslug, vsaj opravljenega dela, tri leta in pol. Gre za pravico, da se razumeva, dr. Bajuk, ki jo uživamo tudi mi,poslanke in poslanci, in ki v ničemer ni oporečna oziroma sporna. Gre pa vsekakor za okoliščino, ki dodatno utemeljuje naše vztrajanje, torej vztrajanje Združene liste socialnih demokratov, po razpustitvi državnega zbora v trenutku, ko je Drnovškova vladaz izstopom ljudske stranke oziroma z najavo o izstopu razpadla, in po razpisu predčasnih volitev. Le toliko, za osvežitev spomina okoli geneze in odgovornosti ter tudi posledic še odprte vladne krize.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg225">Povsem zaman, dr. Bajuk, da nas prepričujete, da bi bilo bolje, da vašo vlado podpremo, sicer bomo nekako vsilili ljudem volitve sredi poletja. Jaz ne vem, ali bo možno ali ne, kakorkoli že, to ni argument, ki bi nas prepričeval. Krizo je povzročila stranka, ki vas je za mandatarja predlagala, in za podaljševanje te krize odgovornost nosite tudi sami od trenutka, ko ste se odločili vztrajati pri kandidaturi za vsako ceno in do konca. Če bi se po prvem neuspehu, ko ste videli, koliko je ura, umaknili in vaše prepričali, da se je bolje podati na predčasne volitve, bi bile slednje že razpisane za drugo polovico junija. Če pa ste mislili, da z vašo izvolitvijo je kriza mimo, ste se močno ušteli. Res pa je, da je vlak junijskih volitev šel mimo, tega ne bomo več ujeli. Torej odgovornost za tako stanje, ki je bila prvotno le na ramenih SLS-a, nosite sedaj tudi vi in vsi kolegice in kolegi, ki vas podpirajo in ki so vas izvolili.</seg>
@@ -971,37 +952,37 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg233">Tudi jaz, dr. Bajuk, sem za rešitev, kot ste dejali, ki bo v korist države, zaposlenih v teh podjetjih in lokalnih skupnosti, in ne vem, če bi kdo taki rešitvi nasprotoval. A je treba tudi snovati in ponuditi. Za enkrat iz vaših ust ni bilo slišati seveda nič o taki rešitvi. Upam,da če boste uspeli ustoličiti vlado, da se bo taka rešitev tudi zgodila. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg234">Hvala lepa. Gospa Darja Lavtižar-Bebler ima besedo, za njo Ivan Kebrič. Replika, se opravičujem. Kolega Kelemina ima repliko. Se opravičujem!</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg235">Hvala lepa za besedo. Spoštovani predsednik! Cenjeni državni zbor! Spoštovani kandidat, kandidati za ministre in kandidatka! Vse moje spoštovanje, vsem skupaj. Repliciram pa gospodu Aureliu Juriju.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg236">V svojem nastopu namreč očita tem cenjenim kandidatom, da so prišli po plačo v vlado. In to očita gospod Aurelio Juri z nekimi nizkotnimi diskvalifikacijami, in to tisti Aurelio Juri, ki je v svoji občini povzročil z izplačilom, neupravičenim in protizakonitim izplačilom plač škodo svojim občanom. Računsko sodišče je namreč v svojem poročilu ugotovilo nekaj deset milijonov preveč izplačanih plač, ki jih je povzročil gospod Aurelio Juri in tudi njegova naslednica. Osebno sam sem predlagal vladi in tudi odboru za nadzor proračuna, in tudi računskemu sodišču, naj učinkovito ukrepa. Še danes tega denarja niste vrnili v celoti; nekaj ste vrnili, vsega pa še niste vrnili. In vi danes tem cenjenim kandidatom, ki so dejansko zastavili svoje ime zato, da se preprečijo take kršitve in podobne, ki se v tej državi dogajajo celo večnost, da se to ne bi več dogajalo. Vi njim očitate, da so prišli po plačo, ki imajo zagotovljeno svojo eksistenco. To je nekorektno od vas, ki ste nepravilnosti s svojo vladavino, takrat, ko ste bili na oblasti, povzročali. Zato vas prosim, da s takimi nizkimi diskvalifikacijami ne poskušate razvrednotiti pomembnosti teh ljudi, ki so danes tukaj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg237">Hvala. Replika na repliko, Aurelio Juri.</seg>
             </u>
             <note type="speaker">AURELIO JURI:</note>
-            <u who="#SDZ2.JuriAurelio" ana="#regular">
+            <u who="#JuriAurelio">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg238">Torej ne vem, koliko škode je gospod Kelemina naredil v svojem prostoru, domnevam, da veliko, ampak to je moja ocena.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg239">Poglejte, popravek navedbe. Gre za osem milijonov, ne nekaj deset milijonov, v času moje vladavine, kot ji pravite, in ta problem se rešuje, ker je bil sprejet tudi dogovor v skladu s sklepi računskega sodišča in tudi organov mestne občine Koper, da se stvari sanirajo. In to poteka. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg240">Replika na repliko, kolega Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg241">Se opravičujem, gospod Aurelio Juri, vsem skupaj, da moram še enkrat za govornico, ampak takrat, ko ste nastopili mandat poslanca, ste dejansko prenehali biti župan. In to se ve, kdaj ste nastopili mandat poslanca. Torej, štiri leta, tako rekoč, niste bili sposobni urediti teh zadev, štiri leta skoraj, tako rekoč, niste bili sposobni tega urediti, in sedaj govorite, da boste to v najkrajšem času uredili. Vi ste povzročili - ste sami povedali - 10 milijonov, vaša kolegica naslednica pa je tudi povzročila približno 19, vse skupaj okrog 29 milijonov. Imam poročilo, ki ga grem lahko sedajle poiskat, imam vse shranjeno, arhivirano, lahko prinesem, pa vam bom tu citiral točne številke, če hočete. Prav zaradi tega, te vaše neučinkovitosti, ki ste jo do sedaj pokazali, sem trdno prepričan, da bodo kandidati, ki so danes predlagani za ministre, prispevali k temu, da bo ta država postala pravna in učinkovita, takšna, kakršno si tudi naše Slovenke in Slovenci zaslužijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg242">Hvala. Gospa Beblerjeva ima besedo. Pripravi naj se kolega Kebrič.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER:</note>
-            <u who="#SDZ2.LavtižarBeblerDarja" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg243">Hvala lepa za besedo, spoštovani gospod predsednik. Spoštovani zbor! Zanimivo bi bilo vedeti, kako bodo poznejše kronike sedanjega političnega dogajanja prikazovale glasovanje o Bajukovi vladi. Morda ga bodo prikazovale kot drobne epizode pred pomembnim razpotjem, morda pa bo prav to glasovanje uvod in del tega nasprotja, nemara kot posledica vsiljene odločitve o volilnem sistemu na splošnih državnozborskih volitvah, katerih izidi bodo začrtali pot naše države v prvem desetletju 21. stoletja. Vsebinsko bodo te odločitve morda razbistrile dileme in nas nemara približale širokemu družbenemu konsenzu o poti nadaljnjega razvoja Slovenije med divjim in brezsrčnim kapitalizmom 19. stoletja ter drago socialno državo blaginje.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg244">Pri tem se zastavlja več vprašanj: ali bo predlagani nastop izrazito desničarskega režima, tudi če bo šlo za nekaj mesecev, prispeval k razvoju družbenega soglasja o dolgoročnih smotrih naše družbe; ali bo prispeval k preseganju travm iz naše bližnje zgodovine; ali nas bo Bajukova vlada pripeljala bliže k razviti demokratični Evropi in bolje prispevala k ugledu Slovenije; ali bo zamenjava Drnovškove vlade z Bajukovo posadko okrepila in naredila našo demokracijo zrelejšo. Odgovori na ta vprašanja so po mojem nikalni. Tudi če desničarska slaba polovica državnega zbora ponovno nastrga z vprašljivimi obljubami položajev in državnega denarja za glasove dveh poslancev oziroma poslank, ki ju njihovi volilci gotovo niso za to izvolili, Janša-Bajukova garnitura ne bo mogla znatno prispevati k soglasju, saj sama uživa le izrazito manjšinsko podporo javnega mnenja na Slovenskem. V tem je tudi temeljni razlog za njeno odklanjanje predčasnih volitev, ker se upravičeno boji preverjanja družbene podpore na volitvah.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg245">Bajukova vlada po mojem ne bo prispevala k celjenju starih ran in k družbeni pomiritvi. Več njenih vidnih članov je znanih protagonistov političnega revanšizma, enosmerne lustracijske zakonodaje ter političnega izrabljanja travmatičnega kolektivnega spomina na boleče poglavje naše zgodovine. Njihov prevzem oblasti, tudi če bo kratkoročen, utegne ponovno sprožiti boleča nesoglasja med Slovenci. Demokratična Evropa po 2. svetovni vojni je bila in ostaja zaznamovana z zavračanjem fašizma in fašističnega kolaborantstva med 2. svetovno vojno in z zavračanjem poizkusov politične in moralne rehabilitacije obojega.</seg>
@@ -1014,55 +995,55 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg252">Sama pri tem seveda ne želim imeti nobenega sodelovanja, zato moje podpore in mojega glasu za kaj takšnega ne more biti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg253">Hvala, kolegica Beblerjeva. V celoti spoštujem vso različnost mnenj, ki se v razpravi pojavlja, ampak nekatere besede, kolegica Beblerjeva, ki ste jih uporabili, in nekatere stavčne zveze pa so take, da sem dolžan, da preberem prvi odstavek ustave, ki govori, to je člen 63: "Protiustavno je vsakršno spodbujanje k narodni, rasni, verski ali drugi neenakopravnosti ter razpihovanje narodnega, rasnega, verskega ali drugega sovraštva in nestrpnosti." Jaz sem dolžan na tem mestu, da to javno povem in prosim, da na ta način se razprava več ne nadaljuje. Repliko ima kolega Franci Potočnik, za njim Franci Rokavec, za njim gospa Beblerjeva.</seg>
             </u>
             <note type="speaker">FRANCI POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg254">Spoštovani! Repliciram gospe Darji Lavtižar-Bebler. Za mene je bil njen nastop žaljiv. Govorila je o izrazito desničarski vladi, o tej vladi, ki je zdaj predlagana. Jaz bi to vlado podprl in nisem nikakršen izrazit desničar, levičar tudi ne, nikoli nisem bil v partiji. Nisem tudi ne klerikalec, sem pa demokrat in bom demokrat ostal. Sem od začetka član Slovenske ljudske stranke, ki je demokratična stranka, ki temelji na vrednotah krščanstva in ima v svoji preambuli tudi zapisan krščanski etos, ta pa pravi tudi, da je treba odpuščati. Zato Darja, odpuščam ti.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg255">Repliko ima kolega Rokavec.</seg>
             </u>
             <note type="speaker">FRANCI ROKAVEC:</note>
-            <u who="#SDZ2.RokavecFranc" ana="#regular">
+            <u who="#RokavecFranci">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg256">Hvala za besedo, gospod predsednik. Spoštovani kandidati za ministre, spoštovane poslanke in poslanci!</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg257">Prav tako repliciram gospe poslanki, gospe Beblerjevi. Bom zelo kratek. Ampak dejansko v svojem govoru ste, gospa Beblerjeva, rekli, da so predlagani ministri, ki bodo sestavljali bodočo vlado, večkrat odražali tudi javno revanšizem. Oprostite, gospa Beblerjeva, če hočemo bitidemokrati in tako, kot je tudi že predhodnik, gospod Potočnik, dejal pred menoj: Vaš govor in vaš nastop je dejansko odražal revanšizem. Prosim vas, zamislite se, kaj ste dejali za tem ambonom. Mislim, da je bilo škoda nekaj besed. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg258">Hvala. Replika, gospa Beblerjeva.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER:</note>
-            <u who="#SDZ2.LavtižarBeblerDarja" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg259">Hvala lepa. Spoštovani kolegi! Verjetno me niste dobro poslušali in me zato tudi niste dobro razumeli. Jaz sem govorila - in zato prosim tudi gospoda predsedujočega, da mi ne podtika kakšnih zlonamernih izjav tukaj, še manj pa seveda določbo ustave, ki govori o kakšnem spodbujanju sovraštva ali kaj podobnega - jaz sem govorila o tem, na čem je utemeljena Evropa po 2. svetovni vojni, in tukaj sem govorila o tem, da je utemeljena na nasprotovanju fašizmu in tudi na nasprotovanju poizkušanju rehabilitacije, moralne in politične, tega obdobja. Tako da ste me popolnoma narobe razumeli. Jaz pa ne vem, zakaj bi vi, gospod kolega, meni tukaj odpuščali. Jaz ne rabim vašega odpuščanja, jaz za svoje besede vedno odgovarjam sama.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg260">Hvala. Veliko nestrpnost sem razumel v vaših besedah in zato sem pač <gap reason="inaudible"/> Prosim, če si pogledate stenogram, sem si pa zapisal nekatere besede, ki so bile tukaj izrečene, in mi je nerodno, da jih ponavljam, jih ne bom ponavljal. Besedo ima gospod Kebrič. Replika? Komu replicirate? Prosim, kolega Bajc.</seg>
             </u>
             <note type="speaker">JOSIP BAJC:</note>
-            <u who="#SDZ2.BajcJosip" ana="#regular">
+            <u who="#BajcJosip">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg261">Predsednik, hvala lepa. Najprej bi repliciral kolegici Lavtižarjevi, ker je replicirala predsedniku na to, kar je prebral. Mislim, da po poslovniku to ne sodi med replike.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg262">Drugo, kar bi rad, kolegica Lavtižarjeva, rekel, je naslednje. Malo sem pogledal rojstne podatke kandidatov za ministre - samo pet jih je shodilo pred 41. letom. In govoriti o nekem revanšizmu in še nekaj besed, ki jih bomo, ko bomo pridobili magnetogram vaših izjav, mislim, da je, da ne uporabim kakšnega grdega izraza, več kot abotno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg263">Hvala lepa. Gospa Beblerjeva je poskušala pojasniti, in mislim, da je vendarle bila možnost za repliko. Želite replicirati kolegu Bajcu? Prosim, gospa Bebler.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER:</note>
-            <u who="#SDZ2.LavtižarBeblerDarja" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg264">Spoštovani gospod Bajc, ne mi podtikati stvari, ki jih nisem rekla.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg265">Kar pa zadeva morebitne poskuse nekaterih glede revanšizma, pa sem imela čast sodelovati v več delovnih skupinah, kjer smo pisali dokumente o spravi, o prekinitvi nekega prejšnjega obdobja z dosedanjim, in sem pač nekatere gospode dovolj od blizu spoznala, da najmanj kar je, me skrbi, če bi takšni ljudje zasedli zlasti državotvorne resorje, in to pač smem kot poslanka tu povedati.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg266">Še enkrat povem, nisem replicirala gospodu predsedniku, ampak opozorila sem ga, da mi nima pravice podtikati nečesa, česar nisem rekla, kajti govorila sem o Evropi po drugi svetovni vojni in govorila sem o tem, zakaj je Evropska unija odklonilno reagirala na gospoda Haiderja.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg267">Hvala lepa, gospa Beblerjeva. Ni bila mišljena ta formulacija, na katero sem se odzval s citiranjem ustave, ampak nekatere druge formulacije. Prosim, da si pogledamo magnetogram in bo razvidno. Predlagam pa, da nadaljujemo z razpravo. Kolega Kebrič, nato kolega Kontič.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ2.KerbičIvan" ana="#regular">
+            <u who="#KerbičIvan">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg268">Gospod predsednik, hvala za besedo. Spoštovani predsednik dr. Bajuk in vaša predlagana ekipa za vlado! Kolegice in kolegi! Slika, vsaj politična slika dr. Bajuka, ki jo je pomagal sam izčrtati, je kompletna. Govoril je eno, delal drugo. Dokaz: da je v vseh treh prvih nastopih govoril, da bo predlagal strokovno vlado. Danes mu štejem v dobro, da je svojo napako priznal. To je lepa črta značaja, da spoznaš in upoštevaš druga dejstva, druge argumente, saj je včeraj že na televiziji v Odmevih povedal, da je to politična vlada. Druga stvar, ko je prvič govoril, da bo zmanjšal število ministrstev, je to res storil, vendar ne čisto tako, kot je napovedal. Povedal je tudi to, da ne bo predlagal ministra brez listnice, vendar je to storil. Dobro, zarečenega kruha, zarečenih besed se mnogo poje. Ampak, da gremo naprej. Postavljali smo mu vprašanje v premislek, kaj govori javno mnenje, ali ga bo upošteval ali ne sploh še, ker naših slovenskih političnih razmer ni tako dobro poznal in bi bilo zelo dobro, če bi o tem javnem mnenju vsaj razmišljal, če ga že ne upošteva.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg269">Druga stvar pa je, da je zgodovina učitelj, pa ne bom posegal daleč nazaj. V soboto smo imeli v Mariboru jubilej, proslavo Pekrskih dogodkov. Kaj nam ti govorijo? Govorijo nam, da če vojska nima za seboj ljudstva, pomeni, da je izolirana in se ji slabo piše. To so ti dogodki in naša osvobodilna vojna za samostojno Slovenijo lepo, ne samo povedali, ampak dokazali. To pa narekuje to, da je vseeno treba marsikaj upoštevati.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg270">Če gremo naprej, konkretno, zakaj imam določene prigovore na ta predlog vlade, ki ne pozna v evropski parlamentarni pluralni demokraciji primer. Zakaj? V enih rokah, to se pravi, v rokah ene stranke se osredotočijo oziroma sprejmejo vsa tri represivna ministrstva. V diktaturi je to jasno. V večinskem sistemu, ko je ena stranka na oblasti, prav tako. Tudi v sistemu absolutne večine je to tako, vendar v našem parlamentu, v naši praksi in evropski demokratični praksi takih primerov ni. Saj je to koalicijska stranka, ki predlaga svoje ministre, zato bi človek pričakoval, da bo vsaj malo drugače vlada sestavljena, ne pa, kot sem dejal, vsa tri ministrstva represije v rokah ene stranke. Da to dokažem.</seg>
@@ -1080,34 +1061,34 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg282">Zahvaljujem se vam, da ste me pozorno poslušali. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg283">Hvala, kolega Kebrič. Bojan Kontič ima besedo. Replika? Franc Kangler, replika.</seg>
             </u>
             <note type="speaker">FRANC KANGLER:</note>
-            <u who="#SDZ2.KanglerFranc" ana="#regular">
+            <u who="#KanglerFranc">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg284">Hvala za besedo, spoštovani predsednik. Repliciram poslanskemu kolegu, ki prihaja iz Maribora. Spoštovani gospod Kebrič, na začetku ste me malo izzvali, ko ste dejali, da ste bili zelo presenečeni, ko ste videli seznam kandidatov za ministre. Prihajam iz stranke, ki se zavzema za enakomeren razvoj celega slovenskega podeželja. To pomeni tudi, da so kandidati za ministre iz vseh koncev Slovenije. Zelo sem pa bil presenečen, spoštovani gospod Kebrič, da ste prav vi zavrnili enega izmed ministrov, ki prihaja iz Maribora. Sedaj, ko smo bili tri leta v vladi, je spoštovani minister, gospod Bergauer, dobro opravljal delo. Čez noč, ker so se sile nekoliko obrnile, za vas spoštovani gospod Bergauer ni več sprejemljiv za ministra. Osebno sem prepričan, da nesamo on, da so tudi drugi kandidati na "hearingih" pokazali znanje in strokovnost. Seveda se poslanci na teh "hearingih" niso odločali po svoji vesti. Vnaprej smo lahko ugotovili, razen v treh primerih, kakšen bo rezultat. Potrebno je ločiti: na "hearingih" se predstavljajo kandidati, kjer se lahko pač poslanci odločimo, ali je sprejemljiv za kandidata za ministra ali ni. Tukaj v državnem zboru pa padajo politične odločitve. In gospod spoštovani Kebrič, zelo sem bil presenečen, da mag. Bergauer ni opravil kot štajerski minister, če se smem tako izraziti, "hearinga". Ne vem, zakaj ga niste podprli, kljub temu da sva velikokrat govorila pred tem, da je dober minister. Seveda jaz tudi upam in sem prepričan, da bo ta vlada, z gospodom dr. Bajukom na čelu, se zavzemala za enakomeren razvoj slovenskega podeželja. To pomeni, da bodo tudi nekatere druge resorje, ne samo ministrske, pokrili ljudje, ki prihajajo iz vseh koncev Slovenije.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg285">Tudi vam, gospod spoštovani dr. Jambrek, bi dal eno malo repliko. V svojem nastopu ste omenili, če boste izvoljeni za ministra za notranje zadeve, si boste ustvarili posvetovalni strateški svet. Med tistimi imeni, ki ste jih našteli, mislim, da jih je sedem ali deset, ste omenili kandidate samo z ljubljanske univerze. Tudi mariborskauniverza premore marsikaterega dobrega kandidata, ki vam je lahko v oporo in pomoč.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg286">Prav tako moram reči, da prihajam tudi iz takšnih krajev, kjer imamo tudi iz druge politične opcije veliko dobrih kandidatov. Prihajam iz občine Duplek. Moram reči, da premorejo tudi v tej občini socialdemokrati tudi kakšnega kandidata, ki bi lahko pokril kakšen resor. Imamo dobrega predstavnika za stike z javnostjo - Gornik Maksimiljan. Imamo dobrega strokovnjaka za lokalno samoupravo - Mulec Bogdan in navsezadnje imamo diplomiranega inženirja - Šabeder Bradimirja, ki bi tudi lahko kakšen resor pokril v gospodarstvu.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg287">In gospod Kebrič, na vas še zmeraj apeliram, da je boljše in za dobrobit vsega slovenskega naroda, včasih se odločiti po svoji vesti, kot pa po političnem prepričanju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg288">Hvala kolega Kangler. V vaši repliki ste omenili, da boste tudi replicirali kandidatu za ministra. To seveda po poslovniku ni možno oziroma najverjetneje ste želeli komentirati eno od izjav kandidata za ministra, ki jo je dal v nastopu pred delovnim telesom.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg289">Kolega Jerovšek, replika.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg290">Hvala lepa. Spoštovane kolegice in kolegi, spoštovani gospod predsednik vlade, spoštovani kandidati. Repliciram gospodu Kebriču. Dolgo nisem repliciral in tudi sedaj ne bi, če bi, gospod predsednik, zalegla vaša prošnja in vaša plediranja, da se izpred te govornice ne bi razpihovala vsakršna nestrpnost.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg291">Nato ste prosili gospo Beblerjevo, vendar gospod Kebrič je sicer začel, se mi zdi drugače, da je malo raztreseno začel, vendar se ni mogel izogniti nestrpnosti, in to verski nestrpnosti, češ, da bo kandidat za šolskega ministra dolžan širiti katolicizem z ognjem in mečem.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg292">Gospod Kebrič, ali se vam zdi, da za kandidata za šolskega ministra ne velja slovenska ustava? S tem, ne samo, da ste širili versko nestrpnost, priključili ste se tistim, ki so gospoda kandidata na poniževalen, nizkoten način v preteklih dneh omenjali kot kandidata, ki nima pojma o šolstvu in šolskem sistemu. Kljub temu da je imel kandidat po mnenju vseh poslancev, tudi iz teh vrst, briljanten nastop na "hearingu" in kljub temu, da je gospod kandidat 30 let univerzitetni učitelj, univerzitetni profesor, in kljub temu, da je kot ustavni sodnik verjetno prerešetal vso zakonodajo s področja šolstva, otroškega varstva in tako dalje. Vi ste šli še eno stopnjo naprej. Ne čudim se vam, da ste sposobni tega, da ste naredili to, kajti začeli ste, da je dr. Bajuk govoril eno, delal drugo, češ, da ni predložil strokovne vlade. Vi niste mislili zgolj politično.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg293">Dejstvo pa je, da je dr. Bajuk temu državnemu zboru in slovenskemu narodu predložil doslej najbolj strokovno podkovano vlado. V tej vladi je 9 kandidatov z akademskim nazivom doktor znanosti. Seveda to nekatere zebe v oči in so v nekaterih časopisih začeli naenkrat izpuščati akademske naslove, da se ljudstvo ne bi osvestilo, da je to dejansko zelo visoka strokovna vlada. Vi ste se priključil temu, da skušate z neresnico, s poniževanjem in z razvrednotenjem in z, še poudarjam, z vsakršnim sovraštvom in nestrpnostjo zniževati ugled ljudi, ki so pripravljeni sprejeti na visokem strokovnem nivoju, po mojem, odgovornost za to državo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg294">Hvala. Sedaj pa ima razpravo kolega Kontič, ki mu dajem besedo. Pripravi naj se kolega Samo Bevk.</seg>
             </u>
             <note type="speaker">BOJAN KONTIČ:</note>
-            <u who="#SDZ2.KontičBojan" ana="#regular">
+            <u who="#KontičBojan">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg295">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi, gospod mandatar, kandidatka in kandidati za ministre. Kot bi dejal eden izmed kandidatov za ministra, je pomembno ločiti med vzrokom in povodom. Tako je tudi v tem dogajanju, ki smo mu priča v zadnjih tednih. Kakorkoli pa razmišljam o tem, zakaj danes razpravljamo o predlogu nove vlade, torej kje je vzrok in kje povod, ne morem mimo spoznanja, da je začetek v letu 1997, ko je državni zbor imenoval vlado, kakršno je pač že imenoval. To je bila vlada, ki bi, seveda, če bi čutila tolikokrat opevano državotvornost in odgovornost, morala voditi državo v času med rednimi volitvami. Toda interesi so bili toliko različni, da smo danes, kjer pač smo.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg296">Spoštovani dr. Bajuk! V postopku vašega imenovanja sem vam dvakrat zastavljal vprašanja, ki so nekako sodila na področja, ki jim pri svojem delovanju posvečam večjo pozornost. Tokrat dodajam še eno, to je lokalna samouprava. Do sedaj smo imeli ministra brez listnice, ki je pokrival lokalno samoupravo. S tem so župani imeli sogovornika na področju lokalne samouprave. In še, ko govorimo o Evropi, je pomembno poudariti pomembnost pokrajin. Moja skromna ocena je, da bi ministra, ki bi se ukvarjal zgolj z lokalno samoupravo,in seveda s tem tudi z občinami in pokrajinami, še kako potrebovali. Še posebej je to pomembno, ker se kandidat za ministra, kamor bo sodila najverjetneje lokalna samouprava, do pokrajin na predstavitvi ni opredelil.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg297">Prvič mi na vprašanje s področja zdravstva niste odgovarjali, drugič mi niste odgovarjali na nobeno vprašanje, ker pač enostavno niste odgovarjali. Tudi tokrat, že tretjič sprašujem, kakšno je vaše stališče oziroma stališče predlagane vladne ekipe do nacionalnega programa zdravstvenega varstva, z naslovom "Zdravje za vse do leta 2004"? Verjetno je stališče, ki ga je predstavil kandidat za ministra za zdravstvo, tudi vaše stališče. Toda nacionalni program zdravstvenega varstva je pripravila vlada, v kateri je sodelovala oziroma ta resor vodilastranka, ki sedaj pri predlogu nove vlade tvori večino poslanske podpore. Se pa s tem predlogom sedaj ne strinja bodoči minister, seveda, če bo imenovan.</seg>
@@ -1115,27 +1096,27 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg299">Ne strinjam se torej s popolnim zasebništvom v primarnem zdravstvu in ukinjanjem zdravstvenih domov. To je torej razlog mojega nasprotovanja predlaganemu kandidatu, ki mu strokovnosti na njegovem področju ni moč oporekati, kot je ni moč oporekati vsem kandidatom kar povprek. Toda to je tudi ali predvsem politična vlada, vlada ki programsko in kadrovsko ne ustreza mojim pogledom in stališčem. Kot sem že dejal pred časom, tudi s sedanjo vlado, v.d. vlado, nisem bil zadovoljen. Toda še enkrat poudarjam to, kar sem že povedal: ko menjam staro za novo, hočem pač boljše od starega. Trdno sem prepričan, da je edini način, da do tega tudi dejansko pridemo, da se čim prej izvedejo volitve. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg300">Hvala lepa. Besedo ima kolega Bevk. Pripravi naj se Roman Jakič. Replika. Jaka Presečnik replika na razpravo Bojana Kontiča.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ2.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg301">Hvala lepa, gospod predsednik, za besedo. Ampak enostavno ne razumem, ne vem torej, ali ne razumem gospoda Kontiča ali ne razumem tega zapisnika oziroma mnenja o predstavitvi kandidata za ministra za zdravstvo. Gre za to, da v tem poročilu oziroma mnenju, piše ravno nasprotno od tega, kar je prejle govoril Kontič o zasebništvu, o mnenju vlade oziroma stališčih vlade oziroma kandidata za ministra glede zasebništva in pa glede ukinjanja zdravstvenih domov po Sloveniji. Tako sem pač razumel kolega Kontiča. Torej poročilo je, ugotavljam, popolnoma nasprotno od tega, kar je dejal. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg302">Replika na repliko kolega Kontič.</seg>
             </u>
             <note type="speaker">BOJAN KONTIČ:</note>
-            <u who="#SDZ2.KontičBojan" ana="#regular">
+            <u who="#KontičBojan">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg303">Hvala lepa. Repliciram kolegu. Res je, v poročilu piše, da se po mnenju kandidata za ministra mora ustaviti stihijski prehod v zasebništvo, se pravi omejiti. Država bi morala imeti celoten pregled in vpliv nad tem področjem, prav tako bi bilo treba imeti celosten pogled na podeljevanje koncesij. To seveda ni v nasprotju s tem, kar sem govoril. Govoril sem, da je kandidat naklonjen zasebništvu. Tu ne piše nič takega, česar ne bi jaz povedal. Kandidat je govoril o tem, da je treba omejiti stihijsko zasebništvo, se pravi, podeljevanje koncesij brez natančnih kriterijev. Tudi to sem prej omenil. Nikjer pa ne piše nasprotno, kar sem trdil, da bi bil kandidat proti širjenju zasebništva v zdravstvu. Repliciral sem gospodu Presečniku. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg304">Hvala. Pojasnjeno. Kolega Bevk ima besedo.</seg>
             </u>
             <note type="speaker">SAMO BEVK:</note>
-            <u who="#SDZ2.BevkSamo" ana="#regular">
+            <u who="#BevkSamo">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg305">Hvala za besedo, gospod predsednik. Spoštovani zbor, gospod dr. Bajuk, kandidatka in kandidati za ministre! Ob trikratni razpravi in glasovanju za izvolitev mandatarja vlade Republike Slovenije sem vam, gospod dr. Bajuk, postavil štiri vprašanja. Izgleda, da tudi tokrat ne bo možnosti za odgovore, ker gospoda dr. Bajuka ni v dvorani; upam, da se nam bo pridružil. Se pravi, v teh treh razpravah sem vam postavil štiri vprašanja. Žal se vam na nobeno ni zdelo vredno odgovoriti. Danes imate ponovno priložnost, da končno nanje odgovorite. Dovolite mi, da vam torej osvežim spomin.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg306">Prvič sem vam postavil vprašanje o vaši morebitni podpori za uresničitev projekta uvrstitve partizanske bolnišnice Franja, ki je z odlokom vlade zaščitena kot spomenik državnega pomena, na seznam svetovne kulturne in naravne dediščine pri Unescu.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg307">Drugo vprašanje se je nanašalo na zaustavitev financiranja slovenske izseljenske matice zaradi izjav njenega predsednika, dr. Beblerja, ki niso bile po godu državni sekretarki.</seg>
@@ -1149,74 +1130,74 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg315">In na koncu imam še vprašanje za kandidata mag. Rudija Šeliga, kako bo v tej prehodni vladi, ki bo v najboljšem primeru efektivno lahko delala tri do največ štiri mesece pripravil nacionalni kulturni program, kot je v svoji predstavitvi obljubil, in kako si predstavlja, da bo parlament tik pred zaključkom svojega mandata sprejel in odločal o tako pomembnem vprašanju, kot je to nacionalni kulturni program. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg316">Hvala kolega Bevk. Konkretna vprašanja, ki ste jih naslovil na nekatere kandidate za ministre, mesto za to je seveda nastop oziroma predstavitev na pristojni komisiji državnega zbora, kot pravi ustava oziroma pristojnemu delovnemu telesu državnega zbora, kot pravi poslovnik. Replika kolega Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg317">Hvala lepa gospod predsednik. Moja replika velja poslancu Bevku, in sicer v tistem delu, ko sprašuje kandidata za ministra, dr. Šturma, v zvezi z malteškim viteškim redom.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg318">Gospod Bevk, ali vi sploh veste, kaj je to malteški viteški red. Očitno, da ne. To ni noben seznam CK, to je nekaj drugega. Naj vam tu preberem uradni dokument, kdo je recimo v tem malteškem viteškem redu: senator Francesco Cossiga bivši predsednik italijanske republike, Valéry Giscard d'Estaing, španski kralj Juan Carlos. To ni vaš terorist Carlos, to je španski kralj Juan Carlos. Poglejte. Vi se spravljate sedaj na ta malteški viteški red. Tu so ugledne, ugledne osebnosti evropskega in svetovnega političnega injavnega življenja. Vi pa obravnavate malteški viteški red z aspekta, ne vem, CK. Lepo vas prosim, ni primerno, da na takšen način, bi rekel, diskreditirate malteški viteški red in s tem tudi to deželo spravljate na en, bi rekel, nizek nivo. Nimate te pravice, da tako govorite o malteškem viteškem redu. Nimate. Imate pravico, da lahko rečete, kar hočete, ampak te pravice, da tako, na takšen način, tu, pred tem zborom, tako diskvalificirate to ugledno združenje, asociacijo. Jaz sem trdno prepričan, da moralno nimate te pravice, ker ponižujete to državo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg319">Hvala kolega Hvalica. Kolega Bevk je postavil samo vprašanje. Jaz nisem razumel, da bi bil s tem vprašanjem žaljiv. Prosim, replika, kolega Bevk.</seg>
             </u>
             <note type="speaker">SAMO BEVK:</note>
-            <u who="#SDZ2.BevkSamo" ana="#regular">
+            <u who="#BevkSamo">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg320">Tudi sam, gospod predsednik, mislim tako, kot ste vi sedaj dejali. Mislim, da s tem nisem diskreditiral malteškega viteškega reda. Malteški viteški red ima svoje pomembno poslanstvo. Mislim, da je bil vitez malteškega viteškega reda tudi ameriški predsednik Kennedy. Jaz sem samo postavil vprašanje, kakšno zaobljubo morajo dati člani malteškega viteškega reda, ko postanejo člani malteškega viteškega reda. Mislim, da v nobeni stvari nisem te zadeve diskreditiral.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg321">Predvsem pa me seveda to vprašanje povezuje tudi z vprašanjem o laičnosti naše šole, kajti dr. Lovro Šturm bo pač vodil ministrstvo za šolstvo in šport. Prav zaradi tega bi vam rad povedal, kakšno vlogo ima tudi malteški viteški red oziroma kakšno vlogo imajo ti redovi, pa četudi si član - laik, ne redovnik ali pa duhovnik.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg322">Slovenska enciklopedija pravi, ta nova slovenska enciklopedija, ki ravno zdaj izhaja pod redovi, je to geslo, in sicer, da je redovništvo poseben stan ljudi, ki znotraj cerkvenih skupnosti živijo po določenih, od cerkvenih oblasti odobrenih, pravilih, s katerimi se določa življenje in delovanje redovnikov. Četudi si ti redovnik - laik, se moraš pač podrediti nekaterim pravilom.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg323">Mene pa samo zanima, kakšna je ta izjava, ker nikjer do zdaj si je nisem uspel pridobiti oziroma kakšna je ta zaobljuba. Mislim, da bi nam lahko dr. Lovro Šturm to iz prve roke obrazložil. Mogoče pa sploh ni tako strašno, kot se zdi, ampak ne na "hearingu" in ne danes, izgleda da tega ne bom izvedel. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg324">Hvala. Janez Mežan replika.</seg>
             </u>
             <note type="speaker">JANEZ MEŽAN:</note>
-            <u who="#SDZ2.MežanJanez" ana="#regular">
+            <u who="#MežanJanez">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg325">Hvala lepa. Spoštovane poslanke in poslanci, kandidati za vlado. Ugovarjam gospodu Bevku, še prej bi pa rad odgovoril tudi na vprašanje gospoda Iva Hvalice, ko je vprašal, ali gospod Bevk ve, kaj je to malteški viteški red. Seveda ve. Na odboru za kulturo, šolstvo in šport, ko se je predstavljal prof. dr. Šturm s svojim programom, je kar na dveh straneh magnetograma, tukaj ga imam pred seboj, lahko si ga preberete, natančno razložil, kaj je to malteški viteški red. Samo en poudarek. Malteški viteški red se danes ukvarja izključno s karitativno in humanitarno dejavnostjo. Je pa celotna zgodovina bila razložena na odboru in lahko si vsi, ki želite kaj več izvedeti o tem redu, seveda tudi ta magnetogram preberete.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg326">Druga stvar, gospod Bevk je tukaj postavil kar nekaj vprašanj dr. Šturmu in mag. Šeligi. Moram ugotoviti naslednje, da nobeno od teh vprašanj, ni postavil na odboru. Nobeno od teh vprašanj ni postavil na odboru, razen tisto, ko je vprašal, kakšno zaobljubo je dal dr. Šturm, ko je postal član tega viteškega reda. Že sam predsedujoči oziroma predsednik državnega zbora je ugotovil, da je mesto za postavljanje teh vprašanj bilo na odboru. Tam jih najbrž ni postavil, tudi zato. Postavil jih je tukaj pač zato, ker je hotel s temi vprašanji biti všečen gledalcem in poslušalcem, ni jih pa postavil na tistem mestu, kjer bi lahko dobil konkreten, jasen in nedvoumen odgovor. Toliko v vednost. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg327">Hvala. Ali je pojasnjeno? Besedo ima Roman Jakič. Jaz sem razumel, da je kolega Mežan dvignil roko. Replika še kolega Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg328">Hvala lepa gospod predsednik. Poslanec Bevk, tudi jaz vam repliciram. Delno je sicer to nalogo, namreč odgovor na vprašanje, ki sem vam ga jaz zastavil, odgovoril moj poslanski kolega Mežan. Ampak tisto, da ste vi samo vprašali, kaj je to, ne drži.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg329">Poglejte. V tonu, v podtonu vprašanja je lahko zaznati, kakšno je to vprašanje, ali je to s pozitivnega, s pozitivističnega aspekta. Vaše, vam zagotavljam, da ni bilo. Ampak to je poskus nenehne diskreditacije kandidata. Lepo vas prosim, imejte eno spoštovanje sedaj, ko ste dobili lekcijo s strani profesorja Mežana, imejte spoštovanje do malteškega viteškega reda. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg330">Sedaj sem poskušal prepričati kolega Bajca, da se ne bi oglasil, ampak mi ni uspelo. Prvi kolega Bajc, nato kolega Bevk.</seg>
             </u>
             <note type="speaker">JOSIP BAJC:</note>
-            <u who="#SDZ2.BajcJosip" ana="#regular">
+            <u who="#BajcJosip">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg331">Hvala lepa gospod predsednik. Ne bi repliciral, če ne bi kolega Bevk vzdignil roko. To, kar je kolega Bevk obrazložil, da piše v slovenski enciklopediji v zvezi z redom, to drži. Vendar to niso redovi in ni red, ki se imenuje malteški viteški red. Člani malteškega viteškega reda niso kleriki, lahko se podeli status člana malteškega viteškega reda tudi klerikom. To, kar je pa kolega Bevk prebral, govori pao redovih, ker pravi, da živijo v samostanih in ne vem, kaj vse. Mislim, kolega Bevk, da ste na predstavitvi na odboru dejansko bil seznanjeni, kaj danes dela oziroma kako delujejo člani malteškega viteškega reda, kaj so delali pa v desetem ali enajstem stoletju, mislim pa, da ne boste ne vi, ne jaz, tu danes razlagali.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg332">Hvala. Še replika kolega Bevka.</seg>
             </u>
             <note type="speaker">SAMO BEVK:</note>
-            <u who="#SDZ2.BevkSamo" ana="#regular">
+            <u who="#BevkSamo">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg333">To vprašanje sem kandidatu dr. Šturmu postavil zaradi tega, ker je za našo poslansko skupino zelo pomembno vprašanje, kako bo kot minister urejeval šolsko področje. Zdi se mi, da je laična šola zelo velika pridobitev za našo novo mlado državo in sploh za tradicijo izobraževanja pri nas. Zato mislim, da bi lahko pri eventualni potrditvi te vlade prišlo tudi, seveda nev dveh mesecih, ker se zakonodaja ne da spremeniti tako hitro, ampak v daljšem časovnem obdobju, do spremembe zakonodaje na šolskem področju, ki je bila sprejeta in ki v osnovo postavlja prav laično šolo in seveda ločitev cerkve od države.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg334">Bi pa glede tega, kaj je to tak red ali drugačen red, pač povedal to. V redovništvu iz slovenske enciklopedije so tudi viteški redovi zapisani, tako da bi prosil gospoda Bajca, da si to lepo prebere. V leksikonu pa so zapisani pod geslom "Ivanovci ali Hospitalci", kjergovori o katoliškem duhovniškem viteškem redu, ki je bil ustanovljen tam in tam in se ukvarja s tem in tem. Se pravi, da gre v bistvu za to, da je dr. Šturm član tega viteškega reda kot laik. Mislim, da to ni nič narobe.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg335">Gospod Možgan želi repliko.</seg>
             </u>
             <note type="speaker">JOŽE MOŽGAN:</note>
-            <u who="#SDZ2.MožganJože" ana="#regular">
+            <u who="#MožganJože">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg336">Hvala lepa, gospod predsednik. Spoštovani zbor, dragi kandidati! Malo je treba raziskati to zadevo. Vsi veste, kako velika skrivnost je, kako bogati so, recimo, salezijanci. Najbrž tudi veste, da je velika skrivnost, koliko učeni so jezuiti. Verjetno tudi veste, da je velika skrivnost, koliko je sploh ženskih redov. Danes smo pa spoznali, da je tudi velika skrivnost v tem parlamentu, kaj je malteški red.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg337">Hvala za repliko. Sedaj pa ima besedo kolega Jakič. Pripravi naj se Jože Avšič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SDZ2.JakičRoman" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg338">Spoštovani predsednik, kolegice in kolegi, dr. Andrej Bajuk, kandidatka in kandidati za ministre, lep pozdrav z moje strani! Mandatarja za sestavo nove vlade nisem podprl, ker sem bil prepričan, da prehodne vlade za dobo šestih mesecev v Sloveniji ne potrebujemo. Prav tako sem bil prepričan, da so zavoljo premikov v slovenski politični sferi edini izhod predčasne volitve. Obenem sem menil, da dr. Bajuk ni primeren kandidat za vodenje slovenske vlade. Distanciral sem se in se danes še enkrat distanciram od vseh tistih, ki so mu očitali njegovo oziroma njegovih staršev preteklost ali pa dejstvo, da je večino svojega življenja preživel v tujini in podobno. Mislim, da te diskusije niso relevantne in so vse prevečkrat prepojene s ksenofobnostjo. Očital pa sem dr. Bajuku, da ne pozna razmer v državi sami in predvsem notranje razmere na političnem prizorišču, kar se je izkazalo kot upravičen očitek ob predlagani listi kandidatov za ministre. Dr. Bajuk na žalost odigrava vlogo figure v rokah tistih, ki notranjo politiko naše države zastrupljajo z nestrpnostjo in predvsem nezmožnostjo normalnega političnega dialoga.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg339">Ob predstavitvah kandidatke in kandidatov za ministre se je izkazalo, da ni prostora za približevanje Evropski uniji, kar je bilo predstavljeno kot glavni projekt začasne vlade, temveč da gre zgolj za oblastno prerivanje na desnici. Tudi osebna diskvalifikacija in nato izločitev dr. Demšarja, kot kandidata za ministra, je samo eden od kamenčkov v mozaiku oblastnega prerivanja na desnici. Takšno ravnanje se mi zdi s stališča državotvornosti in države neodgovorno.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg340">Zanimivo je bilo spremljati seveda tudi mrzlično iskanje poslanskih glasov, ki bi podprli kandidata za novega mandatarja in pa sedaj vlade. Marsikdo je bil morda pripravljen za podporo storiti in obljubiti marsikaj. Politična trgovina je bila s strani domnevno moralno neoporečnih in poštenih politikov pripeljana do skrajnosti. Pokazalo se je, kaj vse so nekateri sposobni storiti, da se dokopljejo do absolutne oblasti. S temi dejanji je bila prekoračena meja, kot sem že zadnjič rekel, med političnim lobiranjem in moralno nedopustnimi kravjimi kupčijami. Če ne drugega, spoštovana gospoda, bi morali danes eden za drugim s sklonjeno in pa seveda skesano glavo iskati odpuščanja pri kolegu Pucku, ki ste ga pljuvali in blatili vsa ta leta, s tem, da je bil seveda kolega Pucko toliko moža, če uporabim vašo terminologijo, da je svojo odločitev sporočil vam in nam in javnosti vnaprej in seveda vnaprej odstrl vse domneve, kdo, kako in zakaj bo glasoval ob takratnem glasovanju.</seg>
@@ -1234,11 +1215,11 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg352">Spoštovani predsednik, spoštovane kolegice in kolegi, zaradi vsega navedenega in splošnosti odgovorov, ki ne kažejo slike sistema in njegovega morebitnega spreminjanja, presojam, da niti dr. Šturm, kot tudi drugi kandidati za ministre niso primerni, zato bom glasoval proti predlagani vladi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg353">Hvala lepa. Besedo ima Jože Avšič. Pripravi naj se Richard Beuermann.</seg>
             </u>
             <note type="speaker">JOŽE AVŠIČ:</note>
-            <u who="#SDZ2.AvšičJože" ana="#regular">
+            <u who="#AvšičJože">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg354">Spoštovani gospod predsednik, spoštovani dr. Bajuk. Potem ko ste, po mojem mnenju, kar hrabro prevzeli izziv in ponudbo za mandatarja polletne slovenske vlade, ste nam v parlamentu predstavili vizijo vašega vodenja te vlade. Nujnost vaše potrditve in izvolitve ste utemeljevali predvsem z nevarnostjo zamud pri vključevanju Slovenije v Evropsko unijo, z zamudami pri harmonizaciji naše zakonodaje z evropsko; skratka, predstavili ste se zelo - na videz, po moje - proevropsko. V marsičem ste napovedali kontinuiteto z delom dosedanje vlade, kar smorazumeli tudi tako, da vsaj pol vlade ne bo spremenjene. No, resnici na ljubo, dosedanja vlada dr. Janeza Drnovška je pripravila toliko harmoniziranih predpisov na različnih področjih, da glavne zamude ta trenutek nastajajo zaradi takšnega dela, kakršno pač je v državnem zboru - in ne v vladnih resorjih.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg355">Že ob javni predstavitvi vaših kandidatov za novo vlado se je marsikaj od teh vizij razblinilo in ob zasliševanjih kandidatov ni od teh vizij ostalo prav veliko. Napoved o strokovni prehodni vladi je bila zamenjana s predložitvijo - po moje - najbolj politične liste kandidatov, ki jih je ta državni zbor doživel v zadnjih desetih letih. Še ministri tistih resorjev, ki bi lahko zagotavljali kontinuiteto dela v tem mandatu in zagotavljali tudi strokovnost predloga, so zamenjani. Ostajajo predvsem tisti, na katerih področjih je kar opazno veliko zamude pri harmonizaciji predpisov. Ni čudno, da sta v slovenskem volilnem telesu zavladala kar nekak preplah in negotovost, med volivci zlasti starega SLS pa veliko razočaranje. Res je, da se nekateri tolažijo, da bo že nekako in da nekateri ministri bodo tako in tako ostali, če bo vlada potrjena ali ne.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg356">Sodeloval sem na nekaterih zaslišanjih oziroma "hearingih" in prišel do ugotovitve, da predvsem tisti predlagani ministri, ki doslej niso opravljali tako zahtevnih političnih in strokovnih nalog, le-teh v tako kratkem času, kot jim je dano na voljo, ne bodo opravili kvalitetno, predvsem pa ne v mejah pričakovanj, tudi v mejah pričakovanj mandatarja samega ne - če je to resnično pričakoval. Težko si namreč predstavljam, denimo, kandidata za ministra brez listnice, odgovornega za zakonodajno področje, da bo z velikim veseljem potiskal ali pa vlekel Bajukov voz na poti v Evropo kot izrazi evroskeptik seveda, kar je njegovo prepričanje in njegova izjava na zaslišanju. Kandidatovi nedvoumni pravni eminentnosti in reputaciji navkljub je zagovarjal tezo o implementaciji evropskega prava, kolikor je to nujno potrebno, da smo sprejeti v Unijo. To nekako pomeni, da si prizadeva za - morda celo - revizijo državnega programa za vključevanje v Evropsko unijo. Meni samo po sebi evroskepticizem pravzaprav ni napaka in je potrebno, da je tudi v slovenski družbi prisoten evroskepticizem in da moramo biti previdni pri tem. Vendar; če postavljamo vlado, ki bo proevropska in katere osnovni cilj je, kako čim hitreje priti v Evropo, pa si seveda ne predstavljam, da ravno tisti, ki bo največ deloval na zakonodajnem področju, izraža tak skepticizem v primeru našega približevanja k Evropski uniji</seg>
@@ -1249,11 +1230,11 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg361">Spoštovani gospod Bajuk, mislim, da bi resnično ravnali bolje, če ne bi hiteli s predlogom v parlament. Bolje bi bilo, da bi izrabili vseh tistih petnajst dni, ki so vam bili dani na razpolago, in se temeljiteje prepričali o skladnosti predlaganih kandidatov, vsaj nekaterih, z vašimi programskimi napovedmi, o njihovi strokovnosti in poznavanju nalog, ki jih čakajo v teh mesecih. V izogib temu, da bo prioritetna naloga tako predlagane vlade predvsem odpiranje poglavij za nazaj ali pa urejanje kakšnih ideoloških vprašanj, kar je morda tudi edino, kar lahko storite v tem kratkem času do parlamentarnih volitev, seveda upam, da ta vlada ne bo potrjena. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg362">Hvala lepa. Richard Beuermann ima besedo; pripravi naj se dr. Ciril Ribičič.</seg>
             </u>
             <note type="speaker">RICHARD BEUERMANN:</note>
-            <u who="#SDZ2.BeuermanRichard" ana="#regular">
+            <u who="#BeuermannRichard">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg363">Hvala za besedo, gospod predsednik. Spoštovane poslanke in poslanci, spoštovani gospod mandatar, spoštovani kandidati za ministre. Torej, jaz sem prejšnji teden sodeloval na štirih "hearingih", tudi sem v glavnem prebral magnetograme tistih "hearingov", ki se jih osebno nisem udeležil, in lahko rečem, da me je en "hearing" spravil pravzaprav v strah, kaj se lahko zgodi, če bo danes ta vlada dobila potrebno parlamentarno večino.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg364">Za kaj gre? Gre preprosto za predstavitev kandidata za ministra za delo, družino in socialne zadeve, dr. Mihe Brejca. Ne bom govoril o tem, da so celo novinarji ugotovili, da kandidat praktično nima pojma o resorju, za katerega kandidira. Pa vendarle je potrebno par cvetk, ki so se izkristalizirale na tem odboru, vendarle tukaj izpostaviti. Kandidatu očitno ni jasno niti to, kaj so proračunska sredstva. Kajti, če bi mu bilo, ne bi pripisal temu resorju kar 800 milijard proračunskih sredstev, čeprav je logično, da smo v proračun zapisali 182,18 milijard. In bi to lahko prebral, če kje drugje ne, pa vsaj v Uradnem listu.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg365">Očitno je do tega, do te številke prišel tako, da je seštel tudi sredstva pokojninskega zavarovanja, kar seveda jasno kaže na to, da ne loči med državnim proračunom in pa med sistemi socialnega zavarovanja. Zadeva je, kar se mene tiče, zelo problematična. Seveda bi od kandidata lahko pričakovali najmanj to, da bi se seznanil s tem, kateri zakoni so v proceduri, v kateri fazi zakonodajnega postopka so, ne pa, da govori razne neumnosti: recimo, govoril je o tem, da je bil v marcu mesecu sprejet zakon o starševstvu, ko pa vemo, da še ni bil sprejet, da je v proceduri in da bi lahko - če bi to, seveda, poznal, tematiko - na odboru razložil, kako si sam predstavlja izboljšati ta zakon, ne pa, da poskuša zadevo reševati na - namreč probleme družinske politike reševati v pokojninskem sistemu.</seg>
@@ -1267,11 +1248,11 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg373">Zato, spoštovane poslanke in spoštovani poslanci - da počasi končam - nikakor ne bi podprl te vlade, s takim nekompetentnim kandidatom, tudi če bi bil sicer predstavnik oziroma če bi zastopal tako politično opcijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg374">Hvala. Besedo ima dr. Ciril Ribičič; pripravi naj se Ivo Hvalica.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg375">Spoštovani! Svoje nasprotovanje predlagani vladni ekipi sem si zamislil tako, da se ne bom ponavljal niti z vprašanji, ki sem jih namenil dr. Bajuku ob njegovi kandidaturi, niti ne bom ponavljal kolegov, ki so govorili danes pred menoj.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg376">Veliko je bilo tu govora o politični neuravnoteženosti ekipe, pa tudi v javnosti; sam ne bom govoril o tem, mene zanimajo tri druge neuravnoteženosti, po mojem mnenju, te vladne ekipe.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg377">Prva se nanaša na vprašanje, za katerega veste, da sem ga že večkrat neuspešno odpiral v tem državnem zboru - položaj žensk v politiki in še posebej v vladi. Tisti, ki skušate biti objektivni, se boste spomnili, da sem velikokrat zastavljal to vprašanje dr. Drnovšku, zlasti v obdobju, ko ni imel nobene ministrice v vladi, in sem opozarjal, da je praksa v drugih evropskih in zahodnoevropskih državah bistveno drugačna. Seveda je tako daleč od nas praksa Švedske ali Norveške, kjer imajo po parih ministra, ministrico in enakopravno delitev, tako celo, da pazijo, da niso ženske samo številčno enakopravne, ampak so enakopravne tudi po teži resorjev. Skratka, ne gre samo za enako število ministric kot ministrov, ampak gre tudi za to, da je teža, ponderiranje zagotavlja enakopravno zastopanost. Če pogledamo predlog ministrske ekipe dr. Bajuka, bomo videli, da je v njem samo ena ženska - gospa Brezigar. To je manj kot 6%, to je dvakrat manj, kot je v tem državnem zboru. Seveda, zlobna primerjava je druga: v prebivalstvu Slovenije je večina žensk. Več kot polovico državljank in državljanov in volilnih upravičencev so ženske. No, ampak dr. Bajuk predlaga svojo vlado z dvakrat manjšim zastopstvom ženskega spola, kot to velja za ta državni zbor. To se mi zdi prva takšna neuravnoteženost, na katero je smiselno opozoriti. Toliko bolj, ker so se nekatere ženske organizacije zelo odločno odzvale, tudi meni pisale neka protestna pisma, ki jih raje ne omenjam, v zvezi s čim, ampak gotovo desetkrat manj ali pa tisočkrat manj pomembno, kot je sestava vlade, in me sedaj njihov molk ali pa njihovo zadovoljstvo - če ga ta molk izraža - toliko bolj čudi.</seg>
@@ -1280,11 +1261,11 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg380">Gospod predsednik, ali naj odgovarjam na nevljudno kričanje iz publike ali ne?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg381">Ni potrebno.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg382">No, ampak vseeno moram povedati, da je dr. Jože Mencinger res bil podpredsednik Demosove vlade, to je jasno. Ampak, to ni bila moja poanta, ker moja poanta ni bila v tem, da naj on zasede to, ampak da je v Sloveniji morda pet ljudi, ki bi lahko vodili gospodarski resor. To so lahko ali najuglednejši makroekonomisti, ki si potem pridobijo ekipo operativcev, ali pa najuglednejši operativno uspešni in na tržišču, zlasti tujem, uspešni gospodarstveniki. Mislim, da ta ekipa z dr. Jožetom Zagožnom - ne bi rad bil niti žaljiv niti podcenjujoč; ampak da ta ekipa, kot je predlagana, je najslabša točka in zato največja neuravnoteženost te vlade.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg383">To so torej ta tri dodatna opozorila, ki sem jih hotel ponuditi. Se pravi: slaba zastopanost žensk, slaba zastopanost nekaterih pokrajin oziroma regij, zlasti slovenske Istre, in pa - po moje - neadekvatna gospodarska ekipa, glede na težave in probleme, s katerimi se srečujemo.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg384">Ob koncu bi rad še spregovoril o tajnosti glasovanja oziroma načinu odločanja o tej vladi. Vem, da gre za zelo občutljivo vprašanje. Sam se moram odzvati na to, kar je predsednik, spoštovani gospod Podobnik, rekel na začetku današnje razprave. Govoril je o časti poslancev, da moramo poslanci častno opravljati svojo funkcijo vtej razpravi. To isto velja tudi za glasovanje. Jaz, seveda, bom zelo odkrit in bom povedal, da je v realni politiki zelo naivno, če ena stran dopusti drugi, da krši vse pravne predpise, sama pa vztraja na spoštovanju teh predpisov.</seg>
@@ -1294,11 +1275,11 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg388">Jaz pri tem ne morem sodelovati, ne morem drugega, kot dvigniti svoj glas proti temu. Kaj boste pa storili v poslanskih skupinah, v vodstvu državnega zbora, v komisiji, ki nadzira glasovanje, je pa seveda vaša stvar. Hvala lepa</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg389">Hvala. Hvala kolega dr. Ribičič. Nihče od poslanskih kolegov ni odreagiral na eno od pobud oziroma idej, ki je bila dana v razpravi. S tem je bilo tudi jasno povedano, da ta predlog nikakor ni bil sprejet. In sem prepričan, da bomo častno glasovali, v skladu s poslovnikom. Poslovnik je tukaj jasen: tajno se glasuje, določbe poslovnika so jasne in na tem mestu pozivam poslanske kolege in kolegice, da seveda opravimo glasovanje tako, kot o tem govori poslovnik državnega zbora. Besedo ima kolega Ivo Hvalica in kot zadnja pisno prijavljena za njim, Majda Kregelj-Zbačnik.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg390">Hvala lepa, gospod predsednik. Kolegice, kolegi, predsednik vlade, kandidati za ministre, gospe in gospodje. Niti približno si pred enajstimi leti, ko je nastajala slovenska pomlad, nisem predstavljal, da bom doživel pomlad leta 2000 tako, kot jo doživljam danes in te dni. Niti približno! Človek ne more verjeti, kaj vse smo te dni lahko brali v tisku, poslušali na radiu, gledali na televiziji. Majhne drobne, pa tudi velike, direktne, indirektne diskvalifikacije, nizki udarci. Torej, precej umazana igra. In človek se vpraša - zakaj? Kako je prišlo do tega? Slovenska pomlad, ki je osamosvojila to državo in ki je bila zelo kratek čas na oblasti in je večina tega obdobja bila na takšen ali drugačen način v opoziciji, doživlja sedaj tak žolčen napad. Poskušal sem razumeti, zakaj, pa ne najdem prave razlage.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg391">Poglejte, kako se lahko zgodi, da osrednji slovenski dnevnik včeraj v tedenskem pregledu pride z naslovom "Stop za Bajukovce". To ni samo agresivno, to je tudi žaljivo. Jaz se ne spomnim, da bi kdajkoli, kadarkoli, kje kakšen časopis - tudi nestrankarski - napisal kdaj "Stop za Drovškovce" - oprostite, se težko izgovori in tudi očitno nisem še nikdar tega izgovoril, ker nisem nikdar prebral.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg392">Potem se mi zgodi Radio Koper včeraj ob 12.30. Citiram: "Utegnemo dobiti prehodno emigrantsko vlado." Nepojmljivo! Kako je možno, da urednik radia dovoli takšno žalitev ene politične opcije predsednika vlade, kandidatov za ministre, ki so zgolj in samo šele kandidati - vlada še ni izvoljena? Zakaj toliko nestrpnosti? Zakaj toliko nestrpnosti s strani tistih, ki so nosili še do nedavnega - ampak izgleda, da so sami uvideli, da ni primerno več, da nosijo neke črno-bele značke, kjer je pisalo "Vsi drugačni, vsi enakopravni"? Zakaj toliko nestrpnosti? Dajte vendar, spoštovani kolegi, tem kandidatom možnost najprej, da se pokažejo. Mi bi lahko bili nestrpni do vas, ker vas gledamo tam zgoraj že osem let, sam osebno tu žeosem let. Torej, ne razumem, kako je prišlo do tega. Kako je možno, da se absolutno vsaj - skozi medije - priznava ena sama in zgolj ena sama zveličavna, to je leva, rdeča opcija? Kako je to mogoče? Pa dajte dovoliti vendar, za božjo voljo, da ljudje lahko razmišljajo tudi drugače! In polovica jih razmišlja drugače, pa ne slaba polovica, temveč dobra polovica - govorim o rezultatu volitev leta 1996; mislim, da tega ni treba ponavljati. To, da nekatere a priori stlačijo potem v nasprotno politično opcijo, tako kot je tudi včeraj pisalo na drugi strani Dela, je neokusno. Zakaj so a priori manjšinci na levi strani? Pustite jim svobodo, mogoče se bodo odločili za sredino, mogoče se bodo nekega dne odločili tudi za desno stran. Zakaj a priori te stvari delati? Pa nihče ni protestiral! Protestirate, ko sem hipotetično to enkrat omenil, to zadevo, in moram povedati, da sem dobil veliko veliko odmevov na to, kar sem rekel; pa ne takih, kot ta vrsta misli, ampak drugačnih. Nekega dne bom te odmeve, ki so pismeni, tudi, upam, objavil. Torej, kdo plačuje ta agitprop, ker tu ne gre samo za bivšo partijo, gre tudi za liberalno demokracijo, ki se nonstop deklarira liberalno. Ampak, ali je liberalno tudi a priori proti vsemu, kar je desno od sredine? Ali je to liberalno? Ne Ne vem, za vas je to črtano. Vi poznate krog, ki je črno-bel, priznavate pač samo eno opcijo, tako kot je bila tista vaša značka, ki ste jo do nedavnega nosili. Kako je to mogoče, da liberalci ne prenesejo tudi desne sredine? Ali je to liberalizem? In negre zgolj za slučajne besede. Bil sem pozoren nekaj časa in sem videl, da prihajajo kolegi posebno od liberalne demokracije z napisanimi referati, ne vem, katerih avtorjev, ki jih tu preberejo - mimogrede, to je tudi diskvalifikacija tega parlamenta, če ni nekdo v stanju povedati nekaj besed, nekaj prostih stavkov, in da potrebuje res napisan referat - jaz mu svetujem, naj zamenja posel, ker nima tu kaj iskati, dejansko; tu ni - bi rekel - bralnica nekih ekspozejev in referatov, ampak tu je parlament. Velikokrat sem že povedal, da parlament izhaja iz besede "govoriti", sigurno ne iz besede "brati". Torej ti referati - to je bilo samo mimogrede - tudi dokazujejo, da je to pripravljena akcija, zelo dobro plačan in projektiran agitprop: na vsak način a priori zrušiti vse; če nič drugega ne, se očita malteški viteški red.</seg>
@@ -1314,91 +1295,91 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg400">Pa to je res, to je res. V nekaterih se je vse zrušilo, ker niso mogli dojeti, da se je lahko to zgodilo. Poglejte, jaz bom imel fenomenalen spomin na to. Jaz sem si tisti dan, ko se je to zgodilo, vse registriral v svoj diktafon in nikdar več ne moreš ponoviti občutkov tistega trenutka, tistega dne. Jaz sem te občutke, tudi ko sem gledal kolega Pahorja, ko sem gledal Golobiča tam zunaj, ko sem gledal te mrtvaške obraze, ko sem videl, kako se jim vse sesuva, dobesedno so hodili tako, kot da bi hodili po tleh, ki se tresejo ob potresu. Torej to je bilo nekaj neverjetnega. To sem jaz vse registriral, ker vem, da je to nemogoče ponoviti. Moram reči, kamera je bila prizanesljiva, če bi te ljudi malo več snemala, bi bila lepa fotodokumentacija, ampak nekaj je ostalo. Kdor bo videl, recimo, intervju s poslancem Pahorjem, bo ugotovil, da je bil tisti dan 10 let starejši in tudi da je bil ves spremenjen, pač. To je nedvoumno. Človek se zopet vpraša zakaj. V normalnih demokracijah se to ne dogaja. To so neka pravila igre, ki pač dopuščajo, ne samo dopuščajo, predvidijo možnost, da se lahko ena vlada zamenja tudi v enem letu dvakrat, npr. Italija nam sicer ni za vzgled, niti ni poučen, ampak zadeva je zelo interesantna, ker ne moremo oziroma še nikdar nisem slišal, da bi kdo rekel, da je pa zaradi tega trpela država, gospodarstvo in ne vem kaj. Ne! To je pač procedura, ki jo je treba opraviti, ki je, bom rekel, tudi vkalkulirana v ceno države in to je treba urediti. Sedaj pa, kot da se je porušil svet, kot da je konec vsega, kot da je sodni dan. In vam zagotavljam, sodnega dne ne bo, ne bo še tako kmalu, ker sedaj ni nobenega od teh, ki napovedujejo konec sveta, zadnje čase nisem ničslišal o tem. Torej ne bo, ampak boste pa lahko ob oblast, ampak to je nekaj normalnega. Sprejmite to dragi poslanci liberalne demokracije in ostalih satelitskih strank, katerim se je priključila tudi opozicija pod B, kot jo jaz imenujem, združena lista, ki je pa organsko jasno povezana - jaz to tudi razumem. Sprejmite to demokratičnost, sprejmite to benevolentno. Saj veste, kako pravi star slovenski pregovor: "Enkrat teče zajec, drugič pa pes." Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg401">Hvala kolega Hvalica. V vašem nastopu ste, vsaj ko ste omenjali poslanskega kolega Jelka Kacina bili v besedi, s katero ste ga označili, do njega žaljivi. Še to bi rad povedal, da smo se danes poskušali dogovoriti, da bomo imeli sejo do 22.00 ure, to pa pomeni, da bi morali splošno razpravo zaključiti do 21.00 ure. Po nastopu poslanskega kolega Hvalice se je vrsta kolegov prijavila k repliki in tako najverjetneje danes seje ne bomo mogli zaključiti. Ampak to je pač pravica poslancev, da se priglasijo k replikam. Prvi je Geza Džuban. Prosim! Če ne bomo do 21.00 ure zaključili z razpravo, potem seveda z glasovanjem ne moremo končati do 22.00 ure. Prosim kolega Džuban.</seg>
             </u>
             <note type="speaker">GEZA DŽUBAN:</note>
-            <u who="#SDZ2.DžubanGeza" ana="#regular">
+            <u who="#DžubanGeza">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg402">Hvala lepa gospod predsednik. Mislim najprej, da bi v tistem opozorilu, ki je bilo namenjeno kolegu Hvalici, morali omeniti še koga, ne samo Jelka Kacina, ki jih je gospod Hvalica žalil v svojem nastopu.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg403">Drugo, glede napisanih referatov, kolega Hvalica, ali je zgodba bila namenjena tudi dr. Bajuku ali samo poslancem liberalne demokracije? Aha, hvala lepa. Častne izjeme. Moram vas spomniti, da v zadnjem malo manj kot štiriletnem mandatu nihče ni prebral toliko napisanih referatov kot socialdemokratska stranka v tem parlamentu. Zgodilo se je celo to, ko se vam je zadeva ponesrečila, da sta dva kolega brala isti referat, ki ste jih očitno delili. In je na način, kot pač funkcionirate, prišlo tudi do te zgodbe branja referatov, za katere kolegi očitno niso vedeli, kaj v njih piše. Enkrat je eden od kolegov provociral enega, ko je rekel, "poskušaj sedaj s svojimi mislimi povedati", ker je očitno bilo, da je referat popolnoma v nasprotju z njegovim razmišljanjem.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg404">Glede diskreditacij si poskušajte prebrati samo nekaj Demokracij, pa v nobenem slovenskem časopisu ni toliko podtikanj, laži in diskreditacij kot v Demokraciji, ki jo baje ureja gospod Janša v zadnjem času. V določenih prispevkih celo piše poimensko o poslancih, kako je treba izkoreniniti in uničiti določene ljudi v slovenskem političnem prostoru. Potem slučajno vi ne morete govoriti o tem, kako sekoga diskreditira. Ali se pa spomnimo zadnjega dogodka, kako se je z diskriditacijami, podtikanji in lažmi eleminiralo dr. Demšarja na obrambnem ministrstvu. Očitno zaradi tega, ker je bil potreben prostor za gospoda Janšo in je dr. Demšar moral leteti nanačin, nad katerim se lahko samo zgrozimo.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg405">In zadnje, verjetno bomo stotič ponovili, da se dr. Drnovšek ni zakalkuliral. Gospod Podobnik je najavil izstop svojih ministrov iz vlade in je bilo treba pokrpati vlado in na "hearingih", ki so bili, mislim, da sta danes že bili dve razpravi, v kateri se je govorilo, da nismo podprli raznih kandidatov, se je reklo tudi zaradi česa: spreminjanje referenduma, trgovina z orožjem, ukradeni dokumenti itd. Kvalificirani kandidati za ministre, ki bi vlado nadomestili na način, da bi funkcionirala še nekaj mesecev, nobenega niste podprli. Zgodilo se je na nekem odboru, ko so kolegi razpravljali celo tako, kako je kandidat kvalificiran, dober in primeren, pa so vsi glasovali proti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg406">Hvala. Replika Roman Jakič, za njim Jože Avšič. Se odpovedujem. Replika Miran Potrč, za njim dr. Ciril Ribičič.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg407">Hvala lepa. Jaz bi najprej rad nesoglašal z gospodom Hvalico, ko je trdil, da je slovenska pomlad zagotovila osamosvojitev te države. To je tolikokrat ponavljana neresnica, da enostavno ni mogoče s tem soglašati. Bil je plebiscit. Na plebiscitu so se državljanke in državljani Slovenije odločili za samostojno državo, bila je tudi osamosvojitvena vojna, v kateri je prav zaradi sodelovanja in podpore velike večine državljank in državljanov bila zagotovljena samostojnost in neodvisnost te države, da o vseh drugih stvareh ne bi prej govoril.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg408">Gospod Ivo Hvalica je nekajkrat poudaril, zakaj se ne dovoli, da bi prišla na oblast tudi druga opcija in zakaj se naenkrat želi prikazovati stvari samo črno-belo. Gospod Hvalica, po mojem prepričanju in po tistem, kar jaz govorim z ljudmi, ker ste preko volilnega sistema zahtevali, propagirali delitev Slovenije. Zdaj v tem primeru več ne gre za vlade, ki bi medsebojno sodelovale s posameznimi strankami, ampak gre za vlado, kjer bi se poskušala zagotoviti res enotna politična volja, tudi, da lahko rečem, direktno pod taktirko ene stranke ali enega predsednika. Tega je ljudi strah. Tega si ne želijo In to je razlog, zakaj je nerazpoloženje do takšne usmeritve.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg409">In na koncu, jaz sem vedel, da imam pri sebi, pa pred tem nisem prebral, bi pa ob tolikšnem ponavljanju, gospod Hvalica, vaših pogledov na malteški viteški red, želel prebrati še naslednje iz govora velikega prioria Vilhelma von Liechensteina na neki prireditvi oziroma maši. Vi namreč ves čas trdite samo en del dejavnosti malteškega viteškega reda, to je res humanitarna dejavnost, ampak ima še drugo, ki jo zavestno želite zamolčati. Ta druga pa je: "Naša prvenstvena naloga je verska vzgoja in oblikovanje članov na rednih srečanjih, in sicer s predavanji, duhovnimi vajami in romanjih pri katerih ima zelo pomembno vlogo duhovnih reda. Vitezi in dame malteškega viteškega reda morajo namreč biti zgledni, dejavni katoličani, zvesti papežu in biti pripravljeni z zgledom in besedo v cerkvi in zunaj nje braniti pravo vero. Ravno danes je to izredno pomembna naloga, saj z vseh strani napadajo naša krščanska načela in jih postavljajo pod vprašaj." In dalje: "Cilj in naloga nas maltežarjev je zgledno katoliško življenje v družini, župniji in v javnosti, temu pravimo tudi "tuicio fidej", kar pomeni "zavzemanje za vero"". Tudi ta drugi del je in to je razlog, zakaj smo mi posebej pač na to dejstvo opozorili in menili, da ob dveh prisegah, tudi papežu in malteškemu viteškemu redu, se postavlja ob takih usmeritvah vprašanje, ali ne bo naenkrat šolska politika postala ob takem šolskem ministru v naši državi popolnoma drugačna, ne pa več na temeljih ločitve cerkvein države. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg410">Hvala. Replika, dr. Ciril Ribičič, za njim Jože Možgan.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg411">Spoštovani! Ugovarjal bom dve stvari kolegu Hvalici. In sicer prva zadeva, njegovo omenjanje akcije sveta Evropa "vsi drugačni in vsi enakopravni". Morda ni slučajno, da je predsednica norveške vlade, če se navežem na tisto, kar sem prej govoril, enakopravnosti žensk, tista, ki je bila prva pobudnica te akcije, ampak drugače je to najširša akcija, akcija sveta Evrope. Ne moti me to, da je kolega Hvalica govoril tukaj o tem, da je treba načela iz te akcije spoštovati. Moti me tisto, kar je bilo tukaj podcenjevalnega, glede te akcije. Mogoče je slaba stran teh značk bila to, da so bile črno-bele, morda je slaba stran tega, če kdo misli,da je bila to akcija LDS-a ali kaj podobnega, to je pač akcija sveta Evrope. Ravno takrat so postavljena bila tista načela, zardi katerih sedaj svet Evrope protestira, kadar si kdo prizadeva za oblast na način, ki ni skladen z načeli, ki propagirajo nestrpnost med narodi, med ljudmi, med spoli, med rasami itn.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg412">Druga stvar. Ponavadi tiho poslušam to, kar gospod Hvalica govori o opoziciji pod B. Čisto nobenega razloga ni za nervozo v združeni listi. Nismo morda v tako ugodni poziciji kot ljudska stranka, ki je bila v dosedanji vladi in bo tudi v novi, če bo izvoljena. Smo pa v precej ugodni poziciji, ker smo bili v opoziciji prej in bomo v opoziciji tudi poslej. In zdi se mi, da bomo tudi sedaj opozicija pod B, če se to meri, ne po pomenu, po argumentih, ponačinu nastopanja, ampak po radikalnosti. Nekaterih kolegov niti dosedanje niti nove opozicije glede tega ne moremo dohitevati. Še naprej je najbrž naša stvar. Vsaj jaz se bom za to zavzemal, da nastopamo argumentirano, stvarno in pa brez povzdigovanja glasu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg413">Hvala. Kolega dr. Jože Možgan replika.</seg>
             </u>
             <note type="speaker">JOŽE MOŽGAN:</note>
-            <u who="#SDZ2.MožganJože" ana="#regular">
+            <u who="#MožganJože">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg414">Hvala lepa gospod predsednik. Zelo me boli, ko imamo dvojna merila do Vatikana. Ne vem, gospod Potrč, zakaj se niste zahvalil Vatikanu takrat, ko je priznal novo slovensko državo, če vam je tako odvraten. Bodite dosledni.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg415">Na drugi strani morate vedeti, da je tukaj v tem parlamentu tudi veliko rimokatolikov, ki priznavamo papeža v Vatikanu za duhovnega vodjo. To ni civilni vodja. Lahko boste tudi kdaj vi, kadar boste na oblasti in bomo pač na tem področju poslušali vas. Dajte nehati s tem Vatikanom ali se pa držite enakovrednih meril. Isto velja tudi za gospoda Jelinčiča in njegove, zakaj se niso takrat zahvalili in rekli odklanjamo priznanje slovenske suverenosti. En malteški vitez, ki je prisegel, je pa tak problem v tem parlamentu, da se nam bo cela Evropa smejala, saj to je vendar ena največjih časti, ki jih lahko doseže posameznik v današnjem civiliziranem in evropskem in svetovnem prostoru. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg416">Hvala. Sašo Peče replika. Benjamin Henigman za njim.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDZ2.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg417">Spoštovani! Prvo kratek odgovor gospodu Možganu. Zakaj Slovenska nacionalna stranka nekaj ni naredila, to prepustite nam, s tem se ne obremenjujte. Obremenjujte se s svojimi lastnimi dejanji. To je prva zadeva.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg418">Na govornico sem šel zaradi govora gospoda Hvalice, in sicer v tistem govoru, kjer govori o toleranci, po eni strani o tujcih, o demokraciji in podobne stvari. To je seveda zelo lepo poslušati, čudovito, človek izgleda zelo fleksibilen, vsem daje vse. Ampak kaj, ko resnica ni taka. Ni možno dati vsem vsega, in Slovenija se je z dnem osamosvojitve odločila, da je to Slovenija, da so njeni primarni državljani Slovenci; marsikdo bo tu drugače pomislil. V slovenski nacionalni stranki smo prepričani, da tako mora ostati. Zato bomo tudi vse naredili, da bo tako ostalo.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg419">Kar se tiče tolerance - ja, v določenih pogojih naj ta ostane, ampak danes ni čas za toleranco. Ta državni zbor bi moral - in upam, da bo podprl - ko se bomo srečali z zakonom o zaposlovanju tujcev - sprejeti pobudo slovenske nacionalne stranke, to je, da vsa tista podjetja, ki zaposlujejo več kot 20% tujcev, izgubijo morebitne državne subvencije ali pa kakršnokoli drugo obliko. Preveč je brezposelnih ljudi tukaj, da bi se igrali na noto tolerance in lepo zveneli v svojih govorih. Toliko, hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg420">Hvala, koleg Peče. Vedno je čas za toleranco. Kolega Henigman, replika, nato kolega Potrč. Kolega Henigman je prvi, se opravičujem.</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ2.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg421">Hvala, gospod predsednik. Spoštovani zbor! Čisto na kratko bi rad repliciral gospodu Potrču, pa tudi vsem tistim, ki so omenjali katolištvo oziroma zelo diferenciran odnos do vseh tistih, ki smo verni in ki predstavljamo slovenski narod, pa tudi druge v tem parlamentu.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg422">Poglejte 41. člen ustave, gospod Potrč, pa tudi gospa Beblerjeva: "Izpovedovanje veri in drugih opredelitev v zasebnem in javnem življenju je svobodno." Vi ste pravnica, oba sta pravnika in bi se lahko držala našega prvega zakona, se pravi ustave. 42. člen jasno govori o zbiranju, združevanju in o svobodni pravici le-tega. To pomeni za vsa društva, za stranke, za vse redove, ki so pri nas ali pa kjerkoli drugje. 43. člen govori o volilni pravici, se pravi, da smolahko izvoljeni in da volimo - in danes, mislim, da volimo tukaj, nekatere bi pa radi izvolili, in upam, da jih bomo. 44. člen pa govori o sodelovanju pri opravljanju javnih zadev. Če si pogledate samo ta sklop naše ustave, potem se zamislite nad svojim razpravljanjem glede tega v tem državnem zboru. Sicer pa bom bolj po svojih besedah rekel za konec vsem vam: že Jezus Kristus je rekel nekako tako: "Zaradi mene vas bodo zasmehovali in grdo govorili." Poskušajmo se spomniti teh besed in jih razumeti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg423">Replika, Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg424">Hvala lepa. Gospod Henigman, največkrat slišiš ali pa slišite to, česar človek ni izrekel in kar je v vaši podzavesti. Če ste me slišali v prejšnji razpravi, da sem rekel eno besedo proti veri, še manj eno besedo proti vernikom, lepo prosim, preberite magnetogram, in se bom opravičil. Tega niti tokrat niti kdajkoli nisem govoril, tega nisem govoril niti v časih, ki mi jih očitate, tudi iz razloga moje vzgoje in spoštovanja do mojih staršev ki sta bila oba verna in sem ju takrat, tudi ko sem imel visoko funkcijo v prejšnjih časih, cerkveno pokopal. Tako nimam nobene slabe vesti v tem pogledu.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg425">Res pa je, in prav bi bilo, da bi poslušali, da pa menim, da je treba vse določbe ustave spoštovati. Kadar pričakujem, da lahko prihaja do kolizije v prisegi, državi in redu - in ta kolizija je možna - kadar pride do tega, da je vprašanje, ali bo nekdo dajal prednost v javni funkciji uresničevanju, bi rekel, borbe za vero v šolah, kadar je ob dejstvu,in sedaj mi recite, da ni res, da postaja tudi uradna cerkev vse bolj željna posegati po civilnih zadevah, kadar je nesporno, da se postavljajo zahteve po spremembi šolskega sistema, kadar se reče, ko bomo imeli pravo strukturo državnega zbora in ko bomo imeli večino, bomo spremenili tudi šolski sistem in uvedli verouk v šole, kadar ima kandidat za ministra drugače kot nekateri drugi svoje popolnoma ločene ocene o predlogu sporazuma s svetim sedežem, takrat lahko kot državljan, ki želim imeti spoštovanje laične šole, izrazim v tem smisli pomisleke in opozorila. Samo to sem storil in mislim da je prav, da tudi to povemo. Takšna možnost s takšno usmeritvijo te vlade in tega ministra obstaja. Jaz je ne želim.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg426">In rad bi povedal. Takoj na začetku 90-ih let sem bil pred razrešitvijo oziroma pred izvolitvijo nove slovenske skupščine in pred mojo razrešitvijo kot predsednika skupščine povabljen, da nekje govorim o eni vaški sredini in sem jim rekel, najbrž ste se zmotili, takrat ko bom govoril, ne bom več tisto kar sem danes in nikar me ne vabite, da ne bo nesporazumov. Pa so rekli, ne, ne, kar pridi, ker te dobro poznamo. Med ostalim sem jim rekel tudi to. Ne bi želel, da bi namesto časov, ko nekdo ni smel hoditi k verouku, prišli časi, ko bi zapovedovali, da moraiti, ker bo sicer izobčen iz določenega okolja. V določenih okoljih do tega, drage gospe in gospodje, že prihaja. Vprašajte otroke in starše in to ni dobro. Na to je pač prav opozoriti.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg427">Hvala lepa. Kolegice in kolegi. O odnosu do vere in vernih ni govoril ne kolega Potrč, ne kolegica Beblerjeva.</seg>
                <note>Govori iz klopi.</note>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg428">To je pa druga tema, kolega Demšar, to pa ni tema, o kateri je repliciral kolega Henigman. Odprli ste temo, ki ni nič povezana z današnjo temo dnevnega reda. To je druga tema, kolegi. Mislim, da ste vse zmešali v en konglomerat.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg429">Replika, kolegica Beblerjeva, ampak predlagam, da ne govorimo o tem vprašanju odnosa do vernih in do vere itn., ker se neposredno tega vprašanja nismo dotikali.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER:</note>
-            <u who="#SDZ2.LavtižarBeblerDarja" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg430">Hvala lepa gospod predsednik. Jaz sem zelo zadovoljna s tem, da ste tudi sami reagirali in opozorili gospoda Henigmana, da jaz in tudi moj kolega nisva govorila ničesar o vernikih, še manj seveda proti vernikom. Jaz osebno pa sem govorila o tem, da je rimskokatoliška cerkev včasih nestrpna do drugače verujočih in še posebej do neverujočih. Ne bom zdaj citirala nekih izjav slovenskega nadškofa, ko je govoril o tem, kdo je pravi Slovenec in kdo ni pravi Slovenec. Pustimo to, se strinjam, to ni tema za danes in ni tema za tukaj. Ampak gospod Henigman, vi najbrž boste bolje vedeli kot jaz, ampak tudi jaz to vem, ena od božjih zapovedi pravi: ne laži. In zato prosim, ne lažite in ne podtikajte.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg431">Kar pa zadeva ustavo in člene, ki ste jih citirali o človekovih pravicah in temeljnih svoboščinah. Jaz verjamem, da ni potrebno biti pravnik, da bi razumel te določbe, zlasti še, ker smo vendarle preživeli nek režim, ki tem določbam o človekovih pravicah in temeljnih svoboščinah ni bil najbolj naklonjen. Ampak za to, da bi parazlagali ustavo in te določbe, je pa vendarle dobro o pravu tudi kaj vedeti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg432">Hvala kolegica Beblerjeva. Prepričan sem, da kolega Henigman ni lagal. Šlo je za dezinterpretacijo oziroma različno razumevanje tega vprašanja. Ampak ugotavljam, da smo sedaj to verigo replik zaključili. In zadnja, ki bo neomejeno razpravljala, je kolegica Zbačnikova.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg433">Lep večer. Bom skušala biti čim krajša. Spoštovani predsednik, spoštovane kolegice in kolegi, spoštovani predsednik vlade, kandidati za vlado in pa tudi spoštovani predstavnik javne besede in tudi slike.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg434">Danes mislim, da je za Slovenijo zopet zgodovinski dan. Imamo možnost, da z izvolitvijo vlade, nove vlade, Slovenija lahko vstopi in zaživi demokracijo v pravem pomenu besede. To vlado sestavljajo ljudje, ki so do sedaj že dokazali in dokazujejo, da želijo uresničevati eno resnico, da želijo uresničevati poštenost in strokovnost. Vendar me žalostijo te razprave, kajti te parlamentarne razprave pokažejo in kažejo, koliko je med nami še nestrpnosti, kako nizko je stanje duha in kulture, koliko je sprenevedanja, koliko je laži, zavajanja in zlasti koliko je diskreditacij.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg435">Tukaj moram kot predsednica odbora za delo, družino, socialo in zdravstvo protestirati proti žolčnim napadom gospoda Beuermanna, ki že nekaj časa ni član našega odbora, in mu svetujem, da prebere magnetogram, kjer je kandidat za ministra za delo, družino in socialo dr. Miha Brejc predstavil svoj program. Mislim, da je njegova žolčna razprava jasno pokazala, da je gospod kandidat zadel v bistvu problema. Namreč, njegova predstavitev je bila ena najbolj sistematskih in najbolj operativnih. Jasno je pokazal in tudi pohvalil, da je to ministrstvo z ministrom Ropom in njegovo ekipo bilo zelo delovno. In tudi sama to večkrat izrazim. Vendar je premalo nekaj oziroma tudi veliko napisanih zakonov, izdanih nekaj lepih brošur, če pa te zakonodaje ni možno izvajati v življenju oziroma če je taka zakonodaja samo na papirju. Vsi vemo, da so potrebni za to, da se taka zakonodaja lahko izvaja, podzakonski akti, pravilniki. Ravno na področju, ki ga je gospod Beuermann omenil in očital dr. Brejcu, je največ problemov, to je na področju zakona o varnosti pri delu. Namreč, to je eden od evropskih zakonov, kije resnično kvaliteten, je skoraj prepisan irski zakon, vendar je zato pač bilo nekje dogovorjeno dvoletno obdobje za pripravo podzakonskih aktov in pravilnikov. Junija bo poteklo leto, nekaj jih je že res pripravljenih, vendar še ne implementiranih v življenje, veliko bistvenih pa še čaka.</seg>
@@ -1410,20 +1391,20 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg441">Naj samo omenim, vse to, kar ste danes očitali vsem tem kandidatom, ki so se s svojim delom že dokazali in še želijo delati v dobro slovenskega naroda, ste kršili tako ustavo in tudi deklaracijo o človekovih pravicah, ki zagotavlja svobodo misli, veroizpovedi, vesti, pravico do življenja, svobode, osebne varnosti, pravico, da se vrnejo v svojo domovino, pravico, da v drugih državah iščejo, uživajo pribežališče pred preganjanjem, pravico, da se združujejo in še bi lahko naštevala. Zato se sprašujem, v kakšni državi živim, če niti poslanci ne spoštujemo lastne ustave, če ne spoštujemo človekovih pravic. Ali res lahko v Sloveniji kandidirajo za predsednika vlade, predsednika države in za pomembne funkcije samo ljudje, ki so bili v partiji, ki so ateisti, ki imajo kumrovško ali beograjsko šolo, ki imajo balkanski način mišljenja in odločanja. Vendar verjamem, da je v tem slovenskem parlamentu tudi veliko pravih, resničnih demokratov, ki bodo znali in razumeli, da je prišel trenutek, ko potrebujemo novo, svežo, moralno neoporečno vlado, in bodo danes to tudi potrdili in bo to tudi Slovenkam in Slovencem najlepše darilo za vstop v 21. stoletje in novo upanje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg442">Hvala, gospa Zbačnikova. Replika, Bojan Kontič.</seg>
             </u>
             <note type="speaker">BOJAN KONTIČ:</note>
-            <u who="#SDZ2.KontičBojan" ana="#regular">
+            <u who="#KontičBojan">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg443">Hvala lepa. Gospa Zbačnikova, zahvaljujem se za vašo skrb. Prisostvoval sem na odboru in na seji državnega zbora in ne potrebujem magnetograma, vem, kaj smo se tam pogovarjali. Če bi bili takrat v dvorani in poslušali, bi slišali, da sem pohvalil nacionalni program zdravstvenega varstva in sem posebej izpostavil tudi vas, kot tisto, ki je zaslužna za to, da imamo nacionalni program v tretjem branju. Nikoli s tega govorniškega odra nisem žalil. Tudi na vašem odboru mi boste težko očitali, da sem kogarkoli diskreditiral ali žalil. Ampak vi istočasno, ko govorite o tem, kako je potrebna toleranca v tem državnem zboru, v isti sapi govorite o tem, kako so kandidati, ki razmišljajo po balkansko, ki imajo kumrovško šolo itn. Zamislite se tudi nad svojimi izjavami in nad svojimi besedami.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg444">Kar se pa tiče kandidata za ministra za zdravstvo. Jaz upam, da ga s svojim nastopom nisem užalil, ker ga niti nisem želel in nisem imel namena. Povedal sem enostavno, kje se ne strinjava glede zasebništva, glede ukinjanja zdravstvenih domov. In gospa Zbačnikova, če se boste spomnili, o tem sva s spoštovanim kandidatom razpravljala tudi na seji odbora. Še enkrat pa poudarjam, moj namen ni bil žaliti in trdno sem prepričan, da za tem govorniškim odrom tudi nisem žalil. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg445">Hvala kolega Kontič. Pisna lista je izčrpana. Ali želi kdo od poslanskih kolegov 5-minutno razpravo? Ali želi besed predsednik vlade? Prosim dr. Bajuk.</seg>
             </u>
             <note type="speaker">DR. ANDREJ BAJUK:</note>
-            <u who="#SDZ2.BajukAndrej" ana="#regular">
+            <u who="#BajukAndrej">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg446">Hvala lepa. Spoštovani gospod predsednik, spoštovane poslanke in poslanci.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg447">Odgovoriti želim samo na nekatera vprašanja, ki so bila danes tukaj zastavljena v današnji razpravi. Najprej bi pa rad izrazil svoje obžalovanje za nekatere nepravilne predstavitve pozicij, ki so jih kandidati za ministrske položaje predstavili na sestankih in sejah odborov.</seg>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg448">Namreč, iz magnetograma jasno izhaja, da je dr. Brejc govoril o tem, da znaša proračun ministrstva za delo okoli 800 milijard, od tega za zavod in pokojninsko in invalidsko zavarovanje 570 milijard. Dr. Brejc je jasno predstavil svoje stališče in konkretne predloge za delo ministrstva, ki sem jih tudi danes vključil v svojo predstavitev.</seg>
@@ -1438,17 +1419,17 @@
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg457">Spoštovane poslanke in poslanci, drage državljanke in državljani, naj se vam ob koncu še enkrat zahvalim za vašo razpravo, za vaše poglede na predstavljeni program in na predlog vladne ekipe. Kot sem že omenil ob koncu moje predstavitve danes tukaj v tem zboru, smatram, da je predlagana vlada politična vlada kot izvršilna veja oblasti in je v celoti pripravljena prevzeti svoj del odgovornosti za blaginjo države Slovenije. Njena naloga pa je, kot je naloga vsake vlade, da mora strokovno izvajati program, ki je bil predstavljen. Smatram, da vsi predlagani kandidati in kandidatka za ministre oziroma ministrico, imajo bogate strokovne izkušnje in so docela usposobljeni za opravljanje ministrskih funkcij, za katere sem jih predlagal. Trdno sem prepričan, da bo ta vlada delovala strokovno in odgovorno, če bo danes v državnem zboru za to dobila zadostno podporo. Prepričan sem, da je predlagana vlada zmožna uresničiti začrtane cilje in je zato vredna vaše podpore. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg458">Hvala. Zahvaljujem se predsedniku vlade dr. Bajuku. Ali želijo besedo kandidati za ministre?</seg>
                <note>Ne želijo.</note>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg459">Ali želi še kdo besedo? Gospa Dobrajčeva prosim, 5-minutna razprava.</seg>
             </u>
             <note type="speaker">POLONCA DOBRAJC:</note>
-            <u who="#SDZ2.DobrajcPolonca" ana="#regular">
+            <u who="#DobrajcPolonca">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg460">Hvala za besedo. Spoštovani predsedujoči, spoštovane kolegice poslanke, spoštovani kolegi poslanci. Vem, da je glasovanje tajno. V osmih letih svojega poslanskega mandata sem se trudila bolj ali manj spoštovati zakone, predvsem pa spoštovati tajnost, ki je predpisana in velja za vse. Ko sem javno obrazložila svoj glas, zakaj bom glasovala za tretji krog, vam je bilo lahko jasno iz mojega nagovora, kako bom glasovala. Ko je bil mandatar izvoljen, se je začelo spraševati, kdo, nihče se ni vprašal, zakaj. In začelo se je prepričevanje. Ne bom rekla, da je kdorkoli stopil do mene, ampak se je začelo javno prepričevanje. Dokler ste prepričevali mene, me niste prepričali. Ko ste se lotili v zgodbi prepričevanja, kako naj se glasuje za vlado, celo mojih staršev, mi je postalo jasno, da bi bilo pametno, če bi danes glasovala drugače, kot sem glasovala pri mandatarju. To je vse, kar lahko povem, glede na to, da je glasovanje tajno. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg461">Hvala, gospa Dobrajčeva. Želi še kdo besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg462">Zaključujem razpravo.</seg>
@@ -1469,7 +1450,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 21.08 uri in se je nadaljevala ob 22.33 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg473">Spoštovane kolegice in kolegi! Ugotavljamo prisotnost!</seg>
                <note>84 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg474">Državni zbor je sklepčen in lahko odloča.</seg>
@@ -1477,7 +1458,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 22.34 uri in se je nadaljevala ob 23.39 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg476">Kolegice in kolegi! Nadaljujemo sejo. Najprej ugotavljamo prisotnost!</seg>
                <note>75 poslancev in poslank.</note>
                <seg xml:id="SDZ2-Izredna-48-2000-05-23.seg477">Zbor je sklepčen in lahko odloča.</seg>

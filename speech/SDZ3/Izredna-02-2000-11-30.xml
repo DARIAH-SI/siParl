@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ3-Izredna-02-2000-11-30"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">2. izredna seja (30. 11. 2000)</title>
-            <meeting n="2"
-                     corresp="#SDZ3-Izredna-02-2000-11-30.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="3" corresp="#DZ" ana="#parl.term #DZ.3">3. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">2. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|A116D3088FA0F3E4C12569AC002ED671</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=sz&amp;uid=A116D3088FA0F3E4C12569AC002ED671</idno>
-                  <imprint>
-                     <date when="2000-11-30">(30. november 2000)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>2. izredna seja (30. 11. 2000)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="2000-11-30"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=sz&amp;uid=A116D3088FA0F3E4C12569AC002ED671</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="180"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="141"/>
                <tagUsage gi="seg" occurs="421"/>
                <tagUsage gi="gap" occurs="24"/>
@@ -524,25 +509,21 @@
                <date when="2000-11-30" ana="#parl.sitting">30. 11. 2000</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ3-Izredna-02-2000-11-30.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">2. izredna seja</head>
-            <docDate>(30. november 2000)</docDate>
             <note type="chairman">Sejo je vodil Borut Pahor, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 16.03 uri.</note>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg1">Spoštovane kolegice poslanke in kolegi poslanci, gospe in gospodje! Pričenjam 2. izredno sejo državnega zbora Republike Slovenije, ki sem jo sklical na podlagi prvega in drugega odstavka 51. in 54. člena poslovnika državnega zbora.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg2">Obveščen sem, da je zadržan in se današnje seje ne more udeležiti kolega Maksimiljan Lavrinc; drugega opravičila zaenkrat nimam.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg3">Prosim, da ugotovimo navzočnost v dvorani. Pred tem prosim, da tisti, ki morda zavoljo različnih okoliščin nimate kartice, ki omogoča glasovanje, s seboj, z dvigom roke potrdite svojo navzočnost in z dvigom roke kasneje tudi poveste, ali boste predlog, ki bo na glasovanju, podprli ali ne. Ugotovimo sklepčnost! Prisotnih je 59 poslancev in dva kolega, ki sta dvignila roko, to je 61 poslank in poslancev; zbor je sklepčen in lahko odloča.</seg>
@@ -562,18 +543,18 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg16">Prehajamo na predloge za umik posameznih točk z dnevnega reda. Predlogov doslej nismo prejeli. Kolega Jerovšek, prosim.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg17">Hvala lepa, gospod predsednik. Spoštovani državni zbor, spoštovani gospod predsednik vlade, kandidati za ministre!</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg18">V Socialdemokratski stranki ugotavljamo, da niso podani poslovniški razlogi za to, da opravimo 2. točko dnevnega reda, se pravi, da opravimo volitve o predlogu liste kandidatov za ministre v vladi. Namreč, 265. člen poslovnika državnega zbora govori zelo jasno, z zelo jasno dikcijo, da o imenovanju ministrov glasujejo poslanci tako, da glasujejo o listi kandidatov za ministre kot celoti. Ugotavljamo, da lista ministrov po veljavnem zakonu v celoti ni bila predložena. Kajti zakon o vladi v 8. členu določa, da poleg predsednika vlado sestavljajo tudi naslednji ministri: minister za finance, za notranje zadeve, zunanje zadeve, pravosodje, obrambo, delo, družino in socialne zadeve, ekonomske odnose in razvoj, gospodarske dejavnosti, kmetijstvo, gozdarstvo in prehrano, za malo gospodarstvo in turizem, za kulturo, za okolje in prostor, za promet in zveze, za šolstvo in šport, za zdravstvo, za znanost in tehnologijo. Se pravi, 16 resorjev. Poleg tega so lahko v vladi tudi ministri brez resorja. To, kar imamo na mizi in imamo pred seboj, je neka lista, ki je predložena po neveljavnem zakonu. In upam, da ta državni zbor ima v sebi toliko državniškega obnašanja in toliko resnosti, da ne bo na začetku mandata kršil vseh zakonskih in poslovniških določil in volil nepopolno listo, ki je popolnoma nezakonita. Takšna vlada bi bila nezakonita, kajti zakon o vladi, tudi v svojem 9. členu, pravi, število ministrstev, njihove pristojnosti in organizacijo ministrstev ter drugih upravnih organov določa zakon. In to sem vam prebral iz veljavnega zakona. Po veljavnem zakonu lista kandidatov ni bila predložena, zato vas gospod predsednik, prosim, da zaščitite integriteto tega državnega zbora in da takoj umaknete to točko in damo predsedniku vlade dodaten čas, da predloži popolno listo kandidatov za ministre, kot je to določeno z zakonom.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg19">Namreč, gospod minister ni predložil treh ministrov, kolikor je meni znano. Zakon je jasen, se ni spreminjal v zadnjem času in bilo je dovolj časa, dovolj priložnosti in mislim, da moramo delovati v skladu z zakonom. Zato gospod predsednik še enkrat lepo prosim, da to točko umaknete s svojo digniteto z dnevnega reda. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg20">Hvala lepa, kolega Jerovšek. Zavedajoč se svoje odgovornosti in v pričakovanju, da utegne kdo to vprašanje tudi postaviti, sem zaprosil sekretariat za zakonodajo in pravne zadeve za mnenje o tem, ali je glede na veljavni zakon o vladi Republike Slovenije in ob upoštevanju določb poslovnika državnega zboramogoče obravnavati in odločati o predlogu za imenovanje ministrov, če lista kandidatov za ministre ni popolna, predlaganih pa je več kot dve tretjini kandidatov za ministre.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg21">Dobil sem pisno mnenje, ki, če ga smem strniti, pravi, da državni zbor lahko odloča o tem. Pisno obrazložitev lahko dobite na klop, če tako želite - obsega dve strani. Bi pa prosil gospo Tino Bitenc, če je tako prijazna in na kratko obrazloži svoje stališče.</seg>
             </u>
             <note type="speaker">TINA BITENC-PENGOV:</note>
-            <u who="#SDZ3.BitencPengovTina" ana="#regular">
+            <u who="#BitencPengovTina">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg22">Gospod predsednik, hvala lepa za besedo. Zelo na kratko.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg23">Najprej bi začela s tem, da 265. člen poslovnika državnega zbora določa način glasovanja o predlogih, ki jih je podal predsednik vlade za ministre. Torej, o njih se odloča tako, da se glasuje o listi kot o celoti.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg24">Kaj naj obsega lista? Torej, ali mora obsegati vse z zakonom določene ministre, dejansko ne določa ne vlada, ne zakon o vladi, niti ne poslovnik. Prvi odstavek 262. člena poslovnika določa, da mora predsednik vlade v petnajstih dnevih po izvolitvi predložiti predsedniku državnega zbora predlogza imenovanje ministrov, ki mora biti v pisni obliki in mora obsegati listo predloženih kandidatov, skupaj s podatki, določenimi, in obrazložena mora biti. To se pravi, točno kaj naj lista obsega, poslovnik ne določa.</seg>
@@ -581,32 +562,32 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg26">Sicer imamo precej vprašanj nerazrešenih in so lahko razrešena vključno s pravnimi posledicami, ob upoštevanju celote ureditve v 11. členu. Zato menimo, da - da skrajšam - je v vseh fazah oblikovanja vlade, v fazi imenovanja ministrov potrebno, da se torej predlog sam, kakor tudi njegovo nadaljnje obravnavanje in odločanje o njem v državnem zboru, nanaša na tako listo, na kateri je več kot dve tretjini ministrov, pri čemer ne štejejo ministri brez resorja. Seveda se to število nanaša na ministre, kot jih določa 8. člen zakona o vladi. In če lahko ugotovimo, da je predlaganih 13 ministrov, po naših izračunih več kot dve tretjini predstavlja 11 ministrov. Zato lahko z vidika take razlage zakona, ustavne ureditve, vključno z zakonom o vladi in poslovnikomzaključimo, da je o predloženi listi torej mogoče peljati razpravo in o njej odločati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg27">Hvala lepa. Po poslovniku imajo sedaj poslanske skupine možnost, da najkasneje v petih minutah pojasnijo svoja stališča.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg28">Kolega Jerovšek, vztrajate pri predlogu, da se umakne? Prosim, želi katera poslanska skupina pojasniti stališče glede predloga za umik? Boste dobili besedo, če želite govoriti v imenu poslanske skupine, gospod Jerovšek.</seg>
                <note>Da.</note>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg29">Prosim. Imate besedo. Pet minut.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg30">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi! Zelo sem presenečen, da predsednica sekretariata za zakonodajo in pravne zadeve po tem, ko smo med drugim včeraj slišali mnenje eminentnega pravnika s številnimi strokovnimi referencami, predstavi tukaj v državnem zboru mnenje, ki v celoti pravzaprav negira nekatere poslovniške odločbe in se nasloni zgolj na tretji odstavek 11. člena zakona o vladi, ki velja za slučaj, ko sta že bila opravljena dva kroga volitev ministrov. Potem je to dovoljeno, kar se tu razlaga.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg31">Dejstvo je, da so ti členi poslovnika izjemno jasni in da ne dopuščajo o takih zadevah nepravniške in siceršnje megle. Namreč, ne bo držalo, da 265. člen določa način volitev, ki je lista v celoti. Lista v celoti predstavlja tisto, kar je zapisano v 8. členu zakona o vladi in ta lista v celoti ima 16 kandidatov za ministre. Če bi bilo predloženih 16 kandidatov za ministre in v prvem krogu ne bi bili potrjeni dve tretjini oziroma ne bi dobili večine, ne bi bil državni zbor za, potem mandatar predloži ponovno listo in se opravi ponovno glasovanje. In četudi v tem slučaju lista pade, je možno to, kar nam je gospa predsednica sedaj ponudila kot pravno mnenje.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg32">Tu je, jaz vam bom prebral še enkrat 266. člen, da boste videli, da je točno to: "Če lista ni izglasovana, se opravi novo glasovanje o imenovanju ministrov na podlagi nove liste kandidatov za ministre. Predsednik vlade mora predložiti novo listo kandidatov najkasneje v 10 dneh od dne prvega glasovanja. Če tudi nova lista kandidatov ni izglasovana, lahko predsednik vlade predloži, da se o vsakem predloženem kandidatu z liste kandidatov glasuje posebej." To je drugi odstavek 266. člena. Vsebuje to, na kar se je naslonilo mnenje sekretariata. Vendar, kot sem rekel, to predvideva v primeru, ko sta že bila izvedena dva poskusa oblikovanja vlade. Zaradi tega je tu jasno, ker česa takega tu ni bilo, da ni bila lista ministrov v celoti predložena. In se čudim tudi mnenju, da je možno na začetku državnega zbora kršiti zakon v celoti kršiti poslovnik in z namenom doseganja političnih ciljev omalovaževati poslovnik in zakon, ki je izredno jasen, in se delati nevedne oziroma se delati nekega poslovniškega valjarja ali buldožerja in delati popolnoma v skladu z nekimi ozkimi političnimi cilji. Ne vem, potem, če bi to naredili, je v bistvu najava nekega izrednega stanja v tej državi, kajti to jasno kaže, da se v tej državi ne bo spoštoval noben zakon, ne bo se spoštoval poslovnik in da je državni zbor pravzaprav popolnoma brez potrebe tu, ker se bo tisto, kar je v nekem centru moči bilo dogovorjeno, izpeljalo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg33">Upam, gospod predsednik, da boste uporabili svojo kredibilnost, svoj ugled, in prav tako tudi pričakujem od izvoljenega predsednika vlade, da bo spoznal napako - ne rečem, da je bilo vse to v tistem trenutku, ko je on listo ministrov predložil, jasno, vendar pričakujem, da je pa danes kristalno jasno in da morata oba tako eminentna politična predstavnika delovati v skladu z zakonom in poslovnikom tega državnega zbora, ki je naša ustava. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg34">Hvala lepa. V imenu poslanske skupine Nove Slovenije, kolega Lojze Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg35">Spoštovani gospod predsednik, poslanke in poslanci, spoštovani gospod predsednik vlade in kandidati za ministre! Vesel in ponosen sem, da sem zopet v družbi poslank in poslancev državnega zbora te države. Rad bi povedal, da kot opozicijski poslanec natančno vem, da nimamo dovolj glasov, da bi vas prepričali v spoštovanje zakonov, ki v tej državi veljajo; imamo pa dovolj glasov, da vas opozorimo, kadar menimo, da greste mimo zakona, kot v tem primeru, da to vam in slovenski javnosti povemo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg36">Zelo obžalujem dejstvo, da se je vsa zadeva z novo koalicijo začela že z izigravanjem dogovorjenih pravil igre. Začetek, ki je pripeljal do obstrukcije na samem začetku, poznate. Dvakrat je bil prekršen dogovor, kako se bodo v skladu s poslovnikom sorazmerno delile pozicije znotraj delovnih teles. To, kar se dogaja danes, je nadaljevanje iste zgodbe. To, kar si je koalicija dovolila in izvolila, je začetek procedure v tretji rundi. Vi ste šli od zadaj, ker menite, da boste tako najlaže prišli skozi, in vi imate tako večino, da lahko sklenete, da sonce ne bo več vzšlo. Imate dve tretjini, lahko sklenete karkoli v tej hiši. Mi pa bomo vztrajali, da boste zakone spoštovali.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg37">In predlagamo, ker smo konstruktivna opozicija - da ne bi prišli pri tako pomembnem dejanju, kot je postavljanje vlade, do težav ali do senc glede spoštovanja zakonov - predlagamo, da se predsednik vlade posluži zakonske možnosti, da tista dva resorja začasno prevzame, pa bo vse v redu. Torej ne vem, zakaj začenjate v tretji rundi oziroma na tretji stopnji procedure. Mi bomo vztrajali pri tem, da se zadeva dela zakonito, zakon in poslovnik sta jasna. Celotno listo je treba predstaviti, tako mi to razumemo, tako je včeraj na televiziji rekel tudi izraziti predstavnik stroke. Kar menimo, da ni zanemarljivo. In ne vem, zakaj nas s tretjim korakom potiskate v probleme in sami sebe s tem, namesto da bi vlada bila tako rekoč že postavljena. In predlagamo, da se torej ne preskakuje procedura, ki bo nedvomno vodila v proceduralne zaplete, kakor poznamo delovanje te hiše, in to je povsem v skladu s poslovnikom. Mi svetujemo torej, da ravnate tako, kot se v tem primeru da ravnati in da nas torej ne zaposlujete s tretjo rundo in da daste polno listo oziroma celovito listo kandidatov.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg38">Proceduralno pa sprašujem predsednika državnega zbora, gospoda Pahorja, ali je zahteval, glede na poznavanje zakonov, od predsednika oziroma od mandatarja, da listo dopolni. To vprašanje oziroma ta odgovor bi rad slišal. Potem pa še nekaj. Gospod predsednik, pri vsem spoštovanju, glejte, vi ste rekli, če želite, lahko dobite mnenje sekretariata za zakonodajo na klop. To bi nas moralo že vse čakati. Jaz ne bi rad predlagal četrt ure odmora, zato da bomo prebrali relativno dolgo mnenje tega sekretariata. Mislim, da bi to spadalo k normalnemu in kulturnemu začetku našega dela. In predlagam, da se ta, to mnenje, po katerem je mogoče, pravi odgovorna oseba, odločati tudi na način kot nam to predlaga vlada. Torej mi ne želimo nobene sence dvoma v zakonitost te procedure, ki bo prinesla slovensko vlado. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg39">Hvala lepa. Ker kolega Peterle omenja moje dolžnosti, mi dovolite pojasniti naslednje. Kot predsednik sem bil dolžan pri sklicu upoštevati poslovnik. Ker je bilo nekaj različnih mnenj, sem se pred tem posvetoval s strokovnjaki v zvezi s tem in dobil zagotovila, da tak sklic ni sporen. Ker so se nekatere diskusije nadaljevale, sem tudi uradno prosil sekretariat, da tako mnenje da. To sem storil kot predsednik, zato da sem lahko mirne vesti in v skladu s poslovnikom, kot rečeno, sklical to sejo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg40">Na zaslišanjih, kolikor mi je znano - če se motim, me popravite - nihče ni odprl vprašanja tega poslovnika. Zato seveda tudi ni bilo mogoče od mene pričakovati, da bom samoiniciativno razdelil mnenje, ki je služilo moji presoji. Zdaj, ko je kolega Jerovšek to vprašanje zastavil, sem službe državnega zbora prosil, kot pravi kolega Peterle, da boste mnenje, ki je napisano na dveh straneh, tudi takoj dobili na klop.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg41">Sprašujem poslanske skupine, ali želi še katera predstaviti svoja stališča.</seg>
@@ -614,24 +595,24 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg42">Predlagatelj umika? Želite še besedo, kolega Jerovšek?</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg43">/Ni razumljivo, ni vključen./</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg44">Prosim, če želite besedo, imate možnost uporabe govorniškega odra. Želite besedo? Prosim, izvolite.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg45">Očitno je potem, da so argumenti tako močni, da seveda poslanske skupine ne želijo kljub temu ne nastopiti proti zakonitosti v tem državnem zboru in se tega močno zavedajo. Jaz mislim, gospod predsednik, da je tudi vam popolnoma jasno.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg46">Namreč ob svojem nastopnem govoru ste omenili, da se boste zavzemali za višjo politično kulturo. Če bi kršili zakon in poslovnik v tem momentu, bi to pomenilo, da smo pomendrali vso politično kulturo, ki je bila že vzpostavljena v desetih letih parlamentarne demokracije, in da ste že takoj na začetku začeli delovati proti temu, kar ste obljubili temu državnemu zboru. Zato mislim, da imate vso pravico, v svojstvu predsednika parlamenta, da sejo prekinete in opravite nujna posvetovanja, da teh kršitev ne bomo delali naprej. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg47">Hvala lepa. Po poslovniku smo tako izčrpali možnost, da bi poslanske skupine oziroma v njihovem imenu poslanci obrazložili svoje stališče do predloga, ki ste ga dali - predlog za umik. Naj še enkrat povem, kolega Jerovšek, da sem se pri svoji odločitvi, da danes državni zbor odloči o tej točki, naslonil tudi na stališče sekretariata za pravne zadeve. Stališče imate v pisni obliki pred seboj. Mislim, da so izpolnjeni vsi pogoji, da <gap reason="inaudible"/> Predsednik vlade, želite besedo? Prosim!</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ3.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg48">Gospod predsednik! Spoštovane poslanke in poslanci! Jaz bi v tej razpravi, ki je bila sedaj odprta, apeliral predvsem na zdrav razum.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg49">Namreč, skušamo postaviti vlado po volitvah, ki so dale zelo nedvoumne rezultate. Ljudje so povedali svojo voljo, prišlo je do formiranja koalicije, izvoljen mandatar in mandatar želi oziroma predlaga vlado. Mi smo se dogovorili, in o tem je obstajal konsenz širše v državi, tudi v vladi, ki je do sedaj delovala, tudi v, če lahko rečem, novi opoziciji, da skušamo racionalizirati delo vlade in da zmanjšamo število resorjev. Zato smo predložili nov zakon o vladi, državni zbor ga je tudi sprejel. S tem zakonom združujemo več ministrstev - tri dosedanja gospodarska ministrstva v eno skupno ministrstvo. Združujemo tudi šolsko ministrstvo in ministrstvo za znanost. Ob tem se res vzpostavlja eno novo ministrstvo, ministrstvo za informacijsko družbo, s katerim želimo slediti trendom v svetu, izzivom sodobnega tehnološkega razvoja. To je državni zbor sprejel, vmes pa je, na žalost, bila uporabljena formalna možnost, ki obstaja, tako da je skupina vsaj 200 poslancev</seg>
                <note>?</note>
@@ -640,7 +621,7 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg52">Resnično bi apeliral na to, da skušamo vsi skupaj zbrati dovolj resnosti in odgovornosti, da začne ta vlada delovati. Čaka nas zelo veliko odprtih problemov in vsako izgubljanje časa sedaj seveda škoduje - komu? - vsem nam, naši državi, zato ker pač ne moremo v tem vmesnem času, ko praktično prejšnja vlada končuje svoje delovanje, nova vlada še ne more začeti, ko ne moremo reševati najbolj resnih vprašanj in problemov, ki so pred nami. Torej mislim, da je povsem legitimno pa tudi, kot smo slišali, povsem zakonito, da vlado danes izvolimo na takšen način, kot sem tudi predlagal. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg53">Hvala lepa za vašo besedo, predsednik vlade. S tem smo zaključili možnost razprave. Vsi ki so imeli možnost, so jo tudi izkoristili. Želite proceduralno? Ne ni razprave, ker je diskusija, ni replike, ker je razprava o točki dnevnega reda, zato prosim, da z ugotovitvijo navzočnosti preidemo na glasovanje o vašem predlogu, gospod Jerovšek. Prosim, ugotovimo sklepčnost! Navzočih je 86 poslank in poslancev.</seg>
                <note>Za je glasovalo 20.</note>
                <note>Proti 60.</note>
@@ -654,7 +635,7 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg60">Prehajamo na 1. točko. Prosim, proceduralno? Prosim, kolega Jerovšek.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg61">Hvala lepa, gospod predsednik. Namreč v izogib temu, da ne bi bili prisotni na tako pomembni seji kršenju zakona in poslovnika državnega zbora, bom predlagal, da se po opravljeni 1. točki sestane komisija za poslovnik, preden preidemo na 2. točko, se seznani z mnenjem sekretariata za zakonodajo in tudi z relevantnimi pravnimi mnenji in se odloči,ali so poslovniške možnosti za opravljanje 2. točke dnevnega reda.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg62">Namreč, treba je v obrazložitev tega mojega predloga povedati, da ni tako enoznačno, da se sedaj na tej točki rešuje država, kot da je sedaj, v tem trenutku, nastopil tisti odločilni trenutek, ko je za vsako ceno, tudi če ni vse po zakonu, če ni po zakonu, potrebno sestaviti vlado.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg63">Gospod Peterle je predlagal zelo racionalen predlog, ki ga je možno zelo na hitro vzeti. Tako da kot konstruktivna opozicija mi predlagamo to. Verjamem jaz, da ima gospod predsednik vlade ob tem slučaju nekatere težave, ker je tudi prek medijev se potožil, da mu drugi centri moči v državi želijo sestavljati vlado in da bi se lahko zgodilo, da če bi iskal nova imena, da mu bi obstruirali del vlade. To je realnatežava predsednika vlade. Vendar lahko vzame nekatere resorje nase. In treba je pri tem v obrazložitev tudi povedati, da ravno ta koalicija, ki danes drvi v nezakonitost, v rešitve proti poslovniku, je v mesecu avgustu ali pa mogoče prvi dan septembra zavrnila možnost, ki bi dajala tudi tej koaliciji možnost, da bi danes sestavljali vlado v skladu z zakonom in da bi se celo izognili tudi "hearingu". S častno izjemo, moram tu povedati, gospoda Anderliča, je kompletna ta koalicija, verjetno je bila formiranaže takrat, glasovala proti temu, da se sprejme zelo racionalen, bolj racionalen predlog o vladi, kot ga ponujate sedaj, z 12 ministri, ki bi pomenil dejansko zmanjšanje stroškov. In bi tudi v enem členu se spremenila ustava, bilo je dovolj časa, ni pa bilo politične volje. Zato je sedaj jokanje tukaj, da so ogroženi temelji države, pa ne vem kaj vse, če <gap reason="inaudible"/>
@@ -665,7 +646,7 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg65">Gospodje in gospe, mogoče, zavrnili ste to takrat. Danes ne zavržite in ne zavrnite poslovnika in zakona o vladi, ker se s tem spuščate v nezakonitost. Jaz predlagam še enkrat, da se po opravljeni 1. točki sestane komisija za poslovnik, najde racionalno rešitev. Jaz pa verjamem, da bo med tem časom tudi gospod predsednik vlade razmislil, toliko pregmatik je in toliko racionalen je, da se bo naslonil na zakonito rešitev in vložil listo kandidatov za vlado v skladu z zakonom, prevzel nekatera ministrstva nase in se bodo opravljali dodatni "hearingi" in bo vse rešeno relativno hitro. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg66">Hvala lepa, kolega Jerovšek. V 334. členu poslovnika je v prvem odstavku zapisano - citiram: "Če pride do dvoma o vsebini posamezne določbe poslovnika, razlaga poslovnik med sejo predsedujoči." Kolega Jerovšek je odprl vprašanje morebitne kršitve poslovnika. Na osnovi jasnega stališča sekretariata smo ugotovili, da poslovnik ni kršen in da lahko državni zbor danes o 2. točki odloča.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg67">Vi ste v skladu s 70. členom nastopili in želeli besedo, jaz sem vam jo dal. Če se z mojim pojasnilom ne strinjate, bom dal svojo razlago na glasovanje in bomo s tem še enkrat umaknili vsako senco dvoma o tem, ali državni zbor lahko ali ne o tem odloči. Želite, da o tem?</seg>
                <note>Da.</note>
@@ -676,22 +657,22 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg71">Kolega Peterle, imate proceduralno? Prosim, izvolite.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg72">Gospod predsednik, mislim, da smo še kar naprej v veliki senci, glede zakonitosti, spoštovanja zakonitosti. Vi imate pravico tolmačiti poslovnik, nimate pa pravice tolmačiti zakona o vladi. In v tem zakonu o vladi ni člena, ki bi dovoljeval mandatarju, da ponudi okrnjeno vlado. Piše, da mora predlagati imenovanje ministrov, ne samo nekaterih ministrov. Tisto, kar se nanaša na dve tretjini, velja šele, če ne bi bila vlada potrjena; od takrat naprej se proceduralno in v skladu z zakonom razmišlja o dveh tretjinah. Torej povejte mi, gospod predsednik ali gospod mandatar, kje je podlaga za to, da se začne z okrnjenim, se pravi necelovitim predlogom za sestavo vlade. Vlada lahko deluje z dvema tretjinama, ne more pa začeti z okrnjenim številom ministrov. Prosim, da se to razjasni. Predlagam četrt ure odmora, da tisti, ki so za to v tej hiši zadolženi, vendarle na to zadevo globlje pogledajo; ne gre samo za poslovnik, gre za zakon o vladi in ta je kršen.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg73">Kolega Peterle, osebno ne vidim razloga za odmor, razen če ga bo predlagala katera od poslanskih skupin. Drugič, menim, da so vse poslovniške možnosti, da nadaljujemo razpravo. Pravkar smo odločali o tem, ali sem poslovnik razložil med sejo prav ali ne, in z večino ugotovili, da državni zbor o 2. točki dnevnega reda lahko odloči.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg74">Zato predlagam, da preidemo na 1. TOČKO DNEVNEGA REDA - DOLOČITEV KANDIDATA, KI V SKLADU S 14. ČLENOM ZAKONA O POSLANCIH OPRAVLJA FUNKCIJO POSLANCA NAMESTO POSLANCA, KI JE PREVZEL FUNKCIJO V VLADI.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg75">Republiška volilna komisija je zboru posredovala ugotovitev o pridobitvi mandata poslanca državnega zbora. Ugotovitev je obravnavala mandatno-imunitetna komisija, ki je zboru pismeno poročala. Želi poročevalec komisije besedo? Prosim, kolega Peče.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDZ3.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg76">Spoštovani prisotni! Danes ob 9.00 uri zjutraj je zasedala mandatno-imunitetna komisija in ugotovila oziroma se seznanila, da poslanec, ki je prevzel novo funkcijo, postal predsednik vlade, ali v prihodnje poslanec, ki prevzame funkcijo ministra, za ta čas, za to obdobje ne more več opravljati funkcije poslanca.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg77">V skladu s tem in na podlagi dokumentov republiške volilne komisije ter pismene izjave predlagatelja liste, istoimenske, s katere nadomešča, je komisija ugotovila, da ni zadržkov za imenovanje novega mandata, torej mandata poslancu gospodu Šukljetu. Predlagamo, da predlagani sklep sprejmete. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg78">Hvala lepa. Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg79">Besedo dajem predstavnikom poslanskih skupin. Želi kdo besedo?</seg>
@@ -711,7 +692,7 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg90">Predlog predsednika vlade ste prejeli dne 23. novembra letos, dodatni predlog pa 26. novembra letos. Želi predsednik vlade, dr. Drnovšek besedo. Prosim, predsednik vlade, dr. Drnovšek.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ3.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg91">Spoštovane poslanke, gospodje poslanci, gospod predsednik! Predložil sem listo ministrov, s katero vas je seznanil gospod predsednik državnega zbora. Sestavljanje vlade je vedno zelo zahteven in nič kaj prijeten proces. Včasih je na posameznih resorjih na razpolago več kvalitetnih kandidatov in treba je izbrati, kdo med njimi bi bil imenovan, drugi, ki niso izbrani, so na nek način razočarani. Žal mi je, da se tudi vsa njihova imena potem pojavljajo v javnosti Tega nikoli ne dela mandatar, nikoli nisem sam posredoval teh imen v javnost. Vem, da jim je potem neprijetno, če se niso znašli na koncu na predlagani listi. Ponekod je tudi tako, da bi mandatar želel koga, vendar ne more iz takšnih ali drugačnih razlogov dobiti njegovega pristanka.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg92">Pri vseh teh okoliščinah sem poskušal priti do najboljše možne liste ministrov oziroma ministric, in ta lista je danes pred vami. Prepričan sem, da je to dobra lista, da so na njej kvalitetni kandidati, da imajo nekateri med njimi precej izkušenj, že vladnih izkušenj, drugi prihajajo na novo v vlado, vendar imajo za sabo bogato strokovno in drugačno pot. Tudi za njih sem prepričan, da bodo uspešno delovali kot ministri.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg93">Govorili smo že o zapletu z zakonom o vladi, kjer verjetno za kak mesec dni še velja stari zakon. Bom tako, kot sem najavil, če potrdite izbrano ministrsko ekipo, za to prehodno obdobje, ker to lahko storim za čas do treh mesecev, pooblastil dr. Teo Petrin, da poleg ministrstva za gospodarske dejavnosti opravlja tudi dolžnosti ministra za mednarodne ekonomske odnose in razvoj in pa ministra za drobno gospodarstvo in za malo gospodarstvo in turizem. In pa dr. Lucijo Čok, da kot ministrica za šolstvo in šport pokriva tudi ministrstvo za znanost. Do tistega trenutka, torej pričakujemo, da bo to čez slab mesec dni, ko se bodo ti resorji združili v skupna resorja: resor za gospodarstvo in pa resor za šolstvo in znanost.</seg>
@@ -721,7 +702,7 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg97">Torej upam, da vam bo to vsem skupaj v dragoceno izkušnjo in da bomo to vzeli kot korak v pravo smer. Prepričan sem, da bo že ta poteza izboljšala delovanje vlade in da bomo morda bolj kvalitetno predstavljali resnične interese vseh Slovencev, tako Slovenk kot Slovencev, državljank in državljanov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg98">Hvala lepa, predsednik vlade. V skladu z 263. členom poslovnika državnega zbora so se kandidati predstavili matičnim delovnim telesom in odgovarjali na vprašanja članov odborov. Iz mnenj matičnih delovnih teles izhaja, da so bile predstavitve vseh kandidatov ustrezne</seg>
                <note>mnenja odborov ste prejeli</note>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg99">.</seg>
@@ -730,19 +711,19 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg101">Želijo besedo predstavniki poslanskih skupin? Prijavljeni so in bodo dobili možnost za besedo po vrsti, najprej dr. Andrej Bajuk, poslanska skupina Nove Slovenije. Vodje poslanskih skupin ali predstavnike prosim, da stališča sporočijo z govorniškega odra, vse ostale poslanke in poslanci pa izza klopi. Dr. Andrej Bajuk, imate besedo; za njim bo dobil besedo dr. Miha Brejc.</seg>
             </u>
             <note type="speaker">DR. ANDREJ BAJUK:</note>
-            <u who="#SDZ3.BajukAndrej" ana="#regular">
+            <u who="#BajukAndrej">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg102">Spoštovani gospod predsednik državnega zbora, spoštovane poslanke in poslanci, cenjeni gospod predsednik vlade dr. Janez Drnovšek, spoštovane kandidatke in kandidati za ministre, spoštovani državljani Republike Slovenije! Dovolite mi, da cenjenemu zboru in vsem, ki spremljajo današnjo razpravo prek sredstev javnega obveščanja, predstavim mnenje poslanske skupine Nove Slovenije.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg103">S trenutkom, ko bo izvoljena nova vlada, bo Nova Slovenija v kontekstu koalicije Slovenija prevzela novo vlogo, ki bo hkrati tudi njena dolžnost. Prevzela bo vlogo demokratične parlamentarne opozicije. Želel bi poudariti izjemno velik pomen te vloge za demokratično in pravno državo, za katero je bistvenega pomena dejanska delitev oblasti. Opozicija je konstitutivni del parlamentarne demokracije. Brezopozicije ni demokracije. Poslanska skupina Nove Slovenije bo odgovorno opravljala nalogo opozicije v državnem zboru Republike Slovenije. Naši poslanci bodo s svojimi pobudami in argumenti omogočali pomembnemu delu slovenske javnosti dejansko prisotnost pri vplivanju na odločanje o zadevah splošnega družbenega pomena. Dosledno si bomo prizadevali za temeljito opravljanje nadzorne funkcije, ki jo ima državni zbor nad delom vlade. V tem smislu pričakujemo, da bo opoziciji omogočeno učinkovito delo v delovnihtelesih tega zbora. Hkrati pa želim poudariti, da bomo podpirali vse tiste projekte, ki so nacionalnega pomena za državo, kot je ustvarjanje Evrope na domačih tleh in vstopanje v Evropsko unijo, dosledno spoštovanje in uveljavljanje principa enakosti državljanov pred zakonom, zlasti na davčnem področju. Prav tako pa je enakost možnosti predvsem na področju vzgoje in izobraževanja, poprave krivic in podobno. Želim opozoriti na še nekaj pomembnih dejstev. Parlamentarna opozicija je maloštevilna, kar pomeni, da bo posledično vladajoča koalicija imela veliko večjo odgovornost za demokratični razvoj Slovenije. V tej zvezi tudi želim opozoriti, da je naše globoko prepričanje, da ima država posebno odgovornost za to, da zagotovi pogoje za oblikovanje medijsko pluralnega prostora.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg104">Naj končam z upanjem, da bo tudi vladajoča koalicija doumela izreden pomen konstruktivne opozicije za normalno delovanje slovenske družbe in države in da spričo tega dejstva ne bo podlegla skušnjavi, da bi vedno prevladal zgolj argument moči nad močjo argumentov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg105">Hvala lepa.</seg>
                <note>Aplavz.</note>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg106">Besedo dajem kolegu dr. Mihu Brejcu, ki bo spregovoril v imenu poslanske skupine Socialdemokratske stranke, za njim pa bo dobil besedo gospod Marko Diaci za poslansko skupino stranke Mladih Slovenije. Prosim.</seg>
             </u>
             <note type="speaker">DR. MIHAEL BREJC:</note>
-            <u who="#SDZ3.BrejcMihael" ana="#regular">
+            <u who="#BrejcMihael">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg107">Hvala lepa. Spoštovane gospe in gosodje, lepo pozdravljeni!</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg108">No, danes sedimo v dvorani nekdanjega centralnega komiteja zveze komunistov in v tej dvorani se je marsikaj dogajalo v preteklosti. Prišlo je najbrž, nič najbrž, prišlo je do kršitev človekovih pravic, prišlo je do kršitve ustave in zakonov in bojim se, da se je vladajoče koalicije nekaj malega dotaknilo, ko ste danes tako vehementno poteptali določila poslovnika. To ni dober obet za prihodnost, to ni dober obet za ravnanje v naslednjem obdobju in seveda vse vas postavlja v čudno luč. Ampak nam ne ostaja drugega, kot da to ugotovimo, da to povemo, ostalo prepuščamo vaši vesti.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg109">Nenazadnje zakon o vladi smo pripravili v Bajukovi vladi letos poleti in ga tudi dali v postopek, pa ga poslanci prejšnjega sklica niste niste sprejeli. Pomislite, koliko bi si prihranili težav, če bi ga takrat sprejeli. Ampak ker smo to mi predlagali, je bil predlog že vnaprej slab in seveda danes imate ta kaos, ki vam seveda ne dela časti.</seg>
@@ -763,21 +744,21 @@
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg124">Prosim, za mir v dvorani.</seg>
             </u>
             <note type="speaker">DR. MIHAEL BREJC:</note>
-            <u who="#SDZ3.BrejcMihael" ana="#regular">
+            <u who="#BrejcMihael">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg125">
                   <gap reason="inaudible"/> ki smo jo poslušali osem let, je program kriznega menedžmenta. Ta se začenja z napovedmi o prestrikcijah, o zategovanju pasu itn. Narobe svet, bi rekli. Na eni strani je Slovenija v razcvetu, zgodba o uspehu je en "full swing", so rekli Američani, v redu. Toda vi napovedujete, da bodo naslednja leta težka.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg126">Kako gre to skupaj? Seveda ne gre, kot ne gre še marsikaj, kar ste v teh dneh povedali, kar ste povedali v preteklih letih, predvsem pa kar ste storili v preteklih letih. Zato socialdemokratska stranka te vlade ne bo podprla. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg127">Hvala lepa, gospodu Brejcu. Besedo ima gospod Marko Diaci, v imenu poslanske skupine Stranke mladih Slovenije, za njim pa bo govoril dr. Janez Podobnik v imenu združene ljudske stranke. Prosim!</seg>
             </u>
             <note type="speaker">MARKO DIACI:</note>
-            <u who="#SDZ3.DiaciMarko" ana="#regular">
+            <u who="#DiaciMarko">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg128">Spoštovani gospod predsednik, spoštovane kolegice in kolegi, poslanke in poslanci, spoštovani gospod predsednik vlade ter kandidati za ministre! Spoštovani državljani Republike Slovenije!</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg129">Poslanska skupina Stranke mladih Slovenija je z zaslišanjem ministrskih kandidatov na matičnih delovnih telesih bila bolj ali manj zadovoljna. Povprečna ocena bi lahko bila "dobro". Dejstvo je, da so posamezna področja kompleksna, kandidati pa so si zadali veliko nalog, ki jih je potrebno opraviti. Zaradi makroekonomskih omejitev, ki so nujni za dosego strateških ciljev Republike Slovenije, in so jih omenjali tudi kandidati za ministre, smo mnenja, da bo za izvršitev danih nalog potrebna maksimalna koordinacija med resorji. Sestavni del koalicijske pogodbe med strankami, ki bodo verjetno od danes naprej sestavljale vlado, je tudi dogovor o sodelovanju, ki ga je ločeno podpisala tudi Stranka mladih Slovenije, in so ga sprejele vse koalicijske partnerice.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg130">Od vlade pričakujemo, da bo posebno pozornost posvetila še zlasti naslednjim področjem: izobraževalni politiki, zaposlovalni politiki, socialni politiki, politiki vključevanja Republike Slovenije v Evropsko unijo, stanovanjski politiki, politiki enakih možnosti, mladinski politiki. Pričakujemo tudi, da bo vaša vlada popravila napake, ki so bile storjene v zadnjih tednih, ko smo ponovno odkrito razočarani nad delom državnih organov pri delu z mladimi. Da ne bi bilo pomote, to ni bilo prvič. To se je zgodilo v primeru podelitve štipendij Zavoda Republike Slovenije za zaposlovanje, ker je bila pravica teh mladih do štipendij, ki so realno bistvo obstoja in bivanja dijaka ali študenta, zopet kršena. Ali pa na primer Zoisove štipendije, ki so manjše tako nominalno kot realno, in bi naj v svoji vsebini podpirale najbolj nadarjene. Problem štipendiranja, ki za Zavod Republike Slovenije za zaposlovanje obstajajo v kontekstu reševanja delovnih procesov, je za dijake in študente izziv preživetja. Študenti in dijaki, ki so svojo prvo štipendijo dočakali šele z 20-dnevno zamudo, se tega zavedajo zelo dobro. In še bolj tisti dijaki, ki svoje štipendije niso dobili niti za mesec september. In še enkrat, problem izplačil se letos ni pojavil prvič.</seg>
@@ -791,11 +772,11 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg138">Podprli bomo vse kandidate za ministre, hkrati pa v bodoče budno spremljali in ocenjevali njihovo delo. Želimo vam veliko uspeha v korist Slovenije in njenih državljanov. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg139">Hvala lepa, gospod Diaci. Besedo dajem dr. Janezu Podobniku, ki bo predstavil stališče poslanske skupine SLS+SKD Slovenske ljudske stranke, za njim pa vabim k besedi gospoda Jelinčiča. Prosim, imate besedo.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ3.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg140">Spoštovani gospod predsednik državnega zbora, spoštovani predsednik vlade dr. Drnovšek, kolegice in kolegi, spoštovani kandidati in kandidatke za ministrice in ministre.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg141">Poslanska skupina SLS+SKD Slovenska ljudska stranka bo podprla predlagano listo. Visoka podpora, ki so jo bili predlagani kandidati in kandidatke deležni na matičnih odborih, je po našem mnenju dokaz vsaj dvojega. Najprej to, da se je pokazalo, da kljub temu da so bili drugačni pogledi, je ta ustavni in poslovniški institut vendarle dobra priložnost, da se pravzaprav lahko kandidati inkandidatke za ministre in ministrice prvikrat celovito s svojo vizijo predstavijo v parlamentu. Če se bo ta možnost ukinila, potem tega ne bo več. Lahko so različni pogledi, toda dejstvo je, da smo slišali v teh dneh celovite predstavitve vizij za posamezna področja. To je inštrument, ki to omogoča. In drugič, velika večina podpore na delovnih telesih predstavlja za koalicijo predvsem veliko odgovornost, da s to večino sprejema dobre in modre odločitve. Oblikovanje šeste vlade v samostojni Sloveniji pa je tudi priložnost, da ta vlada za naslednja štiri leta pripravi celovito vizijo, strateške cilje in tudi vzvode za prehod Slovenije v razvito družbo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg142">V naši poslanski skupini smo trdno prepričani, da je ključni izziv pred Slovenijo v naslednjih letih, in to je tudi izziv za slovensko politiko, kako uveljaviti ustavne, zakonske in druge institute, da bo Slovenija postala moderna in učinkovita družba konsenza. O nekaterih vprašanjih, ki so vezane na vlogo opozicije, smo se pripravljeni z vso odgovornostjo pogovarjati v naslednjih dneh in tednih, ko bo državni zbor v celoti oblikoval sestavo delovnih teles. Razumljivo je, da v funkciji vodje poslanske skupine ne morem izreči vse ključne programske usmeritve, ki so bile zapisane v vladni koaliciji ali v dokumentu s katerim se je predstavil predsednik vlade. V vladni ekipi, ki je predlagana, so tudi trije ministri, ki jih predlaga naša stranka. Prepričani smo, da bodo odgovorno, zavzeto in strokovno opravili delo ministrov.</seg>
@@ -805,11 +786,11 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg146">Predsedniku vlade in novoizvoljenim ministrom in ministricam - prepričan sem, da boste izvoljeni - želim uspešno delo, v poslanski skupini SLS + SKD Slovenske ljudske stranke pa boste imeli delovne, toda zelo pozorne spremljevalce vseh določb, ki so oblikovale naš dogovor za vstop v vlado. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg147">Hvala lepa dr. Podobniku. Besedo dajem gospodu Zmagu Jelinčiču, ki bo predstavil stališča poslanske skupine Slovenske nacionalne stranke; za njim pa bo nastopil gospod Ivan Kebrič, za poslansko skupino DeSUS.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ3.JelinčičPlemenitiZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg148">Hvala lepa, gospod predsednik. Prav lep pozdrav vsem skupaj! Pred nami je predlog liste kandidatov za imenovanje ministrov, ki jo je predložil dr. Janez Drnovšek. Nekateri kolegi iz LDS-a so rekli, da "se bo zdaj prižgala luč, ko bodo sile neke bivše kontinuitete izginile in bodo prišli novi kadri". Mislim, da morda se bo prižgala luč in vendar bo smiselno, da si bomo ves čas po malem in potihoma popevali tisto Kekčevo - Kaj mi poje ptičica, ptičica sinička, dobra volja je najbolja. Kajti ravno dobre volje bomo morali imeti veliko, da bomo lahko preveslali vse zadeve, vse čeri, ki jih je v veliki meri kot doto prinesla nekajmesečna Bajukova vlada. Ne bom se spuščal v tista obdobja, ki so pripeljala do tega, da se je stanje še toliko poslabšalo, če ne bi moral poseči predaleč nazaj, vendar pa zagotovo, napake so bile povečane, multiplicirane. Mislim, da nas čaka precej, precej dela, predvsem pa predlagane ministre in ministrice.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg149">Če vzamemo kar in gremo po vrsti po kandidatni listi. Najprej se ozremo na zunanje zadeve k dr. Dimitriju Ruplu. Mislim, da bo imel strahotno dosti dela. Konec koncev, če nič drugega, informacije iz ministrstva za zunanje zadeve curljajo na vseh koncih in krajih. Prej jih izvedo tisti, ki jih ne bi smeli izvedeti, kot tisti v sosednji sobi, kamor so informacije namenjene. Razsulo, ki je v ministrstvu za zunanje zadeve, bo nujno potrebno popraviti. Popraviti bo treba izhodišča in tiste vehementne ignorantske in pa voluntaristične poteze, ki so se delale v zadnjih nekaj mesecih. Odpraviti bo moral, recimo, problematiko slovenske ambasade v Parizu, kjer je bila hiša kupljena s strani države in je bila kupljena kot hiša, v kateri se lahko takoj začne delati in vendar je državni sekretar iz ministrstva za zunanje zadeve pod gospodom Peterletom, gospod Raščan, to hišo razsul in razbil, s tem da je pripeljal za ureditev te hiše sedem Bosancev, nekaj celo brez državljanstva, ki so brez vednosti veleposlanika Kuniča razbijali po hiši in po desetih dneh, ko so vse razbili in nič naredili, odšli. Firma Esad-Palamar, slikopleskarstvo in polaganje tapet iz Vojkove 77, pa je dobila za to neizvršeno delo 10 milijonov slovenskih tolarjev plačila. Res, da so zahtevali 12, vendar so jih dobili 10.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg150">Ti ljudje so marsikaj uničili, predvsem so pa uničili to, da recimo ravno ambasada oziroma veleposlaništvo v Parizu ne more delati, čeprav bi lahko delalo že skorajda pol leta v novih prostorih. Ljudje iz ministrstva tudi niso razmišljali o tem, kaj pomeni varnost. Kajti če tuji državljani opravljajo taka dela v lastni ambasadi, v slovenski ambasadi, zagotovo vsaj pametne obveščevalne službe pošljejo zraven koga, ki že kaj podtakne v kakšen vogalček. Vsaj to bi se lahko kolegi poslanci sedaj, prej pa ministri iz ministrstva za zunanje zadeve naučili od svojih kolegov poslancev</seg>
@@ -818,11 +799,11 @@
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg153">Prosim, gospod Jerovšek.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ3.JelinčičPlemenitiZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg154">
                   <gap reason="inaudible"/> da je šla na obisk. To je slovenska nacionalna stranka in jaz osebno. <gap reason="inaudible"/>
                </seg>
@@ -840,11 +821,11 @@
                <note>Nemir v dvorani.</note>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg161">Prosim, da ni intervencij med nastopom.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ3.JelinčičPlemenitiZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg162">Mislim, da bi bilo to smiselno odpraviti, kajti nikakor ne pada dobra luč na slovensko policijo, ki se s takimi akcijami samo smeši.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg163">Zagotovo pa ga bo čakala druga naloga, ki pomeni opremljenost policije - policijo bo treba opremiti, urediti in če nič drugega, zagotoviti, da bodo policaji imeli vsaj dovolj bencina. Kot mi je znano, policija nima niti toliko denarja, da bi lahko promptno plačevali porabo bencina slovenskemu Petrolu. Morda bi bilo smiselno tudi odpraviti trošarine za bencin za policaje. Konec koncev gre tu za prelaganje denarja iz enega žepa v drugi žep, od tega pa nima nihče kakšne velike koristi. Tukaj je tudi reforma javne uprave. Mislim, da bo to najtrši oreh za dr. Bohinca, ker kot vemo, ni pravnik. Smiselno bi bilo oziroma upam, ali je pravnik, potem se pa motim, potem je pa ekonomist, kajti kot minister za znanost je deloval kot ekonomist, nikakor pa ne kot pravnik, vsaj njegove poteze so bile take. Zagotovo bo pri organiziranosti policije, kot enega segmenta, recimo, lahko javne uprave, prišlo na plan tudi vprašanje Marka Pogorevca, ali bo ostal ali ne bo ostal.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg164">Naslednji minister oziroma kandidat je dr. Anton Grizold za obrambnega ministra. Brez dvoma bo najbolj odmevna akcija tista, ki so jo že začeli pod ministrom Janšo, to je profesionalizacija slovenske vojske. Danes deluje slovenska vojska kot slabo organiziran taborniški odred. Slovenska vojska je brez vodstva, brez cilja in brez namena. Konec koncev pa to ni krivda oficirjev ali podoficirjev, ta kader je dober, je pa nedvomno krivda neurejenosti na področju zakonodaje in pa podzakonskih aktov. Takšni izpadi, ki jih imajo nekateri mladinci v vojski, so nedopustni za to ministrstvo. Gre za ljudi, ki so brez motivacije, brez vsega in kot mamice telefonirajo komandantu kasarne, da naj poskrbijo, da si bodo njihovi sinčki obuli debele nogavice, da jih ne bo zeblo v noge. V bistvu je to sramota za vso slovensko vlado in za vso Slovenijo, ne zgolj za ministrstvo za obrambo. Pri profesionalizaciji, mislim, da bo potrebno poskrbeti, da če bo prišlo do tega, da to ne bo privatna vojska ministra, ampak da bo to, če že bo, profesionalna vojska republike Slovenije. Nismo za to v naši stranki, da bi imeli še enkrat MORIS, takšen kot je bil na začetku, ko je bila to enota ministrstva za obrambo, nismo za to, da bi se iz tega razvijalo po zgodovinskih vzorih iz poznih dvajsetih in zgodnjih tridesetih let, ko bi "Laibstandardte", prerasla v "Šturmabteilungen" in potem v "Schutstafeln".</seg>
@@ -879,31 +860,31 @@
                <note>Odzivi iz dvorane.</note>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg193">Prosim mir v dvorani. Še enkrat prosim za mir v dvorani, kolega Zmago Jelinčič ima besedo. Prosim.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ3.JelinčičPlemenitiZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg194">Hvala, gospod predsednik. Povedati: Slovenska nacionalna stranka vam želi povedati, da poznamo tako probleme, poznamo tako šibke točke, poznamo nepravilnosti. In vladi bomo gledali pod prste. Upam, da nam bodo mediji pri tem pomagali. V dveh mandatih so mediji dostikrat zamižali in so raje poslušali močne politične stranke, ki so jim narekovale, kaj napisati in česa ne. Upam, da to ne bo več tako, da ne bo tako.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg195">In ker želimo, navkljub vsemu da se pa za Slovenijo kaj naredi, da se Slovenijo ojača, da Slovenija dobi svoje mesto tam, kjer mesto ji tudi je, bomo predlog liste kandidatov, podprli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg196">Hvala lepa za izčrpen prispevek kolegu Zmagu Jelinčiču. Besedo ima gospod Ivan Kebrič, ki bo predstavil stališče poslanske skupine DeSUS-a, za njim bosta v imenu poslanskih skupin dobila še kolega Tone Anderlič za Liberalno demokracijo in Miran Potrč za Združeno listo.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ3.KebričIvan" ana="#regular">
+            <u who="#KebričIvan">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg197">Gospod predsednik, hvala za besedo. Spoštovane kolegice, kolegi, spoštovani kandidatke za ministrice in spoštovani kandidati za ministre.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg198">V naši poslanski skupini smo temeljito pregledali predlog, ki nam je bil dostavljen, za sestavo vlade. Menimo, da je sestav dober, in menimo, da je nujno, da čim prej preidemo k izvrševanju nalog, ki jih imamo - tako vlada kot najvišji organ izvršne oblasti, tako mi poslanke in poslanci kot zakonodajno telo -, da preidemo k tistim nalogam, ki nam jih narekuje ustava, poslovnik in ki so nam jih zaupali volivci, volivke.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg199">Menimo, da bi lahko tudi mi na dolgo in široko razpravljali in govorili o tem, kaj mislimo o tem ali onem področju, ki ga bo pokrivala ta ministrica ali minister. Menimo pa, da je nujno, da preidemo čim prej k izvrševanju našega koalicijskega sporazuma, ker so naloge jasno opredeljene in kot take, da je nujno, da pričnemo z izvajanjem. V tem koalicijskem sporazumu je vsaka stranka se potrudila dati svoje najboljše iz svojih programov. In določeni programi so istovetni; vsi se borimo in želimo, da bi se zmanjšala brezposelnost, da bi se ustvarjalo in odpiralo nova delovna mesta, vsi si želimo, da bi bilo šolstvo na taki višini, da bi naši šolarji, ko bodo to končali, bili ustrezni in pripravljeni za Evropo. Vsi si želimo tako zdravstvo, ki bo dostopno vsem; ne le enim ampak vsem dostopni najnovejši dosežki zdravstvene znanosti in zdravil, vsem - ne le tistim, ki v določenih primerih lahko plačajo. Znanosti želimo, da se ji da tisti poudarek, ki nas bo pripeljal po tehnologiji v boljše gospodarjenje.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg200">Ne bom dalje našteval, saj so te naloge, kot pravim, istovetne ali zelo podobne. Morda se razlikujemo edinole malo v vrstnem redu prioritet. Morda, če karikirano povem: eni menimo, bomo pač kupili en tank ali dva ali helikopter manj, pa ta denar namenili za odpiranje novih delovnih mest, da tudi v drugi v fazi ali pa v prioriteti za odpravljanje revščine. Vemo, kje smo - v takih in drugačnih - in menimo - da zaključim- da želimo, da začne ta vlada, ko jo bomo danes izvolili, in tudi z našo pomočjo - nas, štirih poslancev Demokratične stranke upokojencev Slovenije -, da prične že jutri delati in da mi tudi pričnemo in opustimo taka in drugačna zavlačevanja dela ter se lotimo tistih zakonov, ki so pripravljeni, in da se lotimo sprememb tistih zakonov, ki so nujni, da jih spremenimo, da bomo čim prej se prilagodili in uskladili z Evropo. Hvala za vašo pozornost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg201">Hvala lepa gospodu Kebriču iz poslanske skupine DeSUS. Prosim Toneta Anderliča, vodjo poslanske skupine Liberalne demokracije Slovenije, da nas seznani z njenimi stališči; za njim bo sklenil razpravo poslanskih skupin kolega Miran Potrč iz Združene liste.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ3.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg202">Spoštovani! Koalicija ima 58 poslancev, torej to nista niti dve tretjini, vendar pa zadosti velika večina v tem državnem zboru, da se lahko reče, da smo sestavili veliko koalicijo. V LDS verjamemo, da bo ta koalicija sposobna izpeljati vse zastavljene in s strani predsednika vlade ter s strani kandidatk za ministrice in kandidatov za ministre predstavljene programe, izpeljati tudi na način in v zadovoljstvo vseh državljanov in državljank.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg203">Večina stvari je zapisanih v koalicijski pogodbi, vendar življenje bo zagotovo teklo tudi pod <gap reason="inaudible"/> , nekaterim se bo potrebno prilagajati in reševati stvari, ki se bodo pred to vlado in to koalicijo, in seveda pred to državo, postavljale.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg204">Prepričani smo, da bo opozicija - za nas je to 32 poslancev in ne 22; matematika je lahko zelo eksaktna zadeva, računstvo pa predstavlja nekaterim težave, je pa računstvo pred matematiko, če sem prav seznanjen. V tem smislu prav gotovo za to koalicijo velja, da je v to dosedanje delo, v sestavo programa in sestavo koalicijske pogodbe bilo vloženo velikodela, veliko usklajevanja, presedenih veliko ur in napravljen resnično tisti program, ki predstavlja za Slovenijo in za te stranke, ki so dobile mandat na volitvah, da vodijo to državo, tak, da ne bo pustil nobenega vprašanja v nemar in da bomo na koncu lahko rekli, da smo vsi skupaj delali koristno za to državo in za te državljane.</seg>
@@ -914,11 +895,11 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg209">Seveda, je pa jasno, da če vi napišete v svojih predlogih sedem prioritet, izmed teh dobite tri, je jasno, da je to več kot tisto, kar se da zadostiti. Kajti namreč za druge, ki imajo tudi prioritete, potem zmanjka. In v tem smislu najbrž ne moremo reči, da je samo takrat možen dogovor insamo takrat se manjšini ne dela krivica, kadar izključno in samo tisto, kar si ona zaželi, tudi dobi. Pri teh vprašanjih je vendarle potreben dogovor in še enkrat dogovor. In jaz verjamem, da bo zdaj čas za dogovor, ko bomo končno vzpostavili zelo jasno razmerje med pozicijo in opozicijo in mene v tem smislu hrabri predvsem javna pohvala gospoda Brejca, da se je kar v redu dogovarjati in pogovarjati in da je tisto, kar so že imeli v socialdemokraciji, veliko - skoraj vse, kar so si zamislili. Je pa res, daje v tem delu prevladala neka solidarnost do mlajšega brata v koaliciji, ki pa je tako ali tako imel na razpolago več, kot bi mu pripadalo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg210">Hvala lepa gospodu Anderliču. Besedo dajem gospodu Miranu Potrču, ki bo spregovoril v imenu poslanske skupine Združene liste socialnih demokratov in s tem tudi sklenil predstavitve poslanskih skupin.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ3.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg211">Spoštovani gospod Pahor, predsednik državnega zbora, spoštovane kandidatke za ministrice in kandidati za ministre! Volivke in volivci so pred mesecem in pol določili sestavo tega državnega zbora in vsaki od strank, ki sodeluje v njem, namenili pač delež, kakršno je bilo njihovo zaupanje. Na podlagi tega deleža je bila oblikovana koalicija in izvoljen predsednik vlade, ki je podogovoru med koalicijskimi strankami pripravil predloge za ministrice in ministre, o katerih odločamo danes. Naše prepričanje je, da je pripravljeni predlog dober in da so kandidatke za ministrice in kandidati za ministre pripravljeni in sposobni, da odgovorne in težke naloge, ki čakajo to vlado, po svojih najboljših sposobnostih v korist državljank in državljanov Slovenije tudi uresničijo. Poslanke in poslanci združene liste smo prepričani in pripravljeni, da v tej smeri od njih zahtevamo najodgovornejše in resno delovanje in da jim dajemo potrebno podporo pri pripravljanju in izvajanju sprejetih odločitev v vladi in v državnem zboru. V tej smeri tudi menimo in razumemo, da je naša skupna želja, da se vlada glede na volilne rezultate oblikuje čim prej, razumljiva in upravičena. Pred državljankami in državljani je prav po mesecu in pol opraviti tudi to dejanje in zagotoviti, da bo do odgovornega izvajanja zaupanih jim nalog, ki je bilo izraženo z volitvami, prišlo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg212">Rad bi poudaril, da se poslanke in poslanci združene liste predvsem odgovornosti in nalog zavedamo v polni meri. Ne domišljamo si, da se oblast niti v vladi niti v državnem zboru prevzema zato, da bi jo bilo mogoče v korist sebe, strank ali ožjih skupin lahkotno uresničevati. To oblast je mogoče prevzeti samo v polni odgovornosti do nalog, ki nas čakajo, do koristi državljank in državljanov, ljudi in do programa, ki smo si ga - upal bi to trditi - najkonkretneje doslej - tudi glede nalog, ki niso prijetne in so težavne - zapisali v koalicijsko pogodbo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg213">V Združeni listi socialnih demokratov smo bili še dva meseca pred tem v opoziciji. Zavedamo se tega položaja, vemo, da v tem položaju lahko le sodeluješ pri oblikovanju odločitev, odločati praviloma sam ne moreš, ker za to nimaš potrebne večine. Toda tudi v tem položaju je mogoče biti konstruktiven in sodelovati pri predlaganju odločitev, mogoče je delovati tako, da predvsem samo zaviraš, da bi se potrebne odločitve lahko sprejemale.</seg>
@@ -927,23 +908,23 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg216">Želimo si, da bi vse to sodelovanje in uspešno delo bilo v korist izvajanja sprejetega programa, da bi bila Slovenija gospodarsko uspešna in socialno pravična država, da bi bil zagotovljen napredek, da bi bile zagotovljene približno enake možnosti vsem za delo, razvoj, dostojno preživetje, da bi znanje bilo temelj in vodilo našega napredka in da bi bila Slovenija uspešna država v enakopravni evropski skupnosti držav. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg217">Hvala lepa kolegu Potrču. Z njegovim nastopom smo izčrpali predstavitve stališč poslanskih skupni.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg218">V skladu s 67. členom bodo imeli možnost razprave brez časovne omejitve naslednji gospodje, po tem vrstnem redu: gospod Barovič, Cukljati, Bernik, Petan, Peterle, Pukšič, Peče, Jerovšek, Kelemina in gospod Rupar. Za nastopom gospoda Ruparja se bodo seveda lahko poslanke in poslanci prijavili k razpravi, vendar jo omejujem, njihovo razpravo namreč, na največ pet minut. Gospod Barovič ima prvi besedo. Prosim!</seg>
             </u>
             <note type="speaker">BOGDAN BAROVIČ:</note>
-            <u who="#SDZ3.BarovičBogdan" ana="#regular">
+            <u who="#BarovičBogdan">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg219">Hvala lepa, gospod predsednik. Spoštovane poslanke, spoštovani poslanci, kolegice, kolegi. Bom krajši, kot mi čas dovoljuje. Ko sem postal član kar nekaj delovnih teles, sem se zavedal odgovornosti dela vseh nas v teh delovnih telesih in ta odgovornost je bila toliko večja, ker smo se na nekaterih srečali in soočili že prvič na odločitvah, kako izraziti svoje mnenje, ali je kandidat za ministrico ali ministra primeren ali ne. Bil sem na petih poslušanjih, od začetka do konca, in poslušal, trudil se poslušatizgolj in samo vsebino. Ta me je pripeljala do odločitev. Te niso bile v vseh petih primerih enake, ker sem odločal pač po lastni vesti in pa lastni presoji.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg220">Zbral sem si tri cilje, za katere sem menil, da morajo biti pri predstavitvi kandidatk in kandidatov, da morajo biti izpolnjeni. Tretji je bil ta, da je bila vsebina programa, ki so jo kandidati za ministrice oziroma ministre predstavili, tako oblikovana, da je omogočila kontinuiteto dobrega dela. Druga, bolj pomembna je bila, da je bila vsebina natančna in da so bili v programu zastavljeni jasni, vsaj nekateri, cilji v korist slovenske države. In prva, najpomembnejša je tista, da prihajam iz Zasavja, ki pa tudi regija ni, pa bi rad, da bi bila pravnoformalno regija in bi rad, da se uredi zakonodaja, da bo pravnoformalno regija. Zato, ker prihajam iz Zasavja, kjer je stopnja brezposelnosti na enaki visoki ravni že dve leti in se še povečuje in bi rad, da bi bila manjša in bi rad, da se s spremembami zakonov ali pa s sprejemanjem novih zakonov ali pa z delom vlade ta brezposelnost zmanjša. Zato ker prihajam iz Zasavja, kjer se v lokalnih skupnostih trudijo pripraviti programe, na osnovi katerih bodo zaposlili že tako veliko število brezposelnih, pa tudi tiste, ki jih industrijska preteklost seveda odganja od dela; in bi rad, da bi se uredili zakoni, da ne bi bili ti ovira za delo lokalnih skupnosti. In nenazadnje zato, ker jaz ljudem v Zasavju ne morem razlagati, kaj je politična pozicija in opozicija, kdo je za in razlagati tezo, ki tule velja, ampak se z njo ne strinjam: če nisi "za" si "proti".</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg221">Sam nimam rad in mi ni všeč politična premoč, sploh pa, če je absolutna in sama sebi namen. Vem pa, da je edini argument, s katerim se lahko proti politični premoči borim, da z vsebino dokažem, da imamo tudi v opoziciji kdaj včasih prav, in prepričan sem, da bomo to lahko naredili v štirih letih. Pa še nekaj vem. Da se bo, če bo vladna koalicija tako močno slonela samo na političnih osnovah in na "trgovanju" v narekovajih, še kako kmalu skrhala, razblinila in razdelila.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg222">Torej, Zasavje je bil moj prvi razlog in pa to, da sem od petih kandidatov za ministre potrdil tri, da želim, da vlada začne čimprej delati, v dobro, seveda, naših krajev, pa tudi vse Slovenije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg223">Hvala lepa, gospod Barovič. Naslednji ima besedo France Cukjati, za njim pa gospod dr. Bernik.</seg>
             </u>
             <note type="speaker">FRANCE CUKJATI:</note>
-            <u who="#SDZ3.CukjatiFrance" ana="#regular">
+            <u who="#CukjatiFrance">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg224">Spoštovane gospe, spoštovani gospodje! V celotnem postopku predstavitve kandidatov je bilo slišati mnogo lepih obljub, načrtov - če bi jih vzel zares, bi moral reči, da je vrsta njih neizvedljivih in da bi bilo celo včasih umestno vprašanje, zakaj se pa doslej ni to že zgodilo. Pa vendar, predstavitev je pač predstavitev in vključuje tudi element nepredvidljivosti oziroma želja, ki se morda ne bodo uspele realizirati. Moti me pa oziroma me je motilo, da so kandidati večkrat odgovarjali mimo vprašanja, so se izogibali vprašanjem, ki so morda nekoliko bolj ostro posegala v problematiko. Predvsem pa me je motilo, da so bili včasih nekateri kandidati zelo črno-belo kritični do te petmesečne Bajukove vlade, včasih celo neokusno kritični, do delovanja vlade v preteklih letih pa, moram reči, nekritični, kar je in gre tudi na škodo bodočega dela.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg225">Glede primernosti posameznih kandidatov pa bi se dotaknil samo področja, ki ga obvladam, kajti "le čevlje sodi naj kopitar", in sicer glede ministrstva za zdravstvo. Obrazložiti želim, zakaj nisem podprl kandidature dr. Kebra.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg226">Glejte, koalicijski sporazum, ki ste ga podpisali, vladajoča koalicija, od skoraj sto strani namenja le dve strani zdravstvu. Na teh dveh straneh je nekaj načelnih pristopov, ki so tako splošno sprejemljivi, da jim ni oporekati, ena stran je pa namenjena podrobnostim, ki ne vem, kaj imajo opraviti v nekem globalnem dokumentu. Ničesar, prav ničesar pa ni glede reševanja osnovnega zdravstva. Gre namreč za ne majhne probleme enakosti dostopa do zdravstvene službe, enakosti, na katero vsi prisegamo. Še vedno so kraji, kjer je po 5.000 prebivalcev vezanih na ambulanto, ki je samo dvakrat na teden, in pride praktično v tistih krajih po en zdravnik na 8.000 prebivalcev, če bi ga šteli kot polno zaposlenega, in imamo mesta, kjer pride po 1.400 prebivalcev na splošnega zdravnika. Gre za problem kadrov, kjer vemo, da je povprečna starost zdravnikov na podeželju 50 let in se pravzaprav pogrezamo v neko kadrovsko praznino in so razpisi delovnih mest v nekaterih zdravstvenih domovih že leta in leta brez odziva. Gre za problem zanemarjanja odrasle populacije, tiste, ki je najbolj bolna in ki se je v zadnjih desetih letih povečala za okrog 40%, to je starostna grupa od 65 do 75 let, pa nismo za to pod dosedanjo Drnovškovo osemletno vlado namenili niti tolarja več, nobene pozornosti več. Gre zaradi tega za drastičen porast kroničnih obolenj, rakavih obolenj, tak porast, da se ga ne upamo javiti svetovni zdravstveni organizaciji in ga skrivamo. Gre torej za številne probleme, ki jih dosedanja politika liberalne demokracije, ki je na področju osnovnega zdravstva prislovično slaba, ni rešila in je ne rešuje tudi v tem dogovoru koalicijskem. In kandidat za ministra je bil ujet namenoma ali prostovoljno v ta ozek pristop koalicijskega dogovora na tem področju. Prav zaradi tega, ker nisem videl nobene nove poti, nobenega novega pristopa k tej problematiki, sem bil proti.</seg>
@@ -952,11 +933,11 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg229">Vlada bo kljub mojemu negativnemu glasu zagotovo potrjena. Želel bi, da bi Drnovškova vlada v tem mandatu imela na področju šolstva več posluha za svetovnonazorsko širino in pluralnost; na področju zdravstva več posluha za potrebe malega človeka na podeželju; za več posluha za osnovno zdravstvo; v državni upravi manj korupcije in manj šuštarjev; pri pobiranju davkov več poštenosti in doslednosti itn. Želim, čeprav mi osemletne izkušnje ne dovoljujejo, da bi lahko tudi trdno upal. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg230">Hvala lepa. Besedo dajem gospodu Jožefu Berniku. Za njim bo dobil besedo Rudolf Petan. Prosim!</seg>
             </u>
             <note type="speaker">DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#regular">
+            <u who="#BernikJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg231">Hvala lepa, gospod predsednik. Gospe kandidatke in gospodje kandidati za ministre vlade Republike Slovenije!</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg232">Naj na začetku takoj omenim to, da me čudi, da ni med nami več predsednika vlade in tudi ne večine kandidatov za ministre. Opažam, da zlasti tistih, ki so bili že v prejšnjih vladah, zgleda, ta debata ne zanima, čeprav bi prav njih morala zanimati. Če preberete koalicijsko pogodbo, boste videli, vsaj jaz sem imel tak vtis, ko sem jo prebral že tretjič ali četrtič, z nekaterimi spremembami in olepšavami. Ni čudno, da je napisana tako, saj so avtorji tega koalicijskega programa več ali manj isti.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg233">V ta prostor danes so usmerjene oči Slovencev tukaj, v zamejstvu in po svetu. Ne bom šel po ministrstvih, pri katerih bi se dalo marsikaj omeniti, dodatno omeniti, vendar bi rad spregovoril o temi, ki je v koalicijski pogodbi samo v naslovu, ne pa v tekstu - pozornost do Slovencev po svetu.</seg>
@@ -966,11 +947,11 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg237">Torej, to vlado čaka ogromno dela. Tisto delo, ki bi moralo biti v zadnjih osmih letih opravljeno, je še vedno tukaj, in mi vsi tukaj bi morali zelo vestno slediti, kaj bo ta vlada delala, da se ne bo naslednji državni zbor ponovno soočal z neko knjigo, za katero bodo rekli, "to sem pa že prebral, to je 'déja-vu'". Torej, apeliram na vlado, čeprav je tu skoraj samo ena tretjina kandidatov, da se tudi o tej stvari zamisli in pristopi vendarle k nekim konkretnim in v prihodnost zazrtim načrtom. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg238">Hvala lepa, gospod Bernik. Preden dam besedo gospodu Rudolfu Petanu - za njim bo potem nastopil kolega Alojz Peterle - naj rečem, da ste v svojem nastopu omenjali pričakovanje, da bodo tukaj z nami ves čas tudi kandidatke in kandidati za ministre. Ob razumevanju dejstva, da zdaj začenjamo četrto uro razprave in da, kot rečeno, ne enkrat, ne razpravljamo v najbolj primernih okoliščinah za to diskusijo, bi vendarle, tako kot je tu navzoča večina poslank in poslancev, tudi v imenu parlamenta izrazil pričakovanje, da se nam večina, vsaj večina kandidatk in kandidatov za ministrice in ministre vrne in sledi razpravi. Kolega Rudolf Petan ima besedo, kot rečeno, za njim Alojz Peterle.</seg>
             </u>
             <note type="speaker">RUDOLF PETAN:</note>
-            <u who="#SDZ3.PetanRudolf" ana="#regular">
+            <u who="#PetanRudolf">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg239">Hvala za besedo. Spoštovane kolegice in kolegi, gospod predsednik, spoštovani kandidati za ministre in ministrice! Pozdrav velja tudi tistim, ki jih ta trenutek ni tu in pa seveda predsedniku vlade.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg240">Ko sem pred sejo razmišljal, ali se sploh naj oglasim, ali sploh naj razpravljam, glede na to, da ima vladajoča večina krepko dvotretjinsko večino - mi mislimo namreč drugače, in imamo pravico do tega mišljenja, kot misli največja stranka - upam, da nam tudi tu ne bodo predpisovali, kaj lahko mislimo in glede na to, da lahko, če je potrebno, če se jim zdi potrebno, kršijo poslovnik, kršijo ustavo, ignorirajo poslovnik, ignorirajo ustavo, v bistvu deluje kot neki valjar. Pri tem pa me je seveda vodila tudi misel, da v železni repertoar vsake demokratične države spada tudi opozicija in opozicija je tudi pogoj za demokracijo. In ker se seveda tudi zavedam, da ima v tem železnem repertoarju opozicija tudi svojo nalogo in svoje obveznosti, in ta obveznost je, da kritično gleda na delo vladajoče opozicije in vladajoče pozicije, da kritično ocenjuje delo vlade, da opozarja na napake in seveda na nepravilnosti. In ker se je že sedaj v tem kratkem času po volitvah pri delu vladajoče koalicije nabralo kar nekaj napak, nepravilnosti, se mi zdi potrebno, da se tudi oglasim in da tudi opozorim na te nepravilnosti in pa na te napake. Kajti to nalogo konstruktivne opozicije želim tako sam kot tudi moji kolegi iz stranke v redu opraviti.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg241">In če začnem pri tisti prvi nepravilnosti ali napaki, ki se mi zdi zelo pomembna, kajti če bi se to nadaljevalo, potem je to lahko kar problem za našo mlado demokracijo. Namreč, začel bom pri spremembi zakona o vladi, pa ne bom govoril o vsebini, o tem je bilo že veliko povedanega. Gre za postopek, gre za proceduro. Kajti vemo, da procedura je tudi v tem železnem repertoarju demokracije. Namreč, zelo me moti, me je motilo to in me še vedno moti, ker se dogaja še kar naprej, da se je seja delovnega telesa, na kateri se je obravnavala ta sprememba zakona, namreč odbora za notranjo politiko, v bistvu sklicala pol ure pred pričetkom seje. To se mi zdi nedopustno, kajti poslovnik je jasen in mislim, da takšna hitrost lahko samo škodi.</seg>
@@ -983,22 +964,22 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg248">Res pa je, in to priznam, da si želim, da bi se motil. Želel bi, da se je ta minister za finance zmotil in da bi vsi ostali kandidati za ministre, ki so veliko obljubljali, imeli prav. Tega bi si želel. Glede na to, da tudi na področju s katerega prihajam, imamo kar veliko projektov, ki naj bi jih uresničili bom seveda moral in bom prisiljen to ugotoviti, kdo je imel prav, ali kandidat za finančnega ministra ali ostali. Namreč ko se bom verjetno oglasil pri njih in bodo morali povedati, ali je denar za te projekte ali pa denarja ni. Kot sem rekel, želim si, da bi se motil. Do takrat, dokler tega ne bom ugotovil, pa seveda moram verjeti tistemu, kar so povedali. Povedali so pač tako, da finančnega pokritja za vse, kar so obljubljali, ne bo, in zato seveda te garniture ne bom mogel podpreti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg249">Hvala lepa. Gospod Petan, v svojem nastopu ste omenjali večkrat tudi kršitev poslovnika in nekajkrat mojo odgovornost pri tem, zato mi dovolite dve pojasnili.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg250">Prvič, kar se tiče sklica seje. V petek, 24. novembra smo na posvetu z vodji poslanskih skupin sklenili, da bo to danes. Ko so bili "hearingi" opravljeni, sem imel poslovniško možnost sejo sklicati - to sem tudi storil. Toda čas današnjega sklica je bil usklajen in nobena poslanska skupina temu ni nasprotovala.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg251">Drugič, kar se tiče kršitve poslovnika v zvezi z današnjim odločanjem o listi ministrov. Je mar kdo od kolegov iz opozicijskih vrst vprašal na seji odborov ali sicer sekretariat, ali bi današnje odločanje pomenilo kršitev? Ne, to sem storil jaz, zavedajoč se svoje odgovornosti. Še enkrat je treba povedati, sekretariat je zelo jasno povedal, da danes državni zbor s tem, ko odloča o listi kandidatov za ministrice in ministre, ne krši poslovnika. Zato nimam slabe vesti kot predsednik, da danes državni zbor ravna v nasprotju s pravili, h katerim je zavezan.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg252">Kolega Peterle ima besedo. Želite repliko?</seg>
             </u>
             <note type="speaker">RUDOLF PETAN:</note>
-            <u who="#SDZ3.PetanRudolf" ana="#regular">
+            <u who="#PetanRudolf">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg253">V bistvu ni replika, samo dopolnil bi vas. Nisem mislil današnje seje, mislil sem pa dogajanje takrat, ko se je - to je bil, tudi mislim, da petek, ko smo sprejemali spremembe zakona o vladi. Za takrat je veljalo to, kar sem povedal, glede hitrega sklicevanja. V bistvu je bilo 20 minut pred sejo, ne samo pol ure. Ne za današnjo, o današnji seji nisem ničesar.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg254">Prav. Hvala lepa. Kolega Peterle ima besedo, za njim gospod Franc Pukšič.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg255">Hvala lepa, gospod predsednik, za besedo. Spoštovane poslanke in poslanci, kandidatke in kandidati za novo vlado!</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg256">Jaz sem razumel svojo poslansko dolžnost in svojo besedo, ki sem jo dal volivcem, tako, da sem moral opozoriti na namene, ki nimajo podlage v zakonu, ko gre za izvolitev vlade. Govorim o zakonu o vladi, ne o poslovniku, kajti zakon o vladi govori o tem, kako naj ravna mandatar, ko predlaga ministre, in ne govori o delni vladi, to sem že prej pojasnil, ampak o vladi v celoti.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg257">In na odborih, gospod predsednik, ni bilo mesto, da se problematizira ravnanje predsednika vlade ampak se je govorilo o kandidatih, ki jih je dal. Na "hearingih", ki jih pa ni bilo, pa seveda, bi rekel, se pravi, je mesto, da o teh zadevah, ki jih ni bilo, pa bi morale biti, ker bi morali biti vsi kandidati za člane vlade predlagani, in seveda te možnosti ni bilo in lahko o tem govorimo samo tukaj, zato nasprotujem argumentu oziroma razlagi, da v odboru nihče ni nič rekel.</seg>
@@ -1015,11 +996,11 @@
                <note>Nemir v dvorani.</note>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg267">Prosim za mir v dvorani, kolega Peterle ima besedo.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg268">
                   <gap reason="inaudible"/> te materije. In upam, da bo vendarle izveden sklep vlade, Bajukove vlade, da se ta zadeva pokuri. Mene to vprašanje skrbi, predsednik ga niti ne omeni. Ne bom govoril o količinah, za katere vem, da niso majhne.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg269">Glejte, javne finance, gospe in gospodje, javne finance so ena ključnih zadev, s katerimi se ne bo soočala samo ta vlada, kajti ta vlada gre lahko skorajda z istimi ljudmi v odnosu do javnih financ tako naprej, kakor je delala osem let. Ključni ljudje bodo isti v tej vladi, ti, ki nam govorijo, da moramo zdaj pa zares začeti. Nisem slišal gospoda predsednika, da bi zavzel danes odnos do tega, da bi zavzel odnosdo korupcije, ki jo je začela zelo učinkovito preganjati ta vlada. Nič ni rekel o nepovratnih sredstvih, ki so bila v kratkih dneh malo pred odstopom oziroma koncem tretje Drnovškove vlade zelo na hitro razdeljena; pa to ni problem. Nobenega govora o tem,kako so te zadeve povezane z državnimi pomočmi, in tako naprej. Nič govora o tem, da eni davke plačujejo, eni jih pa z državnim spregledom ne plačujejo, in gre za milijarde, o katerih smo govorili, in to pri tistih firmah, kjer ima denar mlade, ne pri malih obrtnikih, pri kmetih in tako naprej, ali podjetnikih. O tem ni besede. Tu poslušamo stvari o Indiji Koromandiji.</seg>
@@ -1033,90 +1014,90 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg277">Poglejte, še nekaj bi na koncu rekel. Prej sem povedal, da predsednik je pač lepo govoril, lepo je izpadel, imamo pa seveda druge izraze in na tiste sem jaz bolj pozoren in jih bolj resno jemljem. Eminentni predstavnik oziroma član LDS-a, gospod Šetinc, je v enem od dnevnikov ljubljanskih pisal o "biču božjem". On ni pisal o "valjarju", ampak je rekel, da bo treba uporabiti "bič božji". Torej jaz temu bolj verjamem kot tistim besedam o prijaznosti in bojim se pri takem razmerju sil, da se bo dogajalo neko moderno, v demokratičen stanjol zavito enoumje, ki ga bo seveda vodila vodilna oziroma stranka relativne večine, po imenu LDS, in ta stvar gre lahko po poti, ki se ji reče, "kdor ne bo z nami, mu bo hudo". Tako sem jaz razumel Šetinčev "bič božji". Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg278">Hvala lepa, kolega Peterle. Kolega Sašo Peče želi replicirati na vaš nastop. Imate pet minut.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDZ3.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg279">Hvala za besedo, gospod predsednik. Razumem, da boli, če človek izgubi položaj. Bolečina, žal, včasih povzroča tudi, da človek začne nerazsodno premišljevati. Žalostno pa je, da človek z nerazsodnim načinom premišljevanja postane razsodnik, ker ta določa, kdo je pozicija in kdo je opozicija.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg280">Bilo je obdobje, ko se je ta isti državni zbor srečal z dvema ključnima, do sedaj ključnima momentoma, in sicer imenovanje mandatarjev oziroma izvolitev mandatarja in pa s predlogom zakona o vladi. Po mojem vedenju, po vedenju celotnega državnega zbora, v tem trenutku, ko smo glasovali o mandatarju in ko smo glasovali o zakonu o vladi, vas ni bilo, gospod Peterle, vas, ki se danes igrate razsodnika. Vas ni bilo. Danes si upate kritizirati oziroma si upate govoriti o tem, da ste edina opozicija v tem državnem zboru. Lepo vas prosim! Kakšna opozicija pa je to, da si niti ne upate priti in izraziti moči, ki jo imate kot poslanec in glasovati proti. Ne, raje se umaknete v najbolj ključnih trenutkih konstituiranja tega državnega zbora. Lepo vas prosim, oziroma tako bom rekel, ne ganejo me sicer vaše besede, ampak le zaradi tega, ker je danes, odkrito rečeno, televizijski prenos. Samo zaradi tega sem hotel to zadevo pojasniti. Drugače verjamem, da imate svoje mnenje in pri njem boste vztrajali, in verjamem, da je to posledica izgube položaja, ki ste ga nekoč imeli. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg281">Hvala lepa. Kolega Peterle ima repliko, želi replicirati tudi kolega Jerovšek, kolega Rupar. Prosim, da se z replikami ne bi oddaljili od predmeta današnje razprave, ki je tako ali tako širok, to je imenovanje vlade. Najprej dajem besedo kolegu Peterletu. Vsak ima največ pet minut za repliko. Prosim!</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg282">Gospod predsednik, ne bom izkoristil petih minut, ker ne želim podaljševati te razprave, držal se bom nedvomno bistvenega.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg283">Mene kot demokrata so tako učili, da če vodja poslanske skupine neke stranke javno izjavi, da bo stranka podprla vlado, potem ga ne morem šteti k opoziciji, po nobenem principu ne.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg284">Kar pa zadeva obstrukcijo, gospod poslanec Peče, preberite si poslovnik, v katerem je ta pravica dana, da tudi na tak način opozicijska stranka izrazi svojo politično voljo. Mi smo to izrazili na način, kot ga poslovnik dopušča, in smo ravnali, kakor smo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg285">Prosim za mir v dvorani. Zdaj imamo tri replike - vse tri prosim za kratek nastop - najprej kolega Jerovšek, za njim kolega Rupar in kot vidim, tudi kolega Peče želi pojasnilo.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg286">Hvala lepa. Zbodlo je in je pravzaprav zastrašujoče deloval nastop gospoda Pečeta v tisti sekvenci, ko je, mislim, da nekajkrat poudaril, "in gospod Peterle, vi si upate govoriti". Kakšen duh se seli v ta državni zbor! Namreč, to so besede in dikcija Višinskega. Namreč, jaz upam, da še nismo tako daleč, da si poslanci državnega zbora v državnem zboru ne bi upali govoriti. Upam, da se bo gospod Sašo Peče opravičil, da je to bil vsaj "lapsus lingue" in da ne stoji za tem,kajti če bo še kdo tu nastopil s svarili in opozarjanjem, "kako si upate govoriti"; doslej, v prejšnjem mandatu česa takšnega nismo doživeli. Verjetno je to rezultat te koalicije in razširjene koalicije s poslanci Slovenske nacionalne stranke, da smatrajo da tu ni več mesta, kjer bi poslanci lahko govorili. Če tega gospod Sašo Peče ne bo zanikal in se opravičil pravzaprav vsem poslancem državnega zbora, potem bo to zelo zlohotno zvenelo in odmevalo po tej stavbi in tudi, upam, da v slovenski javnosti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg287">Hvala lepa. Kolega Rupar želi imeti pojasnilo, za njim gospod Peče in gospod Barovič.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ3.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg288">Hvala lepa, gospod predsednik. Gospodu Sašu Pečetu. Torej, odnos do človeka, ki je v življenju dosegel več, naredil več, je morda bolj izkušen in izobražen, v takem tonu, kot ste ga podali, gospod Peče, ni dopusten. Posebno ni dopustno do kolega, kolega v državnem zboru. Opozoril bi vas rad, da je volilna kampanja s populističnimi nastopi mimo, da je ta državni zbor zbor vse države, da je tako pozicija kot opozicija z vso legitimno in legalno izvolitvijo dobila možnost, da izraža svoje mišljenje. Zato bi lepo prosil - glejte, tudi vi se ne znate opredeliti, ali ste pozicija ali ste opozicija, enkrat ste eno, drugič ste drugo, kakorkoli vam že "paše", tako reagirate. Vsaj odnos do sočloveka je pa vendarle lahko na nivoju poslanca, ne na nivoju mulca. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg289">Hvala lepa. Gospod Peče ima zdaj vnovič besedo. 70. člen daje pravico predsedujočemu, da intervenira, če so replike, šle izven konteksta. Tako da bi prosil, da se v replikah omejimo na predmet današnje razprave. Kolega Peče in za njim kolega Barovič.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDZ3.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg290">Zadnjič se oglašam v okviru replik. Vedno sem stal za svojimi besedami in tudi tokrat bom in glede na to, da sem rekel, da zadnjič stojim oziroma da je zdaj moja zadnja replika, bi samo rekel "psi lajajo, karavana gre dalje".</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg291">Mislim, da bi se bilo dobro umikati besedam, ki bi jih lahko kdo razumel kot neprimerne. Gospod Barovič ima besedo. To je zadnja prijavljena replika. Dobro. Izvolite.</seg>
             </u>
             <note type="speaker">BOGDAN BAROVIČ:</note>
-            <u who="#SDZ3.BarovičBogdan" ana="#regular">
+            <u who="#BarovičBogdan">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg292">Spoštovani kolegi! Ne bi rad, da imamo zdaj učno uro. Izurjeni, izkušeni kolegi vsekakor veliko vedo. Preseneča me, da pa včasih tudi ne in zame, recimo če sem svež in se opravičujem, če razmišljam narobe, je opozicija pač tista stranka, ki ni podpisala niti nobenega dogovora niti vladne koalicije in je izven te koalicije. Če pa spoštovani gospodje, človek razmišlja s svojo glavo in se drži 82. člena ustave, ki govori, da so poslanci predstavniki vsega ljudstva in niso vezani na nikakršna navodila, tudi mi imamo pravico uporabljati svojo glavo in glasovati v okviru poslanske skupine in ena lastovka še ne prinese pomladi. Ponovil bi samo to, da smo na dveh najpomembnejših sejah bili edini navzoči predstavniki, ki smo svojo voljo, opozicijsko, tudi izkazali z glasovanjem proti mandatarju in proti sprejemu predloga novega zakona o vladi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg293">Vabim poslanke in poslance, da zdaj z repliko kolega Jerovška zaključimo to izmenjavo mnenj in da damo možnost še petim, ki so prijavljeni, in sklenemo razpravo. Prosim, kolega Jerovšek.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg294">Gospod predsednik! Glede na to, da gospod Peče ni zmogel poguma, da bi se opravičil in rekel, da je mogoče naredil napako in da je napačno govoril, da je bil to lapsus, ko je govoril z dikcijo dvakrat in vi gospod, si upate govoriti? Vas prosim, da kot predsednik državnega zbora tukaj poveste v tem trenutku, da ta grožnja, ta pretnja gospodaPečeta ni del politike te koalicije, in da zagotovite, da je beseda, da je šel gospod Peče prek dovoljenega, prek okvirov politične demokracije in vseh teh pozitivnih standardov, in da vi z avtoriteto predsednika državnega zbora zagotovite, da naj se noben poslanec ne boji govoriti tukaj v državnem zboru.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg295">Ker pa gospod Peče tega ni zmogel, jaz upam, da se ni kdaj v življenju tudi s padalstvom ukvarjal. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg296">Kolega Jerovšek, kot predsedujoči imam dolžnost paziti na štiri stvari. Najprej da dajem besedo po vrstnem redu, da jo dajem korektno. Drugič, da odmerim vsem enako čas, ki ga določi poslovnik, tretjič, da v nastopih ni žalitev, če so, nanje opozorim, in četrtič, da vodim diskusijo v skladu s poslovnikom. Nastop kolega Pečeta je bil morda za koga politično nesprejemljiv, vendar ga, vsaj v izjavi, ki jo vi navajate, nisem mogel sprejeti za žaljivega. Za žaljivega sem sprejel drugi del njegovega nastopa in ga prosil, da se mu sicer umakne. To je sestavni del te živahne polemike. Ne štejem, da je šlo za žalitev, in kot predsedujoči nimam pravice terjati od njega v tem smislu opravičila.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg297">Za besedo je prosil gospod Pukšič. In še enkrat povem, tudi kolegom, ki jih ni tukaj, še štirje bodo za njim spregovorili, potem gremo na glasovanje. Prosim, gospod Pukšič.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ3.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg298">Hvala lepa. Gospod predsednik, prvo seveda moram povedati to, da me pravzaprav moti in nekako nisem navajen sedeti ljudem za hrbtom in govoriti, oziroma da govorim in mi sedijo drugi za hrbtom. Ne vem, zakaj se onemogoča oziroma ne dovoljuje, da bi se to delalo za govornico. V kolikor pa seveda se, bi prosil, če imam to možnost nadaljevati za govornico.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg299">Poglejte. Bil je dogovor, da imamo vsi tisti, ki ne nastopajo ali nastopamo v vlogi predstavnikov poslanskih skupin, možnost in pravico, pa tudi dolžnost, nastopati iz poslanskih klopi. Ali vas smem, spoštovani kolega, opozoriti, da bomo v novi dvorani državnega zbora prav tako govorili iz klopi, in da je to pravzaprav navada, uzanca, ki je sicer v tradiciji parlamentov, ki jim želimo biti jutri partnerji. Tako, da vas prosim, če ste tako prijazni, da tako kot vsi drugi govorite iz klopi. To bo, kot rečeno, tudi navada, ki jo bomo sprejeli z obnašanjem v novi dvorani državnega zbora. Prosim, kolega Pukšič.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ3.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg300">Hvala lepa za pojasnilo. Čeprav seveda upam, da bodo v novi dvorani pogoji za delo nekoliko drugačni, in glede na to, da v tej dvorani resnično niso pogoji za normalno delo, bi se mi seveda zdelo smiselno, če bi mi dovolili, da bi spregovoril izza govornice. Pa ker te možnosti nimam, bom seveda nadaljeval tu iz te klopi. Hvala lepa, gospod predsednik.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg301">Lep pozdrav številnim ministrom, kandidatom za ministre in ministrice. Upam, da jih slovenska javnost tudi sedaj vidi. Ampak ne v celotni ekipi, kot jo je predlagal predsednik vlade, dr. Drnovšek, in tudi moj pozdrav gospodu predsedniku vlade, dr. Drnovšku, kjerkoli že je. Prav bi pa seveda bilo, po mojem globokem prepričanju, da bi ob sestavljanju in izvolitvi vlade bil prisoten v dvorani.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg302">Gospod predsednik, bom seveda nadaljeval iz klopi. Bi tudi prosil, če mi zagotovite pogoje z ene od strani, ker seveda ni najbolj primerno, da z desnim ušesom poslušam nekaj drugega, kot pa bi seveda želel sam povedati.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg303">Kolega Pukšič, začenjamo kmalu peto uro razprave in upam, da ni to samo moja ocena, da se vsi trudimo po najboljših močeh, da je tukaj pravzaprav relativen mir in možnost za slehernega diskutanta, da je poslušan. Mislim, da ti pogoji veljajo tudi za vas, so, kot rečeno, nehvaležni ta hip, ampak morda že v prihodnjem mesecu gremo v novo dvorano. Tokrat vas prosim, tudi vas, za strpnost, vse ostale kolege pa seveda, da mirno poslušajo njegov nastop. Kolega Pukšič, imate besedo.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ3.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg304">No ja, upam, da ne bo moj nastop izzvenel iz tako da bomo desetkrat prekinjeni med svojim delom, pa vendarle bom poskušal nadaljevati.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg305">Začetek dela novoizvoljenega parlamenta in prva seja KVIAZ-a, komisije za volitve, imenovanja in administrativne zadeve se je začela s predlogom, da se zmanjša število delovnih teles in število članov v delovnih telesih. Za takšno odločitev je bila s 13 glasovi za Združena lista, Liberalna demokracija in DeSUS. Torej, s 13 glasovi za glede na 22 številno članstvo tega delovnega telesa, je seveda to bilo izglasovano. To je bilo tako rekoč vsiljeno že na prvi seji delovnega telesa in pospremljeno s strani ostalih poslanskih skupin z negodovanjem, vsaj toliko, da bi bilo potrebno o nekaterih zadevah, vsaj razmisliti in mogoče prestaviti na naslednjo sejo. Pa vendarle so to ni dogodilo. Moč takratne tročlane koalicije je bila seveda dovolj velika in so to naredili.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg306">No, razdelitve delovnih teles oziroma predsedovanja nekaterim delovnim telesom v pogajanjih, ki jih je vodil gospod Podobnik, je seveda bilo glede na procentualni delež, ki ga je koalicija Slovenija torej dosegla na zadnjih volitvah, takšno, da tema dvema strankama pripada pet predsedniških mest. Od tega je že v naprej definirano po poslovniku, da sta dve vodenji dveh predsedniških mest, to je nadzor nad proračunom in javnimi financami ter nadzor nad obveščevalno-varnostnimi službami - predsedniški mesti, ki pripadata opoziciji. Ostala so nam tako rekoč tri - torej, za katera smo se lahko dogovarjali ali pogovarjali, torej za vodenje treh delovnih, predsedniških mest treh delovnih teles, na katero na od delovnih teles ni kandidirala nobene druga stranka kot Socialdemokratska stranka, tako sta ostali samo dve. Pri teh dveh ena kot druga stranka ni postavljala ultimata: samo to in nič drugega, pač pa je želela izbor med dvema delovnima telesoma. Niti eden niti drugi v kontekstu koalicije Slovenija to ni bilo ponujeno, bile so variante; ali eni ali drugi, in seveda, na takšno igračkanje nismo pristali. To je bil razlog, zakaj poslanci Socialdemokratske stranke in poslanci Nove Slovenije nismo sodelovali na 1. seji državnega zbora ob izvolitvi predsednika vlade in ob sprejetju zakona o vladi. Sprejeti zakon o vladi seveda ne govori oziroma ne prinaša <gap reason="inaudible"/>
@@ -1124,11 +1105,11 @@
                <note>Nemir v dvorani.</note>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg307">Mir v dvorani, prosim. Kolega Pukšič, imate besedo.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ3.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg308">
                   <gap reason="inaudible"/> ne prinaša racionalizacije glede na zakon, ki smo ga dobili od prejšnje Bajukove vlade v prejšnjem sklicu. Če bi bil takšen zakon sprejet v prejšnjem sklicu, bi resnično pomenil racionalizacijo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg309">Ali bo glede na predstavitev v posameznih delovnih telesih in glede na nekaj besed predsednika vlade takšna vladna koalicija, s takšno ministrsko ekipo peljala Slovenijo po poti razvoja demokracije, vključevanja v integracije, Nato, Evropsko skupnost in tako dalje, pravzaprav ne verjamem. Razlogov je nekaj.</seg>
@@ -1145,42 +1126,42 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg320">Ne vem, kje je videla koalicija tako velike pomanjkljivosti v zakonu o štipendiranju, ki ga namerava zavrniti, ki ga je predlagal moj bivši poslanski kolega, gospod Mežan, predsednik odbora za šolstvo, kulturo in šport. Mislim, da je na področju štipendiranja treba bistveno več narediti, bistveno več narediti tudi na izgradnji študentskih domov in bistveno več narediti na področju pobiranja davščin pri tistih posameznikih, ki so v času, ko so se stanovanja razprodajala, "šenkovala" - in če izrečem besedo kradla, ne bom nič kaj narobe povedal - v tistem času sprejetega zakona okrog stanovanj, ko so nekateri za nekaj tisočakov kupovali po nekaj stanovanj, ne samo tistih, v katerih so stanovali in na ta način reševali svoj stanovanjski problem - to ni bil problem, to je bilo normalno; nenormalno pa je bilo, da so kupovali več stanovanj in seveda ta danes na trgu za astronomske cene prodajajo, če pa jih ne prodajajo, pa v njih stanujejo študenti, ki jih najemajo, ki pa plačujejo astronomsko, in nihče tega tudi ne kontrolira, ker gre vse brez registracije, ker gre brez odvajanja davkov, zato ker enostavno študenti ali starši tega ne upajo prijaviti, povedati, ker bi mlad otrok ostal na cesti, ker ni pogojev, torej dovolj sob v študentskih domovih. V primeru pa, če poslanec takšnemu študentu pomaga preživeti kakšno noč, je pa okarakteriziran kot ne vem kaj negativnega v tej združbi. To je seveda nepojmljivo. Pa žal, tudi to se dogaja.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg321">Za malo več zbranosti pri nastopu, prosim. Izvolite, imate besedo, vse ostale pa prosim, da ne motijo in da vam izkažejo z mirom dolžno spoštovanje. Prosim.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ3.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg322">No, in glede na to, da se Drnovškova - torej gospod Drnovšek, predsednik vlade ni odločal za sestavo ministrske ekipe tako, da bi bil kateri minister iz Štajerske ali Prekmurja, mi je seveda razumljivo, mi je razumljivo, da bo koalicija tudi zavrnila zakon o zagotavljanju sredstev za spodbujanje skladnega regionalnega razvoja na območju s posebnimi razvojnimi potrebami, ki ga je vložil bivši poslanski kolega, kolega Luci.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg323">To je samo nekaj naštetih sistemskih napak, ki jih dela ta koalicija, še preden je zavzela položaje. Res pa je, da je to pravzaprav nadaljevanje že utirjene poti, tako kot je žal delala prejšnjih osem let.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg324">Verjemite, da bom kot opozicijski poslanec, tako kot sem bil tudi vseskozi, v prejšnjem mandatu, razen zadnjih par mesecev <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg325">Ministri, bodoči. Prosim, imate besedo. Prosim, da nihče ne moti med sejo.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ3.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg326">
                   <gap reason="inaudible"/> spremljal in bedel nad tem, kar se bo dogajalo z našo mlado šolajočo mladino, da bom bedel in spremljal, kako bodo živeli in delali ljudje na demografsko ogroženem področju, od delavcev do kmetov, da bom skrbel o tem, kako se bodo preživljale nekatere socialno ogrožene skupine in seveda tisti z najmanjšimi pokojninami. Upam, da bo tu komu kapnilo, da je potrebno obuditi, to kar smo že v prejšnjem mandatu želeli absolutno, absolutni dvig pokojnin, ne procentualni, ker bi na ta način sčasoma omogočili tistim, ki imajo najnižje pokojnine, nekoliko hitrejšo rast oziroma manjše zaostajanje.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg327">In nenazadnje, želel bi, da bi ob sprejetju zakona o medijih bilo tudi kaj prostora za to, da bi nacionalna televizija lahko prenašala oziroma da bi imeli državljanke in državljani možnost spremljanja sej državnega zbora vseh in v celoti, ker šele takrat bi seveda državljanke in državljani videli, kaj se dejansko dogaja v državnem zboru, kakšna stališča nekateri zastopajo tu in kakšna seveda takrat, kadar so predvolilni mitingi. Videli in slišali bi tudi nekatere poslance, ko zaprošajo za poslanske imunitete takrat, da se skrijejo pred odgovornostjo za kazniva dejanja celo v času, ko niso bili poslanci. In v takšnem primeru bi seveda, verjamem, bila tudi slika med pozicijo in opozicijo pri naslednjih volitvah bistveno bolj izkristalizirana in čista. Prav bi bilo,da bi Slovenke in Slovenci imeli to možnost čez celo mandatno obdobje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg328">Hvala lepa. Povsem razumljivo je, da po polpetih urah neprekinjene razprave zbranost pade, vendar se mi zdi prav, da imajo vsi kolegi, ki dobijo besedo, enake možnosti, da povedo svoja stališča. Zato prosim vse, da kolikor je le mogoče, zbrano poslušajo, predvsem pa to zahtevam od kandidatov za ministrice in ministre. Pred državnim zborom morajo tudi s svojo zbranostjo pokazati spoštovanje do tega visokega doma. Še štirje imajo besedo. Najprej kolega Peče, za njim kolega Jerovšek, Kelemina in Rupar. Drugih prijavljenih ni. Kolega Peče, imate besedo.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDZ3.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg329">Hvala za besedo predsednik. Kot član poslanske skupine Slovenske nacionalne stranke - opozicijske stranke, tiste, ki je v tistem obdobju, ki si ga danes marsikdo pripisuje, pa če začnem z opoziciji, je ravno pokazala opozicijsko držo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg330">Danes smo prišli do elementa, na katerem je mandatar že potrjen. V Slovenski nacionalni stranki smo temu nasprotovali, ker smo bili prepričani, da obstaja boljša alternativa. Torej tu smo naredili črto. Tu jo je potrebno na novo graditi. Danes je - vsaj po našem mnenju - nastopil čas, da poskušamo pridobiti na času, na tem času, da predlagane ministre in ministrice podpremo. Zaradi tega, ker so pred Slovenijo oziroma gre za to, ker so pred Slovenijo koreniti in pa veliki gospodarski in pa ekonomski ukrepi, ki so nujno potrebni, če hočemo priti na zeleno vejo. Ne glede na to, kdo danes sestavlja vlado in kdo opozicijo. Mislim, da vsi mi, ki smo se potegovali za vstop v državni zbor, smo bili tega mnenja pred volitvami in žal je, da danes toliko bolj zanemarjamo to mnenje, da toliko bolj ob strani puščamo gospodarske probleme in da se že nekaj časa razprava v tej sobi, v tej dvorani suče okoli članstva v opoziciji in ne okoli projektov, ki so jih predstavljali na svojih zaslišanjih kandidati za ministre.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg331">V Slovenski nacionalni stranki, kakor sta že povedala vodja poslanske skupine Zmago Jelinčič, ki je dal predvsem na Primorsko, in kolega Barovič, ki je iznesel tiste poglavitne točke za njegovo okolje, Zasavje; torej pomembne, ki so jih kandidati za ministre izpostavili, jih je pohvalil, po drugi strani pa tudi opozoril na njihove pomanjkljivosti, bi jaz s tega mesta mogoče le zaprosil in v tem primeru, mislim, da najbolj - oziroma zaprosil, apeliral na ministrico, kandidatko za ministrico za gospodarstvo, Teo Petrin, če v svojem mandatu, v kolikor bo danes izvoljena - in verjamem, da bo - poskuša spremeniti dosedanjo prakso, recimo vladavine liberalne demokracije, in poskuša v delovanje te vlade vpeljati tudi druga mesta, ne samo Ljubljano, predvsem Maribor. Tu je ta moj apel, da po svojih močeh, in to moč vam danes dajemo z izglasovanjem, poskrbite tudi za druga mesta tam, kjer se napaja, od tam, od koder prihaja, torej napajanje za centralo Ljubljana. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg332">Hvala lepa. Še trije kolegi imajo besedo do konca. Najprej kolega Jerovšek.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg333">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg334">Danes smo iz obrazložitve predsednika vlade slišali, da je njegov namen narediti čimbolj prijazno državo ljudem skozi kandidate in skozi njegov predlog ministrske liste. Če se to danes ne bi začeli na simbolni način, da se bo ta vlada požvižgala na zakonodajo, bi morda temu lahko verjeli, da je to res edini namen. Vendar, žal se je začelo, kot se je, in tudi ustanavljanje, sestavljanje vlade nam da misliti. Namreč menim, da velja slovenski pregovor "Mnogo babic, kilavo dete". Način, na kakršnega je bila sestavljena ta vlada, je pokazal mnogo. Mnogo je pokazal o tej koaliciji in satelitskih strankah in mnogo je pokazal slovenski javnosti, tudi v smislu, da ne držijo samohvalne razlage, kako je to kadrovsko in strokovno močna koalicija. Nasprotno. Pokazalo se je, da ta koalicija kljub vsemu izraža en šibek kadrovski potencial. <gap reason="inaudible"/>
                </seg>
@@ -1192,11 +1173,11 @@
                <note>Nemir v dvorani.</note>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg338">Prosim! Prosim za mir v dvorani.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg339">Sedaj pa po teh opažanjih, kako je bila sestavljena vlada, bi želel reči še nekaj besed o kandidatih in njihovih programih in načinu, kako je bilo predstavljeno.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg340">Dobro sem poslušal izjave kandidata za notranjega ministra dr. Bohinca. Naravnost frapantno se mi je zdelo, da o vprašanju, ali bo ob silnih uspehih policije v zadnjem času, ko je pretrgala - recimo - to združbo, mafijsko združbo z trgovanjem z ljudmi, z begunci, ko je odkrila korupcijo in je na sledi da, vsaj v enem segmentu državne administracije - ki se zajeda ravno v to kadrovsko strukturo te koalicije - da bi te silne koruptivne primere začeli reševati. Gospod Jelinčič je prej navedel, da gre za več milijard denarja, iz katerega se je financiralo tudi politične stranke za volitve. To bi moralo biti osnovno vodilo ministra za notranje zadeve. Že po športni logiki se nikdar ne menjuje moštva, ki zmaguje, vendar ni zmogel tega. Kajti očitno je, da so že pripravljene čistke na vseh nivojih. In da bo se skušalo pomesti pod preprogo tudi te korupcijske zadeve, da bodo nastavljeni takšni ljudje, da se bo te mape zaprlo in da se bo v ozadju lahko mirno delalo in se tudi izžemalo državo na način, kot je ta primer, ki je pa gotovo vrh ledene gore. Namreč, slovenska javnost ve, da se je v teh osmih letih marsikje krojilo tako, kot se ne bi smelo v pravni in demokratični državi.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg341">Na ta problem se navezuje tudi problem kandidatke za ministrstvo za gospodarske dejavnosti. Tu bi pričakoval od gospoda predsednika vlade in tudi od same kandidatke, da bi upoštevala v demokratičnem svetu nesporno in popolnoma absolutno pravilo objektivne odgovornosti. Ne govorim o subjektivni, verjamem da je ni. Vendar ob tako hudi aferi, ob tako hudi korupciji, mislim, da v Evropi ne bi našli primera, kjer resorni minister ne bi čutil, začutil takoj, da gre za objektivno odgovornost. Da pa se je nekaj dogajalo, v nekem mandatu in da ta isti kandidat pride v novo igro, tu pa je, mislim, da ponižujoče za državo, da se takšen predlog - zaradi objektivne odgovornosti kot pravim še enkrat - pojavi. Pomembno je tudi, ko se ob tem razkrivanju korupcijskih zadev in ob teh kandidaturah oziramo, kako je bilo možno to doseči. Bi bilo potrebno tudi seveda ministru za notranje zadeve, da bi pravzaprav na "hearingu" pokazal, da je hvaležen sedanjemu vodstvu, da se je izognilo političnosti. Da je izključilo politiko in da je brez tega - si bo vzpostavil zopet celo politično vodstvo, ki se bo klanjalo političnim strankam, tako kot je bilo v času ministra Bandlja, potem ni možno naprej odkrivati ne matijskih združb, ne korupcije, ne drugih primerov organiziranega kriminala, predvsem pa ne kriminala belih ovratnikov. Bojim se, da tega minister za notranje zadeve - ali ima navodila, da tega ne bo smel izvajati ali pa ni pripravljen tega dejansko početi. To se pravi, pripravlja se oster kurz sprememb in dejansko se pripravljajo čistke. Jaz ne vem, kako bo sedaj to zavito v celofan. Doslej se je metalo naprej, da je predvsem strokovno to. To vodstvo policije je pokazalo strokovnost, verjetno bo pa njegova smrtna obsodba ravno zaradi strokovnosti.</seg>
@@ -1207,45 +1188,45 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg346">Sedaj, kandidatko dr. Čokovo bi vprašal tudi, ali bo naredila kakšne spremembe pri uvrščanju učiteljev v politične razrede? Se zaveda, kaj je to povzročilo, da je to bila politika: deli in vladaj.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg347">Vprašanj ne morete več postavljati. Vprašanj ne smete več postavljati.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg348">To je retorično vprašanje. Namreč, takrat so nekateri posamezniki iz učiteljskih zbornic zapisali, da je to navodilo ministrstva pod takratnim vodstvom ministrstva v zbornicah povzročilo sovraštvo in bes. Učitelj je zapisal, da tak učitelj ne more biti hkrati tudi vzgojitelj. To je dejstvo in nisem zasledil, da bi bile na tem področju pripravljene ali predvidene kakšne spremembe v pozitivno smer. Nasprotno. Izgleda, da gre za popolno restavracijo protiučiteljskih protimetod proti učencem in tudi bistvo gre pri tem za napoved čistk tistih kadrov, ki se zavzemajo za dejansko pluralno šolo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg349">Kot je bilo tu že ugotovljeno, da je kandidat za ministra za zdravstvo pristaš centralizacije, ukinjanja osnovnega zdravstva in skozi to - pa ne samo skozi to - kandidaturo bije nekaj frapantnega. Ta vlada bo morda naredila ljudem prijazno državo, vendar zgolj v prestolnici; vse je naravnano zgolj na prestolnico, zgolj na "noblesse" in lesk Ljubljane. Periferija, vključno z Mariborom, je zavržena in zapostavljena. Gospodje kandidati in kandidatke, menim, da tako te države ne bo mogoče voditi. Vodili jo boste v pluralizacijo na podlagi revščine, ne pa na podlagi razvoja. In ni naključno, da je ukinjeno tudi ministrstvo za tehnologijo in znanost - nalašč obračam. Namreč, ko se je v prejšnjem "hearingu" dr. Čokova predstavljala kot ministrica za znanost in tehnologijo, tehnologije ni omenila, in takrat sem opozoril, da to ni slučajno. Zdaj se je zgodilo. Slovenija bo postala tehnološka kolonija, kot je napovedal na enem od odborov predstavnik akademije znanosti, in to, da postane tehnološka kolonija in pa morda kolonija še na katerih drugih področjih, je očitno dobilo "žegen" v krogih te koalicije. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg350">Hvala lepa, kolega Jerovšek. Repliko ima podpredsednik Delak - pet minut, potem so prijavljeni še trije oziroma štirje - dva, ki imata spričo načina prijave neomejen čas za razprave, in dva, ki sta omejena na pet minut. Tako da bi, preden kolega Delak začne, prosil vse, ki želijo glasovati, da pridejo v dvorano, ker se bo to, verjamem, kmalu tudi zgodilo. Kolega Delak ima besedo.</seg>
             </u>
             <note type="speaker">ANTON DELAK:</note>
-            <u who="#SDZ3.DelakAnton" ana="#regular">
+            <u who="#DelakAnton">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg351">Hvala. Nisem se mislil oglasiti, ker pa je spoštovani kolega Jerovšek tako analitično obdelal odnose med našo stranko, DeSUS-om, in pa seveda liberalno demokracijo, - pa moram nekaj besed povedati, bom zelo kratek: govori neumnosti! Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg352">To je vse? Hvala lepa. Kolega Jerovšek, želite besedo.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ3.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg353">No, verjamem, da ob vsem tem, ker je bil predsednik vlade izredno nazoren in transparenten pri svojih izjavah in zavrnitvi DeSUS-a, da bi imel pravico samostojno predlagati kandidata, da v današnji razpravi gospod Delak nima argumentov, s katerimi bi to zavračal. Bilo jepa tudi zelo transparentno izza te govornice, ko je prej nastopal predstavnik poslanske skupine, gospod Kebrič, ki je dejal takole: "Mi se strinjamo z listo kandidatov, ki nam je bila predložena." Bil je zelo pošten, njim je bila lista kandidatov predložena, oni niso imeli pravice sodelovati pri kreiranju liste, čeprav se formalno imajo za koalicijskega partnerja. Vendar, kot sem že prej izjavil, v tem gospoda Drnovška podpiram. Sem za to, da se v slovenskem političnem prostoru nekatere stvari razčistijo in da tisto, kar ne izpolnjuje standardov, da pač tudi predsednik vlade to naglas in javno pove. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg354">Ni več potrebe po pojasnilih. Tako ugotavljam, da ima sedaj besedo kolega Kelemina, potem kolega Rupar. Prosim!</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ3.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg355">Hvala lepa, za besedo. Spoštovani predsednik, cenjene poslanke in poslanci, spoštovane gospe in gospodje kandidati. Kdo to izklaplja? Med tem časom sem imel priložnost malo opazovati ljudi <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg356">Prosim, za mir.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ3.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg357">
                   <gap reason="inaudible"/> oziroma kolege, ki so prisotni v državnem zboru, in žal moram, žal mi je, da moram to povedati. Namreč dejstvo je, da smo že vsi od prostora in od razprave in od časa utrujeni. Ampak kljub temu zaradi tega mislim, da ne bi smeli biti nestrpni in sovražni.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg358">Namreč ravno od predstavnice, gospe Andreje Rihter, za kulturo, sem ob nastopu gospoda Jerovška opazil, da je izredno sovražno gledala in nestrpno sem, proti gospodu Jerovšku. Spoštovana gospa Andreja Rihter, vi ste predstavnica za kulturo in ravno vi bi morala upoštevati tiste besede, ki jih je nedolgo tega izrekel gospod Drnovšek o prijaznosti in vljudnosti, četudi vam je še tako težko, kot tudi meni, bodite nasmejani in prijazni, igrajte se pač igralca politike, ne pokazati tega, kar ste malo prej pokazali. To samo v uvod.</seg>
@@ -1260,60 +1241,60 @@
                   <gap reason="inaudible"/> Pa kdo to dela?</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg365">Prosim, če nadaljujete. Prosim, če nadaljujete.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ3.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg366">Mislim, če hoče kdo zavlačevati, jaz lahko govorim tudi pol ure ali pa eno uro, če se komu ljubi, ampak dajte mi 5 minut, bom 5 minut povedal, pa zaključimo, pa lahko glasujemo in gremo domov.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg367">Imate besedo, gospod Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ3.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg368">Hvala lepa. Hvala lepa za prijaznost. Torej, veliko vprašanje - plačilna nedisciplina. In v kolikor tega vprašanja v Sloveniji v prihodnosti ne bomo ustrezno rešili, jaz upam, da poznate - vsaj poslanci, ki imate kontakt s terenom - kako pereč problem je to v gospodarstvu, v podjetništvu in v obrtništvu, da se bo to vprašanje korektno v prihodnosti rešilo. In upam pač, da bomo z nekim konstruktivnim odnosom, tudi opozicije, do tega vprašanja to vprašanje koristno rešili, ne glede na to, da na samem zaslišanju ni bilo odgovora na to vprašanje.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg369">Samo to bom šepovedal: glede na današnjo razpravo je jasno, da koalicija v bistvu ne bo imela težkega dela v državnem zboru, kajti izgleda, da se bo tako imenovana opozicija med seboj spopadala. Lahko jo imenujemo zdaj že, ker je zelo popularno to bilo v prejšnjem sistemu: opozicija A in B. Opozicija A bom imenoval to, ki je močnejša, opozicijo B pa tisto, ki je slabša. Jaz mislim, da se to ne bi smelo preveč dogajati. Samo toliko, da bo razprava čimprej končana. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg370">Hvala lepa za vašo prijaznost, gospod Kelemina. Spoštovane poslanke in poslanci, gospod Rupar je zadnji med tistimi, ki imajo pravico, da govorijo brez omejitve časa. Po njem sta prijavljena še dva poslanca. Torej 10 minut po koncu govora gospoda Ruparja bomo začeli z glasovanjem o imenovanju vlade.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg371">Prosim, gospod Rupar.</seg>
             </u>
             <note type="speaker">PAVEL RUPAR:</note>
-            <u who="#SDZ3.RuparPavel" ana="#regular">
+            <u who="#RuparPavel">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg372">Hvala lepa. Spoštovani gospod predsednik, spoštovane kandidatke in kandidati za ministrice in ministre, poslanke in poslanci, spoštovane gospe in gospodje!</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg373">Mislil sem prebrati tri strani, ampak z ozirom na to, da želim biti vljuden do vas vseh, mi dovolite samo minutko. Ker sem napisal tudi zaključek tega mojega govora v smiselni obliki, pa mi dovolite, da preberem vsaj to. Kandidatke in kandidate ne morem ocenjevati tako, kot je to storil eden od Huseinovih prijateljev v tej dvorani, lahko pa jih ocenjujem tako, kot sem videl, slišal in tudi prebral. Moram priznati, da je gospod dr. Drnovšek imel pri marsikaterem srečno roko. To lahko trdim, ker jih poznam iz dosedanjega sodelovanja. Od teh tudi pričakujem kooperativnost in posluh tudi za predloge iz vrst opozicije, za katere sem prepričan, da lahko koristijo predvsem državljanom Republike Slovenije in da so v večini tudi pametni.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg374">Zato pa podajam že sedaj vso kritiko tistim kandidatom, ki niso niti na strokovnem niti na svojem dosedanjem delu v nobenem stiku z ministrstvom in delom, ki ga prevzemajo. Prepričan sem, da bodo imeli zelo veliko težav že s samim seboj. In prav gotovo vam lahko zagotovim, da bodo v svoji nemoči še naprej valili krivdo na opozicijo ter vlado dr. Bajuka. Vesel pa sem, ker sem prepričan, da v nedogled tega ne bodo mogli ponavljati.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg375">Zatorej mi dovolite kolegice in kolegi, da spoštovanemu gospodu Drnovšku, zato ker sem Slovenec in mi ni vseeno, kaj se dogaja z našo državo, želim, da je imel pri izbiri srečno roko in mu s tega mesta tudi iskreno želim veliko dobrih rezultatov. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg376">Hvala lepa. S tem smo izčrpali govornike, ki so imeli pravico do časovno neomejene razprave. Dva sta se prijavila za razpravo, ki jo omejim na 5 minut. Najprej gospod Drobnič, za njim gospod Sok. Še pred tem sprašujem, želi še kdo besedo?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg377">Prosim.</seg>
             </u>
             <note type="speaker">JANEZ DROBNIČ:</note>
-            <u who="#SDZ3.DrobničJanez" ana="#regular">
+            <u who="#DrobničJanez">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg378">Hvala lepa za besedo. Spoštovani kolegi in kolegice! Mislil sem, da bom lahko nagovoril dr. Drnovška kot predlagatelja liste kandidatov. Vidim, da ne bom mogel, zato bom nekoliko spremenil tisto, kar sem mislil povedati, vsekakor pa se bom izrazil v zvezi s kandidati. Imeli smo priložnost se seznaniti z njihovimi predstavitvami. Sam sem jim tudi postavljal vprašanje. Ugotavljam sledeče, da so pokazali določeno voljo za delo, da so predstavili strukturo ministrstev, kakšne so naloge, vendar vam moram povedati, da to za prevzem odgovorne funkcije, kot je ministrska, ni zadosti. Ni bilo ustreznih odgovorov na ključna vitalna vprašanja, s katerimi se srečuje sedaj Slovenija. O primanjkljajih v proračunski blagajni - odgovori medli, o pokojninskem sistemu, zaostajanju podeželja, zaostanku v sodstvu, privatizacijske vrzeli, porastu nasilja in drugih vprašanj: izogibali so se tem odgovorom ali pa so bili nejasni. To so razlogi, da niso prepričljivi in ne morejo pridobiti zaupanja. Ker je gospod dr. Drnovšek večkrat izjavljal, da ima širok izbor potencialnih kandidatov, na koncu smo ugotovili, da tisti, kar jih je predvsem iz svoje stranke predlagal, so že znana imena. In ta imena so bila vključena v vladanje zadnjihosem let. Rezultate imamo. Iz tako imenovane ničle smo prišli na teh ključnih področjih na minus. Sedaj se sprašujem jaz, kako lahko zaupamo v novo ekipo.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg379">Zakaj ne bom glasoval za predložene kandidate - dodatno? Vladna koalicija se je zavzela, da ne bo omogočila dostojne nadzorne funkcije opoziciji. S tem ne dela škodo samo sebi, ampak dela škodo mladi demokraciji v Sloveniji, dela dolgoročno škodo. Mi imamo premalo izkušenj, da bi se podajali v take vode, imamo pa izkušnje, negativne, od prej.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg380">Ravno tako ni koalicija vladajočih strank pokazala zanimanja za ključna vprašanja Slovencev po svetu in v zamejstvu.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg381">Glede na navedeno, ne morem podpreti predložene liste kandidatov za ministre. Pripravljen sem tvorno sodelovati v opoziciji. Sledil bom izvajanju teh programov, ki ste jih obljubili, dobre predloge bom podprl, na to, seveda, lahko računate. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg382">Hvala lepa. Zadnji prijavljeni diskutant je kolega Sok. Tako se bo glasovanje začelo najkasneje ob 21. uri in 6 minut. Imate besedo.</seg>
             </u>
             <note type="speaker">ALOJZ SOK:</note>
-            <u who="#SDZ3.SokAlojz" ana="#regular">
+            <u who="#SokAlojz">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg383">Hvala lepa, gospod predsednik. Spoštovane gospe in gospodje! Res si nisem predstavljal, da bom zadnji govorec v tem parlamentu. Veliko tega, kar sem želel povedati, je že bilo povedanega, vendar mi kljub temu dovolite, da nekaj k temu dodam.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg384">Večina ministrov je, kot je bilo pričakovati, ustrezno in celo zelo uspešno prestala zaslišanja pred parlamentarnimi odbori, seveda ne glede na to, kaj so govorili in kako so odgovarjali na postavljena vprašanja. In kako tudi ne bi, saj vse parlamentarne odbore vodijo stranke koalicijske večine in v vseh imate tudi potrebno parlamentarno večino. Vlado tako sestavljajo v tem trenutku tiste stranke, ki so se potrudile spremeniti 80. člen ustave in s tem zaobiti voljo ljudstva in odločbo ustavnega sodišča. Z različnimi manevri pa si je vlada zagotovila še dodatno podporo in z večino, ki jo danes ima, ji ne bo problem vladati v naslednjih štirih letih. Ali bo tako razmerje političnih sil v parlamentu in s tem v vladi v prid slovenskemu narodu, se bo hitro pokazalo. Sam sem prepričan, da ne in da jo bo v tej politični situaciji najslabše odneslo slovensko kmetijstvo in s tem slovensko podeželje. Uspešnost vključevanja Slovenije v Evropsko unijo je po mojem prepričanju in tudi po oceni mnogih v glavnem odvisna od uspešnosti vključevanja slovenskega kmetijstva v Unijo. Kmetijstvo namreč ni zgolj samo ekonomska kategorija, pač pa predstavlja izredno pomembno kategorijo tudi z vidika poseljenosti in predvsem z vidika ohranjanja kulturne identitete slovenskepokrajine. Situacija pa je danes taka, da mladi ne vidijo prihodnosti v tem poklicu, da odhajajo v mesta in tam pomagajo ustvarjati trumo nezaposlenih in pa velik stanovanjski problem. Na podeželju pa tako ostajajo ostareli starši, ostareli kmetje, s slabo možnostjo za razvoj, s slabo možnostjo, da bodo prenesli tisto, kar jih čaka v procesu vključevanja v Evropsko unijo, in stiska mnogih malih kmetov, predvsem tistih, ki premorejo 3 do 5 hektarjev zemlje, je izredno velika in sami seveda niso krivi za situacijo, v kakršni so se znašli. Programi, s katerimi bi jim lahko pomagali v teh dneh in tudi, če bi ti programi bili, bi marsikomu ne mogli pomagati, ker pač naši kmetje za to niso usposobljeni.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg385">Verjamem, da ima novi minister za kmetijstvo dobre namene in da si bo prizadeval za takšne ukrepe, ki bodo v prid slovenskemu kmetijstvu, vendar se vprašam, ali jih bo v pretežno liberalni vladi lahko tudi uresničil. Problem je namreč iz socialnega vidika tako velik, da bi ga morala reševati celotna vladna ekipa,ne pa samo ministrstvo za kmetijstvo. Izkušnje iz preteklosti, iz preteklih osem let vladanja liberalne demokracije pa me navajajo na misel, da temu ne bo tako. Sedaj se sicer ponuja izredno strokovna vlada, vendar sem prepričan, da poleg velike strokovnosti morajo ministri izpolnjevati tudi veliko mero poštenosti. Prav slednje bi želel vsem, ki boste danes izvoljeni, položiti na srce, torej delajte svojo službo strokovno in pa tudi pošteno.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg386">Za konec bi samo rekel gospodu Anderliču, ki je celo žaljiv do opozicije, največ do Nove Slovenije, da s takšnim načinom dela preneha, ker me to, kot novo izvoljenega poslanca zelo skrbi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg387">Hvala. Sprašujem, ali želi še kdo besedo? Lista prijavljenih je namreč izčrpana. Ugotavljam, da ne. Zato sprašujem, ali želi besedo predsednik vlade?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg388">Želijo besedo kandidati za ministre? Prosim, za mir v dvorani. Ugotavljam, da ne. Ker ne želi nihče več razpravljati, zaključujem razpravo.</seg>
@@ -1330,115 +1311,115 @@
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg397">Prvi bo prisegel dr. Dimitrij Rupel, minister za zunanje zadeve. Prosim.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SDZ3.RupelDimitrij" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg398">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg399">Hvala lepa. Dr. Rado Bohinc, minister za notranje zadeve.</seg>
             </u>
             <note type="speaker">DR. RADO BOHINC:</note>
-            <u who="#SDZ3.BohincRado" ana="#regular">
+            <u who="#BohincRado">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg400">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg401">Mir v dvorani prosim. Hvala lepa. Dr. Anton Grizold, minister za obrambo.</seg>
             </u>
             <note type="speaker">DR. ANTON GRIZOLD:</note>
-            <u who="#SDZ3.GrizoldAnton" ana="#regular">
+            <u who="#GrizoldAnton">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg402">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg403">Hvala lepa. Mag. Anton Rop, minister za finance.</seg>
             </u>
             <note type="speaker">MAG. ANTON ROP:</note>
-            <u who="#SDZ3.RopAnton" ana="#regular">
+            <u who="#RopAnton">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg404">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg405">Hvala lepa. Dr. Tea Petrin, ministrica za gospodarske dejavnosti.</seg>
             </u>
             <note type="speaker">DR. TEA PETRIN:</note>
-            <u who="#SDZ3.PetrinTea" ana="#regular">
+            <u who="#PetrinTeaTerezija">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg406">Prisegam, da bom spoštovala ustavni red, da bom ravnala po svoji vesti in z vsemi svojimi močmi delovala za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg407">Hvala lepa. Dr. Vlado Dimovski, minister za delo, družino in socialne zadeve.</seg>
             </u>
             <note type="speaker">DR. VLADO DIMOVSKI:</note>
-            <u who="#SDZ3.DimovskiVlado" ana="#regular">
+            <u who="#DimovskiVlado">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg408">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg409">Hvala lepa. Gospod Jakob Presečnik, minister za promet in zveze.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ3.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg410">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg411">Hvala lepa. Mag. Franci But, minister za kmetijstvo, gozdarstvo in prehrano.</seg>
             </u>
             <note type="speaker">MAG. FRANC BUT:</note>
-            <u who="#SDZ3.ButFranc" ana="#regular">
+            <u who="#ButFranc">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg412">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg413">Hvala lepa. Mag. Janez Kopač, minister za okolje in prostor.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOPAČ:</note>
-            <u who="#SDZ3.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg414">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg415">Prosim, za mir v dvorani! Prosim, za mir v dvorani! Hvala lepa. Gospod Ivan Bizjak, minister za pravosodje.</seg>
             </u>
             <note type="speaker">IVAN BIZJAK:</note>
-            <u who="#SDZ3.BizjakIvan" ana="#regular">
+            <u who="#BizjakIvan">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg416">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg417">Hvala lepa. Dr. Lucija Čok, ministrica za šolstvo in šport.</seg>
             </u>
             <note type="speaker">DR. LUCIJA ČOK:</note>
-            <u who="#SDZ3.ČokLucija" ana="#regular">
+            <u who="#ČokLucija">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg418">Prisegam, da bom spoštovala ustavni red, da bom ravnala po svoji vesti in z vsemi svojimi močmi delovala za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg419">Hvala lepa. Dr. Dušan Keber, minister za zdravstvo.</seg>
             </u>
             <note type="speaker">DR. DUŠAN KEBER:</note>
-            <u who="#SDZ3.KeberDušan" ana="#regular">
+            <u who="#KeberDusan">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg420">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg421">Hvala lepa. Gospod Igor Bavčar, minister brez resorja, pristojen za evropske zadeve.</seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SDZ3.BavčarIgor" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg422">Prisegam, da bom spoštoval ustavni red, da bom ravnal po svoji vesti in z vsemi svojimi močmi deloval za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg423">Hvala lepa. Gospa Andreja Rihter, ministrica za kulturo.</seg>
             </u>
             <note type="speaker">ANDREJA RIHTER:</note>
-            <u who="#SDZ3.RihterAndreja" ana="#regular">
+            <u who="#RihterAndreja">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg424">Prisegam, da bom spoštovala ustavni red, da bom ravnala po svoji vesti in z vsemi svojimi močmi delovala za blaginjo Slovenije.</seg>
             </u>
             <note type="speaker">PREDSEDNIK BORUT PAHOR:</note>
-            <u who="#SDZ3.PahorBorut" ana="#chair">
+            <u who="#PahorBorut" ana="#chair">
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg425">Hvala lepa. Sprašujem, ali želi kdo od novoimenovanih ministric ali ministrov besedo? Ugotavljam, da ne. Prosim za mir.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg426">Ker so bili poslanci, dr. Dimitrij Rupel, mag. Anton Rop, mag. Janez Kopač, dr. Lucija Čok in Igor Bavčar imenovani za ministre, v skladu s 14. členom zakona o poslancih začasno ne morejo več opravljati poslanske funkcije. O tem bom takoj obvestil republiško volilno komisijo in jo zaprosil, da zboru sporoči, kateri kandidati bodo v skladu s 14. členom zakona o poslancih nadomestili te poslance. Na podlagi obvestila republiške volilne komisije bo mandatno-imunitetna komisija državnega zbora pripravila poročilo in predlagala potrditev mandatov ter o svojih ugotovitvah poročala na prvem naslednjem zasedanju zbora.</seg>
                <seg xml:id="SDZ3-Izredna-02-2000-11-30.seg427">S tem zaključujem to točko dnevnega reda in 2. izredno sejo državnega zbora Republike Slovenije. Hvala lepa.</seg>

@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 19. seja</title>
             <meeting n="19"
-                     corresp="#VsiZbor.1991-05-30.s019-01.DruzPolZb #VsiZbor.1991-05-30.s019-01.ZbObc #VsiZbor.1991-05-30.s019-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="157"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="27"/>
                <tagUsage gi="seg" occurs="241"/>
             </namespace>
@@ -341,23 +332,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-05-30.s019-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-05-30.s019-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-05-30.s019-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -368,16 +342,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA</head>
             <head type="session">19. seja</head>
             <docDate>30. maj 1991</docDate>
             <note type="chairman">Predsedoval: dr. France Bučar, predsednik Skupščine Republike Slovenije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 18.10 uri.</note>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg1">Začenjam 19. skupno sejo vseh zborov Skupščine Republike Slovenije, ki sem jo sklical na podlagi 364. člena ustave Republike Slovenije in 134. člena poslovnika Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg2">Najprej bomo ugotovili sklepčnost in prosim delegate Družbenopolitičnega zbora, da izkažejo svojo prisotnost.</seg>
                <note>34 delegatov.</note>
@@ -391,7 +369,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg7">Predlog dnevnega reda ste prejeli. Želi o predlogu dnevnega reda kdo razpravljati? Prosim, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SSK11.PotrcMiran1938" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg8">Spoštovano predsedstvo, kolegice in kolegi! Predlagam, da na današnjo skupno sejo vseh zborov uvrstimo točko dnevnega reda z naslednjo vsebino "Uresničevanje sklepov skupnih sej vseh zborov Skupščine Republike Slovenije". Naj ta predlog obrazložim.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg9">Skupščina Republike Slovenije je na skupni seji vseh zborov, dne 2.2.1991, ko je sprejela resolucijo o predlogu za sporazumno razdružitev SFRJ, med drugim sprejela tudi sklep:</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg10">"Predsednik Predsedstva Republike Slovenije, predsednik Skupščine Republike Slovenije in predsednik Izvršnega sveta Skupščine Republike Slovenije bodo z vodji klubov delegatov sproti predlagali in ocenjevali potek aktivnosti za uresničevanje predloga o sporazumni razdružitvi SFRJ, o svojih aktivnostih in stališčih obveščali klube delegatov ter Skupščini Republike Slovenije predlagali potrebne aktivnosti, odločitve in ukrepe."</seg>
@@ -404,17 +382,17 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg17">2. Predlagamo sklep o takojšnji pobudi in aktivnosti za prvo pogajanje posebne delegacije Skupščine Republike Slovenije s predstavniki Skupščine SFRJ. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg18">Hvala lepa. Želi kdo razpravljati o tem predlogu? Prosim.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR BEBLER:</note>
-            <u who="#SSK11.LavtizarBeblerDarja1950" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg19">Spoštovane poslanke, spoštovani poslanci! V imenu Socialistične stranke podpiram predlog, ki ga je tukaj v imenu Stranke demokratične prenove podal tovariš Miran Potrč. Mi smo danes že na Družbenopolitičnem zboru poskušali razširiti dnevni red s točko, ki naj bi se glasila "Razmere v Sloveniji v zvezi z ravnanjem JLA v naši republiki". Obveščeni smo, da se pripravlja nekakšen vsesplošen miting, skupščina pa ne sprejme ocene, ali je takšen miting zdaj, te dni, sprejemljiv, potreben in smiseln. Njegov namen je očitno dati javno podporo za naprej in za nazaj ukrepom, ki jih je te dni sprejemala koordinacija republiških upravnih organov. Mislimo, da to brez predhodne poglobljene razprave v skupščini ni mogoče storiti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg20">Koordinacija republiških upravnih organov je te dni sprejemala ukrepe, od katerih so številni takšne narave, da jih je šteti za ukrepe imanentne izrednim razmeram. Zastavlja se vprašanje, kakšen organ je ta koordinacija, kakšen je njen ustavno-pravni status. V veljavni ustavi takšne koordinacije nikjer ni omenjene, tudi ni posebej v povezavi z odločanjem o izrednih razmerah ali neposredni vojni nevarnosti. Tam so omenjeni samo skupščina, Predsedstvo Republike Slovenije in predsedstvo v razširjeni sestavi.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg21">V preteklih dneh so se v Sloveniji zvrstili takšni dogodki, prišlo je tudi do prve človeške žrtve, da je nesprejemljivo, da bi republiška skupščina o tem ničesar ne rekla. Zato podpiramo predlog, kakršnega je podal tovariš Miran Potrč. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg22">Hvala. Želi še kdo razpravljati o predlogu? V kolikor ne, potem dajem ta predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg23">Kdor je za ta predlog, naj prosim glasuje!</seg>
                <note>63 delegatov.</note>
@@ -426,21 +404,21 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg27">Prosim, ali še kdo želi razpravljati o dnevnem redu? Prosim, gospod Ribičič.</seg>
             </u>
             <note type="speaker">DR.CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg28">Jaz upam, gospod predsednik, da mi boste pustili, da povem svoje stališče v zvezi s tem sklepom, ki je bil zdaj sprejet. V Stranki demokratične prenove Slovenije se zavedamo velikega pomena usklajenega in konsenzualnega delovanja vseh političnih strank, zlasti pa tistih, ki so pred plebiscitom sklenile sporazum. Kot veste, so to vse parlamentarne stranke te naše Skupščine Republike Slovenije. Skupna sporazumno ugotovljena in javno izražena volja političnih strank ter državljank in državljanov o osamosvajanju Slovenije lahko edina izniči grozeče vojaške pritiske na Slovenijo, ki se jim ni mogoče uspešno zoperstavljati samo z vojaškimi in policijskimi sredstvi. Toda za dosego sporazumne volje je nujno predhodno resno in potrpežljivo dogovarjanje ter benevolentno obravnavanje predlogov drugih sogovornikov. To se ni zgodilo, ko smo v SDP Slovenije predlagali, da naj se pred osamosvojitvijo in v skladu s sprejetimi odločitvami te skupščine, sprejme nova ustava Republike Slovenije in naj se prek posebnega parlamentarnega telesa predstavnikov vseh strank na konsenzualni način usmerja osamosvajanje Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg29">Z obema predlogoma želimo prispevati k notranji demokratični ureditvi Republike Slovenije kot pravne in socialne države, z razvitim občutkom za svoboščine državljank in državljanov ter k nenasilnemu uveljavljanju plebiscitne odločitve tako glede osamosvojitve, kot glede pogajanj o možni institucionalni povezavi z državami, ki nastajajo na tleh dosedanje jugoslovanske federacije. Odklanjanje razprave o aktualnih zaostritvah na današnji seji Družbenopolitičnega zbora in sedaj zavrnitev našega predloga na skupni seji o oblikovanju posebnega parlamentarnega telesa, nas prepričuje, da za verbalnimi izjavami o pomenu političnega sporazuma ni resnične politične volje o enakopravnem upoštevanju predlogov SDP Slovenije. Brez enakopravnega sodelovanja naj bi naša stranka prevzemala soodgovornost za odločitve, na katere ne more vplivati. Morda še ni prepozno, da bi preprečili, da se bo namesto skupne politične volje, morda tudi jutri na zborovanju, demonstriral politični razcep in nesposobnost za dosego sporazuma. Po zavrnitvi naših ključnih predlogov je na potezi, da to prepreči, drugi stran. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg30">Hvala lepa. Želi še kdo besedo za dodatno točko dnevnega reda? Namreč, o tej točki ne razpravljamo več, ker je bila že izglasovana. Če imate predlog za dodatno, je v redu. Prosim, gospod Bekeš.</seg>
             </u>
             <note type="speaker">PETER BEKEŠ:</note>
-            <u who="#SSK11.BekesPeter1946" ana="#regular">
+            <u who="#BekesPeter1946">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg31">Spoštovani gospod predsednik, spoštovane kolegice in kolegi! Danes imamo kratek dnevni red; jaz se opravičujem, ker bom predlagal, da ga malo podaljšamo. Namreč, pri točki "Volitve in imenovanja" sem pogrešal mnenje Sodnega sveta oziroma sploh Sodni svet kot predlagatelja o odločitvi v zvezi z imenovanji in razrešitvami sodnikov. Po veljavni zakonodaji je Sodni svet organ, ki nosi predlagalno funkcijo in v bistvu je že doslej vloga naše Komisije za volitve, imenovanja in administrativne zadeve bila nekoliko problematična. Mi tega vprašanja, dokler se je sporadično pojavljala ta vloga, nismo odpirali kot načelno vprašanje, ampak smo se spuščali v razprave o argumentih za take ali drugačne rešitve, ker je bil pač vzdrževan videz samostojne vloge Sodnega sveta v teh procedurah, vsaj s tem, da je bila njegova prisotnost formalno izpričana v dokumentih. Danes te prisotnosti ni.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg32">Skupščina je pred kratkim obravnavala poročilo o stanju v pravosodju, ki je žal bilo reducirano predvsem na sicer zelo pereče vprašanje nagrajevanja sodnikov in drugih pravosodnih funkcionarjev in drugih delavcev zaposlenih na sodiščih. Ni pa se spustila v ta vprašanja. Danes so verjetno številni med nami prebrali vest o odstopu dr.Borisa Strozaka, predsednika Sodnega sveta. Sam lahko zgolj ugibam, da je ta njegov odstop povezan z odsotnostjo mnenj Sodnega sveta, zato predlagam, da pred točko "Volitve in imenovanja", vsaj pred obravnavo zadev, povezanih z volitvami in razrešitvami sodnikov, slišimo dodatno poročilo funkcionarja, ki vodi organ, pristojen za pravosodje, dr.Pirnata, o teh vprašanjih. Mislim, da ta skupščina pred temi pomembnimi odločitvami to informacijo ne le zasluži, ampak če hočemo zagotoviti vsebinsko, demokratično in odgovorno odločanje, jo nujno potrebujemo. Prosim, da skupščina odloči o tem predlogu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg33">Hvala lepa. Poslanca bi opozoril na to, da je v tem dnevnem redu, kot ga imamo, s strani Sodnega sveta predlagana samo ena razrešitev, drugače pa Sodni svet ni dostavil nobenih predlogov. Tako da mislim, da ta intervencija ni posebej potrebna. Torej dajem ta predlog, v kolikor ni k predlogu razprave, na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg34">Kdor je za, naj prosim glasuje!</seg>
                <note>70 delegatov.</note>
@@ -451,11 +429,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg37">Ugotavljam, da predlog ni sprejet.</seg>
             </u>
             <note type="speaker">PETER BEKEŠ:</note>
-            <u who="#SSK11.BekesPeter1946" ana="#regular">
+            <u who="#BekesPeter1946">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg38">Gospod predsednik! Mislim, da ne gre za zlorabo procedure. Ta predlog je propadel in imam alternativni predlog: da uvrstimo kot samostojno točko vprašanje vloge interpretacije pravnega položaja Sodnega sveta in nastale razmere z dejstvom, da je njegov predsednik odstopil.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg39">Hvale lepa. Ta dodatni predlog dajem v razpravo. Želi kdo besedo? Če ne, dajem predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg40">Kdor je za predlog, naj prosim glasuje!</seg>
                <note>63 delegatov.</note>
@@ -467,13 +445,13 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg44">Prosim, gospod Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg45">Spoštovani! Prosim, da na skupni seji vseh treh zborov Skupščine Republike Slovenije danes, dne 30. maja 1991, predložite v obravnavo in odločanje z glasovanjem na tej skupni seji, naslednji sklep:</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg46">Javni tožilec Republike Slovenije naj do naslednje seje Skupščine Republike Slovenije pojasni, zakaj še ni postopal po sklepu, sprejetem na nadaljevanju 17. skupne seje vseh zborov Skupščine Republike Slovenije, dne 9.5.1991.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg47">Obrazložitev. Skupščina Republike Slovenije je na nadaljevanju 17. skupne seje vseh zborov dne 9.5.1991 sprejela sklep, po katerem je bil Javni tožilec Republike Slovenije dolžan pripraviti informacijo o stanju na področju preganjanja vojnih hudodelcev. Takšen sklep je skupščina sprejela zaradi tega, da bi bila povečana pravna varnosti morebiti prizadetih. Skrajni čas je, da se zadeve iz časa druge svetovne vojne tudi na tem področju pravno uredijo. Nevzdržno je, da se prizadeti morebitni vojni hudodelci, ki živijo v tujini ali domovini, ne postavijo pred sodišče. Nevzdržno je tudi, da Javni tožilec Republike Slovenije še ni pojasnil skupščini, zakaj ni pripravil zahtevane informacije. S tem je predlog sklepa utemeljen. To predlagamo zaradi tega, ker je na vidiku svetovni slovenski kongres in zaradi pravne varnosti udeležencev želimo, da se ta zadeva uredi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg48">Gospoda poslanca bi opozoril na to, da je ta sklep že sprejet, da pa seveda ni javni tožilec na to še odgovoril in bo predsedstvo skupščine javnega tožilca posebej pozvalo, da postopa v skladu z že sprejetim sklepom. Če menite, da je potrebno o tem posebej glasovati, da je to posebna točka dnevnega reda, ki naj pride na dnevni red, bi dal predlog v razpravo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg49">Želi kdo o tem razpravljati? Če ne želi, potem dajem predlog na glasovanje, da se ta dnevni red dopolni s točko, da se sprejme sklep: Javni tožilec Republike Slovenije naj do naslednje seje Skupščine Republike Slovenije pojasni, zakaj še ni postopal po sklepu, sprejetem na nadaljevanju 17. skupne seje vseh zborov Skupščine Republike Slovenije, dne 9.5.1991. Če ni razprave, dajem ta predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg50">Kdor je za, naj prosim glasuje!</seg>
@@ -487,11 +465,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg55">Kdor je za predlagani dnevni red? Prosim, Jože Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg56">Gospod predsednik, drage kolegice in kolegi! Jaz bom glasoval proti dnevnemu redu zaradi tega, ker sem šokiran, da ta skupščina oziroma večinski del te skupščine v trenutku, ko se dogajajo hude zadeve v naši Republiki Sloveniji, ni pripravljena dati na dnevni red razprave o varnostno političnih razmerah v Sloveniji in o posledicah delovanja Jugoslovanske ljudske armade. Mi smo danes doživljali v Družbenopolitičnem zboru trikrat, da je bila večina proti, celo ko je kolega Tomšič predlagal, da se sprejme resolucija, ki obsoja protiustavno ravnanje JLA, je večina glasovala proti Tomšičevemu predlogu. Prosim, naj javnost iz tega naredi svoje zaključke. Menim, da je to skrajno neodgovorno dejanje in da bi predvsem predsednik skupščine bil prvi pozvan, ki bi moral dati danes to točko na dnevni red.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg57">Hvala lepa. Poslanec ima pravico, da pove zakaj bo ali ne bo glasoval o kaki stvari, mislim pa, da ni treba, da poslanec daje lekcije tej skupščini, kaj bi morala narediti. Glasujemo o celotnem dnevnem redu.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg58">Kdor je za, naj prosim glasuje!</seg>
                <note>104 delegati.</note>
@@ -504,22 +482,22 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg63">Želi o osnutkih kdo razpravljati? Prosim, gospod Buser.</seg>
             </u>
             <note type="speaker">DR. STANKO BUSER:</note>
-            <u who="#SSK11.BuserStanko1932" ana="#regular">
+            <u who="#BuserStanko1932">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg64">Spoštovano predsedstvo, spoštovane kolegice, spoštovani kolegi! Predlagam, da poslanke in poslanci slovenske skupščine z enominutnim molkom počastimo spomin nedolžne žrtve Jozefa Simčika, ki je obležal na cesti ob posredovanju jugoslovanske armade. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg65">Prosim, če ste za to, da počastimo z enominutnim molkom.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg66">Torej, želi kdo razpravljati o osnutkih zapisnikov? Prosim, gospod Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg67">Prosim, da v okviru razprave o zapisniku 17. in 18. skupne seje vseh zborov Skupščine Republike Slovenije predložite v obravnavo in odločanje z glasovanjem na skupni seji Skupščine Republike Slovenije danes, dne 30.5.1991, naslednji sklep:</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg68">Zapisnik 17. skupne seje vseh zborov Skupščine Republike Slovenije v dneh 28.3., 24.4., 8.5. in 9.5 naj se na strani 5 dopolni tako, da se za besedilom v predzadnjem odstavku, ki se glasi "zato je predlagal, da se 17. skupna seja prekine", vstavi nov stavek, ki se glasi: "Poslanec Liberalne stranke Vitomir Gros se je priglasil k razpravi. Predsedujoči dr. France Bučar poslancu Grosu ni dal besede. Besede poslancu Grosu predsedujoči ni dal tudi po glasno izraženi zahtevi poslanca Grosa, da želi besedo v skladu s poslovnikom zaradi obrazložitve svojega glasu pred glasovanjem o predlogu sklepa predsedujočega."</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg69">Obrazložitev. 17. skupna seja vseh zborov Skupščine Republike Slovenije je nadaljevalna oziroma odprta seja, na kateri je na pobudo socialdemokratskih poslancev in poslancev Liberalne stranke tekoče obravnavana predvsem problematika osamosvojitve Republike Slovenije. Na nadaljevanju seje dne 24.4., ki je bila sklicana na zahtevo skupine 52-tih poslancev, se je razvila obširna razprava. Ta razprava nikakor ni bila zaključena. Med drugim se skupščina tudi ni opredelila do nekaterih konkretnih predlogov. Poslanec Gros je želel opozoriti na to okoliščino pred glasovanjem o prekinitvi seje, s tem pa tudi o odložitvi sprejemanja sklepov. To je bila po poslovniku njegova pravica, ki jo je predsedujoči s tem, ko mu ni dal besede, kršil. Prav je, da je to razvidno tudi iz zapisnika seje. Ni prav, da se takšna eklatantna kršitev poslovnika niti ne zabeleži v zapisniku. S tem je predlog sklepa utemeljen. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg70">Hvala lepa. Ta predlog sklepa za dopolnitev zapisnika dajem na glasovanje, če ne želi kdo razpravljati. V kolikor ne želi nihče razpravljati, dajem to dopolnilo na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg71">Kdor je za, naj prosim glasuje!</seg>
                <note>56 delegatov.</note>
@@ -544,21 +522,21 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg83">Želi o predlogu kdo razpravljati? Prosim, gospod Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg84">Sprašujem predstavnika ali predstavnike Izvršnega sveta, ali je Božena Ostrovršnik izrazila željo, da se umakne z dolžnosti namestnice republiškega sekretarja za ljudsko obrambo? Ker iz tega poročila ni jasno, da se namerava predčasno upokojiti. Prosim za pošten odgovor, ali je dala Božena pobudo za umik ali je dal Janša?</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg85">Hvala lepa. Želi predstavnik Izvršnega sveta odgovoriti na to vprašanje?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg86">Želi o stvari še kdo razpravljati? Prosim, gospod Janša.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg87">Pobudo za predčasno upokojitev je dala gospa Božena Ostrovršnik pisno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg88">Hvala lepa. Želi še kdo razpravljati? V kolikor ne želi, dajem predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg89">Kdor je za, naj prosim glasuje!</seg>
                <note>143 delegatov.</note>
@@ -749,11 +727,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg198">Želi o predlogu kdo razpravljati? Prosim, gospod Kreft.</seg>
             </u>
             <note type="speaker">DR.LEV KREFT:</note>
-            <u who="#SSK11.KreftLev1951" ana="#regular">
+            <u who="#KreftLev1951">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg199">Hvala lepa za besedo. Dovolite mi, da brez izkoriščanja pravice, da povem, kako bom glasoval kasneje, povem, da ne morem biti za ta predlog, ne zaradi tega, ker bi želel razpravljati o teh ljudeh, ki jih po večini poznam - nekatere bolje, druge slabše, ampak zaradi tega, ker sem že pri zakonu o RTV-ju nasprotoval kakršnikoli pravici te skupščine, da se tako globoko vpleta v delovanje nekega samostojnega medija, da celo daje soglasje k imenovanju posameznih urednikov, katerih delo ne sme v nobenem primeru biti odvisno od politike, tudi te skupščine ne, ampak samo od stroke in njihovih uspehov pri delu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg200">Hvala lepa. Želi še kdo pojasniti svoje glasovanje?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg201">Če ne želi nihče razpravljati, prehajamo na glasovanje.</seg>
@@ -818,11 +796,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg239">Naj preberem še obvestilo: poslance Družbenopolitičnega zbora predsednik Toplak obvešča, da bo nadaljevanje seje Družbenopolitičnega zbora danes, takoj po skupni seji, in to tukaj.</seg>
             </u>
             <note type="speaker">DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg240">Dodatno pojasnilo poslancem Družbenopolitičnega zbora: efektivnega dela imamo za 20 do 30 minut. V tem primeru jutri ni treba priti in nadaljujemo z delom v ponedeljek. Sedaj pa vas prosim, da se takoj dobimo v dvorani na Tomšičevi 5.</seg>
             </u>
             <note type="speaker">IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#regular">
+            <u who="#BizjakIvan">
                <seg xml:id="SSK11-VsiZbor.1991-05-30.s019-01.seg241">Prosim tudi poslance Zbora občin, da se na kratko zberemo v svoji dvorani, da se dokončno dogovorimo, da ne bi bilo nejasnosti.</seg>
             </u>
             <note type="time">Skupna seja je bila končana ob 19.00 uri.</note>

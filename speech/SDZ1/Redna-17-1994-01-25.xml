@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ1-Redna-17-1994-01-25"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">17. redna seja (25. 1. 1994)</title>
-            <meeting n="17"
-                     corresp="#SDZ1-Redna-17-1994-01-25.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="17" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="1" corresp="#DZ" ana="#parl.term #DZ.1">1. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,35 +34,26 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje
                      avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">17. seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="session">163AF5915965427BC1257832004838E9</idno>
-                  <idno type="URI">163AF5915965427BC1257832004838E9</idno>
-                  <imprint>
-                     <date when="1994-01-25">(25., 26., 27., 28. januar, 1., 2., 3., 4. in 9. februar
-               1994)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>17. redna seja (25. 1. 1994)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1994-01-25"/>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="799"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="160"/>
                <tagUsage gi="seg" occurs="1095"/>
                <tagUsage gi="gap" occurs="5"/>
@@ -1262,23 +1245,21 @@
                <date when="1994-01-25" ana="#parl.sitting">25. 1. 1994</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ1-Redna-17-1994-01-25.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">17. seja</head>
-            <docDate>(25., 26., 27., 28. januar, 1., 2., 3., 4. in 9. februar 1994)</docDate>
             <note type="chairman">Sejo so vodili: mag. Herman Rigelnik, predsednik zbora, podpredsedniki Vladimir Topler, dr. Lev Kreft in Miroslav Mozetič</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.10 uri.</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1">Spoštovane kolegice poslanke in kolegi poslanci, gospe in gospodje! Pričenjam 17. sejo Državnega zbora Republike Slovenije. Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Dušan Bavdek, g. Lev Kreft, ga. Maria Pozsonec, g. Alojzij Metelko, g. Borut Pahor, g. France Bučar, g. Miroslav Mozetič, ga. Danica Simšič, g. Roberto Battelli in g. Bojan Korošec. Ugotovimo sklepčnost!</seg>
                <note>51 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg2">Ugotavljam, da je zbor sklepčen in da lahko odloča. Na to sejo sem vabil tudi predstavnike Vlade Republike Slovenije in jih lepo pozdravljam.</seg>
@@ -1327,14 +1308,14 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg30">Želi besedo predstavnik predlagateljev? Gospod Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg31">Spoštovani predsednik, spoštovane gospe, spoštovani gospodje! Deset poslancev nas je podpisalo oziroma pripravilo predlog o spremembah in dopolnitvah zakona o zunanjetrgovinskem poslovanju in na osnovi 201. člena poslovnika Državnega zbora vlagamo ta predlog sprememb in dopolnitev po hitrem postopku.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg32">Namreč, ugotovili smo na dveh sejah Komisije za spremljanje in nadzor lastninskega preoblikovanja, da problematika revidiranja družbenega kapitala v tujini še ni urejena.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg33">In na osnovi zakona o gospodarskih družbah, ki v 53. členu govori o obveznem revidiranju računovodskih izkazov in seveda tudi na osnovi tega, ker vemo, da je ta hip lastninsko preoblikovanje v teku, revizija je v teku, revizijski organ - SDK pa je seveda pooblaščen samo za opravljanje revizije na področju države in ne izven države, potrebno je, da sprejmemo to dopolnitev zakona po hitrem postopku. S tem seveda v bistvu dopolnjujemo zakon o zunanji trgovini, ki je bil sprejet 12. marca lanskega leta in dopolnjen 10. decembra 1993. Istočasno pa je seveda tu določeno v teh treh členih, ki dopolnjujejo zakon o zunanje-trgovinskem poslovanju tudi to, da je revizijski organ tisti, ki tudi da svoj pristanek na to, kdo to revizijo v tujini opravi za družbeni kapital, ki se odteka oziroma je seveda v tujini.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg34">Upam in prosim, spoštovane poslanke in poslanci, da sprejmete ta predlog in to pobudo, da na današnji oziroma 17. seji Državnega zbora ta zakon oziroma to dopolnitev sprejmemo po hitrem postopku. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg35">Hvala gospod Rejc. Želi besedo predstavnik Vlade?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg36">Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -1376,11 +1357,11 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg56">Drugih predlogov za razširitev dnevnega reda nismo prejeli. Želi v zvezi s tem kdo besedo? Prosim, gospod Kociper.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg57">Hvala lepa, gospod predsednik, spoštovane gospe in gospodje! Lep dober dan vsem skupaj. V imenu Odbora za zdravstvo, delo, družino in socialno politiko sem dolžan predlagati za uvrstitev na dnevni red predlog zakona o omejevanju uporabe tobačnih izdelkov. Odbor je namreč 10. januarja letošnjega leta obravnaval omenjeni zakon in to potem tudi po temeljiti obravnavi odločil. Odločil je tudi o amandmajih, ki so bili vloženi in predlaga Državnemu zboru, da se zakon, ki ga predlaga Vlada v drugi obravnavi, uvrsti na to sejo. Menimo namreč, da kljub obilici gradiv, ki jih ima Državni zbor na tej seji, mu ta zakon ne bo vzel preveč časa in da je prav, da tudi ta zakon obravnavamo na tej seji. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg58">Hvala lepa gospod Kociper. Mi smo na kolegiju predsednika Državnega zbora obravnavali tudi ta zakonski projekt. Kolegij je predlagal, odnosno predlaga Državnemu zboru, da to problematiko obravnava v mesecu februarju. Predvsem tudi zaradi tega, da bi bil dovolj dolg čas za vlaganje amandmajev. Tako da predlagam, da o tem ne glasujemo. Seveda, če pa vztrajate, dam tudi to na glasovanje.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg59">Vztrajate? Kolegij ne predlaga. Želijo o tem razpravljati predstavniki poslanskih skupin? O tem predlogu, ki ga je dal gospod Kociper.</seg>
                <note>Ne želijo.</note>
@@ -1394,11 +1375,11 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg64">Želi v zvezi z razširitvijo še kdo besedo? Gospod Jelinčič.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ1.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg65">Gospod predsednik, poslanci in poslanke, dober dan! Predlagal bi, da se druga in tretja obravnava zakona o nacionalni produktivni kinematografiji združita. Namreč, predlagatelj in odbor nista dobil nobenih dodatnih amandmajev s strani Vlade. Naši amandmaji so, tako predlagatelja in odbora, usklajeni med seboj. Tako, da mislim, da je škoda izgubljati čas in da to zadevo lahko opravimo na tem zasedanju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg66">Hvala lepa gospod Jelinčič. To bi obravnavali pri skrajševanju rokov, ne pri tej točki. Želi še kdo okrog razširitve?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg67">V sklicu 17. seje Državnega zbora so pod točkami 24., 34., 39., 40. in 41. vključeni tudi predlogi zakonov, ki so bili poslancem posredovani v roku, krajšem od 30 dni, kot to določa drugi odstavek 52. člena poslovnika. Z namenom, da bi omogočili obravnavo teh zakonov na tej seji, kolegij predsednika Državnega zbora predlaga, da zbor odloči skladno z drugim odstavkom 179. člena Poslovnika Državnega zbora o skrajšanju 30 dnevnega roka za predložitev gradiva poslancem za naslednje predloge zakonov:</seg>
@@ -1463,7 +1444,7 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg100">Ugotavljam, da predlog ni bil sprejet. Prehajamo na hitre postopke. Prosim, gospod Matuš.</seg>
             </u>
             <note type="speaker">ŠTEFAN MATUŠ:</note>
-            <u who="#SDZ1.MatušŠtefan" ana="#regular">
+            <u who="#MatušŠtefan">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg101">Hvala za besedo. Spoštovane poslanke, spoštovani poslanci! Na podlagi 179. člena poslovnika Državnega zbora predlagatelji predlagamo združitev prve in druge faze zakonodajnega postopka za predlog zakona o spremembah in dopolnitvah zakona o državljanstvu.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg102">Zakon je bil obravnavan že na 8. seji Državnega zbora, na kateri so bili obravnavani cilji in načela zakona ter ocena stanja in razlogi za spremembe.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg103">Nadalje je bil predlog zakona obravnavan v drugi fazi s številnimi amandmaji ter v tretjem branju na lanski novembrski seji, kjer je bil tudi sprejet oziroma smo ga takrat tudi sprejeli.</seg>
@@ -1471,21 +1452,21 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg105">Glede na navedena dejstva in ker smo predlagatelji v novem predlogu izvzeli to, tako imenovano sporno dikcijo, načela in cilji ter vsebina zakona pa so ostali isti, predlagam, da sprejmete združitev obravnave, in sicer prve in druge faze zakonodajnega postopka. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg106">Hvala lepa. Slišali smo predlog gospoda Matuša. Želijo predstavniki poslanskih skupin besedo? Gospod Jožef Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg107">Hvala lepa. Jaz temu nasprotujem in bi se seveda skliceval na obrazložitev gospoda Matuša, če je temu res tako, da smo štirikrat o tem govorili in o tem razpravljali, potem ne vidim razloga, da bi sploh o tem razpravljali, če pa že, pa mislim, da je potrebno v normalnem postopku.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg108">Hvala lepa. Želi še kdo v imenu poslanske skupine? Gospod Matuš, ni razprave, na koncu vam bom dal besedo. Želi predstavnik Vlade besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg109">Besedo dajem poslankam in poslancem. Gospod Matuš.</seg>
             </u>
             <note type="speaker">ŠTEFAN MATUŠ:</note>
-            <u who="#SDZ1.MatušŠtefan" ana="#regular">
+            <u who="#MatušŠtefan">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg110">Hvala za besedo. Spoštovani! Z gospodom Školčem se ne bi strinjal v toliko, ker je Državni zbor ta zakon sprejel. Po odložilnem vetu, v katerem naj bi bila ta sporna določba</seg>
                <note>državljan po rodu</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg111">, ni pridobil absolutne večine. V tem je samo zadeva.</seg>
@@ -1494,7 +1475,7 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg113">, kar je iz zakona sedaj izvzeto, da se pač obravnava oziroma da se združita prva in druga faza zakonodajnega postopka.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg114">Hvala lepa, gospod Matuš. Na glasovanje dajem predlog gospoda Matuša, da se združita prva in druga faza predloga zakona o spremembah in dopolnitvah zakona o državljanstvu Republike Slovenije. Ugotovimo sklepčnost!</seg>
                <note>65 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg115">Kdo je za?</seg>
@@ -1528,11 +1509,11 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg129">Ugotavljam, da je predlog sprejet. Ker ni dodatnih predlogov v zvezi z dnevnim redom, prehajamo na sprejem dnevnega reda. Prosim, gospod Kociper.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg130">Hvala lepa. Spet v vlogi predsednika Odbora za zdravstvo, delo, družino in socialno politiko sem dolžan predlagati Državnemu zboru, da predlog zakona o spremembah zakona o pokojninskem in invalidskem zavarovanju, ki so ga vložili poslanci in je v imenu predlagateljev predlagal gospod Ivan Sisinger na odboru tudi hitri postopek, predlagam, da ta zakon uvrstimo na dnevni red po hitrem postopku. Gre za to, da je matični odbor ocenil ta predlog kot umesten in podprl hitri postopek, da bi tako lahko Vlada čimprej pristopila k sistemskim spremembam tega zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg131">Hvala lepa. Gospod Kociper tukaj predlaga, da obravnavamo predlog zakona o spremembah zakona o pokojninskem in invalidskem zavarovanju po hitrem postopku. Besedo dajem vodjem poslanskih skupin. Želi besedo predstavnik Vlade?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg132">Ugotovimo sklepčnost!</seg>
@@ -1546,11 +1527,11 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg137">Pod to točko bo zbor obravnaval tudi zadeve, ki jih bo Komisija za volitve, imenovanja in administrativne zadeve predložila med sejo. Pred glasovanjem o dnevnem redu v celoti dajem besedo še predsedniku Komisije za lokalno samoupravo gospodu Cirilu Ribičiču, da poroča zboru odločitve komisije v zvezi z zamikom odločanja o drugi, tretji in četrti točki dnevnega reda na tej seji. Prosim gospod Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ1.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg138">Hvala lepa. Spoštovani zbor, tukaj se ne bom spuščal v to, kako je nastajal 95. člen zakona o lokalni samoupravi niti v motive predlagatelja postopka pred Ustavnim sodiščem. Rekel bi samo to, da Ustavno sodišče ni moglo, tudi ni hotelo sprejeti tistih predlogov, ki so šli v smeri, da se razveljavi samo del tega člena ali da si celo Ustavno sodišče vzame to pravico, da določa nove roke. Pač pa je razveljavljen 95. člen v celoti in rad bi povedal stališče komisije v zvezi s tem. Komisija ugotavlja, da ta razveljavitev terja resno dograditev rešitev v celotnem paketu zakona, ki se nanaša na lokalno samoupravo in v tistem delu, ki zadevajo prehod v novo ureditev. Komisija je oblikovala posebno skupino, v kateri so člani Komisije za lokalno samoupravo in Odbora za notranjo politiko, predstavniki vladne službe za reformo lokalne samouprave, predstavniki Sekretariata za zakonodajo in pravne zadeve Državnega zbora, predstavniki službe za zakonodajo vlade in predstavnik republiške volilne komisije. Obveščam vas, da se je skupina danes že sestala in začela na delovni ravni razreševati strokovne in druge dileme, mislim, da v konstruktivnem vzdušju in na produktiven način, ki obeta, da bi prišla s ponujenimi predlogi rešitev. Nekatere bodo verjetno tudi variantne pred Državni zbor lahko prišle v relativno kratkem času. Zato predlagamo, in to je predlog Komisije za lokalno samoupravo, da se začne obravnava teh točk dnevnega reda, ki zadevajo spremembe zakona o lokalni samoupravi in zakona o lokalnih volitvah, in tretja obravnava zakona o lokalnih referendumih takrat, ko bo komisija prišla s temi predlogi za dograditev na podlagi upoštevanja odločb Ustavnega sodišča. Pri tem bomo na prvo mesto postavili ravno vprašanje, kaj je treba eventualno dograditi v zakonu o lokalnih referendumih, da bi čimprej lahko obravnavali ta zakon in da bi imeli vsebinske vidike reforme lokalne samouprave sprejete v celoti in bi ostalo odprto samo še vprašanje ureditve prehodnih določb v zvezi z realizacijo lokalne samouprave. Skratka, nismo se odločili za to, da bi umikali iz dnevnega reda, ampak predlaga matično delovno telo, da se začne obravnava takrat, ko bo prišlo s svojimi predlogi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg139">Hvala, gospod Ciril Ribičič. Pred začetkom seje Državnega zbora sem prejel dopis gospoda Janka Halba, kateremu naj bi pod 1. točko dnevnega reda potrdili mandat, iz katerega izhaja, da gospod Janko Halb vrača poslanski mandat za preostanek mandatne dobe nepreklicno.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg140">Predlagam, da tudi to točko dnevnega reda ne obravnavamo kot prvo, ampak o njej odločamo, ko dobimo mnenje Mandatno-imunitetne komisije.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg141">Tako predlagam za današnjo sejo dnevni red kot ste ga sprejeli s sklicem in sprejetimi spremembami in mi dovolite, da ga ne berem. Na glasovanje dajem predlog dnevnega reda v celoti. Ugotovimo sklepčnost!</seg>
@@ -1571,7 +1552,7 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg150">Želijo besedo predstavniki poslanskih skupin? Besedo dajem poslankam in poslancem. Prosim gospod Tone Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg151">Opravičujem se, ker se spet oglašam pri točki, pri kateri se ne pričakuje, da bo kdorkoli kaj rekel. Nanašal se bom pa, če smem, v bistvu relativno na kratko, ampak na 5 zakonov iz tega kompleksa ratifikacij. K temu, da sem se oglasil, me je spodbudilo tudi današnje pismo, ki smo ga danes dobili od gospoda sekretarja iz Ministrstva za zunanje zadeve, ker je pač ministrstvo moralo ugotoviti, da je prišlo do neskladij med prevodom v slovenščini oziroma iz italijanščine v slovenščino ali obratno in da je to razlog celo zato, da se zadrži veljavnost tega zakona.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg152">Moram reči, če sedaj povem, kar sem želel povedati, da sem prebral vse te zakone o ratifikacijah in vse sporazume. Pri vseh sem ugotovil, razen pri tistih, ki se sklepajo med Hrvaško in Slovenijo, razen pri tistih zelo hude jezikovne spodrsljaje, netočnosti v prevodu, jezikovne malomarnosti itd. Od tega, da se v slovenščino uvajajo, v slovenski jezik uvajajo zelo čudne skovanke, ki jih slovenščina po mojem mnenju ne pozna ali jih tudi slabo prenese, in sicer kot nekakšni neposredni prevodi iz tujega jezika očitno. Tisto, kar pač v angleščini ali nemščini nastaja kot ena beseda iz povezave dveh, treh besed, ni rečeno, da je to mogoče na isti način prevajati tudi v slovenščino. To deluje kot neke vrste spakedranščina ali latovščina, kot se temu pravi, do tega, da se prenaša popolnoma avtomatsko nek tuj besedni red v slovenske stavke, do tega, da se, kot sem že prej opozoril, prevajajo na nek neposreden način, da se tuje besede, ki nekomu zvenijo malo znano, vnašajo v slovenski tekst kot tujke, pa v resnici tega statusa v našem jeziku še nimajo itd.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg153">Rad bi povedal, da lahko navedem tudi nekaj primerov teh členov, zlasti kadar gre za sporazume, če to koga zanima, pa verjetno ne. Tisti, ki bi pa želel, se lahko prepriča in mu jih bom pokazal. O tem bi neformalno, mislim, da ni potrebno, da o tem zbor sklepa, vendarle apeliral na ministrstvo, ki se s tem ukvarja, naj mislim, da bo državni proračun tudi to prenesel, zaposli enega lektorja, ki bo te prevode pogledal in bo pošiljal v Državni zbor izdelke, ki bodo v čast novi slovenski državi in v ustavi zapisani "skrbi za jezik". To, kar dobivamo, je dejansko nedopustno.</seg>
@@ -1579,7 +1560,7 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg155">Ponovno prosim Ministrstvo za zunanje zadeve, da vendarle, čeprav je za zunanje zadeve, misli tudi na notranjo zadevo, ki se imenuje slovenski jezik. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg156">Hvala lepa gospod Peršak. Predlagal bi gospod Peršak, da na koncu damo Državnemu zboru, da sprejme sklep, da naj Vlada, jaz mislim da ne ministrstvo, ampak Vlada zagotovi ratifikacije v ustreznem, torej v slovenskem jeziku, ne pa kot ste rekli, latovščini. Predlagam da ta sklep damo na glasovanje Državnemu zboru na koncu.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg157">Želi še kdo besedo? Če ne, zaključujem splošno razpravo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg158">Ker ne želi nihče več razpravljati, prehajamo na obravnavo in odločanje o posameznih členih predloga zakona.</seg>
@@ -1844,14 +1825,14 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg298">Želijo besedo predstavniki poslanskih skupin? Prosim, gospod Jelinčič. Hvala bogu, da ste se javili za besedo.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ1.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg299">Hvala lepa. Slovenska nacionalna stranka je proti podpisu tega protokola. Zakaj?</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg300">V kompletnem predlogu zakona o ratifikaciji pogodbe niso nikjer upoštevana dvojna državljanstva. Če vzamemo in če pogledamo prvi člen, drugi, tretji. Recimo prvi pravi: "pristojni mejni organi pogodbenic bodo brez formalnosti prevzeli osebo z območja druge pogodbenice, za katero se lahko verodostojno dokaže, da je državljan pogodbenice. Vemo, da je ogromno število dvojnih državljanov, tako državljanov Republike Slovenije, kot Republike Hrvaške. Kako bodo urejali v tem primeru te zadeve? Mislim, da ministrstvo ni razmišljalo o tem, ali pa ni hotelo razmišljati o tej zadevi.  </seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg301">V 2. členu gre za enake probleme, in tudi v 3. Mislim, da bi morali najprej sprejeti zakon o odpravi dvojnega državljanstva, ki bi urejal te zadeve in šele naknadno sprejemati oziroma ratificirati ta zakon o ratifikaciji pogodbe med Vlado Slovenije in Hrvaške.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg302">Če vzamemo 4. člen, ki pravi v začetku: "pristojni mejni organi pogodbenic bodo brez posebnih formalnosti prevzemali državljane tretjih držav, ki so na nedovoljen način prestopili državno mejo med pogodbenicama in so bili prejeti na ozemlju druge pogodbenice v treh dneh po nedovoljenem prehodu državne meje." To pomeni, da je slovenska državna meja odprta in omogoča nemoten vstop državljanom Bosne in Hercegovine, Zvezne republike Jugoslavije in katerekoli druge države v našo republiko. Komu jih bomo vračali? Ne bomo jih, če bodo šli nazaj ali pa, če jih bo kdo slučajno vrnil Hrvatom bodo imeli Hrvatje po tem sporazumu v treh dneh možnost, da nam tega človeka pošljejo nazaj in mi ga moramo sprejeti, ker smo ta zakon ratificirali. Mislim, da je zakon izredno nedodelan in nekonsistenten in ga kot takega ne smemo sprejeti v tem parlamentu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg303">Hvala gospod Jelinčič. Želi še kdo izmed vodij poslanskih skupin v imenu poslanske skupine besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg304">Besedo dajem poslankam in poslancem. Kdo želi besedo? Ker ne želi nihče razpravljati predlagam, da skladno z zadnjo alineo 189. člena poslovnika razpravljamo in glasujemo o vseh členih skupaj. Ugotovimo sklepčnost!</seg>
@@ -2085,11 +2066,11 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg427">Besedo dajem poslankam in poslancem. Prosim, gospa Vika Potočnik.</seg>
             </u>
             <note type="speaker">VIKTORIJA POTOČNIK:</note>
-            <u who="#SDZ1.PotočnikViktorija" ana="#regular">
+            <u who="#PotočnikViktorija">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg428">Spoštovane poslanke in poslanci! Po mojem gre za izredno pomemben akt, zakon o ratifikaciji konvencije o varstvu posameznikov, glede na avtomatsko obdelavo osebnih podatkov. Seveda gre za pravico, ki je določena tudi z ustavo in seveda pravico, ki jo imamo razčlenjeno tudi v slovenski zakonodaji v zakonu o varstvu osebnih podatkov. Kljub temu pa je naš zbor že opozoril na nekatere pomanjkljivosti, bodisi tega zakona, ali pa na podatke, ki se zbirajo bodisi preširoko in ni izvajana nad njim kontrola, tako kot sem že večkrat omenila, imenovana EMŠO številka. Zato bi samo opozorila, to kar opozarja tudi matično delovno telo, da z sklepom zadolžimo Vlado, naj prouči vse zakone, ki se nanašajo na varstvo osebnih podatkov in jih uskladi bodisi s to konvencijo, ali pa z najbolj restriktivno uporabo - predvsem tukaj mislim na državo in seveda tudi uredi ustvarjanje baze podatkov, kar se mi zdi tudi z vidika varovanja človekovih pravic kot eno izredno pomembnih elementov tudi razvoja te država v smislu, ne samo z vidika varovanja človekovih pravic kot izredno pomembnih elementov tudi razvoja te države v smislu ne samo varovanja človeka kot takega, ampak tudi njegove zasebnosti in tudi demokracije nasploh.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg429">Hvala, gospa Vika Potočnik. Povedati vam moram, da smo v veliki vnemi ta sklep sprejeli že pri 8. točki tako, da predlagam, da ta sklep ni sestavni del osme točke, ampak je sestavni del 17. točke sklepa, ki je bil sprejet. In sicer Vlada Republike Slovenije naj preuči vse zakone, ki se nanašajo na varstvo osebnih podatkov in po potrebi predlaga ustrezne spremembe. To je to. Se pravi, ta sklep smo že sprejeli. Iz 8. točke ga dajemo samo na 17. točko. Želi še kdo besedo? Ker ne želi nihče razpravljati, predlagam zboru, da v skladu z zadnjo alineo 87. člena poslovnika razpravlja o vseh členih skupaj. Ugotovimo sklepčnost!</seg>
                <note>47 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg430">Kdo je za?</seg>
@@ -2157,11 +2138,11 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg463">Na glasovanje bom dal predlog gospoda Peršaka, ki ga je prej podal v razpravi. Prosim.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg464">Hvala. Predlagam, da bi se sklep glasil nekako tako: Državni zbor nalaga Vladi Republike Slovenije, da v vseh primerih zakonov, ki jih predloži Državnemu zboru zagotovi predhodno lektorsko obdelavo tekstov zato, da ne bodo prihajali v Državni zbor zakoni, ki so jezikovno nedodelani, katerih členi so z jezikovnega vidika sporni. Posebej pa naj to velja za zakone o ratifikaciji in mednarodne sporazume, kjer prihaja, kot smo danes videli, do evidentnih neskladij med sporazumom v tujem jeziku in slovenskem jeziku, da je bilo zaradi tega potrebno celo v enem primeru zadržanje uveljavljanja tega sporazuma. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg465">Hvala lepa, gospod Peršak.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg466">Dajem predlog sklepa gospoda Peršaka na glasovanje. Ugotovimo sklepčnost!</seg>
                <note>53 prisotnih.</note>
@@ -2174,7 +2155,7 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg471">Predlog zakona je v obravnavo zboru predložil poslanec dr. Dimitrij Rupel. Želi predlagatelj besedo? Prosim, gospod Dimitrij Rupel.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SDZ1.RupelDimitrij" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg472">Spoštovani gospod predsednik, spoštovane kolegice in kolegi.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg473">Pred tem zborom, na prejšnjem zasedanju sem napovedal spremembo zakona oziroma novelo ali zakon o spremembi zakona, kakor koli se temu reče, na točki, ki je bila predmet, če se spominjate, tudi razprave v Državnem svetu in o kateri smo imeli tudi pri nas precej živahno razpravo.  </seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg474">Gre za 60. člen in za neko nelogičnost, za neko nepravilnost, ki se nam je pripetila zaradi naglega dela, bodisi zakonitosti, ki spremljajo parlamentarno življenje. Formulacije so odvisne od posameznih amandmajev, včasih ne toliko od celotnega sistema, celotnega projekta zakona kot je predlagan in prediskutiran v odboru.</seg>
@@ -2183,32 +2164,32 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg477">Predlagal bi, da takšen zakon sprejmemo. To je zakon, ki je samo po imenu zakon. V resnici gre za skrajšanje prejšnjega zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg478">Hvala lepa, gospod Dimitrij Rupel.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg479">Predlog zakona je obravnaval tudi Odbor za kulturo, šolstvo in šport. Želi poročevalec besedo? Gospod Moge, prosim.</seg>
             </u>
             <note type="speaker">RUDI MOGE:</note>
-            <u who="#SDZ1.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg480">Hvala za besedo. Spoštovane poslanke in poslanci. Odbor za kulturo, šolstvo in šport je ta zakon temeljito obravnaval. Po takšnih argumentih kot so, da ne bi v tej zakonodaji iznad vse ostale zakonodaje izdvojili le šolstvo, in da ne bi določeni profili, torej samo redni profesor imel določene obveznosti in hkrati tudi določene privilegije, smo  enoglasno prišli do tega sklepa, da predlagamo poslancem, da zakon sprejmejo v predlaganem besedilu, in sicer, da se sporni amandma, ki je bil izglasovan na predlog poslanke Irene Oman, izniči. Ta del besedila zakona 60. člena je bil ravno tisti, zaradi katerega je Državni svet dal veto na ta zakon. Torej odbor priporoča, da sprejmete ta zakon v predloženem besedilu. Ima pa samo dva člena. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg481">Hvala, gospod Moge. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg482">Želi besedo predstavnik Vlade? Prosim. Besedo ima gospod Zgaga - državni sekretar.</seg>
             </u>
             <note type="speaker">DR. PAVEL ZGAGA:</note>
-            <u who="#SDZ1.ZgagaPavel" ana="#regular">
+            <u who="#ZgagaPavel">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg483">Hvala za besedo. Spoštovane poslanke, spoštovani poslanci! Vlada Republike Slovenije podpira besedilo novele v obliki, v kateri jo je predlagatelj dr. Rupel vložil. Ob tem bi želel povsem na kratko označiti določeno, recimo temu strokovno ozadje problema, pred katerim smo. Prepričani smo, da sistemsko problema upokojevanja na eni strani in pomlajevanja vrst univerze ni mogoče rešiti, če smem tako reči, v enem samem stavku.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg484">Stara zakonodaja, to je zakon o usmerjenem izobraževanju, ki je s 1. januarjem letos za področje visokega šolstva nehal veljati, je imel posebno določilo, po katerem je vsem profesorjem dovoljeval delo do 70. leta, ne glede na to, ali so izpolnili pokojninsko osnovo ali ne. Predlagatelj zakona o visokem šolstvu je, ko je pripravljal material za prvo in drugo branje, ta del razrešil preprosto tako, da te bonitete ni več dajal.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg485">Torej, tisti predlog, ki ste ga dobili na mizo v prvem in drugem branju zakona o visokem šolstvu je predpostavljal, da ko visokošolski profesor izpolni 40 let delovne dobe, se upokoji. Problem, do katerega smo prišli, je seveda ta, da se strižeta dve dimenziji. Eno je ustavna pravica državljanov in državljank in pa tiste pravice, ki izhajajo iz delovno-pravne in pa pokojninske zakonodaje, drugo pa je seveda povsem umestno prizadevanje, ki ga Vlada in Ministrstvo za šolstvo podiramo, to je prizadevanje za pomlajevanje vrst v visokem šolstvu. Menimo, da za to slednje naredimo lahko največ natanko s tem, da povečujemo možnosti za nameščanje asistentov stažistev, mladih raziskovalcev in vzporednih namestitev. Zlasti slednje, vzporedne namestitve, je v zadnjih dveh letih pravzaprav kar pomladilo marsikatero katedro tako ljubljanske kot mariborske univerze. Še posebej v tem zadnjem ob vzporednih namestitvah. Gre sistem, po katerem zadnja tri leta pred upokojitvijo, lahko namestimo mlajšega docenta ali izrednega profesorja na tisto mesto in se na ta način redni profesor dokaj enostavno bomo rekli umakne iz pedagoškega procesa, predvsem študentje pa ob tem ne trpijo pomanjkanja pedagoških dejavnosti. Če bi zelo na hitro prekinili s to logiko, potem moram poudariti s tega mesta, da bi študijski proces trpel že v tem semestru, še posebej pa v naslednjem šolskem letu. Kakršna koli hitra in radikalna rešitev na tem področju bi lahko povzročila neprijetne posledice in na to vas kot predstavnik Vlade moram opozoriti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg486">Hvala, gospod Zgaga. Želijo besedo predstavniki poslanskih skupin? Prosim, gospod Pučnik.</seg>
             </u>
             <note type="speaker">DR. JOŽE PUČNIK:</note>
-            <u who="#SDZ1.PučnikJože" ana="#regular">
+            <u who="#PučnikJože">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg487">Spoštovane kolegice in kolegi! Socialni demokrati odklanjamo ta zakon. Razloge smo ob tej priliki že nekajkrat razložili, zato bi tukaj omenil samo mogoče dve ali tri točke.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg488">Spoštovane kolegice in kolegi! Mi se moramo zavedati, kakšno je realno vzdušje v teh inštitucijah, ki jih obravnava ta zakon. Mi vemo, kakšna so razmerja moči, kako so razporejeni vplivi etabliranih profesorjev in mi vemo tudi, kako težko je mlajšim kadrom prihajati na mesta, na katerih bi lahko v polni meri razvili svojo iniciativnost. Naj omenim samo eno. Profesor, ki do 65. leta svoje starosti ni uspel s svojim pedagoškim prizadevanjem vzgojiti ustrezno kvalificiranih naslednikov, ni bil sposoben, da je zasedal to mesto. Do 65. leta starosti je mogoče najti talentirane asistente ali pa tudi ljudi izven same katedre, ki bi lahko ustrezno nadomestili profesorja.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg489">Argument, ki ga je predstavnik Vlade navedel, ne spada v ta kontekst. Namreč, da se v katedre pospešeno nastavljajo asistenti. To je sicer prav, to je potrebno pozdraviti. Sigurno je premalo asistentskih mest in mi, Social demokrati podpiramo pospešeno nastavljanje asistentov v katedrah, samo eno je asistent, drugo je pa profesor.</seg>
@@ -2223,66 +2204,66 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg498">Poglejte, če ne postanete profesor, boste težko našli mesto za objaviti neko razpravo v strokovni reviji. Ne bi še več stvari našteval. Poznam, jaz poznam ta "kšeft" tako rekoč od znotraj. Jaz se bojim teh vplivnih struktur, sociologi pravimo temu "klike", kar ni negativen izraz, temveč interesne povezave. Te povezave so izredno močne in verjemite mi, ne služijo niti napredovanju znanosti, recimo v našem primeru slovenske znanosti, niti ne koristijo napredovanju mlajši generaciji, da tudi razvijejo in pokažejo, kaj znajo. Zato vas prosim, da tega zakona ne podprete. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg499">Hvala, gospod Pučnik. Želi še kdo v imenu poslanskih skupin razpravljati? Gospod Šešerko.</seg>
             </u>
             <note type="speaker">DR. LEO ŠEŠERKO:</note>
-            <u who="#SDZ1.ŠešerkoLeo" ana="#regular">
+            <u who="#ŠešerkoLeo">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg500">Spoštovani gospod predsednik, spoštovani zbor. Naša poslanska skupina ravno tako, kot gospod Pučnik, stoji na stališču, da Slovenci potrebujemo mlade in dinamične univerze in da je prvotni predlog bil povsem utemeljen. Ravno tako razumemo to argumentacijo, da v primerih, ko nekdo še ni dosegel polne pokojninske dobe, ima možnost, da kot član akademije znanosti in umetnosti, ali kot miritirani profesor, ali v drugih funkcijah naprej raziskuje, vendar je treba ključna, pedagoška in vodilna mesta v univerzi dati mladim ljudem in jim tudi omogočiti, da lahko v svoji polni življenjski moči delajo na univerzah.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg501">Želim tudi opozoriti na to, da smo v tem tednu dobili iz Bazla povabilo, da posredujemo mesto za tretje stopenjski študij za okolje in opazim v tem predlogu študija, da imajo oni enoletni študij tretje stopnje, ki se konča v enem letu. Zdaj pojdite na naše univerze in poglejte, kako se študira tretja stopnja. Vsi veste, da je normalno predvideno dve leti in da vsaj še eno leto traja potem priprava zaključne naloge. In če bomo mi imeli takšno visoko šolstvo, ki ne bo kompatibilno, dinamično in odprto, potem nam bo slaba predla <gap reason="inaudible"/> To ni edini vzrok, da nam lahko slaba prede, ampak eden od mnogih in zato ravnajmo tu modro in najdimo druge izhode, ne pa ta, ki je predlagan. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg502">Hvala, gospod Šešerko. V imenu poslanske skupine, gospod Rudi Moge.</seg>
             </u>
             <note type="speaker">RUDI MOGE:</note>
-            <u who="#SDZ1.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg503">Hvala za besedo. Poslanska skupina LDS bo podprla zakon in bo podprla tudi mnenje Vlade, ki ta zakon podpira v koaliciji.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg504">Reč je pa sledeča: mi menimo, da mora splošna zakonodaja veljati za vse, tako za zdravnike, tako za delavce v državni upravi, tako za delavce v kulturi in še in še bi lahko našteval. Zdi se mi, da je to izredno fašistično, če samo enemu ozkemu sloju ljudi, in to v vsej tej hierarhiji, ki sem jo naštel, pa bi lahko še razširil, omejimo pravice samo rednim profesorjem v visokem šolstvu. Mislim, da če bi že tem te pravice omejili, kot jim omejuje tisti 60. člen, ki ga je dala poslanka Omanova, da bi potem morale podobne omejitve tudi veljati za vse druge profile. Kaj jaz vem, lahko na primer: 73 let star poslanec kot profesor ne more delati, kot poslanec pa lahko narod zastopa, ali pa podobno velja za razne zdravnike in podobne stvari.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg505">Zaradi tega bo naša poslanska skupina podprla ta osnovni predlog, saj je zdajšnja dikcija, ki je bila utemeljeno nekako napadena s strani Državnega sveta, res protiustavna oziroma protizakonita, saj samo kasto rednih profesorjev nekje prikrajšuje v svojih pravicah do pokojnine oziroma do pravic iz pokojninskega in invalidskega zavarovanja.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg506">Rekel bi še tole, da za tem, kar je gospod Pučnik govoril o tem profesorju, meni se zdi dr. Pučnik, da je bil to doktor matematik Pleml? Potem se pa oproščam. Rekel bi še na koncu samo tele stvari, da če mi pustimo zakon takšen kot je in ne sprejmemo teh dopolnitev, da potem nismo naredili tistega, kar je odbor predlagal in tudi za kar se je zavzemal Državni zbor ob tem, ko ko smo obravnavali zakon, ko je bil na njega že izrečen veto. Naša poslanska skupina bo vsekakor v tem primeru ta zakon podprla, ker se mi zdi, da smo s tem zakonom potem tudi redne profesorje dali v enak okvirček zakonodaje, kot vse ostale delavce. Če pa ta zakon velja, pa ne velja potem tista omejitev 65 let niti za izredne profesorje, ne velja niti za docente, ne velja niti za višje predavatelje, ne velja za profesorje, ki neprimerno bolj pedagoško poučujejo v srednji šoli, ne velja niti za profesorje v osnovni šoli in za tako ozek segment torej vpeljati neko prepoved, se mi zdi nesmiselno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg507">Hvala lepa, gospod Moge. V imenu poslanske skupine gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg508">Spoštovane poslanke in poslanci! Poslanska skupina Slovenske ljudske stranke ne bo podprla tega zakona. Strinjamo se sicer, da je morda potreben popravek, ker ta člen pač izloča samo redne profesorje, ne pa vseh visokošolskih učiteljev in menimo, da bi omejitev morala veljati za vse. Menimo, da s tem zakonom tega ni mogoče urediti, zato bomo zakon zavrnili. Menim pa, da bi predlagatelj morda - v tem primeru Vlada, moral razmisliti o tem, kako rešiti status visokošolskih učiteljev, ki do 65. leta ne dosežejo polne delovne dobe. Mogoča je tudi drugačna rešitev, da namreč v tem primeru dobijo pravico do polne pokojnine in da se razlika za tista leta morda plača iz proračuna in da se jim tudi na ta način zagotovi sicer enake pravice, hkrati pa zagotovi tudi pomlajevanje kadrov na visokih šolah, to je pomlajevanje visokošolskih učiteljev.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg509">Menim, da je veliko argumentov za to in da so jih spoznali tudi drugod. Taka so tudi poročila iz večine evropskih držav, kjer seveda zelo veliko dajo na visoko šolstvo in so spoznale, da je takšna ureditev potrebna kot smo jo želeli uveljaviti z zakonom o visokem šolstvu, ampak res nerodno, ker se nanaša samo na redne profesorje, ne pa na vse. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg510">Hvala gospod Zagožen. V imenu poslanske skupine gospod Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg511">Poslanska skupina Demokratske stranke bo podprla sprejem tega zakona, in sicer iz treh razlogov.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg512">Prvi razlog je ta, ki je bil sedaj že dvakrat poudarjen, da bi ohranitev člena, takega kot je uvedlo diskriminacijo med visokošolskimi učitelji samimi. Redni profesorji ne bi mogli v tistih primerih, ko je to vprašanje do konca izkoristiti pravice do polne delovne dobe in do normalne upokojitve, vsi ostali višji predavatelji, izredni profesorji itd. bi pa to lahko.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg513">Drugič je naslednji problem. Vprašanje je, ali je ta člen, ki sploh ni tudi z drugega vidika, ki je sicer v zadnjem času zelo aktualen, sporen. Namreč zakon o delovnih razmerjih in posredno bi si upal trditi tudi ustava zagotavlja na tem področju vsem iste pravice in zakon o delovnih razmerjih to vprašanje ureja drugače, kot je v tem členu urejeno. Najmanj kar je, bi se dalo to izpodbijati s tega vidika, da zakon, ki sistemsko ureja, kot se temu reče, ta vprašanja, je v neskladju s tistim zakonom. To je lex specialis, vendar ne za to materijo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg514">Tretja stvar, to je bolj objektivno in povem bolj v lastnem imenu. Nekateri poznamo razmere tudi po posameznih visokošolskih ustanovah v Sloveniji. Poznam eno, kjer bi ta člen izgnal po splošnem prepričanju najboljšega rednega profesorja, ki mu manjkata še dve leti do polne delovne dobe.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg515">Hvala, gospod Peršak. Želi še kdo v imenu poslanske skupine? Če ne, dajem besedo poslankam in poslancem. Kdo želi besedo? Prosim, gospod Miran Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ1.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg516">Hvala lepa. Predlog tega zakona podpiram. V osnovi ga podpiramo tudi vsi v poslanski skupini. Ker ni bil takšen dogovor, se nisem hotel v imenu poslanske skupine javiti.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg517">Ob argumentih, ki so za njegov sprejem bili povedani in s katerimi soglašam, bi rad opozoril samo na to, da morda golo črtanje člena v celoti ne odgovarja vsem argumentom, ki so bili dani. Hkrati je treba zagotavljati potrebno pomlajevanje in da je hkrati treba zagotoviti, da ne bodo pravice rednih profesorjev drugačne kot so vseh zaposlenih po zakonu o delovnih razmerjih, da ne bodo drugačne kot so ostali univerzitetni učitelji.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg518">V tej smeri, da bi zadostili eno in drugo, je meni osebno najbolj blizu amandma, ki ga je vložila gospa Irena Oman, vključno z amandmajem, ki sta ga kasneje skupaj vložila Leo Kreft in gospa Omanova. Kaj namreč pove? Pove, da smo v principu za to, da s 65. letom starosti rednemu profesorju, z amandmajem pa vsakemu univerzitetnemu učitelju pedagoško delo naj preneha. Hkrati smo za to,da  mu ne preneha v primeru, če ni dopolnil potrebnih let za normalno pokojnino in se mu v tem primeru ta starostna meja podaljša do neke zgornje meje 70-ih let, ki je tukaj zapisana. To je potrebno razumeti kot neko objektivno zgornjo mejo, kjer bi bilo to resno pedagoško delo oteženo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg519">Ob tem, ko podpiram predlog zakona, bi podprl tudi oba amandmaja, ki sta vložena. Osebno sodim, da bi to bilo najbližje tej, v osnovi sprejeti rešitvi na seji Državnega zbora, ker smo rekli, moramo spremeniti ta člen, da ne bi nasilno pošiljali v pokoj univerzitetnih učiteljev, rednih profesorjev v primeru kadar, nimajo dopolnjene polne delovne dobe. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg520">Želi še kdo besedo? Gospod Rudi Moge.</seg>
             </u>
             <note type="speaker">RUDI MOGE:</note>
-            <u who="#SDZ1.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg521">Hvala za besedo. Jaz bi glede na izvajanje gospoda Zagožna pač tole poskušal utemeljiti. Namreč pred njim so spremembe in dopolnitve tega zakona in te spremembe in dopolnitve tega zakona se nanašajo samo na redne profesorje. On je pa izjavil, da s tem zakonom ni mogoče urediti tudi drugih področij. Torej bi lahko z določenimi amandmaji tudi vsaj na tem področju napravil red, tako, da bi te stvari veljale za vse, ki pač učijo v visokem šolstvu. Po drugi strani je pa situacija takšnale. Kdorkoli se je odločil, da bo univerzitetni profesor, mora imeti vsaj visoko izobrazbo, da magisterija pa doktorata ne štejem k temu. Ampak 19 let je redno šolanje, 5 let je visoko šolanje, 1 leto, to, kar bo moral opraviti v teritorialni obrambi, se pravi, da komaj, ko lahko začne delati, doseže že starost 25 let. Potem 40 let delovne dobe. To je torej 65 v idealnem primeru, če seveda takoj dobi zaposlitev. S strani mnogih govorcev je bilo tukaj rečeno, da so pa profesorji pri 65 letih že takšni, da so povečini zaradi intelektualnega dela iztrošeni, torej da delajo, v narekovaju rečeno, več škode kot koristi v predavalnicah. S tem se sicer ne strinjam, ampak če smo humana družba in če mislimo, da je izmed vseh poklicev ta res takšen, da je potreba po prejšnjem upokojevanju mimo zakona, potem bi ti ljudje morali razmišljati v tej smeri, da bi predlagali s kakšnimi spremembami pa dopolnitvami drugih zakonov, vsaj skrajšanje dobe tem ljudem ali pa beneficirano delovno dobo za univerzitetne profesorje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg522">Hvala gospod Moge. Želi še kdo besedo? Če ne, zaključujem splošno razpravo in prehajamo na obravnavo 1. člena in amandmajev. Kdo želi besedo? Ker ne želi nihče besede, prehajamo na odločanje o amandmaju na amandma poslanke gospe Irene Oman in poslanca Leva Krefta.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg523">Amandma samostojne poslanske skupine k 1. členu se spremeni tako, da se v prvi vrstici besedi "redni profesorji" nadomestita z besedama "visokošolski učitelj", v četrti vrstici pa se besede "za tiste redne profesorje" nadomestijo z besedami za tiste visokošolske učitelje. Ugotovimo sklepčnost!</seg>
                <note>64 prisotnih.</note>
@@ -2314,27 +2295,27 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg537">Ugotavljam, da je naslov zakona sprejet. V drugi obravnavi je bil izglasovan en amandma k 1. členu. Želi kdo vložiti v skladu s poslovnikom amandma? Prosim, gospod Rudi Moge.</seg>
             </u>
             <note type="speaker">RUDI MOGE:</note>
-            <u who="#SDZ1.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg538">Potreboval bi nekaj časa, da ta amandma napišem, pa da ga dobite v roke in vse ostale reči.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg539">Predlagam potem 5 minut odmora, gospod Rudi Moge in napišite v tem času.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg540">Ob 12.30 uri nadaljujemo sejo.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 12.25 uri in se je nadaljevala ob 12.41 uri.</note>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg541">Nadaljujemo sejo in ugotovimo navzočnost v dvorani. Ugotavljam, da je navzočih 46 poslank in poslancev, zato je zbor sklepčen in lahko odloča.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg542">Imamo dva amandmaja. Najbolj oddaljen je amandma skupine desetih poslancev s prvim podpisanim Rudijem Mogetom, ki se glasi takole. Prosil bi, gospod Moge, če dobro poslušate. Črta se del zadnjega stavka 1. člena, ki se glasi: "Vendar največ do sedemdesetega leta starosti". In amandma Samostojne poslanske skupine, besedilo prvega člena se v celoti črta in nadomesti z besedilom: "Visokošolski učitelj, ki izpolnjuje pogoje za pridobitev pravice do polne starostne pokojnine lahko zaseda delovno mesto do doseženega 65. leta starosti. Starostna omejitev 65 let ne velja za tiste visokošolske učitelje, ki niso dopolnili delovne dobe do polne starostne pokojnine. Le ti lahko ostanejo v delovnem razmerju do izpolnitve pogojev za pridobitev pravice do polne starostne pokojnine, vendar največ do 67. leta starosti".</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg543">Bolj oddaljen amandma gospoda Rudija Mogeta in desetih poslancev, zato dajem v obravnavo ta amandma. Prosim, gospod Žaro Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg544">Spoštovani! Prosim predsednika Državnega zbora, da dobimo o tem amandmaju pisno na klop, kajti jih je le preveč. Ker je zadeva pomembna mislim, da se lahko po tem tudi narobe odločimo, zato predlagam, da dobimo to pisno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg545">Slišali ste predlog gospoda Žareta Preglja. Ta njegov predlog bom dal na glasovanje. Gospo Žaro Pregelj predlaga, da dobimo pisni predlog na mizo. Ugotovimo sklepčnost!</seg>
                <note>63 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg546">Kdo je za?</seg>
@@ -2346,35 +2327,35 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg550">Predlog za začetek postopka je obravnaval zbor na 16. seji. Prosim gospod Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ1.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg551">Spoštovani, ko sem omenjal sklop zakonov, ki se nanašajo vsaj posredno tudi na lokalno samoupravo, sem mislil tudi na ustavni zakon. V skupini smo se dogovorili, da ne odpiramo vsebinskih dilem in da ne obveščamo Državnega zbora o teh predhodnih razmišljanjih, kako in kaj razrešiti problem, ki je nastal z odločbo Ustavnega sodišča. Kljub temu pa je očitno, da so nekatere možnosti povezane lahko tudi s sprejemom ustavnega zakona. Pogledi so tukaj še precej vsak k sebi, ampak bi predlagal, da se ne zaključi oziroma ne začne razprava o tej točki dnevnega reda, dokler naša skupina in Komisija za lokalno samoupravo ne dasta svojih predlogov, ker je na prvi pogled zelo očitno, da so tiste rešitve, ki bi bile zapisane v ustavnem zakonu, veliko bolj trdne zaradi posebne večine in zaradi tega, ker takšen ustavni zakon ne podleže presoji ustavnosti pred Ustavnim sodiščem in zato bi prosil, če se Državni zbor s tem strinja, da velja to tudi za ta zakon. Hvala lepa. Seveda se pa pri tem ne spuščam v to, kakšna bi bila rešitev, ker so rešitve v ustavnem zakonu lahko zelo različne. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg552">Hvala lepa, gospod Ciril Ribičič. Ugovarja kdo temu predlogu? Prosim, gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg553">Hvala lepa. Jaz temu nasprotujem. Sicer tudi sam vidim eno od možnosti za to, da se razreši problem, ki je nastal z odločitvijo Ustavnega sodišče s tem, da se določene stvari reši z ustavnim zakonom, kot je bilo tukaj še rečeno, to ni nujno. Zato menim, da v kolikor je potrebno probleme, ki so vezani za realizacijo zakonodaje, ki ureja uvedbo te lokalne samouprave, da tam sprožimo poseben postopek za poseben ustavni zakon in jaz ne bi tega vezal, ker se bomo potem spet znašli v tisti situaciji, v kateri smo bili pred novim letom, ko je ravno ta vezava povzročila, da ustavni zakon ni bil sprejet in da se s tem opira niz vprašanj. Zato predlagam, da v bistvu to proceduro speljemo in v kolikor se bo pokazalo, da je možno problem, ki je včeraj nastal, rešiti z ustavnim zakonom, da začnemo tam novo proceduro za nov ustavni zakon. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg554">Hvala lepa. Gospod Pukl.</seg>
             </u>
             <note type="speaker">VITODRAG PUKL:</note>
-            <u who="#SDZ1.PuklVitodrag" ana="#regular">
+            <u who="#PuklVitodrag">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg555">Spoštovani gospod predsednik, spoštovani zbor! Predlagam, da se oglašamo pragmatično. Za ustavni zakon je potrebna dvotretjinska večina. Ta je pogojena s prejšnjim soglasjem o treh oziroma štirih stvareh, kot je že gospod Ribičič povedal, in predlagam, da odložimo obravnavo tega ustavnega zakona do soglasja v zadevah lokalne samouprave, volitev, referenduma in tako naprej, ker bo verjetno, ni pa gotovo, ampak z zelo veliko verjetnostjo bo to soglasje o teh zadevah tudi soglasje za ta ustavni zakon. Menim, da bi po nepotrebnem, če bi obravnavali ustavni zakon, načenjali vse probleme vseh ostalih predpisov, ki so bili omenjeni, nepotrebno bi zavlekli celo razpravo, ta razprava pa ne bi bila produktivna. Zato predlagam, da sledimo predlogu gospoda Ribičiča.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg556">Hvala, gospod Pukl. Želi še kdo besedo? Prosim, gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg557">Spoštovane poslanke in poslanci! Podpiram predlog gospoda Školča, da v tem primeru ne vežemo dveh zelo različnih stvari na en ustavni zakon, ker se utegne zadeva tako zaplesti, da problem lokalne samouprave, ki ga moramo rešiti ne bi rešili. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg558">Hvala. Želi še kdo besedo? Če ne želi nihče več, bom dal na glasovanje predlog gospoda Cirila Ribičiča, ki predlaga, da odložimo obravnavo predloga za začetek postopka za spremembo ustavnega zakona za izvedbo Ustave Republike Slovenije in jih povežemo z obravnavo točk 2., 3. in 4. Ugotovimo sklepčnost!</seg>
                <note>65 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg559">Kdo je za?</seg>
@@ -2386,35 +2367,35 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg563">Predlog za začetek postopka je predložila skupina poslancev Državnega zbora za obravnavo na prejšnji seji, Državni zbor pa je sklenil, da se ta točka preloži in obravnava na januarski seji državnega zbora. Želi kdo od predlagateljev besedo? Želi besedo predstavnik Sekretariata za zakonodajo? Želi predstavnik delovnega telesa? Želijo besedo predstavniki poslanskih skupin? Besedo dajem poslankam in poslancem. Kdo želi? Prosim, gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg564">Spoštovane poslanke in poslanci! Glede na to, da od 1.1.1994 ne veljajo več omejitve, ki jih je postavljal ustavni zakon za izvedbo ustave, namreč od 1.1. naprej so pod ustavno presojo podvrženi vsi zakoni in drugi predpisi, ki veljajo v republiki Sloveniji. Zdi se mi popolnoma nemogoče, da bi zdaj ponovno en del zakonodajo, in to tiste, ki je bila sprejeta pred sprejemom temeljne listine o samostojni Sloveniji, ponovno izvzeli iz ustavne presoje. Tako da se mi zdi pravzaprav ta postopek brezpredmeten in glasoval bom proti temu ustavnemu zakonu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg565">Hvala lepa, gospod Zagožen. želi še kdo besedo? Gospod Školč, prosim.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg566">Hvala lepa. Podpiram začetek tega postopka in tudi sprejem ustavnega zakona, ki bo podaljšal čas za uskladitev vse zakonodaje z ustavo. Menim, da čas ne zdrži. Ker je nastal čas enega meseca, ni mogoče več zagotoviti formalnega okvirja, v katerem bi poizkušali vzdrževati pravni red in pravno varnost.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg567">Po moji presoji je predvsem velika napaka, da to ne velja že od začetka letošnjega leta. Odgovornost Državnega zbora je, da s svojimi odločitvami povzroči čim manj nesigurnosti v družbi in državi. Ta nesigirnost bo odpravljena s tem, ko bo popolnoma jasno, da v nekem času še veljajo predpisi, katerih spornost se bo pokazala takrat, ko se bo odločalo o njih v Državnem zboru. Najbolj eklatantne stvari, ki so zoper ustavo, ki so vezane na spoštovanje človekovih pravic in državljanskih svoboščin, ne veljajo. Bojim se, v kolikor bi prevladala ta filozofija, da je prejšnja tridomna Skupščina iz različnih razlogov, ker ni zmogla vsega uskladiti, je sedaj vse tisto, kar je prej potencialno neveljavno, je sedaj prevelika odgovornost, ki bi jo Državni zbor lahko vzel na sebe. Zdi se mi nujno, da imamo, kot velja na kmetih, od koder prihaja predlagatelj tega predloga, boljši je imeti slab red kot nobenega reda.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg568">V tem primeru velja ta red postopoma popravljati. Roki, ki so dogovorjeni, so taki, da se večina ključnih stvari po prioriteti uredi do polovice leta, ostalo  pa do konec leta. Nered oziroma slab red bo slaba izkaznica za pravni sistem in tudi za Državni zbor, ki ima možnost, da ga odpravi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg569">Hvala lepa, gospod Školč. Želi še kdo besedo? Gospod Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg570">Prej se nisem oglasil, niti kakšen drug član se ni v imenu skupine. Podpiramo to, da bi se ustavni zakon na  to temo sprejel. Mislimo, da so občasne trditve, ki se pojavljajo, češ da ta zakonodaja ne velja več, nevzdržne. Lahko bi bili brez kazenske zakonodaje, da bi ljudje morili, kradli. Na podlagi take trditve nihče ne bi mogel, razen neposredno na podlagi ustave postaviti pred sodišče, če ne bi veljal zakon o obligacijskih razmerjih in cela vrsta zakonov iz področja gospodarskih odnosov. Poleg tega ustava ne govori, da bodo nehali veljati, temveč govori o roku za usklajevanje. Rok za usklajevanje naj bi ta zakon podaljšal z ustavo, ker to ni bilo uspešno.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg571">Moram povedati, da je po našem mnenju in po mojem mnenju ta igra s tem, ki izhaja iz tega principa, dajmo sedaj odpreti lov in po možnosti vložiti tudi čim več ustavnih zahtev za spodbijanje oziroma razveljavitev ob tem, da tudi drugi zakoni niso sprejeti in da popravljanje zakonodaje terja nek čas, vsaj nekaj mesecev, zlasti na takih področjih, kot sem rekel, kazensko, obligacijsko itn. Ta igra je zelo nevarna in nekje na robu nekega zavestnega ustvarjanja neke anemije, nereda zato, ker nekdo pričakuje, da bo v taki situaciji lažje pridobival na političnem ugledu. To se lahko obrne proti vsem nam, predvsem pa proti demokraciji v tej deželi.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg572">Mi bomo zato zakon podprli. Kakšen bo izid, to odgovornost pa bo nosil vsak od nas v tolikšni meri, kakor se bo odločil. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg573">Hvala, gospod Peršak. Gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ1.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg574">Hvala lepa. V Združeni listi smo od vsega začetka podpirali sprejem tega ustavnega zakona in bili nekateri poslanci tudi njegovi sopodpisniki. Njegov sprejem nismo nikoli pogojevali s sprejemom kakršnih koli drugih rešitev in tudi jasno povedali, da je za nas razprava o ureditvi lokalne samouprave pomembna, da ne nasprotujemo, da naj ne bi bila eventualno vključena tudi v ustavni zakon, vendar za nas to ni bil nikoli pogoj. Naše prepričanje je, da zahteven proces preoblikovanja stare zakonodaje v novo, za vse nas, predvsem pa za državljanke in državljane, terja neko razvidnost in jasen položaj.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg575">Mi smo lahko nezadovoljni s procesom, kakor je tekel doslej. Mi smo lahko kritični do tega, mi se lahko medsebojno tudi dobronamerno ali slabonamerno obtožujemo, kdo je za to kriv več ali manj. Ampak naša odgovornost za funkcioniranje pravne države slej ko prej obstaja. V kolikor bomo pač s premajhno večino v tem Državnem zboru odločili, da je smotrneje, da ugotovimo, da je mogoče brez jasnega programa dela Državnega zbora na spremembi prioritetne zakonodaje prepustiti oceno predlagateljem, pobudnikom in kasneje težkemu in zahtevnemu delu v Ustavnem sodišču, da samostojno presoja, čemu bo dalo prioriteto, kaj bo predlagalo ponovno rokovno odločitev Državnemu zboru, v katerih primerih pa se bo odločilo Ustavno sodišče tako, kot se je odločilo v primeru 95. člena, za kar ima vso pravico, ampak kar hkrati pomeni, da določen člen ali določena rešitev v katerem koli zakonu z dnem razglasitve preneha veljati in neko pravno stanje ni urejeno. To se lahko dogodi, ker prav gotovo bodo še neustavne oziroma so neustavne rešitve z vidika nove ustave. Najbrž nihče, ki tukaj sedi, ne dvomi. Ampak to se lahko dogodi še na kakšnem zakonu. Če je tega mnogo, to pač pomeni, da tudi 14 dni ali mesec dni neka pravna razmerja sploh ne bo mogoče urejati, niti posamezniku, niti državnim organom, niti pravosodju. To je pa velika negotovost. Potem bo hkrati pomenilo, da bomo v Državnem zboru tako, kot smo danes bili, pred tem, da moramo pač oblikovati ad hoc skupine, ki med seboj vejo že čisto vse in vsak od nas ve tudi stališča vseh in iskati zopet rešitve za celovit pregled treh pomembnih zakonov. Garantiram, mogoče sem prekorajžen, ko to rečem, ko bomo, jaz pa upam da bomo, tekom te seje sprejeli potrebne tri zakone o lokalni samoupravi, o referendumu in o volitvah, da bo skrben pravnik, potem, ko bodo sprejeti, ponovno med njimi ugotavljal neusklajenosti in nerešene stvari, pa ne zaradi površnosti, ampak enostavno, ker se takšen kompleks ne da urediti v najkrajšem času.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg576">Če bomo mi na tem, da se nam bo to dogajalo še večkrat, potem bomo prilagajali sicer z veliko intenziteto po nalogu ustavnega sodišča nekatere zakone novi ustavi, ampak bomo tudi stalno sproti ugotavljali, da smo to naredili ne dovolj premišljeno in da moramo to na novo popravljati. Mislim, da bi nam vsem koristil nek programiran prehod in temeljito delo. Zato je za mene sprejem tega ustavnega zakona posebno nujnost in odgovornost vseh nas in bi bilo prav, da za njega glasujemo. Tudi sam mislim, da je z vidika Državnega zbora sprejem tega zakona potreben tudi zato, da opredelimo svoj odnos do intenzivnega zakonodajnega dela. Nekdo bo rekel, ja saj če ga ne bomo sprejeli, je naša dolžnost, da delamo še intenzivneje. Mislim, da ne. Povsem objektivno je mogoče potem tudi tolmačenje, da začnemo spoštovati normalno proceduro dela v Državnem zboru, da na vsaki seji na začetku nimamo toliko in toliko rešitev in skrajševanj rokov in hitrih postopkov, ampak da delamo normalno in premišljeno. Namesto, da imamo po 50 točk dnevnega reda na mesec, jih imamo pač samo 10 ali 15 in jih ne damo na sejo Državnega zbora, dokler jih delovna telesa temeljito ne premeljejo. Ker potem tako in tako vemo, da če bo kdo, ali posameznik ali Ustavno sodišče menil, da mora začeti postopek, bomo vzeli tisto kot prioriteto. Takšen odnos nas do potrebne spremembe zakonodaje ne bi bil ustrezen.</seg>
@@ -2422,42 +2403,42 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg578">Jaz osebno in naša poslanska skupina ga želimo. Glasovali bomo za predlog ustavnega zakona.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg579">Gospa Jana Primožič.</seg>
             </u>
             <note type="speaker">JANA PRIMOŽIČ:</note>
-            <u who="#SDZ1.PrimožičJana" ana="#regular">
+            <u who="#PrimožičJana">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg580">Gospod predsednik, spoštovane kolegice in kolegi. Najprej lep pozdrav.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg581">Poudarila bi nekaj dejstev. Nova ustava s 1.1. letošnjega leta velja v  celoti. Do sedaj tega nismo mogli trditi. Lahko smo ponosni, da po dveh letih lahko rečemo, da je naša ustava v celoti v veljavi.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg582">Zakoni veljajo, dokler niso sprejeti novi. Razlika s prejšnjim stanjem je ta, da so podvrženi presoji Ustavnega sodišča. Do sedaj smo imeli, lahko rečem, zelo čuden sistem, kajti stara zakonodaja se ni mogla, ni bila podvržena presoji Ustavnega sodišča oziroma presoji in usklajenosti z ustavo, dočim je bila nova tej dilemi podvržena.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg583">Smo za to, da se čimprej spremeni naš pravni sistem v skladu z novo ustavo. Zato ne bomo glasovali, ker se nam to ne zdi potrebno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg584">Hvala lepa, gospa Primožičeva. Gospod Zagožen ima besedo.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg585">Spoštovani zbor! Nisem slišal, morda sem bil premalo pozoren, ampak res nisem slišal nobenega poslanca, da bi rekel, da ti zakoni, ki so bili sprejeti pred temeljno listino in varovani z ustavnim zakonom, z izvedbo ustave, niso veljavni. Veljavni so zakonski predpisi, dokler niso razveljavljeni in da se tudi uporabljajo. Normalno je, da se uporablja tudi ustava v celoti. Ustava je veljavna. Zakonov ali določb zakona in predpisov, ki so v nasprotju z veljavno ustavo, ni mogoče uporabljati, ker bi, to pomenilo kršitev ustave.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg586">Popolnoma nelogično je sedaj, da bi z nekim ustavnim zakonom spet krnili veljavnost ustave, ko je od 1.1. v celoti v veljavi in so določbam v Ustavi podvrženi vsi zakoni in drugi predpisi. Vsi se zavedamo odgovornosti za funkcioniranje pravne države, da pa bi krnili pravno državo, če vzamemo polno veljavnost ustave z ustavnim zakonom. Mislim, da ne bo nobenega lova na neustavne določbe tistih zakonov, je pa razumljivo, da se bodo državljani, ki bi eventualno lahko utrpeli škodo zaradi uporabe protiustavnih predpisov, sklicevali neposredno na ustavo in zahtevali ustavno presojo. To je samo utrditev pravne države. Še enkrat ponavljam, naša poslanska skupina ne podpira niti začetka postopka, ker se nam zdi povsem nepotreben, še več, škodljiv za uveljavitev pravne države in če bo do začetka postopka prišlo, bomo vsekakor glasovali proti ustavnemu zakonu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg587">Hvala. Želi še kdo besedo? Prosim gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg588">Hvala lepa. Do današnjega dneva sem mislil, da je ustava veljala od takrat, ko smo jo sprejeli, in to v celoti, ker stvari so popolnoma nedvoumno zapisane in bi veljalo še enkrat mogoče pogledati v prehodnih in končnih določbah, ko smo sprejemali ustavo in smo v 174. členom zapisali, da se za izvedbo te ustave in za zagotovitev prehoda k uporabi določb te ustave sprejme ustavni zakon. Ne bom bral do konca.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg589">Ta ustavni zakon je bil na isti seji sprejet in v 11. členu piše, da ta ustavni zakon začne veljati z razglasitvijo. Se pravi, s sprejemom ustave in ustavnim zakonom je začela ustava veljati v svoji polni celoti. To ne pomeni, da je zakonodajni postopek enkrat za vselej končan, ker drugače bi to pomenilo, da ko izčrpamo ta program, lahko razpustimo Državni zbor in v bistvu samo še o tem nekdo presoja, ali so odločitve v skladu, karikiram, z zakoni. Ustava velja ves čas, določeni zakoni, ki pa bodo podvrženi presoji, bodo podvrženi presoji ne glede na to, ali so bili sprejeti pred osamosvojitvijo oziroma pred sprejemom ustave je vsak zakon možno v nekem postopku spremeniti. Toliko velja okrog te vneme, kako smo se znebili nekih spon, ki nas držijo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg590">Bojim se, da z odločitvijo za nepodaljšanje tega ustavnega zakona stopamo več kot en korak nazaj. Stopamo nazaj kar za neko celo obdobje, in sicer stopamo v obdobje, ko je odprt lov na niz nekih postopkov, ko lahko vsak presoja, kaj velja in kaj ne velja in mogoče za tem pultom nihče ni o tem govoril. Ampak spomnil vas bom, v neki preiskavi, ki je iskala storilce anonimnih pisanj, se je visok uslužbenec Ministrstva za obrambo, če se ne motim, se piše gospod Zagožen, skliceval, da pač za njega en zakon ne velja oziroma eno določilo enega zakona, ker da pač takih kršitev ni. To navajam samo kot primer, kaj pomeni ne sprejeti ustavnega zakona in kaj pomeni v bistvu pustiti odprto vsakemu posamezniku presojo, da poleg vseh instanc še preko Ustavnega sodišča išče možnost za to, da se izogne določenim stvarem, katerim se drugače ne bi mogel izogniti.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg591">To, kar bi prosil, je, da preden odločamo, spet pokličemo Vlado. Enkrat sem to nekako že izposloval, ko je to padlo, da pove svoje eksplicitno stališče do sprejema ustavnega zakona in tukaj, gospod predsednik, bi prosil, če je to mogoče narediti brez tega glasovanja, da se jih pokliče, ker gre za absolutno bolj pomembno zadevo, kot se v tem trenutku kaže. Tudi sam mislim, da ne bo nobena drama, če te stvari ne bodo sprejete, toda hočem, da se natančno vidi, kako bodo karte, ki odpirajo pot voluntarizmu, porazdeljene in  tem smislu bi hotel slišati tudi stališče Vlade. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg592">Hvala lepa. Kasneje bom prosil za besedo ministra Lojzeta Jankota. Dajem besedo dr. Ruplu.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SDZ1.RupelDimitrij" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg593">Spoštovani gospod predsednik, spoštovane kolegice in kolegi. Menim, da smo pred važno odločitvijo, da ne bom uporabil besede usodno. Če ne bomo potrdili oziroma če ne bomo pritrdili predlogu, da se podaljša veljavnost določene zakonodaje in če ne bomo te točke opravili tako, kot je bila predstavljena tudi že prej recimo z besedami kolega Peršaka, potem bomo dosegli to, da si bomo vzeli pristojnosti in jih dali nekomu drugemu.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg594">Gre za to, da danes Državni zbor odloča o tem ali bo ohranil oblast, ki jo v tej državi tudi po ustavi ima in bo sam odločal o stvareh, ki so bistvenega pomena za to državo, ali bo pristojnosti prepustil Ustavnemu sodišču. Gre za, čisto preprosto povedano, oblast Državnega zbora in za to ali bo Državni zbor dopustil, da si pristojnosti jemlje kdo drug.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg595">Seveda ne bi imel nič proti temu, da namesto Državnega zbora odloča in vlada Ustavno sodišče Republike Slovenije, ko se ne bi v zadnjem času zgodilo nekaj, kar me navdaja z neko bojaznijo, da ne rečem s strahom in slabimi občutki. Včeraj si je Ustavno sodišče, po moji sodbi, dovolilo neko stvar, ki kaže na to, da se politizira. Tisto Ustavno sodišče, tisti element oblasti, ki naj bi bil zunaj ideoloških, političnih, strankarskih in vseh mogočih pripetij, si je vzel pravico v tej državi odločiti, kdaj naj bodo volitve in kdaj volitve ne smejo biti.</seg>
@@ -2465,29 +2446,29 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg597">Drugi primer, zaradi katerega imam nekatere pomisleke in strahove v zvezi z Ustavnim sodiščem, je govor njegovega predsednika na nedavni proslavi, ko je govoril o kadrovski politiki o tem, kako bi bilo treba na Slovenskem urediti kadrovsko politiko, kako bi bilo potrebno urediti - bom rekel "berus pferbod" - itd. Zaradi vsega tega seveda opozarjam, da danes ne odločamo samo o neki tehnični stvari, ampak odločamo o tem, ali ta Državni zbor še ima pristojnosti in, ali še ima oblast v tej državi, ali je pripravljen si to oblast vzeti iz rok in jo dati nekomu drugemu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg598">Hvala gospod Rupel. Besedo ima gospod Ribičič. Replika, gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg599">Spoštovani zbor! Jaz sem kar nekoliko šokiran ob takem političnem napadu na Ustavno sodišče, ki se je ravnokar zgodilo po moji presoji. Ustavno sodišče je včeraj sprejelo nek sklep soglasno in obsoditi ga, da je to politični sklep, ko je vendar poklicano za to, da presoja, kaj je v skladu z ustavo in kaj ni v skladu z ustavo, je po mojem napad na ustanovo, ki je z ustavo ustanovljena za to, da brani ustavnost v tej državi. Ustavno sodišče seveda ni nič odločalo o tem, kdaj bodo volitve in kako bodo volitve. Presojalo je samo ustavnost nekega člena v zakonu o lokalni samoupravi in očitno je presodilo, da ni v skladu z ustavo in da državljanom jemlje neke ustavne pravice. Za to gre.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg600">Gospod Rupel je tudi rekel ravnokar, da naj bi s tem ustavnim zakonom podaljšali veljavnost nekih zakonov. Ni potrebe. Ti zakoni so veljavni. Samo tako kot vsi drugi zakoni, vsi drugi predpisi, so izpostavljeni ustavni presoji. To je normalna inštitucija prav gotovo v vsaki ustavi in za to so ustavna sodišča.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg601">Podobno gospod Školč. Do uskladitve z ustavo oziroma do izteka uskladitvenega roka ni mogoče začeti postopka za oceno ustavnosti predpisov in drugih splošnih aktov, piše v drugem odstavku 1. člena ustavnega zakona za izvedbo ustave. To ne pomeni, da bo volontersko lahko vsak presojal, kaj je ustavno in kaj ni ustavno, ampak, da to sme delati Ustavno sodišče, medtem ko doslej tega ni smelo. Ni smelo, razen v izjemnih primerih, če so ti predpisi in drugi splošni akti posegali v človekove pravice in temeljne svoboščine. So pa seveda še zakoni in predpisi in določbe, ki neposredno ne posegajo v človekove pravice in temeljne svoboščine, ki z ustavo niso usklajeni in kadar se uporabljajo na način, ki je v nasprotju z ustavnimi določbami, ima prizadeti pravico se pritožiti in zahtevati ustavno presojo. Tako da ne vem, kam bomo prišli s takimi nastopi, ko se poskuša diskvalificirati ustanovo, ki je v sistemu določena za to, da brani ustavno ureditev. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg602">Hvala, gospod Zagožen. Repliko ima gospod Rupel.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SDZ1.RupelDimitrij" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg603">Spoštovani gospod predsednik, drage kolegice in kolegi! Moram vendarle popraviti kolega Zagožna. Prebral bom odločbo Ustavnega sodišča, ki v 4. točki pravi: "Ustavno dopustno je, da se do preobrazbe obstoječih občin z zakonom odloži izvedba volitev organov novih občin in da se za ustrezen čas, v katerem bo preobrazbo dejansko mogoče izvesti, ki bo glede na trajanje celotnega mandata sorazmerno kratek, podaljša mandat obstoječim organom v občinah." Če to ni politična beseda, če to ni politična izjava, potem ne vem, kaj je politična izjava. Ustavno sodišče uporablja besede, kot ustrezen čas, sorazmerno kratek čas in govori, seveda to so popolnoma neprecizne besede in me čudi, da si Ustavno sodišče dovoli takšen besednjak, nakar pa govori o tem, da je treba podaljšati mandate obstoječim organom v občinah. Za kaj gre? Konkretno v primeru Ljubljane to pomeni, da bo predsednik Vlade Mesta Ljubljane lahko vladal še eno leto, tako kot do sedaj brez kontrole, brez skupščine itn. Če to ni politična odločitev, potem ne vem kaj je politična odločitev. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg604">Hvala. Gospod Ribičič ima besedo.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ1.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg605">Spoštovani! Menim, da glede tega ustavnega zakona dramatiziranje ni na mestu z nobene strani. Zdaj smo vendarle v drugi polovici januarja in mislim, da dramatiziranje v tem smislu, kaj velikega se bo zgodilo, ni korektno, ali pa tudi dramatiziranje v drugi smeri, kakor da bi podaljševali nek star pravni sistem, če sprejmemo podaljšanje roka. Naj vam v zvezi s tem povem, da tisti, ki smo bili člani ustavne komisije, ki je pripravljala te rešitve, smo bili takrat, vsaj jaz osebno, pa tudi nekateri drugi prepričani, da v dveh letih ne bo mogoče vsega storiti in da bo ta rok podaljšan.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg606">Ampak, glede tega, ker se je zdaj sprožila polemika, moram reči, da nima neposredne zveze s to materijo. Tukaj gre za odločbo, ki se nanaša na novo sprejet zakon, na ravnokar sprejet zakon v tem državnem zboru, ki je bil v rekordnem času, potem ko je bil sprejet, v eni določbi razveljavljen, mi pa govorimo o podaljšanju roka za tiste predpise od prej, ki so bili sprejeti pred ustavo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg607">Menim, da gre tukaj za to, da bi sprejem tega ustavnega zakona okrepil. Zdaj v kakšni meri, je težko reči, ampak bi okrepil pravno varnost državljank in državljanov Republike Slovenije. Pri tem se sklicujem na obrazložitev, ki jo je gospod Lojze Janko tukaj dal, in zlasti na tisti del, ko je opozarjal, da bo seveda v sporih pred sodišči lahko prihajalo do sklicevanja na protiustavnost tistih zakonov, na podlagi katerih odločajo sodišča.</seg>
@@ -2497,11 +2478,11 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg611">Prvič, ker ne vidim nobenega smisla v glasovanju o tej zadevi, če niti vladne stranke niso dosegle soglasja okrog spremembe ustavnega zakona, ki se sprejema z dvotretjinsko večino. Imamo tukaj, če dobro razumem, dve vladni stranki, ki sta za in dve vladni stranki, ki sta proti. Ne vidim nobenega smisla niti od te razprave niti od glasovanja, ki bo tukaj sledilo. Vidim samo poglabljanje razlik in medsebojnega nezaupanja, ki se nam bo maščevalo v negativnem smislu, ko bomo iskali sporazum, kjer bi bilo ravno tako dobro, da je na ustavni ravni glede prehoda v lokalno samoupravo. Izglasovano je bilo tako, kot je bilo izglasovano. To sedaj obravnavamo. Možno je seveda tudi naprej siliti v glasovanje o tem vprašanju, sprašujem se pa, kdo bo od tega imel kakšno korist.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg612">Hvala gospod Ciril Ribičič. Želi še kdo besedo? Prosim, gospa Nada Skuk.</seg>
             </u>
             <note type="speaker">NADA SKUK:</note>
-            <u who="#SDZ1.SkukNada" ana="#regular">
+            <u who="#SkukNada">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg613">Hvala lepa za besedo. Lepo pozdravljeni kolegi in kolegice! Počakala sem, da je par govorcev pred menoj govorilo, da se mi je malo temperatura ohladila, ker moram reči, da ko poslušam določene razprave, meni kar zakuha, da se tako izrazim. Zato tudi velikokrat ne grem za govorniški oder, ker vem, da bi verjetno precej replik spodbudila, pa kljub temu ne morem poslušati take debate, ker jaz, ko sem kandidirala za poslanko, sem bila prepričana, da imamo ustavo, v katero vsi zaupamo, ki ji verjamemo in ki jo bomo upoštevali pri svojem delu. Zato ne morem poslušati takih razprav, da je pač treba še postopno pa ne vem kako naprej. V glavnem, jaz enostavno ne prenesem več teh izrazov postopno, postopno. Mislim, da že dolgo postopno delamo in dajmo si že vzeti to nalogo na pleča in končno začnimo ustavo izvajati.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg614">Jaz se ne morem strinjati z gospodom Školčem, ki govori, da bo sedaj pa vsak presojal zakonodajo. Mislim, da vsak ima pravico zahtevati presojo na Ustavnem sodišču in Ustava tudi vsakemu državljanu omogoča, da se prepriča, ali so njegove človekove pravice in svoboščine varovane ali ne. Ali ima pravico v demokraciji se oglasiti, ali ima pravico podvomiti v kakšno stvar? Mislim, da smo zato ustavo sprejeli, da je tu dana možnost našim državljanom. Jasno, presoja ustavnost pa Ustavno sodišče. Jaz bi Ustavno sodišče kot tako inštitucijo zelo priporočala, da jo vsi poslanci upoštevamo kot organ, ki je pristojen za presojo ustavnosti. Prosim, resnično, jaz več ne morem poslušati teh dvomov, da demokratično izvoljene inštitucije. Sami v tem parlamentu smo izvolili demokratične inštitucije, sodnike, te sodnike, one in mislim, da so sposobni, da bodo znali prebrati ustavo, da bodo znali presoditi kaj je tisto kar mi sprejemamo v skladu z ustavo. Če bomo zahtevali, da bodo tudi presodili, kaj je tisto, kar ste prej sprejemali, tudi vi, gospod Rupel, v prejšnji Skupščini, kar ni v skladu z ustavo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg615">Želimo, da je možno tudi prej sprejeto zakonodajo presojati. Za to ni nihče tu klical k nekemu nepravnemu stanju, k nekemu neredu v državi. Želimo samo to, da ima vsak državljan možnost, da preveri, ali so njegove pravice spoštovane in če se sodi in se postopa v naši državi z ustavo, ki velja.</seg>
@@ -2513,11 +2494,11 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg621">Če je glavni problem Vlada v Ljubljani, da zaradi tega naša lokalna zakonodaja tako počasi napreduje, bi svetovala vsem, ki ste delegati v Skupščini, da se držite tistega kar so vas zadolžili volivci. Izvoljeni ste bili za mandat, dokler ne bo nov. Hodite na seje in ne bo mogel predsednik Vlade samostojno delati brez vašega nadzora in podpore. Meni je zavrela kri, ker ne morem več poslušati postopno in postopno. Tri leta se že postopno pripravljamo, da uvedemo demokracijo. Dajmo ljudem možnost, da z uveljavitvijo lokalne samouprave tudi ta zakonodaja oziroma demokracija začne veljati.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg622">Hvala lepa, gospa Skuk. Gospod Školč, izvolite repliko.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg623">Hvala lepa. Tudi jaz bi rad, da bi mi kdaj zavrela kri, ker določene stvari težko poslušam. Zdi se mi, da je osnovna naloga za mene kot Liberalnega demokrata, da na osnovi racionalne presoje odločam. Po tej plati bi rekel dve stvari gospe Skukovi.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg624">Kaj je postopno in kaj je mahoma. To je nemogoče, da ne bi bilo odgovorjeno. To so stvari, ki jih evropska in s tem tudi slovenska zgodovina zelo dobro pozna. Poznam besede postopoma zamenjati z evolucijo in mahoma z revolucijo. Po tej plati sem raje gospe Skukovi v želodcu. Sem za to, da predelamo tisto, kar moramo, da stvari spreminjamo po tej postopni poti.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg625">Oglasil sem se zaradi druge zadeve. Mislim, da je mogoče bil v tej točki nesporazum. Ustavni zakon za izvedbo Ustave Republike Slovenije je že takrat izvzel vse tiste predpise, ki bi posegali v človekove pravice in temeljne svoboščine.</seg>
@@ -2526,22 +2507,22 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg628">Jaz sem tudi že prej rekel, da ne vidim posebne drame v tem, če te stvari ne bodo tako odločene in tudi privoščim Ustavnemu sodišču, da se bo moralo seveda z vsemi temi nesporazumi ukvarjati, nenazadnje pozicija, v kateri so se zdaj našli, da pač kot ona pravi: "nam solijo pamet", kako bi bilo prav, da naredimo zato ker določeni stvari se ne znamo odločiti, ni pozicija, ki gre Ustavnemu sodišču. Ustavno sodišče naj v črti ustave presoja skladnost zakonov z ustavo in po tej plati jim privoščim, da bi se s pravno materijo ukvarjali, ne pa s političnimi nasveti, kdaj in kako velja izpeljati lokalne volitve. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg629">Hvala gospod Školč. Gospod Bavčar ima besedo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg630">V skladu s poslovnikom moram reči, da bom v nadaljevanju omejeval razpravo na pet minut, ker ni pisnih prijav, pa ne zaradi gospoda Bavčarja, ampak zaradi razprave, ker mislim, da <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SDZ1.BavčarIgor" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg631">Jaz ti bom, predsednik, prihranil to dolžnost. Rad bi rekel samo to gospe Skukovi, da je poslanska skupina SKD v drugi obravnavi vložila predlog 95. člena s šestimi podpisi, da so se ji pridružili tudi nekateri drugi poslanci in da zaradi tega jaz odklanjam seveda očitke na račun našega stališča.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg632">Drugič pa, kar zadeva Ljubljano, pričakoval sem, da bodo to ljubljanski poslanci, ki jih je nekaj tukaj povedali, ni problem v njihovi pripravljenosti za sodelovanje, ampak v predsedniku, ki ne skliče teh sej.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg633">Hvala lepa. Želi še kdo? Če ne, bi prosil ministra Lojzeta Janka, če lahko da stališče Vlade. Seveda pa za tebe ne velja omejitev pet minut.</seg>
             </u>
             <note type="speaker">LOJZE JANKO:</note>
-            <u who="#SDZ1.JankoAlojz" ana="#regular">
+            <u who="#JankoAlojz">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg634">Hvala lepa. Gospe in gospodje poslanci! Ko je poleti, lansko leto 25 poslancev predlagalo začetek postopka za spremembo prvega odstavka, 1. člena ustavnega zakona, je Vlada zavzela do tega pozitivno mnenje in ga tudi obrazložila.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg635">Ko se je potem približno dva meseca zadeva malo zapletla in smo skušali skupaj odpraviti določene pomanjkljivosti, smo vendarle menili, da je za delovanje pravnega reda, ki je resnično precej - lahko si drznem reči - nenavaden v teh prehodnih časih, nujno potrebna elementarna pravna varnost in zato je Vlada tudi v tem poskusu, ko je predlagala selekcijo zakonov, vztrajala pri stališču, da bi bilo le zelo koristno, da se ta ustavni rok, določen v ustavnem zakonu, dopolni oziroma podaljša.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg636">Posebej sem na seji tega Državnega zbora pred dvema mesecema povedal, kaj vse se lahko zgodi, ne kaj se bo zgodilo in moja prva misel je bila, in prvo izhodišče, da je gotovo, da pravna varnost ne bo večja. V tem vmesnem času, ko je 1.1.1994 nehal veljati rok in ko je ponovno skupina poslancev predlagala, da se ta rok vendarle spet uvede, Vlada svojega stališča ni spremenila. V bistvu sedaj gre za stališče, ki mu nasprotujejo v nekaterih političnih strankah in celi vrsta poslancev, tako da je težko dobiti dve tretjini, izhaja to stališče, da ni potreben nobeno podaljšanje roka iz  po mojem mnenju nekaterih predpostavk oziroma ocen.</seg>
@@ -2553,34 +2534,34 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg642">Za konec seveda ne morem povedati drugega kot to, da tudi v Vladi ni stališče soglasno in za kakršnokoli zadevo na področju spreminjanja ustavnega zakona vsi vemo, da je potrebna dvotretjinska večina. Rečem pa, da pravna varnost gotovo ne bo večja. Na drugi strani, iluzija je, da se bo ustava sedaj hitreje in neposredneje izvajala, kajti Ustavno sodišče bo lahko le razveljavilo določene stvari, ne bo pa moglo namesto zakonodajalca spreminjati in dopolnjevati zakonov, ker to ni njegova funkcija. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg643">Hvala, minister Lojze Janko. Proceduralno ima gospod Ciril Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ1.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg644">Spoštovani! Predlagam Državnemu zboru, da prekinemo to točko dnevnega reda. Obrazložitev je takšna kot poprej, da omogočimo tistim, ki si prizadevajo iskati sporazum glede lokalne samouprave še eno možnost, da se del tega sporazuma zapiše tudi v ta ustavni zakon.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg645">Drugi argument, moram sedaj navesti vsaj en nov argument, ker ponavljam v bistvu prejšnji predlog. In sicer ta nov argument je, da je ta razprava zame zelo prepričljiva v tem smislu, da je nima smisla nadaljevati in da bi glasovanje o tem ustavnem zakonu bil en dodaten fiasko, za katerega vam garantiram, da ne bo pozitivno, ampak bo negativno vplival na možnost sporazumevanja o drugih vprašanjih, ki so na dnevnem redu in za katere bi želeli sporazumno odločanje nekje na ravni ustavnih odločitev. Prosim poslance, ne da se premislijo glede svojega stališča glede tega ustavnega zakona. Jaz ne verjamem v čudeže in tudi ne verjamem, da bo ta racionalna obrazložitev ministra Janka koga lahko na hitro prepričala, toliko poznam trdnost teh stališč.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg646">Prosim vas samo, da se premislite glede tega, da je to treba storiti danes in takoj in da pač poslušate tudi, če niste prepričani da imam prav, da poslušate oceno nekoga, ki sodeluje v tem usklajevanju, da to ne bo koristilo, ampak bo škodilo usklajevanju glede drugih vprašanj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg647">Hvala lepa gospod Ciril Ribičič. Proceduralno ima gospod Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg648">Spoštovani zbor! Ponovno predlagam, da usode usklajevanja zakonov o lokalni samoupravi v izvedbi referendumov in lokalnih volitvah ne vežemo na usodo predloga s spremembo ustavnega zakona, ki je sedaj na dnevnem redu. To bi utegnilo povzročiti dejansko popolno blokado. Upam, da si je sedaj več nihče ne želi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg649">Hvala lepa. Želi še kdo? Gospod Ciril Ribičič, to je samo eno vprašanje, ki se postavlja. To je vprašanje, da smo mi o tem že glasovali. Predlog je bil, da se veže obravnava predloga za začetek postopka za spremembo ustavnega zakona s točkami 2., 3. in 4. Glasovanje ni uspelo.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ1.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg650">Prosil bi, pričakoval sem, da bo moj predlog kot proceduralni dan na glasovanje brez razprave. Glede tega, da bi pa to bilo ponavljanje istega predloga, pa gre za drug predlog, torej da se točka prekine, da se ne preide na glasovanje. Se pravi, je to drugačen predlog in pa v utemeljitvi so bili novi argumenti, ki jih sedaj ne bi ponavljal.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg651">Tako, da vztrajam pri svojem predlogu. Prosim vas, če le morete v skladu s poslovnikom, da daste na glasovanje, gospod predsednik ta predlog.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MAG. HERMAN RIGELNIK:</note>
-            <u who="#SDZ1.RigelnikHerman" ana="#chair">
+            <u who="#RigelnikHerman" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg652">Hvala lepa, se nisva potem prav razumela. Proceduralno gospod Ribičič daje predlog, da prekinemo to točko dnevnega reda. Ugotovimo sklepčnost!</seg>
                <note>Ni konstatacije.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg653">Kdo je za?</seg>
@@ -2591,7 +2572,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 13.56 uri in se je nadaljevala ob 16.10 uri</note>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg656">Spoštovane kolegice poslanke, spoštovani kolegi poslanci! Nadaljujemo 17. sejo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg657">Za popoldanski del seje so se opravičili gospod Dragan Černetič, gospa Jadranka Šturm-Kocjan, gospod Zoran Thaler in gospod Igor Bavčar za eno uro.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg658">Prosim, da v dvorani najprej ugotovimo prisotnost!</seg>
@@ -2605,23 +2586,23 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg665">Želi o teh amandmajih kdo razpravljati? Gospod Moge, prosim izvolite.</seg>
             </u>
             <note type="speaker">RUDI MOGE:</note>
-            <u who="#SDZ1.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg666">Hvala za besedo. Spoštovane poslanke in poslanci! Amandma, ki sem ga vložil, govori o tem, da bi v tekstu, ki smo ga sprejeli zdaj na 1. člen, samo črtali besedo: "vendar največ do 70-ega leta starosti."</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg667">Spomnite se, da smo najprej sprejeli tekst, ki je imel tukaj notri 65 let. Zdaj nekateri predlagajo 67, tukaj 70 let, vendar pa pravim, da katera koli letnica bo v tem tekstu, potem ta pride navzkriž prvič s 14. členom zakona o ustavi, ki govori, da smo vsi enaki pred zakonom in s 102. členom zakona o delovnih razmerjih, kjer je osnovna človekova pravica, da lahko 40 let dela.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg668">Zaradi tega bodo ti, ki bi jih recimo ta zakon v tem omejeval, šli verjetno na ustavno sodišče in verjetno bodo potem tožbo tudi dobili. Jaz bi vas poprosil, da bi v izogib tega, da zopet ne bi sprejemali zakone, ki bi bili navzkriž z ustavo in z drugo zakonodajo, ta amandma podprli.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg669">Hvala lepa. Gospa Irena Oman ima besedo.</seg>
             </u>
             <note type="speaker">IRENA OMAN:</note>
-            <u who="#SDZ1.OmanIrena" ana="#regular">
+            <u who="#OmanIrena">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg670">Hvala lepa. Spoštovani! Moje mnenje je, da oceno ustavnosti daje ustavno sodišče, zato se jaz s tem ne bom obremenjevala.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg671">Menim, da po tistem materialu, ki sem ga jaz dobila oziroma naša poslanska skupina, pa verjetno tudi druge poslanske skupine, ki govorijo o nekaterih, bom rekla evropskih standardih,</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg672">v Evropi velja, da se najkasneje s 67-imi leti visokošolski učitelji upokojijo in iz tega tudi naš amandma, ki ostaja sicer v celoti enak kot je bil že sprejet z dopolnilom, ki smo ga vložili skupaj s poslansko skupino združene liste, vendar pa omejuje na 67 let in ne na 70, kot je bilo prvotno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg673">Hvala lepa. Želi še kdo besedo? V kolikor ne, prehajamo na odločanje o amandmajih.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg674">Najprej bomo glasovali o amandmaju, ki ga predlagajo gospod Rudi Moge in skupina poslancev. Črta se del zadnjega stavka, 1. člena, ki se glasi: "vendar največ do 70-ega leta starosti." Ugotovimo sklepčnost!</seg>
                <note>53 prisotnih.</note>
@@ -2652,7 +2633,7 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg690">Gospod Peršak ima besedo kot predlagatelj zakona.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg691">Hvala za besedo. Sem presenečen, da smo tako hitro prišli do tega zakona. Rad bi povedal samo nekaj stavkov. Predlagatelji smo seveda poslanci iz skupine, nisem samo jaz, da ne bo izgledalo, kot da si posebej lastim kakšne zasluge.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg692">Rad bi povedal to, da je zakon kljub nekaterim redakcijskim pomanjkljivostim, za odpravo katerih so predlagani amandmaji, pripravljeni tako, kot je bil sprejet v drugi obravnavi, da sta ostali odprti samo dve vprašanji, eno se je še naknadno pri tretji obravnavi povedalo. Eno izmed odprtih vprašanj je soglasje med predlagatelji in Vlado glede tega, ali naj se, da opišem primer, v primeru, ko se ponovno vzpostavi agrarna skupnost in niso vsi nekdanji člani te agrarne skupnosti soustanovitelji v tej ponovni vzpostavitvi agrarnih skupnosti, da tudi v tem primeru zemljišča te agrarne skupnosti vrnejo v celoti, vendar naj bi po našem mnenju, tako kot je bilo sprejeto v drugi obravnavi, lastnik tistega preostanka, glede katerega ni lastnikov idealnih deležev, bila lokalna skupnost, se pravi občina, ker pač tudi mi mislimo, da je na nek način bližje tej agrarni skupnosti in ljudem, ki bodo v tej agrarni skupnosti še zlasti, ko bo prišlo do preoblikovanja občin. Vlada pa vztraja in je vložila amandma, ki je dobil podporo tudi na matičnem delovnem telesu, da naj bi lastnik teh zemljišč, tega preostanka zemljišč ostal Sklad kmetijskih zemljišč in gozdov in bi z njimi kot sočlan agrarnih skupnosti upravljal, in to iz razloga, ker bi Vlada oziroma sklad želel s temi zemljišči reševati eventualne probleme z denacionalizacijo, se pravi uporabiti ta del zemljišč tudi za nadomestna zemljišča pri denacionalizaciji, kar je po našem mnenju povezano z vprašanjem, ali bi reflektanti na ta nadomestna zemljišča postali člani agrarnih skupnosti ali ne.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg693">In drugič, da bi sklad lahko sredstva, ki bi jih pridobil na račun teh zemljišč od drugih članov agrarne skupnosti, ki bi ta zemljišča koristili, uporabil v kakšne druge namene, za katere je zavezan po zakonu o Skladu kmetijskih zemljišč in gozdov.</seg>
@@ -2680,12 +2661,12 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg709">To se mi zdita dva problema, na katera se mi je zdelo vredno opozoriti in v imenu predlagateljev zakona apelirati na zbor, da bi - jaz se strinjam s tem, da se dikcija, kot je zdaj zapisana v tretjem odstavku črta, ampak da se nadomesti s to bolj določno, bolj neoporečno dikcijo in tudi bolj konkretno. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg710">Hvala lepa gospodu Peršaku. Predlog zakona je obravnavala Komisija za spremljanje in nadzor lastninskega preoblikovanja in družbene lastnine kot matično delovno telo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg711">Prosim poročevalca, da poda mnenje. Gospod Rejc ima besedo.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg712">Spoštovani podpredsednik! Gospe in gospodje! Po svoje lahko pohvalim kolego Antona Peršaka kot enega od predlagateljev tega zakona za njegov izjemen trud, tudi sedaj pred menoj. Vendar moram reči tudi to, da kakor se vidi iz samih in to smo tudi ugotovili na Komisiji za spremljanje in nadzor lastninskega preoblikovanja in družbene lastnine.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg713">Na več sejah ko smo obravnavali ta predlog zakona, smo gotovo - in to mislim, da je ena skupna ugotovitev, prišli do izjemno, bi rekel - lahko rečem dobre rešitve, ali pa tako rekoč rešitve, skupne rešitve, kjer je zelo malo razlik - mnogo manj, kot smo jih morda prej slišali, ker moram povedati, da je to zakon, ki sega prav tja do pred srednji vek.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg714">Tako, da tako globoko in v daljavo v zgodovini noben zakon ne sega in tudi iz te strani imamo to obliko lastninskega, bi rekel pridobivanja lastnine in te pravice in ponovno vzpostavitev agrarnih skupnosti, kar je seveda stvar dveh let, se pravi, od tega časa ko bo zakon sprejet in upam, da bo danes sprejet, kot pravim smo dosegli izjemno poenotenje in se vidi že iz teh amandmajev, ki jih zgleda veliko, ampak je v glavnem veliko redakcijskih, veliko takih, ko pač v nečem popravlja ali pa dopolnjuje z neko besedo tekst in ga napravlja bolj kompletno ali pa da je Vlada recimo dala neke bolj precizne tekste, ki v bistvu pomenijo, da se ve za kaj se gre in da se neka stvar precizira.</seg>
@@ -2699,7 +2680,7 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg722">Predlagam, kot pravim, problem je v tem, da ta amandma, ki ga je gospod Anton Peršak, je sigurno zamudil ta uradni rok. Druga stvar pa je, da se mi zdi, da kakor koli gledamo te amandmaje ali pa celi zakon, da je dosti celovit, dosti čuten do vseh in seveda dovolj nekako, kot se vidi, je v glavnem to soglasje, skoraj kompletno pripravljen, razen v dveh točkah, ki pa sta tudi rešljivi z oziroma na to, da tudi sedaj nobeden ni stregel po tem, da bi se ta služnostna uporaba ne uporabila in predlagam, da bi zakon oziroma te amandmaje in zakon skupaj sprejeli in bi seveda s tem pripravili en velik premik tudi v lastninskem preoblikovanju naše dežele. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg723">Hvala lepa gospodu Rejcu. Želi besedo predstavnik Sekretariata za zakonodajo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg724">Želi besedo predstavnik Vlade? Ga ni. Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -2707,20 +2688,20 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg725">Besedo dajem poslankam in poslancem. Prosim, gospod Geza Džuban in potem gospod Šešerko.</seg>
             </u>
             <note type="speaker">GEZA DŽUBAN:</note>
-            <u who="#SDZ1.DžubanGeza" ana="#regular">
+            <u who="#DžubanGeza">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg726">Hvala lepa predsedujoči. Spoštovani zbor! Želim se oglasiti samo k 8. členu predložene spremembe tega zakona, in sicer v tistem delu, ko se govori o tem, ali prenesti ostanek agrarne skupnosti v lastništvo občine ali ostane ta del v skladu kmetijskih zemljišč. V preteklosti so osnovali sklad kmetijskih zemljišč z namenom, da gospodari z vsemi zemljišči nekdanjih pravnih oseb v tej državi in da se vodi tudi skozi ta sklad neko kmetijsko politiko, ki bo verjetno imela v prihodnosti tudi neko vlogo.  Z amandmajem v 8. členu uvajamo novo, za moje pojme nelogično zadevo, da prenašamo ta zemljišča na občino, ki v prvi vrsti ni zainteresirana za neko kmetijsko predelavo, pač pa da bi spreminjala namen tem zemljiščem. Vlogo v tem primeru bi morala odigrati neka druga zemljišča, istočasno pa vis-a-vis nekdanjega oziroma sedanjega družbenega sektorja, ki je kvalificiran za to pridelavo in je tudi za zaposlene eksistenčno vezan na to zemljišče, smo mu lastništvo odvzeli, čeprav še vedno ima prioriteto pri najemanju. Sedaj prenašamo neko lastništvo na občino, ki v kmetijskem smislu nima kaj početi s temi zemljišči. Logično mi je, da ta zemljišča ostanejo v skladu in da za morebitne potrebe lokalnih skupnosti, ki pač bodo imele svoje interese, skozi 22. člen zakona o skladu kmetijskih zemljišč le-te izražajo svoje interese oziroma lahko tudi ta zemljišča pridobijo takrat, ko bo denacionalizacija zaključena.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg727">Moje stališče je v tem, da ostanejo ta zemljišča, sedanjem lastniku, to je ne Skladu kmetijskih zemljišč. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg728">Hvala, gospod Geza Džuban. Gospod Šešerko ima besedo.</seg>
             </u>
             <note type="speaker">DR. LEO ŠEŠERKO:</note>
-            <u who="#SDZ1.ŠešerkoLeo" ana="#regular">
+            <u who="#ŠešerkoLeo">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg729">Spoštovani gospod podpredsednik, spoštovani zbor! Jaz sem potem, ko je moj kolega gospod Džuban začel govoriti, že pričakoval, da moja intervencija ne bo potrebna. Žal je potem razvil tezo tako, da on zastopa stališče, naj ta zemljišča, za katera ni zahtevkov, pripadajo skladu. Moje stališče je bliže temu, da naj pripadajo občini, in sicer zato, ker jaz nisem izhajal iz podmene, da bo občina slabo ravnala s takimi zemljišči. Mnenja sem, da v tistih primerih, ko ni nobenega zahtevka za pravno nasledstvo na nekem zemljišču agrarne skupnosti, da naj se v takem primeru ne izvaja po dednem zakonu in se na vrat na nos išče za vsako ceno nekega dediča, ampak sem mnenja, da se naj v takem primeru to zemljišče pusti ali v last sklada, kot pravi kolega Džuban, ali v lastništvo občine. Gre namreč za to, da bo treba za taka zemljišča tudi skrbeti in je v tem pogledu potreben naslovnik oziroma lastnik. Na vsak način pa je važno, da ne bodo za vsako ceno ta zemljišča postala predmet trgovanja, ki bi potem povzročil, kot lahko sam ugotovim v nekaterih primerih, ko novi lastniki kupijo taka zemljišča, na njih včasih postavljajo različne objekte brez dovoljenj, kar potem okoljevarstveno predstavlja velike probleme. Recimo ob rekah lahko povem, da poznam takšne primere. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg730">Hvala. Želi še kdo besedo?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg731">Razpravo zaključujem in prehajamo na odločanje o posameznih amandmajih k členom. Pregled amandmajev imate. To so amandmaji Komisije za spremljanje in nadzor lastninskega preoblikovanja družbene lastnine z dne 25.01., datum 24.01., pregled amandmajev. Prosil bi, da si jih pripravite, da mi ne bo treba brati amandmajev. Imamo amandma k 1. členu, ki ga predlaga poslanska skupina demokratov, demokratske stranke. Vlada ga podpira, matično delovno telo podpira. Amandma se glasi: v tretjem odstavku se črta besedilo oziroma pod drugem odstavku tretjega člena tega zakona. Ugotovimo sklepčnost!</seg>
@@ -2732,32 +2713,32 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg734">Ugotavljam, da je amandma sprejet. Imamo amandma k 4. členu. Pod točko ena in dva. Prvega predlaga poslanska skupina demokratov in drugega predlaga Vlada. Vlada prvega ne podpira. Drugi amandma, Vlada, matično delovno telo in predlagatelji podpirajo. Prosim, gospod Peršak obrazložitev.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg735">To je to sporno vprašanje v zvezi z Slovenci v zamejstvu. Najprej bi povedal naslednje, da je prvi amandma odvisen od usode drugega amandmaja, kajti če bi drugi bil</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg736">sprejet, je prvi brezpredmeten, tako da predlagam, da se glasuje v obratnem vrstnem redu. Drugič pa, moram povedati, da sedaj, če bo pač stališče, da ne glede na to, da preprosto tistega svojega amandmaja nisem mogel vložiti prej, ker je šele 21., to je zadnji dan, ko je bil rok odprt za amandmaje, bil vložen amandma Vlade in tudi sporočeno to stališče, da bo Vlada oporekala temu odstavku, kar prej ni bilo sporno do tega dne. To je stališče je bilo meni prvič sporočeno kot predlagatelju zakona na sestanku, ki smo ga imeli ravno z zamejskimi Slovenci v zvezi s to teme organiziranega. Če bi bil ta amandma sprejet, to vprašanje ostaja v tem zakonu nerešen. Priznavam dobro voljo gospoda Rejca in matičnega odbora, na katerem je tekla razprava o tem, vendar je to prejudic; mi ne vemo, ali bo zakon o dvojnem državljanstvu dodelil Slovencem pravico do dvojnega državljanstva a'priori. Mi danes po mojem mnenju, vsaj jaz osebno ne morem računati na to, ker vem da zoper to, da se a'priori dodeli pravica do dvojnega državljanstva obstojajo tehtni ugovori ustavne narave. Se pravi, da je to zelo vprašljivo in v tem primeru, ker formalno je seveda res, da sem tisti amandma vložil 25. januarja, ker ga 21. nisem mogel, ker nisem vedel da se odstavek člena izpodbija pred tem, tako da bom glasoval proti amandmaju Vlade sedaj. Ne smem vas to prositi in vas tudi ne bom, ampak če bi člen ostal, mislim, da ga je lažje potem spremeniti, korigirati, kot če ne ostane. Če ostane nerešen. Sicer mislim, če ne bo o tem nič pisalo v zakonu, da bo na nek način zakon neskladen s temi sprejetimi dvostranskimi sporazumi, to je z Videmskim sporazumom, da bo s tega vidika mogoče celo iti v neko tožbo na nek način in zahtevati s strani zamejskih Slovencev, da se jim ta pravica prizna ne glede na to ali to v zakonu piše ali ne, ker pač Videmski sporazumi o tem govorijo, ampak v bistvu bo potrebno po mojem mnenju ta zakon novelirati in zato mislim, da je pametneje, da rešitev, četudi ne najbolj primerna, ostane in da se mogoče potem z novelo, ki jo bomo mi takoj pripravili, to rešuje, kot pa da ne ostane nič na to temo v zakonu. In zaradi tega bom jaz glasoval proti amandmaju Vlade. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg737">Hvala lepa. Kot je predlagal gospod Peršak, bomo najprej glasovali o amandmaju k 4. členu, pod točko 2 - amandma Vlade, ki ga predlagatelji in delovno telo podpirajo. Ali ga predlagatelj ne podpira? Torej ga predlagatelj ne podpira - in prosim, če to korigirate v pregledu amandmajev.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg738">Gospod Školč želi besedo. Prosim.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg739">Hvala lepa. Z gospodom Peršakom se strinjam, da glasujemo po tem vrstnem redu in tudi nasprotujem vladnemu amandmaju. Tisto, kar bi rad tukaj povedal, je, da smo o tem enkrat že govorili in da so bila priporočila, kako naj se ta zakon naredi, narejena v smislu, kot je bilo tudi tukaj rečeno - naj se poskuša najti rešitev, da bo omogočeno slovenski narodnostni skupnosti v Italiji, da te pravice, ki jih je izgubila za časa fašizma med dvema vojnama, dobi nazaj. Zato v bistvu opozarjam - mogoče je to prehuda beseda - ampak bi le prosil za pozornost vse tiste ljudi, poslanke in poslance, ki se jim zdi, da je mogoče o tem zelo na lahko odločati; da gre za neko zadevo, ki se ji končno lahko reče "primorska zadeva" in da po tej plati le velja poslušati ljudi, ki prihajajo s tega konca. Ponavljam: gre za zemljo, ki so jo tem vaškim skupnostim vzeli za časa fašizma, in noro bi bilo, če je bi imeli pravice dobiti nazaj, v tem času, ko se določene meje kljub vsemu</seg>
                <note>upam</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg740">brišejo. In da ne bi govoril o drugih rečeh, sem ubral natančno ta besednjak, ki je mogoče bolj razumljiv tistim, ki se odločajo po instinktu kot po drugih stvareh.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg741">Skratka, glasoval bom proti amandmaju Vlade in me preseneča, da ga je sploh vložila, glede na vse deklaracije, ki so bile sprejete na Odboru za mednarodne odnose, priporočila v Državnem zboru in obljube, ki so jih tudi naši predstavniki v imenu Vlade dajali tej kmečki zvezi v zamejstvu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg742">Hvala lepa gospodu Školču. Želi še kdo besedo? Prosim, gospod Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ1.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg743">Spoštovani podpredsednik, gospe in gospodje! Glasoval bom za ta amandma Vlade, in to iz enega razloga. Prvič, prepričan sem, da se bo lahko v tem času, ki je na razpolago, da se agrarne skupnosti ponovno vzpostavijo, stvar uredila. Drugič, da smo mi že dali državljanstvo Slovencem in da jim ga ne bomo vzeli; se pravi, da bo treba to urediti v zakonu o dvojnem državljanstvu. In tretjič mislim, če bi to zavrnili, da potem ne bi šli po nekem zaporedju. Zato mislim, da je prav, da se glasuje za to in osebno bom glasoval za amandma Vlade.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg744">Hvala lepa. Prehajamo na odločanje o amandmaju k 4. členu pod točko 2. Še enkrat poudarjam, da predlagatelji tega amandmaja, ki ga predlaga Vlada, ne podpirajo. Ugotovimo sklepčnost!</seg>
                <note>59 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg745">Kdo je za amandma Vlade k 4. členu pod točko 2?</seg>
@@ -2820,27 +2801,27 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg775">Ugotavljam, da je amandma sprejet. Na 3. strani k 8. členu, amandma pod točko 2, predlaga Vlada. Gospod Šešerko.</seg>
             </u>
             <note type="speaker">DR. LEO ŠEŠERKO:</note>
-            <u who="#SDZ1.ŠešerkoLeo" ana="#regular">
+            <u who="#ŠešerkoLeo">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg776">Spoštovani gospod podpredsednik, spoštovani zbor! Jaz bom glasoval proti temu drugemu amandmaju in mi je ljubo, da je predlagatelj Vlada. Zakaj? Zaradi tega, ker je tu predvideno, da se v vsakem primeru išče premoženjskega naslednika, in to izraža nekaj, kar je predstavnik Zelenih, Jožko Fišer zelo lepo označil "sveti egoizem". Tu se za vsako ceno poskuša najti nekdanjega lastnika oziroma njegovega naslednika in se izhaja od tod, da bo ta najboljše opravljal to, kar mu bo vrnjeno. Mislim, da je to absurdna ideja in da se naša Vlada k slepi gonji za nekim lastnikom. Če greste pogledati po gozdovih, poljih in po travnikih, vidite, da imate dandanašnji zelo veliko lastnikov, ki sploh ne vedo, kje so njihove parcele, ker tega ne morejo vedeti. Zdi se mi absurdno siliti te ljudi, da postanejo pravni nosilci lastništva in na tak način ustvarjati praktično nerešljive pravne probleme, ki bodo iz tega nastali in probleme v naravi, kjer bo nekdo, ki bo poskušal nekaj urediti nekaj, imel težave z ostalim delom, za katerega stvari ne bodo urejeno. Kot rečeno: glasujem proti.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg777">Hvala lepa. Gospod Zagožen in potem gospod Peršak.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ1.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg778">Spoštovani zbor! Jaz bom ta amandma podprl. Mislim, da gre za nesporazum. Amandma ni napisan zato, da bi ga uporabljali tako, kot ga je razumel gospod Šešerko, ampak zaradi tega, da se premoženje obravnava v dednem postopku kot pozneje najdeno premoženje, da se ne deli na dediče, ki niso člani agrarne skupnosti, ki sploh več ne kmetujejo, ampak da se deduje po zakonu o dedovanju kmetijskih zemljišč, kar pomeni, da je dedič tisti, ki je član kmetije. V tem primeru je to tisti, ki je član agrarne skupnosti. Ostali dediči pa imajo pravico samo do nujnega deleža v denarju. To je povsem logično. Ne gre za iskanje dedičev in pravnih naslednikov na vsako silo ampak zato, da agrarne skupnosti funkcionirajo tako kot so vselej v zgodovini. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg779">Hvala lepa, gospod Zagožen. Gospod Peršak, prosim.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg780">Moram povedati, da se bom tudi jaz, kot se predlagatelji strinjamo s tem amandmajem, glasoval za amandma. O razlogih je govoril tudi predgovornik. Intenca je dejansko ta, da ne bi v tem primeru prišlo do drobljenja lastništva nad tem idealnim deležem, recimo, da je 6 ali 7 dedičev in samo eden živi na kmetiji in samo eden ima krave, tisti, ki živijo v mestu nimajo kaj pasti na tem deležu, če jih je pa 7 in ko bi eden lahko pasel 7 krav, bo pa vsak imel pravico do paše samo ene krave tem deležu, kar  po mojem mnenju ni ravno smiselno. Zato predlagatelji podpiramo ta amandma in jaz bom glasoval zanj.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg781">Hvala lepa.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg782">Prehajamo na odločanje in prosim, da ugotovimo prisotnost. Ugotovimo sklepčnost!</seg>
                <note>50 prisotnih.</note>
@@ -2857,31 +2838,31 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg788">Ugotavljam, da je amandma sprejet. Imamo amandma Vlade pod 4. točko na 3. strani k 8. členu in ga dajem na glasovanje. Ugotovimo prisotnost? Gospod Školč ima besedo. Prosim, se opravičujem, nisem videl.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ1.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg789">Hvala lepa. Temu amandmaju nasprotujem. Opozoril bi Državni zbor, da smo o tem že glasovali, da je bila rešitev v drugem branju drugačna, tudi že z voljo Državnega zbora, da je mogoče tak amandma vložiti samo zaradi tega, ker je bil člen spremenjen.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg790">Ne bi govoril o vseh vidikih te rešitve. Govoril bom danes samo o psihološkem, velja pa predzgodovina za Primorsko natančno tako, kot je veljala za tisti del, ki se nanaša na to kmečko skupnost v zamejstvu. Poglejte, v posameznih vaseh so šestdeset in več let vodili spore z državnimi in para državnimi institucijami, da bi obranili svoje pravice oziroma, da bi jih lahko vknjižili, oziroma vknjižili tudi te znamenite deleže, o katerih je bilo toliko govora in meni se zdi naravnost, bom rekel cinično, da Vlada poskuša tisti del ozemlja, ki je recimo neidentificiran, sedaj zadržati, ker bi se dalo dokazati, da je zgodba razselitve teh krajev v veliki meri vezana tudi na zgodbe, ki so bile vezane na odvzem teh pravic in zemljišč.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg791">Zato jaz temu nasprotujem. Menim, da velja verjeti tem manjšim skupnostim, da bodo lahko v večji meri in boljše gospodarile z temi zemljišči in bom še bolj direkten. Na nek način ne verjamem, da zemljiškemu skladu, da bo tukaj sledil tem lokalnim zadevam, ki so pa v večji meri pogojene ravno z naravo te lastnine in bom povedal tudi bojazen teh potencialnih bodočih lastnikov, da se bojijo, da se bo preko tega poravnavalo druge denacionalizacijske ali pa tretje zahtevke in po tej plati velja vrniti lokalni skupnosti. Večina teh skupnosti je bila svoj čas organizirana tudi kot občine. Sedaj verjetno temu ne bo več tako in menim, da predvsem tisti, ki govorite, da zna tisti, ki je blizu zemlje, bolj z njo gospodariti, kot sama država in da tisti, ki je dalj od središča, da bolj razume posamezen problem, da boste tako pristaši privatne zemlje in tisti, ki ste bili včasih pristaši odprave agrarnega maksimuma za to, da gre to v občinsko last in ravno tako vsi tisti, ki nasprotujete centralizaciji v vseh pogledih. Da bomo še bolj plastičen, obraten proces je, da bi spet podržavljali marsikatero tudi sedaj privatno stvar. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg792">Hvala lepa, gospod Oman.</seg>
             </u>
             <note type="speaker">IVAN OMAN:</note>
-            <u who="#SDZ1.OmanIvan" ana="#regular">
+            <u who="#OmanIvan">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg793">Gospod podpredsednik, gospe in gospodje. Glasoval bom za ta amandma. Pa ne zato, ker je že v prejšnji obravnavi v drugem branju bil ta zakon z Vladnimi amandmaji napravljen tak, da je izvedljiv, da je operativen, predvsem pa zato, ker v kolikor bodo ta zemljišča, ki bodo ostala, če bodo ostala v lasti in v upravi tega sklada je velika verjetnost oziroma celo z zakonom o skladu zagotovljeno, v kolikor bodo te agrarne skupnosti zainteresirane za uporabo teh zemljišč, da bo prav tem dodeljeno, prav nobenega jamstva pa ni, da se bo to zgodilo, če bo to zemljišče prišlo v last občin. Torej, Sklad kmetijskih zemljišč je bil ustanovljen zaradi gospodarjenja s kmetijskimi zemljišči, ki je v javni lasti.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg794">Hvala lepa. Gospod Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg795">Se opravičujem. Najprej bi rad povedal, da je verjetno, glede na to, da smo se praktično z vsemi amandmaji Vlade strinjali, prišlo do ene manjše napake. S tem se nismo. To je že najbrž razvidno iz tistega, kar sem govoril pred začetkom glasovanja v imenu predlagateljev. To je pravzaprav edini, s katerim nismo soglašali in je verjetno prišlo zaradi tega do napake. Rad bi pa samo še to povedal, glede na to, kar je bilo povedano, zakaj bom jaz, seveda kot predlagatelj, glasoval za to, da ostane tako, kot zdaj piše v zakonu. Nekateri se bojijo tega, češ da bodo občine ta zemljišča zlorabile za gradnjo, ali kaj podobnega. Poglejte, občina bo, če bo, bo ravno tako član agrarne skupnosti kot vsi drugi člani in bo morala delovati v skladu s pravili agrarne skupnosti, ki s tem zakonom dobivajo tako rekoč zakonsko veljavno težo, ker so z zakonom določena kot kriterij in norma za ravnanje znotraj agrarne skupnosti, pravila agrarne skupnosti. To je prva stvar.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg796">Druga stvar pa, verjetno, v 95%-ih gre tukaj za pašnike in gozdove, razen tam, kjer je tekom teh let po 2. svetovni vojni prišlo, to je pa samo ravninski pridelek v glavnem, prišlo do prekvalifikacije teh zemljišč v polja, ali kaj podobnega. In tudi tam je po tem zakonu treba gospodariti s temi zemljišči v skladu z zakoni, ki urejajo gospodarjenje s kmetijskimi zemljišči. Ne more se nekdo kar odločiti in polja pozidati, če zakon to onemogoča in pravila agrarne skupnosti. Tako, da jaz mislim, da so ti strahovi malo neupravičeni.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg797">Druga stvar, ki bi jo pa želel povedati, je ta. Občina, jaz sem prej govoril o kravah in o paši. Občina seveda ne bo pasla svojih krav na teh pašnikih, pač pa bo to pravico odstopila ostalim članom agrarne skupnosti in bo iz tega naslova dobivala nek, sicer najbrž majhen, ampak dohodek in tisti razlog, zakaj mi branimo to stališče, je ta. Iz istega razloga pa seveda Vlada predlaga to, da bi to bil sklad, kajti sklad je zavezanec za določene finančne dolžnosti in seveda ravno tako želi določen dohodek iz tega naslova dobiti. Oba, tako sklad, kot občina bosta pa člana agrarne skupnosti in bosta na neki način zavezana s pravili agrarne skupnosti, kar zahteva gospodarjenje z zemljišči. Zato jaz v končni konsekvenci niti ne vidim takšne tragedije, kaj se bo zgodilo, ali bo ta, ali druga odločitev. Zaradi tega nismo kakšnega velikega spora z Vlado delali zaradi tega. Glasoval bom pa pač za tisto rešitev, ki je zdaj.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg798">Hvala lepa. Jaz bi prosil, če korigirate v pregledu amandmaja, da k 8. členu pod točko 4 predlagatelj amandmaja ne podpira in dajem ta amandma na glasovanje. Ugotovimo sklepčnost!</seg>
                <note>56 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg799">Kdo je za?</seg>
@@ -2956,7 +2937,7 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg837">Ugotavljam, da je predlog zakona o ponovni vzpostavitvi agrarnih skupnosti ter vrnitvi njihovega premoženja in pravic sprejet. Gospod Peršak, izvolite.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SDZ1.PeršakAnton" ana="#regular">
+            <u who="#PeršakAnton">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg838">Jaz sicer nisem pristaš kakšnih patetičnih zahval po tem ko so kakšni zakoni sprejeti, vendar mislim, da ta zakon zasluži, da par besed rečem.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg839">Ta zakon je prehodil relativno težko pot. Kot vi veste, prvič je bil zares omenjen pri zakonu o denacionalizaciji, potem pri zakonu o Skladu kmetijskih zemljišč in gozdov.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg840">V začetku so bila precejšnja nesoglasja med nami in Vlado, ko smo ta zakon predlagali, vendar moram reči, čeprav sem predstavnik opozicijske stranke, da smo s predstavniki Vlade v tem primeru, lahko rečem zelo dobro sodelovali, čeprav smo imeli različna mnenja. V nekaterih stvareh  smo iskali rešitve skupaj in smo jih našli.</seg>
@@ -2966,7 +2947,7 @@
                <note>Aplavz v dvorani.</note>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg844">Hvala lepa gospodu Peršaku.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg845">Mi pa prehajamo naprej na 24. TOČKO DNEVNEGA REDA, to je na DRUGO OBRAVNAVO PREDLOGA ZAKONA O USTAVNEM SODIŠČU.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg846">Predlog zakona je zboru predložila Vlada Republike Slovenije. Želi predstavnik Vlade besedo?</seg>
@@ -2975,13 +2956,13 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg848">Prosim, gospod Pukl ima besedo.</seg>
             </u>
             <note type="speaker">VITODRAG PUKL:</note>
-            <u who="#SDZ1.PuklVitodrag" ana="#regular">
+            <u who="#PuklVitodrag">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg849">Spoštovani predsedujoči</seg>
                <note>Topler: Prosim za malo miru v dvorani, da bo lahko poročevalec podal mnenje.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg850">Spoštovani zbor. Sprejeli ste dodatno poročilo z dne 12.1. in dodatno poročilo od 25.1. in pa preglede amandmajev. Pri obravnavi tega zakona nismo naleteli na politične težave in politična nasprotja. Gre predvsem za samo organizacijo in poslovanje tega Ustavnega sodišča. Z večino glasov je naš odbor odločil, da nekatere amandmaje, kot so razvidni iz priloženega pregleda, podpre, druge sicer ne. Gre za vprašanja, ki bistveno vpliva na samo konsistenco zakona in je stvar odločitve odbora oziroma zbora, kako bo vrednotil svoja stališča do teh amandmajev. V imenu odbora pa predlagam, da sprejmemo zakon kot je predložen in da pri glasovanju o amandmajih upoštevate mnenje odbora in mnenje predlagatelja. Sicer pa, če bo potrebno kakšno pojasnilo, bi ga lahko med glasovanjem še podal. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg851">Hvala lepa gospodu Puklu. Želi besedo predstavnik sekretariata za zakonodajo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg852">Prehajamo na obravnavo in odločanje o posameznih členih predloga zakona. Zboru najprej predlagam, da skladno z zadnjo alineo 189. člena poslovnika razpravljamo in glasujemo o vseh členih h katerimi so bili predlagani amandmaji, skupaj.</seg>
@@ -3187,11 +3168,11 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg955">Prosim, gospod Pregelj, proceduralno? Obrazložitev? Ste, prav. Glasujemo o sklepu, da za tretjo obravnavo zakon pripravi predlagatelj. Izvolite.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SDZ1.PregeljŽarko" ana="#regular">
+            <u who="#PregeljŽarko">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg956">Spoštovani! Sem proti takemu predlogu. Namreč, iz razloga, da v bistvu venomer pri vsakem zakonu uporabljamo izjemo iz poslovnika, namesto da bi uporabili pravila. V resnici je tole neke vrste svojevrsten manever, kako se Državnemu zboru jemlje zakonodajno pristojnost. Res, da gre tukaj zgolj za formalno usklajevanje, prvotno naj bi bil z to odgovoren sekretariat. Mi pa stalno pri vsakem zakonu venomer dajemo to vlogo Vladi. Vlada je v resnici predlagatelj zakona, ne pa izdelovalec. Hvala lepa.          </seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg957">Hvala lepa gospodu Preglju.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg958">Prosim, da ugotovimo sklepčnost znova! Ugotovimo sklepčnost!</seg>
                <note>51 prisotnih.</note>
@@ -3205,7 +3186,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 17.47 uri in se je nadaljevala ob 18.15 uri.</note>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg964">Spoštovane kolegice, spoštovani kolegi! Z akademsko četrtjo zamude nadaljujemo sejo. Prosim, da najprej v dvorani ugotovimo prisotnost. Ugotavljamo prisotnost!</seg>
                <note>44 poslancev.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg965">Prosim, da ponovno ugotovimo prisotnost v dvorani!</seg>
@@ -3216,7 +3197,7 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg969">Želi besedo predstavnik Vlade? Prosim izvolite, gospod Banovec ima besedo.</seg>
             </u>
             <note type="speaker">TOMAŽ BANOVEC:</note>
-            <u who="#SDZ1.BanovecTomaž" ana="#regular">
+            <u who="#BanovecTomaž">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg970">Dober večer. Gospe in gospodje! Izredno kratek bom, ker mislim, da smo priložnost, ko ste postavili delegatsko vprašanje, že precej govoriti o problemih, ki jih ima pravzaprav slovenska statistika, s tem pa verjetno tudi država.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg971">Moram pa povedati, da smo v tem času nekoliko napredovali in smo tudi že verjetno ena od redkih inštitucij, ki je podpisala deklaracijo o skupnem delu na področju statistike z Evropsko unijo ali skupnostjo, kar bo verjetno tisto, kar smo se takrat pogovarjali še nekoliko bolj zaostrilo naloge pred državno statistiko pa tudi pred tistimi pooblaščenimi organi in organizacijami, ki jih izvajajo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg972">Mislim, da bi bilo mogoče, ker je 1. točka samo zakon, bi verjetno lahko govoril o obeh dokumentih.</seg>
@@ -3228,15 +3209,15 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg977">Mislim, da je dve leti nazaj, ko je na osnovi razprave o ustavi v tem parlamentu, sicer je bil drugačen - v drugačni sestavi, na zahtevo poslancev, takratni predlagatelj, minister za notranje zadeve, umaknil predlog, da se registrira v registru prebivalstva narodnost. Razlogi so tudi ustavni in zato mislimo predlagati v naslednjem koraku, seveda registracijo narodnosti samo, če se kdo prostovoljno izjasni, da se jo registrira. V nasprotnem in mislim, da bo precej jasno, bo pa ta narodnost ali pa narodna pripadnost ali pa etnična pripadnost še kategorija, ki jo bomo v glavnem na vzorcih ali pa na velikih popisih zajemali. Drugo vprašanja so registri. Preučili bomo to skrajšaje rokov, mislim pa, da bo to tudi zadeva parlamenta, organizaija ministrstev, kar ste tudi obravnavali. Na koncu mogoče o tisti zadevi, ki ji rečemo prej zakon o nacionalnem programu, po vaših poslovniških spremembah pa samo še nacionalni program, to je verjetno mogoče nekoliko manj usklajena zadeva glede na uporabo in pa bodočnost in ocenjujemo, da boste po današnji razpravi in napotilih, ki jih boste imeli kdaj tudi priložnost dobiti, relativno drugačen dokument. Razlogi so mogoče v dveh smereh, celo v treh. Racionalnost v tem času nameravamo doseči zlasti na področju spremljanja zdravstvenih in socialnih stanj, ker je veliko razdrobljenih raziskav. Nosilec je  v glavnem inštitut za varovanje zdrave Slovenije. Drugi pomembni razlog je, da se na področju državnega računovodstva in knjigovodstva, potem pa tudi s funkcijo SDK-ja in pa glede na področju revizije, ki še ni dokončna, verjetno tudi ta del, ki je predlagan SDK-ju, spreminja. Najbolj pomemben je pa zadnji dogodek, v katerem je po tem podpisu dogovor, z Evropsko unijo oziroma skupnostjo prišlo do tega, da bomo morali večji del tega postaviti po vsebini, mogoče v novo luč, v dve kategoriji. Tisto, kar bo Država Slovenija potrebovala evropezirano takoj za tako imenovani asociacijski sporazum oziroma za ta pogajanja, kolikor veste naj bi bila končana letos jeseni. In drugi del, ker bi moral biti nekako urejen do leta 1997 po vsebini, da bomo takrat kompatibilni oziroma komponudilni. Obljubil sem, da bom kratek, sedaj sem seveda nekoliko daljši, mislim pa da boste svoje povedali. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg978">Hvala lepa gospodu Banovcu. Besedo dajem predstavniku odbora, to je Odbor za znanost, tehnologijo in razvoj, da predstavi svoje mnenje. Prosim, gospod Tancig.</seg>
             </u>
             <note type="speaker">DR. PETER TANCIG:</note>
-            <u who="#SDZ1.TancigPeter" ana="#regular">
+            <u who="#TancigPeter">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg979">Spoštovani predsedujoči, kolegice, kolegi. Ker je kolega Banovec rekel, da bo kratek, bom pa jaz resnično kratek. Mimo pisnega mnenja oziroma pismenega po nekaterih v interpretacijah, ki ga je dal odbor, ne bi šel oziroma ga ne bi razlagal. Rekel bi edino tako, če bi bila Slovenija na drugih področjih tako evropeizirana kot je ravno na tem statističnem, bi imeli dosti manj problemov, kot jih imamo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg980">Hvala lepa. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg981">Besedo dajem predstavnikom poslanskih skupin.</seg>
@@ -3244,52 +3225,52 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg982">Besedo dajem poslankam in poslancem. Prosim, gospa dr. Mateja Kožuh-Novak.</seg>
             </u>
             <note type="speaker">DR. MATEJA KOŽUH-NOVAK:</note>
-            <u who="#SDZ1.KožuhNovakMateja" ana="#regular">
+            <u who="#KožuhNovakMateja">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg983">Se oproščam. Malo sem zamudila, ker sem mislila, da se bo še kdo javil od poslanskih skupin. Nastopam v imenu poslanske skupine Združene liste. Naša poslanska skupina se veseli, da je končno prišel ta zakon v obravnavo. Eden od osnovnih pogojev za urejeno državo je urejena državna statistika. Zaradi tega bom tudi jaz kratka, pa bom rekla, podpiramo izdajo tega zakona, se veselimo, da so povezani z državami Evropske unije, ker nam bo omogočilo tudi primerjave našega dela z razvito Evropo.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg984">Hvala lepa. Želi še kdo besedo? Prosim, gospa Omanova.</seg>
             </u>
             <note type="speaker">IRENA OMAN:</note>
-            <u who="#SDZ1.OmanIrena" ana="#regular">
+            <u who="#OmanIrena">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg985">Hvala lepa. Spoštovani! Samostojna poslanska skupina podpira predlog zakona kot je predlagan, s tem da pa k 4. točki stališč in sklepov predlagamo še novo alineo, ki se glasi: "Predlagatelj naj v predlog zakona o državni statistiki uvede obvezo, da se zbirajo tudi podatki, ki se nanašajo na nacionalnost". Z zakonom o spremembah in dopolnitvah zakona o evidenci, nastanitvi občanov in v registru prebivalstva iz leta 1991 je bil namreč podatek o nacionalnosti črtan. Naše mnenje je, da je za mnoge raziskovalne inštitucije tudi ta podatek zelo dragocen in tudi za državo, za sestavo zelo pomemben. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg986">Hvala lepa. Želi še kdo besedo? Če ne želi nihče več besede, razpravo zaključujem in prehajamo na odločanje in razpravo o stališčih in sklepih. Najprej o dopolnjevalnih in spremljevalnih amandmajih k stališčem in sklepom. Gospa Irena Oman. Želi kdo razpravljati o stališčih in sklepih?</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg987">Gospa Irena Oman predlaga, da se k 4. točki stališč in sklepov doda nova alinea, ki se glasi: "Predlagatelj naj v predlog zakona o državni statistiki uvede obveznost, da se zbirajo tudi podatki, ki se nanašajo na nacionalnost." Prosim, da ugotovimo prisotnost. Izvolite, gospod Tancig.</seg>
             </u>
             <note type="speaker">DR. PETER TANCIG:</note>
-            <u who="#SDZ1.TancigPeter" ana="#regular">
+            <u who="#TancigPeter">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg988">S stališča Odbora za znanost, tehnologijo in razvoj je bilo ravno nasprotno, zato ne vem, kako se je treba izjasnjevati, ker pod točko 4, konkretne pripombe k predlogu zakona piše, oziroma je bil predlog: "Državni zbor smatra, da ni primerno vključiti še narodnost. " Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg989">Hvala lepa. Izvolite, gospod Banovec.</seg>
             </u>
             <note type="speaker">TOMAŽ BANOVEC:</note>
-            <u who="#SDZ1.BanovecTomaž" ana="#regular">
+            <u who="#BanovecTomaž">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg990">Mislim, da je mogoče prišlo do nesporazuma. V vseh svetovnih mednarodnih in drugačnih listinah so štirje atributi vezani na človeka pošastno zaščiteni. Eden od teh je: politična pripadnost, da bom tako začel, je prostovoljna, svetovno nazorska. Drugo je verska pripadnost in se pozabi, ko se dela in uniči. Tretja je ta, torej narodnost. Zato smo mi predlagali, če sem prav razumel, da kdor hoče in želi, to imajo tudi na Madžarskem rešitev, naj se v ustreznem registru izjasni tudi po narodnosti. Predlagam tudi to rešitev. Ne moremo pa narediti za obvezno. Obvezno pa ne moremo narediti, ker mislim, da je še enkrat tisto, kdo je kaj bolan, ampak tisto je pa četrto. Ne govorimo zdaj o takoimenovanih pravicah, če sem po radiu poslušal malo prej, ste veliko o tem govorili. Torej, predlagam solucijo, da to uredimo v registru, takrat ste rekli, da ne. Da pa ne more biti obvezno. Mislim, da bo večina Slovencev, dobro etničnih Slovencev to uredila. Bi bilo pa strašno težko, če bi s temi stvarmi zdajle začeli, tri leta po tistem, ko smo rekli, da bomo drugače delali.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg991">Prosim, gospod Poljšak. Gospa Irena Oman, vi vztrajate pri svojem? Izvolite.</seg>
             </u>
             <note type="speaker">MARIJAN POLJŠAK:</note>
-            <u who="#SDZ1.PoljšakMarijan" ana="#regular">
+            <u who="#PoljšakMarijan">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg992">Po mojem pojmovanju je statistika strokovna stvar. Ko se gre za strokovne zadeve, potem je treba ugotavljati resnico. To ni vprašanje politike, ali bo ena stvar, ali bo ali ne bo, ampak takšna, kakršna je. In ker je narodna pripadnost taka stvar, kakršna je, po mojem mišljenju se mora ugotavljati. Ker potem so podatki, ki se jih dobi iz Zavoda za statistiko resnični, ali pa niso resnični. V smislu tega, da je to resna zadeva, ki daje resne podatke, s katerimi lahko tudi mi manipuliramo in tudi drugi z njimi operirajo in delajo, potem mora biti ta podatek. Ta podatek mora biti resničen, to ni politično vprašanje.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK  VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg993">Hvala lepa. Prehajamo na odločanje k dodatni točki, k točki 4 stališč in sklepov. Še razprava k tej točki? Prosim, izvolite.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ1.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg994">Rad bi ugovarjal tej ideji in tej logiki, ki jo je gospod Poljašk tukaj zagovarjal. In sicer gre pri narodnosti za subjektivno opredelitev. Drugače moramo postaviti seveda objektivne kriterije, kakšen odstotek slovenske krvi, ali kak drug objektivni kriterij bi imeli za presojo, kdo je slovenske ali kakšne druge narodne skupnosti. Zato pa se to seveda lahko ugotavlja pač glede na vprašanje, glede na to, kaj kdo čuti, kateremu narodu pripada. Tukaj gre za celo vrsto lahko mejnih primerov, ampak v vsakem primeru je tukaj volja posameznika odločilnega pomena. Vse drugo bi torej vodilo v to, da po nekih fizičnih ali nekih drugih značilnostih razvrščamo ljudi v narodne skupnosti.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg995">Hvala lepa. Ne vidim več prijavljenih. Prehajamo na odločanje. Ugotovimo sklepčnost!</seg>
                <note>46 prisotnih.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg996">Kdo je za sprejem nove, dodatne točke, kot predlaga gospa Irena Oman?</seg>
@@ -3367,65 +3348,65 @@
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1038">Prosim, gospod Sisinger.</seg>
             </u>
             <note type="speaker">IVAN SISINGER:</note>
-            <u who="#SDZ1.SisingerIvan" ana="#regular">
+            <u who="#SisingerIvan">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1039">Spoštovane poslanke in poslanci, predsedujoči! Predlog sprememb in dopolnitev pokojninskega zakona, ki je pred vami, pravzaprav nimam posebej potrebe, da ga obrazlagam na dolgo in široko, ker smo že trikrat imeli v obravnavi na dnevnem redu in je bil ponovno po umiku v novembrski seji, ko sem obrazložil, zakaj pravzaprav umikam tudi te obrazložitve, ni bilo potrebno, da vam to obrazložitev dajem. Zakon je vložen v popolnoma enakem besedilu, kot je bil v prvi in drugi obravnavi pred našim Državnim zborom in pred vsemi vami. Gre samo ponovno za iste zadeve - 274. člen in 319. člen, ki govorita samo o sestavi Skupščine Zavoda za pokojninsko in invalidsko zavarovanje in v 319. členu o tej izvolitvi in tem času. Moram povedati, da sem ga, kot predlagatelj tega zakona, obrazložil tudi na matičnem odboru in bo predsednik podal poročilo, kakšno je bilo tudi stališče matičnega odbora. Vendar vas, poslanke in poslanci, prosim - glede na to, da smo vendarle sprejeli predlog, da po hitrem postopku sprejmemo ta zakon in ta dva člena - da ni nobenih razlogov, da ne bi tega zakona, takega kot je predlagan, v celoti sprejeli in s tem omogočili tudi - in to je eden od razlogov, ki sem ga podal na odboru in ga podajam tudi tukaj - Vladi, da čimprej vloži, ker ima pripravljen paket zakonov o vojnih veteranih, o žrtvah vojne, pa tudi o sistemskih spremembah pokojninskega zakona, vključno s 306. členom, katerega bi samo omenil, ker smo o njem govorili že takrat ob umiku. In zato, ker je vse to že pripravljeno, vas prosim, da ta zakon, tak kot je, sprejmemo v teh dveh členih in da omogočimo skupščini Zavoda za pokojninsko in invalidsko zavarovanje, da se vsaj do konca marca lahko konstituira in da ne podaljšujemo več tega mandata</seg>
                <note>od oktobra dalje</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1040">dosedanji skupščini ter da tako skupščina začne, kot bi morala pravzaprav začeti že oktobra delati po predlogu zakona.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1041">Poslanke in poslanci, prepričan sem, da tako kot smo soglasno podprli predlog zakona v matičnem odboru, moram tudi povedati, da Vlada tokrat nima amandmajev, kot jih je vlagala vse doslej, in da se tudi Vlada oziroma predstavniki Vlade, s katerimi je bil opravljen razgovor, strinjajo s takim predlogom kot je tukaj pred nami. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1042">Hvala lepa gospodu Sisingerju kot predlagatelju. Odbor za zdravstvo, delo, družino in socialno politiko kot matično delovno telo je zakon obravnaval in prosim poročevalca, da poda mnenje.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1043">Gospod Kociper, izvolite.</seg>
             </u>
             <note type="speaker">ŠTEFAN KOCIPER:</note>
-            <u who="#SDZ1.KociperŠtefan" ana="#regular">
+            <u who="#KociperŠtefan">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1044">Hvala lepa. Spoštovani! Danes sem enkrat že predstavil obravnavo tega zakona na odboru. Odbor je podprl predlog, da Državni zbor ta zakon obravnava po hitrem postopku in uredi tisto, kar predlagatelji predlagajo. V razpravi so člani odbora tudi menili, da je gotovo v državnem interesu, da se kompleksno uredijo zadeve na pokojninsko-invalidskem področju, zlasti tudi v zvezi s 306. členom veljavnega zakona, katerega reševanje je Državni zbor s sklepom že sprejel na svoji seji. Da bi Vlada torej lahko čimprej predlagala kompleksno razdelavo 306. člena, je smiselno predlagani zakon v predloženem besedilu sprejeti po hitrem postopku. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1045">Hvala lepa gospodu Kocipru. Ali želi besedo predstavnik Sekretariata za zakonodajo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1046">Vlade ni v dvorani. Ali želijo besedo predstavniki poslanskih skupin? - Prosim, gospa Omanova, kot predstavnica Samostojne poslanske skupine.</seg>
             </u>
             <note type="speaker">IRENA OMAN:</note>
-            <u who="#SDZ1.OmanIrena" ana="#regular">
+            <u who="#OmanIrena">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1047">Hvala lepa. Spoštovani! Samostojna poslanska skupina bo podprla predlog zakona o spremembah in dopolnitvah zakona o pokojninskem in invalidskem zavarovanju. Toda, ko je bil ta zakon prvič vložen, že takrat nismo mogli mimo 306. člena.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1048">In tudi tokrat vlagamo amandma na 306. člen. In sicer: doda se novi 1.a člen. Torej, drugi odstavek 306. člena se nadomesti z novim besedilom, ki se glasi: "Vrednotenje časa iz prejšnjega odstavka se pri tistih državljanih Republike Slovenije, ki so že dosegli sodno rehabilitacijo, ravna skladno z odločbami sodišča, doseženih v odškodninskih zahtevah. V vseh drugih primerih se vrednotenje časa iz prvega odstavka uredi s posebnim zakonom."</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1049">Zelo na kratko bom skušala to obrazložiti, ker imate te amandmaje z obrazložitvijo pred seboj. Skratka, gre za to, da bi s sprejetjem tega amandmaja dobili osnovo za uveljavljanje pravic, ki so jih politični obsojenci - govorim samo o političnih, ker klasični obsojenci oziroma obsojeni za klasična kazniva dejanja imajo podlago v ustavi, da če so rehabilitirani, svoje pravice uveljavljajo, medtem ko zavod za pokojninsko in invalidsko zavarovanje politične obsojence, ki so rehabilitirani, napoti vsakič znova na, bom citirala 306. člen zakona, ki pravi, da bo šele z bodočim zakonom urejena pravica iz naslova rehabilitacije. Torej, nam se zdi nesprejemljivo, da ta zakon čakamo in čakamo in seveda prepričana sem, da ga vsaj še leto dni ne bo, oziroma lahko da bo predložen, ampak postopek ne bo končan. Torej, dikcija drugega odstavka 306. člena omogoča tisto, kar smo, če se spustim na zakon, ki ga je včeraj ustavno sodišče zavrnilo, recimo tudi tu gre za neustavnost, gre za dve različni vrsti rehabilitiranih obsojencev, eni lahko uveljavljajo, drugi ne morejo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1050">Drugo je, da se doda nov tretji odstavek, ki se glasi: "Čas dejanskega odvzema prostosti se državljanom iz prejšnjega odstavka v pokojninsko dobo šteje dvojno." Razlog za dopolnitev 306. člena s predlaganim dodatnim odstavkom o neuporabnosti člena, kajti drugi odstavek napotuje, da se bo zadeva uredila s posebnim zakonom. To sem že govorila. Ideja, da bi zadevo rešili na predlagan način, je oblikovanje na osnovi delovnega gradiva Ministrstva za pravosodje, ki smo ga dobili v okviru medresorske komisije za popravo krivic pri Vladi Republike Slovenije. Pričakujem, da boste oba predloga podprli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1051">Hvala lepa gospe Omanovi. Želi še kdo kot predstavnik poslanskih skupin? V kolikor ne, dajem besedo poslankam in poslancem. Želi kdo besedo? Prosim, gospa Lukačeva.</seg>
             </u>
             <note type="speaker">METKA KARNER-LUKAČ:</note>
-            <u who="#SDZ1.KarnerLukačMetka" ana="#regular">
+            <u who="#KarnerLukačMetka">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1052">SpoŠtovani zbor! Danes že tretjič obravnavamo spremembe in dopolnitve tega zakona v popolnoma enaki obliki kot prvič. Spomnimo se, da smo v prejšnjih dveh obravnavah ugotovili, ta zbor je ugotovil, da je celoten zakon o invalidskem in pokojninskem zavarovanju potreben mnogih sprememb. O tem so nam govorili številni amandmaji, ki so bili vloženi in stališča, ki jih je ta zbor sprejel v prvi obravnavi in pa številni amandmaji, ki so bili vloženi v drugi obravnavi. Pa vendar je tokrat predlagatelj prišel pred nas s popolnoma istim predlogom kot prvič, in sicer zato, da je predvsem anuliral sklep Državnega zbora v zvezi s 306. členom. No, ne bi komplicirala okrog tega, tudi sama sem glasovala, da se ta zakon sprejme po hitrem postopku, spremembe tega zakona sprejmejo po hitrem postopku in sicer zato, da bi Vladi omogočili, da pride s tistimi spremembami, ki so menda nujne kot sama tudi ugotavlja, čimprej pred ta zbor in da jih sprejmemo. Vendar pa sem kljub temu vložila k spremembam tega zakona samo en amandma in sicer, zdi se mi, da predlagatelj ni najbolj ustrezno rešil, ko je predlagal, da 16 predstavnikov upokojencev imenujejo društva in druge oblike povezovanja in organiziranja upokojencev. Namreč, v čem je problem? V društva in druge oblike upokojencev je vključena le slaba polovica vseh upokojencev. Po predlogu bi tako ostala tista polovica upokojencev, ki je neorganizirana, tudi neustrezno zastopana v svojih interesih v skupščini ZPIZ. To so zlasti upokojenci, ki prejemajo predvsem nižje pokojnine, ki ne čutijo posebne stanovske pripadnosti, pa tudi posebne politične pripadnosti ne in bi tako popolnoma izpadli iz tega. Zato predlagam, da bi v skupščino 16 predstavnikov upokojencev imenoval Državni zbor in bi pri tem tudi poskrbel za ustrezno regionalno zastopanost teh predstavnikov, ki bodo prišli v skupščino ZPIZ.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1053">Naj navedem še to, ker smo že v prejšnjih obravnavah ugotovili, da je zakon potreben številnih sprememb, predvsem mislim, da bi morali sprejeti še tiste spremembe čimprej, ki imajo za ZPIZ neugodne materialne posledice, tako npr. 254. člen zakona, kjer bi morali določiti, da pravice iz pokojninskega in invalidskega zavarovanja pri ZPIZ uveljavlja le oseba, ki je bila zadnjih deset let pred uveljavitvijo pravic zavarovana pri ZPIZ določeno dobo, npr. najmanj eno leto ali kakorkoli bi se že pač dogovorili. In da bi morali odpraviti tista določila zakona, ki ohranjajo diskriminacijo upokojencev oz. državljanov v tem zakonu. 306. člen, 39. člen in 49 člen. Nadalje menim, da bi morali uskladiti še nekatere zadeve, ki danes povzročajo veliko težav ZPIZ-u, recimo 46. in 229. člen, ki govorita, da se delnice in obveznice ne upoštevajo v pokojninsko osnovo, kljub temu, da so bile plačane vse dajatve, pa se vendarle ne priznavajo v pokojninsko osnovo. Kot vidimo, je zakon zastarel. Državnemu zboru predlagam, da sprejme naslednji sklep, tako da od Vlade dobimo zagotovilo, da bo čimprej s spremembami prišla, in sicer Državni zbor zadolži Vlado Republike Slovenije, da na marčevsko sejo Državnega zbora predloži predlog dopolnitev in sprememb zakona o invalidskem in pokojninskem zavarovanju.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1054">Hvala lepa gospe Lukačevi. Gospo Potrč, prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ1.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1055">Hvala lepa. Samo tri stvari povsem na kratko.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1056">Prvič. Podpiram predlog sklepa gospe Lukačeve, ker o vprašanjih, povezanih s sistemsko ureditvijo bo treba razpravljati v Državnem zboru čimprej in mislim, da je prav, da za marčevsko sejo Vlado zato zadolžimo.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1057">Drugič. Predlagatelji zakona smo imeli ožji namen in tega smo s predlogom zakona uresničili. Kdor resno želi, da bi lahko imeli čimprej priliko razpravljati o sistemski ureditvi ZPIZ-a, bo najbrž, tako ali drugače, želel, da bi danes pospravili ta zakon z dnevnega reda in dali Vladi prostor, da s sistemskim zakonom pride.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1058">Tretje. Glede predstavnikov upokojencev. Rad bi vas ponovno obvestil, če smo morda pozabili - ne pa vplival na vašo odločitev - ta predlog, ki je zdaj v zakonu, je pripravljen po izrecnem soglasju z vsemi predstavniki upokojenskih društev in organizacij in oblik organiziranja, ki zdaj sestavljajo t.i. upokojensko kombinacijo. V njem so bili tudi predstavniki upokojenskih frakcij iz vseh strank, ki so danes tukaj prisotne in to je njihova želja. Če želimo v Državnem zboru odločiti drugače, to pravico imamo; jaz, ki sem bil zadolžen od predlagateljev, da to koordinacijo opravim, sem vam dolžan to povedati in bom glasoval za to, kar v zakonu piše. Moj krajši komentar še to: morda je res, da niso vsi povezani v društva in organizacije, ampak mislim, da so ta društva politično organiziranih upokojencev vsaj toliko njihovi reprezentanti, kot nas 90 tukaj, ki sedimo v Državnem zboru. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1059">Hvala lepa gospodu Potrču. Želi še kdo besedo? Prosim, gospod Sisinger.</seg>
             </u>
             <note type="speaker">IVAN SISINGER:</note>
-            <u who="#SDZ1.SisingerIvan" ana="#regular">
+            <u who="#SisingerIvan">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1060">Poslanke in poslanci! Vse to, kar je rekla gospa Lukačeva, je seveda resnica in ima pri vsem tem prav. Vendar ne v tem primeru, ko gre za 274. člen in ko gre za 319. člen. Jaz se ji globoko pridružujem, da že dolgo resnično čakamo na te sistemske spremembe pokojninskega zakona. Jaz moram reči, da sem te spremembe pred kratkim dobil in jih na nek način imam, poznam. Moram reči, da gre za cel sklop sistemskih sprememb, ko bomo imeli še velike razprave, moram reči, tudi v tem Državnem zboru, ker se tičejo upokojencev za nazaj in za naprej in seveda se strinjam z gospo Ireno Oman, da se reši čimprej 306. člen. Moram reči, da ga Vlada rešuje oz. Ministrstvo za delo. Tudi to se rešuje, kot se mora rešiti vojne veterane, žrtve vojne, vse to je v pripravi in naš predsednik, gospod Kociper ve, da so te zadeve tako daleč, da bomo verjetno že na prvi seji njegovega matičnega odbora imeli v razpravi.</seg>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1061">Jaz vas prosim, če hočemo resnično, da to zadevo spravimo, to skupščino z dnevnega reda po enem letu, saj smo to vložili že junija, potem seveda vas prosim, in ker smo se že odločili, da po hitrem postopku sprejmemo, da seveda zavrnemo ta dva amandmaja, ker je vse to vezano na sistemski zakon in sprejmemo v takšnem besedilu predlog zakona, kot ga predlagatelji predlagamo, kot ga je matični odbor v soglasju tudi potrdil in se z njim strinjali, moram povedati, tudi predstavnikom Vlade.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK VLADIMIR TOPLER:</note>
-            <u who="#SDZ1.ToplerVladimir" ana="#chair">
+            <u who="#ToplerVladimir" ana="#chair">
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1062">Hvala lepa. Želi še kdo besedo?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ1-Redna-17-1994-01-25.seg1063">Zaključujem splošno razpravo in prehajamo na drugo obravnavo. Imamo tri člene. Najprej dajem v obravnavo 1. člen in amandma k 1. členu. Imamo dva amandmaja k 1. členu. Gospa Metka Karner-Lukač predlaga amandma k 1. členu, črta se besedilo druge alinee in se nadomesti z novim besedilom, ki se glasi: "16 predstavnikov upokojencev imenuje Državni zbor". V kolikor bo sprejet predlagani amandma, se črta tretji odstavek tega člena. To dajem na glasovanje. Ugotovimo sklepčnost!</seg>

@@ -9,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Skupščine Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Zbor združenega dela: 19. seja</title>
-            <meeting n="19"
-                     corresp="#ZbZdruDel.1991-04-17.s019-01.ZbZdruDel"
-                     ana="#parl.meeting.regular"/>
+            <meeting n="19" corresp="#ZbZdruDel" ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +27,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +40,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +61,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="320"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="162"/>
                <tagUsage gi="seg" occurs="734"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -868,13 +857,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="ZbZdruDel.1991-04-17.s019-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -885,16 +867,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>ZBOR ZDRUŽENEGA DELA</head>
             <head type="session">19. seja</head>
             <docDate>17. in 18. april 1991</docDate>
             <note type="chairman">Predsedoval: Jože Zupančič, predsednik Zbora združenega dela</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.15 uri.</note>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg1">Pričenjam 19. sejo Zbora združenega dela Skupščine Republike Slovenije Slovenije, ki sem jo sklical na podlagi 31. člena začasnega poslovnika Skupščine Republike Slovenije. Za današnjo 19. sejo zbora se je ponovno opravičilo kar precej poslancev, glede na sedanje številčno stanje pa smo zadovoljivo sklepčni. Zato lahko pričnemo z našim delom.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg2">Najprej dvoje obvestil, glede na dnevni red, ki je predlagan smo na današnjo sejo vabili samo predstavnike Izvršnega sveta, Gospodarske zbornice, Narodne banke in Turistične zveze.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg3">In drugo. Prejeli smo povabilo Raziskovalnega inštituta FSPN, Centra za politološke raziskave in prosim vas, da se prijazno odzovete k sodelovanju pri izvedbi raziskovalnega projekta o delovanju slovenskega parlamenta. Del raziskave, ki jo bodo opravili sredi aprila 1991 leta, je usmerjen na enega od aspektov parlamentarnega življenja, to je delegatsko odločanje.</seg>
@@ -948,11 +934,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg38">Prečiščen predlog dnevnega reda imate na mizi. Želi v zvezi z dnevnim redom še kdo razpravljati? Prosim, Gradišar Franc.</seg>
             </u>
             <note type="speaker">FRANC GRADIŠAR:</note>
-            <u who="#SSK11.GradisarFranc1945" ana="#regular">
+            <u who="#GradisarFranc1945">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg39">Klub neodvisnih poslancev ima en predlog na 2. točko dnevnega reda. Klub neodvisnih poslancev predlaga, da se danes opravi celovita razprava o amandmajih, da pa se o sprejetju predloga zakona o vojaški dolžnosti odloča na seji skupščine dne 24.4.1991. Glede na to, da je bilo do sedaj vloženih 54 amandmajev, smatramo, da moramo sprejemanje preložiti, da se v tem času opravi temeljita razprava in maksimalno upoštevanje predloženih amandmajev, v smislu kvalitete zakona, ne glede na to, da gre za zakon začasnega značaja. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg40">Hvala. Gre za predlog, ki seveda ne spreminja dnevnega reda. Kaj menite iz sekretariata na to pobudo? Ni odmeva.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg41">Potem tudi ne moremo glasovati, ker se lahko še ugotovi. Zdaj glasujemo in se opredeljujemo samo o predloženem dnevnem redu. Še želi kdo? Če ni, potem bi vas vprašal, pogledali ste tisti predlog dnevnega reda, ki ga imate.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg42">Kdo je za predlagani dnevni red?</seg>
@@ -987,7 +973,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg62">Glede na to, da je tu toliko amandmajev, je verjetno prav, da bi predstavnik Izvršnega sveta, gospod Jelko Kacin, namestnik republiškega sekretarja za ljudsko obrambo podal uvodno obrazložitev, potem bi pa razpravljali in verjetno bi bilo prav, da bi po tej načelni razpravi tudi zaključili z razpravo in se potem pogovorili o amandmajih, skratka v drugi fazi. Bi gospod Kacin lahko, prosim!</seg>
             </u>
             <note type="speaker">JELKO KACIN, namestnik republiškega sekretarja za ljudsko obrambo:</note>
-            <u who="#SSK11.KacinJelko1955" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg63">Spoštovano predsedstvo, spoštovane poslanke in poslanci! Predlog zakona o vojaški dolžnosti, ki temelji na nedavno sprejetem zakonu o obrambi in zaščiti smo pripravili v skladu z razpravo o osnutku zakona, ki je potekala konec letošnjega januarja. Dejansko pa je bil zakonski osnutek v razpravi vse od konca lanskega leta. Pri pripravi predloga smo upoštevali razprave v zborih Skupščine Republike Slovenije, v skupščinskih delovnih telesih in številne druge predloge, ki so nam jih posredovale različne organizacije in organi. Predlagane zakonske rešitve so vzbudile tudi v javnosti precejšnjo pozornost, kar se je neposredno odražalo tudi v številu sprejetih predlogov in mnenj.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg64">Čeprav so bili številni predlogi tudi med seboj nasprotujoči, smo jih poskušali v največji meri vgraditi v zakonsko besedilo. Ocenjujemo, da smo ustrezno upoštevali večino predlogov, saj smo v zakonskem predlogu izvršili več kot 150 različnih popravkov v primerjavi z osnutkom.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg65">Zakon o vojaški dolžnosti, enako kot velja za zakon o obrambi in zaščiti, je zakon za prehodno obdobje, dokler ne bodo sprejete dolgoročne opredelitve glede načina zagotavljanja nacionalne varnosti slovenske države. Zato bi bilo realno pričakovati, da bi lahko ohranili večino obstoječih rešitev. Temeljna razlika med predlogom in osnutkom zakona je v tem, da smo poslušali področje vojaške dolžnosti še bolj liberalizirati, ga uskladiti z demokratičnimi procesi ter posodobiti. Prepričani smo, da je obravnavano zakonsko ureditev lahko povsem enakovredno primerjati z ureditvijo v razvitih državah. Predlagamo rešitve, ki v najmanjši meri posegajo v življenje in delo državljanov, obenem pa bi tudi v teh negotovih časih ohranjali najnujnejšo obrambno pripravljenost države v vseh pogledih.</seg>
@@ -1001,21 +987,21 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg73">Zato izvršni svet predlaga, da Skupščina Republike Slovenije predlog zakona o vojaški dolžnosti obravnava in sprejme. Zakon predstavlja neposreden prispevek k racionalnejšemu izvrševanju celotnega sistema vojaške dolžnosti tudi v materialnem smislu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg74">Hvala. Mogoče kdo od predstavnikov delovnih teles? Ne? Prvi se je prijavil gospod Dretnik.</seg>
             </u>
             <note type="speaker">IVAN DRETNIK:</note>
-            <u who="#SSK11.DretnikIvan1921" ana="#regular">
+            <u who="#DretnikIvan1921">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg75">Spoštovani zbor, spoštovani predsednik, najprej bi se opravičil, ker sem prekršil sklep, ki smo ga pred nedavnim sprejeli, namreč, da se vsak amandma predloži vsaj deset dni pred sejo. Stvar je sledeča. 31. člen zakona o vojaški dolžnosti pravi tako: "Služenje vojaškega roka se na nabornikovo prošnjo odloži: prvič, naborniku, ki po šolanju na fakulteti ali drugi visoki šoli nadaljuje s podiplomskim študijem itd.; drugič, naborniki, ki po predpisih, ki urejajo varstvo družin vseh, ki so obvezni vojaški službi, ki izpolnjujejo pogoje za pridobitev statusa edinega hranilca itd. Tu so štiri točke, med katerimi pa ne najdem nabornika kmeta itd.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg76">54. člen tega zakona namreč to določa in sicer samo služenje na orožnih vajah. 2. člen tega zakona pravi "orožne vaje se lahko kmetu ali drugemu obvezniku, ki samostojno opravlja dejavnost z osebnim delom izjemoma odloži zaradi neodložljivih del, če nima zaposlenih delavcev in enega člana oziroma člana, ki je ta dela sposoben opraviti, dokler je takšna potreba, vendar najdlje do naslednjega vpoklica." Se pravi pri naborniku kmetu pa tega določila ni. In kaj se lahko zgodi? Je veliko primerov, kjer je nabornik kmet edina moška moč pri hiši, poleg ostarelih staršev morda še celo od teh samo eden. In če bomo to ugodnost določili z zakonom, se bo ta kmet nabornik lahko odločil, da bo odslužil tistih 7 mesecev v zimskih mesecih in s tem bomo najbrž vsi zadovoljni. Zato vas prosim, spoštovane poslanke in poslanci, da sprejmete to na razumevanje in tako tudi glasujete. To bi bila ena stvar.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg77">Druga stvar, ki jo bom zdaj omenil, pa je bolj informativne narave. Je zelo zanimiva. Namreč uvod; v kazenskih določbah tega zakona nisem zasledil tistega najhujšega prekrška, ki se lahko vojaku zgodi, namreč dezerterstvo. Najbrž je to ena taka samoumevna kazen, da tega niti ni treba v zakon vnašati. To je moje osebno mnenje. Omenjam vam pa to zaradi tega, ker sem ta najhujši vojaški prekršek naradil sam, 22. januarja l944. leta. Ta svoj prekršek sem ob neki priliki, pred nedavnim, na našem obrambnem ministrstvu tudi povedal. Zanimivo je pa še nekaj, da gospod polkovnik, ki je zastopnik JLA, še do danes ni vedel, da se že skoraj eno leto tukaj shaja z vojaškim dezerterjem. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg78">Gospod Marjan Vilfan v imenu Komisije za obrambo.</seg>
             </u>
             <note type="speaker">MARJAN VILFAN:</note>
-            <u who="#SSK11.VilfanMarjan1931" ana="#regular">
+            <u who="#VilfanMarjan1931">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg79">Komisija za obrambo je ugotovila, da je predlagatelj zakona upošteval skoraj vse pripombe, ki so bile oblikovane ob obravnavi osnutka zakona na sejah delovnih teles zborov skupščine in drugih.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg80">Zakon ureja področje vojaških dolžnosti v prehodnem obdobju, dokler ne bo sprejet koncept nacionalne varnosti Republike Slovenije, nova ustava in ustavni zakon, ki bo določal roke, v katerih se morajo določbe nove ustave tudi uzakoniti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg81">Predlog zakona, 1. člen določa, da pri izvrševanju vojaške dolžnosti lahko sodelujejo tudi ženske. S tem, je uveljavljen predlog mnogih delegatov, da naj se tudi ženskam, na konkretno zahtevo, omogoči sodelovanje v rezervnem sestavu. Uveljavljene so tudi številne zahteve, da se vojaška evidenca vodi po kraju stalnega bivališča, to je drugi odstavek 7. člena. Upravni organi, pristojni za obrambne zadeve zbirajo in vodijo le tiste osebne podatke o obvezniku, ki so nujno potrebni zaradi ustreznih razporeditev. Roki za prijavo sprememb osebnih podatkov so podaljšani od 8 na 15 dni.</seg>
@@ -1031,11 +1017,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg91">Člani komisije so menili, da predlog zakona, glede na razmere in obdobje v katerem bo veljal, ureja celotno področje vojaške dolžnosti, zato komisija predlaga zborom, da sprejmejo zakon skupaj s predlaganimi amandmaji.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg92">Hvala lepa. Gospod Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg93">Spoštovani. Jaz bi v bistvu podobno, kot je gospod Dretnik dejal, tudi jaz imam en amandma, ki ni amandma Liberalno-demokratske stranke, toda s strani študentske organizacije oziroma študentske vlade. Z Ljubljanske univerze sem naprošen, da vložim amandma. Obrazložitev, zakaj ga vlagam v bistvu na dan sprejemanja tega zakona oziroma upam, da bomo sprejeli tisti predlog, da o tem glasujemo šele 24., je pa ta, da pač študentje z obrazložitvijo, ki so jo pa dobili šele včeraj na tistem odboru za mladinska vprašanja, v zvezi z oprostitvijo služenja vojaškega roka za študente in pa na podlagi nekaterih člankov oziroma izjav ministrov v tisku, so se odločili ponovno vložiti amandmaje in sicer na 29. člen, ki naj bi se dopolnil s 4. točko, da nabornik, ki dokaže, da je vpisan na fakulteto, višjo ali visoko šolo oziroma je končal šolanje na fakulteti, višji ali visoki šoli in to želi. Obrazložitev je preprosta. Pravijo: Vsi vemo, da lahko Slovenija tehnološki zaostanek z Evropo nadoknadi le z znanjem in tehnologijo. Bodoči nosilci znanja so študentje oziroma diplomanti. Da bi študentom omogočili čim boljši in nemoteni izobraževalni proces predlagamo naslednjo novost, to je ta amandma.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg94">Pravijo: "velik problem predstavlja prekinitev šolanja ali izguba stika s stroko z 12, zdaj in pa po novem pa za 6 ali 7 mesecev, zato menimo, da je treba študentom omogočiti neprekinjeno izobraževanje in strokovno usposabljanje ter jih s tem v zvezi oprostiti služenja vojaškega roka pred ali po šolanju. Seveda pa je to treba prepustiti lastni izbiri študentu."</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg95">Letos je bil na visokih šolah tudi ukinjen predmet obrambe in zaščita, njegove vsebine pa razdeljene posameznim strokovni programom, kjer se recimo farmacevti učijo delati zdravila v izrednih razmerah in podobno. Sprememba, ki jo predlagamo je le logično posledica teh sprememb.</seg>
@@ -1046,11 +1032,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg100">Zato prosim, če lahko tudi o tem amandmaju razpravljamo in bi prosil, da kljub temu, da sem zamudil z vlaganjem, da ga zbor sprejme. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg101">Hvala. Gospod Aksentijević.</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ:</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg102">Hvala gospod predsednik. Spoštovani. Hvala gospodu, ker me je pravočasno obvestil, s kom imam opravka.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg103">V tem političnem trenutku se intenzivno odvijajo pogovori najvišjih predstavnikov oblasti vseh republik o bodočnosti skupnega življenja nas vseh v skupni domovini Jugoslaviji. Sprejetje tega zakona samo otežuje delo pogajalcem in to predvsem slovenskim predstavnikom. Če se to da razumeti kot politiko tako imenovanega izvršenega dejanja, ali kaj?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg104">Drugič. Sprašujem ali ste seznanjeni z rezultati pogovora med predsednikom Vlade Republike Slovenije, gospodom Peterletom in zveznim sekretarjem za ljudsko obrambo, generalom Kadijevićem? Iz njihovega sporočila, koliko mi je znano, je ta zakon v nasprotju z njunim dogovorom.</seg>
@@ -1059,22 +1045,22 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg107">Četrtič. Predlagam, da se predlog neodvisnih delegatov spremeni in da o tem zakonu opravimo razpravo, ampak ga sprejmemo takrat, ko politika pripravi pogoje, da se zakon sprejme, to se pravi, da nam ne ogroža naše lastne varnosti. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg108">Hvala. Še kdo. Prosim dr. Rode.</seg>
             </u>
             <note type="speaker">DR. PRIMOŽ RODE:</note>
-            <u who="#SSK11.RodePrimoz1942" ana="#regular">
+            <u who="#RodePrimoz1942">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg109">Ne bi rad dvigoval temperature v dvorani, vendar pa kot kaže se zgodovina ponavlja in smo ponovno priče poskusom podaljševanja sprejemanja nekaterih zakonov in bi to skušal razložiti, zakaj tako menim.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg110">Za osamosvojitev, za to smo se plebiscitarno odločili, 23. mislim, da smo glasovali za to v visokem procentu, je potrebno, da vlada predloži in skupščina sprejme preko 20. zakonov. Te moramo nujno sprejeti, če hočemo, da bomo po razdružitvi ali pa po drugačni ureditvi živeli normalno življenje, mirno, lahko v neki tesnejši povezavi z Jugoslavijo oziroma z republikami po Jugoslaviji. Jasno pa je, vsaj meni, da po osamosvojitvi ne bodo pretrgane vezi z Jugoslavijo, ne trgovinske, ne gospodarske ne proizvodne in ne človeško kulturne. Zdaj, če bo ta naša skupščina delala tako, kot dela do sedaj, jaz mislim, da bomo teh 20 zakonov, če 2 meseca neprenehoma zasedamo, jih ne bomo sprejeli, to se pravi od jutra do večera.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg111">Zato menim, da pristopimo tudi k temu zakonu, ki je eden izmed njih. Res je tisti, ki ima pripombo, ki jo je treba upoštevati, ne dlakocepske pripombe, bom dal primer za dlakocepsko pripombo, da skušamo to resno delati, poskušamo res narediti tak zakon, da bo sprejemljiv za vse. Pustimo zdaj ob strani te igrice med opozicijo in pozicijo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg112">Primer dlakocepske pripombe: na Komisiji za mirovno politiko, kjer sem tudi član, me pa ni bilo, ko je bilo to sprejeto, oziroma sem malo prej zapustil to sejo je bilo v 16. členu, v zadnjem odstavku sledeča dikcija: "Pri tem upošteva njegova, to pomeni od nabornika, splošna in posebna znanja vejica, ter želje in potrebe oboroženih sil, vejica, je nam vsem jasno kaj vejica pomeni v slovenskem jeziku, v slovnici vseh držav. Glede na to dikcijo komisija predlaga, da Zakonodajno-pravna komisija Skupščine Republike Slovenije poizkuša najti ustreznejšo formulacijo tega odstavka. Mislim, da je absolutno jasno, da je bilo tukaj mišljeno, da gre za, torej upošteva nabornikova splošna in posebna znanja, to je logično ter želje in potrebe oboroženih sil. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg113">Hvala. Še želi kdo? Prosim gospod Gradišar.</seg>
             </u>
             <note type="speaker">FRANC GRADIŠAR:</note>
-            <u who="#SSK11.GradisarFranc1945" ana="#regular">
+            <u who="#GradisarFranc1945">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg114">Klub neodvisnih vlaga 6. amandmajev tako pa da ne bo nesporazuma, najprej smo jih dali kot pripombe, ker pa niso bile upoštevane, jih dajemo kot amandmaje.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg115">Amandma k 13. členu: V 1. stavku se preizrazi "pooblaščene zdravstvene organizacije ter pooblaščeni zdravstveni delavci" zapiše še "civilne organizacije, oziroma civilni zdravstveni delavci". Obrazložitev: Ne glede ali bomo imeli v bodoče tudi vojaške bolnice in vojaške zdravnike, verjetno ne, naj izdajajo naloge in preglede v zvezi z naborniki, pooblaščene civilne zdravstvene ustanove in civilni zdravstveni delavci.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg116">Amandma k 19. členu: Za prvim stavkom se doda novi stavek. "Za tako razvrstitev je predhodno potrebno pridobiti soglasje nabornika." Obrazložitev: V šole za rezervne oficirje naj ne bi bil razvrščen nihče proti svoji volji. Položaj rezervnih oficirjev je po končanem vojaškem roku drugačen od ostalih nabornikov, rezervni oficirji morajo na primer kar 10 let dlje služiti v rezervnem sestavu, to je člen 49., praviloma se tudi pogosteje kličejo na orožne vaje. Med vojaškim rokom se jih lahko pošlje na usposabljanje tudi izven območja Republike Slovenije, člen 25.</seg>
@@ -1084,11 +1070,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg120">Amandma k 51. členu: pri četrtem odstavku se namesto pike doda vejica in doda "do otrokovega 18. leta pa se ga ne kliče na vaje, ki so daljše od 24. ur." Obrazložitev: na orožne vaje se ne kliče vojaški obveznik samohranilec, če ima otroka, ki še ni star 15 let. Veljalo pa bi uvesti omejitve tudi do 18. leta otrokove starosti vsaj v primerih, ko je obveznik klican na večdnevne vaje. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg121">Še želi v zvezi s to načelno razpravo kdo? Ne želi. Gospod Zlobec.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg122">Najprej bi rekel, ne bojte se, ne bom obrazlagal vseh amandmajev naše stranke. Ne gre za nikakršno muhavost, ne za nekakšno drobnjakarstvo, ampak gre za en temeljni eksistencialni, drugačen pristop, ki ga zagovarja naša stranka v nasprotju s pristopom tistih,k ki so sestavljali ta vojaški zakon.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg123">Kot da smo vsi pozabili, da je prehod v demokracijo v Sloveniji bil zgrajen ravno na boju za človekove pravice. In ravno ugovor vesti, če se spominjate ob vseh škandalih vojaških sodišč, je bila ena tistih stvari, ki je ljudem vlila poguma v boju proti partijski avtoriteti vojske.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg124">Janez Janša je postal nacionalni heroj, ne zaradi tega, ker bi zahteval slovensko vojsko, ampak zaradi kršenja njegovih človekovih pravic, od individualnih do nacionalnih. Mislim, da to vse prehitro pozabljamo. Zato je osnovni, ne, ne gre za nesporazum, osnovna razlika med stališčem Liberalno-demokratske stranke in med kolegoma Janšo, Kacinom in ostalimi in med tistimi, ki mislijo, da bi s slovensko puško razrešili vse probleme, ki nas čakajo ta, da je naše izhodišče v človekovih pravicah. V tem primeru v človekovih pravicah posameznika nasproti državi.</seg>
@@ -1102,22 +1088,22 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg132">Pravzaprav vas ne bom več moril, jaz bi lahko tri ure tukaj razlagal vsak člen posebej, tukaj nismo zganjali nikakršne politike, tukaj nam je dejansko šlo samo za en vrednostni odnos do posameznika in bi vas prosil, tako komisijo, ki bo o tem razpravljala kot vas, da resnično prisluhnete tem stvarem, ker jaz pravim, to ni ne politika ne šala, tukaj gre za resne stvari. In navsezadnje imate tudi vi svoje otroke in vaši otroci bodo imeli svoje otroke in kakor jim bo zdaj trasirana slovenska obrambna moč, bo najbrž trasirana še kar za nekaj časa. In mislim da je dolžnost vseh nas, da dobro pazimo, da ne bomo dobili neke vojske, ki se bo postavljala nad posameznika, kakor se postavlja v tem zakonu. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg133">Hvala. Želi še kdo? Prosim gospa Sagadin.</seg>
             </u>
             <note type="speaker">VLASTA SAGADIN:</note>
-            <u who="#SSK11.SagadinVlasta1957" ana="#regular">
+            <u who="#SagadinVlasta1957">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg134">Spoštovani! Rada bi vas predstavila stališče oziroma še en amandma k predlogu zakona o vojaških dolžnostih, ki smo ga včeraj v klubu poslancev zelenih izoblikovali.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg135">Najbolj problematičen del tega zakona je 5 poglavje, ki se ukvarja z ugovorom vesti vojaškim dolžnostim. Zakonodajalec namreč v zakonu predvideva komisije za ugotavljanje pravice do ugovora vesti vojaški dolžnosti. Menimo, da je ugovor vesti vojaški dolžnosti osebna odločitev posameznika o kateri ne smejo in ne morejo odločati nikakršne komisije, ki naj bi jih imenoval republiški upravni organ, pristojen za upravo. Zato predlagamo, da namesto komisij, ki bi dosegale v integriteto posameznika, podaljšamo civilne službe od enega do dveh mesecev. Torej, da ne bi bilo civilno služenje enako dolgo, kot vojaška obveznost. Zavedamo pa se, da v tem trenutku velja ustavni zakon za izvedbo ustavnih amandmajev 96 in 97 k ustavi Republike Slovenije, na področju ljudske obrambe, ki v svojem 7. členu izenačuje trajanje služenja vojaškega roka s služenjem v civilnih službah. Zato bomo takoj po sprejetju zakona o vojaški dolžnosti sprožili postopek za spremembo 7. člena ustavnega zakona za izvedbo ustavnih amandmajev 96. in 97. k ustavi Republike Slovenije, s katero se bo služenje v civilnih službah podaljšalo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg136">Na osnovi te spremembe bodo mogoče spremembe v 5. poglavju zakona o vojaški dolžnosti, ugovor vesti vojaški dolžnosti, s katerimi se bodo odpravile komisije za priznavanje pravice do ugovora vesti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg137">K 51. členu pa imamo naslednji amandma: v tretjem odstavku tega člena se besedi "dveh mesecev" nadomestita z besedama "enega meseca", tretji odstavek se tako glasi: "vojaški obveznik je lahko v enem letu vpoklican na orožne vaje največ do enega meseca." Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg138">Gospa Osterman.</seg>
             </u>
             <note type="speaker">ANKA OSTERMAN:</note>
-            <u who="#SSK11.OstermanAnka1940" ana="#regular">
+            <u who="#OstermanAnka1940">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg139">K razpravi se priglašam ne samo zaradi tega, ker so novi amandmaji, temveč tudi s stališča, da povem, da smo se v stranki Demokratične prenove lotili zakona s predpostavko, da je to resnično začasen zakon, kajti vizija demilitarizirane Slovenije je jasna, trdna in zato bi predlagala, teh nekaj amandmajev, ki jih razen zadnjega ne bi posebej razlagala, ker sledijo oziroma izhajajo že iz predhodnih razprav. Pa mi dovolite, da jih preberem.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg140">In sicer amandma k 33. členu, kjer se črtajo besede "sme"ter besede "prekiniti" in se ustrezno popravi v besedo "prekine", torej ne "sme prekiniti", ampak prekine.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg141">K 38. členu. Črta se stavek po katerem naj bi komisija ugotavljala primernost nabornika za civilno služenje na podlagi potrdil o splošnem načinu življenja in ravnanja posameznika.</seg>
@@ -1127,53 +1113,53 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg145">In še k 72. členu naj se doda odstavek, ki se glasi: "vojaški obvezniki, ki so na dan uveljavitve tega zakona na služenju vojaškega roka v JLA več kot sedem mesecev, se v roku enega meseca od uveljavitve tega zakona odpustijo iz JLA". Tu bi čisto na kratko obrazložitev podala. Saj je služenje vojaškega roka v zadnjem letu pravzaprav izjemno naporno in tudi nevarno. Znano je, da se med vojaki pojavljajo psihične težave, bili so tudi tragični dogodki, kar vse je v veliki meri posledica negotovosti, stalne konfliktnosti v državi in vojski posebej. Zato menim, da bi bilo povsem neumestno, da bi tem vojakom omogočili čimprejšnji odpust iz vojske, praktično pa bi tudi na tak način tako ali tako zadostili slovenskemu zakonu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg146">Hvala lepa. Še kdo želi besedo? Gospod Daneu.</seg>
             </u>
             <note type="speaker">IVO DANEU:</note>
-            <u who="#SSK11.DaneuIvo1937" ana="#regular">
+            <u who="#DaneuIvo1937">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg147">Spoštovani! Jaz imam pa samo dva amandmaja na ta vojaški zakon, pa mislim, da niso toliko bistveni, ampak bi bilo dobro, če bi ju sprejeli.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg148">V 8. členu, kjer naj bi se drugi stavek spremenil tako, da bi se sedaj po novem glasil: "podatki iz kazenske evidence se uničijo, ko vojaški obveznik odsluži vojaški rok. Vsi ostali osebni podatki o vojaškem obvezniku v vojaški evidenci se uničijo, ko mu preneha vojaška dolžnost. Obrazložil bi to s tem: predlagani amandma želi na ta način natančneje zaščititi osebne podatke o vojaškem obvezniku v skladu z 9. členom zakona o varstvu osebnih podatkov. V tem členu je postavljena zahteva, da se osebni podatki lahko shranjujejo in uporabljajo le toliko časa, dokler je to potrebno za dosego namena, zaradi katerega so bili zbrani, obdelovani ter shranjeni. Ni nikakršnega pravno utemeljenega razloga, da bi podatki iz kazenske evidence ostali v vojaški evidenci vse do trenutka, ko vojaški obveznik doseže 55 oziroma 60 let starosti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg149">K 9. členu. Amadnma na prvi odstavek, prvi odstavek naj bi se spremenil, da bi se po novem glasil tako: "državni organi so dolžni upravnim organom, pristojnim za obrambne zadeve, dati na njihovo zahtevo podatke o zdravstvenem stanju in o posebnih znanjih vojaških obveznikov, za ocenitev njihove sposobnosti za vojaško službo in določitev rodu službe ter dolžnosti v oboroženih silah." Obrazložitev: Z amandmajem želimo preprečiti, da bi o vojaških obveznikih zbirali podatke tudi po podjetjih, zavodih in drugih organizacijah. Morda bi edino tu noter lahko dali "zdravstveni zavodi", tisti recimo zdravniki, da bi lahko opravičili, če si bolan, pa te takrat pokličejo na vaje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOžE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg150">Hvala. Zdaj, če je še kaj, kar je potrebno pri tej načelni razpravi, ker drugače bi se skušali dogovoriti tako, kot je bilo predlagano, da bi zaključili s to razpravo in tudi prekinili točko dnevnega reda, s tem, da bi skupina delegatov, ki smo jo prej izvolili, da bi se sestala, pregledala vse amandmaje, ugotovila kje se kaj ujema, nekatere stvari izločila, potem še tudi mogoče kaj drugega dogovorila in nam poročala.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg151">Se strinjate s tem, da ne bi na tak način, ker imamo sedaj tu vloženih točno 59 amandmajev v zboru. Da bi bili za to? Ker na tak način tudi veliko časa pridobimo, ker lahko pričnemo z obravnavo 3. točke in gremo naprej, potem ko komisija to zaključi, pa preidemo na glasovanje o posameznih amandmajih. Se strinjate s tem? Je kdo proti? Naj dvigne glas. Ga ni?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg152">Potem bi vas prosil, kar vse tiste člane te delovne skupine, da se zberete, kar zadaj, v sobi 217 in pričnete delo in skušajte čimprej urediti vso stvar v zadovoljstvo nas vseh, tako, da bi čimprej lahko nadaljevali in tudi zaključili to točko dnevnega reda.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg153">Mi bi prišli v 3. TOČKO DNEVNEGA REDA, TO JE PREDLOG ZAKONA O TURISTIČNI TAKSI. Nekoliko lažja tema. Predlog zakona je v obravnavo predložil Izvršni svet Skupščine Republike Slovenije. Objavljen je bil v Poročevalcu številka 11. Predlog zakona so obravnavali Zakonodajno-pravna komisija, ki je ugotovila, da je predlagatelj pri predlogu zakona upošteval njene pripombe k osnutku zakona. Amandmaji so tudi s strani Zakonodajno-pravne komisije in sicer k 7., 10. in 14. členu. Predstavnik Izvršnega sveta bi moral biti Ingo Paš ali Jure Žerovec, ga ni, svetovalec republiškega sekretarja za turizem in gostinstvo. Če jih ni, bi mi vseeno nadaljevali. Želi kdo razpravljati? Ima kdo od vas kakšen predlog?</seg>
             </u>
             <note type="speaker">BARBARA ZUPANC:</note>
-            <u who="#SSK11.ZupancBarbara1963" ana="#regular">
+            <u who="#ZupancBarbara1963">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg154">Klub Liberalno-demokratske stranke je oblikoval amandma k 5. členu, 2. točki predloga zakona o turistični taksi. In sicer naj se doda nova alinea: "gostje v domovih za učence in študente, ki opravljajo turistično dejavnost". Obrazložitev: V Sloveniji smo z načrtno gradnjo študentskih domov in domov za učence dosegli relativno ugoden bivalni standard za učence in študente. Kvalitetnejši standard omogoča izvajanje turistične dejavnosti in to v času, ko domovi niso popolnoma zasedeni poleti in zimske počitnice, s čimer se povečuje prepotrebno finančno ugodnejša turistična ponudba.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg155">Večino sredstev, zbranih iz turističnih dejavnosti, so domovi uporabili za vzdrževanje in izboljšanje standarda omenjenih domov. Ocenjujemo, da bi 100 % plačevanje turistične takse zavrlo težko organizirano turistično dejavnost v domovih. S tem bi se povečale zahteve za večjo družbeno, budžetsko participacijo za vzdrževanje standarda za domove učencev in študentov. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg156">Hvala. Zdaj je prišel tudi gospod Ingo Paš, naš minister za turizem. Želite besedo v zvezi z zakonom, nekaj uvodnih misli? Prosim.</seg>
             </u>
             <note type="speaker">INGO PAŠ, republiški minister za turizem in gostinstvo:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg157">Hvala lepa za besedo. Sedaj imamo pred seboj zakonski predlog, ki je usklajen s pripombami, ki so bile v skupščinski razpravi ob osnutku zakona. Uskladitev je potekala tako s predstavniki najbolj prizadetih občin, prav tako je uskladitev potekala s turistično zvezo in uskladitve so bile tudi medresorske, pri čemer smo upoštevali večino vseh pripomb. Pripomnil bi na to, da se turistična taksa, po zgledu na avstrijsko zakonodajo, deli na prenočitveno in krajevno takso, da je sprejeto tisto povprečno razmerje, ki je tudi bilo že v osnutku poudarjeno, torej 80 proti 20 v korist občin.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg158">Poleg tega bi pripomnil to, da smo v okviru danih pripomb tudi določili samo porabo te takse, ker je bil velik problem prav pri občinah, glede na njihove pretekle obveznosti, ki so jih prevzele prav tudi na račun turistične takse.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg159">Sprejete rešitve bile usklajene tako z resorjem financ kot tudi zakonodaje.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg160">Omenim naj, da je zakonski predlog obravnavala Zakonodajno-pravna komisija, ki je dala čisto redakcijske pripombe, ki jih tudi v celoti sprejemamo, potem je bilo obravnavano na Odboru za proračun in finance, ki je dal le eno pripombo glede rokov, v katerih morajo porabniki, pobiralci, torej obveščati glede pobrane takse, ki jo tudi sprejemamo. Potem je obravnaval Odbor za splošne gospodarske zadeve, ki je dal tudi eno pripombo, ki je torej še stvar razčiščevanja, namreč, da se praviloma ta taksa naj bi uporabljala v kraju občine, kjer je pobrana. No iz zakonske definicije taka smiselna porabe, tudi že sedaj izhaja. In končno je obravnaval tudi Odbor za varstvo potrošnikov, ki na zakonski predlog ni imel pripomb. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg161">Hvala. Želi še tu kdo razpravljati? Gospa Ostermanova.</seg>
             </u>
             <note type="speaker">ANKA OSTERMAN:</note>
-            <u who="#SSK11.OstermanAnka1940" ana="#regular">
+            <u who="#OstermanAnka1940">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg162">V dogovoru s turističnimi organizacijami in društvi v občini Ptuj vlagam amandma k 8. členu in sicer gre pravzaprav za program, tako kot je na ravni republike, naj bi bil tudi v občini ravno zato, da bi se preprečila nesmotrna poraba sredstev, ki se v občini zberejo in predlagam, da se 8. člen tega zakona dopolni z novim četrtim odstavkom, ki se glasi:</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg163">"razdelitev sredstev krajevne takse za namene iz prejšnjega odstavka pripravi pristojni občinski upravni organ v sodelovanju s turističnimi društvenimi organizacijami ter turističnimi in gostinskimi organizacijami z območja občine. Obrazložitev: upravni odbor Turističnega društva Ptuj je na seji 29. marca, ob obravnavi predloga zakona o turistični taksi, bil mnenja, da bi v občini pri razdelitvi sredstev krajevne takse zagotovili vpliv turističnih organizacij, društenih organizacij in pa turističnih in pa gostinskih organizacij. In predlagam, da to sprejmete.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg164">Hvala. Gospod Darko Bizjak, poslanec s področja turizma.</seg>
             </u>
             <note type="speaker">DAVORIN BIZJAK:</note>
-            <u who="#SSK11.BizjakDavorin1938" ana="#regular">
+            <u who="#BizjakDavorin1938">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg165">Mi smo danes na Odboru za gospodarske zadeve bili seznanjeni s tališči številnih turističnih organizacij, ki so izrazile predvsem bojazen, da bi se turistična taksa, tako kot se je tudi doslej ponekdaj dogajalo, trošila nesmotrno za neke programe, to predvsem v tistih krajih, kjer so občinska središča izven torej, se ne pokrivajo s turističnimi središči. Čeprav je pri tem treba povedati, da so tudi interesi, da se združujejo tudi ta sredstva za neke skupne cilje, tudi komunalne naložbe, kot je primer v našem primorju, kjer se namerava en del turistične takse tudi doslej so se tako ravnali, nameni tudi za skupne potrebe, recimo za vodovod.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg166">To se pravi, naša naloga je bila, da nekako napišemo takšen tekst, ki bo omogočal smotrnost in namembnost turistične takse, da se ne bi zgodilo, da bi s preglasovanjem v skupščini recimo neke občine, kjer prevladujejo predvsem ljudje izven turizma, ta denar namenili za neke komunalne namene, ker tekst v tej 3. točki 8. člena je v drugem delu v tem smislu nedorečen, prvi del: "sredstva krajevne takse se nameni za sofinanciranje storitev in ugodnosti, ki so jih gostje v kraju deležni" to je jasno, to se pravi, gre za prireditve in druge stvari v kraju, "brezplačne" in potem naprej "za komunalne potrebe, ki nastanejo zaradi turističnih dejavnosti", to je pa tako zelo razširljiv pojem, da se bomo prerekali, ker bo vsaka vaška cesta, seveda saj tudi je, lahko služi v končni fazi turizmu. Vendar je treba tu spoštovati določene prioritete, zato smo predlagali amandma, kot je tu navedeno, kjer bi bilo poudarjeno, da se za vse te dejavnosti v turističnem kraju sredstva namenijo. Seveda pa to ne pomeni, da se ne bi na občinski skupščini dogovorili, da se ta sredstva združijo za neko skupno akcijo, ki je za turizem neke širše regije primerna.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg167">Zdaj dobili smo danes, zdaj, na mizo tudi amandma, ki so ga podpisali gospod Daneu, Ivan Kuhar, Darja Lavtižar-Bebler, ki je po vsebini isti. Zdaj ne vem kaj od enega je boljše s tem, da ta amandma predlaga, da bi 2/3 sredstev se porabilo v tem kraju, 1/3 bi se pa lahko združevala, kar bi seveda pomenilo morda v nekem smislu manjšo svobodo dogovarjanja o uporabi teh sredstev. Zato predlagam, da vztrajamo pri amandmaju, ki ga je prelagal Odbor za gospodarske zadeve.</seg>
@@ -1181,7 +1167,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg169">Jaz predlagam, da se ta amandma sprejme, v kolikor pa predstavniki Izvršnega sveta najdejo salamonsko rešitev, ki bi eno in drugo pokrila, pa smo tudi za nadaljnjo razpravo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg170">Hvala gospod Bizjak. Še želi kdo? Zdaj imamo tu pri tem dokaj kratkem zakonu osem amandmajev. Želi še kdo razpravljati? Ker drugače bi lahko zaključili z razpravo. Jaz bi vseeno predlagal, glede na to, da turistično gospodarstvo ni sestavljeno samo iz vprašanja kako deliti to takso, ampak je zelo komplicirana gospodarska dejavnost, da bi ravno ob tem zakonu mogoče sprejeli tudi stališča ali pa sklepe ali pa priporočilo našemu Odboru za gospodarske zadeve, da bi še pred sezono razpravljal o turističnem gospodarstvu, glede na to, kako pomembno je na eni strani, na drugi pa seveda tudi zato, ker je v izrednih škripcih glede na objektivne in subjektivne razmere, ki vladajo na gospodarskem področju. S tem, da bi pri tem odboru potem tudi sodelovali predstavniki IS, turistične zveze in pa gospodarske zbornice in menim, da bi na tak način dobili vsaj neko osnovo, ki bi lahko dala temelje za širšo razpravo o turističnem gospodarstvu jeseni v okviru našega zbora.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg171">Kaj meniš gospod predsednik, bi bila sprejemljiva takšna pobuda? Hvala. Še želi kdo razpravljati? Gospod minister je še treba kaj? Ne, ni treba. Potem bi zaključil z razpravo v zvezi s tem zakonom in bi pač mi tudi opredelili svoja stališča do prelaganih amandmajev, potem pa še o zakonu v celoti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg172">Najprej je tu amandma k 5. členu, ki ga je posredovala gospa Baumanova. Amandma k 5. členu k točki 2 "turistično takso v višini 50 % plačujejo" se doda nova alinea, "gostje v domovih za učence in študente, ki opravljajo turistično dejavnost". Veste točno vsi zakaj gre, mi moramo seveda zdaj naprej ugotoviti glede na to, da je kar precejšnjo manjkanje v naših poslanskih klopeh, koliko nas je sploh tu, predno preidemo k glasovanju.</seg>
@@ -1189,27 +1175,27 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 11.45 uri in se je nadaljevala ob 12.10 uri.</note>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg174">Nadaljevali bi s to točko dnevnega reda. Izjemoma bi dovolil še gospe Vlasti Sagadin, da še vseeno poda dva svoja amandmaja, zaradi tega ker je iz objektivnih razlogov.</seg>
             </u>
             <note type="speaker">VLASTA SAGADIN:</note>
-            <u who="#SSK11.SagadinVlasta1957" ana="#regular">
+            <u who="#SagadinVlasta1957">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg175">Jaz se opravičujem, zgleda da je komunikacija malo zatajila med sekretarjem našega poslanskega kluba, ki mi ni pravočasno prinesel tega teksta in bi predlagala dva amandmaja k 1. členu.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg176">In sicer, da se v drugem odstavku izpusti tretji del stavka, "ki je registriran oziroma priglašen za sprejem gostov na prenočevanje". Obrazložitev: registracija objektov za prenočevanje obravnavajo drugi predpisi. Zato ni nujno, da se v tem zakonu to poudarja. Ob enem pa tako določilo omogoča zajemanje takse tudi v prenočitvenih kapacitetah, ki niso uradno registrirane, se pa v njih vseeno nudi možnosti prenočitve. To so predvsem sindikalni apartmaji delovnih organizacij, recimo v apartmajskih naseljih. Primer recimo Kaninska vas v Bovcu, kjer prenočujejo zaposleni ter zasebna ležišča v vikendih, kjer prav tako poleg lastnikov in sorodnikov prenočujejo tudi drugi gostje, mnogokrat se oddajajo precej komercialno. Recimo v občini Tolmin je takih objektov vsaj preko 250, z vsaj 1000 ležišči.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg177">7. člen pa naj bi se preoblikoval v celoti in sicer "višino turistične takse, ki jo določi občina v razponu 5 do 13 točk se deli na prenočitveno takso, ki je vrednotena s 25 % celotne vrednosti takse, ter krajevno takso, ki je vrednotena s 75% celotne vrednosti takse. Pri določitvi višine turistične takse se upošteva stopnje infrastrukturne opremljenosti kraja za turistično dejavnost in potrebe turističnega razvoja v kraju. Višina takse je lahko različna glede na letni čas in posamezno območje občine" Obrazložitev: s prelagano rešitvijo k predlogu zakona bi turistično manj razvite občine prispevale za skupne potrebe v republiki sorazmerno bistveno večje deleže glede na celo 40 % pobrane takse proti 15 % v najrazvitejših. Manj razviti kraji, ki ne morejo iztržiti večje vrednosti, prav zaradi slabe turistične infrastrukture, bodo s tako takso izgubljali precejšen delež sredstev, ki bi bila doslej mnogokrat ali pa so bila doslej edini vir za financiranje infrastrukture za turizem.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg178">Potem smo imeli pa še en amandma, ki ga pa zdaj umikam, glede na to, da je gospod Daneu že vložil podobnega v imenu svoje stranke. To je glede delitvenega razmerja med krajem po teritorialnem principu. Koliko ostane kraju, kjer je taksa pobrana, koliko pa občini. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg179">Hvala. S tem je dejansko zdaj zaključena razprava. Lepo vas prosim, vzemite v roke predlog zakona o turistični taksi, da bo jasno in gremo k tem amandmajem. Pričenjamo seveda pri 1. členu, ki ga je sedaj tudi posredovala gospa Sagadinova in sicer v 1. členu, v drugem odstavku se izpusti tretji del stavka, "ki je registriran oziroma priglašen za sprejem gostov na prenočevanje." Gospod minister Ingo Paš, republiški sekretar za turizem in gostinstvo.</seg>
             </u>
             <note type="speaker">INGO PAŠ:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg180">Mi smo te amandmaje že predhodno pisno dobili, zato smo jih že pregledali in moram reči, da se s tem amandmajem prelagatelj ne strinja in sicer zaradi tega, ker je definicija gosta določena po WTO, torej po mednarodni turistični organizaciji za turizem. Poleg tega amandma ni sprejemljiv, ker bi v skladu s takšnim amandmajem prišlo do pravne nedorečenosti. Gost bi bil vezan na katerikoli nastanitveni objekt. Torej tako je npr. vikend, poleg tega pa seveda ni izkjučeno pod tem amandmajem niti ne stanovanje.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg181">Počitniški domovi so registrirani za sprejemanje gostov na prenočevanje. Torej to tu odpade. Vprašanje zajemanje vikendov pod določila tega zakona pa je bilo razčiščeno že ob pripravi osnutka. Takšno stališče že takrat ni dobilo podpore, ker lastniki vikendov plačujejo vse krajevne dajatve, kar smo tudi poudarili v obrazložitvi tega zakonskega predloga. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg182">Hvala lepa. Slišali ste, Izvršni svet se s tem predlogom ne strinja. Prej ste slišali Vlasto Sagadin. Še želi kdo izraziti svoje mnenje kako bo glasoval? Ne želi.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg183">Potem moram ugotoviti našo prisotnost.</seg>
                <note>46 nas je</note>
@@ -1224,39 +1210,39 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg189">Smo pri 5. členu, Mihaela Bauman ga je prelagala. 5. člen. In sicer amandma k 5. členu k točki 2. "Turistično takso v višini 50 % plačujejo se doda novo alineo: "gostje v domovih za učence in študente, ki opravljajo turistično dejavnost. Gospod Paš.</seg>
             </u>
             <note type="speaker">INGO PAŠ:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg190">Torej tega amandmaja nismo dobili predhodno. Moram pa povedati naslednje, da je bil podoben predlog podan tudi v naši razpravi na skupščinskem odboru za proračun in finance, torej, da bi v študentskih domovih bila podana tovrstna olajšava ali oprostitev. To stališče na samem odboru, ki sicer ni bil sklepčen, vendar pa ni dobilo podpore. In sicer iz naslednjih razlogov: namreč mi smo v zakonski predlog vključili oprostitev za mladinske domove, ki so včlanjeni v mednarodno organizacijo mladinskih domov, torej tako imenovane "youth Hostell" in torej glede na to, ne vidimo te potrebe, da se ta oprostitev ali olajšava razširja na dodatne nove subjekte, ker to pomeni tudi, in to moramo imeti pred očmi, poseg na tržišče.S tem se seveda lahko pojavi določena motnja na trgu, ki ni primerna. Pripominjam, da smo tudi razširili olajšavo, glede na prejšnji osnutek, torej na osebe od 7 do 18 leta starosti, tako da so že tudi vsi ti zajeti v olajšavo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg191">Želi še kdo? Prosim, gospod Murko.</seg>
             </u>
             <note type="speaker">DEJAN MURKO:</note>
-            <u who="#SSK11.MurkoDejan1967" ana="#regular">
+            <u who="#MurkoDejan1967">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg192">Glasoval bom torej za ta amandma Liberalno demokratske stranke, ker sem prepričan, da bi 50 % olajšava plačevanja turističnih taks gostov dijaških in študentskih domov bistveno prispevala k povečanju tako ponudbe nekega mesta, pa tudi pridobila bi se še kako potrebna dodatna sredstva za izboljšanje standarda dijaških in študentskih domov.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg193">Ne bi sprejel trditve ministra, da je to sicer mogoče za tiste, ki so člani teh "Youth Hostel", prav zato, ker so te rešitve v svetu znane. Ne glede na včlanjenje v kakršnokoli organizacijo, so študentskih domovi v poletnih mesecih mnogo kje spremenjeni v mladinske hotele, ki nudijo spodobno prenočišče mnogim mladim in jim tako zmanjšajo stroške potovanja, obenem pa to pomeni tudi nek dodaten vir sredstev, pa seveda, kar je najpomembnejše, racionalno zapolnitev prostih kapacitet v poletnih mesecih.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg194">Žal mi je sicer da je to stališče ministra negativno, ker se to ponavadi kako meni Izvršni svet zelo odraža pri glasovanju. Kljub temu pa apeliram in tudi sam sem prepričan, da to mišljenje ni bilo dovolj premišljeno, da bi sprejem tega amandmaja, ki je zelo pomemben v našo deželo ne dvomimo privabil mnoge mlade in študente, ki bodo v prihodnosti potencialni gostje bistveno višjega plačilnega razreda in se bodo radi vračali k nam prav zato, ker se bodo Slovenije spominjali kot gostoljubne dežele še iz svojih mladih let. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg195">Želi še svoj glas kdo kaj povedati? Gospod Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg196">Podobno kot je dejal Dejan Murko bom tudi jaz glasoval za ta amandma. Bi pa seveda od gospoda ministra prosil za eno obrazložitev. Namreč zakaj Izvršni svet vztraja pri tem, da te 50 % olajšave vseeno ne bi dodelili gostom, ki bodo nastanjeni v dijaških in študentskih domovih. Ko pa v 2. alinei ravno tako piše, da bodo 50 % olajšave za goste v kampih. Gre za to, konec koncev, da pač ta amandma, ki je bil predložen ne posega, jasno, ker 200 % olajšava za te "youth Hostel", ste tako in tako dali v to, ampak gre za 50 %, ker mislimo vseeno, da bi 50 % olajšava bo pripomogla tudi pri, kaj vem, obnovi teh dijaških domov in seveda s tem dotok nekega denarja, ki pa če te 50 % olajšave ne bo, bodo pa seveda ti dijaški in študentski domovi na nek način od vlade oziroma od Skupščine Republike Slovenije zahtevali neka sredstva za adaptacijo in te minimalne stvari.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg197">Zato bi vseeno prosil, zakaj npr. gostje v kampih, ja 50 % olajšave, gostje v dijaških in študentskih domovih ne. Popolnoma se strinjam, da ste tudi uvedli tisto alineo, ki govori od 7 do 28 let in tudi zelo lepo, da ste to naredili, ampak konec koncev gostje v študentskih domovih, veste da npr. tudi mednarodna vozovnica za študente oziroma za mlajše ljudi "inter-rail" je pač fiksirana na številko, oziroma starost 26 let. In študentje, ki potujejo so stari večinoma od 20 do 25 let. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg198">Hvala. Prosim gospod Paš.</seg>
             </u>
             <note type="speaker">INGO PAŠ:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg199">K obrazložitvi zakaj olajšava samo za kampe. Obrazložitev je preprosta, ker tudi po ugotovitvah občin cena v kampu enostavno ne prenese polne takse in bi prišlo do izrazitega nesorazmerja, to je osnovni razlog.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg200">Seveda študentski domovi so nastanitveni objekti, to je seveda popolnoma nekaj drugega, kot kamp in torej še enkrat poudarjam, da tudi Odbor za proračun in finance, torej čeprav je bil sicer nesklepčen, pa vendarle, večina članov ni podprla takega predloga. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg201">Slišali ste dve mnenji. Skušali se bomo opredeliti do teh dveh mnenj z glasovanjem. Ker je vas sedaj nekaj več prišlo, vas prosim, še enkrat za prisotnost.</seg>
                <note>54 delegatov je prisotnih</note>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg202">.</seg>
@@ -1275,11 +1261,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg212">2. Pri določitvi višine turistične takse se upošteva stopnja infrastrukturne opremljenosti kraja za turistično dejavnost in potrebe turističnega razvoja v kraju. Višina takse je lahko različna glede na letni čas in posamezno območje občine. To je popolnoma preoblikovan 7. člen. Gospod minister.</seg>
             </u>
             <note type="speaker">INGO PAŠ:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg213">Tudi ta amandma smo dobili že predhodno in tudi na to pripravili odgovor. Torej s tem amandmajem se ne strinjamo. Razlog je naslednji. Razmerje med prenočitveno in krajevno takso je po zakonskem predlogu določeno po proučitvi dejanskega stanja, kar je bilo storjeno tudi v soglasju s predstavniki najbolj prizadetih občin, tako, da takšno razmerje zagotavlja v povprečju delitev takse v razmerju 80 : 20 v korist občine. Pripominjamo, da je v avstrijski zakonodaji določeno to razmerje v razponu 3 do 12 avstrijskih šilingov za krajevno takso in 3,5 avstrijskega šilinga za prenočitveno takso, iz česar izhaja, da je po avstrijski zakonodaji razmerje določeno v bistveno bolj ugodnem razmerju v korist prenočitvene takse. Razponi turistične takse po amandmaju omogočajo določanje nesorazmerno visokih taks. Kar seveda ni priporočljivo. Drugi odstavek tako spremenjenega 7. člena pa je v resnici identičen z našim zakonskim predlogom in kot takšen ne predstavlja amandmaja.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg214">Hvala. Še želi kdo? Če ne, predlagam, da glasujemo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg215">Kdo je za sprejem amandmaja k 7. členu, tako kot sem ga prej prebral?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg216">Kdo je za?</seg>
@@ -1292,12 +1278,12 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg220">In smo pri amandmaju Odbora za splošno gospodarske zadeve k 8. členu. Odbor predlaga k predlogu zakona o turistični taksi amandma in sicer, da se v 8. členu tretji odstavek spremeni tako, da se glasi: "Sredstva krajevne takse se namenijo za sofinanciranje storitev in ugodnosti, ki so jih gostje deležni brezplačno za komunalne potrebe, ki nastanejo zaradi turističnih dejavnosti in za promotivne dejavnosti v turističnem kraju." Dodatek je seveda "turističnem kraju". To je amandma Odbora za splošno gospodarske zadeve. Gospod Paš.</seg>
             </u>
             <note type="speaker">INGO PAŠ:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg221">V zvezi s tem amandmajem bi povedal splošno stališče. Namreč sekretariat je pri pripravi predloga tudi pripravil določene natančnejše kriterije glede razporejanja te takse torej tudi v tem smislu kot zajema to ta amandma. Moram reči, da pri medresorskem usklajevanju z zakonodajo in financami je bilo sprejeto stališče, da bi prenatančno definiranje pomenilo tudi poseganje v pristojnosti občine in da to ne bi bilo primerno. Zaradi tega smo takšne natančnejše definicije izpustili.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg222">Poleg tega bi opozoril na to, da po tej definiciji, kot je v tem predlogu je navedeno, torej posebej "ki so jih gostje v kraju deležni brezplačno", kar pomeni, da gre dejansko za namembnost kraja. Torej v okviru občine. Spričo navedenega menim, da je ta dodatek v bistvu bolj pojasnilne narave kot pa, da še enkrat ponavlja turistični kraj, torej da gre za razlago določbe in je zaradi tega naš predlog, da naj bi se tovrstna vprašanja predvsem regulirala s podzakonskim aktom, torej navodilom Sekretariata za finance, ki bi bilo sprejeto v soglasju z našim sekretariatom.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg223">Hvala. Želi še kdo? Če ne želi bi glasovali in sicer o tem 4. amandmaju, ki ga je pa pripravil Odbor za splošne gospodarske zadeve. In sicer, da se spremeni tretji odstavek, tako kot sem ga prej prebral.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg224">Kdo je za predlagani amandma?</seg>
                <note>29 delegatov je za.</note>
@@ -1309,20 +1295,20 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg228">Sedaj pa imamo pri 8. členu predlog, ki ga je tu posredoval tudi gospod Ivo Daneu, ki je pa seveda drugačen od tega. Amadnam k 8. členu in sicer na koncu besedila 3. točke 8. člena naj se doda naslednji tekst: "vsaj dve tretjini sredstev krajevne takse mora občina nameniti za tovrstne dejavnosti v kraju, v katerem so bila ta sredstva zbrana." Prosim, gospod Paš.</seg>
             </u>
             <note type="speaker">INGO PAŠ:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg229">Torej, pri tem amandmaju velja isto, kot sem prej povedal za prejšnjega.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg230">Kako boš glasoval? Lahko poveš. Gospod Daneu, prosim pridi in povej!</seg>
             </u>
             <note type="speaker">IVO DANEU:</note>
-            <u who="#SSK11.DaneuIvo1937" ana="#regular">
+            <u who="#DaneuIvo1937">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg231">Glede na to, da so po predlaganem besedilu 3. člena tega zakona sredstva krajevne takse prihodek občine in glede na dosedanjo prakso, da so se sredstva turistične takse pogosto uporabljala za druge namene in ne vselej za nadaljnji razvoj turizma v krajih, kjer je bila turistična taksa zbrana, ali pa za razvoj turistične dejavnosti nasploh, bi bilo nujno treba zagotoviti, da se pretežni del teh sredstev vrne nazaj v konkreten kraj, kjer je ustrezen nivo turistične dejavnosti sploh omogočil pridobitev teh sredstev. Tak koncept je tudi skladen z bodočo uveljavitvijo koncepta lokalne samouprave, po katerem naj bi bila turistična taksa eden izmed izvirnih finančnih virov bodoče manjše občine.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg232">Konkretno gre za primer Kranjske gore, kjer na Jesenicah občina ne vrača nazaj tistega, za kar domačini smatrajo, da bi morali vračati nazaj. Verjetno je pa še mnogo drugih krajev, ki bi lahko s tem denarjem, ki ga zbirajo, izboljšali turistično ponudbo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg233">To je še boljše napisano v amandmaju, ki smo ga že sedaj sprejeli. Tu gre za dve tretjini, tam smo pa praktično ves denar spravili tja nazaj. Mislim, da sem prav povedal. Se pravi, Ivo Daneu odstopa od predlaganega amandmaja, ker je to že dopolnjeno v prej sprejetem amandmaju.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg234">Tu je pa sedaj dodatek k 8. členu, ki ga je predlagala gospa Osterman, in sicer: 8. člen se dopolni z novim 4. odstavkom, ki se glasi: "razdelitev sredstev krajevne takse za namene iz prejšnjega odstavka pripravi pristojni občinski upravni organ v sodelovanju s turističnimi društvenimi organizacijami ter turističnimi in gostinskimi organizacijami z območja občine." Slišali ste, malo ponavljam gospoda ministra, da nočejo posegati v pristojnosti občine. Gre za dopolnitev 8. člena. Ali še želi kdo? Ne želi.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg235">Kdor je za, da se 8. člen dopolni z novim 4. odstavkom, ki se glasi: "Razdelitev sredstev krajevne takse za namene iz prejšnjega odstavka pripravi pristojni občinski upravni organ v sodelovanju s turističnimi društvenimi organizacijami ter turističnimi in gostinskimi organizacijami z območja občine?</seg>
@@ -1337,11 +1323,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg241">Prosim gospod Paš.</seg>
             </u>
             <note type="speaker">INGO PAŠ:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg242">Sekretariat se s tem amandmajem strinja. Mi smo na odboru, torej se strinjali, da se vzame kot tisto obdobje, za katerega je treba poročati, torej dati evidenco o porabi taks, pač da to sovpada s koledarskim polletjem in zato je ta amandma v tem smislu logičen.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg243">Hvala. Torej lahko glasujemo o 9. členu in s tem tudi o našem 7. amandmaju.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg244">Kdo je za predlagani amandma, ki ga je Odbor za finance predlagal? Kdo je za?</seg>
                <note>52 delegatov glasuje za.</note>
@@ -1353,11 +1339,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg248">In sedaj imamo še amandmaje Zakonodajno-pravne komisije, ki so pač več ali manj redakcijskega značaja. In sicer k 7. členu najprej. V četrtem odstavku se besedilo "se mora upoštevati" z besedilom "se upošteva". Čisto redakcijsko. Prosim!</seg>
             </u>
             <note type="speaker">INGO PAŠ:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg249">V zvezi s predlaganimi amandmaji Zakonodajno-pravne komisije, za katero sem že povedal, da so redakcijske narave, na nekatere stvari smo potem tudi mi že sami opozorili, tudi Zakonodajno-pravno komisijo, se v celoti strinjamo, razen kar zadeve vprašanje kazni, torej pri teh kazenskih določbah pa vztrajamo pri predlogu in sicer tudi v smislu predhodne skupščinske razprave ob osnutku, kjer se je zahtevalo ravno, da so te kazni ustrezno visoke. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg250">Hvala lepa. Slišali ste. To se pravi, to je 7. člen, ker gre za redakcijski amandma. Potem pri 10. členu pa tudi. Besedilo "plačujejo obračunano krajevno in prenočitveno takso" se nadomesti z besedilom "nakazujejo pobrano krajevno in prenočitveno takso" ter v 14. členu tretji odstavek se spremeni tako, da se glasi: "turistična taksa iz prvega odstavka tega člena se nakazuje na poseben račun v občini in se razporeja med občino in republiko v razmerju 9 : 1." Tudi ta amandma je redakcijske narave. Želi v zvezi z vsemi temi amandmaji kdo kaj povedati? Ne. Lahko glasujemo o vseh treh amandmajih hkrati? Tudi to pravite, da lahko. Potem vas vprašam, kdo je za sprejem teh treh redakcijskih amandmajev, ki jih je prelagala Zakonodajno-pravna komisija?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg251">Kdo je za?</seg>
                <note>51 delegatov glasuje za.</note>
@@ -1399,11 +1385,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg274">Predlog so tudi obravnavali Odbor za proračun in javne finance ter Odbor za varstvo potrošnikov. Amandmaji so tudi nekateri predloženi Zakonodajno-pravna komisija k 1. členu, predstavnik IS je tudi tu, gospod Ingo Paš, naš minister za turizem, prosim.</seg>
             </u>
             <note type="speaker">INGO PAŠ:</note>
-            <u who="#SSK11.PasIngo1941" ana="#regular">
+            <u who="#PasIngo1941">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg275">Torej kot je povedano gre za formalno spremembo, torej zakona o komunalnih taksah, katerega spremembe so seveda potrebne zaradi sprejetja zakona o turistični taksi, da prenehajo veljati tiste določbe, ki so s tem zakonom nadomeščene. Torej redakcijske pripombe zakonodajno-pravne komisije pa seveda v celoti sprejemamo, saj smo tudi sami pravzaprav nanje opozorili.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg276">Hvala lepa. Želi kdo razpravljati? Ni razprave. Če ne želite razpravljati jo bi tudi kar zaključil in bi kar glasovali. Na glasovanje dajem amandma Zakonodajno-pravne komisije k 1. členu predloga zakona, ki se spremeni tako, da se glasi: "v zakonu o komunalnih taksah, Uradni list SRS št. 29/65, 7/70 in 7/72, se črtajo 4. točka 1. odstavka 4. člena, 5.a člen in drugi odstavek 6. člena. IS s tem amandmajem soglaša. Tu nihče ne bo ničesar vprašal. Prisotnost moramo ugotoviti. Prisotnost prosim!</seg>
                <note>50 delegatov.</note>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg277">In koliko nas je za ta amandma?</seg>
@@ -1431,20 +1417,20 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg293">Predlagatelj je gospod Danijel Starman in mu predajam kratek čas za uvodno besedo.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg294">Spoštovani predsednik, drage kolegice in kolegi. K tako izčrpni uvodni besedi je težko kaj posebnega dodati, še posebej, ker je obrazložitev bila dana že pred sprejemom proračuna. Mislim pa, da bi bilo prav, da bi poudaril sledeče: proračun je sprejet s 5 % znižanjem, od osnutka do predloga glede dohodkov za državno upravo. Poleg tega v uvodnem ekspozeju je predsednik Izvršnega sveta poudaril, da vlada pripravlja temeljito analizo organizacije uprave in menim, da bo šlo tukaj za večji poseg v reorganizacijo v smislu poudarjanja kvalitete upravnih delavcev. Zato mislim, da tisti pomislek, ki ste ga upravičeno imeli pred prekinjeno razpravo, da naj se sredstva ne bi povečevala v globalu za državno upravo, bi s tem lahko odpadel, glede na to, da bo Izvršni svet moral v kratkem času pripraviti svoje predloge.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg295">Ker sem pri pripravi zakona izhajal zlasti iz razmer v pravosodju lahko temu zboru poročam, da se ekszodus, da ga tako grobo imenujem, to je odhod izjemno kvalitetnih sodnih kadrov nadaljuje. Torej naša sodišča, sem prepričan, da danes niso sposobna prevzeti novih kompetenc, zlasti, ko bomo sprejemali zakon o denacionalizaciji, ki bo prinesel vrsto novih pristojnosti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg296">Zato, da bi lahko pravosodje postalo kolikor toliko konkurenčno pri izbiri kadrov, mislim, da je tudi to eden od razlogov, ki potrjuje, da je potrebno tak zakon sprejeti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg297">Drugo pa je vprašanje sistemske narave, o katerem ste tudi že slišali, to je, da je praktično sprejemljiv amandma Komisije za volitve, imenovanja in administrativne zadeve, da se v tej fazi urejanja države, ne bi spuščali v porušena razmerja med pravosodjem in ostalimi vejami oblasti. Zato jaz podpiram predlog komisije in predlagam, da sprejmete ta amandma in predlog zakona kot takega. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg298">Želi besedo predstavnica Izvršnega sveta, predstavnik Izvršnega sveta?</seg>
                <note>Ne.</note>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg299">Želi kdo od poslank ali poslancev besedo? Gospod Moge.</seg>
             </u>
             <note type="speaker">RUDI MOGE:</note>
-            <u who="#SSK11.MogeRudi1944" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg300">Spoštovane poslanke in poslanci! Sam sem tudi funkcionar in verjemite mi, da bi mi ne vem kako pasalo, če bi se sedaj moj osebni dohodek dvignil za 32 %, ne kot je tukaj pomotoma navedeno 22 %, gre za 32.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg301">Hkrati moram pa po svoji etični in moralni lastnosti tudi gledati na to, da se osebni dohodki dvigujejo skoraj vsem enakomerno. Nimamo namreč opravka samo z eksodusom sodnikov, ampak imamo tudi z eksodusom upravnih delavcev, zdravnikov, tudi ti zapuščajo delovno mesto in opravka z eksodusom prosvetnih delavcev.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg302">Tale stvar do take mere izmaliči delo v ostalih družbenih dejavnostih, da boste verjetno, če vam podatke zdaj iz tega navedem, to mnenje z mano delili. Poglejte npr. če si pogledate tole poročilo; obrazložitev predloga zakona, lahko vidite, da bi na str. 2 dobil funkcionar s koeficientom 6, to se pravi največ to so predsednik republike in vlade, brez delovne uspešnosti, torej čisti osebni dohodek brez davka 21.710 din. Če vzamete teh 21.710 din in delite potem to z 6, pa pomnožite z 3,38, toliko dobijo prosvetarji, bi dobili nekje, da bi brez davka nek prosvetar moral dobiti okoli 12.229 din. Dohodek, ki ga pa dobi kalkulativni, ki mu je pa namenjen je pa 7.300 din ali za 67 % manj. Zaradi takih velikih disproporcev bodo verjetno moji kolegi, ki so tudi funkcionarji, temu nasprotovali.</seg>
@@ -1453,51 +1439,51 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg305">Glede na tranutno stanje zakona, ki ga sprejemamo in to kar prelagam, menim, da je naša zahteva, tudi liberalci se s tem strinjajo, upravičena, kar je razvidno tudi iz razpoloženja ljudi in kupa volilcev, saj včasih zastopam tudi del vzgoje in izobraževanja tukaj v skupščini. Kup se jih je obrnilo name a bo skupščina zmogla toliko moralnega poguma, da si bomo pogledali iz oči v oči, dali odprte karte na mizo, skušali na resnico stopiti in doreči ta problem do konca, da ne pustimo ljudi, ki se sedaj po šolah, pa otrok, ki so doma v takšni negotovosti. Iz tega vzroka vas še enkrat prosim, da bi poslanci Zbora združenega dela, smo vedno bili odprti do teh problemov, bodisi do gospodarstva ali ostalih dejavnosti, tole pobudo podprli. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg306">Prosim Andrej Murn.</seg>
             </u>
             <note type="speaker">ANDREJ MUREN:</note>
-            <u who="#SSK11.MurenAndrej1953" ana="#regular">
+            <u who="#MurenAndrej1953">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg307">V glavnem se pridružujem mnenju gospoda Mogeta. Sam bi pa rekel nekako takole. Sam zakon, kot je predložen je v bistvu sicer dober, načelno se strinjam z njim. Samo čas za njegovo sprejemanje pa ni ta prav. Namreč zakaj gre. Delavci zgubljajo delo, plač ne morejo izplačevati v družbenih dejavnostih, si kratkomalo politični funkcionarji ne moremo privoščiti, da bi začeli sebi dvigati plače. To je moralno nevzdržno. V bistvu mi moramo nekako deliti usodo vsega naroda.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg308">Zato predlagam sledeče: opravimo razpravo o tem zakonu, oziroma o teh obeh zakonih, saj sta med sabo povezana, zakon o spremembi zakona o delavcih v državnih organih se veže na zakon o funkcionarjih in poglejmo kakšno je mnenje v zboru, nato pa oba ta zakona, sprejetje zakonov odložimo na boljši čas, to se pravi na tisti čas, ko bomo lahko nespodbitno rekli, da se je gospodarska dejavnost začela krepiti, da se je to gospodarsko padanje ustavilo in da se je ta krivulja že dvignila navzgor. Takrat bomo pa upravičeni, da si tudi sami sebi povišamo plače, prej pa ne. Zato bi vas prosil, da tako tudi glasujemo.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg309">Hvala. Gospod Andrej Šter.</seg>
             </u>
             <note type="speaker">ANDREJ ŠTER:</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg310">Spoštovani! Torej dvakrat sem že nastopil pred vami že kot poročevalec Komisije za volitve in imenovanja. Prepričan sem, da ni potrebe, da tretjič ponavljam tisto kar sem že povedal, vendar moram odgovoriti na izzivajanje vseh predgovornikov. Ustvarja se vtis, ko da si s tem zakonom državna uprava zvišuje osebne dohodke. To ni res. Predvsem, če postavimo dilemo, da tako kot zgleda sedaj, ko je predlagatelj gospod Starman sprejel amandma, ki ga predlaga naša komisija, to je Komisija za volitve in imenovanja. Namreč čisto na kratko bom povzel dejansko stanje.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg311">Izvršni svet pri omejevanju oziroma pri zniževanju ali pa povečevanju odstopanja pri osebnih dohodkih tako funkcionarjev kot zaposlenih v državni upravi, in to je bil bistven moment pri odločitvi Komisije za volitve in imenovanja, nima omejitve. Sami se verjetno spomnite našega vztrajanja pri tem, da bi omejili proste roke, brez vsake omejitve, Izvršnega sveta pri tem. Ker stališče na Komisiji za volitve in imenovanje je bilo: imamo zakon, ki se trenutno izvršuje 41 %. Že ko se je začela ta razprava je bila meja nekje pri 50, torej v 2. mesecih je pravzaprav še za 10 % se povečal tisti luft, v katerem, bom rekel, je možno manipuliranje s strani Izvršnega sveta.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg312">Komisija za volitve in imenovanja ne predlaga nič drugega kot to, da povežemo odločitev o osebnih dohodkih funkcionarjev z osebnimi dohodki delavcev v državni upravi, da ne omogočimo posega v dogovorjeno lestvico osebnih dohodkov, ker je težko presoditi ali je sedaj sodstvo, a je mogoče kakšna druga veja državna uprave bolj upravičena oziroma bolj ogrožena od trendov, ki v slovenski družbi obstajajo in se bodo mogoče krepili, mogoče zmanjševali. Jaz ne postavljam nobene prognoze, ampak trdim, da je lestvico podreti zelo lahko, nazaj postaviti pa praktično skoraj nemogoče. Torej da uveljavljeno lestvico obdržimo, hkrati pa določimo tudi spodnji nivo tistega, kar Izvršni svet še lahko poseže v nivo izvajanja zakona.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg313">Sicer je boljše, da ta zakon negiramo, ker zakon, ki se izvaja 41 %, ta je presneto slab. Hkrati pa seveda povežemo osebne dohodke v sferi funkcionarstva, a karkoli naj bi to že bilo, z osebnimi dohodki zaposlenih, kajti sicer bomo sami sebi postavili oviro, preko katere ne bomo skočili. to je bil sedaj namen Komisije za volitve in imenovanja, ki je oblikovala amandma k zakonu. Jaz predlagam, da razmislimo in da se seveda potem odločimo, sam bom glasoval za ta amandma in za predlog zakona. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg314">Hvala gospod Ban.</seg>
             </u>
             <note type="speaker">FRANC BAN:</note>
-            <u who="#SSK11.BanFranc1938" ana="#regular">
+            <u who="#BanFranc1938">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg315">Najprej moram reči, da se pridružujem predlogu gospoda Mogeta, gospoda Murna, časi so preresni, da bi danes Zbor združenega dela diskutiral o zadevi in sklepal o zadevi o kateri v tem materialu piše. Gospod Šter ne nas zavajati. V tem materialu, kjer je podpisan predsednik komisije na koncu piše dobesedno takole: "ta izračun pokaže, da bi se ob sprejetju novega amandmaja komisije k 1. členu predloga zakona povečali za cca 22 %. Jaz nisem za noben cca, ker je treba že bolj konkretno reči in gospod Moge je izračunaval in izračunal, da to ni 22, ampak je nekaj preko 30.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg316">Tale hip in v teh dneh pa protestira ali štrajka toliko in toliko 100 ali 1000 ljudi v šolstvu, jutri bo to v zdravstvu, da ne govorimo koliko 1000 ljudi, delavcev v združenem delu, v gospodarstvu Slovenije dobiva zajamčene OD že nekaj mesecev. Mislim, da je nesprejemljivo, da bi mi o kakršnikoli korekciji navzgor OD - ali v državni upravi ali funkcionarjev - v tem trenutku in v teh dneh govorili.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg317">To je ena stvar, druga ki je na tole vezana. Gospod Starman je prej omenil fenomen redukcije državne uprave itd. Ja ljudje božji, preberite si odgovor poslanca, odgovor na poslansko vprašanje gospoda Franca Lovrenčiča. Tule noter piše koliko sto in več ljudi bomo morali imeti, da bomo čuvali državno mejo in tako dalje in tako naprej. Mi rabimo vendarle celoten paket in celoten pregled racionalizacije kompletne naše državne uprave. Jaz se strinjam, da je res, da bo manj na področju ljudske obrambe, zniževanje občinskih štabov itd. itn., jaz verjamem, da bo treba Karavanke čuvati, da bo treba mejo čuvati itd. Ampak mi rabimo celoten sklop organizacije te jutrišnje državne uprave. In videti ali bo resnično šlo v smeri racionalizacije ali ne bo šlo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg318">In najbrž v tem trenutku, jaz bi se zelo strinjal, v tem trenutku, ko ni pravega odgovora, jaz ne vem kje je vlada našla odgovor, ker se ti čudno zdi, da včeraj ni bilo denarja, zdaj pa kar denar bo za šolnike, jutri bo za zdravstvo, pojutrišnjem za ne vem katerega, v fabriki pa direktorji nimajo kaj reči ljudem, ker enostavno denarja ni in so časi strahovito resni in jaz resnično mislim, da ne bi bila nobena katastrofa, če bi to vendarle odložili, pa potem celovito videli, kakšne so dejanske možnosti in šanse. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg319">Zdaj smo kar trije tu prijavljeni. Jaz mislim, da Andrej Šter, ampak dokler on ne pride sem, prosim, moramo povedati, da za šolstvo denarja še vedno ni in ne govoriti, da se je že nekje najdel, ker ga ni. Prosim.</seg>
             </u>
             <note type="speaker">ANDREJ ŠTER:</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg320">Da sem zavajal, seveda odločno odklanjam iz tele obrazložitve: osebni dohodki državne uprave funkcionarjev in zaposlenih so vezani na izplačani osebni dohodek v gospodarstvu. Procenti, o katerih sem tudi govoril, to se pravi vedno večje zaostajanje, pomeni, da osebni dohodek v gospodarstvu raste, kajti osebni dohodek v državni upravi je ostal na nivoju leta 90, november. To pokaže čisto korekten izračun, da če upoštevamo še to, da se je število zaposlenih zmanjšalo, je osebni dohodek v gospodarstvu izplačani, neobračunani ali pa kaj takega kot izplačani osebni dohodek, višji, če ga delimo z manj zaposlenimi, je celo proporcionalno še večji.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg321">Torej zaostajanje za gospodarstvom je evidentno. Jaz predlagam samo to, da se to zaostajanje limitira, nič drugega. Upoštevaje gospodarstvo, ki ga imamo vsi v mislih, je zaostajanje vedno večje. A se strinjate? Vsekakor to tam piše, ampak na prvi strani piše, da je osebni dohodek delavcev vezan na izplačani osebni dohodek v gospodarstvu in da je osebni dohodek delavcev vezan na izplačani osebni dohodek v gospodarstvu in da je zaostajanje zdaj 42 %, to je dveh mesecih plus 10 %.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg322">Hvala. Gospod Starman še.</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg323">Upam, da sem zadnjič tukaj v tej stvari. Poglejte hrvatska republika je verjetno ta trenutek v težji situaciji kot Slovenija. Izplačuje 100 % osnovo osebnega dohodka na zaposlenega v gospodarstvu. Od prvega dneva, odkar je začela s svojo demokracijo in svojo suverenostjo in to zato, ker se zaveda, kaj pomeni državotvornost, s tem, da je razmerje 1 proti 8. Tu|man ima 8 koeficient, naš Kučan, da tako govorim, ima 6,5. To je eno vprašanje.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg324">Drugo vprašanje. Zakon, za katerega predlagam, da se spremeni, se že od vsega začetka ne izvaja in je vprašanje, ali bo šlo Vrhovno sodišče v ustavni spor. In sicer zato, ker se osebni dohodki ne obračunavajo za pretekli mesec povprečnega dohodka v gospodarstvu, ampak trenutno po osebnem dohodku december 89. Torej tukaj imamo celoten zamik z zviševanjem v gospodarstvu, ki se mesečno zvišuje in tisti direktorji, ki trdijo, da se jim osebni dohodki v gospodarstvu ne zvišujejo naj mi to dokažejo. Statistika govori drugače. Zato, če imamo resen namen ustvariti državo Slovenijo, moramo vedeti, da zato rabimo kvalificirane strokovnjake, da bodo pripravljali kvalitetne zakone, da bomo imeli kvalitetne sodnike, ki bodo sodili na podlagi teh zakonov in še to moram reči, da jutri ob dveh je zbor sodnikov Slovenije, ki so združeni v sindikat in čakajo tudi vašo odločitev, zato ker je vaš zbor edini, ki še tega ni sprejel, oba zbora sta to sprejela v takem besedilu, kot se predlaga.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg325">Zato mislim, da ni razlogov načelne narave, tako kot se hoče poudariti zviševanje osebnega dohodka o nepravem času. Gre za popravek nesorazmerij in če hočete reči tudi nezakonitosti, ki se izvajajo na tem področju do sedaj. In proračunska sredstva, ki so določena z uveljavitvijo tega zakona niti za dinar se ne bodo povečala.</seg>
@@ -1505,60 +1491,60 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg327">Upam, da sem bil jasen in prosim, imamo zelo težke stvari danes, vojaška obveznost pa to, da to razumete in sprejmete. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg328">Replika gospod Moge.</seg>
             </u>
             <note type="speaker">RUDI MOGE:</note>
-            <u who="#SSK11.MogeRudi1944" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg329">Gospod poslanec Starman, nič drugega ne govorim. Prej je bil proračun klasičen, ko se je uprava in vse drugo poučevala, torej je bil klasičen del pa en poseben del, ki se je napajal iz Sisovskih sredstev. Zdaj je enoten proračun in smo iz tega proračuna vsi plačani.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg330">Govorim pa tole, kar ste omenili je res in zaostajajo osebni dohodki tudi v področju državne uprave in pri sodnikih vendar, če bomo zdaj mi dvignili na tem področju osebne dohodke in jih niso prosvetni delavci tudi ne že od oktobra oziroma so na takšnem stanju, kot so bili v decembru, lahko oni z istimi argumenti zahtevajo to, kar jaz zdaj tukaj govorim, to se pravi, če bo državna uprava to dobila, naj dobimo tudi mi. Mene pa ne boste prepričali v tem trenutku, da je državna uprava in uradniki, da so bolj pomembni, kot vzgoja in izobraževanje za slovenski narod.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg331">Hvala. Gospod Zlobec.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg332">Čisto katka replika. Mene bi kolega Starman celo prepriča, če ne bi začel s tisto srhljivo primerjavo z demokratično Hrvaško. Jaz mu popolnoma verjamem, bral sem tudi druge stvari o Hrvaški, kako so hrvaški policaji stimulirani. Enako sem bral kako so stimulirani srbski policaji na Kosovu. Skratka dejansko se je dogajalo že to, na kar smo že skozi opozarjali: naj živi država, pa čeprav poginjajo njeni državljani.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg333">To je ena popolna mistifikacija države, kot enega represivnega aparata, ki mora za vsako ceno funkcionirati. In to poznamo od Latinske Amerike do bivših vzhodnoevropskih držav. In zato se jaz absolutno pridružujem vsem govornikom, ki so to zavrnili. Pač pa, da bom konstruktiven, predlagam, da se zmanjša za najmanj 40 %, da zmanjša za največ 50 %.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg334">S tem bi imeli stabilne plače, ne bi šle nikakor navzdol, bi se pa preprečilo v tem trenutku 1/3 povišanje plač, kar bi v resnici zbudilo pri ljudeh preprosto bes nad to državo in seveda tudi bes proti vsem nam, ki to državo na takšen ali drugačen način reprezentiramo. Mislim to preprosto tudi modro ni, ne samo da ni pošteno in etično in konsekventno, tudi modro ni.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg335">Hvala. Še kdo? Težko je, zaradi več razlogov. Jaz mislim, da bi pravzaprav, skoraj presenetljivo je, da se nihče ni obregnil ob tisti naš organ v izvršnem svetu, ki pa ima na kraju vseh krajev celotno državno upravo v svojih rokah in tudi glede na to, da se sedaj en velik del zavodov financira iz republiškega proračuna, bi morali priti do celovite obravnave te problematike. In mi, da to ministrstvo tudi v zvezi z državnimi uslužbenci praktično nič v enem letu ni napravilo se mi zdi milo rečeno dokaj slabo. Slaba ocena, ker enostavno ne bo šlo, ker če se zdaj tu spomnimo samo še enega stavka iz ene izmed preteklih sej, ko smo pač tudi vsi poudarjali, zdravstvo je pomembno za slovenski narod, šport je pomemben za slovenski narod, potem smo prišli seveda do šolstva, do univerze in še marsikaj drugega, zdaj pa imamo spet samo en segment, tako da je tu dejansko težko.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg336">Jaz bi bil bolj pristaš tega, da bi obravnavo vseeno preložili, ker če gremo na glasovanje je seveda vprašanje kako bo to seveda tudi opravljeno. Gospod Starman slišal ste, vi ste predlagatelj, jaz vam dam še enkrat besedo. Kaj menite?</seg>
             </u>
             <note type="speaker">DANIJEL STARMAN:</note>
-            <u who="#SSK11.StarmanDanijel1940" ana="#regular">
+            <u who="#StarmanDanijel1940">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg337">Samo še en podatek. Lanski proračun je za državno upravo predvidel, po podatkih Izvršnega sveta, 19,6 % več kot letošnji. Mislim, da tudi to nekaj pove. Ob čisto drugačnih pristojnostih, ob bistveno večjih pristojnostih federacije in ob bistveno manjših novih pristojnostih, zlasti glede meje o kateri je bilo govora, kot jih bo imela nova država. Ker je ta zbor že enkrat predložil, mislim, da bi danes morali odločati. Zato ne podpiram predloga, da bi še enkrat prelagali, ker v nasprotnem primeru bo skupno zasedanje in bo na skupnem zasedanju morala pasti odločitev; glede na to, da sta oba zbora to že sprejela. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg338">Hvala. Slišali ste predlog. Prosim, iz Izvršnega sveta Jože Olup, namestnik republiškega sekretarja za pravosodje in upravo.</seg>
             </u>
             <note type="speaker">MAG. JOŽE OLUP:</note>
-            <u who="#SSK11.OlupJoze" ana="#regular">
+            <u who="#OlupJoze">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg339">Spoštovani! Sem iz Sekretariata za pravosodje in upravo, pa bi lepo prosil gospoda predsednika tega zbora, če bi želel pojasniti, kateri upravni organ je imel v mislih, ker ga je izrecno imenoval v tistem delu, ko je omenil, da v enem letu ni ničesar naredil, pa bi moral narediti. Ali se to nanaša na Sekretariat za pravosodje in upravo? Ali morda na koga drugega, ki bi moral bolj pojasnjevati stališča vlade glede finančnih zmožnosti kot kdo drug?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg340">Ni sporno, to sem mislil vaš sekretariat.</seg>
             </u>
             <note type="speaker">MAG. JOŽE OLUP:</note>
-            <u who="#SSK11.OlupJoze" ana="#regular">
+            <u who="#OlupJoze">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg341">Potem pa, če ste tako ljubeznivi, bi lahko nekoliko bolj opredelili, da bi vsaj vedel, na katero temo leti kritika, da v enem letu ni bilo nič storjenega.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg342">Jaz mislim, da ni pravo mesto zdaj, lahko pa seveda<gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">MAG. JOŽE OLUP:</note>
-            <u who="#SSK11.OlupJoze" ana="#regular">
+            <u who="#OlupJoze">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg343">Hvala lepa. Potem se opravičujem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg344">Bi mogoče želel še kdo v zvezi s tem? Če ne, slišali ste predlagatelja, naj gre proces do kraja. Kaj menite predlagatelji, ki ste predlagali, da se to preloži. Se strinjate s tem, da glasujemo? Ja. Dobro. Gospod Muren tudi? Dobro. Potem moramo vseeno proceduro izvesti. Gremo najprej k temu edinemu amandmaju, ki ga imamo. Ni edini, pravi Marija. Zaključil sem razpravo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg345">In sicer 1. amandma k 1. členu, ta člen se spremeni tako, da se glasi: "v zakonu o funkcionarjih v državnih organih. Ur.l. Republike Slovenije št 30/90, se prvi odstavek k 6. člena spremeni tako, da se glasi: "osnova za obračun osebnega dohodka je povprečni osebni dohodek na delavca, izplačan v gospodarstvu Republike Slovenije za pretekli mesec po uradnih podatkih Zavoda Republike Slovenije za statistiko, ki je lahko zmanjšan za odstotek, ki ga določi Izvršni svet Skupščine Republike Slovenije glede na proračunske možnosti, vendar ne za več kot 40 %." Zakonodajno-pravna komisija amandma podpira. Se bo kdo izjasnil v zvezi s tem amandmajem? Nihče.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg346">Potem bi ugotovil prisotnost.</seg>
@@ -1608,7 +1594,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 13.30 uri in se je nadaljevala ob 14.20 uri.</note>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg374">Predno pridemo k tej b) točki, predlogu za izdajo zakona o spremembah zakona o delavcih v državnih organih, s predlogom zakona, bi vas rad informiral o tem najprej, da smo prejeli v skladu z 232. našega poslovnika interpelacijo 17 poslancev, ki so se podpisali v zvezi z razvojno in ekonomsko politiko Izvršnega sveta Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg375">In sicer pravijo: "podpisani poslanci Zbora združenega dela Skupščine Republike Slovenije vlagamo v skladu z 401. členom Ustave Republike Slovenije in 232. členom poslovnika Skupščine Republike Slovenije interpelacijo v zvezi z razvojno in ekonomsko politiko Izvršnega sveta Skupščine Republike Slovenije." Potem pa sledi obrazložitev: na 4. straneh, ki bi jo razmnožili in vam jo v teku seje tudi razdelili, tako, da bi bil pač s tem opravičen, da bi ne bi bilo treba te interpelacije brati. Tako, da bi jo dobili, ostalim poslancem seveda bi pa to poslali po pošti domov. Tistim, ki jih ni.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg376">In jaz bi seveda obvestil predsednika Skupščine in predsednika Izvršnega sveta, da bi mi obravnavali to interpelacijo v skladu z 233. členom našega poslovnika, to se pravi na naslednji seji. 233. člen poslovnika pa tudi jasno govori, kaj in kako se pač to dogaja.</seg>
@@ -1625,19 +1611,19 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg387">Predstavnik Izvršnega sveta je gospod Jože Olup, namestnik republiškega sekretarja za pravosodje in upravo. Želite besedo? Ne predstavnik predlagatelja gospod Andrej Šter. Želite besedo?</seg>
             </u>
             <note type="speaker">ANDREJ ŠTER:</note>
-            <u who="#SSK11.SterAndrej1958" ana="#regular">
+            <u who="#ŠterAndrej">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg388">Povedal bi, pri prejšnjem zakonu bi samo to dodal, da po zadnjih podatkih, ki jih imam iz občine Kranj, tam prejema tretjina zaposlenih zajamčen osebni dohodek. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg389">Želi še kdo kaj dodati? To sicer ni bilo v zvezi s poročanjem komisije, ampak dejansko je pa bila to pripomba, ki je verjetno na mestu. Želi kdo od poslancev ali poslank razpravljati? Ne želite. Če ne želite, pač nimamo razprave. Prosim gospod Studenčnik.</seg>
             </u>
             <note type="speaker">JOŽE STUDENČNIK:</note>
-            <u who="#SSK11.StudencnikJoze1956" ana="#regular">
+            <u who="#StudenčnikJože">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg390">Jaz bi samo vprašanje postavil, glede na to, ker prejšnjega zakona nismo sprejeli, kaj je sedaj s tem, s to kombinacijo?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg391">Nič hudega. Mi gremo naprej zaradi tega, ker bomo tu potem pač glasovali. Sta dva različna zakona ne. Nimamo kaj. Še mogoče kaj? Če ne, bi se najprej pogovorili o amandmaju Komisije za volitve, imenovanja in administrativne zadeve k 1. členu, ki se glasi: "ta člen se spremeni, tako da se glasi: "v zakonu o delavcih v državnih organih, Uradni list Republike Slovenije 15/90 in 5/91 se v 60. členu 1. odstavek spremeni tako, da se glasi: "osnova za obračun osebnega dohodka je povprečni osebni dohodek na delavca izplačan v gospodarstvu Republike Slovenije za pretekli mesec, po uradnih podatkih Zavoda Republike Slovenije za statistiko, ki je lahko zmanjšan za odstotek, ki ga določi Izvršni svet Skupščine Republike Slovenije glede na proračunske možnosti, vendar ne za več kot 40 %. Zakonodajno-pravna komisija amandma podpira.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg392">Se bo kdo izjasnil v zvezi s tem amandmajem? Izgleda, da nihče.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg393">Potem bom ugotovil prisotnost.</seg>
@@ -1664,7 +1650,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg407">Osnutek zakona je v obravnavo predložil Izvršni svet Skupščine Republike Slovenije. Objavljen je bil v Poročevalcu št. 12. Osnutek zakona so obravnavali Odbor za varstvo potrošnikov, Zakonodajno-pravna komisija, ki je ugotovila, da je predlagatelj upošteval večino pripomb komisije, danih v predhodni obravnavi zakona, oz. pojasnil, zakaj posameznih pripomb ni upošteval, k posameznim členom pa je predlagala konkretne pripombe in mnenja. Predstavnica Izvršnega sveta je gospa Fanika Mlakar, direktorica Zavoda Republike Slovenije za cene. Želi besedo? Da.</seg>
             </u>
             <note type="speaker">FANIKA MLAKAR:</note>
-            <u who="#SSK11.MlakarFanika" ana="#regular">
+            <u who="#MlakarFanika">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg408">Spoštovane poslanke in poslanci! O obravnavi predloga za izdajo zakona o cenah. V začetku marca je bilo na besedilo podanih nekaj pripomb in predlog za spremembo posameznih določil zakona. Po obravnavi smo vse pripombe in predloge proučili in ustrezno vključili v osnutek, ki ga danes obravnavamo. V primerjavi s predlogom za izdajo se osnutek razlikuje v naslednjem:</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg409">- v prvem odstavku 4. člena smo črtali "zdravila", kar pomeni, da je sedaj zdravilom omogočeno samostojno oblikovanje cen.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg410">- v 4. členu smo na lastno pobudo dodali nov tretji odstavek, ki daje Izvršnemu svetu pooblastilo, da lahko tudi za navedene proizvode in storitve v prvem odstavku, omogoči prosto oblikovanje cen ter ugotovi, da so nastopili razlogi za tako oblikovanje cen.</seg>
@@ -1679,57 +1665,57 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg419">V zvezi s predlogom o opredelitvi proizvodov in storitev lokalnega pomena v samem zakonu, menimo, da je ponujana rešitev 10. členu ustreznejša, saj ob prenosu pristojnosti iz federacije na republiko za vse proizvodne storitve, v tem trenutku ni možno navesti vseh proizvodov in storitev lokalnega pomena, brez bojazni, da bi katero področje izpustili, kar bi bilo možno pozneje popraviti le s spremembo zakona. Menimo, da s tem ne kaže obremenjevati Skupščine, zato predlagamo, da te proizvode in storitve sproti ugotavlja Izvršni svet z odlokom. Predlagamo, da osnutek zakona podprete. Hvala za pozornost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg420">Poročevalci delovnih teles, ali želi kdo razpravljati? Ne. Odpiram razpravo. Kdo želi razpravljati? Gospod Arzenšek.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg421">Spoštovani zbor! Z ozirom na izvajanje gospe Mlakarjeve bi imel samo vprašanje. Rekla je in posebej poudarila, da so zdravila izvzeta iz kontrole. Moram reči, da je verjetno prav in to predvsem industriji za proizvodnjo zdravil. Moj predlog oziroma vprašanje pa je: z ozirom na to, da so javni zavodi, proračunske ustanove in da je recimo cena zdravil tudi kalkulativni element cene storitve, pa če se pogovarjamo, da imamo tri vrste spiska zdravil, t.i. pozitivno listo, vmesno listo in listo, ko naj bi v celoti vse plačali sami, imam en predlog za premislek. Ali ne bi kazalo, da bi zdravila s pozitivne liste le bila kontrolirana?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg422">Bojim se namreč to, da ko je bilo govora pred kratkim, da določene tovarne zdravil, zaradi bistvene razlike v cenah surovin, ki jih morajo dobiti in pa tečaja marke in podobne stvari, da praktično ne morejo proizvajati teh zdravil oziroma imajo bistvene težave in je včasih celo lahko vprašljivo to, ali bo to zdravilo na tržišču, če se obnašamo po ekonomskih tržnih cenah. Ne zadovoljuje me vse tisto, kar ste povedali, da v takih momentih pa lahko ukrepa Izvršni svet. Zdi se mi premalo dorečeno.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg423">Če bi recimo šlo za pozitivno listo zdravil - vemo pa, za katero gre, ta je najpomembnejša - da pa so le-ta nekako kontrolirana in da je zagotovljena njihova dobava in možnost pridobitve, bi le bilo nekaj storjenega, razen, če mislite, da je to treba reševati v specialnem zakonu. Mislim pa, da o zdravilih ni nič govora v zakonu o zdravstvenem varstvu! Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg424">Hvala. Gospod Dretnik.</seg>
             </u>
             <note type="speaker">IVAN DRETNIK:</note>
-            <u who="#SSK11.DretnikIvan1921" ana="#regular">
+            <u who="#DretnikIvan1921">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg425">Gospod predsednik, ponovno se opravičujem zaradi zakasnitve, z opravičilom, da smo to pripombo, ki jo bom dal, formirali sami na klubu poslancev Slovenske kmečke zveze. Glasi se: Podpisani vlagamo k osnutku zakona o cenah sledeče pripombe: 9. člen tega zakona se spremeni tako, da se glasi: "Cene kmetijskih pridelkov določa Kmetijski inštitut Slovenije. V smislu določb 6. člena tega zakona pripominjamo, da so bile v preteklosti cene kmetijskih proizvodov vedno določene, nikoli pa ne regresirane v višini, ki bi krila proizvodne stroške.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg426">Hvala. Gospod Muren.</seg>
             </u>
             <note type="speaker">ANDREJ MUREN:</note>
-            <u who="#SSK11.MurenAndrej1953" ana="#regular">
+            <u who="#MurenAndrej1953">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg427">Imam pripombe na 7. in 8. člen.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg428">7. člen pravi: "Cene proizvodov in storitev, pri katerih se izplačujejo nadomestila, določa funkcionar, ki vodi republiški upravni organ, pristojen za cene." 8. člen pa pravi: "ob sprostitvi blaga iz republiških blagovnih rezerv določa cene tega blaga funkcionar, ki vodi republiški upravni organ, pristojen za blagovne rezerve." Povsod drugod, v vseh drugih členih zakona določa ali pa lahko določa cene Izvršni svet. In se mi zdi, da bi bilo mogoče bolj smiselno, če bi v teh dveh členih veljalo enako, da bi tudi tukaj določal Izvršni svet ceno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg429">Hvala. Še želi kdo besedo? Gospod Erce.</seg>
             </u>
             <note type="speaker">FRANC ERCE:</note>
-            <u who="#SSK11.ErceFranc1951" ana="#regular">
+            <u who="#ErceFranc1951">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg430">Kolegice in kolegi. Povedal vam bom kakšne so pripombe k osnutku zakona o cenah kluba slovenskih krščanskih demokratov. Pripomba na 5. člen, kjer Izvršni svet govori, da lahko intervenira tudi ob, oziroma zaradi preprečitve monopolnega oblikovanja cen. Smatramo, ker je deloma že gospa Mlakarjeva rekla, da bo mogoče to urejeno v nekih antimonopolnih zakonih, torej mi predlagamo, da se to uredi v tem antimonopolnem antitrustovskem, kako se to imenuje, posebnem zakonu.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg431">V 6. členu, kjer tudi zakonodajalec oziroma predlagatelj uporablja posebno zvezo "bistveno poslabšajo pogoji poslovanja", smatramo, da ta beseda oziroma ta zveza ne sodi v zakon, ker je nekako preveč ohlapna in daje preveliko možnost proste presoje. Kriteriji bi morali biti nekje po naši oceni bolj precizno postavljeni.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg432">In pa še zadnja pripomba k 12. členu osnutka zakona. Ta člen določa, da se zahtevki za spremembo ukrepov določitve cen vlagajo pri republiškem upravnem organu pristojnem za cene. Smatramo, da je ta organ nekako ostanek stare zakonodaje in sistema. Mislimo, da v tem trenutku, ko govorimo oziroma ko imamo v nekih skupščinskih procedurah zakone s področja privatizacije, lastninjenja torej privatizacije, ko v bistvu odpravljamo pojem družbene lastnine, ostane zgolj področje javne sfere in gospodarskih subjektov, ki so opredeljeni v 4. členu tega osnutka. Tista področja, kjer država kot pretežni ali pa večinski, izključni lastnik izvorno določa cene oziroma raven cen proizvodov in storitev. Celotna ostala podjetniška sfera, razen seveda delov t.i. javnih financ, ki se napajajo oziroma financirajo iz proračuna, naj sprejemajo odločitve o cenah popolnoma svobodno, suvereno, pač z normalnim sprejemanjem poslovnega rizika, kjer je tudi normalno ta odgovornost upravljalcev kapitala do lastnikov kapitala bolj jasna, kot je ta hip seveda še nam, kjer seveda imajo tudi sindikati svoje pravo mesto in tako naprej.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg433">Mi smatramo, da si sedaj, z osnutkom tega zakona, naša izvršilna oblast jemlje preveliko pristojnost in mogoče s tem tudi odgovornost. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg434">Hvala. Še kdo? prosim gospod Bizjak.</seg>
             </u>
             <note type="speaker">DAVORIN BIZJAK:</note>
-            <u who="#SSK11.BizjakDavorin1938" ana="#regular">
+            <u who="#BizjakDavorin1938">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg435">Meni se seveda postavlja vprašanje kaj je s cenami, ki jih imajo še vedno v zvezni pristojnosti, ker v tem zakonu teh problemov ne rešujemo in mislim, da bi do predloga vendarle tudi ta problem, če imamo seveda pri ostalih sklepih, ki smo jih v tej skupščini resen namen, potem tudi to rešiti. Mislim na nekatere infrastrukturne zadeve, ki smo jih pustili še vedno v zvezni pristojnosti. Verjetno bi kazalo ta zakon tudi s tem področjem zapolniti.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg436">Hvala gospod Brglez. Še kdo? Če ni, bi gospa Mlakarjeva direktorica Zavoda Republike Slovenije za cene.</seg>
             </u>
             <note type="speaker">FANIKA MLAKAR:</note>
-            <u who="#SSK11.MlakarFanika" ana="#regular">
+            <u who="#MlakarFanika">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg437">Poskušala bom samo nekaj stvari. No, če začnem z zadnjim vprašanjem kaj je s cenami, ki so v zvezni pristojnosti? S tem zakonom, smo mi že zadnjič povedali, da s tem zakonom prenašamo komplet vso pristojnost cen, ki so zdaj v zvezni pristojnosti v republiško pristojnost. Ko bo ta zakon sprejet bodo vse cene, ki so zdaj v zvezni pristojnosti v republiški pristojnosti, tudi infrastrukture, zato to posebno opredeljevanje ni potrebno.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg438">V zvezi s predlogom gospoda Arzenška za zdravila moram reči, da smo mi zelo podpirali, da bi bila zdravila v zakonu na soglasju Izvršnega sveta, ker menimo, da le gre za tako pomemben proizvod, tudi iz tega vidika, kar je on poudaril, vendar je bilo na vseh treh zborih tako vašem, kot Družbenopolitičnem zboru, kot v Zboru občin s strani poslancev predlagano, da se naj zdravila izkjučijo iz zakona. Zato smo mi tudi to storili, ker smo to pripombo, glede na to, da je bila podana na vseh treh zborih, bili dolžni upoštevati. Mislim pa, da je predlog, ki ga je dal gospod Arzenšek sprejemljiv in ga bomo proučili. Mislim, da je prav, da bi bila vsaj zdravila s pozitivne liste pod kontrolo. Moram reči, da smo tu naleteli na velik odpor farmacevtske industrije.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg439">Glede 9. člena mislim, da tam govori, da zaščitne cene kmetijskih izdelkov določa Izvršni svet Skupščine Republike Slovenije. Mi mislimo, glede na to, da so od določitve zaščitnih cen, da se ponavadi potem oblikujejo tudi odkupne cene in da gre za osnovne kmetijske epizode, da teh cen ne more določati inštitucija, kot izvršni svet Skupščine Slovenije, ki je tudi zadolžen za preskrbo slovenskega tržišča.</seg>
@@ -1739,7 +1725,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg443">Ne glede na to, da so javna podjetja, da ima Izvršni svet večino v organih upravljanja, še kljub temu mislimo, da bi na teh področjih, to je samo električna energija, samo prevoz potnikov po železnici, da bi v teh primerih moral določati cene Zvezni izvršni svet. No pri železnici imamo še dodatni argument. Železnica dobiva veliko sredstev iz proračuna in mislimo, da mora imeti Izvršni svet tudi pregled nad prihodkovno stranjo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg444">Slišali ste. Obravnavamo itak šele osnutek. Po tem sprejmemo načelni sklep. Želi še kdo kaj dodati? Ne želi. Potem lahko zaključim z razpravo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg445">Predlagam, da bi Zbor združenega dela sprejel naslednji sklep: Zbor združenega dela Skupščine Republike Slovenije sprejema osnutek zakona o cenah. Predlog zakona naj pripravi Izvršni svet Skupščine Republike Slovenije. Pri pripravi predloga zakona naj predlagatelj prouči in ustrezno upošteva pripombe in mnenja pristojnih delovnih teles Skupščine in pripombe ter stališča naših delegatov." Želi o tem sklepu kdo razpravljati? Ne želi.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg446">Potem bi mi ugotovili prisotnost.</seg>
@@ -1767,7 +1753,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg461">Komisija za notranjo politiko, ki je opozorila na vrsto nerazrešenih vprašanj. Predstavnik Izvršnega sveta je gospod Brvar, svetovalec Izvršnega sveta v republiškem sekretariatu za notranje zadeve. Želi besedo? Prosim, gospod Brvar.</seg>
             </u>
             <note type="speaker">BOGOMIL BRVAR:</note>
-            <u who="#SSK11.BrvarBogomil" ana="#regular">
+            <u who="#BrvarBogomil">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg462">Spoštovane poslanke, poslanci, spoštovani predsednik! Področje evidence gibanja in nastanitve občanov ureja zakona o evidenci nastanitve občanov in registru prebivalstva, Skupščina Slovenije ga je sprejela leta 1983. Leta 1990 je bil ta zakon spremenjen in usklajen s 50 amandmajem k ustavi, tako da je bilo iz njega črtano določilo, po katerem so lahko organi za notranje zadeve, če je bil podan sum, vstopili v prostore za nastanitve, da preverijo identitete prijavljenih oseb.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg463">Leta 1990 je Skupščina sprejela Zakon o varstvu osebnih podatkov, s katerim je potrebno zakonodajo uskladiti do konca marca leta 1991. Znano nam je, da je predlagano sicer, da se ta rok podaljša do konca leta 1991, letošnjega leta. Ne glede na to prolongacijo, predlagamo, da Skupščina obravnava in sprejme predložene spremembe. Umikanje zakona bi bilo namreč smotrno le v primeru, če bi do konca leta lahko pripravili nov zakon o evidenci in nastanitvi občanov in o registru prebivalstva. Ker pa je ta zakon vezan na sprejem sistemske in organizacijske zakonodaje na področju javne uprave in ker je potrebno predhodno razrešiti vrsto odprtih vprašanj, kot npr. katere organe vodi centralni register prebivalstva, novega zakona ni mogoče pripraviti prej kot v letu in pol. Zato predlagamo, da Skupščina najprej sprejme predlagane dopolnitve in spremembe v skladu z zahtevami zakona o varstvu osebnih podatkov.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg464">V skladu z zahtevami tega zakona, bi zakon o evidenci nastanitve občanov in registru prebivalstva dopolnili z naslednjim: določili bi vse osebne podatke, ki jih je občan dolžan dati pristojnemu občinskemu pravnemu organu za notranje zadeve, ob prijavi oziroma odjavi stalnega prebivališča in tiste, ki sta jih občan in stanodajalec dolžna dati ob prijavi začasnega prebivališča. Ti podatki so bili doslej določeni s pravilniki, zdaj pa jih je potrebno v skladu z zakonom o varstvu osebnih podatkov določiti v zakonu o evidencah in nastanitvi občanov in registru prebivalstva.</seg>
@@ -1782,43 +1768,43 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg473">Spoštovane poslanke in poslanci! Prosim, da podprete oziroma sprejmete predlog za izdajo zakona o spremembah in dopolnitvah zakona o evidencah nastanitve občanov in register prebivalstva z osnutkom zakona. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg474">Hvala. Želijo poročevalci delovnih teles mogoče besedo? Če ne, bi prosil za razpravo. Kdo želi razpravljati? Ni razprave. Prosim, gospod Murko, Univerza Maribor.</seg>
             </u>
             <note type="speaker">DEJAN MURKO:</note>
-            <u who="#SSK11.MurkoDejan1967" ana="#regular">
+            <u who="#MurkoDejan1967">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg475">Jaz bi v imenu Liberalno-demokratske stranke podal pripombe k predlogu za izdajo zakona o spremembah in dopolnitvah zakona o evidenci in nastanitvi občanov in o registru prebivalstva z osnutkom zakona. Ta zakon je le na videz nedolžen, v bistvu pa s svojimi določili kar močno in celo neposredno posega v zasebnost posameznika. Tako recimo 5.a člen vsebuje mnogo preveč podatkov, ki jih je potrebno dati ob prijavi spremembe naslova stanovanja. Nikakršnega razloga ne vidim, da se dajejo podatki pod točko 6: zakonski stan, 7: šolsko izobrazbo, 10: priimek in ime ter enotno matično številko osebe, ki vodi gospodinjstvo ter sorodstvena razmerja do te osebe ter pod točko ll: celo navesti vzrok selitve.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg476">Člani komisije, morate oditi, ob treh smo se dogovorili, pa še tu sedite. Puc, Rudolf, Zabukovec, Šter, Dular v sobi 209.</seg>
             </u>
             <note type="speaker">DEJAN MURKO:</note>
-            <u who="#SSK11.MurkoDejan1967" ana="#regular">
+            <u who="#MurkoDejan1967">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg477">Ti podatki resnično posegajo v intimo vsakega posameznika in menim, da nimajo nikakršne zveze s selitvijo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg478">Prav tako menim, da v členu 10.a ni potrebno dajati podatkov pod točko 5: šolska izobrazba in poklic, ker to za vpis v knjigo gostov v hotelu menda ja ni pomembno. Potem mislim, da je nujno, da se zbiranje vse te kopice podatkov privede na eno razumno raven, ne po načelu vse vsakomur, da to pač upoštevamo in da se navaja le nujno potrebne podatke.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg479">Veliki brat tako ne bo vedel nič manj potrebnih podatkov, mi pa se bomo počutili tudi znatno svobodneje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg480">Hvala. Gospod Arzenšek.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg481">Spoštovani! Vprašal bi tole gospoda Brvarja. Če se spomnimo na 3. ali 4. seji novega sestava skupščine, ko smo postavili vprašanje, ali ne bi kazalo urediti enotnih evidenc za zdravstvo, da bi recimo matična številka ne bi bila samo za potrebe notranjih zadev, Zavoda za statistiko, hotela in ne vem česa, ampak da bi to veljalo za vse tiste, ki kakorkoli potrebujejo podatke. Takrat je bilo nekje odgovorjeno, da če bodo prišle spremembe, ali kasneje z novim zakonom, da bodo te stvari urejene. Tu jaz tega ne vidim. Namreč, da bi lahko t.i številko enotne matične številke občana koristili tudi pri nas.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg482">V zdravstvu je namreč takole. Najprej imamo registrsko številko, potem t.i. neko IŠU številko, zdraven še neko šifro dejavnosti, pa zdraven vse sorte. Edino česar ne smemo uporabljati, ne smemo uporabljati najbolj enostavnega načina, to je ta enotna matična številka. In imamo teh obrazcev prvič preveč in pa preveč kompliciranih. Mislim, da bi kazalo tudi če je to samo dopolnitev ali sprememba, te stvari upoštevati in rešpektirati tudi v teh dopolnitvah zakona. Na napotnicah je veliko napisanega.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg483">Jaz rešpektiram ime in priimek, začetnico in rojstne podatke, vse drugo pa ne potrebujemo, ker nam bi s to številko, ki je matična številka občana, povedali vse. Tako pa imamo na napotnicah in drugih stvareh tri, štiri šifre. Tisti šifrant je takole debel. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg484">Ali še želi kdo. Ni več? Ali je potrebno, gospod Brvar, svetovalec Izvršnega sveta v Republiškem sekretariatu za notranje zadeve. Prosim!</seg>
             </u>
             <note type="speaker">BOGOMIL BRVAR:</note>
-            <u who="#SSK11.BrvarBogomil" ana="#regular">
+            <u who="#BrvarBogomil">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg485">Pripomba o tem, da je nekaterih podatkov preveč - vaše mnenje bomo proučili, uskladili z Zavodom za statistiko, ker po sedanji zakonodaji navodilo na tem področju izdajata republiški sekretar za notranje zadeve in direktor Zavoda za statistiko v soglasju. V vsakem primeru pa je treba upoštevati, da so to za statistične podatke, ker se ne identificirajo osebe kot take, edina baza podatkov za raziskovanje v Sloveniji in to uporablja Zavod za statistiko Republike Slovenije. Vendar bomo to proučili. Kar pa zadeva uporabe enotne matične številke v zdravstvu, pa, kakor mi je znano, to že uporabljajo nekatere zdravstvene institucije v Sloveniji npr. Nova Gorica itd. in ni najmanjšega problema, da se enotna matična številka uporabi za identifikacijo na tem področju.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg486">Ali še želi kdo? Če ne, bi zaključil razpravo v zvezi s to točko in bi predlagal naslednji sklep:</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg487">1. Zbor združenega dela Skupščine Republike Slovenije sprejme predlog za izdajo zakona o spremembah in dopolnitvah zakona o evidenci nastanitve občanov in o registru prebivalstva z osnutkom zakona.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg488">2. Predlog zakona naj pripravi izvršni svet Skupščine Republike Slovenije. Pri pripravi predloga zakona naj predlagatelj prouči in ustrezno upošteva pripombe in stališča pristojnih delovnih teles Skupščine in pripombe ter predloge delegatov.</seg>
@@ -1973,17 +1959,17 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg591">Potem je tu še gospod Jože Studenčnik. Prosil bi ga, da bi on prebral.</seg>
             </u>
             <note type="speaker">JOŽE STUDENČNIK:</note>
-            <u who="#SSK11.StudencnikJoze1956" ana="#regular">
+            <u who="#StudenčnikJože">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg592">Delegatska pobuda. O slovenski metalurgiji se zadnje čase veliko piše in objavlja v javnih medijih. Vendar imam občutek, da prihaja do nejasnega, nekorektnega poročanja. Takšno poročanje povzroča zbeganost med zaposlenimi v metalurgiji, kar tudi kvarno vpliva na odnos slovenskega okolja do naše metalurgije. Zelo sporno področje je zaposlenost v tej panogi, in to zaradi tega, ker se podaja število zaposlenih glede na seštevek v podjetjih, ki so združena v Slovenskih železarnah, kar pa se nikakor ne more enačiti s številom zaposlenih v metalurgiji in to primerjati z ostalo Evropo ali iz tega celo računati produktivnost.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg593">Zavedati se moramo, da so v sklopu Slovenskih železarn štiri podjetja, ki niso metalurške panoge, in tudi to, da tudi železarne niso sestavljene samo iz metalurških obratov. Celo livarstvo moramo izločiti oziroma podajati ločeno, če hočemo koristiti podatke za stvarno in točno primerjavo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg594">Zato dajem pobudo, da se od odgovornih ljudi zahtevajo točni podatki po podjetjih v sklopu Slovenskih železarn, da podajo direktno in indirektno vezane delavce na področju metalurgije ter livarstva. Istočasno naj se dajo podatki o instaliranih kapacitetah in proizvodnji, tako da bo stvarno možno postreči s konkretnimi podatki za primerjavo z Evropo in pripadajočo produktivnostjo. Možno je seveda, da strokovne službe zahtevajo še ostale pomembne podatke in jih ustrezno objavijo za javnost.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg595">Hvala. Gospod Ivan Dretnik.</seg>
             </u>
             <note type="speaker">IVAN DRETNIK:</note>
-            <u who="#SSK11.DretnikIvan1921" ana="#regular">
+            <u who="#DretnikIvan1921">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg596">Delegatska pobuda! Na gozdnatih področjih Slovenije postaja vprašanje vzdrževanja gozdnih cest vse večji problem. Nova davčna zakonodaja in priprava gozdarske zakonodaje ne dajeta zadovoljivega odgovora na to vprašanje. Čeprav je po novem lastnik gozda obremenjen z zelo povečanim davkov na katastrski dohodek in je predviden visok davek na promet z lesom, ni v tem okviru predvidenega ustreznega deleža za vzdrževanje gozdnih cest. Po sedanjem še nedodelanem, sistemu bi bil lastnik gozda še bolj obremenjen kot v prejšnjem sistemu, saj bi ob vseh davčnih obremenitvah moral sam financirati tudi dejavnost, ki bi se morala vsaj sofinancirati iz dajatev, zbranih od lastnikov gozdov.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg597">Glede na to, da so v republiškem proračunu namenjena tudi sredstva za gozdove in da so trenutno največji problem prav gozdne ceste, dajemo pobudo, da se ta problematika rešuje prioritetno, saj gre tudi za vprašanje dostopa do hribovitih kmetij.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg598">Zavračamo kakršnokoli povezovanje sedanje problematike gozdnih cest s sprejetim zakonom o moratoriju. Dejstvo je, da so se davki za gozdne lastnine določili v visokih postavkah, ni pa se obenem predvidel tudi način vzdrževanja gozdnih cest.</seg>
@@ -1992,12 +1978,12 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg601">Ta amandma se glasi: 31. člen tega zakona se dopolni s 6. točko, ki se glasi: "kmetu, ki izpolnjuje pogoje, kateri so navedeni v 3. odstavku 54. člena tega zakona s pripombo vendar najdlje do konca septembra koledarskega leta, v katerem dopolni 27 let". Utemeljitev: Na številnih kmetijah je nabornik edina moška delovna moč. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg602">Mislil sem gospod Dretnik, da boste pri pobudah in predlogih ter vprašanjih vsaj to povedali, kako ste dezertirali, ne pa da boste amandma prebrali.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg603">Gospod Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg604">Spoštovani, nimam na papir vržene pobude. Mislim pa, da je bila zajeta že v tisti pobudi, ki jo je podal kolega Moge pri eni drugi točki. Namreč, ta razširitev dnevnega reda s problematiko na šolskem področju v tem stanju, ki je sedaj nastalo in pa pod b) je tudi on navedel to problematiko zaključnega izpita srednješolcev oziroma četrtošolcev letošnje generacije. Naj najprej povem, kakšne sklepe želim posredovati.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg605">Namreč, tako kot je v duhu tega, da poslanci Skupščine Republike Slovenije oziroma poslanci Zbora združenega dela na svoji seji 24.4. obravnavajo nastali položaj okrog zaključnih izpitov; tretjič, intenzivira se strokovna priprava mature za leto 1995 ter zanjo zagotovijo vsa ustrezna sredstva.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg606">Poglejte, za kaj gre pri teh zaključnih izpitih. Zaključni izpiti so bili uvedeni leta 1987 in od takrat naj bi pristojni organ do te generacije četrtošolcev, ki naj bi bili sedaj, pripravil ustrezen program in določene kataloge znanj za opravljanje tega zaključnega izpita. V javnosti se večkrat govori, da srednješolci, ki sedaj protestirajo proti zaključnemu izpitu, da se opravičujejo z izgovorom, da zanj niso vedeli. Četrtošolci jasno in glasno poudarjajo, da so za zaključni izpit vedeli, toda programa le-tega in tu je seveda vprašanje - sedaj še ne vejo. Se pravi, ni napisanih, primera radi, 150 vprašanj, ki naj bi bila postavljena in bi se iz tega učili.</seg>
@@ -2009,22 +1995,22 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg612">Zato s to svojo pobudo ali vprašanjem na nek način želim, da bi strokovni svet, ker se ugotavlja, da je strokovni svet za vzgojo in izobraževanje še vedno organ Skupščine Republike Slovenije, da se na nek način vseeno sestane. Sam zaključni izpit ni sporen, ampak izvajanje tega, ker konec koncev Lazarini tudi v tem dopisu srednješolcem z dne 12.4. pravi, da bo tako in tako strokovnemu svetu na naslednji seji, v sredini maja, predlagal sklep, da naj pisne naloge za zaključne izpite za vse programe pripravijo predmetne skupine na Zavodu za šolstvo na ravni, ki ustreza večini učencev, s čimer bi preprečili možno samovoljo nekaterih učiteljev. Tu se popolnoma strinjam, toda mislim, da je rok 15. maj, v katerem se misli svet sestati, odločno predolg in mislim, da bi bilo vseeno na neki način potrebno aktivirati ves ta strokovni mehanizem v tem času in po 24.4. sprejeti določene ukrepe na tem področju. Konec junija ali kdaj bodo imeli srednješolci zaključne izpite in so seveda v zelo težkem položaju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg613">Hvala. Še kdo? Gospod Arzenšek.</seg>
             </u>
             <note type="speaker">DR. JOŽE ARZENŠEK:</note>
-            <u who="#SSK11.ArzensekJoze1942" ana="#regular">
+            <u who="#ArzenšekJože">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg614">Poslal sem pismeno pobudo, pa ni bila omenjena. Smatram, da obstaja neskladje med letos sprejetim zakonom o prispevnih stopnjah za zdravstvo, zaposlovanje itd. in sprejetim zakonom o proračunu. Pobuda ni bila prebrana, zato bi prosil, ker če ne, bi jaz uveljavljal pravni spor, ker mislim, da razlaga, ki jo je podal zadnjič predstavnik Sekretariat za finance in za zakonodajo ne drži.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg615">Namreč zakon se ne more pokrivati in ne more vzdržati interpretacije ta, da kadar zakon komu ustreza, velja, kadar pa ne, pa ni važno, da ga upoštevamo. In takrat smo mi namreč predlagali tako, da v kolikor recimo ne bodo vsa sredstva zbrana iz tega po zakonu o prispevnih stopnjah za zdravstvo, zaposlovanje itn., takrat v neki projekciji 11.8 milijarde, da se naj ustrezno zniža prispevna stopnja in seveda to pomeni razbremenitev gospodarstva, kar je moj prijatelj Grašič že izkoristil in je mislil, da bodo tam plačevali bolniške, pa mislim, da to proračune bo dal. Ampak to je moja taka vmesna pripomba.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg616">In drugo; vic je v tem, da ni vlada odgovorila z ničemer. Se pravi niti znižala prispevne stopnje in če tega ne, potem pa naj ta zakon ukine. In jaz sem dal za to pisno zahtevo in seveda pravno razlago, ker nisem bil zadovoljen na zadnjem zasedanju skupščine z razlago, ki jo je dal Sekretariat za zakonodajo in Sekretariata za finance. To je ena zadeva in bi prosil predsednika, da to uveljavi.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg617">Druga zadeva pa ta, to pa dajem pobudo, nisem imel zdaj prilike, da bi napisal, da bi pristojni organ, zdaj na vem, če je to Zavod za statistiko ali je to Republiški sekretariat za zdravstveno varstvo itn. v smislu ukrepov, ki so bili sprejeti od sprejemanju proračuna s področja zdravstva, ko pod 6. točko prvega poglavja piše "poenostavitev in ukinitev nekaterih evidenc naj poenostavi evidence vključno s tem, da uveljavlja, recimo, kot edini podatek, mogoče samo še s kakšno šifro dejavnosti, tole enotno matično številko občana v celotnem slovenskem prostoru. Hvala lepa. In to čimprej, lahko bi pa to naredili, po izjavi gospe, ki predstavlja Zavod za statistiko, takoj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg618">Hvala, Jože. Gospod Muren.</seg>
             </u>
             <note type="speaker">ANDREJ MUREN:</note>
-            <u who="#SSK11.MurenAndrej1953" ana="#regular">
+            <u who="#MurenAndrej1953">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg619">Moja pobuda je pravzaprav na isto temo, kot je govoril že gospod Roman tukaj. To je pa stališče kluba poslancev o teh zaključnih izpitih.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg620">Tekst naj bo sledeči: "klub poslancev Socialdemokratske stranke daje pobudo, da pristojno telo v Republiškem sekretariatu za vzgojo, izobraževanje in telesno kulturo spremeni pogoje iz vzgojnoizobraževalnega programa, ki jih mora izpolniti kandidat za pridobitev izobrazbe. To je zakon o usmerjenem izobraževanju, člen 45. In sicer tako, da pogoj za pridobitev izobrazbe ni tudi uspešno opravljen zaključni izpit. Obrazložitev: klub poslancev Socialdemokratske stranke ocenjuje, da navedeni pogoji povsem po nepotrebnem obremenjujejo srednješolsko populacijo, ki je trenutno v 2, 3. in 4. letniku, to pa je po naši oceni v treh letih nekaj desettisoč mladih ljudi.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg621">Dijake 1. letnikov namreč ta problematika ne prizadeva v taki meri, saj je za šolsko leto 1994-95 predvidena bodisi matura, bodisi zaključni izpit, odvisno od odločitve srednješolca ali nadaljuje s šolanjem ali ne. Najbolj pa problematika prihaja do izraza pri letošnji generaciji četrtošolcev, saj zaključek leta zelo hitro sledi. Nepotrebnost opravljanja sedaj predvidenih zaključnih izpitov je po našem mnenju očitna, saj so zgolj breme in psihični pritisk na dijake, nimajo pa nobene teže. Vsaka šola namreč predvideva svoje zaključne izpite, fakultete pa v vsakem primeru določajo sprejemne izpite po lastnem programu, zaključnih izpitov pa ne upoštevajo, kar je normalno, ker zahtevnejše šole, boljše šole imajo zahtevnejše zaključne izpite, manj zahtevne šole imajo pa manj zahtevne izpite, gre pa za šole istega ranga. Normalno, da potem fakulteta ne more tega priznavati.</seg>
@@ -2037,7 +2023,7 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg628">Tu bi pripomnil še to, da tukaj je potreben strokoven pristop k temu problemu in mi Socialdemokrati nasprotujemo začetni politizaciji tega problema, ki bo samo udarila po glavah teh četrtošolcev, pozitivno pa tega problema ne bo rešila.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg629">Hvala. Mogoče vseeno kot zanimivost. Dajem pobudo, da zaključni izpit absolutno obstane v srednjih šolah in sicer iz naslednjih razlogov; ker je zaključni izpit popolnoma, z vsemi pedagoškimi dokazi, ovrednoten kot pozitiven ukrep za zaključek srednjega šolstva. Jaz mislim, da ni niti enega negativnega pokazatelja, ki bi opravičeval takšne predloge kot so se sedaj pojavili iz vrst srednješolcev širom Slovenije, zlasti še samo iz nekaterih posameznih šol.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg630">Poleg tega so zaključni izpit opravljali že pred dvema letoma tisti, ki so opravljali programe samo dve leti, vse triletne šole so tudi že opravile. In dejstvo je, da bi morali naravoslovci in družboslovci, ki so zdaj najbolj napeti, opravljati zaključni izpit že lansko leto, ker sta oba strokovna sveta že pred petimi leti, to se pravi, že 86 leta, v svojih programskih spremembah, sprejela zaključni izpit kot sestavni del njihovega programa.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg631">In še nekaj, trdno sem tudi prepričan kot pedagog, da je bil zaključni izpit tisti, ki je dal zaključku šolanja svoj pečat in tudi odraslost vsakemu, ki je srednjo šolo zaključil. Veliko zaključnih izpitov iz stare gimnazije sem dal skozi, enako sem dal tudi prazni tek usmerjenega izobraževanja. In kdor ti dve razliki pozna, tisti absolutno ne more podpreti teh teženj kot jih zdaj nekateri srednješolci zahtevajo.</seg>
@@ -2045,34 +2031,34 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg633">Trdno smo prepričani, da bi s tako, zelo enostavno, ureditvijo marsikaj uredili in bi bilo srednješolcem in bodočim študentom marsikaj prizanešeno in se ne bi spuščali na nivo tistih posameznikov, ki postajajo živčni, nervozni in ne vem kaj še. Gre za veliko populacijo, ne pa za posameznika. Pobuda. Ne bomo razpravljali o pobudi, mogoče kdo kaj drugega. Prosi, gospa Sagadinova.</seg>
             </u>
             <note type="speaker">VLASTA SAGADIN:</note>
-            <u who="#SSK11.SagadinVlasta1957" ana="#regular">
+            <u who="#SagadinVlasta1957">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg634">Imam samo delegatsko vprašanje. Konec marca sem vložila delegatsko pobudo v zvezi s problematiko splava na Sekretariat za zdravstvo, Medtem ko na to mojo pobudo odgovora iz sekretariata uradno še nisem dobila, tudi neuradno, skratka, nič ne vem, kakšno je njihovo stališče, pa se je moja pobuda znašla na dnevnem redu zasedanja Komisije za žensko politiko, kamor pa te pobude uradno nisem jaz naslovila. Zdaj me pa zanima, kakšna je običajna uradna pravna pot delegatskih pobud, ki jih dajemo delegati na točno določene naslove.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg635">Namreč popotovanje te moje delegatske pobude in pa zasliševanje na Odboru za žensko politiko oziroma na Komisiji za žensko politiko okrog te moje pobude mi močno diši po enih starih, boljševističnih metodah cenzuriranja javnega oziroma osebnega mnenja in zato prosim, če morda že kar zdaj tovariš predsednik ali pa sekretarka znata povedati, kako je sploh uradna pot vsakršne pobude, ki se v našem zboru pojavi.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg636">Zelo preprosto je. Takoj, ko so pobude danes, se pošiljatelju to tudi polje, oziroma naslovniku pošlje. To so Izvršni svet in matično delovno telo. Od nas gre to naprej, potem pa seveda čakamo na odgovore in ko pridejo odgovori, jih mi tako in tako, to je bil tudi enkrat odgovor, dobite najprej tisti, ki ste pobude dali, potem šele so objavljene. Gre zanesljivo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg637">Jaz sem sam tudi zato, ker je bilo že enkrat tudi to, gospod Arzenšek in gospod Bizjak sta načela to vprašanje, kako je s temi pobudami. Jaz imam celo tak občutek, da je Izvršni svet celo marsikateri teden zelo priden in na veliko pobud odgovori, včasih pa potem seveda, zaradi drugega dela, kasnijo. Gospod Bolič.</seg>
             </u>
             <note type="speaker">MUHAREM BOLIĆ:</note>
-            <u who="#SSK11.BolicMuharem1936" ana="#regular">
+            <u who="#BolicMuharem1936">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg638">Jaz bi dal eno pobudo, da v tem času, ki je minil, ki mu rečemo boljševistični, da se o njem v tem zboru res ne bi več pogovarjali, ker iz čisto praktičnih razlogov v boljševizmu nam sploh ni bilo treba postavljati vprašanje splava, ker je to bilo zelo v redu narejeno. V tem času sem delal kot direktor in delam to danes. Škoda, da se izgovarjamo na ta čas, ker smo živeli veliko boljše, vedeli smo kaj delamo, vedeli smo za koliko delamo, danes niti ne vemo za koliko delam, niti kako delam, niti kakšni so ustvarjeni rezultati, niti koliko bom dal za davke, niti kam gre ta davek, iz Arzenškove debate sledijo, niti ne vemo kam gre ta davek. Tako, da bi bilo zelo fer, da ta čas pozabimo, da začnemo drugače delati, pa ne govorim to kot bivši boljševik, ker nisem bil nikoli boljševik, pa tudi danes nisem, ampak stvari poštene, delovne poslance iritirajo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg639">Hvala. Še kakšna pobuda?</seg>
             </u>
             <note type="speaker">DEJAN PERŠOLJA:</note>
-            <u who="#SSK11.PersoljaDejan1946" ana="#regular">
+            <u who="#PersoljaDejan1946">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg640">Imam dve pobudi. V novi davčni zakonodaji je bilo predvideno, da je nakup motornih vozil, ki jih kmetje uporabljamo za svojo dejavnost, to so kombinirana vozila, tovorna vozila in pa še terenska vozila, oproščena temeljnega prometnega davka. Na ta način so kmetje, ki so pokojninsko in invalidsko zavarovani, izenačeni z obrtniki. Tako tolmačenje je veljalo le nekaj dni. Republiška uprava za družbene prihodke je po usklajevanju Sekretariata za finance dala navodilo, da se v oprostitev davka ne štejejo terenska in tovorna vozla, ki jih nabavljajo kmetje za svojo dejavnost, kot samo vozila za prevoz mleka. Menimo, da bi morale davčne olajšave pri nakupu veljati tudi za kmete, če nabavljajo vozila, ki jih rabijo za svojo dejavnost.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg641">Kot drugo pobudo: odprava kontingentov za uvoz sadilnega materiala. Zaradi povečanega obsega obnove vinogradov, primanjkuje kvalitetnega sadilnega materiala. Zato smo ga prisiljeni uvažati. Za prvo polovico leta so kvote že izpolnjene in ne moremo dobiti novih kontingentov iz Beograda. Predlagamo, da se urgentno odpravijo administrativne omejitve uvoza navedenega materiala. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg642">Hvala. Še kdo želi? Gospa Ostermanova.</seg>
             </u>
             <note type="speaker">ANKA OSTERMAN:</note>
-            <u who="#SSK11.OstermanAnka1940" ana="#regular">
+            <u who="#OstermanAnka1940">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg643">Imam delegatska vprašanja naslovljene na Sekretariat za ljudsko obrambo in sicer:</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg644">1. vprašanje: Ali je res, da v Pekrah pri Mariboru gradite novo vojašnico? Kakšna je predračunska vrednost investicije?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg645">2. Koliko vojašnic še gradite v Sloveniji?</seg>
@@ -2080,38 +2066,38 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg647">Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg648">Hvala. Gospod Aksentijevič. Ampak ne razpravo, le pobudo.</seg>
             </u>
             <note type="speaker">MILAN AKSENTIJEVIĆ:</note>
-            <u who="#SSK11.AksentijevicMilan1935" ana="#regular">
+            <u who="#AksentijevicMilan1935">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg649">Ker je tovarišica namenila vprašanje gospodu ministru, jaz ne bom na to odgovarjal, ker ni mene vprašala.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg650">Gospod predsednik, to je pobuda iz mojega delovnega okolja, to se pravi moje baze. Večkrat smo ugotovili v naši skupščini, da se na prostoru Jugoslavije in Slovenije dogaja, vodi medijska vojna. Dobili smo odlok slovenske TV, da se, poleg republiških vojskujočih se centrov, dovoli gledanje programa Yutel. Moti, ker imajo vse vojskujoče strani na razpolago udarne termine, to se pravi od 19.30 do 20.00 ure, medtem, ko je Yutel dobil termin na koncu programa.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg651">Zakaj TV oddaja, ki res nastopa kot jugoslovanska, zakaj se jo poriva na konec programa, celo na 24.00 uri, največkrat od 1.00 ali 2.00 po polnoči?</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg652">Predlagam, da Yutel ima in dobi stalen čas oddajanja in to v času tretjega dnevnika. To je želja vseh nas, ki hočemo biti točno in vsestransko obveščeni. To bi lahko bila lepa nova naloga za ministra za informiranje, slišimo, da bo novi minister.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg653">Še kdo? Prosim, Roman Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg654">Hvala za besedo. Kjub temu mislim, da vseeno imam to pravico in to moralno obvezo, da vseeno utemeljim ene stvari okoli tega zaključnega izpita. Na nek način smo bili v isti koš vrženi socialdemokrati, kot liberalni demokrati.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg655">Jaz s svojim izvajanjem nikakor nisem želel anulirati zaključni izpit. Konec koncev, leta 1987 ga je predlagal takrat šef tega šolskega polja, naš član, zdaj generalni sekretar Liberalno-demokratske stranke. Jaz sem opozarjal na to, da izvajanje tega zaključnega izpita ni bilo tako, kot bi moralo biti. In prav tako nisem prejudiciral odločitve Skupščine Republike Slovenije, tako kot je npr. povzela Socialdemokratska stranka iz tega pod točko 5. Zahteve zveze četrtošolcev Slovenije, ko govori točno in eksplicitno, da je treba, da moramo poslanci spremeniti ta 45. člen zakona o usmerjenem izobraževanju. In potem, da strokovni svet za vzgojo in izobraževanje s programov črta uspešno opravljanje zaključnega izpita.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg656">Jaz sem samo predlagal, da strokovni svet, da se sestane in na osnovi tega, ker izvajanje zaključnega izpita, potemtakem, zaključni izpit naj bi bil po diplomi diplomirani pedagog, zame tudi pomeni nekaj. Čeprav, če se ne motim, ko ste govorili o starih gimnazijah, je zaključni izpit bil matura in kolikor jaz vem je bila na nek način eksterna preverljivost znanja ali pa vsaj del mature je bil skupen,če se ne motim, potem je bil pa en del zbirne skupine pa različen.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg657">Jaz sem želel samo, da se odpre vprašanje tudi zaključnega izpita, zaradi razlogov, ki sem jih pa naštel. To pa je, da je internega značaja in pa to, da program le-tega ne vedo in z drugo roko sem pa branil Univerzo, kot predstavnik Univerze, ker mislim, da te puščice ne smejo biti sedaj uprte na Univerzo in pozabiti Sekretariat oziroma tudi srednje šole, ker konec koncev je res neopravičeno pričakovati na Univerzi, da odpravijo nek selekcijski mehanizem, ki bi pač selekcioniral, ker zaključnemu izpitu enostavno ne verjamemo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg658">Besedo ima gospod Muren.</seg>
             </u>
             <note type="speaker">ANDREJ MUREN:</note>
-            <u who="#SSK11.MurenAndrej1953" ana="#regular">
+            <u who="#MurenAndrej1953">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg659">Torej je gospod Jakič razlagal, bi moral še jaz mogoče. Tudi mi Socialdemokrati apriorij ne nasprotujemo zaključnim izpitom, ki bi bili eksternega značaja in ki bi bila resna podlaga, da bi imeli na podlagi uspešno opravljenega zaključnega izpita, ne bi bil več potreben sprejemni izpit, v taki obliki, kot se predvideva sedaj na Univerzi.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg660">Torej, če bo matura v bodoče taka, eksterna, je to zelo pozitivno, v vsakem primeru, je to pravilni zaključek srednjega šolanja. Nasprotujemo pa sedanji obliki ureditve, ko se dela dejansko po domače, ena šola tako, druga drugače, kakor se komu zazdi in seveda to potem na Univerzi ni sprejeto. In je potrebno potem eno in drugo hkrati. to je pa res nepotrebno obremenjevanje srednješolcev.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg661">A mi dovolite tri stavke? Mene v bistvu preseneča to, da govorite o maturi, popolnoma zgrešeno. Mature praktično v takšnem pravem pomenu v Sloveniji še sploh ni bilo. Nikdar v preteklosti. Dajmo si to dopovedati. Z eksternim ocenjevanjem in s takšno proceduro kot je pač matura npr. mednarodna matura, kot jo hočemo na koncu vsega nekako spraviti pod našo maturo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg662">Matura je res s katalogom znanj, ki ga dobijo učenci v 1. razredu srednje šole in točno vedo kakšno znanje morajo imeti in se tudi potem ne postavlja vprašanj v srednji šoli, ampak srednja šola prejema vprašanja. Samo odgovorijo na testih znanja, potem pa gredo ta vprašanja v center za maturo, kjerkoli pač ta bo in bodo tam rezulteta tudi ovrednotili in izkristalizirali. Matura je čisto nekaj drugega. Mi smo pa do sedaj, kadarkoli smo govorili o maturi imeli v bistvu zaključni izpit. Jaz sem žal predolgo v srednji šoli. Dal sem zaključne izpite od najlažje, ko je bila samo seminarska naloga; do najtežjih, ko je bilo pet predmetov, skozi, do teh, ki jih imamo sedaj pri usmerjenem oziroma reformiranem izobraževanju.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg663">In tu se mi zdi, da je velika napaka, ko jo tudi mladi delajo, pa tudi ko ste jo vi sedaj gospod Muren povedal, v srednjih šolah se v bistvu pripravljajo temeljito na zaključne izpite že 4 leta. Pri teh temeljnih predmetih, učitelji z dijaki delajo. Lansko leto so že začeli seminarske naloge delati, na nekaterih šolah imajo seminarske naloge že zaključene, kot sestavni del zaključnega izpita. In to ni nekaj kar tako ad hoc sprejeto. To so temeljite priprave. Mora biti pa pri zaključnem izpitu eksterno ocenjevanje, ker je podkrepljena avtonomnost vsakega profesorja. Žal je prav tako, da en slavist bolj razlaga, bolj poglobljeno, ko govori o Prešernu eden o Cankarju, eden pa mogoče o Šalamunu in temu bo on seveda predlagal tudi ta svoja zaključna vprašanja. To se pravi tisto, kar so oni slišali in osvojili, to bodo tudi obravnavali.</seg>
@@ -2120,32 +2106,32 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg666">Samo, da ne bi imeli sedaj tu razprave.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg667">Prosim. Če ni več zelo kaj takega. Prosim Jaša Zlobec.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg668">Jaz profesorja Zupančiča v vseh pogledih globoko spoštujem, ampak tukaj se pa ravno tako globoko ne morem strinjati z njim. Zdaj govorim kot o profesorju ne kot o predsedniku zbora. Namreč stvar je v tem. Že generacije in generacije so žrtve usmerjenega izobraževanja, to se strinjamo, to nimamo kaj izgubljati besed.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg669">Samo 6 jih je.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg670">Samo 6 generacij, v redu dovolj. Vsakič, ko pride do ene spremembe spet pride do enih žrtev, to je logično tudi če je sprememba še tako na boljše. In zdaj je preprosto to, včasih si končal gimnazijo, ko sem jaz hodil v gimnazijo, in si se lahko vpisal na katerokoli fakulteto brez enega diferencialnega izpita, zdaj se pa z ene naravoslovne gimnazije ne moreš vpisati na filozofsko fakulteto in z družboslovne gimnazije se ne moreš vpisati na matematiko, fiziko itn.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg671">Skratka ti, ta mularija zdaj je dejansko bolj obremenjena kot je bila naša, čeprav na te obremenjenosti ni bila tako navajena kot je bilo v naših časih. Seveda tukaj imam eno bolno situacijo in če imamo celo generacijo otrok, ki so totalno živčni in zaskrbljeni preprosto se moramo z njimi vsesti in pogovoriti, en pa z eno vzvišeno gesto, kot smo jo lahko videli s stališča oblati parkrat zdaj zadnje čase, vse skupaj interpretirati na ta način: aha mularija je lena, noče se učiti, nekaj bi bojkotirali, zato, da bi imela manj obveznosti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg672">Mislim, da je stvar dosti bolj resna in da jih ne moremo opraviti tako z levo roko. Zato jaz predlagam,d a se z njimi na raznih ravneh čimprej vsedemo in na prihodnjem zasedanju, prihodnji teden, razširimo dnevni red z eno poglobljeno razpravo o tem in dobimo še seveda stališče strokovnega sveta, stališče Sekretairata za šolstvo itn. Mislim, da je to ena resna stvar, ker je ena cela generacija tukaj na robu živčnega zloma.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg673">Obljubim, da ne bom več govoril v zvezi s tem, ampak jaz sem sredi šolajoče mladine in prisežem, da ne poznam živčne generacije. Za mene so to čisto normalna, v redu mlada generacija, ki je sposobna narediti čudeže, nikakor pa ne sprejemam v njihovem imenu, kljub temu, da sem trikrat starejši od njih, da so živčni. Pa vi jih degradirate no vsi, nekaj jih je, tako kot smo med starimi tudi, jaz sem tudi zdaj malo koleričen. Ampak zaradi tega pa niste vsi vi.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg674">80 poslancev je v redu in zaradi tega se mi zdi to neupravičeno, se mi pa zdi popolnoma prav, da je pa ta dialog nujno potreben, Jaša, to se pa strinjam, tega dialoga pa ni. Takoj, ko pride do kakšne pobude bi dejansko moral tudi naš Minister, pa še tudi marsikdo drug reagirati, priti z njimi skupaj, da bi se pogovarjali.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg675">In če bi ta dialog bil ustvarjen, jaz mislim, da tega problema sploh ne bi bilo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg676">In tudi bi sprejel to pobudo če bi dobili kakšna, vsaj solidna gradiva za te stvari, da pač tudi to obravnavamo, saj bomo pač tisto uro ali pa uro in pol obravnavali, jaz ne podcenjujem tega, da se prav razumemo, ampak to mora biti vseeno nekaj pripravljeno, ne moremo pa kar tako kot zdaj. Prosim.</seg>
             </u>
             <note type="speaker">VALENTIN PRELOVEC:</note>
-            <u who="#SSK11.PrelovecValentin1934" ana="#regular">
+            <u who="#PrelovecValentin1934">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg677">Gospodje poslanci, jaz grem čisto na drugo področje, da ne boste mislili, da ponavljam. Namreč prihajam z enim zelo resnim vprašanjem za naš Izvršni svet. Na to vprašanje upamo obrtniki, da bomo dobili odgovor.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg678">Za to situacijo, ki je nastala v našem gospodarstvu je vsem jasno, ne bi niti tega ponavljali, da imamo ljudi na cesti vsak dan več. No med temi so se našli tudi obrtniki. Preobraziti gospodarstvo ali pa preobraziti nekega obrtnika pomeni, zamenjati program. Imam konkreten primer, ki ga bom tukaj navedel, preveril sem ga sam, odločbe sem videl sam, zaradi tega ne govorim na pamet. Ta bivši obrtnik sprašuje, kam naj se pritoži za to zadevo, ki se mu je zgodila. Naj jo povem:</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg679">Obrtnik je pred dvemi leti imel delavnico za kooperacijo strojne stroke. Posel se je začel slabšati in se odločil, da bo iz te delavnice naredil nočitvene kapacitete. Naredil je nekaj, vendar to je bilo nekaj za vzdrževanje te družine premalo, odločil se je še za dozidati restavracijo, sposodil si je na banki denar, da je to naredil, priglasil je gradbeni poseg, vendar odločbe za to ne dobi.</seg>
@@ -2153,11 +2139,11 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg681">Naj Izvršni svet pove občinam ali smo za preobrazbo nekakšnega gospodarstva ali nismo, ali naj se ti ljudje pripravljajo nekaj drugega delati ali naj vse skupaj roke proč, pa naj se tudi oni prijavijo na zavode za tistih 2.800 din na mesec, jaz res ne vem? Naj se na to vprašanje odgovori. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg682">Hvala. Še želi kdo? Če ne bi mi lahko to točko zaključili in bi lahko si pogledali, kaj so naši usklajevalci uspeli doreči O PREDLOGU ZAKONA O SPREMEMBAH IN DOPOLNITVAH ZAKONA O FUNKCIONARJIH V DRŽAVNIH ORGANIH TER PREDLOGA ZA IZDAJO ZAKONA O SPREMEMBAH ZAKONA O DELAVCIH V DRŽAVNIH ORGANIH. In kdo bo zdaj tu, gospod Zabukovec.</seg>
             </u>
             <note type="speaker">ZDRAVKO ZABUKOVEC:</note>
-            <u who="#SSK11.ZabukovecZdravko1940" ana="#regular">
+            <u who="#ZabukovecZdravko1940">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg683">Zdaj ne vem kje naj začnem. Spoštovani. Komisija je razgretih lic ponovila vse argumente in pravzaprav ugotovila, da bo zelo težko najti izhod iz dane situacije. Vsak se bo moral odločiti pri sebi in na koncu glasovati, jaz se bom pa skušal nevtralno držati in ponoviti tiste argumente, ki smo jih ena in druga stran razlagali.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg684">S strani Zbora združenega dela pravzaprav smo mi tisti zbor ki je najmanj uskladil oziroma, ki ni ničesar uskladil, druga sta pa delno uskladila. Mi smo poudarjali po eni strani psihološki trenutek, v katerem to odločamo in dejstva, ki so v zvezi s tem neizpodbitna, torej težak problem učiteljev, zdravstva, predvsem tudi delavcev v podjetjih, predvsem tudi nezaposlenih in situacijo, ki je v zvezi s tem povezana. Njihov socialni nivo ni več niti življenjski minimum in še bolj grozeče je to, kar se nam bliža. Po drugi strani smo povedali, da verjetno imamo premalo podatkov in premalo pariramo govoricam, ki se pojavljajo o enormno visokih plačah in te govorice so seveda nad 40 do 70, 80.000 dinarjev, če so podatki, s katerimi kasneje, ki jih tu in tam dobimo, verodostojni, je to potrebno najmanj razpoloviti.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg685">Da ni ukrepov, predvsem na področju racionalizacije uprave oziroma državnega sektorja v širšem smislu besede, nadalje da bo ta sprememba povzročila povečanje proračuna in pa tudi dejstvo, da republiški Izvršni svet pravzaprav že na podlagi sedaj veljavnega, nespremenjenega zakona lahko kreira politiko plač, torej jih lahko tudi zvišuje, plače, o kateri govorimo, plač delavcev v državnih organih in funkcionarjev v državnih organih. Saj dovolite, da obravnavam istočasno oba zakona.</seg>
@@ -2166,24 +2152,24 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg688">Na koncu se je usklajevalna komisija z večino glasov, ne povsem soglasno, vendar z večino glasov, odločila, da predlaga vsem trem zborom, oziroma mislim, da gre v eni zadevi za Zbor občin, v obeh pa za naš zbor, da oba amandmaja ponovno poskušamo izglasovati, vendar v tem smislu da je pri obeh 40 %. Ne tako kot je bilo prej predlog pri funkcionarjih da gre za 50 %, ampak pri obeh, torej, da Izvršni svet Skupščine Republike Slovenije glede na proračunske možnosti, vendar ne več kot 40 %. Zdaj pa vsak po svoji vesti in razumevanju. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg689">Zdravko, vi potem predlagate, da pojmo ponovno k obema zakonoma in sicer najprej, da glasujemo o amandmajih, potem pa še enkrat o zakonu v celoti. Je bilo prav tako? Hvala. Gospod Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg690">Obrazložil bi rad glas. Namreč jaz sploh ne bi šel v amandmaje, ampak bi želel, da se osnovno v bistvu sploh opredelimo do zakona kot takega. Namreč jaz tudi kot profesionalni poslanec zaradi razlogov, ki jih je gospod Muren navedel, ne sprejemam tega zakona in si ne želim povečevati svoje lastne plače, čeprav ni tako visoka, kot so tiste številke, ki so, amapak mislim, da v primerjavi z nekimi srednješolci višja. To glede tega, kar se tiče pa za zakon o delavcih v državni upravi, se bom pa glasovanja vzdržal. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg691">Tu sta sedaj dva predloga. En predlog je, da glasujemo po amandmajih po temu zakonu, drug predlog je, da glasujemo samo o zakonu. Kaj je prav? Je možno oboje? S tem še celoten postopek ni zaključen, to je sedaj druga faza, potem bo še ena, potem bomo pa na skupnem zasedanju. Je tako? Marija pravi, da gre potem takoj na skupno zasedanje. Še kakšen predlog? Prosim, jaz bi tudi predlagal, to kar je gospod Jakič predlagal, da glasujemo še enkrat o samem zakonu, zaradi tega, ker mi smo se tako o teh stvareh opredeljevali, ali gremo z amandmajem? No dajte povedati! Zdravko, kaj ti meniš.</seg>
             </u>
             <note type="speaker">ZDRAVKO ZABUKOVEC:</note>
-            <u who="#SSK11.ZabukovecZdravko1940" ana="#regular">
+            <u who="#ZabukovecZdravko1940">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg692">Jaz sem pri obravnavi te zadeve prišel do spoznanja, da verjetno so koeficienti nerealno postavljeni in potem je bilo potrebno dati diskrecijo Izvršnemu svetu, ta je pa, sem prepričan, sedaj res prevelika.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg693">Verjetno, če bi bili koeficienti, še enkrat bi jih bilo treba preveriti. To je pa daljši postopek, najbrž bi bilo treba v ta zakon znova ugrizniti postaviti neke realne koeficiente, ki bi odgovarjali družbeni situaciji, recimo v tem trenutku in prihodnjih dveh, treh letih in potem dati zelo majhno diskrecijsko pravico Izvršnemu svetu, da bi posegel glede na prilive oziroma časovno dinamiko. to bi smela biti morda 10, 15 morda največ 20 %. Tako načelno gledano je to res prevelika možnost za poseganje. Izhaja pa iz prej ugotovljene, najbrž na hitro postavljene nekoliko nerealne osnove. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg694">Jaz bi predlagal naslednje. Da mi najprej ugotovimo prisotnost. Koliko nas je, potem pa prosim, da mi ne odhajate ta čas.</seg>
                <note>49 poslancev.</note>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg695">In da bi se sedaj najprej opredelili za naslednje! Kdo je za to, da pri obeh zakonih pričnemo z glasovanjem pri amandmajih?</seg>
@@ -2216,7 +2202,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 16.40 uri in se je nadaljevala ob 17.50 uri.</note>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg713">Meni je seveda zelo všeč, da je velika večina od nas, tako kot smo se dogovorili, vztrajala tu v neposredni bližini. Mislil sem, da mi bo uspelo nekaj stvari več urediti, ampak dejansko je pa situacija naslednja. V Družbenopolitičnem zboru nekateri te stvari poznate, ker se pač s kolegi srečujete, se malo pogovarjate. Oni zdaj razpravljajo še o interpelaciji, imajo seveda še kar precej razpravljalcev in je vprašanje, kdaj bodo oni danes zaključili. V Zboru občin so pa seveda na boljšem zaradi tega, ker so tudi pri teh zveznih aktih in vi sami veste, da bo to kar hitro šlo in tako, da oni imajo še samo pobude, ki pa so tudi bile še deloma obravnavane.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg714">In zdaj smo z gospodom Bizjakom, njihov zbor je predlagal, da imamo skupno zasedanje vseh zborov v zvezi s to našo 5. točko, glede zakona o funkcionarjih in delavcih v državnih organih. In sva predlagala Družbenopolitičnemu zboru, da bi oni prekinili sejo od 18.15 uri in da bi mi imeli ob 18.15 uri to skupno zasedanje, da bi vsaj eno zadevo danes odpravili. Zdaj pa pazite. To pa seveda potem ne bo zaključek, ker tam tako samo glasujemo o tem, to dejansko je lahko v četrt ure gotovo, ker pač ni druge razprave, tudi nobenega drugega dnevnega reda ni. In potem, do takrat, pa upamo, da bodo tudi stališča v zvezi z zakonom o služenju vojaške obveze Izvršni svet in Zakonodajno-pravna komisija opravlja, ker bi potem mi še vseeno lahko šli skozi te amandmaje in da bi jih danes mi tudi sprejemali, pazite, zaradi tega, ker potem moramo mi, hočeš nočeš jutri, potem bo seveda usklajevanje, ker veliko stvari seveda ne bo usklajenih in na tak način, da bi vsaj jutri potem lahko že z usklajevalnim predlogom pričeli. Kdaj bi potem jutri pričeli, ob 10. uri ali 12. uri, se bi lahko šele po seji dogovorili, ker bomo videli koliko stvari oziroma koliko zadev ni usklajenih.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg715">Tako, da danes nas še potem po skupnem zasedanju seveda čaka delo in takrat vas mora biti seveda tudi toliko kolikor vas je zdaj tu in sme biti, ker pač sprejemamo amandmaje k zelo pomembnemu zakonu. Mi pa zakona ne moremo prestaviti na naslednji teden, ker je seveda zelo pomemben, da ga imamo čimprej.</seg>
@@ -2227,7 +2213,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 18.00 uri in se je nadaljevala ob 19.05 uri.</note>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg720">Začnemo? Bi ugotovili najprej prisotnost. Koliko nas je?</seg>
                <note>48 poslancev prisotnih</note>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg721">.</seg>
@@ -2236,37 +2222,37 @@
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg724">Vsi imate gradivo, ki ste ga prejeli. Mislim, da smo se vseeno dogovorili, da bi danes to opravili, ker bi se pač lahko načelno dogovorili, da jutri kasneje pričnemo. Jaz mislim, da je še vseeno bolj prav, 48 nas je tu, da to opravimo danes. Pridite sem, Jaša.</seg>
             </u>
             <note type="speaker">JAŠA L. ZLOBEC:</note>
-            <u who="#SSK11.ZlobecJasaL1951" ana="#regular">
+            <u who="#ZlobecLukičJaša">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg725">Zakaj mislim, da ni primerno, da v takih situacijah take stvari obravnavamo? Pridnost je sicer lepa čednost, ampak hitrica in naglica pa ne vedno. Izpade namreč subjektivno pri celi vrsti poslancev hočeš nočeš, da tisti, ki je vlagal amandmaje, da je naenkrat tisti nekako krivec, da bomo zgubljali toliko časa v teh poznih večernih urah in se a priori ustvari eno negativno razpoloženje do amandmajev. Že tako se ustvarja negativno razpoloženje do amandmajev ob misli, da bomo v najslabšem primeru morali še skupaj zasedati in še enkrat glasovati in mislim, da ni korektno, zlasti, ker vsi vemo, da se bo v Družbenopolitičnem zboru ta stvar zavlekla, kot se je še vedno do zdaj, da ni korektno do tistih, ki so te amandmaje predlagali, da v takem vzdušju o teh amandmajih razpravlja in glasuje, ker imamo izkušnje ne glede na stranke in ne glede na strankarsko pripadnost, da se v takih položajih amandmajem zelo slabo piše, ker ljudje hočejo čimprej opraviti z njimi.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg726">Hvala. Prosim, gospod Gradišar.</seg>
             </u>
             <note type="speaker">FRANC GRADIŠAR:</note>
-            <u who="#SSK11.GradisarFranc1945" ana="#regular">
+            <u who="#GradisarFranc1945">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg727">Glede na to, kot sem že pač pri dnevnem redu dal tisto pobudo, da bi danes opravili celovito razpravo o tem problemu, s tem da bi odločali 24., zakaj sem prej povedal, ne bom ponavljal. Sem pa pregled amandmaje k predlogu zakona o vojaški dolžnosti in malo, bi rekel, seštel, pogledal, kaj Izvršni svet podpira in ali ne podpira oziroma, do katerih nima mnenja. Mogoče sem se celo za kakšnega zmotil, ker sem hitel. In od 80 amandmajev 53 amandmajev Izvršni svet ne podpira za 22 nima mnenja. Za mene to pomeni, da 75 ne podpira. To pomeni, da če mi sedaj nadaljujemo, je po mojem popolnoma brez veze, po domače povedano, da to opravimo, dajmo času čas, pa to naredimo jutri, pa bo stvar rešena. Sprejemamo pa potem, po moji verziji, če od 80 amandmajev, recimo se uskladi vsaj 2/3, potem zakon sprejmemo, če ne, pa ga vrnemo predlagatelju. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg728">To sedaj čisto tako ni kot je bilo povedano. Rs je, da tam v tem vašem gradivu ni vse celovito zajeto in je nekaj stališč Izvršnega sveta odpadlo. Moram pa povedati, da ima Izvršni svet stališča do vseh amandmajev. To je prvo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg729">Drugo pa je tudi to res, da je Zakonodajno-pravna komisija opravila že kar precej dela in mislim, da ne bi bila ne vem kakšna časovna stiska, če bi še te stvari danes opravili, ampak jaz ne bom tega seveda tu napenjal, dogovorili se bomo. Zlasti pa dokaj mučno to ker vemo praktično vsi, da so poslanci Družbenopolitičnega zbora, kjer je velika večina profesionalcev, odšla in so prekinili zasedanje in bodo nadaljevali jutri ob 10.00 uri. Samo mi pa smo vedno bili racionalni. Strinjam se z gospodom Zlobcem, da pridnost tudi ni vedno čednost. Samo poglejte, kaj sedaj profitiramo.</seg>
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg730">Mislim,da to ne smemo. Povejte, še eno ali dve mnenji, potem pa bom jaz odločil in o tem ne bomo glasovali.</seg>
             </u>
             <note type="speaker">BOGO ROGINA:</note>
-            <u who="#SSK11.RoginaBogo1947" ana="#regular">
+            <u who="#RoginaBogo1947">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg731">Gospod predsednik, ko ste omenil, da je Družbenopolitični zbor odšel malo pred sedmo. Slučajno sem bil v knjižnici in sem slišal ta stavek gospoda Toplaka, če se nisem zmotil, upam, da se nisem, je bilo rečeno, da oni začnejo zjutraj ob 7.00 uri zjutraj. Jaz bi predlagal, da bi mogoče nekako upoštevali različna mnenja, da bi mogoče tudi mi kakšno uro prej jutri začeli. Mogoče. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg732">To pa je sedaj nova. To nisem slišal, da naj bi začeli jutri ob 7.00 uri zjutraj. To moramo preveriti. Prosim gospod Roman.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg733">Poglejte, Jaša Zlobec je poudaril že par svari. Rad pa bi vam samo to povedal in mislim, da se boste s tem tudi strinjali. Jaz kot predlagatelj oziroma podpisnik tega dokumenta oziroma teh amandmajev, ki so s strani Liberalno demokratske stranke predloženi, je v tem trenutku, sedaj, dobil pismeno obrazložitev, zakaj se Izvršni svet ne strinja. Res je, da smo to dobili pred eno uro in pol. Tisti prvi del, ko govori Izvršni svet, se ne opredeljuje. In šele v tem trenutku sem kot predlagatelj dobil obrazložitev amandmajev, zakaj se z njimi ne strinja. Upam, da boste dopustili vsaj to možnost, da predlagatelj na osnovi argumentov, ki so iznešeni v tem svežnju papirja kot obrazložitev, da nam boste pustili to možnost, da vsaj jutri do 10.00 ure premeljeno in konec koncev tudi, če je kakšen argument s strani predlagatelja upravičen, odstopimo od določenih amadnamjev. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#chair">
+            <u who="#ZupancicJoze1936" ana="#chair">
                <seg xml:id="SSK11-ZbZdruDel.1991-04-17.s019-01.seg734">Gospod Rogina je povedal, da prične Družbenopolitični zbor ob 10.00 uri. Pri teh zadeva je tako; kar precej je različnih pogledov in ne, ne boste glasovali, zaradi tega, ker se mi zdi, da to pa ni v redu. Ker potem pa lahko pride tudi do tega, da bomo delali in bo velika večina nezadovoljnih in bomo na tak način spravili to delo zelo slabo pod streho. Zato predlagam, da tudi mi, zaradi tega, ker je tudi Družbenopolitični zbor pred nami že prekinil sejo, prekinemo s sejo in nadaljujemo jutri ob 10. uri v teh prostorih.</seg>
             </u>
             <note type="time">SEJA JE BILA PREKINJENA OB 19.45 URI IN SE JE NADALJEVALA 18.4.1991 OB 10.30 URI.</note>

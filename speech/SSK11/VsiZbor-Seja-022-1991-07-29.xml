@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 22. seja</title>
             <meeting n="22"
-                     corresp="#VsiZbor.1991-07-29.s022-01.DruzPolZb #VsiZbor.1991-07-29.s022-01.ZbObc #VsiZbor.1991-07-29.s022-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="60"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="51"/>
                <tagUsage gi="seg" occurs="265"/>
                <tagUsage gi="gap" occurs="4"/>
@@ -381,23 +372,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-07-29.s022-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-07-29.s022-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-07-29.s022-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -407,16 +381,20 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">22. izredna seja</head>
             <docDate>29. in 30. junij 1991</docDate>
             <note type="chairman">Sejo je vodil dr. France Bučar, predsednik Skupščine Republike Slovenije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 22.20 uri.</note>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg1">Začenjam izredno sejo vseh zborov Skupščine Republike Slovenije, ki sem jo sklical na podlagi 99. člena Poslovnika Skupščine Republike Slovenije, ki določa, da predsednik zbora lahko izjemoma skliče sejo zbora – nanaša se seveda tudi na skupno sejo vseh zborov če je to potrebno zaradi preprečevanja in odpravljanja večjih motenj v gospodarstvu, kadar to zahtevajo interesi ljudske obrambe, varstva ustavne ureditve in podobno. Mislim, da je položaj tak, da narekuje sklic izredne seje. To poudarjam zaradi tega, ker so nekateri delegati že pred to sejo postavljali vprašanje, čemu neki je potrebna ta seja in kaj se je posebnega zgodilo. Mislim, da gre za izredne razmere, ki zahtevajo tudi posebno potrditev te skupščine, kajti brez odobritve te skupščine noben izvršilni organ praktično ne more podvzemati ukrepov, ki jih ta izredna situacija narekuje. Zato naj bi bila ta seja ne eni strani ocena sedanjega položaja, ugotovitev pravilnosti dosedanjih ukrepov in začrtane strategije na posameznih področjih.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg2">In ko bito opravili, bi eventualno sprejeli tudi določene formalne sklepe: tako glede ugotovitve naših stališ kot tudi glede adresantov, adresiranje namembnikov, za katere bi se pač odločili in dogovorili.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg3">Ali se strinjate s tako predlaganim dnevnim redom?</seg>
@@ -433,7 +411,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg10">Dogovorili smo se že pred tem, da bi o tem poročal predsednik Izvršnega sveta, minister Janša, in mu dajem besedo.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg11">Gospod predsednik, spoštovane poslanke in poslanci! Nimam dobrega referata niti poročila, ker ni bilo časa. Poudarek bi dal samo nekaterim glavnim ocenam dosedanjega razvoja dogodkov, poskusu prognoze razvoja dogodkov v prihodnosti in odgovoru na ultimat Štaba vrhovne komande oboroženih sil SFRJ, ki je prišel pravkar.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg12">Najrazličnejše oblike pritiska, ki so se na Republiko Slovenijo izvajale zlasti od sredine maja in so dosegle največjo intenzivnost v mariborskih dogodkih, so ob razglasitvi samostojnosti in neodvisnosti Republike Slovenije doživele svoj dramatični vrh. Po večmesečnih pripravah imajo svoje izhodišče v znanem dokumentu politične uprave Zveznega sekretariata za ljudsko obrambo, kasneje v vojaško-štabni vaji BEDEM, so se začele načrtovane aktivnosti izvajati tudi dejansko.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg13">Na Republiko Slovenijo je bila izvršena oborožena agresija 27.6.1991 v zgodnjih jutranjih urah. Tudi dosedanje delovanje brez seznanjanja je jasno: blokirati državo mejo Republike Slovenije, obvladati teritorij, izvršiti zamenjavo oblastnih organov, zlasti vodstva Republike Slovenije. To je tudi končni cilj. To delovanje je armada pravno pokrila z odločitvijo Zveznega izvršnega sveta z dne 25.6.1991 ob neposrednem zavarovanju izvrševanja zveznih predpisov ob prehodu državne meje na teritoriju Republike Slovenije. Gre za akt, ki bi bil protiustaven, protizakonit in nelegitimen celo v prejšnji upravni ureditvi pred osamosvojitvijo Slovenije. Dejstvo pa je, da s takim pokritjem armada izvaja načrtno in grobo agresijo z radikalnim ciljem na Republiko Slovenijo, ki ima svoje politično ozadje.</seg>
@@ -475,12 +453,12 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg49">Prav tako predlagam, da se zahteva in začne proces mednarodne akcije za prekinitev te agresije z vsem, kar lahko to pomeni. Predlagam, da tudi parlament najodločnejše zahteva prenehanje kakršnihkoli bojnih aktivnosti Jugoslovanske armade na območju Republike Slovenije in pričetek takojšnjega umika z našega državnega ozemlja. Hvala. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg50">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg51">Predlagal bi, da bi to poročilo dopolnili še z vidika notranje varnosti in dejavnosti organov za notranje zadeve. Mogoče bi še minister Bavčar spregovoril. Pojasnil bi še, da razpravo pojmujem povsem delovno, zato ne gre za kakšno protokolarno razporeditev referentov, ampak gre izključno za tematiko.</seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SSK11.BavcarIgor1955" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg52">Saj zaradi tega, ker sem zdaj na vrsti, glede na to, da so bili drugačni dogovori, tudi nimam še vseh podatkov, kajti podatki neprestano prihajajo. Rad bi rekel, da so delavci slovenske policije, kriminalistične službe in varnostne informativne službe v teh dneh opravili izredno težavno delo, skupaj z vsemi drugimi organi, predvsem pa Teritorialno obrambo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg53">Rad bi posebej izpostavil vlogo Milice in njenih posebnih ter specialnih enot, ki so v začetku sami, pozneje pa tudi organizirano in skupaj s Teritorialno obrambo zaustavljali oklepna vozila – mislim konkretno na to kolono, ki je izpadla iz vrhniške kasarne -, varovali določene objekte in osebnosti, od začetka do konca, se pravi, vse te dni, sodelovali pri izdelavi in varovanju cestnih ovir, urejali in nadzirali cestni promet, ki je bil na mnogih območjih zelo oviran, v veliko krajih in na mnogih koncih Slovenije pa tudi popolnoma onemogočen.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg54">Mi smo opravljali in še vedno opravljamo naloge na mednarodnih mejnih prehodih. V tem trenutku so podatki, ponavljam, nepopolni, kajti tik preden sem prišel v parlament, se je predala posadka na Vrtojbi. Lahko rečem, da v tem trenutku slovenska milica skupaj s Teritorialno obrambo obvladuje 63 mednarodnih in maloobmejnih prehodov, medtem ko Jugoslovanska armada obvladuje 9 maloobmejnih in 6 mednarodnih prehodov.</seg>
@@ -495,12 +473,12 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg63">Rad bi povedal, da so delavci slovenske policije, kriminalistične službe in varnostno-informativne službe izjemno zgledno sodelovali z enotami Teritorialne obrambe in sodim, da je to bistveno doprineslo k dosedanjemu uspehu našega dela, ki seveda še ni končano. Hvala lepa. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg64">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg65">Preden bi prešli na razpravo o posameznih vprašanjih, ki smo jih sedaj notirali oziroma so bile predlagane, menim, da bi bilo umestno, da kar nadaljujemo z razpravo oziroma s prezentacijo problemov še z drugih področij. In če se s tako metodo strinjate, bi predlagal, da predsednik Milan Kučan poda poročilo o teh pogajanjih s predstavniki zahodnoevropske skupnosti in kakšno je bilo naše dokončno stališče, še posebej glede na nekatere nesporazume, ki so ob tem morda nastali. Prosim, gospod predsednik.</seg>
             </u>
             <note type="speaker">MILAN KUČAN:</note>
-            <u who="#SSK11.KucanMilan1941" ana="#regular">
+            <u who="#KucanMilan1941">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg66">Gospod predsednik, spoštovane poslanke in poslanci! Do nocojšnjega sklica skupščine je prišlo tudi na pobudo Predsedstva Republike Slovenije. Po mnenju predsedstva je prav, da je skupščina kot najvišji organ oblasti v teh dramatičnih trenutkih vključena v vse tiste aktivnosti, vse te aktivnosti spozna in po potrebi odobri.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg67">Jugoslovanska vojska je 27.6.1991 izvedla brutalno agresijo na suverenost, samostojnost in neodvisnost Republike Slovenije. V Sloveniji so izsilili vojno tisti, ki se ne morejo sprijazniti s plebiscitno odločitvijo slovenskega naroda in državljanov Slovenije, da želijo sami odločati o lastni državi, o svoji usodi, ne na škodo drugih, pa tudi ne na škodo sebe, zoper svoje interese, posebej tiste, ki zadevajo narodov obstoj. Znane so vam odločitve, ki jih je sprejelo predsedstvo v razširjeni sestavi s predsednikom skupščine, predsednikom Izvršnega sveta in ministri za obrambo, notranje zadeve in zunanje zadeve v okviru svojih pooblastil in na temelju sprejetih stališč Skupščine Republike Slovenije, da se zavaruje suverenost Republike Slovenije, da se zavaruje suverenost Republike Slovenije ter življenje in premoženje njenih prebivalcev.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg68">O agresiji sem s pismom obvestil generalnega sekretarja Združenih narodov in predlagal sklic Varnostnega sveta, ki naj bi prispeval k temu, da bi se agresija zoper Republiko Slovenijo ustavila. S pismom sem se obrnil tudi na predsednika Evropskega sveta Jacquesa Santerja z zaprosilom, da na zasedanju šefov držav oziroma vlad dvanajsterice storijo vse potrebno, da se ustavi agresija, končajo sovražnosti na ozemju naše republike in prispeva k demokratični rešitvi jugoslovanske politične krize. Na vlade vseh držav Konference za evropsko varnost in sodelovanje ter mednarodno skupnost se je s podobnim zaprosilom obrnil tudi naš minister za zunanje zadeve dr. Dimitrij Rupel. Tudi na podlagi teh naših opbud je prišlo v minuli noči do pogovora skupine evropskih zunanjih ministrov v Zagrebu. Predstavniki Evropske skupnosti, gospod Jacques Poos, Gianni De Michelis in gospod VanDen Broek ter komisar Komisije Evropske skupnosti za Sredozemlje gospod Matutes, so se po pogovoru v Beogradu s predsednikom Zveznega izvršnega sveta Markovićem, zunanjim ministrom Lončarjem ter predsednikom Tuđmanom in menoj. Razgovora se je udeležil z naše strani tudi naš zunanji minister dr. Dimitrij Rupel. Z vsebino teh razgovorov ste se lahko seznanili preko današnjih sporočil ter preko tiskovnih konferenc. Skupina evropskih zunanjih ministrov je predsedniku Tuđmanu in meni zastavila tri vprašanja. Ta vprašanja so, kot so nas obvestili, že dobila pozitivni odgovor od predsednika Zveznega izvršnega sveta Markovića in srbskega predsednika.</seg>
@@ -534,11 +512,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg96">Predlagam pa, da na današnjem zasedanju gospod predsednik parlamenta Republike Slovenije predlaga temu zboru, da z minuto molka počastimo spomin umrlim v tej nesmiselni agresiji na Republiko Slovenijo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg97">Glede na vsebino tega vprašanja mislim, da lahko v nadaljevanju neposredno spregovori gospod zunanji minister, ki lahko razširi ta pogled še s splošnejšo oceno zunanjepolitičnih zadev.</seg>
             </u>
             <note type="speaker">DR. DIMITRIJ RUPEL:</note>
-            <u who="#SSK11.RupelDimitrij1946" ana="#regular">
+            <u who="#RupelDimitrij">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg98">Spoštovani predsednik predsedstva, spoštovani predsednik skupščine, spoštovani predsednik vlade, drage kolegice in kolegi!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg99">Naše ministrstvo ne deluje na enaki fronti kot tista dva, ki sta se danes najprej legitimirala, vendar mislim, da je naše delo v tem času zelo naporno in v tem smislu izrabljam to priložnost, da se zahvalim svojim kolegom v tem ministrstvu, ki so v teh dneh vložili veliko naporov v to, da se naša, lahko rečem, obramba slovenskega naroda in naše dežele nadgradita na zunanjepolitičnem področju.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg100">Dovolite mi, da si postavim nekaj vprašanj in na njih odgovorim. Kaj ustvarja kontekst slovenskega zunanjepolitičnega delovanja v času vojne? Seveda je vloga tega konteksta predvsem strah tujine pred širjenjem nasilja. Ta strah tujine pred širjenjem nasilja je nov moment, s katerim delujemo v slovenski zunanji politiki. Mislim, da se je s tem, kar se je dogodilo v zadnjih nekaj dneh, spremenil status Slovenije kot kandidatke za mednarodno priznanje in, kakor je morebiti to po svoje nikoli problematična izjava, menim, da jo moram povedati: mislim, da se je status Slovenije v tem vojnem času pravzaprav spremenil na bolje.</seg>
@@ -563,11 +541,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg119">Danes, 29. junija, je zunanje ministrstvo poslalo pismo gospodu Jacquesu Poosu, predsedniku Ministrskega sveta Evropske skupnosti, kjer smo ga obvestili, da se agresija kljub dogovoru o prenehanju sovražnosti v Sloveniji nadaljuje, in izrazili smo prepričanje, da bo o tem obveščen Ministrski svet Evropske skupnosti. Prav lepa hvala. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg120">Prosim še predsednika Izvršnega sveta, gospoda Peterleta, da mogoče poda splošni pogled na problematiko in položaj Slovenije.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg121">Spoštovane poslanke in poslanci! Ob osamosvojitvi oziroma ob proglasitvi Slovenije je slovenska vlada razpustila prejšnje skupine, ki so pripravljale projekte za osamosvojitev, in imenovala skupino 7 ljudi, ki naj bi uveljavljali osamosvajanje oziroma koordinirali te zadeve na posameznih področjih. Lahko bi rekli, da sedaj ta skupina deluje v nekem smislu kot vojni kabinet vlade.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg122">Dovolite kratek sprehod skozi nekatera področja, za katera mislim, da jih je treba posebej omeniti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg123">Najprej se bom ustavil pri gospodarstvu, pri njegovem funkcioniranju. Zaenkrat v sami proizvodnji ni prišlo do večjih zastojev, tudi ni prišlo do večjih zastojev pri blagovnih tokovih, vključno z izvozom, čeprav so na cestah številne blokade. Na intervencijah, s katerimi se obračajo na nas posamezna podjetja, poskuša posebej Ministrstvo za industrijo urejati zadeve v koordinaciji z Ministrstvom za notranje zadeve in najdejo sprotne rešitve, tako da so ti tokovi čim manj prizadeti. Težave zaradi blokad so, vendar to zaenkrat res ne pomeni večjih zastojev. Naj omenim tudi to, da se je del industrije zelo hitro preusmerilo, zelo odgovorno, na delo za potrebe naše Teritorialne obrambe oziroma za vojne potrebe teh dni.</seg>
@@ -585,7 +563,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg135">Dovolite na koncu nekaj zelo osebnega. Številni ste mi danes za rojstni dan čestitali. Opravičujem se, ker pač nisem odgovoril, se pa vsem zahvaljujem s tega mesta. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg136">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg137">Ker so s tem uvodna pojasnila in prezentacije izčrpane, bi predlagal, da preidemo na razpravo. Predlagam približno tako metodo: mogoče bi najprej razpravljali o posameznih temah, tako kot so bili prezentirani posamezni referati, in bi o njih poskušali opredeliti svoja stališča in končno bi jih sprejeli. Če se strinjate s tem, bi prosil za ta način.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg138">Gospod Capuder me je opozoril, da bi morali skupščino začeti z enominutnim molkom, na kar me opozarja kot minister za kulturo. Sam sem menil, da bi to bilo opravljeno, ko bi končali razpravo o teh zadevah, če pa mislite, da bi to morali takoj opraviti, pa lahko to opravimo takoj. Prosim za minuto molka. /Minuta molka./ Slava!</seg>
@@ -593,30 +571,30 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg140">Izvolite, gospod Schwarzbartl.</seg>
             </u>
             <note type="speaker">MAG. ERVIN ANTON SCHWARZBARTL:</note>
-            <u who="#SSK11.SchwartzbartlErvin1940" ana="#regular">
+            <u who="#SchwartzbartlErvin1940">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg141">Spoštovano predsedstvo, spoštovani člani parlamenta!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg142">Mogoče je razlog, da sem dvignil med prvimi roko, tudi v tem, ker dejansko slabo slišim in imam težave pri tem, ko moram primerjati določene tekste, ki so bili danes izneseni.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg143">Danes sem bil na pogrebu vojaka Teritorialne obrambe. Padel je v Domžalah. To je občina, v kateri sem župan. Doživel sem zvezo med življenjem in svobodo. In svoboda je zame dragocena vrednota, ki ima tako visoko ceno kot samo življenje. Življenje pa je dar, pravimo, ki ga ne izbiramo sami in nad njim nimamo oblasti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg144">Zato ne morem biti pri svojem odločanju – in zdi se, da bomo danes morali nekaj odločiti – površen. Ne morem si dovoliti, da po nemarnem zapravimo že pridobljene pozicije v svetu, v Jugoslaviji, na osnovi že sprejetih aktov o osamosvojitvi, kjer sem se do njih nekako opredelil in jih sprejel. Sprejeli smo jih s tako ali drugačno večino. Ne morem tudi odstopiti od tega, kar je že doseženega na vojaških področjih. In me je stalo precej vojne škode, materiala in na drugi strani življenj. In tako, če tega ne morem kar tako pozabiti, bi v zvezi s svojimi stališči in sklepi, ki jih bom še lahko sprejel, vprašal naslednje: Ali imam možnost, da kaj izvem o boju interpretacij, za katere smo tukaj slišali, da se bijejo med Evropo in nami. Rečeno je bilo: boj interpretacij. Ne vem pa niti, med kom pravzaprav natančno teče ta boj. Če je kakršenkoli boj interpretacij, potem je tu nekaj nejasnosti in mirnost ni umestna. Gospod minister nas je pozval, naj bi bili mirni. Jaz pa pravim, da ni mirnost umestna in tega priporočila ne morem sprejeti. Želim biti buden in previden. Zato prosim še enkrat, ali je možno, da, prvič, dobim zapis dogovora v Zagrebu na klop, da vidim, kaj se je tam v resnici pogovarjalo. In drugič, da dobim predloge, ki so bili podani s strani obrambnega in notranjega ministra, v obliki odgovorov na tista pisanja, ki sem jih dobil na klop kot vprašanja. In zahtevam, vsaj zase, nekaj časa, da se lahko s temi papirji soočim, da jih med seboj primerjam, da se morda v klubu posvetujem, zato ker ne znam ponoviti tega, kar sem slišal. Jaz sem že izgubil povezovalno nit. Šele potem bi morda odločal, če bom res moral odločati. V nasprotnem primeru nimam o čem odločati. Jaz sem se odločil, v tem parlamentu sem glasoval. Resolucije, zakone in tako dalje sem sprejel in za njimi stojim. Nimam česa spreminjati. Če pa kdo želi, da bi karkoli spremenil, potem pa bi zelo rad, kar se mene tiče, da ne zapravljam po nemarnosti te svoje priložnosti, videl to na mizi, da lahko primerjam. To je moja prošnja, ne pa diskusija. Za diskusijo, če bo treba, se bom še prijavil. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg145">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg146">Zdaj trenutno najbrž nimamo na razpolago oziroma nimamo možnosti, d bi vam posredovali neposredne zapiske s teh razgovorov. Mislim pa, da jih bomo verjetno lahko dobili in bomo zapise teh razgovorov tudi dali na razpolago, vsaj mislim, da je to možno.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg147">Prosim, naslednji govornik.</seg>
             </u>
             <note type="speaker">DR. BOŽIDAR VOLJČ:</note>
-            <u who="#SSK11.VoljcBozidar1939" ana="#regular">
+            <u who="#VoljčBožidar">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg148">Spoštovani gospod predsednik, spoštovano predsedstvo, spoštovane poslanke in poslanci!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg149">V novejši zgodovini se mi je misel večkrat ustavljala ob Izraelu in vselej me je najbolj pretreslo to, da so ga en dan po tem, ko je razglasil svojo neodvisnost, napadli njegovi sosedje. Nikdar si nisem mislil, da bo naša Slovenija prišla kdajkoli v podoben položaj, čeprav živimo tukaj pravzaprav že poldrugo tisočletje in se tu nismo naselili tako kot Izraelci. Tisto, kar najbolj navdušuje pri njihovi zgodbi, je to, da so vzdržali, čeprav so bili napadeni naslednji dan. In če potegnem paralelo še naprej, se tudi mi doslej nismo slabo odrezali. Menim, da nam dosedanje ravnanje lahko da dovolj razlogov, da naše hrbte, ki jih imajo raje sključene kot zravnane, zravnamo in na noben način ne odnehamo, tako kot smo sklenili prejšnji teden, čeprav je treba priznati, da v iskanju podpore po svetu ostajamo in bomo verjetno še nekaj časa ostali fizično sami. Zaradi tega je poziv, da vzdržimo, najbrž toliko bolj krut, pa zaradi tega tudi toliko bolj potreben.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg150">Menim, da v dosedanji politiki vlade in predsedstva, tako kot smo danes tu slišali, nimamo kakšnih velikih razlik in razhajanj med seboj. Menim pa, da bi bilo, glede na to, kako so ljudje reagirali na nejasnosti medijskih sporočil, treba skrbeti za to, da bi bila poročila kratka, zelo jasna in bolje je, da so bolj pogosta, kot pa na primer, da so širša. Tako zaenkrat menim, da smo vsi enotni glede tega, kar smo prejšnji teden sklenili, in da je pač danes čas, da glede na situacijo, ki se spreminja iz ure v uro bolj na slabše kot na bolje, sprejmemo samo še kakšne dodatne sklepe, ki pa seveda izhajajo iz tistega, kar smo se prejšnji teden ob sprejetju neodvisnosti dogovorili. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg151">Besedo ima gospod Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg152">Spoštovane kolegice in kolegi poslanci!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg153">Težko bom izrazil – kot verjamem, da velja tudi za moje kolege, ki vodijo stranke in poslanske skupine – vse tisto, kar se je dogajalo v teh dneh. To bi rad izrazil po svojih močeh bolj kot vzdrževanje in temeljno usmeritev tistega, za kar smo se zavzemali. Takoj, ko smo spoznali, da gre za pravo agresijo in resno voljo, smo predlagali, da se ustavijo vsi prestižni boji med strankami. Podobno je storila tudi vlada v senci, ker menimo, da je politična enotnost tisto, kar je bistveno. Povedano bolj direktno, manj politične enotnosti pomeni več človeških žrtev in daljše boje. V teh dneh se je pokazalo, to so mi na ljubljanskih ulicah tudi povedali pripadniki teritorialne enote in notranjih zadev, da je naša prednost, da ni političnih nasprotij znotraj političnih strank, ko gre za vsa temeljna vprašanja osamosvajanja Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg154">Drugo, na kar bi vas rad opozoril, je naše posebno ogorčenje, ko gre za Slovence, za pripadnike slovenskega naroda, ki še naprej delajo v Jugoslovanski armadi, tudi v njenem vrhu, čeprav nam je vsem jasno, da se pokori narod, ki so mu doslej pripadali. Dali so tudi pobudo tej skupščini, da spodbudi raziskovanje storjenih vojnih zločinov v teh dneh med nesmiselno agresijo na Slovenijo, seveda ne glede na nacionalno pripadnost storilcev. Prizadevali smo si, da bi dobili čim več podpore v mednarodni javnosti, zlasti med strankami, s katerimi imamo dobro vzpostavljene stike. Mnoge od njih imajo tudi resen vpliv na evropske institucije. Tu imamo kar nekaj lepih uspehov. Naj mimogrede omenim, da to zlasti velja za Italijo, za sodelovanje z Demokratično stranko levice v Italiji. Pred nekaj urami se je podpredsednik Bekeš sestal s predsednikom Ocetom, s Socialisti v Italiji, s SDP Hrvaške in tako dalje. Doživeli smo pa nekaj tudi grenkih razočaranj. Tega ne pripovedujem zaradi tega, da bi govoril o vplivu naše stranke, ampak hočem poudariti, da je odnos do razumevanja našega problema in agresije na Slovenijo za nas ta trenutek tisto merilo, preko katerega ne bomo mogli iti v naših bodočih odnosih s strankami. Ena od njih je SDP Bosne in Hercegovine, ki je v svojem sporočilu obsodila odcepitev in podprla napad na Slovenijo. Če tovariš Marco Panella, radikalec transnacionalne stranke, bolje razume naš trenutni problem in je to pokazal s prihodom v Ljubljano, kot recimo tovariš Nijaz Duraković, potem pač ne bomo gledali na ideološko bližino in sodelovanje v preteklosti, ampak odnos do tega za nas zelo usodnega vprašanja.</seg>
@@ -631,22 +609,22 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg163">Kot smo zapisali v eni od izjav v zadnjih dneh, med mirom in vojno bi izbrali mir, med mirom in svobodo pa smo se odločili za svobodo. No, in v skladu s tako opredelitvijo nameravamo ravnati tudi v naprej. Hvala lepa. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg164">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg165">Besedo ima Jože Zupančič.</seg>
             </u>
             <note type="speaker">JOŽE ZUPANČIČ:</note>
-            <u who="#SSK11.ZupancicJoze1936" ana="#regular">
+            <u who="#ZupancicJoze1936">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg166">Gospod predsednik, bom kratek. Težko mi je govoriti zaradi tega, ker sem, enako kot vsi tu prisotni, čustveno izredno prizadet. To našo čustveno prizadetost bodo verjetno bolje izrazili naši prijatelji, ki so tudi med nami. Zato bom kratek.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg167">V celoti podpiram vse, kar so storili v Izvršnem svetu, in prepričan sem, da če bodo tako delali, pametno, spretno in tudi v korist nas vseh, bo tako celoten projekt uspešen za nas. Tudi sem trdno prepričan, ker je gospod predsednik rekel, naj se opredelimo tudi glede tega, kakšne imamo možnosti, da se je v teh dneh pojavil in pokazal novi Slovenec, nič več cagav in jamrajoč Slovenec. Tu se je pokazal drugačen: požrtvovalen, samozavesten, takšen, ki žrtvuje ne samo svoje premoženje, on žrtvuje tudi svoje življenje. V imenu njih in za njih, ki so nas tudi izvolili, moramo takšno pot, kot smo si jo zastavili, nadaljevati.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg168">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg169">Gospod Žakelj.</seg>
             </u>
             <note type="speaker">VIKTOR ŽAKELJ:</note>
-            <u who="#SSK11.ZakeljViktor" ana="#regular">
+            <u who="#ZakeljViktor">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg170">Spoštovani predsednik, člani predsedstva, poslanke in poslanci!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg171">Naj se tudi jaz v imenu naše stranke vključim v to razpravo z identično vsebino, kot so jo izrazili že govorniki pred menoj. Uvodoma želim reči, da je tisto, kar v naši stranki poudarjamo, naše prepričanje, da je treba v tem in naslednjih tednih in mesecih ohraniti mirnost, skrajno treznost v presojanju razmer in bežati od vsake evforije, tudi tiste, ki se pojavlja v javnih nastopih, v tisku, ker prostor, čas in razmere bomo obvladali le skrajno racionalno. Zato je naša temeljna preokupacija, da bi skupno storili vse, da vojake zamenjajo diplomati. Dvomilijonski narod ni v stanju preživeti konca te podivjane zveri, ki se lahko v vsakem trenutku splaši. Ni slučajno, da je menda Kadijević izjavil, da se ne boji slovenskega orožja in tudi ne hrvaškega. Tisto, česar se boji in za kar ne ve, kako bo reagiralo, so ljudje. In če so ljudje – in so ljudje in smo Slovenci edini kapital, edino sredstvo, v tej obrambi -, potem je naša skupna dolžnost, da ta resurs, da to sredstvo do skrajnosti varujemo. Varujemo ga edino na ta način, da to zvito bizantinsko politiko premagamo z racionalno evropsko diplomacijo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg172">Drugo. Mislimo, da je treba, ne samo danes in tu, ampak tudi javno izraziti priznanje za vojaške in obrambne rezultate, za velike aktivnosti, za politične aktivnosti na mednarodnem in drugih področjih, da je treba izraziti tudi osebna priznanja ljudem,ki ta čas nosijo glavno breme te vsiljene nam vojaške operacije. Vsi hkrati se moramo zahvaliti in izraziti priznanje, mi kot parlamentarci ljudem. Kolikor smo mi preverjali, in smo preverjali, vsaj nekateri naši župani so sedaj na najbolj izpostavljenih mestih, doživljajo enoglasno podporo občanov. To je tista povezanost med ljudmi in politiko, med politiko in obrambo, ki je pravzaprav izredna. Mislim pa, da je, če sem prav razumel domača in tuja sredstva obveščanja, in ko sem tudi pozorno prisluhnil uvodnim razlagam, ki jih podpiramo, in to, kar ste doslej uspeli prinesti na mizo, da je treba nekatere stvari terminološko poenotiti. Pa ne gre seveda za enko besedno igro, ampak za globoko vsebino, bolj zaradi primera, kot za to, da bi v popolnem naštevanju – naj omenim dvoje, troje. Mislim, da moram v izjavi, za katero predlagamo, da jo v odmoru pripravimo, v katero bo vključeno vse to, kar je bilo že prej predlagano s strani poslanca in sekretarja Janše, predsednika Kučana in drugih, take pojme, kot je nesporno dovčerajšnja Jugoslovanska ljudska armada, okvalificirati kot agresorja. To ne sme biti zgolj žurnalističen pojem, ampak kvalifikacija, ki jo je sprejel ta parlament.</seg>
@@ -657,11 +635,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg177">In na koncu. Ne glede na to, da je situacija težka in bo najbrž še nekaj časa, v naši stranki menimo, da je treba storiti vse, da bi naš parlament in tudi organi naše vlade kolikor je mogoče normalno delovali tudi na drugih, prav tako pomembnih področjih. Namreč na tistih, ki zadevajo vprašanja, ki jih moramo nujno rešiti, če hočemo pognati naše gospodarsko in družbeno življenje. Mislim, da je treba vse in se organizirati, da se dela naprej – zopet zaradi primera – na lastninjenju, na denacionalizaciji, na menjanju gospodarske strukture. Kajti tisto, kar bo sledilo in kar ne bo nič manj boleče kot to sedaj, je ta ekonomija, so problemi, ki jih je in jih bo ta agresija potencirala. Hvala lepa. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg178">Besedo ima gospod Školč.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg179">Hvala lepa za besedo. Spoštovani predsednik, gostje in poslanci!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg180">Jaz sem najbolj žalosten zaradi tega, ker vojna terja žrtve, najprej človeške, nato materialne in ne nazadnje povsem zamenjuje prostor za politiko kot tisto dejavnost, ki naj ureja odnose med družbami, državami in ljudmi. To pomeni, da danes ni mogoče toliko razpravljati o tem, ali smo bili presenečeni ali nismo bili presenečeni. Sam vem, da bi bilo neslavno ponavljati tiste stvari, ki sem jih mogoče kdaj govoril in pač iz tega izhaja moj prav. Zdi se mi, da se je treba predvsem osredotočiti nato, da pripravimo tak dokument, ki nam bo v naslednjih dneh omogočil čim več manevrskega prostora v svetu in ki bo nedvoumno podprl vse tiste, ki se sedaj, vsak pač na svojem področju, trudijo, da vzdržujejo to krhko samostojnost države.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg181">Mislim, da bi bilo treba sedaj najprej pohvaliti obrambo, ki je bila narejena bodisi spontano bodisi organizirano. Govorim zelo odkrito, zadeve so bile vseh vrst in si je treba hkrati prizadevati, da je tega spontanega za naprej čim manj, ker to mogoče vodi do največjih žrtev. Obramba, kot je bila organizirana, je bila velik dosežek. Večji dosežek je bilo premirje, ki je bilo doseženo. Zdaj, ali je to premirje ali je to zatišje, o tem se da diskutirati. Jaz mislim, da je treba z naše strani poskušati vztrajati pri terminu premirje, biti do njega skrajno oprezen, čeravno smo pač dobili na klopi te dokumente, ki govorijo, da gre bolj za zatišje.</seg>
@@ -676,11 +654,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg190">Iz tega prihaja niz koristnih informacij. Mi smo praktično vzporedno dobili to, kar ste dobili na klopi. In na drugi poziv, ki je bil na ekranu, so se oglasili iz Avstrije, kjer so dali tri telefonske številke avstrijske televizije, kamor se je možno neprestano oglašati in sporočati, kaj se tu dogaja, ker že ocenjujejo situacijo glede na izjavo gospoda, ki vodi te posle, Kosa, če se ne motim, pozabil sem, kako se piše, za dramatične. Eno stvar sem še pozabil med temi sklepi, se mi pa zdi nujna, pozvati organizacije, da se izogibajo nizu teh malih<gap reason="inaudible"/>, da enostavno iz konflikta z Jugoslovansko armado in zvezno državo ne izpeljujejo zaključkov na vse jugoslovanske asociacije, da se poskuša o teh asociacijah armado osamiti, tako kot tistega zadnjega, ki ne razume, kaj se v Jugoslaviji dogaja, in to se mi zdi tudi pametno zapisati v ta naš dokument. Hvala lepa. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg191">Besedo ima gospod Gros.</seg>
             </u>
             <note type="speaker">VITOMIR GROS:</note>
-            <u who="#SSK11.GrosVitomir1942" ana="#regular">
+            <u who="#GrosVitomir1942">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg192">To pot bom poskušal biti še bolj kratek, kot sem običajno. In sicer, menim, da se je Skupščina Republike Slovenije danes sestala, da bi ugotovila popolno enotnost skupščine in vseh parlamentarnih in izvenparlamentarnih strank v naslednjih sklepih:</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg193">Prvič. Skupščina Republike Slovenije podpira vse dosedanje ukrepe organov Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg194">Drugič. Organi oblasti Republike Slovenije so dolžni zagotoviti dosledno izvajanje osamosvojitvenih aktov Republike Slovenije, pri čemer ne pride v poštev nobeno odlaganje ali celo kakršenkoli suspenz teh aktov.</seg>
@@ -688,21 +666,21 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg196">Če sprejmemo to ali nekaj podobnega, lahko sejo hitro zaključimo, saj smo bolj potrebni na svojih mestih. Vlada pa naj v miru dela po zgornjih smernicah. Tudi naša stranka je navezala stike po svetu. Tako je preko grofa Lamsdorfa v Republiki Nemčiji dosegla, da je dal izjavo v imenu liberalne internacionale. Prav tako smo navezali stike z avstrijskimi liberalci in tudi drugod po svetu. Toliko imam povedati v imenu Liberalne stranke. Hvala lepa. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg197">Besedo ima gospod Rode.</seg>
             </u>
             <note type="speaker">DR. PRIMOŽ RODE:</note>
-            <u who="#SSK11.RodePrimoz1942" ana="#regular">
+            <u who="#RodePrimoz1942">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg198">Spoštovani!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg199">27.6.1991 navsezgodaj zjutraj, ko sem se prebil skozi blokade na intenzivni oddelek, kjer delam, je bilo tam med osebjem, gre za mlado osebje, v glavnem so to medicinske sestre, čutiti precej strahu. Kajti ta mlada dekleta niso poznala občutka, kaj pomeni vojna, kaj pomeni vojno stanje. Njihovi fantje so bili bodisi v okupatorski vojski bodisi pri naših. Prihajale so na delo z majhno zamudo; to se je zgodilo prvič. Vendar prišle so vse. V naslednjih 24 urah, delamo v turnusih, so prihajale iz Pivke, Tržiča, ena tudi iz Sorice s kolesom. Težje je postalo zvečer, ko je vidno pretresen slovenski policist pripeljal prve ranjence. Tudi sam sem jih prvič videl. Mlade fante, poškodovane od meni neznanega orožja. Rekel je, da je bila neka raketa, del rakete. Trije so bili pripadniki JNA in en naš. Kirurgi so nastopili, anestezisti in naše ekipe in zjutraj ob sedmih so se dobili na nočni kavi. Vsi štirje, to smo lahko sporočili, so bili zjutraj izven življenjske nevarnosti. To sem povedal zato, da povem, da slovenski zdravniki in medicinske sestre smo vedno delali pošteno in požrtvovalno, ne glede na to, od kod je prihajal nam zaupan bolnik ali ranjenec. Ta svetla tradicija je obstajala, sem jo bral, in obstaja tudi danes. Obljubljamo, da nam ne bo žal prečutih noči, psihične in telesne utrujenosti samo zato, ker smo odločeni, da živimo v svobodni državi Sloveniji in da na ta način prispevamo k svetli podobi naše države. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg200">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg201">Besedo ima Marjan Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SSK11.PodobnikMarjan1960" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg202">Spoštovani!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg203">V imenu Poslanskega kluba Slovenske kmečke zveze-Ljudske stranke želim dati podporo in priznanje delovanju slovenske politične oblasti, še posebno Izvršnemu svetu.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg204">Povedal bi, da se je v okviru svojih zmožnosti tudi naša stranka vključila v pomoč, posebno pri sodelovanju pri preskrbi z osnovnimi živili, in v druge aktivnosti, v sodelovanju z organi slovenske oblasti, pa tudi v povezavi s sorodnimi strankami iz tujine. Dobili smo podporo predstavnikov najmočnejše italijanske kmečke organizacije, gospoda Mikolinija, predstavnikov avstrijske ljudske stranke, v pogovorih pa smo tudi s predstavniki vzhodnoevropskih sorodnih strank in organizacij.</seg>
@@ -711,28 +689,28 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg207">Na koncu bi povedal še to, da naši ljudje – člani, simpatizerji, po terenu zahtevajo in spodbujajo k absolutnemu vztrajanju pri sprejetih odločitvah in ukrepih in v imenu stranke želim dati tudi vse priznanje vojakom slovenske vojske, pripadnikom slovenske policije in vsem, ki na kakršenkoli način pomagajo slovenskim organom pri obrambi Slovenije. Hvala. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg208">Hvala.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg209">Besedo ima gospod Feltrin.</seg>
             </u>
             <note type="speaker">FRANCI FELTRIN:</note>
-            <u who="#SSK11.FeltrinFranci1943" ana="#regular">
+            <u who="#FeltrinFranci1943">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg210">Spoštovani predsednik, spoštovano predsedstvo, spoštovani zbor!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg211">Ker sem prej vodil sestanek Demosa, kjer so se izoblikovali sklepi, bi jih tu tudi podal, in sicer: naj se takoj prevzame efektivna oblast v Sloveniji, da se po možnosti prosi za pomoč tujino, v obrambnem smislu, da skupščina zaseda in sprejme potrebne sklepe, če je treba - mislim, da bo sprejemala sklepe do konca okupacije -, umik Jugoslovanske ljudske armade takoj, in to brezpogojno. Peto pobudo pa dajem sam, in to je, da se preimenuje Teritorialno obrambo v Slovensko vojsko. Povedal bi, kaj me je do tega privedlo, pa mi ne zamerite. Ko sem odhajal od doma, je sin čistil orožje, ker je prišel na kratek oddih. Bil je zelo žalosten in je rekel: »Oče, povej vašemu zboru, da sem zelo žalosten, ker ste morali kupiti najslabše orožje, namesto da bi imeli boljše.« Sin je bil na Ljubelju. Bili so tudi njegovi prijatelji tam, bili so tudi na Jezerskem, zato imam korektno informacijo, kar me je zelo sram. Sin še pravi: »Poglej, kakšno uniformo imam, kakšne imam čevlje, kakšne hlače, ker smo škrtarili in smo razsipavali drugje. In danes se nam to maščuje.«</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg212">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg213">Gospod Pahor.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SSK11.PahorBorut1963" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg214">Vsebinsko nimam kaj dodati k temu, kar je rekel šef stranke dr. Ciril Ribičič. Sam se oglašam s kratkim predlogom, ki ga želim tudi kratko utemeljiti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg215">Zelo podpiram mnenje, da je nastopil pravi čas, da celotna slovenska diplomatska inteligenca, Ministrstvo za zunanje zadeve, parlament in predsedstvo prediskutirajo in dogovorijo načrt aktivnosti za uspešno in čim hitrejšo dosego mednarodnega priznanja. Zaradi izjemnih razmer in zaradi uspešnosti predlagam, da danes naša skupščina sprejme sklep, s katerim bi zavezala Komisijo za mednarodne odnose, da na zaprti seji ta načrt tudi prediskutira. Zato predlagam, da se te seje, ki naj bo sklicana čim prej, udeležijo dr. Dimitrij Rupel in Lojze Peterle, razpoložljiva diplomatska inteligenca in drugi strokovnjaki ter, če je le mogoče, šefi strank in po možnosti član predsedstva. Cilj take seje bi bil dogovoriti načrt aktivnosti. Verjamem, da mnogi menite, da bo zaradi težke napovedljivosti dogodkov težko doseči nek konsistenten načrt, pa vendar v izogib netaktnosti in v izogib nepotrebnim potezam bi veljalo tak načrt sprejeti. Na tem sestanku bi se najprej temeljito informirali. Mislim, da tudi ko gre za zunanjepolitične aktivnosti, temeljitega informiranja še vedno primanjkuje, da uskladimo aktivnosti med parlamentom, predsedstvom in strankami. To se mi zdi še posebej pomembno, ker vidimo, da danes mnogi od vas poudarjate, da stranke zelo aktivno delajo v zunanji politiki. Zdi se mi pomembno, da končno uskladimo lobiranje slovenskih predstavnikov po svetu, tudi tistih, ki so včeraj na Slovenskem svetovnem kongresu poudarili svojo privrženost slovenski suverenosti, in da ne nazadnje dogovorimo morebitne posebne ukrepe za zavarovanje neodvisnosti države Slovenije na zunanjepolitičnem področju.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg216">Spoštovani predsednik, kolegice in kolegi! Predlagam, da tak sklep sprejmemo in pooblastimo komisijo in predsednika, gospoda Šinkovca, da komisijo čim prej skliče, v sodelovanju z zunanjim ministrom in predsedstvom.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg217">Hvala lepa. To je sugestija, s katero se popolnoma strinjam in sem jo že sam nameraval predlagati, da bi že med razpravo imenovali redakcijsko skupino, ki bi te sklepe o tem dokumentu nekako povzela.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg218">Če se s tem strinjate, bi predlagal naslednje poslance: Toneta Peršaka, Dareta Voljča, Jožefa Školča in dr. Leona Krefta. Ali se strinjate s tem? Še Starman. Mislim, da ni treba dati na glasovanje sklepa, razen če vi zahtevate.</seg>
                <note>Ne.</note>
@@ -740,7 +718,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg220">Besedo ima dr. Toplak.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#regular">
+            <u who="#ToplakLudvik">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg221">Hvala lepa, gospod predsednik.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg222">Želel sem predlagati, da bi pripravili zaključni dokument današnjega zasedanja, v katerem bi izrazili predvsem potrditev vseh aktivnosti, ki so jih državni organi in civilno prebivalstvo na Slovenskem doslej izvajali v obrambo pred napadom. Dalje, da potrdimo vsa danes podana poročila predsednika Kučana, predsednika Izvršnega sveta Peterleta in ministrov Janše, Bavčarja in dr. Rupla.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg223">Morebiti bi posebej zadolžili eno od sedanjih komisij, zlasti Komisijo za mednarodne odnose, ali pa morda imenovali posebno komisijo, ki bi koordinirala vse najrazličnejše aktivnosti, ki so pred slovenskim parlamentom v pogojih vojne.</seg>
@@ -750,11 +728,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg227">Zahtevati takojšnjo prekinitev in pogajanja ter apelirati na mednarodno priznanje Republike Slovenije kot države. Hvala lepa. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg228">Besedo ima gospa Bebler.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR BEBLER:</note>
-            <u who="#SSK11.LavtizarBeblerDarja1950" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg229">Spoštovani!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg230">Če bi slovenska skupščina sprejela zamrznitev ali celo preklic ustavnih samoosvojitvenih aktov, bi to pomenilo, da smo samovoljno in nepooblaščeno prekršili dolžnost, naloženo s plebiscitno odločitvijo; da ignoriramo dejstvo, da so številni – žal zdaj govorimo že o številnih – za to samostojnost in suverenost nove lastne države izgubili življenje in da smo končno nevredni, da bi še naprej sedeli v teh skupščinskih klopeh, kajti s tem bi izgubili tudi sleherno kredibilnost kot najvišje predstavniško telo republike. Poti nazaj torej ni. Seveda to ne pomeni, da se odrekamo preudarnosti, strpnosti in skrbi, da ne bi z nepremišljenimi potezami izpostavljali človeških življenj in premoženja. Toda, ko bi zdaj odstopili od svojih legitimnih in tudi povsem legalnih odločitev, bi lahko spet za cela desetletja zapravili možnost slovenskega naroda, da realizira svojo samoodločbo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg231">Zavedati se moramo, da bi nas po takšni vdaji tudi po navidezni razrešitvi sedanjih zaostrenih ali bolje rečeno okupacijskih razmer srbski in črnogorski centralisti ter oblastniki in njihova armada prej ko slej in še z večjo intenzivnostjo ter aroganco spet začeli izsiljevati, izžemati in ustrahovati. Ta armada ni politično nevtralna, ampak služi natančno opredeljeni ideologiji in političnim interesom. zato nam mora biti jasno, da bi prej ko slej preprečila vse tiste gospodarske in druge reforme, s katerimi bi Slovenci želeli vstopiti v skupino naprednih in demokratičnih evropskih držav in s katerimi bi si želeli priboriti enakopraven in izhodiščni položaj v eventualni gospodarski, carinski ali kakšni drugi skupnosti. Nikakor pa ni nobenega razloga za kakšno evforijo, češ da so doslej s svojim odporom že onesposobili ali vsaj bistveno odvrnili agresorja od nadaljnjih drastičnih posegov in operacij. Mislim, da moramo trezno presoditi dosedanji potek agresije in odpora ter morda tudi ugotoviti, da so bili kdaj tudi kateri izmed ukrepov z naše strani po nepotrebnem provokativni.</seg>
@@ -765,51 +743,51 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg236">Tudi sama se zavzemam za to, da bi v okviru možnosti skupščina in posebej pristojna delovna telesa kontinuirano obravnavala nastale razmere oziroma bi bila to morda koordinacija, kakor je predlagal pred tem gospod Školč. Hvala. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg237">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg238">Preden bi nadaljevali razpravo, je prosil gospod Bavčar, da bi dal še neko obvestilo. Prosim.</seg>
             </u>
             <note type="speaker">IGOR BAVČAR:</note>
-            <u who="#SSK11.BavcarIgor1955" ana="#regular">
+            <u who="#BavčarIgor">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg239">Gospe in gospodje!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg240">Nič posebej nenavadnega za te razmere, vendar pa bi vas rad obvestil, da je prišlo pred nekaj minutami do grobe kršitve premirja s strani diverzantske skupine Jugoslovanske armade. Njeni pripadniki so na križišču Šubičeve in Titove streljali proti skupščini. Milica jih je prestregla na križišču pri Smeltu in eden od njih je ujet, drugi se je zatekel v Smelt. Zdaj izvaja policija to blokado. Predlagal bi, domnevam, da je to ena od načrtovanih provokacij, s katero se želi motiti tudi to zasedanje, ki je bilo sicer sklicano na posebno tajen način, in če smem, bi rad predlagal parlamentu, da svoje delo skrajša.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg241">Tu imamo relativno dolg seznam razpravljavcev. Če menijo razpravljavci, da so njihovi prispevki nujno potrebni, bi prosil, da svoje predloge predložijo na čim krajši možni način.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg242">Besedo ima gospod Tomažič.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg243">Kot predsednik Komisije za poslovnik čutim dolžnost, da opozorim na potrebo po sprožitvi nekega postopka, ki je po mojem mnenju tako logičen in nujen, da bi ga lahko izpeljali že danes. Med tistimi, ki so nam grozili tudi s tega mesta, in bojim se, da morda tudi sodeluje kdo pri tem, kar se zdaj dogaja, je tudi delegat te skupščine Milan Aksentijević. On je delegat v Zboru združenega dela, to je delegat volilne enote aktivnih in civilnih vojaških oseb, zaposlenih v Jugoslovanski armadi. To je tista skupina zaposlenih, ki naj bi skrbela za obrambo Republike Slovenije. Jasno je, da že od 25. in še bolj od 27.6.1991 to ni več Jugoslovanska ljudska armada, to je tista enota, zaposlena v obrambnih silah, ki naj varuje Teritorialno obrambo oziroma, če smem tako reči, oborožene sile Republike Slovenije ali celo ime, kot ga je predlagal gospod Voljč. In to je tudi nova volilna enota delegata za Zbor združenega dela v tej skupščini.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg244">Predsedstvo Republike Slovenije je že pozvalo zaposlene v Jugoslovanski armadi, da lahko podajo izjavo o lojalnosti in o tem, da so pripravljeni delovati in se zaposliti v TO Slovenije. Kot je zdaj povedal gospod minister Janša, se delegat Milan Aksentijević ni odzval. Mislim, da je s tem izgubil svojo volilno bazo in da se je izločil iz te baze. Predlagam, da če bi predsednik aktiviral člane Mandatno-imunitetne komisije Zbora združenega dela, ki bi ugotovila, ali je njemu kot delegatu prenehal mandat, da so nastopili pogoji iz 2. točke 29. člena Zakona o volitvah v skupščino in da ni več delegat Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg245">Kasneje bodo nadomestne volitve, če bo komisija tako ugotovila in če bo Zbor združenega dela danes se sestal in to potrdil, ali bo morda to na naslednji seji. Kajti menim, da bi bili dolžni to narediti tudi iz varnostnih razlogov, kajti ljudje zaupajo tej skupščini, mislim, da zaupajo slehernemu delegatu, mislim pa, da delegatu Aksentijeviću ne moremo zaupati in zato mislim, da je nujno, da se to zgodi še danes.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg246">Gospod Zakonjšek.</seg>
             </u>
             <note type="speaker">JOŽE ZAKONJŠEK:</note>
-            <u who="#SSK11.ZakonjsekJoze1925" ana="#regular">
+            <u who="#ZakonjsekJoze1925">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg247">/Iz klopi - se ne sliši - ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg248">Hvalalepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg249">Besedo ima Plešivčnik.</seg>
             </u>
             <note type="speaker">DR. DRAGO PLEŠIVČNIK:</note>
-            <u who="#SSK11.PlesivcnikDrago1929" ana="#regular">
+            <u who="#PlesivcnikDrago1929">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg250">Zelo na kratko.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg251">Postal bi sam sebi nezvest, če se ne bi ob tej priložnosti tudi tu izpovedal. Več kot 25 let se na svojstven način zavzemam za mir. Ne vidim razloga, da bi se temu načelu odpovedal zdaj, ko je ta vrednota življenja ogrožena. Za njo se zavzemam zato, ker menim, da je mir hrepenenje človeštva in da ga naj voditelji vodijo v to smer. Kar sem se danes lahko posvetoval, so mi ljudje rekli: Želimo si miru in svojo Slovenijo. Usmerimo naše napore, da to dvoje dosežemo. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg252">Hvala lepa.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg253">Gospod Tomšič.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg254">Hvala lepa, gospod predsednik. Spoštovani člani predsedstva, člani vlade, spoštovani poslanci!</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg255">Tudi jaz bom skrajšal svojo razpravo glede na predsednikov apel, vendar moram kot praktično edini predstavnik Socialdemokratske stranke izreči nekaj besed o tem.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg256">Prvič sem zelo zadovoljen, skoraj srečen, da je končno prišlo do tega, da so vse stranke uvidele, kako potrebno je, da smo vsaj v najtežjem trenutku enotni. Vse stranke, torej tudi tiste, ki so mislile, da bo ta razvoj šel drugo pot. Tudi mi smo že pred nekaj dnevi apelirali na vse socialdemokratske stranke Evrope, da nam v teh trenutkih pomagajo in oni so v Evropskem parlamentu izdali izjavo, v kateri našo suverenost podpirajo.</seg>
@@ -817,25 +795,25 @@
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg258">Morda še nekaj besed o tem ultimatu. Čeprav je nekaj točk sprejemljivih, kar je že tudi gospod minister Janša povedal, vendar je nekaj smešno. Običajno ultimat daje nekdo, ki je zmagal, nekomu, ki je bil poražen. Zdi se, kot da smo za armado poraženci in to je tisto najbolj smešno. Zato moramo biti zelo odločni in moramo zavrniti predvsem tiste točke, kjer zahtevajo, da bi se z naših položajev, ki jih že imamo, umaknili, tako da bi potem morali te položaje zopet zavzemati. Ponavljam, biti moramo zelo, zelo odločni. Moramo biti za pogajanja, moramo dati armadi tudi časten izhod iz te krize, torej ne smemo iti na vse ali nič, kar sem danes od nekaterih poslancev slišal, to je popolnoma napačna politika. Mi ne moremo nekoga, ki je dejansko močnejši, čeprav je trenutno tako, potisniti v kot, da se potem še bolj brani. Mi mu moramo povedati, da smo tukaj mi, da bomo tukaj ostali, tukaj smo tisočletja in bomo še naprej ostali kot suverena dežela. Hvala lepa. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg259">Besedo ima Spomenka Hribar.</seg>
             </u>
             <note type="speaker">MAG. SPOMENKA HRIBAR:</note>
-            <u who="#SSK11.HribarSpomenka1941" ana="#regular">
+            <u who="#HribarSpomenka1941">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg260">Srbi so zelo velik narod. Imajo krasno literaturo, imajo lepe pregovore in tudi nekaj zelo pomembnih ukazov, eden med njimi je: »Ne dulji brate.« Mislim, da smo vsi utrujeni, nekateri še posebej, dajmo sprejeti sklepe, dajmo podpreti predsedstvo, vlado, in pojdimo domov. Hvala lepa. /Ploskanje./</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg261">Se še kdo prijavlja za besedo? Če ne, potem bi jaz, preden komisija predloži osnutek teksta, ki naj bi ga sprejeli, še vprašal, ali ta zbor meni, da mora Mandatno-imunitetna komisija že danes razpravljati o mandatu poslanca Aksentijevića. Dajmo to na glasovanje.</seg>
                <note>Ni treba.</note>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg262">Hvala lepa.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg263">Imam samo en predlog, čeprav je ta seja zaprta, če sem pravilno razumel, da bi takoj po sprejetju sklepov o tem obvestili javnost, vsekakor pa pred deveto uro in da bi tudi, ker vidim, da je televizija prisotna, dali v javnost razprave, ki smo jih vodili na tej seji.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg264">S tem se strinjam, da ta stališča objavimo pred deveto uro zjutraj. In mislim, da je to potrebno zlasti glede na to, ker se ta tako imenovani ultimat Kadijevića izteče točno ob 9. uri, 30. junija 1991. Je pa seveda bolj težko izpolniti to zadevo, da bi objavili tudi vse govore, najprej je potrebna redakcija vseh teh govorov in bo malce težko.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-07-29.s022-01.seg265">Odrejam desetminutni odmor.</seg>
             </u>

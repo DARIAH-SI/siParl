@@ -9,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Skupščine Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Družbeno-politični zbor: 47. seja</title>
-            <meeting n="47"
-                     corresp="#DruzPolZb.1992-10-07.s047-01.DruzPolZb"
-                     ana="#parl.meeting.regular"/>
+            <meeting n="47" corresp="#DruzPolZb" ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +27,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +40,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +61,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="148"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="88"/>
                <tagUsage gi="seg" occurs="310"/>
                <tagUsage gi="gap" occurs="3"/>
@@ -414,13 +403,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="DruzPolZb.1992-10-07.s047-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -430,69 +412,83 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>DRUŽBENOPOLITIČNI ZBOR</head>
             <head type="session">47. SEJA</head>
             <docDate>7., 8., 14., 21., 22. in 29.10. ter 11.11.1992</docDate>
             <note type="chairman">Predsedoval: dr. Ludvik Toplak, predsednik Družbenopolitičnega zbora in Anton Peršak, podpredsednik zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Začetek seje ob 11.17 uri.</note>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg1">Pričenjamo 47. sejo Družbenopolitičnega zbora Skupščine Republike Slovenije, ki sem jo sklical na podlagi 31. člena začasnega poslovnika Skupščine Republike Slovenije. Zboru predlagam, da opravimo najprej proceduralna vprašanja.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg2">Vlada Republike Slovenije predlaga, da se v skladu z drugim odstavkom 265. člena poslovnika Skupščine Republike Slovenije združita prva in druga faza zakonodajnega postopka tako, da se hkrati obravnava predlog za izdajo zakona z osnutkom pri zakonu o Vladi Republike Slovenije. V sklopu zakonov, ki morajo v skladu z ustavo vzpostaviti z ustavo predvideno državno ureditev je treba pred novimi volitvami v državni zbor sprejeti še zakon, ki bo uredil tista vprašanja v zvezi s sestavo in delovanjem vlade, ki se po ustavi urejajo z zakonom, uveljavijo pa tudi racionalnejšo sestavo vlade in nekaterih ministrstev. Vlada Republike Slovenije zato predlaga Skupščini Republike Slovenije, da hkrati obravnava in sprejme predlog za izdajo zakona o Vladi Republike Slovenije z osnutkom zakona.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg3">Odbor za pravosodje in upravo kot matično delovno telo ni podprl predloga predlagatelja, da se združita prva in druga faza zakonodajnega postopka. V skladu z dogovorom s predsedniki vseh treh zborov pa bi vam predlagal, da bi zbor v dnevni red vendarle uvrstil predlog za izdajo z osnutkom. Zakon o vladi je namreč zakon, ki ga je nujno sprejeti še do volitev, saj bo le tako možno po konstituiranju Državnega zbora oblikovati vlado na podlagi novega zakona o vladi. Zato predsedniki zborov predlagamo, da zbori uvrstijo v dnevni red obe zakonodajni fazi, poslancem in poslankam pa predlagam, da pripombe in predloge posredujejo v razpravi ob osnutku zakona. Po obravnavi zakona bi se po potrebi sestali vodje poslanskih klubov, ki bi poskušali poenotiti različna stališča do osnutka zakona. Zbori bi nato po končani razpravi sprejeli vsebinski sklep, kjer bodo jasno opredeljena stališča za predlagatelja zakona, kaj vse pri pripravi zakona mora upoštevati.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg4">Želi predstavnik vlade besedo? Predstavnik vlade je tukaj? Ni. Hvala. Želijo besedo predstavniki skupščinskih delovnih teles? Predstavniki Odbora za pravosodje in upravo? Besedo želi, prosim, gospod Peter Reberc.</seg>
             </u>
             <note type="speaker">PETER REBERC:</note>
-            <u who="#SSK11.RebercPeter1966" ana="#regular">
+            <u who="#RebercPeter1966">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg5">Odbor za pravosodje in upravo je obravnaval predlog za izdajo zakona o vladi skupaj z osnutkom zakona in je v razpravi ugotovil, lahko rečem, soglasno, da je v tem zakonu veliko stvari še nedorečenih. In da se ne bi zdaj spuščal v vsebinsko razlago, so člani odbora soglasno menili, da naj sprejmemo v tej fazi samo predlog za izdajo zakona, da pa naj vlada čimprej pripravi tudi osnutek zakona zato, da bi ga lahko še pravočasno sprejeli.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg6">Hvala lepa gospodu Rebercu za poročilo. Odpiram razpravo. Prosim gospod Emil Milan Pintar.</seg>
             </u>
             <note type="speaker">EMIL MILAN PINTAR:</note>
-            <u who="#SSK11.PintarEmilMilan1944" ana="#regular">
+            <u who="#PintarEmilMilan1944">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg7">Hvala lepa. V zvezi s tem zakonom bi rad opozoril na tri stvari. Prvič, da ni nobenega dvoma, da mi tak zakon rabimo še pred iztekom mandata sedanje vlade, kajti povsem nenormalno bi bilo pričakovati, da bi prepustili to funkcijo novemu mandatnemu obdobju, da bo sestavljena nova velika vlada in da bo prvi akt te nove vlade neke vrste samoukinitev približno v tretjinskem obsegu, kajti prepričan sem, da se je med vsemi nami uveljavilo mnenje, da lahko brez škode oziroma obratno, zaradi potreb po učinkovitejšem delu naše vladno telo zmanjšamo tam približno za eno tretjino.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg8">Ob tej enotni misli, da zakon rabimo pa seveda nastaja nekaj vprašanj, kako naj bo vlada organizirana. V osnovi se pojavljata dva temeljna koncepta. Koncept, ki bo govoril o tem, da bomo imeli vlado kot kabinet in ministrstva kot neke vrste razmeroma samostojno strokovno upravno službo. Ta koncept je tisti, ki ga čedalje več modernih družb uveljavlja, je pa seveda rezultat nekih urejenih in stabilnih razmer v družbah. Nisem prepričan, da ga mi v tem trenutku že zmoremo, vendar če se bo pojavil primerno razdelan, potem mislim, da bi ga kazalo podpreti. Tu v predlogu vlade je pa to malo spremenjen septembrski predlog glede na tistega, ki smo ga imeli priliko videti v marcu - strokovni delavci so približno isti, podpisani minister je drugi pa - seveda ne gre za ta koncept o katerem tu govorim ampak gre še zmeraj za nek koncept vlade, ki je glede na naše dosedanje delo klasično organizirana. Ker ostaja v tem kontekstu, bi rad opozoril na nekaj vprašanj katera se mi zdijo izjemno pomembna in da so v tem delu napačno rešena. Prvo tako napačno rešeno vprašanje je odnos med vlado in parlamentom. Tisti, ki poznate ta razmerja v drugih evropskih državah veste, da je pravzaprav to razmerje precej natančno opisano in da so naloge ali dolžnosti vlade tu izjemno precizno zastavljene. Kajti odnos med parlamentom in vlado je seveda odnos me tistim, ki na nek način vlado postav<gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik"
+               xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.u5"
+               next="#SSK11-DruzPolZb.1992-10-07.s047-01.u7"
+               ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg9">Prosim. Samo malo prosim, če smem prekiniti gospoda poslanca. Mi zdaj še ne razpravljamo o vsebini, ampak samo še o proceduralnemu vprašanju o združitvi obeh faz.</seg>
             </u>
             <note type="speaker">Vmes gospod Pintar:</note>
-            <u who="#SSK11.PintarEmilMilan1944" ana="#unauthorized">
+            <u who="#PintarEmilMilan1944">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg10">Jaz se opravičujem, sem razumel, da je razprava odprta tudi ovsebini.</seg>
             </u>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik"
+               xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.u7"
+               prev="#SSK11-DruzPolZb.1992-10-07.s047-01.u5"
+               next="#SSK11-DruzPolZb.1992-10-07.s047-01.u9"
+               ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg11">Ni še. Mi smo samo še pri vprašanju o združitvi obeh faz pa bi o vsebinski razpravi nadaljevali, ko bomo prišli na to. Jaz bi predlagal, da prvo odločimo.</seg>
             </u>
             <note type="speaker">Gospod Pintar:</note>
-            <u who="#SSK11.PintarEmilMilan1944" ana="#unauthorized">
+            <u who="#PintarEmilMilan1944">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg12">Hvala lepa.</seg>
             </u>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik"
+               xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.u9"
+               prev="#SSK11-DruzPolZb.1992-10-07.s047-01.u7"
+               ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg13">Prosim.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg14">Mi smo pri proceduralnem vprašanju glede združitve obeh faz. Prosim, gospod Peršak želi besedo. Vsebino bomo nadaljevali, gospod Pintar.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg15">Jaz bi se rad samo zavzel za to, da bi se zbor vendarle odločil, da obravnavamo ta osnutek kot osnutek iz tega razloga, ki ga je sicer omenil že tudi gospod Pintar, ker mislim, da ta zakon preprosto moramo sprejeti do volitev in če ga danes ne obravnavamo kot osnutek, je to skoraj že nemogoče. Predlagam pa, da potem zbor, ko bo to obravnavo opravil, sprejme dovolj obvezujoče sklepe o tem, kako naj se predlog zakona oblikuje in predloži na podlagi razprave seveda, zato da se ne bo potem vsa razprava še enkrat ponovila ob predlogu, pa da ne bo potrebna ne vem kakšna množica amandmajev itn. Skratka, rad bi vas poskušal nagovoriti za to, da glasujemo za to, da se obravnava kot osnutek, hkrati pa se odločimo za malo drugačne sklepe kot ponavadi; se pravi sklepe, ki bodo jasno usmerili vlado, kako naj se oblikuje predlog. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg16">Hvala lepa. Prosim, gospod Peter Bekeš.</seg>
             </u>
             <note type="speaker">PETER BEKEŠ:</note>
-            <u who="#SSK11.BekesPeter1946" ana="#regular">
+            <u who="#BekesPeter1946">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg17">Spoštovani predsednik, spoštovane kolegice in kolegi! Ne bi bilo dobro, da o tem osnutku zakona razpravljamo v umetno ustvarjenem vzdušju nuje. Namreč, vsaka vlada, ker gre pač za zakon, ki se z navadno večino sprejema, načeloma lahko s tisto večino, ki je omogočila vzpostavitev vlade, seveda ureja posamezna vprašanja ali celotno zakonsko postavitev svojega položaja, pristojnosti in razmerij v skladu s svojimi potrebami. Načelno takemu stališču ne bi mogli ugovarjati. Praktično - in zato sem se oglasil k besedi - pa bi bilo izredno koristno, ker bo šlo za konstituiranje prve vlade, ki bo v celoti začela delovati na osnovi nove ustave in na osnovi drugače strukturiranega parlamenta se pravi Državnega zbora kot je bila struktura dosedanje skupščine, da po volitvah večina, ki bo iz teh volitev izšla, konstituira novo vlado na podlagi že veljavnega zakona. To pripravo in ta zakon lahko sprejmemo edino mi.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg18">Mislim, da je proceduralno mogoče to kvalitetno opraviti, če se danes tukaj odločimo za sprejem združitve prvih dveh faz postopka. Se pravi, da danes obravnavamo predlog za izdajo zakona z osnutkom; to se pravi, tudi osnutek. Jaz sam sem imel vrsto pripomb na delovnem telesu, kjer smo ta osnutek obravnavali in mislim, da osnutek z dopolnitvami (ki so jih tudi drugi kolegi predlagali) in s spremembami je sposoben, če bo seveda predlagatelj to voljo in to delovno pripravljenost pokazal; tega v dosedanji proceduri ni zanikal - za obravnavo, je sposoben za dograjevanje, bodo pa seveda morali biti sklepi taki, da bodo jasno nakazali, v kateri smeri naj se pripravi predlog. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg19">Hvala lepa. Še kdo? Če ni več potem preidemo na glasovanje o proceduralnem vprašanju združitve prve in druge faze. Ugotovimo navzočnost.</seg>
                <note>43 navzočih.</note>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg20">Kdo je za združitev obeh faz?</seg>
@@ -562,42 +558,42 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg58">Besedo želi gospod Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg59">Jaz imam predlog v zvezi z dnevnim redom, in sicer v zvezi s 14. in 15. točko. Gre za interpelacijo in za obtožbo kršitve ustave zoper ministra za notranje zadeve. Ne gre za to, da zavračam to, da se to obravnava. Gre za to, da je po našem mnenju treba razčistiti vprašanje, ali je za obravnavo te teme pristojen posamezen skupščinski zbor, ali je pristojna skupna seja skupščine. Po mojem mnenju je v skladu s konstruktivno nezaupnico in v skladu z načinom imenovanja ministrov, pristojna za to skupna seja, ne pa posamezni zbor.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg60">In ker je to vprašanje sporno tudi v Zboru občin, kjer so sicer to točko tudi uvrstili na dnevni red in obravnavali, predlagam - tak je bil tudi prvotni dogovor ali usmeritev vodstva skupščine - da se zbor tega danes ne uvrsti na dnevni red, pač pa hkrati sprejme sklep, da se zahteva od ustavne komisije mnenje oziroma stališče o tem, ali je za to točko, za obravnavo tega pristojen zbor ali skupna seja, in da se potem, ko bo to stališče ustavna komisija dala, v skladu s tem postopa.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg61">Če bo ocenila, da je to stvar zbora, naj to zbor takrat nemudoma uvrsti na dnevni red; če bo dala stališče, da je to skupna seja, bo to šlo na skupno sejo. Ne zavračam obravnave, ampak da se proceduralno ugotovi, ali je to stvar zbora ali skupne seje in se v skladu s tem postopa. Predlagam pa, da gre to z dnevnega reda zato, da ne bo zopet to točka, ki se bo še mesec dni ali dva mesece kot nedokončana točka seje vlekla, medtem ko bomo čakali na to stališče.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg62">Prosim gospoda Peršaka, da konkretno sformulira predlog sklepa.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg63">Predlagam, da zbor z glasovanjem odloči, da to ni na dnevnem redu te seje. In drugič, da sprejme sklep, s katerim zbor nalaga ustavni komisiji, naj jasno pove stališče, ali je obravnava interpelacije in ustavne obtožbe zoper ministra stvar za obravnavo na posameznem skupščinskem zboru ali na skupni seji skupščine.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg64">Hvala lepa. Želi kdo razpravljati o predlogu sklepa? Prosim, gospod Buser.</seg>
             </u>
             <note type="speaker">DR.STANKO BUSER:</note>
-            <u who="#SSK11.BuserStanko1932" ana="#regular">
+            <u who="#BuserStanko1932">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg65">Spoštovano predsedstvo, spoštovane poslanke in poslanci! Gospod Peršak je obrazložil svoje mnenje, ker je rekel, po mojem mnenju. Jaz bi rad slišal proceduralno, kakšno je uradno mnenje. Gospod Peršak je rekel: po mojem mnenju. To sem si zapisal. Prosil bi za uradno mnenje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg66">Prosim, gospod Reberc.</seg>
             </u>
             <note type="speaker">PETER REBERC:</note>
-            <u who="#SSK11.RebercPeter1966" ana="#regular">
+            <u who="#RebercPeter1966">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg67">Sklep, po katerem naj bi bilo mnenje ustavne komisije v zvezi z interpelacijo merodajno, po moje, ni ustrezen oziroma je vprašljiv. Naš zbor se sicer lahko odloči, da kateremukoli telesu v tej skupščini, ali ustavni komisiji ali kakšni drugi, mogoče tudi Komisiji za spremljanje in izvajanje poslovnika, ali še kateri tretji, ali na novo oblikuje novo komisijo, ki naj o tem pove svoje mnenje, in potem reče, da je to tisto mnenje, ki je v bistvu mnenje zbora. Mislim pa, da sklep, kot ga predlaga gospod Peršak, nima prave osnove. Tu gre za proceduralno vprašanje. V proceduralnih vprašanjih ustavna komisija sicer lahko daje mnenja, niso pa merodajna in zavezujoča. Tudi če bo taka komisija našemu zboru dala svoje mnenje in bo naš zbor to mnenje prevzel kot svoje, tako mnenje ne bo obvezovalo ostalih dveh zborov in bomo prav tako na neki slepi poti.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg68">Zaradi tega menim, da ni smiselno dajati tega mandata ustavni komisiji. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg69">Hvala lepa. Repliko želi gospod Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg70">Moje stališče je naslonjeno na odlok o ustanovitvi ustavne komisije, ki je z zadnjo alineo tega odloka tudi zadolžena za tolmačenje oziroma za dajanje mnenja o teh zadevah, ki se tičejo ustavne materije. Gospodu Rebercu moram povedati, da s poslovnikom ta stvar ni urejena, ker je ta poslovnik pisan za skupščino, v kateri interpelacija zoper posameznega ministra in ustavna obtožba zoper ministra nista obstojale. Poslovnik preprosto tega vprašanja ne ureja.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg71">Zato je treba uporabljati direktno ustavo in v tem vmesnem času, dokler ni novega poslovnika in z odlokom o ustanovitvi ustavne komisije, kot rečeno, je za to zadolžena ustavna komisija, da daje stališče o tem.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg72">Jaz sem prej govoril o 14. in 15. točki skupaj. Mogoče je smiselno, da se o vsaki točki odloča zbor posebej in o vsaki točki posebej sprejme tudi sklep, ki bi se glasil nekako takole (prebral bom samo enega, razumite ga pa za 14. in 15. točko):</seg>
@@ -605,17 +601,17 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg74">V drugem primeru je pa 119. člen. Mislim, da je stvar čista. Res gre za to, da to v poslovniku ni urejeno.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg75">Hvala. Gospod Žare Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SSK11.PregeljZarko1956" ana="#regular">
+            <u who="#PregeljZarko1956">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg76">Spoštovani! Interpelacija je vložena v skladu z 232. členom veljavnega poslovnika in to je urejeno v poslovniku. Direktno sicer stari poslovnik ni obravnaval interpelacije do posameznega ministra, obravnaval je interpelacijo do izvršnega sveta. Toda dejansko se to tiče tudi dela Izvršnega sveta, delo posameznega ministra. Zato je ta interpelacija popolnoma pravilno vložena. Mora biti obravnavana na teh zborih, ne glede na to, kakšno mnenje da vlada.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg77">Mislim, da je nesmiselno dolgoveziti in iskati neke proceduralne luknje, kajti na enak princip so bile tudi konstruktivne nezaupnice spravljene in ne vem zakaj bi morali za tisto, za kar imamo v poslovniku osnovo, zavračati z neko obrazložitvijo, da ne gre za urejene zadeve.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg78">Druga stvar je ustavna obtožba. Tisto je nekoliko drugačna zadeva, toda interpelacija je popolnoma pravilno vložena in mora biti obravnavana na zboru. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg79">Hvala lepa. Želi še kdo besedo?</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg80">Predlog gospoda Peršaka dajem na glasovanje. Ugotovimo navzočnost!</seg>
                <note>46 navzočih poslancev.</note>
@@ -629,17 +625,17 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg85">Sedaj dajem na glasovanje dnevni red v celoti. Še gospod Stanko Debeljak, namestnik ministra za finance.</seg>
             </u>
             <note type="speaker">STANKO DEBELJAK:</note>
-            <u who="#SSK11.DebeljakStanko" ana="#regular">
+            <u who="#DebeljakStanko">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg86">Gospod predsednik! Zboru predlagam, da umakne z dnevnega reda 7. točko dnevnega reda, to je predlog zakona o obrestni meri in da jo uvrsti na dnevni red takrat, ko bo besedilo predloga zakona o obrestni meri napisano v skladu s sklepi zborov iz meseca julija.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg87">Ko so zbori v juliju obravnavali predlog za izdajo zakona o obrestni meri z osnutkom, so sprejeli sklep, da predlog zakona pripravijo predlagatelji v sodelovanju z vlado. Povedati moram, da ta tekst predloga zakona, ki je pripravljen za obravnavo k tej točki dnevnega reda, so pripravili predlagatelji sami in da je sodelovanje z vlado steklo potem, ko je bil ta predlog zakona napisan in da smo na tem sodelovanju (zadnje je bilo 7/10) ugotovili, da so različna stališča glede vsebine predloga zakona in zato je vlada predlagala, da predlagatelji nadalje usklajujejo vsebino tega zakona s predstavniki vlade in tudi monetarnimi oblastmi, ker se ta vsebina zakona bistveno nanaša in razlikuje od ekonomske politike vlade in ukrepov monetarnih oblasti.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg88">Temu predlogu zakona so nasprotovali tudi predstavniki Banke Slovenije, ki so bili prisotni na tem razgovoru s predstavniki predlagateljev in tudi predstavnik Zavoda za makroekonomske analize. Sprejet je bil tudi predlog s strani vlade, da se to usklajevanje nadaljuje in predlagam, da zbori, konkretno vaš zbor, obravnava tako usklajen tekst predloga zakona, ne pa tisti predlog zakona, ki je danes predmet obravnave k tej točki. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg89">Želi še kdo na to vprašanje kaj dodati? Če nihče, bom jaz.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg90">Predstavnika vlade, ki predlaga, da se točka dnevnega reda - predlog zakona o obrestni meri - preloži oziroma da iz dnevnega reda, jaz razumem. Kot predlagatelj pa moram reči: po sklepih vseh treh zborov skupščine so predlagatelji dolžni pripraviti predlog zakona ob sodelovanju z vlado. V vseh treh zborih je bilo posebej poudarjeno, da gre za komplicirano strokovno, pravno in ekonomsko vprašanje. Zato so predlagatelji povabili k sodelovanju predstavnika vlade, predvsem profesorje Ekonomske fakultete v širokem krogu; nekaj sto udeležencev, strokovnjakov je prediskutiralo zakonski osnutek, prediskutiralo in tudi analizirali vse skupščinske razprave, kakor tudi znanstvene referate, ki so bili predloženi. Na posebnem posvetu kluba finančnikov, kjer so bili predstavniki vlade in predstavniki Narodne banke in bank navzoči - ne bom rekel predstavniki vlade, ampak ljudje iz vlade - in je tekla obširna razprava o teh istih vprašanjih in so se tudi oblikovala stališča. Res pa je, da na Ekonomsko fakulteto na strokovni posvet predstavniki vlade niso prišli, čeprav so predhodno potrdili udeležbo, niti se niso opravičili.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg91">Poseben sklic pravnikov, v organizaciji društva pravnikov v gospodarstvu, gospodarskih sodnikov in drugih strokovnjakov v Mariboru, je bil sklican, ko se je ponovno preoblikovalo; tudi o tem je bila obveščena vlada.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg92">Na podlagi vseh teh razprav je nastal - so predlagatelji pač ob sodelovanju vlade, kolikor je vlada pač pokazala sodelovanje, ob sodelovanju z vlado. In če vlada ni bila voljna sodelovati, smo pač pripravili na podlagi tega, kar smo imeli. To so bile skupščinske razprave v zborih, pisna stališča vlade, pisna stališča Narodne banke, kakor tudi morebiti druga, zlasti stališča vladnih predstavnikov v zborih in v delovnih telesih skupščine. Vse to je bilo upoštevano, kolikor je po presoji predlagateljev sprejemljivo. Ko smo predložili predlog zakona o obrestni meri, je Odbor za kreditno monetarni sistem sprejel stališče, da ni bilo pripravljeno skupaj z vlado.</seg>
@@ -650,86 +646,86 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg97">Predlagam, da zbor potrdi predlagani dnevni red. Drugače rečeno, da zbor ne sprejme predloga predstavnika vlade, da se ta 7. točka briše z dnevnega reda.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg98">Gospod Kopač želi besedo.</seg>
             </u>
             <note type="speaker">JANEZ KOPAČ:</note>
-            <u who="#SSK11.KopacJanez1961" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg99">Hvala lepa za besedo. Jaz podpiram predlog predstavnika vlade. Zdaj bi pravzaprav bilo slepljenje samega sebe, če bi poskušali na ta ali oni način formulirati tisto dikcijo ob sodelovanju z vlado. Vsakršna razprava v zvezi z uvrščanjem tega zakona na dnevni red se potem nujno dotika tudi vsebine in ne samo procedure priprave tega zakona. Jasno je, da koncept nobene od institucij, ki se kakorkoli čutijo odgovorne za neko dogajanje v družbi - pa naj bo to Banka Slovenije, Zavod za makro ekonomske analize, vlada, Odbor za kreditno monetarni sistem in politiko, ali pa katerakoli druga institucija ne more pritrjevati konceptu, kot je zapisan v temu zakonu. Ta zakon je seveda bil predebatiran na velikih srečanjih, ki jih je z visoko donečimi akademskimi nazivi argumentiral tudi dr. Ludvik Toplak, vendar je pa treba reči, da kolikor je meni poznan rezultat razprav na tovrstnih srečanjih, pač, ta zakon tam predebatiran je bil, vendar podpore pač ni dobil.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg100">Po drugi strani bi rad zaključil s tem. Ne bi se rad spuščal v vsebino, mislim pa, da je tudi tistim, ki spremljate to razpravo bolj ali manj poznana in da so vam poznane uničujoče posledice za našo državo in naše gospodarstvo, če bi ta zakon bil sprejet. Mislim celo, če bi bil jaz na mestu vlade, da bi ponudil svoj odstop v primeru, da je sprejet takšen zakon, ker na ta način potem ni možno nikakršno vodenje ekonomske politike več. Rad bi rekel samo to. Če smo se zadnjič kregali okrog osnutka zakona in je bilo tam rečeno marsikaj tudi smešnega, vsaj moja diskusija takrat je bila na nek način cinična, ker sploh nisem mogel verjeti, da nekdo predlaga takšen zakon je pa tokrat zadeva bolj resna. Govorimo o predlogu.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg101">Skratka, predlagam, da se podpre mnenje predstavnika vlade in da predlagatelji, če imajo res namen urediti kakšno od vprašanj v zvezi z obrestno mero, to naredijo in pripravijo v sodelovanju z vlado, tako kot je predlagal Odbor za kreditno monetarni sistem in politiko, ki ga vodi gospod Deželak. Če pa nimajo tega namena potem je pa bolje, da takšnega zakona sploh nimamo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg102">Hvala lepa, še kdo? Če ne, moram replicirati.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg103">Prvo gospodu Kopaču. Nihče se ni kregal, vsaj jaz se nisem kregal. Res pa je, da je gospod Kopač znal biti žaljiv prejšnjikrat tako kot tudi danes. Ni šlo za nobene velike zbore z nastopi ljudi z visoko zvenečimi akademski nazivi. Res pa je, da so pa res nastopali ljudje - to so med drugim tudi, kolega Kopač, vaši profesorji iz Ekonomske fakultete v Ljubljani in iz drugih fakultet v Sloveniji: Viljem Merhar, profesor, imam referat obširno, v obširnem referatu; če že želi vedeti kdo; so še številni drugi. Obratno, s strani strokovnih krogov, univerzitetnih strokovnih krogov in inštitutov, razen vladnega Zavoda za planiranje oziroma makro ekonomske analize pri Ministrstvu za planiranje ni bilo niti enega resnega strokovnega vsebinskega prigovora. Šlo pa je za nekaj redakcijskih pripomb, kakor so jih izoblikovali predvsem kompetentni pravniki tako iz prakse, iz gospodarstva, predvsem pa gospodarski sodniki in tudi sicer najkompetentnejši strokovnjaki, ki so na Slovenskem do danes največ pisali na področju obresti. Toliko.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg104">Jaz o vsebini ne bi želel, predlagam pa, da se predlog vlade, da se točka briše iz dnevnega reda, ne sprejme. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg105">Še kdo? Če ne, hvala lepa. Prosim, gospod Debeljak, predstavnik vlade.</seg>
             </u>
             <note type="speaker">STANKO DEBELJAK:</note>
-            <u who="#SSK11.DebeljakStanko" ana="#regular">
+            <u who="#DebeljakStanko">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg106">Gospod predsednik, glede sodelovanja predstavnikov predlagatelja in vlade, tako kot ste rekli, moram reči naslednje. Cenim napore, da predlagatelji svoje predloge, svoje rešitve v zvezi z obrestmi preverjajo v praksi na posvetih, - to dela tudi vlada, to delajo tudi druge institucije - vendar mislim, da se to ne more okvalificirati kot sodelovanje s predstavniki vlade pri pisanju teksta zakona, ne glede na to ali so bili predstavniki vlade povabljeni in ne glede na to, ali so se predstavniki vlade teh posvetov udeležili.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg107">Drugo. Na Odboru za kreditno monetarni sistem je bilo jasno povedano, da gre za sklep: predlagatelji v sodelovanju z vlado. In ta dikcija sklepa Odbora za kreditno monetarni sistem ne vpliva na postopke, ki so tekli med predstavniki vlade in predlagateljev kasneje.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg108">In tretje, kar je vezano s sklepom o tem, da vlada pripravi zakon o obrestnih merah. Vlada je pripravila zakon o zamudni obrestni meri, ga dala v postopek in ta zakon je bil tudi v drugi polovici marca leta 1992 sprejet. Tako, da je vlada ta sklep, z vidika kot je ona menila, da je potrebno urediti, tudi sprejela. In ne nazadnje, tako kot se predstavniki predlagateljev sklicujejo, da so bili strokovni posveti, kjer je vrsta teoretikov in profesorjev te rešitve v zakonu podpirala, tako je tudi vrsta teoretikov in strokovnjakov, ki ta zakon ne podpira in ga odklanja. Npr., Banka Slovenije ima v celoti odklonilno stališče do takih rešitev glede obrestnih mer; ni treba, da se zdaj sklicujem še na institucije in predstavnike posameznih organov v okviru vlade. In to mora biti jasen dokaz, da so predlagane rešitve z ekonomskega vidika nesprejemljive. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg109">Hvala lepa. Še kdo? Prosim, gospod Gajšek.</seg>
             </u>
             <note type="speaker">JANEZ GAJŠEK:</note>
-            <u who="#SSK11.GajsekJanez" ana="#regular">
+            <u who="#GajsekJanez">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg110">Verjamem, da so lahko morda neke posledice uničujoče, če bo kak zakon sprejet. Ampak to, da nimamo primernega zakona že krepko obdobje na tem področju, je pa še bolj uničujoče. Še enkrat bom ponovil, pa verjetno bo gospod Debeljak znal strokovno razložiti, kako lahko podjetje preživi in bom dal dva primera.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg111">Prvi primer, ki sem ga že nekajkrat citiral (in se bo sredina smejala): lansko leto oktobra meseca je obstajal dolg enega podjetja, veste katerega, ki je znašal 14,2 milijona dolarjev, takratna dinarska ali tolarska protivrednost. V avgustu letošnjega leta je ta dolg, ne da bi se karkoli na njem dogajalo, zrasel na 40 milijonov ameriških dolarjev. V tem mesecu znaša 44 milijonov ameriških dolarjev. Razložite mi, kako je strokovno to mogoče in kako podjetje lahko ob tem preživi?</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg112">Dajmo to na stran, ker je to nek historiat, pa si poglejmo podjetnika privatnika, ki se je konec minulega leta zadolžil za 4 milijone mark, do današnjega dneva mu je dolg narasel na 8 milijonov mark. Podjetnik izvaža 80% svoje proizvodnje. Z vsem spoštovanjem, gospod Debeljak, povejte mi, kako lahko tak podjetnik normalno vodi svoj posel in normalno živi. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg113">Hvala. Želi še kdo, če ne moram replicirati na besedo predstavnika vlade.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg114">Družbenopolitični zbor je ob sprejemu zakona o zamudni obrestni meri sprejel dodatni sklep, ki se glasi: "Vlado se zadolži, da v roku 30 dni pripravi predlog za izdajo zakona o obrestni meri, s katerim bo celovito urejeno vprašanje obrestne mere." Vlada tega ni izvršila, zato so v naslednjih 90 dneh podpisani poslanci vložili predlog za izdajo zakona. Poteklo je nadaljnjih 6 mesecev - vlada zakon permanentno blokira. Sodeluje toliko, kolikor mora, bolje rečeno - kolikor hoče. Dejstvo je, da je sodelovala toliko kolikor je, da pa pisnega stališča na predlog zakona še do danes ni dala.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg115">Zapis, ki smo ga poslancem priložili, je nastal na podlagi šesturnih razgovorov, ki smo jih imeli predlagatelji s predstavniki vlade. Pisnega stališča v enem stavku vlada ni dala. Zato moram reči, da gre za ekstremno ignorantski odnos vlade do parlamenta. To kar govorimo - in to ne bi želel sedaj razpravljati, bom pa razpravljal v zvezi z zakonom o vladi - če mislimo oblikovati in uzakoniti stanje, tako stanje odsotnosti kontrolnega mehanizma v tej državi, potem je pred nami vladavina mafije. Jaz osebno proti temu opozarjam in protestiram, proti takšnemu ignorantskemu delu vlade.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg116">Mi imamo tudi druge zakone, o katerih ne bi začenjal, pa se vlada prav tako ignorantsko obnaša do sprejetih zakonov. Zakone bi morala spoštovati vlada in poslanci in državljani. Zakoni veljajo tudi za vlado. Zato menim, ne bi navajal vsebinskih, gospodarskih argumentov, s katerimi je samo za ilustracijo postregel poslanec Gajšek, in še z drugimi, ki jih zgodovina ne pozna. Svetovna ekonomija tega še ni zabeležila. Gre samo za primere ekstremne antiekonomije. Menim, da če vlada misli voditi takšno ekonomsko politiko, bo to gospodarska katastrofa. Poslanci, ki o tem odločajo, tudi sprejemajo odgovornost za to. Hvala lepa, ne bom se več oglasil.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg117">Gospod Kopač želi besedo.</seg>
             </u>
             <note type="speaker">JANEZ KOPAČ:</note>
-            <u who="#SSK11.KopacJanez1961" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg118">Hvala lepa za besedo. Bili smo deležni plohe besed v visokem tonu, kar mislim, da nikakor ni bilo na mestu.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg119">Ta vlada, kolikor se spomnim, je predložila v ta parlament več zakonov o obrestni meri, ki pa se niso tako imenovali. Ni, da bi sedaj zganjali formalizem. Če omenim samo dva, ki se tičeta sanacije bank, bi se lahko imenovala zakona o zniževanju obrestne mere. In to je bistvo vsega spora v zvezi z zakonom, ki ga predlaga poslanec dr.Toplak. Kajti, ne da se z enim zakonom predpisovati neke obrestne mere in potem misliti, da bo to tudi dejansko lahko obstajalo - ker življenje gre svojo pot. Treba je ustvariti pogoje, s katerimi se bo lahko v bankah sploh znižala realna obrestna mera in te pogoje, se recimo, ustvarja tudi s sanacijo bank. Toliko samo okoli pripombe, da ta vlada ni v skupščino poslala nobenega zakona o obrestni meri in da je ignorirala parlament. Ni ga ignorirala.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg120">Drugo. V zvezi, "ni primera v svetovni zgodovini", ali nekaj takega smo slišali. Gospod Toplak, v času med razpravo o osnutku in razpravo danes, se je v Evropi na evropskih monetarnih trgih zgodilo marsikaj. Recimo, morda ste prebrali, če spremljate ta dogajanja, da je švedska centralna banka dvignila obrestno mero na 500% za kratkoročne likvidnostne kredite. En dan na 85, kar je bil velik šok za cel svet, naslednji teden pa na 500%. Skratka, gre za instrumente ekonomske politike, ki jih v rokah mora imeti centralna banka, če hoče skrbeti za stabilnost denarja. Namen švedske centralne banke je bil, da skrbi za stabilnost njihove valute. Zato se je tega instrumenta poslužila. To je samo ilustracija, ki je veljala samo kratek čas, zato da se je preprečila kriza.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg121">Ta zakon bi na vsak način zavezal roke kakršnemukoli vodenju ekonomske politike skozi višino obrestne mere in ne bi dosegal svojega učinka. Namen tega zakona je dober in ga podpiram. Samo ves čas govorim, da na ta način to ne gre. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg122">Hvala lepa. Mi smo pri proceduralnem vprašanju dnevnega reda. O vsebini bomo govorili, ko bo točka na dnevnem redu. Glasujemo o predlogu predstavnika vlade. Prosim, gospod Debeljak.</seg>
             </u>
             <note type="speaker">STANKO DEBELJAK:</note>
-            <u who="#SSK11.DebeljakStanko" ana="#regular">
+            <u who="#DebeljakStanko">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg123">Glede urejanja obresti z zakonom. Z zakonom se obresti, cen, tečaja - ne da urejati. Kar se tiče zgodovine, ni dolgo od tega, ko so imeli Švedi 75% obrestno mero, naslednji dan pa 570% obrestno mero. Kje so ti zakoni, ki preprečujejo take obrestne mere v razvitem svetu? Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg124">Še kdo? Prosim, gospod Podobnik.</seg>
             </u>
             <note type="speaker">MARJAN PODOBNIK:</note>
-            <u who="#SSK11.PodobnikMarjan1960" ana="#regular">
+            <u who="#PodobnikMarjan">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg125">Spoštovani! Nasprotujem temu, da bi se zakon o obrestni meri umaknil z dnevnega reda. Poslanci Slovenske ljudske stranke so predložili ta zakon zato, da bi naredili vsaj del tistega, česar ni naredila vlada. Tudi vprašanje, zakaj tega vlada ni naredila, je samo na nek način odprto. V bistvu pa je stvar več ali manj jasna in tudi argumenti gospoda Debeljaka o tem, kaj o zadevi misli Banka Slovenije, samo potrjujejo dejstvo, da je bančni monopol v Sloveniji zvezan z Ljubljansko banko in povezan z Banko Slovenije tako močan, da bo verjetno tudi preprečil zakon, ki bi vsaj delno omilil negativne posledice nerealno visokih obresti. Prepričan sem, da ni direktorja slovenske firme na levici, desnici, kjerkoli, ki želi delati v interesu svojih ljudi in ki ne podpira takih rešitev, ki bi vsaj delno znižale te oderuške obresti.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg126">Preseneča me silno zavzemanje za to, da zakon sploh ne pride na dnevni red. Torej na nek način strah pred razpravo o tej tematiki in pred razgalitvijo namenov, ki pač niso pošteni - to si upam trditi - niso pošteni nameni, ko se skuša preprečiti razprava o zmanjšanju nekega monopolnega položaja nekega segmenta v slovenski družbi.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg127">Glede primerjave z zakonom o sanaciji bank bi rekel naslednje. Zadevo, ki se imenuje zakon o sanaciji bank, kakršen je prišel v parlament, bi mu lahko dali tudi drugačen naslov. Tak zakon kot je, verjamem, da je zakon o sanaciji bank potreben in je tudi namen lahko v osnovi dober, vendar ta zakon bi z enako pravico imenovali zakon o plačilu zapitka starega režima. Ta zakon enostavno želi stvari v celoti pokriti, vsi skupaj bomo stvar potrdili in s tem bi vse zadeve, ki so se v preteklosti plačevale preko slovenskih bank političnim in drugim firmam, bile lepo tudi pokrite.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg128">Pričakujem, da ta zakon ne bo šel in še enkrat, podpiram obravnavo zakona o obrestni meri v zboru in zato tudi nasprotujem, da bi se predlog vlade, da se zakon umakne, sprejel. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR.LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg129">Hvala lepa. Želi še kdo? Če ne, zaključujem razpravo k tej točki.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg130">Prešli bi na glasovanje. Medtem pa so me opozorili na strokovno vprašanje: ali je lahko vlada predlagatelj za umik točke z dnevnega reda, če ni vlada predlagatelj tega zakona? Z drugimi besedami: ali vlada lahko predlaga umik točke, ker ni predlagatelj? Predstavnik poslovniške komisije, gospod Tomažič, prosim. Vlada po poslovniku, kar so me opozorili, lahko da mnenje. Kopač je predlagal, dobro. Ugotovimo navzočnost!</seg>
                <note>47 navzočih poslancev.</note>
@@ -753,67 +749,67 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg142">Bodimo racionalni, kratki, samo tisto, na kar pričakujete odgovor tekom te seje. Gospod Jože Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg143">Spoštovane poslanke in poslanci! Delovanje obveščevalne službe obrambnega ministrstva in vojaške policije v Teritorialni obrambi Slovenije je še vedno povsem izven skupščinskega nadzora. Nadaljuje se nezakonito in nedopustno stanje. Po dolgih razpravah o tem, katero telo naj opravlja nadzor, je bilo sklenjeno, da se ustanovi posebna komisija Skupščine Republike Slovenije za nadzor nad zakonitostjo dela varnostnega organa v ministrstvu, pristojnem za obrambne zadeve, in vojaške policije v Teritorialni obrambi Slovenije. Odlok o ustanovitvi, nalogah, sestavi in številu članov te komisije je bil objavljen v Uradnem listu RS, št. 14 tega leta. Komisija Skupščine Republike Slovenije za volitve, imenovanja in administrativne zadeve je na seji dne 11. maja 1992 predlagala kandidatno listo za izvolitev predsednika, podpredsednika in članov omenjene komisije. Ko je ta predlog že bil na dnevnem redu seje skupščine in ko bi se moralo pristopiti k izvolitvi, je poslanec Ljudske stranke Janez Lukač nastopil z zahtevo, da mora predsednik te komisije biti iz vrst poslancev opozicije. S to njegovo intervencijo se je postopek izvolitve na omenjeni seji zaustavil. Po tem se ni mesece in mesece ničesar ukrepalo in danes, 7. oktobra moram, žal, ugotoviti, da komisija še vedno ni konstituirana, da torej ne deluje in da je posledično temu celotna služba varnostnega organa v obrambnem ministrstvu in delovanje vojaške policije v Teritorialni obrambi Slovenije še vedno povsem izven skupščinskega nadzora. Sprašujem se, koliko časa bomo tolerirali takšno nelegalno in nelegitimno stanje.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg144">Predsednika skupščinske komisije za volitve, imenovanja in administrativne zadeve naprošam za pojasnilo, zakaj se o znani intervenciji poslanca Lukača komisija ni opredelila in zakaj ni eventualno pripravila novega kadrovskega predloga za sestavo te komisije. Kajti bistvena stvar je, da ta komisija mora biti konstituirana da deluje.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg145">Prav tako predlagam, da bi Družbenopolitični zbor sprejel sklep, da se mora nemudoma konstituirati Komisija za nadzor nad zakonitostjo dela varnostnega organa v Ministrstvu za obrambo in vojaške policije v Teritorialni obrambi Slovenije. Takšen sklep naj bi se posredoval tudi Zboru občin in Zboru združenega dela. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg146">Hvala. Glede zadnjega predloga moram povedati, da pri sami točki "Vprašanja in pobude" ni predvideno sprejemanje sklepov; šele, če je odgovor tak, da je poslanec z njim nezadovoljen, potem lahko terja razpravo in uvrstitev na dnevni red kot neke vrste točke in potem sklepanje. Toliko, da ne bi bilo nesporazumov.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg147">Besedo ima gospa Zdenka Vidovič.</seg>
             </u>
             <note type="speaker">ZDENKA VIDOVIČ:</note>
-            <u who="#SSK11.VidovicZdenka" ana="#regular">
+            <u who="#VidovicZdenka">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg148">Spoštovani! Podala bom pobudo. S pošiljko delegatskega gradiva za 47. sejo DPZ, datirano z dne 25.9.1992, smo poslanci prejeli tudi predlog za izdajo zakona z osnutkom zakona o revidiranju, s pripisom, za gre za gradivo za naslednjo sejo DPZ. V tem času smo dobili tudi sklic 48. seje DPZ za 14.10., s šestimi točkami dnevnega reda, vendar tega zakona ni na dnevnem redu. Ker gre za zakon, ki ga v Republiki Sloveniji nujno potrebujemo, saj zakon podrobno ureja področje, ki ga v Sloveniji zakonsko še nimamo urejenega - vsaj tako podrobno ne - in ker gre za zakon, ki bo hkrati tudi omogočil ustanavljanje podjetij za revidiranje v Sloveniji - moram povedati, da se SDK intenzivno pripravlja za ustanovitev takšnega podjetja - dajem pobudo, da uvrstimo zakon o revidiranju z osnutkom na dnevni red naslednje seje, to je za 48. sejo DPZ.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg149">Svojo pobudo naslavljam tudi na predsednika ostalih dveh zborov in predlagam, da tudi ona dva uvrstita ta zakon na seje, sklicane za 14. oktobra. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg150">Hvala. Tudi tu lahko nekaj takoj pojasnim: o dnevnem redu se dogovarjajo predsedniki zborov in oni so se dogovorili, da naj bi ta tema bila na obravnavi tiste seje, ki bo imela cel kompleks gospodarskih, bančnih itn. zakonov - to je predvidoma 28. tega meseca. Tako da to ni pozabljeno.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg151">Besedo ima gospod Tomšič.</seg>
             </u>
             <note type="speaker">FRANCE TOMŠIČ:</note>
-            <u who="#SSK11.TomsicFrance1937" ana="#regular">
+            <u who="#TomsicFrance1937">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg152">Hvala lepa. Spoštovane poslanke in poslanci! Kar bom sedaj povedal, ni prvič sproženo v skupščini, vendar je še vedno tako aktualno, kot je bilo pred tremi meseci. V imenu Sindikata neodvisnosti- Konfederacija novih sindikatov Slovenije kot tudi v lastnem imenu dajem pobudo da Vlada Republike Slovenije nemudoma reši problem v zvezi s sedaj že anarhičnim stanjem samodoločanja plač direktorjev v družbenih podjetjih.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg153">Znano je, da je vlada pred tremi meseci obljubila, da bo ta problem rešila. Do danes ni bilo narejeno nič. Zato s tega mesta apeliram na predsednika Vlade Republike Slovenije, dr.Janeza Drnovška, ki se vedno javno zavzema za socialno, tržno gospodarstvo, naj se vlada nemudoma loti tega problema. V nasprotnem primeru bo vlada morala prevzeti vso odgovornost za stavkovne nemire, ki se že konkretno napovedujejo - posebno v Mariboru. Nevzdržno je, da se nekatere direktorske strukture preko svojih marionetnih upravnih odborov v delniških družbah - ki to niso, saj so 99 % v družbeni lasti - to je treba poudariti -, samodoločajo plače, torej mimo nadzornih odborov, ki so po naših podatkih tudi do 20-krat večje od delavskih plač. Poleg tega so te plače zakrite v "šlajer" tajnosti, čeprav nimamo nobene zakonske podlage za to.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg154">Trdno sem prepričan, da nas lahko samo zakon o določanju višine plač poslovodnim strukturam, ki bo sprejet po hitrem postopku in ki bo v prehodnem obdobju, torej dokler podjetja ne dobijo pravega lastnika in tudi nadzornega odbora, urejal plače v skladu z uspešnostjo podjetja, z velikostjo podjetja in s spoštovanjem kolektivnih pogodb. To so trije glavni kriteriji, iz katerih bi moral ta zakon izhajati.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg155">Vlada se mora pač zavedati, da tega problema ne more rešiti Gospodarska zbornica Slovenije s splošno formuliranimi priporočili niti ne s kolektivno pogodbo, kot so predlagali nekateri sindikati, saj vemo, da se kolektivne pogodbe ne spoštujejo. Rešitev je torej samo v sprejetju ustreznega zakona, ki bo vključeval tudi kazenske določbe in izterjatve torej. Samo zakon je tisti, ki nas bo obvaroval socialnih nemirov. Tukaj apeliram posebno tudi na gospoda Žaklja, ki je podpredsednik v vladi, ki je zadolžen za te stvari. Lahko mu sporočim od tukaj, da smo vsi sindikati Slovenije sprejeli predlog socialnega pakta, v katerem je seveda tudi ta zahteva. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg156">Hvala. Gospod Gošnik.</seg>
             </u>
             <note type="speaker">VANO GOŠNIK:</note>
-            <u who="#SSK11.GosnikVane1953" ana="#regular">
+            <u who="#GosnikVane1953">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg157">Hvala lepa. Rad bi sporočil poziv Vladi Republike Slovenije. Na včerajšni okrogli mizi o položaju hrvatske energetike na hrvaški televiziji sta hrvaški minister za energetiko in direktor Elektro-privrede Hrvaške nonšalantno in celo z markantnim nasmeškom izjavila, da Hrvaška dolguje za dobavo elektrike iz JE Krško Sloveniji več kot milijardo slovenskih tolarjev. Te elektrike po njunih izjavah ne plačuje preprosto za to, ker tega ne more storiti. Vlado Slovenije zato pozivam, da od Hrvatske nemudoma izterja ta dolg oz. napove prekinitev dobav električne energije iz Jederske elektrarne Krško. To dejstvo pa uporabi tudi v bilateralnih pogajanjih z Vlado Republike Hrvaške. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg158">Hvala. Gospa Pozsonec.</seg>
             </u>
             <note type="speaker">MARIA POZSONEC:</note>
-            <u who="#SSK11.PozsonecMaria1940" ana="#regular">
+            <u who="#PozsonecMaria">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg159">Spoštovani! Jaz bi posredovala tri poslanske pobude. Ministrstvu za šolstvo ter telesno kulturo dajem pobudo, da spremeni pogoje glede sprejema v delovno razmerje na dvojezičnih šolah. Zakonska določila za bodoče dvojezične učne moči predpisujejo znanje madžarskega jezika na srednji stopnji. Nekateri študentje to pridno izkoriščajo in ne obiskujejo predavanj iz madžarščine na fakultetah, saj to ni potrebno. Smatram, da znanje iz madžarščine na srednji stopnji ni dovolj za bodoče kadre dvojezičnih šol, zato je treba spremeniti pogoje za sprejem v službo.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg160">Vladi Republike Slovenije predlagam, da pripravi in da da v proceduro zakon o posebnih pravicah narodnosti. V Lendavi se bojimo, da bomo brez tega sistemskega zakona težko izvajali oz. uresničevali naše narodnostne pravice, predvsem, kot na primer, pri nastajanju novih občin. Zato smatramo, da je zelo nujno pristopiti k izdelavi te zakonodaje oz. moram pripomniti, da je zelo velika napaka, da je nismo naredili in je nismo sprejeli do sedaj.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg161">In še eno. Upokojenci z najnižjimi pokojninami se zelo težko preživljajo. Proceduralno povišanje pokojnin jim ne prinese večje vsote. V interesu upokojencev z najnižjimi pokojninami predlagam, da bi se uvedel takšen sistem, ki bi zagotavljal takšno valorizacijo pokojnin, ki bo omogočala človeku dostojno življenje. Predlagam torej višjo valorizacijo nizkih pokojnin. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg162">Hvala. Gospod Tomažič.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg163">Hvala. Poslanski klubi opozicijskih strank smo v svoji izjavi z dne 21. septembra ugotovili, da se po zakonu o političnem združevanju iz proračuna lahko financirajo le tiste politične organizacije, ki so sodelovale na volitvah, njihovi kandidati pa so bili izvoljeni za delegate v Družbenopolitični zbor (takšno je tudi pismeno stališče Ministrstva za zakonodajo z dne 17. februarja 1992), da obstaja popolna in izključna pravna kontinuiteta med SDZ in SDZ-Narodno demokratsko stranko, medtem, ko se je Demokratska stranka popolnoma na novo ustanovila več kot eno leto po volitvah, da je minister za finance v sodelovanju z ministrom za pravosodje samovoljno in v nasprotju z zakonom spremenil razmerje financiranja političnih strank in ob tem Narodni demokratski stranki odvzel tri četrt dosedanjih sredstev, da je bil omenjeni ukrep izveden nedosledno in pristransko saj Narodni demokratski stranki sredstva niso bila odvzeta od trenutka izstopa nekaterih poslancev, to je bilo oktobra 91, niti niso bila dodeljena vsem parlamentarnim strankam na njihovo zahtevo, čeprav imajo poslance v Družbenopolitičnem zboru, da predstavljajo samovoljni ukrep navedenih ministrov tudi veliko zmanjšanje veliko materialne podlage za nastopanje v predvolilni kampaniji tako Narodne demokratske stranke kot tudi pozicije v celoti. Na naše veliko zadovoljstvo je bilo na današnjem sestanku med predstavniki teh poslanskih klubov, vlado in vodstvom skupščine narejen prvi korak v rešitev tega problema.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg164">In sicer smo ugotovili, da so podatki, katere je poslal generalni sekretar ministru za pravosodje temeljili le na neuradnih podatkih skupščinskih služb KVIAZ-a, medtem ko je lahko pravna podlaga za kakršno koli spremembo v financiranju političnih strank le uradni dokument, takšen kot je bil tudi osnovni. Osnovni dokument pa je bil poročilo republiške volilne komisije in na podlagi tega ugotovitev zbora na podlagi poročila mandatno imunitetne komisije o konstituiranju tega zbora, torej Družbenopolitičnega zbora. Ta stvar se lahko tudi spremeni, ampak samo s spremembo teh zadev; torej bi se na pobudo kogarkoli sestala mandatno imunitetna komisija in predlagala spremembo tega akta o konstituiranju glede strukture strank, ki so zastopane v Družbenopolitičnem zboru.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg165">Zaradi tega je generalni sekretar poslal danes ministru za pravosodje naslednji dopis: "Dne 7. julija 92 sem vam na vašo zahtevo z dne 29. junija 1992 poslal podatke o tem, koliko političnih strank je zastopanih v Družbenopolitičnem zboru Skupščine Republike Slovenije in koliko poslancev ima posamezna stranka v Družbenopolitičnemu zboru Skupščine Republike Slovenije. Obveščam vas, da temeljijo podatki, ki sem vam jih poslal na evidenci strokovne službe Komisije za volitve, imenovanja in administrativne zadeve in ne na ugotovitvi pristojnega telesa Skupščine Republike Slovenije. Zaradi tega, teh podatkov ni mogoče smatrati kot nesporno podlago za kakršnokoli ukrepanje pristojnih državnih organov." Zaradi tega pričakujemo, da bo vlada takoj opravila ukrep, ki ga je sprožila julija in prosimo, da se to stori še danes, da se naši stranki nakažejo sredstva tako, kot veljajo po sedaj veljavnem zakonu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg166">Hvala. Gospod Buser.</seg>
             </u>
             <note type="speaker">DR. STANKO BUSER:</note>
-            <u who="#SSK11.BuserStanko1932" ana="#regular">
+            <u who="#BuserStanko1932">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg167">Spoštovani! Imam poslansko pobudo za vlado in pa poslanska vprašanja. In sicer vprašanje se glasi takole: Zakaj vlada oziroma Ministrstvo za varstvo okolja in urejanje prostora v zvezi s pripravo gradnje tovarne usnja v Gočevi pri Lenartu, kljub številnim urgencam občine Lenart še ni podala mnenja k dopolnitvam dolgoročnega in srednjeročnega plana občine. Za kaj gre? V občini Lenart, ki je bila do nedavnega na repu svojega razvoja, je prišlo do tega, da je večji del podjetij propadlo. Trenutno imajo 1.200 ljudi na cesti oziroma jih čaka na delo, kar predstavlja že 25% produktivnega prebivalstva. Do konca leta grozi, da jih bodo imeli 2.000. Glede na to se je občina Lenart odločila, da da možnost firmi Schmidt iz Avstrije zgraditi tovarno usnja. Glede na to so izvedli še vse pripravljalne faze (glede zemljišč, glede posega v prostor, glede hidroloških problemov na reki Pesnici in Velki) in to je bilo dostavljeno Ministrstvu za varstvo okolja in urejanje prostora. Kljub številnim urgencam to ministrstvo oziroma vlada do danes še ni odgovorila oziroma dala negativnega ali pozitivnega mnenja.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg168">Lahko omenim, da sem si ob priliki strokovne ekskurzije ogledal že obstoječo tovarno firme Schmidt v Feldbachu v Avstriji, ki bi postavila tudi pri nas podobno tovarno, z enako, še modernejšo tehnologijo. Na tej ekskurziji sem ugotovil z drugimi strokovnjaki, da delajo oziroma da imajo tovarno, ki je okolju zelo nenevarna, da tovarno vodijo popolnoma računalniško, da je kontrolirana izplaka, ki prihaja iz te tovarne na trikratne načine in da je firma Schmidt v Avstriji prejela že več državnih odlikovanj za pravno in ekološko varno obratovanje.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg169">Zato menim, da bi bilo pomembno, preden bi vlada izdala svoje mnenje, da si ljudje, ki se ukvarjajo s to problematiko gredo pogledati neposredno objekt, ki tam že stoji in potem napravijo svojo oceno. Eno ali drugo. Menim, da je na ta način, ker vlada sedaj ni opravila oziroma Ministrstvo za varstvo okolja neposredno, neodgovorno - pa naj bo mnenje takšno ali drugačno. To je bilo vprašanje.</seg>
@@ -821,20 +817,20 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg171">Vlada naj že vendar odgovori na mojo poslansko pobudo z dne 15.6.1992 o problematiki inšpekcije za jedrsko varnost in izpolni svoje lastne ugotovitve v njenem odgovoru na mojo pobudo z dne 13/5 tega leta. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg172">Hvala. Gospod Lampret.</seg>
             </u>
             <note type="speaker">JANEZ LAMPRET:</note>
-            <u who="#SSK11.LampretJanez" ana="#regular">
+            <u who="#LampretJanez">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg173">Spoštovani zbor! Postavljam poslansko vprašanje Vladi Republike Slovenije. V 74. členu ustave Republike Slovenije je določeno, da pogoje za ustanavljanje gospodarskih organizacij določa zakon. Skladno s to določbo bi moral zakon urejati vprašanja v zvezi z ustanavljanjem in delovanjem podjetij na področju gospodarske infrastrukture oziroma velikih tehnoloških sistemov, ki imajo v svoji dejavnosti tudi določene zadeve javnega pomena. V teh podjetjih se upravljanje ureja po 44. členu ustave Republike Slovenije tako, da ima vsak državljan pravico, da v skladu z zakonom neposredno ali po izvoljenih predstavnikih sodeluje pri upravljanju javnih zadev.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg174">Postavljam naslednje vprašanje. Glede na to, da je Vlada Republike Slovenije z odlokom o spremembah in dopolnitvah odloka o ustanoviti javnega podjetja za področje dejavnosti železniškega prometa (Ur.l. 33/92) določila, da se oblikuje v javnem podjetju za področje dejavnosti železniškega prometa upravni odbor, ki naj bi izvajal upravljalsko funkcijo v tem podjetju, nastaja vprašanje, ali je v tem primeru Vlada Republike Slovenije upoštevala pri sprejemanju navedenega odloka omenjena ustavna določila. Ali s tem odlokom ni Vlada Republike Slovenije prekoračila ustavna pooblastila s tem, da je odločala o zadevah, ki se po določbah ustave Republike Slovenije urejajo z zakonom, za katerih sprejemanje je izključno pristojna Skupščina Republike Slovenije oziroma po volitvah državni zbor? Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg175">Hvala. Gospod Janko Halb.</seg>
             </u>
             <note type="speaker">JANKO HALB:</note>
-            <u who="#SSK11.HalbJanko1957" ana="#regular">
+            <u who="#HalbJanko1957">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg176">Spoštovane poslanke in poslanci, lepo pozdravljeni! Moja poslanska pobuda številka 1 se nanaša na 65. člen ustave. Ta člen pravi takole: "Položaj in posebne pravice romske skupnosti, ki živi v Sloveniji, ureja zakon." Zakaj sem citirani člen ustave vgradil v svojo poslansko pobudo? V občini Murska Sobota živi več kot polovica predstavnikov Romov, ciganov v Sloveniji in kot taka skupina predstavlja precejšen tako socialen, ekonomski, kulturen, izobraževalni in na sploh problem, ki ga občina sama in pa tudi Romi, kot neposredno zainteresirani subjekti, ne moremo razrešiti. Zato je Skupščina občine Murska Sobota uvrstila problematiko o razreševanju romske problematike s celotno analizo in pregledom stanja na svojo sejo in med drugim zavezala poslance, ki iz tistega konca prihajamo, da v republiškem parlamentu iniciramo realizacijo zakonskega postopka iz 65. člena ustave. Zato na tem mestu izrekam že kritiko prejšnji in sedanji vladi, da se tega ni spomnila in dajem obenem pobudo, da se to čimprej opravi, da bi bila ta ustavna pravica Romov realizirana.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg177">Drugo vprašanje ali prošnja je vezana na razpravo iz današnjih točk dnevnega reda, to je recimo odnosi z Republiko Madžarsko. Svoje vprašanje bom ilustriral na živem primeru. Problem je v tem. Kaj je slovenska država, ustrezna pristojna ministrstva, storila za zaščito slovenskih državljanov v tistem trenutku, ko se nahajajo v Republiki Madžarski. Za kaj v bistvu gre? Pred dvema mesecema je družina iz naše občine šla na turistično potovanje po Madžarski in šofer, voznik osebnega avtomobila, je povzročil prometno nesrečo s takojšnjim smrtnim izidom in čez tri tedne še s smrtjo druge osebe. Temu vozniku je bil na licu mesta odvzet potni list in omejeno gibanje. Sedaj je minilo že dva meseca kar ta oseba na lastne stroške biva na omejenem področju županije Zalegersek. Stike s svojci sicer ima, vendar samo na ozemlju Republike Madžarske, na tem ožjem okrožju. Dodatno k nemogoči psihozi tega človeka povzroča zapretena kazen do 10 let zapora zaradi prometnega prekrška. Moram povedati, da je človek iz nepazljivosti verjetno prevozil znak stop. Vse urgence, ki so jih svojci, kot mi iz občine poslali našemu veleposlaniku v Republiki Madžarski, gospodu Hajošu in tudi preko kontaktov z zunanjim ministrstvom, enostavno ne zaležejo, ker manjka temeljni sporazum o ratifikaciji tistih obveznosti, ki jih je imela Jugoslavija, kar sedaj prevzema Slovenija, to je sedaj o medsebojni izročitvi državljanov. 20. bo verjetno, tako je obljubljeno, vložena obtožnica, do takrat pa je ta človek v hišnem zaporu in brez perspektive, da mu kdo sploh lahko pomaga. Zato apeliram na zunanje ministrstvo, da nemudoma takoj ukrene vse, kar je v interesu Republike Slovenije in kar je možno za zaščito naših državljanov.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg178">Tretje vprašanje se nanaša na delo tako vlade kot neposredno Ministrstva za kmetijstvo, gozdarstvo in prehrano. Nikdar ni prepozno sprožiti tudi vprašanje o pristopu in ukrepih, ki jih je slovenska vlada sprejela za sanacijo suše in vročine v območjih, ki jih je zaradi kmetijske problematike prizadelo v nekaterih krajih Slovenije. Sklicujem se na tri dokumente, ki so v bistvu legitimni, vendar, grobo rečeno, manipulativni. V prvem dokumentu, to so ugotovitve, sklepi in predlogi, ki jih je vlada sprejela 25.8 je med sklepi pod 2. točko zapisano, da Republiška direkcija za blagovne rezerve takoj sprosti 10.000 ton koruze in jih razdeli zaradi suše najbolj ogroženim živinorejcem. Poudarjam, besedo "razdeli". Vsi laiki menimo, da je razdelitev zastonj. Za realizacijo teh ukrepov so sledila razna obvestila, telefaksi s strani ministra in 3.9, to je naslednji, glasi takole: "Upravičenci dobijo koruzo iz silosa republiških rezerv brezplačno." Konec citata, to je iz tega teleksa. 10.9, pred tem je podpisal minister za trgovino, v tem faksu je pa ministrstvo za kmetijstvo. Tu piše tako: "To pa pomeni, da se dosedanja pomoč smatra le kot akontativna in se zato razdeljena koruza posebej evidentira kot obliko brezobrestnega kreditiranja." Če ste to razumeli menim, da uvidevate, da gre za navadno manipulacijo. Ko v začetku kmetom odobriš neka sredstva, materialne dobrine, živinsko hrano brezplačno, naj to vzamejo, potem pa pošlješ faks, da je to akontacija brezobrestnega kredita. Konkretno gre za slab odnos ali pristop do kmetijstva, do te problematike, ki jo je povzročila suša. Navidezno gre za to, da je vlada namenila 1,5 milijarde sredstev za sanacijo škode po suši. Vendar za kaj gre? Gre za preusmeritev proračunskih sredstev, ko je vlada denar za regresiranje obrestnih mer vzela iz enega konca in ga navidezno dala za sanacijo suše. Še dodatno zaostruje zadevo angažiranje 400 milijonov sredstev iz solidarnosti, ki jih je vlada odpoklicala, torej da so zavezanci morali to vplačati, to pa v bistvu daje kot akontacijo brezobrestnega kredita.</seg>
@@ -843,24 +839,30 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg181">Zakaj to ponovno sprašujem? Na nekatera vprašanja človek dolgo ne dobi odgovora, na nekatera dobi en odgovor, jaz sem pa na isto vprašanje dobil dva identična odgovora s tem, da ima en dodatno številko 319. Sprašujem se zakaj? Zakaj sem postavil to vprašanje. Odgovor je v bistvu povzetek stanja in postopkov do tik pred izrekom sodbe, ki jo je izreklo Temeljno sodišče v Lenartu. Sklicujem se na ta naslov, ki je bil objavljen v Mladini, številka 35 iz 15. septembra, ko gospod Ivan Bukovnik, ki je bil odvetnik Petra Rotarja, pravi: to je bil politični proces. Jaz sem to prebral, analiziral, tudi sem primerjal s tektom, ki mi ga je gospod Miha Kozinc posredoval, nekaj sem dal kot pobudo na komisijo za nadzor nad bivšo UDBO in enostavno so trditve gospoda odvetnika take, da bi ministrstvo, zdaj povzete so po intervjuju, ki ga je imela novinarka Melita Zajc, Mladinina, take, da bi pravosodje ali kdor je bil tu tangiran, moral reagirati. Ker pa reagiranja ni, lahko laično menim, da so trditve gospoda odvetnika korektne, realne in legitimne in tisto kar sem v vprašanju zastavil, da je domišljija Slovencev neskončna, potrjuje to tezo, da gospod Rotar, ki je bil obsojen na osnovi priznanja, enostavno tega zločina ni zagrešil. Argument v tem sestavku so bistveno različne izjave balista, torej strokovnjaka za potovanje izstrelka, in pa patologa, ki je izvršil obdukcijo. Eni pravijo, da je šlo za prestrel, drugi pravijo, da je šlo za spremembo smeri krogle. Ena trditev napotuje to, da sta šla v gospoda Krambergerja najmanj dva strela, drugi, da je samo eden in izključno možen od gospoda Rotarja. Lepo bi prosil, da me na Ministrstvu za pravosodje še naprej, tako kot dosedaj, seznani kaj je dejansko res in kaj ne. Na drugi strani bi pa prosil, da nekdo, če je taka trditev, reagira, ker sicer priznava krivdo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg182">Hvala. Gospod Tomše je še prosil za besedo.</seg>
             </u>
             <note type="speaker">IVAN TOMŠE:</note>
-            <u who="#SSK11.TomseIvan1942" ana="#regular">
+            <u who="#TomseIvan1942">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg183">Hvala lepa, gospod predsedujoči. Jaz bi rad izkoristil to kot urgenco. Namreč, 17.8.1992 leta sem poslal Družbenopolitičnemu zboru zahtevo, da naj mi vlada odgovori v zvezi z izplačilom deviznih vlog. Ker pa imamo na dnevnem redu tudi sanacijo bank in gre za izjemno povezane zadeve, kajti po mojem vprašanju gre za vprašanje, ali bo vlada pustila, da bo vsak individualni varčevalec, ki ima vezane in zavezane devize v banki, moral sprožiti spore na sodiščih. Ti spori so že dobljeni; to pomeni, na prvi in drugi instanci je sodišče odločilo, da ni zakonite podlage za zadrževanje deviz. Torej vlada ni ukrepala še nič, kolikor sem seznanjen, v zvezi z zadrževanjem deviz v bankah. Prišla je samo s predlogom zakona o sanaciji bank. Se pravi, da se je vlada postavila na stališče bank, ne pa na stališče državljanov Slovenije, ki imajo "zamrznjen" kapital v bankah. Zato bi prosil, če je možno, da vlada to moje pisanje iz 17.8.1992 zelo hitro prouči, uskladi odgovor v smislu sodne prakse in pove, ali bo vlada ukrepala ali pa morajo vsi državljani, ki imajo zamrznjene vloge, stopiti do najbližjega odvetnika, najeti odvetnika, stopiti na sodišče in preko sodišča izterjati svoje devize, ki so jim trenutno zablokirane v bankah. Gre za zelo pomembno vprašanje za državljane Slovenije, zato resnično prosim, da čimprej, če je možno že v teku tega zasedanja, če ne pa čimprej, dobim odgovor na to vprašanje. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton"
+               xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.u65"
+               next="#SSK11-DruzPolZb.1992-10-07.s047-01.u67"
+               ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg184">Hvala. Lista prijavljenih za to predtočko je izčrpana.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg185">Dolžan sem zbor naknadno obvestiti, ker smo tudi mi naknadno bili obveščeni, da se je za to sejo opravičil tudi gospod Peterle. Potem bi pa prosil, da bi zbor še imenoval komisijo za usklajevanje dnevnega reda, kar smo prej po sprejemu dnevnega reda pozabili, ker je mogoče pričakovati, da bo prišlo do neusklajenosti.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg186">Prosim za predloge za komisijo za usklajevanje dnevnega reda. Andrej Žorž. Prosim za nadaljnje predloge. Še štiri predloge rabimo. Gospod Grims ne želi. Prosim še štiri predloge, take; ki se strinjajo. Gospod Magajna Andrej. Gospod Reberc je predlagan. Gospod Reberc ne želi. Magajna je že predlagan, Magajna ne oporeka.</seg>
             </u>
             <note type="speaker">Glas iz klopi:</note>
-            <u who="#SSK11.unknown" ana="#unauthorized">
+            <u who="#unknown">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg187">Oporeka.</seg>
             </u>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton"
+               xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.u67"
+               prev="#SSK11-DruzPolZb.1992-10-07.s047-01.u65"
+               ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg188">Magajna ne želi. Še štiri predloge prosim. Kakšne posebne volje ne vidim, da bi usklajevali dnevni red. Boris Gerl je predlagan v komisijo za usklajevanje dnevnega reda. Še koga kdo predlaga? Če ne, ne moremo glasovati. Tomše. Tomše ne. Prav. Ali potem preložimo imenovanje te komisije? Zdaj bi morali preiti na 1. točko dnevnega reda, vendar moram ugotoviti, da zbor ni sklepčen.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg189">Prosim, da ugotovimo navzočnost.</seg>
                <note>31 navzočih.</note>
@@ -868,7 +870,7 @@
             </u>
             <note type="time">Seja je prekinjena ob 13.00 uri in se je nadaljevala ob 14.40 uri.</note>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg191">Spoštovane poslanke in poslanci, ugotovimo navzočnost.</seg>
                <note>39</note>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg192">Prosim vodje poslanskih klubov, da v 5 minutah omogočijo sklepčnost.</seg>
@@ -921,11 +923,11 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg223">Gospod Tone Peršak ima proceduralen predlog.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg224">Pravkar smo izvedeli, da so tudi ostali zbori opravili glasovanje o usklajevalnih predlogih za zakon o strankah in volilni kampanji in da zbori niso usklajeni med seboj. Predlagam, da naš zbor predlaga takoj sklic skupne delovne seje za uskladitev pri teh dveh zakonih, zato da bi po možnosti to še danes opravili, če se seveda zbor s tem strinja.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg225">Hvala lepa. Predlog proceduralnega značaja gospoda Peršaka dajem na glasovanje, da predlagamo drugim zborom sklic skupne delovne seje za oba zakona.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg226">Kdor je za, naj prosim glasuje.</seg>
                <note>44 poslancev.</note>
@@ -939,15 +941,15 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg232">Predstavnik vlade k tej točki je navzoč. Želi besedo? Ne. Želijo besedo poročevalci delovnih teles? Ne. Odpiram razpravo k tej točki. Prosim lepo. Gospod Magajna.</seg>
             </u>
             <note type="speaker">ANDREJ MAGAJNA:</note>
-            <u who="#SSK11.MagajnaAndrej1952" ana="#regular">
+            <u who="#MagajnaAndrej">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg233">Mnenja komisije niste dobili na mizo, ker to ni matično telo, zato bom na kratko predstavil. Na včerajšnji razpravi Komisije za invalide je bilo poudarjeno, da je področje invalidskega varstva izrazito interdisciplinarno, zato mora vlada v okviru svojih pristojnosti poskrbeti za njegov usklajen razvoj na posameznih področjih, k čemur jo zavezuje tudi strategija razvoja invalidskega varstva v Sloveniji. Zato komisija predlaga, da vlada na podlagi 35. člena tega zakona ustanovi urad za invalide pri Vladi republike Slovenije, možno sicer tudi pri pristojnem ministrstvu, vendar se komisija bolj zavzema za ustanovitev tega urada pri vladi. Še naprej pa naj opravlja komisija za invalidsko varstvo pri Vladi Republike Slovenije konkretne naloge pri uresničevanju razvojne strategije in usklajevanju politike ter povezovanju vseh nosilcev družbene skrbi za invalide. Komisija je tudi menila, da je naslov Republiške uprave za vojne veterane iz 41. člena preozek in da ga je treba dopolniti tako, da bi se glasil: Republiška uprava za vojne veterane in žrtve vojne.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg234">Hvala lepa gospodu Magajni. Še kdo od poročevalcev delovnih teles? Če ne, odpiram razpravo. K besedi se javlja gospod Dušan Semolič.</seg>
             </u>
             <note type="speaker">MAG. DUŠAN SEMOLIČ:</note>
-            <u who="#SSK11.SemolicDusan1947" ana="#regular">
+            <u who="#SemolicDusan1947">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg235">Spoštovani! Prav gotovo je koristno, da pri sprejemu tega zakona pogledamo po nekaterih rešitvah po Evropi in vsaj v enem delu mislim, da ponujeno besedilo vzdrži primerjave. V mislih imam sestavo vlade oziroma število ministrstev. Seveda, če se ne primerjamo z mini državami - Andoro, Monakom, Vatikanom in San Marinom - lahko rečemo, da vlade v Evropi štejejo povprečno 13 do 14 ministrskih resorjev. Sploh število ni odvisno od velikosti države. Belgija ima 21 ministrstev, Danska 20, Grčija 19, pa še bi lahko to utemeljeval. Poleg teh klasičnih ministrstev: obrambe, financ, mednarodnih odnosov, pravosodja, notranjih zadev, ni nekega splošnega pravila, kjer bi rekel - tako bodi tudi pri nas. Zagotovo ne more biti kriterij potrebe strank, pač pa potrebe prebivalcev, cilj razvojne strategije, splošni problemi, problemi za katere vemo, da je dobro, da v vladi obstoji še zlasti za to poklican minister, ki bo skrbel za to področje. Glede na to menim, da je ponujena sestava ministrstev, torej ne število ministrov, ampak ponujena sestava nekako primerna; ker tudi vem, da bolj od števila ministrstev je vsa stvar odvisna od sposobnosti ministrov in še kaj, kar je povezano z vlado.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg236">Pač pa bi vendarle predlagal, da se v tej ponudbi teh ministrstev loči ministrstvo za pravosodje od uprave. Tule nam lahko Evropa služi za zgled. Praktično skoraj ni države v Evropi, ki pozna to fuzijo ministrstva za pravosodje in upravo. To je praviloma ločeno. Sploh je ministrstvo za pravosodje neko klasično področje. Pa bi lahko našteval države, mislim, da ni potrebno. Lahko bi samo izjeme naštel. Med izjemami je Švica, ker ima združeno pravosodje in pa bivša Jugoslavija, ki je imela od dvanajstih ministrstev skupaj ministrstvo za pravosodje in upravo. Potem pa nastane zadrega pri naštevanju držav, ki bi to združevala in vredno je v tem delu evropski praksi slediti. Sem za delitev preprosto tudi zaradi zapisanega ustavnega načela delitve sodne, zakonodajne in izvršilne oblasti. Če hočemo, da je pravosodje resnično samostojno, mislim da je ta delitev nujno potrebna. Tudi naši kolegi in kolegice iz pravosodja nas na to opozarjajo, zahtevali so od nas in je zdaj prilika, da temu prisluhnemo. To, da bi delili, to še ne pomeni, da bi imeli eno ministrstvo več. Namreč jaz odpiram kot dilemo, ali je potem potrebno imeti ministrstvo za upravo, kot dilemo odpiram. Čeprav v Evropi, če mi spet lahko Evropa služi kot primer za to, poznamo Španijo, Švedsko, kjer obstoje ministrstva za javno upravo, potem je pa spet kar praznina, da bi poiskali državo, ki ima poseben resor za upravo. Skratka bolj kot za ukinjanje tega sem za delitev pravosodja in uprave. To je težišče mojega predloga.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg237">Naslednja pripomba se dotika predloga, da bi bil Zavod za statistiko vladna služba, torej zavod za statistiko vladna služba, se predlaga v tem tekstu. No, temu nasprotujem. Mislim, da bi ogrozilo strokovno samostojnost dela tega zavoda. Preprosto, izsledke, študije, analize Zavoda za statistiko ne bo uporabljala, in že sedaj ne uporablja, zgolj vlada. In če hočemo zaupati tem podatkom, pa nam vsem služi zaradi mnogih stvari, ko ti podatki prihajajo v javnost, mislim, da to ni dobro. Skratka sem za to, da se poišče neka druga rešitev.</seg>
@@ -955,11 +957,11 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg239">Toliko. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg240">Hvala lepa gospodu Semoliču. Gospod Jože Smole. Prosim, četrti po vrsti po prijavah.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg241">Predlog za izdajo zakona o vladi bi morala pripraviti že prejšnja vlada. Za zamudo na tem področju je še posebej kriv tedanji minister za pravosodje dr. Pirnat. Končno je v skupščinsko proceduro prišel osnutek zakona o vladi. Po mojem mnenju je v celoti vzeto dober. Imam pa nekaj konkretnih pripomb.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg242">Vlada bi morala biti racionalna in učinkovita. To bi moralo biti osnovno vodilo pri koncipiranju zakona o vladi. Ponujeni osnutek zakona o vladi se v nekaterih bistvenih zadevah močno oddaljuje od takšnega načela. Dopušča namreč, da bi vlada lahko imela tri podpredsednike in tri ministre brez resorja. Mislim, da si takšnega luksuza ne moremo dovoliti. Po določilih 39. člena osnutka zakona bi vlada lahko imela skupaj s predsednikom 21 članov. Menim, da je to absolutno preveč in da je nemogoče tudi zagotavljati neko kolektivno delo vlade pri takšni številčni sestavi. Obrazložitev, da so trije podpredsedniki vlade potrebni zaradi učinkovite koordinacije dela posameznih ministrstev, resorjev, je, po mojem, povsem neutemeljena. Koordinacija vseh resorjev je naloga predsednika vlade, ki mora zagotoviti dosledno izvajanje politike in stališč vlade. Zato mislim, da je dovolj v vladi en podpredsednik, ki naj bi v odsotnosti predsednika vlade tudi opravljal posle premiera. Zavzemam se za pravega podpredsednika in mislim, da je v tem primeru lahko samo eden podpredsednik. Ni mi jasno, zakaj bi vlada lahko imela tri ministre brez resorjev. Kaj naj bi delali ministri brez listnice oziroma brez resorja? Ali je pri tako koncipirani vladi - trije podpredsedniki in trije ministri brez resorjev - mišljeno, da bi se večstrankarski sistem prek raznih koalicij zagotavljal skozi ministrske stolčke, ki bi se ponujali posameznim predstavnikom strank. Če je to mišljeno, potem je to za mene skrajno neracionalno in to bi bil pravi luksuz, ki si ga mi ne moremo in ne smemo privoščiti.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg243">Zastavlja se tudi vprašanje, ali zares potrebujemo 14 ministrov oziroma 14 ministrstev. V osnutku je dan zelo konkreten predlog, da se sedanja ministrstva za industrijo in gradbeništvo, za malo gospodarstvo, za energetiko, za trgovino, za turizem in gostinstvo združijo v skupno ministrstvo za gospodarske zadeve. Po mojem bi se v to skupno ministrstvo za gospodarske zadeve dalo združiti tudi sedanje Ministrstvo za kmetijstvo, gozdarstvo in prehrano. Ali resor kmetijstva ne spada v gospodarske dejavnosti? Če smo se že prej opredeljevali, da je treba združevati gospodarske dejavnosti v enem ministrstvu, potem mislim, da bi bilo logično, da se tudi kmetijstvo, gozdarstvo in prehrana združi v to ministrstvo.</seg>
@@ -969,11 +971,11 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg247">Podpiram predlog, da se varnostno informativna služba VIS izdvoji iz Ministrstva za notranje zadeve. Verjetno bi nadzor nad delom te službe lahko opravljali predsednik vlade ali pa podpredsednik vlade. Seveda je to možno samo ob predpostavki, da se bo okrepila tudi vloga skupščinske Komisije za nadzor nad zakonitostjo dela varnostno informativne službe. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg248">Hvala lepa gospodu Smoletu. Javlja se Anton Peršak.</seg>
             </u>
             <note type="speaker">ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg249">Govorim v imenu kluba Demokratske stranke, ki je o tem osnutku zakona in sploh o zakonu o vladi nekajkrat in dokaj temeljito razpravljal. Najprej nek popolnoma zdravorazumski premislek. Osnutek predvideva, da bo nova vlada imela 14 ministrov, nosilcev resorjev, predsednika in lahko tudi tri podpredsednike in tri ministre brez listnice. Glede na to, da bo vlada po volitvah 1992 in tudi kakšna naslednja zelo verjetno koalicijska, v koalicijah pa bo skoraj gotovo več in ne le dve stranki, je realno pričakovati, da bodo izkoriščene čisto vse možnosti za vse funkcije in tako bo Slovenija še nadalje imela eno največjih, če ne najštevilnejšo vlado v Evropi, razen Romunije po razpadu Sovjetske zveze, ki je imela 57 ministrstev. Recimo samo za primerjavo (čeprav je že gospod Semolič tudi o tem govoril): Avstrija ima 12 ministrstev, Finska 13, Nizozemska 13, Norveška, ki je precej večja od Slovenije 16, Portugalska 16, Švedska 13 itn. Sicer pa je povprečje, kot je že bilo rečeno, 13 do 14 ministrov oziroma povprečno 15 do 16 članov celotne vlade; mi naj bi jih imeli 21.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg250">Poleg tega se zdi, da je zakon, tako kot je napisan, po eni strani nekoliko ekstenziven, v kolikor želijo opredeliti predvsem vlogo in naloge vlade, če pa želi podrobno urediti strukturo ministrstev in vse, pa je že vprašanje, ali tudi kaj ne manjka. Ne glede na to, ali vidimo v vladi predvsem politično telo ali predvsem vrh sistema uprave, ki naj bo oblikovan predvsem po strokovnih kriterijih, menimo, da bi bilo prav, da bi bili glede števila članov vlade precej bolj restriktivni. Optimalen predlog, ki ga zagovarjajo nekateri člani naše stranke bi pomenil, recimo, devet, deset resorjev; seveda pa smo po kakšni tehtni razpravi pripravljeni sprejeti tudi večje število ministrstev, nikakor pa ne tega, da bi ostalo to, da ima vlada kar tri podpredsednike, ker se potem sprašujemo, kaj bodo počeli in kako si bodo to podpredsedništvo delili in tudi tri ministre brez listnice. Naše mnenje je, da če že bi naj zakon dopuščal možnost, da ima vlada lahko enega podpredsednika, pri čemer bi se zavzeli za to, da naj bo to, če že je eden izmed ministrov, ki vodi enega izmed resorjev, tako kot je to v večini držav. Recimo, v Nemčiji je vice kancler, kot vemo, zunanji minister in še ponekod so podobne rešitve.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg251">Kar zadeva te ministre brez listnice. Nedvomno je možno, da se pojavi potreba v vladi, da ima nekoga, ki je za neke posebne naloge zadolžen, ki niso rešene v okviru kakšnega ministrstva, zato je možno pristati na to, da se eno, ali pa maksimalno dve taki mesti dopustita; tri pa se nam zdi že precej pretirano.</seg>
@@ -987,19 +989,19 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg259">O teh kadrovskih oziroma številčnosti, ki zadevajo 17. člen in te stvari, sem že govoril, zato ne bi še enkrat ponavljal. Vsekakor pa je stališče našega kluba, da bi morali biti zlasti glede števila res izrazito bolj restriktivni, da ne bomo ena vladno najštevilčnejših držav v Evropi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg260">Hvala gospodu Peršaku. Prosim, gospod Emil Milan Pintar. Repliko želi gospod Žarko Pregelj.</seg>
             </u>
             <note type="speaker">ŽARKO PREGELJ:</note>
-            <u who="#SSK11.PregeljZarko1956" ana="#regular">
+            <u who="#PregeljZarko1956">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg261">Spoštovani. Jasno, da je bila praktična primerjava oziroma praktičen nasvet, da Ministrstvo za varstvo okolja ne bi smelo biti samostojno s strani Zelenih zelo slabo sprejeto. Namreč Ministrstvo za varstvo okolja mora biti popolnoma samostojen resor, kajti edino na ta način bo lahko okolje varovalo. Strinjam se pa, da je zelo vprašljivo združevanje tega ministrstva z urejanjem prostora. To je pa čisto nekaj drugega. Urejanje prostora običajno sodi pod tako imenovano komunalnourbanistično dejavnost in je podvrženo vsemu tistemu, čemur je podvrženo ostalo gospodarstvo. Tako, da v resnici je tukaj problem, medtem ko Ministrstvo za varstvo okolja mora biti samostojen resor v vladi in imeti popolno samostojno odgovornost. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg262">Hvala. Še nekdo je dvignil roko za repliko. Se odreka. Prosim, gospod Pintar.</seg>
             </u>
             <note type="speaker">EMIL MILAN PINTAR:</note>
-            <u who="#SSK11.PintarEmilMilan1944" ana="#regular">
+            <u who="#PintarEmilMilan1944">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg263">Se opravičujem gospod predsednik, ker sem interveniral, ampak razumel sem, ker si me preje prekinil, ker sem bil prezgodaj, da me sedaj ne boste razporedili na zadnje mesto.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg264">Če nadaljujem tam kjer sem preje nehal. Opozoriti sem hotel, da ta zakon za mene odpira tri sklope vprašanj in na vsakega od teh treh sklopov imam nekaj pripomb. Prvi od teh sklopov je seveda vprašanje odnosa med vlado in parlamentom. Številni ljudje opozarjajo, da ta odnos ni tak, kot je bil v preteklosti, kjer je šlo za neke vrste podrejenost, direktno podrejenost vlade parlamentu, pa naj je bila ta navidezna ali resnična, da torej gre za neke vrste vzporednosti dveh različnih vej. Vendar mislim, da so v tem zakonu prišla do izraza birokratska stališča, ki so besedo "vzporednost ali enakopravnost" praktično pripeljala do neke vrste "neodvisnosti"; za to pa seveda ne gre. Če gre za tri ločene veje oblasti, pravosodno ali sodno v zakonodajno izvedbeno, izvršilno, potem seveda moramo ta odnos tako regulirati, da, če drugega ne, je jasno, da obstoji kontrola javnosti nad vlado.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg265">Poglejte, v predlogu, v tekstu, ki ga imamo tu, piše, da bo vlada dala poročilo parlamentu in javnosti samo na polovici mandata. Tu vam kažem neko zadevo, ki obsega 825 strani drobnega tiska. To je letno poročilo, ki ga je nemška vlada dolžna dati vsako leto parlamentu in javnosti. Mogoče slovenski vladi ne bi bilo treba, da napiše 825 strani drobno tiskanega teksta, da bi pa morala vsako leto parlamentu in javnosti podati podrobno poročilo svojega dela, mislim, da je vsem nam jasno. Ne gre za vprašanje podrejenosti, gre za vprašanje povezanosti medsebojne odgovornosti. In seveda, če mi teh odnosov ne vzpostavimo, potem se nam bo to, kar se nam je lansko leto in letos zgodilo, npr. rebalans proračuna, ki se nam je zgodil dvakrat kot eksces pri dveh različnih vladah, bo postalo seveda pravilo. In zato bi rekel tudi tistim v sedanji vladi, ki se želijo obnašati kot kanclerji, da nemški kancler je seveda dolžan to poročilo zelo natančno pregledati in podpisati in tu se kaže, da v evropskem prostoru ta vzporednost dveh vej oblasti ne pomeni, da druga drugi ničesar ne sporočita. No to je ta del vprašanj.</seg>
@@ -1012,22 +1014,22 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg272">In da končam. Mislim, da ta osnutek ne rešuje problema državnega intervencionizma; pušča ga sektorjem. Vi pa veste, da nam zdaj intervencionizem teče skozi 47 kanalov, od nivoja vlade do nivoja občine, 47 kanalov, ki so nepregledni. In ta osnutek ne rešuje tistega problema, ki sem ga na začetku zastavil, da bi namreč morali videti, ali sploh uporabljamo tak model mišljenja, ki ga osnutek ponuja ali pa enkrat gremo na to, da zgradimo na eni strani pravno državo, na drugi strani pa politični kabinet, ki se seveda menja, in da menjava političnega kabineta ne sesuje institucij pravne države. Kajti to kar je zdaj, je mešanica enega in drugega, menjava ministra sesipa velikokrat tudi tisto, kar bi moralo biti tudi v ozadju institucija pravne države. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg273">Hvala lepa gospodu Pintarju. Gospod Zoran Thaler je na vrsti.</seg>
             </u>
             <note type="speaker">ZORAN THALER:</note>
-            <u who="#SSK11.ThalerZoran1962" ana="#regular">
+            <u who="#ThalerZoran">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg274">Hvala predsednik. Spoštovani! Menim, da je prav, da je zakon prišel na dnevni red in da je v fazi osnutka, ker ga potrebujemo, glede na to, da bodo volitve decembra in je resnično prav, da je nova vlada postavljena po novem zakonu, ki bo v skladu z ustavo. Sem pa že iz poročila Odbora za pravosodje in upravo kot matičnega delovnega telesa v prvem vsebinskem odstavku, ki pravi: "V razpravi je bilo poudarjeno, da smo z novo ustavo sprejeli načelo delitve oblasti na zakonodajno, izvršilno in sodno, da smo sprejeli sistem parlamentarne demokracije, v kateri je parlament zakonodajno telo in najvišji organ oblasti, vlada pa le njen izvršilni organ. Z novo ustavo vlada tako dobiva popolnoma drugačno funkcijo, kot jo je imel prej izvršni svet." Že iz tega odstavka se vidi, da vlada popolna zmeda glede koncepta, ker je prvi del odstavka v popolnem nasprotju z drugim. In razen drugega stavka, ki ugotavlja, da je vlada popolnoma nekaj drugega kot izvršni svet, ta odstavek ne pove ničesar. Skratka, po mojem mnenju drži, da se poslavljamo od izvršnega sveta in da nova ustava predpisuje delitev oblasti na zakonodajno, izvršno in sodno in da torej potrebujemo vlado ne pa izvršni svet. In seveda ugotovitev odbora, da imamo parlamentarno demokracijo, v kateri je parlament najvišji organ oblasti, vlada pa le njen izvršilni organ, ne more več držati. Ustava sama določa razmerja med vejami oblasti, t.i. med parlamentom, predsednikom države, vlade, ustavnim sodiščem in v tem smislu se ta zakon v to ne more spuščati. Po tej ustavi je jasno, da vlada ni več le izvrševalec, pač pa samostojna veja oblasti, seveda v mejah ustave in zakonov.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg275">Zavzemam se za tak koncept zakona, ki bo zagotovil učinkovito vlado, vlado, ki bo lahko vodila politiko te države in imela za to vsa pooblastila, za tak zakon na podlagi ustave, ki bo preprečil kompetenčne spore med predvsem zakonodajno vejo oblasti in izvršilno. Narobe je, da ima ta parlament še vedno, ali pa ideje tistih, ki bi želeli tudi to za bodoči parlament, da bi imel parlament še vedno izvršilno funkcijo v nekaterih točkah. Seveda pa je vlada omejena v temeljnem pravilu, da je odvisna od parlamenta, da jo lahko nezaupnica v parlamentu vrže. In seveda ni skrbi za to, da bi bila lahko nepokorna parlamentu.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg276">Če pravim, da sem pristaš majhne, učinkovite vlade lahko to konkretiziram na način, da menim, da je številka 10 za ta ožji kabinet nekako pravšnja, ali pa plus minus eden dva ministra; vse ostalo bi bilo treba organizirati v upravah, uradih, agencijah, službah itn., ki se pri vladi lahko ustanovijo. Namreč le tak kabinet v ožjem smislu bo lahko skrbel krovno in kompetenčno za usodo države oziroma davkoplačevalcev. Zdaj se večkrat dogaja to, da glavni parlament ni tukaj, pač pa na Gregorčičevi 25 v novi dvorani, kjer sedi 20 in še nekaj ministrov. Seveda oni parlamentirajo med seboj, kaj je bolj prioritetno in kaj ne. To se v vladi, ki mora skrbeti za enotno usmeritev in, kot sem dejal, za usodo cele države, ne bi smelo dogajati. Zato menim, da je prav, ker gremo tudi v smeri deetatizacije vseh področij, da se ministrstva organizirana samo na področjih, ki so resnično, kot se temu reče včasih, državotvorna in kjer ima država besedo. Povsod drugje, kjer želimo, da jo ima vedno manj, ni potrebno, da so to ministrstva. Če sem še bolj konkreten, menim, da bi bilo potrebno imeti 7 ministrstev, v katerih je pet klasičnih, državnih: za finance, notranje zadeve, zunanje zadeve, obrambo, pravosodje, potem pa še dva - enega za gospodarstvo, ki pokrije vsa dosedanja ministrstva s tega področja in enega za, kakor se pač imenuje, socialo ali pa za družbene dejavnosti, ki pokrije zadeve iz tega področja, plus en predsednik vlade, en podpredsednik in verjetno en minister brez listnice, če res pride kaj nujnega. To bi vse skupaj pomenilo 10 članov tega ožjega kabineta, ki bi po, mojem mnenju, lahko veliko učinkoviteje upravljal z državo.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg277">Drugače podpiram zakon v vseh tistih točkah, ki vpeljujejo to delitev oblasti, kjer konstituirajo izvršilno vejo oblasti kot samostojno. Posebno si želim, da bi predlog zakona prišel čimprej na dnevni red. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg278">Hvala. Doktor Bučar je na vrsti.</seg>
             </u>
             <note type="speaker">DR. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#regular">
+            <u who="#BučarFrance">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg279">Spoštovani poslanci! Nisem se nameraval oglasiti, ampak so bile že pripombe s strani nekaterih strank, češ, kaj se predsednik parlamenta vtika v zadeve, ki se ga ne tičejo, kajti on se sploh nima pravice materialno spuščati v posamezne zadeve. Ne glede na to, menim, da je zakon o vladi tako pomembna zadeva, da lahko našo slovensko usodo za dolgo časa opredeli in določi. Mislim, da je to prilika, ko se je treba posebej skrbno pripraviti, kaj bomo sprejeli v tej skupščini. Mene veseli, ko sem slišal nekatere diskutante, ki so sicer po povsem drugi poti prišli do približno enakih pogledov, vsaj kar se tiče števila resorjev, kot sem tudi jaz. Tu mislim predvsem na gospoda Smoleta; jaz sem približno skoraj identičnih pogledov, vendarle čisto po drugi poti. Menim namreč, da je ta zakon slab in ne da je dober. Namreč slab je zaradi tega, ker ne odraža nikakršnega koncepta. Nam gre predvsem za to, da dobimo - ne vlado, ker vlada je samo sredstvo, da pridemo do upravljanja te države, ki bo tej državi omogočil, da bo sposobna odgovarjati na izzive sodobnega časa. Zato je treba sistem upravljanja države postaviti na popolnoma drugačne osnove. Sedaj smo nasledili oziroma smo do sedaj imeli koncept upravljanja, ki izvira, si upam trditi, iz filozofije absolutistične države, ker gre pravzaprav celotno upravljanje od vrha navzdol po hierarhični poti in, mislim, da ne bom nikogar užalil, funkcijo absolutnega vladarja je potem prevzela vodilna stranka oziroma partija oziroma njen generalni sekretar ali pa predsednik celo. To pomeni, da je bila funkcija parlamenta predvsem v tem, da da legalnost tem odločitvam, ki so bile sprejete že pred parlamentom. Izvršni svet, in to ni slučajno, potem že prej sprejete in legalizirane odločitve spreminja v prakso. Zato torej nas ne zanima, kakšen svet je, ampak svet je takšen, kot ga mi vidimo s svojimi očmi; zato nas zanima kot povratna informacija samo to, kako so se naše odločitve izvrševale in izvršile. Zato ni slučajno, da se v takem sistemu vse stvari odločajo na vrhu, da je ta vrh potem preobremenjen. Jaz iz lastne prakse govorim, da recimo, naši ministri v Beogradu, niso imeli 5 minut na dan časa, da bi o kakšni stvari razmislili, ker ga je ta sistem sam po sebi neprestano gnal v odločanje o stvareh, o katerih pojma ni imel in ga ni mogel imeti. In to je sistem, ki ga s tem nadaljujemo. To je sitem, ki je preprečeval, da bi mi prišli do neke normalne, učinkovite uprave; kajti problem ni bil samo v izvrševanju, ampak tudi predvsem v servilnosti. Kajti sistem takega hierarhičnega, absolutističnega odločanja je absolutno v nasprotju s samo teorijo v pravnem smislu, mislim tudi s faktičnim potekom odločanja. Kajti odločaš vedno po vseh premisah odločanja. Se pravi (da ne bom sedaj učeno pripovedoval), da se vedno, pred vsako odločitvijo postavlja vprašanje, kaj želimo, kje smo sedaj in kako premostiti razliko med enim in drugim. In na vrhu, kjer se določajo primarne odločitve, prevladuje ta element vrednostnih odločitev, se pravi politike. In funkcija vrha je predvsem, da določa politiko. Teoretično bi sedaj lahko razpravljali o tej stari Montesquieuvi teoriji, ali je ločitev sodne in izvršilne oblasti in tako naprej. S stališča teorije upravljanja te delitve ne moremo postaviti, vendarle jo moramo iz drugih razlogov uveljaviti.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg280">Zato, iz tega stališča, če govorimo o izvršnem svetu kot izvršnem svetu, potem je popolnoma jasno, da je poudarek na strokovnosti. In vsak, ki bi ga na cesti vprašali, ali je za strokovno vlado, se razume, da bi odgovoril, da je za strokovno vlado. Vidite, vlada ne more biti strokovna; vlada mora biti predvsem politična in njena funkcija je, da prevaja odločitve, ki so bile sprejete na prvi stopnji - se pravi v parlamentu - v izvršitev v upravo. In če nimamo tega koncepta, potem je popolnoma jasno, da v nobenem primeru ne moremo priti do določitve števila resorjev. Zato je mene naravnost zbodlo tukaj 14 resorjev. Zakaj pa jih ni 15, ali 35, ali pa samo 7? Namreč, nobenega kriterija ni. Kriterij pa je ravno v tem, da določimo mi funkcijo vlade. In s tem, če smo določili funkcijo vlade, smo s tem posredno določili tudi funkcijo uprave. In se tako vračamo (naj mi študentje ne zamerijo) do stare dileme Maksa Vebra: ali politika in diletantizem, ali uprava in strokovnost. Mi rabimo ne samo strokovno upravo, mi rabimo predvsem sistem odločanja o državnih zadevah, ki bo drugačen kot doslej. Ne da je vertikalen in da se o vseh stvareh odloča na vrhu, ampak da se v različnih, že vmesnih krogotokih sprejemajo odločitve. To se pravi, da pride takorekoč (če smem uporabiti ta izraz) že precejeno do vrha in da vrh določa samo stvari, ki se niso mogle odločiti na nivoju uprave. Večina odločanja se mora preseliti v upravo.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg281">Seveda pa je na drugi strani funkcija vlade kot političnega organa v tem smislu pravzaprav sintetična. Določati cilje, pomeni sintezo, medtem ko strokovnost pomeni analizo, analitični pristop. Zato bomo imeli mi opravka s položajem, kjer se bo uprava širila in se bo nujno širila, čeprav ne v takem smislu, kot se je doslej, ker se moramo zavedati, da ne bo več upravno operativnega vodstva, ampak bo predvsem funkcija uprave regulatorna in bo zato na drugačen način delala, vendar bo z razvojem družbene kompleksnosti vedno več področij, ki jih bo treba usmerjati.</seg>
@@ -1043,11 +1045,11 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg291">Naslednja stvar, ki jo bom samo mimogrede omenil. Ministrstva so samo tista področja, kjer izvaja oblast. Poglejte, vse drugo je samo strokovno delo, naj bo, če je potrebno, da je edino pod vodstvom vlade, so to lahko posebni uradi pri vladi, ki imajo seveda strokovne funkcije, ne oblastnih in istočasno moramo poskrbeti, da bo vlada v vsakem primeru samo tisti rele - pa jo s tem ne ponižujem - da bo rele tistega, kar se odloči v skupščini;če imamo tako imenovani parlamentarni sistem, ki je uzakonjen v naši ustavi. Brez tega mislim, da ne moremo niti govoriti o nekem novem pristopu do organizacije, do upravljanja države, kajti s tem ne moremo brez takšnega koncepta, mislim pravega koncepta o vladi, ne moremo priti niti do strokovnega uprave, niti ne moremo začeti z organizacijo lokalne samouprave. Za enkrat toliko. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg292">Hvala lepa. Dr. Toplak, prosim.</seg>
             </u>
             <note type="speaker">DR. LUDVIK TOPLAK:</note>
-            <u who="#SSK11.ToplakLudvik1942" ana="#chair">
+            <u who="#ToplakLudvik" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg293">Danes, ko smo glasovali o predlogu za izdajo z osnutkom, sem glasoval proti, ker menim, da je stvar zrela za ene teze in zelo, bi rekel, konstruktivna razprava vseh dosedanjih razpravljalcev me je v to tudi prepričala.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg294">Imam nekaj načelnih pripomb. Prvič menim, da ni dovolj jasno opredeljen odnos vlade do parlamenta, vlade do političnih strank kot centrov politične moči in vlade do uprave, o čemer je bil pravkar govor. Teoretično vprašanje pa je predvsem še vedno nedorečeno in mislim, da ga bomo morali doreči, do kakšne mere je vlada politično telo, čisto politično telo in do katere mere je vendarle organ odločanja in v kakšni meri odgovarja za izvrševanje zakonov, se pravi, da je le izvršilno telo parlamenta.</seg>
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg295">Osebno imam pomisleke, da obstoji velika in resna nevarnost in možnost brezmejne koncentracije in nekontrolirane koncentracije politične in vsestranske moči v nekem nekontroliranem telesu, ki mu rečemo vlada. Zlasti še, če pridejo, tako kot je naša praksa, praktično vsi strankarski šefi za šefe resorjev oziroma za člane vlade. V tem primeru je tako, kot je neki minister pred kratkim pripomnil, parlament, kot pravi: malo cirkusa pa mora biti. Z drugimi besedami: parlament in razprava v parlamentu pa je cirkus za publiko, za televizijo; vsa moč odločanja, vsa koncentracija in nekontrolirana oblast pa je v parlamentu. Jaz bi si dovolil opozoriti na nevarnost skušnjave po oblasti, ki je vse, ampak prav vse oblastnike v vsej človeški zgodovini zanesla. Skušnjava po oblasti je vse tiste, ki so imeli moč oblasti v sebi in ko je ta oblast bila nekontrolirana, zanesla. In tudi v naši polpretekli zgodovini in tudi danes vidimo okrog sebe, kako so ljudje podvrženi tej skušnjavi. Skušnjava po oblasti je večna in če je nekontrolirana, je normalna in nujna posledica, ki vodi v entropijo vsak sistem in nujno vodi do entropije države. Jaz bi imel nekaj argumentov iz samega teksta, ki je tukaj predložen, v prid tej moji trditvi, ki to dokazujejo. Tudi razumem; ta zakonski predlog je pisala vlada in vlada za sebe in čisto vsak oblastnik v vsej človeški zgodovini, ko je pisal o sebi in ko je moč imel, da je sebe določal, svoj položaj in svojo oblast in pravila za svoja obnašanja, je pisal približno tako, kot je napisan ta zakon: da ga nihče ne bo kontroliral, da ostane nekontroliran in zato praktično sam svoj - kot pravi predsednik gospod dr. Bučar - absolutni vladar. Mislim, da cel sistem tega zakona o vladi je na to pripravljen in sedaj kdor koli je in kdor koli bo, ne vem kdo bo in ne vemo kdo bo - recimo, da si lahko mislimo vsak za sebe in tisti, ki pač si največ in najbolj misli, da bo to stvar imel, se razume, da je to stvar tako pripravil. Zato bi resno imel še nekaj konkretnih pripomb.</seg>
@@ -1067,7 +1069,7 @@
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg309">Dalje. V 22. členu: "Predsednik vlade skrbi za enotnost politične in upravne usmeritve vlade." Tudi tu mislim, da gre za nepopolne in nedefinirane kategorije." Nadalje še nekaj konkretnih pripomb in v 35. členu mislim, da bo treba v prehodnih določbah doreči nekaj, kaj je npr. z nekaterimi zavodi in upravami, ki sedaj delujejo kot upravni organi. Posebej pa bi še pritrdil, da moramo mi ločiti določene službe. Npr. vojsko moramo ločiti od ministrstva kot upravnega organa, tako kakor je pravosodje ločeno od ministrstva za pravosodje kot državnega organa in tako kakor je teater ločen od ministrstva za kulturo. Isto velja za policijo in še določene druge službe. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK ANTON PERŠAK:</note>
-            <u who="#SSK11.PersakAnton1947" ana="#chair">
+            <u who="#PeršakAnton" ana="#chair">
                <seg xml:id="SSK11-DruzPolZb.1992-10-07.s047-01.seg310">Hvala. Predlagam, da sedaj prekinemo to točko (še nekaj je prijavljenih za diskusijo), ker ob štirih bi naj (nekateri poslanci so celo že prišli pogledat) bila ta delovna skupna seje za usklajevanje tistih dveh volilnih zakonov, pa vabim poslance iz avle, da pridejo v dvorano.</seg>
             </u>
             <note type="time">SEJA JE BILA PREKINJENA DNE 7.10.1992 OB 16.00 URI IN SE JE NADALJEVALA 8.10.1992 OB 10.50 URI.</note>

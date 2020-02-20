@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 11. zasedanje</title>
             <meeting n="11"
-                     corresp="#VsiZbor.1991-03-27.z011-01.DruzPolZb #VsiZbor.1991-03-27.z011-01.ZbObc #VsiZbor.1991-03-27.z011-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.special"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="9"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="5"/>
                <tagUsage gi="seg" occurs="51"/>
                <tagUsage gi="gap" occurs="2"/>
@@ -146,23 +137,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-03-27.z011-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-03-27.z011-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-03-27.z011-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -173,21 +147,25 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNO ZASEDANJE VSEH ZBOROV SKUPŠČINE REPUBLIKE SLOVENIJE</head>
             <head type="session">11. zasedanje</head>
             <docDate>27. marec 1991</docDate>
             <note type="chairman">Sejo je vodil Ivan Bizjak, predsednik Zbora občin.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je začela ob 11.10 uri.</note>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg1">Gospodje poslanci in gospe poslanke, spoštovani gostje! Pričenjam skupno zasedanje Družbenopolitičnega zbora, Zbora občin in Zbora združenega dela Skupščine Republike Slovenije. Na skupnem zasedanju bomo poslušali UVODNO BESEDO gospoda Lojzeta Peterleta, predsednika Izvršnega sveta Skupščine Republike Slovenije K PREDLOGU ZAKONA O PRORAČUNU REPUBLIKE SLOVENIJE ZA LETO 1991 in uvodno besedo gospoda Janeza Janše, člana Izvršnega sveta Skupščine Republike Slovenije in republiškega sekretarja za ljudsko obrambo k predlogu zakona o obrambi in zaščiti.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg2">Besedo dajem najprej gospodu predsedniku Lojzetu Peterletu.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SSK11.PeterleAlojz1948" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg3">Spoštovane poslanke in poslanci, Tisztelt kepvišelok tisztelt holgyeim es uraim, Spetabili delegate e delegati.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg4">Proračun za letošnje leto smo iz osnutka premaknili v predlog, o katerem boste razpravljali danes. Ne bi pa mogel reči, da je bil dosežen kak pomemben premik od prerekanja - kdo naj bi kaj oziroma koliko imel ali dal v proračun - k razmišljanju, kaj in kako delati, da bi ustvarili večji družbeni proizvod in z njim relativizirali problem javne porabe.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg5">Razprava o osnutku proračuna je izražala različnost, pa tudi nasprotnost interesov. Ob skoraj enotni zahtevi za znižanje javne porabe naj bi proračunu hkrati zagotavljali več sredstev za družbene dejavnosti, sofinancirali vrsto s stališča občin pomembnih naložb, dali več za ceste, železnico itd. Z mnenjem skupščine, naj vlada določi posamezne postavke prvega integralnega proračuna, je bila vlada tudi pri pripravi predloga proračuna postavljena med mlinska kamna želja in možnosti. Pri pripravljanju predloga smo iskali ravnotežje med želenim, potrebnim in močnim ob upoštevanju v skupščini sprejetih Programskih usmeritev, plebiscitnih ciljev in programa aktivnosti za njihovo uresničitev ter razvojne in gospodarske politike in socialnega programa. Osrednje naloge pri pripravi predloga - znižanja proračuna - zato nismo izpeljali tako daleč, da bi povzročili razpad posameznih socialnih sistemov, izničenje potrebnih razvojnih spodbud ter onemogočanje razvoja temeljnih funkcij mlade slovenske države. Enako, kot je razvojna prenova gospodarstva proces, je tudi zmanjševanje javne porabe proces in ne trenutno dejanje. Tudi v razvitem svetu se že desetletja ubadajo z obema procesoma: na različne načine in z različno uspešnostjo po posameznih državah.</seg>
@@ -229,11 +207,11 @@
                </seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg38">Hvala lepa gospodu Peterletu za podano uvodno besedo. Prosim gospoda Janeza Janšo, republiškega sekretarja za ljudsko obrambo, da nam poda UVODNO BESEDO K PREDLOGU ZAKONA O OBRAMBI IN ZAŠČITI.</seg>
             </u>
             <note type="speaker">JANEZ JANŠA:</note>
-            <u who="#SSK11.JansaJanez1958" ana="#regular">
+            <u who="#JanšaJanez">
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg39">Spoštovane poslanke, spoštovani poslanci! V skladu s predlogi, pripombami in naročili zborov te skupščine ter skupščinskih delovnih teles smo pripravili predlog zakona o obrambi in zaščiti. Pri pripravi predloga smo upoštevali tudi predloge, ki so jih dale Gasilska zveza Slovenije in druge organizacije, Katedra za obramboslovje ter nekateri drugi organi. Osnutek zakona je bil v razpravi vse od novembra 1990. To je omogočilo, da v osnutku predlagane rešitve še izpopolnimo in Skupščini Republike Slovenije ponudimo rešitve, ki bodo kar najbolj ustrezno urejale organiziranje in delovanje obrambe in zaščite v prihodnjem obdobju, dokler po novi ustavi Republike Slovenije ne bodo uveljavljene vse potrebne spremembe v političnem in gospodarskem sistemu. V skladu z naročilom te skupščine je pripravljen tudi predlog zakona o vojaški dolžnosti, ki ima prav tako značaj zakona za prehodno obdobje. Predlog tega zakona določi Izvršni svet Skupščine Republike Slovenije. Pri tem pa v ničemer ne poskušamo prejudicirati določene zasnove zagotavljanja nacionalne varnosti slovenske države in varnosti njenih prebivalcev. Te odločitve bodo sprejete in opredeljene v novi ustavi Republike Slovenije in zato vzporedno pripravljamo tudi zasnovo nacionalne varnosti Republike Slovenije. O tej zasnovi se je v teh dneh zaključuje razprava v Svetu predsedstva Republike Slovenije za ljudsko obrambo. Predlog rešitev bo poslan Skupščini Republike Slovenije v obravnavo in sprejetje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg40">Na podlagi razprave o osnutku smo predlog zakona skrajšali. Odpravili smo vse rešitve, ki so se nekaterim zdele kot da še ohranjamo totalitarno ureditev, zlasti na področju obrambnih varnostnih priprav. Vse dolžnosti državljanov praviloma tako nastajajo z 18-im letom starosti. Število podjetij in drugih nosilcev obrambnih priprav se bo v naprej zmanjšalo za nad 70%, podobno velja za obveznost organiziranja civilne zaščite oziroma narodne zaščite. Varnostne načrte naj bi izdelovali le še državni organi. To bo omogočilo, da po sprejetju zakona Izvršni svet Skupščine Republike Slovenije odpravi uporabo vseh zveznih predpisov, ki to področje sedaj urejajo. Bistveno bolj restrektivno predlagamo tudi ureditev obrambnih ukrepov ter postopkov v zvezi z varnostnimi ukrepi. Zakon določa, da o ukrepih za pripravljenost in o mobilizacijah odloča le Predsedstvo Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg41">Upoštevali smo predloge glede ureditve Teritorialne obrambe Republike Slovenije. Predlagana ureditev je jasnejša in v celoti v pristojnosti republike. Določbe o štabih za teritorialno obrambo kot vojaških teritorialnih poveljstvih bodo omogočile nadaljnje racionalnejše organiziranje teritorialna obrambe. Predvidevamo, da bo število območnih štabov teritorialne obrambe po reorganizaciji v primerjavi s sedanjimi občinskimi štabi manjše za polovico. Zahteve, vsaj za prihodnje obdobje, po popolni depolitizaciji so upoštevane, tako da se v zakonu določa, da delavci teritorialne obrambe stalnega sestava ne smejo biti člani političnih organizacij. S tem bo dosežen cilj depolitizacije, ne pa samo departizacije. V zakonu predlagam, da pokrivanje refenducij za usposabljanje v teritorialni obrambi, enotah za zveze in v rezervnem sestavu organov za notranje zadeve s prihodnjim letom preide v breme republike. Bili so tudi predlogi, da se to zgodi že ob sprejetju tega zakona, vendar opozarjamo na to, da je prerazporeditev financiranja med letom v praksi težko izvedljiva.</seg>
@@ -247,7 +225,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg49">Zato predlagam, da zbori Skupščine Republike Slovenije predlog zakona o obrambi in zaščiti obravnavajo in sprejmejo. Predlagam tudi, da sprejmete amandmaje, ki jih je podprl Izvršni svet. Ti amandmaji so vam bili posredovani danes. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI IVAN BIZJAK:</note>
-            <u who="#SSK11.BizjakIvan1956" ana="#chair">
+            <u who="#BizjakIvan" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg50">Zahvaljujem se gospodu Janši za podano uvodno besedo. Zaključujem Skupno zasedanje Družbenopolitičnega zbora, Zbora občin in Zbora združenega dela Skupščine Republike Slovenije.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-03-27.z011-01.seg51">Družbenopolitični zbor ima sedaj odmor, ostala dva zbora pa takoj nadaljujeta z delom.</seg>
             </u>

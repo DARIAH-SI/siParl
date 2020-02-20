@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ3-Redna-01-2000-10-27"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">1. redna seja (27. 10. 2000)</title>
-            <meeting n="1"
-                     corresp="#SDZ3-Redna-01-2000-10-27.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="1" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="3" corresp="#DZ" ana="#parl.term #DZ.3">3. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">1. seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|1B8D4049EC228A37C125698B002CD9D4</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=sz&amp;uid=1B8D4049EC228A37C125698B002CD9D4</idno>
-                  <imprint>
-                     <date when="2000-10-27">(27. oktober 2000)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>1. redna seja (27. 10. 2000)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="2000-10-27"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=III&amp;type=sz&amp;uid=1B8D4049EC228A37C125698B002CD9D4</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="63"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="31"/>
                <tagUsage gi="gap" occurs="7"/>
                <tagUsage gi="seg" occurs="109"/>
@@ -209,23 +194,21 @@
                <date when="2000-10-27" ana="#parl.sitting">27. 10. 2000</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ3-Redna-01-2000-10-27.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">1. seja</head>
-            <docDate>(27. oktober 2000)</docDate>
             <note type="chairman">Sejo je vodil dr. Jožef Bernik, predsedujoči in Borut Pahor, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.16 uri.</note>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ3.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <gap reason="inaudible"/>
                <note>Aplavz.</note>
                <gap reason="inaudible"/>
@@ -236,11 +219,11 @@
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg3">V skladu z drugim odstavkom 10. člena poslovnika državnega zbora prvo sejo novoizvoljenega državnega zbora vodi najstarejši poslanec, dr. Jožef Bernik. Želim mu uspešno delo.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg4">Gospod predsednik, spoštovane poslanke in kolegi poslanci, gospe in gospodje! Pričenjam prvo sejo Državnega zbora Republike Slovenije, ki jo je na podlagi tretjega odstavka 81. člena ustave republike sklical predsednik Republike Slovenije. Predsednik republike, gospod Milan Kučan, je prisoten na seji in ga lepo pozdravljam ter mu dajem besedo. Izvolite gospod predsednik!</seg>
             </u>
             <note type="speaker">MILAN KUČAN:</note>
-            <u who="#SDZ3.KučanMilan" ana="#regular">
+            <u who="#KučanMilan">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg5">Spoštovani gospod predsedujoči, spoštovane poslanke in poslanci, predsednik vlade, ministri, ekscelence, gospe in gospodje!</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg6">Ustava mi je dodelila pravico in naložila častno dolžnost, da skličem konstitutivno sejo državnega zbora, konstitutivno sejo 4. sklica slovenskega parlamenta po prvih demokratičnih večstrankarskih volitvah in tretjega po osamosvojitvi države.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg7">Spoštovane poslanke in poslanci! Volilke in volilci so vas izbrali po svobodni presoji programov in videnj prihodnosti naše države, ter načinu opravljanja z njo, kakor so jih ponujale politične stranke, ki so vas kandidirale, pa tudi na podlagi vaših osebnih predstavitev.</seg>
@@ -260,7 +243,7 @@
                <gap reason="inaudible"/>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg19">Predsedniku republike se lepo zahvaljujem za njegove besede.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg20">Preden nadaljujemo z delom, prosim poslanke in poslance, ki službi zbora pred dvorano niso javili svoje prisotnosti in oddali potrditev o izvolitvi, da to storijo sedaj tu, pri predsedniški mizi, da bo vse v redu.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg21">Nadaljujemo sejo. Pri vodenju seje zbora mi bo pomagala generalna sekretarka državnega zbora, gospa Veliščkova, ki jo zelo dobro poznate.</seg>
@@ -273,35 +256,35 @@
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg28">Prehajamo na predloge za razširitev dnevnega reda. Prosim. Gospod Anderlič, prosim.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ3.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg29">Da bi državni zbor lahko čimprej začel normalno opravljati svoje delo, mora imeti konstituirana vsaj nekatera delovna telesa, zato v imenu skupine poslancev predlagam razširitev dnevnega reda s točko oblikovanje delovnih teles državnega zbora. Predlagam, da to točko obravnavamo pod zaporedno točko številka 5 dnevnega reda. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg30">Hvala. Želi v zvezi s tem kdo besedo? Prosim.</seg>
             </u>
             <note type="speaker">SAŠO PEČE:</note>
-            <u who="#SDZ3.PečeSašo" ana="#regular">
+            <u who="#PečeSašo">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg31">Samo vprašanje gospodu Anderliču, v imenu katerih poslancev je nagovoril državni zbor.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg32">Prosim.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ3.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg33">V imenu skupine poslancev, ki so bili izvoljeni na istoimenski listi liberalne demokracije.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg34">Ali želi še katera druga poslanska skupina besedo? Prosim, gospod Peterle.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg35">Spoštovane poslanke in poslanci. Govorim v imenu Nove Slovenije in nasprotujem temu predlogu, ker menim, da bomo prišli v težave, če bomo v nejasni situaciji odločali o tako pomembnih sestavah. Zaradi prehitrega odločanja smo že imeli v preteklosti težave. Predlagam, da delovna telesa, tista, ki jih ni nujno izvoliti danes, volimo po tem, ko bo znano, kdo je v vladi in kdo v opoziciji.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg36">Hvala lepa. Želi še kakšna poslanska skupina besedo? Če ne, potem bi prosil, če želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve. Želi?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg37">Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -309,11 +292,11 @@
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg38">Želi predlagatelj dodatno obrazložiti svoj predlog na komentarje? Prosim.</seg>
             </u>
             <note type="speaker">ANTON ANDERIČ:</note>
-            <u who="#SDZ3.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg39">Glede na predhodno obrazložitev naj dodam še to, da je predlog v nadaljevanju, glede na to, kar je tudi predsedujoči že rekel, da verjetno nekaterih stvari danes ne bo mogoče opraviti, da bi to točko opravili v nadaljevanju seje, v prihodnjih dneh. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg40">Na glasovanje dajem predlog za razširitev dnevnega reda z navedenim predlogom gospoda Anderliča. Ugotovimo prisotnost!</seg>
                <note>82 poslancev.</note>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg41">Glasujmo o predlogu za razširitev dnevnega reda.</seg>
@@ -332,13 +315,13 @@
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg51">Predlog predstavnikov poslanskih skupin v sestavo mandatno-imunitetne komisije bo predstavil gospod dr. Janez Podobnik.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ3.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg52">Spoštovani dr. Bernik, kolegice in kolegi! Kot je bilo že povedano, je bil včeraj pripravljalni sestanek za današnjo sejo. Na tem sestanku sem bil tudi pooblaščen, da v imenu predstavnikov istoimenskih list, ki so bile izvoljene v državni zbor, predstavim odlok o izvolitvi predsednika, podpredsednika in članov mandatno-imunitetne komisije državnega zbora Republike Slovenije.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg53">Odlok je pripravljen na podlagi drugega odstavka 7. člena zakona o poslancih in določb poslovnika državnega zbora. Odlok je sestavljen iz treh členov. Prvi govori o tem, da ima mandatno-imunitetna komisija državnega zbora Republike Slovenije predsednika in sedem članov. V drugem razdelku odloka je razvidno, da se v mandatno-imunitetno komisijo državnega zbora izvolijo: za predsednika Valentina Pohorca, za člane pa Cirila Pucka, Pavla Ruparja, Bojana Kontiča, Jurija Malovrha, Majdo Zupan,Zmaga Jelinčiča in Igorja Štembergerja. Tretji razdelek govori o tem, da ta odlok začne veljati z dnem, ko ga sprejme državni zbor Republike Slovenije.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg54">Spoštovane kolegice in kolegi! Prosim oziroma predlagam, da predlagani odlok po eventualni razpravi sprejmete. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg55">Hvala lepa, gospod Podobnik. Želijo predstavniki poslanskih skupin besedo?</seg>
                <note>Ne želijo.</note>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg56">Glasovali bomo o navedenih predlogih v celoti, enako kot o listi kandidatov. Prosim, da poslanke in poslanci zabeležite svojo navzočnost. Ugotavljam, da je prisotnih 84 poslank in poslancev.</seg>
@@ -352,7 +335,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 10.47 uri in se je nadaljevala ob 11.20 uri.</note>
             <note type="speaker">PREDSEDNIK DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg63">Spoštovani poslanci, malo potrpljenja še prosim, ker se razmnožuje poročilo komisije. Upamo, da kmalu to dobimo.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg64">Gospe poslanke in gospodje poslanci! Prehajamo na 2. TOČKO DNEVNEGA REDA, to je POROČILO MANDATNO-IMUNITETNE KOMISIJE O PREGLEDU POTRDIL O IZVOLITVI TER MOREBITNIH PRITOŽB KANDIDATOV IN PREDSTAVNIKOV LIST KANDIDATOV ZOPER ODLOČITVE VOLILNE KOMISIJE, KI LAHKO VPLIVAJO NA POTRDITEV MANDATOV, S PREDLOGOM ZA POTRDITEV MANDATOV IN ZA ODLOČANJE O PRITOŽBAH.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg65">Preden gremo k temu, imam prijetno dolžnost, da pozdravim gospoda predsednika republiške volilne komisije gospoda Gašperja Frankarja. Lepo ga pozdravljam in se zahvaljujem za njegovo delo.</seg>
@@ -360,7 +343,7 @@
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg66">Zdaj pa gremo naprej. Gradivo za obravnavo te točke dnevnega reda bi sicer morali prejeti na klop, pardon, dobili ste na klop poročilo republiške volilne komisije, ki je objavljeno v Uradnem listu Republike Slovenije, št. 98, z dne 24. oktobra letos. Pritožb nismo dobili. Sedaj bi morali dobiti na klop tudi pisno poročilo mandatno-imunitetne komisije, vendar ta se razmnožuje. Da ne bi izgubljali časa, predlagam, ker ima gospod predsednik te komisije poročilo napisano, da on poroča, razen če so kakšni ugovori k tej točki in k mojemu predlogu. Ker ni ugovorov, prosim gospoda Valentina Pohorca, da poda poročilo te komisije.</seg>
             </u>
             <note type="speaker">VALENTIN POHOREC:</note>
-            <u who="#SDZ3.PohorecValentin" ana="#regular">
+            <u who="#PohorecValentin">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg67">Spoštovani gospod predsedujoči, spoštovane poslanke in poslanci in drugi prisotni v tej dvorani!</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg68">Podajam poročilo o pregledu potrdil o izvolitvi s predlogom za potrditev mandatov. Mandatno-imunitetna komisija državnega zbora Republike Slovenije je na prvi seji, dne 27.10.2000, v skladu z določbo tretjega odstavka 7. člena zakona o poslancih pregledala potrdilo o izvolitvi poslancev državnega zbora Republike Slovenije. Do začetka prve seje državnega zbora Republike Slovenije ni bilo vloženih pritožb kandidatov in predstavnikov list kandidatov zoper odločitve volilne komisije, ki lahko vplivajo na potrditev mandatov.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg69">Mandatno-imunitetna komisija je pregledala poročilo republiške volilne komisije o izidu rednih volitev poslancev v državni zbor in k poročilu priložene volilne spise ter potrdila o izvolitvi poslancev in je na podlagi tega ugotovila:</seg>
@@ -370,7 +353,7 @@
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg73">Na podlagi navedenega in v skladu s prvim odstavkom 14. člena poslovnika državnega zbora Republike Slovenije mandatno-imunitetna komisija predlaga državnemu zboru Republike Slovenije, da na podlagi 7. člena zakona o poslancih in drugega odstavka 14. člena poslovnika državnega zbora Republike Slovenije sprejme naslednji sklep: "Potrdijo se mandati vsem poslancem državnega zbora Republike Slovenije, izvoljenih na volitvah 15. oktobra 2000, po seznamu izvoljenih mandatov, ki je sestavni del poročila mandatno-imunitetne komisije." Komisija je bila sklepčna, manjkal je samo eden, ostali smo bili prisotni. Vsi smo poročilo soglasno potrdili. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK DR. JOŽE BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg74">Hvala gospodu predsedniku, Valentinu Pohorcu. Čeprav še niste dobili na klop tega poročila, h kateremu je priložena tudi lista vseh poslank in poslancev, bom nadaljeval sejo in zato odpiram razpravo o poročilu mandatno-imunitetne komisije. Nobene razprave ni o tem. Želijo besedo predstavniki poslanskih skupin?</seg>
                <note>Ne želijo.</note>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg75">Dajem besedo poslankam in poslancem.</seg>
@@ -385,18 +368,18 @@
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg81">Prosim, če želite besedo.</seg>
             </u>
             <note type="speaker">GAŠPER FRANKAR:</note>
-            <u who="#SDZ3.FrankarGašper" ana="#regular">
+            <u who="#FrankarGašper">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg82">Gospod predsedujoči, hvala lepa. Vsem poslankam in poslancem čestitam ob izvolitvi in vam želim veliko uspeha.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg83">Hvala lepa. S tem zaključujem to točko dnevnega reda.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg84">Prehajamo na 3. TOČKO DNEVNEGA REDA - IZVOLITEV PREDSEDNIKA, PODPREDSEDNIKA IN ČLANOV KOMISIJE ZA VOLITVE, IMENOVANJA IN ADMINISTRATIVNE ZADEVE.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg85">V skladu z dogovorom predstavnikov strank, katerih kandidati so bili izvoljeni v državni zbor, so že posredovani predlogi za sestavo komisije za volitve, imenovanja in administrativne zadeve državnega zbora.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg86">Predlog parlamentarnih strank bo predstavil gospod Janez Podobnik.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ3.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg87">Spoštovani kolega dr. Bernik, kolegice in kolegi! Z enakimi pooblastili kot pri prejšnji točki dnevnega reda bi vam rad predstavil odlok o izvolitvi predsednika, podpredsednika in članov komisije državnega zbora Republike Slovenije za volitve, imenovanja in administrativne zadeve. Sestava odloka je prav tako pripravljena na podlagi dogovora na včerajšnjem pripravljalnem sestanku za to sejo državnega zbora. Odlok je pripravljen na podlagi 15. in 172. člena poslovnika državnega zbora.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg88">Komisija državnega zbora Republike Slovenije za volitve, imenovanja in administrativne zadeve ima predsednika, podpredsednika in 22 članov.</seg>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg89">V komisijo državnega zbora Republike Slovenije za volitve, imenovanja in administrativne zadeve se izvolijo: za predsednika Ciril Pucko, za podpredsednika Franc Pukšič in za člane Anton Anderlič, Igor Bavčar, Maksimiljan Lavrinc, Tone Partljič, Irma Pavlinič-Krebs, Matjaž Švagan, Miran Jerič, Dušan Vučko, dr. Mihael Brejc, Janez Janša, mag. Franc Sušnik, Silva Črnugelj, Aurelio Juri, Miran Potrč, Ivan Božič, Franci Rokavec, dr. Andrej Bajuk, mag.Janez Drobnič, Anton Delak, Sašo Peče, Bogomir Vnučec in Maria Pozsonec.</seg>
@@ -404,7 +387,7 @@
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg91">Kolegicam in kolegom predlagam, da po obravnavi ta odlok sprejmejo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg92">Hvala, dr. Podobnik. Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg93">Želijo besedo predstavniki poslanskih skupin?</seg>
@@ -422,38 +405,38 @@
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg102">Glede na to, da lahko kandidata za predsednika oziroma podpredsednika predlaga tudi skupina najmanj 10 poslank in poslancev, prosim, da morebitne predloge navedenih pooblaščenih predlagateljev posredujete tukaj na predsedniški mizi. Gospod Anderlič, prosim.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ3.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg103">Imam proceduralni predlog, da glede na to, da je bilo od sklica konstitutivne seje do konstitutivne seje danes izredno malo časa in da se predstavniki skupin poslancev, izvoljenih na istoimenskih listah, niso uspeli dogovoriti za razdelitev nekaterih nalog, vodstvenih funkcij v državnem zboru in ker smo danes tudi razširili predlog dnevnega reda s točko: oblikovanje vsaj nekaterih delovnih teles, predlagam, da državni zbor v tem trenutku prekine sejo in jo nadaljuje 7. novembra. V tem času pa naj komisija za volitve, imenovanja pripravi predlog za predsednika, podpredsednike in za delovna telesa predloge in seveda tudi tisti predlog, ki ste ga vi navedli je aktualen, da lahko tudi skupina 10 poslancev, če se bo tako opredelila, tudi predlaga svoj predlog. Torej, moj predlog je prekinitev do 7. novembra in do takrat naj se komisija za volitve in imenovanja sestane ter pripravi predloge. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg104">Hvala lepa, gospod Anderlič. Slišali ste proceduralni predlog in sedaj se moramo o tem odločiti. Najprej seveda dajem besedo poslankam in poslancem.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg105">Proceduralno vprašanje.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg106">Prosim! Gospa generalna tajnica me je obvestila, da po poslovniku ni razprave, vendar mislim, da lahko poslanci spremenijo, če želijo. <gap reason="inaudible"/>
                </seg>
                <note>Smeh.</note>
                <gap reason="inaudible"/>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ3.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg107">Predlagatelj predloga ni povedal, katerega leta, Povedal je 7. november. Jaz bi rad slišal tudi leto.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg108">Prosim, gospod Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ3.AnderličAnton" ana="#regular">
+            <u who="#AnderličAnton">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg109">To je najmanj, kar je za dodati. Torej, predlog v popolnosti zveni tako, da bo jasen tudi v tej točki. Predlagam prekinitev do 7. novembra leta 2000 in seja naj bi se nadaljevala tega dne ob 10.00 dopoldan. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDUJOČI DR. JOŽEF BERNIK:</note>
-            <u who="#SDZ3.BernikJožef" ana="#chair">
+            <u who="#BernikJožef" ana="#chair">
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg110">Hvala lepa. Slišali ste dopolnjeni predlog. Kot vidim iz poslovnika, ni mogoče več o tej stvari razpravljati. Če pa predlog ne gre skozi, potem bomo pa novega dobili. Zato moram po poslovniku prositi za navzočnost.</seg>
                <note>83 prisotnih.</note>
                <seg xml:id="SDZ3-Redna-01-2000-10-27.seg111">Sedaj gremo na glasovanje o proceduralnem predlogu. Prosim!</seg>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Izredna-17-1997-12-16"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">17. izredna seja (16. 12. 1997)</title>
-            <meeting n="17"
-                     corresp="#SDZ2-Izredna-17-1997-12-16.DZ"
-                     ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="17" corresp="#DZ" ana="#parl.meeting.extraordinary">Izredna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">17. izredna seja</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|63906F9470B33B6EC1256572004AC25A</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=63906F9470B33B6EC1256572004AC25A</idno>
-                  <imprint>
-                     <date when="1997-12-16">(16. december 1997)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>17. izredna seja (16. 12. 1997)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1997-12-16"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=63906F9470B33B6EC1256572004AC25A</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="293"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="118"/>
                <tagUsage gi="seg" occurs="506"/>
                <tagUsage gi="gap" occurs="12"/>
@@ -609,25 +594,21 @@
                <date when="1997-12-16" ana="#parl.sitting">16. 12. 1997</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Izredna-17-1997-12-16.DZ"
-                 ana="#par.lower"
-                 corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">17. izredna seja</head>
-            <docDate>(16. december 1997)</docDate>
             <note type="chairman">Sejo je vodil Janez Podobnik, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.13 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje! Pričenjam 17. izredno sejo Državnega zbora Republike Slovenije, ki sem jo sklical na podlagi 1. in 2. odstavka 51. člena in 54. člena poslovnika državnega zbora. Prosim, da poslanke in poslanci zasedete svoja mesta. Predstavniki vlade naj se usedejo na svoje mesto, da bomo lahko pričeli s sejo. Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: gospa Eda Okretič-Salmič, gospod Ciril Pucko. Gospa Darinka Mravljak je prisotna. Dr. Jože Zagožen je prisoten. Tudi Vincencija Demšarja vidim. Prosim, da ugotovimo prisotnost v dvorani!</seg>
                <note>79 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg2">Državni zbor je sklepčen in lahko odloča. Na sejo sem vabil predsednika Vlade Republike Slovenije dr. Janeza Drnovška ter druge člane vlade, guvernerja Banke Slovenije dr. Franceta Arharja, generalnega direktorja Zavoda za pokojninsko in invalidsko zavarovanje gospoda Janeza Prijatelja, generalnega direktorja Zavoda za zdravstveno zavarovanje Slovenije gospoda Franca Koširja, predstavnika Urada predsednika Republike Slovenije in kandidatki za ustavni sodnici prof. dr. Miroslavo Geč-Korošec in prof. dr. Dragico Wedan-Lukić ki bosta v primeru izvolitve zaprisegli pred zborom. Vse vabljene prav lepo pozdravljam. Opravičujem se zaradi nujne zadržanosti ministra za zdravstvo.</seg>
@@ -635,16 +616,16 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg4">Prehajamo na umike. Predlogov za umik posamezne točke dnevnega reda v pisni obliki nismo prejeli. Ima pa predlog v zvezi z umikom gospod Potrč. Prosim.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg5">Hvala lepa gospod predsednik. Spoštovane kolegice in kolegi! V imenu poslanske skupine Združene liste socialnih demokratov predlagam, da se iz dnevnega reda današnje seje umaknejo: prvič - predlog zakona o višini povračil v zvezi z delom in nekaterih drugih prejemkov. To je točka 16. Drugič - predlog zakona o spremembah in dopolnitvah zakona o notranjih zadevah. To je točka 17. In tretjič - predlog zakona o spremembah in dopolnitvah zakona o obrambi, točka 18. Dovolite, da dam kratko obrazložitev za vse tri predlagane zakone skupaj.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg6">Vlada je z 2,5 mesečno zamudo državnemu zboru predložila proračun za leto 1998. Ob njem predlaga vrsto zakonov iz takoimenovanega varčevalnega paketa ukrepov, ki so po njenih trditvah nujni, da bi lahko zagotovili prihodke proračuna v obsegu 814 milijard, odhodke v obsegu 843 milijard in primanjkljaj v obsegu 29,5 milijarde tolarjev. Varčevalnega paketa ukrepov vlade uradno nismo prejeli. Vlada je o njem prvič spregovorila na tiskovni konferenci pred več kot mesecem dni. Ali ga je kdaj sprejela kot vladni akt ali le kot dogovor koalicijskih strank, poslanci opozicije, vsaj Združene liste, ne vemo. Ne poznamo tudi celotnega paketa zakonov, ki naj bi jih vlada predložila v sprejem državnemu zboru. V petek, 12. decembra, nam je generalni sekretar vlade predložil seznam 26 zakonov. Danes imamo za dnevni red predlaganih 13 zakonov. Iz sredstev javnega obveščanja smo obveščeni, da so dodatno predlagani še nekateri zakoni, ki v tem seznamu sploh niso navedeni, recimo predlog zakona o spremembah in dopolnitvah zakona o določitvi minimalne plače in o načinu usklajevanja plač, ki se nam, kolikor poznamo njegovo vsebino, zdi izjemno bistven. Tako sploh ne poznamo in ne vemo, kaj vse naj bi sestavljal paket zakonov, ki naj bi ga državni zbor sprejel za uveljavitev predloga proračuna. Iz 13 zakonov, ki so uvrščeni na to sejo, pa ni razvidno, ali so sploh vsi povezani s sprejemom proračuna, ali morajo res vsi stopiti v veljavo 1.1.1998 in je zato nujno njihovo odločanje v zadnjih dneh decembra, in končno, kolikšni bodo zaradi teh zakonov novi finančni viri ali zmanjšane obveznosti za proračun za leto 1998. Mnogi predlagani zakoni končno posegajo v materialne pravice zaposlenih, nekatere od teh urejene tudi s kolektivnimi pogodbami. Vlada se pred sprejemom varčevalnega programa ni posvetovala s socialnimi partnerji.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg7">Prosim, kolegice in kolegi, da se umirite in poslušate gospoda Potrča. Prosim, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg8">Vlada se pred sprejemom varčevalnega programa ni posvetovala s socialnimi partnerji. Posvetovanje z njimi je pričela šele potem, ko je pripravila in sprejela osnutke zakonov. To je posebej nesprejemljivo zato, ker šele skupen dogovor o vseh predlaganih rešitvah lahko omogoči uskladitev, sprejemljivo za vse socialne partnerje. Vlada pa kljub temu, da usklajevanje o bistvenih vprašanjih s socialnimi partnerji še ni doseženo, predlaga v predhodni sprejem le nekatere zakone, ki bistveno posegajo v pravice zaposlenih, z nekaterimi od njih pa se celo enostransko razveljavljajo sklenjene kolektivne pogodbe. To velja posebej za tri zakone, ki jih mi predlagamo, da se umaknejo.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg9">Za nobenega od njih ni nujno, da stopi v veljavo 1.1.1998, za nobenega to tudi ni predlagano. Nesprejemljivo je govoriti o tem, da je vprašanje beneficirane dobe varčevalni ukrep. To je lahko utemeljen razlog za spremembo, ampak varčevati na zdravju ljudi - jaz tega še nisem slišal. Razen tega je tudi sekretariat v svojem mnenju opozoril, koliko odprtih vprašanj je v zvezi s temi zakoni.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg10">Za nobenega od predlaganih zakonov vlada ni navedla materialnih učinkov. Mi sicer ne dvomimo, da materialni učinki so, pričakujemo pa, če so tako zelo pomembni, da je treba o njih preko noči razpravljati, da vlada ve za njih in da bi bilo korektno, da jih državnemu zboru vsaj pisno pa na pol točno predloži.</seg>
@@ -654,7 +635,7 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg14">In na koncu - vse navedeno ne pomeni, da v poslanski skupini Združene liste nasprotujemo nujnemu varčevanju in tudi predlaganim rešitvam v navedenih zakonih. O njih smo pripravljeni razpravljati v okviru celote predlaganih zakonov in ukrepov. O njih smo pripravljeni razpravljati, ko bomo dobili celovito oceno potrebnih in nujnih prihrankov za proračun in ko bomo dobili obvestilo o tem, da so dogovori o teh vprašanjih s socialnimi partnerji zaključeni. Prepričani smo, da se z umikom teh treh zakonov z dnevnega reda ne ogroža sprejema paketa ukrepov, niti proračuna. Zavedamo se, da bo o teh vprašanjih državni zbor moral nadaljevati odločanje takoj po novem letu in na to smo pripravljeni. Menimo pa, da ni mogoče pristati na to, da se z vsiljenim odločanjem o teh vprašanjih že v teh dneh onemogoča nadaljevanje sporazumevanja s socialnimi partnerji, enostransko razveljavlja vsebina sklenjenih kolektivnih dogovorov in zahteva od državnega zbora prenagljeno in nepremišljeno odločanje izven celote predlaganih ukrepov in njihovih učinkov. Predlagamo, da te tri zakone ne uvrstimo na dnevni red. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg15">Hvala lepa, gospod Potrč. Predlagam, da v skladu s poslovnikom, sedaj imajo možnost, da se tako predstavnik predlagatelja, poročevalec matičnega delovnega telesa in predstavniki poslanskih skupin opredelijo. Ker je gospod Potrč omenjal tri zakone skupaj v paketu, predlagam, da razpravo opravimo za vse tri skupaj, potem pa bomo seveda o vsakem zakonu posebej tudi glasovali glede umika z dnevnega reda. Predlagam, da zdaj opravimo ta postopek, potem bo pa dobil besedo gospod Hvalica za nov predlog umika. Zdaj izpeljemo postopek za ta predlog. Taka je bila naša dosedanja praksa in mislim, da je tudi pravilna. Želi predstavnik predlagatelja besedo? Vse tri zakone je predlagala Vlada Republike Slovenije. Želi predstavnik vlade besedo? Predstavnik vlade ne želi besedo. Želi besedo poročevalec matičnega delovnega telesa?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg16">Želi besedo predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
@@ -666,43 +647,43 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg19">Torej, prosim, za pozor. Na glasovanje dajem predlog za umik 16. točke z dnevnega reda, to je predlog zakona o višini povračil stroškov v zvezi z delom in nekaterih drugih prejemkov. Ugotovimo prisotnost? Proceduralni predlog ima gospod Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg20">Hvala lepa, gospod predsednik. Spoštovani poslanci, spoštovani ministri, ki ste po 14-ih dnevih ponovno v državnem zboru! Glede na to, da nismo bili pripravljeni na ta predlog in v tem trenutku ne vemo, kako bi o tem predlogu gospoda Potrča glasovali, sam sem imel pa tudi še dodaten predlog za umik, zahtevam v imenu poslanske skupine eno uro odmora. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg21">Gospod Hvalica, razumljivo, vsak poslanec lahko predlaga umik iz dnevnega reda in o njegovem predlogu se potem po postopku, kot sem ga zdaj izpeljal, tudi glasuje. Tako da vi boste dobili besedo takoj, ko bomo glasovali o teh treh predlogih. V skladu s poslovnikom pa je poslanska skupina pred glasovanjem zahtevala pavzo za razmislek, zato bo državni zbor sejo nadaljeval točno ob 15.30 uri.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 14.28 uri in se je nadaljevala ob 15.35 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg22">Nadaljujemo s sprejemanjem dnevnega reda 17. izredne seje državnega zbora. Ugotovimo prisotnost! 58 poslank in poslancev. Državni zbor je sklepčen in lahko odloča.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg23">Ali želi besedo predstavnik poslanske skupine Socialdemokratov? Gospod Ivo Hvalica, prosim.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg24">Hvala lepa, gospod predsednik. Spoštovani kolegi! Poslanska skupina Socialdemokratske stranke je imela sejo poslanske skupine. Jaz moram povedati, da smo se mi sestali tudi zaradi tega, ker nam je bilo danes dopoldne onemogočeno, čeprav je bilo dogovorjeno na kolegiju, da so torki dopoldan rezervirani za seje poslanskih skupin. Bil je odbor za mednarodne odnose, prav tako je bil tudi razgovor predstavnikov parlamentarnih strank z vlado oziroma s predsednikom vlade, tako da smo mi sestanek šele sedaj opravili in se tudi dogovorili, kako bomo glasovali ob najnovejšem predlogu za umik nekaterih točk z dnevnega reda.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg25">Gospod predsednik, ali lahko že sedaj podam tudi moj predlog ali moram priti še enkrat nazaj?</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg26">Gospod Hvalica, sedaj bomo dali na glasovanje predloge za umik posameznih točk dnevnega reda. Možnost nastopa poslanskih skupin je, žal, tukaj izčrpana in boste z glasovanjem izrazili vaše stališče.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg27">Ne, hotel sem povedati, da imam tudi sam predlog <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg28">Aha, za nov predlog! Ne, ne, kasneje, ko bomo glasovali o tem predlogu.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg29">Hvala lepa, gospod predsednik.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg30">Hvala, gospod Hvalica.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg31">Na glasovanje torej dajem predlog, da se s 17. izredne seje umakne predlog zakona o višini povračil stroškov v zvezi z delom in nekaterih drugih prejemkov. Ugotovimo prisotnost!</seg>
                <note>73 prisotnih.</note>
@@ -728,13 +709,13 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg43">Besedo dajem gospodu Ivu Hvalici.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg44">Hvala lepa, gospod predsednik. Spoštovani kolegi! Predlagam umik točke 15, to je predlog zakona o spremembah in dopolnitvah zakona o prispevkih za socialno varnost, kjer je predlagan hitri postopek.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg45">Glejte, naše stališče je, da zakon ni sprejemljiv; uvaja plačevanje prispevkov za socialno varnost od vseh prejemkov iz delovnega razmerja, torej tudi na prehrano, prevoz in regres. Torej gre za antisocialni zakon.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg46">Mi smo trdno pričakovali, da bodo v varčevalnem paketu vlade predvsem obdavčitve privilegijev, tu pa doživljamo pravzaprav penaliziranje sociale. Torej mi temu nasprotujemo, zato predlagamo, da se ta predlog zakona umakne z dnevnega reda. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg47">Hvala, gospod Hvalica. Predlog zakona je vložila vlada. Želi predstavnik predlagatelja besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg48">Želi besedo poročevalec matičnega delovnega telesa?</seg>
@@ -747,12 +728,12 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg52">Ali želi predlagatelj umika dodatno obrazložiti svoj predlog? Sicer ni bilo razprave, ampak poslovniška možnost je. Torej gospod Hvalica kot predlagatelj.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg53">Hvala lepa, gospod predsednik, za korekten odnos in za to, da ste mi omogočil, da izkoristim to poslovniško možnost. Sicer bi jaz lahko to povedal že prej, ampak sedaj sem toliko bolj motiviran, ker vidim, da se ne oglasijo predstavniki vlade. Ko sem vas jaz pozdravil, prej na začetku te seje, nisem mislil, da vas pozdravim tu kot neme pričevalce te seje, ampak kot aktivne. Torej akterje na tej seji! Sedaj ste se nekako potuhnili in nihče noče nič reči.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg54">Čudim se tudi nekaterim predstavnikom poslanskih skupin, da ne rečejo niti besede, jaz sem bil zelo jasen. Gre za antisocialni ukrep. Gre za predlog zakona, ki penalizira socialo. Kaj naj o tem govorim? Lahko sicer govorim tudi tri dni o tem, ampak mislim, da je jasno, za kaj gre. Torej jaz se čudim nekaterim, tudi tistim, ki zrejo kar naprej v prihodnost - in to je za prihodnost - se čudim, da tu nič ne rečejo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg55">Hvala gospod Hvalica. Samo majhna korekcija. Kadar predlagatelj dodatno obrazloži svoje razloge za umik, ima samo 5 minut, da to pove.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg56">Torej na glasovanje dajem predlog za umik 15. točke z dnevnega reda, to je predlog zakona o spremembah in dopolnitvah zakona o prispevkih za socialno varnost. Ugotavljamo prisotnost!</seg>
                <note>Glas iz dvorane.</note>
@@ -769,11 +750,11 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg64">Želi predstavnik predlagatelja besedo ob tem predlogu, da se umakne 20. točka dnevnega reda? Kar dva predstavnika, gospod Gaspari ali gospod Dragonja? Gospod Dragonja.</seg>
             </u>
             <note type="speaker">METOD DRAGONJA:</note>
-            <u who="#SDZ2.DragonjaMetod" ana="#regular">
+            <u who="#DragonjaMetod">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg65">Hvala lepa, gospod predsednik. Spoštovane poslanke in poslanci! V imenu predlagatelja, Vlade Republike Slovenije, bi želel predlagati, da ta točka ostane na dnevnem redu. Njeno sprejetje je vezano z nadaljnjo operativnostjo poslovanja Slovenskih železarn, predvsem v tistem delu, ki se nanaša na izpolnjevanje obveznosti glede izdanih obveznic za sanacijo Slovenskih železarn v preteklosti. Vlada je v svojih procedurah uspela zagotoviti realizacijo sklepov državnega zbora. Res, z nekaj zamudami, mislim pa, da so materiali kompletni v državnem zboru, da bi lahko na ostalih zakonih, predvsem na zakonu o privatizaciji oziroma o lastninjenju Slovenskih železarn, ki vsebuje glavni paket in glavne nadaljnje sanacijske ukrepe, naprej profilirali politiko sanacije tega gospodarskega sistema in opravili tudi oceno tistih vprašanj, ki so bila odprta in postavljena kot eksplicitne zahteve državnega zbora. Da bi pa ta zakon, vključujoč amandmaje, ki za eno leto podaljšujejo servisiranje obresti na izdane obveznice, državni zbor obravnaval in s tem zagotovil nadaljnje uspešne pogoje za to, da se ta sanacija lahko nadaljuje in da so ustvarjeni pogoji za nadaljevanje poslovanja Slovenskih železarn.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg66">Hvala lepa, gospod minister, magister Dragonja. Želi besedo poročevalec matičnega delovnega telesa?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg67">Predstavnik sekretariata za zakonodajo in pravne zadeve?</seg>
@@ -781,11 +762,11 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg68">Želijo besedo predstavniki poslanskih skupin? Gospod Mozetič v imenu poslanske skupine Slovenskih krščanskih demokratov.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg69">Drage kolegice, spoštovani kolegi! Opozoril bom samo na to, kar je v bistvu bilo posredno opozorjeno, na proceduralno napako. Mislim, na žalost ugotavljam, da tudi ta dnevni red, sicer po posvetovanju, dvojnem, s poslanskimi skupinami, je izkoristil predsednik svojo možnost in ga predlagal takšnega, kakršen pač je. Vendar pri tej točki je pa sam celo povedal, da je naredil napako. Če je državni zbor sklenil, da bo to točko obravnaval oziroma to materijo, ki je v tej točki, šele potem, ko bo zakon o delni privatizaciji Slovenskih železarn, ki ga tudi vlada pripravlja, potem predsednik tega ne bi smel dati na dnevni red. Če bi hoteli proceduralno to zadevo rešiti, bi verjetno vlada morala priti s predlogom, istočasno pa tudi povedati, zakaj ni sprejela še zakona in ga poslala v parlament, o delni privatizaciji. Ampak, očitno poslovnik in vse te zadeve za to vladno koalicijo ne držijo. Če je pač potrebno iz nekih interesov, pa jaz ne dvomim, da je pri železarnah potrebno res nekaj narediti. To smo že junija, julija meseca ugotavljali, tukaj smo tudi imeli paket zakonov, tudi po hitrem postopku. Danes je december, pa nimamo nobenega še, razen tega, ki ga je v bistvu nemogoče resno sprejeti, ker nismo dobili še niti jasnega zagotovila, da je tisti sanacijski program, ki ga ima vlada v svojih predalih in ki so nam ga poslali, ali bo kaj iz njega ali ne bo. Vendar jamstva pa bomo sprejemali. To pomeni, ne glede na vse te probleme, ki so, vendar bi se jih morala zavedati najprej vlada, prinesti tiste zakone v parlament, ki so nujni, in potem bi se držali svojega sklepa. Ne dvomim pa, da bo vladna večina pač to proceduralno napako spregledala, in tudi sklep, ki smo ga že enkrat sprejeli, danes sprejela drugačen sklep. Verjetno je pametnejša, kot je bila takrat, ampak to ne igra vloge. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg70">Hvala lepa gospodu Mozetiču. Želi še kdo besedo v imenu poslanskih skupin?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg71">Dovolite, da sam dodatno pojasnim svoj predlog.</seg>
@@ -799,38 +780,38 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg76">Ugotavljam, da predlog za umik 20. točke z dnevnega reda ni bil sprejet. Ali je še kakšen predlog za umik. Gospod Špiletič ima predlog za umik ene od točk dnevnega reda. Prosim.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg77">Hvala lepa, gospod predsednik. Spoštovane kolegice in kolegi! V bistvu imam eno vprašanje, in sicer v zvezi s predlagano točko 10 - predlog zakona o spremembah in dopolnitvah zakona o davčnem postopku, EPA 326 . Na kolegiju smo se dogovorili, da bo ta zakon, ki ima kar 55 členov, vlada umaknila in pripravila novo verzijo zakona, skrajšano. Štiri člene smo omenjali, in sicer, da bodo v tem zakonu samo tisti členi, ki se nanašajo na podaljšanje roka iz 31.12.1997 še za eno leto. Saj v naši poslanski skupini te nove verzije predloga nismo prejeli, tudi v samem predlaganem dnevnem redu je še vedno navedba EPA 326 . Sprašujem, če bo vlada potegnila nazaj ta zakon in predlagala novega oziroma, kako bo sploh proceduralno potekala obravnava te točke.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg78">Gospod Špiletič, če počakate, vam bi takoj pojasnil. Točno je, na takšen način je tekel dogovor na seji kolegija. Vlada se je odločila, da bo ta dogovor uresničila s tem, da je predlagala amandmaje. S temi amandmaji je predlagala črtanje številnih členov, ki so vloženi v samem zakonu, in je pustila tiste, za katere ocenjuje, da so bili v skladu z dogovorom na kolegiju.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg79">Je pa to v nasprotju z dogovorom. Mislim, da to ugotovitev lahko potrdite.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg80">Mislite, da bi vlada vložila nov zakon?</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg81">Nov zakon s štirimi členi. Točno tako smo se dogovarjali, gospod predsednik.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg82">Mislim, da je pač več možnosti. Vlada se je odločila za eno od teh. Res pa je, da je bilo na kolegiju izraženo pričakovanje, da bi vlada vložila nov predlog zakona, ampak tudi ta rešitev mislim, da je korektna, v skladu s poslovnikom.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg83">Želi še kdo besedo pri umikih? Potem predlagam, da gremo na razširitve dnevnega reda.</seg>
                <note>Glas iz dvorane.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg84">Bom dal besedo. Kakšen bo vrstni red? Gospod mag. Schiffrer se je prvi oglasil, mu dajem besedo. Se opravičujem. Potem imajo predstavniki vlade predlog in gospod Anderlič v imenu skupine poslancev. In tudi gospod Pukšič. In gospod Kopač. Prosim.</seg>
             </u>
             <note type="speaker">MAG. MARJAN SCHIFFRER:</note>
-            <u who="#SDZ2.SchiffrerMarijan" ana="#regular">
+            <u who="#SchiffrerMarijan">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg85">Spoštovani! Poslanska skupina Slovenskih krščanskih demokratov predlaga razširitev dnevnega reda 17. izredne seje Državnega zbora Republike Slovenije s točko Položaj slovenske narodne skupnosti na Hrvaškem po nerazumljivem črtanju slovenske manjšine iz ustave Republike Hrvaške. V smislu 64. člena poslovnika državnega zbora so nerazumljivi razlogi nastali žal po sklicu seje, ko je hrvaški sabor nepričakovano in proti volji Slovencev na Hrvaškem črtal iz ustave avtohtono slovensko manjšino na Hrvaškem. Še posebej smo zaskrbljeni nad dejstvom, da so črtali slovensko manjšino iz Hrvaške ustave isti dan, ko je bil na uradnem obisku na Hrvaškem predsednik vlade Republike Slovenije dr. Janez Drnovšek. Pričakujemo, da bodo iz državnotvornih in načelnih razlogov vse stranke slovenskega parlamenta podprle v resni skrbi za Slovence na Hrvaškem naš predlog in pričakujemo pod to točko dnevnega reda poročilo predsednika vlade, dr. Janeza Drnovška in ministra za zunanje zadeve, dr. Borisa Frleca.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg86">Hvala lepa, mag. Schiffrer. Samo še vprašanje. Ali imate pri tej dodatni točki dnevnega reda tudi gradivo? Zaenkrat je tole.</seg>
                <note>Glas iz ozadja.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg87">Hvala lepa. Predlog mag. Schiffrerja sodi v sklop poslovniških določb glede razlogov, ki so nastali tudi po sklicu izredne seje. 54. člen poslovnika tudi govori o tem, da se gradivo za izredno sejo lahko predloži poslancem tudi na sami seji. Na moje vprašanje mag. Schiffrerju, ali že sedaj takoj pri predlogu za dodatno točko dodaja kakšno ustrezno gradivo, mi je pač samo dal pisni predlog, torej utemeljitve dodatne točke dnevnega reda, in tudi povedal, da bo posebno gradivo pripravilo pristojno matično delovno telo, ki ga tudi sam vodi. Gospod Schiffrer je bil v tem primeru tudi poročevalec matičnega delovnega telesa, ker vodi komisijo.</seg>
@@ -841,7 +822,7 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg90">Želijo besedo predstavniki poslanskih skupin? Gospod Peterle, gospod Ribičič, gospod Anderlič, gospod Hvalica.</seg>
             </u>
             <note type="speaker">ALOJZ PETERLE:</note>
-            <u who="#SDZ2.PeterleAlojz" ana="#regular">
+            <u who="#PeterleAlojz">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg91">Hvala lepa za besedo. Spoštovani gospod predsednik, spoštovane poslanke in poslanci!</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg92">22. prosinca leta 1990 je hrvaški sabor sprejel ustavo Republike Hrvaške, v kateri je bil formaliziran status slovenske in drugih manjšin na Hrvaškem. V omenjeni ustavi piše naslednje:</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg93">"Republika Hrvaška se ustanavlja kot nacionalna država hrvaškega naroda in država pripadnikov drugih narodov in manjšin, ki so njeni državljani, Srbov, Muslimanov, Slovencev, Čehov, Slovakov, Italijanov, Madžarov, Judov in drugih, ki se jim jamči enakopravnost z državljani hrvaške narodnosti in uveljavljanje narodnih pravic v skladu z demokratičnimi normami Organizacije združenih narodov in držav svobodnega sveta."</seg>
@@ -853,11 +834,11 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg98">Od slovenske vlade pa pričakujem, da bo zavarovala interese Slovencev na Hrvaškem in za to seveda podvzela potrebne korake. Torej naša poslanska skupina vztraja pri tem, torej bo podprla predlog, da o tej zadevi govorimo na tej seji državnega zbora. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg99">Hvala, gospod Peterle. V imenu poslanske skupine Združene liste socialnih demokratov, dr. Ciril Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg100">Spoštovani! V imenu poslanske skupine združene liste lahko z mirno vestjo podprem ta predlog za razširitev dnevnega reda. Navedel bom samo dva razloga.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg101">En razlog je v tem, da smo vedno, ko je šlo za obravnavo položaja manjšin v naši državi, nasprotovali uporabi načela recipročnosti, zlasti takšne negativne recipročnosti, ki pod izgovorom, da nekaj ni urejeno v sosednji državi, na enak način jemljemo kot argument za spreminjanje naše veljavne ureditve.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg102">Drugi razlog je še pomembnejši, o njem govorim že sedaj, ne pa šele pozneje, zaradi tega, da bi tudi kakšen od kolegov iz drugih strank storil isti korak. Mi smo poklicali naše kolege v Socialdemokratski stranki, SDP Hrvaške in jih povprašali, kako so glasovali pri tem predlogu. Kolega Ivica Račan je v imenu poslanske skupine Socialdemokratske stranke vložil amandma, ki je nasprotoval uradnemu predlogu za črtanje Slovencev in Muslimanov iz hrvaške ustave. Pri tem se je skliceval na dva argumenta:</seg>
@@ -865,113 +846,113 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg104">Zelo lepo bi bilo tukaj slišati, ne mislim takoj, ampak pozneje v razpravi o tej točki, za katero sem prepričan, da bo uvrščena na dnevni red, kako so naši kolegi ravnali in kako so s tistimi strankami, s katerimi imajo stike na Hrvaškem, poskušali doseči, da ne bi prišlo do takšnega preglasovanja. V tem primeru so bili preglasovani v hrvaškem saboru socialdemokrati, ki poskušajo zastopati podobne usmeritve, kot jih zastopamo, in s katerimi sodelujemo v okviru Socialistične internacionale. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg105">Hvala, dr. Ribičič. V imenu poslanske skupine Liberalne demokracije Slovenije gospod Tone Anderlič, ki prihaja za govorniški oder z mesta druge poslanske skupine.</seg>
                <note>Smeh.</note>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg106">Spoštovani! Poslanska skupina liberalne demokracije podpira, da državni zbor obravnava problematiko, ki je bila uvodoma predstavljena s strani predsednika komisije za odnose s Slovenci v zamejstvu in po svetu.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg107">Vendar je vprašanje, ki je bilo že danes sproženo na odboru za mednarodne odnose in očitno tudi v okviru komisije za Slovence po svetu in zamejstvu, tako da bi bilo potrebno v okviru delovnih teles pripraviti gradivo, se opredeliti do vseh teh vprašanj. To je zagotovo vprašanje, o katerem je potrebno s temeljito pripravo vse stvari obravnavati. Kajti ta naša skrb za Slovence v zamejstvu in po svetu je vendarle taka, da pri nas ni nikoli vprašanja odnosa in skrbi za njih. Je pa vprašanje, ali lahko nepripravljeno razpravljamo o tem. Jaz bi na nek način pogojno podprl to zadevo, da vendarle najprej odbor za mednarodne odnose in komisija za Slovence po svetu in zamejstvu to gradivo pripravi, in po možnosti kaj več kot samo časopisne in druge novice. Jaz ne bi rad tukaj utemeljeval tudi možnosti drugih zahtev ali kaj podobnega do Slovenije in okoliščin, v katerih se je ta zadeva na Hrvaškem pač zgodila. Jaz verjamem, da bo tudi vprašanje drugih zahtev do Slovenije predmet diskusij, tako na odboru kot v komisiji, zato vendarle ob tej načelni podpori prosimo v poslanski skupini, da se vendarle ta stvar ne obravnava prej, dokler nimamo temeljite priprave v delovnih telesih in gradiva, da ne bi naredili nepotrebne škode. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg108">Hvala, gospod Anderlič. Dovolite, da glede na vašo razpravo samo proceduralno pojasnim, da bi bila ta točka obravnavana šele po obravnavi tega vprašanja na pristojnem matičnem delovnem telesu in bi bila upoštevana tudi vaša sugestija. Besedo ima gospod Ivo Hvalica v imenu poslanske skupine socialdemokratov.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg109">Hvala lepa, gospod predsednik. Spoštovani kolegi! Spoštovani gospod zunanji minister v odsotnosti! Ko je treba, ga nikdar ni tu. Torej, jaz sem danes na odboru za mednarodne odnose že načel to vprašanje. Pri tem jasno moram povedati, da podpiram pobudo predsednika komisije za Slovence v zamejstvu in po svetu. Jaz sem nemudoma, ko se je to zgodilo, ko sem izvedel, da se je to zgodilo, tudi predlagal komisiji, da se sestane. Prav tako sem danes na odboru za mednarodne odnose - in zaradi tega nismo opravili sestanka poslanske skupine - predlagal, da bi dobili neko informacijo, glede na to, da je bil prisoten tako zunanji minister kot tudi državni sekretar. Toda, glej ga zlomka, bil sem preglasovan, 7:8 in o tem nismo dobili informacije. Komu je bilo v interesu? Torej to licemerstvo, ki ga je pravkar tu za to govornico opravil vodja poslanske skupine liberalne demokracije, ni bilo potrebno. Lahko bi njihovi, njegovi člani na OMU podprli ta moj predlog in bi lahko del informacije že imeli. Trdno sem namreč prepričan, da je treba - torej pri zunanjih zadevah, pri zadevah, ki se tičejo naše zunanje politike, reagirati takoj. Tu je čas dejansko še dvakrat bolj dragocen ali pa trikrat ali pa štirikrat, kot hočete, kot o zadevah, ki se tičejo neke notranje politične zadeve. Ampak danes poslanci pozicije, moram izključiti tu, torej Slovenska ljudska stranka me je podprla na sestanku OMA, niso hoteli niti tega slišati. Jaz se zadevam, da je to vprašanje, ki se tiče pravzaprav notranje, da je to notranjepolitično vprašanje Hrvaške. Toda glede na to, da se ustava ne piše vsak dan, niti vsakih 10 let, marsikje po svetu so ta obdobja celo daljša, je to dogodek, ki sem ga jaz preprosto imenoval črni petek za slovensko diplomacijo. Kako je mogoče, da se je nekaj takega zgodilo, ne da slovenska diplomacija zazna, da bi bilo možno, da se to zgodi. In nenazadnje, spoštovana gospoda, izjava dr. Drnovška včeraj v intervjuju na televiziji je bila v nasprotju s tistim, kar smo danes slišali od ministra za zunanje zadeve. Jaz ne vem, če se niti predsednik vlade in minister za zunanje zadeve ne moreta sinhronizirati v neki tako pomembni točki, tudi občutljivi, ne vem, kaj si potem lahko mislimo o tem! Torej, jaz bi lahko o tem še kaj povedal, ampak bom zaključil s tem, da podpiramo v imenu poslanske skupine Socialdemokratske stranke Slovenije predlog mag. Schiffrerja, predsednika komisije za Slovence v zamejstvu in po svetu, da se to uvrsti na dnevni red in pravočasno opravi ta razprava. Smo namreč tudi pred kratkimi počitnicami, zadeva se bo razvlekla, razvodenela, in če bomo to kasneje obravnavali, ne bo imelo več želenega učinka. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg110">Hvala, gospod Hvalica. Prosil bi predstavnike poslanskih skupin, da ste pri svojih obrazložitvah korektni - kajti veste, da ni možna replika na vaše nastope - da pač poveste, ali ste za ali proti predlogu za razširitev dnevnega reda. Besedo ima gospod Jelinčič, za njim gospod Lešnik. Jelinčič v imenu poslanske skupine Slovenske nacionalne stranke.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg111">Hvala lepa, gospod predsednik. Kolegice, kolegi, predstavniki vlade! Dogodek, ki se je zgodil v petek, je pravzaprav logična posledica dosedanje neuravnotežene in nesposobne politike slovenske vlade do sosednje Hrvaške. Mislim, da je edino slovenska vlada bila presenečena nad tem dogodkom, vsi ostali, ki spremljajo dogajanje in medsebojne kontakte obeh vlad, smo pričakovali ta dogodek prej ali slej. Nedvomno je to notranjepolitično vprašanje Republike Hrvaške, vendar ima Republika Slovenija za to možnost, da sprejme kakšne protiukrepe. V ponedeljek sem dal predlog slovenski vladi, da naj kot protiukrep, kot enega od protiukrepov v Istri spremeni vse mednarodne prehode v meddržavne. Na ta način bi sosednjo Hrvaško prizadeli tam, kjer je edino občutljiva, pri denarju. In tudi tukaj je edina možnost, da jo pritisnemo, kajti vse ostalo je kot bob ob steno. Nedvomno je, da so hrvaški pogajalci, ne glede na to, da ne znajo držati besede, bistveno sposobnejši od slovenskih. In vedno, kadar se vladna delegacija iz Zagreba ali iz katerega koli drugega kraja, kjer so meddržavni pogovori, vrne domov v Ljubljano, čez dan ali dva zvemo, da smo zopet dobili po glavi in da bomo zopet plačevali ne vem kakšne obresti za ne vem kakšne vloge.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg112">S tem v zvezi bi se tudi vprašal, kako je mogoče, da naš veleposlanik Malešič šele dan po tem, kar se je zgodilo v Zagrebu, obvesti z depešo, ki ima oznako strogo zaupno, slovensko vlado o tem, kaj se je zgodilo včeraj in kar smo isti dan prebrali v časopisih. Dokler bomo imeli takšne predstavnike slovenske države po tujini, se nam bo slabo pisalo. In dokler bodo ti ljudje tako nonšalantno in ignorantsko delali s Slovenijo, toliko časa ne moremo upati, da se bo kaj izboljšalo.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg113">Sodim, da bi, ko bomo govorili o tej zadevi, ne samo, da se bomo opredeljevali načelno do te situacije in do tega problema, ampak da se bomo opredelili tudi do protiukrepov, ki jih mora vlada predložiti. Če ne bo protiukrepov, je vse skupaj zaman in Hrvatje se nam bodo smejali, kot se nam smejijo že od 1990. leta dalje; ves čas se "šlepajo" na Sloveniji in izrabljajo Slovenijo za to, da jih bomo pripeljali v CEFTO, v EFTO, v Evropsko unijo in v vse mednarodne institucije. Slovenska vlada še ni spregledala hrvaškega načrta in ne razume te vrste diplomacije. Rekel bi celo, da v določeni meri - upam, da bo zdaj kaj bolje - ampak v določeni meri sploh ne razume diplomacije. Kakor je to kruta pilula, mislim, upam, da se bo slovenska vlada streznila in da bo zadevo zagrabila z drugega konca.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg114">Poslanska skupina Slovenske nacionalne stranke bo podprla predlog, ki je bil dan tukaj, in upam, da bomo kmalu dobili odgovore na naša vprašanja. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg115">Hvala gospodu Jelinčiču. V imenu poslanske skupine DeSUS, gospod Lešnik, za njim gospod Gostiša.</seg>
             </u>
             <note type="speaker">ZORAN LEŠNIK:</note>
-            <u who="#SDZ2.LešnikZoran" ana="#regular">
+            <u who="#LešnikZoran">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg116">Gospod predsednik, kolegice in kolegi! Tako kot verjetno večina ali pa, še bolje rečeno, vsi, smo tudi v naši poslanski skupini z nejevoljo in z razočaranjem sprejeli vest o sklepu hrvaškega sabora, ki je spremenil ustavo.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg117">Podpiramo predlog krščanskih demokratov in gospoda Schiffrerja, da o tem v našem parlamentu spregovorimo. Vendar s tisto dopolnitvijo, ki jo je predlagal že vodja poslanske skupine liberalne demokracije, da v resnici temeljito pripravimo gradivo, da o tem najprej spregovori komisija za zamejce po svetu in pa seveda odbor za mednarodne odnose.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg118">Samo v informacijo - tudi jaz sem glasoval proti temu, da bi danes na seji OMA razpravljali o tej zadevi, zato, ker smo bili informirani, da vlada pripravlja temeljito analizo in temeljito poročilo o tem vprašanju, in pa zaradi tega, ker sem bil informiran, da bo seja trajala samo do pol dvanajste ure, ko je bil že sklican razgovor z vodji poslanskih skupin.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg119">Skratka, predlog krščanskih demokratov podpiramo, z željo, da se pripravi temeljito poročilo o tem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg120">Hvala lepa, gospod Lešnik. Preden dam besedo gospodu Leonu Gostiši v imenu poslanske skupine Slovenske ljudske stranke, mi dovolite, da se zaradi korektnosti dogovorimo takoj. Namreč, gre za razlago komisije za poslovnik, ki je naslednja. Jaz jo bom prebral. To je ena njenih zadnjih razlag, ki jo sprejela tudi na pobudo predsednika državnega zbora. Je pa naslednja: Določba 64. člena poslovnika o odločanju državnega zbora o dnevnem redu velja tako za redno kot izredno sejo državnega zbora. Upravičeni predlagatelji lahko predlagajo tako umik posamezne točke kot tudi razširitev, če so razlogi nastali po sklicu seje in če je bilo poslancem poslano ali izročeno gradivo, ki je podlaga za uvrstitev na dnevni red. Ta razlaga, ki je povsem jasna, iz te razlage izhaja naslednje. Razlogi po sklicu seje so v primeru tega predloga za širitev dnevnega reda nastali. Toda druga tema je, ali je bilo poslancem poslano ali izročeno gradivo. Zato bi prosil predlagatelja gospoda Schiffrerja, da poskuša zelo hitro zagotoviti morda nekaj predlogov, vsebinskih, o katerih bi državni zbor razpravljal. Sicer se nam bo zgodilo, da bomo ob večinski podpori vseh poslanskih skupin, da uvrstimo to točko na dnevni red, to naredili v nasprotju s poslovniško določbo, da morajo poslancem, ali jim biti poslano ali izročeno gradivo, ki je podlaga za uvrstitev na dnevni red. V vašem dopisu, v vašem gradivu je žal samo predlog za razširitev dnevnega reda, ni pa gradiva, ni pa vsebinskih predlog. Besedo ima gospod Leon Gostiša v imenu poslanske skupine Slovenske ljudske stranke.</seg>
             </u>
             <note type="speaker">LEON GOSTIŠA:</note>
-            <u who="#SDZ2.GostišaLeon" ana="#regular">
+            <u who="#GostišaLeon">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg121">Hvala lepa. Spoštovani! Reakcija je potrebna, čeprav je, roko na srce, malo pozna. Saborska odločitev je slovensko zunanjo politiko presenetila. Po odzivih, ki so sledili, je to več kot jasno. Razlog, zakaj bo Slovenska ljudska stranka podprla uvrstitev točke na dnevni red, je nedvoumen. Nikakor namreč ne smemo dopustiti, da se nakopičeni problemi v odnosih s Hrvaško rešujejo na plečih slovenske manjšine, pa čeprav gre za manjšino, ki smo jo, bodimo odkriti, precej mačehovsko obravnavali v preteklosti. To in pa tudi še nekatere druge dele slovenskega narodnega telesa v tujini. In upam, da bo razprava, ki jo bomo opravili v državnem zboru, ta naš dolg vsaj delno popravila.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg122">Hvala, gospod Gostiša. S tem so izčrpani nastopi poslanskih skupin. Sprašujem vas, ali kdo nasprotuje mojemu predlogu, da državni zbor ne bo takoj glasoval o tem predlogu, ker je še nekaj pobud za razširitev dnevnega reda. V tem času pa predlagatelji pripravijo kratko vsebinsko utemeljitev, ki bo tudi smatrana kot potrebno gradivo in bo s tem tudi izvršena pač zahteva poslovnika oziroma komisije za poslovnik. Gospod Kacin, želite besedo v smislu? To pomeni, da nasprotujete mojemu proceduralnemu predlogu. Imate drugačen predlog? Prosim. Proceduralno ima besedo gospod Kacin.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SDZ2.KacinJelko" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg123">Gospod predsednik, kolegice in kolegi! Kot je bilo že danes povedano, smo se o tem pogovarjali tudi na seji odbora za mednarodne odnose. Ampak ne samo tam. Tudi na sestanku vseh parlamentarnih skupin je tekla beseda o tem in imel sem občutek, da smo se poenotili, da je to tako resna tema, da potrebuje daljšo pripravo, da potrebuje tudi pisna gradiva, da potrebuje tudi izhodišča in da bodo vse parlamentarne stranke storile vse, kar je v naši moči, da bi bila takrat razprava čimbolj celovita. Zato bi še enkrat predlagal, da se o tem danes ne pogovarjamo in da najdemo priložnost, ko bodo zagotovljeni pogoji za tako razpravo, da o tem razpravljamo in odločamo.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg124">Ustava v sosednji državi se ne spreminja vsak dan. In s hitenjem ne bomo dosegli čisto nič, razen, da bomo zamudili čas za vsebinsko in celovito pripravo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg125">Hvala gospodu Kacinu. Žal je vaša razprava v tem smislu proceduralna razprava, ki je tudi vsebinska, poslanske skupine so povedale svoja stališča. Ponovno sprašujem - preden bi dal na glasovanje predlog, bi želel, da bi v celoti bila izvršena določba poslovnika - ali kdo nasprotuje, da razpravljamo o drugih širitvah dnevnega reda, v tem času pa predlagatelji pripravijo potrebno gradivo, ki je lahko izhodišče za razpravo.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg126">Namreč, kot sem obveščen s strani predlagatelja, je to gradivo lahko tudi stališče ljudi iz vlade. Neko gradivo, ki je že pripravljeno - ni potrebno, da se v celoti napiše sedaj. Tako je zagotovil predlagatelj te točke dnevnega reda.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg127">Predlagam, da ne glasujemo o tem predlogu, ampak počakamo na to gradivo. Predlog za razširitev dnevnega reda ima v imenu poslanske skupine tudi gospod Tone Anderlič in mu dajem besedo.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg128">Spoštovani! Dajem predlog za razširitev dnevnega reda s predlogom zakona o spremembah zakona o začasnem zadržanju izvajanja nekaterih določb zakona o denacionalizaciji in zakona o izvrševanju kazenskih sankcij.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg129">Gre preprosto za to, da je bil rok, ki smo si ga zadali z zakonom, 20. december, katerega pa, smo ugotovili te dni, ni mogoče izvesti. 20. december je bil tisti rok, ko naj bi tudi po mnenju ustavnega sodišča, ki je v svoji odločbi v letu 1995 ocenilo, da mora državni zbor Slovenije oceniti, ali je Republika Slovenija finančno zmožna popraviti krivice v celoti. Kar pomeni ne samo z vrnitvijo zaplenjenega premoženja, ampak tudi s povrnitvijo izgubljenega zaslužka in negmotne škode, česar zakon o denacionalizaciji upravičencem ne priznava.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg130">Gre za tako imenovani 145. člen zakona o izvrševanju kazenskih sankcij. Vi veste, da so se nekatere občine zaradi tega znašle tik pred bankrotom in v težavah in seveda tudi država Slovenija posredno s tem.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg131">Zakon, ki je v razmnoževanju in jaz verjamem, da ga boste takoj dobili, vsebuje samo dva člena, ki se nanašata na datum. Posebej moram poudariti to, da v zvezi z vračanjem premoženja cerkvi oziroma verskim skupnostim ni govora, kajti to je vprašanje, katerega sporazumno rešuje vlada, in tudi takrat, ko smo izglasovali v državnem zboru ta zakon, kateremu rok se izteka 20. decembra, nismo zajeli s tem zakonom. So pa to razlogi, ki so, pravim, nastali s tem, ko smo ugotovili, kaj je z roki. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg132">Hvala lepa. Gospod Anderlič je predlagal, torej v imenu treh poslancev, treh poslanskih skupin razširitev dnevnega reda s predlogom zakona o začasno zadržani <gap reason="inaudible"/> , se opravičujem, predlogom zakona o spremembah zakona o začasnem zadržanju izvajanja nekaterih določb zakona o denacionalizaciji in zakona o izvrševanju kazenskih sankcij. Navedel je tudi razloge, ki so nastali po sklicu izredne seje, in je tudi vložil ustrezno gradivo. Preden dam možnost razpravljalcem, ima gospod Hvalica proceduralni predlog.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg133">Hvala lepa, gospod predsednik. Glede na pravkar slišano in na vašo predhodno razlago, v kakšnem primeru je možna širitev dnevnega reda, vas sprašujem, gospod predsednik, ali je pri tem primeru, ki ga je podal vodja liberalne demokracije, to primer, kjer so nastali razlogi za širitev po sklicu seje. To me namreč zanima. Prej ste striktno opozorili - jaz tu namreč pri tem predlogu ne vidim - zato vas sprašujem, če poskušate ugotoviti, ali so nastali razlogi za širitev dnevnega reda po sklicu te seje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg134">Gospod Hvalica, tudi sam imam to dilemo. Tu gre za občutljivo razlago te poslovniške določbe, kaj pomeni in na kakšen način se interpretira utemeljitev predlagatelja dodatne točke, da so razlogi nastali po sklicu izredne ali redne seje, kajti poslovniška komisija je tukaj izenačila svojo razlago. Gospod Anderlič je dvakrat omenil v svojem nastopu razloge, ki so po njegovi oceni taki, da jih lahko tolmačimo, da so nastali po sklicu izredne seje državnega zbora. Vsekakor pa v prejšnjem primeru mislim, da je bila stvar nedvoumna, prav tako je bilo tudi gradivo - mislim, da bo posredovano - tako da bomo glasovali o prejšnjem predlogu za razširitev dnevnega reda. Sprašujem, ali želi besedo predstavnik sekretariata oziroma ali želi besedo predstavnik vlade!</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg135">Želijo besedo predstavniki poslanskih skupin? Gospod Mozetič ali gospod Rejc? Gospod Mozetič ima besedo, gospod Potrč ima besedo, bo imel za njim besedo.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg136">Drage kolegice, spoštovani kolegi! No, najprej čisto procesno, proceduralno. Ne vem, kdaj so nastali ti razlogi, ampak sigurno niso nastali po sklicu te seje. Ti razlogi so verjetno že dolgo. Zakaj niste pripravili zakona predlagatelji, vlada, mi ni znano, ampak zdaj ne morete govoriti, da je to nastalo po sklicu te izredne seje, ki je bila sklicana pred dvema dnevoma.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg137">Zdaj pa, kar zadeva to vsebino. Jasno, mi bomo temu nasprotovali, ampak mene čudi to, da ste zdaj prišli s predlogom, ko smo prejšnji teden ugotovili, da ni bilo totalitarnega komunističnega režima, ki je izvajal razlastitve, zdaj pa nastaja škoda zaradi denacionalizacije, in celo, tako sem prej, če sem prav, slišal, taka škoda, da bo celo država zaradi tega bankrotirala. Dajte se enkrat zmeniti, kaj je kaj. Najprej se odločite, kaj je, kje smo, kaj se je dogajalo, kaj se ni dogajalo in če se nekaj ni dogajalo, potem tudi nekaj drugega najbrž ni. Vendar, resno pa pristopimo k stvari.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg138">Dejstvo je, da pogoji niso nastali po tem sklicu, dejstvo je, da zakona niste pač pripravili, in ker ga niste pripravili, ga je nemogoče na tak način uvrščati na dnevni red in kršiti poslovnik. Mislim, da bi to moral ugotoviti že predsednik državnega zbora in enostavno niti ne spraševati naprej.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg139">Hvala, gospod Mozetič. V imenu poslanske skupine združene liste gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg140">Hvala lepa. Jaz sem v imenu naše poslanske skupine eden od sopodpisnikov predloga. S kolegija predsednika državnega zbora vodje poslanskih skupin bodo vedeli, da je o vprašanju uvrstitve ali neuvrstitve zakona o denacionalizaciji v tretji obravnavi bila razprava na seji kolegija državnega zbora in da je bila skupna ugotovitev, da bi bilo po svoje zaradi tega, da bi preprečili nastop situacije, v kateri bi moratorij potekel in ne bi imeli rešeno vprašanje v zvezi z vračanjem premoženja tujim državljanom, v zvezi z vračanjem premoženja potomcem bivših fevdalcev in v zvezi z vračanjem premoženja po izvrševanju zakona o kazenskih sankcijah, nujno potrebno nekaj storiti. Ko smo skupaj ugotovili, da ni realnih podlag za to, da bi se v tretji obravnavi lahko ta zakon obravnaval, je naše prepričanje, da je prav, da se za krajši rok, to je dveh mesecev podaljša moratorij, in sicer samo v teh treh točkah - neupravičena pridobitev državljanstva, zakon o izvrševanju kazenskih sankcij in tudi vprašanje potomcem bivših fevdalcev. Razlogi za to so po našem mnenju nastopili po tem, ko je seja državnega zbora bila sklicana, saj smo po njej ugotovili, da zakona v tretji obravnavi o spremembah in dopolnitvah zakona o denacionalizaciji ni, ker še pač ni bil vložen. Mi ta predlog podpiramo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg141">Hvala, gospod Potrč. Proceduralni predlog gospod Rejc. Želi še katera od poslanskih skupin besedo? Če boste predlagali, da razmnožimo gradivo, bomo to takoj storili.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg142">Hvala, gospod predsednik za besedo. Predlog, ki ga je dal gospod kolega Anderlič glede razširitve dnevnega reda, menim, da ne more priti v poštev, iz preprostega razloga, ker so v postopku spremembe in dopolnitve zakona o denacionalizaciji, ki ravno ta primer tudi rešuje. In seveda dva zakona na isto temo - pravim, da ravno to tudi rešuje. Tudi ZIKS je prizadel. In je potrebno, da predlagatelji pripravijo tretjo obravnavo in zadeva se bo izpeljala in opravila v državnem zboru. Menim, da nimamo nobenega opravičila, predvsem pa ni v poslovniku možno določilo, oziroma je določilo, ki preprečuje, da bi bila dva na isto temo hkrati v parlamentarni proceduri. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg143">Hvala, gospod Rejc. Prav to proceduralno vprašanje je bilo aktualno ob zadnjem primeru, ko smo sprejeli dodaten, nov moratorij v obliki zakona in takrat je bilo nekako tudi sprejeto stališče, ki je dobilo podlago tudi v razlagi komisije za poslovnik, torej, da prav vprašanje moratorija, torej časovna vprašanja so izključena. In v tem primeru ne gre za dva zakona z isto vsebino v postopku. Ker zakon je zelo enak takratni vsebini. V tem smislu bomo na enak način tolmačili poslovniško določbo in tudi razlago komisije za poslovnik. Želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg144">Želi predlagatelj dodatno obrazložiti svoj predlog?</seg>
@@ -987,19 +968,19 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg150">Vlada predlaga razširitev dnevnega reda z zakonom o poroštvu Republike Slovenije za alocirane obveznosti Nove ljubljanske banke d.d. Ljubljana in Nove kreditne banke Maribor d.d. iz naslova kreditov, ki jih je sklad za financiranje povečanja zaposlovanja v gospodarsko manj razvitih in izrazito emigracijskih področjih Socialistične federativne Republike Jugoslavije najel pri Skladu Sveta Evrope za socialni razvoj. Prosim predstavnika vlade, da poda predlog za širitev dnevnega reda. Obrazložitev predloga, gospod Gaspari.</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ2.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg151">Glede na obsežnost dnevnega reda in pa že zdaj nejevoljo glede tega dnevnega reda, ki je nujen predpogoj za sprejemanje nekaterih ukrepov vlade, vlada pri tej točki ne bo vztrajala za vključitev na dnevni red. Menimo, da bi bilo dobro to čimprej storiti. Gre za institucijo Evropske Unije oziroma skupnosti socialni svet Evropske zveze. Z ratifikacijo tega sporazuma se potem odpre možnost za sodelovanje Republike Slovenije s tem socialnim svetom. Kot pravim, če bo to lahko prišlo na naslednjo sejo, stvar ne bo nič bistveno prikrajšana. Zgodile so se nekatere pomanjkljivosti v proceduri, ne samo pri vladi, tudi drugje. In zato ne vztrajamo, da bi moralo biti to vključeno v to sejo državnega zbora. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg152">Hvala, gospod Gaspari. To pomeni, da predloga za razširitev dnevnega reda s to točko ni več. Predlog za širitev dnevnega reda ima tudi gospod Pukšič.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ2.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg153">Hvala lepa. Predsednik državnega zbora! Spoštovane poslanke in poslanci! Prav lep pozdrav pa seveda tudi velja študentkam in študentom Visoke upravne šole v Ljubljani, ki so zgoraj na galeriji. Spoštovani predsednik! Gre za razširitev oziroma za postavljeno vprašanje. Namreč, bil sem na komisiji za mandatno-imunitetna vprašanja oziroma mandatno-imunitetni komisiji, kjer smo obravnavali med drugim obravnavo obvestila okrožnega sodišča v Ljubljani v zvezi z vodenjem kazenskega postopka zoper poslanca državnega zbora, in je uvrščeno na dnevni red kot 6. točka. Hkrati pa smo obravnavali tudi sklep komisije državnega zbora o nezdružljivosti opravljanja javne funkcije s pridobitno dejavnostjo. In ker je bila ta seja istočasno in te točke ni na dnevnem redu, se mi pravzaprav postavlja vprašanje, ali je to izpadlo, ker je tudi iz pregleda zadev za obravnavo na izredni seji državnega zbora bil pod 6. alineo predlog tega sklepa o nezdružljivosti opravljanja javne funkcije s pridobitno dejavnostjo. In ker je bilo v časopisju v zadnjem času veliko na to temo prelitega črnila in ker smo poslanci Socialdemokratske stranke in gospod poslanec Pavel Rupar seveda prepričani - in tako je bilo tudi ugotovljeno na komisiji za ugotavljanje nezdružljivosti opravljanja javne funkcije s pridobitno dejavnostjo - da je zadeva korektna in ni bilo kršenja zakona, se postavlja vprašanje, zakaj tega ni na dnevnem redu. Vsekakor pa bi radi zadevo razčistili pred slovensko javnostjo. Namreč gre za to, da imamo pri tem čisto vest. Vsekakor je potrebno to zadevo čimprej razjasniti, ker, kot je bilo že ugotovljeno na komisiji, ni bilo kršenja 12. člena tega zakona, saj podjetje ni bilo v funkciji upravljanja. Hvala lepa.</seg>
             </u>
             <note type="speaker">JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#regular">
+            <u who="#PodobnikJanez">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg154">Hvala lepa gospod Pukšič. Jaz sem vašo razpravo razumel kot proceduralno vprašanje meni, predsedniku, ki tudi predlaga točke dnevnega reda. Res je, ko je bila seja kolegija, na kateri smo obravnavali možne točke dnevnega reda, je bila kot ena od možnih točk omenjena tudi ta točka, ki ste jo vi omenil. Sam sem potem temeljito razmislil o tem vprašanju in sem prepričan, da točka dnevnega reda, ki govori o tem, ali bo nek poslanec državnega zbora, ali se mu bo celo odvzel mandat, je tako pomembna, da jo državni zbor obravnava na redni seji.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg155">Prav tako sem bil obveščen s strani članov te komisije iz nekaterih poslanskih skupin, da želijo, da matično delavno telo zaradi nekaterih novih razlogov še enkrat obravnava to vsebinsko vprašanje in ga potem predlaga v sprejem državnemu zboru. Ocenil sem, da s strani obeh delovnih teles gradivo še ni bilo v celoti pripravljeno. Zato mislim, da je pametno, da ni te točke na tej izredni seji državnega zbora; zato je tudi nisem uvrstil na to izredno sejo.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg156">Ali ima še kdo predlog za razširitev dnevnega reda?</seg>
@@ -1007,35 +988,35 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg157">Gospod Kovše, državni sekretar za energetiko, lahko pričakujemo kakšen zakon s področja energetike?</seg>
             </u>
             <note type="speaker">ALOJZ KOVŠE:</note>
-            <u who="#SDZ2.KovšeAlojz" ana="#regular">
+            <u who="#KovšeAlojz">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg158">Lep pozdrav! Predlagam, da se na izredno sejo državnega zbora uvrsti predlog zakona o poroštvu Republike Slovenije za restrukturiranje obveznosti podjetij s področja elektrogospodarstva. Predlog zakona je intervencijske narave; odlašanje z razrešitvijo plačilne sposobnosti podjetij elektrogospodarstva bi povzročilo motnje v oskrbi z električno energijo in s tem veliko gospodarsko škodo.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg159">Dovolite, da vam samo povem, da analiza predvidenih pogojev poslovanja v letu 1998 in 1999 kaže, da je v teh dveh letih poslovanje v elektroenergetskem sistemu obremenjeno z izredno visokimi obveznostmi za vračilo kreditov, saj anuitete v letu 1998 znašajo preko 21 milijard tolarjev, v letu 1999 preko 17 milijard tolarjev. Od tega pa znašajo samo anuitete, za katere posojila je dala jamstvo država: v letu 1998 - 13 milijard tolarjev in v letu 1999 preko 10 milijard tolarjev. Skupne anuitete predstavljajo v teh dveh letih več kot 20,5% pričakovanega celotnega prihodka od prodaje električne energije. Večina kreditnih obveznosti, ki bi jih restrukturirali, izhaja iz najetja kreditov v obdobju 1974-1985, ko je elektroenergetski sistem izvajal intenzivne investicijske dejavnosti. Predvsem so bile tu reakcije na težave pri preskrbi z električno energijo - to so bile takrat redukcije v letu 1973. Več kot 70% vseh obveznosti pa se nanaša na Nuklearno elektrarno Krško in Termoelektrarno Šoštanj.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg160">Upam, da sem vam povedal nekaj razlogov, da bi bilo dejansko nujno, ker te obveznosti zapadejo že v januarju prihodnjega leta, da bi uvrstili ta zakon oziroma predlog zakona o poroštvu Republike Slovenije za restrukturiranje obveznosti podjetij s področja elektrogospodarstva na dnevni red.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg161">Na koncu bi v bistvu povedal, da je to samo restrukturiranje obveznosti, za katere je država že dala poroštvo in to ni sprejemanje nekih novih poroštev - ampak je v bistvu restrukturiranje teh poroštev za dve leti, kajti v naslednjih dveh letih so te obremenitve elektroenergetskega sistema velike, kot sem prej povedal. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg162">Hvala, gospod Kovše. O tem zakonu je bilo govora tudi na seji predsednika kolegija državnega zbora; predlagan je bil s strani vlade, ko smo ocenjevali, kateri razlogi so tisti, da vežejo uveljavitev zakona s 1.1.1998. Pri tem zakonu nismo našli neposredne povezave in tudi zato se potem nisem odločil in ga nisem uvrstil na dnevni red izredne seje. Predlagal bi, da je pač ta zakon eden od tistih, ki bo zanesljivo uvrščen na dnevni red januarske seje. S tem bi bili tudi vaši argumenti, s katerim utemeljujete uvrstitev na to izredno sejo, sprejeti. Torej, da bi bil zakon obravnavan meseca januarja. Namreč, tu se ponovno postavlja vprašanje, kateri so razlogi, ki so nastali po sklicu izredne seje, da so taki, da lahko razpravljamo in ta zakon uvrščamo na izredno sejo. Seveda gradivo obstaja, zakon je bil 12.12. poslan v državni zbor. Tako da bi v tem primeru ne odprl razprave glede širitve dnevnega reda in bi bil ta zakon eden od tistih, ki bi bil na redni seji januarja med prvimi zakoni na dnevnem redu. Ali je še kakšen predlog za razširitev dnevnega reda? Gospod Hvalica ima predlog za razširitev.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg163">Hvala lepa, gospod predsednik. Spoštovani kolegi! Poslanske pobude in vprašanja so stalna točka dnevnega reda sej državnega zbora. Mi smo imeli letos po parlamentarnih počitnicah samo enkrat, enkrat samkrat smo imeli možnost, da opravimo te poslanske pobude in vprašanja.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg164">Na podlagi 23. člena poslovnika je možno, da državni zbor odloči tudi, da bodo vprašanja in pobude poslancev na posebni seji. Jaz razumem izredno sejo kot posebno sejo in bi predlagal, da uvrstimo to točko na dnevni red. Glejte, v pol leta smo imeli poslanci samo enkrat to možnost. Pri tem bi opozoril še na naslednje: poslanske pobude in vprašanja so tipičen institut opozicije. Vi se lahko zmenite sicer med seboj, na večerji in ko se dobite vladne stranke, ampak opozicija ima pa edina to možnost. Glede na to, da nam to možnost daje poslovnik tudi na izredni seji predlagam, da uvrstimo poslanske pobude in vprašanja na dnevni red te izredne seje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg165">Hvala lepa, gospod Hvalica. Tretji odstavek 20. člena govori: "Državni zbor lahko odloči, da bo vprašanja in pobude poslancev obravnaval na posebni seji." Sam interpretiram to določbo tako, da je ena posebna seja, na kateri so zgolj samo poslanska vprašanja. Jaz sem pripravljen, da se tudi, če je potrebno, v okviru kolegija zelo hitro dogovorimo in je v mesecu januarju tudi taka seja, kajti gospod poslanec Hvalica ima prav. Ker je bilo zelo malo rednih sej po parlamentarnih počitnicah letos, so imeli poslanci redkokdaj možnost, da so lahko na seji državnega zbora postavili tudi poslansko vprašanje. Seveda, pisna možnost obstaja. Poslanci imajo poslovniško možnost, da to storijo na seji državnega zbora, na kateri imajo tudi pravico oziroma poslovniško možnost, da takoj dobijo tudi odgovor. Če boste dali tako pobudo, gospod Hvalica, se lahko pogovorimo o taki seji državnega zbora, kot jo določa poslovnik.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg166">Sprašujem gospoda Schiffrerja, ker zdaj nam ostane samo še glasovanje o razširitvi dnevnega reda glede položaja slovenske narodne skupnosti na Hrvaškem po črtanju slovenske manjšine iz ustave Republike Hrvaške. Ali lahko dobimo zagotovilo s strani predstavnika vlade, da bo tudi pripravljeno ustrezno gradivo? Želi besedo gospod državni sekretar, gospod Vajgl?</seg>
                <note>Da.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg167">Prosim.</seg>
             </u>
             <note type="speaker">IVO VAJGL:</note>
-            <u who="#SDZ2.VajglIvo" ana="#regular">
+            <u who="#VajglIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg168">Spoštovani gospod predsednik! Jaz se opravičujem za odsotnost prej z zasedanja, ker nisem vedel, da bo ta točka dnevnega reda na vrsti, pa sem za pol ure odšel.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg169">Samo to bi rad rekel, da bo zunanje ministrstvo pripravilo informacijo o vseh zadevah, ki so se dogajale v zadnjem času, o potezah zunanjega ministrstva o naši intervenciji v hrvaškem zunanjem ministrstvu, odgovoru, ki smo ga prejeli danes, in vseh ostalih relevantnih zadevah, ki se nanašajo na Slovence na Hrvaškem in njihov položaj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg170">Hvala gospodu državnemu sekretarju.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg171">Na podlagi njegovega nastopa ugotavljam, da bodo poslanci prejeli ustrezno gradivo in tokrat izjemoma, v tem primeru, dajem na glasovanje predlog, da se točka dnevnega reda 17. izredne seje razširi s točko, o kateri sem prej govoril - položaj slovenske narodne skupnosti na Hrvaškem. Ugotavljamo prisotnost!</seg>
                <note>68 prisotnih.</note>
@@ -1179,14 +1160,14 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg246">Gospod Mozetič ima besedo.</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg247">Drage kolegice! Spoštovani kolegi! Nisem zaradi zakona o obrambi, pač pa zato, ker je po dnevnem redu zadnji zakon, ki se sprejema po hitrem postopku, in sem počakal do zadnjega zakona. Velja pa za vse zakone, ki jih sprejemamo po hitrem postopku - to kar bom povedal pri tem zakonu, za katerega predlaga, da naj gre v sprejem po hitrem postopku.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg248">Če ste dobro spremljali, praktično vsi zakoni, vse točke dnevnega reda, ki jih imamo na tej izredni seji, se sprejemajo po izrednem hitrem postopku. Enostavno bi bilo dobro, če bi ugotovili, da smo končno prišli po slabem redu vladanja letu vlade, nove koalicije v izredne razmere. Ampak poglejte, kaj piše poslovnik, kdaj je hitri oziroma ta hitri izredni postopek. Kadar zahtevajo "izredne potrebe države". Izredna potreba države je v tem trenutku, verjetno, preveč debel proračun. Za leto 1997 in pa nov proračun za leto 1997, zato je treba sprejemati varčevalni ukrep po hitrem postopku, s katerim se bodo, v glavnem, določale nove davščine.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg249">Drugi razlog je narava nesreče oziroma "interesi obrambe", je drugi razlog. Ne vem, možno, da so tudi interesi obrambe tukaj zadaj tega, ne vem, ker to v glavnem se niti ne sporoča poslancev.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg250">Pač pa, naslednji razlog so "narava nesreče". Jaz mislim, da je naravna nesreča, ki se skoraj spreminja v nacionalno katastrofo, ampak ne v smislu potresa povodnji in podobni zadev, pač pa v smislu tega, kako ta vlada dela. In to je glavni razlog, zakaj bomo to, kar vse delamo danes na tej seji, sprejemali po izrednem hitrem postopku. Ne glede na to, ne glede na tako nacionalno katastrofo, sem jaz proti vsem tem izrednim hitrim postopkom in tudi proti hitremu postopku pri tem zadnjem. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg251">Hvala lepa, gospodu Mozetiču. Želi še katera od poslanskih skupin besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg252">Zaključujem razpravo.</seg>
@@ -1274,11 +1255,11 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg300">Besedo dajem poslankam in poslancem. Se opravičujem. V imenu poslanske skupine Slovenskih krščanskih demokratov boste govoril gospod Izidor Rejc.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg301">Spoštovani gospod predsednik, gospe in gospodje! Ne bom se toliko spuščal v posamezna imena, ki jih predsednik države predlaga. Vendar izbijajo podatke za gospoda dr. Župančiča, kjer so vsi osebni podatki in je življenjepis v angleškem jeziku. Izgleda, da ta gospod ne more dobiti prevajalca ali kaj podobnega. Vendar menim, da je to ena od osnovnih dejavnosti ali pa ena osnovnih, bi rekel, etičnih pristopov, da se kandidat, ki je Slovenec in naj bi šel tja za evropskega sodnika, predstavi tudi v evropskem jeziku. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg302">Hvala lepa gospodu Rejcu. Želijo besedo poslanke in poslanci?</seg>
                <note>Ne želijo.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg303">Razpravo zaključujem. Prehajamo na glasovanje. V skladu s 87. členom poslovnika državnega zbora in 80. členom zakona o ustavnem sodišču zbor o določitvi treh kandidatov za sodnika Evropskega sodišča glasuje tajno, pri čemer bomo o vsakem kandidatu glasovali na posebni glasovnici. Glasuje se za tri kandidate. V skladu s 97. členom poslovnika vodi tajno glasovanje predsedujoči s pomočjo generalne sekretarke državnega zbora in štirih poslancev, ki jih izvoli državni zbor na predlog predsedujočega. Predstavniki poslanskih skupin so predlagali naslednje člane volilne komisije: predstavnik LDS, Rudolf Moge, predstavnik SLS - Josip Bajc, predstavnik Socialdemokratov - Jože Jerovšek, predstavnik SKD - mag. Marjan Schiffrer. Član te komisije sem tudi sam kot predsedujoči. Ali kdo temu predlogu nasprotuje?</seg>
@@ -1295,7 +1276,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 17.09 uri in se je nadaljevala ob 18.07 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg310">Kolegice in kolegi, nadaljujemo sejo. Ugotavljamo prisotnost!</seg>
                <note>58 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg311">Državni zbor je sklepčen in lahko odloča.</seg>
@@ -1309,67 +1290,67 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg319">Proceduralni predlog ima dr. Zagožen.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg320">Spoštovani zbor! Jaz imam proceduralno vprašanje.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg321">Rad bi pojasnilo, kaj bo sedaj storil državni zbor, glede na to, da po našem poslovniku in zakonu, nismo določili treh kandidatov. Mislim, da moram enostavno sporočiti evropskemu parlamentu, da nimamo kandidata in da se postopek nadaljuje. Najbrž bi moral o tem odločati državni zbor, ker si verjetno ne moremo privoščiti, po mojem, nacionalne sramote, da ne določimo treh kandidatov za sodnika Evropskega sodišča za človekove pravice v skladu s poslovnikom parlamenta, ki izbira izmed teh treh.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg322">Hvala dr. Zagožen. Kaj predlagate?</seg>
                <note>Iz dvorane pojasnilo.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg323">Ko sem prebral zapisnik o izidu glasovanja o prof. dr. Petru Jamreku, sem potem tudi prebral: "Na podlagi 2. odstavka 80. člena zakona o Ustavnem sodišču, ob smiselni uporabi 14. člena tega zakona se za prosto mesto sodnika Evropskega sodišča za človekove pravice opravi nov kandidacijski postopek." Ali je med nami tudi gospod Baškovič? Predstavnik ministrstva za pravosodje ali za zunanje zadeve? Prosim, gospod državni sekretar Vajgl.</seg>
             </u>
             <note type="speaker">IVO VAJGL:</note>
-            <u who="#SDZ2.VajglIvo" ana="#regular">
+            <u who="#VajglIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg324">Spoštovani gospod predsednik, gospe poslanke, gospodje poslanci! Moram dati obvestilo, da v primeru, če do 18. Slovenija ne bo poslala predlogov kandidatov, potem ne bomo imeli sodnika. Se pravi, do 18. morajo biti kandidati v Strassbourgu, drugače sodnika ne bomo imeli. Tako da smo vezani na ta rok. Ni pa nikjer rečeno, da morajo biti trije kandidati.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg325">Gospod Baškovič, želite besedo? Sprašujem še enkrat predstavnika zunanjega ministrstva. Vprašanje je zelo jasno. Ali je korektno, da državni zbor na podlagi izida glasovanja pošlje, pove, da je določil listo dveh kandidatov za sodnika Evropskega sodišča za človekove pravice? Ali je to v skladu z določbami, ki veljajo v evropskem parlamentu oziroma v tem sodišču.</seg>
             </u>
             <note type="speaker">IVO VAJGL:</note>
-            <u who="#SDZ2.VajglIvo" ana="#regular">
+            <u who="#VajglIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg326">Gospod predsednik, mi lahko damo tudi dva kandidata. Nikjer ni rečeno, nihče od nas ne zahteva, da morajo biti trije kandidati. Dva kandidata sta dva kandidata in eden izmed njih bo izvoljen za sodnika.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg327">Gospod Mozetič, imate proceduralni predlog?</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg328">Hvala lepa. Prvič, vlada v tem postopku nima kaj iskati, tako da ne vem, zakaj je državni sekretar tukaj govoril. Ona bo sicer uradno poslala pismo, kaj smo mi storili, po našem postopku je to tako pač v tej državi. Zdaj, vseskozi, kar sem jaz o tej zadevi seznanjen, tudi na odboru za pravne zadeve, ki vodi hearinge, od jutri naprej v Parizu, je bilo vseskozi govora o treh kandidatih, in mislim, da je tudi generalni sekretar poslal pismo, v katerem zahteva tri kandidate, tri kandidate. In vse države, ki so jih do zdaj poslale, z izjemo Slovenije, pa še nekaj držav, ki še niso to naredile, so poslale po tri kandidate. Zdaj, situacija, kaj narediti. Ko se bo ponovil postopek, naj se to čimprej razčisti.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg329">Zdaj to, o čemer je pa gospod Vajgl govoril, da bo sramota, da nismo poslali pravočasno kandidata, naj se obrne na kakšen drug naslov. Parlament je to kandidaturo oziroma te predloge dobil pred nekaj dnevi in če bi bila poslana prej, bi verjetno imeli več časa, da tudi rešimo take zaplete. Tako da jaz mislim in sem prepričan, da moramo poslati v Strassbourg predlog treh kandidatov, parlamentarna skupščina se bo pa odločala potem v Strassbourgu o enem.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg330">Torej, kolegice in kolegi, to pomeni, da je sedaj razprava o predlogu sklepa, ki sem ga pravzaprav prebral na koncu, ko sem rekel, da na podlagi izida glasovanja ugotavljam, da je Državni zbor Republike Slovenije določil listo kandidatov za sodnike Evropskega sodišča za človekove pravice in potem sem prebral dve imeni: profesorja doktorja Antona Pereniča in profesorja doktorja Boštjana Zupančiča, prvi 61 glasov, drugi 54 glasov. Torej o tem vprašanju sedaj moramo opraviti razpravo. Če je potrebno, bomo tudi sejo prekinili, da bi dobili najbolj korektno tolmačenje tega zapleta. Gospod Anderlič in nato gospod Jakič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg331">Sam sem bil prepričan in na pogovorih v tem postopku je bilo to, vsaj meni, jasno, da se pogovarjamo o treh kandidatih. Najprej je bilo več kandidatov za določitev treh kandidatov, ki naj bi jih Slovenija poslala, pač po pismu, ki ga je zunanje ministrstvo dobilo od gospoda Terschysa. Jaz menim, da ni druge rešitve v tem trenutku, kot da preprosto ugotovimo izid, ki je bil. Moram reči, da mi je ta zadeva presenetila, ampak to tako pač je in smo določili dva kandidata, s tem da se lahko preveri, ali je potrebno poslati tri. Mi najbrž lahko obvestimo, če je to jutrišnji dan, da je parlament določil dva kandidata in da, če je potrebno določiti tri, da pač za tretjega ponovimo postopek. Druge rešitve tukaj ne vidim. Je pa seveda vprašanje teh rokov, ki so pred nami bili.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg332">Hvala, gospod Anderlič. Gospod Jakič.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SDZ2.JakičRoman" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg333">Hvala za besedo. Kot član slovenske delegacije v Svetu Evrope bi tudi želel videti, da ima Slovenija tri kandidate. Zato predlagam, če je možno, da seveda potrdimo dva kandidata, ki sta danes dobila potrebno večino. Da pa zaprosimo ali pa na nek način naredimo, da do pojutrišnjem predsednik predloži v izvolitev manjkajočega tretjega kandidata, ker izredna seja poteka in bi lahko o tem odločali jutri oziroma pojutrišnjem in še ujeli "death line", ki nam ga je Svet Evrope dal. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg334">Hvala lepa, gospod Jakič. Vaš poziv vsebuje nekatere nejasnosti glede same procedure - kakšna je pač procedura, ko predsednik države predlaga kandidate za sodnike Evropskega sodišča. Gospod Hvalica, nato pa gospod Baškovič.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg335">Hvala lepa, gospod predsednik. Torej, zadeva ni jasna predvsem zaradi tega, ker nisem opazil, da bi gospodu Mozetiču kdo ustrezno repliciral. Navsezadnje imamo tudi ministra za pravosodje in bi bilo zaželeno, da slišimo čisto pravno zadevo - artikulacijo. Meni trenutno ni jasno; lahko so nekateri predlogi, rekel bi, ki stojijo, ampak jaz nisem trdno prepričan. Na vsak način je moj predlog naslednji - in bom izrabil še to priliko, da dam neke vrste proceduralni predlog - ali da se prekine sejo, dokler ne dobimo ustreznega pojasnila, sicer bom pa jaz, če do tega ne bo prišlo, zahteval odmor v imenu poslanske skupine. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg336">Hvala lepa. Besedo ima gospod Baškovič, nato dr. Zagožen.</seg>
             </u>
             <note type="speaker">MILAN BAŠKOVIČ:</note>
-            <u who="#SDZ2.BaškovičMilan" ana="#regular">
+            <u who="#BaškovičMilan">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg337">Hvala lepa. Jaz sem se medtem dokopal do tega akta, ki je objavljen v mednarodnih pogodbah, na katerega se sklicuje predsednik republike v svojem predlogu. Namreč, protokol številka 11 Konvencije o varstvu človekovih pravic in temeljnih svoboščin - tam on že sam govori o tem svojem predlogu, da sodnike z večino glasov izvoli parlamentarna skupščina s seznama treh kandidatov, ki jih imenuje vsaka visoka pogodbenica - to je dejansko v tem aktu. Tudi res piše, "člane sodišča izvoli..." in tako naprej, "z večino glasov z liste oseb, ki so jih imenovale članice Sveta Evrope. Vsaka članica imenuje tri kandidate." Tako da to je določeno, vsaj tako je v dokumentih ves čas vidno.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg338">Sedaj zakon o Ustavnem sodišču pri nas to materijo ureja posredno, v določbi 80. člena, ki govori o predlaganju kandidatov iz Republike Slovenije za sodnika Evropskega sodišča za človekove pravice - to je posebno poglavje 12, ki ima samo en člen, in pravi: "določbi 12. in 13. člena tega zakona", namreč o Ustavnem sodišču, "se smiselno uporabljata tudi za predlagane kandidate iz Republike Slovenije za sodnika Evropskega sodišča. Kandidate Republike Slovenije za sodnika Evropskega sodišča za človekove pravice določi državni zbor ob smiselni uporabi določbe 14. člena tega zakona."</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg339">Če se to pogleda, je to, kar je bilo storjeno po tem postopku predsednika republike je po 12. členu objavil kandidiranje za to funkcijo; rok mora biti najmanj 30 dni</seg>
@@ -1378,73 +1359,73 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg341">Mislim, da je pa možno tolmačiti, da sta dva uspela, eden pa ni. Bi pa morali biti trije, to pa tudi drži. Tako da stvar v celoti ni izpeljana. En kandidat je seveda še zmeraj odprt. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg342">Hvala lepa gospod Baškovič. Dr. Franc Zagožen ima besedo. Prosim za potrpežljivost. Gospod Marušič bo tudi dobil besedo, čeprav je to sicer zadeva državnega zbora in naše procedure, mislim pa, da pomoč ministrov ne bomo zavrnili, če nam lahko svetujejo. Dr Zagožen, prosim.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg343">Predlagal bi, da te točke ne zaključimo, tako da lahko še v okviru te seje tudi kaj storimo, če bomo dobili ustrezen predlog. In ustrezen predlog mislim, da lahko še vedno dobimo. Predlagatelj je pač predsednik države in on lahko jutri kandidaturo tudi ponovi, če hoče. Po moji oceni je pa blamaža, če bomo poslali dva kandidata in se nam utegne zgoditi, da bo parlamentarna skupščina to obravnavala kot kršitev tistega protokola in nas izločila iz držav, ki bodo imele člane evropskega sodišča vsaj začasno, s prvim mandatom.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg344">Hvala dr. Zagožen. Gospod Pahor še ima besedo.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg345">Hvala lepa predsednik. Če je le mogoče in če to ne pomeni kršitve <gap reason="inaudible"/>
                </seg>
                <note>Nemir v dvorani.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg346">Prosim za mir v dvorani.</seg>
             </u>
             <note type="speaker">BORUT PAHOR:</note>
-            <u who="#SDZ2.PahorBorut" ana="#regular">
+            <u who="#PahorBorut">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg347">
                   <gap reason="inaudible"/> poslovnika, bi soglašal s predlogom kolega dr. Zagožna. Kolikor jaz razumem in vselej sem tako razumel priporočilo, naj bi naša država poslal tri kandidate. Predlagam, da se do jutri, ko se bo seja nadaljevala, preuči možnost, kaj storiti.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg348">Predlagam, da imenujemo, da predlagamo parlamentarni skupščini v izbiro tri kandidate, da te točke ne zaključimo in da jutri nadaljujemo s to obravnavo, potem ko se bo vzelo dovolj časa, da se premisli o tem ali predlagati ponovno istega kandidata ali drugega ali kaj tretjega.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg349">Ali kdo nasprotujemo temu proceduralnemu predlogu, ki je bil podan s strani dveh poslancev, da se 3. točka dnevnega reda ne zaključi? Da jo prekinemo in nadaljujemo s 4. točko dnevnega reda. Gospod Anderlič, nasprotujete temu predlogu? Sicer ima besedo tudi gospod Mozetič. Prosim najprej gospod Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg350">Načelno nimam proti tem kaj veliko, ampak mislim, da to proceduralno ni korektno. Z vidika - dobro sem poslušal gospoda Baškoviča, ki je rekel, da je ta procedura v tej rundi zaključena in to pomeni s tem tudi točka dnevnega reda in da je kadarkoli mogoče sklicati izredno sejo. Tudi jutri, pojutrišnjem, če vse te točke iz te preselimo na drugo in tako naprej. Ampak to je že stvar naprej.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg351">Mislim, da je točka zaključena, s tem da je mogoče sklicati naslednjo izredno sejo, če bo ponovljen postopek, in o tem ponovno odločati. Mislim, da bi bil to hud precedens poslovniški, da ne ugotovimo, da je bila točka zaključena. Ne glede na izid glasovanja je to, kar je, in nadaljnjo potezo moramo iskati skupaj in reševati to zadevo. Mislim, da to ni skladno z poslovnikom in predlagam, da se ta točka zaključi, naj se ugotovi do jutri, ali bo ponovljen postopek - verjetno bo - in da se potem v naslednjih skliče nova izredna seja. To je najmanj, kar je, poslovniško - se mi zdi - absolutno nekorektno. Točka je zaključena, s tem ko smo opravili volitve in razglasili rezultate. Rezultati so razglašeni pri tej točki. Zdaj, da ni tako, kot smo pričakovali, da bo, je drugo vprašanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg352">Hvala gospod Anderlič. Želi besedo še gospod Mozetič?</seg>
             </u>
             <note type="speaker">MIROSLAV MOZETIČ:</note>
-            <u who="#SDZ2.MozetičMiroslav" ana="#regular">
+            <u who="#MozetičMiroslav">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg353">Hvala lepa. No, tukaj bi se celo moral strinjati z gospodom Anderličem. Dejstvo je; to, kar je izvoljeno, to kar je, je. Ampak problem nastane, če te seje ne bomo zaključili. Poglejte, tudi glede na roke, ki jih je gospod Baškovič povedal, bi bilo eventualno možno ujeti - ne ta rok, ki bi ga morali ujeti. Praktično smo res med petimi državami, ki še niso poslale do včerajšnjega dne, ko sem gledal spisek na seji odbora za pravne zadeve in človekove pravice, parlamentarni skupščini Sveta Evrope; hearingi se bodo za tiste, ki so poslali, začeli jutri, za drugi krog držav, se začnejo 7., 8. in 9. januarja. 7. januar je tudi že poln, 8. in 9. januar so še vsi tisti, ki še niso poslali. Sedaj rokovno je možno, da se celo dati ujeti rok tistih 15 dni, tako da ne bi bilo nikakršne kršitve. Vendar karkoli vzamemo, prepozno bomo poslali, to je dejstvo. To je dejstvo!</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg354">Vendar, jaz predpostavljam, če bomo poslali kandidature treh - to je kandidatura v Svetu Evrope, ne dveh potem pa še enega. Tja moramo poslati tri. Mi smo za dva zaključili, tukaj v parlamentu smo za dva zaključili. To je dejstvo. Moramo še za tretjega. In ko bomo imeli paket vseh treh, potem je naša kandidatura popolna za Svet Evrope.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg355">Tako mislim jaz in tako je tudi, vsaj iz tistega, kakor sem prej poslušal, kar je prebral gospod Baškovič. In zdaj v tem času, če bomo poslali, čeprav bo prepozno,do tistega datuma, da bo šlo pač na hearinge v januarju, jaz mislim, da bo potem šlo tudi na Parlamentarno skupščino Sveta Evrope.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg356">Vendar najdimo zdaj znotraj tega možnost in znotraj tega bi predlagal, da bi ne glede na to, da se v bistvu s tem - kar je gospod Anderlič glede zaključka te točke strinjam - da je kljub vsemu danes ne zaključimo, pa vidimo, kaj se da - bom rekel - narediti pri tej stvari. Pa ne zato, ker jo bomo morali zaključiti, ampak seja ima 22 a, b, torej 24 ali koliko točk. Če jo ne bomo zaključili, potem tega enostavno ne bomo več mogli uvrstiti. Dokler te seje ne zaključimo, ne moremo sklicati - jaz se sicer s tem ne strinjam, ampak tako je - ne moremo sklicati nove seje. V tem je ves problem. Pač to je zdaj nastalo. Mislim pa, da v Strassbourgu glede na vse določbe pa tudi glede na vse to, da bi mi poslali samo dva, da ne bi poslali polne kandidature, mislim, da bi bila to - dobro, recimo sramota, z zelo blago besedo, ampak neresnost se pa jasno pokaže.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg357">Hvala gospod Mozetič. Tudi sam ste ugotovil, kako je včasih zapleteno v celoti spoštovati poslovniške določbe. Se strinjam z vami. Gospod Marušič ima besedo, minister za pravosodje, bil je izvan in mislim, da mu ne bo nihče nasprotoval z nastopi.</seg>
             </u>
             <note type="speaker">TOMAŽ MARUŠIČ:</note>
-            <u who="#SDZ2.MarušičTomaž" ana="#regular">
+            <u who="#MarušičTomaž">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg358">Predsednik, hvala za besedo. Spoštovane, spoštovani!</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg359">Namreč, kolikor stvar razumem, sicer to ni moja pravna specialnost - logično - mi imamo pravico do treh kandidatov, izmed katerih se izbere eden. To se pravi številka tri ne prekludira naše pravice o enem kandidatu, kolikor to razumem. Se pravi, tudi če mi pošljemo dva, potem se pravica izbire zoži samo na dva, se pravi, na enega. Tako da v tem pogledu, če smem biti pošten, ne morem dati tukaj enega mnenja, kot je zahteval od mene poslanec Ivo Hvalica. Tega ne morem reči. Vendar menim, da mi lahko kandidiramo s tremi, iz teh treh se zbere eden. Ker je pa v skladu z našim nacionalnim internim zakonom predvidena državnozborska procedura volitev, sta bila izvoljena samo dva - jaz mislim, da sta dve, si lahko potem Evropa izbere enega. Vendar v vsakem primeru, ker je vredno biti previden. In tudi podpiram - pardon, oprostite. Če bi bil poslanec, bi soglašal tudi z mnenji dr. Zagožna in poslanca Pahorja. Namreč, skušajmo dobiti čas in izvoliti še enega, tako da gremo s kompletno garnituro naprej. Sicer je naša garnitura škrbasta, kot se reče temu.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg360">Vprašanje je samo to, ali lahko uspemo narediti tekom jutrišnjega dneva. Če se to ne uspe narediti, potem je jasno treba z dvema iti naprej, ker drugega izhoda nimamo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg361">Hvala lepa, gospod minister. Poslušali ste s svojim stališčem pomagati v zagati, v kateri se je znašel državni zbor. Gospod Anderlič.</seg>
             </u>
             <note type="speaker">ANTON ANDERLIČ:</note>
-            <u who="#SDZ2.AndreličAnton" ana="#regular">
+            <u who="#AndreličAnton">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg362">Prav veseli me, da se z gospodom Mozetič lahko spet po nekaj časa strinjava, ker nekaj časa vmes je bilo nekaj vibracij, ki niso šle <gap reason="inaudible"/> Je pa tudi res, da se je mnogokrat zdaj že zgodilo in edina mogoča pot je, da če nam ne bo uspelo zaključiti seje, da preprosto vse točke preložimo na naslednjo sejo. To smo neštetokrat že storili zato, da smo sprostili proceduri pot. Te primere lahko tukaj naštevam, ampak najbrž ni potrebno. Mislim, da bi bil hud, hud precedens, če bi ravnali tako, kot je bilo tukaj predlagano. Razumem dobro voljo, jaz razumem to pripravljenost, vmes med našo sejo in med zaslišanjem v Strassbourgu bi se lahko zgodilo marsikaj. Na primer, da bi kakšen kandidat ne uspel priti v Strassbourg ali kakorkoli drugače, pa bi vendarle imeli samo dva. Ampak jaz ne navijam za to, da pošljemo dva tja gor. Jaz sem bil že v prvem svojem nastopu ekspliciten in jasen. Mi smo točko zaključili, ugotovili, da imamo dva kandidata, obvestimo nemudoma predsednika države, da smo razumeli to našo nalogo, da določimo tri, vendar nam to ni uspelo in je po naši ureditvi potrebno kandidacijski postopek ponoviti. On je na potezi, da nam v čim krajšem času, seveda znotraj tistih rokov, ki jih bo mogoče še loviti, pošlje predlog za dodatno določitev kandidata. Jaz mislim, da je to edino korektno, tudi poslovniško. Jaz ne verjamem, da predsedujoči oziroma predsednik sedaj lahko tolmači poslovnik drugače kot tako. Če ga tolmači drugače, je po mojem treba dati to na glasovanje ali pa se poslovniška komisija opredeli do tega. Samo jaz sem trdno prepričan, da je bolj korektno in edina mogoča pot, da danes to točko zaključimo, obvestimo predsednika in seveda potem lahko skličemo novo izredno sejo ali kakorkoli že. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg363">Hvala, gospod Anderlič. Zdi se mi ključno, da ob tej situaciji, v kateri smo, ravnamo modro in si sami omogočimo možnost za razmislek. To je ključno vprašanje. Razumljivo je, da je bilo glasovanje končano, da so bili rezultati razglašeni, toda razprava in različni pogledi pa so se odprli na podlagi izida glasovanja, da je Državni zbor Republike Slovenije določil listo kandidatov za sodnike Evropskega sodišča. To je ključno vprašanje. V smislu volitev je razumljivo, da je točka končana, toda, ker gre za prvi tak primer, je zelo pomembno, da si sami omogočimo možnost, da do jutri pridobimo potrebna strokovna mnenja iz služb državnega zbora in da lahko potem trezno odreagiramo na nastalo situacijo.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg364">Obveščen sem bil tudi o nekaterih datumih, o nekaterih drugih vprašanjih, katere države tega še niso posredovale in tako naprej. Gre za več aspektov tega vprašanja - odbor za mednarodne odnose, strokovna služba, potem pravna služba in tako naprej. Bilo bi najbolj korektno, da bi državni zbor z glasovanjem ugotovil in podprl proceduralni predlog, da se točka ne zaključi v tistem segmentu, ko ugotavljamo, da smo določili listo kandidatov. Razumljivo, mi smo glasovali in izglasovali; nismo pa seveda še določili liste kandidatov za sodnike Evropskega sodišča. To je pa drugi del te točke dnevnega reda. Zato mislim, da ne bomo kršili poslovniške določbe, če bo državni zbor predlagal, da tukaj to točko prekinemo, pridobimo vsa potrebna strokovna mnenja in se potem, najverjetneje že jutri, o tem vprašanju tudi dokončno odločimo. Vsekakor bomo tudi takoj obvestili predlagatelja, da naj ponovi postopek.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg365">Ta proceduralni predlog dajem na glasovanje, da se 3. točka dnevnega reda prekine, in to v točki, ko državni zbor določa listo kandidatov za sodnike Evropskega sodišča za človekove pravice, in da se pridobi mnenje ustreznih strokovnih služb. Ta proceduralni predlog dajem na glasovanje. Ugotovimo prisotnost!</seg>
@@ -1484,7 +1465,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 18.45 uri in se je nadaljevala ob 19.31 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg388">Kolegice in kolegi! Nadaljujemo izredno sejo državnega zbora. Ugotovimo prisotnost!</seg>
                <note>52 prisotnih.</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg389">Ugotavljam, da je državni zbor je sklepčen in lahko odloča.</seg>
@@ -1497,16 +1478,16 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg394">Vabim prof. dr. Miroslavo Geč-Korošec, sodnico Ustavnega sodišča Republike Slovenije, da priseže pred državnim zborom.</seg>
             </u>
             <note type="speaker">DR. MIROSLAVA GEČ-KOROŠEC:</note>
-            <u who="#SDZ2.GečKorošecMiroslava" ana="#regular">
+            <u who="#GečKorošecMiroslava">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg395">Prisegam, da bom sodila po ustavi in zakonu in po svoji vesti in si z vsemi svojimi močmi prizadevala za ustavnost in zakonitost ter za varovanje človekovih pravic in temeljnih svoboščin.</seg>
                <note>Aplavz.</note>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg396">Želite spregovoriti? Prosim?</seg>
             </u>
             <note type="speaker">DR. MIROSLAVA GEČ-KOROŠEC:</note>
-            <u who="#SDZ2.GečKorošecMiroslava" ana="#regular">
+            <u who="#GečKorošecMiroslava">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg397">Spoštovani gospod predsednik, spoštovane in drage poslanke, spoštovani in dragi poslanci! Iskreno se vam zahvaljujem za vašo odločitev in s tem za izkazano zaupanje. Želim in upam, da mi bodo moje fizične, psihične in intelektualne moči omogočale, da bom lahko v skladu z dano zaprisego objektivno in po svoji vesti opravljala in predvsem reševala tiste zadeve, ki so že vrsto let spremljale moje strokovno, pa tudi znanstveno področje. To je predvsem področje civilnega materialnega prava, od tega obligacijskega, dednega, družinskega in predvsem mednarodnega zasebnega prava. To je tistega področja, kjer nastopajo pravna razmerja z mednarodnim elementom, ki so v zadnjem času vedno bolj pogosta in pomembna.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg398">Pri tem mislim tudi na že ratificirane oziroma notificirane pogodbe in konvencije, ter na tiste, ki jih bo morala ali želela skleniti samostojna država Slovenija, glede na željo za čimprejšnjim vstopom v Evropsko zvezo.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg399">Še enkrat iskrena hvala z željo, da bi bilo moje delo pravično in uspešno. Hvala lepa. <gap reason="inaudible"/>
@@ -1515,12 +1496,12 @@
                <gap reason="inaudible"/>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg400">Zahvaljujem se za besede ustavne sodnice, dr. Miroslave Geč-Korošec.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg401">Prosim profesor dr. Dragico Wedam-Lukić, sodnico Ustavnega sodišča Republike Slovenije, da priseže pred državnim zborom.</seg>
             </u>
             <note type="speaker">DR. DRAGICA WEDAM-LUKIĆ:</note>
-            <u who="#SDZ2.WedamLukićDragica" ana="#regular">
+            <u who="#WedamLukićDragica">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg402">Prisegam, da bom sodila po ustavi in zakonu in po svoji vesti in si z vsemi svojimi močmi prizadevala, za ustavnost in zakonitost, ter za varovanje človekovih pravic in temeljnih svoboščin. <gap reason="inaudible"/>
                </seg>
                <note>Aplavz</note>
@@ -1531,13 +1512,13 @@
                <gap reason="inaudible"/>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg404">Zahvaljujem se za besede, ki jih je izrekla ustavna sodnica dr. Dragica Wedam-Lukić. S tem smo, spoštovani kolegi in kolegice, zaključili to točko dnevnega reda.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg405">Predlagam, da danes opravimo še predstavitev predloga proračuna Republike Slovenije za leto 1998 in s tem omogočimo, da jutri dopoldne lahko delovna telesa v miru opravijo svoje delo, pred nadaljevanjem izredne seje, ki se bo pričela jutri popoldne.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg406">Kolegice in kolegi, prehajamo na 2. TOČKO DNEVNEGA REDA - PREDSTAVITEV PREDLOGA PRORAČUNA REPUBLIKE SLOVENIJE ZA LETO 1998. Gre za prvo dejanje obravnave in sprejemanja državnega proračuna v državnem zboru, in sicer na podlagi 4. odstavka 215. člena poslovnika državnega zbora. Predsednik vlade in minister za finance predstavita predlog državnega proračuna in proračunski memorandum. O tej predstavitvi ni razprave. Ob tej priložnosti bodo poslankam in poslancem spregovorili o temeljnih vprašanjih delovnega področja institucij, ki jih predstavljajo in se nanašajo na obravnavano tematiko tudi guverner Banke Slovenije, generalni direktor Zavoda za pokojninsko in invalidsko zavarovanje in generalni direktor Zavoda za zdravstveno zavarovanje Slovenije. Prosim predsednika Vlade Republike Slovenije dr. Janeza Drnovška, da predstavi predlog proračuna Republike Slovenije za leto 1998 in proračunski memorandum. Prosim.</seg>
             </u>
             <note type="speaker">DR. JANEZ DRNOVŠEK:</note>
-            <u who="#SDZ2.DrnovšekJanez" ana="#regular">
+            <u who="#DrnovšekJanez">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg407">Spoštovani gospod predsednik, spoštovane poslanke in poslanci! Predstavljamo proračun za leto 1998. Vlada je v zadnjih treh mesecih intenzivno pripravljala in usklajevala predlog proračuna, ki ga danes predstavlja državnemu zboru. Predlog proračuna za leto 1998 je po naši oceni zelo pomemben. Gre za zelo pomembno proračunsko in javnofinančno leto, ko je potrebno sprejeti nekatere temeljne odločitve v naši državi. Naši izračuni so pokazali, da bi nadaljevanje spontanih trendov v javnih financah, torej, če bi veljali vsi obstoječi zakoni, vse obstoječe pravice in pa obstoječi način obračunavanja plač, vsi sprejeti nacionalni programi, da bi v tem primeru morali predložiti proračun, ki bi imel približno 4-5% primanjkljaja. Torej, 4-5% družbenega proizvoda bi znašal primanjkljaj po takšni spontani varianti, če seveda ne bi ob takšnem predlogu proračuna sprejeli ukrepov, ki bi lahko zagotovili drugačen rezultat in drugačen primanjkljaj. O tem smo precej razpravljali. Tudi v širši javnosti in tudi med ekonomisti je bilo v toku letošnjega leta več razprav o tem, kaj je za Slovenijo najbolj primerna javnofinančna politika, ali so primerni višji proračunski primanjkljaji. Nekateri so menili, da je smiselno v določenih razvojnih obdobjih financirati razvoj tudi z večjimi proračunskimi primanjkljaji. Drugi so temu odločno nasprotovali in trdili, da moramo obdržati približno uravnotežene javne finance in proračunske finance, da proračunski deficit ne bi smel bistveno porasti oziroma da ne bi smel porasti več kot 1% družbenega proizvoda, kot neka mera, ki si jo sami postavljamo. V vladi smo se po številnih razpravah opredelili tudi za ta drugi, finančno bolj konservativen pristop, ki predpostavlja, da bi Slovenija nadaljevala s solidnimi pokazatelji proračunskega financiranja in s sorazmerno nizkimi stopnjami proračunskih deficitov in javnega dolga. S tem dosegamo oziroma s tem skušamo doseči določena gospodarska gibanja. Predvsem ne želimo, da bi država nastopila na finančnih trgih kot prevelik povpraševalec po denarju, kar bi vplivalo ali na obresti ali na tečaj ali na oboje. Seveda se zavedamo, da bi neko večje zadolževanje danes, jutri pomenilo veliko večje kreditne obveznosti, vračanje in seveda tudi vedno večje obrestne obveznosti v proračunu. Že tako je proračun za leto 1998 precej bolj obremenjen s takšnimi obveznostmi, ker zapadejo nekatere pretekle kreditne obveznosti, in to še iz dediščine nekdanje skupne države. Torej odločili smo se in predlagamo državnemu zboru, da skušamo ohraniti takšen pristop in da proračunski in javnofinančni primanjkljaj ne bi presegel 1% družbenega proizvoda v letu 1998.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg408">Zato smo nekaj časa v vladi, med ministrstvi, usklajevali tudi predlog spremljevalnih ukrepov; temu smo rekli predlog nekega varčevalnega programa, ki bi zagotovil zmanjšanje odhodkov proračuna in ki bi zagotovil, da bi lahko proračunska gibanja na tak način uokvirili. Po drugi strani smo iskali tudi možnost nekaterih dodatnih virov, da bi povečali prihodke proračuna in tudi na prihodkovni strani storili tisto, kar je možno in smiselno storiti. Proračun, ki ga predlagamo, je v okviru tega 1% primanjkljaja in spremljajo ga predlogi, o katerih naj bi državni zbor odločal tudi na tej izredni seji, torej vrsta zakonov po hitrem postopku, ki bi zagotovili željena proračunska gibanja.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg409">Nekateri tovrstni zakoni še pridejo oziroma jih vlada še predvideva. Danes oziroma za to sejo smo predložili tiste, ki so usklajeni tudi s socialnimi partnerji, ki so usklajeni v ekonomsko-socialnem svetu. Nekateri, in to predvsem tisti, ki se nanašajo na eskalacijo plač, ti še niso usklajeni oziroma še niso dogovorjeni s socialnimi partnerji. Želeli smo ohraniti do sedaj vzpostavljeno prakso socialnega dogovarjanja v Sloveniji. Ti, že do sedaj sprejeti instrumenti, že do sedaj veljavne kolektivne pogodbe, v nekaterih točkah že omogočajo pozitivna gibanja, tudi bolj umirjena gibanja plač, čemur smo priča že po razultatih oziroma po gibanjih v letu 1997 in tudi v letu 1998 so ta gibanja že precej bolj umirjena kot v zadnjih dveh letih. Zato ne želimo porušiti tega dogovora, ki je v osnovi že pozitiven, ampak ga želimo še nekoliko izostriti, še nekoliko popraviti, da bi vzpostavili tista potrebna gibanja v letu 1998. Pri tem se seveda postavlja veliko vprašanje. Tudi sami smo si ga postavljali, ali je v Sloveniji možno in primerno, torej takšne ukrepe, tudi varčevanje, tudi umirjanje rasti plač doseči enostavno z zakonsko prisilo. Mislimo, da ne. Mislimo, da je potrebno poizkusiti doseči na podlagi argumentov takšen konsenz, takšno soglasje, da vsi socialni partnerji torej napravijo potrebne poteze in privolijo v takšne poteze. Poznamo primere nekaterih držav, zahodnih držav. Na primer Francije in še nekaterih drugih, kjer so se takšni varčevalni ukrepi končali s splošno blokado, splošnimi stavkami, na koncu z neuspehom vladnega programa. Želimo se temu izogniti, želimo doseči spoznanje in razumevanje, torej povsod, pri vseh akterijih, da so seveda okviri porabe omejeni, da preko določenih okvirov ne moremo iti in da je seveda veliko bolje, da z nekim dogovorom v naprej, s konsenzom in ne s prisilo in ne na koncu preko neke ekonomske in socialne krize, dosežemo želena gibanja.</seg>
@@ -1555,11 +1536,11 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg421">Gospod predsednik, spoštovane poslanke in poslanci! S tem zaključujem svojo predstavitev. Vlada bo v tem obdobju, torej do dokončnega sprejemanja proračuna v državnem zboru, skušala uspešno končati pogajanja s socialnimi partnerji, sindikati zlasti, da bi prišla do povsem dokončne slike, do dokončnih številk o tem, s kakšno eskalacijo, s kakšnim gibanjem plač lahko realno računamo in da bomo seveda tudi temu odmerili druge racionalizacijske ukrepe, ki so potrebni, da bi dosegli predvidene javnofinančne cilje v letu 1998. Mislim pa, da mora ostati in bomo vsekakor skušali doseči ta cilj, osnovni cilj, da ne bi presegli 1% primanjkljaja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg422">Hvala lepa predsedniku vlade, doktor Drnovšku, za predstavitev predloga proračuna za leto 1998. Prosim ministra za finance, magistra Mitja Gasparija, za dodatno predstavitev predloga proračuna za leto 1998 in tudi dodatno predstavitev proračunskega memoranduma.</seg>
             </u>
             <note type="speaker">MAG. MITJA GASPARI:</note>
-            <u who="#SDZ2.GaspariMitja" ana="#regular">
+            <u who="#GaspariMitja">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg423">Gospod predsednik, gospe in gospodje poslanci, ostali prisotni! Glede na to, da ura ni najbolj primerna za daljše referate, problemi, ki jih pa proračun vsebuje in rešitve, ki jih poskuša dajati, pa verjetno bolj pomembni kot čas, v katerem predstavljam te ugotovitve, bi prosil za nekaj razumevanja in pa tudi poslušanja. Glede na to, kar je rekel predsednik vlade, bi sam rad nekatere točke zaostril. Zaostril zaradi tega, ker prihaja čas, ko bo treba nekatere odločitve sprejeti, ne glede na to, ali so prijetne ali ne in te odločitve ne prihajajo samo zaradi tega, ker bi delali v preteklosti napake, ampak predvsem zaradi tega, ker se približujemo določenim rešitvam, ki so normalne za normalne evropske države, za nas pa dokaj nove in neobičajne. Zato bi razdelil to obrazlago na tri vsebinske dele.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg424">Prvič. Odnos celotnega sektorja javnih financ do makroekonomskih narodnogospodarskih gibanj in sprememb, ki so v zadnjih letih nastale v strukturi teh gibanj in ki povzročajo, da se pogovarjamo, prvič ali drugič v zadnjih šestih letih o tem, da ima lahko Republika Slovenija tudi proračunski primanjkljaj. Torej njegovi vzroki in možne posledice, če bi ta vprašanja zanemarjali ali jih podcenjevali.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg425">Drugič. Mislim, da je potrebno povedati nekaj o strukturnih problemih državnega proračuna kot dela javnih financ, pa vsekakor tistih problemov, ki kažejo na nekatere slabosti v odločanju v Republiki Sloveniji, tako na ravni vlade, kot parlamenta, ko gre za javne finance.</seg>
@@ -1591,11 +1572,11 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg451">Če bodo gibanja takšna, kot je bilo tukaj rečeno - in na koncu bi rad samo še povedal ali pa opozoril poslance, ker je bilo danes nekajkrat omenjeno tudi to vprašanje, kakšni so učinki ukrepov, ki naj bi jih vlada s svojimi ukrepi dosegla - imate kvantifikacijo teh ukrepov v prilogi proračunskega memoranduma v tabelah, ki so priložene k proračunskemu memorandumu, kjer so učinki na fiskalni strani šestinštirideset milijard in sto milijonov, ukrepov, ki jih vlada predlaga, na odhodkovni strani pa dvainpetdeset milijard šesto petinsedemdeset milijonov tolarjev, tako na področju plač, socialnih transferjev in drugih izdatkov v državnem proračunu. Ti ukrepi so bili javno pojasnjeni v državnem proračunu in obrazložitvah posameznih ministrstev, bodo pa tudi konkretno definirani. V zakonskem tekstu so pa predloženi državnemu zboru, in upam, da bomo lahko jutri začeli razpravo o teh predlogih. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg452">Hvala lepa gospodu ministru za finance, mag. Gaspariju. Besedo ima guverner banke Slovenije, dr. France Arhar.</seg>
             </u>
             <note type="speaker">DR. FRANCE ARHAR:</note>
-            <u who="#SDZ2.ArharFrance" ana="#regular">
+            <u who="#ArharFrance">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg453">Hvala, gospod predsednik. Dame in gospodje! Poskušal bom v nekih črtah pravzaprav nadaljevati tisto, kar sta začela predsednik vlade in zdaj nazadnje tudi finančni minister.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg454">Namreč ugotovitve, ki sta jih tukaj dala, smatram za resna prizadevanja, da bi se v sedanjem trenutku, ki ga poznamo tak, kot je, nekatere stvari obrnile drugače in da bi šle dejansko v tisti smeri, za katero se je ta država v kratkem odločila in za kar je dobila priznanje tudi iz druge strani, to se pravi z Evrope.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg455">Namreč, tukaj se mi zastavlja temeljno vprašanje. Na eni strani imamo danes pregled - vsaj globalni - proračuna za prihodnje leto. Na drugi strani je v parlamentu že strategija za Evropo in na tretji strani je dokument, ki se imenuje asociacijski sporazum, ki ga je ta parlament že sprejel in čakamo na ratifikacijo pri evropskem krogu. Tukaj se pravzaprav zastavlja zdaj temeljno vprašanje, kaj je naš cilj, naš cilj na kratko progo v drugem letu in kdaj in pod kakšnimi pogoji je naš cilj Evropa, dvojna unija, gospodarska in denarna. Mi smo slišali, kakšne so ambicije v zvezi z eno in drugo, vendar jaz moram ugotoviti, in mislim, da bo tudi ta parlament ugotovil, da med temi dokumenti so razlike, in o nekaterih razlikah, kot rečeno, sta govorila pravzaprav posredno oba predhodnika. Kaj se je zgodilo v tem kratkem času treh mesecev, ko smo gledali proračun za letošnje leto, bi lahko strnili v naslednje ugotovitve.</seg>
@@ -1615,12 +1596,12 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg469">Ne glede na to, da smo ob koncu leta, pred nami so prazniki, te besede obeh predhodnikov, pa tudi moje, jaz mislim, da niso namenjene temu, da bi bili ti prazniki slabši, bolj grenki. Začnimo novo leto z drugačnimi odločitvami! Skratka, izkoriščam priložnost, da vam zaželim lepe praznike, božični mir in dosti zdravja in uspehov vsem skupaj vnaprej, drugo leto in na poti v Evropo! Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg470">Hvala lepa gospodu guvernerju Banke Slovenije, dr. Francetu Arharju, za njegov nastop in njegove lepe želje.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg471">Besedo ima generalni direktor Zavoda za pokojninsko in invalidsko zavarovanje, gospod Janez Prijatelj.</seg>
             </u>
             <note type="speaker">JANEZ PRIJATELJ:</note>
-            <u who="#SDZ2.PrijateljJanez" ana="#regular">
+            <u who="#PrijateljJanez">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg472">Spoštovani gospod predsednik, cenjene poslanke in poslanci! Dobre tri mesece je, odkar sem govoril za to govornico in opozoril na nekatere probleme pokojninskega in invalidskega zavarovanja, zlasti pa na težave pri financiranju, ki so vse bolj pereče in bodo, izgleda, tudi v vseh prihodnjih letih. Verjetno ste me zadnjič nekoliko narobe razumeli, da pravzaprav preveč strašim pred prihodnostjo tega zavarovanja v preteklem letu, pa vendar se je izkazalo, da vse tisto, na kar sem opozarjal, zaradi prenizko planiranih proračunskih postavk lanskega leta za transferje v pokojninsko-invalidsko zavarovanje drži in se je praktično tudi uresničilo, tako, da bo Zavod za pokojninsko in invalidsko zavarovanje končal poslovno leto 1997 z izgubo in da so se na koncu leta dokaj zaostrili tudi likvidnostni problemi tega zavarovanja.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg473">Jaz sem že pred tremi meseci državni zbor seznanil z dejstvom, da mora zavod zaradi zavestne makroekonomske politike države že vse od leta 1994 poslovati z izgubo, da je to proti njegovi volji, da so bile dvakrat znižane prispevne stopnje v letu 1996, da je bil znižan rezervni sklad tega zavarovanja in tako naprej in tako naprej, kar pomeni, da je praktično en ogromen makroekonomski sistem države v, lahko rečem, rdečih številkah. Dejstvo je, da vemo zakaj: država je v težavah, proračun je v težavah, makroekonomske težave so prisotne, pred nami je pokojninska reforma. Cela vrsta stvari se odvija in je v teku - tudi varčevalni ukrepi, tako da vemo, kje smo in to, kar jaz danes govorim, ni nekaj, da bi se ne zavedal ekonomskih problemov te družbe, ampak vendarle makroekonomski sistem, kot je pokojninski zavod, verjetno ne sme biti obsojen na rdeče številke.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg474">Lansko leto sem državni zbor seznanil z oceno, da se v državnem proračunu za leto 1997 določa očitno prenizka postavka transferjev za pokojninsko in invalidsko zavarovanje, ki ne bo mogla nadomestiti izpada prihodkov zaradi predhodno znižane prispevne stopnje. Napovedal sem, da bo v primeru, če se ta postavka ne bo ustrezno zvišala, zavod končal leto 1997 z izgubo, in da se bodo zaostrile likvidnostne razmere. Sedaj sem ocenil, da je tako povzročen primanjkljaj zavoda neprimeren in tudi nepotreben in da bi tudi verjetno psihološko slabo vplival na splošno sprejemanje predlogov za novo pokojninsko reformo. Zaradi težavnih zapletov predvsem državnega proračuna ter zaradi postavljenih limitov njegove višine moja opozorila na očitno neusklajenost finančnega načrta zavoda in proračuna niso dosegla namena in niso bila upoštevana, saj tudi poslanci državnega zbora na to temo niste vložili nobenega amandmaja, pa tudi sicer se o tej problematiki kaj dosti ni razpravljalo.</seg>
@@ -1639,11 +1620,11 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg487">Spoštovane gospe poslanke in poslanci, bil sem nekoliko osredotočen na finančni načrt za preteklo in letošnje leto. V prilogi sem vam posredoval vse statistične podatke pokojninskega zavoda, iz katerih so na jedrnat način razvidna vsa gibanja v letošnjem letu. Državni zbor pa je prejel naknadno tudi osnutek finančnega načrta zavoda, ki pa je šele v fazi predloga in nanj čaka soglasje vlade. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg488">Hvala lepa, gospod Janez Prijatelj. Besedo dajem gospodu Francu Koširju, generalnemu direktorju Zavoda za zdravstveno zavarovanje Slovenije.</seg>
             </u>
             <note type="speaker">FRANC KOŠIR:</note>
-            <u who="#SDZ2.KoširFranc" ana="#regular">
+            <u who="#KoširFranc">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg489">Gospod predsednik, spoštovane poslanke in poslanci, gospod minister</seg>
                <note>ki še edini vztraja pri tej uvodni razpravi</note>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg490">! Dovolite mi, da se z nekaj poudarki pridružim tem uvodnim mislim, ki so jih podali moji predhodniki. Pri tem bi rad uvodoma izrazil zadovoljstvo, da je državni proračun prvič pravzaprav naravnan z varčevalnimi ukrepi na situacijo, kjer bo potrebno gospodariti in razpolagati s tistim, kar pravzaprav imamo oziroma z manjšim primanjkljajem zagotoviti funkcioniranje države in seveda obeh javno finančnih blagajn, torej pokojninskega in zdravstvenega zavarovanja.</seg>
@@ -1662,7 +1643,7 @@
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg503">Pridružujem se guvernerju - želim vam prijetne praznike, srečno novo leto, predvsem pa zdravja v prihodnjem letu. Ker ste pa dobro zavarovani, bo pa tudi poceni za nas. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg504">Hvala lepa, generalnemu direktorju Zavoda za zavarovanje Slovenije. Razumljivo je, da nam vsaj on tudi vošči veliko zdravja.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg505">S tem smo zaključili s predstavitvami priloge državnega proračuna za leto 1998. Zahvaljujem se vsem poslankam in poslancem, da ste vzdržali do te pozne ure in s tem tudi zaključujem to točko dnevnega reda.</seg>
                <seg xml:id="SDZ2-Izredna-17-1997-12-16.seg506">Juti ob 14.00 uri državni zbor nadaljuje sejo s 5. točko - obvestilo Okrožnega sodišča v Ljubljani in potem po vrstnem redu, kot je sprejet dnevni red. Hvala lepa vsem in lahko noč.</seg>

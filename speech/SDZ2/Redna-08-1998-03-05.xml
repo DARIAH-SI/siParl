@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Redna-08-1998-03-05"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">8. redna seja (5. 3. 1998)</title>
-            <meeting n="8"
-                     corresp="#SDZ2-Redna-08-1998-03-05.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="8" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,33 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">Nadaljevanje 8. seje (5. marec 1998)</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|6AEC3995453F8F4AC12565C4003B051B</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=6AEC3995453F8F4AC12565C4003B051B</idno>
-                  <imprint>
-                     <date when="1998-03-05"/>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>8. redna seja (5. 3. 1998)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="1998-03-05"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=6AEC3995453F8F4AC12565C4003B051B</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="note" occurs="359"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="149"/>
                <tagUsage gi="seg" occurs="494"/>
                <tagUsage gi="gap" occurs="9"/>
@@ -635,22 +621,21 @@
                <date when="1998-03-05" ana="#parl.sitting">5. 3. 1998</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Redna-08-1998-03-05.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">Nadaljevanje 8. seje (5. marec 1998)</head>
             <note type="chairman">Sejo je vodil Miroslav Luci, podpredsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 10.21 uri.</note>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg1">Spoštovane kolegice, spoštovani kolegi poslanci! Državni zbor zaseda. Kolegi poslanci, prosim, da zavzamemo svoja mesta. Pričenjam nadaljevanje 8. seje državnega zbora Republike Slovenije. Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: Herman Tomažič, Jože Lenič, Alojz Peterle, Ivan Božič do 12.00 ure, Peter Hrastelj za dopoldanski del seje, Peter Petrovič, Rafael Kužnik za dopoldanski del seje, mag. Marijan Schiffrer za popoldanski del seje, Eda Okretič-Salmič od 11.00 do 12.00 ure. Prosim, da ugotovimo prisotnost v dvorani!</seg>
                <note>77 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg2">Tako je zbor sklepčen in lahko odloča.</seg>
@@ -659,37 +644,37 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg5">Ali kdo nasprotuje temu predlogu? Gospa Beblerjeva, izvolite.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER:</note>
-            <u who="#SDZ2.LavtižarBeblerDarja" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg6">Spoštovani gospod podpredsednik, spoštovani zbor! Včeraj smo se dogovorili, kako in po kakšnem vrstnem redu bo potekala današnja seja oziroma nadaljevanje 8. seje državnega zbora.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg7">Zato v imenu poslanske skupine LDS sprašujem, zakaj je prišlo do takšnega predloga. In če boste vztrajali pri takšnem predlogu dnevnega reda, potem bom prosila za določeno pavzo. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg8">Hvala lepa. No, to je bil predlog. Če kakorkoli želite, bomo seveda o tem predlogu glasovali. Torej bi dal kar na glasovanje predlog, da po 44. točki in 19. točki preidemo, torej državni zbor preide na obravnavo 64. točke dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg9">Opredelitev, zakaj sem predlagal; torej zaradi odsotnosti imenovanega poslanca, ki bo v tej točki, v naslednjem tednu zadržan in pa zaradi, seveda nevzdržnosti stanja, ko je poslanec precej razdvojen v tem času. Mislim, da je primerno, da to čimprej odločimo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg10">Gospa Beblerjeva! Pred glasovanjem, še izvolite.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER:</note>
-            <u who="#SDZ2.LavtižarBeblerDarja" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg11">Spoštovani zbor! Pred odločanjem o tem predlogu, ki ga je tukaj predstavil gospod podpredsednik državnega zbora, prosim v imenu poslanske skupine LDS za 1-urno pavzo.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg12">Kolegi, poslanke in poslanci! Torej prekinjamo sejo za 1 uro in nadaljujemo ob 11.30 uri.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 10.26 uri insejenadaljevala ob 11.37 uri.</note>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg13">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje. Nadaljujemo z 8. sejo državnega zbora. Poslanke in poslance prosim, da zasedejo svoja mesta. Ugotavljamo prisotnost!</seg>
                <note>68 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg14">Ugotavljam, da je zbor sklepčen in lahko nadaljujemo z delom. Poslanska skupina LDS je predlagala enourno pavzo. Prosim predstavnika poslanske skupine, da poda svoje mnenje.</seg>
             </u>
             <note type="speaker">DARJA LAVTIŽAR-BEBLER:</note>
-            <u who="#SDZ2.LavtižarBeblerDarja" ana="#regular">
+            <u who="#LavtižarBeblerDarja">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg15">Hvala lepa. Gospod podpredsednik, spoštovani zbor. Ne glede na to, da smo mi seveda zainteresirani in smo tudi predčasno že prosili, da se ta točka, ki jo danes obravnavamo, ki je zdaj na tej seji pod številko 64, uvrsti že na 19. izredno sejo državnega zbora, ne glede na dejstvo, da smo zainteresirani, da se ta zadeva obravnava, bomo nasprotovali temu, da se premešča dnevni red, tudi iz načelnih razlogov. Kajti, naj bi delo državnega zbora potekalo po nekem redu, da se lahko tudi ustrezno pripravimo za posamezne točke. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg16">Hvala lepa.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg17">Na glasovanje dajem predlog, da bo državni zbor po 44. točki dnevnega reda in po 19. točki dnevnega reda prešel na 64. točko dnevnega reda in nato na 45. in dalje po vrstnem redu.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg18">Prehajamo na glasovanje. Ugotavljamo prisotnost!</seg>
@@ -732,11 +717,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg40">Prehajamo na odločanje o četrtem dopolnjevalnem predlogu, predlagatelj je Avšič Jože. Gospod Avšič Jože želi obrazložiti glas. Izvolite.</seg>
             </u>
             <note type="speaker">JOŽE AVŠIČ:</note>
-            <u who="#SDZ2.AvšičJože" ana="#regular">
+            <u who="#AvšičJože">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg41">Predsednik, ne bi obrazlagal posebej, ker sem ga predlagal, bom "za", vendar pa prosim, da bi naredili popravek pri tem sklepu. Očitno je med prepisovanjem prišlo do neke napake v včerajšnji naglici. Gre za to, da bi namesto "in" moralo biti "ali" - "Zavodu za kmetijstvo ali območnim zavodom za gozdove".</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg42">Torej, da ne bi tega razmnoževali, bom kar prebral - imamo nov tekst četrtega dopolnjevalnega predloga: "Predlagatelj naj v 5. členu, v oklepaju, organizacijske enote, opredeli sedež območnih enot, ki se ustanovijo za območje sedanjih območnih zavodov za kmetijstvo ali območnih zavodov za gozdove."</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg43">Prehajamo na glasovanje. Ugotovimo prisotnost!</seg>
                <note>67 prisotnih.</note>
@@ -755,116 +740,116 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg51">Prehajamo na odločanje o šestem dopolnjevalnem predlogu, predlagatelj je Zoran Lešnik. Prehajamo na odločanje. Ugotovimo prisotnost! Oprostite, moment! Opredelitev glasu oziroma obrazložitev glasu, gospod Geza Džuban, izvolite.</seg>
             </u>
             <note type="speaker">GEZA DŽUBAN:</note>
-            <u who="#SDZ2.DžubanGeza" ana="#regular">
+            <u who="#DžubanGeza">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg52">Hvala lepa, gospod podpredsednik. To stališče je eno pomembnejših, ki posega na področje "zbornica - da ali ne" - "kmetijsko-gozdarska zbornica - da ali ne".</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg53">V uvodni razpravi smo govorili o tem obveznem članstvu, da ali ne, oziroma o usodi zbornice, ki bi nastala, in bi se na ta način oblikovala v obsegu, ko bi pokrivala področje interesov panoge, to je kmetijstva oziroma bi v neobveznem članstvu nastala v neki okrnjeni obliki.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg54">Osebno bom nasprotoval temu predlogu stališča, ker ocenjujem, da od praga naprej, katerega bomo določili oziroma priporočali v stališčih matičnega delovnega telesa, bi morali biti vsi, ki se ukvarjajo z dejavnostjo tako ali drugače, člani zbornice, sicer zbornica ne bo oblikovana tako, kot je potrebno oziroma bo zastopala tudi interese tistih, ki ne bodo člani, pa ne bodo nič prispevali. Nasprotoval bom temu predlogu stališča. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg55">Hvala lepa. Opredelitev glasu tudi Feri Horvat. Izvolite kolega. Replik ni.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg56">Hvala za besedo, gospod podpredsednik. Spoštovane kolegice in kolegi, tudi jaz bom glasoval proti temu stališču, kajti to potem ruši v bistvu koncept zbornice, kot je predlagano s tem zakonom, in potem bi tudi vsebina drugih pomembnih določil tega zakona morala biti bistveno drugačna. Izglasovan pa je bil koncept, kot primerna podlaga že s 1. sklepom, zato mislim, da je poleg tega kar je rekel kolega Džuban in to sem jaz včeraj podrobneje obrazložil razloge, zakaj mislim, da je primeren za koncept z obveznim članstvom, kot reprezentativna zbornica, kot partner države in tudi zaradi tega, ker je potrebno imeti v državi ali smiselno enoten zborničen sistem po svojem konceptu. Tako je konstruirana gospodarska zbornica in tudi obrtna zbornica. In tudi v drugih evropskih primerljivih državah je koncept zbornice tak z obveznim članstvom. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg57">Hvala lepa. Opredelitev glasu tudi Zoran Lešnik. Izvolite.</seg>
             </u>
             <note type="speaker">ZORAN LEŠNIK:</note>
-            <u who="#SDZ2.LešnikZoran" ana="#regular">
+            <u who="#LešnikZoran">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg58">Gospod podpredsednik, kolegice in kolegi! Razumljivo, da bom glasoval za takšen predlog, kot sem ga predlagal. Ampak, ne samo zaradi tega, ker sem ga jaz predlagal ali naša poslanska skupina, ampak glasoval bom zato, ker izgleda, da nekateri nočemo stvari ločiti. Gospodarska zbornica Slovenije je združenje pravnih oseb. Gospodarska zbornica, kot jo predlagamo kmetijsko-gozdarska je združenje fizičnih oseb. Zdaj pa sprašujem tiste, ki so proti, ali ustanavljamo zbornico zato, ker to zbornico rabi država ali ustanavljamo to zbornico zato, ker jo rabi kmetijstvo in slovenski kmet. Osebno menim, da jo ustanavljamo zaradi kmetijstva in slovenskega kmetstva, kajti družbenega kmetijstva tako prej kot slej več ne bomo imeli. In če ustava pravi, da fizičnih oseb ne moremo in ne smemo posiljevati v neko, da morajo biti obvezni člani. Kajti, če bomo to sprejeli, potem bo jutri lahko nekdo predlagal, da bomo pač obvezno ustanovili pevski zbor, v katerem bomo morali biti obvezno člani.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg59">In če ni ta predlog sprejet, potem vas prosim, da si preberete določila o članstvu, kjer boste lahko ugotovili, da morajo biti po tem zakonu obvezno člani vsi družinski člani neke kmetije, ki so zavarovani po zakonu o invalidsko-pokojninskem zavarovanju. Da morajo biti obvezno člani tisti, ki živijo na kmetiji in so bili nekoč po zakonu o invalidsko ali invalidsko-pokojninskem sistemu zavarovani ali zavarovani po zakonu o starostnem zavarovanju, pa so danes stari 85 let, živijo, preživljajo jesen svojega življenja na kmetiji, pa morajo biti člani. Jaz vem, da je zbornica, saj smo dobili od zbornice, tudi napisala, da morajo biti obvezno. Ja, kaj bo pa drugega napisala, saj ona je sicer združenje pravnih oseb, ampak hkrati se pa boji, če bi prišlo do spremembe zakona, da bi bili prostovoljni člani in ker ne dela, tako kot bi morala delati, da bo prej ko slej na prepihu.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg60">Cenjeni kolega, obrazložitev glasu.</seg>
             </u>
             <note type="speaker">ZORAN LEŠNIK:</note>
-            <u who="#SDZ2.LešnikZoran" ana="#regular">
+            <u who="#LešnikZoran">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg61">Obrazlagam glas in ker vidim, da bodo <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg62">Vsebinsko več ne bi.</seg>
             </u>
             <note type="speaker">ZORAN LEŠNIK:</note>
-            <u who="#SDZ2.LešnikZoran" ana="#regular">
+            <u who="#LešnikZoran">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg63">No, potem pa hvala lepa, ne bom več. Torej jaz bom glasoval za to, da članstvo ni obvezno za fizične osebe. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg64">Hvala lepa, kolega Lešnik. Obrazložitev glasu, gospod Potočnik in gospod Rokavec. Obrazložitev glasu, prosim.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg65">Razumem, gospod podpredsednik, saj s tem namenom sem se tudi javil, čeprav bi sicer bila tudi logična replika, ampak ni možna. Glasoval bom proti temu sklepu, ker če bi takšna določila vstavili v zakon, potem zbornica ne bi mogla opravljati svoje funkcije, zaradi katere jo ustanavljamo in namen predlagatelja je tudi ta, da bi to zbornico onemogočil s takšnim določilom. Seveda, kdo bo član v tej zbornici, o tem bo v drugi obravnavi še tekla beseda in tudi prvo stališče odbora za kmetijstvo, gozdarstvo in prehrano tudi pravi, naj se preuči to, kdo bodo člani te zbornice. Tako da stvar ni prejudicirana. Skratka sam in vsi v Ljudski stranki bomo glasovali proti temu dopolnjevalnemu predlogu, ker pač ocenjujemo, da je kmetijsko-gozdarska zbornica nujno potrebna in mora biti tudi takšna, da bo lahko svoje naloge tudi opravljala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg66">Hvala lepa. Obrazložitev glasu tudi Franci Rokavec.</seg>
             </u>
             <note type="speaker">FRANCI ROKAVEC:</note>
-            <u who="#SDZ2.RokavecFranc" ana="#regular">
+            <u who="#RokavecFranci">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg67">Hvala, gospod podpredsednik. Glasoval bom proti temu predlaganemu sklepu iz najmanj dveh razlogov. Namreč v razpravi se nisem oglasil. Mislim pa, da je potrebno, da se pri odločanju o tem predlogu oglasim. Namreč prvo, kar je, ta predlog odstopa od prejšnjih predlogov, ker dejansko zakonodajalcu oziroma pripravljavcu zakona nalaga, da mora uvrstiti to dikcijo v zakonski tekst. Drugo, ker sem prepričan, da rabi obvezno članstvo, da je obvezno članstvo pogoj, eno od bistvenih konceptov tega zakona zaradi tega, ker potrebuje kmetijsko-gozdarsko zbornico v taki obliki kakor država, ker prenaša prek javnih služb, delovanje javnih služb na zbornico in pa, da s tem tudi zagotovi reprezentativno zastopstvo kmetov oziroma stanu pri pogajanjih v Evropsko unijo. Jaz sem prepričan, da s tem zakonom zamujamo vsaj enih par let in bi apeliral na vse poslanke in poslance, da zavrnete ta predlagani predlog.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg68">Hvala lepa. Obrazložitev glasu tudi gospod Jelinčič, pa gospod Veber.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg69">Jaz bom podprl predlagani predlog, ki ga je dal gospod Zoran Lešnik, iz zelo enostavnega razloga. 74. člen slovenske ustave pravi: "Gospodarski pobuda je svobodna." To se pravi, nihče ne sem predpisovati fizičnim osebam obveznega članstva v kateremkoli združenju organizaciji, društvu ali kaj podobnega. To se lahko predpiše za gospodarske družbe, nikakor pa ne more biti obvezno za fizične osebe. In če ta predlog pač ne bo sprejet, bo verjetno treba pretehtati pred ustavnim sodiščem ustavnost celega zakona. In mislim, da se bo ustavnost zlomila ravno na tem določilu. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg70">Hvala lepa. Gospod Veber.</seg>
             </u>
             <note type="speaker">JANKO VEBER:</note>
-            <u who="#SDZ2.VeberJanko" ana="#regular">
+            <u who="#VeberJanko">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg71">No, jaz bi povedal, da bom glasoval za ta predlog, ki ga je posredoval gospod Lešnik. Kajti mislim, da je neumestno obremenjevati ljudi, da jih prisilno učlanjujemo v zbornico. Kajti prav gotovo ni preverjen njihov interes. In sem proti takemu posredovanju. Tako, da bom podprl ta predlog in s tem omogočil, da se ta člen, ki je danes predlagan v tem predlogu zakona dejansko tudi ustrezno spremeni.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg72">Hvala lepa. Gospod Možgan, nato gospod Demšar.</seg>
             </u>
             <note type="speaker">JOŽE MOŽGAN:</note>
-            <u who="#SDZ2.MožganJože" ana="#regular">
+            <u who="#MožganJože">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg73">Glasoval bom proti predlogu gospoda Zorana Lešnika, ker je njegova utemeljitev privlečena za lase. V zdravniški zbornici je članstvo obvezno.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg74">Slučajno sem zdaj v situaciji, ko sem prostovoljen član. Ampak mislim, da mi poslanska plača dovoljuje plačilo članarine, ki je petintrideset tisoč tolarjev na leto, in sem ostal v zdravniški zbornici. To bi rad povedal, da imajo verjetno podobno odvetniki, to bodo povedali pravniki. Samo pri zdravnikih so fizične osebe obvezni člani. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg75">Hvala lepa gospodu Možganu. Gospod Demšar, nato gospod Pungartnik, potem gospod Zagožen in gospod Kebrič.</seg>
             </u>
             <note type="speaker">VINCENCIJ DEMŠAR:</note>
-            <u who="#SDZ2.DemšarVincencij" ana="#regular">
+            <u who="#DemšarVincencij">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg76">Hvala. Glasoval bom za tak dopolnjevani predlog iz enostavne utemeljitve. Biti član in to obvezen, pomeni, da nekoga v nekaj prisiliš, da nekaj mora biti. Seveda iz tega izhajajo pravice in pa obveznosti, če si nekje član. Vendar siliti ljudi notri, ker kdor ima zemljo že po stanu zato, ker nekaj ima, je vključen v kmetijsko dogajanje, če tako nekako na splošno rečem. In on s svojim delom in pa svojim imetjem že avtomatsko sodeluje pri stvari. In ne vidim, zakaj bi ga morali siliti. In če ima neko, poseduje nekaj, obdeluje nekaj, ima potem tudi že iz tega neke pravice. Zato ne vidim razloga, da ga prisiliš tja, da mora biti član in šele potem ima pravico tudi glasovanja, ne samo svoje obveznosti. Torej, to kar je tu napisano, je tudi po moje lahko ustavno vprašljivo, ali ne bo ta stvar padla, ko bomo šli preverjati, ali tako po moje posiljevanje ljudi pri nas posebej, ko bo šlo to v stotisoče. Torej, članstvo ne bo 52, ali pa ne vem, nekaj tisoč, ampak gre to po 100.000. Zato mislim, da je v tem primeru to tu zgrešeno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg77">Hvala lepa, kolegu Demšarju. Obrazložitev glasu gospod Pungartnik, gospod Zagožen, Kebrič, Avšič, Čebulj.</seg>
             </u>
             <note type="speaker">CIRIL METOD PUNGARTNIK:</note>
-            <u who="#SDZ2.PungartnikCirilMetod" ana="#regular">
+            <u who="#PungartnikCirilMetod">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg78">Gospod predsedujoči, hvala. Spoštovane kolegice, kolegi! Tudi na odboru sem bil proti obveznemu članstvu v tem smislu, kot je predstavljeno. Namreč, pri drugih zbornicah, ne glede katere so, ljudje v bistvu od tega živijo. Zdravnik je v praksi zaposlen kot zdravnik, notar je kot notar, živi od tega. Mi imamo pa na področju kmetijske dejavnosi pač dva segmenta prebivalcev. Se pravi, eni so poklicni kmetje, da rečem, od tega živijo, ali pridobivajo večino svojega vira za življenje zase in družino iz kmetijstva. In drugi del prebivalstva, ki ima, ki so lastniki zemlje, ki to zemljo lahko daje ali v najem, ali jo sami obdelujejo, ampak odvisnost njihovega življenja ni od te zemlje. Jaz sem tudi na odboru sprožil vprašanje konfliktnosti teh dveh skupin v eni zbornici. Na koncu koncev tisti, ki živijo od zemlje, ki so na to življenjsko vezani, imajo pri tem drugačne interese, kot pa tisti lastniki zemlje, ki niso odvisni od te zemlje življenjsko. In bo tudi znotraj prišlo do spora. Večino, če bo pa ta zakon v tej normi, kot je zdaj, bodo pa večino v tej zbornici imeli nekmetje, še enkrat poudarim, ne tisti, ki živijo od kmetijstva. Jaz bom pri tem, ker je ta predlog tako dokončen, ga ne bom ne podprl, pa tudi proti ne bom. Ali me razumete? Ampak, zavzemal se bom zmeraj za to, da naj bodo v zbornici, tudi lahko obvezno, ampak tisti, ki so obvezani s svojim življenjem, s svojimi družinskimi člani na preživetje na kmetijstvo, ne pa da imamo znotraj ene zbornice dve grupi ljudi, ki bodo lahko imeli jutri bistveno različne interese. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg79">Hvala lepa. Gospod Jože Zagožen.</seg>
             </u>
             <note type="speaker">DR. JOŽE ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženJože" ana="#regular">
+            <u who="#ZagoženJože">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg80">Hvala lepa. S tem odpiramo eno vprašanje, ki je prisotno tudi pri vseh ostalih zbornicah, kot je gospodarska zbornica, kot je obrtna zbornica in podobno. Morali bi te stvari načelno rešiti. Tudi sem odgovoril na to, da so tudi podjetniki posamezniki fizične osebe in je zanje obvezno članstvo v obrtni zbornici. Torej tisto o fizičnih osebah ne drži, čeprav se tudi meni postalja vprašanje, verjetno bi nosilec kmetijske dejavnosti moral biti, vprašanje pa je zdaj, kako z ostalimi člani družine. To pa mi ni čisto jasno. Tako da v principu mislim, da stvar ni sporna. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg81">Hvala lepa. Razprava je že bila precej obširna. Želel bi, da res opredeljujete svoj glas z bistvenimi elementi, torej ne vsebinskimi. Naslednji je gospod Kebrič.</seg>
             </u>
             <note type="speaker">IVAN KEBRIČ:</note>
-            <u who="#SDZ2.KerbičIvan" ana="#regular">
+            <u who="#KerbičIvan">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg82">Hvala, gospod podpredsednik, za besedo. Spoštovane kolegice in kolegi! Glasoval bom za ta predlog, pa ne zato, ker prihaja iz naše poslanske skupine, ampak predvsem zato, ker me je prepričala tudi določena argumentacija ostalih. Gre za naslednje:</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg83">Če je dr. Možgan dejal, da bo glasoval proti temu predlogu za obvezno članstvo, to torej pomeni na drugi strani, če je član zdravniške zbornice, sedaj pa ne opravlja tega poklica, pomeni, da je prostovoljni član. Isto velja, po mojem načelu, naslednje: šele od 18.000</seg>
                <note>govorim okroglo</note>
@@ -872,41 +857,41 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg85">Trdno sem prepričan, če bo sprejet tak zakon, da bo sprožen ustavni spor, in da bo ta člen v tem smislu razveljavljen. Zato že sedaj pravim, da bom glasoval za ta predlog. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg86">Hvala lepa, gospod Kebrič. Predlagal bi, da ne bi polemizirali z odločanjem drugih, ampak podajte samo svoje videnje pri tem.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg87">Gospod Avšič, obrazložitev glasu, ne polemike.</seg>
             </u>
             <note type="speaker">JOŽE AVŠIČ:</note>
-            <u who="#SDZ2.AvšičJože" ana="#regular">
+            <u who="#AvšičJože">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg88">Obljubljam, da ne bom polemičen. Moram pa reči, da bom, seveda, proti temu predlogu iz razlogov, ker je državni zbor podprl predlog zakona kot primerno podlago za naslednjo obravnavo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg89">Namreč, koncept takšnega zakona zahteva obvezno članstvo. Vendar pa, ker sem pri besedi, in da se ne bi več javljal naprej, bom podprl tudi šesti dopolnjevalni predlog oziroma sedmi dopolnjevalni predlog gospoda Malovrh, da je treba proučiti cenzus, od kje obvezno članstvo, in podprl bi tudi še deveti dopolnjevalni predlog gospoda Malovrha, vendar je identičen z mnenjem odbora, da je samo en predstavnik kmetije, take kmetije, ki bo evropsko primerljiva, obvezni član. To je potem komplet tega vprašanja, o katerem se pogovarjamo. Seveda pa bi lahko, v nadaljevanju bomo morda celo vložili amandma ali pa ga bom sam vložil, dovolili hkrati z obveznim članstvom tudi prostovoljno članstvo. Tega pozna zakon o obrtni zbornici, kjer bi lahko tudi tisti kmetje, ki ne izpolnjujejo pogojev in jih ne zadene obvezno članstvo, lahko prostovoljno pristopili, če začutijo potrebo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg90">Hvala lepa kolegu Avšiču. Kolega Čebulj, izvoli. Obrazložitev glasu.</seg>
             </u>
             <note type="speaker">FRANC ČEBULJ:</note>
-            <u who="#SDZ2.ČebuljFranc" ana="#regular">
+            <u who="#ČebuljFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg91">Hvala lepa. Jaz sem bil privatno tudi nekje takega mnenje, da obvezno članstvo nikakor ne bi sodilo v ta sam zakon, toda glede na problematiko kmetijstva in jasnih evidenc v kmetijskih zadrugah in v občinah, ki se soočamo s to problematiko, sem mnenja, da obvezno članstvo je potrebno. In seveda tako ne morem podpreti predloga gospoda kolega Lešnika. Da pa seveda bo vprašanje višine katastrskega dohodka, o tem seveda bo pa potrebno dopolniti z amandmajem, kjer bi pa bil cenzus znatno višji, kot pa je dejansko predlagan. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg92">Hvala lepa. Kolega Franc Zagožen. Izvolite.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg93">Spoštovani zbor! Jaz bom glasoval proti predlogu gospoda Lešnika, ki je tudi vse svoje poklicno življenje posvetil manipulaciji s kmeti in deloval proti njihovim interesom. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg94">Hvala lepa za obrazložitev glasu. Replike ni. Proceduralno izvolite. Vendar procedure ne zlorabi.</seg>
             </u>
             <note type="speaker">ZORAN LEŠNIK:</note>
-            <u who="#SDZ2.LešnikZoran" ana="#regular">
+            <u who="#LešnikZoran">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg95">Nič ne bom zlorabljal, ampak najodločneje protestiram proti takšni izjavi dr. Zagožna, ker če ne bi bila izrečena tu, bi se srečala na sodišču. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg96">Hvala. To je bilo proceduralno. Končali smo z obrazložitvami glasu. Kolegi, prosim za strpnost. Nadaljujemo s sejo. Razpravljalcev več ni in prehajamo na glasovanje o 6. dopolnjevalnem predlogu. Predlagatelj Zoran Lešnik. Prehajamo na odločanje. Ugotavljamo prisotnost!</seg>
                <note>67 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg97">Kdo je za 6. dopolnjevalni predlog?</seg>
@@ -917,44 +902,44 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg100">Prehajamo na 7. dopolnjevalni predlog. Predlagatelj Jurij Malovrh. Obrazložitev glasu gospod Potočnik, gospod Malovrh, obrazložitev glasu. Gospod Džuban.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg101">Spoštovane dame in gospodje! Jaz bom glasoval proti temu predlogu sklepa, ker pravzaprav ni čisto jasno iz njena razvidno, kaj bi želel. Če gre za to, da se ponovno preuči višina cenzusa, ki določa, kdo je obvezni član, potem je ta stvar že zapopadena oziroma zajeta v prvem stališču odbora in sicer, kjer pravi, predlagatelj naj v poglavju dva ponovno prouči obvezno članstvo s tem, da se preuči povečanje minimuma na evropsko primerljivo velikost kmetije. Mislim, da ni jasno, naj se povečanje minimuma, katerega minimuma in tudi vprašanje je evropske primerljive velikosti kmetije, ker tega standarda nimamo. Tako da jaz mislim, da tudi, če bi bil ta sklep sprejet, jaz ne vem, če bi si lahko z njim kaj pomagali. Jaz bom glasoval proti temu sklepu.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg102">Hvala lepa za obrazložitev glasu gospoda Potočnika. Gospod Malovrh, gospod Džuban, gospod Jelinčič in nato gospod Čebulj.</seg>
             </u>
             <note type="speaker">JURIJ MALOVRH:</note>
-            <u who="#SDZ2.MalovrhJurij" ana="#regular">
+            <u who="#MalovrhJurij">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg103">Gospod podpredsednik, hvala lepa za besedo. Jaz bom glasoval za ta predlog in sicer iz sledečih razlogov. Vem, da je potrebno obvezno članstvo, vendar samo za tržne proizvajalce, ne pa za samooskrbne proizvajalce. To, kar je v predlogu podano, bi lahko, milo rečeno, rekel tako, da imamo veliko večino v Sloveniji kmetov ali pol kmetov, ki se ukvarjajo z zemljo pač zaradi tega, ker so jo nasledili in pa, ker s tem zmanjšujejo svoj proračunski primanjkljaj, ne pa zato, da bi tržno proizvajali. Predlog, kot je podan, je podan v tem, da tisti, ki ima približno 30 arov vrta ali pa vinograda, je že član kmetijsko-gozdarske zbornice po povprečju 1,26 hektarja. Drugo je tudi, katastrski dohodki so različni po Sloveniji, tudi po kategoriji zemlje. Vemo, da gremo v Evropsko skupnost, vemo, da se bomo soočili s tržnimi viški Evrope, pa vendar ima Slovenija tržne viške samo delno na govejem mesu, potem pri proizvodnji jajc, pri proizvodnji kurjega mesa in pa mleka ter mlečnih izdelkov. Naše kmete bo bolj potrebno zaščititi in posebej te velike tržne proizvajalce pred invazijo kmetijstva iz Evrope, ne pa, da bi zastopali izvoznike z našega področja.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg104">In prav k temu je težil ta predlog. Kajti vemo, da je v Sloveniji povprečna velikost kmetije nekaj manj ko 4 hektare. Približno enaki ali pa nam najbližji so Poljaki, ki imajo okrog 7 hektarov potem so Avstrijci z 17, Nemci z okoli 50., Anglosalci pa Francozi z 150. hektari. Tako, da prav zaradi tega je tudi naravnan ta predlog, da ni konkreten. Kajti mi jim moramo povečati na tiste subjekte, ki tržno proizvajajo. Vsi ostali pa se interesno združujejo, kar pa že sam predlog zakona ne izključuje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg105">Hvala lepa. Naslednji je gospod Džuban obrazložitev glasu.</seg>
             </u>
             <note type="speaker">GEZA DŽUBAN:</note>
-            <u who="#SDZ2.DžubanGeza" ana="#regular">
+            <u who="#DžubanGeza">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg106">Hvala lepa. Glasoval bom proti zaradi tega, ker bi dosegli obratni učinek, kot si ga želi gospod Malovrh v tem predlogu stališča. Imeli smo prezentirane podatke, da so dežele s strukturo kmetijstva, ki je slava takšna, da imajo vse povprečno večje kmetije, kot ga ima Slovenija. Kar pomeni, da bi mi morali prag vključevanja članov zniževati. Mi pa želimo doseči obratni efekt, ki je predlagan v prvem stališču matičnega delovnega telesa, da prag povečujemo. In s tistim stališčem, ki je stališče matičnega delovnega telesa, praktično dosežemo po enostavnejši, krajši in naši poti, tisto, kar želi doseči gospod Malovrh. Če bi upoštevali njegovo stališče in se primerjali z neko Avstrijo, bi morali prag znižati. To si pa osebno ne želim in mi je boljši predlog - kot sem rekel - matičnega delovnega telesa, in tega ne bom podprl. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg107">Hvala lepa, kolega Džuban. Gospod Jelinčič, obrazložitev glasu.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg108">Jaz bom podprl tudi ta predlog gospoda Jurija Malovrha. In ob tem bi zopet citiral slovensko ustavo, zdaj pa 42. člen drugo alineo, ko pravi: "Vsakdo ima pravico, da se svobodno združuje z drugimi." To ravno pomeni za fizične osebe, kamor sodijo tudi kmetje. In že prej sem navajal 74. člen ustave, ampak tako kot prej to ni nič pomagalo in tudi zdaj to ne bo pomagalo.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg109">Hvala lepa. Obrazložitev glasu, gospod Čebulj. Potem smo z obrazložitvami končali.</seg>
             </u>
             <note type="speaker">FRANC ČEBULJ:</note>
-            <u who="#SDZ2.ČebuljFranc" ana="#regular">
+            <u who="#ČebuljFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg110">Hvala lepa. Ja, jaz sem prišel do zaključka, da tega predloga ne morem podpreti. In iz čisto preprostega razloge, ker tudi vsebuje kot proučitev ponovnega članstva. In to v bistvu izpodbija tisto, kar smo glasovali proti v šestemu dopolnilnem predlogu. Je pa tako, kot je rekel kolega Džuban, da ima stališča, jasno so zapisana iz odbora za kmetijstvo in naj se pač podpre kot stališče odbora za kmetijstvo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg111">Hvala lepa, gospod Čebulj. Še kdo?</seg>
                <note>Ne.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg112">Prehajamo na odločanje o sedmem dopolnjevalnem predlogu. Ugotovimo prisotnost v dvorani!</seg>
@@ -967,11 +952,11 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg116">Prehajamo na osmi dopolnjevalni predlog, predlagatelj je Zoran Lešnik. Prehajamo na odločanje. Gospod Džuban, obrazložitev glasu. Moramo počakati z odločanjem.</seg>
             </u>
             <note type="speaker">GEZA DŽUBAN:</note>
-            <u who="#SDZ2.DžubanGeza" ana="#regular">
+            <u who="#DžubanGeza">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg117">Hvala lepa. Mogoče je predlog na nek način nejasen. Če je tako, kot si ga jaz razlagam, potem mislim, da ni dober. Iz enačitve osnov za izračun zborničnih prispevkov, če to pomeni to, da tisti, ki ima katastrski dohodek, neka relativna razmerja dohodka v kmetijstvu, in tisti, ki ima 20.000 katastrskega dohodka, bi plačeval isti prispevek kot tisti, ki ima 2 milijona. Mislim, da je zadeva nesprejemljiva. Ob štartu, če ste gledali obrazložitev k zakonu o kmetijsko gozdarski zbornici, lahko ugotovitve, da bi ob štartu plačevali člani pri najnižjem pragu članstva okoli 1.000 tolarjev na leto. Ali bi potem za tiste, ki bi morali prispevati v tem članstvu 1.000 tolarjev, izenačevali nekje na sredini s tistimi, ki bi plačevali recimo deset ali dvajsetkrat več. Mislim, da to ne bi bilo dobro in da je način izračuna zborničnega prispevka sicer morda ne najboljši, ampak kljub vsemu mnogo boljši, kot bi ga na tak način poskušali oblikovati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg118">Hvala lepa gospodu Džubanu. Prehajamo na odločanje. Ugotovimo prisotnost!</seg>
                <note>61 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg119">Kdo je za osmi dopolnjevalni predlog?</seg>
@@ -985,32 +970,32 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg123">, gospod Feri Horvat je bil prvi.</seg>
             </u>
             <note type="speaker">JURIJ MALOVRH:</note>
-            <u who="#SDZ2.MalovrhJurij" ana="#regular">
+            <u who="#MalovrhJurij">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg124">Gospod podpredsednik, jaz deveto točko umikam, glede na to, da je ta predlog brezpredmeten, ker se pokriva z drugo točko samega stališča odbora. Jaz sem mislil, da bo to kar iz klopi že zadosti, pa sem potem moral priti gor.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg125">Hvala lepa. Proceduralno, gospod Feri Horvat.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg126">Oprostite, gospod podpredsednik, mislim, da ta opomba ni korektna oziroma ni točna. Ta predlog se razlikuje od stališča, ki je v poročilu odbora, kajti ta obvezuje vlado, kako naj pripravi to določbo zakona za drugo obravnavo. Se pravi, en predstavnik kmetije kot nosilec gospodarstva oziroma najemne pravice, medtem ko stališče odbora pravi, naj prouči - se pravi, sploh ni obvezno za vlado. To je bistveno vprašanje in to je povezano s konceptom zbornice in povezano s članstvom in povezano z obveznim članstvom. Jaz sem za obvezno članstvo, ampak pod pogojem, da je res, da niso družinski člani in ne vem kdo vse, potem pa ne bi bil za obvezno članstvo. To je zelo pomembno in zato predlagam, da o tem glasujemo.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg127">Hvala lepa. Prosim malo tišine, da lahko normalno delamo! Predlagatelj je predlog umaknil in ne moremo o njem glasovati - mislim, da je to jasno. Gospod Ciril Ribičič je želel še nekaj, tudi proceduralno.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg128">Spoštovani! Ne bi rad zaradi tega preveč kompliciral, ampak pritisnil sem trikrat na tipko, pa lučka ni hotela goreti; dokler je bilo možno zgoraj kontrolirati, ni registriral mojega glasu. Ampak zdaj, ko bomo preverili sklepčnost, se bo videlo, ali naprava deluje ali ne. Zaradi tega, če ne bo delovala, naj se potem tudi za nazaj preverijo glasovanja.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg129">Ker gre za tako pomembno stvar, kot je glasovanje, za pet minut prekinjam sejo, ampak res za pet minut! Čez pet minut, torej ob 12.32 uri smo ponovno v dvorani, medtem časom pa bomo preverili to aparaturo.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 12.27 uri in se je nadaljevala ob 12.35 uri.</note>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg130">Spoštovane kolegice poslanke, kolegi poslanci! Nadaljujemo delo. Ugotovljeno je, da naprava za glasovanje poslanca dr. Ribičiča deluje. Tako lahko nadaljujemo delo. Ugotavljamo prisotnost!</seg>
                <note>61 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg131">Zbor je sklepčen.</seg>
@@ -1034,30 +1019,30 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg142">Prehajamo na odločanje o 11. dopolnjevalnem predlogu. Predlagatelj je Zoran Lešnik. Proceduralno, gospod Ciril Ribičič.</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg143">Ne bi rad, da bi se to vleklo mogoče ure, tedne ali pa mesece. Izpisek glasovanja je pokazal, da res ni registriralo mojega glasovanja, tisto, kar sem prej trdil. Glasovalna naprava je pa delovala v redu in zato nisem zahteval ponovnega glasovanja. Da pa ne bi zdaj bila navada in da ne bi se name sklicevali tisti, ki vpijejo, da tipka ne dela, sem hotel samo to pojasniti in prositi kolege, da ta spodrsljaj ne bi izkoriščali za kakšne slabše odnose v prihodnje. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg144">Hvala lepa. Vaš predlog je, gospod Ribičič? Prosim?</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg145">Prosim, če ponovite predlog.</seg>
                <note>Glasovi iz dvorane.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg146">Tišina!</seg>
             </u>
             <note type="speaker">DR. CIRIL RIBIČIČ:</note>
-            <u who="#SDZ2.RibičičCiril" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg147">Moj proceduralni predlog je bil, da prosim kolege za korektne odnose za naprej in da ne izkoriščajo tega primera, ki se je zgodil, za kaj drugega.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg148">Hvala lepa, kolega Ciril Ribičič. Odločamo o enajstem dopolnjevalnem predlogu, predlogu Zorana Lešnika. Obrazložitev glasu, gospod Potočnik.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg149">Spoštovani! Jaz bom glasoval proti temu dopolnjevanemu predlogu. Dilemo, ali večinski ali proporcionalni sistem, ki se pojavlja, razrešujemo v tretjem dopolnilnem stališču odbora za kmetijstvo, gozdarstvo in prehrano, ki pravi: "Predlagatelj naj ponovno prouči primernost proporcionalnega volilnega sistema v svet zbornic in možnost uvedbe večinskega sistema." To,kar pa predlagatelj, gospod Zoran Lešnik predlaga, pa pravi: "Pri delu volilnih organov, potrjevanje kandidatur in postopka glede glasovanja se smiselno uporabljajo določbe zakona o volitvah državni svet." Volitve v državni svet niso ne večinske ne proporcionalne, niso direktne. Voli se prek elektorjev. Elektorje volijo občinski sveti in ti elektorji potem volijo svetnike. Občinski sveti tudi predlagajo kandidate. In mislim, da v kontekstu tega zakona takšni dopolnjevalni predlog nima mesta, ker ne govori o večinskem ali proporcionalnem sistemu. Zato bom glasoval proti. Če bo sprejet, bo pa tako ali tako - po moje - brezpredmeten.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg150">Hvala lepa, gospod Potočnik. Prahajamo na odločanje o enajstem dopolnjevalnem predlogu. Ugotavljamo prisotnost!</seg>
                <note>64 poslancev.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg151">Kdo je za enajsti dopolnjevalni predlog?</seg>
@@ -1068,28 +1053,28 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg154">Prehajamo na odločanje o dvanajstem dopolnjevalnem predlogu. Predlagatelj je Jurij Malovrh. Obrazložitev glasu. Predlagatelj, izvoli.</seg>
             </u>
             <note type="speaker">JURIJ MALOVRH:</note>
-            <u who="#SDZ2.MalovrhJurij" ana="#regular">
+            <u who="#MalovrhJurij">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg155">No, ta predlog je bil podan zaradi tega, ker so na posameznih območjih lokalne skupnosti kar dosti investirale v te območne zavode. In s takšnim predlogom zakona, kot je bil podan, pride do ponovne nacionalizacije lastnine lokalnih skupnosti, kar mislim, da sedaj pač ni prav. Moram reči, da pred kratkim, par let nazaj, se je že ena taka nacionalizacija izvršila prek pravosodnega ministrstva, pa ni prav, da bi se ta praksa nadaljevala. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg156">Hvala lepa gospodu Juriju Malovrhu. Gospod Potočnik, obrazložitev glasu.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg157">Spoštovani! Jaz bom glasoval proti temu predlogu. Zakaj? Namreč, drugi stavek, ne vemo, ali pomeni to, da se mora izvršiti nacionalizacija ali je proti nacionalizaciji. Namreč, pravi: "Predlagatelj naj v 45. členu ponovno preuči ustanoviteljske pravice." V redu, če bi to bilo. Naprej pa pravi, "s predlagano rešitvijo se v nekaterih primerih izvrši nacionalizacija premoženja lokalnih skupnosti." Ta drugi stavek se mi zdi, da zamegli vsebino tega dopolnilnega predloga, zato bom glasoval proti.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg158">Hvala lepa gospodu Potočniku. Obrazložitev glasu je enkrat možna. Gospod Malovrh bi spet obrazložil svoj glas. Hvala lepa.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg159">Prehajamo na odločanje. Torej proceduralno. Ampak res proceduralno.</seg>
             </u>
             <note type="speaker">JURIJ MALOVRH:</note>
-            <u who="#SDZ2.MalovrhJurij" ana="#regular">
+            <u who="#MalovrhJurij">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg160">Jaz bi prosil, da bi šli na 13. in 14. in se potem vrnemo na 12. predlog, da napišem drugi stavek, da bo za nekatere povsem jasen. Hvala lepa. Namesto "s" se spreminja "ker se s predlagano rešitvijo".</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg161">Hvala lepa. Torej to je 12. dopolnjevalni predlog, ki ga je gospod Malovrh pravkar proceduralno dopolnil: "Predlagatelj naj bi v členu 45 ponovno preučil ustanoviteljske pravice, ker se s predlagano rešitvijo v nekaterih primerih izvrši nacionalizacija premoženja lokalnih skupnosti." Je pravilno?</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg162">Prehajamo na glasovanje. Ugotavljamo prisotnost!</seg>
                <note>60 prisotnih.</note>
@@ -1101,12 +1086,12 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg166">Prehajamo na 13. dopolnjevalni predlog, predlog Jurija Malovrha. Razprave, torej obrazložitve glasu ni. Ugotavljamo prisotnost! Gospod Zagožen želi obrazložiti svoj glas. Franc Zagožen, izvolite.</seg>
             </u>
             <note type="speaker">DR. FRANC ZAGOŽEN:</note>
-            <u who="#SDZ2.ZagoženFranc" ana="#regular">
+            <u who="#ZagoženFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg167">Spoštovani zbor! Glasoval bom proti temu. Žal je bilo sprejetih že nekaj predlogov, če bi jih sprejeli tudi v drugem ali celo tretjem branju, potem bi moral predlagatelj predlog zakona umakniti. V drugem bi to lahko še storil.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg168">Skratka, ekspert za to področje je postal gospod Malovrh.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg169">Hvala lepa. Prehajamo na odločanje.</seg>
                <note>Glasovi iz dvorane.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg170">O trinajstem dopolnjevanem predlogu. Kolegi poslanci, malo strpnosti. Ostanimo na nivoju. Ugotavljamo prisotnost!</seg>
@@ -1128,30 +1113,30 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg179">Kdo je za vse, o čemer je bilo do sedaj glasovano, vključno s stališči odbora? Spoštovani kolegi poslanci in poslanke! Zdaj glasujemo o stališčih v celoti, tudi stališčih matičnega delovnega telesa. Kolikor kdo želi, da o stališčih matičnega delovnega telesa glasujemo posebej, naj to izrazi. Gospod Čebulj.</seg>
             </u>
             <note type="speaker">FRANC ČEBULJ:</note>
-            <u who="#SDZ2.ČebuljFranc" ana="#regular">
+            <u who="#ČebuljFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg180">Hvala lepa. Pod številko tri sem sodeloval na samem odboru, ampak nisem zaznal, da bi bilo sprejeto "predlagatelj naj ponovno prouči primernost proporcionalnega volilnega sistema v svet zbornice in možnost uvedbe večinskega sistema." Za to se jaz popolnoma nič ne spomnim in tudi nikjer ni zaslediti, da bi bil tak predlog sklepa sprejet kot stališče. To se pravi, zadnji del "možnost uvedbe večinskega sistema". Sedaj, edino, če ga predsedujoči <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg181">Kolega Čebulj! Predlagaš, da glasujemo o stališčih matičnega delovnega telesa posamezno?</seg>
             </u>
             <note type="speaker">FRANC ČEBULJ:</note>
-            <u who="#SDZ2.ČebuljFranc" ana="#regular">
+            <u who="#ČebuljFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg182">Predlagam, da glasujemo o posameznih predlagnih stališčih.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg183">Prahajamo na odločanje o stališčih matičnega delovnega telesa. Odločamo o stališču številka ena. Imate ga v poročilu na mizi, poročilu k predlogu zakona o Kmetijsko-gozdarski zbornici Slovenije. Glasujemo o točki ena. Ugotavljamo prisotnost. Gospod Džuban, obrazložitev glasu.</seg>
             </u>
             <note type="speaker">GEZA DŽUBAN:</note>
-            <u who="#SDZ2.DžubanGeza" ana="#regular">
+            <u who="#DžubanGeza">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg184">Hvala lepa. Glasoval bom za vsa stališča, ne glede na to, da bomo glasovali o vsakem posebej. Prvič zato, ker imajo verifikacijo na matičnem delovnem telesu in smo na njem o vseh odločali, se za njih odločali in so točno tukaj na tem spisku teh stališč v tem materialu.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg185">Drugič bom glasoval za ta stališča zaradi tega, ker je v njih vsebovana večina dilem, ki so bile izpostavljene tudi v dopolnilnih predlogih, o katerih smo glasovali. In so nekatere rešitve, ki so lahko takšne in drugačne v teh stališčih. Kolikor bodo uporabljene, se lahko pomembno preuredi zbornični sistem kmetijsko-gozdarskih zbornic iz sedanjega predloga v nekega drugega in se nekatera določila predloga zakona lahko pomembno spremenijo v tem smislu, da se za moje pojme poenostavi zbornični sistem kmetijsko-gozdarske zbornice.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg186">Mislim, da so stališča takšna, kot so, primerna in bom glasoval za njih v vseh točkah od ena do šest. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg187">Hvala lepa, kolega Džuban. Želeli smo, da glasujemo v celoti, ampak, ker je predlog, da glasujemo posamezno, moramo tako kot prej pri ostalih glasovati o posameznih točkah, o stališčih matičnega delovnega telesa.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg188">Prehajamo na odločanje o stališču matičnega odbora pod številko ena. Ugotavljamo prisotnost!</seg>
                <note>63 poslancev.</note>
@@ -1200,7 +1185,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 12.56 uri in se je nadaljevala ob 14.47 uri.</note>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg214">Spoštovane kolegice poslanke, kolegi poslanci! Prosim, če zasedete svoja mesta in nadaljujemo delo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg215">Dodatno so se opravičili za popoldanski del seje, in sicer: Roman Jakič, Josip Bajc, Miroslav Luci, Alojz Vesenjak, Feri Horvat, Andrej Gerenčer, Jelko Kacin, Jakob Presečnik od 15.30 ure dalje, Ciril Metod Pungartnik od 15.30 ure dalje, Kaplja Mirko od 15.30 ure dalje, Branko Janc od 15.30 ure dalje, ravno tako gospod Tone Anderlič, gospod Vili Trofenik od 16.30 ure dalje in gospod Ciril Pucko za pričetek popoldanskega dela seje.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg216">Ugotovimo prisotnost v dvorani!</seg>
@@ -1212,7 +1197,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg221">Vlada je dala odgovor na predlog državnega zbora, zato odpiram razpravo. Gospod Špiletič želi razpravljati. Prosim, imate besedo.</seg>
             </u>
             <note type="speaker">BOGOMIR ŠPILETIČ:</note>
-            <u who="#SDZ2.ŠpiletičBogomir" ana="#regular">
+            <u who="#ŠpiletičBogomir">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg222">Hvala za besedo. Res je, da je državni zbor obravnaval to točko, ki naj bi jo sedaj nadaljevali, in takrat je sprejel dva sklepa, ki ju bom citiral:</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg223">Prvič. Kdo je odgovoren za to, da je do napake, ki je omenjena v obrazložitvi zakona, prišlo, in sicer, vprašanje je bilo jasno in nedvoumno, da je potrebno navesti ime in priimek tistega, ki je za to odgovoren.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg224">Drugi sklep pa je bil, da vlada natančno navede, na kateri seji in na čigav predlog se je odločila, da se zakon o ratifikaciji, tako kot je bil sprejet, ne deponira pri Svetu Evrope.</seg>
@@ -1222,32 +1207,32 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg228">Hkrati imam pa še eno dodatno vprašanje predstavnikom vlade: Kakšne so posledice tega dejstva, da Slovenija do danes še ni deponirala akta o ratifikaciji konvencije pri Svetu Evrope? Ali to pomeni, da tudi sama ne more zahtevati podatkov od drugih držav oziroma da tudi sama ne nudi podatkov drugim državam, tako kot to določa vsebina konvencije o preprečevanju pranja denarja, ko gre za preganjanje mednarodnega organiziranega kriminala?</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg229">Hvala. Želi še kdo razpravljati? Gospod Hvalica ima besedo.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg230">Hvala lepa, gospa podpredsednica. Moj poseg v to razpravo je predvsem proceduralne narave. In sicer sprašujem, kako je mogoče, da imamo poročilo k predlogu zakona o spremembi zakona o ratifikaciji konvencije o pranju itd. Z dne 10. decembra, ki ga je dal odbor, vlada nam pa pojasnjuje to zadevo šele z datumom 3.3. in v državni zbor je prišlo včeraj, 4.3. Jaz mislim, da je nedopustno, da na takšen način delamo. Zadevo moramo mi v odboru za mednarodne odnose le malo preštudirati. Tukaj je kar nekaj odprtih vprašanj, nekaj od tega je moj kolega Špiletič povedal, in mislim da ne moremo mimo tako važnega akta na takšen, tudi proceduralno za moje pojme napačen način. Jaz predlagam, da to točko preložimo, in sicer, da se mora sestati odbor za mednarodne odnose, razpravljati o pojasnilu v zvezi s spremembo zakona, ki ga je dala vlada in ki smo ga včeraj dobili v državni zbor, potem pa šele plenarno o tem odločati in takrat bomo imeli tudi kaj še za povedati. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg231">Hvala. Želi še kdo razpravljati? Predstavnik vlade, gospod Stroligo? Ali je to razumeti kot vaš proceduralni predlog? Morda samo tole. Ali dovolite, da še razpravo zaključimo?</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg232">Hvala lepa. Gospa, o proceduralnih predlogih se glasuje. Lepo vas prosim, da se držite poslovnika. Jaz sem natančno predlagal. Ne nazadnje, kvečjemu bi lahko <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg233">Bomo to upoštevali.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg234">Samo malo, ne me prekinjati, lepo vas prosim! Torej prosim, da date ta predlog, ki sem ga jaz predlagal - bil sem zelo jasen - na glasovanje in šele potem, ko bomo na odboru za mednarodne odnose o tem razpravljali, potem lahko predstavnik vlade pove svoje mnenje. Naj pride na odbor, pa naj pojasni, kako je prišlo do tega pojasnila! Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg235">Hvala. Dajem predlog gospoda Hvalice na glasovanje, s tem, da se ta točka prekine. O tem se opravi razprava na odboru za mednarodne odnose in se nadaljuje, ko bo dano poročilo. Ugotovimo prisotnost!</seg>
                <note>51 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg236">Kdo je za proceduralni predlog?</seg>
@@ -1259,30 +1244,30 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg240">Prehajamo na 45. TOČKO DNEVNEGA REDA - PREDLOG ZAKONA O ZAGOTAVLJANJU SREDSTEV ZA NEKATERE NUJNE PROGRAME REPUBLIKE SLOVENIJE V KULTURI. Predlog zakona je v obravnavo zboru predložila skupina poslancev s prvopodpisanim Miranom Potrčem. Želi predstavnik predlagatelja besedo? Gospod Moge.</seg>
             </u>
             <note type="speaker">RUDOLF MOGE:</note>
-            <u who="#SDZ2.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg241">Predsedujoča, najlepša hvala za besedo. Predlagatelji se v uvodu najlepše zahvaljujemo vsem poslankam in poslancem za obilno podporo v prvi obravnavi. Kakor veste, je 57 poslancev glasovalo za, samo 2 sta bila proti. Prav ta množična podpora pa je bila naša obveza, da smo zakon skrbno preučili, vsa stališča iz prve obravnave, jih realizirali in posebej smo pazili na to, da smo sredstva enakomerno porazdelili po regijah. Odnos do zakona ni bil vedno tak, kot je danes. Spomnimo se samo našega slavnega pisatelja Prešerna, ki je v svoji Glosi med drugim tudi zapisal, če se spominjate iz šolskih klopi: "Le začniva pri Homeri, prosil reva dni je stare; mraz Ovida v Pontu tare; drugih pevcev zgodbe beri: nam spričuje Alighieri, kako sreča pevce udarja; nam spričujeta pisarja, Luzijade, Don Kihota, kakošna Parnasa pota" itn. Potem pa zadnje vrstice tega: "slep je, kdor se s petjem ukvarja, Kranjec moj mu osle kaže, pevcu vedno sreča laže, on živi, umrje brez dnarja".</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg242">Pa mislim, da smo sedajle, ko imamo svojo državo, v popolnoma drugačni situaciji in da tudi na kulturo gledamo drugače. Mislim, da je zakon ena izmed zelo pomembnih zaščitnih zakonodaj na poti v Evropsko unijo, ko bodo meje padle, ko se bodo gospodarstva povezovala, ko bomo imeli skupno valuto, saj med drugim ohranja naše spomenike, obogatuje knjižnice, vlaga v javne zavode in pa tudi pomaga obilno ljubiteljski kulturi. Zato bomo s tem zakonom, poslanke in poslanci, postavili spomenik vsem velikanom slovenske kulture, omogočili sprostitev kulturne ustvarjalnosti umetnikov in amaterjev ter zagotovili kvalitetnejše življenje državljankam in državljanom naše male državice. In ne nazadnje ne pozabimo, da vložen tolar v kulturo se šestkratno povrne. Jaz se vam zahvaljujem za pozornost. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ - SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg243">Hvala. Predlog zakona je obravnaval tudi odbor za kulturo, šolstvo in šport kot matično delovno telo. Želi predstavnik odbora besedo. Besedo ima gospod Janez Mežan, predsednik odbora.</seg>
             </u>
             <note type="speaker">JANEZ MEŽAN:</note>
-            <u who="#SDZ2.MežanJanez" ana="#regular">
+            <u who="#MežanJanez">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg244">Hvala lepa. Gospa predsedujoča, poslanke in poslanci, predstavniki vlade! Odbor za kulturo, šolstvo in šport je na svoji 11. seji 10.2. kot matično delovno telo obravnaval predlog zakona o zagotavljanju sredstev za nekatere nujne razvojne programe Republike Slovenije v kulturi, druga obravnava,ki jo je za obravnavo v državni zbor predložila skupina poslancev. Sekretariat za zakonodajo in pravne zadeve državnega zbora v svojem mnenju ugotavlja, da je treba v 3. členu precizirati datum v letu 1997, kar je bilo tudi narejeno, ko naj bi vzeli cene kot osnovo, na katero bo vezana višina sredstev za programe, ter da priloga številka 1 ne sodi med priloge, ki bi bile sestavni del zakona. Opozarja tudi, da bo potrebno glede na amandmaje doseči ustalitev vrednosti predlaganih amandmajev in osnovnega besedila zakona kot tudi prilog. Odbor se je seveda opredeljeval do amandmajev. Na odboru smo se vsi zavedali, da je potreb in želja na področju kulture neprimerno več, kot jih je mogoče uresničiti v tem zakonu. Zato po utemeljitvah ministrstva za kulturo odbor nekaterih dopolnil ni podprl, ker so ali v rednem programu ali so manj pomembna glede na druge v istem kraju, v vidu pa smo imeli tudi enakomerno porazdelitev po celotni Sloveniji. Odbor je oblikoval tudi nekaj svojih amandmajev oziroma dopolnil - ne bi jih predstavljal. Na koncu je po razpravi, dovolj obširni razpravi sprejel dva sklepa. Prvi: Odbor za kulturo, šolstvo in šport podpira predlog zakona o zagotavljanju sredstev za nekatere nujne programe Republike Slovenije v kulturi v drugi obravnavi in predlaga, da ga državni zbor sprejme skupaj z dopolnili, ki jih odbor predlaga. In drugič: Odbor predlaga, da se v primeru, da bo državni zbor v drugi obravnavi podprl predlagano rešitev, opravi tretja obravnava v skladu z drugim odstavkom 194. člena Poslovnika držvnega zbora. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg245">Hvala. Želi besedo predstavnik sekretariata za zakonodajo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg246">Želi predstavnik vlade besedo? Gospod minister Školč ima besedo.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ2.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg247">Hvala lepa. Spoštovane poslanke, spoštovani poslanci! Govoril bom seveda v imenu ministrstva, ker vlada do konca ni uskladila svojega stališča do tega zakona, tako kot ne v prvi obravnavi. Pozdravljam stališča odbora za šolstvo, kulturo in šport in lahko povem, da je ministrstvo v vsem času sodelovalo pri oblikovanju predvsem prilog, medtem, ko je tekst zakona napisan tako kot drugi temu primerljivi zakoni. Tisto, kar bi posebej podprl za to, da bi bil zakon lahko realiziran v predvidenem obsegu, je to, da se predvsem sprejmejo tisti amandmaji, ki so bili usklajeni znotraj predlagateljev in potrjeni tudi na odboru, ki ga vodi gospod Mežan. Na tak način ne bi predimenzionirali finančnih obveznosti zakona in ne bi šli čez časovne omejitve, ki jih ta zakon predlaga. Tako, kot je gospod Moge v začetku govoril, tudi sam menim, da je to eden od tistih zakonov, ki z eno potezo rešuje manjši del problemov, ki jih ima infrastruktura na področju kulture. Priloge so narejene tako, da po eni strani rešujejo nacionalne institucije, v veliki meri pa pomenijo to, kar je bila običajna ideja v državnem zboru, da se sredstva za posamezne programe le prerazporedijo po celi Sloveniji. Tak je program investicij v knjižničarstvu, tak je program posodobitve mreže ljubiteljske kulture in v veliki meri tudi program, ki posega na področje spomenikov. Med vsemi prilogami imate tudi prilogo, ki na nek način pokaže, v kakšnem razmerju bi bila ta posebna sredstva do rednih sredstev ministrstva za kulturo v prihodnjih letih, tako da je z marsikaterim amandmajem in z marsikaterim predlogom mogoče računati, da bo v istem obdobju, drobnarije pa celo prej, lahko realiziran kot v tem nacionalnem programu. Zato osebno ta zakon pozdravljam; v veliki meri mi bo olajšalo to komunikacijo z vsemi ljudmi, ki si na področju kulture v Republiki Sloveniji prizadevajo za boljši kulturni standard. Pozdravljam tudi predlog odbora, da se opravi druga in tretja obravnava na tej isti seji s tem običajnim sedemdnevnim razmikom, tako da bo vsakemu jasno in ne bo težav s tem, kaj je bilo zares sprejeto. Hvala vam lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg248">Hvala. Bili sta vloženi sicer dve pisni prijavi k razpravi, ampak moram povedati, da je to druga obravnava, in prehajamo na obravnavo in odločanje o posameznih členih predloga.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg249">Zato zboru predlagam, da skladno z zadnjo alineo 189. člena poslovnika razpravlja in glasuje o vseh tistih členih skupaj, h katerim niso bili vloženi amandmaji. Želi v zvezi s tem kdo besedo? Ugotavljam, da ne. Zato ugotovimo prisotnost! Ugotovimo prisotnost!</seg>
                <note>52 prisotnih.</note>
@@ -1319,19 +1304,19 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg269">Amandma, ki ga predlaga skupina poslancev, prvoimenovani gospod Miroslav Luci; matično delovno telo ga ne podpira. Ta sklop in amandma k temu sklopu dajem v razpravo. Gospod minister želi razpravljati.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SDZ2.ŠkolčJožef" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg270">Hvala lepa, še enkrat. Jaz bi rad samo opozoril, da večina teh amandmajev je bila s predlagatelji usklajena na način, da tisti programi, ki pač ne gredo v program financiranja po tem zakonu, gredo v redni program. Nekateri pa pravzaprav v celoti izpadejo. Predlagatelji in tudi odbor so se s tem strinjali. In zato se mi zdi zelo pomembno v celoti slediti stališčem odbora, ker bodo na tak način priloge usklajene s številkami, ki so v zakonu in bo mogoče vse to pač opraviti tudi v primeru amandmaja, ki ga je predlagal gospod Luci. On soglaša s to rešitvijo. Žal ga v tem trenutku ni tukaj. Tako da se ne bi še večkrat oglašal, razen, če je potrebno za katerega od projektov posebej povedati. Zdi se mi, da je odbor v tem primeru opravil pomembno nalogo, da je pripravil program tako, da je usklajen s številkami v zakonu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg271">Hvala. Gospod Moge.</seg>
             </u>
             <note type="speaker">RUDOLF MOGE:</note>
-            <u who="#SDZ2.MogeRudolf" ana="#regular">
+            <u who="#MogeRudolf">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg272">Predsedujoča, hvala lepa za besedo. Bom zelo kratek. Predlagatelji smo se trudili, da so bila sredstva enakomerno porazdeljena po vsej Sloveniji. Če hočete, lahko v tretji obravnavi tudi dobite zemljevid tega, smo ga tudi naredili. Vsakršno sprejemanje amandmajev bi šlo na škodo enega ali drugega in potem tudi ne bi mogli končati obravnave tega zakona tudi v tretji obravnavi, kajti sprejetje mimo tega, kar je odbor potrdil, bi pomenilo, da moramo osnovni zakon z amandmaji potem dopolniti oziroma spremeniti. Zato bi vas prosil v imenu predlagateljev, če bi podprli le tiste amandmaje, ki jih je podprl tudi matični odbor.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg273">Hvala. Želi še kdo razpravljati? Ugotavljam, da ni razpravljalcev. Na glasovanje dajem amandma k prilogi dve, sklop ena, "arheologija". Ugotovimo prisotnost!</seg>
                <note>49 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg274">Kdo je za?</seg>
@@ -1382,7 +1367,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 15.18 uri in se je nadaljevala ob 15.32 uri.</note>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg300">Ugotovimo prisotnost v dvorani! No, saj se bomo zbrali, da zaključimo s tem današnjim delom do 19.00 ure.</seg>
                <note>46 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg301">Zbor je sklepčen in lahko nadaljuje z delom.</seg>
@@ -1391,7 +1376,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 15.34 uri in se je nadaljevala ob 15.45 uri.</note>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg304">Prosim, če zasedemo svoja mesta in nadaljujemo z delom. Ugotavljamo prisotnost v dvorani!</seg>
                <note>51 poslancev.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg305">Zbor je sklepčen in lahko nadaljujemo z delom.</seg>
@@ -1498,29 +1483,29 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg363">Predlagam še naslednji sklep. In sicer, predlog zakona za tretjo obravnavo pripravijo predlagatelji predloga zakona, to je skupina poslancev s prvopodpisanim gospodom Miranom Potrčem. Želi še kdo razpravljati? Gospod Samo Bevk, imate besedo.</seg>
             </u>
             <note type="speaker">SAMO BEVK:</note>
-            <u who="#SDZ2.BevkSamo" ana="#regular">
+            <u who="#BevkSamo">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg364">Hvala za besedo. Gospa podpredsednica, spoštovani zbor! Bom zelo kratek, vendar bi se rad oglasil pri tej točki.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg365">V poslanski skupini Združene liste podpiramo <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ - SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg366">Jaz bi vas samo opozorila - razprava je samo o predlaganem sklepu, kdo pripravi zakon za tretjo razpravo. Samo o tem je razprava.</seg>
             </u>
             <note type="speaker">SAMO BEVK:</note>
-            <u who="#SDZ2.BevkSamo" ana="#regular">
+            <u who="#BevkSamo">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg367">Pardon.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ - SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg368">Gospod Mežan.</seg>
             </u>
             <note type="speaker">JANEZ MEŽAN:</note>
-            <u who="#SDZ2.MežanJanez" ana="#regular">
+            <u who="#MežanJanez">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg369">Hvala lepa. Predlagam seveda, ker je to zakon, ki smo ga podprli vsi poslanci vseh poslanskih skupin, in bo seveda koristil kulturi na celotnem slovenskem ozemlju, da zakon za tretjo obravnavo seveda pripravi ministrstvo, poslanci vseh poslanskih skupin oziroma predlagatelji bomo pa pomagali ta zakon pripraviti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ - SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg370">Po poslovniku pripravlja zakon ali predlagatelj ali pa sekretariat. Predlog zakona za tretjo obravnavo pripravijo predlagatelji predloga zakona.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg371">Dajem dani predlog na glasovanje. Če to ne bo sprejeto, potem bo pa predlog pripravil sekretariat. Prosim, če ugotovimo prisotnost. Ugotavljamo prisotnost!</seg>
                <note>50 prisotnih.</note>
@@ -1543,18 +1528,18 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg382">Predlog zakona je v obravnavo zboru predložila Vlada Republike Slovenije. Želi predstavnik vlade besedo? Besedo ima gospa Dunja Piškur-Kosmač, državna sekretarka.</seg>
             </u>
             <note type="speaker">DUNJA PIŠKUR-KOSMAČ:</note>
-            <u who="#SDZ2.PiškurKosmačDunja" ana="#regular">
+            <u who="#PiškurKosmačDunja">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg383">Hvala lepa, gospa predsedujoča. Spoštovane poslanke in poslanci! Dovolite, da vam v zelo kratkih besedah predstavim predlog zakona o kemikalijah, ravno zaradi tega, ker je vlada za pripravo tega zakona bila zelo angažirana in opravila ogromno delo.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg384">Predlog zakona o kemikalijah, ki je pred vami, spoštovane gospe poslanke in gospodje poslanci, bo pripomogel k uresničevanju ene izmed prednostnih nalog, ki izhajajo iz predloga nacionalnega programa zdravstvenega varstva Republike Slovenije. Gre za sprejem enega izmed krovnih zakonov, za zmanjševanje nevarnosti kemikalij na zdravje ljudi in okolja, in je eden od najpomembnejših predpisov, ki ga moramo sprejeti v okviru približevanja Evropski uniji.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg385">Temeljni cilji zakona so varovanje človeka in okolja pred ne dovolj preverjenimi kemikalijami, zagotovitev pravilne informacije potrošniku z doslednim opozarjanjem na nevarnosti, povezane z nevarnimi kemikalijami ter zagotovitev varnega poteka njihovega življenjskega kroga. Z ureditvijo še nepokritih področij kemikalij naj bi dosegli celostni nadzor nad njimi. Zakon je zasnovan tako, da bo omogočil prenos ustreznih predpisov Evropske unije v slovenski pravni sistem. Zato, da smo pripravili ta predlog, ki je trenutno pred vami, smo uskladili več kot tisoč strani evropskih direktiv. Sodelovali smo s švedskim kemičnim inšpektoratom ter z nemškim ministrstvom za okolje, varstvo narave in varnost reaktorjev. V več delovnih srečanjih med strokovnjaki, tako v Sloveniji kakor tudi v omenjenih dveh državah, smo poskušali najti najboljše rešitve, pri čemer smo upoštevali izkušnje obeh držav članic Evropske unije. Večina predpisov, ki so predvideni v predlogu zakona, je že v pripravi.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg386">Zato, spoštovane poslanke in poslanci, vam želim uspešno delo pri obravnavi tega, za kemijsko varnost in s tem za ohranitev zdravja našega prebivalstva in za ohranjanje pa tudi za izboljšanje stanja okolja zelo pomembnega zakona, uspešno delo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg387">Hvala. Predlog zakona je obravnaval tudi odbor za zdravstvo, delo, družino in socialno politiko kot matično delovno telo. Prosim predsednico, gospod Majdo Kregelj-Zbačnik, če poda poročilo.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg388">Lep popoldanski pozdrav! Naš odbor je na seji 5.11.1997 že obravnaval ta predlog zakona. Uvodno predstavitev je že podala gospa državna sekretarka, dr. Piškurjeva. Člani smo bili seznanjeni tudi z mnenjem sekretariata za zakonodajo in pravne zadeve, ki k navedenemu predlogu zakona ni imel pripomb z ustavnega vidika. Ker je zakon pripravljen v skladu s 175. členom poslovnika, daje sekretariat konkretne predloge, ki naj bi se upoštevale v naslednjih fazah obravnave.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg389">V razpravi so člani odbora predstavnike ministrstva spraševali, kje in kako se bodo obravnavali bojni strupi in kemična orožja; nadalje kako se uvrščajo medicinski izdelki, nevrotiki, radioaktivne snovi, streliva, eksploziva, živila, krmila ter vsa kemična sredstva, ki se v kmetijstvu uporabljajo; kako so razumljene pristojnosti med predlogom zakona o kemikalijah in predlogom zakona o mamilih in psihotropnih snoveh z že sprejetim zakonom o zdravilih; kakšna je povezava med predlogom zakona in področji dela, kot so zdravstveno varstvo rastlin, posebni odpadki in onesnaževanje okolja. Na vprašanje je odgovarjala predstavnica ministrstva. Poudarjala je, da se bodo ostala vprašanja, ki so zajeta v drugih zakonih, na primer: zakon o eksplozivnih snoveh, zakon o prepovedi proizvodnje in prometa z azbestnimi izdelki, zakon o strupih itd., urejala in usklajevala s smernicami Evropske unije v okviru resornih ministrstev. Prav zaradi obsežnosti problematike, ki se ureja v tem zakonu, bi bila vsa dodatna stališča in sugestije ostalih odborov zelo priporočljiva, predvsem zato, ker je področje kemikalij, ki se uporabljajo v kmetijstvu, izredno široko. Vemo pa tudi, da ima Slovenija z vsakovrstnimi odpadki velike probleme. V tem trenutku se sama industrija srečuje z velikimi problemi, kako razvrščati tiste snovi, ki so nevarne, bodisi za zdravje ljudi ali za okolje, ne spadajo pa med eksplozivne snovi, ki jih ni mogoče kategorizirati.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg390">V takem primeru je industrija prisiljena uporabljati za izvoz evropsko zakonodajo, čeprav pri nas še ne velja. Za razvrščanje te snovi trenutno ni zakonske podlage. Tako, da je ministrstvo v skladu s svojo pristojnostjo zagotavljanja kemične varnosti prisiljeno izdajati dovoljenja za posamične uvoze in izvoze teh nevarnih snovi, kar pa ni v neposredni pristojnosti ministrstva za zdravstvo, temveč ministrstva za gospodarske dejavnosti, kamor spada industrijska proizvodnja.</seg>
@@ -1562,29 +1547,29 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg392">Po opravljeni razpravi so člani odbora sprejeli naslednja sklepa: Prvi; predlog zakona o kemikalijah je primerna podlaga za pripravo predloga besedila za drugo obravnavo. In drugi sklep; predlagatelj naj pri pripravi predloga besedila za drugo obravnavo upošteva mnenje sekretariata za zakonodajo in pravne zadeve. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg393">Hvala gospe Kregelj-Zbačnikovi. Želi predstavnik sekretariata besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg394">Želijo besedo predstavniki poslanskih skupin? Gospod Zmago Jelinčič ima besedo v imenu poslanske skupine SNS.</seg>
             </u>
             <note type="speaker">ZMAGO JELINČIČ:</note>
-            <u who="#SDZ2.JelinčičZmago" ana="#regular">
+            <u who="#JelinčičPlemenitiZmago">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg395">Hvala lepa za besedo. Jaz se ne bi ravno strinjal s tem, da je zakon primerna podlaga za nadaljnjo obravnavo. Kar nekaj je nelogičnosti in kar nekaj je nejasnosti, pa če gremo kar k definicijam. Tukaj piše: Kemikalije so snovi in pripravki - in potem govori naprej, kaj so snovi - snovi so kemični elementi ali njihove spojine v naravnem stanju - ali tako naprej. Jaz bi poprosil predlagatelja, da če nima ustrezne dokumentacije, naj si nabavi recimo enciklopedijo Britannico, pa naj potem definicije določenih zadev vzame tam ven, da bodo res v skladu z evropsko zakonodajo in z mednarodnimi znanstvenimi termini. Glede na ta zakon ne bi mogel ravno govoriti o tem, da je zelo znanstveno in pretehtano pripravljen. Recimo, vzemimo samo primer 3. člena v povezavi ravno zopet z 2. členom, kjer se obravnavajo pomeni izrazov. Pri pomenih izrazov piše tukaj: Eksplozivne kemikalije so trdne, tekoče, pastozne ali želedolozne kemikalije, katerih lastnost je <gap reason="inaudible"/> in tako naprej. Na drugi strani imamo v 3. členu izjeme, kjer se zakon ne uporablja. In sicer piše recimo: "Za streliva in eksplozive, kadar se dajejo v promet z namenom razstreljevanja ali za doseganje drugih pirotehničnih učinkov." Jaz bi vprašal gospo državno sekretarko recimo, kam v tem primeru sodi pikrinska kislina? Zelo enostavno, verjetno ne bom dobil zdaj odgovora na to, bi pa prosil vsaj pisno, da se pripravi odgovor na eno od teh vprašanj, ki jih je nedvomno kar dosti. Vprašal bi jo tudi, kaj to pomeni "kemikalije v končni obliki". V končni obliki dobimo spojine, dobimo soli, kaj jaz vem koga. Ali je to mišljeno ali je mišljena mešanica raznih kemikalij? Iz tega zakona je zadeva popolnoma nepregledna. In pravzaprav bi morda bilo najbolje spremeniti naziv zakona, ga popraviti, kajti bolj govorimo o snoveh, o pripravkih, kot pa o kemikalijah samih. Jaz se ne bi več spuščal v te zadeve. Navajen sem že, da vlada pripravlja bedaste zakone, bo pač to še eden od takih v vrsti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg396">Hvala, gospod Jelinčič. Besedo ima gospa Majda Kregelj-Zbačnik v imenu poslanske skupine SDS.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg397">Še enkrat lep pozdrav! Še prej bi pa vprašala, ali je morda odbor za kmetijstvo, gozdarstvo in za gospodarstvo o tem tudi kaj razpravljal, ker smo zaprosili za to, ker je ta tema tako široka in pokriva tudi druga področja. To je prvo vprašanje. Potem bom pa v imenu poslanske skupine.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg398">Predstavitev zakona teče in imajo besedo predstavniki poslanskih skupin.</seg>
             </u>
             <note type="speaker">MAJDA ANA KREGELJ-ZBAČNIK:</note>
-            <u who="#SDZ2.Kregelj-ZbačnikMajdaAna" ana="#regular">
+            <u who="#Kregelj-ZbačnikMajdaAna">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg399">Potem bom predstavila pač mnenje naše poslanske skupine. Poslanska skupina SDS podpira ta predlog zakona iz naslednjih razlogov:</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg400">Ta naj bi bolj celovito urejal ravnanje z zdravju in okolju nevarnimi in drugimi kemičnimi snovmi.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg401">Drugič naj bi tudi bil pravni okvir za nujno natančnejše urejanje posameznih vprašanj iz tega področja s predpisi vlade in pristojnih ministrstev.</seg>
@@ -1594,60 +1579,60 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg405">Ko skušamo v luči mednarodnih dogovorov in izkušenj urejati zadeve v Sloveniji, je treba urejati z evropskimi standardi in usmeritvami, pri tem pa je treba upoštevati tudi slovensko specifiko. Slovenija mora skrbno varovati naravo in opredeliti svoje ekološko poslanstvo v evropskem prostoru. To je pogoj za naš obstoj, hkrati pa koristno za Evropo, ki je okolje že močno uničila. Pri tem pa ne smemo pozabiti na ljudi, kajti družba, ki ne bdi nad kakovostjo življenja in socialnim varstvom državljanov, ne more računati na podporo in na preživetje. Trajno uspešno gospodarjenje mora vsebovati tudi osnovne poteze naše prihodnje kulture. Država ima na voljo različno omejevalne in stimulativne ukrepe, s katerimi lahko usmerja k gospodarnemu in okolju varnemu ravnanju. Še enkrat, nujno potrebujemo nacionalni program za ravnanje s kemikaliji. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ - SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg406">Hvala. Želi predstavnik še katere poslanske skupine besedo? Ugotavljam da ne. Besedo dajem poslankam in poslancem. Gospod Potočnik, imate besedo. Ker ni bilo pisnih prijav, omejujem razprave na 5 minut.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg407">Hvala lepa. Ne bo pet minut. Glede na to, da je gospa predsednica matičnega delovnega telesa spraševala, ali je odbor za kmetijstvo, gozdarstvo in prehrano obravnaval ta zakon, moram reči da ne. Mi smo dobili predlog matičnega delovnega telesa potem, ko je ta že pripravil osnovni sklep, da je predlog zakona primerna podlaga za pripravo predloga besedila za drugo obravnavo, bo pa se odbor za kmetijstvo, gozdarstvo in prehrano aktivno vključil v drugi obravnavi, ko bomo, če bo potrebno, dali konkretne pripombe v obliki amandmaja.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ - SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg408">Hvala. Besedo ima še gospod Beuerman.</seg>
             </u>
             <note type="speaker">RICHARD BEUERMANN:</note>
-            <u who="#SDZ2.BeuermanRichard" ana="#regular">
+            <u who="#BeuermannRichard">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg409">Spoštovana podpredsednica, hvala lepa za besedo. Tudi jaz bom zelo kratek. Najprej bi pravzaprav želel izraziti svoje začudenje, da se ni izjasnilo kot zainteresirano matično telo tudi odbor za infrastrukturo in okolje, ker mislim, da je to taka tematika, da bi morali na tem odboru tudi kakšno reči.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg410">Kar se pa tiče samega zakona, pa moram reči, da predlagam, da pripravljalec zakona za drugo branje vendarle nekoliko bolj jasno napiše 43. člen. Poglejte, ta člen govori takole: "Če obstaja utemeljen sum, da je določena kemikalija škodljiva zdravju in okolju, lahko Vlada Republike Slovenije trajno prepove ali omeji njeno proizvodnjo, promet ali uporabo." To velja, razen vode, praktično za vsako kemikalijo, tako da bi morali tukaj, po moje, le dodati še nekaj dodatnih stvari. Skratka, da je ta kemikalija na neki, recimo, mednarodni listi prepovedanih ali strogo omejenih snovi in tako naprej. Skratka, malo večjo jasnost pri tem členu bi bilo potrebno zagotoviti. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg411">Hvala. Ali boste pripravili dodatno stališče?</seg>
             </u>
             <note type="speaker">RICHARD BEUERMANN:</note>
-            <u who="#SDZ2.BeuermanRichard" ana="#regular">
+            <u who="#BeuermannRichard">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg412">Torej to, kar sem rekel, to je moje stališče. Predlagam, da se to upošteva.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg413">Dati ga morate v pisni obliki.</seg>
             </u>
             <note type="speaker">RICHARD BEUERMANN:</note>
-            <u who="#SDZ2.BeuermanRichard" ana="#regular">
+            <u who="#BeuermannRichard">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg414">Lahko tudi, ja.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg415">Zbor mora o tem odločati. Hvala.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg416">Želi še kdo razpravljati? Gospod Jerovšek ima besedo.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg417">Hvala lepa, gospa podpredsednica. Kolegice in kolegi! Pozdravljam ta zakon in priznavam vladi, da je priprava tega zakona obširno delo. Kajti kemikalije so tako obsežna stvar, da samo razvrstitev kemikalij v določene kategorije večno povzroča probleme tudi samim kemikom, sploh pa nomenklatura in potem poimenovanje kemikalij. Če vemo, da je danes na svetu, ne vem, tri milijone organskih spojin in da jih vsako leto na novo sintetizirajo mogoče stotisoč, potem je to seveda zelo zahtevna problematika.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg418">Hkrati pa je ta zakon pomemben tudi zaradi tega, ker je kemija panoga, ki je v Sloveniji nekako najboljše prestala tranzicijski čas. Menim, da je to zaradi tega, ker je v Sloveniji bila izobražena generacija kemijskih inženirjev, ki so dejansko izredno vestno delali na kemijski sintezi, na kemijski tehnologiji. Zaradi tega nobeden večji proizvodni kompleks v kemijski in farmacevtski kemiji ni v teh tranzicijskih časih propadel, čeprav je tudi v tej panogi prišlo do izgube trgov, ker je bilo tudi to prej usmerjeno proti južnim trgom.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg419">Zaradi tega me je malce strah - in tu bi bili moji pomisleki - da bi ta zakon in te določbe zakona, predvsem kar se tiče nadzora in pravic inšpektorja za kemikalije, in v zvezi s tem, kar je omenil gospod Beuermann, v zvezi s 43. členom prepovedi, in bi rad opozoril oziroma se pridružil temu mnenju, da je te določbe v 43. členu in 58. členu, ki daje pooblastila inšpektorjem, potrebno nekoliko precizirati. Kajti izkušnje so, da ko mi na nekem področju uvedemo inšpektorja, so ti inšpektorji žal bolj papeški od papeža - začetnemu delu, ko je neki inšpektorat ustanovljen. Takšne so izkušnje iz proizvodnje na področju inšpektorjev za ekologijo. Verjetno bodo podobne izkušnje tudi tu in glede na to, da sem rekel, da je kemijska industrija v Sloveniji najbolj vitalna in tudi panoga, ki po mojem daje v državni budžet največ prispevkov, ne bi želel, da bi s sprejemom tega zakona, pa z nejasnostjo določenih členov lahko povzročili svojevoljo teh inšpektorjev, ki bodo sicer delovali v najboljši veri. Kajti na mnogih področjih smo mi v Sloveniji z akti in temi predpisi, vsaj prej v Jugoslaviji bili, nekako več predpisov imeli, niso se vsi izvajali, ampak če je pa nekdo bil svojeglav, je pa lahko na podlagi teh predpisov škodoval. Tako je recimo, iz lastne prakse vem, da je Henkel v Düsseldorfu, to je kemijski gigant, kjer je na eni lokaciji 14.000 zaposlenih lahko spuščal v odpadne vode s PH 11, dočim pri nas je PH 8. Jaz se s tem ne zavzemam za blažje ukrepe. Vendar, tudi tu, ko se navaja, kaj vse lahko kemijski inšpektor prepove proizvodnjo, takoj ustavi proizvodnjo. Treba je zapisati, za kakšen čas lahko ustavi proizvodnjo, ker drugače bomo mi ustavili proizvodnjo marsikje, katere pomembne kemikalije, kajti tu je tudi nekako indoktrinacija ljudi na tem področju, kar je sicer logično. Ljudje se bojijo škodljivih posledic, vendar vedno znova prihaja v javnost, da o neki kemikaliji takoj razglasijo, da je kancerogena in ne vem kaj in potem bomo tudi imeli prepoved. Zaradi tega bi rad, da bi te prepovedi, še neke dodatne predpise tem inšpektorjem, da ne bi prišlo do pretiravanj. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg420">Hvala. Želi še kdo razpravljati? Gospa Hren-Vencelj.</seg>
             </u>
             <note type="speaker">DR. HELENA HREN-VENCELJ:</note>
-            <u who="#SDZ2.HrenVenceljHelena" ana="#regular">
+            <u who="#HrenVenceljHelena">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg421">Prosila bi, če bi gospa državna sekretarka lahko malo pojasnila, kaj pomeni poglavje 10. Dobra laboratorijska praksa, GLP. Namreč, pod GLP jaz razumem nekaj drugega, kot je opis tega poglavja. GLP je namreč seznam, ali pa vrsta ukrepov, da se izvajajo v laboratorijih, recimo v medicini vsi postopki po nekih določenih normah oziroma določenih predpisih. In to imenujemo skupno - dobra laboratorijska praksa. Iz teh členov, kot je pa tukaj napisano, pa jaz bolj razumem, da naj bi pravzaprav urad za kemikalije ali pa pač neka pooblaščena institucija izvajala ta nadzor nad uvozom oziroma nad tem, kaj se pod neko deklaracijo na uvoznih listinah skriva. Zdaj, če sem narobe razumela, me lepo prosim popravite. Tukaj namreč pravi in govori o ocenjevanju laboratorijev. To mislim, da nima <gap reason="inaudible"/> Ne vem, resnično ne vem, kaj to pomeni. Tako, da bi morda gospa sekretarka to nekoliko pojasnila. Sicer pa, če je bilo mišljeno to, kar jaz mislim, da gre pravzaprav za neke referenčne laboratorije, ki naj bi skrbeli za to, kaj se uvaža, kako se za zdravju nevarnimi kemikalijami, ki se uporabljajo zelo široko pri nas dela. Torej, nadzor nad njimi. Potem bi pa to pač moralo biti nekoliko drugače napisano. Namreč tukaj v 47. členu pravi: "Ocenjevanje dobre laboratorijske prakse." Tudi to se mi zdi zelo čudno. In da ga opravljajo strokovnjaki, ki jih minister pooblasti in naslednje potem v inšpekcijskem nadzoru so to zdravstveni inšpektorji, ki naj bi imeli nek poseben način subšpecializacije za v smer, ne vem, nadzora nad kemikalijami.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg422">Zdaj, to naj bi se, če ni drugače z mednarodno pogodbo določeno, nadziralo na državni meji. Kaj to pomeni? Da naj bi ta zdravstveni inšpektor odvzel na meji vzorce in jih poslal v ta referenčni laboratorij. Če je to temu tako, potem je v redu. Sicer bi pa morali malo drugače to deseto poglavje napisati, da bi človek vedel, za kaj gre. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg423">Hvala. Želi še kdo besedo? Ne želi. Tako zaključujemo splošno razpravo. Matično delovno telo je predlagalo zboru, da sprejme naslednja sklepa, in sicer: "Predlog zakona o kemikalijah je primerna podlaga za pripravo predloga besedila za drugo obravnavo." Kdo želi razpravljati? Ugotavljam, da ni razpravljavcev.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg424">Na glasovanje dajem prvi sklep. Ugotavljamo prisotnost v dvorani!</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg425">Ugotovimo prisotnost! Ponovno ugotavljamo prisotnost v dvorani! Ugotavljamo prisotnost v dvorani!</seg>
@@ -1656,7 +1641,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 16.28 uri in se je nadaljevala ob 16.40 uri.</note>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg427">Prosim, če zasedemo svoja mesta, se pripravimo na nadaljnje delo in seveda še prej ugotovimo prisotnost v dvorani. Ugotavljamo prisotnost v dvorani!</seg>
                <note>48 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg428">Zbor je sklepčen in lahko nadaljujemo z delom.</seg>
@@ -1680,19 +1665,19 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg439">Besedo ima gospod Jerovšek.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg440">Hvala lepa. Samo dopolnil bi rad, ker sem tudi sam pripravil dopolnjevalni predlog, ki ga še nisem uspel dati.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg441">Ampak splošna razprava je bila zaključena. Aha, ste napovedali. Se opravičujem.</seg>
             </u>
             <note type="speaker">JOŽEF JEROVŠEK:</note>
-            <u who="#SDZ2.JerovšekJožef" ana="#regular">
+            <u who="#JerovšekJožef">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg442">Da bi premostili to, da bi uskladili, ker se tudi moj dopolnjevalni nanaša na 43. in pa 58. člen, zato predlagam, če dodatno stališče, ali pa iz mojega izločimo 43. člen, pa se nanaša samo na 58. člen. S tem se strinjam. S predlogom gospoda Beuermanna se strinjam.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg443">Ali lahko tisto dopolnite, pa pripravite, tako da bomo še to dali na glasoavnje, kar je bilo?</seg>
                <note>Glas iz ozadja.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg444">Tako. Dobro. Kdo želi še ob tem prvem predlogu, ki sem ga prebrala razpravljati?</seg>
@@ -1720,14 +1705,14 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg457">Prosim poročevalca, če predstavi mnenje odbora. Besedo ima gospod Presečnik.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ2.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg458">Hvala lepa, gospa podpredsednica. Kolegice in kolegi! Odbor za infrastrukturo in okolje je predlog zakona o zračnem prometu obravnaval na treh sejah in sicer 4.11., 27.11.1997 in pa 29.1.1998. Predlog zakona je obrazložil predlagatelj zakona, obširno je pa o zakonu podala mnenje tudi Vlada Republike Slovenije, ki v svojem mnenju zavrača ta zakon</seg>
                <note>ta stališča vlade imamo tudi napisana in med drugim tudi povzeta v poročilu odbora za infrastrukturo in okolje na strani 2 in 3 zgoraj</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg459">. Svoje mnenje je podal tudi sekretariat državnega zbora za zakonodajo in pravne zadeve.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg460">Na podlagi razprave v odboru, na podlagi upoštevanja mnenj sekretariata in mnenja vlade, je odbor državnega zbora za infrastrukturo in okolje ugotovil, da ne sprejema temeljnih ciljev in poglavitnih rešitev predloga zakona o zračnem prometu, in meni, da ni primerna podlaga za drugo obravnavo. Zato predlaga Državnemu zboru Republike Slovenije, da v skladu s 185. členom poslovnika državnega zbora sprejme sklep: "Predloga zakona o zračnem prometu, prva obravnava, se ne sprejme." Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg461">Hvala. Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg462">Želi besedo predstavnik vlade?</seg>
@@ -1751,7 +1736,7 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg474">Prehajamo na 48. TOČKO DNEVNEGA REDA - PRVA OBRAVNAVA PREDLOGA ZAKONA O ŽELEZNIŠKEM PROMETU. Predlog zakona je v obravnavo zboru predložil poslanec Franc Pukšič. Želi predlagatelj predloga zakona besedo? Prosim, gospod Pukšič, imate besedo.</seg>
             </u>
             <note type="speaker">FRANC PUKŠIČ:</note>
-            <u who="#SDZ2.PukšičFranc" ana="#regular">
+            <u who="#PukšičFranc">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg475">Hvala lepa za besedo. Res je pa dobro, da sem zakon predložil, ker ga je lahko potem vlada takoj za mano tudi prepisala in dala v Poročevalec.</seg>
                <note>Smeh.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg476">Prvi set k popotnici zakona, ki seveda upam, da bo dobil podporo in da se bo dal amandmirati, kolikor bo to potrebno.</seg>
@@ -1761,16 +1746,16 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg480">Zaradi vsega tega ugotavljam, da ni razlogov, da se zakon v prvi obravnavi ne sprejme in da je predlog zakona primerna podlaga za drugo obravnavo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg481">Hvala. Predlog zakona je obravnaval tudi odbor za infrastrukturo in okolje kot matično delovno telo. Prosim predsednika Presečnika, če poda poročilo.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ2.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg482">Gospa podpredsednica! Kolegice in kolegi! Navedeni predlog zakona, torej, predlog zakona o železniškem prometu je odbor obravnaval na seji dne 11. februarja letošnjega leta. Pri tem je prisluhnil predstavitvi predlagatelja, prisluhnil mnenju vlade Republike Slovenije, ki je tudi bilo podano v pisni obliki z dne 29.12.1997. Nadalje je prisluhnil mnenju predstavnice sekretariata za zakonodajo in pravne zadeve. Predvsem se je pa na koncu vprašal in torej razpravljal o tem, ali je možno predlog zakona o železniškem prometu v prvi obravnavi sprejeti in ga za tem v drugi obravnavi izboljšati. Splošna ugotovitev je bila, da bi bilo glede na vsebinske pripombe sekretariata predloženo zakonsko besedilo težko primerno dodelati še zlasti brez vnaprejšnjih utemeljitev sistemskih rešitev.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg483">Ob koncu razprave je odbor državnega zbora za infrastrukturo in okolje ugotovil, da so temeljni cilji in poglavitne rešitve predloga zakona o železniškem prometu pomanjkljivo predstavljeni in meni, da predlog zakona ni primerna podlaga za drugo obravnavo. Državnemu zboru Republike Slovenije zato odbor predlaga, da v skladu s 185. členom poslovnika državnega zbora sprejme naslednji sklep: Predlog zakona o železniškem prometu, prva obravnava, se ne sprejme. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg484">Želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg485">Želi besedo predstavnik vlade?</seg>
@@ -1780,22 +1765,22 @@
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg487">Besedo dajem poslankam in poslancem. Gospod Malovrh. Pisnih razprav nismo dobili, zato razprave omejujem na 5 minut.</seg>
             </u>
             <note type="speaker">JURIJ MALOVRH:</note>
-            <u who="#SDZ2.MalovrhJurij" ana="#regular">
+            <u who="#MalovrhJurij">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg488">Gospa podpredsednica, hvala lepa za besedo. Ne bo 5 minut, kajti zakon, ki je bil predložen, bo naša poslanska skupina zavrnila. To je prvo. Drugo pa, zavrnila ga bo pa zaradi tega, ker je pomanjkljivo izdelan. Ne da ni potreben, pač pa je pomanjkljivo izdelan. Meni kot dolgoletnemu železničarju se zdi škoda, da bi čez mesec ali pa dva dodelovali ta zakon, in sicer manjka, glede na to, da se predvideva reorganizacija železniške uprave, železniške reorganizacije, manjka tukaj notri tudi direkcija za železniški promet, potem pa stavka, ki je v samem zakonu opredeljena, in bi lahko rekel, da je železnica kot neke vrste hrbtenica kopenskega prometa, ki lahko še kako naredi veliko gospodarsko škodo, predvsem luškemu prometu in pa tudi velikim gigantom in pa uporabnikom železniških storitev, je tudi precej nedodelana.</seg>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg489">V samem postopku sta še dva zakona s to tematiko, z istim naslovom, in sicer zakon, ki so ga vložili Socialdemokrati in pa zakon, ki ga je vložila sama vlada. Tako tega zakona ne bomo podprli in mislimo, da ni primeren za drugo obravnavo, kot je že ugotovil tudi odbor za infrastrukturo in okolje. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg490">Hvala. Želi še kdo razpravljati? Ugotavljam, da ni razpravljavcev. Zaključujem splošno razpravo. Matično delovno telo predlaga zboru, da sprejme naslednji sklep: "Predlog zakona o železniškem prometu, prva obravnava, se ne sprejme." Odpiram razpravo o predlogu tega sklepa. Kdo želi besedo? Ugotavljam, da nihče. Prehajamo na glasovanje. Ugotovimo prisotnost! Bomo še počakali gospoda Battellija. Hvala. Lepo prosim, če še enkrat ponovimo. V dvorani nas je več kot 50. Ugotovimo prisotnost! Ampak to bi se moralo kaj poznati. Odrejam še 10 minut odmora. Nadaljujemo ob 17.10 uri.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 17.02 uri in se je nadaljevala ob 17.13 uri.</note>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg491">Lepo prosim, da nadaljujemo z našim delom. Kolegice in kolegi, prosim, če zasedete svoja mesta. Ugotovimo prisotnost v dvorani. Ali še kdo prihaja? Še enkrat ponovimo. Ugotovimo prisotnost v dvorani! Dajmo še malo resnosti, prosim, saj nismo v šoli! Čez 10 minut nadaljujemo. Prosim, če ste vsi prisotni.</seg>
             </u>
             <note type="time">Seja je bila prekinjena ob 17.14 uri in se je nadaljevala ob 17.20 uri.</note>
             <note type="speaker">PODPREDSEDNICA EDA OKRETIČ-SALMIČ:</note>
-            <u who="#SDZ2.OkretičSalmičEda" ana="#chair">
+            <u who="#OkretičSalmičEda" ana="#chair">
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg492">Lepo prosim, da nadaljujemo. Imeli smo deset minut odmora. Ugotovimo prisotnost v dvorani! Ugotovimo prisotnost! Še enkrat bomo ponovili.</seg>
                <note>45 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-08-1998-03-05.seg493">Še enkrat. Saj smo samo enkrat. Dvakrat se ugotavlja prisotnost. Ugotovimo prisotnost!</seg>

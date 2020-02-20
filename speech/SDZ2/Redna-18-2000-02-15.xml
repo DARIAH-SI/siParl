@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="SDZ2-Redna-18-2000-02-15"
+     xml:lang="sl"
      ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
@@ -8,9 +9,8 @@
             <title type="main" xml:lang="sl">Dobesedni zapis seje Državnega zbora Republike Slovenije</title>
             <title type="main" xml:lang="en">Verbatim record of the session of the National Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">18. redna seja (15. 2. 2000)</title>
-            <meeting n="18"
-                     corresp="#SDZ2-Redna-18-2000-02-15.DZ"
-                     ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="18" corresp="#DZ" ana="#parl.meeting.regular">Redna</meeting>
+            <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,19 +22,11 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -42,34 +34,27 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-22+02:00">22. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <analytic>
-                  <title xml:lang="sl">Nadaljevanje 18. seje</title>
-               </analytic>
-               <monogr>
-                  <edition xml:lang="sl">Preverjen zapis seje</edition>
-                  <edition xml:lang="en">Verified session record</edition>
-                  <idno type="custom" subtype="day">SZA|3CF2654CD3DD2343C125688800528AA6</idno>
-                  <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=3CF2654CD3DD2343C125688800528AA6</idno>
-                  <imprint>
-                     <date when="2000-02-15">(15. februar 2000)</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title>18. redna seja (15. 2. 2000)</title>
+               <edition xml:lang="sl">Preverjen zapis seje</edition>
+               <edition xml:lang="en">Verified session record</edition>
+               <date when="2000-02-15"/>
+               <idno type="URI">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/evidenca?mandat=II&amp;type=sz&amp;uid=3CF2654CD3DD2343C125688800528AA6</idno>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
-               <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="271"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="60"/>
                <tagUsage gi="seg" occurs="491"/>
                <tagUsage gi="gap" occurs="3"/>
@@ -660,23 +645,21 @@
                <date when="2000-02-15" ana="#parl.sitting">15. 2. 2000</date>
             </setting>
          </settingDesc>
-         <particDesc>
-            <org xml:id="SDZ2-Redna-18-2000-02-15.DZ" ana="#par.lower" corresp="#DZ">
-               <orgName>Državni zbor Republike Slovenije</orgName>
-            </org>
-         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="minutes">
+      <front>
+         <div type="preface">
             <head>DRŽAVNI ZBOR REPUBLIKE SLOVENIJE</head>
             <head type="session">Nadaljevanje 18. seje</head>
-            <docDate>(15. februar 2000)</docDate>
             <note type="chairman">Sejo je vodil Janez Podobnik, predsednik državnega zbora.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 14.11 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg1">Spoštovane kolegice poslanke, kolegi poslanci, gospe in gospodje! Pričenjam nadaljevanje 18. seje državnega zbora. Obveščen sem, da so zadržani in se današnje seje ne morejo udeležiti naslednje poslanke in poslanci: dr. Franc Zagožen, za pričetek seje Andrej Fabjan, Bojan Kontič, dr. Ciril Ribičič, Maria Pozsonec, od 17. ure dalje Peter Hrastelj, Darinka Mravljak, dr. Jože Zagožen, Jožef Jagodnik, Jelko Kacin, Anton Delak, Andrej Gerenčer, od 17. ure dalje Ivan Božič, Borut Pahor in od 17. ure dalje Franci Rokavec.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg2">Prosim, da ugotovimo navzočnost v dvorani. Ugotavljamo torej navzočnost v dvorani!</seg>
                <note>61 poslancev in poslank.</note>
@@ -685,7 +668,7 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg5">Prehajamo torej na 15. TOČKO DNEVNEGA REDA, TO JE NA PRVO OBRAVNAVO PREDLOGA ZAKONA O RAČUNSKEM SODIŠČU. Smo že v okviru splošne razprave, ki je odprta. Edini od poslancev še, ki je bil prijavljen, je poslanec Kelemina. Želite besedo? Pisno prijavljen.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg6">Hvala lepa za besedo. Spoštovani predsednik, spoštovani vsi skupaj! Pred nami je seveda ta novi predlog zakona o računskem sodišču. Zdajle, marsikaj je bilo seveda že v tej razpravi povedanega. Upam, da se ne bom preveč ponavljal, kljub temu bi rad podal neke svoje poglede na to obravnavo te tematike, ki je danes pred nami.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg7">Kot so že vsi ostali predgovorniki in pa tudi kot je obrazloženo v samem uvodu, je jasno, da smo nekako vsi, ki hočemo sodelovati pri sprejemu tega zakona, prišli do spoznanja, da so spremembe zakona o računskem sodišču nujne in da je nekako le najden tukaj nekakšen konsenz z vsemi prizadetimi, da je potrebno te zadeve tudi v najkrajšem času urediti. Seveda je vprašanje zdajle, kako urediti. Jaz pač pričakujem, da razmišljamo o tem, da urediti na bolje, ne na slabše.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg8">Prav gotovo je bilo v ta predlog vloženega, kar veliko dela. Moram priznati, da glede na to, da poznam prejšnji zakon in tudi poslovnik o računskem sodišču, da je ta bistveno bolj obsežen. Čeprav sedaj s tem obsegom ni rečeno, da je tudi toliko bolj kvaliteten. So prav gotovo določene rešitve dobre, je pa tudi nekaj stvari, ki bi jih bilo potrebno urediti po moji oceni drugače, in na te bi rad danes tukaj tudi opozoril.</seg>
@@ -719,11 +702,11 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg34">To bi bile moje pripombe. Upam, da ne glede na to, da jih nisem podal v pisni obliki, da jih bo predlagatelj poskušal upoštevati pri obravnavi predloga za drugo obravnavo. V kolikor pa ne, bomo prisiljeni amandmirati toliko bolj obsežno predlog zakona o računskem sodišču. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg35">Hvala, kolega Kelemina, za splošno razpravo. Iz stenograma, ko smo prekinili, je bilo razvidno, da je bil kolega Kelemina tudi edini, ki je bil pisno prijavljen. Ali želi besedo predstavnik predlagateljev ali eventualno predstavnik vlade? Prosim, gospod Feri Horvat, prvopodpisani predlagatelj.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg36">Hvala za besedo, gospod predsednik. Spoštovane kolegice in kolegi, predstavnice in predstavniki vlade, namestnica predsednika računskega sodišča!</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg37">Najprej bi se želel, čeprav mislim, da še ni konec te razprave, pa vendarle bi se želel zahvaliti za izrečeno podporo v dosedanji razpravi konceptu zakona in tudi vsem pripombam in predlogom, ki so bili dani. Upam si reči, v svojem imenu, ker ne morem govoriti v imenu vseh 6 podpisnikov, da bom predlagal tudi sopodpisnikom, da večino teh pripomb tudi upoštevamo pri pripravi predloga za drugo obravnavo. Seveda razen tistih, ki so v nasprotju z zastavljenim konceptom tega zakona.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg38">Kajti prepričan sem, da koncept je pravilen. Da je to potrdila tudi javna predstavitev mnenj. Torej zelo širok avditorij strokovnjakov s tega področja. Ne samo poslanci in predstavniki sedanjega računskega sodišča, ampak tudi drugi neodvisni strokovnjaki, od pravnikov, bivših ustavnih sodnikov, ministrov, ki so sodelovali tudi pri pisanju sedanjega zakona o računskem sodišču, in pa seveda strokovnjakov s področja revizije. Ob tem mi dovolite, da posebej opozorim na nekaj vprašanj, ki so bila izpostavljena v razpravi in ki bodo predmet naše skupne obravnave, tako podpisnikov predloga, članov odbora za nadzor proračuna kot matičnega delovnega telesa in seveda potem tudi vseh poslancev pri obravnavi predloga za drugo obravnavo.</seg>
@@ -736,27 +719,27 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg45">Da ne govorim o praktičnih problemih. Da imamo člane računskega sodišča z različnimi mandatnimi dobami. Eni, ki sem jim izteče mandat leta 2003, enemu 2004 in najnovejši članici sodišča šele leta 2007. In vrnem se, in s tem bi tudi končal, na to, da je tudi tako po lastnih izkušnjah kot tudi po priporočilu Evropske unije, v zadnjem poročilu komisije in v partnerstvu za pristop, sprememba zakona o računskem sodišču navedena kot ena prioritetnih kratkoročnih nalog za povečanje nadzora nad javnimi financami. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg46">Hvala, kolega Feri Horvat. Replika, kolega Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg47">Hvala lepa. Poglejte, jaz mislim, da gre dejansko oziroma menim in prepričan sem, da gre za izredno pomembno urejanje zadev v tej državi in da je zelo odvisno oziroma veliko odvisno od tega, kakšno, s kakšno določbo in kakšne pravice in dolžnosti bomo seveda naložili najvišji revizijski instituciji v tej državi. Tudi nadaljnje učinkovito uporabljanje, seveda trošenje državnih sredstev. In je res potrebno temeljito, vsaj tiste določbe doreči, ki nekako v zaključni fazi odpravljajo te nepravilnosti, ki se prav gotovo - to lahko ugotovimo - pri nas dogajajo, in da je to, kar računsko sodišče do danes ugotovi in da tudi v javnost, mogoče res le en majhen delček vseh nepravilnosti, ki se v tej državi zgodijo. Birokracija in politikanti so zaščiteni neverjetno. To moramo ugotoviti in dejansko obstajajo tako rekoč dvojna merila za navadne državljane, se pravi vse, ki nekako živijo izven politike, izven tega birokratskega stroja, in za to drugo srenjo, če tako rečem, za privilegirance na področju birokracije.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg48">Nikjer nimamo nobenih pogajanj z drugimi prekrški ali nepravilnostmi, ki se zgodijo z drugimi državljani. Če jaz naredim prekršek, takoj odgovarjam, in če sem vedel za zakon ali če nisem vedel, plačati in konec. Tukaj pa imamo razčiščevalne sestanke in usklajevanja in svetovalne funkcije in ne vem, cela vrsta samih zadev oziroma postopkov. Temu rečem jaz delanje v rokavicah. Te stvari morajo biti dorečene in se ne strinjamveliko s tem, da število poročil bi moralo biti manjše. Mislim, da bi moralo biti število poročil večje, da bi morali v tem prehodnem obdobju, v katerem Slovenija je, bistveno več kontrol izvrševati, bistveno več nadzora izvršiti. Se pa strinjam s tem, dav kolikor bi bila ta poročila pozitivna, da ni nekih ugotovljenih nepravilnosti, da se ne obremenjujejo institucije, določeni organi, ki izvajajo to kontrolo, ampak da se naredi kratek povzetek ali celo v nekem pregledu skupaj, da se ugotovi, ta in ta poročila so bila ugodna oziroma brez vseh pripomb in dejansko ni potrebno potem organov s tem obremenjevati.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg49">Kajti največji problem je s tem, kar je tudi sam kolega Feri Horvat priznal, da z uresničevanjem poročil računskega sodišča. Poročila so se, vemo, kako uresničevala. Mogoče bi rad enkrat podatke dobil o tem, koliko je res bilo v skladu z obstoječim zakonom o računskem sodišču izrečenih res nekih konkretnih kazni v tej birokraciji in tej administraciji, ki v tej državi vlada. Te podatke bi rad enkrat dobil in videl, koliko je dejansko kdo plačal oziroma koliko so jih odstavili, koliko jih je bilo razrešenih in tako naprej. Nobenega. Niti enega. Upam si to trditi.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg50">Zato trdim, da dejansko ni volje niti v tem državnem zboru. Sedaj se mi zdi, da tudi oblast pa itak, kdor je na oblasti si želi, da bi bila čim manj kontrolirana in da bi čim lažje svojo politiko izvajala. Absolutno mislim, da v tej državi obstajajo dvojni kriteriji, za navadne državljane in kriteriji za funkcioniranje in delovanje birokratskedržave, kakršno jaz ocenjujem, da jo mi v naši državi imamo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg51">Hvala lepa. Gospod Žnidaršič želi besedo.</seg>
             </u>
             <note type="speaker">FRANC ŽNIDARŠIČ:</note>
-            <u who="#SDZ2.ŽnidaršičFranc" ana="#regular">
+            <u who="#ŽnidaršičFranc">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg52">Hvala lepa, gospod predsednik. Spoštovane poslanke in poslanci! Sam sem kot sopodpisnik tega zakona seveda dolžan podpreti zakon. Podprl pa ga bom tudi predvsem iz naslednjih razlogov.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg53">Prvič. V pripravi zakona so bile uporabljene evropske rešitve. Drugič. Pri pripravi zakona je sodelovalo šest poslanskih skupin in mislim, da je državnozborsko usklajen. In tretjič, javna predstavitev mnenj je pokazala, da je vendarle predlog zakona naravnan v skrajšanje določenih postopkov in lažji nadzor javnih financ. Ne nazadnje je eventualne pomanjkljivosti in neskladja tega predloga mogoče v nadaljnjem postopku odpraviti z amandmaji in stališči, ki jih bo sprejel ta državni zbor in mislim, da je prav, da dobimo zakon, ki bo lažje nadziral javne finance, saj smo iz obstoječega nadzora javnih financ prek odbora za proračun videli, da obstoječi zakon računskemu sodišču tega v celoti ne omogoča, kakršen je. In bo vendarle nadaljnje delo računskega sodišča lažje, državni zbor bo imel boljšo podlago za oceno nepravilnosti, ki se na področju javnih financ dogajajo. Upam pa tudi, da bo nov pristop omogočil konsekvence o katerih je govoril gospod Kelemina in za katere se tudi sam zavzemam, da bi do njih prišlo takrat, kadar je očitno šlo za zlorabo pooblastil, položaja in seveda nesmotrno porabo javnega denarja. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg54">Hvala. Ali želi še kdo besedo? Ne želi v okviru splošne razprave, jo zaključujem. Prehajamo na razpravo o predlaganih sklepih in stališčih.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg55">Najprej dajem v razpravo prvi sklep matičnega delovnega telesa, ki se glasi: "Predlog zakona o računskem sodišču je primerna podlaga za pripravo predloga zakona za drugo obravnavo." Predlog tega sklepa dajem na glasovanje. Ugotovimo prisotnost!</seg>
                <note>44 prisotnih.</note>
@@ -785,11 +768,11 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg69">Prehajamo na 16. TOČKO DNEVNEGA REDA - OBRAVNAVA PREDLOGA ZAKLJUČNEGA RAČUNA PRORAČUNA REPUBLIKE SLOVENIJE ZA LETO 1996. Državni zbor je z obravnavo te točke dnevnega reda pričel na 17. seji, pri čemer je bila zaključena razprava predstavnikov poslanskih skupin. Pisnih prijav za razpravo poslank in poslancev nismo prejeli. Ali želi kdo besedo? Želi, gospod Rejc, prosim.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg70">Spoštovani gospod predsednik, gospe in gospodje! Ne gre za to, da bi nekako bili za to, da se zaključni račun za leto 1996 potrdi, vendar je pa res to neka neresnost. Vsako podjetje, ki bi v štirih letih skoraj, v treh letih in pol prineslo zaključni račun v potrditev, bi bilo že zdavnaj zbrisano iz registra. Gre za to, da smo že zdavnaj sprejeli zakon o računovodstvu. Že zdavnaj smo ugotovili in ugotavljali, da je potreben enoten pristop po ministrstvih in podobno. Že zdavnaj vemo, da mora biti tukaj malo večji red. Iz tega izhajajoč menim, da bi tudi računovodstva iz posameznih ministrstev in tudi finančnega ministrstva bilain morala biti kos za to, da se zaključni račun napravi. To je gotovo tudi zadnji zaključni račun, ki ima nekako bilanco v medsebojnem razmerju, torej zadnji zaključni račun, potem bomo pa vedno bili priča proračunu oziroma zaključnemu računu države, ki ima negativno bilanco. Vendar menim, da je to treba podpreti, lepo pa ni, da se leto 1996 še vedno valja pod našimi nogami, ker to je bilo volilno leto, mi pa ta hip odhajamo iz parlamenta. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg71">Hvala lepa, kolega Rejc. Ali želi še kdo besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg72">Zaključujem splošno razpravo.</seg>
@@ -808,7 +791,7 @@
             </u>
             <note type="time">Seja je bila prekinjena ob 15.10 uri in se je nadaljevala ob 15.22 uri.</note>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg80">Ugotavljamo prisotnost, da bomo glasovali o predlogu sklepa: "Državni zbor Republike Slovenije sprejema zaključni račun proračuna Republike Slovenije za leto 1996." Ugotavljamo prisotnost!</seg>
                <note>59 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg81">Kdo je za predlagani sklep?</seg>
@@ -1023,15 +1006,15 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg205">Želijo besedo predstavniki poslanskih skupin? V imenu poslanske skupine socialdemokratov, Ivo Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg206">Hvala lepa, gospod predsednik. Kolegice in kolegi! Simptomatično, simptomatično! Pred seboj imamo predlog zakona o ratifikaciji Sporazuma o sodelovanju med Ministrstvom za obrambo Republike Slovenije in Ministrstvom za obrambo Države Izrael - ne vidim ministra, vidim državnega podsekretarja - podcenjevanje državnega zbora. To je vendar sporazum, o katerem je bilo še pa še govora! Seveda, sedaj, ko je nabavljeno orožje, ko je <gap reason="inaudible"/> Kje pa si? Ga ni. Ja, on je v zraku. Potem ko je bivši minister opravil vse nakupe, sedaj pa prihaja do sporazuma. To je tisti sporazum, ki je bil prej tajni sporazum, ki ga ni bilo. Mislim, da bi morali ob tej priložnosti vsaj parlamentu natočiti čistega vina in povedati, kaj in kako je s tem. Torej, neizmerno me čudi, da se predstavnik vlade ali pa, še bolj konkretno, predstavnik ministrstva za obrambo ni oglasil k temu. To pravzaprav potrjuje to, da je vse tisto, o čemer smo govorili takrat, ko je bil to še nek tajni sporazum, ki ni bil sporazum, nekaj privatnega ali ne vem, kako bi temu rekel; skratka, da je bilo to, da je to držalo, sicer bi imeli lahko priložnost, da bi to tu pojasnili in bi post festum nekatere naše stvari demantirali. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg207">Hvala lepa. Želi še katera od poslanskih skupin besedo? Prehajamo na razpravo poslank in poslancev. Pisnih prijav ni bilo. Petminutna razprava - Rudolf Petan.</seg>
             </u>
             <note type="speaker">RUDOLF PETAN:</note>
-            <u who="#SDZ2.PetanRudolf" ana="#regular">
+            <u who="#PetanRudolf">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg208">Hvala za besedo, gospod predsednik. Spoštovani, najprej bom povedal, da bom glasoval za podporo temu sporazumu. Glasoval bom za. Ta sporazum, ki je bil objavljen v Poročevalcu, nosi datum 23.11.1998. Danes smo že leta 2000. Predhodnik tega sporazuma, ki je bil tajen, ki ga sicerpo nekaterih predstavah ni bilo ali pa so se ga nekateri odpovedali, pa je že star 5 let. Podpisi pod tem sporazumom so bili na nivoju, kako bi rekel, tretjem nivoju predstavnikov države. Podpisani so bili predstojniki varnostno-obveščevalnih služb obeh držav. Po drugi strani pa je potrebno tudi omeniti, da takratni minister, po njegovih izjavah namreč, se je temu sporazumu odpovedal in sploh ni vedel, da je tak sporazum obstajal. Po drugi strani je tudi izjavil, da sploh ni vedel, da so kateri predstavniki iz njegovega resorja potovali v državo, s katero se je ta sporazum sklenil.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg209">Seveda, takrat smo vprašali, kakšen predstojnik nekega ministrstva ali oddelka pa je lahko nekdo, ki se mu lahko njegovi sodelavci sprehajajo po Mediteranu, konkretno v tujih državah. Kako je to urejeno potem s potnimi nalogi, da o povračilu potnih stroškov in o dnevnicah sploh ne govorimo. In kako to, da lahko tako pomemben sporazum podpiše nek uradni iz tretje hierarhične linije, če ni to kar celo četrta. Ampak to navsezadnje niti ni tako pomembno, bolj pomembna je vsebina tega. Namreč, sporazum je bil, pa ga ni bilo. Tisti predstojniki, ki bi morali biti najbolj poklicani za to, so se tega sporazuma kar naenkrat odpovedali takrat, ko je zadeva prišla v javnost. Dejstvo pa je, da se je vsebina pa izvajala. Zaradi tega sporazuma je bilo vzpostavljeno sodelovanje z državo Izrael in seveda do neke mere je ta sporazum opravičeval nakupe opreme, ki jo je opravila slovenska država v Izraelu. Tako smo kupili havbice, ki so bile že na samem začetku oporečne. Ne govorim, da je havbica, lahko je bilo krivo tudi polnjenje, kar tudi je bilo, ker je bilo 20 let staro. O tem, verjetno ni treba razpravljati. Na osnovi tega sporazuma smo kupili minomete, od katerih je odstopala barva, ki so bili presignirani, ki so se poškodovali ob streljanju na našem terenu. To se pravi, da kompenzatorji niso bili pravi, ali to ni pomembno, kateri del ni bil pravi. Dejstvo je, da niso bili pravilno nabavljeni.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg210">Tu sem lahko damo navsezadnje tudi posredno nakupe sicer sodobne opreme, pilatuse, ki so bili predelani v Izraelu in zaradi tega bodo verjetno ali so že tudi težave s samo garancijo in s samim vzdrževanjem. Na osnovi tega sporazuma so bila nakupljena sredstva zvez in verjetno še kaj. Porabljenega je bilo ogromno denarja. Marsikdaj, ne trdim da vse, marsikdaj tudi brez pravega nadzora in navsezadnje to ugotavlja tudi računsko sodišče. To ni moja izmišljotina. Ta zadeva z računskim sodiščem se nahaja v dveh odborih in noben še ni prišel do kraja, ker tudi vlada ni posredovala tistih podatkov, ki bi jih morala posredovati.</seg>
@@ -1039,7 +1022,7 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg212">Dejstvo je, da je predhodnik tega sporazuma bil tajni, kajti takih sporazumov nimamo. Na koncu bi še rekel: ta sporazum je 5 let prišle prepozno. Če bi prišel 5 let prej, verjetno ne bi bilo tiste smrtne nesreče pri Počku in še drugih podobnih težav. Res je, da je sporazum tak, kot je, za podpreti in ga bom tudi podprl, vendar pa z grenkim priokusom. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg213">Hvala lepa. Ali želi še kdo besedo?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg214">Prehajamo k odločanju. Najprej bomo glasovali o predlogu sklepa: "Državni zbor glasujem le o predlogu zakona v celoti." Ugotavljamo prisotnost! Ta sklep dajem na glasovanje.</seg>
@@ -1132,7 +1115,7 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg267">Predlog zakona je v obravnavo zboru predložila vlada Republike Slovenije. Ali želi predstavnik vlade besedo? Kot predstavnik vlade od tukaj prisotnih lahko nastopi mag. Janez Božič, predsednik uprave Darsa. Prosim, mag. Božič.</seg>
             </u>
             <note type="speaker">MAG. JANEZ BOŽIČ:</note>
-            <u who="#SDZ2.BožičJanez" ana="#regular">
+            <u who="#BožičJanez">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg268">Hvala lepa za besedo, gospod predsednik. Spoštovane poslanke, spoštovani poslanci! Z italijanskim zakonom številka 19 z dne 9.1.1991 je Republika Italija dodelila denarna sredstva deželi Furlanija - Julijska krajina, ki so namenjena za povezavo avtocestnih odsekov Republike Italije z avtocestnimi odseki Republike Slovenije. Z deželnim zakonom Furlanije - Julijske krajine številka 34 z dne 22.8.1991 je bila družba Autovie Venete, Trst pooblaščena, da sklene pogodbo o dodelitvi sredstev Republiki Sloveniji. Vlada Republike Slovenije je s sklepom v septembru 1995 pooblastila društvo za avtoceste, da lahko prične dogovarjanje s pooblaščeno družbo Autovie Venete o pogojih in načinu izvedbe zakona 19. Dars d. d. je v skladu s pooblastilom z Autovie Venete uskladil in parafiral naslednje dokumente, in sicer prvo, posojilno pogodbo v višini 92 milijard 504 milijone italijanskih lir oziroma 57 milijonov dolarjev, pogodbo o tehničnem sodelovanju in pa sporazum o ustanovitvi in delovanju tehničnega odbora. Ministrstvo za zunanje zadeve Republike Italije je dne 1.12.1998 poslalo verbalno noto, s katero je potrdilo višino in pogoje kredita in soglašalo s tem, da se sredstva tega posojila namenijo za izgradnjo 2. in 3. etape avtocestnega odseka Vipava-Razdrto. V skladu z letnim programom dela Dars za leto 1998 smo se v letu 1998 pričele priprave za gradnjo 3. etape avtocestnega odseka Vipava-Razdrto in v skladu s programom dela Dars za leto 1999 so se v letu 1999 pričele priprave za gradnjo 2. etape avtocestnega odseka Vipava-Razdrto. V Uradnem listu Republike Slovenije 71/99 z dne 3.9.1999 je bila objavljena tudi uredba o lokacijskem načrtu za primorski krak avtoceste naodseku hitre ceste Razdrto-Vipava. Predračunska vrednost avtocestnega odseka Vipava-Razdrto, torej tretja etapa Vipava-Podnanos, znaša 2 milijardi 772 milijonov 500 tisoč SIT, od tega bo milijarda 259 milijonov SIT zagotovljenih iz lastnih sredstev in milijarda 512 milijonov SIT oziroma 9 milijonov dolarjev zagotovljenih iz sredstev italijanskega kredita, ki je predmet tega zakona o soglasju. Predračunska vrednost druge etape avtocestnega odseka Vipava-Razdrto, druga etapa Rebernice, znaša 27 milijard 640 milijonov SIT, od tega bo zagotovljenih iz lastnih sredstev 10 milijard 336 milijonov SIT, iz sredstev italijanskega kredita, ki je predmet tega zakona o soglasju, v višini 8 milijard SIT oziroma 48 milijonov ameriških dolarjev in iz finančnih kreditov v višini 9 milijard 240 milijonov SIT oziroma 55 milijonov dolarjev.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg269">Zakon o soglasju in zakon o poroštvu najetih finančnih kreditov je državni zbor že sprejel in sta objavljena v Uradnem listu Republike Slovenije, številka 31/99. Skladno s tretjim odstavkom 5. člena zakona o družbi za avtoceste v Republiki Sloveniji mora Dars za najetje srednjeročnih in dolgoročnih posojil predhodno dobiti soglasje državnega zbora Republike Slovenije s posebnim zakonom. S predvidenim kreditom v skupnem znesku 92 milijard 504 milijone italijanskih lir oziroma 57 milijonov dolarjev bodo v skladu z letnim programom dela Dars za leto 1998 in programom dela Dars za leto 1999 zagotovljeni vsi potrebni viri za gradnjo oziroma za izgradnjo druge in tretje etape avtocestnega odseka Vipava-Razdrto.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg270">Po sprejetju zakona o soglasju bo Dars lahko podpisal posojilno pogodbo z družbo Autovie Venete, Trst v višini, kot je bilo rečeno, 92 milijard 504 milijone italijanskih lir, pod naslednjimi pogoji: kredit je brezobresten; kredit se bo odplačeval v 15 enakih letnih obrokih, prvi obrok pa bo zapadel dve leti po zakonu o začetku obratovanja avtocestnega odseka Vipava-Razdrto; drugi obrok bo treba plačati prvo leto po zapadlosti prvega in vsak naslednji obrok po zapadlosti prejšnjega.</seg>
@@ -1140,30 +1123,30 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg272">Spoštovane poslanke in spoštovani poslanci, prosim, da se ta zakon sprejme, kajti s tem bo dana zelena luč za nadaljevanje gradnje v Vipavski dolini. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg273">Hvala mag. Božiču, ki je kot predstavnik vlade predstavil vsebino zakona.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg274">Predlog zakona je obravnaval odbor za infrastrukturo in okolje kot matično delovno telo. Prosim poročevalca, da predstavi mnenje odbora. Besedo ima kolega Presečnik.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ2.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg275">Hvala lepa za besedo. Kolegice in kolegi! Odbor je predlog navedenega zakona obravnaval na svoji 60. seji, 18. januarja letošnjega leta.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg276">Torej v razpravi okoli tega zakona člani odbora niso oporekali namenu kredita. Zastavilo se je več vprašanj v zvezi z utemeljenostjo določbe v posameznih alineah glede sočasnih sklenitev posebnih pogodb o tehničnem sodelovanju, ki jih morata pogodbeni stranki dogovoriti v postopku po najemu kreditov oziroma po podpisu ustrezne kreditne pogodbe.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg277">Odbor je pripravil posamezne amandmaje k posameznim členom in na koncu tudi sprejel sklep: "Odbor državnega zbora Republike Slovenije za infrastrukturo in okolje predlaga državnemu zboru, da predlog zakona o soglasju Republike Slovenije za najetje kredita Autovie Venete za gradnjo druge in tretje etape avtocestnega odseka Vipava-Razdrto obravnava po hitrem postopku in ga skupaj z amandmajema odbora sprejme." Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg278">Hvala kolega Presečnik. Ali želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg279">Besedo dajem predstavnikom poslanskih skupin. Če ni sedaj razprav, jo pričakujem pri besedi poslank in poslancev. Ali želi kdo besedo? Kolega Hvalica.</seg>
             </u>
             <note type="speaker">IVO HVALICA:</note>
-            <u who="#SDZ2.HvalicaIvo" ana="#regular">
+            <u who="#HvalicaIvo">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg280">Hvala lepa, gospod predsednik. Pri tej točki dnevnega reda in naslednji, ki je matarializacija tega zakona o poroštvu, je treba ugotoviti nekaj, kar je nedvoumno.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg281">Obžalovati je treba, da je prišlo tako pozno do sprejema tega zakona. Republika Slovenija je silila vse mogoče aranžmaje in najemala kredite po vseh možnih ugodnih in neugodnih pogojih. Tu, ko gre za brezobrestni kredit, pa tega ni znala realizirati. Ta predlog oziroma ta finančna sredstva je Italija s svojim zakonom o obmejnih območjih in kasneje še z deželnim zakonom pravzaprav dodelila že 10 let od tega, ko samostojne Slovenije ni bilo. Človek ne more verjeti, da je pot tega zakona tako dolgo trajala.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg282">Ne vem, koga bi pri tem obtožil, obsoditi se ne da nobenega. Treba je kvečjemu obžalovati - ne zaradi tega, ker imamo tudi pregovor "boljše pozno kot nikoli", ampak, ker je bil kredit v italijanskem zakonu, mislim, da je številka 19, o obmejnih območjih; oni imajo bolj enostavne številke, nimajo teh epa in tako dalje, da se zlomiš jezik in tako dalje. Številka 19 je bila namreč določena nominalnost, vrednost tega kredita v lirah. Tako na oko, če danes izračunam, je ta kredit vreden še polovico, če je polovico. To se pravi, polovico tega realnega zneska, ne nominialnega, nominalni ostaja, smo pač s tem, da smo toliko časa vlekli to zadevo, zapravili in s tem, jasno, povzročili tudi veliko zakasnitev izgradnje osimske avtoceste, kot sojo imenovali na obeh strani meje, po Vipavski dolini. Ta, jasno, ne bo zgrajena niti po prvem niti po drugem programu Darsa, ki je bil tukaj požegnan, ampak bolj po realističnih terminih, ki smo jih nekateri, pa poglejte magnetograme, pet, šest, sedem letod tega tu pripovedovali, to bo zgrajeno enkrat 2005, če bo, ali pa 2006 je bolj realno. Tako približno bo sovpadalo z vstopom v Evropsko unijo, zgolj slučajno ali pa ne. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg283">Hvala lepa, kolega Hvalica. Zboru predlagam, da v skladu z drugo alineo 189. člena poslovnika po končani razpravi in glasovanju o amandmajih, členih, h katerim so bili vloženi amandmaji, razpravlja in glasuje skupaj o preostalih členih, h katerim niso bili. Torej, predlagani sklep ne bo sprejet, če bi mu nasprotovala najmanj ena tretjina navzočih poslancev. Ugotavljamo prisotnost!</seg>
                <note>55 prisotnih.</note>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg284">Kdo je za predlog sklepa, da bomo glasovali o tistih amandmajih, členih, skupaj, h katerim niso bili vloženi amandmaji?</seg>
@@ -1212,13 +1195,13 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg309">Prehajamo na tretjo obravnavo predloga zakona. Ugotavljam, da sta bila k predlogu zakona v drugi obravnavi sprejeta amandmaja k 1. in 2. členu. Ali želite k tema dvema členoma kvalificirani predlagatelji vložiti amandma? Želite? Prosim, gospod Kopač.</seg>
             </u>
             <note type="speaker">MAG. JANEZ KOPAČ:</note>
-            <u who="#SDZ2.KopačJanez" ana="#regular">
+            <u who="#KopačJanez">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg310">Hvala za besedo. Zdaj sem šele opazil, mi kot poslanska skupina smo vložili amandma k 2. členu zakona o poroštvu, gre za pomoto, pomoto pri pisanju naslovov, ne vem kako se je zgodila. Ampak hoteli smo vložiti amandma k 2. členu zakona o soglasju za najetje kredita in se po vsebini seveda ta amandma, ki smo ga vložili k naslednji točki, mislim k zakonu, ki ga bomo obravnavali pri naslednji točki dnevnega reda, v resnici nanaša na ta zakon.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg311">Zato bi želel s podpisom ta hip že vloženi amandma k predlogu zakona o poroštvu Republike Slovenije k 2. členu tega predloga zakona prekvalificirati v amandma poslanske skupine LDS k predlogu zakona o soglasju za najetje kredita k 2. členu tega predloga zakona. Amandma se torej glasi: V 2. členu se doda nov odstavek, ki se glasi: "DARS d.d. lahko najame kredit iz 1. člena tega zakona le pod pogojem, da je v času najetja kredita zagotovljen predvideni nivo zneska od cestnin v skladu s programom dela DARS za tekoče leto in pod pogojem, da je za zemljišča na avtocestni trasi, za katero črpa kredit DARS d.d. oproščen plačevanja zneska za spremembo namembnosti kmetijskih zemljišč v višini 70 odstotkov." To je identičen tekst, kakršen je že bil sprejet na predlog odbora, v obliki amandmaja odbora k zadnjemu zakonu o soglasju za najetje kredita, ki smo ga v tem državnem zboru obravnavali. Naj pa bi zagotavljal, da se bo realiziral ta kredit v skladu s planirano dinamiko in planiranimi finančnimi aranžmaji, kot so bili v času obravnave nacionalnega programa izgradnje avtocest. Taamandma, ki ga je pri prejšnjem zakonu o soglasju - šlo je takrat za najetje kredita za traso preko Trojan - je državni zbor sprejel na podlagi slabih izkušenj, ko je med sprejetjem nacionalnega programa in predlogom zakona o soglasju za najetje kredita vlada spremenila pogoje, pod katerimi je realizacija tega projekta predvidena.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg312">Zato skratka prosim, če lahko naš predsednik poslanskega kluba naredil nemudoma <gap reason="inaudible"/> Torej v pol minuti; skratka, če se samo prekvalificira ta že vloženi amandma k naslednjemu predlogu zakona pod 33. točko k 2. členu tega predloga zakona v okviru hitrega postopka, ker je zdaj, 2. člen, hvala bogu, bil amandmiran v drugi obravnavi, pa se to lahko naredi. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg313">Hvala lepa. Ali želi še kdo od kvalificiranih predlagateljev vložiti amandma? Ugotavljam, da bo poslanska skupina Liberalne demokracije Slovenije vložila amandma k 2. členu, ki je bil amandmiran. Seveda bi tudi predlagal, da poslanska skupina pogleda, kakšen je bil sprejeti amandma in kako zgleda člen, da ne bo prišlo do nomotehničnih težav pri samem oblikovanju, tako da bi jaz zdaj prekinil to točko dnevnega reda. V tem času bo poslanska skupina vložila amandma. Prekinjam to točko dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg314">Prehajamo na 33. TOČKO DNEVNEGA REDA - OBRAVNAVA PREDLOGA ZAKONA O POROŠTVU REPUBLIKE SLOVENIJE ZA OBVEZNOSTI IZ KREDITA, KI GA NAJAME DARS, DELNIŠKA DRUŽBA, PRI AUTOVIE VENETE ZA GRADNJO 2. IN 3. ETAPE AVTOCESTNEGA ODSEKA VIPAVA-RAZDRTO. Predlog zakona je v obravnavo zboru predložila vlada Republike Slovenije. Ali želi predstavnik vlade besedo?</seg>
                <note>Ne želite.</note>
@@ -1305,11 +1288,11 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg361">V okviru tretje obravnave smo. Ugotavljam, da je poslanska skupina Liberalne demokracije Slovenije vložila amandma k 2. členu. Amandma ste prejeli na klop. Amandma je spremenjen v tem, da gre za amandma k zakonu o soglasju Republike Slovenije in potem se nadaljuje vsebina zakona. Amandma se glasi: "V 2. členu se doda nov odstavek, ki se glasi - Darsa, delniška družba lahko najame kredit iz 1. člena tega zakona le pod pogojem, da je: prvič v času najetja kredita zagotovljen predviden nivo zneskov od cestnin v skladu s programom Darsa delniška družba, za tekoče leto; drugič: za zemljišča na avtocestni trasi, za katero črpa kredit Dars, delniška družba, oproščen plačevanja zneska za spremembo namembnosti kmetijskih zemljišč v višini 70%". To je tudi edini vloženi amandma k temu zakonu. V razpravo dajem amandma. Proceduralni predlog, gospod Potočnik.</seg>
             </u>
             <note type="speaker">FRANC POTOČNIK:</note>
-            <u who="#SDZ2.PotočnikFranc" ana="#regular">
+            <u who="#PotočnikFranc">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg362">Poslanska skupina Slovenske ljudske stranke prosi za 15 minut odmora, da bomo pripravili amandma na amandma v tretji obravnavi.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg363">Poslanska skupina Slovenske ljudske stranke. Kolega Potočnik! Ali je možen dogovor, da bi poslanska skupina Slovenske ljudske stranke pripravila amandma na amandma? V tem času pa bi državni zbor pričel z obravnavo predloga zakona o telekomunikacijah. Mogoče.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg364">Prekinjam, ponovno prekinjam 32. točko dnevnega reda.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg365">Prehajamo na 34. TOČKO DNEVNEGA REDA - PREDLOG ZAKONA O SPREMEMBAH IN DOPOLNITVAH ZAKONA O TELEKOMUNIKACIJAH, HITRI POSTOPEK.</seg>
@@ -1318,7 +1301,7 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg367">Besedo ima gospod Mirko Zamernik.</seg>
             </u>
             <note type="speaker">BOGOMIR ZAMERNIK:</note>
-            <u who="#SDZ2.ZamernikBogomir" ana="#regular">
+            <u who="#ZamernikBogomir">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg368">Hvala lepa, gospod predsednik. Davnega 5.11.1998 je bilo na 34. seji obravnavano besedilo zakona, ki je pred vami, zakon o spremembah in dopolnitvah zakona o telekomunikacijah. Da je nekaj na tem področju resnično hudo narobe, če že drugega ne, govorijo protesti - žal zaenkrat neuspešni - vseh, ki te telekomunikacije uporabljamo, to pa smo praktično vsi. Z zadnjimi podražitvami in pa z izenačenjem cene impulza so bili uporabniki internetnih storitev še toliko bolj hendikepirani, saj seje ta cena sedaj bistveno dvignila. Mi smo s tem predlogom, ki je bil, kot sem že rekel, vložen leta 1998, želeli vsaj za silo te zadeve popraviti.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg369">In da na hitro preletim skozi zakon, kaj smo želeli s tem spremeniti. Želeli smo spremembe in dopolnitve pojmov, ki sledijo tehnološkim spremembam na tem področju. Želeli smo izločiti mobilno telefonijo. Mi vemo, kako dragi so bili mobilni telefoni, dokler stvar ni dobila konkurence. Spomnite se, da je še pred nekaj leti mobilni telefon bil praktično nedostopen za večji del prebivalstva. Danes ima mobilni telefon skorajda že vsak. To je prinesla konkurenca.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg370">Žal na področju klasične telefonije te konkurence ni in tudi to smo želeli - se pravi, doseči prekinitev monopola na področju telekomunikacij. Predlagali smo tudi povečanje varnosti prenosa podatkov oziroma varovanja prenosa podatkov, ukinili prepoved povratnega klica in pa zaščiti delovanje Arnesa. Arnes vemo, da je omrežje, ki ga uporabljajo predvsem znanstvene in raziskovalne institucije in tudi šole.</seg>
@@ -1329,19 +1312,19 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg375">Strinjam se, da je nekatere stvari zaradi povedanega potrebno v tem zakonu spremeniti, vendar pa menimo v imenu predlagateljev, da je zakon primerna podlaga za nadaljnjo obravnavo in prosim, če ga podprete. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg376">Hvala, kolega Zamernik, ki je nastopil kot prvopodpisani skupine poslancev predlagateljev predloga zakona.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg377">Predlog zakona je obravnaval odbor za infrastrukturo in okolje kot matično delovno telo. Prosim poročevalca, da predstavi mnenje odbora. Besedo ima predsednik Jakob Presečnik.</seg>
             </u>
             <note type="speaker">JAKOB PRESEČNIK:</note>
-            <u who="#SDZ2.PresečnikJakob" ana="#regular">
+            <u who="#PresečnikJakob">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg378">Hvala lepa za besedo. Kolegice in kolegi, odbor je predlog navedenih sprememb zakona obravnaval najprej na svoji 34. seji 5.11.1998, nato še na 60. seji 21. januarja letošnjega leta. Torej poročilo s te seje odbora imamo predstavljeno. Tukaj bi rad samo poudaril, da so v razpravi člani odbora menili, da je delovanje javnih telekomunikacijskih storitev sproščanje prenosa podatkov, ukinjanje monopola na področju javnih telekomunikacij ter ureditev upravljanja tržnih telekomunikacijskih storitev nujna, da pa je smiselno problematiko obravnavati celovito. Zato so člani odbora menili, da je smotrno predlog zakona skupine poslancev s prvopodpisanim Mirkom Zamernikom iz postopka sprejemanja umakniti in omogočiti celovito razpravo ob obravnavi predloga zakona o telekomunikacijah, ki ga pripravlja poslanci iz vlada Republike Slovenije.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg379">Nekateri člani so izrazili tudi kritiko glede negativnega odnosa vlade Republike Slovenije do predlogov zakonov, ki jih vlagajo poslanci iz poslanskih opozicijskih strank.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg380">Ob koncu splošne razprave k predlogu zakona o spremembah in dopolnitvah zakona o telekomunikacijah je odbor državnega zbora za infrastrukturo in okolje sprejel naslednji sklep: "Odbor državnega zbora za infrastrukturo in okolje podpira obravnavo predloga zakona o spremembah in dopolnitvah zakona o telekomunikacijah po hitrem postopku."</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg381">V nadaljevanju seje odbora ni bil sprejet predlog sklepa, da je predlog zakona o spremembah in dopolnitvah zakona o telekomunikacijah primeren za nadaljnjo obravnavo v okviru hitrega postopka, zato je odbor sprejel sklep: "Odbor državnega zbora za infrastrukturo in okolje predlaga državnemu zboru Republike Slovenije, da predlog zakona o spremembah in dopolnitvah zakona o telekomunikacijah ne sprejeme." Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg382">Hvala kolegu Presečniku. Ali želi besedo predstavnik sekretariata?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg383">Ali želi besedo predstavnik vlade?</seg>
@@ -1364,7 +1347,7 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg394">Besedo ima kolega Feri Horvat.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg395">Hvala za besedo, gospod predsednik. Spoštovane kolegice in kolegi, gospe in gospodje! Ustavno sodišče Republike Slovenije je 11.6.1998 v oceni ustavnosti zakona o gospodarski zbornici Slovenije na osnovi več predlagateljev odločilo. Prvič, zakon o gospodarski zbornici Slovenije je v neskladju z ustavo, in drugič, ugotovljeno neskladje z ustavo je državni zbor dolžan odpraviti v roku enega leta od dneva objave te odločbe v Uradnem listu Republike Slovenije. Ta objava se je zgodila 3.7.1998, tako da sedaj že dejansko precej kasnimo pri izvedbi tega, kar je zaukazalo oziroma naročilo ustavno sodišče državnemu zboru.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg396">Predlog zakona je bil vložen, kot vidite iz gradiva, 21.10.1998, glede na odločbo ustavnega sodišča in kasnitev, ki sem jo že omenil, in predvsem zaradi ustreznejšega delovanja gospodarske zbornice Slovenije v skladu z ustavo je potrebno spremembo tega zakona čimprej sprejeti.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg397">Predlagan je skrajšani postopek, kar utemeljuje sama odločba ustavnega sodišča. Temu stališču oziroma predlogu novele zakona po skrajšanem postopku je pritegnila tudi vlada Republike Slovenije v svojem mnenju z dne 28.6.1999. To mnenje imate v gradivu. Vlada je to storila kljub temu, da je kasneje tudi sama predložila nov zakon o gospodarski zbornici Slovenije. Vendar smo skupaj ocenili, da če hočemo sorazmerno hitro ob že omenjeni kasnitvi novelosprejeti, da je potem primerneje sprejeti ta zakon o spremembah in dopolnitvah zakona gospodarske zbornice, ob upoštevanju - to poudarjam že kar uvodoma - amandmajev vlade, ki so identični oziroma skladni tudi s predlogom, ki ga je tudi vlada predložila, in odgovarjajo na pripombe in ugotovitve ustavnega sodišča.</seg>
@@ -1382,7 +1365,7 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg409">Izrazil pa bom rezervo do treh amandmajev, ki so vloženi. Enega je vložila poslanska skupina slovenske ljudske stranke oziroma kolega Brenčič, enega kolegi krščanski demokrati in pa enega socialdemokratska stranka. Ampak se bom oglasil potem, ko bo konkretna razprava, in povedal, zakaj mislim, da ne bi bilo dobro sprejeti predlaganih amandmajev. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg410">Hvala lepa, kolega Horvat. Predlog zakona je obravnaval odbor za gospodarstvo kot matično delovno telo. Ali želi poročevalec predstaviti mnenje odbora?</seg>
                <note>Ne želi.</note>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg411">Ali želi besedo predstavnik vlade?</seg>
@@ -1390,7 +1373,7 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg412">Ali želite besedo predstavniki poslanskih skupin? Besedo želi gospod Brenčič, v imenu poslanske skupine slovenske ljudske stranke.</seg>
             </u>
             <note type="speaker">STANISLAV BRENČIČ:</note>
-            <u who="#SDZ2.BrenčičStanislav" ana="#regular">
+            <u who="#BrenčičStanislav">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg413">Hvala lepa, gospod predsednik. Spoštovane kolegice poslanke in kolegi poslanci, spoštovani predlagatelj zakona o spremembah in dopolnitvah zakona o gospodarski zbornici! No, ni mogoče zanikati tega, da je ta zakon, ta novela zakona nastala glede na zahtevo ustavnega sodišča, glede na določbe odločbe ustavnega sodišča. Nas nekoliko zanima v bistvu tudi dejstvo, zakaj je sploh ustavno sodišče reagiralo, zakaj je ta odločba nastala. Ne moremo mimo dejstva, da vzrok iščemo predvsem v tem, da gospodarska zbornica s svojo organiziranostjo in notranjo strukturo, navsezadnje s predsednikom na čelu, enostavno ne sledi spremembam, ki se dogajajo v slovenskem gospodarstvu. Dejstvo je, da je s porušitvijo določenih velikih sistemov in prestrukturiranjem velikih podjetij nastalo veliko malih in srednjih podjetij, ki iščejo tudi svoj interes in svojo pristnost v soočanju z velikimi sistemi in velikimi podjetji, predvsem v smislu uravnoteženja interesov z velikimi podjetji, seveda uravnoteženje, ki se tiče sprejemanja odločitev, v katerih vidijo zaščito svojih interesov. Da je temu tako, govori kar cela vrsta podatkov, ki jih bom tudi - vsaj nekaj njih - predstavil.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg414">Prek 90% slovenskega gospodarstva predstavljajo mala in srednja podjetja. To so podjetja, ki jih opredeljuje 51. člen zakona o gospodarskih družbah. Njihova udeležba v posameznih strokovnih interesnih združenjih pa predstavlja zgolj 13%. V 110-članski skupščini gospodarske zbornice je le 13 članov malih podjetij. V upravnem odboru so od 31 članov strokovne javnosti žal samo trije člani malih podjetij. Ne moremo mimo dejstva in ugotovitev, da je novo zaposlovanje prisotno zgolj v malih in srednjih podjetjih, medtem ko je v velikih podjetjih in velikih sistemih zaposlovanje tako rekoč nazadovalo in še nazaduje. Zaradi tako nenormalne upravnestrukture prihaja v praksi celo do tega, da v bistvu znotraj sistema članstva v gospodarski zbornici nastajajo nasprotja med velikimi podjetji in malimi podjetji, da se tako rekoč mala podjetja v določenih segmentih znotraj same zbornice celo onemogoča.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg415">Na osnovi zahtev odločbe ustavnega sodišča je seveda želel predlagatelj tega zakona v sozvočju z gospodarsko zbornico oziroma vodstvom gospodarske zbornice tudi nekako slediti zahtevam. Žal lahko ugotovim, da je bil v svojem predlogu vse preveč ali premalo dorečen glede na zahtevo ali vsebino, ki jo podaja odločba ustavnega sodišča. Zato v poslanski skupini Slovenske ljudske stranke v celoti podpiramo amandmaje vlade, ki tako rekoč mnogo bolje, bolj kvalitetno, bolj vsebinsko sledijo odločbi.</seg>
@@ -1402,11 +1385,11 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg421">Iz vsega tega povedano bomo v poslanski skupini Slovenske ljudske stranke pisno zahtevali od predsednika državnega zbora, ker ta je tisti, ki je po poslovniku dolžan uvrstiti določen zakon na dnevni red, da nov zakon o gospodarski zbornici, ki ga je vlada že sprejela, ta je EPA 639 /2 uvrsti na 20. redno sejo državnega zbora. Seveda pri vsebini tega zakona bomo vsekakor želeli uveljaviti to, kar tudi "gro" članstva v gospodarski zbornici pričakuje. Enostavno, napraviti moramo institucijo gospodarske zbornice, ki bo primerljiva ali kolikor toliko primerljivo z nacionalnimi gospodarskimi zbornicami pri članicah Evropske unije. To bi bilo vse. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg422">Hvala, kolega Brenčič, ki je podal stališče poslanske skupine Slovenske ljudske stranke. Želi še kdo v imenu poslanskih skupin. Kolega Henigman, stališče poslanske skupine SKD.</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ2.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg423">Hvala, gospod predsednik. Spoštovani! Z zakonom o gospodarski zbornici se srečujemo že drugič v letu dni. Prvi zakon je bil vložen s strani poslancev SKD in je seveda nekoliko drugače oziroma bistveno drugače predvidel funkcioniranje ali delovanje gospodarske zbornice ali gospodarskih zbornic v Sloveniji. Žal, so vladna večina in tudi nekateri drugi poslanci ta koncept prostovoljnega članstva in panožnega povezovanja gospodarstva za interese velikih, srednjih in malih podjetij v tem državnem zboru zavrnili. Krščanski demokrati ne odstopamo od stališča, kaj je dobro za slovensko gospodarstvo in predvsem se opiramo na ankete in potrebe slovenskega gospodarstva, kakšno gospodarsko združenje oziroma kakšno zbornico želijo imeti, se pravi, prostovoljno, ki pokriva interese celotnega gospodarstva, in sicer na način, da se vsak gospodarski subjekt opredeli za tisto združenje oziroma za tisto zbornico, od katere ima tudi koristi. Se pravi, da gospodarska zbornica deluje v interesu gospodarskih družb na osnovi tržnega principa. Tisto, kar ponudi, tudi dobi plačano. Zakon, s katerim se srečujemo danes, je seveda samo popravek starega zakona o gospodarskih zbornicah, katerega rok, glede na odločbo ustavnega sodišča, pa je potekel že 3. julija 1999. Se pravi, zamujamos spremembami, ki jih je zahtevalo ustavno sodišče, kar ni prvič v državnem zboru, zamujamo pa seveda na račun vlade Republike Slovenije, ker sama ni pripravila ustreznega zakonskega teksta in so to pripravili poslanci oziroma gospodarska zbornica sama inje vložila preko poslancev v proceduro.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg424">Danes smo slišali tudi to, da je ta zakon samo prehoden zakon in da se pripravlja nov vladni predlog. Zato v tem trenutku izražam v imenu poslanske skupine sploh pomislek, zakaj se potem, ko smo zamudili rok, sploh s tem zakonom ukvarjamo, če bo prišel nov koncept ustanavljanja oziroma reorganizacije gospodarske zbornice.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg425">Ne glede na vse to, krščanski demokrati tega zakona ne bomo podprli. Smo pa ali pa tudi zato tega zakona ne bomo podprli, ker se s konceptom, ki ga želi slovensko gospodarstvo, poenotimo oziroma slovensko gospodarstvo želi tržni pristop, želi prostovoljno članstvo, tega pa ta zakon ne omogoča. Ne glede na vse povedano, pa smo k posameznim členom, ki so v proceduri, predlagali tudi nekaj amandmajev Gre za amandmaje, ki dajejo večjo težo malim in srednjim podjetjem, kar se odraža v 11. členu tega zakona, kjer smo predvideli, da se obvezna članarina, žal obvezna v dveh tretjinah, namenja za regijske zbornice oziroma združenja na regijski ravni, se pravi, ena tretjina ostane zvezi oziroma centralni gospodarski zbornici, dve tretjini naj se razdelita regionalnim zbornicam za enakopravnejši odnos.</seg>
@@ -1417,53 +1400,53 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg429">suvereno, samostojno odločala o višini članarine, pa se z zadnjim odstavkom 20.b člena ne strinjamo, kjer bi, mislim, da približno 20% ta članarina varirala; menimo, da je to treba v samem zakonu jasno določiti in ne prepustiti tega, če že sprejemamo zakon, posebnemu statutu gospodarske zbornice. Rešitev s statutom smo imeli že do sedaj, pa jo je ustavno sodišče kot neustrezno in zakonsko nepokrito tudi zavrnilo. Zato menimo, naj se to uredi v zakonu in da se možnosti variranja članarine ne dovoli. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg430">Hvala lepa, kolega Henigman. Stališče poslanske skupine socialdemokratov predstavlja Branko Kelemina.</seg>
             </u>
             <note type="speaker">BRANKO KELEMINA:</note>
-            <u who="#SDZ2.KeleminaBranko" ana="#regular">
+            <u who="#KeleminaBranko">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg431">Hvala lepa za besedo. Spoštovani vsi skupaj! Tudi naša poslanska skupina, socialdemokratska stranka, se nekako pridružuje kritiki in ugotovitvam, da je ta predlog zakona poslan v državni zbor z zamudo, kar je seveda tako rekoč skoraj običaj v našem zakonodajnem procesu. No, kot svojo pripombo k negativnim ugotovitvam, ki so bile že podane s strani drugih poslanskih skupin, bi dodali to, da ugotavljamo, da je gospodarska zbornica tudi, žal, po naših ugotovitvah razmeroma spolitiziran organ in da dejansko ukrepa samo takrat, kadar pač čutijo neko tudi politično energijo, ki jo je treba nekako sprožiti, medtem kovelikokrat, v veliko primerih, ko bi bilo treba ukrepati, kot je, recimo, pri sprejemanju proračuna in pri marsikaterem drugem dogodku, pa dajo neke načelne pripombe, potem pa vse skupaj ostane na neki načelni ravni in se ne zgodi popolnoma nič. Kadar pa pač nekdo, ki sicer včasih zgublja spomin, ugotovi, da je potrebno kritizirati vlado, potem pa seveda se vlada kritizira in pa tudi njena gospodarska politika, drugače pa ne.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg432">No, glede tega obveznega članstva. Tudi mi imamo pomisleke glede tega, da je v bistvu obvezno članstvo sicer po eni strani izredno pozitiven element, če seveda bi gospodarska zbornica izvajala svoje storitve oziroma izvajala svoje poslanstvo za korist vseh članov zbornice. Na osnovi anket in pa tudi potreb je ugotovljeno, da veliko, veliko podjetij se enostavno ne najde v gospodarski zbornici in ji gospodarska zbornica kot taka ne nudi nobenih uslug in so seveda logično proti temu, da morajo plačevati obvezno članarino, če od tega ni nobene koristi. Upamo, da bo seveda tudi v nadaljevanju, ko bo prišlo do celovite spremembe zakona o gospodarskih zbornicah do sprememb in da bo dejansko bolj prišlo do izraza tisto, kar je že velikokrat tudi sama gospodarska zbornica povedala, da bo večino svojih prihodkov poskušala pridobivati na trgu s svojimi storitvami. Če bo to uresničeno, bo seveda en velik cilj dosežen.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg433">Bi pa hotel posebej v imenu poslanske skupine obrazložiti pripombo na en amandma, ki smo ga tudi sami vložili. Gre za problem tako imenovanega, če tako rečem, dvojnega plačevanja članarine. Veliko subjektov je, ali pa vsaj nekaj jih poznamo, ki dejansko morajo zdajle na osnovi nedorečene zakonodaje plačevati celo dvojno članarino, enkrat gospodarski zbornici kot taki, drugič pa še panožni, svoji panožni zbornici. Tako da mi predlagamo da bi v okviru te zakonodaje ta problem rešili na tak način, da bi te panožne zbornice, ki seveda na osnovi zakona morajo biti združene oziroma biti pod pokroviteljstvom gospodarske zbornice, to članarino, ki jo plačujejo udeleženci, da se pravično razdeli, in sicer tako bi pripadala ena tretjina zbrane članarine panožni zbornici, ostalo pa seveda gospodarski zbornici. Mislimo, da je to upravičeno, nekorektno pa je, da morajo določeni subjekti plačevati danes dvojno članarino.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg434">Jaz upam, da boste ta amandma podprli tudi ostali. Naša poslanska skupina bo pa glede ostalih amandmajev in pa členov ravnala v skladu s svojimi odločitvami in tudi odločitvami posameznih poslancev. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg435">Hvala kolega Kelemina. Izčrpali samo razpravo poslanskih skupin. Sedaj se bo odvila razprava poslancev in poslank. Pisne prijave pa ni bilo. Ali želi kdo 5-minutno razpravo? Kolega Rejc, kolega Demšar, kolega Lešnik.</seg>
             </u>
             <note type="speaker">IZIDOR REJC:</note>
-            <u who="#SDZ2.RejcIzidor" ana="#regular">
+            <u who="#RejcIzidor">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg436">Hvala. Spoštovani gospod predsednik! Spoštovane gospe in gospodje.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg437">Zakon o spremembah in dopolnitvah zakona o gospodarski zbornici je v postopku. Kakorkoli že, moram reči, da se soočamo z veliko neracionalizacijo našega dela. Povedano je bilo, da ta zakon oziroma ta sprememba pomeni prilagajanje oziroma prilagoditev zahtevi ustavnega sodišča, tistemu, kar je bilo oporečeno glede na organizacijsko strukturo gospodarstva v Sloveniji.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg438">Mi vemo, da smo imeli že pred tem, dosti prej zakon, ki naj bi celovito urejal, predvsem pa naj bi upošteval mnenje oziroma zahteve ustavnega sodišča in tudi zahtevo gospodarstva. Le-tega ste seveda zavrnili in sedaj se ukvarjamo s tem novim zakonom oziroma s spremembo in dopolnitvijo zakona, ki pa ni nič kaj posebnega. Je samo to, da se uvede pregled, organizacija, zakonita organizacija in tudi nadzorni organi. Malo moteče je to, da tudi vlada predlaga eno osebo v nadzorni odbor in podobno.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg439">Kakorkoli obračam, ne morem biti zadovoljen s tem, ker menim, da gospodarska zbornica Slovenije v tem sestavu in v taki organizacijski obliki ne opravlja tiste funkcije, ki bi jo morala. Taka sprememba in dopolnitev, naj ponazorim, mi pomeni samo prenašanje hladne limonade k naslonjaču. Torej nič več in teh sprememb ne bom podprl. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg440">Hvala kolega Rejc. 5 minutna razprava, kolega Demšar. Za njim Zoran Lešnik.</seg>
             </u>
             <note type="speaker">VINCENCIJ DEMŠAR:</note>
-            <u who="#SDZ2.DemšarVincencij" ana="#regular">
+            <u who="#DemšarVincencij">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg441">Hvala za besedo in lepo pozdravljeni. Oglašam se pri tej točki, glede na to, da sem v poslanski pisarni imel več kot 10 manjših podjetnikov, ki so mi potožili, da so dolžni plačevati članarino, od tega pa nimajo popolnoma nič.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg442">Koliko pomeni taka članarina za enega podjetnika? Ravno v nedeljo mi je eden rekel, da plača 60.000 na leto. To pomeni, ta je pri najnižji številki. Tu se vprašam. Če govorimo o tem, da bomo ravnali po tržnem sistemu, kar ponudiš, če nekdo kupi, prav, če pa ne kupi, pa zato ne boš nič dobil plačano, je res to, kar je bilo prej povedano, da je to nek ostanek nekega sistema, ki živi naprej, neupravičen in na račun drugih. Če bi jaz samo povedal številko, koliko na primer iz našegakonca plačajo ljudje tej gospodarski zbornici, od česar nimajo popolnoma nič, ampak res nimajo nič, razen to, da so mnogi na nek način stavkali in niso hoteli plačevati in seveda je potem bilo njim zaseženo na razne načine imetje ali so na kakršenkoli drug način izterjali od njih to članarino. Seveda se jezijo ti podjetniki na davkarijo, seveda pa davkarija pri tem ni nič kriva, ker samo izvaja, kar je njena naloga.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg443">Zdaj, malce težko razumem. En majhen podjetnik mora svoje plačati, ne glede na to, ali ima od tega kaj ali ne, medtem ko država vlada, lahko si privošči, da ustavno sodišče izda odločbo, da je treba stvari uskladiti, država pa nič. Kje je logika, da nekdo je takoj "štrafan", takoj ga najdejo, medtem ko si lahko drugi privoščijo to, da sploh ne reagirajo.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg444">Zdaj seveda sem tu v tem uvodnem delu tega zakona prebiral in med drugim pravi, zdaj ne vem, to je neko parafriziranje teksta, ki ga je izdalo ustavno sodišče, ampak pravi takole: Preko obveznega članstva je zagotovljena verodostojnost dela zbornice ter njeni strokovnosti, objektivnosti itn. Kako je sedaj na ta način zagotovljena verodostojnost in pa strokovnost? Recimo formulacija, ki pravi, da je obvezno članstvo podlaga za ugotavljanje in spremljanje skupnih interesov gospodarskih subjektov in priprava podlag. Ljudje božje, jaz se bojim, da je to nek način pokrivanje nečesa, do česar ta gospodarska zbornica zasigurno ni upravičena! Bom dal primerjavo. Poglejte, saj smo bili pri kmetijsko-gozdarski zbornici pripravljeni pa na drug način. Reklismo, da je potrebno imeti takšno višino katastrskega dohodka. Če ne dosežeš 20.000, pa nisi član in ne boš imel pravice. Pri tem pa še vlečemo in vlečemo to zgodbo naprej. Jaz upam, da bomo, če bo, jaz bom tudi proti temu glasoval, ampak upam, da bomo enkrat prišli do tega in da bo tudi to ukinjeno in da bo dejansko interesno združenje podjetnikov, ki bodo imeli interes ščititi svoje interese, in prav je, da tako, kot so bila včasih razna združenja, da ne posežem predaleč v zgodovino, verjamem, da bodo tudi v prihodnosti, ampak ne pa na tak način ljudi prisiljevati v neko združenje. Če govorimo, da si v nekaj prisiljen, potem zagotovo to tudi ni v skladu z našo ustavo. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg445">Hvala, kolega Demšar. Razprava, Zoran Lešnik.</seg>
             </u>
             <note type="speaker">ZORAN LEŠNIK:</note>
-            <u who="#SDZ2.LešnikZoran" ana="#regular">
+            <u who="#LešnikZoran">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg446">Sem proti obveznemu članstvu. Prepričan sem, da je obvezno članstvo potuha nekomu, v tem primeru voljenim in zaposlenim, konkretno v zbornici, gospodarski zbornici, poudarjam.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg447">Obvezno članstvo je na koncu koncev tudi proti ustavno, čeprav ustavno sodišče dovoljuje nekatere izjeme. Sicer pa iz svojih življenjskih izkušenj, tako kot je malo prej povedal kolega Demšar, vem, da še nobena prisila ni rodila dobrih rezultatov. Tako ali drugače je rodila odpor. Ne nazadnje zbornica se zavzema za razbremenitev gospodarstva. Z obveznim članstvom pa predpisujemo tudi obvezno članarino in s to članarino zbornica kar pošteno obremenjuje gospodarstvo. Prepričan sem, da se bo gospodarstvo vključevalo v zbornico, če bo videlo določene koristi. Te pa bodo nesporno, če bo članstvo prostovoljno in bodo voljeni in zaposleni delali tako, da bodo rezultati za gospodarstvo privlačni. Predloga zakona o spremembah in dopolnitvah zakona o gospodarski zbornici prav zaradi povedanega ne bom podprl. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg448">Hvala, kolega Lešnik. Slabi dve minutki je bilo. Želi še kdo besedo? Predlagatelj zakona, gospod Horvat.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg449">Hvala lepa za besedo, gospod predsednik. Spoštovane kolegice in kolegi, dovolite mi nekaj besed še ob koncu. Kljub temu, da pravite nekateri, da ne boste tega zakona podprli, mislim, da je to slabša izbira med slabimi, če mislite, da ta ni dobra. Ostati pri zakoni iz leta 1990, kar je dejansko nevzdržno, da tako dolgo ni bil spremenjen, je pa res najslabša rešitev. In ni točno tisto, kar je kolega Brenčič rekel, da se zbornica ni nič spremenila znotraj svoje organiziranosti. Zakonodajalec in vlada nista svojega naredila. Zbornica se je znotraj spremenila, ker po statutu zbornice je organiziranost že bistveno drugačna, kot pa v zakonu piše, prav v tem smislu, kot je tu tudi predlagano, tako panožna združenja, tako območne zbornice, večja decentralizacija in tako dalje. To je eno - da si nalijemo čistega vina in da govorimo resnico, ne pa na pamet.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg450">Drugič. Ne oporekam temu, da je legitimna ta razprava glede obveznega članstva ali ne, vendar je ta razprava sedaj, moram žal reči, brezpredmetna. Tu gre za zakon po skrajšanem postopku, za urejanje tistega, kar nalaga temu državnemu zboru ustavno sodišče. Vendar pa, ker je le bilo zelo kategorično rečeno s strani nekaj diskutantov - zelo oster napad na obvezno članstvo, potem bi vam, spoštovani kolegi, najprej priporočil, da si malo bolj pogledate, kako so stvari po svetu urejene, pa tudi kaj preberete, da ne bi preveč napamet govorili. Ne moremo reči, da je ostanek bivšega sistema zbornični sistem, ki je podoben ali pa skoraj enak, kot je v Avstriji, pa kot je v Nemčiji, pa kot je v Italiji, pa kot je v Franciji in še bi lahko našteval - javnopravni model zbornic z obveznim članstvom v večini članic Evropske unije, pri naših glavnih partnericah. Kot pravim, pa s tem ne oporekam, da je ta razprava lahko legitimna, vendar takrat, ko bomo razpravljali o novem zakonu, in sem za to, da pride čim prej na tapeto, vendar mislim, da ni realno, da bi lahko ob vseh drugih nalogah še letos, v tem mandatu sprejeli novi zakon v treh obravnavah. Zato se vračam na to, da je bolje sprejeti tak zakon.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg451">Če hočemo, da bo gospodarstvo organizirano kot del civilne družbe in bo imelo večji vpliv v tej državi - in nima dovolj močnega - potem je tak model organiziranosti primernejši. Ali mislite, da je bolje, da se bodo posamezne politične stranke polastile posameznih delov gospodarstva in indirektno potem upravljale z njim, da bo to boljša rešitev? Slabša bo, če bo taka.</seg>
@@ -1472,11 +1455,11 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg454">In s tem bi zaključil in bi predlagal, da glede na to, da je že kolega Brenčič napovedal, da dveh amandmajev ne bodo podprli v zvezi s posebnim statusom za male podjetnike, ker dejansko rešitev ni v tem. Jaz sem tudi osebno za to, da se vloga malih in srednjih podjetnikov v zborničnem sistemu bolj uveljavi. Vendar tega se ne da samo z zakonom predpisati oziroma zagotoviti. Podatki, ki so bili tukaj navedeni, koliko so vključeni mali podjetniki v posamezne dele zbornice, niso točni. Jaz imam tukaj podatke o vključenosti v združenja in je ta podatek tak, da je pri malih podjetnikih res procent 22, pri srednjih 25, pri velikih 40. Res je, da tu zgleda nesorazmerje, če to primerjamo s številom. Vendar če primerjamo z ekonomskimi kriteriji, kot je bruto domači proizvod, da ne govorimo o izvozu, potem je kar tu približno nekje blizu realnega. Ampak kljub temu sem za to, da bi vključitev malih in srednjih bila večja in bi bil za to, da bi na koncu sprejeli še en dodaten sklep, da se predlaga zbornici, da dejansko zagotovi večjo vključenost malih in srednjih podjetnikov v posamezne oblike združevanja. Moram pa povedati, da v nekaterih združenjih so mali podjetniki, glede na specifiko dejavnosti, celo v pretežni večini, tudi po številu. In pa še to. V območnih zbornicah pravijo, da so odbori podjetnikov številčno celo močnejši, kot so upravni odbori območnih zbornic. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg455">Hvala kolega Horvat. Replika, kolega Demšar.</seg>
             </u>
             <note type="speaker">VINCENCIJ DEMŠAR:</note>
-            <u who="#SDZ2.DemšarVincencij" ana="#regular">
+            <u who="#DemšarVincencij">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg456">Gospod Horvat replicam vam. Postavil bi najprej eno osnovno vprašanje, ki naj ne zveni popopulistično. Koliko bi ostalo še članov, če bi jih povprašali, ali želijo še ostati člani zbornice? Če je zbornica tako prepričana v svoj prav, potem naredite to. Pošljite jim, pa boste dobili odgovor. Zanima me, kakšen bo odgovor. In potem, ko boste enkrat rekli, poglejte, 95 procentov, pa ni treba 95, če boste dobili 70 procentov sedanjega članstva, da želijo še naprej biti člani, pa bom rekel, ja saj, pa je verjetno potem res prav, da ostaja to tako.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg457">Gospod Horvat, kot predlagatelj ste omenili, da če to zavrnemo, je to najslabša rešitev. Vi sami veste, da podjetnike zlasti moti pri vsej tej zgodbi obvezno članstvo. Zakaj ste se temu izognili? Vi bi kot predlagatelj lahko dali pobudo za neko rešitev. Tako kot sem prej omenjal, sem samo eno rešitev povedal: glede na dohodek si član, če imaš nižji dohodek, pa nisi član. To je recimo ena od rešitev. Lahko jih je verjetno še veliko več. Nisem s tega področja doma.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg458">Kolikor vem, vi ste pri gospodarski zbornici bili toliko časa zraven, da stvari sigurno boljše razumete kot jaz. To vam priznam. Ampak na drugi strani pa ti ljudje, ki skoraj vsak ponedeljek, ko imam poslansko pisarno ali je to v Žireh ali je to v Železnikih ali Loki ali Gorenji vasi, pridejo in povedo: "Sedaj so mi zopet sedli na tisti del premoženja, rubili so mi, ker nisem plačeval." To bi rekel prvič.</seg>
@@ -1486,32 +1469,32 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg462">Na koncu. Res bi zbornici priporočal, naredite anketo, koliko jih bi še plačevalo članarino, če bi bilo prostovoljno. Potem boste videli, kje ste z vašim predlogom. Ali ste se s pravega konca stvari lotili ali bi se ga morali drugje. Če se bi lotili s tega vidika, da bi bili tudi rešili vprašanje tega članstva, bi sigurno danes bila velika večina za to, da se tak zakon sprejme oziroma taka sprememba podpre. Hvala lepa</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg463">Hvala. Dve repliki na vašo rapliko. Najprej je kolega Feri Horvat, za njim kolega Potrč.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT:</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg464">Hvala za besedo, gospod predsednik. Spoštovani kolega Demšar! Najprej odgovor na to vprašanje, zakaj mi predlagamo drugačno članstvo ali drugačen koncept. To preprosto ni možno, ker moj predlog izhaja samo iz tega, kar je reklo ustavno sodišče, in ureja samo ta dva segmenta, kako izboljšati organiziranost in usklajevanje stališč v okviru gospodarske zbornice. In pa drugo, kako izboljšati financiranje, da se upraviči obvezna članarina. To je ena zadeva. Takrat, ko bo pa odprta generalna debata o novem zakonu o zbornici ali pa novela zakona o zbornici, takrat pa lahko potem vso paleto damo na mizo pa se o njej pogovarjamo. Zdaj je premalo časa in bi tudi bilo neracionalno, da bi človek čas trošil za to zadevo čeprav nič ne oporekam tej legitimnosti te razprave. Osebno sem pa globoko prepričan, da je za naše razmere, še posebno v tem času vstopanja v Unijo, potrebno imetimočne in učinkovite zbornice, vse tri, ki jih imamo. Dostikrat, ko upravičeno tukaj kritiziramo vlado, posamezna ministrstva itd., je to še dodaten argument, da bi potrebovali bolj učinkovite in sposobne zbornice.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg465">Drugo vprašanje, kar se članarine tiče. Jaz ne zagovarjam sedanje višine članarine v nobeni zbornici, da je prava; verjamem, da je prej visoka kot pa nizka, ampak ponavljam pa to, da pa to, ko so posamezni podjetniki nezadovoljni s tem, kar dobijo, da je krivda na obeh straneh, in pri zbornicah in pa tudi pri njih, koliko koristijo. Eni vem, da zelo dobro koristijo.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg466">In odgovor na tretje vprašanje - in nisem tukaj odvetnik zbornice - kaj nudi. Dosti tega poznam, kar nudi, vprašanje pa je, koliko to znajo podjetniki izkoristiti. Gotovo ima Gospodarska zbornica Slovenije enega najboljših informacijskih tržnih sistemov, ki si ga radi ogledujejo tudi iz tujine. Vprašanje, kdo ga zna uporabiti in koliko ga uporabi. Da ima dobro svetovalno službo, pravno in tudi na drugih področjih, da ima dosti dobro razvito izobraževanje in podobno, tudi nekatere druge zadeve. Da sodeluje v pogajalskih skupinah z Evropsko unijo in tam zastopa interese, verjamem, slovenskega gospodarstva. Dobro, da bi morda včasih lahko bila še bolj glasna v odnosu do vlade, čeprav dostikrat se predsednik vlade ali pa tudi ministri jezijo, če je zbornica glasna, ampak pravim, morala bi biti še bolj glasna, še bolj vplivna, tako kot so zbornice tudi v drugih državah, kjer imajo urejeno celo tako, da ne morejo sprejemati določenih ukrepov vlade ali parlamenti, ne da dobijo tudi mnenje zbornice. Jaz bi nekaj takega recimo uvedel, ko bomo govorili o novem zakonu o zbornicah in podobno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK JANEZ PODOBNIK:</note>
-            <u who="#SDZ2.PodobnikJanez" ana="#chair">
+            <u who="#PodobnikJanez" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg467">Hvala. Replika, kolega Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg468">Hvala lepa. Na kratko bom povedal dve skupini razlogov, zaradi katerih tudi sam menim, da kakorkoli je upravičeno postavljati kot odprto vprašanje, da ali ne obvezno članstvo, je nekaj tudi sprenevedanja, da to postavljamo prav zdaj ob gospodarski zbornici.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg469">Najprej, gre za prilagoditev ustavni odločbi. Ta ustavna odločba je jasno rekla, da zakon o gospodarski zbornici Slovenije ni v nasprotju z ustavo zato, ker ima obvezno članstvo, ampak zato, ker nima dovolj jasnih zagotovil, da bi stališča, oblikovana v organih zbornice, bila vedno reprezentativni odraz interesov gospodarstva, in ker primanjkujejo kriteriji za članarino. To poskuša ta zakon urediti, ob tem da pravi ustavno sodišče, da bi sicer brez obveznega članstva lahko grozila nevarnost, da bi se članski krog zmanjšal,zbornica pa bi izgubila transparentnost pri spremljanju gospodarskega življenja v državi. In da je prav to, kar naj bi imela gospodarska zbornica Slovenije, jasen odnos do sistemskih rešitev, do problemov gospodarjenja, in izražala skupne interese večine gospodarstva, terja, da je članstvo obvezno, da pa se mora odločanje oblikovati na res dovolj reprezentativen način.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg470">Drugič. Tudi sam dobivam opozorila, da je vprašanje obveznega članstva, moram reči, bolj kot samo pri gospodarski zbornici Slovenije, bolj pri obrtni zbornici Slovenije, bolj pri kmetijski zbornici vprašanje in da mnogi temu oporekajo. Mislim reči, zelo na hitro, problem obveznega članstva je enoznačen in smo lahko samo za ali proti, in ni res - to je zahtevno vprašanje. Vendar, kje smo malo dvolični - da to postavljamo sedaj pri gospodarski zbornici Slovenije, ko smo pri obrtni zbornici to sprejeli; ko smo pred kratkim vodili zelo, zelo načelne in resne diskusije, ali je ob bistveno širšem krogu, ki zadeva celo nekaj arov zemljišč, obvezno članstvo sprejemljivo pri kmetijsko-gozdarski zbornici, ko imamo druge zbornice, kot so zdravniška, odvetniška, da jih ne naštevam naprej, kjer je povsod, kar jaz vem, predvideno obvezno članstvo, ker opravljajo te zbornice tudi nekaj funkcij iz okvira javnega interesa in imajo nekatera javna pooblastila. In sedaj postaviti to vprašanje samo in izključno na način, kot je postavljeno pri gospodarski zbornici, in to od poslank in poslancev, ki so, bi rekel, zelo kratek čas nazaj vehementno zagovarjali popolnoma drugačno stališče pri nekem drugem političnem interesu, se mi zdi rahlo sprenevedavo, in to je za mene tudi razlog, da se sedaj ne morem odločiti za to, da bi spremenil stališče in temeljno opredelitev, ki velja pri gospodarski zbornici glede članstva.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg471">Povem pa še enkrat, soglašam, da bo najbrž prav to vprašanje načelno odpreti. Ampak takrat biti pripravljen, imeti podobno stališče pri podobnih vprašanjih. Ne pa od istih poslank in poslancev tako zelo različno, ker gre za en ali drug politični interes. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg472">Hvala lepa, gospod Potrč. Repliko ima gospod Demšar. Gospod Henigman. Prej je napisan gospod Demšar, ampak kar izvolite, kolega Henigman. Je pa to replika?</seg>
             </u>
             <note type="speaker">BENJAMIN HENIGMAN:</note>
-            <u who="#SDZ2.HenigmanBenjamin" ana="#regular">
+            <u who="#HenigmanBenjamin">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg473">Mislim, da se je zmotil. Hvala. Spoštovani! Repliciram gospodu Horvatu kot predlagatelju zakona, in sicer v tistem delu, ko se pogovarjamo o tem, da imamo sedaj na mizi ta zakon in ne moremo drugače.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg474">Spoštovani! Vsi vi, vse poslanske skupine ste brez razprave zavrnili predlog zakona o gospodarskih zbornicah, ki smo ga vložili krščanski demokrati in je prišel na vrsto lani, če ne že predlani, o prostovoljnem članstvu, o več zbornicah po panožnem principu. Vsi ste zavrnili ta koncept. Ta koncept je bil predlagan v času odločbe ustavnega sodišča oziroma v tistem enoletnem času, ko bi lahko kako drugače te stvari pogledali.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg475">Da dopolnim še gospoda Demšarja, ki je očitno zgrešil. Mi smo izhajali takrat pri tem predlogu iz ankete iz leta 1994, ki jo je pripravila vlada Republike Slovenije oziroma takratno ministrstvo za gospodarstvo. Ta anketa je pri približno 2.900 pravnih osebah ugotovila sledeče. Če malo poenostavim - anketa je bila narejena na osnovi malih, srednjih in velikih podjetij - da se od 75% do 95% ali več odstotkov družb ne strinja, z obveznim članstvom in ne strinja predvsem ne z obveznim članstvom, ampak z zakonsko opredelitvijo, da morajo biti člani gospodarske zbornice. Ko se je pa postavilo vprašanje drugače, koliko teh gospodarskih družb, posameznikov in podobno bi pristopilov panožno oziroma gospodarsko zbornico, branžno, ki bi jo sami ustanovili, je bil rezultat sledeč. Da bi več kot polovica se strinjala z ustanovitvijo posebnih zbornic, v katerih bi imeli sami besedo in možnost odločanja, kaj od gospodarske zbornice, panožne želijo. Se pravi, ni res, da bi podjetja ne bila organizirana in da ne bi plačevala prispevka. Moti jih obvezno plačevanje prispevka po zakonu in nemožnost vplivanja na odločitve gospodarske zbornice.</seg>
@@ -1519,35 +1502,35 @@
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg477">Opazk GZS praktično ni bilo, kar so pa bile, pa so bile v smislu, bo že nekako. Očitno so se nekje drugje dogovorili za nekaj drugega. In to nekaj drugega, sem čedalje bolj prepričan, da je ta novela k temu staremu zakonu. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg478">Hvala lepa kolegu Henigmanu. Repliko ima kolega Demšar.</seg>
             </u>
             <note type="speaker">VINCENCIJ DEMŠAR:</note>
-            <u who="#SDZ2.DemšarVincencij" ana="#regular">
+            <u who="#DemšarVincencij">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg479">Prej je bilo rečeno, da smo lahko dvolični, da gre za politični interes. Gospod Potrč, jaz sem rekel to: "Mi s tem sedaj gremo nazaj." Poglejte, gospodarska zbornica ima obvezno članstvo napisano. Pri kmetijsko-gozdarski zbornici smo šli naprej. Smo rekli ne, ni obvezen vsakdo, ki ima za ped zemlje, ampak je nek kriterij, 20.000 na leto katastrskega dohodka moraš imeti na leto, potem si lahko član in imaš tudi vse pravice, ki so s tem v zvezi. Ampak vidite, tu pa tiste male podjetnike tiščimo, da morajo to plačevati. Zato bom gospodu Henigmanu rekel, nič nisem jaz zgrešil, jaz sem rekel, pošljimo podjetnikom vprašanje, ali bi bili še člani. Jaz nisem za anketo, ampak na osnovi tistega denarja, kolikor ste ga zbrali. Meni je eden v nedeljo rekel, da 600 tisoč sem že plačal v desetih letih, od tega pa čisto nič dobil. Za tistih 600 tisoč mu pošljite vprašalnik pa še kuverto notri, da bo odgovoril na vprašanje, ali bo želel biti član ali ne, pa bomo videli, kakšna je slika.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg480">Zdaj tu glede političnega interesa. Gospod Potrč, kakšen je moj politični interes zdaj, da bom jaz v neko smer govoril, če mi konkretni ljudje povedo, kako se jim godi. Jaz ljudi niti nisem vprašal, verjetno niso bili vsi člani SKD. Verjetno ne. Ampak prišli so. Pa so mi rekli, poglej, kakšna je to lumparija, ko so mi to zaplenili, so mi na to sedli in podobne stvari. Ni to, ne morem jaz govoriti o političnem interesu, razen v kolikor sem tu v funkciji kot politik. To pa drži. Drugače, drugače pa tu, jaz razumem te ljudi, ko od nekaj nima nič, mora pa plačevati. Zato mi ne reči, da sem dvoličen ali pa da gre tu za nek poseben političen interes. Hvala lepa.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg481">Hvala lepa kolegu Demšarju. Replika gospoda Ferija Horvata, nato pa gospoda Potrča.</seg>
             </u>
             <note type="speaker">FRANC (FERI) HORVAT):</note>
-            <u who="#SDZ2.HorvatFranc" ana="#regular">
+            <u who="#HorvatFranc">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg482">Hvala za besedo. Ne bom se več kaj dosti oglašal. Vendar pri nekaterih stvareh enostavno ne morem, da ne bi odreagiral. Jaz seveda zavračam tole, kar pravi kolega Henigman, da bi to bilo, ne vem, podpiranje ne vem česa. Nobenega drugega privatnega pa ne kakšnega drugega interesa nimam pri tem, kot to, da odločbo ustavnega sodišča spoštujemo in da sprejmemo to novelo. Kajti drugače bo ostalo stanje odprto, kar je slabše, kot pa če te novele ne bi sprejeli. To je dejstvo.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg483">Drugo, kar se članarine tiče, to kar pravi kolega Demšar. Glejte, bodimo malo bolj objektivni, pa si poglejmo malo podrobneje in besedilo zakona pa še kakšen drug papir, da ne bi preveč na pamet govorili, pa tudi malo demagogijo zganjali. Člen 20.b predvideva, da je osnova za izračun članarine za pravne osebe amortizacija plus vkalkulirane plače, za fizične osebe, samostojne podjetnike, je to dobiček. Skupščina gospodarske zbornice določi letno odmero članarine, tudi najvišji znesekza vse in pa lahko pavšal določi za male podjetnike in pa lahko tudi sprejme oprostitve, se pravi, dana je široka možnost, da ta članarina ni previsoka. Jaz verjamem, da je danes previsoka, ampak ni možno tega urediti zdaj s tem zakonom na boljši način.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg484">In še drugo. Prepričan sem, da bi prostovoljno članstvo - in če bi bilo, bi približno veljalo to, iz te ankete, ki jo je citiral kolega Henigman, pa da bi polovica gospodarskih subjektov bila član zbornice - da bi taka zbornica bila manj vplivna v državi in da bi bila gotovo dražja, kar je osnovno pravilo, čim manj subjektov je, in to je tudi eden od argumentov ustavnega sodišča, ko v obrazložitvi zagovarja obvezno članstvo.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg485">In pa še to, veste take ankete je treba tudi z rezervo vzeti. Kajti, če bi naredili anketo in vprašali slovenske davkoplačevalce, prebivalke in prebivalce in pa podjetja, ali ste za to, da so davki tako visoki, kot so, ali da jih je treba znižati za 30 procentov, verjemite, da bi jih zelo velik procent rekel, da jih je treba zmanjšatiza 30 procentov, ali pa še več.</seg>
             </u>
             <note type="speaker">PREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg486">Hvala lepa. Replika, gospod Potrč.</seg>
             </u>
             <note type="speaker">MIRAN POTRČ:</note>
-            <u who="#SDZ2.PotrčMiran" ana="#regular">
+            <u who="#PotrčMiran">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg487">Gospod Demšar, najprej bi vas le rad, dovolite mi, popravil. V zakonu o kmetijsko-gozdarski zbornici smo določili, ne da so nad določenim zneskom posestniki, lastniki, zakupnik in podobno lahko člani, ampak da morajo biti člani. Določili smo obvezno članstvo, in to najbrž vsi vemo. Jaz nisem nobenemu očital, da ima politični interes, ker ga imamo vsi, jaz temu nič ne ugovarjam. Jaz sem samo rekel,da je mnogokrat preveč očiten in da v tem primeru isti ljudje, ki ste v nekem primeru zelo vehementno zagovarjali obvezno članstvo, tudi iz političnega interesa, zdaj iz drugačnega pač zagovarjate drugačen princip. In dokler diskusija ne bo imela za mene približno enakega predznaka, tako dolgo jaz mislim, da o prvem kriteriju, ko gre samo za uskladitev z odločbo ustavnega sodišča, se mi zdi predlog takšen, kot je pripravljen, dovolj korekten. Hvala.</seg>
             </u>
             <note type="speaker">PODPREDSEDNIK MIROSLAV LUCI:</note>
-            <u who="#SDZ2.LuciMiroslav" ana="#chair">
+            <u who="#LuciMiroslav" ana="#chair">
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg488">Hvala lepa. Ni več replik, ni prijavljenih za razpravo, zaključujem splošno razpravo.</seg>
                <seg xml:id="SDZ2-Redna-18-2000-02-15.seg489">Prehajamo na drugo obravnavo, to je na razpravo in odločanje o posameznih členih predloga zakona. Pregled amandmajev imate na mizi pod številko 35, datirano z datumom 7.2.2000. Zboru pa predlagam, da skladno z drugo alineo 189. člena poslovnika po končani razpravi in glasovanju o amandmajih in členih, h katerim so bili vloženi amandmaji, razpravlja in glasuje skupaj o preostalih členih, h katerim niso bili vloženi amandmaji. Predlagani sklep ne bo sprejet, če bo mu bo nasprotovala najmanj ena tretjina navzočih poslancev. Ugotovimo prisotnost!</seg>
                <note>40 prisotnih.</note>

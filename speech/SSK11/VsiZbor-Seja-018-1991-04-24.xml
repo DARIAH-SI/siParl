@@ -10,8 +10,9 @@
             <title type="main" xml:lang="en">Verbatim record of the session of the Assembly of the Republic of Slovenia</title>
             <title type="sub" xml:lang="sl">Vsi zbori zasedajo skupaj: 18. seja</title>
             <meeting n="18"
-                     corresp="#VsiZbor.1991-04-24.s018-01.DruzPolZb #VsiZbor.1991-04-24.s018-01.ZbObc #VsiZbor.1991-04-24.s018-01.ZbZdruDel"
+                     corresp="#DruzPolZb #ZbObc #ZbZdruDel"
                      ana="#parl.meeting.regular"/>
+            <meeting n="11" corresp="#SK" ana="#parl.term #SK.11">11. sklic</meeting>
             <respStmt>
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -28,19 +29,12 @@
                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
                <orgName xml:lang="en">Institute of Contemporary History</orgName>
                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-               <address>
-                  <street>Kongresni trg 1</street>
-                  <settlement>Ljubljana</settlement>
-                  <postCode>1000</postCode>
-                  <country xml:lang="sl">Slovenija</country>
-                  <country xml:lang="en">Slovenia</country>
-               </address>
                <email>inz@inz.si</email>
             </publisher>
             <distributor>DARIAH-SI</distributor>
             <distributor>CLARIN.SI</distributor>
-            <pubPlace>https://github.com/DARIAH-SI/siParl</pubPlace>
-            <pubPlace>http://hdl.handle.net/11356/1236</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
+            <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
@@ -48,21 +42,17 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                 Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2019-04-24+02:00">24. 4. 2019</date>
+            <date when="2020-02-20+01:00">20. 2. 2020</date>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title>Slovenian parliamentary corpus SlovParl 2.0</title>
-                  <author>Andrej Pančur</author>
-                  <author>Mojca Šorn</author>
-                  <author>Tomaž Erjavec</author>
-                  <imprint>
-                     <distributor>Slovenian language resource repository CLARIN.SI</distributor>
-                     <pubPlace>http://hdl.handle.net/11356/1167</pubPlace>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <bibl>
+               <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
+               <author>Andrej Pančur</author>
+               <author>Mojca Šorn</author>
+               <author>Tomaž Erjavec</author>
+               <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
+               <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -73,11 +63,12 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="div" occurs="1"/>
+               <tagUsage gi="front" occurs="1"/>
+               <tagUsage gi="div" occurs="2"/>
                <tagUsage gi="head" occurs="2"/>
                <tagUsage gi="docDate" occurs="1"/>
                <tagUsage gi="note" occurs="134"/>
+               <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="u" occurs="29"/>
                <tagUsage gi="seg" occurs="215"/>
                <tagUsage gi="gap" occurs="1"/>
@@ -382,23 +373,6 @@
                </item>
             </list>
          </abstract>
-         <particDesc>
-            <org xml:id="VsiZbor.1991-04-24.s018-01.DruzPolZb"
-                 ana="#par.chamber"
-                 corresp="#DruzPolZb">
-               <orgName>Družbeno-politični zbor</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-04-24.s018-01.ZbObc"
-                 ana="#par.chamber"
-                 corresp="#ZbObc">
-               <orgName>Zbor občin</orgName>
-            </org>
-            <org xml:id="VsiZbor.1991-04-24.s018-01.ZbZdruDel"
-                 ana="#par.chamber"
-                 corresp="#ZbZdruDel">
-               <orgName>Zbor združenega dela</orgName>
-            </org>
-         </particDesc>
          <settingDesc>
             <setting>
                <name type="city">Ljubljana</name>
@@ -409,25 +383,29 @@
          </settingDesc>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="sl">
-      <body>
-         <div type="minutes">
+   <text>
+      <front>
+         <div type="preface">
             <head>SKUPNA SEJA</head>
             <head type="session">18. seja</head>
             <docDate>24. aprila 1991</docDate>
             <note type="chairman">PREDSEDOVAL: Dr. France Bučar, predsednik Skupščine Republike Slovenije.</note>
+         </div>
+      </front>
+      <body>
+         <div>
             <note type="time">Seja se je pričela ob 18,53 uri.</note>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg1">Seja je sklicana na podlagi 364. člena Ustave in 134. člena Poslovnika. Sklepčnost smo ravnokar zagotovili in predlog dnevnega reda so VOLITVE IN IMENOVANJA. Zapisnik prejšnje seje ni bil predložen, ker seja ni bila končana, zato je samo ta dnevni red. Mislim, da se s tem strinjate. Ali ima kdo še kakšen predlog za razširitev dnevnega reda? Ker ni, potem prehajamo kar na obravnavanje zadev po tem dnevnem redu. In sicer</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg2">1. Predsednik Izvršnega sveta Skupščine Republike Slovenije predlaga, da Skupščina razreši Staneta Staniča, dolžnosti člana Izvršnega sveta Skupščine Republike Slovenije in republiškega sekretarja za informiranje. Predlog ste prejeli, prav tako tudi mnenje Komisije za volitve, imenovanja in administrativne zadeve. Želi besedo, predstavnik predlagatelja, če je tukaj. Predstavnik komisije - ne želi. Želi k predlogu kdo razpravljati? Školč prosim.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg3">No to je dosti nenavadno, da se pač razrešuje prvega ministra v tej skupščini in da ni človeka, ki je to razrešitev predlagal. Jaz nimam kaj govoriti v obrambo ministra, ali pa za ta predlog, v kolikor gospoda Peterleta ni tukaj, da bi svoje razloge za to podal. Zato predlagam, da se to seveda opravi takrat, ko bo gospod Peterle utegnil to pojasniti, ker se mi zdi, da mora neka "manira" le veljati, če za nekoga glasujemo, da vemo zakaj glasujemo zato, da gre stran. Hkrati pa moram reči, da se mi ne zdi korektno to, da prej gospod Gros ni dobil besede, ker je to na nek način udarec pravilom v skupščini. V kolikor se pač ne da po normalni proceduri govoriti, potem je bom rekel, stvar dosti problematična. Mislim pa, da je treba to zadevo umakniti, ker pač gospoda Peterleta ni, da bi tukaj pojasnil in če ni pojasnil, se mi zdi, da ne moremo slepo dvigovati rok za njegove predloge. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg4">Hvala lepa, torej kar se tiče prigovora na prejšnjo sejo, to zdaj ni več predlog prejšnje seje, če pa smatrate za potrebno, lahko vložite ugovor. Želi še kdo razpravljati? Torej, če ne želi nihče razpravljati, dajem predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg5">Kdor je prosim za to, za predlog kot ste ga slišali, prosim, da glasuje, kdor je za?</seg>
                <note>79 delegatov za.</note>
@@ -439,12 +417,12 @@
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg9">Predsednik Izvršnega sveta Skupščine Republike Slovenije predlaga, da skupščina izvoli Jelka Kacina, za člana Izvršnega sveta in ga imenuje za Republiškega sekretarja za informiranje. Predlog ste prejeli, predstavnik predlagatelja želi besedo? Ne želi. Želi besedo predstavnik komisije. Ne želi. Želi o predlogu kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg10">Hvala za besedo. Rad bi samo povedal to, da poleg tega, da niste gospodu Grosu dali besede, niste razpravljali oz. dali na glasovanje predloga, ki ga je podal</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg11">Školč, namreč, da se glasovanje o vsem tem preloži, ko bo predlagatelj tu in ko bo ustno tudi nam, tako kot je Komisiji za volitve, imenovanje in administrativne zadeve razložil razloge za te zamenjava. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg12">Hvala lepa. Če je bil to predlog, sem verjetno preslišal, potem se oproščam in dajem zato predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg13">Ali smo za to, da o teh predlogih, ki jih izstavlja Izvršni svet, in kjer ni obrazložitve predlagatelja, ne glasujemo danes. Kdor je prosim, za ta predlog, naj pritisne na tipko? Torej želijo še enkrat pojasnilo. Stavljen je bil predlog, da o razrešitvah in imenovanjih, ki jih predlaga Izvršni svet in jih njegov predstavnik ne obrazloži, tukaj ne razpravljamo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg14">To je zdaj predlog, če se s tem strinjate, prosim, da potrdite svoje stališče.</seg>
@@ -457,7 +435,7 @@
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg18">Nadaljujemo z razpravo, prosim?</seg>
             </u>
             <note type="speaker">Dr. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg19">Spoštovani kolegi, poslanci, en od 79 glasov za razrešitev ministra Staniča je bil tudi moj, ker sem mislil, da glasujemo o predlogu, da se stvar odloži z dnevnega reda, pa mislim, da bi tudi 78 glasov zadoščalo za razrešitev. Jaz bi rad nekaj besed rekel v zvezi s predlogom tukaj nenavzočega predsednika vlade, mandatarja te vlade, ki ima seveda edini pravico predlagati spremembe v vladi, in sicer v zvezi z njegovim predlogom, da gospoda Jelka Kacina izvolimo za ministra za informiranje. Nedvomno ima kandidat veliko poguma, izpričal ga je nedvomno na področju, ki ga do zdaj opravlja, kjer bi to rekel, da je skoraj dolžnost oziroma profesionalna deformacija, imeti pa seveda človek mora veliko poguma, če gre v takšnih razmerah v takšne razrešitve, kateri smo bili priča danes in takšnega imenovanja brez prisotnosti mandatarja, v takšen riziko, ki je povezan z ministrskim položajem. No pa nisem mislil govoriti in spraševati o tem.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg20">Moja vprašanja se nanašajo na poglede gospoda Kacina na tisto področje, ki naj bi ga v vladi zastopal. Prvo vprašanje je za gospoda Kacina, kako ocenjuje delovanje Sekretariata za informiranje pod vodstvom gospoda Staniča v preteklih 300 dnevih.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg21">Drugo vprašanje se nanaša na to, kakšen je odnos gospoda Kacina do razprave v tej skupščini, znane - povedal bom na kratek možen način - kot afera "Labodji spev". Tretje vprašanje, prosim gospoda Kacina, da opredeli svoje stališče do predloga za odvzem akreditivov Majde Vukelič v tej skupščini in do nedavnega sklepa skupščinske komisije o razrešitvi Alenke Leskovic. Naslednje vprašanje se nanaša na stališče gospoda Kacina do kritike, ki je prišla zlasti iz vrst opozicije in tudi iz strokovne javnosti na račun vsebine zakona o RTV, način sprejema tega zakona, možnosti vpliva opozicije in civilne družbe in tudi zaposlenih na imenovanje in delovanje direktorjev in urednikov. Sprašujem gospoda Kacina, ali lahko javno zagotovi, da bodo v javnosti obravnavana tudi tista stališča, s katerimi se osebno ne strinja, npr. glede Deklaracije za mir, takojšnje demilitarizacije in mirovnega člena slovenske ustave.</seg>
@@ -465,21 +443,21 @@
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg23">Končno ga sprašujem, ali nam lahko zagotovi, da bo kot minister za informiranje deloval v interesu širjenja svobode govora in tiska in za uveljavljanje svobode informiranja, ne pa predvsem kot predstavnik vladajočih struktur ali celo vladajoče koalicije. Vsa ta vprašanja so bila povedana z naslednjim namenom. Ali nam lahko gospod Kacin zagotovi ali nam želi zagotoviti, skratka, ali nas želi prepričati, da naj bi tudi iz opozicije, tudi iz SDP glasovali za njegovo izvolitev in seveda vprašanje, s čim nas želi prepričati, da je to njegovo imenovanje tudi v korist poslancev, ki sedimo v opozicijskih klopeh. Če je vprašanj preveč, če so preveč strokovna in če je potrebno kaj dalj časa za odgovor nanje, potem bi bilo dobro, da se vrnemo k predlogu gospoda Školča in obravnavamo to naslednjič ob prisotnosti gospoda Peterleta. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg24">Želi gospod Kacin na to vprašanje odgovoriti? Ne želi? Želi še kdo razpravljati? Bi odgovoril? Prosim.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SSK11.KacinJelko1955" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg25">Spoštovano predsedstvo, poslanke in poslanci! Gospod Ribičič je zastavil toliko vprašanj, da jaz od prvega trenutka nisem beležil, ker jih je cela serija in bi težko po spominu odgovoril na vsakega od njih. Hvala za pomoč. Rekel bi vam takole.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg26">Kar zadeva, ocenjevanje delovanja Sekretariata za informiranje pod vodstvom gospoda Staneta Staniča v preteklih 300 dnevih, ga jaz težko ocenjujem. Rekel bom takole. Gospoda Staniča cenim predvsem kot človeka, kot delavca, ki si je prizadeval, da bi na tem področju opravil svoje poslanstvo, ki ga je v tej vladi imel, ampak danes smo v situaciji, ko nas do tega 23. junija loči manj kot dva meseca in mislim, da ste oceno dela tega sekretariata dali s tem, ko ste dali razrešnico dosedanjemu sekretarju za informiranje in mislim, da je moje dopolnjevanje te ocene nepotrebno. Pri tem pa želim na vsak način <gap reason="inaudible"/>
                </seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg27">Pardon, tu moram vskočiti v pojasnilo in se opravičiti. Naredil sem poslovniško napako, ker zdajle ugotavljam, da je imenovanje in razreševanje članov Izvršnega sveta po tem dodatnem poslovniku sicer lahko javno ali tajno na podlagi zahteve katerihkoli poslancev, če se pa odločimo za javno glasovanje, potem je pa treba poimensko poklicati. To bom potem ponovno dal na glasovanje, da se odločite o načinu, ali gremo na tajno, ali na poimensko glasovanje.</seg>
             </u>
             <note type="speaker">JELKO KACIN:</note>
-            <u who="#SSK11.KacinJelko1955" ana="#regular">
+            <u who="#KacinJelko">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg28">Torej, kar zadeva druga vprašanja, naj pojasnim odnos do razprave v tej skupščini, znane pod afero "Labodji spev". Večkrat je bila uporabljena ta terminologija, tako da vaše vprašanje ni jasno. Ne vem na kateri primer mislite.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg29">Kar zadeva Majdo Vukelič in Alenko Leskovic, gre za zadeve, ki so se zgodile tukaj v skupščini. Mislim, da ima vsak od delavcev te skupščine pravico, da se na ta postopek pritoži in da prek normalnih organov uveljavi svoje pravice, v kolikor so bile kršene. Bo pa ta procedura pokazala, ali so bile napake storjene ali ne. Težko se je opredeljevati naprej kar takole, ker jaz v tej stvari nisem sodeloval, nisem se pogovarjal o tej stvari ne s prizadetimi ne s tistimi, ki so po vaši oceni vpleteni tukaj v te zadeve.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg30">Kar zadeva vprašanje na ljubljanski televiziji, vsebini zakona RTV, načinu sprejemanja tega zakona v parlamentu in na možnost vpliva opozicije, civilne družbe in zaposlenih na imenovanje in delovanje urednikov in direktorjev RTV, vam moram prav tako reči, da nisem sodeloval v pripravi teh odločitev niti v kadrovanju, ker je to stvar Televizije. Preprosto bi vam težko rekel kaj na to temo. "Ali lahko javno zagotovi, da bodo v javnosti enakopravno obranavana tudi tista stališča, s katerimi se osebno ne strinja, npr., glede Deklaracije za mir, takojšnje demilitarizacije in mirovnega člena slovenske ustave". Vsekakor bodo ta stališča javno obravnavana, enakopravno, ne morem pa vam jamčiti, da bodo izglasovana, to je pa drug problem.</seg>
@@ -491,37 +469,37 @@
                <note>Ploskanje</note>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg35">Školč, prosim.</seg>
             </u>
             <note type="speaker">JOŽEF ŠKOLČ:</note>
-            <u who="#SSK11.SkolcJozef1960" ana="#regular">
+            <u who="#ŠkolčJožef">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg36">Hvala lepa. Moram reči, da nad vse cenim to maniro, da se kandidati za ministre tukaj predstavijo. In tudi nobenega dvoma ni, da je gospod Peterle izbral spretnega človeka. Mogoče bo znal odgovoriti tudi na tista vprašanja, na katera gospod Peterle pač noče odgovoriti in se nanašajo tudi na področje, ki ga minister pokriva. Preden bom to zastavil, se mi pa zdi intenca tega nastopa na nek način nevarna in kar sama po sebi vsiljuje tudi druga vprašanja. Gospod Kacin se ponuja kot najboljši zato, ker imamo praktično samo še dva meseca do osamosvojitve. Zanimivo je, da je samo to ministrstvo tisto, ki pač to ugotavlja, druga pa ne; drugače ne bi imeli zadrege, ki smo jo imeli ob predhodni točki. In sama po sebi se vsiljuje misel, da vladajo pač neke izredne razmere in da če ne drugje, bodo v promociji veljale izredne razmere, ker časa primanjkuje, naloga pa je znana. Znotraj tega mi ne bo mogel odgovoriti gospod Kacin, ampak na nek način se mi vsiljuje vprašanje, ali bo potem tudi gospoda Mencingerja zamenjal kod iz Ministrstva za obrambo, ki je pač tisto, ki bedi nad to časovno uro.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg37">Tisto pa, kar se mi zdi, da bi moral gospod Kacin tukaj le povedati, če seveda ve - do sedaj ga ni bilo junaka, ki bi to javno povedal, čeravno je bila dolžnost - je to, kako se bodo ali so se že potrošila sredstva za pluralizacijo medijev. Če zlorabim gospoda Reberca, ki pravi, ko je vprašanje proslave dneva OF in vprašanje 350.000 dinarjev, da to ni mogoče, da bi vsi davkoplačevalci plačevali, potem se mi zdi, da mora biti prav tako javno odgovorjeno na vprašanje, ki meri na osem do desetkrat večji denar. In mene zanima, kam je ta denar šel, če je že šel, oziroma kam bo šel, ali se bo pač delil pod nekimi kriteriji. Mislim, da bi bilo zelo nespretno, če bi gospod Kacin sprejel to ministrstvo in ne znal na to vprašanje natančno odgovoriti. Ker jaz se ne bom zadovoljil s tem prevračanjem besed, ne bom vam pa tudi kratil dragocenega časa, da pač v kolikor - seveda vam ga kratim, vi ga pa po drugi strani nam, ko izsiljujete sestanke, za katere niti osnovnega sklepa ne znate predlagati, kot recimo, da se vlada zamenja.</seg>
                <note>Smeh v dvorani.</note>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg38">To vas spravlja v velike zadrege, tako da jaz tukaj nimam kakšnih posebnih ozirov do tega časa, ki se ga poljubno razmetava. Zdi se mi pa, da je potrebno ta posel korektno opravljati in da je naša vloga tukaj predvsem, da zastavljamo neprijetna vprašanja in da davkoplačevalcem povemo, kam gre njihov denar. Glede tega bomo na koncu odgovornost nosili vsi in ne bose verjeli, tudi vi, ki se vam sedaj to zdi hudo čudno. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg39">Hvala lepa. Ali želi še kdo diskutirali? Prosim, gospod Ribičič.</seg>
             </u>
             <note type="speaker">Dr. CIRIL RIBIČIČ:</note>
-            <u who="#SSK11.RibicicCiril1947" ana="#regular">
+            <u who="#RibičičCiril">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg40">Jaz se ponovno oglašam, zato da bi se zahvalil gospodu Kacinu za dana pojasnila. Vprašanj je bilo precej, nekatera zelo zahtevna, odgovori pa so bili kratki in razumljivo, da vsi niso mogli biti dovolj argumentirani, glede na to, da gre za človeka, ki prihaja iz enega področja na povsem drugo, njemu manj znano področje. Komentiral bi samo dva. Še posebej cenim to, da mu ni vseeno, kaj misli opozicija o njegovem imenovanju in zaradi tega je njegov postopek korekten in ga v okviru teh današnjih možnosti kakršne imamo, ko nimamo možnosti dobiti odgovorov od mandatarja, nam to kar precej pomeni.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg41">Komentiral bi dva odgovora. Prvič, da je imenovanje direktorjev in urednikov pa tudi sprejemanje zakona in tako naprej stvar RTV, v kar se mi ne vmešavamo. Seveda mi vemo za razloge razburjenosti okoli tega vprašanja, seveda pa je problem pri RTV, najkrajše povedano v tem, da se poskuša razmerje političnih sil, določeno v tem parlamentu, prenašati v RTV. To se pravi, da tam ne gre za razmerje sil v javnosti, ampak za razmerje trenutnih političnih sil v tem parlamentu. Skratka odločitve se sprejemajo tukaj na tem mestu ali pa seveda preko Sveta RTV, ki je bil izvoljen in postavljen, glede na to razmerje političnih sil tukaj in to na žalost ni stvar RTV, še najmanj stvar zaposlenih v RTV ali pa civilne družbe.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg42">Drugo vprašanje je bilo ali nam lahko gospod Kacin obljubi, da bo sklical tiskovno konferenco, ko bomo imeli v Sloveniji zbrano celotno opozicijo iz vseh republik. Seveda mi vemo, da jo lahko sklicujemo sami, zato se je vprašanje nanašalo na to, ali bo ta sekretariat tudi, ko gre za opozicijo, ravnal na takšen način, da bo kot državni organ sklical, omogočal tiskovno konferenco na takšen način, da bo to imelo večji odmev kot to lahko sami zagotovimo.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg43">Rekel bi samo še to, kar je bilo deloma že omenjeno, ne gre za to, da bi imenovali mi novega sekretarja za osamosvajanje, kot je bilo možno iz tega odgovora razbrati, gre za sekretarja za informiranje. Razlika pa je tukaj bistvena. Jaz moram reči, da med svobodo tiska in med tisto usmeritvijo, ki misli, da mora v tisku biti samo tisto, kar koristi osamosvojitvi, je zelo velika razlika. Hvala lepa.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg44">Hvala lepa. Želi še kdo razpravljati? V kolikor ne, bi prosim, dal v odločitev - ali gremo za oba primera, na katera bi kasneje navezal še - ker imamo tudi na dnevnem redu - tudi izvolitev predsednika Ustavnega sodišča, ali se odločimo za tajno glasovanje, z listki, ki so že pripravljeni za volitve? V takem primeru bi mi normalno delovali, listke bi vam razdelili. Sedaj se morate pač odločiti, ali gremo na poimensko klicanje in se boste izjasnili. Prosim? Torej treba se je odločiti o eni ali pa drugi obliki odločanja.</seg>
             </u>
             <note type="speaker">ROMAN JAKIČ:</note>
-            <u who="#SSK11.JakicRoman1967" ana="#regular">
+            <u who="#JakičRoman">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg45">Spoštovani zbor, jaz bi predlagal tajno glasovanje, med tem, ko se bodo pa tiskali listki, bi pa vseeno prosil gospoda Kacina, ki je sicer že odgovoril na veliko zastavljenih vprašanj s strani gospoda Ribičiča, da odgovori še na tisto eno, ki smo mu ga zastavili.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg46">Oprostite, razprava o tem je že zaključena. Imeli ste priložnost se javiti, če se niste, razprava je že zaključena. Torej, sprašujem ta zbor, ali se odločimo za tajno glasovanje ali poimensko glasovanje? Predlog je za tajno glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg47">Kdo je prosim za ta predlog?</seg>
                <note>125 delegatov za.</note>
@@ -550,11 +528,11 @@
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg62">Predsedstvo Republike Slovenije predlaga, da skupščina izvoli za predsednika Ustavnega sodišča Republike Slovenije dr. Petra Jambreka. Predlog predsedstva ste prejeli in tudi mnenje Komisije za volitve. Želi besedo predstavnik predlagatelja. Ne. Komisije? Ne želi. Želi o predlogu kdo razpravljati? Prosim, gospod Smole.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg63">Položaj predsednika Ustavnega sodišča je zelo pomemben in zato predlagam tajno glasovanje.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg64">Dajem predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg65">Kdo je za to, da se Petra Jambreka s tajnim glasovanjem voli?</seg>
                <note>93 delegatov za.</note>
@@ -686,43 +664,43 @@
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg144">Komisija za volitve, imenovanja in administrativne zadeve predlaga, da skupščina izvoli za člana Zakonodajno-pravne komisije Skupščine RS Janeza Lampreta in dr. Rajka Pirnata. Predlog ste prejeli. Ali želi besedo predstavnik predlagatelja? Ne. Želi o predlogu kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">SONJA LOKAR:</note>
-            <u who="#SSK11.LokarSonja1948" ana="#regular">
+            <u who="#LokarSonja1948">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg145">Hvala lepa. Ne bi rada razpravljala, samo gospoda dr. Rajka Pirnata bi rada nekaj vprašala. Vi ste pravosodni minister, ste poslanec skupščine v Družbenopolitičnem zboru, ste po funkciji član Sodnega sveta. Kako gledate na to, da bodo ljudje ob vaši izvolitvi v Zakonodajno-pravno komisijo, ki mora, kot vemo, pregledati vsak zakon, ki gre v skupščinsko proceduro, in mnoge med njimi bo predlagalo prav vaše ministrstvo, torej tudi vi sami, zelo verjetno dejali: Kadija te tuži, Kadija ti sudi. Ali menite, da se vaša kandidatura sklada s pravnim načelom, elementarnim za demokratične ureditve, ločitve izvršne in zakonodajne oblasti?</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg146">Hvala lepa. Želi še kdo razpravljati? Rajko Pirnat.</seg>
             </u>
             <note type="speaker">Dr. RAJKO PIRNAT:</note>
-            <u who="#SSK11.PirnatRajko1951" ana="#regular">
+            <u who="#PirnatRajko1951">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg147">Verjetno je jasno, da - in pod tem pogojem sem seveda pristal na svojo kandidaturo v Zakonodajno-pravno komisijo - v njej ne bom kot minister, ampak kot poslanec. Ne glede na to, pa bi rad vprašal tole: ali menite, da v Angliji, kjer je velika večina ministrov tudi poslancev, ni izveden sistem delitve oblasti? Vsi ministri določenega ranga - ker v Angliji imajo različne vrste ministrov. Torej dejstvo personalne povezanosti s samo idejo delitve oblasti ni nujno povezano. Gre za to, da v postopkih, v pravni ureditvi, ki ureja te postopke sprejemanja, lahko pridejo do izraza različna stališča in prepričan sem, da moje članstvo v Zakonodajno-pravni komisiji, čeprav sem s precejšnjim oklevanjem vanj privolil, ne bo nikakor pomenilo, da bom v njej forsiral svoje zakone ali deloval kot predstavnik Izvršnega sveta, ker potem bi podobno lahko postavili za vse ministre, ki so tudi poslanci te skupščine. Gre pač za to, da kot poslanec in kot strokovnjak na nekaterih pravnih področjih menim, da lahko prispevam k delovanju Zakonodajno-pravne komisije. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg148">Hvala lepa. Želi še kdo razpravljati. Prosim.</seg>
             </u>
             <note type="speaker">JOŽE SMOLE:</note>
-            <u who="#SSK11.SmoleJoze1927" ana="#regular">
+            <u who="#SmoleJoze1927">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg149">Ko smo zadnjič morali formirati neko delovno skupino za vojaški zakon, sem jaz predlagal Janeza Janšo kot delegata te skupščine v skupino. Meni je bilo odgovorjeno, da ne more biti, ker je predlagatelj zakona. Tu se mi zdi paralela ista; ne more biti sekretar za pravosodje po moje član Zakonodajno-pravne komisije, ker se pojavlja kot predlagatelj mnogih stvari. In jaz bi prosil, da se vendarle to razdeli. Jaz se zavedam, da je dr. Rajko Pirnat član Družbenopolitičnega zbora, vendarle naj gre v kakšno drugo komisijo, kjer se stvari ne bodo vezale za njegov resor.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg150">Hvala lepa. Želi še kdo razpravljati? Prosim.</seg>
             </u>
             <note type="speaker">VILIJEM SEKEREŠ:</note>
-            <u who="#SSK11.SekeresVilijem1939" ana="#regular">
+            <u who="#SekeresVilijem1939">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg151">Spoštovano predsedstvo, spoštovani kolegi. Sprašujem kolego poslanca Pirnata, če ravno tako želi prispevati k uspešnosti te komisije, kot prispeva tudi Komisiji za ustavna vprašanja. Hvala.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg152">Želi kdo odgovoriti? Prosim, Tomažič.</seg>
             </u>
             <note type="speaker">ANTON TOMAŽIČ:</note>
-            <u who="#SSK11.TomazicAnton1950" ana="#regular">
+            <u who="#TomazicAnton1950">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg153">Torej jaz kot predsednik Zakonodajno-pravne komisije moram reči, da ta komisija nikakor ne deluje po tem principu kontradiktornosti, da bi na eni strani imeli to kot je v postopkih na sodišču in tako dalje, zato ne vidim nobenega nasprotja. Tudi, če bo gospod Pirnat predlagatelj nekega zakona, bomo mi na komisiji vsi skupaj skušali doseči, da bo ta zakon še boljši in tu ne vidim nobene analogije ali pa kakšnega nasprotja. Tudi v poslovniku seveda ni nobene takšne določbe, ki bi to preprečevala. Mi smo ga torej predlagali in je zelo dobrodošel kot strokovnjak posebno na upravnem področju in mislim, da je to dober predlog.</seg>
             </u>
             <note type="speaker">PREDSEDNIK dr. FRANCE BUČAR:</note>
-            <u who="#SSK11.BucarFrance1923" ana="#chair">
+            <u who="#BučarFrance" ana="#chair">
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg154">Če ne želi nihče razpravljati, dajem predlog na glasovanje, pred tem pa prosim, če ponovno preverimo sklepčnost - Družbenopolitični zbor 57; Zbor občin 43; Zbor združenega dela 48. Torej sklepčnost je dana. Dajem predlog na glasovanje.</seg>
                <seg xml:id="SSK11-VsiZbor.1991-04-24.s018-01.seg155">Najprej za izvolitev Janeza Lampreta. Kdo je prosim za?</seg>
                <note>105 delegata za.</note>
