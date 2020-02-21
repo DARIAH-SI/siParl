@@ -94,11 +94,11 @@
                                     </xsl:choose>
                                 </xsl:for-each>
                             </xsl:variable>
-                            <measure unit="texts" quantity="{sum($measures/tei:texts)}">
+                            <measure unit="texts" quantity="{sum($measures/tei:texts)}" xml:lang="en">
                                 <xsl:value-of select="format-number(sum($measures/tei:texts),'#,###')"/>
                                 <xsl:text> texts</xsl:text>
                             </measure>
-                            <measure unit="words" quantity="{format-number(sum($measures/tei:words),'#')}">
+                            <measure unit="words" quantity="{format-number(sum($measures/tei:words),'#')}" xml:lang="en">
                                 <xsl:value-of select="format-number(sum($measures/tei:words),'#,###')"/>
                                 <xsl:text> words</xsl:text>
                             </measure>
