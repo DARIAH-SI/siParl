@@ -513,6 +513,18 @@
                                             <label xml:lang="en">Term 7</label>
                                         </event>
                                     </listEvent>
+                                    <listOrg xml:id="workingBodies">
+                                        <head xml:lang="sl">Delovna telesa Državnega zbora Republike Slovenije</head>
+                                        <head xml:lang="en">Working bodies of the National Assembly of the Republic of Slovenia</head>
+                                        <xsl:for-each-group select="folder[matches(@label,'SDT')]/teiHeader/profileDesc/particDesc/listOrg/org/listOrg[@xml:id='workingBodies']/org" group-by="@xml:id">
+                                            <xsl:sort select="current-grouping-key()"/>
+                                            <org xml:id="{current-grouping-key()}" ana="#parl.committee">
+                                                <orgName>
+                                                    <xsl:value-of select="normalize-space(current-group()[1])"/>
+                                                </orgName>
+                                            </org>
+                                        </xsl:for-each-group>
+                                    </listOrg>
                                 </org>
                                 <xsl:for-each select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listOrg/tei:org[not(@role ='parliament')]">
                                     <xsl:copy-of select="." copy-namespaces="no"/>
