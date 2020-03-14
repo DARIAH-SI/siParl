@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:id="SDT2-OZKGIP-Redna-025-1998-12-08"
-     xml:lang="sl"
-     ana="#parl.sitting">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SDT2-OZKGIP-Redna-025-1998-12-08" xml:lang="sl" ana="#parl.sitting">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -15,6 +12,11 @@
                <persName>Andrej Pančur</persName>
                <resp xml:lang="sl">Kodiranje TEI</resp>
                <resp xml:lang="en">TEI corpus encoding</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0002-1560-4099">Tomaž Erjavec</persName>
+               <resp xml:lang="sl">Jezikoslovna obdelava</resp>
+               <resp xml:lang="en">Linguistic processing</resp>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -29,12 +31,10 @@
             <pubPlace>http://hdl.handle.net/11356/1300</pubPlace>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
-               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
-                                Attribution 4.0 International License</ref>.</p>
-               <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
-                                Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2020-02-23">23. 2. 2020</date>
+            <date when="2020-03-11">11. 3. 2020</date>
          </publicationStmt>
          <sourceDesc>
             <bibl>
@@ -63,6 +63,20 @@
                <tagUsage gi="pc" occurs="348"/>
             </namespace>
          </tagsDecl>
+         <listPrefixDef>
+            <prefixDef ident="mte" matchPattern="(.+)" replacementPattern="http://nl.ijs.si/ME/V6/msd/tables/msd-fslib-sl.xml#$1">
+               <p xml:lang="sl">Zasebni naslovi URI s to predpono kažejo na element fs, ki definirajo slovenske oblikoskladenjske oznake JOS.</p>
+               <p xml:lang="en">Private URIs with this prefix point to feature-structure elements defining the Slovene JOS MSDs.</p>
+            </prefixDef>
+         </listPrefixDef>
+         <appInfo>
+            <application version="1.0" ident="reldi-tagger">
+               <label>CLASSLA-StanfordNLP</label>
+               <desc xml:lang="sl">Oblikoskladenjsko označevanje in lematizacija s programom CLASSLA-StanfordNLP,
+	  izšolanimi za slovenščino in dostopnim na <ref target="https://github.com/clarinsi/classla-stanfordnlp">https://github.com/clarinsi/classla-stanfordnlp</ref>.</desc>
+               <desc xml:lang="en">MSD tagging and lemmatisation with CLASSLA-StanfordNLP trained for Slovene, available from <ref target="https://github.com/clarinsi/classla-stanfordnlp">https://github.com/clarinsi/classla-stanfordnlp</ref>.</desc>
+            </application>
+         </appInfo>
       </encodingDesc>
       <profileDesc>
          <abstract>
@@ -119,6 +133,10 @@
             </setting>
          </settingDesc>
       </profileDesc>
+      <revisionDesc>
+         <change xml:lang="en" when="2020-03-11">
+            <name>Tomaž Erjavec</name>: Add linguistic annotation.</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <front>
@@ -135,7 +153,7 @@
             <u who="#PotočnikFranc" ana="#chair">
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg1">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg1.s1">
-<gap reason="inaudible"/>
+                     <gap reason="inaudible"/>
 <w ana="mte:Agpmsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing" lemma="državen">državnega</w>
 <w ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="zbor">zbora</w>
 <w ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="republika">Republike</w>
@@ -147,7 +165,7 @@
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in">in</w>
 <w join="right" ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="prehrana">prehrano</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg1.s2">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na">Na</w>
 <w ana="mte:Ps1fslp" msd="UposTag=DET|Case=Loc|Gender=Fem|Number=Sing|Number[psor]=Plur|Person=1|Poss=Yes|PronType=Prs" lemma="naš">naši</w>
@@ -158,13 +176,13 @@
 <w ana="mte:Ncmsay" msd="UposTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="sekretar">sekretarja</w>
 <w ana="mte:Ncmsay" msd="UposTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="gospod">gospoda</w>
 <w ana="mte:Npmsay" msd="UposTag=PROPN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing" lemma="Mohorič">Mohoriča</w>
-</s>
-</seg>
+                  </s>
+               </seg>
                <note>?</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg2">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg2.s1">
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg2.s2">
 <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="dneven">Dnevni</w>
 <w join="right" ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="red">red</w>
@@ -200,7 +218,7 @@
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="točka">točka</w>
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="razno">razno</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg2.s3">
 <w ana="mte:Q" msd="UposTag=PART" lemma="še">Še</w>
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="preden">preden</w>
@@ -226,7 +244,7 @@
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="gospod">gospod</w>
 <w join="right" ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Čebulj">Čebulj</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg2.s4">
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="da">Da</w>
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="pa">pa</w>
@@ -246,7 +264,7 @@
 <w ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Štefan">Štefan</w>
 <w join="right" ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Klinc">Klinc</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg2.s5">
 <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="želeti">Želi</w>
 <w ana="mte:Pq-msn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Sing|PronType=Int" lemma="kdo">kdo</w>
@@ -255,7 +273,7 @@
 <w ana="mte:Ncmsl" msd="UposTag=NOUN|Case=Loc|Gender=Masc|Number=Sing" lemma="red">redu</w>
 <w join="right" ana="mte:Vmpn" msd="UposTag=VERB|Aspect=Imp|VerbForm=Inf" lemma="razpravljati">razpravljati</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">?</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg2.s6">
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="v">V</w>
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="kolikor">kolikor</w>
@@ -265,16 +283,16 @@
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="na">na</w>
 <w join="right" ana="mte:Ncnsa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Sing" lemma="glasovanje">glasovanje</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg3">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg3.s1">
 <w ana="mte:Pq-msn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Sing|PronType=Int" lemma="kdo">Kdo</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=VERB|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="za">za</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">?</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg4">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg4.s1">
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="soglasno">Soglasno</w>
@@ -283,7 +301,7 @@
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="red">red</w>
 <w join="right" ana="mte:Appmsnn" msd="UposTag=ADJ|Case=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing|VerbForm=Part" lemma="sprejet">sprejet</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg4.s2">
 <w ana="mte:Agpfsa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Sing" lemma="uvoden">Uvodno</w>
 <w ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="beseda">besedo</w>
@@ -316,8 +334,8 @@
 <w ana="mte:Ncnsa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Sing" lemma="področje">področje</w>
 <w join="right" ana="mte:Ncnsg" msd="UposTag=NOUN|Case=Gen|Gender=Neut|Number=Sing" lemma="ribištvo">ribištva</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
             </u>
             <note type="speaker">GOSPOD MOHORIČ:</note>
             <u who="#unknown-M">
@@ -327,7 +345,7 @@
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="gospod">gospod</w>
 <w join="right" ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="predsednik">predsednik</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg5.s2">
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="na">Na</w>
 <w ana="mte:Agpnsa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Neut|Number=Sing" lemma="kratek">kratko</w>
@@ -347,8 +365,8 @@
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
 <w join="right" ana="mte:Ncnsn" msd="UposTag=NOUN|Case=Nom|Gender=Neut|Number=Sing" lemma="ribištvo">ribištvo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg6">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg6.s1">
 <w ana="mte:Agpnsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Neut|Number=Sing" lemma="slovenski">Slovensko</w>
@@ -376,7 +394,7 @@
 <w ana="mte:Ncnsa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Sing" lemma="gojenje">gojenje</w>
 <w join="right" ana="mte:Ncfpg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="riba">rib</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg6.s2">
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="potem">Potem</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
@@ -415,7 +433,7 @@
 <w ana="mte:Agpfsa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">evropsko</w>
 <w join="right" ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="zakonodaja">zakonodajo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg6.s3">
 <w ana="mte:Agpfsa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Sing" lemma="celoten">Celotno</w>
 <w ana="mte:Agpfsa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">evropsko</w>
@@ -427,8 +445,8 @@
 <w ana="mte:Ncmsd" msd="UposTag=NOUN|Case=Dat|Gender=Masc|Number=Sing" lemma="obseg">obsegu</w>
 <w join="right" ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="dejavnost">dejavnosti</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg7">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg7.s1">
 <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Evropa">Evropa</w>
@@ -453,7 +471,7 @@
 <w ana="mte:Agpmpg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur" lemma="upraven">upravnih</w>
 <w join="right" ana="mte:Ncmpg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Plur" lemma="akt">aktov</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg7.s2">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in">In</w>
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="sicer">sicer</w>
@@ -466,7 +484,7 @@
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in">in</w>
 <w join="right" ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="nadzor">nadzor</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg7.s3">
 <w ana="mte:Mlpnsn" msd="UposTag=ADJ|Case=Nom|Gender=Neut|Number=Sing" lemma="drug">Drugo</w>
 <w ana="mte:Ncnsn" msd="UposTag=NOUN|Case=Nom|Gender=Neut|Number=Sing" lemma="poglavje">poglavje</w>
@@ -475,7 +493,7 @@
 <w ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="tržen">tržna</w>
 <w join="right" ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="ureditev">ureditev</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg7.s4">
 <w ana="mte:Mlonsa" msd="UposTag=ADJ|Case=Acc|Gender=Neut|NumType=Ord|Number=Sing" lemma="tretji">Tretje</w>
 <w ana="mte:Ncnsn" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Sing" lemma="poglavje">poglavje</w>
@@ -489,7 +507,7 @@
 <w ana="mte:Agpmpn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur" lemma="mednaroden">mednarodni</w>
 <w join="right" ana="mte:Ncmpn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="sporazum">sporazumi</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg7.s5">
 <w ana="mte:Vmep-pm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Plur|VerbForm=Part" lemma="ugotoviti">Ugotovili</w>
 <w join="right" ana="mte:Va-r1p-n" msd="UposTag=AUX|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">smo</w>
@@ -570,7 +588,7 @@
 <w ana="mte:Agpnsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Neut|Number=Sing" lemma="morski">morskem</w>
 <w join="right" ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="ribištvo">ribištvu</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg7.s6">
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="potem">Potem</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=VERB|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
@@ -591,8 +609,8 @@
 <w ana="mte:Agpmpn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur" lemma="podzakonski">podzakonski</w>
 <w join="right" ana="mte:Ncmpn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="akt">akti</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s1">
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="poleg">Poleg</w>
@@ -620,7 +638,7 @@
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="pa">pa</w>
 <w join="right" ana="mte:Ncmpa" msd="UposTag=NOUN|Case=Acc|Gender=Masc|Number=Plur" lemma="kader">kadre</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s2">
 <w join="right" ana="mte:Vmpr1p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin" lemma="ocenjevati">Ocenjujemo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -636,7 +654,7 @@
 <w ana="mte:Agcfpg" msd="UposTag=ADJ|Case=Gen|Degree=Cmp|Gender=Fem|Number=Plur" lemma="pomemben">pomembnejših</w>
 <w join="right" ana="mte:Ncfpg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="posledica">posledic</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s3">
 <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Slovenija">Slovenija</w>
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na">na</w>
@@ -650,7 +668,7 @@
 <w ana="mte:Agpfpg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Plur" lemma="poseben">posebnih</w>
 <w join="right" ana="mte:Ncfpg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="izjema">izjem</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s4">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na">Na</w>
 <w ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="področje">področju</w>
@@ -700,7 +718,7 @@
 <w ana="mte:Agpfpa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Plur" lemma="posamezen">posamezne</w>
 <w join="right" ana="mte:Ncfpa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Plur" lemma="vrsta">vrste</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s5">
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="kot">Kot</w>
 <w ana="mte:Vmpr2p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin" lemma="vedeti">veste</w>
@@ -735,7 +753,7 @@
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za">za</w>
 <w join="right" ana="mte:Ncnsa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Sing" lemma="sredozemlje">sredozemlje</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s6">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na">Na</w>
 <w ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="področje">področju</w>
@@ -756,7 +774,7 @@
 <w ana="mte:Agpnsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Neut|Number=Sing" lemma="letošnji">letošnjega</w>
 <w join="right" ana="mte:Ncnsg" msd="UposTag=NOUN|Case=Gen|Gender=Neut|Number=Sing" lemma="leto">leta</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s7">
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="direktiva">Direktiva</w>
 <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z">z</w>
@@ -766,7 +784,7 @@
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za">za</w>
 <w join="right" ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="tuna">tuno</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s8">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v">V</w>
 <w ana="mte:Agpfsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Fem|Number=Sing" lemma="slovenski">slovenski</w>
@@ -786,7 +804,7 @@
 <w ana="mte:Ps1fsip" msd="UposTag=DET|Case=Ins|Gender=Fem|Number=Sing|Number[psor]=Plur|Person=1|Poss=Yes|PronType=Prs" lemma="naš">našo</w>
 <w join="right" ana="mte:Ncfsi" msd="UposTag=NOUN|Case=Ins|Gender=Fem|Number=Sing" lemma="zakonodaja">zakonodajo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s9">
 <w ana="mte:Q" msd="UposTag=PART" lemma="sicer">Sicer</w>
 <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z">z</w>
@@ -795,7 +813,7 @@
 <w ana="mte:Agpnpg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Neut|Number=Plur" lemma="riboloven">ribolovnih</w>
 <w join="right" ana="mte:Ncnpg" msd="UposTag=NOUN|Case=Gen|Gender=Neut|Number=Plur" lemma="sredstvo">sredstev</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s10">
 <w ana="mte:Pd-nsn" msd="UposTag=DET|Case=Nom|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">To</w>
 <w ana="mte:Va-r3p-n" msd="UposTag=AUX|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">so</w>
@@ -813,7 +831,7 @@
 <w ana="mte:Agpfsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Sing" lemma="premajhen">premajhne</w>
 <w join="right" ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="riba">ribe</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s11">
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="zaradi">Zaradi</w>
 <w join="right" ana="mte:Pd-nsg" msd="UposTag=DET|Case=Gen|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">tega</w>
@@ -826,7 +844,7 @@
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="ohranitev">ohranitev</w>
 <w join="right" ana="mte:Ncfpg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="vrsta">vrst</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg8.s12">
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="poleg">Poleg</w>
 <w ana="mte:Pd-nsg" msd="UposTag=DET|Case=Gen|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">tega</w>
@@ -847,8 +865,8 @@
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="reprodukcija">reprodukcija</w>
 <w join="right" ana="mte:Ncfpg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="vrsta">vrst</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg9">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg9.s1">
 <w join="right" ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="zakonodaja">Zakonodaja</w>
@@ -864,7 +882,7 @@
 <w ana="mte:Agpnsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Neut|Number=Sing" lemma="morski">morskem</w>
 <w join="right" ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="ribištvo">ribištvu</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg9.s2">
 <w ana="mte:Agpmpa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Masc|Number=Plur" lemma="potreben">Potrebne</w>
 <w ana="mte:Agpmpa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Masc|Number=Plur" lemma="statističen">statistične</w>
@@ -879,7 +897,7 @@
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="o">o</w>
 <w join="right" ana="mte:Ncfsl" msd="UposTag=NOUN|Case=Loc|Gender=Fem|Number=Sing" lemma="statistika">statistiki</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg9.s3">
 <w ana="mte:Agpnsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Neut|Number=Sing" lemma="strokoven">Strokovno</w>
 <w ana="mte:Ncnsn" msd="UposTag=NOUN|Case=Nom|Gender=Neut|Number=Sing" lemma="delo">delo</w>
@@ -897,7 +915,7 @@
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v">v</w>
 <w join="right" ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="morje">morju</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg9.s4">
 <w ana="mte:Ncmsan" msd="UposTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="nadzor">Nadzor</w>
 <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="nad">nad</w>
@@ -912,7 +930,7 @@
 <w ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="luški">luška</w>
 <w join="right" ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="kapatanija">kapatanija</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg9.s5">
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="z">Z</w>
 <w ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="vidik">vidika</w>
@@ -936,7 +954,7 @@
 <w ana="mte:Agpfsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">Evropski</w>
 <w join="right" ana="mte:Ncfsl" msd="UposTag=NOUN|Case=Loc|Gender=Fem|Number=Sing" lemma="unija">uniji</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg9.s6">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na">Na</w>
 <w ana="mte:Agpmsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Masc|Number=Sing" lemma="bilateralen">bilateralnem</w>
@@ -964,7 +982,7 @@
 <w ana="mte:Agpfsd" msd="UposTag=ADJ|Case=Dat|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">Evropski</w>
 <w join="right" ana="mte:Ncfsd" msd="UposTag=NOUN|Case=Dat|Gender=Fem|Number=Sing" lemma="unija">uniji</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg9.s7">
 <w ana="mte:Ps1nsnp" msd="UposTag=DET|Case=Nom|Gender=Neut|Number=Sing|Number[psor]=Plur|Person=1|Poss=Yes|PronType=Prs" lemma="naš">Naše</w>
 <w ana="mte:Ncnsn" msd="UposTag=NOUN|Case=Nom|Gender=Neut|Number=Sing" lemma="morje">morje</w>
@@ -974,7 +992,7 @@
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="zelo">zelo</w>
 <w join="right" ana="mte:Agpnsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Neut|Number=Sing" lemma="občutljiv">občutljivo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg9.s8">
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="zaradi">Zaradi</w>
 <w ana="mte:Pd-nsg" msd="UposTag=DET|Case=Gen|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">tega</w>
@@ -986,8 +1004,8 @@
 <w ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="kvaliteta">kvaliteto</w>
 <w join="right" ana="mte:Vmpr1p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin" lemma="čuvati">čuvamo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s1">
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="zaradi">Zaradi</w>
@@ -1009,7 +1027,7 @@
 <w ana="mte:Agpmsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing" lemma="nadzoren">nadzornega</w>
 <w join="right" ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="center">centra</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s2">
 <w join="right" ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="center">Center</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -1031,7 +1049,7 @@
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="promet">promet</w>
 <w join="right" ana="mte:Agsmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Sup|Gender=Masc|Number=Sing" lemma="gost">najgostejši</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s3">
 <w ana="mte:Vmbr3s" msd="UposTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="iti">Gre</w>
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za">za</w>
@@ -1053,7 +1071,7 @@
 <w ana="mte:Vmpr3p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin" lemma="delovati">delujejo</w>
 <w join="right" ana="mte:Appnsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|VerbForm=Part" lemma="povezan">povezano</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s4">
 <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z">S</w>
 <w ana="mte:Pd-nsi" msd="UposTag=DET|Case=Ins|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">tem</w>
@@ -1074,7 +1092,7 @@
 <w ana="mte:Agpnpi" msd="UposTag=ADJ|Case=Ins|Degree=Pos|Gender=Neut|Number=Plur" lemma="ploven">plovnimi</w>
 <w join="right" ana="mte:Ncnpi" msd="UposTag=NOUN|Case=Ins|Gender=Neut|Number=Plur" lemma="sredstvo">sredstvi</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s5">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="pri">Pri</w>
 <w ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="reševanje">reševanju</w>
@@ -1087,7 +1105,7 @@
 <w ana="mte:Agpfpg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Plur" lemma="podoben">podobnih</w>
 <w join="right" ana="mte:Ncfpg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="zadeva">zadev</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s6">
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="nadzor">Nadzor</w>
 <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="nad">nad</w>
@@ -1102,7 +1120,7 @@
 <w ana="mte:Appnpg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Neut|Number=Plur|VerbForm=Part" lemma="predpisan">predpisanih</w>
 <w join="right" ana="mte:Ncnpg" msd="UposTag=NOUN|Case=Gen|Gender=Neut|Number=Plur" lemma="sredstvo">sredstev</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s7">
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="zaradi">Zaradi</w>
 <w ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="majhnost">majhnosti</w>
@@ -1124,7 +1142,7 @@
 <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="predvidevati">predvideva</w>
 <w join="right" ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Evropa">Evropa</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s8">
 <w ana="mte:Pp1mpn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Plur|Person=1|PronType=Prs" lemma="jaz">Mi</w>
 <w ana="mte:Va-r1p-n" msd="UposTag=AUX|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">smo</w>
@@ -1145,7 +1163,7 @@
 <w ana="mte:Vmbr3s" msd="UposTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="zahtevati">zahteva</w>
 <w join="right" ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="register">register</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s9">
 <w ana="mte:Pd-nsa" msd="UposTag=DET|Case=Acc|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">To</w>
 <w ana="mte:Ncnsa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Sing" lemma="področje">področje</w>
@@ -1170,7 +1188,7 @@
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in">in</w>
 <w join="right" ana="mte:Ncfpa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Plur" lemma="zveza">zveze</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s10">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tako">Tako</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -1205,7 +1223,7 @@
 <w ana="mte:Agpmsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing" lemma="riboloven">ribolovnega</w>
 <w join="right" ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="vidik">vidika</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg10.s11">
 <w ana="mte:Ncnsn" msd="UposTag=NOUN|Case=Nom|Gender=Neut|Number=Sing" lemma="ministrstvo">Ministrstvo</w>
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za">za</w>
@@ -1232,13 +1250,13 @@
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="ki">ki</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="podružnica">podružnica</w>
-<gap reason="inaudible"/>
-</s>
-</seg>
+                     <gap reason="inaudible"/>
+                  </s>
+               </seg>
                <note>Ni razumljivo.</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg11">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg11.s1">
-<gap reason="inaudible"/>
+                     <gap reason="inaudible"/>
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in">In</w>
 <w ana="mte:Vmpr3s-n" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="imeti">ima</w>
 <w ana="mte:Appnpa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Neut|Number=Plur|VerbForm=Part" lemma="homonologiran">homonologirana</w>
@@ -1247,7 +1265,7 @@
 <w ana="mte:Agpfsa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">Evropsko</w>
 <w join="right" ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="unija">unijo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg11.s2">
 <w ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="cenoven">Cenovna</w>
 <w join="right" ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="politika">politika</w>
@@ -1268,7 +1286,7 @@
 <w ana="mte:Agpfsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">Evropski</w>
 <w join="right" ana="mte:Ncfsl" msd="UposTag=NOUN|Case=Loc|Gender=Fem|Number=Sing" lemma="unija">uniji</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg11.s3">
 <w ana="mte:Pp1mpn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Plur|Person=1|PronType=Prs" lemma="jaz">Mi</w>
 <w ana="mte:Vmpr1p-n" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="imeti">imamo</w>
@@ -1280,7 +1298,7 @@
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
 <w join="right" ana="mte:Agpnsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Neut|Number=Sing" lemma="razumljiv">razumljivo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg11.s4">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="vendar">Vendar</w>
 <w ana="mte:Vmpr1p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin" lemma="delati">delamo</w>
@@ -1290,25 +1308,25 @@
 <w ana="mte:Pd-mpg" msd="UposTag=DET|Case=Gen|Gender=Masc|Number=Plur|PronType=Dem" lemma="ta">teh</w>
 <w join="right" ana="mte:Ncmpg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Plur" lemma="program">programov</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg11.s5">
 <w ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">Evropska</w>
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="unija">unija</w>
 <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="poznati">pozna</w>
 <w ana="mte:Ncmpa" msd="UposTag=NOUN|Case=Acc|Gender=Masc|Number=Plur" lemma="ukrep">ukrepe</w>
-<gap reason="inaudible"/>
-</s>
-</seg>
+                     <gap reason="inaudible"/>
+                  </s>
+               </seg>
                <note>Ni razumljivo.</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg12">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg12.s1">
-<gap reason="inaudible"/>
+                     <gap reason="inaudible"/>
 <w ana="mte:Agpnsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Neut|Number=Sing" lemma="začasen">Začasnega</w>
 <w ana="mte:Ncnsg" msd="UposTag=NOUN|Case=Gen|Gender=Neut|Number=Sing" lemma="skladiščenje">skladiščenja</w>
 <w ana="mte:Ncmpg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Plur" lemma="presežek">presežkov</w>
 <w join="right" ana="mte:Agpmpg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur" lemma="tržen">tržnih</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg12.s2">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tako">Tako</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -1328,7 +1346,7 @@
 <w ana="mte:Va-f1p-n" msd="UposTag=AUX|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Fut|VerbForm=Fin" lemma="biti">bomo</w>
 <w join="right" ana="mte:Vmep-pm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Plur|VerbForm=Part" lemma="ustanoviti">ustanovili</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg12.s3">
 <w ana="mte:Pd-nsn" msd="UposTag=DET|Case=Nom|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">To</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
@@ -1337,7 +1355,7 @@
 <w ana="mte:Agpmpa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Masc|Number=Plur" lemma="kmetijski">kmetijske</w>
 <w join="right" ana="mte:Ncmpa" msd="UposTag=NOUN|Case=Acc|Gender=Masc|Number=Plur" lemma="trg">trge</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg12.s4">
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="potem">Potem</w>
 <w ana="mte:Va-c" msd="UposTag=AUX|Mood=Cnd|VerbForm=Fin" lemma="biti">bi</w>
@@ -1353,7 +1371,7 @@
 <w ana="mte:Agpfsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Sing" lemma="tržen">tržne</w>
 <w join="right" ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="ureditev">ureditve</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg12.s5">
 <w ana="mte:Agpmsnn" msd="UposTag=ADJ|Case=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing" lemma="cel">Cel</w>
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="proces">proces</w>
@@ -1392,7 +1410,7 @@
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
 <w join="right" ana="mte:Ncmpg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Plur" lemma="polž">polžev</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg12.s6">
 <w ana="mte:Pd-msn" msd="UposTag=DET|Case=Nom|Gender=Masc|Number=Sing|PronType=Dem" lemma="ta">Ta</w>
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="pravilnik">pravilnik</w>
@@ -1421,8 +1439,8 @@
 <w ana="mte:Appmpn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|VerbForm=Part" lemma="izdan">izdani</w>
 <w join="right" ana="mte:Ncmpn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="predpis">predpisi</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg13">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg13.s1">
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="potem">Potem</w>
@@ -1434,7 +1452,7 @@
 <w ana="mte:Agpfsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Sing" lemma="državen">državne</w>
 <w join="right" ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="pomoč">pomoči</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg13.s2">
 <w ana="mte:Pp1mpn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Plur|Person=1|PronType=Prs" lemma="jaz">Mi</w>
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v">v</w>
@@ -1473,20 +1491,20 @@
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
 <w ana="mte:Q" msd="UposTag=PART" lemma="predvsem">predvsem</w>
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za">za</w>
-<gap reason="inaudible"/>
-</s>
-</seg>
+                     <gap reason="inaudible"/>
+                  </s>
+               </seg>
                <note>Ni razumljivo.</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg14">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg14.s1">
-<gap reason="inaudible"/>
+                     <gap reason="inaudible"/>
 <w ana="mte:Ncmpa" msd="UposTag=NOUN|Case=Acc|Gender=Masc|Number=Plur" lemma="ribnik">Ribnike</w>
 <w ana="mte:Va-r1p-n" msd="UposTag=AUX|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">smo</w>
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="letos">letos</w>
 <w ana="mte:Vmep-pm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Plur|VerbForm=Part" lemma="razpisati">razpisali</w>
 <w join="right" ana="mte:Ncnpa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Plur" lemma="sredstvo">sredstva</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg14.s2">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tako">Tako</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -1495,7 +1513,7 @@
 <w ana="mte:Ncmpn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="projekt">projekti</w>
 <w join="right" ana="mte:Vmpr3p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin" lemma="teči">tečejo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg14.s3">
 <w ana="mte:Vmpr1p-n" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="imeti">Imamo</w>
 <w ana="mte:Q" msd="UposTag=PART" lemma="tudi">tudi</w>
@@ -1514,7 +1532,7 @@
 <w ana="mte:Agpfsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">Evropske</w>
 <w join="right" ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="unija">unije</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg14.s4">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="kajti">Kajti</w>
 <w ana="mte:Pd-fsn" msd="UposTag=DET|Case=Nom|Gender=Fem|Number=Sing|PronType=Dem" lemma="ta">ta</w>
@@ -1530,9 +1548,9 @@
 <w ana="mte:Appfsd" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|VerbForm=Part" lemma="dosežen">doseženi</w>
 <w ana="mte:Ncfsd" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="starost">starosti</w>
 <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="pred">pred</w>
-<gap reason="inaudible"/>
-</s>
-</seg>
+                     <gap reason="inaudible"/>
+                  </s>
+               </seg>
                <note>Ni razumljivo.</note>
                <gap reason="inaudible"/>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg15">
@@ -1543,7 +1561,7 @@
 <w ana="mte:Ncmpn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="ukrep">ukrepi</w>
 <w join="right" ana="mte:Agpmpn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur" lemma="primerljiv">primerljivi</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg15.s2">
 <w ana="mte:Pi-mpn" msd="UposTag=DET|Case=Nom|Gender=Masc|Number=Plur|PronType=Ind" lemma="nekateri">Nekateri</w>
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="pa">pa</w>
@@ -1555,7 +1573,7 @@
 <w ana="mte:Agpnsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Neut|Number=Sing" lemma="potreben">potrebno</w>
 <w join="right" ana="mte:Vmen" msd="UposTag=VERB|Aspect=Perf|VerbForm=Inf" lemma="uskladiti">uskladiti</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg15.s3">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na">Na</w>
 <w ana="mte:Pd-nsl" msd="UposTag=DET|Case=Loc|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">tem</w>
@@ -1565,13 +1583,13 @@
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="enkrat">enkrat</w>
 <w join="right" ana="mte:Vmep-sm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Sing|VerbForm=Part" lemma="omeniti">omenil</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
-<gap reason="inaudible"/>
-</s>
-</seg>
+                     <gap reason="inaudible"/>
+                  </s>
+               </seg>
                <note>Ni razumljivo.</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16.s1">
-<gap reason="inaudible"/>
+                     <gap reason="inaudible"/>
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="situacija">Situacija</w>
 <w ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="strategija">strategije</w>
 <w ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="razvoj">razvoja</w>
@@ -1583,7 +1601,7 @@
 <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="sektorski">sektorski</w>
 <w join="right" ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="plan">plan</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16.s2">
 <w ana="mte:Pd-nsn" msd="UposTag=DET|Case=Nom|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">To</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
@@ -1609,7 +1627,7 @@
 <w ana="mte:Agpfsd" msd="UposTag=ADJ|Case=Dat|Degree=Pos|Gender=Fem|Number=Sing" lemma="ustrezen">ustrezni</w>
 <w join="right" ana="mte:Ncfsd" msd="UposTag=NOUN|Case=Dat|Gender=Fem|Number=Sing" lemma="komisija">komisiji</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16.s3">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v">V</w>
 <w ana="mte:Pd-msl" msd="UposTag=DET|Case=Loc|Gender=Masc|Number=Sing|PronType=Dem" lemma="ta">tem</w>
@@ -1626,7 +1644,7 @@
 <w ana="mte:Agpmpa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Masc|Number=Plur" lemma="strukturen">strukturne</w>
 <w join="right" ana="mte:Ncmpa" msd="UposTag=NOUN|Case=Acc|Gender=Masc|Number=Plur" lemma="ukrep">ukrepe</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16.s4">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="kajti">Kajti</w>
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="pri">pri</w>
@@ -1646,7 +1664,7 @@
 <w ana="mte:Agpfsg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">Evropske</w>
 <w join="right" ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="unija">unije</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16.s5">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v">V</w>
 <w ana="mte:Pi-mpl" msd="UposTag=DET|Case=Loc|Gender=Masc|Number=Plur|PronType=Ind" lemma="nekateri">nekaterih</w>
@@ -1664,7 +1682,7 @@
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="skozi">skozi</w>
 <w join="right" ana="mte:Ncmsan" msd="UposTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="proračun">proračun</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16.s6">
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tam">Tam</w>
 <w ana="mte:Va-r3p-n" msd="UposTag=AUX|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">so</w>
@@ -1678,7 +1696,7 @@
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in">in</w>
 <w join="right" ana="mte:Ncmpn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="lastnik">lastniki</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16.s7">
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="ker">Ker</w>
 <w ana="mte:Q" msd="UposTag=PART" lemma="še">še</w>
@@ -1701,7 +1719,7 @@
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
 <w join="right" ana="mte:Ncmpa" msd="UposTag=NOUN|Case=Acc|Gender=Masc|Number=Plur" lemma="ladjar">ladjarje</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16.s8">
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="potem">Potem</w>
 <w ana="mte:Q" msd="UposTag=PART" lemma="tudi">tudi</w>
@@ -1709,7 +1727,7 @@
 <w ana="mte:Q" msd="UposTag=PART|Polarity=Neg" lemma="ne">ne</w>
 <w join="right" ana="mte:Vmbr3s" msd="UposTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="prispevati">prispeva</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg16.s9">
 <w ana="mte:Rgs" msd="UposTag=ADV|Degree=Sup" lemma="najprej">Najprej</w>
 <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="morati">mora</w>
@@ -1729,8 +1747,8 @@
 <w ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="evropski">Evropska</w>
 <w join="right" ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="unija">unija</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg17">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg17.s1">
 <w ana="mte:Ncmpn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="ukrep">Ukrepi</w>
@@ -1752,7 +1770,7 @@
 <w ana="mte:Ncfsl" msd="UposTag=NOUN|Case=Loc|Gender=Fem|Number=Sing" lemma="sestava">sestavi</w>
 <w join="right" ana="mte:Ncnsg" msd="UposTag=NOUN|Case=Gen|Gender=Neut|Number=Sing" lemma="ministrstvo">ministrstva</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg17.s2">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="kajti">Kajti</w>
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="vedno">vedno</w>
@@ -1775,7 +1793,7 @@
 <w ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="transakcija">transakcije</w>
 <w join="right" ana="mte:Vmpr3p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin" lemma="potekati">potekajo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg17.s3">
 <w join="right" ana="mte:Vmpr1p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin" lemma="predvidevati">Predvidevamo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -1792,7 +1810,7 @@
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="kadrovsko">kadrovsko</w>
 <w join="right" ana="mte:Appfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|VerbForm=Part" lemma="usposobljen">usposobljena</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg17.s4">
 <w ana="mte:Vmpr1p" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin" lemma="predvidevati">Predvidevamo</w>
 <w join="right" ana="mte:Q" msd="UposTag=PART" lemma="tudi">tudi</w>
@@ -1804,8 +1822,8 @@
 <w ana="mte:Vmpp-pm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Plur|VerbForm=Part" lemma="koristiti">koristili</w>
 <w ana="mte:Ncnpa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Plur" lemma="sredstvo">sredstva</w>
 <w ana="mte:Mlofsg" msd="UposTag=ADJ|Case=Gen|Gender=Fem|NumType=Ord|Number=Sing" lemma="tretji">tretje</w>
-</s>
-</seg>
+                  </s>
+               </seg>
                <note>?-nerazločno</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg18">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg18.s1">
@@ -1818,14 +1836,14 @@
 <w ana="mte:Agpnpg" msd="UposTag=ADJ|Case=Gen|Degree=Pos|Gender=Neut|Number=Plur" lemma="kmetijski">kmetijskih</w>
 <w join="right" ana="mte:Ncnpg" msd="UposTag=NOUN|Case=Gen|Gender=Neut|Number=Plur" lemma="sredstvo">sredstev</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s1">
 <w ana="mte:Agpmpn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur" lemma="mednaroden">Mednarodni</w>
 <w join="right" ana="mte:Ncmpn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="sporazum">sporazumi</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s2">
 <w ana="mte:Pp1mpn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Plur|Person=1|PronType=Prs" lemma="jaz">Mi</w>
 <w ana="mte:Vmpr1p-n" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="imeti">imamo</w>
@@ -1844,7 +1862,7 @@
 <w ana="mte:Q" msd="UposTag=PART|Polarity=Neg" lemma="ne">ne</w>
 <w join="right" ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="izvajati">izvaja</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s3">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v">V</w>
 <w ana="mte:Agpnsl" msd="UposTag=ADJ|Case=Loc|Degree=Pos|Gender=Neut|Number=Sing" lemma="glaven">glavnem</w>
@@ -1859,7 +1877,7 @@
 <w ana="mte:Agpnsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Neut|Number=Sing" lemma="nemogoč">nemogoče</w>
 <w join="right" ana="mte:Vmpn" msd="UposTag=VERB|Aspect=Imp|VerbForm=Inf" lemma="izvajati">izvajati</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s4">
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="da">Da</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=VERB|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
@@ -1884,7 +1902,7 @@
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="težko">težko</w>
 <w join="right" ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="izvedljiv">izvedljiva</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s5">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="vendar">Vendar</w>
 <w ana="mte:Npfsn" msd="UposTag=PROPN|Case=Nom|Gender=Fem|Number=Sing" lemma="Slovenija">Slovenija</w>
@@ -1895,7 +1913,7 @@
 <w ana="mte:Pd-msl" msd="UposTag=DET|Case=Loc|Gender=Masc|Number=Sing|PronType=Dem" lemma="ta">tem</w>
 <w join="right" ana="mte:Ncmsl" msd="UposTag=NOUN|Case=Loc|Gender=Masc|Number=Sing" lemma="sporazum">sporazumu</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s6">
 <w ana="mte:Vmpp-pm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Plur|VerbForm=Part" lemma="poskušati">Poskušali</w>
 <w ana="mte:Px------y" msd="UposTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se">se</w>
@@ -1952,7 +1970,7 @@
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="od">od</w>
 <w join="right" ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="vrednost">vrednosti</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s7">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tako">Tako</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -1972,7 +1990,7 @@
 <w ana="mte:Pd-msg" msd="UposTag=DET|Case=Gen|Gender=Masc|Number=Sing|PronType=Dem" lemma="ta">tega</w>
 <w join="right" ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="sporazum">sporazuma</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s8">
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="do">Do</w>
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="sedaj">sedaj</w>
@@ -1982,7 +2000,7 @@
 <w ana="mte:Va-r3s-y" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin" lemma="biti">ni</w>
 <w join="right" ana="mte:Vmpp-sm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Sing|VerbForm=Part" lemma="izvajati">izvajal</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s9">
 <w ana="mte:Vmpp-pm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Plur|VerbForm=Part" lemma="poskušati">Poskušali</w>
 <w ana="mte:Px------y" msd="UposTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se">se</w>
@@ -1997,7 +2015,7 @@
 <w ana="mte:Ncmsan" msd="UposTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="sporazum">sporazum</w>
 <w join="right" ana="mte:Vmpp-sm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Sing|VerbForm=Part" lemma="izvajati">izvajal</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s10">
 <w ana="mte:Pd-nsn" msd="UposTag=DET|Case=Nom|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">To</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
@@ -2042,7 +2060,7 @@
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="strošek">strošek</w>
 <w join="right" ana="mte:Vmer3s" msd="UposTag=VERB|Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="znižati">zniža</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg19.s11">
 <w ana="mte:Rgp" msd="UposTag=DET|PronType=Int" lemma="koliko">Koliko</w>
 <w ana="mte:Va-f1p-n" msd="UposTag=AUX|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Fut|VerbForm=Fin" lemma="biti">bomo</w>
@@ -2065,8 +2083,8 @@
 <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="med">med</w>
 <w join="right" ana="mte:Ncmpi" msd="UposTag=NOUN|Case=Ins|Gender=Masc|Number=Plur" lemma="ribič">ribiči</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg20">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg20.s1">
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="gospod">Gospod</w>
@@ -2090,8 +2108,8 @@
 <w ana="mte:Vmpp-sm" msd="UposTag=VERB|Aspect=Imp|Gender=Masc|Number=Sing|VerbForm=Part" lemma="poskušati">poskušal</w>
 <w join="right" ana="mte:Vmen" msd="UposTag=VERB|Aspect=Perf|VerbForm=Inf" lemma="odgovoriti">odgovoriti</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANC POTOČNIK:</note>
             <u who="#PotočnikFranc" ana="#chair">
@@ -2104,26 +2122,26 @@
 <w ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="predstavitev">predstavitev</w>
 <w join="right" ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="problematika">problematike</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg21.s2">
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="zdaj">Zdaj</w>
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="pa">pa</w>
 <w ana="mte:Vmpr1s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin" lemma="odpirati">odpiram</w>
 <w join="right" ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="razprava">razpravo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg21.s3">
 <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="želeti">Želi</w>
 <w ana="mte:Pq-msn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Sing|PronType=Int" lemma="kdo">kdo</w>
 <w join="right" ana="mte:Vmpn" msd="UposTag=VERB|Aspect=Imp|VerbForm=Inf" lemma="razpravljati">razpravljati</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">?</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg21.s4">
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="gospod">Gospod</w>
 <w join="right" ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Gasparini">Gasparini</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
             </u>
             <note type="speaker">MARIO GASPARINI:</note>
             <u who="#GaspariniMario">
@@ -2133,7 +2151,7 @@
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="na">na</w>
 <w join="right" ana="mte:Agpnsa" msd="UposTag=ADJ|Case=Acc|Degree=Pos|Gender=Neut|Number=Sing" lemma="kratek">kratko</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg22.s2">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="na">Na</w>
 <w ana="mte:Pd-nsl" msd="UposTag=DET|Case=Loc|Gender=Neut|Number=Sing|PronType=Dem" lemma="tisti">tistem</w>
@@ -2160,14 +2178,14 @@
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="ki">ki</w>
 <w ana="mte:Vmpr3p-n" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="imeti">imajo</w>
-<gap reason="inaudible"/>
-</s>
-</seg>
+                     <gap reason="inaudible"/>
+                  </s>
+               </seg>
                <note>nerazločno!</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg23">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg23.s1">
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg23.s2">
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tukaj">Tukaj</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
@@ -2178,7 +2196,7 @@
 <w ana="mte:Ps1nsls" msd="UposTag=DET|Case=Loc|Gender=Neut|Number=Sing|Number[psor]=Sing|Person=1|Poss=Yes|PronType=Prs" lemma="moj">mojem</w>
 <w join="right" ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="mnenje">mnenju</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg23.s3">
 <w join="right" ana="mte:Q" msd="UposTag=PART" lemma="no">No</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -2201,7 +2219,7 @@
 <w ana="mte:Pg-nsa" msd="UposTag=DET|Case=Acc|Gender=Neut|Number=Sing|PronType=Tot" lemma="ves">vse</w>
 <w join="right" ana="mte:Pd-nsa" msd="UposTag=DET|Case=Acc|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">to</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg23.s4">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="in">In</w>
 <w ana="mte:Vmpr1p-n" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="imeti">imamo</w>
@@ -2246,7 +2264,7 @@
 <w ana="mte:Ncmsi" msd="UposTag=NOUN|Case=Ins|Gender=Masc|Number=Sing" lemma="status">statusom</w>
 <w join="right" ana="mte:Ncmpg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Plur" lemma="ribič">ribičev</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg23.s5">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tako">Tako</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -2257,7 +2275,7 @@
 <w ana="mte:Pd-nsa" msd="UposTag=DET|Case=Acc|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">to</w>
 <w join="right" ana="mte:Vmen" msd="UposTag=VERB|Aspect=Perf|VerbForm=Inf" lemma="urediti">urediti</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg23.s6">
 <w join="right" ana="mte:Vmpr1s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin" lemma="misliti">Mislim</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -2271,7 +2289,7 @@
 <w ana="mte:Pd-msg" msd="UposTag=DET|Case=Gen|Gender=Masc|Number=Sing|PronType=Dem" lemma="ta">tega</w>
 <w join="right" ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="zakon">zakona</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg23.s7">
 <w join="right" ana="mte:Cc" msd="UposTag=CCONJ" lemma="in">In</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -2300,8 +2318,8 @@
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tako">tako</w>
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="naprej">naprej</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg24">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg24.s1">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="ampak">Ampak</w>
@@ -2312,7 +2330,7 @@
 <w ana="mte:Pi-nsa" msd="UposTag=PRON|Case=Acc|Gender=Neut|Number=Sing|PronType=Ind" lemma="nekaj">nekaj</w>
 <w join="right" ana="mte:Mlpnsg" msd="UposTag=ADJ|Case=Gen|Gender=Neut|Number=Sing" lemma="drug">drugega</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg24.s2">
 <w ana="mte:Si" msd="UposTag=ADP|Case=Ins" lemma="z">S</w>
 <w ana="mte:Npfsi" msd="UposTag=PROPN|Case=Ins|Gender=Fem|Number=Sing" lemma="Hrvaška">Hrvaško</w>
@@ -2332,7 +2350,7 @@
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="tako">tako</w>
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="naprej">naprej</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg24.s3">
 <w ana="mte:Va-c" msd="UposTag=AUX|Mood=Cnd|VerbForm=Fin" lemma="biti">Bi</w>
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="pa">pa</w>
@@ -2405,7 +2423,7 @@
 <w ana="mte:Sg" msd="UposTag=ADP|Case=Gen" lemma="do">do</w>
 <w join="right" ana="mte:Npmsg" msd="UposTag=PROPN|Case=Gen|Gender=Masc|Number=Sing" lemma="Umag">Umaga</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg24.s4">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="torej">Torej</w>
 <w ana="mte:Q" msd="UposTag=PART" lemma="samo">samo</w>
@@ -2422,7 +2440,7 @@
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="dol">dol</w>
 <w join="right" ana="mte:Ncmpd" msd="UposTag=NOUN|Case=Dat|Gender=Masc|Number=Plur" lemma="ribič">ribičem</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg24.s5">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="o">O</w>
 <w join="right" ana="mte:Ncmsl" msd="UposTag=NOUN|Case=Loc|Gender=Masc|Number=Sing" lemma="status">statusu</w>
@@ -2431,13 +2449,13 @@
 <w ana="mte:Q" msd="UposTag=PART|Polarity=Neg" lemma="ne">ne</w>
 <w join="right" ana="mte:Vmpr1s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin" lemma="govoriti">govorim</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg24.s6">
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="hvala">Hvala</w>
 <w join="right" ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="lep">lepa</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANC POTOČNIK:</note>
             <u who="#PotočnikFranc" ana="#chair">
@@ -2445,19 +2463,19 @@
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg25.s1">
 <w join="right" ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="hvala">Hvala</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg25.s2">
 <w ana="mte:Q" msd="UposTag=PART" lemma="še">Še</w>
 <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="želeti">želi</w>
 <w join="right" ana="mte:Pq-msn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Sing|PronType=Int" lemma="kdo">kdo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">?</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg25.s3">
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="gospod">Gospod</w>
 <w join="right" ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Božič">Božič</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
             </u>
             <note type="speaker">IVAN BOŽIČ:</note>
             <u who="#BožičIvan">
@@ -2506,7 +2524,7 @@
 <w ana="mte:Q" msd="UposTag=PART|Polarity=Neg" lemma="ne">ne</w>
 <w join="right" ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="izvajati">izvaja</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg26.s2">
 <w ana="mte:Pp1-pd" msd="UposTag=PRON|Case=Dat|Number=Plur|Person=1|PronType=Prs" lemma="jaz">Nam</w>
 <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="omogočati">omogoča</w>
@@ -2530,16 +2548,16 @@
 <w ana="mte:Ncfsg" msd="UposTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="škoda">škode</w>
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za">za</w>
 <w ana="mte:Ncnsa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Sing" lemma="izvajanje">izvajanje</w>
-<pc join="right" ana="mte:Z" msd="UposTag=PUNCT">&quot;</pc>
+<pc join="right" ana="mte:Z" msd="UposTag=PUNCT">"</pc>
 <w join="right" ana="mte:Npmsg" msd="UposTag=PROPN|Case=Gen|Gender=Masc|Number=Sing" lemma="Aqi">Aqija</w>
-<pc join="right" ana="mte:Z" msd="UposTag=PUNCT">&quot;</pc>
+<pc join="right" ana="mte:Z" msd="UposTag=PUNCT">"</pc>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
 <w ana="mte:Q" msd="UposTag=PART" lemma="še">še</w>
 <w ana="mte:Vmep-pm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Plur|VerbForm=Part" lemma="ohraniti">ohranili</w>
 <w ana="mte:Pd-fsa" msd="UposTag=DET|Case=Acc|Gender=Fem|Number=Sing|PronType=Dem" lemma="ta">to</w>
 <w join="right" ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="pogodba">pogodbo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg26.s3">
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="da">Da</w>
 <w ana="mte:Px------y" msd="UposTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se">se</w>
@@ -2582,13 +2600,13 @@
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="unija">unija</w>
 <w join="right" ana="mte:Vmep-sf" msd="UposTag=VERB|Aspect=Perf|Gender=Fem|Number=Sing|VerbForm=Part" lemma="zaračunati">zaračunala</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg26.s4">
 <w ana="mte:Q" msd="UposTag=PART" lemma="samo">Samo</w>
 <w join="right" ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="pripomba">pripomba</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANC POTOČNIK:</note>
             <u who="#PotočnikFranc" ana="#chair">
@@ -2601,8 +2619,8 @@
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="gospod">gospod</w>
 <w join="right" ana="mte:Npmsn" msd="UposTag=PROPN|Case=Nom|Gender=Masc|Number=Sing" lemma="Ilič">Ilič</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
             </u>
             <note type="speaker">GOSPOD ILIČ:</note>
             <u who="#unknown-M">
@@ -2611,7 +2629,7 @@
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="čisto">Čisto</w>
 <w join="right" ana="mte:Agpnsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Neut|Number=Sing" lemma="kratek">kratko</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg28.s2">
 <w ana="mte:Pd-nsn" msd="UposTag=DET|Case=Nom|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">To</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
@@ -2669,7 +2687,7 @@
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="lahko">lahko</w>
 <w join="right" ana="mte:Vmer3s" msd="UposTag=VERB|Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="uloviti">ulovi</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg28.s3">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="zdaj">Zdaj</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -2692,8 +2710,8 @@
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="v">v</w>
 <w join="right" ana="mte:Npmsan" msd="UposTag=PROPN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="Rovinj">Rovinj</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
             </u>
             <note type="speaker">PREDSEDNIK FRANC POTOČNIK:</note>
             <u who="#PotočnikFranc" ana="#chair">
@@ -2701,14 +2719,14 @@
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg29.s1">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="dobro">Dobro</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg29.s2">
 <w ana="mte:Q" msd="UposTag=PART" lemma="še">Še</w>
 <w ana="mte:Vmpr3s" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="želeti">želi</w>
 <w join="right" ana="mte:Pq-msn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Sing|PronType=Int" lemma="kdo">kdo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">?</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <note>Ne.</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg30">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg30.s1">
@@ -2721,7 +2739,7 @@
 <w ana="mte:Ncmda" msd="UposTag=NOUN|Case=Acc|Gender=Masc|Number=Dual" lemma="predlog">predloga</w>
 <w join="right" ana="mte:Ncmpg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Plur" lemma="sklep">sklepov</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg30.s2">
 <w ana="mte:Pp1mpn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Plur|Person=1|PronType=Prs" lemma="jaz">Mi</w>
 <w ana="mte:Va-r1p-n" msd="UposTag=AUX|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">smo</w>
@@ -2749,7 +2767,7 @@
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="predlog">predlog</w>
 <w join="right" ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="sklep">sklepa</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg30.s3">
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="odbor">Odbor</w>
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za">za</w>
@@ -2781,21 +2799,21 @@
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
 <w join="right" ana="mte:Ncnsn" msd="UposTag=NOUN|Case=Nom|Gender=Neut|Number=Sing" lemma="ribištvo">ribištvo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg30.s4">
 <w ana="mte:Pd-nsn" msd="UposTag=DET|Case=Nom|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">To</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
 <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="načelen">načelni</w>
 <w join="right" ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="sklep">sklep</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg31">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg31.s1">
 <w ana="mte:Mlpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Gender=Masc|Number=Sing" lemma="drug">Drugi</w>
 <w join="right" ana="mte:Cc" msd="UposTag=CCONJ" lemma="pa">pa</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg31.s2">
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="odbor">Odbor</w>
 <w ana="mte:Vmbr3s" msd="UposTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="predlagati">predlaga</w>
@@ -2837,7 +2855,7 @@
 <w ana="mte:Ncnsl" msd="UposTag=NOUN|Case=Loc|Gender=Neut|Number=Sing" lemma="področje">področju</w>
 <w join="right" ana="mte:Ncnsg" msd="UposTag=NOUN|Case=Gen|Gender=Neut|Number=Sing" lemma="ribištvo">ribištva</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg31.s3">
 <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="državen">Državni</w>
 <w ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="sekretar">sekretar</w>
@@ -2848,7 +2866,7 @@
 <w ana="mte:Ncmsi" msd="UposTag=NOUN|Case=Ins|Gender=Masc|Number=Sing" lemma="predlog">predlogom</w>
 <w join="right" ana="mte:Ncmsg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Sing" lemma="sklep">sklepa</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg31.s4">
 <w ana="mte:Vmpr3s-n" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="imeti">Ima</w>
 <w ana="mte:Pq-msn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Sing|PronType=Int" lemma="kdo">kdo</w>
@@ -2856,11 +2874,11 @@
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za">za</w>
 <w join="right" ana="mte:Vmen" msd="UposTag=VERB|Aspect=Perf|VerbForm=Inf" lemma="dopolniti">dopolniti</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">?</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg31.s5">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="dobro">Dobro</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg31.s6">
 <w ana="mte:Cc" msd="UposTag=CCONJ" lemma="ampak">Ampak</w>
 <w ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="glede">glede</w>
@@ -2907,7 +2925,7 @@
 <w ana="mte:Ncmpl" msd="UposTag=NOUN|Case=Loc|Gender=Masc|Number=Plur" lemma="predlog">predlogih</w>
 <w join="right" ana="mte:Ncmpg" msd="UposTag=NOUN|Case=Gen|Gender=Masc|Number=Plur" lemma="sklep">sklepov</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg31.s7">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="torej">Torej</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -2926,16 +2944,16 @@
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="na">na</w>
 <w join="right" ana="mte:Ncnsa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Sing" lemma="glasovanje">glasovanje</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg32">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg32.s1">
 <w ana="mte:Pq-msn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Sing|PronType=Int" lemma="kdo">Kdo</w>
 <w ana="mte:Va-r3s-n" msd="UposTag=VERB|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="za">za</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">?</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <note>12 članov.</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg33">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg33.s1">
@@ -2943,8 +2961,8 @@
 <w ana="mte:Pq-msn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Sing|PronType=Int" lemma="kdo">kdo</w>
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="proti">proti</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">?</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <note>Nihče.</note>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg34">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg34.s1">
@@ -2952,19 +2970,19 @@
 <w ana="mte:Agpmsny" msd="UposTag=ADJ|Case=Nom|Definite=Def|Degree=Pos|Gender=Masc|Number=Sing" lemma="medsebojen">Medsebojni</w>
 <w join="right" ana="mte:Ncmsn" msd="UposTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="pogovor">pogovor</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">)</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg35">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg35.s1">
 <w ana="mte:Mlomsg" msd="UposTag=ADJ|Case=Gen|Gender=Masc|NumType=Ord|Number=Sing" lemma="tretji">Tretjega</w>
 <w join="right" ana="mte:Va-r1p-y" msd="UposTag=VERB|Mood=Ind|Number=Plur|Person=1|Polarity=Neg|Tense=Pres|VerbForm=Fin" lemma="biti">nismo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg35.s2">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v">V</w>
 <w join="right" ana="mte:Ncmsl" msd="UposTag=NOUN|Case=Loc|Gender=Masc|Number=Sing" lemma="red">redu</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg35.s3">
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="torej">Torej</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">,</pc>
@@ -2976,20 +2994,20 @@
 <w ana="mte:Ncnsi" msd="UposTag=NOUN|Case=Ins|Gender=Neut|Number=Sing" lemma="glasovanje">glasovanjem</w>
 <w join="right" ana="mte:Vmep-pm" msd="UposTag=VERB|Aspect=Perf|Gender=Masc|Number=Plur|VerbForm=Part" lemma="zaključiti">zaključili</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg35.s4">
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="točka">TOČKA</w>
 <w join="right" ana="mte:Rgp" msd="UposTag=ADV|Degree=Pos" lemma="razno">RAZNO</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
                <seg xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg36">
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg36.s1">
 <w ana="mte:Vmpr3s-n" msd="UposTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="imeti">Ima</w>
 <w ana="mte:Pq-msn" msd="UposTag=PRON|Case=Nom|Gender=Masc|Number=Sing|PronType=Int" lemma="kdo">kdo</w>
 <w join="right" ana="mte:Pq-nsa" msd="UposTag=PRON|Case=Acc|Gender=Neut|Number=Sing|PronType=Int" lemma="kaj">kaj</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">?</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg36.s2">
 <w ana="mte:Sl" msd="UposTag=ADP|Case=Loc" lemma="v">V</w>
 <w ana="mte:Cs" msd="UposTag=SCONJ" lemma="kolikor">kolikor</w>
@@ -3008,15 +3026,15 @@
 <w ana="mte:Mdo" msd="UposTag=NUM|NumForm=Digit|NumType=Ord" lemma="25.">25.</w>
 <w join="right" ana="mte:Ncfsa" msd="UposTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="seja">sejo</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">.</pc>
-</s>
+                  </s>
 <s xml:id="SDT2-OZKGIP-Redna-025-1998-12-08.seg36.s3">
 <w ana="mte:Ncfsn" msd="UposTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="hvala">Hvala</w>
 <w ana="mte:Agpfsn" msd="UposTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="lep">lepa</w>
 <w ana="mte:Sa" msd="UposTag=ADP|Case=Acc" lemma="za">za</w>
 <w join="right" ana="mte:Ncnsa" msd="UposTag=NOUN|Case=Acc|Gender=Neut|Number=Sing" lemma="sodelovanje">sodelovanje</w>
 <pc ana="mte:Z" msd="UposTag=PUNCT">!</pc>
-</s>
-</seg>
+                  </s>
+               </seg>
             </u>
             <note type="time">Seja je bila končana ob 18.33 uri.</note>
          </div>
