@@ -39,7 +39,7 @@
   <xsl:template match="tei:title[matches(., '\[siParl-ana\]')]">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
-      <xsl:value-of select="replace(., '\[siParl-ana\]', '[siParl-test]')"/>
+      <xsl:value-of select="replace(., '\[siParl-ana\]', '[siParl-sample]')"/>
     </xsl:copy>
   </xsl:template>
   

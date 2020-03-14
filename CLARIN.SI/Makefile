@@ -1,4 +1,9 @@
-all:	get sample
+all:	get sample vert
+vert:
+	rm -f siParl-vert/*.vert
+	rm -f siParl-vert/*/*.vert
+	bin/parla-tei2vert.pl 'siParl-ana/*/*.xml' siParl-vert
+	bin/joinvert.pl 'siParl-vert/*/*.vert' siParl-vert/siparl20-sample.vert
 sample:
 	ls siParl-ana/S*/*.xml > files.tmp
 	$s files=../files.tmp -xsl:bin/siParl2sample.xsl \
@@ -8,12 +13,17 @@ sample:
 	siParl-ana/siParl-ana.xml > siParl-ana/siParl-sample.xml
 	$s -xi -xsl:bin/pretty.xsl siParl-ana/siParl-sample.xml | $j schema/parla-clarin.rng
 	rm files.tmp
+	rm siParl-ana/*-ana.xml
 get:
 	cp ../../Master/SDT2/KPZONOJFSPD-Redna-021-1998-11-25-ana.xml siParl-ana/SDT2
 	cp ../../Master/SDT2/OZKGIP-Redna-025-1998-12-08-ana.xml siParl-ana/SDT2
 	cp ../../Master/SDT2/OZKŠIŠ-Redna-034-2000-05-18-ana.xml siParl-ana/SDT2
 	cp ../../Master/SDT2-ana.xml siParl-ana
 	cp ../../Master/siParl-ana.xml siParl-ana
+	cp ../../bin/siparl2vert.xsl bin/
+	cp ../../bin/parla-tei2vert.pl bin/
+	cp ../../bin/parla-xml2vert.pl bin/
+	cp ../../bin/joinvert.pl bin/
 
 
 j = java -jar /usr/local/bin/jing.jar 
