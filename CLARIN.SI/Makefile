@@ -1,7 +1,12 @@
-cnv:
+all:	get sample
+sample:
 	ls siParl-ana/S*/*.xml > files.tmp
-	$s files=files.tmp -xsl:siParl2sample.xsl siParl-ana/SDT2-ana.xml > siParl-ana/SDT2-sample.xml
-	$s files=files.tmp -xsl:siParl2sample.xsl siParl-ana/siParl-ana.xml > siParl-ana/siParl-sample.xml
+	$s files=../files.tmp -xsl:bin/siParl2sample.xsl \
+	siParl-ana/SDT2-ana.xml > siParl-ana/SDT2-sample.xml
+	$s -xi -xsl:bin/pretty.xsl siParl-ana/SDT2-sample.xml | $j schema/parla-clarin.rng
+	$s files=../files.tmp -xsl:bin/siParl2sample.xsl \
+	siParl-ana/siParl-ana.xml > siParl-ana/siParl-sample.xml
+	$s -xi -xsl:bin/pretty.xsl siParl-ana/siParl-sample.xml | $j schema/parla-clarin.rng
 	rm files.tmp
 get:
 	cp ../../Master/SDT2/KPZONOJFSPD-Redna-021-1998-11-25-ana.xml siParl-ana/SDT2
