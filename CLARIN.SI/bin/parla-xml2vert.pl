@@ -1,9 +1,9 @@
 #!/usr/bin/perl
-# Finalise XSLT produced vertical file:
+# Finalise XSLT produced vertical file with UD annotations:
 # - remove namespace definitions
 # - de escape XML entities
-# - add Slovene (MTE V6) MSD to English one
-# - change lemma to lemma-pos with Slovene PoS
+# - add Slovene MTE V6 MSD to English one, both for token and head
+# - change token lemma to lemma-pos with Slovene PoS
 #
 use warnings;
 use utf8;
@@ -13,7 +13,6 @@ binmode STDOUT, 'utf8';
 while (<DATA>) {
     chomp;
     my ($sl,$en)=split;
-    # $en{$sl}=$en;
     $sl{$en}=$sl;
 }
 while (<>) {
@@ -26,20 +25,23 @@ while (<>) {
 	s|&lt;|<|g;
 	s|&gt;|>|g;
 	s|&quot;|"|g;
-	($tok, $lemma, $msd_en) = split /\t/;
-	unless (exists $sl{$msd_en}) {
-	    print STDERR "ERROR: Bad MSD $msd_en (localise to Np) in $_!";
-	    $msd_sl = 'Np'; #Napaka, programska
+	($tok, $lemma, $msd_en, 
+	 $ud_pos, $ud_feats) = split /\t/;
+	if ($msd_en =~ /-$/) {
+	    print STDERR "WARN: MSD $msd_en ends in '-', stripping!\n";
+	    $msd_en =~ s/-+$//
 	}
-	$msd_sl = $sl{$msd_en};
+	if (exists $sl{$msd_en}) {$msd_sl = $sl{$msd_en}}
+	else {
+	    print STDERR "ERROR: Unknown MSD $msd_en in $_!\n";
+	    $msd_sl = 'Np'
+	}
 	my ($cat) = $msd_sl =~ /^(.)/;
 	$lemma_pos = $lemma . '-' . lc $cat;
-	print join( "\t", $tok, $lemma_pos, $msd_en, $msd_sl) . "\n";
+	print join( "\t", $tok, $lemma_pos, $msd_en, $msd_sl,
+		    $ud_pos, $ud_feats) . "\n";
     }
     else {
-	# De-escape in attribute values
-	s|&lt;|<|g;
-	s|&gt;|>|g;
 	print;
 	print "\n";
     }
@@ -48,6 +50,7 @@ __DATA__
 Gp-pdm-d	X
 Gp-ppdzd	X
 Gp-ppdzn	X
+Gp-ppmzd	X
 Gp-ppmzn	X
 Gp-ptd-d	X
 Gp-spdzd	X

@@ -2,10 +2,6 @@
 use warnings;
 use utf8;
 use FindBin qw($Bin);
-use File::Temp qw/ tempfile tempdir /;  #creation of tmp files and directory
-`mkdir $Bin/tmp` unless -e "$Bin/tmp";
-$tmpDir="$Bin/tmp";
-my $tempDir = tempdir(DIR => $tmpDir, CLEANUP => 1);
 
 $inDir = shift;
 $outDir = shift;

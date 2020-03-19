@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<!-- Transform one file of siParl Parla-CLARIN TEI encoded corpus to CQP vertical format -->
+<!-- Transform one file (session) siParl Parla-CLARIN TEI encoded corpus
+     to CQP vertical format (which is still XML though, and needs another polish) -->
 <!-- Needs the file with corpus teiHeader as a parameter -->
 <xsl:stylesheet 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -56,23 +57,23 @@
 	<xsl:variable name="titles">
 	  <xsl:for-each select="tei:teiHeader/tei:fileDesc/tei:titleStmt/
 				tei:title[@xml:lang='sl' and @type='sub']">
-	    <xsl:value-of select="concat(., $multi-separator)"/>
+	    <xsl:value-of select="concat(normalize-space(.), $multi-separator)"/>
 	  </xsl:for-each>
 	</xsl:variable>
 	<xsl:value-of select="et:trim($titles)"/>
       </xsl:attribute>
-      
+
       <!-- Reference to mandate, looks like this:
 	   <meeting n="2" corresp="#DZ" ana="#parl.term #DZ.2">2. mandat</meeting>
 	   in corpus teiHeader:
 	   <org xml:id="DZ" role="parliament" ana="#parl.national #par.lower">
-             <orgName xml:lang="sl">Državni zbor Republike Slovenije</orgName>
-             <orgName xml:lang="en">National Assembly of the Republic of Slovenia</orgName>
-             ...
-	       <event xml:id="DZ.1" from="1992-12-23" to="1996-11-27">
-                 <label xml:lang="sl">1. mandat</label>
-                 <label xml:lang="en">Term 1</label>
-               </event>
+	   <orgName xml:lang="sl">Državni zbor Republike Slovenije</orgName>
+	   <orgName xml:lang="en">National Assembly of the Republic of Slovenia</orgName>
+	   ...
+	   <event xml:id="DZ.1" from="1992-12-23" to="1996-11-27">
+  	     <label xml:lang="sl">1. mandat</label>
+	     <label xml:lang="en">Term 1</label>
+	   </event>
       -->
       <xsl:variable name="mandate-ref"
 		    select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:meeting
@@ -80,14 +81,10 @@
 			    contains(tei:catDesc[ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang='en'],
 			    'Legislative period')]/
 			    substring-after(@ana, ' ')"/>
-      <xsl:attribute name="mandate">
-	<xsl:value-of select="key('idr', $mandate-ref, $teiHeader)/
-			      tei:label[ancestor-or-self::tei:*[@xml:lang][1][@xml:lang='sl']]"/>
-      </xsl:attribute>
-      <xsl:attribute name="mandate_en">
-	<xsl:value-of select="key('idr', $mandate-ref, $teiHeader)/
-			      tei:label[ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang='en']"/>
-      </xsl:attribute>
+      <xsl:attribute name="mandate"
+		     select="et:format-mandate(key('idr', $mandate-ref, $teiHeader), 'sl')"/>
+      <xsl:attribute name="mandate_en"
+		     select="et:format-mandate(key('idr', $mandate-ref, $teiHeader), 'en')"/>
 
       <!-- Reference to organisation and type of meeting, looks like this:
            <meeting n="61" corresp="#KZEZ" ana="#parl.meeting.regular">Redna</meeting>
@@ -103,7 +100,7 @@
 	  <xsl:for-each select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:meeting/
 				key('idr', @corresp, $teiHeader)/tei:orgName
 				[ancestor-or-self::tei:*[@xml:lang][1][@xml:lang='sl']]">
-	    <xsl:value-of select="concat(., $multi-separator)"/>
+	    <xsl:value-of select="concat(normalize-space(.), $multi-separator)"/>
 	  </xsl:for-each>
 	</xsl:variable>
 	<xsl:value-of select="et:trim($organs)"/>
@@ -115,7 +112,7 @@
 				key('idr', @ana, $teiHeader)/self::tei:category/
 				tei:catDesc[ancestor-or-self::tei:*[@xml:lang][1][@xml:lang='sl']]
 				)">
-	    <xsl:value-of select="concat(., $multi-separator)"/>
+	    <xsl:value-of select="concat(normalize-space(.), $multi-separator)"/>
 	  </xsl:for-each>
 	</xsl:variable>
 	<xsl:value-of select="et:trim($types)"/>
@@ -127,7 +124,7 @@
 				key('idr', @ana, $teiHeader)/self::tei:category/
 				tei:catDesc[ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang='en']
 				)">
-	    <xsl:value-of select="concat(., $multi-separator)"/>
+	    <xsl:value-of select="concat(normalize-space(.), $multi-separator)"/>
 	  </xsl:for-each>
 	</xsl:variable>
 	<xsl:value-of select="et:trim($types)"/>
@@ -143,17 +140,27 @@
       <xsl:apply-templates select=".//tei:seg"/>
     </xsl:variable>
     <!-- Only output if not empty -->
-    <xsl:if test="$segs">
-      <u>
+    <xsl:if test="normalize-space($segs)">
+      <speech>
 	<xsl:variable name="speaker" select="key('idr', @who, $teiHeader)"/>
 	<xsl:attribute name="who" select="$speaker/@xml:id"/>
 	<xsl:attribute name="name" select="et:format-name($speaker//tei:persName[1])"/>
-	<xsl:attribute name="gender" select="$speaker/tei:sex/@value"/>
+	<!--xsl:attribute name="gender" select="$speaker/tei:sex/@value"/-->
+	<!-- Fix errors in source (M M, m) -->
+	<xsl:attribute name="gender">
+	  <xsl:choose>
+	    <xsl:when test="$speaker/tei:sex">
+	      <xsl:value-of select="upper-case($speaker/tei:sex[1]/@value)"/>
+	    </xsl:when>
+	    <!-- 'unknown' does not have sex -->
+	    <xsl:otherwise>-</xsl:otherwise>
+	  </xsl:choose>
+	</xsl:attribute>
 	<xsl:attribute name="birth">
 	  <xsl:choose>
 	    <xsl:when test="$speaker/tei:birth">
 	      <!-- Return year only -->
-	      <xsl:value-of select="substring-before($speaker/tei:birth/@when, '-')"/>
+	      <xsl:value-of select="replace($speaker/tei:birth/@when, '(-\d\d)+$', '')"/>
 	    </xsl:when>
 	    <xsl:otherwise>-</xsl:otherwise>
 	  </xsl:choose>
@@ -190,37 +197,31 @@
 	<xsl:attribute name="party_en"   select="et:speaker-party($speaker, 'yes',  'en')"/>
 	<xsl:text>&#10;</xsl:text>
 	<xsl:copy-of select="$segs"/>
-      </u>
+      </speech>
       <xsl:text>&#10;</xsl:text>
     </xsl:if>
   </xsl:template>
 
   <xsl:template match="tei:seg">
     <xsl:if test=".//tei:w or .//tei:pc">
-      <seg id="{@xml:id}">
-	<!-- DL looks like:
-	     http://exist.sistory.si/exist/apps/parla/
-	     OZFIMP-Nujna-056-2004-03-01
-	     .xml?id=
-	     SDT3-OZFIMP-Nujna-056-2004-03-01.seg136
-	     &odd=parla.odd&view=div#
-	     SDT3-OZFIMP-Nujna-056-2004-03-01.seg136
-	-->
-	<!--xsl:attribute name="dl">
-	  <xsl:value-of select="$exist-prefix"/>
-	  <xsl:value-of select="substring-before(substring-after(@xml:id, '-'), '.seg')"/>
-	  <xsl:text>.xml?id=</xsl:text>
-	  <xsl:value-of select="@xml:id"/>
-	  <xsl:text>&amp;odd=parla.odd&amp;view=div#</xsl:text>
-	  <xsl:value-of select="@xml:id"/>
-	</xsl:attribute-->
+      <p id="{@xml:id}">
+	<xsl:attribute name="dl" select="et:id2dl(@xml:id)"/>
 	<xsl:text>&#10;</xsl:text>
 	<xsl:apply-templates/>
-      </seg>
+      </p>
       <xsl:text>&#10;</xsl:text>
     </xsl:if>
   </xsl:template>
 
+  <xsl:template match="tei:name">
+    <xsl:copy>
+      <xsl:copy-of select="@type"/>
+      <xsl:text>&#10;</xsl:text>
+      <xsl:apply-templates/>
+    </xsl:copy>
+    <xsl:text>&#10;</xsl:text>
+  </xsl:template>
+  
   <xsl:template match="tei:s">
     <xsl:choose>
       <xsl:when test="tei:w or tei:pc">
@@ -258,22 +259,8 @@
 
   <xsl:function name="et:output-annotations">
     <xsl:param name="token"/>
-    <xsl:variable name="msd">
-      <xsl:choose>
-	<xsl:when test="starts-with($token/@ana,'#')">
-	  <xsl:value-of select="substring-after($token/@ana,'#')"/>
-	</xsl:when>
-	<xsl:when test="starts-with($token/@ana,'mte:')">
-	  <xsl:value-of select="substring-after($token/@ana,'mte:')"/>
-	</xsl:when>
-	<xsl:otherwise>
-	  <xsl:message terminate="yes">
-	    <xsl:text>FATAL: Weird MSD </xsl:text>
-	    <xsl:value-of select="$token/@ana"/>
-	  </xsl:message>
-	</xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
+    <xsl:variable name="id" select="$token/@xml:id"/>
+    <!--xsl:variable name="n" select="replace($id, '.+\.(t\d+)$', '$1')"/-->
     <xsl:variable name="lemma">
       <xsl:choose>
 	<xsl:when test="$token/@lemma">
@@ -284,7 +271,55 @@
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:sequence select="concat($lemma, '&#9;', $msd)"/>
+    <xsl:variable name="msd" select="substring-after($token/@ana,'mte:')"/>
+    <xsl:variable name="ud-pos" select="replace(replace($token/@msd, 'UposTag=', ''), '\|.+', '')"/>
+    <xsl:variable name="ud-feats">
+      <xsl:variable name="fs" select="replace($token/@msd, 'UposTag=[^|]+\|?', '')"/>
+      <xsl:choose>
+	<xsl:when test="normalize-space($fs)">
+	  <xsl:value-of select="replace($fs, '\|', ' ')"/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:text>-</xsl:text>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:sequence select="concat($lemma, '&#9;', $msd, '&#9;', $ud-pos, '&#9;', $ud-feats)"/>
+  </xsl:function>
+
+  <!-- Convert seg/@xml:id to URL of DARIAH-SI digital library -->
+  <xsl:function name="et:id2dl">
+    <!-- DL looks like:
+	 http://exist.sistory.si/exist/apps/parla/
+	 OZFIMP-Nujna-056-2004-03-01
+	 .xml?id=
+	 SDT3-OZFIMP-Nujna-056-2004-03-01.seg136
+	 &odd=parla.odd&view=div#
+	 SDT3-OZFIMP-Nujna-056-2004-03-01.seg136
+    -->
+    <xsl:param name="id"/>
+    <xsl:value-of select="$exist-prefix"/>
+    <xsl:value-of select="substring-before(substring-after($id, '-'), '.seg')"/>
+    <xsl:text>.xml?id=</xsl:text>
+    <xsl:value-of select="$id"/>
+    <xsl:text>&amp;odd=parla.odd&amp;view=div#</xsl:text>
+    <xsl:value-of select="$id"/>
+  </xsl:function>
+  
+  <!-- Mandate looks like this in corpus teiHeader:
+       <event xml:id="DZ.1" from="1992-12-23" to="1996-11-27">
+         <label xml:lang="sl">1. mandat</label>
+         <label xml:lang="en">Term 1</label>
+       </event>
+  -->
+  <xsl:function name="et:format-mandate">
+    <xsl:param name="mandate-event" as="element(tei:event)"/>
+    <xsl:param name="lang" as="xs:string"/>
+    <xsl:value-of select="$mandate-event/
+			  tei:label[ancestor-or-self::tei:*[@xml:lang][1][@xml:lang = $lang]]"/>
+    <xsl:text> (</xsl:text>
+    <xsl:value-of select="concat($mandate-event/@from, ' - ', $mandate-event/@to)"/>
+    <xsl:text>)</xsl:text>
   </xsl:function>
 
   <!-- Format the name of a person from persName -->
@@ -353,23 +388,43 @@
      <!-- Party name in which language -->
     <xsl:param name="lang" as="xs:string"/>
     <xsl:variable name="parties">
-      <!-- Should be actually just one for a given date! -->
-      <xsl:for-each select="$speaker/tei:affiliation[@role='member']">
-	<xsl:if test="et:between-dates($session-date, @from, @to)">
-	  <xsl:variable name="party"
-			select="key('idr', @ref, $teiHeader)"/>
-	  <xsl:choose>
-	    <xsl:when test="$party/tei:orgName[@full=$full]
-			    [ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang=$lang]">
+      <xsl:variable name="tmp">
+	<!-- Should be actually just one for a given date! -->
+	<xsl:for-each select="$speaker/tei:affiliation[@role='member']">
+	  <xsl:if test="et:between-dates($session-date, @from, @to)">
+	    <xsl:variable name="party"
+			  select="key('idr', @ref, $teiHeader)"/>
+	    <xsl:if test="$party/tei:orgName[@full=$full]
+			  [ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang=$lang]">
 	      <xsl:value-of select="$party/tei:orgName[@full=$full]
 				    [ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang=$lang]"/>
-	    </xsl:when>
-	    <xsl:otherwise>-</xsl:otherwise>
-	  </xsl:choose>
-	</xsl:if>
-      </xsl:for-each>
+	    </xsl:if>
+	    <xsl:value-of select="$multi-separator"/>
+	  </xsl:if>
+	</xsl:for-each>
+      </xsl:variable>
+      <xsl:value-of select="et:trim($tmp)"/>
     </xsl:variable>
     <xsl:choose>
+      <xsl:when test="matches($parties, concat('\', $multi-separator))">
+	<xsl:message>
+	  <xsl:text>ERROR: more than one party for </xsl:text>
+	  <xsl:value-of select="$speaker/@xml:id"/>
+	  <xsl:text> on </xsl:text>
+	  <xsl:value-of select="$session-date"/>
+	</xsl:message>
+	<xsl:value-of select="replace($parties, concat('\', $multi-separator, '.+'), '')"/>
+      </xsl:when>
+      <!-- Speaker belongs to parties, just none when he is speaking!? -->
+      <xsl:when test="not(normalize-space($parties)) and $speaker/tei:affiliation[@role='member']">
+	<xsl:message>
+	  <xsl:text>ERROR: belongs to parties but none for </xsl:text>
+	  <xsl:value-of select="$speaker/@xml:id"/>
+	  <xsl:text> on </xsl:text>
+	  <xsl:value-of select="$session-date"/>
+	</xsl:message>
+	<xsl:text>-</xsl:text>
+      </xsl:when>
       <xsl:when test="normalize-space($parties)">
 	<xsl:value-of select="$parties"/>
       </xsl:when>
