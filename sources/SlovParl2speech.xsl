@@ -313,18 +313,18 @@
                         <particDesc>
                             <listOrg>
                                 <org xml:id="SK" role="parliament" ana="#parl.regional #parl.national #par.multi">
-                                    <orgName from="1990-06-23" to="1992-12-23" xml:lang="sl">Skupščina Republike Slovenije</orgName>
-                                    <orgName from="1990-06-23" to="1992-12-23" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
-                                    <orgName from="1963-06-24" to="1990-06-23" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
-                                    <orgName from="1963-06-24" to="1990-06-23" xml:lang="en">Assembly of Socialist Republic of Slovenia</orgName>
-                                    <event from="1963-06-24" to="1992-12-23">
+                                    <orgName from="1990-06-23" to="1992-12-22" xml:lang="sl">Skupščina Republike Slovenije</orgName>
+                                    <orgName from="1990-06-23" to="1992-12-22" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
+                                    <orgName from="1963-06-24" to="1990-06-22" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
+                                    <orgName from="1963-06-24" to="1990-06-22" xml:lang="en">Assembly of Socialist Republic of Slovenia</orgName>
+                                    <event from="1963-06-24" to="1992-12-22">
                                         <label xml:lang="en">existence</label>
                                     </event>
                                     <idno type="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Skup%C5%A1%C4%8Dina_Socialisti%C4%8Dne_republike_Slovenije</idno>
                                     <listEvent>
                                         <head>Legislative period</head>
-                                        <event xml:id="SK.11" from="1990-05-08" to="1992-12-23">
+                                        <event xml:id="SK.11" from="1990-05-08" to="1992-12-22">
                                             <label xml:lang="sl">11. sklic</label>
                                             <label xml:lang="en">Term 11</label>
                                         </event>
@@ -335,21 +335,21 @@
                                         <org xml:id="DruzPolZb" ana="#par.chamber">
                                             <orgName xml:lang="sl">Družbeno-politični zbor</orgName>
                                             <orgName xml:lang="en">Socio-Political Chamber</orgName>
-                                            <event from="1974" to="1992-12-23">
+                                            <event from="1974" to="1992-12-22">
                                                 <label xml:lang="en">existence</label>
                                             </event>
                                         </org>
                                         <org xml:id="ZbObc" ana="#par.chamber">
                                             <orgName xml:lang="sl">Zbor občin</orgName>
                                             <orgName xml:lang="en">Chamber of Municipalities</orgName>
-                                            <event from="1974" to="1992-12-23">
+                                            <event from="1974" to="1992-12-22">
                                                 <label xml:lang="en">existence</label>
                                             </event>
                                         </org>
                                         <org xml:id="ZbZdruDel" ana="#par.chamber">
                                             <orgName xml:lang="sl">Zbor združenega dela</orgName>
                                             <orgName xml:lang="en">Chamber of Associated Labour</orgName>
-                                            <event from="1974" to="1992-12-23">
+                                            <event from="1974" to="1992-12-22">
                                                 <label xml:lang="en">existence</label>
                                             </event>
                                         </org>
