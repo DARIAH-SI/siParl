@@ -30,10 +30,10 @@
     </xsl:variable>
     
     <xsl:param name="taxonomy-legislature">
-        <taxonomy>
+        <taxonomy xml:id="parl.legislature">
             <desc xml:lang="en">Legislature</desc>
             <desc xml:lang="sl">Zakonodajna oblast</desc>
-            <category>
+            <category xml:id="parl.geo-political">
                 <desc xml:lang="en">Geo-political or administrative units</desc>
                 <desc xml:lang="sl">Geopolitične ali upravne enote</desc>
                 <category xml:id="parl.supranational">
@@ -53,10 +53,10 @@
                     <catDesc xml:lang="sl"><term>Lokalna zakonodajna oblast</term></catDesc>
                 </category>
             </category>
-            <category>
+            <category xml:id="parl.organization">
                 <desc xml:lang="en">Organization</desc>
                 <desc xml:lang="sl">Organiziranost</desc>
-                <category>
+                <category xml:id="parl.chambers">
                     <desc xml:lang="en">Chambers</desc>
                     <desc xml:lang="sl">Zbori</desc>
                     <category xml:id="par.uni">
@@ -119,7 +119,7 @@
                             session. The session/meeting may take one or more
                             days.</catDesc>
                         <catDesc xml:lang="sl"><term>Seja</term></catDesc>
-                        <category>
+                        <category xml:id="parl.meeting-types">
                             <desc xml:lang="en">Types of meetings</desc>
                             <category xml:id="parl.meeting.regular">
                                 <catDesc xml:lang="en"><term>Regular meeting</term></catDesc>
@@ -172,21 +172,17 @@
     </xsl:param>
     
     <xsl:param name="taxonomy-speakers">
-        <taxonomy>
+        <taxonomy xml:id="speaker_types">
             <desc xml:lang="en">Types of speakers</desc>
             <desc xml:lang="sl">Vrste govornikov</desc>
             <category xml:id="chair">
                 <catDesc xml:lang="en"><term>Chairperson</term>: chairman of a meeting</catDesc>
                 <catDesc xml:lang="sl"><term>Predsedujoči</term>: predsedujoči zasedanja</catDesc>
             </category>
-            <!--<category xml:id="regular">
-                <catDesc xml:lang="en"><term>Regular speaker</term>:</catDesc>
-                <catDesc xml:lang="sl"><term>Regularni govornik</term>:</catDesc>
+            <category xml:id="regular">
+                <catDesc xml:lang="en"><term>Regular</term>: a regular speaker at a meeting</catDesc>
+                <catDesc xml:lang="sl"><term>Navadni</term>: navadni govorec na zasedanju</catDesc>
             </category>
-            <category xml:id="unauthorized">
-                <catDesc xml:lang="en"><term>Unauthorized speaker</term>: unauthorized intervention in the speech of the main speaker.</catDesc>
-                <catDesc xml:lang="sl"><term>Neavtorizirani govornik</term>: Neavtorizirana intervencija v govor glavnega govornika.</catDesc>
-            </category>-->
         </taxonomy>
     </xsl:param>
     
@@ -1273,15 +1269,23 @@
                     <xsl:value-of select="concat('#',@xml:id)"/>
                 </xsl:for-each>
             </xsl:attribute>
-            <!--<xsl:attribute name="ana">
+            <!-- dodam še @xml:id -->
+            <xsl:variable name="document-name-id" select="ancestor::tei:TEI/@xml:id"/>
+            <xsl:variable name="num">
+                <xsl:number count="tei:u" level="any"/>
+            </xsl:variable>
+            <xsl:attribute name="xml:id">
+                <xsl:value-of select="concat($document-name-id,'.u',$num)"/>
+            </xsl:attribute>
+            <xsl:attribute name="ana">
                 <xsl:choose>
                     <xsl:when test="$speaker = $chair/tei:item">#chair</xsl:when>
                     <xsl:otherwise>#regular</xsl:otherwise>
                 </xsl:choose>
-            </xsl:attribute>-->
-            <xsl:if test="$speaker = $chair/tei:item">
+            </xsl:attribute>
+            <!--<xsl:if test="$speaker = $chair/tei:item">
                 <xsl:attribute name="ana">#chair</xsl:attribute>
-            </xsl:if>
+            </xsl:if>-->
             <xsl:apply-templates mode="pass7"/>
         </u>
     </xsl:template>
