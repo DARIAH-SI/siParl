@@ -47,7 +47,7 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                     Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2020-03-03+01:00">3. 3. 2020</date>
+            <date when="2020-04-06+02:00">6. 4. 2020</date>
          </publicationStmt>
          <sourceDesc>
             <bibl>
@@ -61,20 +61,6 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="text" occurs="608"/>
-               <tagUsage gi="front" occurs="231"/>
-               <tagUsage gi="div" occurs="839"/>
-               <tagUsage gi="head" occurs="462"/>
-               <tagUsage gi="docDate" occurs="231"/>
-               <tagUsage gi="note" occurs="120824"/>
-               <tagUsage gi="body" occurs="608"/>
-               <tagUsage gi="u" occurs="59062"/>
-               <tagUsage gi="seg" occurs="226752"/>
-               <tagUsage gi="gap" occurs="2965"/>
-            </namespace>
-         </tagsDecl>
          <editorialDecl>
             <correction>
                <p>No correction of source texts was performed. Only apparently typed errors were corrected.</p>
@@ -90,10 +76,10 @@
             </segmentation>
          </editorialDecl>
          <classDecl>
-            <taxonomy>
+            <taxonomy xml:id="parl.legislature">
                <desc xml:lang="en">Legislature</desc>
                <desc xml:lang="sl">Zakonodajna oblast</desc>
-               <category>
+               <category xml:id="parl.geo-political">
                   <desc xml:lang="en">Geo-political or administrative units</desc>
                   <desc xml:lang="sl">Geopolitične ali upravne enote</desc>
                   <category xml:id="parl.supranational">
@@ -129,10 +115,10 @@
                      </catDesc>
                   </category>
                </category>
-               <category>
+               <category xml:id="parl.organization">
                   <desc xml:lang="en">Organization</desc>
                   <desc xml:lang="sl">Organiziranost</desc>
-                  <category>
+                  <category xml:id="parl.chambers">
                      <desc xml:lang="en">Chambers</desc>
                      <desc xml:lang="sl">Zbori</desc>
                      <category xml:id="par.uni">
@@ -240,7 +226,7 @@
                         <catDesc xml:lang="sl">
                            <term>Seja</term>
                         </catDesc>
-                        <category>
+                        <category xml:id="parl.meeting-types">
                            <desc xml:lang="en">Types of meetings</desc>
                            <category xml:id="parl.meeting.regular">
                               <catDesc xml:lang="en">
@@ -331,7 +317,7 @@
                   </category>
                </category>
             </taxonomy>
-            <taxonomy>
+            <taxonomy xml:id="speaker_types">
                <desc xml:lang="en">Types of speakers</desc>
                <desc xml:lang="sl">Vrste govornikov</desc>
                <category xml:id="chair">
@@ -339,6 +325,12 @@
                      <term>Chairperson</term>: chairman of a meeting</catDesc>
                   <catDesc xml:lang="sl">
                      <term>Predsedujoči</term>: predsedujoči zasedanja</catDesc>
+               </category>
+               <category xml:id="regular">
+                  <catDesc xml:lang="en">
+                     <term>Regular</term>: a regular speaker at a meeting</catDesc>
+                  <catDesc xml:lang="sl">
+                     <term>Navadni</term>: navadni govorec na zasedanju</catDesc>
                </category>
             </taxonomy>
          </classDecl>
@@ -358,17 +350,17 @@
                <org xml:id="SK"
                     role="parliament"
                     ana="#parl.regional #parl.national #par.multi">
-                  <orgName from="1990-06-23" to="1992-12-23" xml:lang="sl">Skupščina Republike Slovenije</orgName>
-                  <orgName from="1990-06-23" to="1992-12-23" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
-                  <orgName from="1963-06-24" to="1990-06-23" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
-                  <orgName from="1963-06-24" to="1990-06-23" xml:lang="en">Assembly of Socialist Republic of Slovenia</orgName>
-                  <event from="1963-06-24" to="1992-12-23">
+                  <orgName from="1990-06-23" to="1992-12-22" xml:lang="sl">Skupščina Republike Slovenije</orgName>
+                  <orgName from="1990-06-23" to="1992-12-22" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
+                  <orgName from="1963-06-24" to="1990-06-22" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
+                  <orgName from="1963-06-24" to="1990-06-22" xml:lang="en">Assembly of Socialist Republic of Slovenia</orgName>
+                  <event from="1963-06-24" to="1992-12-22">
                      <label xml:lang="en">existence</label>
                   </event>
                   <idno type="wikimedia">https://sl.wikipedia.org/wiki/Skup%C5%A1%C4%8Dina_Socialisti%C4%8Dne_republike_Slovenije</idno>
                   <listEvent>
                      <head>Legislative period</head>
-                     <event xml:id="SK.11" from="1990-05-08" to="1992-12-23">
+                     <event xml:id="SK.11" from="1990-05-08" to="1992-12-22">
                         <label xml:lang="sl">11. sklic</label>
                         <label xml:lang="en">Term 11</label>
                      </event>
@@ -379,21 +371,21 @@
                      <org xml:id="DruzPolZb" ana="#par.chamber">
                         <orgName xml:lang="sl">Družbeno-politični zbor</orgName>
                         <orgName xml:lang="en">Socio-Political Chamber</orgName>
-                        <event from="1974" to="1992-12-23">
+                        <event from="1974" to="1992-12-22">
                            <label xml:lang="en">existence</label>
                         </event>
                      </org>
                      <org xml:id="ZbObc" ana="#par.chamber">
                         <orgName xml:lang="sl">Zbor občin</orgName>
                         <orgName xml:lang="en">Chamber of Municipalities</orgName>
-                        <event from="1974" to="1992-12-23">
+                        <event from="1974" to="1992-12-22">
                            <label xml:lang="en">existence</label>
                         </event>
                      </org>
                      <org xml:id="ZbZdruDel" ana="#par.chamber">
                         <orgName xml:lang="sl">Zbor združenega dela</orgName>
                         <orgName xml:lang="en">Chamber of Associated Labour</orgName>
-                        <event from="1974" to="1992-12-23">
+                        <event from="1974" to="1992-12-22">
                            <label xml:lang="en">existence</label>
                         </event>
                      </org>
@@ -1186,8 +1178,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -1246,10 +1237,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -1261,8 +1251,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -1355,10 +1344,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -1398,8 +1386,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -1472,8 +1459,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -1504,8 +1490,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -1633,10 +1618,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -1671,11 +1655,7 @@
                                from="1992-12-23"
                                to="1996-11-27"
                                ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.D"
-                               from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                  <affiliation role="member" ref="#party.D" from="1992-12-23" to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -1811,13 +1791,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -1868,8 +1846,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -1974,8 +1951,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -2006,10 +1982,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -2029,10 +2004,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -2069,8 +2043,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -2202,8 +2175,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -2214,11 +2186,7 @@
                                from="1992-12-23"
                                to="1996-11-27"
                                ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.D"
-                               from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                  <affiliation role="member" ref="#party.D" from="1992-12-23" to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.DS"
                                from="1994-03-12"
@@ -2324,8 +2292,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -2461,13 +2428,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -2521,13 +2486,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -2549,13 +2512,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -2581,8 +2542,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -2654,10 +2614,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -2838,13 +2797,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -2873,8 +2830,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -2896,8 +2852,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -2940,8 +2895,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="2004-10-22"
-                               to="2007-03-30"
-                               ana="#DZ.4"/>
+                               to="2007-03-29"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2007-03-30"
@@ -2964,8 +2918,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -3005,8 +2958,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -3078,10 +3030,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -3125,10 +3076,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -3176,13 +3126,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -3208,8 +3156,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -3305,13 +3252,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -3416,8 +3361,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -3457,8 +3401,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -3482,13 +3425,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -3520,13 +3461,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -3563,13 +3502,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -3594,8 +3531,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -3665,8 +3601,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -3735,13 +3670,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -3789,10 +3722,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -3861,13 +3793,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -3958,11 +3888,11 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1992-04"
+                               to="1992-04-01"
                                ana="#SK.11"/>
                   <affiliation role="member"
                                ref="#party.SDS.1"
-                               from="1992-04"
+                               from="1992-04-02"
                                to="1992-12-22"
                                ana="#SK.11"/>
                   <affiliation role="MP"
@@ -3993,8 +3923,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -4111,13 +4040,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -4161,10 +4088,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -4176,13 +4102,11 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
-                               to="1996-07-23"
-                               ana="#DZ.1"/>
+                               to="1996-07-22"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="1996-07-23"
@@ -4268,8 +4192,7 @@
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2008-10-15"
-                               to="2011-10-15"
-                               ana="#DZ.5"/>
+                               to="2011-10-14"/>
                   <affiliation role="member"
                                ref="#party.Zares.2"
                                from="2011-10-15"
@@ -4306,10 +4229,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -4401,8 +4323,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -4558,8 +4479,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -4573,8 +4493,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -4686,10 +4605,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -4701,8 +4619,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -4755,8 +4672,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -4801,13 +4717,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -4897,10 +4811,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -4928,13 +4841,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -4970,10 +4881,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -4996,8 +4906,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -5022,13 +4931,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -5042,8 +4949,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -5057,8 +4963,7 @@
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-10-27"
-                               to="2002-03-15"
-                               ana="#DZ.3"/>
+                               to="2002-03-14"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2002-03-15"
@@ -5098,13 +5003,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -5153,8 +5056,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -5198,8 +5100,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -5213,8 +5114,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -5274,8 +5174,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -5297,8 +5196,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -5320,13 +5218,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -5382,8 +5278,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -5500,13 +5395,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -5541,8 +5434,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -5590,10 +5482,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -5615,8 +5506,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -5663,13 +5553,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -5713,16 +5601,11 @@
                                from="2008-10-15"
                                to="2011-12-15"
                                ana="#DZ.5"/>
-                  <affiliation role="member"
-                               ref="#party.SD"
-                               from="2008-12-16"
-                               to="2010-10-27"
-                               ana="#DZ.5"/>
+                  <affiliation role="member" ref="#party.SD" from="2008-12-16" to="2010-10-26"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2010-10-27"
-                               to="2010-11-08"
-                               ana="#DZ.5"/>
+                               to="2010-11-07"/>
                   <affiliation role="member"
                                ref="#party.NP"
                                from="2010-11-08"
@@ -5771,7 +5654,7 @@
                      <surname>Mak</surname>
                      <forename>Viljem</forename>
                   </persName>
-                  <sex value="m"/>
+                  <sex value="M"/>
                   <birth when="1937-04-29">
                      <placeName ref="https://www.geonames.org/3198244">Kasaze</placeName>
                   </birth>
@@ -5831,13 +5714,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -5920,10 +5801,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -5992,13 +5872,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -6095,8 +5973,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -6127,10 +6004,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -6142,8 +6018,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -6238,13 +6113,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -6287,8 +6160,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -6316,10 +6188,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -6372,11 +6243,7 @@
                                from="1992-12-23"
                                to="1996-11-27"
                                ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.D"
-                               from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                  <affiliation role="member" ref="#party.D" from="1992-12-23" to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -6416,8 +6283,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -6439,10 +6305,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -6464,8 +6329,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -6479,8 +6343,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -6545,10 +6408,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -6560,8 +6422,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -6683,13 +6544,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -6714,8 +6573,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -6726,11 +6584,7 @@
                                from="1992-12-23"
                                to="1996-11-27"
                                ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.D"
-                               from="1992-12-23"
-                               to="1994-04-06"
-                               ana="#DZ.1"/>
+                  <affiliation role="member" ref="#party.D" from="1992-12-23" to="1994-04-05"/>
                   <affiliation role="member"
                                ref="#party.DS"
                                from="1994-04-06"
@@ -6753,10 +6607,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -6768,8 +6621,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -6815,8 +6667,7 @@
                   <affiliation role="member"
                                ref="#party.SKD"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -6866,11 +6717,11 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1992-05"
+                               to="1992-05-31"
                                ana="#SK.11"/>
                   <affiliation role="member"
                                ref="#party.SDS.1"
-                               from="1992-06"
+                               from="1992-06-01"
                                to="1992-12-22"
                                ana="#SK.11"/>
                </person>
@@ -6889,8 +6740,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -6968,8 +6818,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -6994,13 +6843,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -7025,8 +6872,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -7081,13 +6927,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -7096,7 +6940,7 @@
                   <affiliation role="MP"
                                ref="#DZ"
                                from="1992-12-23"
-                               to="2000-06-13"
+                               to="1996-11-27"
                                ana="#DZ.1"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
@@ -7111,8 +6955,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -7142,13 +6985,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -7216,13 +7057,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -7246,8 +7085,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -7272,10 +7110,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -7287,8 +7124,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -7313,8 +7149,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -7328,8 +7163,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -7363,8 +7197,7 @@
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="2004-10-22"
-                               to="2005-04-04"
-                               ana="#DZ.4"/>
+                               to="2005-04-03"/>
                   <affiliation role="member"
                                ref="#party.SD"
                                from="2005-04-04"
@@ -7530,8 +7363,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -7591,10 +7423,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -7606,8 +7437,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -7630,8 +7460,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -7666,13 +7495,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -7773,8 +7600,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -7835,10 +7661,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -7904,8 +7729,7 @@
                   <affiliation role="member"
                                ref="#party.SKD"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -7955,10 +7779,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -7981,8 +7804,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -7996,8 +7818,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -8039,8 +7860,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -8204,8 +8024,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -8228,11 +8047,7 @@
                                from="1992-12-23"
                                to="1996-11-27"
                                ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.D"
-                               from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                  <affiliation role="member" ref="#party.D" from="1992-12-23" to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -8256,7 +8071,7 @@
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2004-07-06"
-                               to="2004-07-07"
+                               to="2004-07-06"
                                ana="#DZ.3"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
@@ -8384,8 +8199,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -8411,8 +8225,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -8436,8 +8249,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -8482,10 +8294,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -8643,10 +8454,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -8706,8 +8516,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -8782,13 +8591,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -8835,8 +8642,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -8875,7 +8681,6 @@
                   <birth when="1940-07-29">
                      <placeName ref="https://www.geonames.org/3200785">Gabrijele</placeName>
                   </birth>
-                  <sex value="M"/>
                   <affiliation role="MP"
                                ref="#ZbObc"
                                from="1990-05-08"
@@ -8904,8 +8709,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#cl.DEMOS"
                                from="1991-10-13"
@@ -8990,10 +8794,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -9031,13 +8834,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -9061,8 +8862,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -9126,8 +8926,7 @@
                   <affiliation role="member"
                                ref="#party.ZESS"
                                from="1993-03-22"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1994-03-12"
@@ -9159,10 +8958,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -9174,8 +8972,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -9302,13 +9099,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -9342,8 +9137,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -9435,13 +9229,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -9505,10 +9297,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -9542,10 +9333,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -9573,10 +9363,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -9603,10 +9392,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -9687,8 +9475,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -9785,8 +9572,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -9858,13 +9644,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -9888,8 +9672,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -9913,8 +9696,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -9943,10 +9725,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -9974,8 +9755,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -9999,13 +9779,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -10029,8 +9807,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -10103,8 +9880,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -10157,10 +9933,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -10172,8 +9947,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -10252,10 +10026,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -10326,8 +10099,7 @@
                   <affiliation role="member"
                                ref="#party.ZESS"
                                from="1993-03-22"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1994-03-12"
@@ -10352,10 +10124,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -10367,8 +10138,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -10446,8 +10216,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"

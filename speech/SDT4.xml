@@ -52,7 +52,7 @@
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                     Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2020-03-03+01:00">3. 3. 2020</date>
+            <date when="2020-04-06+02:00">6. 4. 2020</date>
          </publicationStmt>
          <sourceDesc>
             <bibl>
@@ -64,19 +64,6 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="text" occurs="1300"/>
-               <tagUsage gi="front" occurs="1300"/>
-               <tagUsage gi="div" occurs="2600"/>
-               <tagUsage gi="head" occurs="2659"/>
-               <tagUsage gi="note" occurs="175971"/>
-               <tagUsage gi="body" occurs="1300"/>
-               <tagUsage gi="u" occurs="115260"/>
-               <tagUsage gi="seg" occurs="266172"/>
-               <tagUsage gi="gap" occurs="57396"/>
-            </namespace>
-         </tagsDecl>
          <editorialDecl>
             <correction>
                <p>No correction of source texts was performed. Only apparently typed errors were corrected.</p>
@@ -92,10 +79,10 @@
             </segmentation>
          </editorialDecl>
          <classDecl>
-            <taxonomy>
+            <taxonomy xml:id="parl.legislature">
                <desc xml:lang="en">Legislature</desc>
                <desc xml:lang="sl">Zakonodajna oblast</desc>
-               <category>
+               <category xml:id="parl.geo-political">
                   <desc xml:lang="en">Geo-political or administrative units</desc>
                   <desc xml:lang="sl">Geopolitične ali upravne enote</desc>
                   <category xml:id="parl.supranational">
@@ -131,10 +118,10 @@
                      </catDesc>
                   </category>
                </category>
-               <category>
+               <category xml:id="parl.organization">
                   <desc xml:lang="en">Organization</desc>
                   <desc xml:lang="sl">Organiziranost</desc>
-                  <category>
+                  <category xml:id="parl.chambers">
                      <desc xml:lang="en">Chambers</desc>
                      <desc xml:lang="sl">Zbori</desc>
                      <category xml:id="par.uni">
@@ -242,7 +229,7 @@
                         <catDesc xml:lang="sl">
                            <term>Seja</term>
                         </catDesc>
-                        <category>
+                        <category xml:id="parl.meeting-types">
                            <desc xml:lang="en">Types of meetings</desc>
                            <category xml:id="parl.meeting.regular">
                               <catDesc xml:lang="en">
@@ -333,7 +320,7 @@
                   </category>
                </category>
             </taxonomy>
-            <taxonomy>
+            <taxonomy xml:id="speaker_types">
                <desc xml:lang="en">Types of speakers</desc>
                <desc xml:lang="sl">Vrste govornikov</desc>
                <category xml:id="chair">
@@ -341,6 +328,12 @@
                      <term>Chairperson</term>: chairman of a meeting</catDesc>
                   <catDesc xml:lang="sl">
                      <term>Predsedujoči</term>: predsedujoči zasedanja</catDesc>
+               </category>
+               <category xml:id="regular">
+                  <catDesc xml:lang="en">
+                     <term>Regular</term>: a regular speaker at a meeting</catDesc>
+                  <catDesc xml:lang="sl">
+                     <term>Navadni</term>: navadni govorec na zasedanju</catDesc>
                </category>
             </taxonomy>
          </classDecl>
@@ -458,7 +451,7 @@
                      <org xml:id="KZOSSVZIPS" ana="#parl.committee">
                         <orgName>Komisija za odnose s Slovenci v zamejstvu in po svetu</orgName>
                      </org>
-                     <org xml:id="KZPTZČPIEM" ana="#parl.committee">
+                     <org xml:id="KZPTZCPIEM" ana="#parl.committee">
                         <orgName>Komisija za peticije ter za človekove pravice in enake možnosti</orgName>
                      </org>
                      <org xml:id="KZP" ana="#parl.committee">
@@ -479,7 +472,7 @@
                      <org xml:id="OZKGIP" ana="#parl.committee">
                         <orgName>Odbor za kmetijstvo gozdarstvo in prehrano</orgName>
                      </org>
-                     <org xml:id="OZKŠIŠ" ana="#parl.committee">
+                     <org xml:id="OZKSIS" ana="#parl.committee">
                         <orgName>Odbor za kulturo šolstvo in šport</orgName>
                      </org>
                      <org xml:id="OZLSIRR" ana="#parl.committee">
@@ -497,7 +490,7 @@
                      <org xml:id="OZP" ana="#parl.committee">
                         <orgName>Odbor za promet</orgName>
                      </org>
-                     <org xml:id="OZVŠZITR" ana="#parl.committee">
+                     <org xml:id="OZVSZITR" ana="#parl.committee">
                         <orgName>Odbor za visoko šolstvo znanost in tehnološki razvoj</orgName>
                      </org>
                      <org xml:id="OZZEU" ana="#parl.committee">
@@ -1312,10 +1305,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -1327,8 +1319,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -1491,8 +1482,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -1572,8 +1562,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -2459,8 +2448,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -2676,8 +2664,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -2691,8 +2678,7 @@
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-10-27"
-                               to="2002-03-15"
-                               ana="#DZ.3"/>
+                               to="2002-03-14"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2002-03-15"
@@ -2959,8 +2945,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -3121,8 +3106,7 @@
                   <affiliation role="member"
                                ref="#party.SMC.1"
                                from="2014-08-01"
-                               to="2015-03-07"
-                               ana="#DZ.7"/>
+                               to="2015-03-06"/>
                   <affiliation role="member"
                                ref="#party.SMC.2"
                                from="2015-03-07"
@@ -3183,8 +3167,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -3552,8 +3535,7 @@
                   <affiliation role="member"
                                ref="#party.SNS"
                                from="1996-11-28"
-                               to="2000-06-07"
-                               ana="#DZ.2"/>
+                               to="2000-06-06"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2000-06-07"
@@ -3706,8 +3688,7 @@
                   <affiliation role="member"
                                ref="#party.NSi"
                                from="2004-10-22"
-                               to="2008-06-12"
-                               ana="#DZ.4"/>
+                               to="2008-06-11"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2008-06-12"
@@ -3825,8 +3806,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -3983,8 +3963,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -3998,8 +3977,7 @@
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-10-27"
-                               to="2002-03-15"
-                               ana="#DZ.3"/>
+                               to="2002-03-14"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2002-03-15"
@@ -4318,8 +4296,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="2004-10-22"
-                               to="2007-03-30"
-                               ana="#DZ.4"/>
+                               to="2007-03-29"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2007-03-30"
@@ -4388,18 +4365,12 @@
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="2004-10-22"
-                               to="2007-02-22"
-                               ana="#DZ.4"/>
+                               to="2007-02-21"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2007-02-22"
-                               to="2007-02-27"
-                               ana="#DZ.4"/>
-                  <affiliation role="member"
-                               ref="#party.NP"
-                               from="2007-02-27"
-                               to="2007-10-12"
-                               ana="#DZ.4"/>
+                               to="2007-02-26"/>
+                  <affiliation role="member" ref="#party.NP" from="2007-02-27" to="2007-10-11"/>
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2007-10-12"
@@ -4413,8 +4384,7 @@
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2008-10-15"
-                               to="2011-10-15"
-                               ana="#DZ.5"/>
+                               to="2011-10-14"/>
                   <affiliation role="member"
                                ref="#party.Zares.2"
                                from="2011-10-15"
@@ -4526,8 +4496,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -5271,13 +5240,11 @@
                   <affiliation role="member"
                                ref="#party.Levica.1"
                                from="2014-08-01"
-                               to="2017-06-26"
-                               ana="#DZ.7"/>
+                               to="2017-06-25"/>
                   <affiliation role="member"
                                ref="#party.Levica.2"
                                from="2017-06-26"
-                               to="2017-07-05"
-                               ana="#DZ.7"/>
+                               to="2017-07-04"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2017-07-05"
@@ -5331,8 +5298,7 @@
                   <affiliation role="member"
                                ref="#party.SKD"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -5453,8 +5419,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -6070,8 +6035,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -6179,11 +6143,11 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1992-04"
+                               to="1992-04-01"
                                ana="#SK.11"/>
                   <affiliation role="member"
                                ref="#party.SDS.1"
-                               from="1992-04"
+                               from="1992-04-02"
                                to="1992-12-22"
                                ana="#SK.11"/>
                   <affiliation role="MP"
@@ -6214,8 +6178,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -6629,8 +6592,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -6740,8 +6702,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -6862,10 +6823,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -6877,13 +6837,11 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
-                               to="1996-07-23"
-                               ana="#DZ.1"/>
+                               to="1996-07-22"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="1996-07-23"
@@ -6990,8 +6948,7 @@
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2008-10-15"
-                               to="2011-10-15"
-                               ana="#DZ.5"/>
+                               to="2011-10-14"/>
                   <affiliation role="member"
                                ref="#party.Zares.2"
                                from="2011-10-15"
@@ -7207,8 +7164,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -7222,8 +7178,7 @@
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-10-27"
-                               to="2002-03-15"
-                               ana="#DZ.3"/>
+                               to="2002-03-14"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2002-03-15"
@@ -7365,8 +7320,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -7683,8 +7637,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -7698,8 +7651,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -8491,8 +8443,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -8596,13 +8547,11 @@
                   <affiliation role="member"
                                ref="#party.SKZ"
                                from="1990-05-08"
-                               to="1990-12-18"
-                               ana="#SK.11"/>
+                               to="1990-12-17"/>
                   <affiliation role="member"
                                ref="#party.SKZ-LS"
                                from="1990-12-18"
-                               to="1992-06-27"
-                               ana="#SK.11"/>
+                               to="1992-06-26"/>
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1992-06-27"
@@ -8616,8 +8565,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -8631,8 +8579,7 @@
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-10-27"
-                               to="2002-03-15"
-                               ana="#DZ.3"/>
+                               to="2002-03-14"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2002-03-15"
@@ -9184,18 +9131,12 @@
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="2004-10-22"
-                               to="2007-01-25"
-                               ana="#DZ.4"/>
+                               to="2007-01-24"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2007-01-25"
-                               to="2007-02-27"
-                               ana="#DZ.4"/>
-                  <affiliation role="member"
-                               ref="#party.NP"
-                               from="2007-02-27"
-                               to="2007-10-12"
-                               ana="#DZ.4"/>
+                               to="2007-02-26"/>
+                  <affiliation role="member" ref="#party.NP" from="2007-02-27" to="2007-10-11"/>
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2007-10-12"
@@ -9209,8 +9150,7 @@
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2008-10-15"
-                               to="2011-10-15"
-                               ana="#DZ.5"/>
+                               to="2011-10-14"/>
                   <affiliation role="member"
                                ref="#party.Zares.2"
                                from="2011-10-15"
@@ -9318,8 +9258,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -9382,8 +9321,7 @@
                   <affiliation role="member"
                                ref="#party.SZS"
                                from="1990-05-08"
-                               to="1990-06-09"
-                               ana="#SK.11"/>
+                               to="1990-06-08"/>
                   <affiliation role="member"
                                ref="#party.SSS"
                                from="1990-06-09"
@@ -9507,23 +9445,13 @@
                   <affiliation role="member"
                                ref="#party.SNS"
                                from="1992-12-23"
-                               to="1993-07-30"
-                               ana="#DZ.1"/>
+                               to="1993-07-29"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="1993-07-30"
-                               to="1993-09-20"
-                               ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.D"
-                               from="1993-09-20"
-                               to="1994-04-06"
-                               ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.DS"
-                               from="1994-04-06"
-                               to="1995-11-10"
-                               ana="#DZ.1"/>
+                               to="1993-09-19"/>
+                  <affiliation role="member" ref="#party.D" from="1993-09-20" to="1994-04-05"/>
+                  <affiliation role="member" ref="#party.DS" from="1994-04-06" to="1995-11-09"/>
                   <affiliation role="member"
                                ref="#party.NP"
                                from="1995-11-10"
@@ -9645,8 +9573,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -9943,16 +9870,11 @@
                                from="2008-10-15"
                                to="2011-12-15"
                                ana="#DZ.5"/>
-                  <affiliation role="member"
-                               ref="#party.SD"
-                               from="2008-12-16"
-                               to="2010-10-27"
-                               ana="#DZ.5"/>
+                  <affiliation role="member" ref="#party.SD" from="2008-12-16" to="2010-10-26"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2010-10-27"
-                               to="2010-11-08"
-                               ana="#DZ.5"/>
+                               to="2010-11-07"/>
                   <affiliation role="member"
                                ref="#party.NP"
                                from="2010-11-08"
@@ -10349,8 +10271,7 @@
                   <affiliation role="member"
                                ref="#party.SMC.1"
                                from="2014-08-01"
-                               to="2015-03-07"
-                               ana="#DZ.7"/>
+                               to="2015-03-06"/>
                   <affiliation role="member"
                                ref="#party.SMC.2"
                                from="2015-03-07"
@@ -10910,10 +10831,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -10925,8 +10845,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -11019,8 +10938,7 @@
                   <affiliation role="member"
                                ref="#party.SKD"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -11101,8 +11019,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -11566,8 +11483,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -11581,8 +11497,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -11722,8 +11637,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -12002,8 +11916,7 @@
                   <affiliation role="member"
                                ref="#party.SDZ"
                                from="1990-05-08"
-                               to="1991-10-13"
-                               ana="#SK.11"/>
+                               to="1991-10-12"/>
                   <affiliation role="member"
                                ref="#party.D"
                                from="1991-10-13"
@@ -12014,11 +11927,7 @@
                                from="1992-12-23"
                                to="1996-11-27"
                                ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.D"
-                               from="1992-12-23"
-                               to="1994-04-06"
-                               ana="#DZ.1"/>
+                  <affiliation role="member" ref="#party.D" from="1992-12-23" to="1994-04-05"/>
                   <affiliation role="member"
                                ref="#party.DS"
                                from="1994-04-06"
@@ -12082,8 +11991,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -12223,8 +12131,7 @@
                   <affiliation role="member"
                                ref="#party.SKD"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -12365,8 +12272,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -12455,18 +12361,12 @@
                   <affiliation role="member"
                                ref="#party.SNS"
                                from="2004-10-22"
-                               to="2008-01-09"
-                               ana="#DZ.4"/>
+                               to="2008-01-08"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2008-01-09"
-                               to="2008-01-14"
-                               ana="#DZ.4"/>
-                  <affiliation role="member"
-                               ref="#party.NP"
-                               from="2008-01-14"
-                               to="2008-03-14"
-                               ana="#DZ.4"/>
+                               to="2008-01-13"/>
+                  <affiliation role="member" ref="#party.NP" from="2008-01-14" to="2008-03-13"/>
                   <affiliation role="member"
                                ref="#party.Lipa"
                                from="2008-03-14"
@@ -12892,8 +12792,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -12907,8 +12806,7 @@
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-10-27"
-                               to="2002-03-15"
-                               ana="#DZ.3"/>
+                               to="2002-03-14"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2002-03-15"
@@ -13182,18 +13080,12 @@
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="2004-10-22"
-                               to="2007-02-22"
-                               ana="#DZ.4"/>
+                               to="2007-02-21"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2007-02-22"
-                               to="2007-02-27"
-                               ana="#DZ.4"/>
-                  <affiliation role="member"
-                               ref="#party.NP"
-                               from="2007-02-27"
-                               to="2007-10-12"
-                               ana="#DZ.4"/>
+                               to="2007-02-26"/>
+                  <affiliation role="member" ref="#party.NP" from="2007-02-27" to="2007-10-11"/>
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2007-10-12"
@@ -13207,8 +13099,7 @@
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2008-10-15"
-                               to="2011-07-08"
-                               ana="#DZ.5"/>
+                               to="2011-07-07"/>
                   <affiliation role="member"
                                ref="#party.NP"
                                from="2011-07-08"
@@ -13319,8 +13210,7 @@
                   <affiliation role="member"
                                ref="#party.ZKS-SDP"
                                from="1990-05-08"
-                               to="1991-12-20"
-                               ana="#SK.11"/>
+                               to="1991-12-19"/>
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1991-12-20"
@@ -13334,8 +13224,7 @@
                   <affiliation role="member"
                                ref="#party.SDP"
                                from="1992-12-23"
-                               to="1993-05-29"
-                               ana="#DZ.1"/>
+                               to="1993-05-28"/>
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="1993-05-29"
@@ -13369,8 +13258,7 @@
                   <affiliation role="member"
                                ref="#party.ZLSD"
                                from="2004-10-22"
-                               to="2005-04-04"
-                               ana="#DZ.4"/>
+                               to="2005-04-03"/>
                   <affiliation role="member"
                                ref="#party.SD"
                                from="2005-04-04"
@@ -13636,8 +13524,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -13892,8 +13779,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -13922,13 +13808,11 @@
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2008-10-15"
-                               to="2008-11-28"
-                               ana="#DZ.5"/>
+                               to="2008-11-27"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2008-11-28"
-                               to="2009-10-05"
-                               ana="#DZ.5"/>
+                               to="2009-10-04"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2009-10-05"
@@ -14319,13 +14203,11 @@
                   <affiliation role="member"
                                ref="#party.DeSUS"
                                from="2008-10-15"
-                               to="2009-12-01"
-                               ana="#DZ.5"/>
+                               to="2009-11-30"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2009-12-01"
-                               to="2010-11-08"
-                               ana="#DZ.5"/>
+                               to="2010-11-07"/>
                   <affiliation role="member"
                                ref="#party.NP"
                                from="2010-11-08"
@@ -14504,8 +14386,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -14519,8 +14400,7 @@
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-10-27"
-                               to="2002-03-15"
-                               ana="#DZ.3"/>
+                               to="2002-03-14"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2002-03-15"
@@ -14769,8 +14649,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -14803,11 +14682,7 @@
                                from="1992-12-23"
                                to="1996-11-27"
                                ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.D"
-                               from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                  <affiliation role="member" ref="#party.D" from="1992-12-23" to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -14831,7 +14706,7 @@
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2004-07-06"
-                               to="2004-07-07"
+                               to="2004-07-06"
                                ana="#DZ.3"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
@@ -15166,11 +15041,7 @@
                                from="1992-12-23"
                                to="1996-11-27"
                                ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.D"
-                               from="1992-12-23"
-                               to="1994-04-06"
-                               ana="#DZ.1"/>
+                  <affiliation role="member" ref="#party.D" from="1992-12-23" to="1994-04-05"/>
                   <affiliation role="member"
                                ref="#party.DS"
                                from="1994-04-06"
@@ -15409,8 +15280,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -15886,8 +15756,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -15964,8 +15833,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -16127,11 +15995,7 @@
                                from="2004-10-22"
                                to="2007-02-22"
                                ana="#DZ.4"/>
-                  <affiliation role="member"
-                               ref="#party.NP"
-                               from="2007-02-27"
-                               to="2007-10-12"
-                               ana="#DZ.4"/>
+                  <affiliation role="member" ref="#party.NP" from="2007-02-27" to="2007-10-11"/>
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2007-10-12"
@@ -16350,16 +16214,11 @@
                                from="1992-12-23"
                                to="1996-11-27"
                                ana="#DZ.1"/>
-                  <affiliation role="member"
-                               ref="#party.ZS"
-                               from="1992-12-23"
-                               to="1993-03-22"
-                               ana="#DZ.1"/>
+                  <affiliation role="member" ref="#party.ZS" from="1992-12-23" to="1993-03-21"/>
                   <affiliation role="member"
                                ref="#party.ZESS"
                                from="1993-03-22"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1994-03-12"
@@ -16463,8 +16322,7 @@
                   <affiliation role="member"
                                ref="#party.SLS.1"
                                from="1996-11-28"
-                               to="2000-06-06"
-                               ana="#DZ.2"/>
+                               to="2000-06-05"/>
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-06-06"
@@ -16478,8 +16336,7 @@
                   <affiliation role="member"
                                ref="#party.SLS-SKD"
                                from="2000-10-27"
-                               to="2002-03-15"
-                               ana="#DZ.3"/>
+                               to="2002-03-14"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2002-03-15"
@@ -16493,13 +16350,8 @@
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="2004-10-22"
-                               to="2007-03-28"
-                               ana="#DZ.4"/>
-                  <affiliation role="member"
-                               ref="#party.NP"
-                               from="2007-03-28"
-                               to="2007-10-12"
-                               ana="#DZ.4"/>
+                               to="2007-03-27"/>
+                  <affiliation role="member" ref="#party.NP" from="2007-03-28" to="2007-10-11"/>
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2007-10-12"
@@ -16513,8 +16365,7 @@
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2008-10-15"
-                               to="2011-07-08"
-                               ana="#DZ.5"/>
+                               to="2011-07-07"/>
                   <affiliation role="member"
                                ref="#party.NP"
                                from="2011-07-08"
@@ -16778,8 +16629,7 @@
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2008-10-15"
-                               to="2011-10-15"
-                               ana="#DZ.5"/>
+                               to="2011-10-14"/>
                   <affiliation role="member"
                                ref="#party.Zares.2"
                                from="2011-10-15"
@@ -17275,8 +17125,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -17398,8 +17247,7 @@
                   <affiliation role="member"
                                ref="#party.SMS"
                                from="2000-10-27"
-                               to="2004-09-02"
-                               ana="#DZ.3"/>
+                               to="2004-09-01"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2004-09-02"
@@ -17472,11 +17320,7 @@
                                from="2011-12-16"
                                to="2014-07-31"
                                ana="#DZ.6"/>
-                  <affiliation role="member"
-                               ref="#party.DL"
-                               from="2011-12-16"
-                               to="2012-04-10"
-                               ana="#DZ.6"/>
+                  <affiliation role="member" ref="#party.DL" from="2011-12-16" to="2012-04-09"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2012-04-10"
@@ -17762,18 +17606,12 @@
                   <affiliation role="member"
                                ref="#party.SNS"
                                from="2004-10-22"
-                               to="2008-01-09"
-                               ana="#DZ.4"/>
+                               to="2008-01-08"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2008-01-09"
-                               to="2008-01-14"
-                               ana="#DZ.4"/>
-                  <affiliation role="member"
-                               ref="#party.NP"
-                               from="2008-01-14"
-                               to="2008-03-14"
-                               ana="#DZ.4"/>
+                               to="2008-01-13"/>
+                  <affiliation role="member" ref="#party.NP" from="2008-01-14" to="2008-03-13"/>
                   <affiliation role="member"
                                ref="#party.Lipa"
                                from="2008-03-14"
@@ -17900,13 +17738,8 @@
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="2004-10-22"
-                               to="2007-03-02"
-                               ana="#DZ.4"/>
-                  <affiliation role="member"
-                               ref="#party.NP"
-                               from="2007-03-02"
-                               to="2007-10-12"
-                               ana="#DZ.4"/>
+                               to="2007-03-01"/>
+                  <affiliation role="member" ref="#party.NP" from="2007-03-02" to="2007-10-11"/>
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2007-10-12"
@@ -17920,8 +17753,7 @@
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2008-10-15"
-                               to="2011-10-15"
-                               ana="#DZ.5"/>
+                               to="2011-10-14"/>
                   <affiliation role="member"
                                ref="#party.Zares.2"
                                from="2011-10-15"
@@ -17953,8 +17785,7 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2003-09-19"
-                               ana="#DZ.3"/>
+                               to="2003-09-18"/>
                   <affiliation role="member"
                                ref="#party.SDS.2"
                                from="2003-09-19"
@@ -17996,11 +17827,7 @@
                                from="2011-12-16"
                                to="2014-07-31"
                                ana="#DZ.6"/>
-                  <affiliation role="member"
-                               ref="#party.PS"
-                               from="2011-12-16"
-                               to="2014-04-29"
-                               ana="#DZ.6"/>
+                  <affiliation role="member" ref="#party.PS" from="2011-12-16" to="2014-04-28"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2014-04-29"
@@ -18477,13 +18304,11 @@
                   <affiliation role="member"
                                ref="#party.SDS.1"
                                from="2000-10-27"
-                               to="2001-12-14"
-                               ana="#DZ.3"/>
+                               to="2001-12-13"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2001-12-14"
-                               to="2003-02-04"
-                               ana="#DZ.3"/>
+                               to="2003-02-03"/>
                   <affiliation role="member"
                                ref="#party.SLS.2"
                                from="2003-02-04"
@@ -19005,13 +18830,8 @@
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="2004-10-22"
-                               to="2007-03-02"
-                               ana="#DZ.4"/>
-                  <affiliation role="member"
-                               ref="#party.NP"
-                               from="2007-03-02"
-                               to="2007-10-12"
-                               ana="#DZ.4"/>
+                               to="2007-03-01"/>
+                  <affiliation role="member" ref="#party.NP" from="2007-03-02" to="2007-10-11"/>
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2007-10-12"
@@ -19025,8 +18845,7 @@
                   <affiliation role="member"
                                ref="#party.Zares.1"
                                from="2008-10-15"
-                               to="2011-10-15"
-                               ana="#DZ.5"/>
+                               to="2011-10-14"/>
                   <affiliation role="member"
                                ref="#party.Zares.2"
                                from="2011-10-15"
@@ -19103,10 +18922,9 @@
                   <affiliation role="member"
                                ref="#party.ZSMS"
                                from="1990-05-08"
-                               to="1990-11-10"
-                               ana="#SK.11"/>
+                               to="1990-11-09"/>
                   <affiliation role="member"
-                               ref="#part.LDS.1"
+                               ref="#party.LDS.1"
                                from="1990-11-10"
                                to="1992-12-22"
                                ana="#SK.11"/>
@@ -19118,8 +18936,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -19517,8 +19334,7 @@
                   <affiliation role="member"
                                ref="#party.LDS.1"
                                from="1992-12-23"
-                               to="1994-03-12"
-                               ana="#DZ.1"/>
+                               to="1994-03-11"/>
                   <affiliation role="member"
                                ref="#party.LDS.2"
                                from="1994-03-12"
@@ -19958,13 +19774,11 @@
                   <affiliation role="member"
                                ref="#party.DeSUS"
                                from="2008-10-15"
-                               to="2009-12-01"
-                               ana="#DZ.5"/>
+                               to="2009-11-30"/>
                   <affiliation role="member"
                                ref="#party.NeP"
                                from="2009-12-01"
-                               to="2010-11-08"
-                               ana="#DZ.5"/>
+                               to="2010-11-07"/>
                   <affiliation role="member"
                                ref="#party.NP"
                                from="2010-11-08"
@@ -20382,67 +20196,67 @@
    <xi:include href="SDT4/KZP-Redna-012-2007-05-16.xml"/>
    <xi:include href="SDT4/KZP-Redna-014-2007-09-19.xml"/>
    <xi:include href="SDT4/KZP-Redna-015-2008-04-17.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Javna-001-2007-03-02.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-001-2005-10-17.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-002-2006-05-03.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-003-2006-10-19.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-004-2006-11-10.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-005-2007-02-14.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-005-2007-05-30.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-005-2007-06-01.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-006-2007-05-31.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-007-2007-07-05.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-008-2007-10-03.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-008-2007-11-22.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-009-2007-10-17.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-011-2007-12-04.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-011-2007-12-12.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-011-2007-12-20.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-012-2008-02-15.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Nujna-013-2008-03-19.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-001-2005-01-14.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-002-2005-02-02.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-003-2005-02-25.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-004-2005-03-30.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-005-2005-05-11.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-006-2005-06-24.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-007-2005-07-08.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-008-2005-09-15.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-009-2005-10-05.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-009-2005-10-11.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-010-2005-11-18.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-011-2006-01-11.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-012-2006-02-23.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-013-2006-03-16.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-014-2006-04-18.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-015-2006-05-19.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-016-2006-06-14.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-017-2006-09-07.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-017-2006-09-15.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-018-2006-10-11.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-019-2006-11-10.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-020-2007-01-16.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-021-2007-02-14.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-022-2007-03-13.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-024-2007-04-13.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-025-2007-05-10.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-026-2007-09-19.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-027-2007-11-07.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-027-2007-11-09.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-028-2007-11-08.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-028-2007-11-14.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-028-2007-12-04.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-029-2007-11-28.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-029-2007-12-12.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-030-2007-12-12.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-031-2008-01-18.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-032-2008-02-21.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-033-2008-03-19.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-034-2008-04-18.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-035-2008-05-15.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-036-2008-06-06.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-036-2008-06-13.xml"/>
-   <xi:include href="SDT4/KZPTZČPIEM-Redna-037-2008-07-09.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Javna-001-2007-03-02.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-001-2005-10-17.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-002-2006-05-03.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-003-2006-10-19.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-004-2006-11-10.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-005-2007-02-14.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-005-2007-05-30.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-005-2007-06-01.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-006-2007-05-31.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-007-2007-07-05.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-008-2007-10-03.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-008-2007-11-22.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-009-2007-10-17.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-011-2007-12-04.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-011-2007-12-12.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-011-2007-12-20.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-012-2008-02-15.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Nujna-013-2008-03-19.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-001-2005-01-14.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-002-2005-02-02.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-003-2005-02-25.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-004-2005-03-30.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-005-2005-05-11.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-006-2005-06-24.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-007-2005-07-08.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-008-2005-09-15.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-009-2005-10-05.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-009-2005-10-11.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-010-2005-11-18.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-011-2006-01-11.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-012-2006-02-23.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-013-2006-03-16.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-014-2006-04-18.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-015-2006-05-19.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-016-2006-06-14.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-017-2006-09-07.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-017-2006-09-15.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-018-2006-10-11.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-019-2006-11-10.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-020-2007-01-16.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-021-2007-02-14.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-022-2007-03-13.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-024-2007-04-13.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-025-2007-05-10.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-026-2007-09-19.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-027-2007-11-07.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-027-2007-11-09.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-028-2007-11-08.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-028-2007-11-14.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-028-2007-12-04.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-029-2007-11-28.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-029-2007-12-12.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-030-2007-12-12.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-031-2008-01-18.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-032-2008-02-21.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-033-2008-03-19.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-034-2008-04-18.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-035-2008-05-15.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-036-2008-06-06.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-036-2008-06-13.xml"/>
+   <xi:include href="SDT4/KZPTZCPIEM-Redna-037-2008-07-09.xml"/>
    <xi:include href="SDT4/MK-Nujna-001-2004-11-10.xml"/>
    <xi:include href="SDT4/MK-Nujna-002-2004-11-25.xml"/>
    <xi:include href="SDT4/MK-Nujna-003-2004-12-03.xml"/>
@@ -20760,65 +20574,65 @@
    <xi:include href="SDT4/OZKGIP-Redna-029-2008-04-03.xml"/>
    <xi:include href="SDT4/OZKGIP-Redna-030-2008-04-10.xml"/>
    <xi:include href="SDT4/OZKGIP-Redna-031-2008-06-05.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Javna-001-2005-05-12.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Javna-002-2006-03-08.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Javna-003-2007-09-21.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Javna-004-2007-12-06.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-001-2004-11-30.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-002-2005-03-09.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-003-2005-06-10.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-004-2005-07-07.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-005-2005-07-15.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-006-2005-07-20.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-007-2005-09-09.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-008-2005-10-19.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-009-2006-06-13.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-010-2006-07-05.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-011-2006-10-16.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-012-2006-10-25.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-013-2006-11-15.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-014-2007-09-20.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-015-2007-10-18.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-016-2007-11-16.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-017-2007-12-11.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-018-2008-03-04.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-019-2008-06-11.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Nujna-020-2008-07-09.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-001-2005-01-14.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-002-2005-02-18.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-002-2005-03-03.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-003-2005-03-03.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-004-2005-05-05.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-005-2005-06-01.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-006-2005-06-29.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-007-2005-09-07.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-008-2005-10-07.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-009-2005-12-01.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-010-2006-01-15.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-011-2006-03-15.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-012-2006-04-13.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-013-2006-05-09.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-014-2006-05-10.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-015-2006-06-01.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-016-2006-06-30.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-017-2006-09-21.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-018-2006-10-05.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-019-2007-01-11.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-020-2007-02-14.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-021-2007-03-13.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-022-2007-04-10.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-023-2007-05-16.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-024-2007-06-05.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-025-2007-06-26.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-026-2007-09-13.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-026-2007-09-14.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-027-2007-10-11.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-028-2008-01-10.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-029-2008-02-13.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-030-2008-03-06.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-031-2008-05-07.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-032-2008-06-04.xml"/>
-   <xi:include href="SDT4/OZKŠIŠ-Redna-033-2008-07-01.xml"/>
+   <xi:include href="SDT4/OZKSIS-Javna-001-2005-05-12.xml"/>
+   <xi:include href="SDT4/OZKSIS-Javna-002-2006-03-08.xml"/>
+   <xi:include href="SDT4/OZKSIS-Javna-003-2007-09-21.xml"/>
+   <xi:include href="SDT4/OZKSIS-Javna-004-2007-12-06.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-001-2004-11-30.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-002-2005-03-09.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-003-2005-06-10.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-004-2005-07-07.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-005-2005-07-15.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-006-2005-07-20.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-007-2005-09-09.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-008-2005-10-19.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-009-2006-06-13.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-010-2006-07-05.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-011-2006-10-16.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-012-2006-10-25.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-013-2006-11-15.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-014-2007-09-20.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-015-2007-10-18.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-016-2007-11-16.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-017-2007-12-11.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-018-2008-03-04.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-019-2008-06-11.xml"/>
+   <xi:include href="SDT4/OZKSIS-Nujna-020-2008-07-09.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-001-2005-01-14.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-002-2005-02-18.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-002-2005-03-03.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-003-2005-03-03.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-004-2005-05-05.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-005-2005-06-01.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-006-2005-06-29.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-007-2005-09-07.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-008-2005-10-07.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-009-2005-12-01.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-010-2006-01-15.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-011-2006-03-15.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-012-2006-04-13.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-013-2006-05-09.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-014-2006-05-10.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-015-2006-06-01.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-016-2006-06-30.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-017-2006-09-21.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-018-2006-10-05.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-019-2007-01-11.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-020-2007-02-14.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-021-2007-03-13.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-022-2007-04-10.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-023-2007-05-16.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-024-2007-06-05.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-025-2007-06-26.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-026-2007-09-13.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-026-2007-09-14.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-027-2007-10-11.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-028-2008-01-10.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-029-2008-02-13.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-030-2008-03-06.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-031-2008-05-07.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-032-2008-06-04.xml"/>
+   <xi:include href="SDT4/OZKSIS-Redna-033-2008-07-01.xml"/>
    <xi:include href="SDT4/OZLSIRR-Nujna-001-2004-11-29.xml"/>
    <xi:include href="SDT4/OZLSIRR-Nujna-002-2004-12-15.xml"/>
    <xi:include href="SDT4/OZLSIRR-Nujna-004-2005-12-14.xml"/>
@@ -21121,43 +20935,43 @@
    <xi:include href="SDT4/OZP-Redna-025-2007-12-12.xml"/>
    <xi:include href="SDT4/OZP-Redna-026-2008-02-12.xml"/>
    <xi:include href="SDT4/OZP-Redna-027-2008-05-08.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-001-2004-11-29.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-002-2005-05-25.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-003-2005-10-18.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-004-2006-07-05.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-005-2006-10-18.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-006-2006-12-07.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-007-2007-06-28.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-008-2007-09-18.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-009-2007-10-18.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-010-2008-05-14.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-010-2008-05-20.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Nujna-011-2008-06-11.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-001-2005-03-04.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-003-2005-05-11.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-005-2005-09-06.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-006-2005-10-05.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-007-2005-11-03.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-008-2005-12-01.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-009-2005-12-07.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-010-2006-02-22.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-011-2006-03-09.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-012-2006-06-01.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-013-2006-10-12.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-014-2006-11-09.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-015-2007-01-18.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-016-2007-02-14.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-017-2007-06-07.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-018-2007-06-28.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-018-2007-06-29.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-018-2007-07-04.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-018-2007-07-06.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-018-2007-09-05.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-019-2007-09-12.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-020-2007-11-08.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-021-2008-01-16.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-022-2008-03-18.xml"/>
-   <xi:include href="SDT4/OZVŠZITR-Redna-023-2008-06-04.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-001-2004-11-29.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-002-2005-05-25.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-003-2005-10-18.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-004-2006-07-05.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-005-2006-10-18.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-006-2006-12-07.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-007-2007-06-28.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-008-2007-09-18.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-009-2007-10-18.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-010-2008-05-14.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-010-2008-05-20.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Nujna-011-2008-06-11.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-001-2005-03-04.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-003-2005-05-11.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-005-2005-09-06.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-006-2005-10-05.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-007-2005-11-03.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-008-2005-12-01.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-009-2005-12-07.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-010-2006-02-22.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-011-2006-03-09.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-012-2006-06-01.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-013-2006-10-12.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-014-2006-11-09.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-015-2007-01-18.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-016-2007-02-14.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-017-2007-06-07.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-018-2007-06-28.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-018-2007-06-29.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-018-2007-07-04.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-018-2007-07-06.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-018-2007-09-05.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-019-2007-09-12.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-020-2007-11-08.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-021-2008-01-16.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-022-2008-03-18.xml"/>
+   <xi:include href="SDT4/OZVSZITR-Redna-023-2008-06-04.xml"/>
    <xi:include href="SDT4/OZZ-Nujna-001-2004-11-29.xml"/>
    <xi:include href="SDT4/OZZ-Nujna-002-2005-02-02.xml"/>
    <xi:include href="SDT4/OZZ-Nujna-003-2005-06-07.xml"/>

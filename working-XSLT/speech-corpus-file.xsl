@@ -146,141 +146,83 @@
                             </namespace>
                         </tagsDecl>
                         <classDecl>
-                            <taxonomy>
+                            <taxonomy xml:id="parl.legislature">
                                 <desc xml:lang="en">Legislature</desc>
                                 <desc xml:lang="sl">Zakonodajna oblast</desc>
-                                <category>
+                                <category xml:id="parl.geo-political">
                                     <desc xml:lang="en">Geo-political or administrative units</desc>
                                     <desc xml:lang="sl">Geopolitične ali upravne enote</desc>
                                     <category xml:id="parl.supranational">
-                                        <catDesc xml:lang="en">
-                                            <term>Supranational legislature</term>
-                                        </catDesc>
-                                        <catDesc xml:lang="sl">
-                                            <term>Nadnacionalna zakonodajna oblast</term>
-                                        </catDesc>
+                                        <catDesc xml:lang="en"><term>Supranational legislature</term></catDesc>
+                                        <catDesc xml:lang="sl"><term>Nadnacionalna zakonodajna oblast</term></catDesc>
                                     </category>
                                     <category xml:id="parl.national">
-                                        <catDesc xml:lang="en">
-                                            <term>National legislature</term>
-                                        </catDesc>
-                                        <catDesc xml:lang="sl">
-                                            <term>Nacionalna zakonodajna oblast</term>
-                                        </catDesc>
+                                        <catDesc xml:lang="en"><term>National legislature</term></catDesc>
+                                        <catDesc xml:lang="sl"><term>Nacionalna zakonodajna oblast</term></catDesc>
                                     </category>
                                     <category xml:id="parl.regional">
-                                        <catDesc xml:lang="en">
-                                            <term>Regional legislature</term>
-                                        </catDesc>
-                                        <catDesc xml:lang="sl">
-                                            <term>Regionalna zakonodajna oblast</term>
-                                        </catDesc>
+                                        <catDesc xml:lang="en"><term>Regional legislature</term></catDesc>
+                                        <catDesc xml:lang="sl"><term>Regionalna zakonodajna oblast</term></catDesc>
                                     </category>
                                     <category xml:id="parl.local">
-                                        <catDesc xml:lang="en">
-                                            <term>Local legislature</term>
-                                        </catDesc>
-                                        <catDesc xml:lang="sl">
-                                            <term>Lokalna zakonodajna oblast</term>
-                                        </catDesc>
+                                        <catDesc xml:lang="en"><term>Local legislature</term></catDesc>
+                                        <catDesc xml:lang="sl"><term>Lokalna zakonodajna oblast</term></catDesc>
                                     </category>
                                 </category>
-                                <category>
+                                <category xml:id="parl.organization">
                                     <desc xml:lang="en">Organization</desc>
                                     <desc xml:lang="sl">Organiziranost</desc>
-                                    <category>
+                                    <category xml:id="parl.chambers">
                                         <desc xml:lang="en">Chambers</desc>
                                         <desc xml:lang="sl">Zbori</desc>
                                         <category xml:id="par.uni">
-                                            <catDesc xml:lang="en">
-                                                <term>Unicameralism</term>
-                                            </catDesc>
-                                            <catDesc xml:lang="sl">
-                                                <term>Enodomen</term>
-                                            </catDesc>
+                                            <catDesc xml:lang="en"><term>Unicameralism</term></catDesc>
+                                            <catDesc xml:lang="sl"><term>Enodomen</term></catDesc>
                                         </category>
                                         <category xml:id="par.bi">
-                                            <catDesc xml:lang="en">
-                                                <term>Bicameralism</term>
-                                            </catDesc>
-                                            <catDesc xml:lang="sl">
-                                                <term>Dvodomen</term>
-                                            </catDesc>
+                                            <catDesc xml:lang="en"><term>Bicameralism</term></catDesc>
+                                            <catDesc xml:lang="sl"><term>Dvodomen</term></catDesc>
                                             <category xml:id="par.upper">
-                                                <catDesc xml:lang="en">
-                                                    <term>Upper house</term>
-                                                </catDesc>
-                                                <catDesc xml:lang="sl">
-                                                    <term>Zgornji dom</term>
-                                                </catDesc>
+                                                <catDesc xml:lang="en"><term>Upper house</term></catDesc>
+                                                <catDesc xml:lang="sl"><term>Zgornji dom</term></catDesc>
                                             </category>
                                             <category xml:id="par.lower">
-                                                <catDesc xml:lang="en">
-                                                    <term>Lower house</term>
-                                                </catDesc>
-                                                <catDesc xml:lang="sl">
-                                                    <term>Spodnji dom</term>
-                                                </catDesc>
+                                                <catDesc xml:lang="en"><term>Lower house</term></catDesc>
+                                                <catDesc xml:lang="sl"><term>Spodnji dom</term></catDesc>
                                             </category>
                                         </category>
                                         <category xml:id="par.multi">
-                                            <catDesc xml:lang="en">
-                                                <term>Multicameralism</term>
-                                            </catDesc>
-                                            <catDesc xml:lang="sl">
-                                                <term>Večdomen</term>
-                                            </catDesc>
+                                            <catDesc xml:lang="en"><term>Multicameralism</term></catDesc>
+                                            <catDesc xml:lang="sl"><term>Večdomen</term></catDesc>
                                             <category xml:id="par.chamber">
-                                                <catDesc xml:lang="en">
-                                                    <term>Chamber</term>
-                                                </catDesc>
-                                                <catDesc xml:lang="sl">
-                                                    <term>Zbor</term>
-                                                </catDesc>
+                                                <catDesc xml:lang="en"><term>Chamber</term></catDesc>
+                                                <catDesc xml:lang="sl"><term>Zbor</term></catDesc>
                                             </category>
                                         </category>
                                     </category>
                                     <category xml:id="parl.committee">
-                                        <catDesc xml:lang="en">
-                                            <term>Committee</term>
-                                        </catDesc>
-                                        <catDesc xml:lang="sl">
-                                            <term>Delovno telo</term>
-                                        </catDesc>
+                                        <catDesc xml:lang="en"><term>Committee</term></catDesc>
+                                        <catDesc xml:lang="sl"><term>Delovno telo</term></catDesc>
                                         <category xml:id="parl.committee.standing">
-                                            <catDesc xml:lang="en">
-                                                <term>Standing committee</term>
-                                            </catDesc>
-                                            <catDesc xml:lang="sl">
-                                                <term>Stalno delovno telo</term>
-                                            </catDesc>
+                                            <catDesc xml:lang="en"><term>Standing committee</term></catDesc>
+                                            <catDesc xml:lang="sl"><term>Stalno delovno telo</term></catDesc>
                                         </category>
                                         <category xml:id="parl.committee.special">
-                                            <catDesc xml:lang="en">
-                                                <term>Special committee</term>
-                                            </catDesc>
-                                            <catDesc xml:lang="sl">
-                                                <term>Začasno delovno telo</term>
-                                            </catDesc>
+                                            <catDesc xml:lang="en"><term>Special committee</term></catDesc>
+                                            <catDesc xml:lang="sl"><term>Začasno delovno telo</term></catDesc>
                                         </category>
                                         <category xml:id="parl.committee.inquiry">
-                                            <catDesc xml:lang="en">
-                                                <term>Committee of inquiry </term>
-                                            </catDesc>
-                                            <catDesc xml:lang="sl">
-                                                <term>Preiskovalna komisija</term>
-                                            </catDesc>
+                                            <catDesc xml:lang="en"><term>Committee of inquiry </term></catDesc>
+                                            <catDesc xml:lang="sl"><term>Preiskovalna komisija</term></catDesc>
                                         </category>
                                     </category>
                                 </category>
                                 <category xml:id="parl.term">
-                                    <catDesc xml:lang="en">
-                                        <term>Legislative period</term>: term of the parliament between
+                                    <catDesc xml:lang="en"><term>Legislative period</term>: term of the parliament between
                                         general elections.</catDesc>
                                     <catDesc xml:lang="sl">Zakonodajno obdobje</catDesc>
                                     <category xml:id="parl.session">
-                                        <catDesc xml:lang="en">
-                                            <term>Legislative session</term>: the period of time in which
+                                        <catDesc xml:lang="en"><term>Legislative session</term>: the period of time in which
                                             a legislature is convened for purpose of lawmaking, usually being
                                             one of two or more smaller divisions of the entire time between two
                                             elections. A session is a meeting or series of connected meetings
@@ -288,126 +230,72 @@
                                             purpose.</catDesc>
                                         <catDesc xml:lang="sl">Parlamentaro zasedanje</catDesc>
                                         <category xml:id="parl.meeting">
-                                            <catDesc xml:lang="en">
-                                                <term>Meeting</term>: Each meeting may be a
+                                            <catDesc xml:lang="en"><term>Meeting</term>: Each meeting may be a
                                                 separate session or part of a group of meetings constituting a
                                                 session. The session/meeting may take one or more
                                                 days.</catDesc>
-                                            <catDesc xml:lang="sl">
-                                                <term>Seja</term>
-                                            </catDesc>
-                                            <category>
+                                            <catDesc xml:lang="sl"><term>Seja</term></catDesc>
+                                            <category xml:id="parl.meeting-types">
                                                 <desc xml:lang="en">Types of meetings</desc>
                                                 <category xml:id="parl.meeting.regular">
-                                                    <catDesc xml:lang="en">
-                                                        <term>Regular meeting</term>
-                                                    </catDesc>
-                                                    <catDesc xml:lang="sl">
-                                                        <term>Redna seja</term>
-                                                    </catDesc>
+                                                    <catDesc xml:lang="en"><term>Regular meeting</term></catDesc>
+                                                    <catDesc xml:lang="sl"><term>Redna seja</term></catDesc>
                                                 </category>
                                                 <category xml:id="parl.meeting.special">
-                                                    <catDesc xml:lang="en">
-                                                        <term>Special meeting</term>
-                                                    </catDesc>
-                                                    <catDesc xml:lang="sl">
-                                                        <term>Posebna seja</term>
-                                                    </catDesc>
+                                                    <catDesc xml:lang="en"><term>Special meeting</term></catDesc>
+                                                    <catDesc xml:lang="sl"><term>Posebna seja</term></catDesc>
                                                     <category xml:id="parl.meeting.extraordinary">
-                                                        <catDesc xml:lang="en">
-                                                            <term>Extraordinary meeting</term>
-                                                        </catDesc>
-                                                        <catDesc xml:lang="sl">
-                                                            <term>Izredna seja</term>
-                                                        </catDesc>
+                                                        <catDesc xml:lang="en"><term>Extraordinary meeting</term></catDesc>
+                                                        <catDesc xml:lang="sl"><term>Izredna seja</term></catDesc>
                                                     </category>
                                                     <category xml:id="parl.meeting.urgent">
-                                                        <catDesc xml:lang="en">
-                                                            <term>Urgent meeting</term>
-                                                        </catDesc>
-                                                        <catDesc xml:lang="sl">
-                                                            <term>Nujna seja</term>
-                                                        </catDesc>
+                                                        <catDesc xml:lang="en"><term>Urgent meeting</term></catDesc>
+                                                        <catDesc xml:lang="sl"><term>Nujna seja</term></catDesc>
                                                     </category>
                                                     <category xml:id="parl.meeting.ceremonial">
-                                                        <catDesc xml:lang="en">
-                                                            <term>Ceremonial meeting</term>
-                                                        </catDesc>
-                                                        <catDesc xml:lang="sl">
-                                                            <term>Slavnostna seja</term>
-                                                        </catDesc>
+                                                        <catDesc xml:lang="en"><term>Ceremonial meeting</term></catDesc>
+                                                        <catDesc xml:lang="sl"><term>Slavnostna seja</term></catDesc>
                                                     </category>
                                                     <category xml:id="parl.meeting.commemorative">
-                                                        <catDesc xml:lang="en">
-                                                            <term>Commemorative meeting</term>
-                                                        </catDesc>
-                                                        <catDesc xml:lang="sl">
-                                                            <term>Žalna seja</term>
-                                                        </catDesc>
+                                                        <catDesc xml:lang="en"><term>Commemorative meeting</term></catDesc>
+                                                        <catDesc xml:lang="sl"><term>Žalna seja</term></catDesc>
                                                     </category>
                                                     <category xml:id="parl.meeting.opinions">
-                                                        <catDesc xml:lang="en">
-                                                            <term>Public presentation of opinions</term>
-                                                        </catDesc>
-                                                        <catDesc xml:lang="sl">
-                                                            <term>Javna predstavitev mnenj</term>
-                                                        </catDesc>
+                                                        <catDesc xml:lang="en"><term>Public presentation of opinions</term></catDesc>
+                                                        <catDesc xml:lang="sl"><term>Javna predstavitev mnenj</term></catDesc>
                                                     </category>
                                                 </category>
                                                 <category xml:id="parl.meeting.continued">
-                                                    <catDesc xml:lang="en">
-                                                        <term>Continued meeting</term>
-                                                    </catDesc>
+                                                    <catDesc xml:lang="en"><term>Continued meeting</term></catDesc>
                                                 </category>
                                                 <category xml:id="parl.meeting.public">
-                                                    <catDesc xml:lang="en">
-                                                        <term>Public meeting</term>
-                                                    </catDesc>
-                                                    <catDesc xml:lang="sl">
-                                                        <term>Javna seja</term>
-                                                    </catDesc>
+                                                    <catDesc xml:lang="en"><term>Public meeting</term></catDesc>
+                                                    <catDesc xml:lang="sl"><term>Javna seja</term></catDesc>
                                                 </category>
                                                 <category xml:id="parl.meeting.executive">
-                                                    <catDesc xml:lang="en">
-                                                        <term>Executive meeting</term>
-                                                    </catDesc>
-                                                    <catDesc xml:lang="sl">
-                                                        <term>Zaprta seja</term>
-                                                    </catDesc>
+                                                    <catDesc xml:lang="en"><term>Executive meeting</term></catDesc>
+                                                    <catDesc xml:lang="sl"><term>Zaprta seja</term></catDesc>
                                                 </category>
                                             </category>
                                             <category xml:id="parl.sitting">
-                                                <catDesc xml:lang="en">
-                                                    <term>Sitting</term>: sitting day</catDesc>
-                                                <catDesc xml:lang="sl">
-                                                    <term>Dan seje</term>
-                                                </catDesc>
+                                                <catDesc xml:lang="en"><term>Sitting</term>: sitting day</catDesc>
+                                                <catDesc xml:lang="sl"><term>Dan seje</term></catDesc>
                                             </category>
                                         </category>
                                     </category>
                                 </category>
                             </taxonomy>
-                            <taxonomy>
+                            <taxonomy xml:id="speaker_types">
                                 <desc xml:lang="en">Types of speakers</desc>
                                 <desc xml:lang="sl">Vrste govornikov</desc>
                                 <category xml:id="chair">
-                                    <catDesc xml:lang="en">
-                                        <term>Chairperson</term>: chairman of a meeting</catDesc>
-                                    <catDesc xml:lang="sl">
-                                        <term>Predsedujoči</term>: predsedujoči zasedanja</catDesc>
+                                    <catDesc xml:lang="en"><term>Chairperson</term>: chairman of a meeting</catDesc>
+                                    <catDesc xml:lang="sl"><term>Predsedujoči</term>: predsedujoči zasedanja</catDesc>
                                 </category>
-                                <!--<category xml:id="regular">
-                                    <catDesc xml:lang="en">
-                                        <term>Regular speaker</term>:</catDesc>
-                                    <catDesc xml:lang="sl">
-                                        <term>Regularni govornik</term>:</catDesc>
+                                <category xml:id="regular">
+                                    <catDesc xml:lang="en"><term>Regular</term>: a regular speaker at a meeting</catDesc>
+                                    <catDesc xml:lang="sl"><term>Navadni</term>: navadni govorec na zasedanju</catDesc>
                                 </category>
-                                <category xml:id="unauthorized">
-                                    <catDesc xml:lang="en">
-                                        <term>Unauthorized speaker</term>: unauthorized intervention in the speech of the main speaker.</catDesc>
-                                    <catDesc xml:lang="sl">
-                                        <term>Neavtorizirani govornik</term>: Neavtorizirana intervencija v govor glavnega govornika.</catDesc>
-                                </category>-->
                             </taxonomy>
                         </classDecl>
                     </encodingDesc>
