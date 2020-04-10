@@ -21,7 +21,7 @@ elsif (-d $inDir) {$procFiles = "$inDir/*.xml"}
 
 ($inBase) = $procFiles =~ m|(.+)/[^/]+/[^/]+\.xml|;
 $rootTEI = "$Bin/../$inBase/siParl-ana.xml";
-$rootTEI = "$Bin/../$inBase/siParl-sample.xml" unless -e $rootTEI;
+$rootTEI = "$Bin/../$inBase/siParl-ana-sample.xml" unless -e $rootTEI;
 die "Can't find root TEI file with teiHeader: $rootTEI\n"
     unless -e $rootTEI;
 

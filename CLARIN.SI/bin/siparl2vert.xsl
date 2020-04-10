@@ -15,6 +15,8 @@
 
   <xsl:output method="xml" encoding="utf-8" indent="no" omit-xml-declaration="yes"/>
   
+  <xsl:key name="id" match="tei:*" use="@xml:id"/>
+
   <!-- File with corpus teiHeader for information about taxonomies, person, parties -->
   <xsl:param name="tei"/>
 
@@ -248,19 +250,47 @@
   <xsl:template match="tei:c"/>
   <xsl:template match="tei:pc | tei:w">
     <xsl:value-of select="concat(.,'&#9;',et:output-annotations(.))"/>
+    <xsl:call-template name="deps"/>
     <xsl:text>&#10;</xsl:text>
     <xsl:if test="@join = 'right' or @join='both' or
-		  following-sibling::tei:*[1]/@join = 'left' or
-		  following-sibling::tei:*[1]/@join = 'both'">
+		  following::tei:*[self::tei:w or self::tei:pc][1]/@join = 'left' or
+		  following::tei:*[self::tei:w or self::tei:pc][1]/@join = 'both'">
       <g/>
       <xsl:text>&#10;</xsl:text>
     </xsl:if>
   </xsl:template>
 
+  <xsl:template name="deps">
+    <xsl:param name="type">UD-SYN</xsl:param>
+    <xsl:variable name="id" select="@xml:id"/>
+    
+    <xsl:variable name="s" select="ancestor::tei:s"/>
+    <xsl:choose>
+      <xsl:when test="$s/tei:linkGrp[@type=$type]">
+	<xsl:variable name="link"
+		      select="$s/tei:linkGrp[@type=$type]/tei:link
+			      [fn:ends-with(@target,concat(' #',$id))]"/>
+	<xsl:value-of select="concat('&#9;', substring-after($link/@ana,'syn:'))"/>
+	<xsl:variable name="target" select="key('id', fn:replace($link/@target,'#(.+?) #.*','$1'))"/>
+	<xsl:choose>
+	  <xsl:when test="$target/self::tei:s">
+	    <xsl:text>&#9;-&#9;-&#9;-&#9;-&#9;-</xsl:text>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:value-of select="concat('&#9;', et:output-annotations($target))"/>
+	  </xsl:otherwise>
+	</xsl:choose>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:text>&#9;-&#9;-&#9;-&#9;-&#9;-</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:function name="et:output-annotations">
     <xsl:param name="token"/>
-    <xsl:variable name="id" select="$token/@xml:id"/>
-    <!--xsl:variable name="n" select="replace($id, '.+\.(t\d+)$', '$1')"/-->
+    <xsl:variable name="n" select="replace($token/@xml:id, '.+\.(t\d+)$', '$1')"/>
+    <xsl:variable name="msd" select="substring-after($token/@ana,'mte:')"/>
     <xsl:variable name="lemma">
       <xsl:choose>
 	<xsl:when test="$token/@lemma">
@@ -271,7 +301,6 @@
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="msd" select="substring-after($token/@ana,'mte:')"/>
     <xsl:variable name="ud-pos" select="replace(replace($token/@msd, 'UposTag=', ''), '\|.+', '')"/>
     <xsl:variable name="ud-feats">
       <xsl:variable name="fs" select="replace($token/@msd, 'UposTag=[^|]+\|?', '')"/>
@@ -284,7 +313,8 @@
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:sequence select="concat($lemma, '&#9;', $msd, '&#9;', $ud-pos, '&#9;', $ud-feats)"/>
+    <xsl:sequence select="concat($lemma, '&#9;', $msd, '&#9;',
+			  $ud-pos, '&#9;', $ud-feats, '&#9;', $n)"/>
   </xsl:function>
 
   <!-- Convert seg/@xml:id to URL of DARIAH-SI digital library -->
@@ -415,10 +445,10 @@
 	</xsl:message>
 	<xsl:value-of select="replace($parties, concat('\', $multi-separator, '.+'), '')"/>
       </xsl:when>
-      <!-- Speaker belongs to parties, just none when he is speaking!? -->
+      <!-- Speaker belongs to parties, just none when he is speaking -->
       <xsl:when test="not(normalize-space($parties)) and $speaker/tei:affiliation[@role='member']">
 	<xsl:message>
-	  <xsl:text>ERROR: belongs to parties but none for </xsl:text>
+	  <xsl:text>WARN: belongs to parties but not for </xsl:text>
 	  <xsl:value-of select="$speaker/@xml:id"/>
 	  <xsl:text> on </xsl:text>
 	  <xsl:value-of select="$session-date"/>

@@ -12,7 +12,9 @@
     exclude-result-prefixes="fn xs et tei xi"
     version="2.0">
 
-  <xsl:output method="xml" encoding="utf-8" indent="no" omit-xml-declaration="yes"/>
+  <xsl:output method="xml" indent="yes"/>
+  <xsl:strip-space elements="tei:*"/>
+  
   <xsl:param name="files"/>
   
   <xsl:param name="change">
@@ -36,10 +38,12 @@
   <xsl:variable name="today-iso" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
   <xsl:variable name="today-slv" select="format-date(current-date(), '[D1]. [M1]. [Y]')"/>
 
-  <xsl:template match="tei:title[matches(., '\[siParl-ana\]')]">
+  <xsl:template match="tei:title[matches(., '\[siParl')]">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
-      <xsl:value-of select="replace(., '\[siParl-ana\]', '[siParl-sample]')"/>
+      <xsl:value-of select="replace(
+			    replace(., '\[siParl\]', '[siParl-sample]'),
+			    '\[siParl-ana\]', '[siParl-ana-sample]')"/>
     </xsl:copy>
   </xsl:template>
   
@@ -53,6 +57,17 @@
   <xsl:template match="tei:extent"/>
   <xsl:template match="tei:tagsDecl"/>
   
+  <xsl:template match="tei:teiHeader">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+      <xsl:if test="not(tei:revisionDesc)">
+	<revisionDesc>
+	  <xsl:copy-of select="$change"/>
+	</revisionDesc>
+      </xsl:if>
+    </xsl:copy>
+  </xsl:template>
   <xsl:template match="tei:revisionDesc">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
@@ -68,11 +83,11 @@
 	<xsl:copy-of select="."/>
       </xsl:when>
       <xsl:otherwise>
-	<xsl:comment>
+	<!--xsl:comment>
 	  <xsl:text>xi:include href="</xsl:text>
 	  <xsl:value-of select="@href"/>
 	  <xsl:text>"/</xsl:text>
-	</xsl:comment>
+	</xsl:comment-->
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>

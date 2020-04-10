@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# Finalise XSLT produced vertical file with UD annotations:
+# Finalise XSLT produced vertical file with UD annotations and dependnencies:
 # - remove namespace definitions
 # - de escape XML entities
 # - add Slovene MTE V6 MSD to English one, both for token and head
@@ -25,26 +25,34 @@ while (<>) {
 	s|&lt;|<|g;
 	s|&gt;|>|g;
 	s|&quot;|"|g;
-	($tok, $lemma, $msd_en, 
-	 $ud_pos, $ud_feats) = split /\t/;
-	if ($msd_en =~ /-$/) {
-	    print STDERR "WARN: MSD $msd_en ends in '-', stripping!\n";
-	    $msd_en =~ s/-+$//
-	}
-	if (exists $sl{$msd_en}) {$msd_sl = $sl{$msd_en}}
-	else {
-	    print STDERR "ERROR: Unknown MSD $msd_en in $_!\n";
-	    $msd_sl = 'Np'
-	}
+	($tok, $lemma, $msd_en, $ud_pos, $ud_feats, $n,
+	 $label,
+	 $head_lemma, $head_msd_en, $head_ud_pos, $head_ud_feats, $head_n
+	) = split /\t/;
+	$msd_sl = &localise($msd_en);
 	my ($cat) = $msd_sl =~ /^(.)/;
 	$lemma_pos = $lemma . '-' . lc $cat;
-	print join( "\t", $tok, $lemma_pos, $msd_en, $msd_sl,
-		    $ud_pos, $ud_feats) . "\n";
+	$head_msd_sl = &localise($head_msd_en);
+	print join( "\t", $tok, $lemma_pos, $msd_en, $msd_sl, $ud_pos, $ud_feats, $n,
+		    $label,
+		    $head_lemma, $head_msd_en, $head_msd_sl, $head_ud_pos, $head_ud_feats, $head_n) 
+	    . "\n";
     }
     else {
 	print;
 	print "\n";
     }
+}
+sub localise {
+    my $msd_en = shift;
+    my $msd_sl;
+    if ($msd_en eq '-') {$msd_sl = '-'}
+    elsif (exists $sl{$msd_en}) {$msd_sl = $sl{$msd_en}}
+    else {
+	print STDERR "ERROR: Unknown MSD $msd_en in $_!\n";
+	$msd_sl = 'Np'
+    }
+    return $msd_sl;
 }
 __DATA__
 Gp-pdm-d	X
