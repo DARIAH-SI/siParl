@@ -2,8 +2,8 @@ all:	get sample conllu vert text meta
 meta:
 	rm -fr siParl.meta
 	mkdir -p siParl.meta
-	bin/siparl2meta.pl sessions ../siParl.ana/siParl-ana-sample.xml 'siParl.ana/*/' siParl.meta
-	bin/siparl2meta.pl speeches ../siParl.ana/siParl-ana-sample.xml 'siParl.ana/*/' siParl.meta
+	bin/siparl2meta.pl sessions ../siParl.ana/siParl-ana-sample.xml 'siParl.ana/SDT2/' siParl.meta
+	bin/siparl2meta.pl speeches ../siParl.ana/siParl-ana-sample.xml 'siParl.ana/SDT2/' siParl.meta
 text:
 	rm -fr siParl.text
 	mkdir -p siParl.text/SDT2;
