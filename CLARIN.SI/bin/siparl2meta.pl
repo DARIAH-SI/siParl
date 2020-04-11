@@ -22,7 +22,7 @@ if ($what eq 'sessions') {
     $header = "ID\tDate\tTitles\tMandate-slv\tMandate-eng\tOrganisations\tTypes-slv\tTypes-eng\n";
 }
 elsif ($what eq 'speeches') {
-    $header = "Speech-ID\tSpeaker-ID\tSex\tBirth\tDeath\tType-slv\tType-eng\tRole-slv\tRole-eng\tPart-Init\tParty-eng\tParty-slv\tnotes\tgaps\tnames\tsegs\tsents\twords\ttokens\n";
+    $header = "Speech-ID\tSpeaker-ID\tSpeaker-Name\tSex\tBirth\tDeath\tType-slv\tType-eng\tRole-slv\tRole-eng\tParty-Init\tParty-slv\tParty-eng\tnotes\tgaps\tnames\tsegs\tsents\twords\ttokens\n";
 }
 else {die "First parameter should be 'sessions' or 'speeches'!|\n"}
 

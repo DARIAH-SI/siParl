@@ -24,19 +24,19 @@ sample-ana:
 	ls siParl.ana/S*/*.xml > files.ana.tmp
 	$s files=../files.ana.tmp -xsl:bin/siparl2sample.xsl \
 	siParl.ana/SDT2-ana.xml > siParl.ana/SDT2-ana-sample.xml
-	$s -xi -xsl:bin/pretty.xsl siParl.ana/SDT2-ana-sample.xml | $j schema/parla-clarin.rng
+	$s -xi -xsl:bin/pretty.xsl siParl.ana/SDT2-ana-sample.xml | $j Schema/parla-clarin.rng
 	$s files=../files.ana.tmp -xsl:bin/siparl2sample.xsl \
 	siParl.ana/siParl-ana.xml > siParl.ana/siParl-ana-sample.xml
-	$s -xi -xsl:bin/pretty.xsl siParl.ana/siParl-ana-sample.xml | $j schema/parla-clarin.rng
+	$s -xi -xsl:bin/pretty.xsl siParl.ana/siParl-ana-sample.xml | $j Schema/parla-clarin.rng
 	rm files.ana.tmp siParl.ana/siParl-ana.xml siParl.ana/SDT2-ana.xml
 sample-tei:
 	ls siParl.tei/S*/*.xml > files.tei.tmp
 	$s files=../files.tei.tmp -xsl:bin/siparl2sample.xsl \
 	siParl.tei/SDT2.xml > siParl.tei/SDT2-sample.xml
-	$s -xi -xsl:bin/pretty.xsl siParl.tei/SDT2-sample.xml | $j schema/parla-clarin.rng
+	$s -xi -xsl:bin/pretty.xsl siParl.tei/SDT2-sample.xml | $j Schema/parla-clarin.rng
 	$s files=../files.tei.tmp -xsl:bin/siparl2sample.xsl \
 	siParl.tei/siParl.xml > siParl.tei/siParl-sample.xml
-	$s -xi -xsl:bin/pretty.xsl siParl.tei/siParl-sample.xml | $j schema/parla-clarin.rng
+	$s -xi -xsl:bin/pretty.xsl siParl.tei/siParl-sample.xml | $j Schema/parla-clarin.rng
 	rm files.tei.tmp siParl.tei/siParl.xml siParl.tei/SDT2.xml
 get:
 	rm -fr siParl.tei
