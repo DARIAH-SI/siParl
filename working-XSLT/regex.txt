@@ -1,4 +1,4 @@
-Združi title elemente, ki so drug za drugim; samo znotraj odstavkov, zato daj restrict to XPath; najprej preveri //p/title[2], če je kje razdelilo besedo in takene primer združini na roko; preveri in popravi še odstavke, ki se ne začnejo z veliko začetnico //sp/p[position() gt 1][matches(.,'^[a-zčšž]')] //p[matches(.,'^,')] Naslovi, ki nis označeni //sp/p[matches(.,'TOČK')][not(title)] ; odstrani dvopičje za (Nadaljevanje): oz (nadaljevanje):
+Združi title elemente, ki so drug za drugim; samo znotraj odstavkov, zato daj restrict to XPath; najprej preveri //p/title[2], če je kje razdelilo besedo in takene primer združini na roko; preveri in popravi še odstavke, ki se ne začnejo z veliko začetnico //sp/p[position() gt 1][matches(.,'^[a-zčšž]')] //sp/p[matches(.,'[a-zčšž]$')] //p[matches(.,'^,')] Naslovi, ki nis označeni //sp/p[matches(.,'TOČK')][not(title)] ; odstrani dvopičje za (Nadaljevanje): oz (nadaljevanje):
 
 find
 (</title>)(\n?\s+)(<title>)
