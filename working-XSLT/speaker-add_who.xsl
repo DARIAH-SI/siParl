@@ -11,7 +11,7 @@
     <!-- izhodiščni dokument je vsakokratni *-list.xml -->
     
     <!-- ustrezno popravi parameter -->
-    <xsl:param name="mandat">SDT7</xsl:param>
+    <xsl:param name="mandat">SDZ8</xsl:param>
     
     <xsl:variable name="doc-speaker" select="concat('../drama/',$mandat,'-speaker-1.xml')"/>
     
