@@ -15,32 +15,31 @@
     -->
     <!-- izhodiščni dokument je vsakokratni *-list.xml -->
     <!-- Skupine:
+          - remove: odstranim stage okoli besede v oklepaju
+          
           - note:
                - answer
-               - correction
-               - comment
-               - unknown
+               - description
+               - error
                - vote
                - vote-ayes
                - vote-noes
                - time
           - gap:
                - inaudible
-               - foreign
-               - performance
+               - editorial
           - incident
+               - action
                - sound
-               - stop_sound
           - kinesic
                - applause
+               - signal
+               - playback
                - snapping
                - gesture
-               - silence
           - vocal
                - interruption
-               - cough
                - laughter
-               - murmuring
                
     -->
     
