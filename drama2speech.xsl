@@ -30,82 +30,82 @@
     </xsl:variable>
     
     <xsl:param name="taxonomy-legislature">
-        <taxonomy xml:id="parl.legislature">
+        <taxonomy xml:id="parla.legislature">
             <desc xml:lang="en">Legislature</desc>
             <desc xml:lang="sl">Zakonodajna oblast</desc>
-            <category xml:id="parl.geo-political">
+            <category xml:id="parla.geo-political">
                 <desc xml:lang="en">Geo-political or administrative units</desc>
                 <desc xml:lang="sl">Geopolitične ali upravne enote</desc>
-                <category xml:id="parl.supranational">
+                <category xml:id="parla.supranational">
                     <catDesc xml:lang="en"><term>Supranational legislature</term></catDesc>
                     <catDesc xml:lang="sl"><term>Nadnacionalna zakonodajna oblast</term></catDesc>
                 </category>
-                <category xml:id="parl.national">
+                <category xml:id="parla.national">
                     <catDesc xml:lang="en"><term>National legislature</term></catDesc>
                     <catDesc xml:lang="sl"><term>Nacionalna zakonodajna oblast</term></catDesc>
                 </category>
-                <category xml:id="parl.regional">
+                <category xml:id="parla.regional">
                     <catDesc xml:lang="en"><term>Regional legislature</term></catDesc>
                     <catDesc xml:lang="sl"><term>Regionalna zakonodajna oblast</term></catDesc>
                 </category>
-                <category xml:id="parl.local">
+                <category xml:id="parla.local">
                     <catDesc xml:lang="en"><term>Local legislature</term></catDesc>
                     <catDesc xml:lang="sl"><term>Lokalna zakonodajna oblast</term></catDesc>
                 </category>
             </category>
-            <category xml:id="parl.organization">
+            <category xml:id="parla.organization">
                 <desc xml:lang="en">Organization</desc>
                 <desc xml:lang="sl">Organiziranost</desc>
-                <category xml:id="parl.chambers">
+                <category xml:id="parla.chambers">
                     <desc xml:lang="en">Chambers</desc>
                     <desc xml:lang="sl">Zbori</desc>
-                    <category xml:id="par.uni">
+                    <category xml:id="parla.uni">
                         <catDesc xml:lang="en"><term>Unicameralism</term></catDesc>
                         <catDesc xml:lang="sl"><term>Enodomen</term></catDesc>
                     </category>
-                    <category xml:id="par.bi">
+                    <category xml:id="parla.bi">
                         <catDesc xml:lang="en"><term>Bicameralism</term></catDesc>
                         <catDesc xml:lang="sl"><term>Dvodomen</term></catDesc>
-                        <category xml:id="par.upper">
+                        <category xml:id="parla.upper">
                             <catDesc xml:lang="en"><term>Upper house</term></catDesc>
                             <catDesc xml:lang="sl"><term>Zgornji dom</term></catDesc>
                         </category>
-                        <category xml:id="par.lower">
+                        <category xml:id="parla.lower">
                             <catDesc xml:lang="en"><term>Lower house</term></catDesc>
                             <catDesc xml:lang="sl"><term>Spodnji dom</term></catDesc>
                         </category>
                     </category>
-                    <category xml:id="par.multi">
+                    <category xml:id="parla.multi">
                         <catDesc xml:lang="en"><term>Multicameralism</term></catDesc>
                         <catDesc xml:lang="sl"><term>Večdomen</term></catDesc>
-                        <category xml:id="par.chamber">
+                        <category xml:id="parla.chamber">
                             <catDesc xml:lang="en"><term>Chamber</term></catDesc>
                             <catDesc xml:lang="sl"><term>Zbor</term></catDesc>
                         </category>
                     </category>
                 </category>
-                <category xml:id="parl.committee">
+                <category xml:id="parla.committee">
                     <catDesc xml:lang="en"><term>Committee</term></catDesc>
                     <catDesc xml:lang="sl"><term>Delovno telo</term></catDesc>
-                    <category xml:id="parl.committee.standing">
+                    <category xml:id="parla.committee.standing">
                         <catDesc xml:lang="en"><term>Standing committee</term></catDesc>
                         <catDesc xml:lang="sl"><term>Stalno delovno telo</term></catDesc>
                     </category>
-                    <category xml:id="parl.committee.special">
+                    <category xml:id="parla.committee.special">
                         <catDesc xml:lang="en"><term>Special committee</term></catDesc>
                         <catDesc xml:lang="sl"><term>Začasno delovno telo</term></catDesc>
                     </category>
-                    <category xml:id="parl.committee.inquiry">
+                    <category xml:id="parla.committee.inquiry">
                         <catDesc xml:lang="en"><term>Committee of inquiry </term></catDesc>
                         <catDesc xml:lang="sl"><term>Preiskovalna komisija</term></catDesc>
                     </category>
                 </category>
             </category>
-            <category xml:id="parl.term">
+            <category xml:id="parla.term">
                 <catDesc xml:lang="en"><term>Legislative period</term>: term of the parliament between
                     general elections.</catDesc>
                 <catDesc xml:lang="sl">Zakonodajno obdobje</catDesc>
-                <category xml:id="parl.session">
+                <category xml:id="parla.session">
                     <catDesc xml:lang="en"><term>Legislative session</term>: the period of time in which
                         a legislature is convened for purpose of lawmaking, usually being
                         one of two or more smaller divisions of the entire time between two
@@ -113,55 +113,55 @@
                         devoted to a single order of business, program, agenda, or announced
                         purpose.</catDesc>
                     <catDesc xml:lang="sl">Parlamentaro zasedanje</catDesc>
-                    <category xml:id="parl.meeting">
+                    <category xml:id="parla.meeting">
                         <catDesc xml:lang="en"><term>Meeting</term>: Each meeting may be a
                             separate session or part of a group of meetings constituting a
                             session. The session/meeting may take one or more
                             days.</catDesc>
                         <catDesc xml:lang="sl"><term>Seja</term></catDesc>
-                        <category xml:id="parl.meeting-types">
+                        <category xml:id="parla.meeting-types">
                             <desc xml:lang="en">Types of meetings</desc>
-                            <category xml:id="parl.meeting.regular">
+                            <category xml:id="parla.meeting.regular">
                                 <catDesc xml:lang="en"><term>Regular meeting</term></catDesc>
                                 <catDesc xml:lang="sl"><term>Redna seja</term></catDesc>
                             </category>
-                            <category xml:id="parl.meeting.special">
+                            <category xml:id="parla.meeting.special">
                                 <catDesc xml:lang="en"><term>Special meeting</term></catDesc>
                                 <catDesc xml:lang="sl"><term>Posebna seja</term></catDesc>
-                                <category xml:id="parl.meeting.extraordinary">
+                                <category xml:id="parla.meeting.extraordinary">
                                     <catDesc xml:lang="en"><term>Extraordinary meeting</term></catDesc>
                                     <catDesc xml:lang="sl"><term>Izredna seja</term></catDesc>
                                 </category>
-                                <category xml:id="parl.meeting.urgent">
+                                <category xml:id="parla.meeting.urgent">
                                     <catDesc xml:lang="en"><term>Urgent meeting</term></catDesc>
                                     <catDesc xml:lang="sl"><term>Nujna seja</term></catDesc>
                                 </category>
-                                <category xml:id="parl.meeting.ceremonial">
+                                <category xml:id="parla.meeting.ceremonial">
                                     <catDesc xml:lang="en"><term>Ceremonial meeting</term></catDesc>
                                     <catDesc xml:lang="sl"><term>Slavnostna seja</term></catDesc>
                                 </category>
-                                <category xml:id="parl.meeting.commemorative">
+                                <category xml:id="parla.meeting.commemorative">
                                     <catDesc xml:lang="en"><term>Commemorative meeting</term></catDesc>
                                     <catDesc xml:lang="sl"><term>Žalna seja</term></catDesc>
                                 </category>
-                                <category xml:id="parl.meeting.opinions">
+                                <category xml:id="parla.meeting.opinions">
                                     <catDesc xml:lang="en"><term>Public presentation of opinions</term></catDesc>
                                     <catDesc xml:lang="sl"><term>Javna predstavitev mnenj</term></catDesc>
                                 </category>
                             </category>
-                            <category xml:id="parl.meeting.continued">
+                            <category xml:id="parla.meeting.continued">
                                 <catDesc xml:lang="en"><term>Continued meeting</term></catDesc>
                             </category>
-                            <category xml:id="parl.meeting.public">
+                            <category xml:id="parla.meeting.public">
                                 <catDesc xml:lang="en"><term>Public meeting</term></catDesc>
                                 <catDesc xml:lang="sl"><term>Javna seja</term></catDesc>
                             </category>
-                            <category xml:id="parl.meeting.executive">
+                            <category xml:id="parla.meeting.executive">
                                 <catDesc xml:lang="en"><term>Executive meeting</term></catDesc>
                                 <catDesc xml:lang="sl"><term>Zaprta seja</term></catDesc>
                             </category>
                         </category>
-                        <category xml:id="parl.sitting">
+                        <category xml:id="parla.sitting">
                             <catDesc xml:lang="en"><term>Sitting</term>: sitting day</catDesc>
                             <catDesc xml:lang="sl"><term>Dan seje</term></catDesc>
                         </category>
@@ -237,7 +237,7 @@
                             <title type="sub" xml:lang="sl">
                                 <xsl:value-of select="$terms/tei:term[@n=$corpus-term]"/>
                             </title>
-                            <meeting n="{number($corpus-term)}" corresp="#DZ" ana="#parl.term #DZ.{$corpus-term}">
+                            <meeting n="{number($corpus-term)}" corresp="#DZ" ana="#parla.term #DZ.{$corpus-term}">
                                 <xsl:value-of select="$corpus-term"/>
                                 <xsl:text>. mandat</xsl:text>
                             </meeting>
@@ -365,7 +365,7 @@
                             <setting>
                                 <name type="city">Ljubljana</name>
                                 <name type="country" key="SI">Slovenija</name>
-                                <date ana="#parl.term">
+                                <date ana="#parla.term">
                                     <xsl:attribute name="from">
                                         <xsl:value-of select="$terms/tei:term[@n=$corpus-term]/@start"/>
                                     </xsl:attribute>
@@ -377,7 +377,7 @@
                         </settingDesc>
                         <particDesc>
                             <listOrg>
-                                <org xml:id="SK" role="parliament" ana="#parl.regional #parl.national #par.multi">
+                                <org xml:id="SK" role="parliament" ana="#parla.regional #parla.national #parla.multi">
                                     <orgName from="1990-06-23" to="1992-12-23" xml:lang="sl">Skupščina Republike Slovenije</orgName>
                                     <orgName from="1990-06-23" to="1992-12-23" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
                                     <orgName from="1963-06-24" to="1990-06-23" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
@@ -397,21 +397,21 @@
                                     <listOrg xml:id="chambers">
                                         <head xml:lang="sl">Zbori Skupščine Republike Slovenije</head>
                                         <head xml:lang="en">Chambers of the Assembly of the Republic of Slovenia</head>
-                                        <org xml:id="DruzPolZb" ana="#par.chamber">
+                                        <org xml:id="DruzPolZb" ana="#parla.chamber">
                                             <orgName xml:lang="sl">Družbeno-politični zbor</orgName>
                                             <orgName xml:lang="en">Socio-Political Chamber</orgName>
                                             <event from="1974" to="1992-12-23">
                                                 <label xml:lang="en">existence</label>
                                             </event>
                                         </org>
-                                        <org xml:id="ZbObc" ana="#par.chamber">
+                                        <org xml:id="ZbObc" ana="#parla.chamber">
                                             <orgName xml:lang="sl">Zbor občin</orgName>
                                             <orgName xml:lang="en">Chamber of Municipalities</orgName>
                                             <event from="1974" to="1992-12-23">
                                                 <label xml:lang="en">existence</label>
                                             </event>
                                         </org>
-                                        <org xml:id="ZbZdruDel" ana="#par.chamber">
+                                        <org xml:id="ZbZdruDel" ana="#parla.chamber">
                                             <orgName xml:lang="sl">Zbor združenega dela</orgName>
                                             <orgName xml:lang="en">Chamber of Associated Labour</orgName>
                                             <event from="1974" to="1992-12-23">
@@ -420,7 +420,7 @@
                                         </org>
                                     </listOrg>
                                 </org>
-                                <org xml:id="DZ" role="parliament" ana="#parl.national #par.lower">
+                                <org xml:id="DZ" role="parliament" ana="#parla.national #parla.lower">
                                     <orgName xml:lang="sl">Državni zbor Republike Slovenije</orgName>
                                     <orgName xml:lang="en">National Assembly of the Republic of Slovenia</orgName>
                                     <event from="1992-12-23">
@@ -465,7 +465,7 @@
                                             <head xml:lang="en">Working bodies of the National Assembly of the Republic of Slovenia</head>
                                             <xsl:for-each-group select="document($source-corpus-document)/tei:teiCorpus/tei:TEI/tei:teiHeader/tei:profileDesc/tei:particDesc/tei:listOrg/tei:org/tei:listOrg/tei:org" group-by="tei:orgName/@key">
                                                 <xsl:sort select="normalize-space(current-group()[1]/tei:orgName)"/>
-                                                <org xml:id="{current-grouping-key()}" ana="#parl.committee">
+                                                <org xml:id="{current-grouping-key()}" ana="#parla.committee">
                                                     <orgName>
                                                         <xsl:value-of select="normalize-space(current-group()[1]/tei:orgName)"/>
                                                     </orgName>
@@ -679,7 +679,7 @@
         <TEI>
             <xsl:apply-templates select="@*" mode="pass1"/>
             <xsl:attribute name="xml:lang">sl</xsl:attribute>
-            <xsl:attribute name="ana">#parl.sitting</xsl:attribute>
+            <xsl:attribute name="ana">#parla.sitting</xsl:attribute>
             <xsl:apply-templates mode="pass1"/>
         </TEI>
     </xsl:template>
@@ -800,22 +800,22 @@
                 <meeting n="{number(@n)}" corresp="#{tokenize(@who,'\.')[last()]}">
                     <xsl:attribute name="ana">
                         <xsl:choose>
-                            <xsl:when test="tei:name = 'Redna'">#parl.meeting.regular</xsl:when>
-                            <xsl:when test="tei:name = 'redna'">#parl.meeting.regular</xsl:when>
-                            <xsl:when test="tei:name = 'redna seja'">#parl.meeting.regular</xsl:when>
-                            <xsl:when test="tei:name = 'Izredna'">#parl.meeting.extraordinary</xsl:when>
-                            <xsl:when test="tei:name = 'Izredna seja'">#parl.meeting.extraordinary</xsl:when>
-                            <xsl:when test="tei:name = 'Nujna'">#parl.meeting.urgent</xsl:when>
-                            <xsl:when test="tei:name = 'nujna'">#parl.meeting.urgent</xsl:when>
-                            <xsl:when test="tei:name = 'nujna seja'">#parl.meeting.urgent</xsl:when>
-                            <xsl:when test="tei:name = 'Javna predstavitev'">#parl.meeting.opinions</xsl:when>
-                            <xsl:when test="tei:name = 'Javna predstavitev mnenj'">#parl.meeting.opinions</xsl:when>
-                            <xsl:when test="tei:name = 'javna predstavitev mnenj'">#parl.meeting.opinions</xsl:when>
-                            <xsl:when test="tei:name = 'Zasedanje'">#parl.meeting.special</xsl:when>
-                            <xsl:when test="tei:name = 'slavnostna seja'">#parl.meeting.ceremonial</xsl:when>
-                            <xsl:when test="tei:name = 'srečanje'">#parl.meeting.special</xsl:when>
-                            <xsl:when test="tei:name = 'posvet'">#parl.meeting.special</xsl:when>
-                            <xsl:when test="tei:name = 'seja izvršilnega odbora'">#parl.meeting.special</xsl:when>
+                            <xsl:when test="tei:name = 'Redna'">#parla.meeting.regular</xsl:when>
+                            <xsl:when test="tei:name = 'redna'">#parla.meeting.regular</xsl:when>
+                            <xsl:when test="tei:name = 'redna seja'">#parla.meeting.regular</xsl:when>
+                            <xsl:when test="tei:name = 'Izredna'">#parla.meeting.extraordinary</xsl:when>
+                            <xsl:when test="tei:name = 'Izredna seja'">#parla.meeting.extraordinary</xsl:when>
+                            <xsl:when test="tei:name = 'Nujna'">#parla.meeting.urgent</xsl:when>
+                            <xsl:when test="tei:name = 'nujna'">#parla.meeting.urgent</xsl:when>
+                            <xsl:when test="tei:name = 'nujna seja'">#parla.meeting.urgent</xsl:when>
+                            <xsl:when test="tei:name = 'Javna predstavitev'">#parla.meeting.opinions</xsl:when>
+                            <xsl:when test="tei:name = 'Javna predstavitev mnenj'">#parla.meeting.opinions</xsl:when>
+                            <xsl:when test="tei:name = 'javna predstavitev mnenj'">#parla.meeting.opinions</xsl:when>
+                            <xsl:when test="tei:name = 'Zasedanje'">#parla.meeting.special</xsl:when>
+                            <xsl:when test="tei:name = 'slavnostna seja'">#parla.meeting.ceremonial</xsl:when>
+                            <xsl:when test="tei:name = 'srečanje'">#parla.meeting.special</xsl:when>
+                            <xsl:when test="tei:name = 'posvet'">#parla.meeting.special</xsl:when>
+                            <xsl:when test="tei:name = 'seja izvršilnega odbora'">#parla.meeting.special</xsl:when>
                             <xsl:otherwise>
                                 <xsl:message>Neznana vrsta seje: <xsl:value-of select="ancestor::tei:TEI/@xml:id"/></xsl:message>
                             </xsl:otherwise>
@@ -826,7 +826,7 @@
             </xsl:for-each>
             <!-- dodam še za prikaz metapodatkov o mandatu -->
             <xsl:variable name="corpus-term" select="ancestor::tei:teiHeader/tei:profileDesc/tei:particDesc/tei:listOrg/tei:org/tei:listEvent/tei:event/@n"/>
-            <meeting n="{number($corpus-term)}" corresp="#DZ" ana="#parl.term #DZ.{$corpus-term}">
+            <meeting n="{number($corpus-term)}" corresp="#DZ" ana="#parla.term #DZ.{$corpus-term}">
                 <xsl:value-of select="$corpus-term"/>
                 <xsl:text>. mandat</xsl:text>
             </meeting>
@@ -841,7 +841,7 @@
                 <name type="city">Ljubljana</name>
                 <name type="country" key="SI">Slovenija</name>
                 <!-- vzamem samo prvega, saj se podatki drugače ponavljajo -->
-                <date when="{tei:setting[1]/tei:date/@when}" ana="#parl.sitting">
+                <date when="{tei:setting[1]/tei:date/@when}" ana="#parla.sitting">
                     <xsl:value-of select="format-date(tei:setting[1]/tei:date/@when,'[D1]. [M1]. [Y0001]')"/>
                 </date>
             </setting>
@@ -854,7 +854,7 @@
             <xsl:choose>
                 <xsl:when test="tei:listOrg/tei:org/tei:listOrg/tei:org">
                     <xsl:for-each select="tei:listOrg/tei:org/tei:listOrg/tei:org">
-                        <org xml:id="{@xml:id}" ana="#parl.committee" corresp="#{tei:orgName/@key}">
+                        <org xml:id="{@xml:id}" ana="#parla.committee" corresp="#{tei:orgName/@key}">
                             <orgName>
                                 <xsl:value-of select="normalize-space(tei:orgName)"/>
                             </orgName>
@@ -863,7 +863,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:for-each select="tei:listOrg/tei:org">
-                        <org xml:id="{@xml:id}" ana="#par.lower" corresp="#DZ">
+                        <org xml:id="{@xml:id}" ana="#parla.lower" corresp="#DZ">
                             <orgName>
                                 <xsl:value-of select="normalize-space(tei:orgName)"/>
                             </orgName>
