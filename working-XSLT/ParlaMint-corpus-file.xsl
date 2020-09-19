@@ -205,9 +205,9 @@
                 <teiHeader>
                     <fileDesc>
                         <titleStmt>
-                            <title type="main" xml:lang="hr">Slovenski parlamentarni korpus ParlaMint-sl [ParlaMint]</title>
+                            <title type="main" xml:lang="sl">Slovenski parlamentarni korpus ParlaMint-sl [ParlaMint]</title>
                             <title type="main" xml:lang="en">Slovenian parliamentary corpus ParlaMint-sl [ParlaMint]</title>
-                            <title type="sub" xml:lang="hr">Zapisi sej Državnega zbora Republike Slovenije, 7. in 8. mandat (2014 - 2020)</title>
+                            <title type="sub" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije, 7. in 8. mandat (2014 - 2020)</title>
                             <title type="sub" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia, Term 7 and 8 (2014 - 2020)</title>
                             
                             <xsl:for-each-group select="//meeting" group-by="@n">
