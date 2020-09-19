@@ -177,6 +177,10 @@
                 <catDesc xml:lang="sl"><term>Navadni</term>: navadni govorec na zasedanju</catDesc>
                 <catDesc xml:lang="en"><term>Regular</term>: a regular speaker at a meeting</catDesc>
             </category>
+            <category xml:id="guest">
+                <catDesc xml:lang="sl"><term>Gost</term>: gostujoči govornik na zasedanju</catDesc>
+                <catDesc xml:lang="en"><term>Guest</term>: a guest speaker at a meeting</catDesc>
+            </category>
         </taxonomy>
     </xsl:param>
     <xsl:param name="taxonomy-subcorpus">
@@ -204,7 +208,7 @@
                             <title type="main" xml:lang="hr">Slovenski parlamentarni korpus ParlaMint-sl [ParlaMint]</title>
                             <title type="main" xml:lang="en">Slovenian parliamentary corpus ParlaMint-sl [ParlaMint]</title>
                             <title type="sub" xml:lang="hr">Zapisi sej Državnega zbora Republike Slovenije, 7. in 8. mandat (2014 - 2020)</title>
-                            <title type="sub" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia, 7th and 8th Mandate (2014 - 2020)</title>
+                            <title type="sub" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia, Term 7 and 8 (2014 - 2020)</title>
                             
                             <xsl:for-each-group select="//meeting" group-by="@n">
                                 <meeting n="{current-grouping-key()}" corresp="{current-group()[1]/@corresp}" ana="{current-group()[1]/@ana}">
@@ -273,8 +277,8 @@
                                 <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                     Attribution 4.0 International License</ref>.</p>
                             </availability>
-                            <date when="{current-date()}">
-                                <xsl:value-of select="format-date(current-date(),'[D1]. [M1]. [Y0001]')"/>
+                            <date when="{tokenize(string(current-date()),'\+')[1]}">
+                                <xsl:value-of select="format-date(current-date(),'[D1].[M1].[Y0001]')"/>
                             </date>
                         </publicationStmt>
                         <sourceDesc>
@@ -282,7 +286,7 @@
                                 <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
                                 <title type="main" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia</title>
                                 <idno type="URI">https://www.dz-rs.si</idno>
-                                <date from="2014-08-01" to="2020-07-16"/>
+                                <date from="2014-08-01" to="2020-07-16">1.8.2014 - 16.7.2020</date>
                             </bibl>
                         </sourceDesc>
                     </fileDesc>
@@ -293,16 +297,16 @@
                         </projectDesc>
                         <editorialDecl>
                             <correction>
-                                <p>No correction of source texts was performed. Only apparently typed errors were corrected.</p>
+                                <p xml:lang="en">No correction of source texts was performed.</p>
                             </correction>
                             <hyphenation>
-                                <p>No end-of-line hyphens were present in the source.</p>
+                                <p xml:lang="en">No end-of-line hyphens were present in the source.</p>
                             </hyphenation>
                             <quotation>
-                                <p>Quotation marks have been left in the text and are not explicitly marked up.</p>
+                                <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
                             </quotation>
                             <segmentation>
-                                <p>The texts are segmented into utterances (speeches) and segments (corresponding to paragraphs in the source transcription).</p>
+                                <p xml:lang="en">The texts are segmented into utterances (speeches) and segments (corresponding to paragraphs in the source transcription).</p>
                             </segmentation>
                         </editorialDecl>
                         <tagsDecl>
@@ -324,7 +328,7 @@
                                 <name type="address">Šubičeva ulica 4</name>
                                 <name type="city">Ljubljana</name>
                                 <name type="country" key="SI">Slovenia</name>
-                                <date from="2014-08-01" to="2020-07-16"/>
+                                <date from="2014-08-01" to="2020-07-16">1.8.2014 - 16.7.2020</date>
                             </setting>
                         </settingDesc>
                         <particDesc>
@@ -402,10 +406,8 @@
                                         >https://en.wikipedia.org/wiki/Civic_List_(Slovenia)</idno>
                                 </org>
                                 <org xml:id="party.DeSUS" role="political_party">
-                                    <orgName full="yes" xml:lang="sl">Demokratična stranka upokojencev
-                                        Slovenije</orgName>
-                                    <orgName full="yes" xml:lang="en">Democratic Party of Pensioners of
-                                        Slovenia</orgName>
+                                    <orgName full="yes" xml:lang="sl">Demokratična stranka upokojencev Slovenije</orgName>
+                                    <orgName full="yes" xml:lang="en">Democratic Party of Pensioners of Slovenia</orgName>
                                     <orgName full="init">DeSUS</orgName>
                                     <event from="1991-05-30">
                                         <label xml:lang="en">existence</label>
@@ -457,17 +459,13 @@
                                     <orgName full="init">NeP</orgName>
                                 </org>
                                 <org xml:id="party.NP" role="independet">
-                                    <orgName full="yes" xml:lang="sl">Poslanska skupina nepovezanih
-                                        poslancev</orgName>
-                                    <orgName full="yes" xml:lang="en">Parliamentary group of unrelated members of
-                                        parliament</orgName>
+                                    <orgName full="yes" xml:lang="sl">Poslanska skupina nepovezanih poslancev</orgName>
+                                    <orgName full="yes" xml:lang="en">Parliamentary group of unrelated members of parliament</orgName>
                                     <orgName full="init">NP</orgName>
                                 </org>
                                 <org xml:id="party.IMNS" role="ethnic_communities">
-                                    <orgName full="yes" xml:lang="sl">Poslanci italijanske in madžarske narodne
-                                        skupnosti</orgName>
-                                    <orgName full="yes" xml:lang="en">Members of the Italian and Hungarian national
-                                        communities</orgName>
+                                    <orgName full="yes" xml:lang="sl">Poslanci italijanske in madžarske narodne skupnosti</orgName>
+                                    <orgName full="yes" xml:lang="en">Members of the Italian and Hungarian national communities</orgName>
                                     <orgName full="init">IMNS</orgName>
                                 </org>
                                 <org xml:id="party.NSi" role="political_party">
@@ -632,13 +630,6 @@
                     </profileDesc>
                 </teiHeader>
                 <xsl:for-each select="folder/ref">
-                    <xsl:sort>
-                        <xsl:analyze-string select="." regex="\d{{4}}-\d{{2}}-\d{{2}}">
-                            <xsl:matching-substring>
-                                <xsl:value-of select="."/>
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:sort>
                     <xsl:element name="xi:include">
                         <xsl:attribute name="href">
                             <xsl:value-of select="substring-after(.,'../ParlaMint/')"/>

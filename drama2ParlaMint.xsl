@@ -191,6 +191,10 @@
                 <catDesc xml:lang="sl"><term>Navadni</term>: navadni govorec na zasedanju</catDesc>
                 <catDesc xml:lang="en"><term>Regular</term>: a regular speaker at a meeting</catDesc>
             </category>
+            <category xml:id="guest">
+                <catDesc xml:lang="sl"><term>Gost</term>: gostujoči govornik na zasedanju</catDesc>
+                <catDesc xml:lang="en"><term>Guest</term>: a guest speaker at a meeting</catDesc>
+            </category>
         </taxonomy>
     </xsl:param>
     
@@ -351,7 +355,7 @@
                                 <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                     Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
                             </availability>
-                            <date when="{current-date()}"><xsl:value-of select="format-date(current-date(),'[D1]. [M1]. [Y0001]')"/></date>
+                            <date when="{tokenize(string(current-date()),'\+')[1]}"><xsl:value-of select="format-date(current-date(),'[D1].[M1].[Y0001]')"/></date>
                         </publicationStmt>
                         <sourceDesc>
                             <bibl>
@@ -375,16 +379,16 @@
                     <encodingDesc>
                         <editorialDecl>
                             <correction>
-                                <p>No correction of source texts was performed. Only apparently typed errors were corrected.</p>
+                                <p xml:lang="en">No correction of source texts was performed.</p>
                             </correction>
                             <hyphenation>
-                                <p>No end-of-line hyphens were present in the source.</p>
+                                <p xml:lang="en">No end-of-line hyphens were present in the source.</p>
                             </hyphenation>
                             <quotation>
-                                <p>Quotation marks have been left in the text and are not explicitly marked up.</p>
+                                <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
                             </quotation>
                             <segmentation>
-                                <p>The texts are segmented into utterances (speeches) and segments (corresponding to paragraphs in the source transcription).</p>
+                                <p xml:lang="en">The texts are segmented into utterances (speeches) and segments (corresponding to paragraphs in the source transcription).</p>
                             </segmentation>
                         </editorialDecl>
                         <classDecl>
@@ -701,6 +705,17 @@
                                             <xsl:copy-of select="." copy-namespaces="no"/>
                                         </xsl:for-each>
                                         <xsl:for-each select="tei:sex">
+                                            <xsl:choose>
+                                                <xsl:when test="@value='M'">
+                                                    <sex value="M">moški</sex>
+                                                </xsl:when>
+                                                <xsl:when test="@value='F'">
+                                                    <sex value="F">ženski</sex>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:message>Unknown sex @value: <xsl:value-of select="@value"/></xsl:message>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
                                             <xsl:copy-of select="." copy-namespaces="no"/>
                                         </xsl:for-each>
                                         <xsl:for-each select="tei:birth">
@@ -731,16 +746,32 @@
                     </profileDesc>
                 </teiHeader>
                 <xsl:for-each select="ref">
+                    <!-- zaradi preimenovanja datotek in s tem tudi identifikatorjev dodam: -->
+                    <xsl:variable name="file-date">
+                        <xsl:analyze-string select="." regex="\d{{4}}-\d{{2}}-\d{{2}}">
+                            <xsl:matching-substring>
+                                <xsl:value-of select="."/>
+                            </xsl:matching-substring>
+                        </xsl:analyze-string>
+                    </xsl:variable>
+                    <xsl:variable name="file-session" select="tokenize(.,'-')[2]"/>
+                    <xsl:variable name="file-session-type" select="tokenize(tokenize(.,'-')[1],'/')[2]"/>
+                    <xsl:variable name="file-new_name" select="concat('ParlaMint-sl_',$file-date,'_',$corpus-label,'-',$file-session-type,'-',$file-session,'.xml')"/>
+                    
+                    <xsl:variable name="document" select="concat($corpus-label,'/',$file-new_name)"/>
+                    
                     <xsl:element name="xi:include">
                         <xsl:attribute name="href">
-                            <xsl:value-of select="."/>
+                            <xsl:value-of select="$document"/>
                         </xsl:attribute>
                     </xsl:element>
                     
                     <!-- TEI dokumenti -->
-                    <xsl:variable name="document" select="concat('../ParlaMint/',.)"/>
-                    <xsl:result-document href="{$document}">
-                        <xsl:apply-templates select="document(.)" mode="pass0"/>
+                    <xsl:variable name="document-path" select="concat('../ParlaMint/',$document)"/>
+                    <xsl:result-document href="{$document-path}">
+                        <xsl:apply-templates select="document(.)" mode="pass0">
+                            <xsl:with-param name="file-new_id" select="substring-before($file-new_name,'.xml')"/>
+                        </xsl:apply-templates>
                     </xsl:result-document>          
                 </xsl:for-each>
             </teiCorpus>
@@ -748,8 +779,11 @@
     </xsl:template>
     
     <xsl:template match="/" mode="pass0">
+        <xsl:param name="file-new_id"/>
         <xsl:variable name="var1">
-            <xsl:apply-templates mode="pass1"/>
+            <xsl:apply-templates mode="pass1">
+                <xsl:with-param name="file-new_id" select="$file-new_id"/>
+            </xsl:apply-templates>
         </xsl:variable>
         <xsl:variable name="var2">
             <xsl:apply-templates select="$var1" mode="pass2"/>
@@ -792,8 +826,11 @@
     </xsl:template>
     
     <xsl:template match="@* | node()" mode="pass1">
+        <xsl:param name="file-new_id"/>
         <xsl:copy>
-            <xsl:apply-templates select="@* | node()" mode="pass1"/>
+            <xsl:apply-templates select="@* | node()" mode="pass1">
+                <xsl:with-param name="file-new_id" select="$file-new_id"/>
+            </xsl:apply-templates>
         </xsl:copy>
     </xsl:template>
     
@@ -837,7 +874,7 @@
     </xsl:template>
     
     <xsl:template match="tei:publicationStmt/tei:date" mode="pass1">
-        <date when="{current-date()}"><xsl:value-of select="format-date(current-date(),'[D1]. [M1]. [Y0001]')"/></date>
+        <date when="{tokenize(string(current-date()),'\+')[1]}"><xsl:value-of select="format-date(current-date(),'[D1].[M1].[Y0001]')"/></date>
     </xsl:template>
     
     <!-- prestavim uvodne podatke iz body v front -->
@@ -928,9 +965,14 @@
     </xsl:template>
     
     <xsl:template match="tei:TEI" mode="pass1">
+        <xsl:param name="file-new_id"/>
         <xsl:variable name="sittingDate" select="tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting/tei:date/@when"/>
         <TEI>
             <xsl:apply-templates select="@*" mode="pass1"/>
+            <!-- nov ParlaMint identifikator -->
+            <xsl:attribute name="xml:id">
+                <xsl:value-of select="$file-new_id"/>
+            </xsl:attribute>
             <xsl:attribute name="xml:lang">sl</xsl:attribute>
             <!-- dodam covid taksonomijo za ParlaMint -->
             <xsl:attribute name="ana">
@@ -975,7 +1017,7 @@
                             <xsl:message>Neznana vrsta seje: <xsl:value-of select="ancestor::tei:TEI/@xml:id"/></xsl:message>
                         </xsl:otherwise>
                     </xsl:choose>
-                    <xsl:value-of select="concat(' (',format-date(tei:date/@when,'[D1]. [M1]. [Y0001]'),')')"/>
+                    <xsl:value-of select="concat(' (',format-date(tei:date/@when,'[D1].[M1].[Y0001]'),')')"/>
                 </title>
             </xsl:for-each>
             <xsl:choose>
@@ -988,7 +1030,9 @@
                     <edition xml:lang="en">Verified session record</edition>
                 </xsl:otherwise>
             </xsl:choose>
-            <date when="{ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting[1]/tei:date/@when}"/>
+            <date when="{ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting[1]/tei:date/@when}">
+                <xsl:value-of select="format-date(ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting[1]/tei:date/@when,'[D1].[M1].[Y0001]')"/>
+            </date>
             <xsl:for-each select="tei:idno[@type='URI'][matches(.,'https:')]">
                 <idno type="URI">
                     <!-- pri skupnih sejah delovnih deles -->
@@ -1053,7 +1097,7 @@
                             <xsl:message>Neznana vrsta seje: <xsl:value-of select="ancestor::tei:TEI/@xml:id"/></xsl:message>
                         </xsl:otherwise>
                     </xsl:choose>
-                    <xsl:value-of select="concat(' (',format-date(tei:date/@when,'[D1]. [M1]. [Y0001]'),')')"/>
+                    <xsl:value-of select="concat(' (',format-date(tei:date/@when,'[D1].[M1].[Y0001]'),')')"/>
                 </title>
             </xsl:for-each>
             <xsl:for-each select="ancestor::tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting">
@@ -1102,7 +1146,7 @@
                 <name type="country" key="SI">Slovenija</name>
                 <!-- vzamem samo prvega, saj se podatki drugače ponavljajo -->
                 <date when="{tei:setting[1]/tei:date/@when}" ana="#parla.sitting">
-                    <xsl:value-of select="format-date(tei:setting[1]/tei:date/@when,'[D1]. [M1]. [Y0001]')"/>
+                    <xsl:value-of select="format-date(tei:setting[1]/tei:date/@when,'[D1].[M1].[Y0001]')"/>
                 </date>
             </setting>
         </settingDesc>
@@ -1765,6 +1809,20 @@
         </xsl:copy>
     </xsl:template>
     
+    <!-- v tei:seg odstranim tei:gap, ki je čisto na koncu ter jih dam za seg -->
+    <!-- dodam -->
+    <xsl:template match="tei:seg[node()[matches(.,'\S')][last()][self::tei:gap]]" mode="pass10">
+        <seg>
+            <xsl:apply-templates select="@*" mode="pass10"/>
+            <xsl:apply-templates mode="pass10"/>
+        </seg>
+        <xsl:copy-of select="node()[matches(.,'\S')][last()][self::tei:gap]" copy-namespaces="no"/>
+    </xsl:template>
+    <!-- odstranim odvečen gap, ki sem ga v prejšnjem pass premaknil -->
+    <xsl:template match="tei:seg/node()[matches(.,'\S')][last()][self::tei:gap]" mode="pass10">
+        
+    </xsl:template>
+    
     <!-- premaknem u/note[@type='speaker'] pred u in u/note[@type='time'] za dotični u -->
     <xsl:template match="tei:u" mode="pass10">
         <xsl:apply-templates select="tei:note[@type='speaker']" mode="pass10"/>
@@ -1774,6 +1832,19 @@
         </u>
         <xsl:apply-templates select="*[position() = last()][self::tei:note[@type='time']]" mode="pass10"/>
     </xsl:template>
+    
+    <!-- v skladu z ParlaMint odstranim front in ga dam na začetek body  -->
+    <xsl:template match="tei:front" mode="pass10"></xsl:template>
+    
+    <xsl:template match="tei:body/tei:div" mode="pass10">
+        <div type="debateSection">
+            <xsl:for-each select=" ancestor::tei:text/tei:front/tei:div/tei:*">
+                <xsl:copy-of select="." copy-namespaces="no"/>
+            </xsl:for-each>
+            <xsl:apply-templates mode="pass10"/>
+        </div>
+    </xsl:template>
+    
     
     <!-- čisto na koncu še preštejem vse elemente (ne upoštevam elementov iz teiHeader) -->
     <xsl:template match="@* | node()" mode="pass11">
@@ -1797,6 +1868,15 @@
                 </namespace>
             </tagsDecl>
         </encodingDesc>
+    </xsl:template>
+    
+    <!-- ker je zaradi premaknjenih gap v prejšnjme koraku na koncu seg ostal prazen prostor, slednjega odstranim -->
+    <xsl:template match="tei:seg/text()[last()]" mode="pass11">
+        <xsl:analyze-string select="." regex="(\s)+$">
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
     </xsl:template>
     
     <!-- povsem na koncu dodam nekaj elementov v teiHeader: poenotenje glede na Tomaževo predlogo za ParlaMint-hr -->
@@ -1861,10 +1941,36 @@
     </xsl:template>
     
     <xsl:template match="tei:titleStmt/tei:title[@type='main'][@xml:lang='sl']" mode="pass12">
-        <title type="main" xml:lang="sl">Slovenski parlamentarni korpus ParlaMint-sl [ParlaMint]</title>
+        <title type="main" xml:lang="sl">
+            <xsl:text>Slovenski parlamentarni korpus ParlaMint-sl, </xsl:text>
+            <xsl:choose>
+                <xsl:when test="following-sibling::tei:meeting[@ana='#parla.meeting.regular']">
+                    <xsl:text>redna seja </xsl:text>
+                    <xsl:value-of select="following-sibling::tei:meeting[@ana='#parla.meeting.regular']/@n"/>
+                </xsl:when>
+                <xsl:when test="following-sibling::tei:meeting[@ana='#parla.meeting.extraordinary']">
+                    <xsl:text>izredna seja </xsl:text>
+                    <xsl:value-of select="following-sibling::tei:meeting[@ana='#parla.meeting.extraordinary']/@n"/>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:text> [ParlaMint]</xsl:text>
+        </title>
     </xsl:template>
     <xsl:template match="tei:titleStmt/tei:title[@type='main'][@xml:lang='en']" mode="pass12">
-        <title type="main" xml:lang="en">Slovenian parliamentary corpus ParlaMint-sl [ParlaMint]</title>
+        <title type="main" xml:lang="en">
+            <xsl:text>Slovenian parliamentary corpus ParlaMint-sl, </xsl:text>
+            <xsl:choose>
+                <xsl:when test="following-sibling::tei:meeting[@ana='#parla.meeting.regular']">
+                    <xsl:text>Regular Session </xsl:text>
+                    <xsl:value-of select="following-sibling::tei:meeting[@ana='#parla.meeting.regular']/@n"/>
+                </xsl:when>
+                <xsl:when test="following-sibling::tei:meeting[@ana='#parla.meeting.extraordinary']">
+                    <xsl:text>Extraordinary Session </xsl:text>
+                    <xsl:value-of select="following-sibling::tei:meeting[@ana='#parla.meeting.extraordinary']/@n"/>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:text> [ParlaMint]</xsl:text>
+        </title>
     </xsl:template>
     <xsl:template match="tei:titleStmt/tei:title[@type='sub'][@xml:lang='sl']" mode="pass12">
         <title type="sub" xml:lang="sl">
@@ -1884,12 +1990,12 @@
             <xsl:value-of select="ancestor::tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting/tei:date"/>
         </title>
         <title type="sub" xml:lang="en">
-            <xsl:text>Minutes of the National Assembly of the Republic of Slovenia, Mandate </xsl:text>
+            <xsl:text>Minutes of the National Assembly of the Republic of Slovenia, Term </xsl:text>
             <xsl:value-of select="following-sibling::tei:meeting[matches(@ana,'#parla.term')]/@n"/>
             <xsl:text>, </xsl:text>
             <xsl:choose>
                 <xsl:when test="following-sibling::tei:meeting[@ana='#parla.meeting.regular']">
-                    <xsl:text>Ordinary Session </xsl:text>
+                    <xsl:text>Regular Session </xsl:text>
                     <xsl:value-of select="following-sibling::tei:meeting[@ana='#parla.meeting.regular']/@n"/>
                 </xsl:when>
                 <xsl:when test="following-sibling::tei:meeting[@ana='#parla.meeting.extraordinary']">
@@ -1915,7 +2021,7 @@
     
     <!-- odstranim agendo (kazalo vsebine točk dnevnega reda) -->
     <xsl:template match="tei:abstract" mode="pass12">
-        
     </xsl:template>
+    
     
 </xsl:stylesheet>
