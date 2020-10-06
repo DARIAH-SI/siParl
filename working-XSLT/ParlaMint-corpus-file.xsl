@@ -200,13 +200,13 @@
     
     
     <xsl:template match="documentsList">
-        <xsl:result-document href="../ParlaMint/ParlaMint-sl.xml">
-            <teiCorpus xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="sl" xml:id="ParlaMint-sl">
+        <xsl:result-document href="../ParlaMint/ParlaMint-SI.xml">
+            <teiCorpus xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="sl" xml:id="ParlaMint-SI">
                 <teiHeader>
                     <fileDesc>
                         <titleStmt>
-                            <title type="main" xml:lang="sl">Slovenski parlamentarni korpus ParlaMint-sl [ParlaMint]</title>
-                            <title type="main" xml:lang="en">Slovenian parliamentary corpus ParlaMint-sl [ParlaMint]</title>
+                            <title type="main" xml:lang="sl">Slovenski parlamentarni korpus ParlaMint-SI [ParlaMint]</title>
+                            <title type="main" xml:lang="en">Slovenian parliamentary corpus ParlaMint-SI [ParlaMint]</title>
                             <title type="sub" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije, 7. in 8. mandat (2014 - 2020)</title>
                             <title type="sub" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia, Term 7 and 8 (2014 - 2020)</title>
                             
@@ -605,7 +605,17 @@
                                             <xsl:copy-of select="." copy-namespaces="no"/>
                                         </xsl:for-each>
                                         <xsl:for-each select="tei:sex">
-                                            <xsl:copy-of select="." copy-namespaces="no"/>
+                                            <xsl:choose>
+                                                <xsl:when test="@value='M'">
+                                                    <sex value="M">moški</sex>
+                                                </xsl:when>
+                                                <xsl:when test="@value='F'">
+                                                    <sex value="F">ženski</sex>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:message>Unknown sex @value: <xsl:value-of select="@value"/></xsl:message>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
                                         </xsl:for-each>
                                         <xsl:for-each select="tei:birth">
                                             <xsl:copy-of select="." copy-namespaces="no"/>

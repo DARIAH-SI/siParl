@@ -716,7 +716,6 @@
                                                     <xsl:message>Unknown sex @value: <xsl:value-of select="@value"/></xsl:message>
                                                 </xsl:otherwise>
                                             </xsl:choose>
-                                            <xsl:copy-of select="." copy-namespaces="no"/>
                                         </xsl:for-each>
                                         <xsl:for-each select="tei:birth">
                                             <xsl:copy-of select="." copy-namespaces="no"/>
@@ -756,7 +755,7 @@
                     </xsl:variable>
                     <xsl:variable name="file-session" select="tokenize(.,'-')[2]"/>
                     <xsl:variable name="file-session-type" select="tokenize(tokenize(.,'-')[1],'/')[2]"/>
-                    <xsl:variable name="file-new_name" select="concat('ParlaMint-sl_',$file-date,'_',$corpus-label,'-',$file-session-type,'-',$file-session,'.xml')"/>
+                    <xsl:variable name="file-new_name" select="concat('ParlaMint-SI_',$file-date,'_',$corpus-label,'-',$file-session-type,'-',$file-session,'.xml')"/>
                     
                     <xsl:variable name="document" select="concat($corpus-label,'/',$file-new_name)"/>
                     
@@ -1393,10 +1392,24 @@
     </xsl:template>
     
     <xsl:template match="tei:u/tei:seg[not(tei:seg)]" mode="pass5">
-        <seg>
+        <!-- Prva verzija pretvorbe je imela samo valu-of. V primeru, ko so imeli prrvotni odstavki samo stage, je ta pretvorba povzročila,
+                 da do nekdanji stage nato izginili! -->
+        <!--<seg>
             <xsl:apply-templates select="@*" mode="pass5"/>
             <xsl:value-of select="normalize-space(.)"/>
-        </seg>
+        </seg>-->
+        
+        <xsl:choose>
+            <xsl:when test="*">
+                <xsl:apply-templates mode="pass5"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <seg>
+                    <xsl:apply-templates select="@*" mode="pass5"/>
+                    <xsl:value-of select="normalize-space(.)"/>
+                </seg>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="tei:u/tei:seg[tei:seg]" mode="pass5">
@@ -1942,7 +1955,7 @@
     
     <xsl:template match="tei:titleStmt/tei:title[@type='main'][@xml:lang='sl']" mode="pass12">
         <title type="main" xml:lang="sl">
-            <xsl:text>Slovenski parlamentarni korpus ParlaMint-sl, </xsl:text>
+            <xsl:text>Slovenski parlamentarni korpus ParlaMint-SI, </xsl:text>
             <xsl:choose>
                 <xsl:when test="following-sibling::tei:meeting[@ana='#parla.meeting.regular']">
                     <xsl:text>redna seja </xsl:text>
@@ -1958,7 +1971,7 @@
     </xsl:template>
     <xsl:template match="tei:titleStmt/tei:title[@type='main'][@xml:lang='en']" mode="pass12">
         <title type="main" xml:lang="en">
-            <xsl:text>Slovenian parliamentary corpus ParlaMint-sl, </xsl:text>
+            <xsl:text>Slovenian parliamentary corpus ParlaMint-SI, </xsl:text>
             <xsl:choose>
                 <xsl:when test="following-sibling::tei:meeting[@ana='#parla.meeting.regular']">
                     <xsl:text>Regular Session </xsl:text>
