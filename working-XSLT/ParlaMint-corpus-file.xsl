@@ -12,9 +12,9 @@
     <xsl:output method="xml" indent="yes"/>
     
     <!-- vstavi ob procesiranju nove verzije -->
-    <xsl:param name="edition">1.0</xsl:param>
+    <xsl:param name="edition">3.0</xsl:param>
     <!-- vstavim CLARIN.SI Handle, kjer bo korpus shranjen v repozitoriju -->
-    <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1345</xsl:param>
+    <xsl:param name="clarinHandle">http://hdl.handle.net/11356/XXXX</xsl:param>
     
     <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
     
@@ -216,13 +216,21 @@
                                 </meeting>
                             </xsl:for-each-group>
                             <respStmt>
-                                <persName>Andrej Pančur</persName>
-                                <resp xml:lang="sl">Kodiranje Parla-CLARIN TEI XML</resp>
-                                <resp xml:lang="en">Parla-CLARIN TEI XML corpus encoding</resp>
+                                <persName ref="https://orcid.org/0000-0001-6143-6877">Andrej Pančur</persName>
+                                <resp xml:lang="sl">Kodiranje ParlaMint TEI XML</resp>
+                                <resp xml:lang="en">ParlaMint TEI XML corpus encoding</resp>
                             </respStmt>
                             <funder>
                                 <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
                                 <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+                            </funder>
+                            <funder>
+                               <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                               <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                            </funder>
+                            <funder>
+                               <orgName xml:lang="sl">Raziskovalni program ARRS P6-0411 "Jezikovni viri in tehnologije za slovenski jezik"</orgName>
+                               <orgName xml:lang="en">Slovenian Research Agency Programme P6-0411 "Language Resources and Technologies for Slovene"</orgName>
                             </funder>
                         </titleStmt>
                         <editionStmt>
@@ -268,8 +276,7 @@
                                 <orgName xml:lang="en">CLARIN research infrastructure</orgName>
                                 <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
                             </publisher>
-                            <idno type="handle">http://hdl.handle.net/11356/1345</idno>
-                            <pubPlace><ref target="http://hdl.handle.net/11356/1345">http://hdl.handle.net/11356/1345</ref></pubPlace>
+                            <idno type="URI" subtype="handle">http://hdl.handle.net/11356/1345</idno>
                             <availability status="free">
                                 <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                                 <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons

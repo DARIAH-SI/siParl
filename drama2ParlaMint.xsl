@@ -245,7 +245,7 @@
         <xsl:variable name="source-corpus-document" select="concat('drama/',$corpus-label,'.xml')"/>
         <xsl:variable name="source-speaker-document" select="concat('drama/',$corpus-label,'-speaker.xml')"/>
         <xsl:result-document href="{$corpus-document}">
-            <teiCorpus xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="siParl.{$corpus-label}" xml:lang="sl">
+            <teiCorpus xml:id="siParl.{$corpus-label}" xml:lang="sl">
                 <teiHeader>
                     <fileDesc>
                         <titleStmt>
@@ -265,7 +265,7 @@
                             <title type="sub" xml:lang="sl">
                                 <xsl:value-of select="$terms/tei:term[@n=$corpus-term]"/>
                             </title>
-                            <meeting n="{number($corpus-term)}" corresp="#DZ" ana="#parla.term #DZ.{$corpus-term}">
+                            <meeting n="{number($corpus-term)}" corresp="#DZ" ana="#parla.lower #parla.term #DZ.{$corpus-term}">
                                 <xsl:value-of select="$corpus-term"/>
                                 <xsl:text>. mandat</xsl:text>
                             </meeting>
@@ -381,6 +381,9 @@
                             <correction>
                                 <p xml:lang="en">No correction of source texts was performed.</p>
                             </correction>
+                            <normalization>
+                               <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+                            </normalization>
                             <hyphenation>
                                 <p xml:lang="en">No end-of-line hyphens were present in the source.</p>
                             </hyphenation>
@@ -412,16 +415,18 @@
                                 </date>
                             </setting>
                         </settingDesc>
+                        <textClass>
+                           <catRef scheme="#parla.legislature" target="#parla.bi #parla.lower"/>
+                        </textClass>
                         <particDesc>
                             <listOrg>
                                 <org xml:id="DZ" role="parliament" ana="#parla.national #parla.lower">
-                                    <orgName xml:lang="sl">Državni zbor Republike Slovenije</orgName>
-                                    <orgName xml:lang="en">National Assembly of the Republic of Slovenia</orgName>
+                                    <orgName xml:lang="sl" full="yes">Državni zbor Republike Slovenije</orgName>
+                                    <orgName xml:lang="en" full="yes">National Assembly of the Republic of Slovenia</orgName>
                                     <event from="1992-12-23">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia"
-                                        >https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia">https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
                                     <listEvent>
                                         <head>Legislative period</head>
                                         <!-- odstranil odvečne mandate -->
@@ -450,12 +455,12 @@
                                     </xsl:if>
                                 </org>
                                 <org xml:id="GOV" role="government">
-                                    <orgName xml:lang="sl">Vlada Republike Slovenije</orgName>
-                                    <orgName xml:lang="en">Government of the Republic of Slovenia</orgName>
+                                    <orgName xml:lang="sl" full="yes">Vlada Republike Slovenije</orgName>
+                                    <orgName xml:lang="en" full="yes">Government of the Republic of Slovenia</orgName>
                                     <event from="1990-05-16">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Vlada_Republike_Slovenije</idno>
                                     <listEvent>
                                         <event xml:id="GOV.11" from="2013-03-20" to="2014-09-18">
@@ -474,32 +479,32 @@
                                         </event>
                                     </listEvent>
                                 </org>
-                                <org xml:id="party.PS" role="political_party">
+                                <org xml:id="party.PS" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Pozitivna Slovenija</orgName>
                                     <orgName full="yes" xml:lang="en">Positive Slovenia</orgName>
                                     <orgName full="init">PS</orgName>
                                     <event from="2011-10-22">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia" 
                                         >https://sl.wikipedia.org/wiki/Pozitivna_Slovenija</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia" 
                                         >https://en.wikipedia.org/wiki/Positive_Slovenia</idno>
                                 </org>
-                                <org xml:id="party.DL" role="political_party">
+                                <org xml:id="party.DL" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Državljanska lista</orgName>
                                     <orgName full="yes" xml:lang="en">Civic List</orgName>
                                     <orgName full="init">DL</orgName>
                                     <event from="2012-04-24">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Dr%C5%BEavljanska_lista</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Civic_List_(Slovenia)</idno>
                                 </org>
                                 
-                                <org xml:id="party.DeSUS" role="political_party">
+                                <org xml:id="party.DeSUS" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Demokratična stranka upokojencev
                                         Slovenije</orgName>
                                     <orgName full="yes" xml:lang="en">Democratic Party of Pensioners of
@@ -508,45 +513,45 @@
                                     <event from="1991-05-30">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Demokrati%C4%8Dna_stranka_upokojencev_Slovenije</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Democratic_Party_of_Pensioners_of_Slovenia</idno>
                                 </org>
-                                <org xml:id="party.Levica.1" role="political_party">
+                                <org xml:id="party.Levica.1" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Združena levica</orgName>
                                     <orgName full="yes" xml:lang="en">United Left</orgName>
                                     <orgName full="init">Levica</orgName>
                                     <event from="2014-03-01" to="2017-06-24">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Levica_(politi%C4%8Dna_stranka)</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/United_Left_(Slovenia)</idno>
                                 </org>
-                                <org xml:id="party.Levica.2" role="political_party">
+                                <org xml:id="party.Levica.2" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Levica</orgName>
                                     <orgName full="yes" xml:lang="en">The Left</orgName>
                                     <orgName full="init">Levica</orgName>
                                     <event from="2017-06-24">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Levica_(politi%C4%8Dna_stranka)</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/The_Left_(Slovenia)</idno>
                                 </org>
-                                <org xml:id="party.LMŠ" role="political_party">
+                                <org xml:id="party.LMŠ" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Lista Marjana Šarca</orgName>
                                     <orgName full="yes" xml:lang="en">The List of Marjan Šarec</orgName>
                                     <orgName full="init">LMŠ</orgName>
                                     <event from="2014-05-31">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Lista_Marjana_%C5%A0arca</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/List_of_Marjan_%C5%A0arec</idno>
                                 </org>
                                 <org xml:id="party.NeP" role="independet">
@@ -568,112 +573,112 @@
                                         communities</orgName>
                                     <orgName full="init">IMNS</orgName>
                                 </org>
-                                <org xml:id="party.NSi" role="political_party">
+                                <org xml:id="party.NSi" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Nova Slovenija – Krščanski demokrati</orgName>
                                     <orgName full="yes" xml:lang="en">New Slovenia – Christian Democrats</orgName>
                                     <orgName full="init">NSi</orgName>
                                     <event from="2000-08-04">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Nova_Slovenija</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/New_Slovenia</idno>
                                 </org>
-                                <org xml:id="party.SD" role="political_party">
+                                <org xml:id="party.SD" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Socialni demokrati</orgName>
                                     <orgName full="yes" xml:lang="en">Social Democrats</orgName>
                                     <orgName full="init">SD</orgName>
                                     <event from="2005-04-02">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Socialni_demokrati</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Social_Democrats_(Slovenia)</idno>
                                 </org>
-                                <org xml:id="party.SDS.2" role="political_party">
+                                <org xml:id="party.SDS.2" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Slovenska demokratska stranka</orgName>
                                     <orgName full="yes" xml:lang="en">Slovenian Democratic Party</orgName>
                                     <orgName full="init">SDS</orgName>
                                     <event from="2003-09-19">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Slovenska_demokratska_stranka</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Slovenian_Democratic_Party</idno>
                                 </org>
-                                <org xml:id="party.SMC.1" role="political_party">
+                                <org xml:id="party.SMC.1" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Stranka Mira Cerarja</orgName>
                                     <orgName full="yes" xml:lang="en">Party of Miro Cerar</orgName>
                                     <orgName full="init">SMC</orgName>
                                     <event from="2014-06-02" to="2015-03-07">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Stranka_modernega_centra</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Modern_Centre_Party</idno>
                                 </org>
-                                <org xml:id="party.SMC.2" role="political_party">
+                                <org xml:id="party.SMC.2" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Stranka modernega centra</orgName>
                                     <orgName full="yes" xml:lang="en">Modern Centre Party</orgName>
                                     <orgName full="init">SMC</orgName>
                                     <event from="2015-03-07">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Stranka_modernega_centra</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Modern_Centre_Party</idno>
                                 </org>
-                                <org xml:id="party.SNS" role="political_party">
+                                <org xml:id="party.SNS" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Slovenska nacionalna stranka</orgName>
                                     <orgName full="yes" xml:lang="en">Slovenian National Party</orgName>
                                     <orgName full="init">SNS</orgName>
                                     <event from="1991-03-17">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Slovenska_nacionalna_stranka</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Slovenian_National_Party</idno>
                                 </org>
-                                <org xml:id="party.ZaAB" role="political_party">
+                                <org xml:id="party.ZaAB" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Zavezništvo Alenke Bratušek</orgName>
                                     <orgName full="yes" xml:lang="en">Alliance of Alenka Bratušek</orgName>
                                     <orgName full="init">ZaAB</orgName>
                                     <event from="2014-05-31" to="2016-05-21">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Stranka_Alenke_Bratu%C5%A1ek</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Party_of_Alenka_Bratu%C5%A1ek</idno>
                                 </org>
-                                <org xml:id="party.ZaSLD" role="political_party">
+                                <org xml:id="party.ZaSLD" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Zavezništvo socialno-liberalnih
                                         demokratov</orgName>
                                     <orgName full="yes" xml:lang="en">Alliance of Social Liberal Democrats</orgName>
                                     <event from="2016-05-21" to="2017-10-07">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Stranka_Alenke_Bratu%C5%A1ek</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Party_of_Alenka_Bratu%C5%A1ek</idno>
                                 </org>
-                                <org xml:id="party.SAB" role="political_party">
+                                <org xml:id="party.SAB" role="politicalParty">
                                     <orgName full="yes" xml:lang="sl">Stranka Alenke Bratušek</orgName>
                                     <orgName full="yes" xml:lang="en">Party of Alenka Bratušek</orgName>
                                     <orgName full="init">SAB</orgName>
                                     <event from="2017-10-07">
                                         <label xml:lang="en">existence</label>
                                     </event>
-                                    <idno type="wikimedia" xml:lang="sl"
+                                    <idno type="URI" xml:lang="sl" subtype="wikimedia"
                                         >https://sl.wikipedia.org/wiki/Stranka_Alenke_Bratu%C5%A1ek</idno>
-                                    <idno type="wikimedia" xml:lang="en"
+                                    <idno type="URI" xml:lang="en" subtype="wikimedia"
                                         >https://en.wikipedia.org/wiki/Party_of_Alenka_Bratu%C5%A1ek</idno>
                                 </org>
                                 <listRelation>
@@ -759,7 +764,7 @@
                     
                     <xsl:variable name="document" select="concat($corpus-label,'/',$file-new_name)"/>
                     
-                    <xsl:element name="xi:include">
+                    <xsl:element name="include" namespace="xi:http://www.w3.org/2001/XInclude">
                         <xsl:attribute name="href">
                             <xsl:value-of select="$document"/>
                         </xsl:attribute>
