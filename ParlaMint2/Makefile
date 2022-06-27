@@ -1,7 +1,23 @@
 # Test targets used to test scripts on a small sample
+# Note that the output files are the same as for the complete conversion
+
+
+# Test conversion of components, needs work by Katja!
 test-cnv-components:
 	$s -xsl:Scripts/siparl2parlamint-components.xsl files-test.xml
 	$j Schema/ParlaMint-TEI.rng Data/*/*.xml
+
+# Do not try, needs work!
+test-cnv-root:
+	$s -xsl:Scripts/siparl2parlamint-root.xsl files-test.xml > Data/ParlaMint-SI.xml
+	#$j Schema/ParlaMint-teiCorpus.rng Data/ParlaMint-SI.xml
+
+# Remove output files
+clean:
+	rm -f ParlaMint-SI.xml
+	rm -f Data/????/*
+	rmdir Data/????
+	rm -f Data/TMP/*
 
 # Validation of the complete ParlaMint, does not work yet
 validate:
@@ -16,9 +32,9 @@ validate:
 cnv-components:
 	$s -xsl:Scripts/siparl2parlamint-components.xsl test.xml
 	$j Schema/ParlaMint-TEI.rng Data/*/*.xml
-cnv-roots:
-	$s -xsl:Scripts/siparl2parlamint-root.xsl files.xml > ParlaMint-SI.xml
-	$j Schema/ParlaMint-teiCorpus.rng Data/*.xml
+cnv-root:
+	$s -xsl:Scripts/siparl2parlamint-root.xsl files.xml > Data/ParlaMint-SI.xml
+	$j Schema/ParlaMint-teiCorpus.rng Data/ParlaMint-SI.xml
 
 # Prepare the list of input/output files from mandates given as first parameter
 prep-files:

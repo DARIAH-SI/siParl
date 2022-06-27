@@ -16,6 +16,7 @@
   
   <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
   
+  <!-- Not sure if we need this, leaving it here for now: -->
   <xsl:variable name="terms">
     <term n="1" start="1992-12-23" end="1996-11-28">1. mandat (1992-1996)</term>
     <term n="2" start="1996-11-28" end="2000-10-27">2. mandat (1996-2000)</term>
