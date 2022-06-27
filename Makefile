@@ -1,6 +1,5 @@
 2parlamint:
-	$s -xsl:drama2ParlaMint.xsl
-	#$s -xsl:working-XSLT/ParlaMint-corpus-file.xsl working-XSLT/ParlaMint-list.xml
+	$s -xsl:drama2ParlaMint.xsl drama/SDT2-list.xml >  ParlaMint2/SDT2.xml
 
 ################################################
 s = java -jar /usr/share/java/saxon.jar
