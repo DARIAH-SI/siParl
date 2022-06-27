@@ -1,7 +1,6 @@
 # Test targets used to test scripts on a small sample
 # Note that the output files are the same as for the complete conversion
 
-
 # Test conversion of components, needs work by Katja!
 test-cnv-components:
 	$s -xsl:Scripts/siparl2parlamint-components.xsl files-test.xml
