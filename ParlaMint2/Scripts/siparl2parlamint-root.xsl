@@ -2,41 +2,34 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 		xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		xmlns:tei="http://www.tei-c.org/ns/1.0"
-		exclude-result-prefixes="xs tei"
+		exclude-result-prefixes="#all"
 		version="2.0">
   
   <xsl:output method="xml" indent="yes"/>
   
-  <!-- vstavi ob procesiranju nove verzije -->
+  <!-- Verzija -->
   <xsl:param name="edition">3.0a</xsl:param>
-  <!-- vstavi CLARIN.SI Handle, kjer bo korpus shranjen v repozitoriju -->
+  <!-- CLARIN.SI Handle, kjer bo korpus shranjen v repozitoriju -->
   <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1486</xsl:param>
-  <!-- vstavi datum od katerega naprej se smatra, da je COVID razprava -->
-  <xsl:param name="covid-date" as="xs:date">2019-11-01</xsl:param>
   
   <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
   
-  <xsl:variable name="terms">
-    <term n="1" start="1992-12-23" end="1996-11-28">1. mandat (1992-1996)</term>
-    <term n="2" start="1996-11-28" end="2000-10-27">2. mandat (1996-2000)</term>
-    <term n="3" start="2000-10-27" end="2004-10-22">3. mandat (2000-2004)</term>
-    <term n="4" start="2004-10-22" end="2008-10-15">4. mandat (2004-2008)</term>
-    <term n="5" start="2008-10-15" end="2011-12-15">5. mandat (2008-2011)</term>
-    <term n="6" start="2011-12-16" end="2014-08-01">6. mandat (2011-2014)</term>
-    <term n="7" start="2014-08-01" end="2018-06-22">7. mandat (2014-2018)</term>
-    <term n="8" start="2018-06-22" end="2022-05-12">8. mandat (2018-2022)</term>
-    <term n="9" start="2022-05-12">9. mandat (2022-)</term>
-  </xsl:variable>
-  
   <!-- Povezave to ustreznih taksonomij -->
+  <!-- Ni jasno, ali res hočemo tule tako... -->
   <xsl:param name="taxonomy-legislature">taxo-legislature.xml</xsl:param>
   <xsl:param name="taxonomy-speakers">taxo-speakers.xml</xsl:param>
   <xsl:param name="taxonomy-subcorpus">taxo-subcorpus.xml</xsl:param>
 
+  <!-- People (also) responsible for the TEI encoding of the corpus -->
+  <xsl:variable name="TEI-resps" xmlns="http://www.tei-c.org/ns/1.0">
+    <persName ref="https://orcid.org/0000-0002-1560-4099 http://viaf.org/viaf/15145066459666591823">Tomaž Erjavec</persName>
+    <persName>Katja Meden</persName>
+  </xsl:variable>
+  
   <!-- The teiHeaders of each term -->
   <xsl:variable name="teiHeaders">
     <xsl:for-each select="mappings/source">
-      <xsl:copy-of select="document(.)/tei:teiHeader"/>
+      <xsl:copy-of select="document(.)//tei:teiHeader"/>
     </xsl:for-each>
   </xsl:variable>
   <!-- The filenames of each component, starting with the year directory -->
@@ -64,24 +57,66 @@
   
   <xsl:template name="fileDesc">
     <fileDesc xmlns="http://www.tei-c.org/ns/1.0">
-      <!-- For now just a copy of current ParlaMint-SI! -->
       <titleStmt>
         <title type="main" xml:lang="sl">Slovenski parlamentarni korpus ParlaMint-SI [ParlaMint]</title>
         <title type="main" xml:lang="en">Slovenian parliamentary corpus ParlaMint-SI [ParlaMint]</title>
-	
-        <title type="sub" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije, 7. in 8. mandat (2014 - 2020)</title>
-        <title type="sub" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia, Term 7 and 8 (2014 - 2020)</title>
-	
-        <meeting n="7" corresp="#DZ" ana="#parla.lower #parla.term #DZ.7">7. mandat</meeting>
-        <meeting n="8" corresp="#DZ" ana="#parla.lower #parla.term #DZ.8">8. mandat</meeting>
-
-        <respStmt>
-          <persName ref="https://orcid.org/0000-0001-6143-6877">Andrej Pančur</persName>
-          <persName ref="https://orcid.org/0000-0002-1560-4099">Tomaž Erjavec</persName>
-          <resp xml:lang="sl">Kodiranje ParlaMint TEI XML</resp>
-          <resp xml:lang="en">ParlaMint TEI XML corpus encoding</resp>
-        </respStmt>
-	
+	<xsl:variable name="mandates">
+	  <xsl:for-each select="$teiHeaders//tei:titleStmt/tei:meeting">
+	    <xsl:sort select="@n" data-type="number"/>
+	    <xsl:copy-of select="."/>
+	  </xsl:for-each>
+	</xsl:variable>
+	<xsl:variable name="min-mandate" select="$mandates/tei:meeting[1]/@n"/>
+	<xsl:variable name="max-mandate" select="$mandates/tei:meeting[last()]/@n"/>
+	<xsl:variable name="min-year">
+	  <xsl:variable name="from-years">
+	    <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
+	      <xsl:sort select="@from" data-type="number"/>
+	      <date xmlns="http://www.tei-c.org/ns/1.0">
+		<xsl:value-of select="replace(@from, '-.+', '')"/>
+	      </date>
+	    </xsl:for-each>
+	  </xsl:variable>
+	  <xsl:value-of select="$from-years/tei:date[1]"/>
+	</xsl:variable>
+	<xsl:variable name="max-year">
+	  <xsl:variable name="to-years">
+	    <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
+	      <xsl:sort select="@to" data-type="number"/>
+	      <xsl:if test="@to">
+		<date xmlns="http://www.tei-c.org/ns/1.0">
+		  <xsl:value-of select="replace(@to, '-.+', '')"/>
+		</date>
+	      </xsl:if>
+	    </xsl:for-each>
+	  </xsl:variable>
+	  <xsl:value-of select="$to-years/tei:date[last()]"/>
+	</xsl:variable>
+        <title type="sub" xml:lang="sl">
+	  <xsl:text>Zapisi sej Državnega zbora Republike Slovenije, </xsl:text>
+	  <xsl:value-of select="concat($min-mandate, '.—', $max-mandate, '. mandat ')"/>
+	  <xsl:value-of select="concat('(', $min-year, '—', $max-year, ')')"/>
+	</title>
+        <title type="sub" xml:lang="en">
+	  <xsl:text>Minutes of the National Assembly of the Republic of Slovenia, Terms </xsl:text>
+	  <xsl:value-of select="concat($min-mandate, '—', $max-mandate, ' ')"/>
+	  <xsl:value-of select="concat('(', $min-year, '—', $max-year, ')')"/>
+	</title>
+	<xsl:copy-of select="$mandates"/>
+        <xsl:for-each-group select="$teiHeaders//tei:titleStmt/tei:respStmt"
+			    group-by="tei:resp[@xml:lang = 'sl']">
+          <respStmt>
+	    <xsl:for-each select="distinct-values(current-group()/tei:persName)">
+	      <xsl:variable name="this" select="."/>
+	      <xsl:copy-of select="$teiHeaders//tei:titleStmt/tei:respStmt/tei:persName[.=$this]
+				   [not(preceding::tei:persName[.=$this])]"/>
+	    </xsl:for-each>
+	    <xsl:if test="current-grouping-key() = 'Kodiranje TEI'">
+	      <xsl:copy-of select="$TEI-resps"/>
+	    </xsl:if>
+	    <xsl:copy-of select="current-group()[1]/tei:resp"/>
+          </respStmt>
+	</xsl:for-each-group>
         <funder>
           <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
           <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
@@ -95,12 +130,20 @@
           <orgName xml:lang="en">Slovenian Research Agency Programme P6-0411 "Language Resources and Technologies for Slovene"</orgName>
         </funder>
       </titleStmt>
-      
       <editionStmt>
-        <edition>3.0a</edition>
+        <edition>
+	  <xsl:value-of select="$edition"/>
+	</edition>
       </editionStmt>
-      
-      <extent><!--These numbers do not reflect the size of the sample!-->
+      <!-- FROM HERE ON NOT OK! -->
+
+      <!-- Source -->
+      <extent>
+        <measure unit="texts" quantity="1711">1711 texts</measure>
+        <measure unit="words" quantity="17953666">17953666 words</measure>
+      </extent>
+      <!-- Target -->
+      <extent>
         <measure unit="speeches" quantity="75122" xml:lang="sl">75.122 govorov</measure>
         <measure unit="speeches" quantity="75122" xml:lang="en">75,122 speeches</measure>
         <measure unit="words" quantity="20190034" xml:lang="sl">20.190.034 besed</measure>
@@ -113,7 +156,9 @@
           <orgName xml:lang="en">CLARIN research infrastructure</orgName>
           <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
         </publisher>
-        <idno subtype="handle" type="URI">http://hdl.handle.net/11356/1432</idno>
+        <idno subtype="handle" type="URI">
+	  <xsl:value-of select="clarinHandle"/>
+	</idno>
         <availability status="free">
           <licence>http://creativecommons.org/licenses/by/4.0/</licence>
           <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
