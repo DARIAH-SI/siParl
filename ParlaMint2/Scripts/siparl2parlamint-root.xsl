@@ -26,6 +26,8 @@
     <persName>Katja Meden</persName>
   </xsl:variable>
   
+  <xsl:variable name="today" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
+
   <!-- The teiHeaders of each term -->
   <xsl:variable name="teiHeaders">
     <xsl:for-each select="mappings/source">
@@ -57,41 +59,43 @@
   
   <xsl:template name="fileDesc">
     <fileDesc xmlns="http://www.tei-c.org/ns/1.0">
+      <xsl:variable name="mandates">
+	<xsl:for-each select="$teiHeaders//tei:titleStmt/tei:meeting">
+	  <xsl:sort select="@n" data-type="number"/>
+	  <xsl:copy-of select="."/>
+	</xsl:for-each>
+      </xsl:variable>
+      <xsl:variable name="min-mandate" select="$mandates/tei:meeting[1]/@n"/>
+      <xsl:variable name="max-mandate" select="$mandates/tei:meeting[last()]/@n"/>
+      <xsl:variable name="min-date">
+	<xsl:variable name="from-dates">
+	  <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
+	    <xsl:sort select="@from" data-type="number"/>
+	    <date xmlns="http://www.tei-c.org/ns/1.0">
+	      <xsl:value-of select="replace(@from, 'T.+', '')"/>
+	    </date>
+	  </xsl:for-each>
+	</xsl:variable>
+	<xsl:value-of select="$from-dates/tei:date[1]"/>
+      </xsl:variable>
+      <xsl:variable name="max-date">
+	<xsl:variable name="to-dates">
+	  <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
+	    <xsl:sort select="@to" data-type="number"/>
+	    <xsl:if test="@to">
+	      <date xmlns="http://www.tei-c.org/ns/1.0">
+		<xsl:value-of select="replace(@to, 'T.+', '')"/>
+	      </date>
+	    </xsl:if>
+	  </xsl:for-each>
+	</xsl:variable>
+	<xsl:value-of select="$to-dates/tei:date[last()]"/>
+      </xsl:variable>
       <titleStmt>
         <title type="main" xml:lang="sl">Slovenski parlamentarni korpus ParlaMint-SI [ParlaMint]</title>
         <title type="main" xml:lang="en">Slovenian parliamentary corpus ParlaMint-SI [ParlaMint]</title>
-	<xsl:variable name="mandates">
-	  <xsl:for-each select="$teiHeaders//tei:titleStmt/tei:meeting">
-	    <xsl:sort select="@n" data-type="number"/>
-	    <xsl:copy-of select="."/>
-	  </xsl:for-each>
-	</xsl:variable>
-	<xsl:variable name="min-mandate" select="$mandates/tei:meeting[1]/@n"/>
-	<xsl:variable name="max-mandate" select="$mandates/tei:meeting[last()]/@n"/>
-	<xsl:variable name="min-year">
-	  <xsl:variable name="from-years">
-	    <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
-	      <xsl:sort select="@from" data-type="number"/>
-	      <date xmlns="http://www.tei-c.org/ns/1.0">
-		<xsl:value-of select="replace(@from, '-.+', '')"/>
-	      </date>
-	    </xsl:for-each>
-	  </xsl:variable>
-	  <xsl:value-of select="$from-years/tei:date[1]"/>
-	</xsl:variable>
-	<xsl:variable name="max-year">
-	  <xsl:variable name="to-years">
-	    <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
-	      <xsl:sort select="@to" data-type="number"/>
-	      <xsl:if test="@to">
-		<date xmlns="http://www.tei-c.org/ns/1.0">
-		  <xsl:value-of select="replace(@to, '-.+', '')"/>
-		</date>
-	      </xsl:if>
-	    </xsl:for-each>
-	  </xsl:variable>
-	  <xsl:value-of select="$to-years/tei:date[last()]"/>
-	</xsl:variable>
+	<xsl:variable name="min-year" select="replace($min-date, '-.+', '')"/>
+	<xsl:variable name="max-year" select="replace($max-date, '-.+', '')"/>
         <title type="sub" xml:lang="sl">
 	  <xsl:text>Zapisi sej Državnega zbora Republike Slovenije, </xsl:text>
 	  <xsl:value-of select="concat($min-mandate, '.—', $max-mandate, '. mandat ')"/>
@@ -135,21 +139,29 @@
 	  <xsl:value-of select="$edition"/>
 	</edition>
       </editionStmt>
-      <!-- FROM HERE ON NOT OK! -->
-
-      <!-- Source -->
       <extent>
-        <measure unit="texts" quantity="1711">1711 texts</measure>
-        <measure unit="words" quantity="17953666">17953666 words</measure>
+	<xsl:variable name="texts" select="sum($teiHeaders//tei:fileDesc/tei:extent/
+					   tei:measure[@unit='texts']/@quantity)"/>
+	<xsl:variable name="words" select="sum($teiHeaders//tei:fileDesc/tei:extent/
+					   tei:measure[@unit='words']/@quantity)"/>
+	<!-- Note that ParlaMint actually expects speeches (and words from .ana) -->
+        <measure unit="texts" quantity="{$texts}">
+	  <xsl:value-of select="format-number($texts,'###.###','euro')"/>
+	  <xsl:text> besedil</xsl:text>
+	</measure>
+        <measure unit="texts" quantity="{$texts}" xml:lang="en">
+	  <xsl:value-of select="format-number($texts,'###,###')"/>
+	  <xsl:text> texts</xsl:text>
+	</measure>
+        <measure unit="words" quantity="{$words}">
+	  <xsl:value-of select="format-number($words,'###.###','euro')"/>
+	  <xsl:text> besed</xsl:text>
+	</measure>
+        <measure unit="words" quantity="{$words}" xml:lang="en">
+	  <xsl:value-of select="format-number($words,'###,###')"/>
+	  <xsl:text> words</xsl:text>
+	</measure>
       </extent>
-      <!-- Target -->
-      <extent>
-        <measure unit="speeches" quantity="75122" xml:lang="sl">75.122 govorov</measure>
-        <measure unit="speeches" quantity="75122" xml:lang="en">75,122 speeches</measure>
-        <measure unit="words" quantity="20190034" xml:lang="sl">20.190.034 besed</measure>
-        <measure unit="words" quantity="20190034" xml:lang="en">20,190,034 words</measure>
-      </extent>
-      
       <publicationStmt>
         <publisher>
           <orgName xml:lang="sl">Raziskovalna infrastrukutra CLARIN</orgName>
@@ -157,24 +169,27 @@
           <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
         </publisher>
         <idno subtype="handle" type="URI">
-	  <xsl:value-of select="clarinHandle"/>
+	  <xsl:value-of select="$clarinHandle"/>
 	</idno>
         <availability status="free">
           <licence>http://creativecommons.org/licenses/by/4.0/</licence>
           <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
           <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
         </availability>
-	
-        <date when="2021-06-11">2021-06-11</date>
-	
+        <date when="{$today}">
+	  <xsl:value-of select="$today"/>
+	</date>
       </publicationStmt>
-      
       <sourceDesc>
         <bibl>
           <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
           <title type="main" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia</title>
           <idno type="URI" subtype="parliament">https://www.dz-rs.si</idno>
-          <date from="2014-08-01" to="2020-07-16">1.8.2014 - 16.7.2020</date>
+          <date from="{$min-date}" to="{$max-date}">
+	    <xsl:value-of select="format-date($min-date, '[D1].[M1].[Y0001]')"/>
+	    <xsl:text> — </xsl:text>
+	    <xsl:value-of select="format-date($max-date, '[D1].[M1].[Y0001]')"/>
+	  </date>
         </bibl>
       </sourceDesc>
     </fileDesc>
