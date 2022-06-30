@@ -7,12 +7,10 @@
   
   <xsl:output method="xml" indent="yes"/>
   
-  <!-- Verzija -->
+  <!-- Version of the produced corpus -->
   <xsl:param name="edition">3.0a</xsl:param>
-  <!-- CLARIN.SI Handle, kjer bo korpus shranjen v repozitoriju -->
+  <!-- CLARIN.SI handle of the finished corpus -->
   <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1486</xsl:param>
-  
-  <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
   
   <!-- Povezave to ustreznih taksonomij -->
   <!-- Ni jasno, ali res hočemo tule tako... -->
@@ -27,6 +25,7 @@
   </xsl:variable>
   
   <xsl:variable name="today" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
+  <xsl:decimal-format name="slv" decimal-separator="," grouping-separator="."/>
 
   <!-- The teiHeaders of each term -->
   <xsl:variable name="teiHeaders">
@@ -43,6 +42,53 @@
     </xsl:for-each>
   </xsl:variable>
 
+  <!-- The list of meeting elements giving also the mandates -->
+  <xsl:variable name="mandates">
+    <xsl:for-each select="$teiHeaders//tei:titleStmt/tei:meeting">
+      <xsl:sort select="@n" data-type="number"/>
+      <xsl:copy-of select="."/>
+    </xsl:for-each>
+  </xsl:variable>
+  <!-- The number of the first mandate in the corpus -->
+  <xsl:variable name="min-mandate" select="$mandates/tei:meeting[1]/@n"/>
+  <!-- The number of the last mandate in the corpus -->
+  <xsl:variable name="max-mandate" select="$mandates/tei:meeting[last()]/@n"/>
+  <!-- The earliest date (element) of a session in the corpus -->
+  <xsl:variable name="min-date">
+    <xsl:variable name="from-dates">
+      <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
+	<xsl:sort select="@from" data-type="number"/>
+	<date xmlns="http://www.tei-c.org/ns/1.0">
+	  <xsl:value-of select="replace(@from, 'T.+', '')"/>
+	</date>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:value-of select="$from-dates/tei:date[1]"/>
+  </xsl:variable>
+  <!-- The most recent date (element) of a session in the corpus -->
+  <xsl:variable name="max-date">
+    <xsl:variable name="to-dates">
+      <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
+	<xsl:sort select="@to" data-type="number"/>
+	<xsl:if test="@to">
+	  <date xmlns="http://www.tei-c.org/ns/1.0">
+	    <xsl:value-of select="replace(@to, 'T.+', '')"/>
+	  </date>
+	</xsl:if>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:value-of select="$to-dates/tei:date[last()]"/>
+  </xsl:variable>
+  <!-- A date element with the date span of the corpus, formatted to slv rules -->
+  <xsl:variable name="date-range" xmlns="http://www.tei-c.org/ns/1.0">
+    <date from="{$min-date}" to="{$max-date}">
+      <xsl:value-of select="format-date($min-date, '[D1].[M1].[Y0001]')"/>
+      <xsl:text> — </xsl:text>
+      <xsl:value-of select="format-date($max-date, '[D1].[M1].[Y0001]')"/>
+    </date>
+  </xsl:variable>
+  
+  <!-- Processing -->
   <xsl:template match="/">
     <teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:lang="sl" xml:id="ParlaMint-SI">
       <teiHeader>
@@ -59,38 +105,6 @@
   
   <xsl:template name="fileDesc">
     <fileDesc xmlns="http://www.tei-c.org/ns/1.0">
-      <xsl:variable name="mandates">
-	<xsl:for-each select="$teiHeaders//tei:titleStmt/tei:meeting">
-	  <xsl:sort select="@n" data-type="number"/>
-	  <xsl:copy-of select="."/>
-	</xsl:for-each>
-      </xsl:variable>
-      <xsl:variable name="min-mandate" select="$mandates/tei:meeting[1]/@n"/>
-      <xsl:variable name="max-mandate" select="$mandates/tei:meeting[last()]/@n"/>
-      <xsl:variable name="min-date">
-	<xsl:variable name="from-dates">
-	  <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
-	    <xsl:sort select="@from" data-type="number"/>
-	    <date xmlns="http://www.tei-c.org/ns/1.0">
-	      <xsl:value-of select="replace(@from, 'T.+', '')"/>
-	    </date>
-	  </xsl:for-each>
-	</xsl:variable>
-	<xsl:value-of select="$from-dates/tei:date[1]"/>
-      </xsl:variable>
-      <xsl:variable name="max-date">
-	<xsl:variable name="to-dates">
-	  <xsl:for-each select="$teiHeaders//tei:sourceDesc/tei:bibl/tei:date">
-	    <xsl:sort select="@to" data-type="number"/>
-	    <xsl:if test="@to">
-	      <date xmlns="http://www.tei-c.org/ns/1.0">
-		<xsl:value-of select="replace(@to, 'T.+', '')"/>
-	      </date>
-	    </xsl:if>
-	  </xsl:for-each>
-	</xsl:variable>
-	<xsl:value-of select="$to-dates/tei:date[last()]"/>
-      </xsl:variable>
       <titleStmt>
         <title type="main" xml:lang="sl">Slovenski parlamentarni korpus ParlaMint-SI [ParlaMint]</title>
         <title type="main" xml:lang="en">Slovenian parliamentary corpus ParlaMint-SI [ParlaMint]</title>
@@ -146,19 +160,19 @@
 					   tei:measure[@unit='words']/@quantity)"/>
 	<!-- Note that ParlaMint actually expects speeches (and words from .ana) -->
         <measure unit="texts" quantity="{$texts}">
-	  <xsl:value-of select="format-number($texts,'###.###','euro')"/>
+	  <xsl:value-of select="format-number($texts,'###.###', 'slv')"/>
 	  <xsl:text> besedil</xsl:text>
 	</measure>
         <measure unit="texts" quantity="{$texts}" xml:lang="en">
-	  <xsl:value-of select="format-number($texts,'###,###')"/>
+	  <xsl:value-of select="format-number($texts, '###,###')"/>
 	  <xsl:text> texts</xsl:text>
 	</measure>
         <measure unit="words" quantity="{$words}">
-	  <xsl:value-of select="format-number($words,'###.###','euro')"/>
+	  <xsl:value-of select="format-number($words, '###.###', 'slv')"/>
 	  <xsl:text> besed</xsl:text>
 	</measure>
         <measure unit="words" quantity="{$words}" xml:lang="en">
-	  <xsl:value-of select="format-number($words,'###,###')"/>
+	  <xsl:value-of select="format-number($words, '###,###')"/>
 	  <xsl:text> words</xsl:text>
 	</measure>
       </extent>
@@ -185,24 +199,76 @@
           <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
           <title type="main" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia</title>
           <idno type="URI" subtype="parliament">https://www.dz-rs.si</idno>
-          <date from="{$min-date}" to="{$max-date}">
-	    <xsl:value-of select="format-date($min-date, '[D1].[M1].[Y0001]')"/>
-	    <xsl:text> — </xsl:text>
-	    <xsl:value-of select="format-date($max-date, '[D1].[M1].[Y0001]')"/>
-	  </date>
+	  <xsl:copy-of select="$date-range"/>
         </bibl>
       </sourceDesc>
     </fileDesc>
   </xsl:template>
   
   <xsl:template name="encodingDesc">
-   <encodingDesc xmlns="http://www.tei-c.org/ns/1.0">
-   </encodingDesc>
+    <encodingDesc xmlns="http://www.tei-c.org/ns/1.0">
+      <projectDesc>
+        <p xml:lang="sl">
+          <ref target="https://www.clarin.eu/content/parlamint">ParlaMint</ref>
+        </p>
+        <p xml:lang="en">
+        <ref target="https://www.clarin.eu/content/parlamint">ParlaMint</ref> is a project that aims to (1) create a multilingual set of comparable corpora of parliamentary proceedings uniformly encoded according to the <ref target="https://github.com/clarin-eric/parla-clarin">Parla-CLARIN recommendations</ref> and covering the COVID-19 pandemic from November 2019 as well as the earlier period from 2015 to serve as a reference corpus; (2) process the corpora linguistically to add Universal Dependencies syntactic structures and Named Entity annotation; (3) make the corpora available through concordancers and Parlameter; and (4) build use cases in Political Sciences and Digital Humanities based on the corpus data.</p>
+      </projectDesc>
+      <editorialDecl>
+        <correction>
+          <p xml:lang="en">No correction of source texts was performed.</p>
+        </correction>
+        <normalization>
+          <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+        </normalization>
+        <hyphenation>
+          <p xml:lang="en">No end-of-line hyphens were present in the source.</p>
+        </hyphenation>
+        <quotation>
+          <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+        </quotation>
+        <segmentation>
+          <p xml:lang="en">The texts are segmented into utterances (speeches) and segments (corresponding to paragraphs in the source transcription).</p>
+        </segmentation>
+      </editorialDecl>
+      <!-- tagsDecl removed, we need to compute these numbers on the basis of the converted components -->
+      <classDecl>
+	<!-- Not quite clear what to do with taxonomies -->
+	<!-- For now, just copy them over: -->
+	<xsl:copy-of select="$teiHeaders//tei:encodingDesc/tei:classDecl/tei:taxonomy"/>
+      </classDecl>
+    </encodingDesc>
   </xsl:template>
   
   <xsl:template name="profileDesc">
     <profileDesc xmlns="http://www.tei-c.org/ns/1.0">
+      <settingDesc>
+        <setting>
+	  <xsl:copy-of select="$teiHeaders/tei:teiHeader[1]/tei:profileDesc/
+			       tei:settingDesc/tei:setting/tei:*[not(self::tei:date)]"/>
+	  <xsl:copy-of select="$date-range"/>
+	</setting>
+      </settingDesc>
+      <particDesc>
+	<xsl:call-template name="listOrg"/>
+	<xsl:call-template name="listPerson"/>
+      </particDesc>
+      <langUsage>
+        <language ident="sl" xml:lang="sl">slovenski</language>
+        <language ident="en" xml:lang="sl">angleški</language>
+        <language ident="sl" xml:lang="en">Slovenian</language>
+        <language ident="en" xml:lang="en">English</language>
+      </langUsage>
     </profileDesc>
   </xsl:template>
   
+  <xsl:template name="listOrg">
+    <listOrg xmlns="http://www.tei-c.org/ns/1.0">
+    </listOrg>
+  </xsl:template>
+  
+  <xsl:template name="listPerson">
+    <listPerson xmlns="http://www.tei-c.org/ns/1.0">
+    </listPerson>
+  </xsl:template>
 </xsl:stylesheet>
