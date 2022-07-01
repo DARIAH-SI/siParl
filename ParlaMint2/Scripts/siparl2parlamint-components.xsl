@@ -41,7 +41,7 @@
 
   <xsl:template match="tei:TEI">
     <xsl:copy>
-      <xsl:attribute name="xml:id" select="replace(base-uri(), '.+/', '')"/>
+      <xsl:attribute name="xml:id" select="replace(base-uri(), '.+/(.+)\.xml', '$1')"/>
       <xsl:attribute name="xml:lang" select="@xml:lang"/>
       <xsl:attribute name="ana">
 	<xsl:value-of select="@ana"/>
@@ -83,7 +83,9 @@
 	    </xsl:otherwise>
           </xsl:choose>
 	  <xsl:text> (</xsl:text>
-	  <xsl:value-of select="ancestor::tei:teiHeader//tei:sourceDesc//tei:date/@when"/>
+	  <xsl:value-of select="format-date(
+				ancestor::tei:teiHeader//tei:sourceDesc//tei:date/@when, 
+				'[MNn] [D01], [Y0001]')"/>
 	  <xsl:text>)</xsl:text>
 	</xsl:when>
       </xsl:choose>
