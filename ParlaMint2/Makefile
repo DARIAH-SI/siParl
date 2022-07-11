@@ -4,7 +4,8 @@
 # Test conversion of components, needs work by Katja!
 test-cnv-components:
 	$s -xsl:Scripts/siparl2parlamint-components.xsl files-test.xml
-	$j Schema/ParlaMint-TEI.rng Data/*/*.xml
+	$j Schema/ParlaMint-TEI.rng Data/2014/ParlaMint-SI_2014-08-25-SDZ7-Izredna-01.xml
+	diff -w Data/2014/ParlaMint-SI_2014-08-25-SDZ7-Izredna-01.xml DataOK/ParlaMint-SI_2014-08-25-SDZ7-Izredna-01.xml | head -100
 
 # Do not try, needs work!
 test-cnv-root:

@@ -214,7 +214,7 @@
     <xsl:template match="documentsList">
         <xsl:variable name="corpus-label" select="tokenize(ref[1],'/')[1]"/>
         <xsl:variable name="corpus-term" select="substring($corpus-label,4,4)"/>
-        <xsl:variable name="corpus-document" select="concat('../speech/',$corpus-label,'.xml')"/>
+        <xsl:variable name="corpus-document" select="concat('speech/',$corpus-label,'.xml')"/>
         <xsl:variable name="source-corpus-document" select="concat('drama/',$corpus-label,'.xml')"/>
         <xsl:variable name="source-speaker-document" select="concat('drama/',$corpus-label,'-speaker.xml')"/>
 	<xsl:message select="$corpus-document"/>
@@ -516,7 +516,7 @@
                     </xsl:element>
                     
                     <!-- TEI dokumenti -->
-                    <xsl:variable name="document" select="concat('../speech/',.)"/>
+                    <xsl:variable name="document" select="concat('speech/',.)"/>
 		    <xsl:message select="$document"/>
                     <xsl:result-document href="{$document}">
                         <xsl:apply-templates select="document(.)" mode="pass0"/>
@@ -1156,7 +1156,7 @@
     <xsl:template match="tei:u/tei:seg/tei:seg[tei:gap or tei:seg]" mode="pass6">
         <xsl:choose>
             <xsl:when test="tei:gap and not(tei:seg)">
-                <!-- Zelo čudno: če sem spodaj dal samo copy-of select ., potem je v naslednjem pass7 ta gap postal note/@n (in nimam pojma, zakaj se je to zgodilo ... -->
+                <!-- Zelo čudno: če sem spodaj dal samo copy-of select ., potem je v naslednjem pass7 ta gap postal note/@n (in nimam pojma, zakaj se je to zgodilo -->
                 <!--<xsl:copy-of select="."/>-->
                 <gap n="{tei:gap/@n}"/>
             </xsl:when>
