@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 		xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		xmlns:tei="http://www.tei-c.org/ns/1.0"
+		xmlns="http://www.tei-c.org/ns/1.0"
 		exclude-result-prefixes="xs tei"
 		version="2.0">
   
@@ -55,6 +56,28 @@
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
+
+   <xsl:template match="tei:titleStmt">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+      <funder>
+	<orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
+	<orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+      </funder>
+    </xsl:copy>
+    <editionStmt>
+      <edition>
+	<xsl:value-of select="$edition"/>
+      </edition>
+    </editionStmt>
+    <extent><!--These numbers do not reflect the size of the sample!-->
+      <measure unit="speeches" quantity="0" xml:lang="sl">0 govorov</measure>
+      <measure unit="speeches" quantity="0" xml:lang="en">0 speeches</measure>
+      <measure unit="words" quantity="0" xml:lang="sl">0 besed</measure>
+      <measure unit="words" quantity="0" xml:lang="en">0 words</measure>
+    </extent>
+  </xsl:template>
   
   <xsl:template match="tei:titleStmt/tei:title[@type = 'main']">
     <xsl:copy>
@@ -92,6 +115,29 @@
       <xsl:text> [ParlaMint]</xsl:text>
     </xsl:copy>
   </xsl:template>
+
+  <xsl:template match="tei:publicationStmt/tei:publisher/tei:email"/>
+  <xsl:template match="tei:publicationStmt/tei:distributor"/>
+  <xsl:template match="tei:publicationStmt/tei:publisher/tei:orgName"/>
+  <xsl:template match="tei:publicationStmt/tei:publisher/tei:ref"/>
+  <xsl:template match="tei:publicationStmt/tei:pubPlace"/>
+
+  
+  <xsl:template match="tei:publicationStmt/tei:publisher">
+    <xsl:copy>
+      <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
+      <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+      <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+    <idno subtype="handle" type="URI">
+      <xsl:value-of select="$clarinHandle"/>
+    </idno>
+  </xsl:template>
+
+
+
   
   <!-- Copy rest to output -->
   <xsl:template match="tei:*">
