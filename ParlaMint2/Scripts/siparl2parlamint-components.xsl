@@ -136,8 +136,55 @@
     </idno>
   </xsl:template>
 
+  <xsl:template match="tei:sourceDesc/tei:bibl/tei:title[not(@*)]"/>
+  
+  <xsl:template match="tei:sourceDesc/tei:bibl">
+    <xsl:copy>
+      <title type="main" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia</title>
+      <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
+      <xsl:apply-templates select="tei:edition"/>
+      <xsl:apply-templates select="tei:idno"/>
+      <!--For the tei:idno, how do I add the subtype attribute and its value? -->
+      <xsl:apply-templates select="tei:date"/>
+    </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="tei:encodingDesc">
+    <xsl:copy>
+      <projectDesc>
+	<p xml:lang="sl">
+          <ref target="https://www.clarin.eu/content/parlamint">ParlaMint</ref>
+	</p>
+	<p xml:lang="en">
+          <ref target="https://www.clarin.eu/content/parlamint">ParlaMint</ref>
+      </p>
+      </projectDesc>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="tei:profileDesc/tei:abstract"/>
+
+  <xsl:template match="tei:profileDesc">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+    <revisionDesc>
+      <!-- Do we need to add any new changes/revisions? Also, weird indentation -->
+      <change when="2021-06-11">
+      <name>Tomaž Erjavec</name>: Made sample.</change>
+      <change when="2021-03-20">
+      <name>Tomaž Erjavec</name>: Fixes for Version 2.</change>
+      <change when="2020-10-06">
+      <name>Tomaž Erjavec</name>: Small fixes for ParlaMint.</change>
+    </revisionDesc>
+  </xsl:template>
 
 
+
+  
   
   <!-- Copy rest to output -->
   <xsl:template match="tei:*">
