@@ -181,9 +181,29 @@
       <name>Tomaž Erjavec</name>: Small fixes for ParlaMint.</change>
     </revisionDesc>
   </xsl:template>
+  
+  <xsl:template match="tei:text">
+    <xsl:copy>
+      <xsl:attribute name="ana">
+	<xsl:choose>
+	  <xsl:when test="xs:date(tei:teiHeader//tei:sourceDesc//tei:date/@when) 
+			  &lt; xs:date($covid-date)">#reference</xsl:when>
+          <xsl:otherwise>#covid</xsl:otherwise>
+	</xsl:choose>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
 
-
-
+  <xsl:template match="tei:front[.//tei:div]">
+    <body>
+      <xsl:apply-templates/>
+    </body>
+  </xsl:template>
+  
+  <xsl:template match="tei:text/tei:body[.//tei:div]">
+      <xsl:apply-templates/>
+  </xsl:template>
   
   
   <!-- Copy rest to output -->
