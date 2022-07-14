@@ -5,6 +5,12 @@
 		xmlns="http://www.tei-c.org/ns/1.0"
 		exclude-result-prefixes="xs tei"
 		version="2.0">
+
+  <!--To-do Notes, 14.07.2022: -->
+  <!--fix the ID of the document : -->
+  <!--ana="#covid" instead #reference: figure out why!!!! -->
+  <!--change the <note type="chairman">...</note> to <head>: -->
+
   
   <xsl:output method="xml" indent="yes"/>
   
@@ -182,6 +188,23 @@
     </revisionDesc>
   </xsl:template>
   
+  <xsl:template match="tei:text/tei:body[.//tei:div]">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  <xsl:template match="tei:text/tei:body/tei:div[.//tei:note]">
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <xsl:template match="tei:text//tei:div[.//tei:head]">
+    <xsl:apply-templates/>
+  </xsl:template>
+    
+  <xsl:template match="tei:front[.//tei:div]">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+
   <xsl:template match="tei:text">
     <xsl:copy>
       <xsl:attribute name="ana">
@@ -191,21 +214,16 @@
           <xsl:otherwise>#covid</xsl:otherwise>
 	</xsl:choose>
       </xsl:attribute>
-      <xsl:apply-templates/>
+      <body>
+	<div type="debateSection">
+	  <xsl:apply-templates/>
+	</div>
+      </body>
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="tei:front[.//tei:div]">
-    <body>
-      <xsl:apply-templates/>
-    </body>
-  </xsl:template>
-  
-  <xsl:template match="tei:text/tei:body[.//tei:div]">
-      <xsl:apply-templates/>
-  </xsl:template>
-  
-  
+
+
   <!-- Copy rest to output -->
   <xsl:template match="tei:*">
     <xsl:copy>
