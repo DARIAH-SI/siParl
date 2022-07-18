@@ -6,12 +6,21 @@
 		exclude-result-prefixes="xs tei"
 		version="2.0">
 
-  <!--To-do Notes, 14.07.2022: -->
-  <!--fix the ID of the document : -->
-  <!--ana="#covid" instead #reference: figure out why!!!! -->
-  <!--change the <note type="chairman">...</note> to <head>: -->
+  <!--To-do, 15.07.2022 (after successful validation; diff notes): -->
 
-  
+  <!--fix the xml:id: concatenated the ParlaMint-SI_; 
+      change the <note type="chairman">...</note> to <head>
+
+      correct the tei:titleStmt/tei:title[@type='sub']
+      
+      tei:publicationStmt/tei:publisher/tei:date: to which date should this be corrected?
+      
+      idno[@type]: which form of the date?
+      
+      What to do with tagUsage?
+
+-->
+    
   <xsl:output method="xml" indent="yes"/>
   
   <!-- vstavi ob procesiranju nove verzije -->
@@ -44,14 +53,15 @@
 	<xsl:apply-templates select="document(source)"/>
       </xsl:result-document>
     </xsl:for-each>
-  </xsl:template>
+  </xsl:template>  
 
   <xsl:template match="tei:TEI">
     <xsl:copy>
-      <xsl:attribute name="xml:id" select="replace(base-uri(), '.+/(.+)\.xml', '$1')"/>
+      <xsl:variable name="base_xml" select="(replace(base-uri(), '.+/(.+)\.xml', '$1'))"/>
+      <xsl:attribute name="xml:id" select="concat('ParlaMint-SI_', $base_xml)"/>
       <xsl:attribute name="xml:lang" select="@xml:lang"/>
       <xsl:attribute name="ana">
-	<xsl:value-of select="@ana"/>
+	<xsl:text>#parla.sitting</xsl:text>
 	<xsl:text>&#32;</xsl:text>
 	<xsl:choose>
 	  <xsl:when test="xs:date(tei:teiHeader//tei:sourceDesc//tei:date/@when) 
@@ -122,6 +132,7 @@
     </xsl:copy>
   </xsl:template>
 
+  
   <xsl:template match="tei:publicationStmt/tei:publisher/tei:email"/>
   <xsl:template match="tei:publicationStmt/tei:distributor"/>
   <xsl:template match="tei:publicationStmt/tei:publisher/tei:orgName"/>
@@ -209,7 +220,7 @@
     <xsl:copy>
       <xsl:attribute name="ana">
 	<xsl:choose>
-	  <xsl:when test="xs:date(tei:teiHeader//tei:sourceDesc//tei:date/@when) 
+	  <xsl:when test="xs:date(/tei:TEI/tei:teiHeader//tei:sourceDesc//tei:date/@when) 
 			  &lt; xs:date($covid-date)">#reference</xsl:when>
           <xsl:otherwise>#covid</xsl:otherwise>
 	</xsl:choose>
@@ -222,7 +233,18 @@
     </xsl:copy>
   </xsl:template>
 
-
+ <!-- In this session, all of the gap element are empty, with only an attribute to explain the type of gap. But this might not be the case for all other sessions.-->
+  <xsl:template match="//tei:gap">
+    <xsl:copy>
+      <xsl:copy-of select="@*"/>
+      <desc>
+	<xsl:attribute name="xml:lang">
+	  <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	</xsl:attribute>
+	<xsl:apply-templates/>
+      </desc>
+    </xsl:copy>
+ </xsl:template>
 
   <!-- Copy rest to output -->
   <xsl:template match="tei:*">
