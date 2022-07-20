@@ -132,7 +132,47 @@
     </xsl:copy>
   </xsl:template>
 
-  
+
+
+  <xsl:template match="tei:titleStmt/tei:title[@type = 'sub']">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:text>Zapisi sej Državnega zbora Republike Slovenije, </xsl:text>
+      <xsl:value-of select="../tei:meeting[@n]"/>
+      <xsl:text>,&#32;</xsl:text>
+      <xsl:value-of select="../tei:title[@type = 'sub' and @xml:lang = 'sl']"/>
+    </xsl:copy>
+    <xsl:element name="title">
+      <xsl:attribute name="type" select="../tei:title[@type= 'sub']/@type"/>
+      <xsl:attribute name="xml:lang" select="../tei:title[@xml:lang = 'en']/@xml:lang"/>
+      <xsl:text>Minutes of the National Assembly of the Republic of Slovenia, Term </xsl:text>
+      <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.term')]/@n"/>
+      <xsl:text>, </xsl:text>
+      <xsl:choose>
+	<xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.regular')]">
+	  <xsl:text>Regular Session </xsl:text>
+          <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.regular')]/@n"/>
+        </xsl:when>
+        <xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]">
+          <xsl:text>Extraordinary Session </xsl:text>
+          <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]/@n"/>
+        </xsl:when>
+	<xsl:otherwise>
+	  <xsl:message terminate="yes">
+	    <xsl:text>Bad session type: </xsl:text>
+	    <xsl:value-of select="../tei:meeting/@ana"/>
+	  </xsl:message>
+	    </xsl:otherwise>
+      </xsl:choose>
+      <xsl:text>, (</xsl:text>
+      <xsl:value-of select="format-date(
+			    ancestor::tei:teiHeader//tei:sourceDesc//tei:date/@when, 
+			    '[D01]. [M01]. [Y0001]')"/>
+      <!-- What kind of date format should actually be here? 25.8.2014 like in DataOK, 25. 8. 2014 (so, with spaces) or August 25, 2014? -->
+      <xsl:text>)</xsl:text>
+    </xsl:element>
+  </xsl:template>
+    
   <xsl:template match="tei:publicationStmt/tei:publisher/tei:email"/>
   <xsl:template match="tei:publicationStmt/tei:distributor"/>
   <xsl:template match="tei:publicationStmt/tei:publisher/tei:orgName"/>
@@ -246,6 +286,7 @@
     </xsl:copy>
  </xsl:template>
 
+ 
   <!-- Copy rest to output -->
   <xsl:template match="tei:*">
     <xsl:copy>
