@@ -29,6 +29,7 @@
   <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1486</xsl:param>
   <!-- vstavi datum od katerega naprej se smatra, da je COVID razprava -->
   <xsl:param name="covid-date" as="xs:date">2019-11-01</xsl:param>
+
   
   <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
   
@@ -73,6 +74,7 @@
     </xsl:copy>
   </xsl:template>
 
+  
    <xsl:template match="tei:titleStmt">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
@@ -205,6 +207,8 @@
       <xsl:apply-templates select="tei:date"/>
     </xsl:copy>
   </xsl:template>
+
+  <!-- This is a new comment!!!--->
 
   <xsl:template match="tei:encodingDesc">
     <xsl:copy>
