@@ -208,7 +208,7 @@
     </xsl:copy>
   </xsl:template>
 
-  <!-- This is a new comment!!!--->
+  <!-- This is a new comment!!!-->
 
   <xsl:template match="tei:encodingDesc">
     <xsl:copy>
