@@ -10,10 +10,6 @@
 
   <!--fix the xml:id: concatenated the ParlaMint-SI_; 
       change the <note type="chairman">...</note> to <head>
-
-      correct the tei:titleStmt/tei:title[@type='sub']
-      
-      tei:publicationStmt/tei:publisher/tei:date: to which date should this be corrected?
       
       idno[@type]: which form of the date?
       
@@ -195,6 +191,15 @@
     </idno>
   </xsl:template>
 
+    <xsl:template match="tei:publicationStmt//tei:date[@when]">
+    <xsl:element name="date">
+      <xsl:attribute name="when">
+	<xsl:value-of select="format-date(current-date(), 
+			      '[Y0001]-[M01]-[D01]')"/>
+      </xsl:attribute>
+    </xsl:element>
+  </xsl:template>
+  
   <xsl:template match="tei:sourceDesc/tei:bibl/tei:title[not(@*)]"/>
   
   <xsl:template match="tei:sourceDesc/tei:bibl">
@@ -204,7 +209,7 @@
       <xsl:apply-templates select="tei:edition"/>
       <xsl:apply-templates select="tei:idno"/>
       <!--For the tei:idno, how do I add the subtype attribute and its value? -->
-      <xsl:apply-templates select="tei:date"/>
+      <xsl:apply-templates select="tei:date"/> 
     </xsl:copy>
   </xsl:template>
 
@@ -277,6 +282,13 @@
     </xsl:copy>
   </xsl:template>
 
+  <xsl:template match="tei:text//tei:note[@type = 'chairman']">
+    <xsl:element name = "head">
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+    
  <!-- In this session, all of the gap element are empty, with only an attribute to explain the type of gap. But this might not be the case for all other sessions.-->
   <xsl:template match="//tei:gap">
     <xsl:copy>
