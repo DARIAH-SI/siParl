@@ -54,8 +54,14 @@
 
   <xsl:template match="tei:TEI">
     <xsl:copy>
-      <xsl:variable name="base_xml" select="(replace(base-uri(), '.+/(.+)\.xml', '$1'))"/>
-      <xsl:attribute name="xml:id" select="concat('ParlaMint-SI_', $base_xml)"/>
+      <xsl:variable name="base" select="(replace(base-uri(), '.+/(.+)\.xml', '$1'))"/>
+       <xsl:variable name="type_of_session" select="tokenize($base,'-')[1]"/>
+       <xsl:variable name="no_of_session" select="tokenize($base,'-')[2]"/>
+       <xsl:variable name="year" select="tokenize($base,'-')[3]"/>
+       <xsl:variable name="month" select="tokenize($base,'-')[4]"/>
+       <xsl:variable name="day" select="tokenize($base,'-')[5]"/>
+       <xsl:variable name="mandat_no" select="tei:teiHeader//tei:meeting[2]/@n"/>
+      <xsl:attribute name="xml:id" select="concat('ParlaMint-SI_',$year,'-',$month,'-',$day, '-','SDZ', $mandat_no, '-', $type_of_session, '-', $no_of_session )"/>
       <xsl:attribute name="xml:lang" select="@xml:lang"/>
       <xsl:attribute name="ana">
 	<xsl:text>#parla.sitting</xsl:text>
@@ -70,6 +76,21 @@
     </xsl:copy>
   </xsl:template>
 
+<!--
+  <xsl:template match="tei:TEI[@xml:id]">
+    <xsl:variable name="front" select="tokenize(.,'_')[1]"/>
+    <xsl:variable name="back" select="tokenize(.,'_')[2]"/>
+    <xsl:variable name="type_of_session" select="tokenize($back,'-')[1]"/>
+    <xsl:variable name="no_of_session" select="tokenize($back,'-')[2]"/>
+    <xsl:variable name="year" select="tokenize($back,'-')[3]"/>
+    <xsl:variable name="month" select="tokenize($back,'-')[4]"/>
+    <xsl:variable name="day" select="tokenize($back,'-')[5]"/>
+    <xsl:attribute name="xml:id">
+      <xsl:value-of select="concat($front,'_',$year,'-',$month,'-',$day,'-',$type_of_session,'-',$no_of_session"/>
+    </xsl:attribute>
+    <xsl:apply-templates/>
+  </xsl:template>
+-->
   
    <xsl:template match="tei:titleStmt">
     <xsl:copy>
