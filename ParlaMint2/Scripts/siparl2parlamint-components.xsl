@@ -53,44 +53,18 @@
   </xsl:template>  
 
   <xsl:template match="tei:TEI">
-    <xsl:copy>
-      <xsl:variable name="base" select="(replace(base-uri(), '.+/(.+)\.xml', '$1'))"/>
-       <xsl:variable name="type_of_session" select="tokenize($base,'-')[1]"/>
-       <xsl:variable name="no_of_session" select="tokenize($base,'-')[2]"/>
-       <xsl:variable name="year" select="tokenize($base,'-')[3]"/>
-       <xsl:variable name="month" select="tokenize($base,'-')[4]"/>
-       <xsl:variable name="day" select="tokenize($base,'-')[5]"/>
-       <xsl:variable name="mandat_no" select="tei:teiHeader//tei:meeting[2]/@n"/>
-      <xsl:attribute name="xml:id" select="concat('ParlaMint-SI_',$year,'-',$month,'-',$day, '-','SDZ', $mandat_no, '-', $type_of_session, '-', $no_of_session )"/>
-      <xsl:attribute name="xml:lang" select="@xml:lang"/>
-      <xsl:attribute name="ana">
-	<xsl:text>#parla.sitting</xsl:text>
-	<xsl:text>&#32;</xsl:text>
-	<xsl:choose>
-	  <xsl:when test="xs:date(tei:teiHeader//tei:sourceDesc//tei:date/@when) 
-			  &lt; xs:date($covid-date)">#reference</xsl:when>
-          <xsl:otherwise>#covid</xsl:otherwise>
-	</xsl:choose>
-      </xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:copy>
+    <xsl:variable name="pass1">
+      <xsl:copy>
+	<xsl:apply-templates select="@*"/>
+	<xsl:apply-templates/>
+      </xsl:copy>
+    </xsl:variable>
+    <!--xsl:copy-of select="$pass1"/-->
+    <xsl:variable name="base-uri" select="base-uri()"/>
+    <xsl:apply-templates mode="pass2" select="$pass1">
+      <xsl:with-param name="base-uri" select="$base-uri"/>
+    </xsl:apply-templates>
   </xsl:template>
-
-<!--
-  <xsl:template match="tei:TEI[@xml:id]">
-    <xsl:variable name="front" select="tokenize(.,'_')[1]"/>
-    <xsl:variable name="back" select="tokenize(.,'_')[2]"/>
-    <xsl:variable name="type_of_session" select="tokenize($back,'-')[1]"/>
-    <xsl:variable name="no_of_session" select="tokenize($back,'-')[2]"/>
-    <xsl:variable name="year" select="tokenize($back,'-')[3]"/>
-    <xsl:variable name="month" select="tokenize($back,'-')[4]"/>
-    <xsl:variable name="day" select="tokenize($back,'-')[5]"/>
-    <xsl:attribute name="xml:id">
-      <xsl:value-of select="concat($front,'_',$year,'-',$month,'-',$day,'-',$type_of_session,'-',$no_of_session"/>
-    </xsl:attribute>
-    <xsl:apply-templates/>
-  </xsl:template>
--->
   
    <xsl:template match="tei:titleStmt">
     <xsl:copy>
@@ -322,11 +296,10 @@
       </desc>
     </xsl:copy>
  </xsl:template>
-
  
-  <!-- Copy rest to output -->
-  <xsl:template match="tei:*">
-    <xsl:copy>
+ <!-- Copy rest to output -->
+ <xsl:template match="tei:*">
+   <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
     </xsl:copy>
@@ -335,4 +308,77 @@
     <xsl:copy/>
   </xsl:template>
 
+  <!-- Pass2 processing -->
+  
+  <xsl:template mode="pass2" match="tei:TEI">
+    <xsl:param name="base-uri"/>
+    <xsl:copy>
+      <xsl:variable name="base" select="(replace($base-uri, '.+/(.+)\.xml', '$1'))"/>
+      <xsl:variable name="type_of_session" select="tokenize($base, '-')[1]"/>
+      <xsl:variable name="no_of_session" select="tokenize($base, '-')[2]"/>
+      <xsl:variable name="year" select="tokenize($base, '-')[3]"/>
+      <xsl:variable name="month" select="tokenize($base, '-')[4]"/>
+      <xsl:variable name="day" select="tokenize($base, '-')[5]"/>
+      <xsl:variable name="mandate_no" select="tei:teiHeader//tei:meeting[2]/@n"/>
+      <xsl:if test="not(normalize-space($mandate_no))">
+	<xsl:message select="concat('ERROR: no mandate number for ', @xml:id)"/>
+      </xsl:if>
+      <xsl:variable name="id" select="concat('ParlaMint-SI_',
+					   $year, '-',
+					   $month, '-',
+					   $day, '-',
+					   'SDZ', $mandate_no, '-', 
+					   $type_of_session, '-', 
+					   $no_of_session)"/>
+      <xsl:attribute name="xml:id" select="$id"/>
+      <xsl:attribute name="xml:lang" select="@xml:lang"/>
+      <xsl:attribute name="ana">
+	<xsl:text>#parla.sitting</xsl:text>
+	<xsl:text>&#32;</xsl:text>
+	<xsl:choose>
+	  <xsl:when test="xs:date(tei:teiHeader//tei:sourceDesc//tei:date/@when) 
+			  &lt; xs:date($covid-date)">#reference</xsl:when>
+          <xsl:otherwise>#covid</xsl:otherwise>
+	</xsl:choose>
+      </xsl:attribute>
+      <xsl:apply-templates mode="pass2">
+	<xsl:with-param name="id" select="$id"/>
+      </xsl:apply-templates>
+    </xsl:copy>
+  </xsl:template>
+  
+  <xsl:template mode="pass2" match="tei:*">
+    <xsl:param name="id"/>
+    <xsl:copy>
+      <xsl:apply-templates mode="pass2" select="@*">
+	<xsl:with-param name="id" select="$id"/>
+      </xsl:apply-templates>
+      <xsl:apply-templates mode="pass2">
+	<xsl:with-param name="id" select="$id"/>
+      </xsl:apply-templates>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template mode="pass2" match="tei:body//@xml:id">
+    <xsl:param name="id"/>
+    <xsl:attribute name="xml:id">
+      <xsl:if test="not(matches(., '\.'))">
+	<xsl:message select="concat('ERROR: strange ID ', .)"/>
+      </xsl:if>
+      <xsl:value-of select="$id"/>
+      <xsl:value-of select="replace(., '^.+(\..+)', '$1')"/>
+    </xsl:attribute>
+  </xsl:template>
+  <xsl:template mode="pass2" match="@*">
+    <xsl:choose>
+      <xsl:when test="starts-with(., '#parl.')">
+	<xsl:attribute name="{name()}">
+	  <xsl:text>#parla.</xsl:text>
+	  <xsl:value-of select="replace(., '#parl\.', '')"/>
+	</xsl:attribute>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:copy/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
 </xsl:stylesheet>
