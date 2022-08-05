@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 		xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		xmlns:tei="http://www.tei-c.org/ns/1.0"
+		xmlns="http://www.tei-c.org/ns/1.0"
 		exclude-result-prefixes="#all"
 		version="2.0">
   
@@ -103,6 +104,69 @@
     </teiCorpus>
   </xsl:template>
   
+  <!-- Add <term> -->
+  <xsl:template match="tei:taxonomy/tei:desc">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <term>
+	<xsl:apply-templates/>
+      </term>
+    </xsl:copy>
+  </xsl:template>
+  <!-- Rename and add <term> -->
+  <xsl:template match="tei:category/tei:desc">
+    <catDesc>
+      <xsl:apply-templates select="@*"/>
+      <term>
+	<xsl:apply-templates/>
+      </term>
+    </catDesc>
+  </xsl:template>
+  <!-- Add <term> if missing -->
+  <xsl:template match="tei:catDesc">
+    <catDesc>
+      <xsl:apply-templates select="@*"/>
+      <xsl:choose>
+	<xsl:when test="tei:term">
+	  <xsl:apply-templates/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <term>
+	    <xsl:apply-templates/>
+	  </term>
+	</xsl:otherwise>
+      </xsl:choose>
+    </catDesc>
+  </xsl:template>
+  
+  <xsl:template match="@xml:id">
+    <xsl:attribute name="xml:id">
+      <xsl:choose>
+	<xsl:when test="starts-with(., 'parl.')">
+	  <xsl:value-of select="replace(., '^parl\.', 'parla.')"/>
+	</xsl:when>
+	<xsl:when test="starts-with(., 'par.')">
+	  <xsl:value-of select="replace(., '^par\.', 'parla.')"/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:value-of select="."/>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:attribute>
+  </xsl:template>
+  
+ <!-- Copy rest to output -->
+ <xsl:template match="tei:*">
+   <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*">
+    <xsl:copy/>
+  </xsl:template>
+
+  <!-- Named templates -->
   <xsl:template name="fileDesc">
     <fileDesc xmlns="http://www.tei-c.org/ns/1.0">
       <titleStmt>
@@ -154,24 +218,22 @@
 	</edition>
       </editionStmt>
       <extent>
-	<xsl:variable name="texts" select="sum($teiHeaders//tei:fileDesc/tei:extent/
-					   tei:measure[@unit='texts']/@quantity)"/>
 	<xsl:variable name="words" select="sum($teiHeaders//tei:fileDesc/tei:extent/
 					   tei:measure[@unit='words']/@quantity)"/>
-	<!-- Note that ParlaMint actually expects speeches (and words from .ana) -->
-        <measure unit="texts" quantity="{$texts}">
+	<!-- Note that ParlaMint expects speeches (and words from .ana) -->
+        <!-- measure unit="texts" quantity="{$texts}">
 	  <xsl:value-of select="format-number($texts,'###.###', 'slv')"/>
 	  <xsl:text> besedil</xsl:text>
 	</measure>
         <measure unit="texts" quantity="{$texts}" xml:lang="en">
 	  <xsl:value-of select="format-number($texts, '###,###')"/>
 	  <xsl:text> texts</xsl:text>
-	</measure>
-        <measure unit="words" quantity="{$words}">
+	</measure-->
+        <measure unit="words" quantity="{format-number($words, '#')}">
 	  <xsl:value-of select="format-number($words, '###.###', 'slv')"/>
 	  <xsl:text> besed</xsl:text>
 	</measure>
-        <measure unit="words" quantity="{$words}" xml:lang="en">
+        <measure unit="words" quantity="{format-number($words, '#')}" xml:lang="en">
 	  <xsl:value-of select="format-number($words, '###,###')"/>
 	  <xsl:text> words</xsl:text>
 	</measure>
@@ -234,8 +296,9 @@
       <!-- tagsDecl removed, we need to compute these numbers on the basis of the converted components -->
       <classDecl>
 	<!-- Not quite clear what to do with taxonomies -->
-	<!-- For now, just copy them over: -->
-	<xsl:copy-of select="$teiHeaders//tei:encodingDesc/tei:classDecl/tei:taxonomy"/>
+	<!-- For now take them from siParl teiHeader and process -->
+	<xsl:apply-templates select="$teiHeaders/tei:teiHeader[1]//
+				     tei:encodingDesc/tei:classDecl/tei:taxonomy"/>
       </classDecl>
     </encodingDesc>
   </xsl:template>
@@ -264,11 +327,13 @@
   
   <xsl:template name="listOrg">
     <listOrg xmlns="http://www.tei-c.org/ns/1.0">
+      <!-- Need to collect all organisations here -->
     </listOrg>
   </xsl:template>
   
   <xsl:template name="listPerson">
     <listPerson xmlns="http://www.tei-c.org/ns/1.0">
+      <!-- Need to collect all persons here -->
     </listPerson>
   </xsl:template>
 </xsl:stylesheet>
