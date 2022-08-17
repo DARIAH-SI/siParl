@@ -13,6 +13,8 @@
   <xsl:param name="edition">3.0a</xsl:param>
   <!-- CLARIN.SI handle of the finished corpus -->
   <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1486</xsl:param>
+  <!-- Ignore parties older than this date-->
+  <xsl:param name="cutoffDate">1995-00-00</xsl:param>
   
   <!-- Povezave to ustreznih taksonomij -->
   <!-- Ni jasno, ali res hočemo tule tako... -->
@@ -340,11 +342,21 @@
   
   <xsl:template name="listOrg">
     <listOrg xmlns="http://www.tei-c.org/ns/1.0">
-      <!-- Need to collect all organisations here -->
-      <xsl:apply-templates select="$teiHeaders//tei:org"/>
+      <!-- Need to collect all unique organisations here -->
+      <xsl:apply-templates mode="unique" select="$teiHeaders//tei:org"/>
     </listOrg>
   </xsl:template>
 
+  <xsl:template match="tei:org" mode="unique">
+    <xsl:variable name="id" select="@xml:id"/>
+    <xsl:variable name="to" select="tei:event[tei:label = 'existence']/@to"/>
+    <xsl:if test="not(preceding::tei:org[@xml:id = $id]) and 
+		  (not($to) or $to &gt; $cutoffDate)">
+      <xsl:apply-templates select="."/>
+    </xsl:if>
+  </xsl:template>
+
+  
   <!-- Add <full> if required:-->
   <xsl:template match="tei:particDesc/tei:listOrg//tei:orgName[not(@full)]">
     <xsl:copy>
@@ -363,12 +375,60 @@
     </xsl:copy>
   </xsl:template>
 
+  <!--Change value of existing @full attribute to either "yes" or "abb"--> 
+  <xsl:template match="tei:particDesc/tei:listOrg//tei:orgName[@full]">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:attribute name="full">
+	<xsl:choose>
+	  <xsl:when test="@xml:lang">
+	    <xsl:text>yes</xsl:text>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:text>abb</xsl:text>
+	  </xsl:otherwise>
+	</xsl:choose>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+
   <xsl:template match="tei:particDesc//tei:listOrg[@xml:id = 'chambers']"/>
   <xsl:template match="tei:particDesc//tei:org[@ana = '#par.chamber']"/>
-    
+
+  <!-- Change value of @role to new, valid ones-->
+  <xsl:template match="tei:particDesc//tei:org[@role]">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:attribute name="role">
+	<xsl:choose>
+	  <xsl:when test="matches(@xml:id,'^party\.' )">
+	    <xsl:text>parliamentaryGroup</xsl:text>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:value-of select="@role"/>
+	  </xsl:otherwise>
+	</xsl:choose>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+
   <xsl:template name="listPerson">
     <listPerson xmlns="http://www.tei-c.org/ns/1.0">
-      <!-- Need to collect all persons here -->
+      <!-- Need to collect all (unique) persons here -->
     </listPerson>
   </xsl:template>
+
+<!--  <xsl:template match="tei:person">
+    <xsl:variable name="personId" select="@xml:id"/>
+    <xsl:if test="not(preceding::tei:person[@xml:id = $personId])">
+      <xsl:apply-templates select="."/>
+    </xsl:if>
+  </xsl:template> -->
+  
+
+  
 </xsl:stylesheet>
+
+
