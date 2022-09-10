@@ -15,7 +15,7 @@
   <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1486</xsl:param>
   <!-- Ignore parties older than this date-->
   <xsl:param name="cutoffDate">1995-00-00</xsl:param>
-  
+
   <!-- Povezave to ustreznih taksonomij -->
   <!-- Ni jasno, ali res hočemo tule tako... -->
   <xsl:param name="taxonomy-legislature">taxo-legislature.xml</xsl:param>
@@ -414,20 +414,37 @@
     </xsl:copy>
   </xsl:template>
 
+  
   <xsl:template name="listPerson">
     <listPerson xmlns="http://www.tei-c.org/ns/1.0">
-      <!-- Need to collect all (unique) persons here -->
+      <head xml:lang="sl">Seznam govornikov</head>
+      <head xml:lang="en">List of speakers</head>
+      <!--Add all unique speakers-->
+      <xsl:apply-templates select="$teiHeaders//tei:person[not(.=preceding::*)]"/>
     </listPerson>
   </xsl:template>
 
-<!--  <xsl:template match="tei:person">
-    <xsl:variable name="personId" select="@xml:id"/>
-    <xsl:if test="not(preceding::tei:person[@xml:id = $personId])">
-      <xsl:apply-templates select="."/>
-    </xsl:if>
-  </xsl:template> -->
-  
+  <!---Change value of attribute "role" of speakers to valid ones-->
+  <!-- affiliation role="member"; match MP and replace to member-->
+  <xsl:template match="tei:particDesc//tei:person//tei:affiliation">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:attribute name="role">
+	<xsl:choose>
+	  <xsl:when test="matches(@role,'^MP')">
+	    <xsl:text>member</xsl:text>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:value-of select="@role"/>
+	  </xsl:otherwise>
+	</xsl:choose>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
 
+  <!-- add roleName element: if ref="#DZ" then roleName="MP"; 
+if ref="#party.+", then roleName=Member" (plus, xml:lang)!-->
   
 </xsl:stylesheet>
 
