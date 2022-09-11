@@ -424,8 +424,7 @@
     </listPerson>
   </xsl:template>
 
-  <!---Change value of attribute "role" of speakers to valid ones-->
-  <!-- affiliation role="member"; match MP and replace to member-->
+  <!---Change value of attribute "role" of speakers to valid ones and add roleName -->
   <xsl:template match="tei:particDesc//tei:person//tei:affiliation">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
@@ -439,13 +438,28 @@
 	  </xsl:otherwise>
 	</xsl:choose>
       </xsl:attribute>
+      <roleName xml:lang="en">
+	<xsl:choose>
+	  <xsl:when test="@ref = '#DZ'">
+	    <xsl:text>MP</xsl:text>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:text>Member</xsl:text>
+	  </xsl:otherwise>
+	</xsl:choose>
+      </roleName>
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
 
-  <!-- add roleName element: if ref="#DZ" then roleName="MP"; 
-if ref="#party.+", then roleName=Member" (plus, xml:lang)!-->
+       <!-- roleName note: several politicians still have affiliations from 1991/1992 and @ref values for committees (e.g., Pahor, Borut:          
+         <affiliation role="member"
+             ref="#DruzPolZb"
+             from="1990-05-08"
+             to="1992-12-22"
+             ana="#SK.11"> should this be removed (as ParlaMint does not include committees)?-->
   
+       
 </xsl:stylesheet>
 
 
