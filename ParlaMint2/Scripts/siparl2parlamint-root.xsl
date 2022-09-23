@@ -40,9 +40,7 @@
   <!-- The filenames of each component, starting with the year directory -->
   <xsl:variable name="components">
     <xsl:for-each select="/mappings/map">
-      <component>
-	<xsl:copy-of select="replace(target, '.+?/(\d\d\d\d/)', '$1')"/>
-      </component>
+      <xsl:copy-of select="replace(target, '.+?/(\d\d\d\d/)', '$1')"/>
     </xsl:for-each>
   </xsl:variable>
 
@@ -100,9 +98,8 @@
 	<xsl:call-template name="encodingDesc"/>
 	<xsl:call-template name="profileDesc"/>
       </teiHeader>
-      <xsl:for-each select="$components/component">
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-		    href="{.}"/>
+      <xsl:for-each select="$components">
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="{.}"/>
       </xsl:for-each>
     </teiCorpus>
   </xsl:template>
@@ -458,8 +455,15 @@
              from="1990-05-08"
              to="1992-12-22"
              ana="#SK.11"> should this be removed (as ParlaMint does not include committees)?-->
+  <xsl:template match="tei:person[@xml:id='LampeAlenka']//tei:birth">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:text/>
+    </xsl:copy>
+  </xsl:template>
   
-       
+  <xsl:template match="tei:person[@xml:id='MurgelJasna']//tei:roleName/@type"/>
+  
 </xsl:stylesheet>
 
 
