@@ -39,8 +39,10 @@
   </xsl:variable>
   <!-- The filenames of each component, starting with the year directory -->
   <xsl:variable name="components">
-    <xsl:for-each select="/mappings/map">
-      <xsl:copy-of select="replace(target, '.+?/(\d\d\d\d/)', '$1')"/>
+    <xsl:for-each select="mappings//map">
+      <xsl:element name="target">
+	<xsl:value-of select="replace(target, '.+?/(\d\d\d\d/)', '$1')"/>
+      </xsl:element>
     </xsl:for-each>
   </xsl:variable>
 
@@ -98,8 +100,8 @@
 	<xsl:call-template name="encodingDesc"/>
 	<xsl:call-template name="profileDesc"/>
       </teiHeader>
-      <xsl:for-each select="$components">
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="{.}"/>
+      <xsl:for-each select="$components/tei:target">
+	   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="{.}"/>
       </xsl:for-each>
     </teiCorpus>
   </xsl:template>
