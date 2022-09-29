@@ -34,7 +34,7 @@
   <!-- The teiHeaders of each term -->
   <xsl:variable name="teiHeaders">
     <xsl:for-each select="mappings/source">
-      <xsl:copy-of select="document(.)//tei:teiHeader"/>
+      <xsl:copy-of select="document(.)//tei:teiHeader" copy-namespaces="no"/>
     </xsl:for-each>
   </xsl:variable>
   <!-- The filenames of each component, starting with the year directory -->
@@ -45,7 +45,7 @@
       </xsl:element>
     </xsl:for-each>
   </xsl:variable>
-
+  
   <!-- The list of meeting elements giving also the mandates -->
   <xsl:variable name="mandates">
     <xsl:for-each select="$teiHeaders//tei:titleStmt/tei:meeting">
@@ -156,7 +156,7 @@
       </xsl:choose>
     </xsl:attribute>
   </xsl:template>
-  
+
  <!-- Copy rest to output -->
  <xsl:template match="tei:*">
    <xsl:copy>
@@ -178,13 +178,13 @@
 	<xsl:variable name="max-year" select="replace($max-date, '-.+', '')"/>
         <title type="sub" xml:lang="sl">
 	  <xsl:text>Zapisi sej Državnega zbora Republike Slovenije, </xsl:text>
-	  <xsl:value-of select="concat($min-mandate, '.—', $max-mandate, '. mandat ')"/>
-	  <xsl:value-of select="concat('(', $min-year, '—', $max-year, ')')"/>
+	  <xsl:value-of select="concat($min-mandate, '. in ', $max-mandate, '. mandat ')"/>
+	  <xsl:value-of select="concat('(', $min-year, ' — ', $max-year, ')')"/>
 	</title>
         <title type="sub" xml:lang="en">
 	  <xsl:text>Minutes of the National Assembly of the Republic of Slovenia, Terms </xsl:text>
-	  <xsl:value-of select="concat($min-mandate, '—', $max-mandate, ' ')"/>
-	  <xsl:value-of select="concat('(', $min-year, '—', $max-year, ')')"/>
+	  <xsl:value-of select="concat($min-mandate, ' and ', $max-mandate, ' ')"/>
+	  <xsl:value-of select="concat('(', $min-year, ' — ', $max-year, ')')"/>
 	</title>
 	<xsl:copy-of select="$mandates"/>
         <xsl:for-each-group select="$teiHeaders//tei:titleStmt/tei:respStmt"
@@ -268,6 +268,8 @@
       </sourceDesc>
     </fileDesc>
   </xsl:template>
+
+
   
   <xsl:template name="encodingDesc">
     <encodingDesc xmlns="http://www.tei-c.org/ns/1.0">
