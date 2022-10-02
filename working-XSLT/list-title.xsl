@@ -13,7 +13,7 @@
     <xsl:output method="xml" indent="yes"/>
     
     <xsl:template match="/">
-        <xsl:result-document href="{tokenize(tei:teiCorpus/tei:TEI[1]/@xml:id,'-')[1]}-list/list-title.xml">
+        <xsl:result-document href="{tokenize(tei:teiCorpus/tei:TEI[1]/@xml:id,'-')[1]}-part2-list/list-title.xml">
             <TEI>
                 <teiHeader>
                     <fileDesc>
