@@ -29,6 +29,10 @@
         <!-- ne procesiram / odstranim -->
     </xsl:template>
     
+    <xsl:template match="tei:stage[preceding-sibling::tei:stage[@type='mag']][matches(.,'[Nn]adaljevanje')]">
+        <!-- ne procesiram / odstranim -->
+    </xsl:template>
+    
     <xsl:template match="tei:bibl">
         <bibl type="mag">
             <xsl:apply-templates/>
