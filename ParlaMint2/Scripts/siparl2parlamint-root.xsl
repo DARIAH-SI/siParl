@@ -186,7 +186,21 @@
 	  <xsl:value-of select="concat($min-mandate, ' and ', $max-mandate, ' ')"/>
 	  <xsl:value-of select="concat('(', $min-year, ' — ', $max-year, ')')"/>
 	</title>
-	<xsl:copy-of select="$mandates"/>
+	<xsl:for-each select="$mandates/tei:meeting">
+	  <xsl:variable name="ana" select="@ana"/>
+	  <meeting>
+	    <xsl:attribute name="n">
+	      <xsl:copy-of select="@n"/>
+	    </xsl:attribute>
+	    <xsl:attribute name="corresp">
+	      <xsl:copy-of select="@corresp"/>
+	    </xsl:attribute>
+	    <xsl:attribute name="ana">
+	      <xsl:value-of select="concat($ana,' ', '#parla.lower')"/>
+	    </xsl:attribute>
+	    <xsl:value-of select="."/>
+	  </meeting>
+	</xsl:for-each>
         <xsl:for-each-group select="$teiHeaders//tei:titleStmt/tei:respStmt"
 			    group-by="tei:resp[@xml:lang = 'sl']">
           <respStmt>
@@ -357,6 +371,7 @@
     </xsl:if>
   </xsl:template>
 
+
   
   <!-- Add <full> if required:-->
   <xsl:template match="tei:particDesc/tei:listOrg//tei:orgName[not(@full)]">
@@ -399,9 +414,10 @@
 
   <!-- Change value of @role to new, valid ones-->
   <xsl:template match="tei:particDesc//tei:org[@role]">
+   <!-- Need to add conditions for ethnicCommunities value-->
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
-      <xsl:attribute name="role">
+            <xsl:attribute name="role">
 	<xsl:choose>
 	  <xsl:when test="matches(@xml:id,'^party\.' )">
 	    <xsl:text>parliamentaryGroup</xsl:text>
@@ -414,6 +430,7 @@
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
+ 
 
   
   <xsl:template name="listPerson">
@@ -424,6 +441,24 @@
       <xsl:apply-templates select="$teiHeaders//tei:person[not(.=preceding::*)]"/>
     </listPerson>
   </xsl:template>
+
+  <xsl:template match="tei:listPerson//tei:person//tei:idno">
+    <xsl:variable name="lang" select="@xml:lang"/>
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:attribute name="type">
+	<xsl:text>URI</xsl:text>
+      </xsl:attribute>
+      <xsl:attribute name="xml:lang">
+	<xsl:value-of select="$lang"/>
+      </xsl:attribute>
+      <xsl:attribute name="subtype">
+	<xsl:text>wikimedia</xsl:text>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+
 
   <!---Change value of attribute "role" of speakers to valid ones and add roleName -->
   <xsl:template match="tei:particDesc//tei:person//tei:affiliation">
