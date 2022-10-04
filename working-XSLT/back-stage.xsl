@@ -11,7 +11,7 @@
     <!-- izhodiščni dokument je vsakokratni *-list.xml -->
     
     <!-- ustrezno popravi parameter -->
-    <xsl:param name="mandat">SDZ7</xsl:param>
+    <xsl:param name="mandat">SDZ8</xsl:param>
     
     <xsl:output method="xml"/>
     
