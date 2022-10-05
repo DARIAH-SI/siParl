@@ -23,11 +23,6 @@
                             <resp xml:lang="sl">Kodiranje TEI</resp>
                             <resp xml:lang="en">TEI corpus encoding</resp>
                         </respStmt>
-                        <respStmt>
-                            <persName>Mihael Ojsteršek</persName>
-                            <resp xml:lang="sl">Kodiranje TEI</resp>
-                            <resp xml:lang="en">TEI corpus encoding</resp>
-                        </respStmt>
                     </titleStmt>
                     <publicationStmt>
                         <publisher>
@@ -35,7 +30,7 @@
                             <orgName xml:lang="en">Institute of Contemporary History</orgName>
                             <ref target="http://www.inz.si/">http://www.inz.si/</ref>
                             <address>
-                                <street>Kongresni trg 1</street>
+                                <street>Privoz 11</street>
                                 <settlement>Ljubljana</settlement>
                                 <postCode>1000</postCode>
                                 <country xml:lang="sl">Slovenija</country>
