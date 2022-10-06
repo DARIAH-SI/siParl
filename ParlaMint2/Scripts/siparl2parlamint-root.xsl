@@ -196,7 +196,7 @@
 	      <xsl:copy-of select="@corresp"/>
 	    </xsl:attribute>
 	    <xsl:attribute name="ana">
-	      <xsl:value-of select="concat($ana,' ', '#parla.lower')"/>
+	      <xsl:value-of select="concat($ana, ' ', '#parla.lower')"/>
 	    </xsl:attribute>
 	    <xsl:value-of select="."/>
 	  </meeting>
@@ -417,10 +417,13 @@
    <!-- Need to add conditions for ethnicCommunities value-->
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
-            <xsl:attribute name="role">
+      <xsl:attribute name="role">
 	<xsl:choose>
-	  <xsl:when test="matches(@xml:id,'^party\.' )">
+	  <xsl:when test="matches(@xml:id, '^party\.(?!IMNS)', ';j' )">
 	    <xsl:text>parliamentaryGroup</xsl:text>
+	  </xsl:when>
+	  <xsl:when test="@xml:id='party.IMNS'">
+	    <xsl:text>ethnicCommunity</xsl:text>
 	  </xsl:when>
 	  <xsl:otherwise>
 	    <xsl:value-of select="@role"/>
