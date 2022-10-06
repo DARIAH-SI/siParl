@@ -419,6 +419,12 @@
       <xsl:apply-templates select="@*"/>
       <xsl:attribute name="role">
 	<xsl:choose>
+	  <xsl:when test="@xml:id='DZ'">
+	    <xsl:text>parliament</xsl:text>
+	  </xsl:when>
+	  <xsl:when test="@xml:id='GOV'">
+	    <xsl:text>government</xsl:text>
+	  </xsl:when>
 	  <xsl:when test="matches(@xml:id, '^party\.(?!IMNS)', ';j' )">
 	    <xsl:text>parliamentaryGroup</xsl:text>
 	  </xsl:when>
@@ -462,7 +468,29 @@
     </xsl:copy>
   </xsl:template>
 
+  
+  <xsl:template match="tei:listOrg//tei:org[not(@xml:id='DZ')]//tei:idno">
+    <xsl:variable name="lang" select="@xml:lang"/>
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:attribute name="type">
+	<xsl:text>URI</xsl:text>
+      </xsl:attribute>
+      <xsl:attribute name="xml:lang">
+	<xsl:value-of select="$lang"/>
+      </xsl:attribute>
+      <xsl:attribute name="subtype">
+	<xsl:text>wikimedia</xsl:text>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
 
+  <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:idno">
+    <idno type="URI" xml:lang="sl" subtype="wikimedia">https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
+    <idno type="URI" xml:lang="en" subtype="wikimedia">https://en.wikipedia.org/wiki/National_Assembly_(Slovenia)</idno>
+  </xsl:template>
+  
   <!---Change value of attribute "role" of speakers to valid ones and add roleName -->
   <xsl:template match="tei:particDesc//tei:person//tei:affiliation">
     <xsl:copy>
