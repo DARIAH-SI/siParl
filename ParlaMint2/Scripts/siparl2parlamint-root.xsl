@@ -413,11 +413,15 @@
   <xsl:template match="tei:particDesc//tei:listOrg[@xml:id = 'chambers']"/>
   <xsl:template match="tei:particDesc//tei:org[@ana = '#par.chamber']"/>
 
+  
   <!-- Change value of @role to new, valid ones-->
-  <xsl:template match="tei:particDesc//tei:org[@role]">
+  <xsl:template match="tei:particDesc//tei:listOrg//tei:org">
+    <xsl:variable name="id" select="@xml:id"/>
+    <xsl:variable name="role" select="@role"/>
    <!-- Need to add conditions for ethnicCommunities value-->
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
+      <xsl:attribute name="xml:id" select="$id"/>
       <xsl:attribute name="role">
 	<xsl:choose>
 	  <xsl:when test="@xml:id='DZ'">
@@ -440,8 +444,15 @@
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
- 
 
+  <xsl:template match="tei:particDesc//tei:listOrg//tei:org/@ana">
+    <xsl:variable name="parl" select="tokenize(.,'\s' )"/>
+    <xsl:variable name="testing" select="replace($parl[1], '^#parl\.', '#parla.')"/> 
+    <xsl:attribute name="ana">
+      <xsl:value-of select="concat($testing, ' ', '#parla.lower')"/>
+    </xsl:attribute>
+  </xsl:template>
+  
   
   <xsl:template name="listPerson">
     <listPerson xmlns="http://www.tei-c.org/ns/1.0">
@@ -491,6 +502,8 @@
     <idno type="URI" xml:lang="sl" subtype="wikimedia">https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
     <idno type="URI" xml:lang="en" subtype="wikimedia">https://en.wikipedia.org/wiki/National_Assembly_(Slovenia)</idno>
   </xsl:template>
+
+
   
   <!---Change value of attribute "role" of speakers to valid ones and add roleName -->
   <xsl:template match="tei:particDesc//tei:person//tei:affiliation">
