@@ -187,7 +187,7 @@
 	  <xsl:value-of select="concat('(', $min-year, ' — ', $max-year, ')')"/>
 	</title>
 	<xsl:for-each select="$mandates/tei:meeting">
-	  <xsl:variable name="ana" select="@ana"/>
+	  <xsl:variable name="item" select="tokenize(@ana, '\t')"/>
 	  <meeting>
 	    <xsl:attribute name="n">
 	      <xsl:copy-of select="@n"/>
@@ -196,7 +196,8 @@
 	      <xsl:copy-of select="@corresp"/>
 	    </xsl:attribute>
 	    <xsl:attribute name="ana">
-	      <xsl:value-of select="concat($ana, ' ', '#parla.lower')"/>
+	      <xsl:value-of select="replace($item[1], '^#parl\.', '#parla.')"/>
+	      <xsl:value-of select="concat($item[2], ' ', '#parla.lower')"/>
 	    </xsl:attribute>
 	    <xsl:value-of select="."/>
 	  </meeting>
