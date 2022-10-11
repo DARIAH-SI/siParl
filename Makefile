@@ -1,3 +1,6 @@
+2parlamint:
+	$s -xsl:drama2ParlaMint.xsl
+	#$s -xsl:working-XSLT/ParlaMint-corpus-file.xsl working-XSLT/ParlaMint-list.xml
 2speech1:
 	$s -xsl:drama2speech.xsl drama/SDT6-list.xml
 2speech:
