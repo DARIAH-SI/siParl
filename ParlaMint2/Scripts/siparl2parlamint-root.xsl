@@ -141,6 +141,21 @@
     </catDesc>
   </xsl:template>
   
+<!-- Add category for guest speakers to speakers taxonomy-->
+  <xsl:template match="tei:taxonomy[@xml:id='speaker_types']">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+      <category xml:id="guest">
+	<catDesc xml:lang="sl">
+	<term>Gost</term>: gostujoči govornik na zasedanju</catDesc>
+	<catDesc xml:lang="en">
+       <term>Guest</term>: a guest speaker at a meeting</catDesc>
+      </category>
+    </xsl:copy>
+  </xsl:template>
+
+  <!--Replace xml:id attribute values from parl. to parla. -->
   <xsl:template match="@xml:id">
     <xsl:attribute name="xml:id">
       <xsl:choose>
@@ -157,6 +172,25 @@
     </xsl:attribute>
   </xsl:template>
 
+  <xsl:template match="tei:particDesc//tei:listOrg//tei:org/@ana">
+    <xsl:attribute name="ana">
+      <xsl:for-each select="tokenize(.,'\s')">
+      <xsl:choose>
+	<xsl:when test="starts-with(., '#parl.')">
+	  <xsl:value-of select="replace(., '^#parl\.', '#parla.')"/>
+	  <xsl:text>&#32;</xsl:text>
+	</xsl:when>
+	<xsl:when test="starts-with(., '#par.')">
+	  <xsl:value-of select="replace(., '^#par\.', '#parla.')"/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:value-of select="."/>
+	</xsl:otherwise>
+      </xsl:choose>
+      </xsl:for-each>
+    </xsl:attribute>
+    </xsl:template>
+    
  <!-- Copy rest to output -->
  <xsl:template match="tei:*">
    <xsl:copy>
@@ -187,7 +221,6 @@
 	  <xsl:value-of select="concat('(', $min-year, ' — ', $max-year, ')')"/>
 	</title>
 	<xsl:for-each select="$mandates/tei:meeting">
-	  <xsl:variable name="item" select="tokenize(@ana, '\t')"/>
 	  <meeting>
 	    <xsl:attribute name="n">
 	      <xsl:copy-of select="@n"/>
@@ -196,8 +229,8 @@
 	      <xsl:copy-of select="@corresp"/>
 	    </xsl:attribute>
 	    <xsl:attribute name="ana">
-	      <xsl:value-of select="replace($item[1], '^#parl\.', '#parla.')"/>
-	      <xsl:value-of select="concat($item[2], ' ', '#parla.lower')"/>
+	      <xsl:value-of select="replace(@ana, '#parl\.', '#parla.')"/>
+	      <xsl:value-of select="concat('&#32;', '#parla.lower')"/>
 	    </xsl:attribute>
 	    <xsl:value-of select="."/>
 	  </meeting>
@@ -330,6 +363,26 @@
 	<!-- For now take them from siParl teiHeader and process -->
 	<xsl:apply-templates select="$teiHeaders/tei:teiHeader[1]//
 				     tei:encodingDesc/tei:classDecl/tei:taxonomy"/>
+	     <taxonomy xml:id="subcorpus">
+               <desc xml:lang="sl">
+                  <term>Podkorpusi</term>
+               </desc>
+               <desc xml:lang="en">
+                  <term>Subcorpora</term>
+               </desc>
+               <category xml:id="reference">
+                  <catDesc xml:lang="sl">
+                     <term>Referenca</term>: referenčni podkorpus, do 2019-10-31</catDesc>
+                  <catDesc xml:lang="en">
+                     <term>Reference</term>: reference subcorpus, until 2019-10-31</catDesc>
+               </category>
+               <category xml:id="covid">
+                  <catDesc xml:lang="sl">
+                     <term>COVID</term>: COVID podkorpus, od 2019-11-01 dalje</catDesc>
+                  <catDesc xml:lang="en">
+                     <term>COVID</term>: COVID subcorpus, from 2019-11-01 onwards</catDesc>
+               </category>
+            </taxonomy>
       </classDecl>
     </encodingDesc>
   </xsl:template>
@@ -372,8 +425,6 @@
     </xsl:if>
   </xsl:template>
 
-
-  
   <!-- Add <full> if required:-->
   <xsl:template match="tei:particDesc/tei:listOrg//tei:orgName[not(@full)]">
     <xsl:copy>
@@ -410,6 +461,7 @@
     </xsl:copy>
   </xsl:template>
 
+  <!--Remove Chambers from the listOrg -->
   <xsl:template match="tei:particDesc//tei:listOrg[@xml:id = 'chambers']"/>
   <xsl:template match="tei:particDesc//tei:org[@ana = '#par.chamber']"/>
 
@@ -418,7 +470,6 @@
   <xsl:template match="tei:particDesc//tei:listOrg//tei:org">
     <xsl:variable name="id" select="@xml:id"/>
     <xsl:variable name="role" select="@role"/>
-   <!-- Need to add conditions for ethnicCommunities value-->
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:attribute name="xml:id" select="$id"/>
@@ -444,14 +495,6 @@
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
-
-  <xsl:template match="tei:particDesc//tei:listOrg//tei:org/@ana">
-    <xsl:variable name="parl" select="tokenize(.,'\s' )"/>
-    <xsl:variable name="testing" select="replace($parl[1], '^#parl\.', '#parla.')"/> 
-    <xsl:attribute name="ana">
-      <xsl:value-of select="concat($testing, ' ', '#parla.lower')"/>
-    </xsl:attribute>
-  </xsl:template>
   
   
   <xsl:template name="listPerson">
@@ -459,10 +502,17 @@
       <head xml:lang="sl">Seznam govornikov</head>
       <head xml:lang="en">List of speakers</head>
       <!--Add all unique speakers-->
-      <xsl:apply-templates select="$teiHeaders//tei:person[not(.=preceding::*)]"/>
+      <xsl:apply-templates mode="unique2" select="$teiHeaders//tei:person"/>
     </listPerson>
   </xsl:template>
-
+  
+  <xsl:template match="tei:person" mode="unique2">
+    <xsl:variable name="id" select="@xml:id"/>
+    <xsl:if test="not(preceding::tei:person[@xml:id = $id])">
+      <xsl:apply-templates select="."/>
+    </xsl:if>
+  </xsl:template>
+  
   <xsl:template match="tei:listPerson//tei:person//tei:idno">
     <xsl:variable name="lang" select="@xml:lang"/>
     <xsl:copy>

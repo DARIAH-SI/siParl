@@ -194,6 +194,17 @@
       </xsl:attribute>
     </xsl:element>
   </xsl:template>
+
+  <xsl:template match="tei:publicationStmt//tei:availability//tei:p"/>
+  
+  <xsl:template match="tei:publicationStmt//tei:availability">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+    <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+    <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
+    </xsl:copy>
+  </xsl:template>
   
   <xsl:template match="tei:sourceDesc/tei:bibl/tei:title[not(@*)]"/>
   
@@ -208,7 +219,6 @@
     </xsl:copy>
   </xsl:template>
 
-  <!-- This is a new comment!!!-->
 
   <xsl:template match="tei:encodingDesc">
     <xsl:copy>
