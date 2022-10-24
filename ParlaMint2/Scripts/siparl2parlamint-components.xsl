@@ -6,16 +6,7 @@
 		exclude-result-prefixes="xs tei"
 		version="2.0">
 
-  <!--To-do, 15.07.2022 (after successful validation; diff notes): -->
 
-  <!--fix the xml:id: concatenated the ParlaMint-SI_; 
-      change the <note type="chairman">...</note> to <head>
-      
-      idno[@type]: which form of the date?
-      
-      What to do with tagUsage?
-
--->
     
   <xsl:output method="xml" indent="yes"/>
   
@@ -287,14 +278,68 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="tei:text//tei:note[@type = 'chairman']">
-    <xsl:element name = "head">
-      <xsl:apply-templates select="@*"/>
-      <xsl:apply-templates/>
-    </xsl:element>
+  <xsl:template match="tei:text//tei:note">
+    <xsl:choose>
+      <xsl:when test="@type='chairman'">
+	<head>
+	  <xsl:apply-templates select="@*"/>
+	  <xsl:apply-templates/>
+	</head>
+      </xsl:when>
+      <xsl:when test="@type">
+	<xsl:copy>
+	  <xsl:apply-templates select="@*"/>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'Za')">
+	<xsl:copy>
+	  <xsl:attribute name="type">vote-ayes</xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'Proti') or starts-with(., 'Nihče')">
+	<xsl:copy>
+	  <xsl:attribute name="type">vote-noes</xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'Ne&#32;') or starts-with(., 'Ne.')">
+	<xsl:copy>
+	  <xsl:attribute name="type">answer</xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'Da.') or starts-with(., 'Želi.')">
+	<xsl:copy>
+	  <xsl:attribute name="type">answer</xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'Se&#32;')">
+	<xsl:copy>
+	  <xsl:attribute name="type">answer</xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'izklop&#32;')">
+	<xsl:copy>
+	  <xsl:attribute name="type">action</xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:copy>
+	  <xsl:apply-templates select="@*"/>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+	<xsl:message select="concat('Warning: Strange note: ', .)"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
+
     
- <!-- In this session, all of the gap element are empty, with only an attribute to explain the type of gap. But this might not be the case for all other sessions.-->
+  <!-- In this session, all of the gap element are empty, with only an attribute to explain the type of gap. But this might not be the case for all other sessions.-->
   <xsl:template match="//tei:gap">
     <xsl:copy>
       <xsl:copy-of select="@*"/>
@@ -302,6 +347,7 @@
 	<xsl:attribute name="xml:lang">
 	  <xsl:value-of select="/tei:TEI/@xml:lang"/>
 	</xsl:attribute>
+	<xsl:text>&#8230;</xsl:text>
 	<xsl:apply-templates/>
       </desc>
     </xsl:copy>
