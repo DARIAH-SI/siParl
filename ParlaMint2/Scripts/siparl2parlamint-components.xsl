@@ -330,7 +330,7 @@
       </xsl:when>
       <xsl:when test="starts-with(., 'nerazumljivo')">
 	<gap>
-	  <xsl:attribute name="reason">inaudiable</xsl:attribute>
+	  <xsl:attribute name="reason">inaudible</xsl:attribute>
 	  <xsl:element name="desc">
 	      <xsl:attribute name="xml:lang">
 		<xsl:value-of select="/tei:TEI/@xml:lang"/>
@@ -338,6 +338,28 @@
 	      <xsl:apply-templates/>
 	  </xsl:element>
 	</gap>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'oglašanje&#32;')">
+	<vocal>
+	   <xsl:attribute name="type">interruption</xsl:attribute>
+	   <xsl:element name="desc">
+	       <xsl:attribute name="xml:lang">
+		 <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	       </xsl:attribute>
+	     <xsl:apply-templates/>
+	   </xsl:element>
+	</vocal>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'znak&#32;') or starts-with(., 'opozorilni&#32;')">
+	<kinesic>
+	  <xsl:attribute name="type">signal</xsl:attribute>
+	  <xsl:element name="desc">
+	    <xsl:attribute name="xml:lang">
+	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	    </xsl:attribute>
+	    <xsl:apply-templates/>
+	  </xsl:element>
+	</kinesic>
       </xsl:when>
       <xsl:otherwise>
 	<xsl:copy>
