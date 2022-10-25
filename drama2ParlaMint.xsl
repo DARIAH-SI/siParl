@@ -11,7 +11,7 @@
     <xsl:output method="xml" indent="yes"/>
     
     <!-- vstavi ob procesiranju nove verzije -->
-    <xsl:param name="edition">1.0</xsl:param>
+    <xsl:param name="edition">3.0</xsl:param>
     <!-- vstavim CLARIN.SI Handle, kjer bo korpus shranjen v repozitoriju -->
     <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1345</xsl:param>
     <!-- vstavim datum od katerega naprej se smatra, da je COVID razprava -->
@@ -238,13 +238,23 @@
         <page n="SDT7">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDt/poDatumu/!ut/p/z1/pY7BCoJAFEW_xS947-mguBwrx0EnwVFzZhOzCqGsRVT09c0yiiLp7i6cc7lgYQA7ucu4c-fxOLm978bG21LWOs2Io1jREiUpWcg1D1Ew2LwADQs9UKZtpSrCMgb7jy_m-nVKOcouEixSLaIKf_PxQzjO_f8G2O_zxvvJ0_--SFAWmpjuc8IFAw0my8DcsKH2CqdD5zPcNQ-CB4zb9us!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OVH70IHS14SVF10C4=CZ6_KIOS9B1A0GE1D0I1MIHINA20G4=LA0=Ejavax.servlet.include.path_info!QCPSejeSejeDTPoDatumuView.jsp==/#Z7_KIOS9B1A0OVH70IHS14SVF10C4</page>
     </xsl:variable>
     
+    <!-- START OF PROCESSING: -->
     <xsl:template match="documentsList">
-        <xsl:variable name="corpus-label" select="tokenize(ref[1],'/')[1]"/>
-        <xsl:variable name="corpus-term" select="substring($corpus-label,4,4)"/>
-        <xsl:variable name="corpus-document" select="concat('../ParlaMint/',$corpus-label,'.xml')"/>
-        <xsl:variable name="source-corpus-document" select="concat('drama/',$corpus-label,'.xml')"/>
-        <xsl:variable name="source-speaker-document" select="concat('drama/',$corpus-label,'-speaker.xml')"/>
-        <xsl:result-document href="{$corpus-document}">
+      <!-- e.g.
+	   <ref>SDT2/KPZONOJFSPD-Redna-017-1998-07-01.xml</ref>
+      -->
+      <!-- e.g. SDT2 -->
+      <xsl:variable name="corpus-label" select="tokenize(ref[1],'/')[1]"/>
+      <!-- e.g. 2 -->
+      <xsl:variable name="corpus-term" select="substring($corpus-label,4,4)"/>
+      <!-- e.g. ../ParlaMint2/SDT2.xml -->
+      <xsl:variable name="corpus-document" select="concat('../ParlaMint2/',$corpus-label,'.xml')"/>
+      <!-- e.g. drama/SDT2.xml -->
+      <xsl:variable name="source-corpus-document" select="concat('drama/',$corpus-label,'.xml')"/>
+      <!-- e.g. drama/SDT2-speaker.xml -->
+      <xsl:variable name="source-speaker-document" select="concat('drama/',$corpus-label,'-speaker.xml')"/>
+      
+      <xsl:result-document href="{$corpus-document}">
             <teiCorpus xml:id="siParl.{$corpus-label}" xml:lang="sl">
                 <teiHeader>
                     <fileDesc>
@@ -771,7 +781,7 @@
                     </xsl:element>
                     
                     <!-- TEI dokumenti -->
-                    <xsl:variable name="document-path" select="concat('../ParlaMint/',$document)"/>
+                    <xsl:variable name="document-path" select="concat('../ParlaMint2/',$document)"/>
                     <xsl:result-document href="{$document-path}">
                         <xsl:apply-templates select="document(.)" mode="pass0">
                             <xsl:with-param name="file-new_id" select="substring-before($file-new_name,'.xml')"/>

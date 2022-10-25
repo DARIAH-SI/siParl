@@ -27,6 +27,7 @@
         <term n="5" start="2008-10-15" end="2011-12-15">5. mandat (2008-2011)</term>
         <term n="6" start="2011-12-16" end="2014-08-01">6. mandat (2011-2014)</term>
         <term n="7" start="2014-08-01" end="2018-06-22">7. mandat (2014-2018)</term>
+        <term n="8" start="2018-06-22" end="2022-05-13">8. mandat (2018-2022)</term>
     </xsl:variable>
     
     <xsl:param name="taxonomy-legislature">
@@ -213,9 +214,10 @@
     <xsl:template match="documentsList">
         <xsl:variable name="corpus-label" select="tokenize(ref[1],'/')[1]"/>
         <xsl:variable name="corpus-term" select="substring($corpus-label,4,4)"/>
-        <xsl:variable name="corpus-document" select="concat('../speech/',$corpus-label,'.xml')"/>
+        <xsl:variable name="corpus-document" select="concat('speech/',$corpus-label,'.xml')"/>
         <xsl:variable name="source-corpus-document" select="concat('drama/',$corpus-label,'.xml')"/>
         <xsl:variable name="source-speaker-document" select="concat('drama/',$corpus-label,'-speaker.xml')"/>
+	<xsl:message select="$corpus-document"/>
         <xsl:result-document href="{$corpus-document}">
             <teiCorpus xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="siParl.{$corpus-label}" xml:lang="sl">
                 <teiHeader>
@@ -323,6 +325,8 @@
                         </publicationStmt>
                         <sourceDesc>
                             <bibl>
+                                <!-- Should be replaced with "Minutes of the National Assembly of the Republic of Slovenia"; not sure how this is done for speech; but for ParlaMint, 
+                                slv and eng version should be added.-->
                                 <title type="main">Website of the National Assembly</title>
                                 <title type="sub">Hansard</title>
                                 <idno type="URI">
@@ -512,7 +516,8 @@
                     </xsl:element>
                     
                     <!-- TEI dokumenti -->
-                    <xsl:variable name="document" select="concat('../speech/',.)"/>
+                    <xsl:variable name="document" select="concat('speech/',.)"/>
+		    <xsl:message select="$document"/>
                     <xsl:result-document href="{$document}">
                         <xsl:apply-templates select="document(.)" mode="pass0"/>
                     </xsl:result-document>          
@@ -954,12 +959,117 @@
         <xsl:apply-templates mode="pass3"/>
     </xsl:template>
     
-    <!-- stage v note -->
-    <xsl:template match="tei:stage" mode="pass3">
+    <!-- stage v note --><!-- Sprememba v 2. verziji -->
+    <!--<xsl:template match="tei:stage" mode="pass3">
         <note>
             <xsl:apply-templates select="@*" mode="pass3"/>
             <xsl:apply-templates mode="pass3"/>
         </note>
+    </xsl:template>-->
+    <xsl:template match="tei:stage" mode="pass3">
+        <xsl:choose>
+            <!-- siParl: stage v note -->
+            <xsl:when test="not(@type)">
+                <note>
+                    <xsl:apply-templates select="@*" mode="pass3"/>
+                    <xsl:apply-templates mode="pass3"/>
+                </note>
+            </xsl:when>
+            <!-- ParlaMint: -->
+            <xsl:when test="@type = 'answer'">
+                <note type="answer">
+                    <xsl:apply-templates mode="pass3"/>
+                </note>
+            </xsl:when>
+            <xsl:when test="@type = 'description'">
+                <note type="description">
+                    <xsl:apply-templates mode="pass3"/>
+                </note>
+            </xsl:when>
+            <xsl:when test="@type = 'error'">
+                <note type="error">
+                    <xsl:apply-templates mode="pass3"/>
+                </note>
+            </xsl:when>
+            <xsl:when test="@type = 'vote'">
+                <note type="vote">
+                    <xsl:apply-templates mode="pass3"/>
+                </note>
+            </xsl:when>
+            <xsl:when test="@type = 'vote-ayes'">
+                <note type="vote-ayes">
+                    <xsl:apply-templates mode="pass3"/>
+                </note>
+            </xsl:when>
+            <xsl:when test="@type = 'vote-noes'">
+                <note type="vote-noes">
+                    <xsl:apply-templates mode="pass3"/>
+                </note>
+            </xsl:when>
+            <xsl:when test="@type = 'time'">
+                <note type="time">
+                    <xsl:apply-templates mode="pass3"/>
+                </note>
+            </xsl:when>
+            <xsl:when test="@type = 'inaudible'">
+                <gap reason="inaudible">
+                    <xsl:apply-templates mode="pass3"/>
+                </gap>
+            </xsl:when>
+            <xsl:when test="@type = 'editorial'">
+                <gap reason="editorial">
+                    <xsl:apply-templates mode="pass3"/>
+                </gap>
+            </xsl:when>
+            <xsl:when test="@type = 'action'">
+                <incident type="action">
+                    <xsl:apply-templates mode="pass3"/>
+                </incident>
+            </xsl:when>
+            <xsl:when test="@type = 'sound'">
+                <incident type="sound">
+                    <xsl:apply-templates mode="pass3"/>
+                </incident>
+            </xsl:when>
+            <xsl:when test="@type = 'applause'">
+                <kinesic type="applause">
+                    <xsl:apply-templates mode="pass3"/>
+                </kinesic>
+            </xsl:when>
+            <xsl:when test="@type = 'signal'">
+                <kinesic type="signal">
+                    <xsl:apply-templates mode="pass3"/>
+                </kinesic>
+            </xsl:when>
+            <xsl:when test="@type = 'playback'">
+                <kinesic type="playback">
+                    <xsl:apply-templates mode="pass3"/>
+                </kinesic>
+            </xsl:when>
+            <xsl:when test="@type = 'snapping'">
+                <kinesic type="snapping">
+                    <xsl:apply-templates mode="pass3"/>
+                </kinesic>
+            </xsl:when>
+            <xsl:when test="@type = 'gesture'">
+                <kinesic type="gesture">
+                    <xsl:apply-templates mode="pass3"/>
+                </kinesic>
+            </xsl:when>
+            <xsl:when test="@type = 'interruption'">
+                <vocal type="interruption">
+                    <xsl:apply-templates mode="pass3"/>
+                </vocal>
+            </xsl:when>
+            <xsl:when test="@type = 'laughter'">
+                <vocal type="laughter">
+                    <xsl:apply-templates mode="pass3"/>
+                </vocal>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message>Unknown stage/@type value: <xsl:value-of select="@type"/></xsl:message>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <!-- Razdelim bivše p (sedaj u/seg) elemente -->
@@ -1046,7 +1156,7 @@
     <xsl:template match="tei:u/tei:seg/tei:seg[tei:gap or tei:seg]" mode="pass6">
         <xsl:choose>
             <xsl:when test="tei:gap and not(tei:seg)">
-                <!-- Zelo čudno: če sem spodaj dal samo copy-of select ., potem je v naslednjem pass7 ta gap postal note/@n (in nimam pojma, zakaj se je to zgodilo ... -->
+                <!-- Zelo čudno: če sem spodaj dal samo copy-of select ., potem je v naslednjem pass7 ta gap postal note/@n (in nimam pojma, zakaj se je to zgodilo -->
                 <!--<xsl:copy-of select="."/>-->
                 <gap n="{tei:gap/@n}"/>
             </xsl:when>
