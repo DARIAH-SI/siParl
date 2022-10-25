@@ -328,6 +328,17 @@
 	  <xsl:apply-templates/>
 	</xsl:copy>
       </xsl:when>
+      <xsl:when test="starts-with(., 'nerazumljivo')">
+	<gap>
+	  <xsl:attribute name="reason">inaudiable</xsl:attribute>
+	  <xsl:element name="desc">
+	      <xsl:attribute name="xml:lang">
+		<xsl:value-of select="/tei:TEI/@xml:lang"/>
+	      </xsl:attribute>
+	      <xsl:apply-templates/>
+	  </xsl:element>
+	</gap>
+      </xsl:when>
       <xsl:otherwise>
 	<xsl:copy>
 	  <xsl:apply-templates select="@*"/>
