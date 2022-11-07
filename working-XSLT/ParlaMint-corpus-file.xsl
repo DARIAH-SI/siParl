@@ -207,8 +207,8 @@
                         <titleStmt>
                             <title type="main" xml:lang="sl">Slovenski parlamentarni korpus ParlaMint-SI [ParlaMint]</title>
                             <title type="main" xml:lang="en">Slovenian parliamentary corpus ParlaMint-SI [ParlaMint]</title>
-                            <title type="sub" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije, 7. in 8. mandat (2014 - 2020)</title>
-                            <title type="sub" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia, Term 7 and 8 (2014 - 2020)</title>
+                            <title type="sub" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije, 7. in 8. mandat (2014 - 2022)</title>
+                            <title type="sub" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia, Term 7 and 8 (2014 - 2022)</title>
                             
                             <xsl:for-each-group select="//meeting" group-by="@n">
                                 <meeting n="{current-grouping-key()}" corresp="{current-group()[1]/@corresp}" ana="{current-group()[1]/@ana}">
@@ -293,7 +293,7 @@
                                 <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
                                 <title type="main" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia</title>
                                 <idno type="URI">https://www.dz-rs.si</idno>
-                                <date from="2014-08-01" to="2020-07-16">1.8.2014 - 16.7.2020</date>
+                                <date from="2014-08-01" to="2022-05-12">1.8.2014 - 12.5.2022</date>
                             </bibl>
                         </sourceDesc>
                     </fileDesc>
@@ -335,7 +335,7 @@
                                 <name type="address">Šubičeva ulica 4</name>
                                 <name type="city">Ljubljana</name>
                                 <name type="country" key="SI">Slovenia</name>
-                                <date from="2014-08-01" to="2020-07-16">1.8.2014 - 16.7.2020</date>
+                                <date from="2014-08-01" to="2022-05-12">1.8.2014 - 12.5.2022</date>
                             </setting>
                         </settingDesc>
                         <particDesc>
@@ -355,7 +355,7 @@
                                             <label xml:lang="sl">7. mandat</label>
                                             <label xml:lang="en">Term 7</label>
                                         </event>
-                                        <event xml:id="DZ.8" from="2018-06-22">
+                                        <event xml:id="DZ.8" from="2018-06-22" to="2022-05-12">
                                             <label xml:lang="sl">8. mandat</label>
                                             <label xml:lang="en">Term 8</label>
                                         </event>
@@ -382,9 +382,9 @@
                                             <label xml:lang="sl">13. vlada Republike Slovenije (13. september 2018 - 13. marec 2020)</label>
                                             <label xml:lang="en">13th Government of the Republic of Slovenia (13 September 2018 - 13 March 2020)</label>
                                         </event>
-                                        <event xml:id="GOV.14" from="2018-03-13">
-                                            <label xml:lang="sl">14. vlada Republike Slovenije (13. marec 2020 - danes)</label>
-                                            <label xml:lang="en">14th Government of the Republic of Slovenia (March 13, 2020 - today)</label>
+                                        <event xml:id="GOV.14" from="2018-03-13" to="2022-06-01">
+                                            <label xml:lang="sl">14. vlada Republike Slovenije (13. marec 2020 - 1. junij 2022)</label>
+                                            <label xml:lang="en">14th Government of the Republic of Slovenia (March 13, 2020 - June 1, 2022)</label>
                                         </event>
                                     </listEvent>
                                 </org>
@@ -527,13 +527,34 @@
                                     <orgName full="yes" xml:lang="sl">Stranka modernega centra</orgName>
                                     <orgName full="yes" xml:lang="en">Modern Centre Party</orgName>
                                     <orgName full="init">SMC</orgName>
-                                    <event from="2015-03-07">
+                                    <event from="2015-03-07" to="2021-12-04">
                                         <label xml:lang="en">existence</label>
                                     </event>
                                     <idno type="wikimedia" xml:lang="sl"
                                         >https://sl.wikipedia.org/wiki/Stranka_modernega_centra</idno>
                                     <idno type="wikimedia" xml:lang="en"
                                         >https://en.wikipedia.org/wiki/Modern_Centre_Party</idno>
+                                </org>
+                                <org xml:id="party.Konkretno" role="political_party">
+                                    <orgName full="yes" xml:lang="sl">Konkretno</orgName>
+                                    <orgName full="yes" xml:lang="en">Concretely</orgName>
+                                    <orgName full="init">Konkretno</orgName>
+                                    <event from="2021-12-04">
+                                        <label xml:lang="en">existence</label>
+                                    </event>
+                                    <idno type="wikimedia" xml:lang="sl"
+                                        >https://sl.wikipedia.org/wiki/Konkretno</idno>
+                                    <idno type="wikimedia" xml:lang="en"
+                                        >https://en.wikipedia.org/wiki/Concretely</idno>
+                                </org>
+                                <org xml:id="party.GAS" role="political_party">
+                                    <orgName full="yes" xml:lang="sl">Gospodarsko aktivna stranka</orgName>
+                                    <orgName full="init">GAS</orgName>
+                                    <event from="2017-06-24" to="2021-12-04">
+                                        <label xml:lang="en">existence</label>
+                                    </event>
+                                    <idno type="wikimedia" xml:lang="sl"
+                                        >https://sl.wikipedia.org/wiki/Gospodarsko_aktivna_stranka</idno>
                                 </org>
                                 <org xml:id="party.SNS" role="political_party">
                                     <orgName full="yes" xml:lang="sl">Slovenska nacionalna stranka</orgName>
@@ -599,8 +620,8 @@
                                         to="2018-09-12" ana="#GOV.12"/>
                                     <relation name="coalition" mutual="#party.LMŠ #party.SMC.2 #party.SD #party.SAB #party.DeSUS"
                                         from="2018-09-13" to="2020-03-12" ana="#GOV.13"/>
-                                    <relation name="coalition" mutual="#party.SDS.2 #party.SMC.2 #party.NSi #party.DeSUS"
-                                        from="2020-03-13" ana="#GOV.14"/>
+                                    <relation name="coalition" mutual="#party.SDS.2 #party.SMC.2 #party.Konkretno #party.NSi #party.DeSUS"
+                                        from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
                                 </listRelation>
                             </listOrg>
                             <listPerson>
@@ -628,7 +649,7 @@
                                             <xsl:copy-of select="." copy-namespaces="no"/>
                                         </xsl:for-each>
                                         <!-- pazi, da daš pravilno vrednost za @ana -->
-                                        <xsl:for-each select="tei:affiliation[@ana=('#DZ.7','#DZ.8')]">
+                                        <xsl:for-each select="tei:affiliation[@ana=('#DZ.7','#DZ.8','#GOV.12','#GOV.13','#GOV.14')]">
                                             <xsl:copy-of select="." copy-namespaces="no"/>
                                         </xsl:for-each>
                                         <xsl:for-each select="tei:idno">
