@@ -369,13 +369,34 @@
                   <orgName full="yes" xml:lang="sl">Stranka modernega centra</orgName>
                   <orgName full="yes" xml:lang="en">Modern Centre Party</orgName>
                   <orgName full="init">SMC</orgName>
-                  <event from="2015-03-07">
+                  <event from="2015-03-07" to="2021-12-04">
                      <label xml:lang="en">existence</label>
                   </event>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Stranka_modernega_centra</idno>
                   <idno type="wikimedia" xml:lang="en"
                      >https://en.wikipedia.org/wiki/Modern_Centre_Party</idno>
+               </org>
+               <org xml:id="party.Konkretno" role="political_party">
+                  <orgName full="yes" xml:lang="sl">Konkretno</orgName>
+                  <orgName full="yes" xml:lang="en">Concretely</orgName>
+                  <orgName full="init">Konkretno</orgName>
+                  <event from="2021-12-04">
+                     <label xml:lang="en">existence</label>
+                  </event>
+                  <idno type="wikimedia" xml:lang="sl"
+                     >https://sl.wikipedia.org/wiki/Konkretno</idno>
+                  <idno type="wikimedia" xml:lang="en"
+                     >https://en.wikipedia.org/wiki/Concretely</idno>
+               </org>
+               <org xml:id="party.GAS" role="political_party">
+                  <orgName full="yes" xml:lang="sl">Gospodarsko aktivna stranka</orgName>
+                  <orgName full="init">GAS</orgName>
+                  <event from="2017-06-24" to="2021-12-04">
+                     <label xml:lang="en">existence</label>
+                  </event>
+                  <idno type="wikimedia" xml:lang="sl"
+                     >https://sl.wikipedia.org/wiki/Gospodarsko_aktivna_stranka</idno>
                </org>
                <org xml:id="party.SMS" role="political_party">
                   <orgName full="yes" xml:lang="sl">Stranka mladih Slovenije</orgName>
@@ -701,8 +722,8 @@
                      <event xml:id="GOV.13" from="2018-09-13" to="2018-03-13">
                         <label>13. vlada Republike Slovenije (13. september 2018 - 13. marec 2020)</label>
                      </event>
-                     <event xml:id="GOV.14" from="2018-03-13">
-                        <label>14. vlada Republike Slovenije (13. marec 2020 - danes)</label>
+                     <event xml:id="GOV.14" from="2018-03-13" to="2022-06-01">
+                        <label>14. vlada Republike Slovenije (13. marec 2020 - 1. junij 2022)</label>
                      </event>
                   </listEvent>
                </org>
@@ -763,6 +784,7 @@
                      when="2017-10-07"/>
                   <relation name="renaming" active="#party.Zares.2" passive="#party.Zares.1"
                      when="2011-10-15"/>
+                  <relation name="merger" mutual="#party.SMC.2 #party.GAS" when="2021-12-04"/>
                   <relation name="coalition"
                      mutual="#party.SDZ #party.SDZ-NDS #party.D #party.SDS.1 #party.SKD #party.LS #party.ZS"
                      from="1990-05-16" to="1992-05-14" ana="#GOV.1"/>
@@ -1269,6 +1291,18 @@
                      <forename>Anton</forename>
                   </persName>
                   <sex value="M"/>
+               </person>
+               <person xml:id="AndrijaničMarkBoris" corresp="#SDZ8.AndrijaničMarkBoris">
+                  <persName>
+                     <surname>Andrijanič</surname>
+                     <forename>Mark</forename>
+                     <forename>Boris</forename>
+                  </persName>
+                  <birth when="1983-07-04"/>
+                  <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Mark_Boris_Andrijani%C4%8D</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Mark_Boris_Andrijani%C4%8D</idno>
                </person>
                <person xml:id="AndrijašičIngrid" corresp="#SDT5.AndrijašičIngrid">
                   <persName>
@@ -2130,8 +2164,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Anja_Bah_Žibert</idno>
                </person>
@@ -2233,8 +2267,8 @@
                   <birth when="1964-11-21">
                      <placeName ref="https://www.geonames.org/3192224/pula.html">Pula (Hrvaška)</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="BakovnikNina" corresp="#SDT5.BakovnikNina">
                   <persName>
@@ -2461,7 +2495,7 @@
                   </persName>
                   <sex value="M"/>
                </person>
-               <person xml:id="BanUrška" corresp="#SDZ7.BanUrška #SDT7.BanUrška">
+               <person xml:id="BanUrška" corresp="#SDZ7.BanUrška #SDT7.BanUrška #SDZ8.BanUrška">
                   <persName>
                      <surname>Ban</surname>
                      <forename>Urška</forename>
@@ -2527,8 +2561,9 @@
                   </birth>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.SAB" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-12-19" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SAB" from="2018-12-19" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-12-19" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SAB" from="2018-12-19" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2018-11-19" ana="#GOV.13"/>
                </person>
                <person xml:id="BangeličMarko" corresp="#SDT2.BangeličMarko">
                   <persName>
@@ -4047,7 +4082,11 @@
                      <surname>Bertoncelj</surname>
                      <forename>Andrej</forename>
                   </persName>
+                  <birth when="1957-07-28"/>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Andrej_Bertoncelj</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Andrej_Bertoncelj</idno>
                </person>
                <person xml:id="BervarGojko" corresp="#SDT3.BervarGojko">
                   <persName>
@@ -4235,8 +4274,8 @@
                   <affiliation role="MP" ref="#DZ" from="2011-12-16" to="2014-07-31" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.SD" from="2011-12-16" to="2014-07-31"
                      ana="#DZ.6"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Samo_Bevk</idno>
                </person>
@@ -4407,7 +4446,7 @@
                   <idno type="wikimedia" xml:lang="en"
                      >https://en.wikipedia.org/wiki/Alenka_Bikar</idno>
                </person>
-               <person xml:id="BilbijaMaja" corresp="#SDT6.BilbijaMaja #SDT7.BilbijaMaja">
+               <person xml:id="BilbijaMaja" corresp="#SDT6.BilbijaMaja #SDT7.BilbijaMaja #SDZ8.BilbijaMaja">
                   <persName>
                      <surname>Bilbija</surname>
                      <forename>Maja</forename>
@@ -4674,6 +4713,7 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.DeSUS" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2016-04-24" ana="#GOV.12"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Julijana_Bizjak_Mlakar</idno>
                </person>
@@ -4834,6 +4874,7 @@
                      <forename>Srečko</forename>
                      <roleName>dr.</roleName>
                   </persName>
+                  <birth when="1953-06-27"/>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
@@ -5701,6 +5742,7 @@
                      <surname>Božič</surname>
                      <forename>Tilen</forename>
                   </persName>
+                  <birth when="1982-09-18"/>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
@@ -5736,7 +5778,7 @@
                   </persName>
                   <sex value="M"/>
                </person>
-               <person xml:id="BradačLado" corresp="#SDT7.BradačLado">
+               <person xml:id="BradačLado" corresp="#SDT7.BradačLado #SDZ8.BradačLado">
                   <persName>
                      <surname>Bradač</surname>
                      <forename>Lado</forename>
@@ -5890,6 +5932,10 @@
                      ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.NP" from="2015-09-14" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="MP" ref="#DZ" from="2021-02-03" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SAB" from="2021-02-03" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Alenka_Bratušek</idno>
                </person>
@@ -6169,8 +6215,10 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-04-01" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-04-01" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-04-18" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2020-04-18" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Franc_Breznik</idno>
                </person>
@@ -6296,9 +6344,9 @@
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2015-03-07" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2019-07-08" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2019-07-02" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2018-08-24" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-08-27" to="2019-07-08" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-08-27" to="2019-07-02" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Milan_Brglez</idno>
                </person>
@@ -6407,8 +6455,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="BriskiAndrej" corresp="#SSK11.BriskiAndrej">
                   <persName>
@@ -6954,7 +7002,14 @@
                      <surname>Bulc</surname>
                      <forename>Violeta</forename>
                   </persName>
+                  <birth when="1964-01-24">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2014-10-02" to="2014-10-29" ana="#GOV.12"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2014-10-29" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Violeta_Bulc</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Violeta_Bulc</idno>
                </person>
                <person xml:id="BulovecFlorjan" corresp="#SDT3.BulovecFlorjan #SDT7.BulovecFlorjan">
                   <persName>
@@ -7358,7 +7413,7 @@
                   <sex value="F"/>
                </person>
                <person xml:id="BöhmLučka"
-                  corresp="#SDZ1.BöhmLučka #SDT2.BöhmLučka #SDT3.BöhmLučka #SDT4.BöhmLučka #SDT5.BöhmLučka #SDT6.BöhmLučka #SDT7.BöhmLučka">
+                  corresp="#SDZ1.BöhmLučka #SDT2.BöhmLučka #SDT3.BöhmLučka #SDT4.BöhmLučka #SDT5.BöhmLučka #SDT6.BöhmLučka #SDT7.BöhmLučka #SDZ8.BöhmLučka">
                   <persName>
                      <surname>Böhm</surname>
                      <forename>Lučka</forename>
@@ -7658,6 +7713,11 @@
                      ana="#DZ.7"/>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
+                  <affiliation role="head" ref="#GOV" from="2014-08-25" to="2018-09-13" ana="#GOV.12"/>
+                  <affiliation role="minister" ref="#GOV" from="2015-03-13" to="2015-03-26" ana="#GOV.12"/>
+                  <affiliation role="minister" ref="#GOV" from="2015-04-09" to="2015-05-12" ana="#GOV.12"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Miroslav_Cerar_ml.</idno>
                </person>
@@ -7788,6 +7848,7 @@
                      <surname>Ciglar</surname>
                      <forename>Saša</forename>
                   </persName>
+                  <birth when="1972"/>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="2013-02-04" to="2013-03-20" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2011-12-16" to="2014-07-31"
@@ -7799,7 +7860,10 @@
                      <surname>Kralj</surname>
                      <forename>Janez</forename>
                   </persName>
+                  <birth when="1978-12-28"/>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Janez_Cigler_Kralj</idno>
                </person>
                <person xml:id="CiglerRozalija" corresp="#SDT7.CiglerRozalija">
                   <persName>
@@ -7815,8 +7879,9 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1958-10-27"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2022-01-11" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2022-01-12" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="CigličMiran" corresp="#SDT5.CigličMiran">
                   <persName>
@@ -8079,6 +8144,13 @@
                   </persName>
                   <sex value="F"/>
                </person>
+               <person xml:id="CudermanAjda" corresp="#SDZ8.CudermanAjda">
+                  <persName>
+                     <surname>Cuderman</surname>
+                     <forename>Ajda</forename>
+                  </persName>
+                  <sex value="F"/>
+               </person>
                <person xml:id="CugMarija" corresp="#SDT2.CugMarija">
                   <persName>
                      <surname>Cug</surname>
@@ -8087,7 +8159,7 @@
                   <sex value="F"/>
                </person>
                <person xml:id="CugeljRobert"
-                  corresp="#SDT4.CugeljRobert #SDT5.CugeljRobert #SDT7.CugeljRobert">
+                  corresp="#SDT4.CugeljRobert #SDT5.CugeljRobert #SDT7.CugeljRobert #SDZ8.CugeljRobert">
                   <persName>
                      <surname>Cugelj</surname>
                      <forename>Robert</forename>
@@ -9121,6 +9193,17 @@
                   </persName>
                   <sex value="M"/>
                </person>
+               <person xml:id="DikaučičMarjan" corresp="#SDZ8.DikaučičMarjan">
+                  <persName>
+                     <surname>Dikaučič</surname>
+                     <forename>Marjan</forename>
+                  </persName>
+                  <birth when="1981-10-17"/>
+                  <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2021-06-15" to="2022-06-01" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Marjan_Dikau%C4%8Di%C4%8D</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Marjan_Dikau%C4%8Di%C4%8D</idno>
+               </person>
                <person xml:id="DimicIva"
                   corresp="#SDZ6.DimicIva #SDT6.DimicIva #SDZ7.DimicIva #SDT7.DimicIva #SDZ8.DimicIva">
                   <persName>
@@ -9135,8 +9218,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.NSi" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Iva_Dimic</idno>
                </person>
@@ -9239,8 +9322,8 @@
                   <birth when="1973-07-20">
                      <placeName ref="https://www.geonames.org/3194648/murska-sobota.html">Murska Sobota</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="DivjakSamo"
                   corresp="#SDT4.DivjakSamo #SDT5.DivjakSamo #SDT6.DivjakSamo #SDT7.DivjakSamo">
@@ -9331,8 +9414,8 @@
                   <birth when="1970-07-04">
                      <placeName ref="https://www.geonames.org/3196359/ljubljana.html">Ljubljana</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   
                </person>
                <person xml:id="DobnikHeda" corresp="#SDT4.DobnikHeda">
@@ -9947,7 +10030,7 @@
                   </persName>
                   <sex value="F"/>
                </person>
-               <person xml:id="DovžanGašper" corresp="#SDT2.DovžanGašper">
+               <person xml:id="DovžanGašper" corresp="#SDT2.DovžanGašper #SDZ8.DovžanGašper">
                   <persName>
                      <surname>Dovžan</surname>
                      <forename>Gašper</forename>
@@ -10160,6 +10243,13 @@
                      <forename>Darko</forename>
                   </persName>
                   <sex value="M"/>
+               </person>
+               <person xml:id="DrmažIrena" corresp="#SDZ8.DrmažIrena">
+                  <persName>
+                     <surname>Drmaž</surname>
+                     <forename>Irena</forename>
+                  </persName>
+                  <sex value="F"/>
                </person>
                <person xml:id="DrndeličKatica" corresp="#SDT2.DrndeličKatica">
                   <persName>
@@ -10854,6 +10944,10 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2014-09-18" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.DeSUS" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2014-10-02" to="2018-09-13" ana="#GOV.12"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Karl_Erjavec</idno>
                </person>
@@ -11156,7 +11250,12 @@
                      <surname>Fakin</surname>
                      <forename>Samo</forename>
                   </persName>
+                  <birth when="1957-07-31">
+                     <placeName>Trbovlje</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2019-03-20" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Samo_Fakin</idno>
                </person>
                <person xml:id="FakirSamo" corresp="#SDT3.FakirSamo">
                   <persName>
@@ -11328,6 +11427,13 @@
                   </persName>
                   <sex value="M"/>
                </person>
+               <person xml:id="FekonjaMario" corresp="#SDZ8.FekonjaMario">
+                  <persName>
+                     <surname>Fekonja</surname>
+                     <forename>Mario</forename>
+                  </persName>
+                  <sex value="M"/>
+               </person>
                <person xml:id="FeldinAljoša" corresp="#SDT7.FeldinAljoša">
                   <persName>
                      <surname>Feldin</surname>
@@ -11424,8 +11530,8 @@
                   <birth when="1993-01-04">
                      <placeName ref="https://www.geonames.org/3197378/kranj.html">Kranj</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2020-03-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-13" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-13" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="FerjancMarjan" corresp="#SDT6.FerjancMarjan #SDT7.FerjancMarjan">
                   <persName>
@@ -11926,7 +12032,7 @@
                   </persName>
                   <sex value="F"/>
                </person>
-               <person xml:id="ForteAlenka" corresp="#SDT6.ForteAlenka #SDT7.ForteAlenka">
+               <person xml:id="ForteAlenka" corresp="#SDT6.ForteAlenka #SDT7.ForteAlenka #SDZ8.ForteAlenka">
                   <persName>
                      <surname>Forte</surname>
                      <forename>Alenka</forename>
@@ -12205,6 +12311,14 @@
                   </persName>
                   <sex value="M"/>
                </person>
+               <person xml:id="FridlJarcIgnacija" corresp="#SDZ8.FridlJarcIgnacija">
+                  <persName>
+                     <surname>Fridl</surname>
+                     <surname>Jarc</surname>
+                     <forename>Ignacija</forename>
+                  </persName>
+                  <sex value="F"/>
+               </person>
                <person xml:id="FriedlAndrej"
                   corresp="#SDT4.FriedlAndrej #SDT6.FriedlAndrej #SDT7.FriedlAndrej">
                   <persName>
@@ -12423,8 +12537,8 @@
                   <birth when="1980-04-17">
                      <placeName ref="https://www.geonames.org/3195506/maribor.html">Maribor</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="FurmanRobert" corresp="#SDT5.FurmanRobert #SDT6.FurmanRobert">
                   <persName>
@@ -12797,6 +12911,7 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.DeSUS" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2020-12-18" ana="#GOV.14"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Toma%C5%BE_Gantar</idno>
                </person>
@@ -12846,6 +12961,14 @@
                   <persName>
                      <surname>Garejeva</surname>
                      <forename>Mateja</forename>
+                  </persName>
+                  <sex value="F"/>
+               </person>
+               <person xml:id="GarvasHočevarJanja" corresp="#SDZ8.GarvasHočevarJanja">
+                  <persName>
+                     <surname>Garvas</surname>
+                     <surname>Hočevar</surname>
+                     <forename>Janja</forename>
                   </persName>
                   <sex value="F"/>
                </person>
@@ -13033,7 +13156,12 @@
                      <surname>Gašperšič</surname>
                      <forename>Peter</forename>
                   </persName>
+                  <birth when="1965-09-19">
+                     <placeName>Novo mesto</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Peter_Ga%C5%A1per%C5%A1i%C4%8D</idno>
                </person>
                <person xml:id="GederAlan" corresp="#SDT5.GederAlan #SDT7.GederAlan">
                   <persName>
@@ -13217,6 +13345,7 @@
                      <surname>Germovšek</surname>
                      <forename>Siniša</forename>
                   </persName>
+                  <birth when="1955-04-08"></birth>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="2004-07-22" to="2004-10-21" ana="#DZ.3"/>
                   <affiliation role="member" ref="#party.SDS.1" from="2000-10-27" to="2003-09-18" ana="#DZ.3"/>
@@ -13605,8 +13734,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-04-01" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-04-01" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Jelka_Godec</idno>
                </person>
@@ -13919,6 +14048,9 @@
                      <surname>Golobič</surname>
                      <forename>Gregor</forename>
                   </persName>
+                  <birth when="1964-01-20">
+                     <placeName>Novo mesto</placeName>
+                  </birth>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DruzPolZb" from="1990-05-08" to="1992-12-22"
                      ana="#SK.11"/>
@@ -14000,8 +14132,8 @@
                   <affiliation role="member" ref="#party.PS" from="2011-12-16" to="2014-05-05" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.NeP" from="2014-05-06" to="2014-07-31"
                      ana="#DZ.6"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="GolčarBojan" corresp="#SDT7.GolčarBojan">
                   <persName>
@@ -15037,8 +15169,9 @@
                   </persName>
                   <sex value="F"/>
                   <birth when="1969"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2021-12-04" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Konkretno" from="2021-12-04" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="GregorčičPeter" corresp="#SDT7.GregorčičPeter">
                   <persName>
@@ -15276,8 +15409,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Branko_Grims</idno>
                </person>
@@ -16077,7 +16210,13 @@
                      <surname>Žnidar</surname>
                      <forename>Vesna</forename>
                   </persName>
+                  <birth when="1977-12-29">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Vesna_Gy%C3%B6rk%C3%B6s_%C5%BDnidar</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Vesna_Gy%C3%B6rk%C3%B6s_%C5%BDnidar</idno>
                </person>
                <person xml:id="GöncSimeon" corresp="#SDT7.GöncSimeon">
                   <persName>
@@ -16343,8 +16482,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SD" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Matja%C5%BE_Han</idno>
                </person>
@@ -16406,6 +16545,13 @@
                      <forename>Joza</forename>
                   </persName>
                   <sex value="F"/>
+               </person>
+               <person xml:id="HarejAnton" corresp="#SDZ8.HarejAnton">
+                  <persName>
+                     <surname>Harej</surname>
+                     <forename>Anton</forename>
+                  </persName>
+                  <sex value="M"/>
                </person>
                <person xml:id="HarejNataša" corresp="#SDT7.HarejNataša">
                   <persName>
@@ -16543,8 +16689,8 @@
                   </persName>
                   <sex value="F"/>
                   <birth when="1986-05-28"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="HeglerFranc" corresp="#SDT3.HeglerFranc">
                   <persName>
@@ -16880,7 +17026,13 @@
                      <surname>Hojs</surname>
                      <forename>Aleš</forename>
                   </persName>
+                  <birth when="1961-12-12">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Ale%C5%A1_Hojs</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Ale%C5%A1_Hojs</idno>
                </person>
                <person xml:id="HojsAlojz" corresp="#SDT7.HojsAlojz">
                   <persName>
@@ -17092,8 +17244,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.NSi" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Jo%C5%BEef_Horvat</idno>
                </person>
@@ -17118,7 +17270,7 @@
                   </persName>
                   <sex value="M"/>
                </person>
-               <person xml:id="HorvatMiha" corresp="#SDZ7.HorvatMiha #SDT7.HorvatMiha">
+               <person xml:id="HorvatMiha" corresp="#SDZ7.HorvatMiha #SDT7.HorvatMiha #SDZ8.HorvatMiha">
                   <persName>
                      <surname>Horvat</surname>
                      <forename>Miha</forename>
@@ -17190,6 +17342,13 @@
                   </persName>
                   <sex value="M"/>
                </person>
+               <person xml:id="HorvatVladimir" corresp="#SDZ8.HorvatVladimir">
+                  <persName>
+                     <surname>Horvat</surname>
+                     <forename>Vladimir</forename>
+                  </persName>
+                  <sex value="M"/>
+               </person>
                <person xml:id="HorvatVlado" corresp="#SDT2.HorvatVlado">
                   <persName>
                      <surname>Horvat</surname>
@@ -17214,8 +17373,8 @@
                   <birth when="1972-04-13">
                      <placeName ref="https://www.geonames.org/3194648/murska-sobota.html">Murska Sobota</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.IMNS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.IMNS" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="HorvatŠtefan" corresp="#SDT3.HorvatŠtefan">
                   <persName>
@@ -17253,6 +17412,14 @@
                   </persName>
                   <sex value="F"/>
                </person>
+               <person xml:id="HostnikKališekMaja" corresp="#SDZ8.HostnikKališekMaja">
+                  <persName>
+                     <surname>Hostnik</surname>
+                     <surname>Kališek</surname>
+                     <forename>Maja</forename>
+                  </persName>
+                  <sex value="F"/>
+               </person>
                <person xml:id="HotMeira" corresp="#SDZ8.HotMeira">
                   <persName>
                      <surname>Hot</surname>
@@ -17262,8 +17429,8 @@
                   <birth when="1980-02-14">
                      <placeName ref="https://www.geonames.org/3197753/koper.html">Koper</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="HoubenHiddo" corresp="#SDT7.HoubenHiddo">
                   <persName>
@@ -17904,8 +18071,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.DeSUS" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Ivan_Hr%C5%A1ak</idno>
                </person>
@@ -18388,9 +18555,16 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Eva_Irgl</idno>
+               </person>
+               <person xml:id="IrgoličAleš" corresp="#SDZ8.IrgoličAleš">
+                  <persName>
+                     <surname>Irgolič</surname>
+                     <forename>Aleš</forename>
+                  </persName>
+                  <sex value="M"/>
                </person>
                <person xml:id="IrgoličNada" corresp="#SDZ2.IrgoličNada #SDT7.IrgoličNada">
                   <persName>
@@ -18573,9 +18747,11 @@
                      <surname>Ivanuša</surname>
                      <forename>Jani</forename>
                   </persName>
+                  <birth when="1968-02-22"/>
                   <sex value="M"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SNS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SNS" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Jani_Ivanu%C5%A1a</idno>
                </person>
                <person xml:id="IvanušaLidija" corresp="#SDZ8.IvanušaLidija">
                   <persName>
@@ -18584,9 +18760,9 @@
                   </persName>
                   <sex value="F"/>
                   <birth when="1979-01-03"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SNS" from="2018-06-22" to="2019-12-19" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2019-12-20" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SNS" from="2018-06-22" to="2019-12-22" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2019-12-23" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="IvanušaTeodora" corresp="#SDT7.IvanušaTeodora">
                   <persName>
@@ -18899,7 +19075,13 @@
                      <surname>Jaklitsch</surname>
                      <forename>Helena</forename>
                   </persName>
+                  <birth when="1977-07-01">
+                     <placeName>Novo mesto</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Helena_Jaklitsch</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Helena_Jaklitsch</idno>
                </person>
                <person xml:id="JakličBoštjan" corresp="#SDT6.JakličBoštjan">
                   <persName>
@@ -19082,6 +19264,13 @@
                   <persName>
                      <surname>Jambrek</surname>
                      <forename>Peter</forename>
+                  </persName>
+                  <sex value="M"/>
+               </person>
+               <person xml:id="JambrovičBoštjan" corresp="#SDZ8.JambrovičBoštjan">
+                  <persName>
+                     <surname>Jambrovič</surname>
+                     <forename>Boštjan</forename>
                   </persName>
                   <sex value="M"/>
                </person>
@@ -19477,8 +19666,9 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-03" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-03-03" ana="#DZ.8"/>
+                  <affiliation role="head" ref="#GOV" from="2020-03-03" to="2022-06-01" ana="#GOV.14"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Janez_Jan%C5%A1a</idno>
                </person>
@@ -19998,8 +20188,8 @@
                   <affiliation role="MP" ref="#DZ" from="2008-10-15" to="2011-12-15" ana="#DZ.5"/>
                   <affiliation role="member" ref="#party.SNS" from="2008-10-15" to="2011-12-15"
                      ana="#DZ.5"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SNS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SNS" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Zmago_Jelin%C4%8Di%C4%8D_Plemeniti</idno>
                </person>
@@ -20137,8 +20327,8 @@
                   <affiliation role="MP" ref="#DZ" from="2011-12-16" to="2014-07-31" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2011-12-16" to="2014-07-31"
                      ana="#DZ.6"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Alenka_Jeraj</idno>
                </person>
@@ -21289,8 +21479,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.DeSUS" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Franc_Jur%C5%A1a</idno>
                </person>
@@ -21675,8 +21865,8 @@
                   <birth when="1975-02-01">
                      <placeName ref="https://www.geonames.org/3195506/maribor.html">Maribor</placeName>                            
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="KalužaJernej" corresp="#SDT7.KalužaJernej">
                   <persName>
@@ -21810,7 +22000,7 @@
                   <sex value="F"/>
                </person>
                <person xml:id="KanglerFranc"
-                  corresp="#SDZ2.KanglerFranc #SDT2.KanglerFranc #SDZ3.KanglerFranc #SDT3.KanglerFranc #SDZ4.KanglerFranc #SDT4.KanglerFranc #SDT5.KanglerFranc #SDT7.KanglerFranc">
+                  corresp="#SDZ2.KanglerFranc #SDT2.KanglerFranc #SDZ3.KanglerFranc #SDT3.KanglerFranc #SDZ4.KanglerFranc #SDT4.KanglerFranc #SDT5.KanglerFranc #SDT7.KanglerFranc #SDZ8.KanglerFranc">
                   <persName>
                      <surname>Kangler</surname>
                      <forename>Franc</forename>
@@ -22061,6 +22251,13 @@
                   </persName>
                   <sex value="M"/>
                </person>
+               <person xml:id="KastelicDanijel" corresp="#SDZ8.KastelicDanijel">
+                  <persName>
+                     <surname>Kastelic</surname>
+                     <forename>Danijel</forename>
+                  </persName>
+                  <sex value="M"/>
+               </person>
                <person xml:id="KastelicJanez" corresp="#SDT3.KastelicJanez">
                   <persName>
                      <surname>Kastelic</surname>
@@ -22099,9 +22296,11 @@
                   <birth when="1969-12-22">
                      <placeName ref="https://www.geonames.org/3190535">Slovenj Gradec</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2015-05-13" ana="#DZ.7"/>
+                  <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2015-05-12" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SD" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="minister" ref="#GOV" from="2015-05-13" to="2018-09-13" ana="#GOV.12"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Andreja_Kati%C4%8D</idno>
                </person>
@@ -22518,8 +22717,8 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1964-09-26"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="KepPeter" corresp="#SDT7.KepPeter">
                   <persName>
@@ -22962,7 +23161,10 @@
                      <surname>Klampfer</surname>
                      <forename>Ksenija</forename>
                   </persName>
+                  <birth when="1976-07-27"/>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Ksenija_Klampfer</idno>
                </person>
                <person xml:id="KlampferMarta" corresp="#SDZ4.KlampferMarta">
                   <persName>
@@ -23243,7 +23445,13 @@
                      <surname>Klemenčič</surname>
                      <forename>Goran</forename>
                   </persName>
+                  <birth when="1972-05-28">
+                     <placeName>Kranj</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Goran_Klemen%C4%8Di%C4%8D</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Goran_Klemen%C4%8Di%C4%8D</idno>
                </person>
                <person xml:id="KlemenčičGregor" corresp="#SDT5.KlemenčičGregor">
                   <persName>
@@ -23791,8 +23999,8 @@
                   <birth when="1962-05-13">
                      <placeName ref="https://www.geonames.org/3188915/trbovlje.html">Trbovlje</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="KneževićMiomir" corresp="#SDT5.KneževićMiomir">
                   <persName>
@@ -23986,8 +24194,10 @@
                   <affiliation role="member" ref="#party.NP" from="2014-05-05" to="2014-06-12" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.ZaAB" from="2014-06-13" to="2014-07-31"
                      ana="#DZ.6"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-09-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SAB" from="2018-09-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-09-26" to="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SAB" from="2018-09-26" to="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SAB" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Ma%C5%A1a_Kociper</idno>
                </person>
@@ -24574,7 +24784,10 @@
                      <forename>Marija</forename>
                      <forename>Milojka</forename>
                   </persName>
+                  <birth when="1951-09-10"/>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Milojka_Kolar_Celarc</idno>
                </person>
                <person xml:id="KolarEdi" corresp="#SDT6.KolarEdi">
                   <persName>
@@ -25151,7 +25364,12 @@
                      <surname>Mrak</surname>
                      <forename>Anja</forename>
                   </persName>
+                  <birth when="1974-04-04">
+                     <placeName>Kranj</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Anja_Kopa%C4%8D</idno>
                </person>
                <person xml:id="KopačSamo"
                   corresp="#SDT2.KopačSamo #SDT4.KopačSamo #SDT5.KopačSamo #SDT7.KopačSamo">
@@ -25189,8 +25407,8 @@
                   <birth when="1978-12-14">
                      <placeName ref="https://www.geonames.org/3197753/koper.html">Koper</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="KoprivcPolona" corresp="#SDT7.KoprivcPolona">
                   <persName>
@@ -25234,7 +25452,13 @@
                      <surname>Koprivnikar</surname>
                      <forename>Boris</forename>
                   </persName>
+                  <birth when="1966-04-06">
+                     <placeName>Kranj</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2014-12-11" to="2018-09-13" ana="#GOV.12"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Boris_Koprivnikar</idno>
                </person>
                <person xml:id="KoprivnikarHelena"
                   corresp="#SDT4.KoprivnikarHelena #SDT7.KoprivnikarHelena">
@@ -25345,8 +25569,8 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1974-12-18"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="KoražijaKlavdija" corresp="#SDT7.KoražijaKlavdija">
                   <persName>
@@ -25431,8 +25655,8 @@
                   <affiliation role="member" ref="#party.Levica.1" from="2014-08-01" to="2017-06-25" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.Levica.2" from="2017-06-26" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Miha_Kordi%C5%A1</idno>
                </person>
@@ -25506,6 +25730,7 @@
                      <surname>Gomboc</surname>
                      <forename>Alenka</forename>
                   </persName>
+                  <birth when="1975-01-05"/>
                   <sex value="F"/>
                   <affiliation role="MP" ref="#DZ" from="2012-10-22" to="2013-02-07" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2011-12-16" to="2014-07-31"
@@ -25604,7 +25829,11 @@
                      <surname>Koritnik</surname>
                      <forename>Boštjan</forename>
                   </persName>
+                  <birth when="1979-06-15"/>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Bo%C5%A1tjan_Koritnik</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Bo%C5%A1tjan_Koritnik</idno>
                </person>
                <person xml:id="KorosecStefan1938" corresp="#SSK11.KorosecStefan1938">
                   <persName>
@@ -25785,8 +26014,8 @@
                   </persName>
                   <sex value="F"/>
                   <birth when="1990-02-27"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="KoršičAleš" corresp="#SDT7.KoršičAleš">
                   <persName>
@@ -26652,8 +26881,8 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1989-06-07"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="KovačičAlojzij" corresp="#SDT5.KovačičAlojzij">
                   <persName>
@@ -26993,6 +27222,7 @@
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2015-03-07" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2021-05-27" ana="#GOV.14"/>
                </person>
                <person xml:id="KozmikVera" corresp="#SDT2.KozmikVera">
                   <persName>
@@ -27009,6 +27239,17 @@
                      <forename>Vera</forename>
                   </persName>
                   <sex value="F"/>
+               </person>
+               <person xml:id="KozmusFerjanKarmen" corresp="#SDZ8.KozmusFerjanKarmen">
+                  <persName>
+                     <surname>Kozmus</surname>
+                     <surname>Ferjan</surname>
+                     <forename>Karmen</forename>
+                  </persName>
+                  <birth when="1985-02-24"/>
+                  <sex value="F"/>
+                  <affiliation role="MP" ref="#DZ" from="2021-11-16" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2021-11-16" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="KozoleBoštjan"
                   corresp="#SDT4.KozoleBoštjan #SDT5.KozoleBoštjan #SDT7.KozoleBoštjan">
@@ -27161,6 +27402,7 @@
                      <surname>Košir</surname>
                      <forename>Jožef</forename>
                   </persName>
+                  <birth when="1946"/>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="1996-11-28" to="2000-10-26" ana="#DZ.2"/>
                   <affiliation role="member" ref="#party.LDS.2" from="1996-11-28" to="2000-10-26"
@@ -27594,8 +27836,8 @@
                   <birth when="1965-01-18">
                      <placeName ref="https://www.geonames.org/3194648/murska-sobota.html">Murska Sobota</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2019-02-14" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2019-02-14" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2019-03-04" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2019-03-04" ana="#DZ.8"/>
                   
                </person>
                <person xml:id="KrajčičDario" corresp="#SDT3.KrajčičDario">
@@ -27733,8 +27975,9 @@
                   <birth when="1960-04-22">
                      <placeName ref="https://www.geonames.org/3203808/bohinjska-bistrica.html">Bohinjska Bistrica</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SAB" from="2018-06-22" ana="#DZ.8"/>
+                  <death when="2021-01-30"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2021-02-02" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SAB" from="2018-06-22" to="2021-02-02" ana="#DZ.8"/>
                </person>
                <person xml:id="KramarHelena" corresp="#SDT5.KramarHelena">
                   <persName>
@@ -28669,8 +28912,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Danijel_Krivec</idno>
                </person>
@@ -29750,6 +29993,7 @@
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2015-03-07" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Simona_Kustec_Lipicer</idno>
                </person>
@@ -30283,6 +30527,13 @@
                   </persName>
                   <sex value="M"/>
                </person>
+               <person xml:id="LampretUroš" corresp="#SDZ8.LampretUroš">
+                  <persName>
+                     <surname>Lampret</surname>
+                     <forename>Uroš</forename>
+                  </persName>
+                  <sex value="M"/>
+               </person>
                <person xml:id="LanAndreja" corresp="#SDT4.LanAndreja">
                   <persName>
                      <surname>Lan</surname>
@@ -30381,7 +30632,7 @@
                   </persName>
                   <sex value="M"/>
                </person>
-               <person xml:id="LautarKatja" corresp="#SDT5.LautarKatja #SDT6.LautarKatja">
+               <person xml:id="LautarKatja" corresp="#SDT5.LautarKatja #SDT6.LautarKatja #SDZ8.LautarKatja">
                   <persName>
                      <surname>Lautar</surname>
                      <forename>Katja</forename>
@@ -30683,7 +30934,12 @@
                      <surname>Leben</surname>
                      <forename>Jure</forename>
                   </persName>
+                  <birth when="1981-04-22">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2019-03-20" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Jure_Leben</idno>
                </person>
                <person xml:id="LebenSimonPeter" corresp="#SDT6.LebenSimonPeter">
                   <persName>
@@ -30824,8 +31080,8 @@
                   <birth when="1960-03-31">
                      <placeName ref="https://www.geonames.org/3190535/slovenj-gradec.html">Slovenj Gradec</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="LenartJožef" corresp="#SDZ8.LenartJožef">
                   <persName>
@@ -30836,8 +31092,8 @@
                   <birth when="1969-02-20">
                      <placeName ref="https://www.geonames.org/3192241/ptuj.html">Ptuj</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="LenarčičAlenka" corresp="#SDT5.LenarčičAlenka">
                   <persName>
@@ -30971,8 +31227,9 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1958-09-30"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" to="2021-03-26" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NP" from="2021-03-30" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="LepošaŠtefan" corresp="#SDT7.LepošaŠtefan">
                   <persName>
@@ -30992,8 +31249,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ŠimenkoLepSuzana" corresp="#SDT7.ŠimenkoLepSuzana">
                   <persName>
@@ -31726,8 +31983,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Toma%C5%BE_Lisec</idno>
                </person>
@@ -31925,6 +32182,7 @@
                      ana="#DZ.7"/>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/An%C5%BEe_Logar</idno>
                </person>
@@ -32945,8 +33203,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-18" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-03-18" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/%C5%BDan_Mahni%C4%8D</idno>
                </person>
@@ -32991,7 +33249,10 @@
                      <surname>Majcen</surname>
                      <forename>Irena</forename>
                   </persName>
+                  <birth when="1958-03-02"/>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Irena_Majcen_(politi%C4%8Darka)</idno>
                </person>
                <person xml:id="MajcenPeter" corresp="#SDT5.MajcenPeter #SDT7.MajcenPeter">
                   <persName>
@@ -33184,7 +33445,13 @@
                      <surname>Brenčič</surname>
                      <forename>Maja</forename>
                   </persName>
+                  <birth when="1969-05-27">
+                     <placeName>Borovnica pri Ljubljani</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2015-05-13" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Maja_Zalaznik</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Maja_Makovec_Bren%C4%8Di%C4%8D</idno>
                </person>
                <person xml:id="MakovecMarko" corresp="#SDT6.MakovecMarko #SDT7.MakovecMarko">
                   <persName>
@@ -33779,6 +34046,7 @@
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2015-03-07" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="minister" ref="#GOV" from="2015-02-27" to="2015-04-08" ana="#GOV.12"/>
                </person>
                <person xml:id="MarkežKlemen" corresp="#SDT6.MarkežKlemen">
                   <persName>
@@ -34963,9 +35231,11 @@
                   <birth when="1959-12-28">
                      <placeName ref="https://www.geonames.org/3188915/trbovlje.html">Trbovlje</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2018-09-13" ana="#DZ.8"/>
-                  <affiliation role="MP" ref="#DZ" from="2020-03-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-13" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2020-03-13" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
                </person>
                <person xml:id="MedvedSamoPeter" corresp="#SDT6.MedvedSamoPeter">
                   <persName>
@@ -35378,8 +35648,8 @@
                   <birth when="1969-02-25">
                      <placeName ref="https://www.geonames.org/3196359/ljubljana.html">Ljubljana</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2020-03-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="MerljakRudi" corresp="#SDT4.MerljakRudi #SDT5.MerljakRudi">
                   <persName>
@@ -35500,8 +35770,8 @@
                   <affiliation role="member" ref="#party.Levica.1" from="2014-08-01" to="2017-06-25" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.Levica.2" from="2017-06-26" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="MesecOgrinAnita"
                   corresp="#SDT3.MesecOgrinAnita #SDT5.MesecOgrinAnita">
@@ -36707,7 +36977,13 @@
                      <surname>Mlinar</surname>
                      <forename>Angelika</forename>
                   </persName>
+                  <birth when="1970-06-29">
+                     <placeName>Žitara vas, Okraj Velikovec, Koroška, Avstrija</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2019-12-19" to="2020-03-13" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Angelika_Mlinar</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Angelika_Mlinar</idno>
                </person>
                <person xml:id="MlinarAnton" corresp="#SDT7.MlinarAnton">
                   <persName>
@@ -37337,7 +37613,13 @@
                      <surname>Mramor</surname>
                      <forename>Dušan</forename>
                   </persName>
+                  <birth when="1953-11-01">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2016-07-14" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Du%C5%A1an_Mramor</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Du%C5%A1an_Mramor</idno>
                </person>
                <person xml:id="MravljaMarko" corresp="#SDT4.MravljaMarko">
                   <persName>
@@ -37685,8 +37967,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SD" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="MuršičDanijel" corresp="#SDT5.MuršičDanijel">
                   <persName>
@@ -37834,8 +38116,8 @@
                   <affiliation role="member" ref="#party.NeP" from="2015-09-08" to="2016-01-28" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2016-01-29" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2018-09-13" to="2020-05-15" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-26" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-26" to="2020-05-14" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.LMŠ" from="2020-05-15" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Jani_M%C3%B6derndorfer</idno>
@@ -38178,8 +38460,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SD" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="NemecTomislav" corresp="#SDT4.NemecTomislav #SDT6.NemecTomislav">
                   <persName>
@@ -38531,8 +38813,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.NSi" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2019-07-08" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" to="2019-07-08" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2019-07-02" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" to="2019-07-02" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Ljudmila_Novak</idno>
                </person>
@@ -38957,6 +39239,7 @@
                      <surname>Ocvirk</surname>
                      <forename>Mojmir</forename>
                   </persName>
+                  <birth when="1961"/>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DruzPolZb" from="1990-05-08" to="1992-12-22"
                      ana="#SK.11"/>
@@ -39242,6 +39525,13 @@
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Eda_Okreti%C4%8D_Salmi%C4%8D</idno>
                </person>
+               <person xml:id="OlajAnton" corresp="#SDZ8.OlajAnton">
+                  <persName>
+                     <surname>Olaj</surname>
+                     <forename>Anton</forename>
+                  </persName>
+                  <sex value="M"/>
+               </person>
                <person xml:id="OlipNante" corresp="#SDT2.OlipNante">
                   <persName>
                      <surname>Olip</surname>
@@ -39471,6 +39761,13 @@
                      <forename>Urška</forename>
                   </persName>
                   <sex value="F"/>
+               </person>
+               <person xml:id="OrehovecDamir" corresp="#SDZ8.OrehovecDamir">
+                  <persName>
+                     <surname>Orehovec</surname>
+                     <forename>Damir</forename>
+                  </persName>
+                  <sex value="M"/>
                </person>
                <person xml:id="OrelAlenka" corresp="#SSK11.OrelAlenka">
                   <persName>
@@ -40285,8 +40582,8 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1968-08-12"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="PavlicaAlenka" corresp="#SDT7.PavlicaAlenka">
                   <persName>
@@ -40358,8 +40655,8 @@
                   <birth when="1975-02-26">
                      <placeName ref="https://www.geonames.org/3196359/ljubljana.html">Ljubljana</placeName>                            
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="PavlinGnidovecRina" corresp="#SDT7.PavlinGnidovecRina">
                   <persName>
@@ -40666,8 +40963,8 @@
                   <birth when="1972-02-01">
                      <placeName ref="https://www.geonames.org/3192673/postojna.html">Postojna</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="PavšičRudi"
                   corresp="#SDT3.PavšičRudi #SDZ4.PavšičRudi #SDT4.PavšičRudi #SDT5.PavšičRudi #SDT6.PavšičRudi #SDT7.PavšičRudi">
@@ -41022,8 +41319,9 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1984"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2021-12-04" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Konkretno" from="2021-12-04" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="PerićĐorđe" corresp="#SDT4.PerićĐorđe">
                   <persName>
@@ -41298,6 +41596,7 @@
                   <affiliation role="member" ref="#party.D" from="1992-12-23" to="1994-04-05" ana="#DZ.1"/>
                   <affiliation role="member" ref="#party.DS" from="1994-04-06" to="1996-11-27"
                      ana="#DZ.1"/>
+                  <affiliation role="minister" ref="#GOV" from="2016-05-20" to="2018-09-13" ana="#GOV.12"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Tone_Per%C5%A1ak</idno>
                </person>
@@ -41961,7 +42260,12 @@
                      <surname>Petrovič</surname>
                      <forename>Jožef</forename>
                   </persName>
+                  <birth when="1958-02-05">
+                     <placeName>Maribor</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2014-10-28" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Jo%C5%BEef_Petrovi%C4%8D_(ekonomist)</idno>
                </person>
                <person xml:id="PetrovičKristijan" corresp="#SDT6.PetrovičKristijan">
                   <persName>
@@ -42194,9 +42498,8 @@
                   <birth when="1964-11-14">
                      <placeName ref="https://www.geonames.org/3196359/ljubljana.html">Ljubljana</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
-                  
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="PečeSašo"
                   corresp="#SDZ2.PečeSašo #SDT2.PečeSašo #SDZ3.PečeSašo #SDT3.PečeSašo #SDZ4.PečeSašo #SDT4.PečeSašo">
@@ -42441,7 +42744,13 @@
                      <surname>Pikalo</surname>
                      <forename>Jernej</forename>
                   </persName>
+                  <birth when="1975-05-30">
+                     <placeName>Slovenj Gradec</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Jernej_Pikalo</idno>
                </person>
                <person xml:id="PikeljValentina" corresp="#SDT6.PikeljValentina">
                   <persName>
@@ -42981,7 +43290,14 @@
                      <surname>Pivec</surname>
                      <forename>Aleksandra</forename>
                   </persName>
+                  <birth when="1972-03-26">
+                     <placeName>Ptuj</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2020-10-14" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Aleksandra_Pivec</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Aleksandra_Pivec</idno>
                </person>
                <person xml:id="PivecFranc1943" corresp="#SSK11.PivecFranc1943">
                   <persName>
@@ -43634,7 +43950,11 @@
                      <surname>Podgoršek</surname>
                      <forename>Jože</forename>
                   </persName>
+                  <birth when="1974-03-17"/>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-10-15" to="2022-06-01" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Jo%C5%BEe_Podgor%C5%A1ek</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Jo%C5%BEe_Podgor%C5%A1ek</idno>
                </person>
                <person xml:id="PodgoršekKatarina" corresp="#SDT6.PodgoršekKatarina">
                   <persName>
@@ -43663,7 +43983,12 @@
                      <surname>Poklukar</surname>
                      <forename>Boštjan</forename>
                   </persName>
+                  <birth when="1971-01-27">
+                     <placeName>Jesenice</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Bo%C5%A1tjan_Poklukar</idno>
                </person>
                <person xml:id="PodkrajšekBojan"
                   corresp="#SDZ7.PodkrajšekBojan #SDT7.PodkrajšekBojan #SDZ8.PodkrajšekBojan">
@@ -43678,8 +44003,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="PodkrižnikIztok"
                   corresp="#SDZ5.PodkrižnikIztok #SDT5.PodkrižnikIztok">
@@ -44055,8 +44380,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Marko_Poga%C4%8Dnik_(politik)</idno>
                </person>
@@ -44275,8 +44600,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Marijan_Pojbi%C4%8D</idno>
                </person>
@@ -44287,12 +44612,18 @@
                   </persName>
                   <sex value="F"/>
                </person>
-               <person xml:id="PoklukarJanez" corresp="#SDT7.PoklukarJanez">
+               <person xml:id="PoklukarJanez" corresp="#SDT7.PoklukarJanez #SDZ8.PoklukarJanez">
                   <persName>
                      <surname>Poklukar</surname>
                      <forename>Janez</forename>
                   </persName>
+                  <birth when="1979-02-09">
+                     <placeName>Kranj</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2021-02-23" to="2022-06-01" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Janez_Poklukar</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Janez_Poklukar</idno>
                </person>
                <person xml:id="PokornMarko" corresp="#SDT7.PokornMarko">
                   <persName>
@@ -44507,8 +44838,8 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1960-12-01"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="PolončičLadislava" corresp="#SDT2.PolončičLadislava">
                   <persName>
@@ -45119,7 +45450,12 @@
                      <surname>Poznič</surname>
                      <forename>Zoran</forename>
                   </persName>
+                  <birth when="1959">
+                     <placeName>Trbovlje</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2019-03-08" to="2020-03-13" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Zoran_Pozni%C4%8D</idno>
                </person>
                <person xml:id="PozsonecMaria"
                   corresp="#SDZ1.PozsonecMaria #SDZ2.PozsonecMaria #SDT2.PozsonecMaria #SDZ3.PozsonecMaria #SDT3.PozsonecMaria #SDZ4.PozsonecMaria #SDT4.PozsonecMaria #SSK11.PozsonecMaria1940">
@@ -45175,6 +45511,10 @@
                   <birth when="1957-11-25"/>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-12-04" to="2018-09-13" ana="#GOV.12"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
                </person>
                <person xml:id="PočivavsekFranc" corresp="#SSK11.PočivavsekFranc">
                   <persName>
@@ -45262,7 +45602,7 @@
                   <sex value="M"/>
                </person>
                <person xml:id="PožunPeter"
-                  corresp="#SDZ4.PožunPeter #SDT4.PožunPeter #SDT5.PožunPeter #SDZ6.PožunPeter #SDT6.PožunPeter #SDT7.PožunPeter">
+                  corresp="#SDZ4.PožunPeter #SDT4.PožunPeter #SDT5.PožunPeter #SDZ6.PožunPeter #SDT6.PožunPeter #SDT7.PožunPeter #SDZ8.PožunPeter">
                   <persName>
                      <surname>Požun</surname>
                      <forename>Peter</forename>
@@ -45430,8 +45770,8 @@
                   <birth when="1991-12-22">
                      <placeName ref="https://www.geonames.org/3196359/ljubljana.html">Ljubljana</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2019-02-14" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2019-02-14" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2019-03-05" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2019-03-05" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="PrebiličVladimir"
                   corresp="#SDT6.PrebiličVladimir #SDT7.PrebiličVladimir">
@@ -45442,7 +45782,7 @@
                   <sex value="M"/>
                </person>
                <person xml:id="PredaličBožo"
-                  corresp="#SDZ4.PredaličBožo #SDT4.PredaličBožo #SDZ6.PredaličBožo #SDT6.PredaličBožo #SDT7.PredaličBožo">
+                  corresp="#SDZ4.PredaličBožo #SDT4.PredaličBožo #SDZ6.PredaličBožo #SDT6.PredaličBožo #SDT7.PredaličBožo #SDZ8.PredaličBožo">
                   <persName>
                      <surname>Predalič</surname>
                      <forename>Božo</forename>
@@ -45509,8 +45849,8 @@
                   <birth when="1987-04-07">
                      <placeName ref="https://www.geonames.org/3190535/slovenj-gradec.html">Slovenj Gradec</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="PredojevićVaso" corresp="#SDT5.PredojevićVaso">
                   <persName>
@@ -45842,8 +46182,8 @@
                   <affiliation role="MP" ref="#DZ" from="2011-12-16" to="2014-07-31" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.SLS.2" from="2011-12-16" to="2014-07-31"
                      ana="#DZ.6"/>
-                  <affiliation role="MP" ref="#DZ" from="2020-03-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.NSi" from="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NSi" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Mihael_Prevc</idno>
                </person>
@@ -45901,7 +46241,13 @@
                      <surname>Prešiček</surname>
                      <forename>Dejan</forename>
                   </persName>
+                  <birth when="1970-12-21">
+                     <placeName>Celje</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2019-01-29" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Dejan_Pre%C5%A1i%C4%8Dek</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Dejan_Pre%C5%A1i%C4%8Dek</idno>
                </person>
                <person xml:id="PrešičMilka" corresp="#SDT2.PrešičMilka">
                   <persName>
@@ -46695,6 +47041,13 @@
                   </persName>
                   <sex value="F"/>
                </person>
+               <person xml:id="PurgBojan" corresp="#SDZ8.PurgBojan">
+                  <persName>
+                     <surname>Purg</surname>
+                     <forename>Bojan</forename>
+                  </persName>
+                  <sex value="M"/>
+               </person>
                <person xml:id="PurgerJana" corresp="#SDT2.PurgerJana">
                   <persName>
                      <surname>Purger</surname>
@@ -46707,7 +47060,10 @@
                      <surname>Purič</surname>
                      <forename>Iztok</forename>
                   </persName>
+                  <birth when="1954-04-09"/>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-12-19" to="2019-10-01" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Iztok_Puri%C4%8D</idno>
                </person>
                <person xml:id="PurkartMarko" corresp="#SDT7.PurkartMarko">
                   <persName>
@@ -47100,8 +47456,8 @@
                   <birth when="1979-03-30">
                      <placeName ref="https://www.geonames.org/3195506/maribor.html">Maribor</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SAB" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SAB" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="RajhVekoslav" corresp="#SSK11.RajhVekoslav #SDT2.RajhVekoslav">
                   <persName>
@@ -47122,8 +47478,10 @@
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2015-03-07" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2021-03-26" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NP" from="2021-03-30" to="2021-12-15" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SAB" from="2021-12-16" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="RajkoJanez" corresp="#SDT6.RajkoJanez">
                   <persName>
@@ -47648,8 +48006,8 @@
                   <birth when="1980-10-09">
                      <placeName ref="https://www.geonames.org/3202780/celje.html">Celje</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NSi" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ReboljDanijel" corresp="#SDT5.ReboljDanijel #SDT6.ReboljDanijel">
                   <persName>
@@ -47977,7 +48335,7 @@
                   </persName>
                   <sex value="F"/>
                </person>
-               <person xml:id="RemihAleš" corresp="#SDT6.RemihAleš">
+               <person xml:id="RemihAleš" corresp="#SDT6.RemihAleš #SDZ8.RemihAleš">
                   <persName>
                      <surname>Remih</surname>
                      <forename>Aleš</forename>
@@ -49147,8 +49505,8 @@
                   <birth when="1967-10-28">
                      <placeName ref="https://www.geonames.org/3202780/celje.html">Celje</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="RosendahlGerd" corresp="#SDT7.RosendahlGerd">
                   <persName>
@@ -49425,6 +49783,13 @@
                   </persName>
                   <sex value="F"/>
                </person>
+               <person xml:id="RožacRobert" corresp="#SDZ8.RožacRobert">
+                  <persName>
+                     <surname>Rožac</surname>
+                     <forename>Robert</forename>
+                  </persName>
+                  <sex value="M"/>
+               </person>
                <person xml:id="RožancVesna" corresp="#SDT7.RožancVesna">
                   <persName>
                      <surname>Rožanc</surname>
@@ -49444,6 +49809,9 @@
                      <surname>Rožej</surname>
                      <forename>Vito</forename>
                   </persName>
+                  <birth when="1974-05-09">
+                     <placeName>Ljubljani</placeName>
+                  </birth>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="2008-12-16" to="2011-07-11" ana="#DZ.5"/>
                   <affiliation role="member" ref="#party.Zares.1" from="2008-10-15" to="2011-10-14" ana="#DZ.5"/>
@@ -49488,7 +49856,7 @@
                   <sex value="M"/>
                </person>
                <person xml:id="RožičLadislav"
-                  corresp="#SDT4.RožičLadislav #SDT5.RožičLadislav #SDZ7.RožičLadislav #SDT7.RožičLadislav">
+                  corresp="#SDT4.RožičLadislav #SDT5.RožičLadislav #SDZ7.RožičLadislav #SDT7.RožičLadislav #SDZ8.RožičLadislav">
                   <persName>
                      <surname>Rožič</surname>
                      <forename>Ladislav</forename>
@@ -50928,7 +51296,12 @@
                      <surname>Cankar</surname>
                      <forename>Stanka</forename>
                   </persName>
+                  <birth when="1953-01-10">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2015-03-12" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Stanka_Setnikar_Cankar</idno>
                </person>
                <person xml:id="SetnikarFranc" corresp="#SDT7.SetnikarFranc">
                   <persName>
@@ -51118,7 +51491,7 @@
                   </persName>
                   <sex value="M"/>
                </person>
-               <person xml:id="SimičIvan" corresp="#SDT3.SimičIvan #SDZ4.SimičIvan #SDT4.SimičIvan">
+               <person xml:id="SimičIvan" corresp="#SDT3.SimičIvan #SDZ4.SimičIvan #SDT4.SimičIvan #SDZ8.SimičIvan">
                   <persName>
                      <surname>Simič</surname>
                      <forename>Ivan</forename>
@@ -51210,7 +51583,13 @@
                      <surname>Simoniti</surname>
                      <forename>Vasko</forename>
                   </persName>
+                  <birth when="1951-03-23">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Vasko_Simoniti</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Vasko_Simoniti</idno>
                </person>
                <person xml:id="SimonovičBranko" corresp="#SDZ8.SimonovičBranko">
                   <persName>
@@ -51221,8 +51600,8 @@
                   <birth when="1953-04-30">
                      <placeName ref="https://www.geonames.org/3191969/rapavel.html">Rapavel/Poreč</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.DeSUS" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="SimoničAndrej"
                   corresp="#SDZ1.SimoničAndrej #SDT2.SimoničAndrej #SDT5.SimoničAndrej #SDT6.SimoničAndrej">
@@ -51483,8 +51862,8 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1979-08-18"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="SivkaPetra" corresp="#SDT7.SivkaPetra">
                   <persName>
@@ -51873,7 +52252,7 @@
                   <sex value="M"/>
                </person>
                <person xml:id="SlavinecMitja"
-                  corresp="#SDZ4.SlavinecMitja #SDT4.SlavinecMitja #SDT7.SlavinecMitja">
+                  corresp="#SDZ4.SlavinecMitja #SDT4.SlavinecMitja #SDT7.SlavinecMitja #SDZ8.SlavinecMitja">
                   <persName>
                      <surname>Slavinec</surname>
                      <forename>Mitja</forename>
@@ -52029,8 +52408,9 @@
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2015-03-07" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2021-03-26" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NP" from="2021-03-30" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="SmajlaIvica" corresp="#SDT2.SmajlaIvica">
                   <persName>
@@ -52058,7 +52438,13 @@
                      <surname>Smerkolj</surname>
                      <forename>Alenka</forename>
                   </persName>
+                  <birth when="1963-12-15">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-11-19" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Alenka_Smerkolj</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Alenka_Smerkolj</idno>
                </person>
                <person xml:id="SmerkoljCiril" corresp="#SDT5.SmerkoljCiril">
                   <persName>
@@ -52072,6 +52458,7 @@
                      <surname>Smodiš</surname>
                      <forename>Branko</forename>
                   </persName>
+                  <birth when="1965-09-01"/>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="2013-03-27" to="2014-07-31" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.SD" from="2011-12-16" to="2014-07-31"
@@ -53192,8 +53579,8 @@
                   </persName>
                   <sex value="M"/>
                   <birth when="1952"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SAB" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SAB" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="StarčekSimon" corresp="#SDT4.StarčekSimon">
                   <persName>
@@ -54218,8 +54605,8 @@
                   <birth when="1962-06-01">
                      <placeName ref="https://www.geonames.org/3196359/ljubljana.html">Ljubljana</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="SuknaičPrimož" corresp="#SDT5.SuknaičPrimož">
                   <persName>
@@ -54490,7 +54877,7 @@
                   </persName>
                   <sex value="M"/>
                </person>
-               <person xml:id="SvetličRok" corresp="#SDT7.SvetličRok">
+               <person xml:id="SvetličRok" corresp="#SDT7.SvetličRok #SDZ8.SvetličRok">
                   <persName>
                      <surname>Svetlič</surname>
                      <forename>Rok</forename>
@@ -54697,8 +55084,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Jo%C5%BEe_Tanko</idno>
                </person>
@@ -54855,8 +55242,8 @@
                   <affiliation role="member" ref="#party.Levica.1" from="2014-08-01" to="2017-06-25" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.Levica.2" from="2017-06-26" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Matej_Ta%C5%A1ner_Vatovec</idno>
                </person>
@@ -55572,8 +55959,9 @@
                   <affiliation role="member" ref="#party.Levica.1" from="2014-08-01" to="2017-06-25" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.Levica.2" from="2017-06-26" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2022-04-10" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NeP" from="2022-04-11" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Violeta_Tomi%C4%87</idno>
                </person>
@@ -55783,6 +56171,8 @@
                      ana="#DZ.7"/>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.NSi" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Matej_Tonin</idno>
                </person>
@@ -56300,7 +56690,7 @@
                   </persName>
                   <sex value="M"/>
                </person>
-               <person xml:id="TrillerVrtovecKatja" corresp="#SDT7.TrillerVrtovecKatja">
+               <person xml:id="TrillerVrtovecKatja" corresp="#SDT7.TrillerVrtovecKatja #SDZ8.TrillerVrtovecKatja">
                   <persName>
                      <surname>Triller</surname>
                      <surname>Vrtovec</surname>
@@ -56615,9 +57005,9 @@
                   <affiliation role="member" ref="#party.Levica.1" from="2014-08-01" to="2017-06-25" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.Levica.2" from="2017-06-26" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2020-03-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2020-03-23" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Levica.2" from="2018-06-22" to="2020-03-19" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2020-03-24" to="2022-05-12" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Franc_Tr%C4%8Dek_(sociolog)</idno>
                </person>
@@ -57051,8 +57441,9 @@
                   </persName>
                   <sex value="F"/>
                   <birth when="1974"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2021-12-26" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NeP" from="2021-12-27" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="UglešićKarmen" corresp="#SDT5.UglešićKarmen">
                   <persName>
@@ -57435,7 +57826,7 @@
                   <sex value="M"/>
                </person>
                <person xml:id="UršičCveto"
-                  corresp="#SDT2.UršičCveto #SDT3.UršičCveto #SDZ4.UršičCveto #SDT4.UršičCveto #SDT5.UršičCveto #SDT6.UršičCveto #SDT7.UršičCveto">
+                  corresp="#SDT2.UršičCveto #SDT3.UršičCveto #SDZ4.UršičCveto #SDT4.UršičCveto #SDT5.UršičCveto #SDT6.UršičCveto #SDT7.UršičCveto #SDZ8.UršičCveto">
                   <persName>
                      <surname>Uršič</surname>
                      <forename>Cveto</forename>
@@ -57928,6 +58319,7 @@
                      <surname>Vasle</surname>
                      <forename>Janez</forename>
                   </persName>
+                  <birth when="1944-05-27"/>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="2012-02-14" to="2013-03-20" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.NSi" from="2011-12-16" to="2014-07-31"
@@ -58060,6 +58452,7 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SD" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2016-07-14" ana="#GOV.12"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Janko_Veber</idno>
                </person>
@@ -58328,8 +58721,9 @@
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2015-03-07" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2019-07-09" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2019-07-09" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2019-07-09" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2019-07-09" to="2021-12-04" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Konkretno" from="2021-12-04" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="VerbičJernej"
                   corresp="#SDT4.VerbičJernej #SDT5.VerbičJernej #SDT6.VerbičJernej #SDZ7.VerbičJernej #SDT7.VerbičJernej">
@@ -59184,6 +59578,13 @@
                   </persName>
                   <sex value="M"/>
                </person>
+               <person xml:id="VindišarFranc" corresp="#SDZ8.VindišarFranc">
+                  <persName>
+                     <surname>Vindišar</surname>
+                     <forename>Franc</forename>
+                  </persName>
+                  <sex value="M"/>
+               </person>
                <person xml:id="VindišJanez" corresp="#SDZ1.VindišJanez">
                   <persName>
                      <surname>Vindiš</surname>
@@ -59362,6 +59763,7 @@
                   <affiliation role="MP" ref="#DZ" from="2013-03-20" to="2014-07-31" ana="#DZ.6"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2011-12-16" to="2014-07-31"
                      ana="#DZ.6"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Andrej_Vizjak</idno>
                </person>
@@ -59993,7 +60395,7 @@
                   <sex value="M"/>
                </person>
                <person xml:id="VoršičNataša"
-                  corresp="#SDT2.VoršičNataša #SDT3.VoršičNataša #SDT4.VoršičNataša #SDT5.VoršičNataša #SDZ6.VoršičNataša #SDT6.VoršičNataša #SDT7.VoršičNataša">
+                  corresp="#SDT2.VoršičNataša #SDT3.VoršičNataša #SDT4.VoršičNataša #SDT5.VoršičNataša #SDZ6.VoršičNataša #SDT6.VoršičNataša #SDT7.VoršičNataša #SDZ8.VoršičNataša">
                   <persName>
                      <surname>Voršič</surname>
                      <forename>Nataša</forename>
@@ -60233,7 +60635,13 @@
                      <surname>Erman</surname>
                      <forename>Mateja</forename>
                   </persName>
+                  <birth when="1965-11-07">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="F"/>
+                  <affiliation role="minister" ref="#GOV" from="2016-09-21" to="2018-09-13" ana="#GOV.12"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Mateja_Vrani%C4%8Dar_Erman</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Mateja_Vrani%C4%8Dar_Erman</idno>
                </person>
                <person xml:id="VraničarMarko" corresp="#SDT2.VraničarMarko">
                   <persName>
@@ -60544,6 +60952,7 @@
                      ana="#DZ.7"/>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.NSi" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
                </person>
                <person xml:id="VrčkoMatevž" corresp="#SDZ2.VrčkoMatevž #SDT2.VrčkoMatevž">
                   <persName>
@@ -60990,8 +61399,8 @@
                   <birth when="1969-03-05">
                      <placeName ref="https://www.geonames.org/3196359/ljubljana.html">Ljubljana</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ZabukovecKerinKatja"
                   corresp="#SDT6.ZabukovecKerinKatja #SDT7.ZabukovecKerinKatja">
@@ -61290,6 +61699,7 @@
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2015-03-07" to="2018-06-21"
                      ana="#DZ.7"/>
+                  <affiliation role="minister" ref="#GOV" from="2019-03-27" to="2020-03-13" ana="#GOV.13"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Simon_Zajc</idno>
                </person>
@@ -61675,8 +62085,8 @@
                   <birth when="1971-10-20">
                      <placeName ref="https://www.geonames.org/3191063/sempeter-pri-gorici.html">Šempeter pri Gorici</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2020-03-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ZavasnikAnka" corresp="#SDT7.ZavasnikAnka">
                   <persName>
@@ -62482,8 +62892,9 @@
                   <affiliation role="member" ref="#party.SMC.1" from="2014-08-01" to="2015-03-06" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SMC.2" from="2015-03-07" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2021-03-26" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NP" from="2021-03-30" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ZotmanMirko" corresp="#SDT3.ZotmanMirko">
                   <persName>
@@ -62978,12 +63389,16 @@
                      <forename>Milan</forename>
                      <roleName>dr.</roleName>
                   </persName>
+                  <birth when="1962-05-25">
+                     <placeName>Ljubljana</placeName>
+                  </birth>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="2004-10-22" to="2008-10-14" ana="#DZ.4"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2004-10-22" to="2008-10-14"
                      ana="#DZ.4"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Milan_Zver</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Milan_Zver</idno>
                </person>
                <person xml:id="ZverMilena" corresp="#SDT5.ZverMilena">
                   <persName>
@@ -63049,7 +63464,7 @@
                   <sex value="F"/>
                </person>
                <person xml:id="unknown-M"
-                  corresp="#SDZ1.unknown-M #SDT2.unknown-M #SDT3.unknown-M #SDT4.unknown-M #SDT5.unknown-M #SDT6.unknown-M #SDT7.unknown-M">
+                  corresp="#SDZ1.unknown-M #SDT2.unknown-M #SDT3.unknown-M #SDT4.unknown-M #SDT5.unknown-M #SDT6.unknown-M #SDT7.unknown-M #SDZ8.unknown-M">
                   <persName>Neidentificiran govornik</persName>
                   <sex value="M"/>
                </person>
@@ -63553,6 +63968,7 @@
                      ana="#DZ.6"/>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Zvone_%C4%8Cerna%C4%8D</idno>
                </person>
@@ -63648,8 +64064,8 @@
                   <birth when="1983-04-12">
                      <placeName ref="https://www.geonames.org/3191063/sempeter-pri-gorici.html">Šempeter pri Gorici</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2020-03-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.NSi" from="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NSi" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ČernilecBoris" corresp="#SDT5.ČernilecBoris">
                   <persName>
@@ -63743,6 +64159,7 @@
                   </birth>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.SAB" from="2018-06-22" to="2018-09-12" ana="#DZ.8"/>
+                  <affiliation role="minister" ref="#GOV" from="2018-09-13" to="2020-03-13" ana="#GOV.13"/>
                </person>
                <person xml:id="ČesnovarFranc" corresp="#SDT4.ČesnovarFranc">
                   <persName>
@@ -64169,7 +64586,7 @@
                   <sex value="F"/>
                </person>
                <person xml:id="ČušAndrej"
-                  corresp="#SDT5.ČušAndrej #SDZ6.ČušAndrej #SDT6.ČušAndrej #SDZ7.ČušAndrej #SDT7.ČušAndrej">
+                  corresp="#SDT5.ČušAndrej #SDZ6.ČušAndrej #SDT6.ČušAndrej #SDZ7.ČušAndrej #SDT7.ČušAndrej #SDZ8.ČušAndrej">
                   <persName>
                      <surname>Čuš</surname>
                      <forename>Andrej</forename>
@@ -64235,7 +64652,10 @@
                      <surname>Šabeder</surname>
                      <forename>Aleš</forename>
                   </persName>
+                  <birth when="1970-03-04"/>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2019-03-27" to="2020-03-13" ana="#GOV.13"/>
+                  <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Ale%C5%A1_%C5%A0abeder</idno>
                </person>
                <person xml:id="ŠabederRobert" corresp="#SDT7.ŠabederRobert">
                   <persName>
@@ -64409,8 +64829,9 @@
                   <birth when="1977-12-02"/>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2018-08-16" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.LMŠ" from="2018-06-22" to="2018-08-16" ana="#DZ.8"/>
-                  <affiliation role="MP" ref="#DZ" from="2020-03-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.LMŠ" from="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-13" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.LMŠ" from="2020-03-13" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="head" ref="#GOV" from="2018-08-17" to="2020-03-13" ana="#GOV.13"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Marjan_%C5%A0arec</idno>
                </person>
@@ -64621,7 +65042,7 @@
                   </persName>
                   <sex value="F"/>
                </person>
-               <person xml:id="ŠelihIvan" corresp="#SDZ5.ŠelihIvan #SDZ7.ŠelihIvan #SDT7.ŠelihIvan">
+               <person xml:id="ŠelihIvan" corresp="#SDZ5.ŠelihIvan #SDZ7.ŠelihIvan #SDT7.ŠelihIvan #SDZ8.ŠelihIvan">
                   <persName>
                      <surname>Šelih</surname>
                      <forename>Ivan</forename>
@@ -65150,6 +65571,7 @@
                      ana="#DZ.7"/>
                   <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2018-06-22" to="2020-03-12" ana="#DZ.8"/>
+                  <affiliation role="minister" ref="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Andrej_%C5%A0ircelj</idno>
                </person>
@@ -65204,8 +65626,8 @@
                   <birth when="1969-05-09">
                      <placeName ref="https://www.geonames.org/3203411/obcina-brezice.html">Brežice</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SNS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SNS" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ŠiškoMetka" corresp="#SDT6.ŠiškoMetka">
                   <persName>
@@ -65603,8 +66025,8 @@
                   <birth when="1955-11-30">
                      <placeName ref="https://www.geonames.org/3196359/ljubljana.html">Ljubljana</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2020-03-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-19" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ŠkrjancJanja" corresp="#SDT6.ŠkrjancJanja">
                   <persName>
@@ -67250,6 +67672,7 @@
                      <surname>Šušmelj</surname>
                      <forename>Andrej</forename>
                   </persName>
+                  <birth when="1965"/>
                   <sex value="M"/>
                   <affiliation role="MP" ref="#DZ" from="2018-09-26" to="2018-12-18" ana="#DZ.8"/>
                   <affiliation role="member" ref="#party.SAB" from="2018-09-26" to="2018-12-18" ana="#DZ.8"/>
@@ -67295,12 +67718,14 @@
                <person xml:id="ŠuštarTadeja" corresp="#SDZ8.ŠuštarTadeja">
                   <persName>
                      <surname>Šuštar</surname>
+                     <!-- Konec julija 2021 poročila: drugi priimek Zalar -->
+                     <surname>Zalar</surname>
                      <forename>Tadeja</forename>
                   </persName>
                   <sex value="F"/>
                   <birth when="1990-09-14"/>
-                  <affiliation role="MP" ref="#DZ" from="2019-07-09" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.NSi" from="2019-07-09" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2019-07-09" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.NSi" from="2019-07-09" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ŠuštaričBojan" corresp="#SDT5.ŠuštaričBojan #SDT7.ŠuštaričBojan">
                   <persName>
@@ -67704,7 +68129,7 @@
                   </persName>
                   <sex value="F"/>
                </person>
-               <person xml:id="ŽakeljJanez" corresp="#SDT7.ŽakeljJanez">
+               <person xml:id="ŽakeljJanez" corresp="#SDT7.ŽakeljJanez #SDZ8.ŽakeljJanez">
                   <persName>
                      <surname>Žakelj</surname>
                      <forename>Janez</forename>
@@ -68129,8 +68554,10 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2014-09-18" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SD" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="deputyHead" ref="#GOV" from="2014-10-02" to="2018-09-13" ana="#GOV.12"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Dejan_%C5%BDidan</idno>
                </person>
@@ -68143,9 +68570,9 @@
                   <birth when="1965-10-05">
                      <placeName ref="https://www.geonames.org/3196359/ljubljana.html">Ljubljana</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-09-26" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2018-09-26" to="2020-05-17" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SD" from="2020-05-18" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-09-26" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2018-09-26" to="2020-05-18" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SD" from="2020-05-19" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ŽidaničAnton" corresp="#SDT2.ŽidaničAnton">
                   <persName>
@@ -68281,8 +68708,8 @@
                   <birth when="1963-09-10">
                      <placeName ref="https://www.geonames.org/3192224/pula.html">Pulj</placeName>
                   </birth>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.IMNS" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.IMNS" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ŽižekBojan" corresp="#SDT7.ŽižekBojan">
                   <persName>
@@ -68391,7 +68818,10 @@
                      <surname>Žmavc</surname>
                      <forename>Gorazd</forename>
                   </persName>
+                  <birth when="1947"/>
                   <sex value="M"/>
+                  <affiliation role="minister" ref="#GOV" from="2016-04-25" to="2016-05-19" ana="#GOV.12"/>
+                  <affiliation role="minister" ref="#GOV" from="2014-09-18" to="2018-09-13" ana="#GOV.12"/>
                </person>
                <person xml:id="ŽmavcJure" corresp="#SDT3.ŽmavcJure">
                   <persName>
@@ -68444,8 +68874,8 @@
                   <affiliation role="MP" ref="#DZ" from="2014-08-01" to="2018-06-21" ana="#DZ.7"/>
                   <affiliation role="member" ref="#party.SDS.2" from="2014-08-01" to="2018-06-21"
                      ana="#DZ.7"/>
-                  <affiliation role="MP" ref="#DZ" from="2020-03-13" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-13" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2020-03-13" to="2021-11-15" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SDS.2" from="2020-03-13" to="2021-11-15" ana="#DZ.8"/>
                   <idno type="wikimedia" xml:lang="sl"
                      >https://sl.wikipedia.org/wiki/Ljubo_%C5%BDnidar</idno>
                </person>
@@ -68463,8 +68893,9 @@
                   </persName>
                   <sex value="F"/>
                   <birth when="1977"/>
-                  <affiliation role="MP" ref="#DZ" from="2018-06-22" ana="#DZ.8"/>
-                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" ana="#DZ.8"/>
+                  <affiliation role="MP" ref="#DZ" from="2018-06-22" to="2022-05-12" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.SMC.2" from="2018-06-22" to="2021-12-04" ana="#DZ.8"/>
+                  <affiliation role="member" ref="#party.Konkretno" from="2021-12-04" to="2022-05-12" ana="#DZ.8"/>
                </person>
                <person xml:id="ŽnidaričJožef" corresp="#SDT7.ŽnidaričJožef">
                   <persName>
