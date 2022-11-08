@@ -292,65 +292,81 @@
 	  <xsl:apply-templates/>
 	</xsl:copy>
       </xsl:when>
-      <xsl:when test="starts-with(., 'Za')">
+      <xsl:when test="starts-with(., 'Za') or starts-with(., 'za')">
 	<xsl:copy>
 	  <xsl:attribute name="type">vote-ayes</xsl:attribute>
 	  <xsl:apply-templates/>
 	</xsl:copy>
       </xsl:when>
-      <xsl:when test="starts-with(., 'Proti') or starts-with(., 'Nihče')">
+      <xsl:when test="starts-with(., 'Proti') or starts-with(., 'Nihče') or starts-with(., 'proti')">
 	<xsl:copy>
 	  <xsl:attribute name="type">vote-noes</xsl:attribute>
 	  <xsl:apply-templates/>
 	</xsl:copy>
       </xsl:when>
-      <xsl:when test="starts-with(., 'Ne&#32;') or starts-with(., 'Ne.')">
+      <xsl:when test="starts-with(., 'Ne&#32;') or starts-with(., 'Ne.') or starts-with(., 'Ga&#32;') or starts-with(., 'Je&#32;')">
 	<xsl:copy>
 	  <xsl:attribute name="type">answer</xsl:attribute>
 	  <xsl:apply-templates/>
 	</xsl:copy>
       </xsl:when>
-      <xsl:when test="starts-with(., 'Da.') or starts-with(., 'Želi.')">
+      <xsl:when test="starts-with(., 'Da.') or starts-with(., 'Želi.') or starts-with(., 'Se&#32;')">
 	<xsl:copy>
 	  <xsl:attribute name="type">answer</xsl:attribute>
 	  <xsl:apply-templates/>
 	</xsl:copy>
       </xsl:when>
-      <xsl:when test="starts-with(., 'Se&#32;')">
-	<xsl:copy>
-	  <xsl:attribute name="type">answer</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'izklop&#32;')">
+      <xsl:when test="starts-with(., 'izklop&#32;') or starts-with(., 'izklop') or starts-with(., 'Izklop&#32;') or starts-with(., 'minuta&#32;') or starts-with(., 'izkop&#32;')">
 	<xsl:copy>
 	  <xsl:attribute name="type">action</xsl:attribute>
 	  <xsl:apply-templates/>
 	</xsl:copy>
       </xsl:when>
-      <xsl:when test="starts-with(., 'nerazumljivo')">
+      <xsl:when test="starts-with(., 'nerazumljivo') or starts-with(., '?') or starts-with(., '...') or starts-with(., 'nerazumljiva') or starts-with(., '…') or starts-with(., 'izključen') or starts-with(., 'mikrofon&#32;')">
 	<gap>
 	  <xsl:attribute name="reason">inaudible</xsl:attribute>
 	  <xsl:element name="desc">
-	      <xsl:attribute name="xml:lang">
-		<xsl:value-of select="/tei:TEI/@xml:lang"/>
-	      </xsl:attribute>
-	      <xsl:apply-templates/>
+	    <xsl:attribute name="xml:lang">
+	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	    </xsl:attribute>
+	    <xsl:apply-templates/>
 	  </xsl:element>
 	</gap>
       </xsl:when>
-      <xsl:when test="starts-with(., 'oglašanje&#32;')">
+      <xsl:when test="starts-with(., 'oglašanje&#32;') or starts-with(., 'oglašanja&#32;') or starts-with(., 'oglašanj&#32;')">
 	<vocal>
-	   <xsl:attribute name="type">interruption</xsl:attribute>
-	   <xsl:element name="desc">
-	       <xsl:attribute name="xml:lang">
-		 <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	       </xsl:attribute>
-	     <xsl:apply-templates/>
-	   </xsl:element>
+	  <xsl:attribute name="type">murmuring</xsl:attribute>
+	  <xsl:element name="desc">
+	    <xsl:attribute name="xml:lang">
+	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	    </xsl:attribute>
+	    <xsl:apply-templates/>
+	  </xsl:element>
 	</vocal>
       </xsl:when>
-      <xsl:when test="starts-with(., 'znak&#32;') or starts-with(., 'opozorilni&#32;')">
+      <xsl:when test="starts-with(., 'nemir&#32;')">
+	<vocal>
+	  <xsl:attribute name="type">interruption</xsl:attribute>
+	  <xsl:element name="desc">
+	    <xsl:attribute name="xml:lang">
+	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	    </xsl:attribute>
+	    <xsl:apply-templates/>
+	  </xsl:element>
+	</vocal>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'smeh') or starts-with(.,  'smeh&#32;')">
+	<vocal>
+	  <xsl:attribute name="type">laughter</xsl:attribute>
+	  <xsl:element name="desc">
+	    <xsl:attribute name="xml:lang">
+	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	    </xsl:attribute>
+	    <xsl:apply-templates/>
+	  </xsl:element>
+	</vocal>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'znak&#32;') or starts-with(., 'opozorilni&#32;') or starts-with(., 'pokaže&#32;')">
 	<kinesic>
 	  <xsl:attribute name="type">signal</xsl:attribute>
 	  <xsl:element name="desc">
@@ -361,6 +377,56 @@
 	  </xsl:element>
 	</kinesic>
       </xsl:when>
+      <xsl:when test="starts-with(., 'ploskanje&#32;') or starts-with(., 'aplavz') or starts-with(., 'ploskanje')">
+	<kinesic>
+	  <xsl:attribute name="type">applause</xsl:attribute>
+	  <xsl:element name="desc">
+	    <xsl:attribute name="xml:lang">
+	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	    </xsl:attribute>
+	    <xsl:apply-templates/>
+	  </xsl:element>
+	</kinesic>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'tlesk&#32;') or starts-with(., 'tlesk') or starts-with(., 'tleskne')">
+	<kinesic>
+	  <xsl:attribute name="type">snapping</xsl:attribute>
+	  <xsl:element name="desc">
+	    <xsl:attribute name="xml:lang">
+	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	    </xsl:attribute>
+	    <xsl:apply-templates/>
+	  </xsl:element>
+	</kinesic>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'naredi&#32;')">
+	<kinesic>
+	  <xsl:attribute name="type">gesture</xsl:attribute>
+	  <xsl:element name="desc">
+	    <xsl:attribute name="xml:lang">
+	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	    </xsl:attribute>
+	    <xsl:apply-templates/>
+	  </xsl:element>
+	</kinesic>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'Čas&#32;') or starts-with(., 'Časa&#32;')">
+	<kinesic>
+	  <xsl:attribute name="type">signal</xsl:attribute>
+	  <xsl:element name="desc">
+	    <xsl:attribute name="xml:lang">
+	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
+	    </xsl:attribute>
+	    <xsl:apply-templates/>
+	  </xsl:element>
+	</kinesic>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'citiram')">
+	<xsl:copy>
+	  <xsl:attribute name="type">comment</xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+      </xsl:when>
       <xsl:otherwise>
 	<xsl:copy>
 	  <xsl:apply-templates select="@*"/>
@@ -370,9 +436,8 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
     
-  <!-- In this session, all of the gap element are empty, with only an attribute to explain the type of gap. But this might not be the case for all other sessions.-->
+  <!-- Select all "empty" <gap reason="inaudible"/> and add <desc> element with ... (Unicode) value to reference the gap in transcriptions-->
   <xsl:template match="//tei:gap">
     <xsl:copy>
       <xsl:copy-of select="@*"/>

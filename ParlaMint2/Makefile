@@ -1,14 +1,12 @@
 # Test conversion of root
 test-cnv-root:
-	$s -xsl:Scripts/siparl2parlamint-root.xsl files-test.xml > Data/ParlaMint-SI.xml
+	$s -xsl:Scripts/siparl2parlamint-root.xsl files.xml > Data/ParlaMint-SI.xml
 	$j Schema/ParlaMint-teiCorpus.rng Data/ParlaMint-SI.xml
 
 # Test conversion of components
 test-cnv-components:
-	$s -xsl:Scripts/siparl2parlamint-components.xsl files-test.xml
-	$j Schema/ParlaMint-TEI.rng Data/2014/ParlaMint-SI_2014-08-25-SDZ7-Izredna-01.xml
-	diff -w DataOK/ParlaMint-SI_2014-08-25-SDZ7-Izredna-01.xml \
-	Data/2014/ParlaMint-SI_2014-08-25-SDZ7-Izredna-01.xml | head -100
+	$s -xsl:Scripts/siparl2parlamint-components.xsl files.xml
+	$j Schema/ParlaMint-TEI.rng Data/*/*.xml
 
 all:	prep-files clean 
 

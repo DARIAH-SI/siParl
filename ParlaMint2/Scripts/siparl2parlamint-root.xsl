@@ -25,7 +25,7 @@
   <!-- People (also) responsible for the TEI encoding of the corpus -->
   <xsl:variable name="TEI-resps" xmlns="http://www.tei-c.org/ns/1.0">
     <persName ref="https://orcid.org/0000-0002-1560-4099 http://viaf.org/viaf/15145066459666591823">Tomaž Erjavec</persName>
-    <persName>Katja Meden</persName>
+    <persName ref="https://orcid.org/0000-0002-0464-9240">Katja Meden</persName>
   </xsl:variable>
   
   <xsl:variable name="today" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
