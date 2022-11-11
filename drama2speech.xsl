@@ -1400,6 +1400,16 @@
         </u>
     </xsl:template>
     
+    <!-- dodam manjkajoče desc -->
+    <xsl:template match="tei:gap[@reason] | tei:incident | tei:kinesic | tei:vocal" mode="pass7">
+        <xsl:element name="{name()}">
+            <xsl:apply-templates select="@*" mode="pass7"/>
+            <desc>
+                <xsl:apply-templates mode="pass7"/>
+            </desc>
+        </xsl:element>
+    </xsl:template>
+    
     <!-- uredim povezave na kazala -->
     <xsl:template match="@* | node()" mode="pass8">
         <xsl:copy>
