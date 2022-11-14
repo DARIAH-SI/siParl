@@ -1088,7 +1088,7 @@
         </TEI>
     </xsl:template>
     <!-- 3. Using 1. and 2. above. -->
-    <xsl:template match="tei:u/tei:seg[tei:note or tei:gap]/text()" mode="pass4">
+    <xsl:template match="tei:u/tei:seg[tei:note or tei:gap or tei:incident or tei:kinesic or tei:vocal]/text()" mode="pass4">
         <seg><xsl:copy-of select="."/></seg>
     </xsl:template>
     
@@ -1110,7 +1110,7 @@
     <xsl:template match="tei:u/tei:seg[tei:seg]" mode="pass5">
         <seg>
             <xsl:apply-templates select="@*" mode="pass5"/>
-            <xsl:for-each-group select="*" group-adjacent="boolean(self::tei:note)">
+            <xsl:for-each-group select="*" group-adjacent="boolean(self::tei:note or self::tei:incident or self::tei:kinesic or self::tei:vocal)">
                 <xsl:choose>
                     <xsl:when test="current-grouping-key()">
                         <xsl:apply-templates select="." mode="pass5"/>
@@ -1156,9 +1156,18 @@
     <xsl:template match="tei:u/tei:seg/tei:seg[tei:gap or tei:seg]" mode="pass6">
         <xsl:choose>
             <xsl:when test="tei:gap and not(tei:seg)">
-                <!-- Zelo čudno: če sem spodaj dal samo copy-of select ., potem je v naslednjem pass7 ta gap postal note/@n (in nimam pojma, zakaj se je to zgodilo -->
+                <!-- Zelo čudno: če sem spodaj dal samo copy-of select ., potem je v naslednjem pass7 ta gap postal note/@n (in nimam pojma, zakaj se je to zgodilo ... -->
                 <!--<xsl:copy-of select="."/>-->
-                <gap n="{tei:gap/@n}"/>
+                <xsl:choose>
+                    <xsl:when test="tei:gap/@n">
+                        <gap n="{tei:gap/@n}"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <gap reason="{tei:gap/@reason}">
+                            <xsl:value-of select="tei:gap"/>
+                        </gap>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:when>
             <xsl:when test="not(tei:gap) and tei:seg">
                 <seg ana="{parent::tei:seg/@ana}">
@@ -1169,7 +1178,15 @@
                 <seg ana="{parent::tei:seg/@ana}">
                     <xsl:for-each select="tei:*">
                         <xsl:choose>
-                            <xsl:when test="self::tei:gap">
+                            <xsl:when test="self::tei:gap[@reason]">
+                                <xsl:text> </xsl:text>
+                                <xsl:copy-of select="."/>
+                                <xsl:text> </xsl:text>
+                            </xsl:when>
+                            <xsl:when test="self::tei:gap[@n][following-sibling::tei:gap[@reason='inaudible'] or preceding-sibling::tei:gap[@reason='inaudible']]">
+                                <!-- ga brišem -->
+                            </xsl:when>
+                            <xsl:when test="self::tei:gap[@n][not(following-sibling::tei:gap[@reason='inaudible'] or preceding-sibling::tei:gap[@reason='inaudible'])]">
                                 <!-- če gap sledi takoj predhodnemu gap elementu, ga ne procesiram -->
                                 <xsl:if test="not(preceding-sibling::tei:*[1][self::tei:gap])">
                                     <xsl:choose>
@@ -1466,8 +1483,22 @@
         </note>
     </xsl:template>
     
-    <xsl:template match="tei:gap" mode="pass9">
-        <gap reason="inaudible"/>
+    <xsl:template match="tei:desc" mode="pass9">
+        <desc>
+            <xsl:apply-templates select="@*" mode="pass9"/>
+            <xsl:analyze-string select="normalize-space(.)" regex="^(\(|/)(.*)(\)|/)$">
+                <xsl:matching-substring>
+                    <xsl:value-of select="normalize-space(regex-group(2))"/>
+                </xsl:matching-substring>
+                <xsl:non-matching-substring>
+                    <xsl:value-of select="normalize-space(.)"/>
+                </xsl:non-matching-substring>
+            </xsl:analyze-string>
+        </desc>
+    </xsl:template>
+    
+    <xsl:template match="tei:gap[@n]" mode="pass9">
+        <gap reason="inaudible"><desc><xsl:value-of select="@n"/></desc></gap>
     </xsl:template>
     
     <!-- odstranim kazala (Pred dnevnim redom), ki nimajo povezav preko corresp -->
