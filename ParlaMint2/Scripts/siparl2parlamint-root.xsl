@@ -171,25 +171,6 @@
       </xsl:choose>
     </xsl:attribute>
   </xsl:template>
-
-  <xsl:template match="tei:particDesc//tei:listOrg//tei:org/@ana">
-    <xsl:attribute name="ana">
-      <xsl:for-each select="tokenize(.,'\s')">
-      <xsl:choose>
-	<xsl:when test="starts-with(., '#parl.')">
-	  <xsl:value-of select="replace(., '^#parl\.', '#parla.')"/>
-	  <xsl:text>&#32;</xsl:text>
-	</xsl:when>
-	<xsl:when test="starts-with(., '#par.')">
-	  <xsl:value-of select="replace(., '^#par\.', '#parla.')"/>
-	</xsl:when>
-	<xsl:otherwise>
-	  <xsl:value-of select="."/>
-	</xsl:otherwise>
-      </xsl:choose>
-      </xsl:for-each>
-    </xsl:attribute>
-    </xsl:template>
     
  <!-- Copy rest to output -->
  <xsl:template match="tei:*">
@@ -512,6 +493,9 @@
       <xsl:apply-templates select="."/>
     </xsl:if>
   </xsl:template>
+
+  <!--Remove unknown speaker(s) from the listPerson-->
+  <xsl:template match="tei:person[@xml:id = 'unknown-M']"/>
   
   <xsl:template match="tei:listPerson//tei:person//tei:idno">
     <xsl:variable name="lang" select="@xml:lang"/>

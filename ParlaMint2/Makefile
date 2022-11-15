@@ -37,7 +37,7 @@ clean:
 
 # Prepare the list of input/output files from mandates given as first parameter
 prep-files:
-	Scripts/map-files.pl 'SDZ6 SDZ7' '../speech' 'Data' > files.xml
+	Scripts/map-files.pl 'SDZ7 SDZ8' '../speech' 'Data' > files.xml
 
 ################################################
 s = java -jar /usr/share/java/saxon.jar

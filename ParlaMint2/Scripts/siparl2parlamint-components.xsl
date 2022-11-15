@@ -90,13 +90,13 @@
 	<xsl:when test="@xml:lang = 'en'">
 	  <xsl:text>Slovenian parliamentary corpus ParlaMint-SI, </xsl:text>
           <xsl:choose>
-            <xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.regular')]">
+            <xsl:when test="../tei:meeting[contains(@ana, '#parla.meeting.regular')]">
               <xsl:text>Regular Session </xsl:text>
-              <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.regular')]/@n"/>
+              <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.meeting.regular')]/@n"/>
             </xsl:when>
-            <xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]">
+            <xsl:when test="../tei:meeting[contains(@ana, '#parla.meeting.extraordinary')]">
               <xsl:text>Extraordinary Session </xsl:text>
-              <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]/@n"/>
+              <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.meeting.extraordinary')]/@n"/>
             </xsl:when>
 	    <xsl:otherwise>
 	      <xsl:message terminate="yes">
@@ -130,16 +130,16 @@
       <xsl:attribute name="type" select="../tei:title[@type= 'sub']/@type"/>
       <xsl:attribute name="xml:lang" select="../tei:title[@xml:lang = 'en']/@xml:lang"/>
       <xsl:text>Minutes of the National Assembly of the Republic of Slovenia, Term </xsl:text>
-      <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.term')]/@n"/>
+      <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.term')]/@n"/>
       <xsl:text>, </xsl:text>
       <xsl:choose>
-	<xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.regular')]">
+	<xsl:when test="../tei:meeting[contains(@ana, '#parla.meeting.regular')]">
 	  <xsl:text>Regular Session </xsl:text>
-          <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.regular')]/@n"/>
+          <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.meeting.regular')]/@n"/>
         </xsl:when>
-        <xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]">
+        <xsl:when test="../tei:meeting[contains(@ana, '#parla.meeting.extraordinary')]">
           <xsl:text>Extraordinary Session </xsl:text>
-          <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]/@n"/>
+          <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.meeting.extraordinary')]/@n"/>
         </xsl:when>
 	<xsl:otherwise>
 	  <xsl:message terminate="yes">
@@ -205,7 +205,6 @@
       <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
       <xsl:apply-templates select="tei:edition"/>
       <xsl:apply-templates select="tei:idno"/>
-      <!--For the tei:idno, how do I add the subtype attribute and its value? -->
       <xsl:apply-templates select="tei:date"/> 
     </xsl:copy>
   </xsl:template>
@@ -278,6 +277,10 @@
     </xsl:copy>
   </xsl:template>
 
+  <!-- Remove unknown speaker utterances-->
+  <xsl:template match="tei:u[@who='#unknown-M']"/>
+  
+  
   <xsl:template match="tei:text//tei:note">
     <xsl:choose>
       <xsl:when test="@type='chairman'">
@@ -286,174 +289,20 @@
 	  <xsl:apply-templates/>
 	</head>
       </xsl:when>
-      <xsl:when test="@type">
-	<xsl:copy>
-	  <xsl:apply-templates select="@*"/>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Za') or starts-with(., 'za')">
-	<xsl:copy>
-	  <xsl:attribute name="type">vote-ayes</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Proti') or starts-with(., 'Nihče') or starts-with(., 'proti')">
-	<xsl:copy>
-	  <xsl:attribute name="type">vote-noes</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Ne&#32;') or starts-with(., 'Ne.') or starts-with(., 'Ga&#32;') or starts-with(., 'Je&#32;')">
-	<xsl:copy>
-	  <xsl:attribute name="type">answer</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Da.') or starts-with(., 'Želi.') or starts-with(., 'Se&#32;')">
-	<xsl:copy>
-	  <xsl:attribute name="type">answer</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'izklop&#32;') or starts-with(., 'izklop') or starts-with(., 'Izklop&#32;') or starts-with(., 'minuta&#32;') or starts-with(., 'izkop&#32;')">
-	<xsl:copy>
-	  <xsl:attribute name="type">action</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'nerazumljivo') or starts-with(., '?') or starts-with(., '...') or starts-with(., 'nerazumljiva') or starts-with(., '…') or starts-with(., 'izključen') or starts-with(., 'mikrofon&#32;')">
-	<gap>
-	  <xsl:attribute name="reason">inaudible</xsl:attribute>
-	  <xsl:element name="desc">
-	    <xsl:attribute name="xml:lang">
-	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	    </xsl:attribute>
-	    <xsl:apply-templates/>
-	  </xsl:element>
-	</gap>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'oglašanje&#32;') or starts-with(., 'oglašanja&#32;') or starts-with(., 'oglašanj&#32;')">
-	<vocal>
-	  <xsl:attribute name="type">murmuring</xsl:attribute>
-	  <xsl:element name="desc">
-	    <xsl:attribute name="xml:lang">
-	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	    </xsl:attribute>
-	    <xsl:apply-templates/>
-	  </xsl:element>
-	</vocal>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'nemir&#32;')">
-	<vocal>
-	  <xsl:attribute name="type">interruption</xsl:attribute>
-	  <xsl:element name="desc">
-	    <xsl:attribute name="xml:lang">
-	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	    </xsl:attribute>
-	    <xsl:apply-templates/>
-	  </xsl:element>
-	</vocal>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'smeh') or starts-with(.,  'smeh&#32;')">
-	<vocal>
-	  <xsl:attribute name="type">laughter</xsl:attribute>
-	  <xsl:element name="desc">
-	    <xsl:attribute name="xml:lang">
-	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	    </xsl:attribute>
-	    <xsl:apply-templates/>
-	  </xsl:element>
-	</vocal>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'znak&#32;') or starts-with(., 'opozorilni&#32;') or starts-with(., 'pokaže&#32;')">
-	<kinesic>
-	  <xsl:attribute name="type">signal</xsl:attribute>
-	  <xsl:element name="desc">
-	    <xsl:attribute name="xml:lang">
-	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	    </xsl:attribute>
-	    <xsl:apply-templates/>
-	  </xsl:element>
-	</kinesic>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'ploskanje&#32;') or starts-with(., 'aplavz') or starts-with(., 'ploskanje')">
-	<kinesic>
-	  <xsl:attribute name="type">applause</xsl:attribute>
-	  <xsl:element name="desc">
-	    <xsl:attribute name="xml:lang">
-	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	    </xsl:attribute>
-	    <xsl:apply-templates/>
-	  </xsl:element>
-	</kinesic>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'tlesk&#32;') or starts-with(., 'tlesk') or starts-with(., 'tleskne')">
-	<kinesic>
-	  <xsl:attribute name="type">snapping</xsl:attribute>
-	  <xsl:element name="desc">
-	    <xsl:attribute name="xml:lang">
-	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	    </xsl:attribute>
-	    <xsl:apply-templates/>
-	  </xsl:element>
-	</kinesic>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'naredi&#32;')">
-	<kinesic>
-	  <xsl:attribute name="type">gesture</xsl:attribute>
-	  <xsl:element name="desc">
-	    <xsl:attribute name="xml:lang">
-	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	    </xsl:attribute>
-	    <xsl:apply-templates/>
-	  </xsl:element>
-	</kinesic>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Čas&#32;') or starts-with(., 'Časa&#32;')">
-	<kinesic>
-	  <xsl:attribute name="type">signal</xsl:attribute>
-	  <xsl:element name="desc">
-	    <xsl:attribute name="xml:lang">
-	      <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	    </xsl:attribute>
-	    <xsl:apply-templates/>
-	  </xsl:element>
-	</kinesic>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'citiram')">
-	<xsl:copy>
-	  <xsl:attribute name="type">comment</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
+      <!-- Remove notes with unknown speakers-->
+      <xsl:when test="starts-with(., 'GOSPOD') or starts-with(., 'GOSPOD&#32;')"/>
       <xsl:otherwise>
 	<xsl:copy>
 	  <xsl:apply-templates select="@*"/>
 	  <xsl:apply-templates/>
 	</xsl:copy>
-	<xsl:message select="concat('Warning: Strange note: ', .)"/>
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-    
-  <!-- Select all "empty" <gap reason="inaudible"/> and add <desc> element with ... (Unicode) value to reference the gap in transcriptions-->
-  <xsl:template match="//tei:gap">
+  </xsl:template>  
+  
+  <!-- Copy rest to output -->
+  <xsl:template match="tei:*">
     <xsl:copy>
-      <xsl:copy-of select="@*"/>
-      <desc>
-	<xsl:attribute name="xml:lang">
-	  <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	</xsl:attribute>
-	<xsl:text>&#8230;</xsl:text>
-	<xsl:apply-templates/>
-      </desc>
-    </xsl:copy>
- </xsl:template>
- 
- <!-- Copy rest to output -->
- <xsl:template match="tei:*">
-   <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
     </xsl:copy>
@@ -461,7 +310,7 @@
   <xsl:template match="@*">
     <xsl:copy/>
   </xsl:template>
-
+  
   <!-- Pass2 processing -->
   
   <xsl:template mode="pass2" match="tei:TEI">
