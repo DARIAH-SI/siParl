@@ -14,7 +14,7 @@
   <!-- CLARIN.SI handle of the finished corpus -->
   <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1486</xsl:param>
   <!-- Ignore parties older than this date-->
-  <xsl:param name="cutoffDate">1995-00-00</xsl:param>
+  <xsl:param name="cutoffDate">2000-00-00</xsl:param>
 
   <!-- Povezave to ustreznih taksonomij -->
   <!-- Ni jasno, ali res hočemo tule tako... -->
@@ -531,48 +531,79 @@
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
-
+  
   <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:idno">
     <idno type="URI" xml:lang="sl" subtype="wikimedia">https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
     <idno type="URI" xml:lang="en" subtype="wikimedia">https://en.wikipedia.org/wiki/National_Assembly_(Slovenia)</idno>
   </xsl:template>
 
-
-  
-  <!---Change value of attribute "role" of speakers to valid ones and add roleName -->
-  <xsl:template match="tei:particDesc//tei:person//tei:affiliation">
+  <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:listEvent">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
-      <xsl:attribute name="role">
-	<xsl:choose>
-	  <xsl:when test="matches(@role,'^MP')">
-	    <xsl:text>member</xsl:text>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:value-of select="@role"/>
-	  </xsl:otherwise>
-	</xsl:choose>
-      </xsl:attribute>
-      <roleName xml:lang="en">
-	<xsl:choose>
-	  <xsl:when test="@ref = '#DZ'">
-	    <xsl:text>MP</xsl:text>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:text>Member</xsl:text>
-	  </xsl:otherwise>
-	</xsl:choose>
-      </roleName>
       <xsl:apply-templates/>
+      <event xml:id="DZ.8" from="2018-06-22" to="2022-05-13">
+        <label xml:lang="sl">8. mandat</label>
+        <label xml:lang="en">Term 8</label>
+      </event>
     </xsl:copy>
   </xsl:template>
 
-       <!-- roleName note: several politicians still have affiliations from 1991/1992 and @ref values for committees (e.g., Pahor, Borut:          
-         <affiliation role="member"
-             ref="#DruzPolZb"
-             from="1990-05-08"
-             to="1992-12-22"
-             ana="#SK.11"> should this be removed (as ParlaMint does not include committees)?-->
+<!--Remove affiliations that are before the cutoffDate (2000), change role values to valid ones and add roleName-->  
+  <xsl:template match="tei:particDesc//tei:person//tei:affiliation">
+    <xsl:variable name="to" select="@to"/>
+    <xsl:choose>
+      <xsl:when test="$to &lt; $cutoffDate"/>
+      <xsl:otherwise>
+	<xsl:copy>
+	  <xsl:apply-templates select="@*"/>
+	  <xsl:attribute name="role">
+	    <xsl:choose>
+	      <xsl:when test="matches(@role,'^MP')">
+		<xsl:text>member</xsl:text>
+	      </xsl:when>
+	      <xsl:otherwise>
+		<xsl:value-of select="@role"/>
+	      </xsl:otherwise>
+	    </xsl:choose>
+	  </xsl:attribute>
+	  <roleName xml:lang="en">
+	    <xsl:choose>
+	      <xsl:when test="@ref = '#DZ'">
+		<xsl:text>MP</xsl:text>
+	      </xsl:when>
+	      <xsl:when test="@role = 'deputyHead'">
+		<xsl:text>Vice Chairman</xsl:text>
+	      </xsl:when>
+	      <xsl:otherwise>
+		<xsl:text>Member</xsl:text>
+	      </xsl:otherwise>
+	    </xsl:choose>
+	  </roleName>
+	  <xsl:apply-templates/>
+	</xsl:copy>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:if test="@ref='#GOV'">
+      <xsl:variable name="ref" select="@ref"/>
+      <xsl:variable name="from" select="@from"/>
+      <xsl:variable name="to" select="@to"/>
+      <xsl:variable name="ana" select="@ana"/>
+      <xsl:copy>
+	<xsl:apply-templates select="@*"/>
+	<xsl:attribute name="role">
+	  <xsl:text>member</xsl:text>
+	</xsl:attribute>
+	<xsl:attribute name="ref" select="$ref"/>
+	<xsl:attribute name="from" select="$from"/>
+	<xsl:attribute name="to" select="$to"/>
+	<xsl:attribute name="ana" select="$ana"/>
+	<roleName xml:lang="en">
+	  <xsl:text>Member</xsl:text>
+	</roleName>
+      </xsl:copy>
+    </xsl:if>
+  </xsl:template>
+
   <xsl:template match="tei:person[@xml:id='LampeAlenka']//tei:birth">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
