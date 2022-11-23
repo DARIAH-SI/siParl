@@ -477,6 +477,20 @@
     </xsl:copy>
   </xsl:template>
   
+  <xsl:template match="tei:org[@xml:id = 'party.SDZ-NDS']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.DLGV']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.DL']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.Lipa']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.LS']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.SKD']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.GAS']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.SND']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.ZS']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.SOPS']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.ZaSLD']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.Zares.1']" mode="unique"/>
+  <xsl:template match="tei:org[@xml:id = 'party.Zares.2']" mode="unique"/>
+
   
   <xsl:template name="listPerson">
     <listPerson xmlns="http://www.tei-c.org/ns/1.0">
