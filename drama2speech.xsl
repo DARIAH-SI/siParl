@@ -11,9 +11,11 @@
     <xsl:output method="xml" indent="yes"/>
     
     <!-- vstavi ob procesiranju nove verzije -->
-    <xsl:param name="edition">2.0</xsl:param>
+    <xsl:param name="edition">3.0</xsl:param>
     <!-- vstavim CLARIN.SI Handle, kjer bo korpus shranjen v repozitoriju -->
-    <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1300</xsl:param>
+    <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1748</xsl:param>
+    
+    <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
     
     <xsl:variable name="source-united-speaker-document">
         <xsl:copy-of select="document('speaker.xml')" copy-namespaces="no"/>
@@ -195,22 +197,6 @@
         <person name="Neja Blaj Hribar" ref="https://orcid.org/0000-0003-0606-6724"/>
     </xsl:variable>
     
-    <xsl:variable name="dz-pages">
-        <page n="SDZ1">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje/!ut/p/z1/lY5NDoIwFITPwgnea0tQlkWwNLQ04SfSbgwrQ6Lowqjx9DZx40aLs5vMfJkBBwO4ebxNh_E6nefx6L11yb6Spk0zwlE0MUVJqrRTWhGsEtiFCs7H-EUcA7x488v3TUq2KHsmYqY7RE2X8T8O_rcvCpL7gpalrDlFEYd46_nVx39RI8rSKGU2Pa4ZgxZsnoF9YEO6O1xOvdfwbHkUvQAaRujE/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OGN00IHOLLOCU0833=CZ6_KIOS9B1A0GR420I1K9TLML10K6=LA0=Ejavax.servlet.include.path_info!QCPSejeSejaPoDatumuView.jsp==/#Z7_KIOS9B1A0OGN00IHOLLOCU0833</page>
-        <page n="SDZ2">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje/!ut/p/z1/lY7NCsIwEISfpU-wm6ZUc4xat6FJA_3BJhfpSQpaPYiKT2_Aixdtndsw8zEDHjrwY38bDv11OI_9MXjn032hbC1WTCJVSYyKFaLRRjMsUthNFXyI8YskTvD05ufvW8G2qFpOCTcNoonn8T8O_rdPGduEglG5KmWMlEzxLvCLj_9UIqrcam3XLS45hxocgXtgxZo7XE5tUPesZRS9AAjWi7c!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OGN00IHOLLOCU0833=CZ6_KIOS9B1A0GR420I1K9TLML10K6=LA0=Ejavax.servlet.include.path_info!QCPSejeSejaPoDatumuView.jsp==/#Z7_KIOS9B1A0OGN00IHOLLOCU0833</page>
-        <page n="SDZ3">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje/!ut/p/z1/lY5LCsIwGITP0hP8k6ZUu4yvNDRpoA802UhXUtDqQlQ8vQE3brR1dsPMxwx52pEfult_6K79eeiOwTuf7gtl62zBBGSVxFCsyBptNEOR0nas4EOMLxIY4eWbn75vM7aBarlMuGkAE0_jfxz8b1-u2SoUjMpVKWLIZIx3gZ99_JcloHKrtV22mHNONbmc3AMVa-50ObVBu2ctougFSM4Raw!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OGN00IHOLLOCU0833=CZ6_KIOS9B1A0GR420I1K9TLML10K6=LA0=Ejavax.servlet.include.path_info!QCPSejeSejaPoDatumuView.jsp==/#Z7_KIOS9B1A0OGN00IHOLLOCU0833</page>
-        <page n="SDZ4">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje/!ut/p/z1/lY7NCsIwEISfpU-wm6ZUc4xa06VJA_3BJhfpSQpaPYiKT2_Aixdtndsw8zEDHjrwY38bDv11OI_9MXjn031BthYrJlFVSYzECtFooxkWKeymCj7E-EUSJ3j15ufvW8G2SC1XCTcNoonn8T8O_revMrYJBUM5lTJGlUzxLvCLj_-qRKTcam3XLS45hxocgXtgxZo7XE5tUPesZRS9AIiqOXw!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OGN00IHOLLOCU0833=CZ6_KIOS9B1A0GR420I1K9TLML10K6=LA0=Ejavax.servlet.include.path_info!QCPSejeSejaPoDatumuView.jsp==/#Z7_KIOS9B1A0OGN00IHOLLOCU0833</page>
-        <page n="SDZ5">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje/!ut/p/z1/lY5NDoIwFITPwgnea0vQLutfqbQ0oRBpN4aVIVF0YdR4epu4caPg7CYzX2YgQAth6G79obv256E7Ru9Dti-UdXxBBMoqpahIwWttNMEig91YIcQYv0jgCC_f_PR9y8kGVcNkykyNaOg0_sfB__blmqxiwahclYKiTMd4H_nZx39ZIqrcam2XDc4ZAwd-C_6BFanvcDk1Ue3TiSR5AcgHQUU!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OGN00IHOLLOCU0833=CZ6_KIOS9B1A0GR420I1K9TLML10K6=LA0=Ejavax.servlet.include.path_info!QCPSejeSejaPoDatumuView.jsp==/#Z7_KIOS9B1A0OGN00IHOLLOCU0833</page>
-        <page n="SDZ6">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje/!ut/p/z1/lY6xDoIwGISfhSf4_1KCMlbF0rSlCZRIuxgmQ6LoYNT49DZxcdHibZe7L3fgoQc_DbfxMFzH8zQcg3c-30th2mJFGPImS1EQWVilFUGZwy5W8CHGL2IY4fmbn79vCrJF0VGeUW0RdTqP_3Hwv31ekk0oaFGJmqXIsxjvAr_4-M9rRFEZpcy6wyWl0IKT4B7YEHuHy6kL6p8tS5IXCGNpUg!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OGN00IHOLLOCU0833=CZ6_KIOS9B1A0GR420I1K9TLML10K6=LA0=Ejavax.servlet.include.path_info!QCPSejeSejaPoDatumuView.jsp==/#Z7_KIOS9B1A0OGN00IHOLLOCU0833</page>
-        <page n="SDZ7">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje/!ut/p/z1/lY5LCsIwGITP0hP8k6ZUu4yvNDRpoA802UhXUtDqQlQ8vQE3brR1dsPMxwx52pEfult_6K79eeiOwTuf7gtl62zBBGSVxFCsyBptNEOR0nas4EOMLxIY4eWbn75vM7aBarlMuGkAE0_jfxz8b1-u2SoUjMpVKWLIZIx3gZ99_JcloHKrtV22mHNONTlN7oGKNXe6nNqg3bMWUfQCSF2wNw!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OGN00IHOLLOCU0833=CZ6_KIOS9B1A0GR420I1K9TLML10K6=LA0=Ejavax.servlet.include.path_info!QCPSejeSejaPoDatumuView.jsp==/#Z7_KIOS9B1A0OGN00IHOLLOCU0833</page>
-        <page n="SDT2">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDt/poDatumu/!ut/p/z1/pY7BCoJAFEW_xS947-mguByrGQedBEfNmU24CqGsRVT09c0yiiLp7i6cc7ngoAc3DZdxN5zH4zTsfbcu3haqMmlGHOWKlqhIq1yteYiSweYFqFnogSJtSl0SFjG4f3w5169SEqjaSLJIN4g6_M3HD-E49_8b4L7PW-8nT_-7PEGVG2KmE4QLBgasyMDesKbmCqdD69PfDQ-CBx96qus!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OVH70IHS14SVF10C4=CZ6_KIOS9B1A0GE1D0I1MIHINA20G4=LA0=Ejavax.servlet.include.path_info!QCPSejeSejeDTPoDatumuView.jsp==/#Z7_KIOS9B1A0OVH70IHS14SVF10C4</page>
-        <page n="SDT3">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDt/poDatumu/!ut/p/z1/pY7NCoJAFIWfxSe49-qguJx-HAcdBUfNmU3MKoSyFlHR0zfLKIqkszvwfYcDFgawk7uMO3cej5Pb-25svC1krdMFcRRrWqEkJXNZ8RAFg80L0LDQA0XalqokLGKw__hirl-nlKHsIsEi1SKq8DcfP4Tj3P9vgP0-b7yfPP3v8wRlronpPiNcMtBgKjA3bKi9wunQ-Qx3zYPgAXTf8Bo!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OVH70IHS14SVF10C4=CZ6_KIOS9B1A0GE1D0I1MIHINA20G4=LA0=Ejavax.servlet.include.path_info!QCPSejeSejeDTPoDatumuView.jsp==/#Z7_KIOS9B1A0OVH70IHS14SVF10C4</page>
-        <page n="SDT4">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDt/poDatumu/!ut/p/z1/pY7NCoJAFIWfxSe49-qguJx-HAedBEfNmY3MKoSyFlHR0zfLKIqkszvwfYcDFnqwk7uMO3cej5Pb-25sPBSy0umCOIo1rVCSkrnc8BAFg-0LULPQA0XalKokLGKw__hirl-llKFsI8Ei1SCq8DcfP4Tj3P9vgP0-b7yfPP3v8gRlronpLiNcMtBgKjA3rKm5wunQ-vR3zYPgAbS72A0!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OVH70IHS14SVF10C4=CZ6_KIOS9B1A0GE1D0I1MIHINA20G4=LA0=Ejavax.servlet.include.path_info!QCPSejeSejeDTPoDatumuView.jsp==/#Z7_KIOS9B1A0OVH70IHS14SVF10C4</page>
-        <page n="SDT5">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDt/poDatumu/!ut/p/z1/pY7LDoIwFES_hS-490IDYVkflKZUDAWk3RhWhkTRhVHj19ul0Wgkzm6ScyYDDjpwY38Zdv15OI793nfr4q2SpUlnxFEsaYGStMzliocoGGxegIqFHlBpXeiCUMXg_vHFVL9MKUPZRIJFukbU4W8-fgjHqf_fAPd93no_efrf5gnK3BAzbUY4Z2DArsHesKL6CqdD49PdDQ-CB7XptXg!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OVH70IHS14SVF10C4=CZ6_KIOS9B1A0GE1D0I1MIHINA20G4=LA0=Ejavax.servlet.include.path_info!QCPSejeSejeDTPoDatumuView.jsp==/#Z7_KIOS9B1A0OVH70IHS14SVF10C4</page>
-        <page n="SDT6">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDt/poDatumu/!ut/p/z1/pY7BCoJAFEW_xS947-mguBwrx0EnwVFzZhOzCqGsRVT09c0yiiLp7i6cc7lgYQA7ucu4c-fxOLm978bG21LWOs2Io1jREiUpWcg1D1Ew2LwADQs9UKZtpSrCMgb7jy_m-nVKOcouEixSLaIKf_PxQzjO_f8G2O_zxvvJ0_--SFAWmpjuc8IFAw2GZ2Bu2FB7hdOh8xnumgfBA7HiE50!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OVH70IHS14SVF10C4=CZ6_KIOS9B1A0GE1D0I1MIHINA20G4=LA0=Ejavax.servlet.include.path_info!QCPSejeSejeDTPoDatumuView.jsp==/#Z7_KIOS9B1A0OVH70IHS14SVF10C4</page>
-        <page n="SDT7">https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDt/poDatumu/!ut/p/z1/pY7BCoJAFEW_xS947-mguBwrx0EnwVFzZhOzCqGsRVT09c0yiiLp7i6cc7lgYQA7ucu4c-fxOLm978bG21LWOs2Io1jREiUpWcg1D1Ew2LwADQs9UKZtpSrCMgb7jy_m-nVKOcouEixSLaIKf_PxQzjO_f8G2O_zxvvJ0_--SFAWmpjuc8IFAw0my8DcsKH2CqdD5zPcNQ-CB4zb9us!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_KIOS9B1A0OVH70IHS14SVF10C4=CZ6_KIOS9B1A0GE1D0I1MIHINA20G4=LA0=Ejavax.servlet.include.path_info!QCPSejeSejeDTPoDatumuView.jsp==/#Z7_KIOS9B1A0OVH70IHS14SVF10C4</page>
-    </xsl:variable>
-    
     <xsl:template match="documentsList">
         <xsl:variable name="corpus-label" select="tokenize(ref[1],'/')[1]"/>
         <xsl:variable name="corpus-term" select="substring($corpus-label,4,4)"/>
@@ -271,8 +257,18 @@
                                     <resp xml:lang="en">Editing a list of speakers</resp>
                                 </respStmt>
                             </xsl:for-each-group>
-                            <funder>DARIAH-SI</funder>
-                            <funder>CLARIN.SI</funder>
+                            <funder>
+                                <orgName xml:lang="sl">Slovenska digitalna raziskovalna infrastruktura za umetnost in humanistiko DARIAH-SI</orgName>
+                                <orgName xml:lang="en">Slovenian Digital Research Infrastructure for the Arts and Humanities DARIAH-SI</orgName>
+                            </funder>
+                            <funder>
+                                <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                                <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                            </funder>
+                            <funder>
+                                <orgName xml:lang="sl">Razvoj slovenščine v digitalnem okolju RSDO</orgName>
+                                <orgName xml:lang="en">Development of Slovene in a Digital Environment RSDO</orgName>
+                            </funder>
                         </titleStmt>
                         <editionStmt>
                             <edition>
@@ -281,8 +277,12 @@
                         </editionStmt>
                         <extent>
                             <xsl:variable name="count-files" select="count(ref)"/>
-                            <measure unit="texts" quantity="{$count-files}">
-                                <xsl:value-of select="$count-files"/>
+                            <measure unit="texts" quantity="{$count-files}" xml:lang="sl">
+                                <xsl:value-of select="format-number($count-files,'###.###','euro')"/>
+                                <xsl:text> besedil</xsl:text>
+                            </measure>
+                            <measure unit="texts" quantity="{$count-files}" xml:lang="en">
+                                <xsl:value-of select="format-number($count-files,'###,###')"/>
                                 <xsl:text> texts</xsl:text>
                             </measure>
                             <!-- Štetje besed -->
@@ -295,24 +295,25 @@
                             </xsl:variable>
                             <xsl:variable name="compoundString" select="normalize-space(string-join($counting/tei:string,' '))"/>
                             <xsl:variable name="count-words" select="count(tokenize($compoundString,'\W+')[. != ''])"/>
-                            <measure unit="words" quantity="{$count-words}">
-                                <xsl:value-of select="$count-words"/>
+                            <measure unit="words" quantity="{$count-words}" xml:lang="sl">
+                                <xsl:value-of select="format-number($count-words,'###.###','euro')"/>
+                                <xsl:text> besed</xsl:text>
+                            </measure>
+                            <measure unit="words" quantity="{$count-words}" xml:lang="en">
+                                <xsl:value-of select="format-number($count-words,'###,###')"/>
                                 <xsl:text> words</xsl:text>
                             </measure>
                         </extent>
                         <publicationStmt>
                             <publisher>
-                                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
-                                <orgName xml:lang="en">Institute of Contemporary History</orgName>
-                                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-                                <email>inz@inz.si</email>
+                                <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                                <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                                <ref target="http://www.clarin.si">http://www.clarin.si</ref>
                             </publisher>
-                            <distributor>DARIAH-SI</distributor>
-                            <distributor>CLARIN.SI</distributor>
                             <xsl:if test="string-length($clarinHandle) gt 0">
-                                <pubPlace>
+                                <idno type="URI" subtype="handle">
                                     <xsl:value-of select="$clarinHandle"/>
-                                </pubPlace>
+                                </idno>
                             </xsl:if>
                             <availability status="free">
                                 <licence>http://creativecommons.org/licenses/by/4.0/</licence>
@@ -325,13 +326,9 @@
                         </publicationStmt>
                         <sourceDesc>
                             <bibl>
-                                <!-- Should be replaced with "Minutes of the National Assembly of the Republic of Slovenia"; not sure how this is done for speech; but for ParlaMint, 
-                                slv and eng version should be added.-->
-                                <title type="main">Website of the National Assembly</title>
-                                <title type="sub">Hansard</title>
-                                <idno type="URI">
-                                    <xsl:value-of select="$dz-pages/tei:page[@n=$corpus-label]"/>
-                                </idno>
+                                <title type="main" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia</title>
+                                <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
+                                <idno type="URI" subtype="parliament">https://www.dz-rs.si</idno>
                                 <date>
                                     <xsl:attribute name="from">
                                         <xsl:value-of select="$terms/tei:term[@n=$corpus-term]/@start"/>
@@ -462,6 +459,10 @@
                                             <label xml:lang="sl">7. mandat</label>
                                             <label xml:lang="en">Term 7</label>
                                         </event>
+                                        <event xml:id="DZ.8" from="2018-06-22" to="2022-05-12">
+                                            <label xml:lang="sl">8. mandat</label>
+                                            <label xml:lang="en">Term 8</label>
+                                        </event>
                                     </listEvent>
                                     <xsl:if test="matches($corpus-label,'^SDT')">
                                         <listOrg xml:id="workingBodies">
@@ -503,8 +504,10 @@
                             </listPerson>
                         </particDesc>
                         <langUsage>
-                            <language ident="sl">Slovenian</language>
-                            <language ident="en">English</language>
+                            <language ident="sl" xml:lang="sl">slovenski</language>
+                            <language ident="en" xml:lang="sl">angleški</language>
+                            <language ident="sl" xml:lang="en">Slovenian</language>
+                            <language ident="en" xml:lang="en">English</language>
                         </langUsage>
                     </profileDesc>
                 </teiHeader>
@@ -573,24 +576,27 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="tei:availability" mode="pass1">
-        <xsl:if test="string-length($clarinHandle) gt 0">
-            <pubPlace>
-                <xsl:value-of select="$clarinHandle"/>
-            </pubPlace>
-        </xsl:if>
-        <availability>
-            <xsl:apply-templates select="@*" mode="pass1"/>
-            <xsl:apply-templates mode="pass1"/>
-        </availability>
-    </xsl:template>
-    
-    <xsl:template match="tei:address" mode="pass1">
-        <!-- odstranim naslov INZ na Kongresnem trgu 1 -->
-    </xsl:template>
-    
-    <xsl:template match="tei:publicationStmt/tei:date" mode="pass1">
-        <date when="{current-date()}"><xsl:value-of select="format-date(current-date(),'[D1]. [M1]. [Y0001]')"/></date>
+    <xsl:template match="tei:publicationStmt" mode="pass1">
+        <publicationStmt>
+            <publisher>
+                <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                <ref target="http://www.clarin.si">http://www.clarin.si</ref>
+            </publisher>
+            <xsl:if test="string-length($clarinHandle) gt 0">
+                <idno type="URI" subtype="handle">
+                    <xsl:value-of select="$clarinHandle"/>
+                </idno>
+            </xsl:if>
+            <availability status="free">
+                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International License</ref>.</p>
+                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
+            </availability>
+            <date when="{current-date()}"><xsl:value-of select="format-date(current-date(),'[D1]. [M1]. [Y0001]')"/></date>
+        </publicationStmt>
     </xsl:template>
     
     <!-- prestavim uvodne podatke iz body v front -->
@@ -691,7 +697,7 @@
     
     <xsl:template match="tei:sourceDesc/tei:bibl" mode="pass1">
         <bibl>
-            <xsl:for-each select="ancestor::tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting">
+            <!--<xsl:for-each select="ancestor::tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting">
                 <xsl:variable name="workingGroup" select="substring-after(@who,'#')"/>
                 <title>
                     <xsl:if test="ancestor::tei:profileDesc/tei:particDesc/tei:listOrg/tei:org/tei:listOrg/tei:org[not(tei:orgName/@key='KKPD')]">
@@ -722,7 +728,9 @@
                     </xsl:choose>
                     <xsl:value-of select="concat(' (',format-date(tei:date/@when,'[D1]. [M1]. [Y0001]'),')')"/>
                 </title>
-            </xsl:for-each>
+            </xsl:for-each>-->
+            <title type="main" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia</title>
+            <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
             <xsl:choose>
                 <xsl:when test="@type='mag'">
                     <edition xml:lang="sl">Nepreverjen zapis seje</edition>
@@ -733,16 +741,18 @@
                     <edition xml:lang="en">Verified session record</edition>
                 </xsl:otherwise>
             </xsl:choose>
-            <date when="{ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting[1]/tei:date/@when}"/>
+            <date when="{ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting[1]/tei:date/@when}">
+                <xsl:value-of select="format-date(ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:setting[1]/tei:date/@when,'[D1]. [M1]. [Y0001]')"/>
+            </date>
             <xsl:for-each select="tei:idno[@type='URI'][matches(.,'https:')]">
-                <idno type="URI">
+                <idno type="URI" subtype="parliament">
                     <!-- pri skupnih sejah delovnih deles -->
-                    <xsl:if test="@corresp">
+                    <!--<xsl:if test="@corresp">
                         <xsl:attribute name="corresp">
-                            <!-- kaže na podatke o delovnem telesu v teiCorpus/teiHeader -->
+                            <!-\- kaže na podatke o delovnem telesu v teiCorpus/teiHeader -\->
                             <xsl:value-of select="concat('#',tokenize(@corresp,'\.')[last()])"/>
                         </xsl:attribute>
-                    </xsl:if>
+                    </xsl:if>-->
                     <xsl:value-of select="."/>
                 </idno>
             </xsl:for-each>

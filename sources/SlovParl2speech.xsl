@@ -11,9 +11,11 @@
     <xsl:output method="xml" indent="yes"/>
     
     <!-- vstavi ob procesiranju nove verzije -->
-    <xsl:param name="edition">2.0</xsl:param>
+    <xsl:param name="edition">3.0</xsl:param>
     <!-- vstavim CLARIN.SI Handle, kjer bo korpus shranjen v repozitoriju -->
-    <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1300</xsl:param>
+    <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1748</xsl:param>
+    
+    <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
     
     <xsl:variable name="source-united-speaker-document">
         <xsl:copy-of select="document('../speaker.xml')" copy-namespaces="no"/>
@@ -210,8 +212,18 @@
                                 <resp xml:lang="sl">Kodiranje TEI</resp>
                                 <resp xml:lang="en">TEI corpus encoding</resp>
                             </respStmt>
-                            <funder>DARIAH-SI</funder>
-                            <funder>CLARIN.SI</funder>
+                            <funder>
+                                <orgName xml:lang="sl">Slovenska digitalna raziskovalna infrastruktura za umetnost in humanistiko DARIAH-SI</orgName>
+                                <orgName xml:lang="en">Slovenian Digital Research Infrastructure for the Arts and Humanities DARIAH-SI</orgName>
+                            </funder>
+                            <funder>
+                                <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                                <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                            </funder>
+                            <funder>
+                                <orgName xml:lang="sl">Razvoj slovenščine v digitalnem okolju RSDO</orgName>
+                                <orgName xml:lang="en">Development of Slovene in a Digital Environment RSDO</orgName>
+                            </funder>
                         </titleStmt>
                         <editionStmt>
                             <edition>
@@ -220,8 +232,12 @@
                         </editionStmt>
                         <extent>
                             <xsl:variable name="count-files" select="count(ref)"/>
-                            <measure unit="texts" quantity="{$count-files}">
-                                <xsl:value-of select="$count-files"/>
+                            <measure unit="texts" quantity="{$count-files}" xml:lang="sl">
+                                <xsl:value-of select="format-number($count-files,'###.###','euro')"/>
+                                <xsl:text> besedil</xsl:text>
+                            </measure>
+                            <measure unit="texts" quantity="{$count-files}" xml:lang="en">
+                                <xsl:value-of select="format-number($count-files,'###,###')"/>
                                 <xsl:text> texts</xsl:text>
                             </measure>
                             <!-- Štetje besed -->
@@ -234,24 +250,25 @@
                             </xsl:variable>
                             <xsl:variable name="compoundString" select="normalize-space(string-join($counting/tei:string,' '))"/>
                             <xsl:variable name="count-words" select="count(tokenize($compoundString,'\W+')[. != ''])"/>
-                            <measure unit="words" quantity="{$count-words}">
-                                <xsl:value-of select="$count-words"/>
+                            <measure unit="words" quantity="{$count-words}" xml:lang="sl">
+                                <xsl:value-of select="format-number($count-words,'###.###','euro')"/>
+                                <xsl:text> besed</xsl:text>
+                            </measure>
+                            <measure unit="words" quantity="{$count-words}" xml:lang="en">
+                                <xsl:value-of select="format-number($count-words,'###,###')"/>
                                 <xsl:text> words</xsl:text>
                             </measure>
                         </extent>
                         <publicationStmt>
                             <publisher>
-                                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
-                                <orgName xml:lang="en">Institute of Contemporary History</orgName>
-                                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-                                <email>inz@inz.si</email>
+                                <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                                <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                                <ref target="http://www.clarin.si">http://www.clarin.si</ref>
                             </publisher>
-                            <distributor>DARIAH-SI</distributor>
-                            <distributor>CLARIN.SI</distributor>
                             <xsl:if test="string-length($clarinHandle) gt 0">
-                                <pubPlace>
+                                <idno type="URI" subtype="handle">
                                     <xsl:value-of select="$clarinHandle"/>
-                                </pubPlace>
+                                </idno>
                             </xsl:if>
                             <availability status="free">
                                 <licence>http://creativecommons.org/licenses/by/4.0/</licence>
@@ -264,12 +281,18 @@
                         </publicationStmt>
                         <sourceDesc>
                             <bibl>
-                                <title type="main">Slovenian parliamentary corpus SlovParl 2.0</title>
-                                <author>Andrej Pančur</author>
-                                <author>Mojca Šorn</author>
-                                <author>Tomaž Erjavec</author>
-                                <idno type="hdl">http://hdl.handle.net/11356/1167</idno>
-                                <distributor>Slovenian language resource repository CLARIN.SI</distributor>
+                                <title type="main" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia</title>
+                                <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
+                                <idno type="URI" subtype="parliament">https://www.dz-rs.si</idno>
+                                <date>
+                                    <xsl:attribute name="from">
+                                        <xsl:value-of select="$terms/tei:term[@n=$corpus-term]/@start"/>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="to">
+                                        <xsl:value-of select="$terms/tei:term[@n=$corpus-term]/@end"/>
+                                    </xsl:attribute>
+                                    
+                                </date>
                             </bibl>
                         </sourceDesc>
                     </fileDesc>
@@ -440,8 +463,10 @@
                             </listPerson>
                         </particDesc>
                         <langUsage>
-                            <language ident="sl">Slovenian</language>
-                            <language ident="en">English</language>
+                            <language ident="sl" xml:lang="sl">slovenski</language>
+                            <language ident="en" xml:lang="sl">angleški</language>
+                            <language ident="sl" xml:lang="en">Slovenian</language>
+                            <language ident="en" xml:lang="en">English</language>
                         </langUsage>
                     </profileDesc>
                 </teiHeader>
@@ -901,10 +926,10 @@
     </xsl:template>
     
     <xsl:template match="tei:gap[@n]" mode="pass1">
-        <gap reason="inaudible"/>
+        <gap reason="inaudible"><desc><xsl:value-of select="@n"/></desc></gap>
     </xsl:template>
     
-    <xsl:template match="tei:gap[tei:desc]" mode="pass1">
+    <!--<xsl:template match="tei:gap[tei:desc]" mode="pass1">
         <note>
             <xsl:value-of select="tei:desc"/>
         </note>
@@ -932,7 +957,7 @@
         <note>
             <xsl:value-of select="tei:desc"/>
         </note>
-    </xsl:template>
+    </xsl:template>-->
     
     <xsl:template match="@* | node()" mode="pass2">
         <xsl:copy>

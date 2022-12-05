@@ -12,9 +12,11 @@
     <xsl:output method="xml" indent="yes"/>
     
     <!-- vstavi ob procesiranju nove verzije -->
-    <xsl:param name="edition">2.0</xsl:param>
+    <xsl:param name="edition">3.0</xsl:param>
     <!-- vstavim CLARIN.SI Handle, kjer bo korpus shranjen v repozitoriju -->
-    <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1300</xsl:param>
+    <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1748</xsl:param>
+    
+    <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
     
     <xsl:variable name="source-united-speaker-document">
         <xsl:copy-of select="document('../speaker.xml')" copy-namespaces="no"/>
@@ -30,8 +32,8 @@
                             <title xml:lang="en" type="main">Slovenian parliamentary corpus siParl</title>
                             <title type="sub" xml:lang="sl">Skupščina Republike Slovenije: 11. mandat (1990-1992)</title>
                             <title type="sub" xml:lang="en">Assembly of the Republic of Slovenia: 11th legislative period 1990-1992</title>
-                            <title type="sub" xml:lang="sl">Državni zbor Republik Slovenije: od 1. do 7. mandata (1992-2018)</title>
-                            <title type="sub" xml:lang="en">National Assembly of the Republic of Slovenia: from the 1st to the 7th legislative period 1992-2018</title>
+                            <title type="sub" xml:lang="sl">Državni zbor Republik Slovenije: od 1. do 8. mandata (1992-2022)</title>
+                            <title type="sub" xml:lang="en">National Assembly of the Republic of Slovenia: from the 1st to the 8th legislative period 1992-2022</title>
                             <title type="sub" xml:lang="sl">Delovna telesa Državnega zbora Republike Slovenije: od 2. do 7. mandata (1996-2018)</title>
                             <title type="sub" xml:lang="en">Working bodies of the National Assembly of the Republic of Slovenia: from the 2nd to the 7th legislative period 1996-2018</title>
                             <title type="sub" xml:lang="sl">Kolegij predsednika Državnega zbora Republike Slovenije: od 2. do 7. mandata (1996-2018)</title>
@@ -41,33 +43,18 @@
                                     <xsl:value-of select="current-group()[1]"/>
                                 </meeting>
                             </xsl:for-each-group>
-                            <respStmt>
-                                <persName>Andrej Pančur</persName>
-                                <resp xml:lang="sl">Kodiranje TEI</resp>
-                                <resp xml:lang="en">TEI corpus encoding</resp>
-                            </respStmt>
-                            <respStmt>
-                                <persName>Mojca Šorn</persName>
-                                <resp xml:lang="sl">Kodiranje TEI</resp>
-                                <resp xml:lang="en">TEI corpus encoding</resp>
-                            </respStmt>
-                            <respStmt>
-                                <persName>Andrej Pančur</persName>
-                                <resp xml:lang="sl">Urejanje seznama govornikov</resp>
-                                <resp xml:lang="en">Editing a list of speakers</resp>
-                            </respStmt>
-                            <respStmt>
-                                <persName>Mihael Ojsteršek</persName>
-                                <resp xml:lang="sl">Urejanje seznama govornikov</resp>
-                                <resp xml:lang="en">Editing a list of speakers</resp>
-                            </respStmt>
-                            <respStmt>
-                                <persName>Neja Blaj Hribar</persName>
-                                <resp xml:lang="sl">Urejanje seznama govornikov</resp>
-                                <resp xml:lang="en">Editing a list of speakers</resp>
-                            </respStmt>
-                            <funder>DARIAH-SI</funder>
-                            <funder>CLARIN.SI</funder>
+                            <funder>
+                                <orgName xml:lang="sl">Slovenska digitalna raziskovalna infrastruktura za umetnost in humanistiko DARIAH-SI</orgName>
+                                <orgName xml:lang="en">Slovenian Digital Research Infrastructure for the Arts and Humanities DARIAH-SI</orgName>
+                            </funder>
+                            <funder>
+                                <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                                <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                            </funder>
+                            <funder>
+                                <orgName xml:lang="sl">Razvoj slovenščine v digitalnem okolju RSDO</orgName>
+                                <orgName xml:lang="en">Development of Slovene in a Digital Environment RSDO</orgName>
+                            </funder>
                         </titleStmt>
                         <editionStmt>
                             <edition>
@@ -76,7 +63,7 @@
                         </editionStmt>
                         <extent>
                             <xsl:variable name="measures">
-                                <xsl:for-each select="folder/teiHeader/fileDesc/extent/measure">
+                                <xsl:for-each select="folder/teiHeader/fileDesc/extent/measure[@xml:lang='sl']">
                                     <xsl:choose>
                                         <xsl:when test="@unit='texts'">
                                             <texts>
@@ -94,28 +81,48 @@
                                     </xsl:choose>
                                 </xsl:for-each>
                             </xsl:variable>
+                            <xsl:variable name="speeches">
+                                <xsl:for-each select="folder/teiHeader/encodingDesc/tagsDecl/namespace/tagUsage[@gi='u']">
+                                    <speech>
+                                        <xsl:value-of select="@occurs"/>
+                                    </speech>
+                                </xsl:for-each>
+                            </xsl:variable>
+                            <measure unit="texts" quantity="{sum($measures/tei:texts)}" xml:lang="sl">
+                                <xsl:value-of select="format-number(sum($measures/tei:texts),'###.###','euro')"/>
+                                <xsl:text> besedil</xsl:text>
+                            </measure>
                             <measure unit="texts" quantity="{sum($measures/tei:texts)}" xml:lang="en">
-                                <xsl:value-of select="format-number(sum($measures/tei:texts),'#,###')"/>
+                                <xsl:value-of select="format-number(sum($measures/tei:texts),'###,###')"/>
                                 <xsl:text> texts</xsl:text>
                             </measure>
-                            <measure unit="words" quantity="{format-number(sum($measures/tei:words),'#')}" xml:lang="en">
-                                <xsl:value-of select="format-number(sum($measures/tei:words),'#,###')"/>
+                            <measure unit="speeches" quantity="{sum($speeches/tei:speech)}" xml:lang="sl">
+                                <xsl:value-of select="format-number(sum($speeches/tei:speech),'###.###','euro')"/>
+                                <xsl:text> govorov</xsl:text>
+                            </measure>
+                            <measure unit="speeches" quantity="{sum($speeches/tei:speech)}" xml:lang="en">
+                                <xsl:value-of select="format-number(sum($speeches/tei:speech),'###,###')"/>
+                                <xsl:text> speeches</xsl:text>
+                            </measure>
+                            <measure unit="words" quantity="{sum($measures/tei:words)}" xml:lang="sl">
+                                <xsl:value-of select="format-number(sum($measures/tei:words),'###.###','euro')"/>
+                                <xsl:text> besed</xsl:text>
+                            </measure>
+                            <measure unit="words" quantity="{sum($measures/tei:words)}" xml:lang="en">
+                                <xsl:value-of select="format-number(sum($measures/tei:words),'###,###')"/>
                                 <xsl:text> words</xsl:text>
                             </measure>
                         </extent>
                         <publicationStmt>
                             <publisher>
-                                <orgName xml:lang="sl">Inštitut za novejšo zgodovino</orgName>
-                                <orgName xml:lang="en">Institute of Contemporary History</orgName>
-                                <ref target="http://www.inz.si/">http://www.inz.si/</ref>
-                                <email>inz@inz.si</email>
+                                <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                                <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                                <ref target="http://www.clarin.si">http://www.clarin.si</ref>
                             </publisher>
-                            <distributor>DARIAH-SI</distributor>
-                            <distributor>CLARIN.SI</distributor>
                             <xsl:if test="string-length($clarinHandle) gt 0">
-                                <pubPlace>
+                                <idno type="URI" subtype="handle">
                                     <xsl:value-of select="$clarinHandle"/>
-                                </pubPlace>
+                                </idno>
                             </xsl:if>
                             <availability status="free">
                                 <licence>http://creativecommons.org/licenses/by/4.0/</licence>
@@ -124,20 +131,35 @@
                                 <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
                                     Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
                             </availability>
-                            <date when="{current-date()}">
-                                <xsl:value-of select="format-date(current-date(),'[D1]. [M1]. [Y0001]')"/>
-                            </date>
+                            <date when="{current-date()}"><xsl:value-of select="format-date(current-date(),'[D1]. [M1]. [Y0001]')"/></date>
                         </publicationStmt>
                         <sourceDesc>
                             <bibl>
-                                <title type="main">Website of the National Assembly</title>
-                                <title type="sub">Hansard</title>
-                                <idno type="URI">https://www.dz-rs.si</idno>
-                                <date from="1990-05-05" to="2018-06-22"/>
+                                <title type="main" xml:lang="en">Minutes of the National Assembly of the Republic of Slovenia</title>
+                                <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
+                                <idno type="URI" subtype="parliament">https://www.dz-rs.si</idno>
+                                <date from="1990-05-05" to="2022-05-13"/>
                             </bibl>
                         </sourceDesc>
                     </fileDesc>
                     <encodingDesc>
+                        <editorialDecl>
+                            <correction>
+                                <p xml:lang="en">No correction of source texts was performed.</p>
+                            </correction>
+                            <normalization>
+                                <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+                            </normalization>
+                            <hyphenation>
+                                <p xml:lang="en">No end-of-line hyphens were present in the source.</p>
+                            </hyphenation>
+                            <quotation>
+                                <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+                            </quotation>
+                            <segmentation>
+                                <p xml:lang="en">The texts are segmented into utterances (speeches) and segments (corresponding to paragraphs in the source transcription).</p>
+                            </segmentation>
+                        </editorialDecl>
                         <tagsDecl>
                             <namespace name="http://www.tei-c.org/ns/1.0">
                                 <xsl:for-each-group select="//tagUsage" group-by="@gi">
@@ -303,7 +325,7 @@
                         <abstract>
                             <p xml:lang="en">The siParl corpus contains minutes of the Assembly of the Republic of Slovenia 
                                 for 11th legislative period 1990-1992, minutes of the National Assembly of the Republic of Slovenia
-                                from the 1st to the 7th legislative period 1992-2018, minutes of the working bodies of the National
+                                from the 1st to the 8th legislative period 1992-2022, minutes of the working bodies of the National
                                 Assembly of the Republic of Slovenia from the 2nd to the 7th legislative period 1996-2018,
                                 and minutes of the the Council of the President of the National Assembly
                                 from the 2nd to the 7th legislative period 1996-2018.</p>
@@ -313,8 +335,8 @@
                                 <name type="city">Ljubljana</name>
                                 <name type="country" key="YU" from="1990-05-05" to="1991-06-25">Yugoslavia</name>
                                 <name type="region" from="1990-05-05" to="1991-06-25">Slovenia</name>
-                                <name type="country" key="SI" from="1991-06-25" to="2018-06-22">Slovenia</name>
-                                <date from="1990-05-05" to="2018-06-22"/>
+                                <name type="country" key="SI" from="1991-06-25" to="2022-05-13">Slovenia</name>
+                                <date from="1990-05-05" to="2022-05-13"/>
                             </setting>
                         </settingDesc>
                         <particDesc>
@@ -400,6 +422,10 @@
                                             <label xml:lang="sl">7. mandat</label>
                                             <label xml:lang="en">Term 7</label>
                                         </event>
+                                        <event xml:id="DZ.8" from="2018-06-22" to="2022-05-12">
+                                            <label xml:lang="sl">8. mandat</label>
+                                            <label xml:lang="en">Term 8</label>
+                                        </event>
                                     </listEvent>
                                     <listOrg xml:id="workingBodies">
                                         <head xml:lang="sl">Delovna telesa Državnega zbora Republike Slovenije</head>
@@ -432,8 +458,10 @@
                             </listPerson>
                         </particDesc>
                         <langUsage>
-                            <language ident="sl">Slovenian</language>
-                            <language ident="en">English</language>
+                            <language ident="sl" xml:lang="sl">slovenski</language>
+                            <language ident="en" xml:lang="sl">angleški</language>
+                            <language ident="sl" xml:lang="en">Slovenian</language>
+                            <language ident="en" xml:lang="en">English</language>
                         </langUsage>
                     </profileDesc>
                 </teiHeader>
