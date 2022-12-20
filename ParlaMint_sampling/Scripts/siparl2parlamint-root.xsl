@@ -602,33 +602,39 @@
       <xsl:apply-templates select="@*"/>
       <xsl:copy-of select="tei:*[not(self::tei:affiliation)]"/>
       <xsl:copy-of select="tei:*[self::tei:affiliation]"/>
-      <xsl:apply-templates select="tei:affiliation[@ref='#GOV']" mode="unique3"/>
+      <xsl:apply-templates select="tei:affiliation[@ref='#GOV']" mode="member"/>
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="tei:affiliation" mode="unique3">
-    <xsl:variable name="from" select="@from"/>
-    <xsl:variable name="to" select="@to"/>
-    <xsl:variable name="role" select="@role"/>
-    <xsl:variable name="siblings" select="preceding-sibling::tei:affiliation[@ref='#GOV'] |
-					 following-sibling::tei:affiliation[@ref='#GOV']"/>
-    
-    <xsl:apply-templates select="$siblings[1]" mode="unique4">
-      <xsl:with-param name="from" select="$from"/>
-      <xsl:with-param name="to" select="$to"/>
-      <xsl:with-param name="role" select="$role"/>
-    </xsl:apply-templates>
+  <xsl:template match="tei:affiliation" mode="member">
+    <xsl:call-template name="member">
+      <xsl:with-param name="from" select="@from"/>
+      <xsl:with-param name="to" select="@to"/>
+      <xsl:with-param name="role" select="@role"/>
+      <xsl:with-param name="siblings"
+		      select="preceding-sibling::tei:affiliation[@ref='#GOV'] |
+			      following-sibling::tei:affiliation[@ref='#GOV']"/>
+    </xsl:call-template>
   </xsl:template>
 
-  <xsl:template match="tei:affiliation" mode="unique4">
+  <xsl:template name="member">
     <xsl:param name="from" as="xs:date"/>
     <xsl:param name="to" as="xs:date"/>
     <xsl:param name="role"/>
+    <xsl:param name="siblings"/>
+    <xsl:variable name="first-sibling" select="$siblings[1]"/>
+    <xsl:variable name="rest-siblings" select="$siblings[position() &gt; 1]"/>
     <xsl:message select="concat('INFO: ', $role, ' from = ', $from, ' to = ', $to)"/>
     <xsl:choose>
-      <xsl:when test="following-sibling::tei:affiliation">
-	<xsl:variable name="from-this" select="@from" as="xs:date"/>
-	<xsl:variable name="to-this" select="@to" as="xs:date"/>
+      <xsl:when test="not($siblings/self::tei:affiliation)">
+	<xsl:message select="concat('MEMBER: Applying Member affiliation: ', $from, ', ', $to)"/>
+	<affiliation role="member" ref="#GOV" from="{$from}" to="{$to}">
+	  <roleName>Member</roleName>
+	</affiliation>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:variable name="from-this" select="$first-sibling/@from" as="xs:date"/>
+	<xsl:variable name="to-this" select="$first-sibling/@to" as="xs:date"/>
 	<xsl:message select="concat('INFO: ',
 			     $role,
 			     ' from = ', $from, ' to = ', $to, 
@@ -637,33 +643,37 @@
 	<xsl:choose>
 	  <!--Outside the scope; both lower than from-->
 	  <xsl:when test="$from-this &lt; $from and $to-this &lt; $from">
-	    <xsl:apply-templates select="following-sibling::tei:affiliation[1]" mode="unique4">
+	    <xsl:call-template name="member">
 	      <xsl:with-param name="from" select="$from"/>
 	      <xsl:with-param name="to" select="$to"/>
-	    </xsl:apply-templates>
+	      <xsl:with-param name="siblings" select="$rest-siblings"/>
+	    </xsl:call-template>
 	  </xsl:when>
 	  <!--Outside the scope: both greater than to -->
 	  <xsl:when test="$from-this &gt; $to and $to-this &gt; $to">
 	    <xsl:apply-templates select="following-sibling::tei:affiliation[1]" mode="unique4">
 	      <xsl:with-param name="from" select="$from"/>
 	      <xsl:with-param name="to" select="$to"/>
+	      <xsl:with-param name="siblings" select="$rest-siblings"/>
 	    </xsl:apply-templates>
 	  </xsl:when>
 	  <!-- Inside the term/Identical terms-->
 	  <xsl:when test="$from-this &gt;= $from and $to-this &lt;= $to">
-	    <xsl:apply-templates select="following-sibling::tei:affiliation[1]" mode="unique4">
+	    <xsl:call-template name="member">
 	      <xsl:with-param name="from" select="$from"/>
 	      <xsl:with-param name="to" select="$to"/>
-	    </xsl:apply-templates>
+	      <xsl:with-param name="siblings" select="$rest-siblings"/>
+	    </xsl:call-template>
 	  </xsl:when>
 	  <!-- Longer than the term-->
 	  <xsl:when test="$from-this &lt;= $from and $to-this &gt;= $to"/>
 	  <!-- Slightly coincide-->
 	  <xsl:when test="$from-this &lt;  $from and $to-this &lt;= $to">
-	    <xsl:apply-templates select="following-sibling::tei:affiliation[1]" mode="unique4">
+	    <xsl:call-template name="member">
 	      <xsl:with-param name="from" select="$from-this"/>
 	      <xsl:with-param name="to" select="$to"/>
-	    </xsl:apply-templates>
+	      <xsl:with-param name="siblings" select="$rest-siblings"/>
+	    </xsl:call-template>
 	  </xsl:when>
 	  <xsl:when test="$from-this &gt;=  $from and $to-this &gt; $to"/>
 	  <xsl:otherwise>
@@ -673,12 +683,6 @@
 				 )"/>
 	  </xsl:otherwise>
 	</xsl:choose>
-      </xsl:when>
-      <xsl:otherwise>
-	<xsl:message select="concat('MEMBER: Applying Member affiliation: ', $from, ', ', $to)"/>
-	<affiliation role="member" ref="#GOV" from="{$from}" to="{$to}">
-	  <roleName>Member</roleName>
-	</affiliation>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
