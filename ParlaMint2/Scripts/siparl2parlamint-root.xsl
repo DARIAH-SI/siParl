@@ -31,6 +31,7 @@
   <xsl:variable name="today" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
   <xsl:decimal-format name="slv" decimal-separator="," grouping-separator="."/>
 
+
   <!-- The teiHeaders of each term -->
   <xsl:variable name="teiHeaders">
     <xsl:for-each select="mappings/source">
@@ -171,10 +172,11 @@
       </xsl:choose>
     </xsl:attribute>
   </xsl:template>
-    
- <!-- Copy rest to output -->
- <xsl:template match="tei:*">
-   <xsl:copy>
+
+  
+  <!-- Copy rest to output -->
+  <xsl:template match="tei:*">
+    <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
     </xsl:copy>
@@ -249,24 +251,26 @@
 	</edition>
       </editionStmt>
       <extent>
+	<!-- for the words count: the value is a sum from SDZ7 + SD8 word count; this value is therefore the word count of the entire corpus-->
 	<xsl:variable name="words" select="sum($teiHeaders//tei:fileDesc/tei:extent/
 					   tei:measure[@unit='words']/@quantity)"/>
-	<!-- Note that ParlaMint expects speeches (and words from .ana) -->
-        <!-- measure unit="texts" quantity="{$texts}">
-	  <xsl:value-of select="format-number($texts,'###.###', 'slv')"/>
-	  <xsl:text> besedil</xsl:text>
-	</measure>
-        <measure unit="texts" quantity="{$texts}" xml:lang="en">
-	  <xsl:value-of select="format-number($texts, '###,###')"/>
-	  <xsl:text> texts</xsl:text>
-	</measure-->
-        <measure unit="words" quantity="{format-number($words, '#')}">
+	<xsl:variable name="speeches" select="sum($teiHeaders//tei:fileDesc/tei:extent/
+					   tei:measure[@unit='texts']/@quantity)"/>
+	<measure unit="words" quantity="{format-number($words, '#')}" xml:lang="sl">
 	  <xsl:value-of select="format-number($words, '###.###', 'slv')"/>
 	  <xsl:text> besed</xsl:text>
 	</measure>
-        <measure unit="words" quantity="{format-number($words, '#')}" xml:lang="en">
+	<measure unit="words" quantity="{format-number($words, '#')}" xml:lang="en">
 	  <xsl:value-of select="format-number($words, '###,###')"/>
 	  <xsl:text> words</xsl:text>
+	</measure>
+	<measure unit="speeches" quantity="{format-number($speeches, '#')}" xml:lang="sl">
+	  <xsl:value-of select="format-number($speeches, '###.###', 'slv')"/>
+	  <xsl:text> besedil</xsl:text>
+	</measure>
+	<measure unit="speeches" quantity="{format-number($speeches, '#')}" xml:lang="en">
+	  <xsl:value-of select="format-number($speeches, '###,###')"/>
+	  <xsl:text> speeches</xsl:text>
 	</measure>
       </extent>
       <publicationStmt>
@@ -394,6 +398,27 @@
     <listOrg xmlns="http://www.tei-c.org/ns/1.0">
       <!-- Need to collect all unique organisations here -->
       <xsl:apply-templates mode="unique" select="$teiHeaders//tei:org"/>
+    <listRelation>
+      <relation name="renaming" active="#party.SMC.2" passive="#party.SMC.1"
+                when="2015-03-07"/>
+      <relation name="successor" active="#party.Levica.2" passive="#party.Levica.1"
+                when="2017-06-24"/>
+      <relation name="renaming" active="#party.ZaSLD" passive="#party.ZaAB"
+                when="2016-05-21"/>
+      <relation name="renaming" active="#party.SAB" passive="#party.ZaSLD"
+                when="2017-10-07"/>
+      <relation name="renaming" mutual="#party.SMC.2 #party.GAS" when="2021-12-04"/>
+      <relation name="coalition" mutual="#party.PS #party.SD #party.DL #party.DeSUS"
+                from="2013-03-20" to="2014-09-18" ana="#GOV.11"/>
+      <relation name="coalition"
+                mutual="#party.SMC.1 #party.SMC.2 #party.SD #party.DeSUS" from="2014-09-18"
+                to="2018-09-12" ana="#GOV.12"/>
+      <relation name="opposition" mutual="#party.SDS.2 #party.IMNS #party.ZaAB #party.NeP #party.NP #party.NSi #party.Levica.1 #party.Levica.2" from="2014-09-18" to="2018-09-12" ana="#GOV.12"/>
+      <relation name="coalition" mutual="#party.LMŠ #party.SMC.2 #party.SD #party.SAB #party.DeSUS" from="2018-09-13" to="2020-03-12" ana="#GOV.13"/>
+       <relation name="opposition" mutual="#party.SDS.2 #party.Levica.2 #party.NSi #party.NeP #party.NP #party.IMNS #party.SNS" from="2018-09-13" to="2020-03-12" ana="#GOV.13"/>
+       <relation name="coalition" mutual="#party.SDS.2 #party.SMC.2 #party.Konkretno #party.NSi #party.DeSUS" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+       <relation name="opposition" mutual="#party.LMŠ #party.SD #party.SAB #party.Levica.2 #party.NeP #party.NP #party.IMNS #party.SNS" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+    </listRelation>
     </listOrg>
   </xsl:template>
 
@@ -445,7 +470,7 @@
   <!--Remove Chambers from the listOrg -->
   <xsl:template match="tei:particDesc//tei:listOrg[@xml:id = 'chambers']"/>
   <xsl:template match="tei:particDesc//tei:org[@ana = '#par.chamber']"/>
-
+ 
   
   <!-- Change value of @role to new, valid ones-->
   <xsl:template match="tei:particDesc//tei:listOrg//tei:org">
@@ -476,7 +501,7 @@
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
-  
+
   <xsl:template match="tei:org[@xml:id = 'party.SDZ-NDS']" mode="unique"/>
   <xsl:template match="tei:org[@xml:id = 'party.DLGV']" mode="unique"/>
   <xsl:template match="tei:org[@xml:id = 'party.DL']" mode="unique"/>
@@ -490,7 +515,7 @@
   <xsl:template match="tei:org[@xml:id = 'party.ZaSLD']" mode="unique"/>
   <xsl:template match="tei:org[@xml:id = 'party.Zares.1']" mode="unique"/>
   <xsl:template match="tei:org[@xml:id = 'party.Zares.2']" mode="unique"/>
-
+  
   
   <xsl:template name="listPerson">
     <listPerson xmlns="http://www.tei-c.org/ns/1.0">
@@ -510,6 +535,7 @@
 
   <!--Remove unknown speaker(s) from the listPerson-->
   <xsl:template match="tei:person[@xml:id = 'unknown-M']"/>
+
   
   <xsl:template match="tei:listPerson//tei:person//tei:idno">
     <xsl:variable name="lang" select="@xml:lang"/>
@@ -545,7 +571,7 @@
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
-  
+
   <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:idno">
     <idno type="URI" xml:lang="sl" subtype="wikimedia">https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
     <idno type="URI" xml:lang="en" subtype="wikimedia">https://en.wikipedia.org/wiki/National_Assembly_(Slovenia)</idno>
@@ -562,7 +588,7 @@
     </xsl:copy>
   </xsl:template>
 
-<!--Remove affiliations that are before the cutoffDate (2000), change role values to valid ones and add roleName-->  
+  <!---Change value of attribute "role" of speakers to valid ones and add roleName -->
   <xsl:template match="tei:particDesc//tei:person//tei:affiliation">
     <xsl:variable name="to" select="@to"/>
     <xsl:choose>

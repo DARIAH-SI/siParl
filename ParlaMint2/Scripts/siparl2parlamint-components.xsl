@@ -18,7 +18,7 @@
   <xsl:param name="covid-date" as="xs:date">2019-11-01</xsl:param>
 
   
-  <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
+  <xsl:decimal-format name="slv" decimal-separator="," grouping-separator="."/>
   
   <!-- Not sure if we need this, leaving it here for now: -->
   <xsl:variable name="terms">
@@ -71,11 +71,31 @@
 	<xsl:value-of select="$edition"/>
       </edition>
     </editionStmt>
-    <extent><!--These numbers do not reflect the size of the sample!-->
-      <measure unit="speeches" quantity="0" xml:lang="sl">0 govorov</measure>
-      <measure unit="speeches" quantity="0" xml:lang="en">0 speeches</measure>
-      <measure unit="words" quantity="0" xml:lang="sl">0 besed</measure>
-      <measure unit="words" quantity="0" xml:lang="en">0 words</measure>
+    <extent>
+      <xsl:variable name="count-u" select="count(ancestor::tei:TEI/tei:text//tei:u)"/>
+      <xsl:variable name="counting">
+        <string>
+          <xsl:apply-templates select="ancestor::tei:TEI/tei:text"/>
+        </string>
+      </xsl:variable>
+      <xsl:variable name="compoundString" select="normalize-space(string-join($counting/tei:string,' '))"/>
+      <xsl:variable name="count-words" select="count(tokenize($compoundString,'\W+')[. != ''])"/>
+      <measure unit="speeches" quantity="{format-number($count-u, '#')}" xml:lang="sl">
+        <xsl:value-of select="format-number($count-u,'###.###', 'slv')"/>
+        <xsl:text> govorov</xsl:text>
+      </measure>
+      <measure unit="speeches" quantity="{format-number($count-u, '#')}" xml:lang="en">
+        <xsl:value-of select="format-number($count-u,'###,###')"/>
+        <xsl:text> speeches</xsl:text>
+      </measure>
+      <measure unit="words" quantity="{format-number($count-words, '#')}" xml:lang="sl">
+	<xsl:value-of select="format-number($count-words,'###.###', 'slv')"/>
+        <xsl:text> besed</xsl:text>
+      </measure>
+      <measure unit="words" quantity="{format-number($count-words, '#')}" xml:lang="en">
+	<xsl:value-of select="format-number($count-words,'###,###')"/>
+        <xsl:text> words</xsl:text>
+      </measure>
     </extent>
   </xsl:template>
   
@@ -259,7 +279,6 @@
     <xsl:apply-templates/>
   </xsl:template>
   
-
   <xsl:template match="tei:text">
     <xsl:copy>
       <xsl:attribute name="ana">
@@ -279,7 +298,7 @@
 
   <!-- Remove unknown speaker utterances-->
   <xsl:template match="tei:u[@who='#unknown-M']"/>
-  
+
   
   <xsl:template match="tei:text//tei:note">
     <xsl:choose>
@@ -298,11 +317,13 @@
 	</xsl:copy>
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>  
-  
-  <!-- Copy rest to output -->
-  <xsl:template match="tei:*">
-    <xsl:copy>
+  </xsl:template>
+
+   
+ 
+ <!-- Copy rest to output -->
+ <xsl:template match="tei:*">
+   <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
     </xsl:copy>
@@ -310,7 +331,7 @@
   <xsl:template match="@*">
     <xsl:copy/>
   </xsl:template>
-  
+
   <!-- Pass2 processing -->
   
   <xsl:template mode="pass2" match="tei:TEI">
