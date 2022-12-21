@@ -572,33 +572,26 @@
     <listPerson xmlns="http://www.tei-c.org/ns/1.0">
       <head xml:lang="sl">Seznam govornikov</head>
       <head xml:lang="en">List of speakers</head>
-      <!--Add all unique speakers-->
-      <xsl:apply-templates mode="unique2" select="$teiHeaders//tei:person"/>
+      <xsl:apply-templates select="$teiHeaders//tei:person"/>
     </listPerson>
   </xsl:template>
   
-  <xsl:template match="tei:person" mode="unique2">
+  <!-- Add all unique non-anonymous speakers -->
+  <xsl:template match="tei:person[contains(@xml:id, 'unknown')]"/>
+  <xsl:template match="tei:person">
     <xsl:variable name="id" select="@xml:id"/>
     <xsl:if test="not(preceding::tei:person[@xml:id = $id])">
-      <xsl:variable name="pass1">
-	<xsl:apply-templates select="."/>
-      </xsl:variable>
-      <xsl:apply-templates mode="unique3" select="$pass1"/>
+      <xsl:copy>
+	<xsl:apply-templates select="@*"/>
+	<xsl:copy-of select="tei:*[not(self::tei:affiliation)]"/>
+	<xsl:copy-of select="tei:*[self::tei:affiliation]"/>
+	<xsl:variable name="gov-member-affiliations">
+	  <xsl:apply-templates select="tei:affiliation[@ref='#GOV']" mode="member"/>
+	</xsl:variable>
+	<!--xsl:copy-of select="$gov-member-affiliations"/-->
+	<xsl:apply-templates select="$gov-member-affiliations" mode="uniq"/>
+      </xsl:copy>
     </xsl:if>
-  </xsl:template>
-
-  <xsl:template match="tei:person" mode="unique3">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:copy-of select="tei:*[not(self::tei:affiliation)]"/>
-      <xsl:copy-of select="tei:*[self::tei:affiliation]"/>
-      <!-- Insert members of ref="#GOV"-->
-      <xsl:variable name="affiliations">
-	<xsl:apply-templates select="tei:affiliation[@ref='#GOV']" mode="member"/>
-      </xsl:variable>
-      <!-- Remove duplicates -->
-      <xsl:apply-templates select="$affiliations" mode="uniq"/>
-    </xsl:copy>
   </xsl:template>
 
   <xsl:template match="tei:affiliation" mode="member">
@@ -616,18 +609,17 @@
     </xsl:if>
   </xsl:template>
   
-
   <xsl:template name="member">
     <xsl:param name="this"/>
     <xsl:param name="siblings"/>
-    <xsl:variable name="from" select="$this/@from"/>
-    <xsl:variable name="to" select="$this/@to"/>
+    <xsl:param name="from" select="$this/@from"/>
+    <xsl:param name="to" select="$this/@to"/>
     <xsl:variable name="first" select="$siblings[1]"/>
     <xsl:variable name="rest" select="$siblings[position() &gt; 1]"/>
     <xsl:message select="concat('INFO: from = ', $from, ' to = ', $to)"/>
     <xsl:choose>
       <xsl:when test="not($siblings/self::tei:affiliation)">
-	<xsl:message select="concat('MEMBER: Applying member affiliation: ', $from, ', ', $to)"/>
+	<xsl:message select="concat('MEMBER: Applying member affiliation: ', $from, ' -- ', $to)"/>
 	<affiliation role="member" ref="#GOV" from="{$from}" to="{$to}">
 	  <roleName>Member</roleName>
 	</affiliation>
@@ -644,6 +636,8 @@
 	  <xsl:when test="$from2 = $from and $to2 = $to">
 	    <xsl:call-template name="member">
 	      <xsl:with-param name="this" select="$this"/>
+	      <xsl:with-param name="from" select="$from"/>
+	      <xsl:with-param name="to" select="$to"/>
 	      <xsl:with-param name="siblings" select="$rest"/>
 	    </xsl:call-template>
 	  </xsl:when>
@@ -651,6 +645,8 @@
 	  <xsl:when test="$from2 &lt; $from and $to2 &lt; $from">
 	    <xsl:call-template name="member">
 	      <xsl:with-param name="this" select="$this"/>
+	      <xsl:with-param name="from" select="$from"/>
+	      <xsl:with-param name="to" select="$to"/>
 	      <xsl:with-param name="siblings" select="$rest"/>
 	    </xsl:call-template>
 	  </xsl:when>
@@ -665,18 +661,23 @@
 	  <xsl:when test="$from2 &gt;= $from and $to2 &lt;= $to">
 	    <xsl:call-template name="member">
 	      <xsl:with-param name="this" select="$this"/>
+	      <xsl:with-param name="from" select="$from"/>
+	      <xsl:with-param name="to" select="$to"/>
 	      <xsl:with-param name="siblings" select="$rest"/>
 	    </xsl:call-template>
 	  </xsl:when>
-	  <!-- Longer than the term -->
+	  <!-- Longer than the term, output nothing! -->
 	  <xsl:when test="$from2 &lt;= $from and $to2 &gt;= $to"/>
-	  <!-- Overlap -->
+	  <!-- Overlap left, adjust date-->
 	  <xsl:when test="$from2 &lt;  $from and $to2 &lt;= $to">
 	    <xsl:call-template name="member">
 	      <xsl:with-param name="this" select="$this"/>
+	      <xsl:with-param name="from" select="$from2"/>
+	      <xsl:with-param name="to" select="$to"/>
 	      <xsl:with-param name="siblings" select="$rest"/>
 	    </xsl:call-template>
 	  </xsl:when>
+	  <!-- Overlap right, output nothing! -->
 	  <xsl:when test="$from2 &gt;=  $from and $to2 &gt; $to"/>
 	  <xsl:otherwise>
 	    <xsl:message select="concat('ERROR: weird interval ',
@@ -689,12 +690,6 @@
     </xsl:choose>
   </xsl:template>
 
-  <!--Remove unknown speaker(s) from the listPerson-->
-  <!--Remove this for the siParl conversion-->
-  <xsl:template match="tei:person[@xml:id = 'unknown-M']" mode="unique2"/>
-  <xsl:template match="tei:person[@xml:id = 'unknown']" mode="unique2"/>
-  <xsl:template match="tei:person[@xml:id = 'unknown-F']" mode="unique2"/>
-  
   <xsl:template match="tei:listPerson//tei:person//tei:idno">
     <xsl:variable name="lang" select="@xml:lang"/>
     <xsl:copy>
