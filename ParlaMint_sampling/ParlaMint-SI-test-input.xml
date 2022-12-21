@@ -52,33 +52,137 @@
             </setting>
          </settingDesc>
          <particDesc>
-            <listPerson>
-               <head xml:lang="sl">Seznam govornikov</head>
-               <head xml:lang="en">List of speakers</head>
-               <person xml:id="PočivalšekZdravko">
-                  <persName>
-                     <surname>Počivalšek</surname>
-                     <forename>Zdravko</forename>
-                  </persName>
-                  <sex value="M"/>
-                  <birth when="1957-11-25"/>
-                  <affiliation role="minister"
-                               ref="#GOV"
-                               from="2010-12-04"
-                               to="2011-09-13"
-                               ana="#GOV.10"/>
-                  <affiliation role="minister"
-                               ref="#GOV"
-                               from="2014-12-04"
-                               to="2018-09-13"
-                               ana="#GOV.12"/>
-                  <affiliation role="minister"
-                               ref="#GOV"
-                               from="2018-09-13"
-                               to="2020-03-13"
-                               ana="#GOV.13"/>
-               </person>
-            </listPerson>
+	   <listPerson>
+             <head xml:lang="sl">Seznam govornikov</head>
+             <head xml:lang="en">List of speakers</head>
+	     <!-- Test #1: Person with two functions in same #GOV; serves more as a sanity check, as it was corrected in previous versions-->
+	     <person xml:id="BulcVioleta">
+               <persName>
+                 <surname>Bulc</surname>
+                 <forename>Violeta</forename>
+               </persName>
+               <birth when="1964-01-24">
+                 <placeName>Ljubljana</placeName>
+               </birth>
+               <sex value="F"/>
+               <affiliation role="deputyHead"
+                            ref="#GOV"
+                            from="2014-10-02"
+                            to="2014-10-29"
+                            ana="#GOV.12"/>
+               <affiliation role="minister"
+                            ref="#GOV"
+                            from="2014-09-18"
+                            to="2014-10-29"
+                            ana="#GOV.12"/>
+               <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Violeta_Bulc</idno>
+               <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Violeta_Bulc</idno>
+             </person>
+	     <!-- Test #2: Person with several functions in different #GOV;-->
+	     <!-- Test results: Semi-correct: outputs one member affiliation (and not two), but the from and to dates correspond to his terms in the GOV (2014 - 2020)-->
+	     <person xml:id="CerarMiro">
+               <persName>
+                 <surname>Cerar</surname>
+                 <roleName>dr.</roleName>
+                 <forename>Miro</forename>
+               </persName>
+               <sex value="M"/>
+               <birth when="1963-08-25">
+                 <placeName ref="https://www.geonames.org/3196359">Ljubljana</placeName>
+               </birth>
+	       <affiliation role="MP"
+                            ref="#DZ"
+                            from="2014-08-01"
+                            to="2018-06-21"
+                            ana="#DZ.7"/>
+               <affiliation role="member"
+                            ref="#party.SMC.1"
+                            from="2014-08-01"
+                            to="2015-03-06"
+                            ana="#DZ.7"/>
+               <affiliation role="member"
+                            ref="#party.SMC.2"
+                            from="2015-03-07"
+                            to="2018-06-21"
+                            ana="#DZ.7"/>
+               <affiliation role="MP"
+                            ref="#DZ"
+                            from="2018-06-22"
+                            to="2018-09-12"
+                            ana="#DZ.8"/>
+               <affiliation role="member"
+                            ref="#party.SMC.2"
+                            from="2018-06-22"
+                            to="2018-09-12"
+                            ana="#DZ.8"/>
+               <affiliation role="head"
+                            ref="#GOV"
+                            from="2014-08-25"
+                            to="2018-09-13"
+                            ana="#GOV.12"/>
+               <affiliation role="minister"
+                            ref="#GOV"
+                            from="2015-03-13"
+                            to="2015-03-26"
+                            ana="#GOV.12"/>
+               <affiliation role="minister"
+                            ref="#GOV"
+                            from="2015-04-09"
+                            to="2015-05-12"
+                            ana="#GOV.12"/>
+               <affiliation role="deputyHead"
+                            ref="#GOV"
+                            from="2018-09-13"
+                            to="2020-03-13"
+                            ana="#GOV.13"/>
+               <affiliation role="minister"
+                            ref="#GOV"
+                            from="2018-09-13"
+                            to="2020-03-13"
+                            ana="#GOV.13"/>
+               <idno type="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Miroslav_Cerar_ml.</idno>
+	     </person>
+	     <!-- Test #3: Extended the original test with his actual affiliation data-->
+	     <!-- Test results: It was working before, but when I added actual data, it reverted back to only outputing member affiliation for the last GOV he was in.-->
+             <person xml:id="PočivalšekZdravko">
+               <persName>
+                 <surname>Počivalšek</surname>
+                 <forename>Zdravko</forename>
+               </persName>
+               <sex value="M"/>
+               <birth when="1957-11-25"/>
+	       <affiliation role="MP"
+                            ref="#DZ"
+                            from="2018-06-22"
+                            to="2018-09-12"
+                            ana="#DZ.8"/>
+               <affiliation role="member"
+                            ref="#party.SMC.2"
+                            from="2018-06-22"
+                            to="2018-09-12"
+                            ana="#DZ.8"/>
+               <affiliation role="minister"
+                            ref="#GOV"
+                            from="2014-12-04"
+                            to="2018-09-13"
+                            ana="#GOV.12"/>
+               <affiliation role="minister"
+                            ref="#GOV"
+                            from="2018-09-13"
+                            to="2020-03-13"
+                            ana="#GOV.13"/>
+               <affiliation role="deputyHead"
+                            ref="#GOV"
+                            from="2020-03-13"
+                            to="2022-06-01"
+                            ana="#GOV.14"/>
+               <affiliation role="minister"
+                            ref="#GOV"
+                            from="2020-03-13"
+                            to="2022-06-01"
+                            ana="#GOV.14"/>
+             </person>
+           </listPerson>
          </particDesc>
          <langUsage>
             <language ident="sl" xml:lang="sl">slovenski</language>
