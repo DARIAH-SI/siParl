@@ -583,8 +583,8 @@
     <xsl:if test="not(preceding::tei:person[@xml:id = $id])">
       <xsl:copy>
 	<xsl:apply-templates select="@*"/>
-	<xsl:copy-of select="tei:*[not(self::tei:affiliation)]"/>
-	<xsl:copy-of select="tei:*[self::tei:affiliation]"/>
+	<xsl:apply-templates select="tei:*[not(self::tei:affiliation)]"/>
+	<xsl:apply-templates select="tei:*[self::tei:affiliation]"/>
 	<xsl:variable name="gov-member-affiliations">
 	  <xsl:apply-templates select="tei:affiliation[@ref='#GOV']" mode="member"/>
 	</xsl:variable>
