@@ -585,11 +585,20 @@
 	<xsl:apply-templates select="@*"/>
 	<xsl:apply-templates select="tei:*[not(self::tei:affiliation)]"/>
 	<xsl:apply-templates select="tei:*[self::tei:affiliation]"/>
-	<xsl:variable name="gov-member-affiliations">
-	  <xsl:apply-templates select="tei:affiliation[@ref='#GOV']" mode="member"/>
-	</xsl:variable>
-	<!--xsl:copy-of select="$gov-member-affiliations"/-->
-	<xsl:apply-templates select="$gov-member-affiliations" mode="uniq"/>
+	<xsl:choose>
+	  <xsl:when test="$id='PočivalšekZdravko'">
+	    <affiliation role="member" ref="#GOV" from="2014-12-04" to="2022-06-01">
+              <roleName>Member</roleName>
+            </affiliation>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:variable name="gov-member-affiliations">
+	      <xsl:apply-templates select="tei:affiliation[@ref='#GOV']" mode="member"/>
+	    </xsl:variable>
+	    <!--xsl:copy-of select="$gov-member-affiliations"/-->
+	    <xsl:apply-templates select="$gov-member-affiliations" mode="uniq"/>
+	  </xsl:otherwise>
+	</xsl:choose>
       </xsl:copy>
     </xsl:if>
   </xsl:template>
