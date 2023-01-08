@@ -11,6 +11,10 @@ test-cnv-components:
 	$s -xsl:Scripts/siparl2parlamint-components.xsl files-test.xml
 	$j Schema/ParlaMint-TEI.rng Data/ParlaMint-SI_*.xml
 
+# Test coversion of ana components (samples)
+test-ana-components:
+	$s -xsl:Scripts/siparl2parlamint-components-ana.xsl files-ana.xml
+
 all:	prep-files clean 
 
 # Validation of the complete ParlaMint, does not work yet
@@ -41,6 +45,10 @@ clean:
 # Prepare the list of input/output files from mandates given as first parameter
 prep-files:
 	Scripts/map-files-test.pl 'SDZ7 SDZ8' '../speech_samples' > files-test.xml
+
+# Prepare the list of input/output files for ana version
+prep-files-ana:
+	Scripts/map-files-ana.pl 'SDZ7 SDZ8' '../speech_samples_ana' > files-ana.xml
 
 ################################################
 s = java -jar /usr/share/java/saxon.jar
