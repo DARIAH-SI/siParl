@@ -391,7 +391,7 @@
 	<xsl:message select="concat('ERROR: strange ID ', .)"/>
       </xsl:if>
       <xsl:value-of select="$id"/>
-      <xsl:value-of select="replace(., '^.+(-\d{2})(\..+\.\d+)', '$2')"/>
+      <xsl:value-of select="replace(., '^.+(-\d{2})(\..+)', '$2')"/>
     </xsl:attribute>
   </xsl:template>
   <xsl:template mode="pass2" match="tei:body//tei:name//@type">
