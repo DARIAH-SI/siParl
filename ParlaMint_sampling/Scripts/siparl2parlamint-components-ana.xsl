@@ -355,7 +355,7 @@
 					   $day, '-',
 					   'SDZ', $mandate_no, '-', 
 					   $type_of_session, '-', 
-					   $no_of_session)"/>
+					   $no_of_session, '.ana')"/>
       <xsl:attribute name="xml:id" select="$id"/>
       <xsl:attribute name="xml:lang" select="@xml:lang"/>
       <xsl:attribute name="ana">

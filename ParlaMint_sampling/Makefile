@@ -15,6 +15,10 @@ test-cnv-components:
 test-ana-components:
 	$s -xsl:Scripts/siparl2parlamint-components-ana.xsl files-ana.xml
 
+# Test conversion of ana root (samples)
+test-ana-root:
+	$s -xsl:Scripts/siparl2parlamint-root-ana.xsl files-ana.xml > ParlaMint_SI.ana.xml
+
 all:	prep-files clean 
 
 # Validation of the complete ParlaMint, does not work yet
