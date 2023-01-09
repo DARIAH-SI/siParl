@@ -133,7 +133,7 @@
 	  <xsl:text>)</xsl:text>
 	</xsl:when>
       </xsl:choose>
-      <xsl:text> [ParlaMint]</xsl:text>
+      <xsl:text> [ParlaMint SAMPLE]</xsl:text>
     </xsl:copy>
   </xsl:template>
 
