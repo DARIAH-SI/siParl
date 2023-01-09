@@ -357,26 +357,147 @@
       <classDecl>
 	<xsl:apply-templates select="$teiHeaders/tei:teiHeader[1]//
 				     tei:encodingDesc/tei:classDecl/tei:taxonomy"/>
-	     <taxonomy xml:id="subcorpus">
-               <desc xml:lang="sl">
-                  <term>Podkorpusi</term>
-               </desc>
-               <desc xml:lang="en">
-                  <term>Subcorpora</term>
-               </desc>
-               <category xml:id="reference">
-                  <catDesc xml:lang="sl">
-                     <term>Referenca</term>: referenčni podkorpus, do 2019-10-31</catDesc>
-                  <catDesc xml:lang="en">
-                     <term>Reference</term>: reference subcorpus, until 2019-10-31</catDesc>
-               </category>
-               <category xml:id="covid">
-                  <catDesc xml:lang="sl">
-                     <term>COVID</term>: COVID podkorpus, od 2019-11-01 dalje</catDesc>
-                  <catDesc xml:lang="en">
-                     <term>COVID</term>: COVID subcorpus, from 2019-11-01 onwards</catDesc>
-               </category>
-            </taxonomy>
+	<taxonomy xml:id="subcorpus">
+          <desc xml:lang="sl">
+            <term>Podkorpusi</term>
+          </desc>
+          <desc xml:lang="en">
+            <term>Subcorpora</term>
+          </desc>
+          <category xml:id="reference">
+            <catDesc xml:lang="sl">
+            <term>Referenca</term>: referenčni podkorpus, do 2019-10-31</catDesc>
+            <catDesc xml:lang="en">
+            <term>Reference</term>: reference subcorpus, until 2019-10-31</catDesc>
+          </category>
+          <category xml:id="covid">
+            <catDesc xml:lang="sl">
+            <term>COVID</term>: COVID podkorpus, od 2019-11-01 dalje</catDesc>
+            <catDesc xml:lang="en">
+            <term>COVID</term>: COVID subcorpus, from 2019-11-01 onwards</catDesc>
+          </category>
+        </taxonomy>
+	<taxonomy xml:id="NER">
+          <desc xml:lang="en"><term>Named entities</term></desc>
+          <category xml:id="PER">
+            <catDesc xml:lang="sl"><term>oseba</term></catDesc>
+            <catDesc xml:lang="en"><term>person</term></catDesc>
+          </category>
+          <category xml:id="LOC">
+            <catDesc xml:lang="sl"><term>lokacija</term></catDesc>
+            <catDesc xml:lang="en"><term>location</term></catDesc>
+          </category>
+          <category xml:id="ORG">
+            <catDesc xml:lang="sl"><term>organizacija</term></catDesc>
+            <catDesc xml:lang="en"><term>organization</term></catDesc>
+          </category>
+          <category xml:id="MISC">
+            <catDesc xml:lang="sl"><term>drugo</term></catDesc>
+            <catDesc xml:lang="en"><term>miscellaneous</term></catDesc>
+          </category>
+        </taxonomy>
+	<taxonomy xml:id="UD-SYN">
+          <desc xml:lang="en"><term>UD syntactic relations</term></desc>
+          <category xml:id="acl">
+            <catDesc xml:lang="en"><term>acl</term>: Clausal modifier of noun (adjectival clause)</catDesc>
+          </category>
+          <category xml:id="advcl">
+            <catDesc xml:lang="en"><term>advcl</term>: Adverbial clause modifier</catDesc>
+          </category>
+          <category xml:id="advmod">
+            <catDesc xml:lang="en"><term>advmod</term>: Adverbial modifier</catDesc>
+          </category>
+          <category xml:id="amod">
+            <catDesc xml:lang="en"><term>amod</term>: Adjectival modifier</catDesc>
+          </category>
+          <category xml:id="appos">
+            <catDesc xml:lang="en"><term>appos</term>: Appositional modifier</catDesc>
+          </category>
+          <category xml:id="aux">
+            <catDesc xml:lang="en"><term>aux</term>: Auxiliary</catDesc>
+          </category>
+          <category xml:id="case">
+            <catDesc xml:lang="en"><term>case</term>: Case marking</catDesc>
+          </category>
+          <category xml:id="cc">
+            <catDesc xml:lang="en"><term>cc</term>: Coordinating conjunction</catDesc>
+          </category>
+          <category xml:id="ccomp">
+            <catDesc xml:lang="en"><term>ccomp</term>: Clausal complement</catDesc>
+          </category>
+          <category xml:id="cc_preconj">
+            <catDesc xml:lang="en"><term>cc:preconj</term>: Preconjunct</catDesc>
+          </category>
+          <category xml:id="conj">
+            <catDesc xml:lang="en"><term>conj</term>: Conjunct</catDesc>
+          </category>
+          <category xml:id="cop">
+            <catDesc xml:lang="en"><term>cop</term>: Copula</catDesc>
+          </category>
+          <category xml:id="csubj">
+            <catDesc xml:lang="en"><term>csubj</term>: Clausal subject</catDesc>
+          </category>
+          <category xml:id="dep">
+            <catDesc xml:lang="en"><term>dep</term>: Unspecified dependency</catDesc>
+          </category>
+          <category xml:id="det">
+            <catDesc xml:lang="en"><term>det</term>: Determiner</catDesc>
+          </category>
+          <category xml:id="discourse">
+            <catDesc xml:lang="en"><term>discourse</term>: Discourse element</catDesc>
+          </category>
+          <category xml:id="expl">
+            <catDesc xml:lang="en"><term>expl</term>: Expletive</catDesc>
+          </category>
+          <category xml:id="fixed">
+            <catDesc xml:lang="en"><term>fixed</term>: Fixed multiword expression</catDesc>
+          </category>
+          <category xml:id="flat">
+            <catDesc xml:lang="en"><term>flat</term>: Flat multiword expression</catDesc>
+          </category>
+          <category xml:id="flat_foreign">
+            <catDesc xml:lang="en"><term>flat:foreign</term>: Flat multiword expression: foreign</catDesc>
+          </category>
+          <category xml:id="flat_name">
+            <catDesc xml:lang="en"><term>flat:name</term>: Flat name</catDesc>
+          </category>
+          <category xml:id="iobj">
+            <catDesc xml:lang="en"><term>iobj</term>: Indirect object</catDesc>
+          </category>
+          <category xml:id="mark">
+            <catDesc xml:lang="en"><term>mark</term>: Marker</catDesc>
+          </category>
+          <category xml:id="nmod">
+            <catDesc xml:lang="en"><term>nmod</term>: Nominal modifier</catDesc>
+          </category>
+          <category xml:id="nsubj">
+            <catDesc xml:lang="en"><term>nsubj</term>: Nominal subject</catDesc>
+          </category>
+          <category xml:id="nummod">
+            <catDesc xml:lang="en"><term>nummod</term>: Numeric modifier</catDesc>
+          </category>
+          <category xml:id="obj">
+            <catDesc xml:lang="en"><term>obj</term>: Object</catDesc>
+          </category>
+          <category xml:id="obl">
+            <catDesc xml:lang="en"><term>obl</term>: Oblique nominal</catDesc>
+          </category>
+          <category xml:id="parataxis">
+            <catDesc xml:lang="en"><term>parataxis</term>: Parataxis</catDesc>
+          </category>
+          <category xml:id="punct">
+            <catDesc xml:lang="en"><term>punct</term>: Punctuation</catDesc>
+          </category>
+          <category xml:id="reparandum">
+            <catDesc xml:lang="en"><term>reparandum</term>: Overridden disfluency (here used for program mistakes!)</catDesc>
+          </category>
+          <category xml:id="root">
+            <catDesc xml:lang="en"><term>root</term>: Root</catDesc>
+          </category>
+          <category xml:id="xcomp">
+            <catDesc xml:lang="en"><term>xcomp</term>: Open clausal complement</catDesc>
+          </category>
+        </taxonomy>
       </classDecl>
       <listPrefixDef>
         <prefixDef ident="mte" matchPattern="(.+)" replacementPattern="http://nl.ijs.si/ME/V6/msd/tables/msd-fslib-sl.xml#$1">
@@ -387,11 +508,11 @@
         </prefixDef>
       </listPrefixDef>
       <appInfo>
-        <application version="1.0.1" ident="reldi-tokeniser">
+        <application version="1.0" ident="reldi-tokeniser">
           <label>ReLDI tokeniser</label>
           <desc xml:lang="en">Tokenisation and sentence segmentation with ReLDI tokeniser, available from <ref target="https://github.com/clarinsi/reldi-tokeniser">https://github.com/clarinsi/reldi-tokeniser</ref>.</desc>
         </application>
-        <application version="1.2" ident="classla-stanfordnlp">
+        <application version="1.0" ident="classla-stanfordnlp">
           <label>CLASSLA-StanfordNLP</label>
           <desc xml:lang="en">MSD tagging and lemmatisation with CLASSLA-StanfordNLP trained for Slovene, available from <ref target="https://github.com/clarinsi/classla-stanfordnlp">https://github.com/clarinsi/classla-stanfordnlp</ref>.</desc>
         </application>
