@@ -8,10 +8,10 @@ binmode(STDOUT,'utf8');
 binmode(STDERR,'utf8');
 print "<mappings>\n";
 foreach $term (split / /, $terms) {
-    $termRoot = "$inDir/$term.xml";
+    $termRoot = "$inDir/$term.ana.xml";
     die "Can't find $termRoot!\n" unless -e $termRoot;
     print "<source>$termRoot</source>\n";
-    $termFile = "$inDir/$term/*.xml";
+    $termFile = "$inDir/$term/*.ana.xml";
     foreach $inFile (glob $termFile) {
 	print "<map>\n";
 	print "<source>$inFile</source>\n";

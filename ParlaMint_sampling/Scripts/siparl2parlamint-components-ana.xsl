@@ -126,11 +126,11 @@
 	      </xsl:message>
 	    </xsl:otherwise>
           </xsl:choose>
-	  <xsl:text> (</xsl:text>
+	  <xsl:text>, </xsl:text>
 	  <xsl:value-of select="format-date(
 				ancestor::tei:teiHeader//tei:sourceDesc//tei:date/@when, 
 				'[MNn] [D01], [Y0001]')"/>
-	  <xsl:text>)</xsl:text>
+	  <xsl:text>,</xsl:text>
 	</xsl:when>
       </xsl:choose>
       <xsl:text> [ParlaMint SAMPLE]</xsl:text>
