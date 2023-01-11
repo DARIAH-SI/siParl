@@ -17,7 +17,7 @@ test-ana-components:
 
 # Test conversion of ana root (samples)
 test-ana-root:
-	$s -xsl:Scripts/siparl2parlamint-root-ana.xsl files-ana.xml > ParlaMint_SI.ana.xml
+	$s -xsl:Scripts/siparl2parlamint-root-ana.xsl files-ana.xml > ParlaMint-SI.ana.xml
 
 all:	prep-files clean 
 

@@ -130,10 +130,9 @@
 	  <xsl:value-of select="format-date(
 				ancestor::tei:teiHeader//tei:sourceDesc//tei:date/@when, 
 				'[MNn] [D01], [Y0001]')"/>
-	  <xsl:text>,</xsl:text>
 	</xsl:when>
       </xsl:choose>
-      <xsl:text> [ParlaMint SAMPLE]</xsl:text>
+      <xsl:text> [ParlaMint.ana SAMPLE]</xsl:text>
     </xsl:copy>
   </xsl:template>
 
@@ -392,6 +391,18 @@
       </xsl:if>
       <xsl:value-of select="$id"/>
       <xsl:value-of select="replace(., '^.+(-\d{2})(\..+)', '$2')"/>
+    </xsl:attribute>
+  </xsl:template>
+  <xsl:template mode="pass2" match="tei:linkGrp//tei:link//@target">
+    <xsl:param name="id"/>
+    <xsl:attribute name="target">
+      <xsl:variable name="test" select="tokenize(., '\s')"/>
+      <xsl:text>#</xsl:text>
+      <xsl:value-of select="$id"/>
+      <xsl:value-of select="replace($test[1], '^.+(-\d{2})(\..+)', '$2')"/>
+      <xsl:text>&#32;#</xsl:text>
+      <xsl:value-of select="$id"/>
+      <xsl:value-of select="replace($test[2], '^.+(-\d{2})(\..+)', '$2')"/>
     </xsl:attribute>
   </xsl:template>
   <xsl:template mode="pass2" match="tei:body//tei:name//@type">
