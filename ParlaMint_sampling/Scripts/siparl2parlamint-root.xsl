@@ -225,20 +225,19 @@
 	    <xsl:value-of select="."/>
 	  </meeting>
 	</xsl:for-each>
-        <xsl:for-each-group select="$teiHeaders//tei:titleStmt/tei:respStmt"
-			    group-by="tei:resp[@xml:lang = 'sl']">
-          <respStmt>
-	    <xsl:for-each select="distinct-values(current-group()/tei:persName)">
-	      <xsl:variable name="this" select="."/>
-	      <xsl:copy-of select="$teiHeaders//tei:titleStmt/tei:respStmt/tei:persName[.=$this]
-				   [not(preceding::tei:persName[.=$this])]"/>
-	    </xsl:for-each>
-	    <xsl:if test="current-grouping-key() = 'Kodiranje TEI'">
-	      <xsl:copy-of select="$TEI-resps"/>
-	    </xsl:if>
-	    <xsl:copy-of select="current-group()[1]/tei:resp"/>
+	  <respStmt>
+	    <persName ref="https://orcid.org/0000-0002-0464-9240">Katja Meden</persName>
+	    <persName ref="https://orcid.org/0000-0002-1560-4099 http://viaf.org/viaf/15145066459666591823">Tomaž Erjavec</persName>
+            <persName ref="https://orcid.org/0000-0001-6143-6877 http://viaf.org/viaf/305936424">Andrej Pančur</persName>
+            <resp xml:lang="sl">Kodiranje TEI</resp>
+            <resp xml:lang="en">TEI corpus encoding</resp>
           </respStmt>
-	</xsl:for-each-group>
+	<respStmt>
+          <persName ref="https://orcid.org/0000-0001-6143-6877 http://viaf.org/viaf/305936424">Andrej Pančur</persName>
+          <persName ref="http://viaf.org/viaf/86154440112735340300">Mihael Ojsteršek</persName>
+          <resp xml:lang="sl">Urejanje seznama govornikov</resp>
+          <resp xml:lang="en">Editing a list of speakers</resp>
+        </respStmt>
         <funder>
           <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
           <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
@@ -434,10 +433,12 @@
 
   <xsl:template name="revisionDesc">
     <revisionDesc>
-      <change when="2021-06-11">
-      <name>Tomaž Erjavec</name>: Made sample.</change>
-      <change when="2021-06-11">
-      <name>Tomaž Erjavec</name>: Finalize encoding.</change>
+      <change when="2023-01-11">
+        <name>Katja Meden</name>: Made ana sample</change>
+        <change when="2023-01-10">
+        <name>Tomaž Erjavec</name>: Small fixes of ParlaMint data</change>
+        <change when="2022-12-08">
+        <name>Katja Meden</name>: Made TEI sample </change>
     </revisionDesc>
   </xsl:template>
 

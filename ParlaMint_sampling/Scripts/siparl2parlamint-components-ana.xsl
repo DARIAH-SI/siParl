@@ -99,7 +99,32 @@
     </extent>
    </xsl:template>
   
-
+   <xsl:template match="tei:titleStmt//tei:respStmt">
+     <respStmt>
+       <persName ref="https://orcid.org/0000-0002-0464-9240">Katja Meden</persName>
+       <persName ref="https://orcid.org/0000-0002-1560-4099 http://viaf.org/viaf/15145066459666591823">Tomaž Erjavec</persName>
+       <persName ref="https://orcid.org/0000-0001-6143-6877 http://viaf.org/viaf/305936424">Andrej Pančur</persName>
+       <resp xml:lang="sl">Kodiranje TEI</resp>
+       <resp xml:lang="en">TEI corpus encoding</resp>
+     </respStmt>
+     <respStmt>
+       <persName ref="https://orcid.org/0000-0001-6143-6877 http://viaf.org/viaf/305936424">Andrej Pančur</persName>
+       <persName ref="http://viaf.org/viaf/86154440112735340300">Mihael Ojsteršek</persName>
+       <resp xml:lang="sl">Urejanje seznama govornikov</resp>
+       <resp xml:lang="en">Editing a list of speakers</resp>
+     </respStmt>
+     <respStmt>
+       <persName ref="http://viaf.org/viaf/305748135">Nikola Ljubešić</persName>
+       <resp xml:lang="sl">Jezikoslovno označevanje</resp>
+       <resp xml:lang="en">Linguistic annotation</resp>
+     </respStmt>
+     <respStmt>
+       <persName ref="http://viaf.org/viaf/15145066459666591823">Tomaž Erjavec</persName>
+       <resp xml:lang="sl">Popravki strukture TEI</resp>
+       <resp xml:lang="en">TEI encoding corrections</resp>
+     </respStmt>
+   </xsl:template>
+   
   <xsl:template match="tei:titleStmt/tei:title[@type = 'main']">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
@@ -254,13 +279,12 @@
       <xsl:apply-templates/>
     </xsl:copy>
     <revisionDesc>
-      <!-- Do we need to add any new changes/revisions? Also, weird indentation -->
-      <change when="2021-06-11">
-      <name>Tomaž Erjavec</name>: Made sample.</change>
-      <change when="2021-03-20">
-      <name>Tomaž Erjavec</name>: Fixes for Version 2.</change>
-      <change when="2020-10-06">
-      <name>Tomaž Erjavec</name>: Small fixes for ParlaMint.</change>
+      <change when="2023-01-11">
+        <name>Katja Meden</name>: Made ana sample</change>
+        <change when="2023-01-10">
+        <name>Tomaž Erjavec</name>: Small fixes of ParlaMint data</change>
+        <change when="2022-12-08">
+        <name>Katja Meden</name>: Made TEI sample </change>
     </revisionDesc>
   </xsl:template>
   
