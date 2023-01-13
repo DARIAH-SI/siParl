@@ -1,5 +1,5 @@
 mini-test-cnv-root:
-	$s -xsl:Scripts/siparl2parlamint-root.xsl files-minitest.xml > ParlaMint-SI-test-output.xml
+	$s -xsl:Scripts/siparl2parlamint-root.xsl files-minitest.xml > Tests/ParlaMint-SI-test-output.xml
 
 # Test conversion of root
 test-cnv-root:
