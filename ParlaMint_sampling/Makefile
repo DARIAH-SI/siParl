@@ -42,7 +42,15 @@ ana-root:
 # Convert ana components: 
 ana-components:
 	$s -xsl:Scripts/siparl2parlamint-components-ana.xsl files-ana.xml
+#-------------2000 extenstion:------------------------------------------------------------------
 
+2000-TEI:
+	$s -xsl:Scripts/siparl2parlamint-components.xsl 2000-tei.xml
+	$j Schema/ParlaMint-TEI.rng ParlaMint-SI.TEI/*/ParlaMint-SI_*.xml
+
+2000-root:
+	$s -xsl:Scripts/siparl2parlamint-root.xsl 2000-tei.xml > ParlaMint-SI.TEI/ParlaMint-SI.xml
+	$j Schema/ParlaMint-teiCorpus.rng ParlaMint-SI.TEI/ParlaMint-SI.xml
 
 # --------Prep files:-----------------------------------------------------------------------------------
 
@@ -62,6 +70,10 @@ prep-TEI:
 # Prep ana for SDZ7 and SDZ8:
 prep-ana:
 	Scripts/map-ana.pl 'SDZ7 SDZ8' '../speech2parlamint_ana' 'ParlaMint-SI.TEI.ana'> files-ana.xml
+
+# Prep TEI for extended ParlaMint:
+prep-2000:
+	Scripts/map-files.pl 'SDZ3 SDZ7 SDZ8' '../speech_samples' 'ParlaMint-SI.TEI'> 2000-tei.xml
 
 
 #------------------Other:------------------------------------------------------------------------

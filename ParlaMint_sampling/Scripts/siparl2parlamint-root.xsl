@@ -16,6 +16,7 @@
   <xsl:param name="clarinHandle">http://hdl.handle.net/11356/1486</xsl:param>
   <!-- Ignore parties older than this date-->
   <xsl:param name="cutoffDate">2000-00-00</xsl:param>
+  <xsl:param name="cutoffDate2">2015-00-00</xsl:param>
 
   <!-- Povezave to ustreznih taksonomij -->
   <!-- Ni jasno, ali res hočemo tule tako... -->
@@ -202,7 +203,7 @@
 	<xsl:variable name="max-year" select="replace($max-date, '-.+', '')"/>
         <title type="sub" xml:lang="sl">
 	  <xsl:text>Zapisi sej Državnega zbora Republike Slovenije, </xsl:text>
-	  <xsl:value-of select="concat($min-mandate, '. in ', $max-mandate, '. mandat ')"/>
+	  <xsl:value-of select="concat('od ', $min-mandate, '. do ', $max-mandate, '. mandata ')"/>
 	  <xsl:value-of select="concat('(', $min-year, ' — ', $max-year, ')')"/>
 	</title>
         <title type="sub" xml:lang="en">
@@ -408,6 +409,7 @@
       <!-- Need to collect all unique organisations here -->
       <xsl:apply-templates mode="unique" select="$teiHeaders//tei:org"/>
       <listRelation>
+	<xsl:apply-templates select="$teiHeaders/tei:teiHeader[1]//tei:listRelation[1]//tei:relation" mode="relations"/>
 	<relation name="renaming" active="#party.SMC.2" passive="#party.SMC.1"
                   when="2015-03-07"/>
 	<relation name="successor" active="#party.Levica.2" passive="#party.Levica.1"
@@ -429,6 +431,21 @@
     </listOrg>
   </xsl:template>
 
+  <xsl:template match="tei:listRelation//tei:relation">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="tei:listRelation//tei:relation" mode="relations">
+    <xsl:variable name="name" select="@name"/>
+    <xsl:variable name="when" select="@when"/>
+    <xsl:variable name="to" select="@to"/>
+    <xsl:if test="$when &gt; $cutoffDate and $when &lt; $cutoffDate2 or $name = 'coalition' and $to &lt; $cutoffDate2 and $to &gt; $cutoffDate">
+      <xsl:apply-templates select="."/>
+    </xsl:if>
+  </xsl:template>
     
   <xsl:template name="revisionDesc">
     <revisionDesc>
