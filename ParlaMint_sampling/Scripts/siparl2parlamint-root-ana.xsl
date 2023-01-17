@@ -440,27 +440,25 @@
     <listOrg xmlns="http://www.tei-c.org/ns/1.0">
       <!-- Need to collect all unique organisations here -->
       <xsl:apply-templates mode="unique" select="$teiHeaders//tei:org"/>
-    <listRelation>
-      <relation name="renaming" active="#party.SMC.2" passive="#party.SMC.1"
-                when="2015-03-07"/>
-      <relation name="successor" active="#party.Levica.2" passive="#party.Levica.1"
-                when="2017-06-24"/>
-      <relation name="renaming" active="#party.ZaSLD" passive="#party.ZaAB"
-                when="2016-05-21"/>
-      <relation name="renaming" active="#party.SAB" passive="#party.ZaSLD"
-                when="2017-10-07"/>
-      <relation name="renaming" mutual="#party.SMC.2 #party.GAS" when="2021-12-04"/>
-      <relation name="coalition" mutual="#party.PS #party.SD #party.DL #party.DeSUS"
-                from="2013-03-20" to="2014-09-18" ana="#GOV.11"/>
-      <relation name="coalition"
-                mutual="#party.SMC.1 #party.SMC.2 #party.SD #party.DeSUS" from="2014-09-18"
-                to="2018-09-12" ana="#GOV.12"/>
-      <relation name="opposition" mutual="#party.SDS.2 #party.IMNS #party.ZaAB #party.NeP #party.NP #party.NSi #party.Levica.1 #party.Levica.2" from="2014-09-18" to="2018-09-12" ana="#GOV.12"/>
-      <relation name="coalition" mutual="#party.LMŠ #party.SMC.2 #party.SD #party.SAB #party.DeSUS" from="2018-09-13" to="2020-03-12" ana="#GOV.13"/>
-       <relation name="opposition" mutual="#party.SDS.2 #party.Levica.2 #party.NSi #party.NeP #party.NP #party.IMNS #party.SNS" from="2018-09-13" to="2020-03-12" ana="#GOV.13"/>
-       <relation name="coalition" mutual="#party.SDS.2 #party.SMC.2 #party.Konkretno #party.NSi #party.DeSUS" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
-       <relation name="opposition" mutual="#party.LMŠ #party.SD #party.SAB #party.Levica.2 #party.NeP #party.NP #party.IMNS #party.SNS" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
-    </listRelation>
+      <listRelation>
+	<relation name="renaming" active="#party.SMC.2" passive="#party.SMC.1"
+                  when="2015-03-07"/>
+	<relation name="successor" active="#party.Levica.2" passive="#party.Levica.1"
+                  when="2017-06-24"/>
+	<relation name="renaming" active="#party.ZaSLD" passive="#party.ZaAB"
+                  when="2016-05-21"/>
+	<relation name="renaming" active="#party.SAB" passive="#party.ZaSLD"
+                  when="2017-10-07"/>
+	<relation name="renaming" active="#party.Konkretno" passive="#party.SMC.2 #party.GAS" when="2021-12-04"/>
+	<relation name="coalition"
+                  mutual="#party.SMC.1 #party.SMC.2 #party.SD #party.DeSUS" from="2014-09-18"
+                  to="2018-09-12" ana="#GOV.12"/>
+	<relation name="opposition" active="#party.SDS.2 #party.IMNS #party.ZaAB #party.NeP #party.NP #party.NSi #party.Levica.1 #party.Levica.2" passive="#GOV" from="2014-09-18" to="2018-09-12" ana="#GOV.12"/>
+	<relation name="coalition" mutual="#party.LMŠ #party.SMC.2 #party.SD #party.SAB #party.DeSUS" from="2018-09-13" to="2020-03-12" ana="#GOV.13"/>
+	<relation name="opposition" active="#party.SDS.2 #party.Levica.2 #party.NSi #party.NeP #party.NP #party.IMNS #party.SNS" passive="#GOV" from="2018-09-13" to="2020-03-12" ana="#GOV.13"/>
+	<relation name="coalition" mutual="#party.SDS.2 #party.SMC.2 #party.Konkretno #party.NSi #party.DeSUS" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+	<relation name="opposition" active="#party.LMŠ #party.SD #party.SAB #party.Levica.2 #party.NeP #party.NP #party.IMNS #party.SNS" passive="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+      </listRelation>
     </listOrg>
   </xsl:template>
 
@@ -864,11 +862,9 @@
   <xsl:template name="revisionDesc">
     <revisionDesc>
       <change when="2023-01-11">
-        <name>Katja Meden</name>: Made ana sample</change>
-        <change when="2023-01-10">
-        <name>Tomaž Erjavec</name>: Small fixes of ParlaMint data</change>
-        <change when="2022-12-08">
-        <name>Katja Meden</name>: Made TEI sample </change>
+      <name>Katja Meden</name>: Made ana sample</change>
+      <change when="2023-01-10">
+      <name>Tomaž Erjavec</name>: Small fixes of ParlaMint data</change>
     </revisionDesc>
   </xsl:template>
 

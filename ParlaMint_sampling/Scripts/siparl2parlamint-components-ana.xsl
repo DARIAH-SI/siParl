@@ -62,8 +62,16 @@
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
       <funder>
-	<orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
-	<orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+        <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
+        <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+      </funder>
+      <funder>
+        <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+        <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+      </funder>
+      <funder>
+        <orgName xml:lang="sl">Raziskovalni program ARRS P6-0411 "Jezikovni viri in tehnologije za slovenski jezik"</orgName>
+        <orgName xml:lang="en">Slovenian Research Agency Programme P6-0411 "Language Resources and Technologies for Slovene"</orgName>
       </funder>
     </xsl:copy>
     <editionStmt>
@@ -280,11 +288,9 @@
     </xsl:copy>
     <revisionDesc>
       <change when="2023-01-11">
-        <name>Katja Meden</name>: Made ana sample</change>
-        <change when="2023-01-10">
-        <name>Tomaž Erjavec</name>: Small fixes of ParlaMint data</change>
-        <change when="2022-12-08">
-        <name>Katja Meden</name>: Made TEI sample </change>
+      <name>Katja Meden</name>: Made ana sample</change>
+      <change when="2023-01-10">
+      <name>Tomaž Erjavec</name>: Small fixes of ParlaMint data</change>
     </revisionDesc>
   </xsl:template>
   

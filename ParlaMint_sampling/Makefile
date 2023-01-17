@@ -1,10 +1,12 @@
+#---------Tests and ParlaMint sample validations: ------------------
+
 mini-test-cnv-root:
 	$s -xsl:Scripts/siparl2parlamint-root.xsl files-minitest.xml > Tests/ParlaMint-SI-test-output.xml
 
 # Test conversion of root
 test-cnv-root:
-	$s -xsl:Scripts/siparl2parlamint-root.xsl files-test.xml > Data/ParlaMint-SI.xml
-	$j Schema/ParlaMint-teiCorpus.rng Data/ParlaMint-SI.xml
+	$s -xsl:Scripts/siparl2parlamint-root.xsl files-test.xml > ParlaMint-SI.xml
+	$j Schema/ParlaMint-teiCorpus.rng ParlaMint-SI.xml
 
 # Test conversion of components
 test-cnv-components:
@@ -13,13 +15,58 @@ test-cnv-components:
 
 # Test coversion of ana components (samples)
 test-ana-components:
-	$s -xsl:Scripts/siparl2parlamint-components-ana.xsl files-ana.xml
+	$s -xsl:Scripts/siparl2parlamint-components-ana.xsl files-test-ana.xml 
 
 # Test conversion of ana root (samples)
 test-ana-root:
-	$s -xsl:Scripts/siparl2parlamint-root-ana.xsl files-ana.xml > ParlaMint-SI.ana.xml
+	$s -xsl:Scripts/siparl2parlamint-root-ana.xsl files-test-ana.xml > ParlaMint-SI.ana.xml 
 
-all:	prep-files clean 
+
+
+#------SDZ7 and SDZ8 conversions:-------------------------------------------------------------------
+
+# Convert TEI root:
+TEI-root:
+	$s -xsl:Scripts/siparl2parlamint-root.xsl files-TEI.xml > ParlaMint-SI.TEI/ParlaMint-SI.xml
+	$j Schema/ParlaMint-teiCorpus.rng ParlaMint-SI.TEI/ParlaMint-SI.xml
+
+# Convert TEI components:
+TEI-components:
+	$s -xsl:Scripts/siparl2parlamint-components.xsl files-TEI.xml
+	$j Schema/ParlaMint-TEI.rng ParlaMint-SI.TEI/*/ParlaMint-SI_*.xml
+
+# Convert ana root:
+ana-root:
+	$s -xsl:Scripts/siparl2parlamint-root-ana.xsl files-ana.xml > ParlaMint-SI.TEI.ana/ParlaMint-SI.ana.xml
+
+# Convert ana components: 
+ana-components:
+	$s -xsl:Scripts/siparl2parlamint-components-ana.xsl files-ana.xml
+
+
+# --------Prep files:-----------------------------------------------------------------------------------
+
+# Prepare the list of input/output files from mandates given as first parameter
+prep-files:
+	Scripts/map-files-test.pl 'SDZ7 SDZ8' '../speech_samples' > files-test.xml
+
+# Prepare the list of input/output files for ana version
+prep-files-ana:
+	Scripts/map-files-ana.pl 'SDZ7 SDZ8' '../speech_samples_ana' > files-test-ana.xml
+
+# Prep TEI for SDZ7 and SDZ8: 
+prep-TEI:
+	Scripts/map-files.pl 'SDZ7 SDZ8' '../speech2parlamint' 'ParlaMint-SI.TEI'> files-TEI.xml
+
+
+# Prep ana for SDZ7 and SDZ8:
+prep-ana:
+	Scripts/map-ana.pl 'SDZ7 SDZ8' '../speech2parlamint_ana' 'ParlaMint-SI.TEI.ana'> files-ana.xml
+
+
+#------------------Other:------------------------------------------------------------------------
+
+all:	prep-files clean
 
 # Validation of the complete ParlaMint, does not work yet
 validate:
@@ -45,15 +92,6 @@ clean:
 	rm -f Data/????/*
 	rmdir Data/????
 	rm -f Data/TMP/*
-
-# Prepare the list of input/output files from mandates given as first parameter
-prep-files:
-	Scripts/map-files-test.pl 'SDZ7 SDZ8' '../speech_samples' > files-test.xml
-
-# Prepare the list of input/output files for ana version
-prep-files-ana:
-	Scripts/map-files-ana.pl 'SDZ7 SDZ8' '../speech_samples_ana' > files-ana.xml
-
 ################################################
 s = java -jar /usr/share/java/saxon.jar
 j = java -jar /usr/share/java/jing.jar

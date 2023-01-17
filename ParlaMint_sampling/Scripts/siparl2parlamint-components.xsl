@@ -207,6 +207,7 @@
   <xsl:template match="tei:publicationStmt/tei:publisher/tei:orgName"/>
   <xsl:template match="tei:publicationStmt/tei:publisher/tei:ref"/>
   <xsl:template match="tei:publicationStmt/tei:pubPlace"/>
+  <xsl:template match="tei:publicationStmt//tei:idno[@type='URI'][@subtype='handle']"/>
 
   
   <xsl:template match="tei:publicationStmt/tei:publisher">
@@ -278,8 +279,6 @@
       <xsl:apply-templates/>
     </xsl:copy>
     <revisionDesc>
-      <change when="2023-01-11">
-        <name>Katja Meden</name>: Made ana sample</change>
         <change when="2023-01-10">
         <name>Tomaž Erjavec</name>: Small fixes of ParlaMint data</change>
         <change when="2022-12-08">
