@@ -52,6 +52,13 @@ ana-components:
 	$s -xsl:Scripts/siparl2parlamint-root.xsl 2000-tei.xml > ParlaMint-SI.TEI/ParlaMint-SI.xml
 	$j Schema/ParlaMint-teiCorpus.rng ParlaMint-SI.TEI/ParlaMint-SI.xml
 
+2000-ana:
+	$s -xsl:Scripts/siparl2parlamint-components-ana.xsl 2000-ana.xml
+
+2000-ana-root:
+	$s -xsl:Scripts/siparl2parlamint-root-ana.xsl 2000-ana.xml > ParlaMint-SI.TEI.ana/ParlaMint-SI.ana.xml
+
+
 # --------Prep files:-----------------------------------------------------------------------------------
 
 # Prepare the list of input/output files from mandates given as first parameter
@@ -74,6 +81,9 @@ prep-ana:
 # Prep TEI for extended ParlaMint:
 prep-2000:
 	Scripts/map-files.pl 'SDZ3 SDZ7 SDZ8' '../speech_samples' 'ParlaMint-SI.TEI'> 2000-tei.xml
+
+prep-2000-ana:
+	Scripts/map-ana.pl 'SDZ3 SDZ7 SDZ8' '../speech_samples_ana' 'ParlaMint-SI.TEI.ana'> 2000-ana.xml
 
 
 #------------------Other:------------------------------------------------------------------------
