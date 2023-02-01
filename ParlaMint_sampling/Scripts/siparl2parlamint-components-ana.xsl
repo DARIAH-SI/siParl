@@ -328,7 +328,7 @@
   </xsl:template>
 
   <!-- Remove unknown speaker utterances-->
-  <xsl:template match="tei:u[@who='#unknown-M']"/>
+  <xsl:template match="tei:u[contains(@who, 'unknown')]"/>
 
   
   <xsl:template match="tei:text//tei:note">

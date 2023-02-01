@@ -407,9 +407,9 @@
   <xsl:template name="listOrg">
     <listOrg xmlns="http://www.tei-c.org/ns/1.0">
       <!-- Need to collect all unique organisations here -->
-      <xsl:apply-templates mode="unique" select="$teiHeaders//tei:org"/>
+      <xsl:apply-templates select="$teiHeaders//tei:listOrg//tei:org"/>
       <listRelation>
-	<xsl:apply-templates select="$teiHeaders/tei:teiHeader[1]//tei:listRelation[1]//tei:relation" mode="relations"/>
+<!--	<xsl:apply-templates select="$teiHeaders/tei:teiHeader[1]//tei:listRelation[1]//tei:relation"/>-->
 	<relation name="renaming" active="#party.SMC.2" passive="#party.SMC.1"
                   when="2015-03-07"/>
 	<relation name="successor" active="#party.Levica.2" passive="#party.Levica.1"
@@ -431,125 +431,43 @@
     </listOrg>
   </xsl:template>
 
-  <xsl:template match="tei:listRelation//tei:relation">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:apply-templates/>
-    </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="tei:listRelation//tei:relation" mode="relations">
-    <xsl:variable name="name" select="@name"/>
-    <xsl:variable name="when" select="@when"/>
-    <xsl:variable name="to" select="@to"/>
-    <xsl:if test="$when &gt; $cutoffDate and $when &lt; $cutoffDate2 or $name = 'coalition' and $to &lt; $cutoffDate2 and $to &gt; $cutoffDate">
-      <xsl:apply-templates select="."/>
-    </xsl:if>
-  </xsl:template>
-    
-  <xsl:template name="revisionDesc">
-    <revisionDesc>
-        <change when="2023-01-10">
-        <name>Tomaž Erjavec</name>: Small fixes of ParlaMint data</change>
-        <change when="2022-12-08">
-        <name>Katja Meden</name>: Made TEI sample </change>
-    </revisionDesc>
-  </xsl:template>
-
-  <xsl:template match="tei:org" mode="unique">
+  <xsl:template match="tei:org">
     <xsl:variable name="id" select="@xml:id"/>
     <xsl:variable name="to" select="tei:event[tei:label = 'existence']/@to"/>
+    <xsl:variable name="role" select="@role"/>
     <xsl:if test="not(preceding::tei:org[@xml:id = $id]) and 
 		  (not($to) or $to &gt; $cutoffDate)">
-      <xsl:apply-templates select="."/>
+      <xsl:copy>
+	<xsl:apply-templates select="@*"/>
+	<xsl:attribute name="xml:id" select="$id"/>
+	<xsl:attribute name="role">
+	  <xsl:choose>
+	    <xsl:when test="@xml:id='DZ'">
+	      <xsl:text>parliament</xsl:text>
+	    </xsl:when>
+	    <xsl:when test="@xml:id='GOV'">
+	      <xsl:text>government</xsl:text>
+	    </xsl:when>
+	    <xsl:when test="matches(@xml:id, '^party\.(?!IMNS)', ';j' )">
+	      <xsl:text>parliamentaryGroup</xsl:text>
+	    </xsl:when>
+	    <xsl:when test="@xml:id='party.IMNS'">
+	      <xsl:text>ethnicCommunity</xsl:text>
+	    </xsl:when>
+	    <xsl:otherwise>
+	      <xsl:value-of select="@role"/>
+	    </xsl:otherwise>
+	  </xsl:choose>
+	</xsl:attribute>
+	<xsl:apply-templates/>
+	<xsl:message select="concat('ORG: Looking at: ', @xml:id, '; ', @role)"/>
+      </xsl:copy>
     </xsl:if>
   </xsl:template>
 
-  <!-- Add <full> if required:-->
-  <xsl:template match="tei:particDesc/tei:listOrg//tei:orgName[not(@full)]">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:attribute name="full">
-	<xsl:choose>
-	  <xsl:when test="@xml:lang">
-	    <xsl:text>yes</xsl:text>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:text>abb</xsl:text>
-	  </xsl:otherwise>
-	</xsl:choose>
-      </xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:copy>
-  </xsl:template>
-
-  <!--Change value of existing @full attribute to either "yes" or "abb"--> 
-  <xsl:template match="tei:particDesc/tei:listOrg//tei:orgName[@full]">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:attribute name="full">
-	<xsl:choose>
-	  <xsl:when test="@xml:lang">
-	    <xsl:text>yes</xsl:text>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:text>abb</xsl:text>
-	  </xsl:otherwise>
-	</xsl:choose>
-      </xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:copy>
-  </xsl:template>
-
-  <!--Remove Chambers from the listOrg -->
-  <xsl:template match="tei:particDesc//tei:listOrg[@xml:id = 'chambers']"/>
-  <xsl:template match="tei:particDesc//tei:org[@ana = '#par.chamber']"/>
- 
-  
-  <!-- Change value of @role to new, valid ones-->
-  <xsl:template match="tei:particDesc//tei:listOrg//tei:org">
-    <xsl:variable name="id" select="@xml:id"/>
-    <xsl:variable name="role" select="@role"/>
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:attribute name="xml:id" select="$id"/>
-      <xsl:attribute name="role">
-	<xsl:choose>
-	  <xsl:when test="@xml:id='DZ'">
-	    <xsl:text>parliament</xsl:text>
-	  </xsl:when>
-	  <xsl:when test="@xml:id='GOV'">
-	    <xsl:text>government</xsl:text>
-	  </xsl:when>
-	  <xsl:when test="matches(@xml:id, '^party\.(?!IMNS)', ';j' )">
-	    <xsl:text>parliamentaryGroup</xsl:text>
-	  </xsl:when>
-	  <xsl:when test="@xml:id='party.IMNS'">
-	    <xsl:text>ethnicCommunity</xsl:text>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:value-of select="@role"/>
-	  </xsl:otherwise>
-	</xsl:choose>
-      </xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="tei:org[@xml:id = 'party.SDZ-NDS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.DS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.DLGV']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.Lipa']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.LS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.SKD']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.SND']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.ZS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.SOPS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.Zares.1']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.Zares.2']" mode="unique"/>
-  
-  <xsl:template match="tei:listOrg//tei:org[not(@xml:id='DZ')]//tei:idno">
+  <xsl:template match="tei:listOrg//tei:org[not[@xml:id='DZ']]//tei:idno">
     <xsl:variable name="lang" select="@xml:lang"/>
+    <xsl:variable name="id" select="..//@xml:id"/>
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:attribute name="type">
@@ -565,12 +483,46 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:idno">
+ <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:idno">
     <idno type="URI" xml:lang="sl" subtype="wikimedia">https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
     <idno type="URI" xml:lang="en" subtype="wikimedia">https://en.wikipedia.org/wiki/National_Assembly_(Slovenia)</idno>
   </xsl:template>
 
-  <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:listEvent">
+  
+  <xsl:template match="tei:org//tei:orgName">
+    <xsl:variable name="full" select="@full"/>
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+	<xsl:if test="not(@full)">
+	  <xsl:attribute name="full">
+	    <xsl:choose>
+	      <xsl:when test="@xml:lang">
+		<xsl:text>yes</xsl:text>
+	      </xsl:when>
+	      <xsl:otherwise>
+		<xsl:text>abb</xsl:text>
+	      </xsl:otherwise>
+	    </xsl:choose>
+	  </xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:if>
+	<xsl:if test="@full">
+	  <xsl:attribute name="full">
+	    <xsl:choose>
+	      <xsl:when test="@xml:lang">
+		<xsl:text>yes</xsl:text>
+	      </xsl:when>
+	      <xsl:otherwise>
+		<xsl:text>abb</xsl:text>
+	      </xsl:otherwise>
+	    </xsl:choose>
+	  </xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:if>
+    </xsl:copy>
+  </xsl:template>
+
+    <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:listEvent">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
@@ -580,6 +532,34 @@
       </event>
     </xsl:copy>
   </xsl:template>
+  
+<!--  <xsl:template match="tei:listRelation//tei:relation">
+    <xsl:variable name="name" select="@name"/>
+    <xsl:variable name="when" select="@when"/>
+    <xsl:variable name="to" select="@to"/>
+    <xsl:if test="(not($name='merger') and $when &gt; $cutoffDate) or
+		  ($name = 'coalition' and $to &gt; $cutoffDate)">
+      <xsl:copy>
+	<xsl:apply-templates select="@*"/>
+	<xsl:if test="$name='secession'">
+	  <xsl:attribute name="name">
+	    <xsl:text>successor</xsl:text>
+	  </xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:if>
+      </xsl:copy>
+    </xsl:if>
+  </xsl:template>-->
+    
+  <xsl:template name="revisionDesc">
+    <revisionDesc>
+        <change when="2023-01-10">
+        <name>Tomaž Erjavec</name>: Small fixes of ParlaMint data</change>
+        <change when="2022-12-08">
+        <name>Katja Meden</name>: Made TEI sample </change>
+    </revisionDesc>
+  </xsl:template>
+
 
   <!-- listPerson templates -->
   

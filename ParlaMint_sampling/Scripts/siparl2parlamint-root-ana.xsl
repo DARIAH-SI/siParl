@@ -397,17 +397,9 @@
         </prefixDef>
       </listPrefixDef>
       <appInfo>
-        <application version="1.0" ident="reldi-tokeniser">
-          <label>ReLDI tokeniser</label>
-          <desc xml:lang="en">Tokenisation and sentence segmentation with ReLDI tokeniser, available from <ref target="https://github.com/clarinsi/reldi-tokeniser">https://github.com/clarinsi/reldi-tokeniser</ref>.</desc>
-        </application>
-        <application version="1.0" ident="classla-stanfordnlp">
+	<application version="1.0" ident="classla">
           <label>CLASSLA-StanfordNLP</label>
-          <desc xml:lang="en">MSD tagging and lemmatisation with CLASSLA-StanfordNLP trained for Slovene, available from <ref target="https://github.com/clarinsi/classla-stanfordnlp">https://github.com/clarinsi/classla-stanfordnlp</ref>.</desc>
-        </application>
-        <application version="1.0" ident="janes-ner">
-          <label>NER system for South Slavic languages</label>
-          <desc xml:lang="en">Named entity recognition done with the Janes NER program, trained for Slovene and available at <ref target="https://github.com/clarinsi/janes-ner">https://github.com/clarinsi/janes-ner</ref>.</desc>
+          <desc xml:lang="en">Linguistic processing with CLASSLA-StanfordNLP trained for Slovene, available from <ref target="https://github.com/clarinsi/classla">https://github.com/clarinsi/classla</ref>.</desc>
         </application>
       </appInfo>
     </encodingDesc>
@@ -440,166 +432,293 @@
   <xsl:template name="listOrg">
     <listOrg xmlns="http://www.tei-c.org/ns/1.0">
       <!-- Need to collect all unique organisations here -->
-      <xsl:apply-templates mode="unique" select="$teiHeaders//tei:org"/>
+      <xsl:apply-templates  select="$teiHeaders//tei:org"/>
       <listRelation>
-	<xsl:apply-templates select="$teiHeaders/tei:teiHeader[1]//tei:listRelation[1]//tei:relation" mode="relations"/>
-	<relation name="renaming" active="#party.SMC.2" passive="#party.SMC.1"
-                  when="2015-03-07"/>
-	<relation name="successor" active="#party.Levica.2" passive="#party.Levica.1"
-                  when="2017-06-24"/>
-	<relation name="renaming" active="#party.ZaSLD" passive="#party.ZaAB"
-                  when="2016-05-21"/>
-	<relation name="renaming" active="#party.SAB" passive="#party.ZaSLD"
-                  when="2017-10-07"/>
-	<relation name="renaming" active="#party.Konkretno" passive="#party.SMC.2 #party.GAS" when="2021-12-04"/>
+	<xsl:apply-templates select="$teiHeaders/tei:teiHeader[1]//tei:listRelation[1]//tei:relation"/>
 	<relation name="coalition"
-                  mutual="#party.SMC.1 #party.SMC.2 #party.SD #party.DeSUS" from="2014-09-18"
-                  to="2018-09-12" ana="#GOV.12"/>
-	<relation name="opposition" active="#party.SDS.2 #party.IMNS #party.ZaAB #party.NeP #party.NP #party.NSi #party.Levica.1 #party.Levica.2" passive="#GOV" from="2014-09-18" to="2018-09-12" ana="#GOV.12"/>
-	<relation name="coalition" mutual="#party.LMŠ #party.SMC.2 #party.SD #party.SAB #party.DeSUS" from="2018-09-13" to="2020-03-12" ana="#GOV.13"/>
-	<relation name="opposition" active="#party.SDS.2 #party.Levica.2 #party.NSi #party.NeP #party.NP #party.IMNS #party.SNS" passive="#GOV" from="2018-09-13" to="2020-03-12" ana="#GOV.13"/>
-	<relation name="coalition" mutual="#party.SDS.2 #party.SMC.2 #party.Konkretno #party.NSi #party.DeSUS" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
-	<relation name="opposition" active="#party.LMŠ #party.SD #party.SAB #party.Levica.2 #party.NeP #party.NP #party.IMNS #party.SNS" passive="#GOV" from="2020-03-13" to="2022-06-01" ana="#GOV.14"/>
+                  mutual="#party.LDS.2 #party.SLS-SKD #party.SLS.2 #party.ZLSD #party.DeSUS #party.SMS"
+                  from="2000-11-30"
+                  to="2002-12-19"
+                  ana="#GOV.6"/>
+        <relation name="opposition"
+                  active="#party.NSi #party.SDS.2 #party.SNS"
+		  passive="#GOV"
+                  from="2000-11-30"
+                  to="2002-12-19"
+                  ana="#GOV.6"/>
+	<relation name="coalition"
+                  mutual="#party.LDS.2 #party.ZLSD #party.SLS.2 #party.DeSUS #party.SMS"
+                  from="2002-12-19"
+                  to="2004-04-19"
+                  ana="#GOV.7"/>
+	<relation name="opposition"
+                  active="#party.SDS.2 #party.NSi #party.SNS"
+		  passive="#GOV"
+                  from="2002-12-19"
+                  to="2004-04-19"
+                  ana="#GOV.7"/>
+	<relation name="coalition"
+                  mutual="#party.LDS.2 #party.ZLSD #party.DeSUS #party.SMS"
+                  from="2004-04-20"
+                  to="2004-12-02"
+                  ana="#GOV.7"/>
+	<relation name="opposition"
+		  active="#party.SDS.2 #party.NSi #party.SLS.2 #party.SNS"
+		  passive="#GOV"
+		  from="2004-04-20"
+		  to="2004-12-02"
+                  ana="#GOV.7"/>
+	<relation name="coalition"
+                  mutual="#party.SDS.2 #party.NSi #party.SLS.2 #party.DeSUS"
+                  from="2004-12-03"
+                  to="2008-11-20"
+                  ana="#GOV.8"/>
+	<relation name="opposition"
+                  active="#party.LDS.2 #party.SD #party.SNS"
+		  passive="#GOV"
+                  from="2004-12-03"
+                  to="2008-11-20"
+                  ana="#GOV.8"/>
+	<relation name="coalition"
+                  mutual="#party.SD #party.Zares.1 #party.DeSUS #party.LDS.2"
+                  from="2008-11-21"
+                  to="2011-05-09"
+                  ana="#GOV.9"/>
+	<relation name="opposition"
+                  active="#party.SDS.2 #party.SNS #party.SLS.2"
+		  passive="#GOV"
+                  from="2008-11-21"
+                  to="2011-05-09"
+                  ana="#GOV.9"/>
+	<relation name="coalition"
+                  mutual="#party.SD #party.Zares.1 #party.LDS.2"
+                  from="2011-05-09"
+                  to="2011-06-27"
+                  ana="#GOV.9"/>
+	<relation name="opposition"
+                  active="#party.SDS.2 #party.SNS #party.DeSUS #party.SLS.2"
+		  passive="#GOV"
+                  from="2011-05-09"
+                  to="2011-06-27"
+                  ana="#GOV.9"/>
+	<relation name="coalition"
+                  mutual="#party.SD #party.LDS.2"
+                  from="2011-06-27"
+                  to="2012-02-09"
+                  ana="#GOV.9"/>
+	<relation name="opposition"
+                  active="#party.SDS.2 #party.SNS #party.DeSUS #party.SLS.2 #party.Zares.1"
+		  passive="#GOV"
+                  from="2011-06-27"
+                  to="2012-02-09"
+                  ana="#GOV.9"/>
+	<relation name="coalition"
+                  mutual="#party.SDS.2 #party.DLGV #party.DL #party.DeSUS #party.SLS.2 #party.NSi"
+                  from="2012-02-10"
+                  to="2013-01-23"
+                  ana="#GOV.10"/>
+	<relation name="opposition"
+                  active="#party.PS #party.SD"
+		  passive="#GOV"
+                  from="2012-02-10"
+                  to="2013-01-23"
+                  ana="#GOV.10"/>
+	<relation name="coalition"
+                  mutual="#party.SDS.2 #party.DeSUS #party.SLS.2 #party.NSi"
+                  from="2013-01-23"
+                  to="2013-02-22"
+                  ana="#GOV.10"/>
+	<relation name="opposition"
+                  active="#party.PS #party.SD #party.DL"
+		  passive="#GOV"
+                  from="2013-01-23"
+                  to="2013-02-22"
+                  ana="#GOV.10"/>
+	<relation name="coalition"
+                  mutual="#party.SDS.2 #party.SLS.2 #party.NSi"
+                  from="2013-02-22"
+                  to="2013-02-25"
+                  ana="#GOV.10"/>
+	<relation name="opposition"
+                  active="#party.PS #party.SD #party.DL #party.DeSUS"
+		  passive="#GOV"
+                  from="2013-02-22"
+                  to="2013-02-25"
+                  ana="#GOV.10"/>
+	<relation name="coalition"
+                  mutual="#party.SDS.2 #party.NSi"
+                  from="2013-02-25"
+                  to="2013-03-19"
+                  ana="#GOV.10"/>
+	<relation name="opposition"
+                  active="#party.PS #party.SD #party.DL #party.DeSUS #party.SLS.2"
+		  passive="#GOV"
+                  from="2013-02-25"
+                  to="2013-03-19"
+                  ana="#GOV.10"/>
+	<relation name="coalition"
+                  mutual="#party.PS #party.SD #party.DL #party.DeSUS"
+                  from="2013-03-20"
+                  to="2014-09-18"
+                  ana="#GOV.11"/>
+	<relation name="opposition"
+                  active="#party.SDS.2 #party.SLS.2 #party.NSi"
+		  passive="#GOV"
+                  from="2013-03-20"
+                  to="2014-09-18"
+                  ana="#GOV.11"/>
+	<relation name="coalition"
+                  mutual="#party.SMC.1 #party.SMC.2 #party.SD #party.DeSUS"
+                  from="2014-09-18"
+                  to="2018-09-12"
+                  ana="#GOV.12"/>
+	<relation name="opposition"
+                  active="#party.SDS.2 #party.Levica.1 #party.Levica.2 #party.NSi #party.ZaAB"
+		  passive="#GOV"
+                  from="2014-09-18"
+                  to="2018-09-12"
+                  ana="#GOV.12"/>
+	<relation name="coalition"
+		  mutual="#party.LMŠ #party.SMC.2 #party.SD #party.SAB #party.DeSUS"
+		  from="2018-09-13"
+		  to="2020-03-12"
+		  ana="#GOV.13"/>
+	<relation name="opposition"
+		  active="#party.SDS.2 #party.Levica.2 #party.NSi #party.SNS"
+		  passive="#GOV"
+		  from="2018-09-13"
+		  to="2020-03-12"
+		  ana="#GOV.13"/>
+	<relation name="coalition"
+		  mutual="#party.SDS.2 #party.SMC.2 #party.Konkretno #party.NSi #party.DeSUS"
+		  from="2020-03-13"
+		  to="2022-06-01"
+		  ana="#GOV.14"/>
+	<relation name="opposition"
+		  active="#party.LMŠ #party.SD #party.SAB #party.Levica.2 #party.SNS"
+		  passive="#GOV"
+		  from="2020-03-13"
+		  to="2022-06-01"
+		  ana="#GOV.14"/>
       </listRelation>
     </listOrg>
   </xsl:template>
 
-  <xsl:template match="tei:listRelation//tei:relation">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:apply-templates/>
-    </xsl:copy>
-  </xsl:template>
-  
-  <xsl:template match="tei:listRelation//tei:relation" mode="relations">
-    <xsl:variable name="name" select="@name"/>
-    <xsl:variable name="when" select="@when"/>
-    <xsl:variable name="to" select="@to"/>
-    <xsl:if test="$when &gt; $cutoffDate and $when &lt; $cutoffDate2 or $name = 'coalition' and $to &lt; $cutoffDate2 and $to &gt; $cutoffDate">
-      <xsl:apply-templates select="."/>
-    </xsl:if>
-  </xsl:template>
-
-    <xsl:template match="tei:org" mode="unique">
+  <xsl:template match="tei:org">
     <xsl:variable name="id" select="@xml:id"/>
     <xsl:variable name="to" select="tei:event[tei:label = 'existence']/@to"/>
+    <xsl:variable name="role" select="@role"/>
     <xsl:if test="not(preceding::tei:org[@xml:id = $id]) and 
-		  (not($to) or $to &gt; $cutoffDate)">
-      <xsl:apply-templates select="."/>
+		  (not($to) or $to &gt; $cutoffDate) and 
+		  (not(@xml:id = 'party.SDZ-NDS' or @xml:id = 'party.DS' or @xml:id = 'party.LS'
+		  or @xml:id = 'party.ZS' or  @xml:id = 'party.SOPS'))">
+      <xsl:copy>
+	<xsl:apply-templates select="@*"/>
+	<xsl:attribute name="xml:id" select="$id"/>
+	<xsl:variable name="role">
+	  <xsl:choose>
+	    <xsl:when test="@xml:id='DZ'">
+	      <xsl:text>parliament</xsl:text>
+	    </xsl:when>
+	    <xsl:when test="@xml:id='GOV'">
+	      <xsl:text>government</xsl:text>
+	    </xsl:when>
+	    <xsl:when test="matches(@xml:id, '^party\.') and (not(@xml:id = 'party.IMNS' 
+			    or @xml:id = 'party.GAS' or @xml:id = 'party.ZaSLD' ))">
+	      <xsl:text>parliamentaryGroup</xsl:text>
+	    </xsl:when>
+	    <xsl:when test="@xml:id='party.IMNS'">
+	      <xsl:text>ethnicCommunity</xsl:text>
+	    </xsl:when>
+	    <xsl:when test="@xml:id='party.GAS' or @xml:id='party.ZaSLD'">
+	      <xsl:text>politicalParty</xsl:text>
+	    </xsl:when>
+	    <xsl:otherwise>
+	      <xsl:value-of select="@role"/>
+	    </xsl:otherwise>
+	  </xsl:choose>
+	</xsl:variable>
+	<xsl:attribute name="role" select="$role"/>
+	<xsl:message select="concat('ORG: Looking at: ', @xml:id, '; ', @role, ', ', $role)"/>
+	<xsl:apply-templates/>
+      </xsl:copy>
     </xsl:if>
   </xsl:template>
 
-  <!-- Add <full> if required:-->
-  <xsl:template match="tei:particDesc/tei:listOrg//tei:orgName[not(@full)]">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:attribute name="full">
-	<xsl:choose>
-	  <xsl:when test="@xml:lang">
-	    <xsl:text>yes</xsl:text>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:text>abb</xsl:text>
-	  </xsl:otherwise>
-	</xsl:choose>
-      </xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:copy>
-  </xsl:template>
-
-    <!--Change value of existing @full attribute to either "yes" or "abb"--> 
-  <xsl:template match="tei:particDesc/tei:listOrg//tei:orgName[@full]">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:attribute name="full">
-	<xsl:choose>
-	  <xsl:when test="@xml:lang">
-	    <xsl:text>yes</xsl:text>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:text>abb</xsl:text>
-	  </xsl:otherwise>
-	</xsl:choose>
-      </xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:copy>
-  </xsl:template>
-
-  <!--Remove Chambers from the listOrg -->
-  <xsl:template match="tei:particDesc//tei:listOrg[@xml:id = 'chambers']"/>
-  <xsl:template match="tei:particDesc//tei:org[@ana = '#par.chamber']"/>
- 
-  
-  <!-- Change value of @role to new, valid ones-->
-  <xsl:template match="tei:particDesc//tei:listOrg//tei:org">
-    <xsl:variable name="id" select="@xml:id"/>
-    <xsl:variable name="role" select="@role"/>
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:attribute name="xml:id" select="$id"/>
-      <xsl:attribute name="role">
-	<xsl:choose>
-	  <xsl:when test="@xml:id='DZ'">
-	    <xsl:text>parliament</xsl:text>
-	  </xsl:when>
-	  <xsl:when test="@xml:id='GOV'">
-	    <xsl:text>government</xsl:text>
-	  </xsl:when>
-	  <xsl:when test="matches(@xml:id, '^party\.(?!IMNS)', ';j' )">
-	    <xsl:text>parliamentaryGroup</xsl:text>
-	  </xsl:when>
-	  <xsl:when test="@xml:id='party.IMNS'">
-	    <xsl:text>ethnicCommunity</xsl:text>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:value-of select="@role"/>
-	  </xsl:otherwise>
-	</xsl:choose>
-      </xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:copy>
-  </xsl:template>
-
-    <xsl:template match="tei:org[@xml:id = 'party.SDZ-NDS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.DS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.DLGV']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.Lipa']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.LS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.SKD']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.SND']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.ZS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.SOPS']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.Zares.1']" mode="unique"/>
-  <xsl:template match="tei:org[@xml:id = 'party.Zares.2']" mode="unique"/>
-  
-  <xsl:template match="tei:listOrg//tei:org[not(@xml:id='DZ')]//tei:idno">
+  <xsl:template match="tei:listOrg//tei:org[not[@xml:id='DZ']]//tei:idno">
     <xsl:variable name="lang" select="@xml:lang"/>
+    <xsl:variable name="id" select="..//@xml:id"/>
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:attribute name="type">
 	<xsl:text>URI</xsl:text>
       </xsl:attribute>
-      <xsl:attribute name="subtype">
-	<xsl:text>wikimedia</xsl:text>
-      </xsl:attribute>
       <xsl:attribute name="xml:lang">
 	<xsl:value-of select="$lang"/>
+      </xsl:attribute>
+      <xsl:attribute name="subtype">
+	<xsl:text>wikimedia</xsl:text>
       </xsl:attribute>
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:idno">
+ <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:idno">
     <idno type="URI" xml:lang="sl" subtype="wikimedia">https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
     <idno type="URI" xml:lang="en" subtype="wikimedia">https://en.wikipedia.org/wiki/National_Assembly_(Slovenia)</idno>
   </xsl:template>
+
   
-  <xsl:template match="tei:listOrg//tei:org[@xml:id='DZ']//tei:listEvent">
+  <xsl:template match="tei:org//tei:orgName">
+    <xsl:variable name="full" select="@full"/>
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
-      <xsl:apply-templates/>
+	<xsl:if test="not(@full)">
+	  <xsl:attribute name="full">
+	    <xsl:choose>
+	      <xsl:when test="@xml:lang">
+		<xsl:text>yes</xsl:text>
+	      </xsl:when>
+	      <xsl:otherwise>
+		<xsl:text>abb</xsl:text>
+	      </xsl:otherwise>
+	    </xsl:choose>
+	  </xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:if>
+	<xsl:if test="@full">
+	  <xsl:attribute name="full">
+	    <xsl:choose>
+	      <xsl:when test="@xml:lang">
+		<xsl:text>yes</xsl:text>
+	      </xsl:when>
+	      <xsl:otherwise>
+		<xsl:text>abb</xsl:text>
+	      </xsl:otherwise>
+	    </xsl:choose>
+	  </xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:if>
     </xsl:copy>
   </xsl:template>
+  
+  <xsl:template match="tei:listRelation//tei:relation">
+    <xsl:variable name="name" select="@name"/>
+    <xsl:variable name="when" select="@when"/>
+    <xsl:variable name="to" select="@to"/>
+    <xsl:if test="(not($name='merger') and $when &gt; $cutoffDate)">
+      <xsl:copy>
+	<xsl:apply-templates select="@*"/>
+	<xsl:if test="$name='secession'">
+	  <xsl:attribute name="name">
+	    <xsl:text>successor</xsl:text>
+	  </xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:if>
+      </xsl:copy>
+    </xsl:if>
+  </xsl:template>
+  
 
     <!-- listPerson templates -->
   
