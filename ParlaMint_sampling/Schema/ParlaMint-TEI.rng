@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://www.tei-c.org/ns/1.0"
+         xmlns:xml="http://www.w3.org/XML/1998/namespace"
+         xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  
+  <a:documentation>RelaxNG XML schema for ParlaMint corpora: schema
+  for "plain text" corpus component file.</a:documentation>
+
+  <include href="ParlaMint.rng"/>
+  
+  <start>
+    <a:documentation>Root element of a ParlaMint component file.</a:documentation>
+    <element name="TEI">
+      <a:documentation>Obligatory @xml:id.</a:documentation>
+      <ref name="id.att"/>
+      <a:documentation>Obligatory @xml:lang.</a:documentation>
+      <attribute name="xml:lang">
+        <ref name="lang.val"/>
+      </attribute>
+      <a:documentation>Obligatory @ana determining what scope this document has.</a:documentation>
+      <attribute name="ana">
+        <ref name="anyURIs"/>
+      </attribute>
+      <ref name="teiHeader"/>
+      <ref name="text-body"/>
+    </element>
+  </start>
+  
+  <!-- METADATA -->
+  
+  <define name="teiHeader">
+    <a:documentation>Metadata of the component.</a:documentation>
+    <element name="teiHeader">
+      <ref name="global.atts"/>
+      <ref name="fileDesc"/>
+      <ref name="encodingDesc"/>
+      <ref name="profileDesc"/>
+      <optional>
+        <ref name="revisionDesc"/>
+      </optional>
+    </element>
+  </define>
+  
+  <define name="fileDesc">
+    <element name="fileDesc">
+      <a:documentation>File description.</a:documentation>
+      <ref name="global.atts"/>
+      <ref name="titleStmt"/>
+      <ref name="editionStmt"/>
+      <ref name="extent"/>
+      <ref name="publicationStmt"/>
+      <ref name="sourceDesc"/>
+    </element>
+  </define>
+
+  <define name="titleStmt">
+    <a:documentation>Title statement.</a:documentation>
+    <element name="titleStmt">
+      <oneOrMore>
+        <ref name="title-header"/>
+      </oneOrMore>
+      <oneOrMore>
+        <ref name="meeting"/>
+      </oneOrMore>
+      <zeroOrMore>
+        <ref name="respStmt"/>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="funder"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="respStmt">
+    <a:documentation>Responsibility statement.</a:documentation>
+    <element name="respStmt">
+      <oneOrMore>
+        <oneOrMore>
+          <element name="persName">
+            <ref name="global.atts"/>
+            <ref name="ref.att"/>
+            <ref name="normalized-space.string"/>
+          </element>
+        </oneOrMore>
+        <oneOrMore>
+          <element name="resp">
+            <ref name="lang.att"/>
+            <ref name="normalized-space.string"/>
+          </element>
+        </oneOrMore>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="editionStmt">
+    <a:documentation>Edition statement.</a:documentation>
+    <element name="editionStmt">
+      <element name="edition">
+        <ref name="normalized-space.string"/>
+      </element>
+    </element>
+  </define>
+  
+  <define name="extent">
+    <a:documentation>Extent of the document.</a:documentation>
+    <element name="extent">
+      <oneOrMore>
+        <element name="measure">
+          <attribute name="unit">
+            <!--data type="NCName"/-->
+            <choice>
+              <value>speeches</value>
+              <value>words</value>
+              <value>tokens</value>
+            </choice>
+          </attribute>
+          <attribute name="quantity">
+            <data type="integer"/>
+          </attribute>
+          <ref name="lang.att"/>
+          <text/>
+        </element>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="publicationStmt">
+    <a:documentation>Publications statement.</a:documentation>
+    <element name="publicationStmt">
+      <ref name="publisher"/>
+      <ref name="idno"/>
+      <element name="availability">
+        <attribute name="status">
+          <value>free</value>
+        </attribute>
+        <element name="licence">
+          <!--data type="anyURI"/-->
+          <a:documentation>Fixed licence CC BY.</a:documentation>
+          <value>http://creativecommons.org/licenses/by/4.0/</value>
+        </element>
+        <ref name="paras"/>
+      </element>
+      <ref name="date-simple"/>
+    </element>
+  </define>
+  
+  <define name="sourceDesc">
+    <a:documentation>Source description.</a:documentation>
+    <element name="sourceDesc">
+      <oneOrMore>
+        <element name="bibl">
+          <oneOrMore>
+            <ref name="title"/>
+          </oneOrMore>
+          <zeroOrMore>
+            <element name="edition">
+              <ref name="lang.att"/>
+              <ref name="normalized-space.string"/>
+            </element>
+          </zeroOrMore>
+          <optional>
+            <ref name="publisher"/>
+          </optional>
+          <oneOrMore>
+            <ref name="idno"/>
+          </oneOrMore>
+          <zeroOrMore>
+            <ref name="date"/>
+          </zeroOrMore>
+        </element>
+      </oneOrMore>
+      <optional>
+        <element name="recordingStmt">
+          <oneOrMore>
+            <element name="recording">
+              <attribute name="type">
+                <choice>
+                  <value>audio</value>
+                  <value>video</value>
+                </choice>
+              </attribute>
+              <optional>
+                <attribute name="dur">
+                  <data type="duration"/>
+                </attribute>
+              </optional>
+              <oneOrMore>
+                <ref name="media"/>
+              </oneOrMore>
+              <zeroOrMore>
+                <ref name="respStmt"/>
+              </zeroOrMore>
+              <optional>
+                <ref name="time"/>
+              </optional>
+              <optional>
+                <element name="equipment">
+                  <ref name="abs"/>
+                </element>
+              </optional>
+            </element>
+          </oneOrMore>
+        </element>
+      </optional>
+    </element>
+  </define>
+  
+  <define name="encodingDesc">
+    <a:documentation>Encoding description.</a:documentation>
+    <element name="encodingDesc">
+      <ref name="global.atts"/>
+      <element name="projectDesc">
+        <ref name="paras"/>
+      </element>
+      <ref name="tagsDecl"/>
+    </element>
+  </define>
+  
+  <define name="profileDesc">
+    <a:documentation>Profile description.</a:documentation>
+    <element name="profileDesc">
+      <ref name="global.atts"/>
+      <ref name="settingDesc"/>
+    </element>
+  </define>
+  
+  <define name="revisionDesc">
+    <a:documentation>Revision description.</a:documentation>
+    <element name="revisionDesc">
+      <ref name="global.atts"/>
+      <oneOrMore>
+        <element name="change">
+          <attribute name="when">
+            <data type="date"/>
+          </attribute>
+          <mixed>
+            <zeroOrMore>
+              <ref name="name-header"/>
+            </zeroOrMore>
+          </mixed>
+        </element>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="tagsDecl">
+    <a:documentation>Tags declaration.</a:documentation>
+    <element name="tagsDecl">
+      <element name="namespace">
+        <attribute name="name">
+          <data type="anyURI"/>
+        </attribute>
+        <oneOrMore>
+          <element name="tagUsage">
+            <attribute name="gi">
+              <data type="Name"/>
+            </attribute>
+            <attribute name="occurs">
+              <data type="nonNegativeInteger"/>
+            </attribute>
+            <text/>
+          </element>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+
+  <define name="settingDesc">
+    <a:documentation>Setting description.</a:documentation>
+    <element name="settingDesc">
+      <element name="setting">
+        <oneOrMore>
+          <ref name="name-header"/>
+        </oneOrMore>
+        <ref name="date"/>
+      </element>
+    </element>
+  </define>
+  
+  <define name="title-header">
+    <a:documentation>A title in the teiHeader. Must have a @type.</a:documentation>
+    <element name="title">
+      <ref name="lang.att"/>
+      <a:documentation>@type is here obligatory:</a:documentation>
+      <attribute name="type">
+        <choice>
+          <value>main</value>
+          <value>sub</value>
+        </choice>
+      </attribute>
+      <ref name="normalized-space.string"/>
+    </element>
+  </define>
+  
+  <define name="title">
+    <a:documentation>A title in the text.</a:documentation>
+    <element name="title">
+      <ref name="lang.att"/>
+      <optional>
+        <a:documentation>@type is optional:</a:documentation>
+        <attribute name="type">
+          <choice>
+            <value>main</value>
+            <value>sub</value>
+          </choice>
+        </attribute>
+      </optional>
+      <ref name="normalized-space.string"/>
+    </element>
+  </define>
+  
+  <define name="meeting">
+    <a:documentation>A "meeting" (e.g. session) of the parliament.</a:documentation>
+    <element name="meeting">
+      <ref name="global.atts"/>
+      <ref name="ana.att"/>
+      <ref name="corresp.att"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="publisher">
+    <a:documentation>Publisher of the corpus.</a:documentation>
+    <element name="publisher">
+      <ref name="lang.att"/>
+      <choice>
+        <group>
+          <oneOrMore>
+            <element name="orgName">
+              <ref name="lang.att"/>
+              <ref name="normalized-space.string"/>
+            </element>
+          </oneOrMore>
+          <optional>
+            <ref name="ref"/>
+          </optional>
+        </group>
+        <text/>
+      </choice>
+    </element>
+  </define>
+  
+  <define name="funder">
+    <a:documentation>Funder of the corpus compilation.</a:documentation>
+    <element name="funder">
+      <oneOrMore>
+        <element name="orgName">
+          <ref name="lang.att"/>
+          <ref name="normalized-space.string"/>
+        </element>
+      </oneOrMore>
+      <optional>
+        <ref name="ref"/>
+      </optional>
+    </element>
+  </define>
+
+  <define name="name-header">
+    <a:documentation>A name as it appears in the teiHeader (rather than in the
+    transcription).</a:documentation>
+    <element name="name">
+      <optional>
+        <attribute name="type">
+          <data type="Name"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="key">
+          <data type="Name"/>
+        </attribute>
+      </optional>
+      <ref name="lang.att"/>
+      <ref name="normalized-space.string"/>
+    </element>
+  </define>
+  
+  <define name="paras">
+    <a:documentation>A series of paragraphs. Paragrapgs are only used in the
+    teiHeader.</a:documentation>
+    <oneOrMore>
+      <element name="p">
+        <ref name="global.atts"/>
+        <ref name="annotated.text"/>
+      </element>
+    </oneOrMore>
+  </define>
+
+  <define name="abs">
+    <a:documentation>A series of anonymous blocks. Anonymous blocks are only used in the
+    teiHeader.</a:documentation>
+    <oneOrMore>
+      <element name="ab">
+        <ref name="global.atts"/>
+        <ref name="normalized-space.string"/>
+      </element>
+    </oneOrMore>
+  </define>
+
+  <a:documentation>Start of definitions for text</a:documentation>
+
+  <define name="text-body">
+    <a:documentation>The definition of the text and body elements.</a:documentation>
+    <element name="text">
+      <ref name="global.atts"/>
+      <ref name="ana.att"/>
+      <element name="body">
+        <oneOrMore>
+          <ref name="div"/>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+  
+  <define name="div">
+    <a:documentation>The definition of the div element.</a:documentation>
+    <element name="div">
+      <ref name="global.atts"/>
+      <choice>
+        <a:documentation>A standard div with utterances.</a:documentation>
+        <group>
+          <attribute name="type">
+            <value>debateSection</value>
+          </attribute>
+          <zeroOrMore>
+            <ref name="head"/>
+          </zeroOrMore>
+	  <a:documentation>We want at least one u in the debateSection.</a:documentation>
+          <zeroOrMore>
+            <choice>
+              <ref name="comment"/>
+              <ref name="pb"/>
+            </choice>
+          </zeroOrMore>
+          <ref name="u"/>
+          <zeroOrMore>
+            <choice>
+              <ref name="comment"/>
+              <ref name="pb"/>
+              <ref name="u"/>
+            </choice>
+          </zeroOrMore>
+        </group>
+        <a:documentation>A div with transcriber comments only.</a:documentation>
+        <group>
+          <attribute name="type">
+            <value>commentSection</value>
+          </attribute>
+          <zeroOrMore>
+            <ref name="head"/>
+          </zeroOrMore>
+          <oneOrMore>
+            <choice>
+              <ref name="comment"/>
+              <ref name="pb"/>
+            </choice>
+          </oneOrMore>
+        </group>
+      </choice>
+    </element>
+  </define>
+
+  <define name="u">
+    <a:documentation>One speech (i.e. 'utterance').</a:documentation>
+    <element name="u">
+      <ref name="global.atts"/>
+      <a:documentation>Attributes to link split utterances.</a:documentation>
+      <optional>
+        <attribute name="prev">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="next">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <optional>
+        <ref name="who.att"/>
+      </optional>
+      <a:documentation>Utterance has obligatory @ana, for the role of the speaker.</a:documentation>
+      <ref name="ana.att"/>
+      <optional>
+        <attribute name="source">
+          <ref name="anyURIs"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <ref name="seg"/>
+          <ref name="comment"/>
+          <ref name="pb"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="seg">
+    <a:documentation>A segment (i.e paragraph) inside a speech.</a:documentation>
+    <element name="seg">
+      <ref name="global.atts"/>
+      <oneOrMore>
+        <choice>
+          <ref name="comment"/>
+          <ref name="pb"/>
+          <text/>
+          <!--ref name="normalized-space.string"/-->
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="note">
+    <a:documentation>A transcriber note.</a:documentation>
+    <element name="note">
+      <ref name="global.atts"/>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <ref name="time"/>
+          <ref name="pb"/>
+          <text/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="pb">
+    <a:documentation>A page break, possible with its source URI.</a:documentation>
+    <element name="pb">
+      <ref name="global.atts"/>
+      <ref name="corresp.att"/>
+      <ref name="source.att"/>
+      <empty/>
+    </element>
+  </define>
+  
+  <define name="comment">
+    <a:documentation>Any type of transcriber comment.</a:documentation>
+    <choice>
+      <ref name="note"/>
+      <element name="gap">
+        <attribute name="reason">
+          <choice>
+            <value>editorial</value>
+            <value>inaudible</value>
+            <value>foreign</value>
+          </choice>
+        </attribute>
+        <oneOrMore>
+          <ref name="incidentDesc"/>
+        </oneOrMore>
+      </element>
+      <element name="kinesic">
+        <optional>
+          <attribute name="type">
+            <ref name="kinesicType.val"/>
+          </attribute>
+        </optional>
+        <optional>
+          <ref name="who.att"/>
+        </optional>
+        <oneOrMore>
+          <ref name="incidentDesc"/>
+        </oneOrMore>
+      </element>
+      <element name="incident">
+        <optional>
+          <attribute name="type">
+            <ref name="incidentType.val"/>
+          </attribute>
+        </optional>
+        <optional>
+          <ref name="who.att"/>
+        </optional>
+        <oneOrMore>
+          <ref name="incidentDesc"/>
+        </oneOrMore>
+      </element>
+      <element name="vocal">
+        <attribute name="type">
+          <ref name="vocalType.val"/>
+        </attribute>
+        <optional>
+          <ref name="who.att"/>
+        </optional>
+        <oneOrMore>
+          <ref name="incidentDesc"/>
+        </oneOrMore>
+      </element>
+    </choice>
+  </define>
+  
+  <define name="incidentDesc">
+    <a:documentation>A description of an incident in a speech.</a:documentation>
+    <element name="desc">
+      <ref name="lang.att"/>
+      <ref name="normalized-space.string"/>
+    </element>
+  </define>
+
+  <define name="media">
+    <a:documentation>The media element</a:documentation>
+    <element name="media">
+      <ref name="global.atts"/>
+      <attribute name="mimeType">
+        <data type="token"/>
+      </attribute>
+      <ref name="source.att"/>
+      <attribute name="url">
+        <ref name="anyURIs"/>
+      </attribute>
+    </element>
+  </define>
+  
+</grammar>

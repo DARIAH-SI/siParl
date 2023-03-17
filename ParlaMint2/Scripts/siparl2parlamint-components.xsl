@@ -18,7 +18,7 @@
   <xsl:param name="covid-date" as="xs:date">2019-11-01</xsl:param>
 
   
-  <xsl:decimal-format name="euro" decimal-separator="," grouping-separator="."/>
+  <xsl:decimal-format name="slv" decimal-separator="," grouping-separator="."/>
   
   <!-- Not sure if we need this, leaving it here for now: -->
   <xsl:variable name="terms">
@@ -71,11 +71,31 @@
 	<xsl:value-of select="$edition"/>
       </edition>
     </editionStmt>
-    <extent><!--These numbers do not reflect the size of the sample!-->
-      <measure unit="speeches" quantity="0" xml:lang="sl">0 govorov</measure>
-      <measure unit="speeches" quantity="0" xml:lang="en">0 speeches</measure>
-      <measure unit="words" quantity="0" xml:lang="sl">0 besed</measure>
-      <measure unit="words" quantity="0" xml:lang="en">0 words</measure>
+    <extent>
+      <xsl:variable name="count-u" select="count(ancestor::tei:TEI/tei:text//tei:u)"/>
+      <xsl:variable name="counting">
+        <string>
+          <xsl:apply-templates select="ancestor::tei:TEI/tei:text"/>
+        </string>
+      </xsl:variable>
+      <xsl:variable name="compoundString" select="normalize-space(string-join($counting/tei:string,' '))"/>
+      <xsl:variable name="count-words" select="count(tokenize($compoundString,'\W+')[. != ''])"/>
+      <measure unit="speeches" quantity="{format-number($count-u, '#')}" xml:lang="sl">
+        <xsl:value-of select="format-number($count-u,'###.###', 'slv')"/>
+        <xsl:text> govorov</xsl:text>
+      </measure>
+      <measure unit="speeches" quantity="{format-number($count-u, '#')}" xml:lang="en">
+        <xsl:value-of select="format-number($count-u,'###,###')"/>
+        <xsl:text> speeches</xsl:text>
+      </measure>
+      <measure unit="words" quantity="{format-number($count-words, '#')}" xml:lang="sl">
+	<xsl:value-of select="format-number($count-words,'###.###', 'slv')"/>
+        <xsl:text> besed</xsl:text>
+      </measure>
+      <measure unit="words" quantity="{format-number($count-words, '#')}" xml:lang="en">
+	<xsl:value-of select="format-number($count-words,'###,###')"/>
+        <xsl:text> words</xsl:text>
+      </measure>
     </extent>
   </xsl:template>
   
@@ -90,13 +110,13 @@
 	<xsl:when test="@xml:lang = 'en'">
 	  <xsl:text>Slovenian parliamentary corpus ParlaMint-SI, </xsl:text>
           <xsl:choose>
-            <xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.regular')]">
+            <xsl:when test="../tei:meeting[contains(@ana, '#parla.meeting.regular')]">
               <xsl:text>Regular Session </xsl:text>
-              <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.regular')]/@n"/>
+              <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.meeting.regular')]/@n"/>
             </xsl:when>
-            <xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]">
+            <xsl:when test="../tei:meeting[contains(@ana, '#parla.meeting.extraordinary')]">
               <xsl:text>Extraordinary Session </xsl:text>
-              <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]/@n"/>
+              <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.meeting.extraordinary')]/@n"/>
             </xsl:when>
 	    <xsl:otherwise>
 	      <xsl:message terminate="yes">
@@ -130,16 +150,16 @@
       <xsl:attribute name="type" select="../tei:title[@type= 'sub']/@type"/>
       <xsl:attribute name="xml:lang" select="../tei:title[@xml:lang = 'en']/@xml:lang"/>
       <xsl:text>Minutes of the National Assembly of the Republic of Slovenia, Term </xsl:text>
-      <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.term')]/@n"/>
+      <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.term')]/@n"/>
       <xsl:text>, </xsl:text>
       <xsl:choose>
-	<xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.regular')]">
+	<xsl:when test="../tei:meeting[contains(@ana, '#parla.meeting.regular')]">
 	  <xsl:text>Regular Session </xsl:text>
-          <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.regular')]/@n"/>
+          <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.meeting.regular')]/@n"/>
         </xsl:when>
-        <xsl:when test="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]">
+        <xsl:when test="../tei:meeting[contains(@ana, '#parla.meeting.extraordinary')]">
           <xsl:text>Extraordinary Session </xsl:text>
-          <xsl:value-of select="../tei:meeting[contains(@ana, '#parl.meeting.extraordinary')]/@n"/>
+          <xsl:value-of select="../tei:meeting[contains(@ana, '#parla.meeting.extraordinary')]/@n"/>
         </xsl:when>
 	<xsl:otherwise>
 	  <xsl:message terminate="yes">
@@ -205,7 +225,6 @@
       <title type="main" xml:lang="sl">Zapisi sej Državnega zbora Republike Slovenije</title>
       <xsl:apply-templates select="tei:edition"/>
       <xsl:apply-templates select="tei:idno"/>
-      <!--For the tei:idno, how do I add the subtype attribute and its value? -->
       <xsl:apply-templates select="tei:date"/> 
     </xsl:copy>
   </xsl:template>
@@ -260,7 +279,6 @@
     <xsl:apply-templates/>
   </xsl:template>
   
-
   <xsl:template match="tei:text">
     <xsl:copy>
       <xsl:attribute name="ana">
@@ -278,6 +296,10 @@
     </xsl:copy>
   </xsl:template>
 
+  <!-- Remove unknown speaker utterances-->
+  <xsl:template match="tei:u[@who='#unknown-M']"/>
+
+  
   <xsl:template match="tei:text//tei:note">
     <xsl:choose>
       <xsl:when test="@type='chairman'">
@@ -286,83 +308,18 @@
 	  <xsl:apply-templates/>
 	</head>
       </xsl:when>
-      <xsl:when test="@type">
-	<xsl:copy>
-	  <xsl:apply-templates select="@*"/>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Za')">
-	<xsl:copy>
-	  <xsl:attribute name="type">vote-ayes</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Proti') or starts-with(., 'Nihče')">
-	<xsl:copy>
-	  <xsl:attribute name="type">vote-noes</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Ne&#32;') or starts-with(., 'Ne.')">
-	<xsl:copy>
-	  <xsl:attribute name="type">answer</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Da.') or starts-with(., 'Želi.')">
-	<xsl:copy>
-	  <xsl:attribute name="type">answer</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'Se&#32;')">
-	<xsl:copy>
-	  <xsl:attribute name="type">answer</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'izklop&#32;')">
-	<xsl:copy>
-	  <xsl:attribute name="type">action</xsl:attribute>
-	  <xsl:apply-templates/>
-	</xsl:copy>
-      </xsl:when>
-      <xsl:when test="starts-with(., 'nerazumljivo')">
-	<gap>
-	  <xsl:attribute name="reason">inaudiable</xsl:attribute>
-	  <xsl:element name="desc">
-	      <xsl:attribute name="xml:lang">
-		<xsl:value-of select="/tei:TEI/@xml:lang"/>
-	      </xsl:attribute>
-	      <xsl:apply-templates/>
-	  </xsl:element>
-	</gap>
-      </xsl:when>
+      <!-- Remove notes with unknown speakers-->
+      <xsl:when test="starts-with(., 'GOSPOD') or starts-with(., 'GOSPOD&#32;')"/>
       <xsl:otherwise>
 	<xsl:copy>
 	  <xsl:apply-templates select="@*"/>
 	  <xsl:apply-templates/>
 	</xsl:copy>
-	<xsl:message select="concat('Warning: Strange note: ', .)"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
-    
-  <!-- In this session, all of the gap element are empty, with only an attribute to explain the type of gap. But this might not be the case for all other sessions.-->
-  <xsl:template match="//tei:gap">
-    <xsl:copy>
-      <xsl:copy-of select="@*"/>
-      <desc>
-	<xsl:attribute name="xml:lang">
-	  <xsl:value-of select="/tei:TEI/@xml:lang"/>
-	</xsl:attribute>
-	<xsl:text>&#8230;</xsl:text>
-	<xsl:apply-templates/>
-      </desc>
-    </xsl:copy>
- </xsl:template>
+   
  
  <!-- Copy rest to output -->
  <xsl:template match="tei:*">
