@@ -99,7 +99,7 @@ update_term_roots:
 
 #Step 12: Update the existing components roots (previous version, 3.0) - correcting handle, date of availablity, misgendered speakers...:
 update_component_roots:
-	$s -xi -xsl:Scripts/siParl-componentRoot-update.xsl speech/SDZ2_list.xml
+	$s -xi -xsl:Scripts/siParl-componentRoot-update.xsl speech/SDZ4_list.xml
 
 
 #Step 13: Run conversion to get new siParl.xml corpus root and with this, new (updated) siParl {version} corpus.
