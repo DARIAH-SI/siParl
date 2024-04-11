@@ -4,10 +4,10 @@
 
 #------------------ PREPARING NEW TERM SUBCORPUS (SDT8, Steps 1 - 8; Last updated: april 2024) -----------------------
 
-#Step 1: Run ../Selenium/Selenium_scrap_full.ipynb  to scrap the HTML files from the webpage. (Use Selenium_from_X_page_forward.ipynb to start scraping from specific page, or Selenium_scrap_Kolegij to scrap debates for the Kolegij, that is on a different part of the page with different structure).
+#Step 1: Run ../Selenium/Selenium_scrap_full.ipynb  to scrap the HTML files from the webpage. Instead, ../Selenium/Selenium_from_X_page_forward.ipynb can be used to start scraping from specific page, or ../Selenium/Selenium_scrap_Kolegij to scrap debates for the Kolegij, that is on a different part of the page with different structure).
 
 
-#Step 2: Convert HTML to XML, F/R function to produce valid document and document differences (diff)
+#Step 2: Convert HTML to XML, F/R function to produce valid document and document differences (diff between documents).
 
 
 
@@ -22,7 +22,7 @@
 
 #Step 2.2:  use Find and replace functions within chosen editor (e.g. Sublime Text, XML Oxygen editor) to fix the HTML format to make it valid and ready for XSLT transformations.
 
-#Step 2.3. Run ../Selenium/diffs.py (shell), document changes made to the source files
+#Step 2.3. Run ../Selenium/diffs.py (shell), document changes made to the source files (diff_output.txt).
 
 
 #--------------------------------------------------------------------------------------------------------------------
