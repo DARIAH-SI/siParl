@@ -55,9 +55,34 @@
                                     <xsl:value-of select="current-group()[1]"/>
                                 </meeting>
                             </xsl:for-each-group>
-                            <funder>
-                                <orgName xml:lang="sl">Slovenska digitalna raziskovalna infrastruktura za umetnost in humanistiko DARIAH-SI</orgName>
-                                <orgName xml:lang="en">Slovenian Digital Research Infrastructure for the Arts and Humanities DARIAH-SI</orgName>
+			    <respStmt>
+			      <persName ref="https://orcid.org/0000-0001-6143-6877 http://viaf.org/viaf/305936424">Andrej Pančur</persName>
+			      <resp xml:lang="sl">Kodiranje TEI</resp>
+			      <resp xml:lang="en">TEI corpus encoding</resp>
+			    </respStmt>
+			    <respStmt>
+			      <persName ref="https://orcid.org/0000-0001-6143-6877 http://viaf.org/viaf/305936424">Andrej Pančur</persName>
+			      <resp xml:lang="sl">Urejanje seznama govornikov</resp>
+			      <resp xml:lang="en">Editing a list of speakers</resp>
+			    </respStmt>
+			    <respStmt>
+			      <persName ref="https://orcid.org/0000-0002-0464-9240">Katja Meden</persName>
+			      <resp xml:lang="sl">Kodiranje TEI</resp>
+			      <resp xml:lang="en">TEI corpus encoding</resp>
+			    </respStmt>
+			    <respStmt>
+			      <persName ref="https://orcid.org/0000-0002-0464-9240">Katja Meden</persName>
+			      <resp xml:lang="sl">Urejanje seznama govornikov</resp>
+			      <resp xml:lang="en">Editing a list of speakers</resp>
+			    </respStmt>
+			    <respStmt>
+			      <persName ref="https://orcid.org/0000-0002-1560-4099 http://viaf.org/viaf/15145066459666591823">Tomaž Erjavec</persName>
+			      <resp xml:lang="sl">Kodiranje TEI</resp>
+			      <resp xml:lang="en">TEI corpus encoding</resp>
+			    </respStmt>
+			    <funder>
+                              <orgName xml:lang="sl">Slovenska digitalna raziskovalna infrastruktura za umetnost in humanistiko DARIAH-SI</orgName>
+                              <orgName xml:lang="en">Slovenian Digital Research Infrastructure for the Arts and Humanities DARIAH-SI</orgName>
                             </funder>
                             <funder>
                                 <orgName xml:lang="sl">Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
@@ -312,7 +337,23 @@
                                         </category>
                                     </category>
                                 </category>
-                            </taxonomy>
+                              </taxonomy>
+			      <taxonomy xml:id="speaker_types">
+				<desc xml:lang="en">Types of speakers</desc>
+				<desc xml:lang="sl">Vrste govornikov</desc>
+				<category xml:id="chair">
+				  <catDesc xml:lang="en">
+				  <term>Chairperson</term>: chairman of a meeting</catDesc>
+				  <catDesc xml:lang="sl">
+				  <term>Predsedujoči</term>: predsedujoči zasedanja</catDesc>
+				</category>
+				<category xml:id="regular">
+				  <catDesc xml:lang="en">
+				  <term>Regular</term>: a regular speaker at a meeting</catDesc>
+				  <catDesc xml:lang="sl">
+				  <term>Navadni</term>: navadni govorec na zasedanju</catDesc>
+				</category>
+			      </taxonomy>
                         </classDecl>
                     </encodingDesc>
                     <profileDesc>

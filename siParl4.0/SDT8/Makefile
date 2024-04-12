@@ -112,8 +112,10 @@ siParl_root:
 val:
 	$s -xi -xsl:Scripts/copy.xsl siParl4.0/SDT8.xml | $j Schema/parla-clarin.rng
 
-
+check-list:
+	$s  meta=../siParl4.0/siParl.xml  -xsl:Scripts/check-links.xsl  siParl4.0/SDT8/KPDZ-001-Redna-2018-06-29.xml
 ################################################
+META = katja/siParl/siParl/siParl4.0/SDT8/siParl4.0/siParl.xml
 s = java -jar /usr/share/java/saxon.jar
 j = java -jar /usr/share/java/jing.jar
 P = parallel --gnu --halt 2
