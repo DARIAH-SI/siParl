@@ -106,7 +106,7 @@ update_component_roots:
 siParl_root:
 	$s -xi -xsl:Scripts/siParl.xsl speech-list.xml
 
-#--------------- VALIDATION (Step 12) ----------------------------------------------------------------------------------
+#--------------- VALIDATION (Step 14) ----------------------------------------------------------------------------------
 
 #Step 14: Validate the entire corpus with Parla-CLARIN (first copy with -xi to define xi:include elements and for validation not to produce errors "xi:include not allowed"):
 val:
@@ -114,6 +114,15 @@ val:
 
 check-list:
 	$s  meta=../siParl4.0/siParl.xml  -xsl:Scripts/check-links.xsl  siParl4.0/SDT8/KPDZ-001-Redna-2018-06-29.xml
+
+#--------------- LINGUISTIC ANNOTAION ----------------------------------------------------------------------------------
+
+#Linguistic annotation: The script "siParl_classla.py" assumes that the files, ready for annotation are all in a folder titled "siParl" (target directory and path can be changed in the script).
+#Use of GPU is recommended
+
+classla:
+	time python3 siParl_classla.py
+
 ################################################
 META = katja/siParl/siParl/siParl4.0/SDT8/siParl4.0/siParl.xml
 s = java -jar /usr/share/java/saxon.jar
