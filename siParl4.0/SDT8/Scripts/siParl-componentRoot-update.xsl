@@ -28,13 +28,28 @@
 
   <xsl:template match="tei:titleStmt/tei:title[@type='main'][@xml:lang='sl']">
     <title type="main" xml:lang="sl">
-      <xsl:value-of select="concat(., ' [siParl]')"/>
+    <xsl:choose>
+      <xsl:when test="matches(., '\[siParl\]$')">
+	<xsl:value-of select="."/>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:value-of select="concat(., '[siParl]')"/>
+      </xsl:otherwise>
+    </xsl:choose>
     </title>
   </xsl:template>
 
-    <xsl:template match="tei:titleStmt/tei:title[@type='main'][@xml:lang='en']">
+
+  <xsl:template match="tei:titleStmt/tei:title[@type='main'][@xml:lang='en']">
     <title type="main" xml:lang="en">
-      <xsl:value-of select="concat(., ' [siParl]')"/>
+      <xsl:choose>
+	<xsl:when test="matches(., '\[siParl\]$')">
+	  <xsl:value-of select="."/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:value-of select="concat(., '[siParl]')"/>
+	</xsl:otherwise>
+      </xsl:choose>
     </title>
   </xsl:template>
 

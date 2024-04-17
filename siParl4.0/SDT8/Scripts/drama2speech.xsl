@@ -68,11 +68,8 @@
         <teiHeader>
           <fileDesc>
             <titleStmt>
-              <title type="main" xml:lang="sl">Dobesedni zapis sej delovnih teles
-              Državnega zbora Republike Slovenije [siParl]</title>
-              <title type="main" xml:lang="en">Verbatim record of sessions of the
-              working bodies of the National Assembly of the Republic of
-              Slovenia [siParl]</title>
+              <title type="main" xml:lang="sl">Dobesedni zapis sej delovnih teles Državnega zbora Republike Slovenije [siParl]</title>
+              <title type="main" xml:lang="en">Verbatim record of sessions of the working bodies of the National Assembly of the Republic of Slovenia [siParl]</title>
               <title type="sub" xml:lang="sl">
                 <xsl:value-of select="$terms/tei:term[@n = $corpus-term]"/>
               </title>
