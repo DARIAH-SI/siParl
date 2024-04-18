@@ -33,7 +33,7 @@
 	<xsl:value-of select="."/>
       </xsl:when>
       <xsl:otherwise>
-	<xsl:value-of select="concat(., '[siParl]')"/>
+	<xsl:value-of select="concat(., ' [siParl]')"/>
       </xsl:otherwise>
     </xsl:choose>
     </title>
@@ -47,7 +47,7 @@
 	  <xsl:value-of select="."/>
 	</xsl:when>
 	<xsl:otherwise>
-	  <xsl:value-of select="concat(., '[siParl]')"/>
+	  <xsl:value-of select="concat(., ' [siParl]')"/>
 	</xsl:otherwise>
       </xsl:choose>
     </title>
