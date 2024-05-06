@@ -113,7 +113,7 @@ val:
 	$s -xi -xsl:Scripts/copy.xsl siParl4.0/SDT8.xml | $j Schema/parla-clarin.rng
 
 check-list:
-	$s  meta=../siParl4.0/siParl.xml  -xsl:Scripts/check-links.xsl  siParl4.0/SDT8/KPDZ-001-Redna-2018-06-29.xml
+	$s  meta=../siParl4.0/siParl.xml  -xsl:Scripts/check-links.xsl  siParl4.0/SDT8/OZZ-011-Redna-2020-11-04.xml
 
 #--------------- LINGUISTIC ANNOTAION ----------------------------------------------------------------------------------
 
