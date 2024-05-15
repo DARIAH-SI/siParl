@@ -53,6 +53,22 @@
     </title>
   </xsl:template>
 
+  <xsl:template match="tei:TEI//@ana">
+   <xsl:attribute name="{name()}">
+     <xsl:choose>
+       <xsl:when test="contains(., '#parl.')">
+         <xsl:value-of select="replace(., '#parl\.', '#parla.')"/>
+       </xsl:when>
+       <xsl:otherwise>
+         <xsl:value-of select="."/>
+       </xsl:otherwise>
+     </xsl:choose>
+   </xsl:attribute>
+  </xsl:template>
+
+
+
+  
   <xsl:template match="tei:publicationStmt/tei:date[@when]">
     <date>
       <xsl:attribute name="when">
