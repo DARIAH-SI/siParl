@@ -313,3 +313,4 @@ time python3 siParl_classla.py
 siParl/OZZ-011-Redna-2020-11-04.xml
 259.10user 46.07system 1:22.65elapsed 369%CPU (0avgtext+0avgdata 9499992maxresident)k
 1232inputs+168outputs (4major+9947228minor)pagefaults 0swaps
+ls siParl4.0/S*/*.xml | parallel --gnu --halt 2 --jobs 20 'java -Xmx240g -jar /usr/share/java/saxon.jar meta=../siParl4.0/siParl.xml -xsl:Scripts/check-links.xsl {}'

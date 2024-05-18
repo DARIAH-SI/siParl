@@ -41,6 +41,22 @@
       <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
+  
+  <xsl:template match="@ana">
+    <xsl:attribute name="{name()}">
+      <xsl:choose>
+	<xsl:when test="contains(., '#parl.')">
+          <xsl:value-of select="replace(., '#parl\.', '#parla.')"/>
+	</xsl:when>
+	<xsl:when test="contains(., '#par.')">
+          <xsl:value-of select="replace(., '#par\.', '#parla.')"/>
+	</xsl:when>
+	<xsl:otherwise>
+          <xsl:value-of select="."/>
+	</xsl:otherwise>
+     </xsl:choose>
+    </xsl:attribute>
+  </xsl:template>
 
   <xsl:template match="tei:titleStmt/tei:title[@type='main'][@xml:lang='sl']">
     <title type="main" xml:lang="sl">

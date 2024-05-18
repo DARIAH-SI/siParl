@@ -101,14 +101,14 @@ update_SSK11_root:
 
 #Step 12: Update the existing components roots (previous version, 3.0) - correcting handle, date of availablity, misgendered speakers...:
 update_component_roots:
-	$s -xi -xsl:Scripts/siParl-componentRoot-update.xsl speech/SSK11_list.xml
+	$s -xi -xsl:Scripts/siParl-componentRoot-update.xsl speech/SDZ8_list.xml
 
 
 #Step 13: Run conversion to get new siParl.xml corpus root and with this, new (updated) siParl {version} corpus.
 siParl_root:
 	$s -xi -xsl:Scripts/siParl.xsl speech-list.xml
 
-
+#Finalize with a manual check and validations below:
 
 #--------------- VALIDATION (Step 14) ----------------------------------------------------------------------------------
 
@@ -117,10 +117,11 @@ val:
 	$s -xi -xsl:Scripts/copy.xsl siParl4.0/siParl.xml | $j Schema/parla-clarin.rng
 
 check-list:
-	$s meta=../siParl4.0/siParl.xml -xsl:Scripts/check-links.xsl  siParl4.0/SSK11/DruzPolZb-Seja-020-1991-06-12.xml
+	$s meta=../siParl4.0/siParl.xml -xsl:Scripts/check-links.xsl  siParl4.0/SDT2.xml
+#/DruzPolZb-Seja-001-1990-05-07.xml
 
 lnk:
-	ls siParl4.0/SSK11/*.xml | $P --jobs 20 '$s meta=../siParl4.0/siParl.xml ${vlink} {}'
+	ls siParl4.0/S*/*.xml | $P --jobs 20 '$s meta=../siParl4.0/siParl.xml ${vlink} {}'
 
 #--------------- LINGUISTIC ANNOTAION ----------------------------------------------------------------------------------
 

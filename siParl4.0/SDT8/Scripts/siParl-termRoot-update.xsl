@@ -42,6 +42,19 @@
     </xsl:copy>
   </xsl:template>
 
+    <xsl:template match="tei:TEI//@ana">
+   <xsl:attribute name="{name()}">
+     <xsl:choose>
+       <xsl:when test="contains(., '#parl.')">
+         <xsl:value-of select="replace(., '#parl\.', '#parla.')"/>
+       </xsl:when>
+       <xsl:otherwise>
+         <xsl:value-of select="."/>
+       </xsl:otherwise>
+     </xsl:choose>
+   </xsl:attribute>
+  </xsl:template>
+
   <xsl:template match="tei:titleStmt/tei:title[@type='main'][@xml:lang='sl']">
     <title type="main" xml:lang="sl">
     <xsl:choose>
@@ -92,8 +105,15 @@
     </idno>
   </xsl:template>
 
-  <xsl:template match="tei:taxonomy[@xml:id='parla.legislature']//tei:catDesc[. = 'Parlamentaro zasedanje']">
-    <catDesc xml:lang="sl">Parlamentarno zasedanje</catDesc>
+  <xsl:template match="tei:taxonomy"/>
+
+  
+  <xsl:template match="tei:classDecl">
+    <classDecl>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="taxonomy-parla.speaker_types.xml"/>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="taxonomy-parla.legislature.xml"/>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="taxonomy-parla.content.xml"/>
+    </classDecl>
   </xsl:template>
 
   <xsl:template match="tei:person[tei:persName/tei:forename[1] = $female_exception/tei:name]//tei:sex">
@@ -108,6 +128,14 @@
     <sex>
       <xsl:attribute name="value">F</xsl:attribute>
     </sex>
+  </xsl:template>
+
+  
+  <xsl:template match="tei:listPerson/tei:head[2]">
+    <xsl:copy-of select="."/>
+    <person xml:id="commentator">
+      <persName>komentator</persName>
+    </person>
   </xsl:template>
   </xsl:stylesheet>
 
