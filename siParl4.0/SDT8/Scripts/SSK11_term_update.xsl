@@ -121,6 +121,110 @@
   </xsl:template>
 
 
+  
+  <xsl:template match="tei:settingDesc/tei:setting">
+    <xsl:copy>
+      <xsl:attribute name="xml:id">sl</xsl:attribute>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+    <setting xml:lang="en">
+      <name type="city">Ljubljana</name>
+      <name type="country" key="YU" from="1990-05-05" to="1991-06-25">Yugoslavia</name>
+      <name type="region" from="1990-05-05" to="1991-06-25">Slovenia</name>
+      <name type="country" key="SI" from="1991-06-25" to="1992-12-23">Slovenia</name>
+      <date ana="#parla.term" from="1990-05-05" to="1992-12-23"/>
+    </setting>
+
+  </xsl:template>
+
+  
+  <xsl:template match="tei:org[@xml:id='SK']">
+    <org xml:id="SK"
+         role="parliament"
+         ana="#parla.regional #parla.national #parla.multi">
+      <orgName from="1990-06-23" to="1992-12-22" xml:lang="sl">Skupščina Republike Slovenije</orgName>
+      <orgName from="1990-06-23" to="1992-12-22" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
+      <orgName from="1963-06-24" to="1990-06-22" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
+      <orgName from="1963-06-24" to="1990-06-22" xml:lang="en">Assembly of Socialist Republic of Slovenia</orgName>
+      <event from="1963-06-24" to="1992-12-22">
+        <label xml:lang="en">existence</label>
+      </event>
+      <idno type="wikimedia">https://sl.wikipedia.org/wiki/Skup%C5%A1%C4%8Dina_Socialisti%C4%8Dne_republike_Slovenije</idno>
+      <listEvent>
+        <head xml:id="sl">Zakonodajno obdobje</head>
+        <head xml:id="en">Legislative period</head>
+        <event xml:id="SK.11" from="1990-05-08" to="1992-12-23">
+          <label xml:lang="sl">11. sklic</label>
+          <label xml:lang="en">Term 11</label>
+        </event>
+      </listEvent>
+      <listOrg xml:id="chambers">
+        <head xml:lang="sl">Zbori Skupščine Republike Slovenije</head>
+        <head xml:lang="en">Chambers of the Assembly of the Republic of Slovenia</head>
+        <org xml:id="DruzPolZb" ana="#parla.chamber">
+          <orgName xml:lang="sl">Družbeno-politični zbor</orgName>
+          <orgName xml:lang="en">Socio-Political Chamber</orgName>
+          <event from="1974" to="1992-12-22">
+            <label xml:lang="en">existence</label>
+          </event>
+        </org>
+        <org xml:id="ZbObc" ana="#parla.chamber">
+          <orgName xml:lang="sl">Zbor občin</orgName>
+          <orgName xml:lang="en">Chamber of Municipalities</orgName>
+          <event from="1974" to="1992-12-22">
+            <label xml:lang="en">existence</label>
+          </event>
+        </org>
+        <org xml:id="ZbZdruDel" ana="#parla.chamber">
+          <orgName xml:lang="sl">Zbor združenega dela</orgName>
+          <orgName xml:lang="en">Chamber of Associated Labour</orgName>
+          <event from="1974" to="1992-12-22">
+            <label xml:lang="en">existence</label>
+          </event>
+        </org>
+      </listOrg>
+    </org>
+  </xsl:template>
+
+  <xsl:template match="tei:org[@xml:id='DZ']/tei:listEvent">
+    <listEvent>
+      <head xml:id="sl">Zakonodajno obdobje</head>
+      <head xml:id="en">Legislative period</head>
+      <event xml:id="DZ.1" from="1992-12-23" to="1996-11-27">
+        <label xml:lang="sl">1. mandat</label>
+        <label xml:lang="en">Term 1</label>
+      </event>
+      <event xml:id="DZ.2" from="1996-11-28" to="2000-10-26">
+        <label xml:lang="sl">2. mandat</label>
+        <label xml:lang="en">Term 2</label>
+      </event>
+      <event xml:id="DZ.3" from="2000-10-27" to="2004-10-21">
+        <label xml:lang="sl">3. mandat</label>
+        <label xml:lang="en">Term 3</label>
+      </event>
+      <event xml:id="DZ.4" from="2004-10-22" to="2008-10-14">
+        <label xml:lang="sl">4. mandat</label>
+        <label xml:lang="en">Term 4</label>
+      </event>
+      <event xml:id="DZ.5" from="2008-10-15" to="2011-12-15">
+        <label xml:lang="sl">5. mandat</label>
+        <label xml:lang="en">Term 5</label>
+      </event>
+      <event xml:id="DZ.6" from="2011-12-16" to="2014-07-31">
+        <label xml:lang="sl">6. mandat</label>
+        <label xml:lang="en">Term 6</label>
+      </event>
+      <event xml:id="DZ.7" from="2014-08-01" to="2018-06-21">
+        <label xml:lang="sl">7. mandat</label>
+        <label xml:lang="en">Term 7</label>
+      </event>
+      <event xml:id="DZ.8" from="2018-06-22" to="2022-05-12">
+        <label xml:lang="sl">8. mandat</label>
+        <label xml:lang="en">Term 8</label>
+      </event>
+    </listEvent>
+  </xsl:template>
+
   <xsl:template match="tei:listPerson/tei:head[2]">
     <xsl:copy-of select="."/>
     <person xml:id="commentator">

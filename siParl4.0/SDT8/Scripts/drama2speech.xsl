@@ -323,6 +323,293 @@
                 <head xml:lang="sl">Delovna telesa Državnega zbora Republike Slovenije</head>
                 <head xml:lang="en">Working bodies of the National Assembly of the Republic of Slovenia</head>
                 <xsl:copy-of select="$listOrg//tei:org"/>
+		               <org xml:id="GOV" role="government">
+                  <orgName xml:lang="sl">Vlada Republike Slovenije</orgName>
+                  <orgName xml:lang="en">Government of the Republic of Slovenia</orgName>
+                  <event from="1990-05-16">
+                     <label xml:lang="en">existence</label>
+                  </event>
+                  <idno type="URI" subtype="wikimedia" xml:lang="sl">https://sl.wikipedia.org/wiki/Vlada_Republike_Slovenije</idno>
+                  <listEvent>
+                     <event xml:id="GOV.1" from="1990-05-16" to="1992-05-14">
+                        <label>1. vlada Republike Slovenije (16. maj 1990 - 14. maj 1992)</label>
+                     </event>
+                     <event xml:id="GOV.2" from="1992-05-14" to="1993-01-25">
+                        <label>2. vlada Republike Slovenije (14. maj 1992 - 25. januar 1993)</label>
+                     </event>
+                     <event xml:id="GOV.3" from="1993-01-25" to="1997-02-27">
+                        <label>3. vlada Republike Slovenije (25. januar 1993 - 27. februar
+                           1997)</label>
+                     </event>
+                     <event xml:id="GOV.4" from="1997-02-27" to="2000-06-07">
+                        <label>4. vlada Republike Slovenije (27. februar 1997 - 7. junij
+                           2000)</label>
+                     </event>
+                     <event xml:id="GOV.5" from="2000-06-07" to="2000-11-30">
+                        <label>5. vlada Republike Slovenije (7. junij 2000 - 30. november
+                           2000)</label>
+                     </event>
+                     <event xml:id="GOV.6" from="2000-11-30" to="2002-12-19">
+                        <label>6. vlada Republike Slovenije (30. november 2000 - 19. december
+                           2002)</label>
+                     </event>
+                     <event xml:id="GOV.7" from="2002-12-19" to="2004-12-03">
+                        <label>7. vlada Republike Slovenije (19. december 2002 - 3. december
+                           2004)</label>
+                     </event>
+                     <event xml:id="GOV.8" from="2004-12-03" to="2008-11-21">
+                        <label>8. vlada Republike Slovenije (3. december 2004 - 21. november
+                           2008)</label>
+                     </event>
+                     <event xml:id="GOV.9" from="2008-11-21" to="2012-02-10">
+                        <label>9. vlada Republike Slovenije (21. november 2008 - 10. februar
+                           2012)</label>
+                     </event>
+                     <event xml:id="GOV.10" from="2012-02-10" to="2013-03-20">
+                        <label>10. vlada Republike Slovenije (10. februar 2012 - 20. marec
+                           2013)</label>
+                     </event>
+                     <event xml:id="GOV.11" from="2013-03-20" to="2014-09-18">
+                        <label>11. vlada Republike Slovenije (20. marec 2013 - 18. september
+                           2014)</label>
+                     </event>
+                     <event xml:id="GOV.12" from="2014-09-18" to="2018-09-13">
+                        <label>12. vlada Republike Slovenije (18. september 2014 - 13. september
+                           2018)</label>
+                     </event>
+                     <event xml:id="GOV.13" from="2018-09-13" to="2018-03-13">
+                        <label>13. vlada Republike Slovenije (13. september 2018 - 13. marec 2020)</label>
+                     </event>
+                     <event xml:id="GOV.14" from="2018-03-13" to="2022-06-01">
+                        <label>14. vlada Republike Slovenije (13. marec 2020 - 1. junij 2022)</label>
+                     </event>
+                  </listEvent>
+               </org>
+               <listRelation>
+                  <relation name="separation"
+                            active="#party.SDZ-NDS #party.D"
+                            passive="#party.SDZ"
+                            when="1991-10-13"/>
+                  <relation name="successor"
+                            active="#party.D"
+                            passive="#party.SDZ"
+                            when="1991-10-13"/>
+                  <relation name="successor"
+                            active="#party.SDZ-NDS"
+                            passive="#party.SDZ"
+                            when="1991-10-13"/>
+                  <relation name="successor"
+                            active="#party.DS"
+                            passive="#party.D"
+                            when="1994-03-12"/>
+                  <relation name="successor"
+                            active="#party.SSS"
+                            passive="#party.SZS"
+                            when="1990-06-09"/>
+                  <relation name="secession"
+                            active="#party.ZESS"
+                            passive="#party.ZS"
+                            when="1993-03-22"/>
+                  <relation name="renaming"
+                            active="#party.LDS.1"
+                            passive="#party.ZSMS"
+                            when="1990-11-10"/>
+                  <relation name="merger"
+                            mutual="#party.LDS.1 #party.D #party.SSS #party.ZESS"
+                            when="1994-03-12"/>
+                  <relation name="successor"
+                            active="#party.LDS.2"
+                            passive="#party.LDS.1"
+                            when="1994-03-12"/>
+                  <relation name="successor"
+                            active="#party.LDS.2"
+                            passive="#party.D"
+                            when="1994-03-12"/>
+                  <relation name="successor"
+                            active="#party.LDS.2"
+                            passive="#party.SSS"
+                            when="1994-03-12"/>
+                  <relation name="successor"
+                            active="#party.LDS.2"
+                            passive="#party.ZESS"
+                            when="1994-03-12"/>
+                  <relation name="successor"
+                            active="#party.SDP"
+                            passive="#party.ZKS-SDP"
+                            when="1991-12-20"/>
+                  <relation name="successor"
+                            active="#party.ZLSD"
+                            passive="#party.SDP"
+                            when="1993-05-29"/>
+                  <relation name="successor"
+                            active="#party.SD"
+                            passive="#party.ZLSD"
+                            when="2005-04-02"/>
+                  <relation name="renaming"
+                            active="#party.SDS.2"
+                            passive="#party.SDS.1"
+                            when="2003-09-19"/>
+                  <relation name="renaming"
+                            active="#party.SKZ-LS"
+                            passive="#party.SKZ"
+                            when="1990-12-18"/>
+                  <relation name="renaming"
+                            active="#party.SLS.1"
+                            passive="#party.SKZ-LS"
+                            when="1992-06-27"/>
+                  <relation name="merger" mutual="#party.SLS.1 #party.SKD" when="2000-04-15"/>
+                  <relation name="successor"
+                            active="#party.SLS-SKD"
+                            passive="#party.SLS.1"
+                            when="2000-04-15"/>
+                  <relation name="successor"
+                            active="#party.SLS-SKD"
+                            passive="#party.SKD"
+                            when="2000-04-15"/>
+                  <relation name="secession"
+                            active="#party.NSi"
+                            passive="#party.SLS-SKD"
+                            when="2000-08-04"/>
+                  <relation name="renaming"
+                            active="#party.SLS.2"
+                            passive="#party.SLS-SKD"
+                            when="2001-12-17"/>
+                  <relation name="renaming"
+                            active="#party.DL"
+                            passive="#party.DLGV"
+                            when="2012-04-24"/>
+                  <relation name="renaming"
+                            active="#party.SMC.2"
+                            passive="#party.SMC.1"
+                            when="2015-03-07"/>
+                  <relation name="successor"
+                            active="#party.Levica.2"
+                            passive="#party.Levica.1"
+                            when="2017-06-24"/>
+                  <relation name="renaming"
+                            active="#party.ZaSLD"
+                            passive="#party.ZaAB"
+                            when="2016-05-21"/>
+                  <relation name="renaming"
+                            active="#party.SAB"
+                            passive="#party.ZaSLD"
+                            when="2017-10-07"/>
+                  <relation name="renaming"
+                            active="#party.Zares.2"
+                            passive="#party.Zares.1"
+                            when="2011-10-15"/>
+                  <relation name="merger" mutual="#party.SMC.2 #party.GAS" when="2021-12-04"/>
+                  <relation name="coalition"
+                            mutual="#party.SDZ #party.SDZ-NDS #party.D #party.SDS.1 #party.SKD #party.LS #party.ZS"
+                            from="1990-05-16"
+                            to="1992-05-14"
+                            ana="#GOV.1"/>
+                  <relation name="coalition"
+                            mutual="#party.LDS.1 #party.SDS.1 #party.ZS #party.D #party.SSS"
+                            from="1992-05-14"
+                            to="1993-01-25"
+                            ana="#GOV.2"/>
+                  <relation name="coalition"
+                            mutual="#party.LDS.1 #party.LDS.2 #party.SKD #party.SDS.1 #party.SDP #party.ZLSD"
+                            from="1993-01-25"
+                            to="1994-03-29"
+                            ana="#GOV.3"/>
+                  <relation name="coalition"
+                            mutual="#party.LDS.2 #party.SKD #party.ZLSD"
+                            from="1994-03-29"
+                            to="1996-01-31"
+                            ana="#GOV.3"/>
+                  <relation name="coalition"
+                            mutual="#party.LDS.2 #party.SKD"
+                            from="1996-01-31"
+                            to="1997-02-27"
+                            ana="#GOV.3"/>
+                  <relation name="coalition"
+                            mutual="#party.LDS.2 #party.SLS.1 #party.DeSUS"
+                            from="1997-02-27"
+                            to="2000-06-07"
+                            ana="#GOV.4"/>
+                  <relation name="coalition"
+                            mutual="#party.SLS-SKD #party.SDS.1"
+                            from="2000-06-07"
+                            to="2000-11-30"
+                            ana="#GOV.5"/>
+                  <relation name="coalition"
+                            mutual="#party.LDS.2 #party.SLS-SKD #party.SLS.2 #party.ZLSD #party.DeSUS #party.SMS"
+                            from="2000-11-30"
+                            to="2002-12-19"
+                            ana="#GOV.6"/>
+                  <relation name="coalition"
+                            mutual="#party.LDS.2 #party.ZLSD #party.SLS.2 #party.DeSUS #party.SMS"
+                            from="2002-12-19"
+                            to="2004-04-20"
+                            ana="#GOV.7"/>
+                  <relation name="coalition"
+                            mutual="#party.LDS.2 #party.ZLSD #party.DeSUS #party.SMS"
+                            from="2004-04-20"
+                            to="2004-12-03"
+                            ana="#GOV.7"/>
+                  <relation name="coalition"
+                            mutual="#party.SDS.2 #party.NSi #party.SLS.2 #party.DeSUS"
+                            from="2004-12-03"
+                            to="2008-11-21"
+                            ana="#GOV.8"/>
+                  <relation name="coalition"
+                            mutual="#party.SD #party.Zares.1 #party.DeSUS #party.LDS.2"
+                            from="2008-11-21"
+                            to="2011-05-09"
+                            ana="#GOV.9"/>
+                  <relation name="coalition"
+                            mutual="#party.SD #party.Zares.1 #party.LDS.2"
+                            from="2011-05-09"
+                            to="2011-06-27"
+                            ana="#GOV.9"/>
+                  <relation name="coalition"
+                            mutual="#party.SD #party.LDS.2"
+                            from="2011-06-27"
+                            to="2012-02-10"
+                            ana="#GOV.9"/>
+                  <relation name="coalition"
+                            mutual="#party.SDS.2 #party.DLGV #party.DL #party.DeSUS #party.SLS.2 #party.NSi"
+                            from="2012-02-10"
+                            to="2013-01-23"
+                            ana="#GOV.10"/>
+                  <relation name="coalition"
+                            mutual="#party.SDS.2 #party.DeSUS #party.SLS.2 #party.NSi"
+                            from="2013-01-23"
+                            to="2013-02-22"
+                            ana="#GOV.10"/>
+                  <relation name="coalition"
+                            mutual="#party.SDS.2 #party.SLS.2 #party.NSi"
+                            from="2013-02-22"
+                            to="2013-02-25"
+                            ana="#GOV.10"/>
+                  <relation name="coalition"
+                            mutual="#party.SDS.2 #party.NSi"
+                            from="2013-02-25"
+                            to="2013-03-20"
+                            ana="#GOV.10"/>
+                  <relation name="coalition"
+                            mutual="#party.PS #party.SD #party.DL #party.DeSUS"
+                            from="2013-03-20"
+                            to="2014-09-18"
+                            ana="#GOV.11"/>
+                  <relation name="coalition"
+                            mutual="#party.SMC.1 #party.SMC.2 #party.SD #party.DeSUS"
+                            from="2014-09-18"
+                            to="2018-09-12"
+                            ana="#GOV.12"/>
+                  <relation name="coalition"
+                            mutual="#party.LMŠ #party.SMC.2 #party.SD #party.SAB #party.DeSUS"
+                            from="2018-09-13"
+                            to="2020-03-12"
+                            ana="#GOV.13"/>
+                  <relation name="coalition"
+                            mutual="#party.SDS.2 #party.SMC.2 #party.Konkretno #party.NSi #party.DeSUS"
+                            from="2020-03-13"
+                            to="2022-06-01"
+                            ana="#GOV.14"/>
+               </listRelation>
               </listOrg>
               <listPerson>
                 <head xml:lang="sl">Seznam govornikov</head>

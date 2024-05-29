@@ -117,13 +117,13 @@ val:
 	$s -xi -xsl:Scripts/copy.xsl siParl4.0/siParl.xml | $j Schema/parla-clarin.rng
 
 check-list:
-	$s meta=../siParl4.0/siParl.xml -xsl:Scripts/check-links.xsl  siParl4.0/SDT2.xml
+	$s meta=../siParl4.0/siParl.xml -xsl:Scripts/check-links.xsl  siParl4.0/SDT8.xml
 #/DruzPolZb-Seja-001-1990-05-07.xml
 
 lnk:
-	ls siParl4.0/S*/*.xml | $P --jobs 20 '$s meta=../siParl4.0/siParl.xml ${vlink} {}'
+	ls siParl4.0/SDT8/*.xml | $P --jobs 20 '$s meta=../siParl4.0/siParl.xml ${vlink} {}'
 
-#--------------- LINGUISTIC ANNOTAION ----------------------------------------------------------------------------------
+#--------------- LINGUISTIC ANNOTATION ----------------------------------------------------------------------------------
 
 #Linguistic annotation: The script "siParl_classla.py" assumes that the files, ready for annotation are all in a folder titled "siParl" (target directory and path can be changed in the script).
 #Use of GPU is recommended

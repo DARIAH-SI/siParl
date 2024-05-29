@@ -214,179 +214,198 @@
                         </classDecl>
                     </encodingDesc>
                     <profileDesc>
-                        <abstract>
-                            <p xml:lang="en">The siParl corpus contains minutes of the Assembly of the Republic of Slovenia for 11th legislative period 1990-1992, minutes of the National Assembly of the Republic of Slovenia from the 1st to the 8th legislative period 1992-2022, minutes of the working bodies of the National Assembly of the Republic of Slovenia from the 2nd to the 7th legislative period 1996-2018, and minutes of the the Council of the President of the National Assembly from the 2nd to the 7th legislative period 1996-2018.</p>
-                        </abstract>
-                        <settingDesc>
-                            <setting>
-                                <name type="city">Ljubljana</name>
-                                <name type="country" key="YU" from="1990-05-05" to="1991-06-25">Yugoslavia</name>
-                                <name type="region" from="1990-05-05" to="1991-06-25">Slovenia</name>
-                                <name type="country" key="SI" from="1991-06-25" to="2022-05-13">Slovenia</name>
-                                <date from="1990-05-05" to="2022-05-13"/>
-                            </setting>
-                        </settingDesc>
-                        <particDesc>
-                            <listOrg>
-                                <org xml:id="SK" role="parliament" ana="#parla.regional #parla.national #parla.multi">
-                                    <orgName from="1990-06-23" to="1992-12-23" xml:lang="sl">Skupščina Republike Slovenije</orgName>
-                                    <orgName from="1990-06-23" to="1992-12-23" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
-                                    <orgName from="1963-06-24" to="1990-06-23" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
-                                    <orgName from="1963-06-24" to="1990-06-23" xml:lang="en">Assembly of Socialist Republic of Slovenia</orgName>
-                                    <event from="1963-06-24" to="1992-12-23">
-                                        <label xml:lang="en">existence</label>
-                                    </event>
-                                    <idno type="wikimedia"
-                                        >https://sl.wikipedia.org/wiki/Skup%C5%A1%C4%8Dina_Socialisti%C4%8Dne_republike_Slovenije</idno>
-                                    <listEvent>
-                                        <head>Legislative period</head>
-                                        <event xml:id="SK.11" from="1990-05-08" to="1992-12-23">
-                                            <label xml:lang="sl">11. sklic</label>
-                                            <label xml:lang="en">Term 11</label>
-                                        </event>
-                                    </listEvent>
-                                    <listOrg xml:id="chambers">
-                                        <head xml:lang="sl">Zbori Skupščine Republike Slovenije</head>
-                                        <head xml:lang="en">Chambers of the Assembly of the Republic of Slovenia</head>
-                                        <org xml:id="DruzPolZb" ana="#parla.chamber">
-                                            <orgName xml:lang="sl">Družbeno-politični zbor</orgName>
-                                            <orgName xml:lang="en">Socio-Political Chamber</orgName>
-                                            <event from="1974" to="1992-12-23">
-                                                <label xml:lang="en">existence</label>
-                                            </event>
-                                        </org>
-                                        <org xml:id="ZbObc" ana="#parla.chamber">
-                                            <orgName xml:lang="sl">Zbor občin</orgName>
-                                            <orgName xml:lang="en">Chamber of Municipalities</orgName>
-                                            <event from="1974" to="1992-12-23">
-                                                <label xml:lang="en">existence</label>
-                                            </event>
-                                        </org>
-                                        <org xml:id="ZbZdruDel" ana="#parla.chamber">
-                                            <orgName xml:lang="sl">Zbor združenega dela</orgName>
-                                            <orgName xml:lang="en">Chamber of Associated Labour</orgName>
-                                            <event from="1974" to="1992-12-23">
-                                                <label xml:lang="en">existence</label>
-                                            </event>
-                                        </org>
-                                    </listOrg>
-                                </org>
-                                <org xml:id="DZ" role="parliament" ana="#parla.national #parla.lower">
-                                    <orgName xml:lang="sl">Državni zbor Republike Slovenije</orgName>
-                                    <orgName xml:lang="en">National Assembly of the Republic of Slovenia</orgName>
-                                    <event from="1992-12-23">
-                                        <label xml:lang="en">existence</label>
-                                    </event>
-                                    <idno type="wikimedia">https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
-                                    <listEvent>
-                                        <head>Legislative period</head>
-                                        <event xml:id="DZ.1" from="1992-12-23" to="1996-11-27">
-                                            <label xml:lang="sl">1. mandat</label>
-                                            <label xml:lang="en">Term 1</label>
-                                        </event>
-                                        <event xml:id="DZ.2" from="1996-11-28" to="2000-10-26">
-                                            <label xml:lang="sl">2. mandat</label>
-                                            <label xml:lang="en">Term 2</label>
-                                        </event>
-                                        <event xml:id="DZ.3" from="2000-10-27" to="2004-10-21">
-                                            <label xml:lang="sl">3. mandat</label>
-                                            <label xml:lang="en">Term 3</label>
-                                        </event>
-                                        <event xml:id="DZ.4" from="2004-10-22" to="2008-10-14">
-                                            <label xml:lang="sl">4. mandat</label>
-                                            <label xml:lang="en">Term 4</label>
-                                        </event>
-                                        <event xml:id="DZ.5" from="2008-10-15" to="2011-12-15">
-                                            <label xml:lang="sl">5. mandat</label>
-                                            <label xml:lang="en">Term 5</label>
-                                        </event>
-                                        <event xml:id="DZ.6" from="2011-12-16" to="2014-07-31">
-                                            <label xml:lang="sl">6. mandat</label>
-                                            <label xml:lang="en">Term 6</label>
-                                        </event>
-                                        <event xml:id="DZ.7" from="2014-08-01" to="2018-06-21">
-                                            <label xml:lang="sl">7. mandat</label>
-                                            <label xml:lang="en">Term 7</label>
-                                        </event>
-                                        <event xml:id="DZ.8" from="2018-06-22" to="2022-05-12">
-                                            <label xml:lang="sl">8. mandat</label>
-                                            <label xml:lang="en">Term 8</label>
-                                        </event>
-                                    </listEvent>
-                                    <listOrg xml:id="workingBodies">
-                                        <head xml:lang="sl">Delovna telesa Državnega zbora Republike Slovenije</head>
-                                        <head xml:lang="en">Working bodies of the National Assembly of the Republic of Slovenia</head>
-                                        <xsl:for-each-group select="folder[matches(@label,'SDT')]/teiHeader/profileDesc/particDesc/listOrg/org/listOrg[@xml:id='workingBodies']/org" group-by="@xml:id">
-                                            <xsl:sort select="current-grouping-key()"/>
-                                            <org xml:id="{current-grouping-key()}" ana="#parla.committee">
-                                                <orgName>
-                                                    <xsl:value-of select="normalize-space(current-group()[1])"/>
-                                                </orgName>
-                                            </org>
-                                        </xsl:for-each-group>
-                                    </listOrg>
-                                </org>
-                                <xsl:for-each select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listOrg/tei:org[not(@role ='parliament')]">
-                                    <xsl:copy-of select="." copy-namespaces="no"/>
-                                </xsl:for-each>
-                                <xsl:copy-of select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listOrg/tei:listRelation" copy-namespaces="no"/>
+                      <abstract>
+			<p xml:lang="sl">Korpus siParl vsebuje zapisnike Skupščine Republike Slovenije za 11. mandatno obdobje 1990-1992, zapisnike Državnega zbora Republike Slovenije od 1. do 8. mandatnega obdobja 1992-2022, zapisnike delovnih teles Državnega zbora Republike Slovenije od 2. do 8. mandatnega obdobja 1996-2022 in zapisnike Kolegija predsednika Državnega zbora od 2. do 8. mandatnega obdobja 1996-2022.</p>
+                        <p xml:lang="en">The siParl corpus contains minutes of the Assembly of the Republic of Slovenia for 11th legislative period 1990-1992, minutes of the National Assembly of the Republic of Slovenia from the 1st to the 8th legislative period 1992-2022, minutes of the working bodies of the National Assembly of the Republic of Slovenia from the 2nd to the 8th legislative period 1996-2022, and minutes of the the Council of the President of the National Assembly from the 2nd to the 8th legislative period 1996-2022.</p> 
+                      </abstract>
+                      <settingDesc>
+			<setting xml:lang="sl">
+                          <name type="city">Ljubljana</name>
+                          <name type="country" key="YU" from="1990-05-05" to="1991-06-25">Jugoslavija</name>
+                          <name type="region" from="1990-05-05" to="1991-06-25">Slovenija</name>
+                          <name type="country" key="SI" from="1991-06-25" to="2022-05-13">Slovenija</name>
+                          <date from="1990-05-05" to="2022-05-13"/>
+                        </setting>
+                        <setting xml:lang="en">
+                          <name type="city">Ljubljana</name>
+                          <name type="country" key="YU" from="1990-05-05" to="1991-06-25">Yugoslavia</name>
+                          <name type="region" from="1990-05-05" to="1991-06-25">Slovenia</name>
+                          <name type="country" key="SI" from="1991-06-25" to="2022-05-13">Slovenia</name>
+                          <date from="1990-05-05" to="2022-05-13"/>
+                        </setting>
+                      </settingDesc>
+                      <particDesc>
+                        <listOrg>
+                          <org xml:id="SK" role="parliament" ana="#parla.regional #parla.national #parla.multi">
+                            <orgName from="1990-06-23" to="1992-12-23" xml:lang="sl">Skupščina Republike Slovenije</orgName>
+                            <orgName from="1990-06-23" to="1992-12-23" xml:lang="en">Assembly of the Republic of Slovenia</orgName>
+                            <orgName from="1963-06-24" to="1990-06-23" xml:lang="sl">Skupščina Socialistične republike Slovenije</orgName>
+                            <orgName from="1963-06-24" to="1990-06-23" xml:lang="en">Assembly of Socialist Republic of Slovenia</orgName>
+                            <event from="1963-06-24" to="1992-12-23">
+                              <label xml:lang="en">existence</label>
+                            </event>
+                            <idno type="wikimedia">https://sl.wikipedia.org/wiki/Skup%C5%A1%C4%8Dina_Socialisti%C4%8Dne_republike_Slovenije</idno>
+                            <listEvent>
+                              <head xml:id="sl">Zakonodajno obdobje</head>
+			      <head xml:id="en">Legislative period</head>
+                              <event xml:id="SK.11" from="1990-05-08" to="1992-12-23">
+                                <label xml:lang="sl">11. sklic</label>
+                                <label xml:lang="en">Term 11</label>
+                              </event>
+                            </listEvent>
+                            <listOrg xml:id="chambers">
+                              <head xml:lang="sl">Zbori Skupščine Republike Slovenije</head>
+                              <head xml:lang="en">Chambers of the Assembly of the Republic of Slovenia</head>
+                              <org xml:id="DruzPolZb" ana="#parla.chamber">
+                                <orgName xml:lang="sl">Družbeno-politični zbor</orgName>
+                                <orgName xml:lang="en">Socio-Political Chamber</orgName>
+                                <event from="1974" to="1992-12-23">
+                                  <label xml:lang="en">existence</label>
+                                </event>
+                              </org>
+                              <org xml:id="ZbObc" ana="#parla.chamber">
+                                <orgName xml:lang="sl">Zbor občin</orgName>
+                                <orgName xml:lang="en">Chamber of Municipalities</orgName>
+                                <event from="1974" to="1992-12-23">
+                                  <label xml:lang="en">existence</label>
+                                </event>
+                              </org>
+                              <org xml:id="ZbZdruDel" ana="#parla.chamber">
+                                <orgName xml:lang="sl">Zbor združenega dela</orgName>
+                                <orgName xml:lang="en">Chamber of Associated Labour</orgName>
+                                <event from="1974" to="1992-12-23">
+                                  <label xml:lang="en">existence</label>
+                                </event>
+                              </org>
                             </listOrg>
-                            <listPerson>
-                                <head xml:lang="sl">Seznam govornikov</head>
-                                <head xml:lang="en">List of speakers</head>
-				<person xml:id="commentator">
-				  <persName>komentator</persName>
-				</person>
-                                <xsl:for-each select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listPerson/tei:person">
-                                    <person xml:id="{@xml:id}">
-                                        <!--<xsl:for-each select="*">
-                                            <xsl:copy-of select="." copy-namespaces="no"/>
-                                            </xsl:for-each>-->
-					<xsl:copy-of select="*[not(self::tei:sex)] | @*"/>
-					<xsl:variable name="forename" select="tei:persName/tei:forename[1]"/>
-					 <xsl:choose>
-					   <xsl:when test="$forename = $female_exception/tei:name">
-					     <!-- If it matches, set sex to 'F' -->
-					     <sex value="F"/>
-					   </xsl:when>
-					   <xsl:otherwise>
-					     <!-- If it doesn't match, copy existing sex element if present -->
-					     <xsl:if test="tei:sex">
-					       <xsl:copy-of select="tei:sex"/>
-					     </xsl:if>
-					   </xsl:otherwise>
-					 </xsl:choose>
-                                    </person>
-                                </xsl:for-each>
-                            </listPerson>
-                        </particDesc>
-                        <langUsage>
-                            <language ident="sl" xml:lang="sl">slovenski</language>
-                            <language ident="en" xml:lang="sl">angleški</language>
-                            <language ident="sl" xml:lang="en">Slovenian</language>
-                            <language ident="en" xml:lang="en">English</language>
-                        </langUsage>
-                    </profileDesc>
-                </teiHeader>
-                <xsl:for-each select="folder/ref">
-                    <xsl:sort>
-                        <xsl:analyze-string select="." regex="\d{{4}}-\d{{2}}-\d{{2}}">
-                            <xsl:matching-substring>
-                                <xsl:value-of select="."/>
-                            </xsl:matching-substring>
-                        </xsl:analyze-string>
-                    </xsl:sort>
+                          </org>
+                          <org xml:id="DZ" role="parliament" ana="#parla.national #parla.lower">
+                            <orgName xml:lang="sl">Državni zbor Republike Slovenije</orgName>
+                            <orgName xml:lang="en">National Assembly of the Republic of Slovenia</orgName>
+                            <event from="1992-12-23">
+                              <label xml:lang="en">existence</label>
+                            </event>
+                            <idno type="wikimedia">https://sl.wikipedia.org/wiki/Dr%C5%BEavni_zbor_Republike_Slovenije</idno>
+                            <listEvent>
+			      <head xml:id="sl">Zakonodajno obdobje</head>
+			      <head xml:id="en">Legislative period</head>
+                              <event xml:id="DZ.1" from="1992-12-23" to="1996-11-27">
+                                <label xml:lang="sl">1. mandat</label>
+                                <label xml:lang="en">Term 1</label>
+                              </event>
+                              <event xml:id="DZ.2" from="1996-11-28" to="2000-10-26">
+                                <label xml:lang="sl">2. mandat</label>
+                                <label xml:lang="en">Term 2</label>
+                              </event>
+                              <event xml:id="DZ.3" from="2000-10-27" to="2004-10-21">
+                                <label xml:lang="sl">3. mandat</label>
+                                <label xml:lang="en">Term 3</label>
+                              </event>
+                              <event xml:id="DZ.4" from="2004-10-22" to="2008-10-14">
+                                <label xml:lang="sl">4. mandat</label>
+                                <label xml:lang="en">Term 4</label>
+                              </event>
+                              <event xml:id="DZ.5" from="2008-10-15" to="2011-12-15">
+                                <label xml:lang="sl">5. mandat</label>
+                                <label xml:lang="en">Term 5</label>
+                              </event>
+                              <event xml:id="DZ.6" from="2011-12-16" to="2014-07-31">
+                                <label xml:lang="sl">6. mandat</label>
+                                <label xml:lang="en">Term 6</label>
+                              </event>
+                              <event xml:id="DZ.7" from="2014-08-01" to="2018-06-21">
+                                <label xml:lang="sl">7. mandat</label>
+                                <label xml:lang="en">Term 7</label>
+                              </event>
+                              <event xml:id="DZ.8" from="2018-06-22" to="2022-05-12">
+                                <label xml:lang="sl">8. mandat</label>
+                                <label xml:lang="en">Term 8</label>
+                              </event>
+                            </listEvent>
+                            <listOrg xml:id="workingBodies">
+                              <head xml:lang="sl">Delovna telesa Državnega zbora Republike Slovenije</head>
+                              <head xml:lang="en">Working bodies of the National Assembly of the Republic of Slovenia</head>
+                              <xsl:for-each-group select="folder[matches(@label,'SDT')]/teiHeader/profileDesc/particDesc/listOrg/org/listOrg[@xml:id='workingBodies']/org" group-by="@xml:id">
+                                <xsl:sort select="current-grouping-key()"/>
+<!--				<xsl:message>
+				  <xsl:text>Check: </xsl:text>
+				  <xsl:value-of select="current-grouping-key()"/>
+				  <xsl:text> - </xsl:text>
+				  <xsl:value-of select="normalize-space(current-group()[1]/orgName)"/>
+				  <xsl:text> - </xsl:text>
+				  <xsl:value-of select="ancestor::folder[@label][1]/@label"/>
+				  
+
+				</xsl:message>-->
+                                <org xml:id="{current-grouping-key()}" ana="#parla.committee">
+                                  <orgName>
+                                    <xsl:value-of select="normalize-space(current-group()[1]/orgName)"/>
+                                  </orgName>
+                                </org>
+                              </xsl:for-each-group>
+                            </listOrg>
+                          </org>
+                          <xsl:for-each select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listOrg/tei:org[not(@role ='parliament')]">
+                            <xsl:copy-of select="." copy-namespaces="no"/>
+                          </xsl:for-each>
+                          <xsl:copy-of select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listOrg/tei:listRelation" copy-namespaces="no"/>
+                        </listOrg>
+                        <listPerson>
+                          <head xml:lang="sl">Seznam govornikov</head>
+                          <head xml:lang="en">List of speakers</head>
+			  <person xml:id="commentator">
+			    <persName>komentator</persName>
+			  </person>
+                          <xsl:for-each select="$source-united-speaker-document/tei:TEI/tei:text/tei:body/tei:div/tei:listPerson/tei:person">
+                            <person xml:id="{@xml:id}">
+                              <!--<xsl:for-each select="*">
+                                  <xsl:copy-of select="." copy-namespaces="no"/>
+                                  </xsl:for-each>-->
+			      <xsl:copy-of select="*[not(self::tei:sex)] | @*"/>
+			      <xsl:variable name="forename" select="tei:persName/tei:forename[1]"/>
+			      <xsl:choose>
+				<xsl:when test="$forename = $female_exception/tei:name">
+				  <!-- If it matches, set sex to 'F' -->
+				  <sex value="F"/>
+				</xsl:when>
+				<xsl:otherwise>
+				  <!-- If it doesn't match, copy existing sex element if present -->
+				  <xsl:if test="tei:sex">
+				    <xsl:copy-of select="tei:sex"/>
+				  </xsl:if>
+				</xsl:otherwise>
+			      </xsl:choose>
+                            </person>
+                          </xsl:for-each>
+                        </listPerson>
+                      </particDesc>
+                      <langUsage>
+                        <language ident="sl" xml:lang="sl">slovenski</language>
+                        <language ident="en" xml:lang="sl">angleški</language>
+                        <language ident="sl" xml:lang="en">Slovenian</language>
+                        <language ident="en" xml:lang="en">English</language>
+                      </langUsage>
+		    </profileDesc>
+		  </teiHeader>
+		  <xsl:for-each select="folder/ref">
+		    <xsl:sort>
+                      <xsl:analyze-string select="." regex="\d{{4}}-\d{{2}}-\d{{2}}">
+                        <xsl:matching-substring>
+                          <xsl:value-of select="."/>
+                        </xsl:matching-substring>
+                      </xsl:analyze-string>
+		    </xsl:sort>
 		    <!-- XInclude: "../" if for (current) GitHub repository, or "../speech/ if packing for whole corpus for CLARIN.SI repository. Otherwise error/no fallback."-->
-                    <xsl:variable name="href">
+		    <xsl:variable name="href">
+                      <xsl:value-of select="substring-after(.,'../speech/')"/>
+		    </xsl:variable>
+		    <xsl:element name="xi:include">
+                      <xsl:attribute name="href">
                         <xsl:value-of select="substring-after(.,'../speech/')"/>
-                    </xsl:variable>
-                    <xsl:element name="xi:include">
-                        <xsl:attribute name="href">
-                            <xsl:value-of select="substring-after(.,'../speech/')"/>
-                        </xsl:attribute>
-                    </xsl:element>
-                </xsl:for-each>
-            </teiCorpus>
-        </xsl:result-document>
-    </xsl:template>
-</xsl:stylesheet>
+                      </xsl:attribute>
+		    </xsl:element>
+		  </xsl:for-each>
+		</teiCorpus>
+	      </xsl:result-document>
+	    </xsl:template>
+	  </xsl:stylesheet>
