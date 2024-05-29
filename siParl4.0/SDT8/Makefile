@@ -117,8 +117,7 @@ val:
 	$s -xi -xsl:Scripts/copy.xsl siParl4.0/siParl.xml | $j Schema/parla-clarin.rng
 
 check-list:
-	$s meta=../siParl4.0/siParl.xml -xsl:Scripts/check-links.xsl  siParl4.0/SDT8.xml
-#/DruzPolZb-Seja-001-1990-05-07.xml
+	$s meta=../siParl4.0/siParl.xml -xsl:Scripts/check-links.xsl  siParl4.0/SDT8/KPDZ-001-Redna-2018-06-29.xml
 
 lnk:
 	ls siParl4.0/SDT8/*.xml | $P --jobs 20 '$s meta=../siParl4.0/siParl.xml ${vlink} {}'

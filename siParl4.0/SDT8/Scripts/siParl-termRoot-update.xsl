@@ -112,7 +112,6 @@
     <classDecl>
       <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="taxonomy-parla.speaker_types.xml"/>
       <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="taxonomy-parla.legislature.xml"/>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="taxonomy-parla.content.xml"/>
     </classDecl>
   </xsl:template>
 
@@ -127,7 +126,6 @@
       <!-- Copy the date element from the existing English version -->
       <xsl:copy-of select="tei:date"/>
     </setting>
-
   </xsl:template>
 
   <xsl:template match="tei:org[@xml:id='SK']/tei:listEvent">
