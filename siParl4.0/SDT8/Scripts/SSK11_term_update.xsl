@@ -124,7 +124,7 @@
   
   <xsl:template match="tei:settingDesc/tei:setting">
     <xsl:copy>
-      <xsl:attribute name="xml:id">sl</xsl:attribute>
+      <xsl:attribute name="xml:lang">sl</xsl:attribute>
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
     <setting xml:lang="en">
@@ -151,8 +151,8 @@
       </event>
       <idno type="wikimedia">https://sl.wikipedia.org/wiki/Skup%C5%A1%C4%8Dina_Socialisti%C4%8Dne_republike_Slovenije</idno>
       <listEvent>
-        <head xml:id="sl">Zakonodajno obdobje</head>
-        <head xml:id="en">Legislative period</head>
+        <head xml:lang="sl">Zakonodajno obdobje</head>
+        <head xml:lang="en">Legislative period</head>
         <event xml:id="SK.11" from="1990-05-08" to="1992-12-23">
           <label xml:lang="sl">11. sklic</label>
           <label xml:lang="en">Term 11</label>
@@ -188,8 +188,8 @@
 
   <xsl:template match="tei:org[@xml:id='DZ']/tei:listEvent">
     <listEvent>
-      <head xml:id="sl">Zakonodajno obdobje</head>
-      <head xml:id="en">Legislative period</head>
+      <head xml:lang="sl">Zakonodajno obdobje</head>
+      <head xml:lang="en">Legislative period</head>
       <event xml:id="DZ.1" from="1992-12-23" to="1996-11-27">
         <label xml:lang="sl">1. mandat</label>
         <label xml:lang="en">Term 1</label>
