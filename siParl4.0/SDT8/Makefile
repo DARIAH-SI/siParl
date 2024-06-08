@@ -69,6 +69,9 @@ drama-root:
 list-org:
 	$s -xsl:Scripts/list-org.xsl drama/SDT8-list.xml > listOrg.xml
 
+#Step 6.5: Count the occurrences of individual structures (e.g., no. of utterances, sentences, gaps ...), append the result to the overall speech-list.xml under appropriate folder/SD*.xml
+list-tags:
+	$s -xsl:Scripts/SDT8_tagsDecl.xsl speech/SDT8_list.xml > listTags.xml
 
 #Step 7: Produce list of speakers (listPerson) by running the transformation on the listPerson-list.xml, produced within the drama conversion to transform it into the main listPerson.xml
 list-person:

@@ -125,27 +125,27 @@
                                     </speech>
                                 </xsl:for-each>
                             </xsl:variable>
-                            <measure unit="texts" quantity="{sum($measures/tei:texts)}" xml:lang="sl">
+                            <measure unit="texts" quantity="{format-number(sum($measures/tei:texts), '#')}" xml:lang="sl">
                                 <xsl:value-of select="format-number(sum($measures/tei:texts),'###.###','euro')"/>
                                 <xsl:text> besedil</xsl:text>
                             </measure>
-                            <measure unit="texts" quantity="{sum($measures/tei:texts)}" xml:lang="en">
+                            <measure unit="texts" quantity="{format-number(sum($measures/tei:texts), '#')}" xml:lang="en">
                                 <xsl:value-of select="format-number(sum($measures/tei:texts),'###,###')"/>
                                 <xsl:text> texts</xsl:text>
                             </measure>
-                            <measure unit="speeches" quantity="{sum($speeches/tei:speech)}" xml:lang="sl">
+                            <measure unit="speeches" quantity="{format-number(sum($speeches/tei:speech), '#')}" xml:lang="sl">
                                 <xsl:value-of select="format-number(sum($speeches/tei:speech),'###.###','euro')"/>
                                 <xsl:text> govorov</xsl:text>
                             </measure>
-                            <measure unit="speeches" quantity="{sum($speeches/tei:speech)}" xml:lang="en">
+                            <measure unit="speeches" quantity="{format-number(sum($speeches/tei:speech), '#')}" xml:lang="en">
                                 <xsl:value-of select="format-number(sum($speeches/tei:speech),'###,###')"/>
                                 <xsl:text> speeches</xsl:text>
                             </measure>
-                            <measure unit="words" quantity="{sum($measures/tei:words)}" xml:lang="sl">
+                            <measure unit="words" quantity="{format-number(sum($measures/tei:words), '#')}" xml:lang="sl">
                                 <xsl:value-of select="format-number(sum($measures/tei:words),'###.###','euro')"/>
                                 <xsl:text> besed</xsl:text>
                             </measure>
-                            <measure unit="words" quantity="{sum($measures/tei:words)}" xml:lang="en">
+                            <measure unit="words" quantity="{format-number(sum($measures/tei:words), '#')}" xml:lang="en">
                                 <xsl:value-of select="format-number(sum($measures/tei:words),'###,###')"/>
                                 <xsl:text> words</xsl:text>
                             </measure>
@@ -201,10 +201,10 @@
                             </segmentation>
                         </editorialDecl>
                         <tagsDecl>
-                            <namespace name="http://www.tei-c.org/ns/1.0">
-                                <xsl:for-each-group select="//tagUsage" group-by="@gi">
-                                    <tagUsage gi="{current-grouping-key()}" occurs="{format-number(sum(for $n in current-group() return $n/@occurs),'#')}"/>
-                                </xsl:for-each-group>
+                          <namespace name="http://www.tei-c.org/ns/1.0">	
+                              <xsl:for-each-group select="//tagUsage" group-by="@gi">
+                                <tagUsage gi="{current-grouping-key()}" occurs="{format-number(sum(for $n in current-group() return $n/@occurs),'#')}"/>
+                              </xsl:for-each-group>
                             </namespace>
                         </tagsDecl>
                         <classDecl>
