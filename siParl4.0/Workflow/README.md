@@ -1,4 +1,4 @@
-# Subcorpus SDT8 and compiling complete corpus
+# Workflow to compile subcorpus SDT8 and complete siParl4.0 corpus
 
 This directory includes all of the compilation components for buidling the SDT8 subcorpus as well as integrating the new subcorpus to the overall corpus.
 

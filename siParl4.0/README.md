@@ -11,4 +11,4 @@ The three main directories include:
 
 - Selenium/: Directory with scripts for scrapping data from the website, original data and data with valid markup
 - sources/: Input data for the start of the transformation
-- SDT8/: Directory with the conversion steps for compilation of the siParl 4.0 corpus (buidling subcorpus for SDT8 data)
+- Workflow/: Directory with the conversion steps for compilation of the siParl 4.0 corpus (and buidling subcorpus for SDT8 data)
