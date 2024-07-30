@@ -16,7 +16,7 @@ Full corpus is also available on the [CLARIN.SI repository](http://hdl.handle.ne
 
 ## Citation
 
-If you use siParl corpus in your work, please cite:
+If you use siParl corpus in your work, please cite the [following paper](https://doi.org/10.1007/s10579-024-09746-8):
 
 ```
 @article{meden2024slovenian,
@@ -25,6 +25,8 @@ If you use siParl corpus in your work, please cite:
   journal={Language Resources and Evaluation},
   pages={1--21},
   year={2024},
+  doi={10.1007/s10579-024-09746-8},
+  url={https://doi.org/10.1007/s10579-024-09746-8},
   publisher={Springer}
 }
 ```
@@ -49,7 +51,7 @@ Celoten korpus je na voljo tudi v [repozitoriju CLARIN.SI](http://hdl.handle.net
 
 ## Citiranje
 
-Če v svojem delu uporabite korpus siParl, prosimo, citirajte naslednji članek:
+Če v svojem delu uporabite korpus siParl, prosimo, citirajte [naslednji članek](https://doi.org/10.1007/s10579-024-09746-8):
 
 ```
 @article{meden2024slovenian,
@@ -58,6 +60,8 @@ Celoten korpus je na voljo tudi v [repozitoriju CLARIN.SI](http://hdl.handle.net
   journal={Language Resources and Evaluation},
   pages={1--21},
   year={2024},
+  doi={10.1007/s10579-024-09746-8},
+  url={https://doi.org/10.1007/s10579-024-09746-8},
   publisher={Springer}
 }
 ```
