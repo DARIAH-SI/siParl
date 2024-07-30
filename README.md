@@ -11,11 +11,12 @@ The lists of speakers are contained in a separate *-speaker.xml file.
 The minutes of the meetings are converted to XSLT [drama2speech.xsl](drama2speech.xsl) from the TEI module for drama texts to TEI speech transcription module, located in the folder [speech](speech).
 The conversion is based on the drama/*-list.xml file list each time of each mandate/corpus.
 
-The new version of the corpus, siParl 4.0, is available together with its data and workflow in the [siParl4.0](siParl4.0) folder.     
+The new version of the corpus, siParl 4.0, is available together with its data and workflow in the [siParl4.0](siParl4.0) folder.
+Full corpus is also available on the [CLARIN.SI repository](http://hdl.handle.net/11356/1936) and on the [NoSketch Engine](https://www.clarin.si/ske/#dashboard?corpname=siparl40) concordancer.
 
 ## Citation
 
-If you use this work, please cite:
+If you use siParl corpus in your work, please cite:
 
 ```
 @article{meden2024slovenian,
@@ -44,6 +45,7 @@ Zapisnike sej se z pretvorbo XSLT [drama2speech.xsl](drama2speech.xsl) iz TEI mo
 Pri pretvorbi se izhaja iz vsakokratnega drama/*-list.xml seznama datotek posameznega mandata/korpusa.
 
 Nova različica korpusa, siParl 4.0, je skupaj z podatki in delotokom na voljo v mapi [siParl4.0](siParl4.0).
+Celoten korpus je na voljo tudi v [repozitoriju CLARIN.SI](http://hdl.handle.net/11356/1936) in na konkordančniku [NoSketch Engine](https://www.clarin.si/ske/#dashboard?corpname=siparl40).
 
 ## Citiranje
 
