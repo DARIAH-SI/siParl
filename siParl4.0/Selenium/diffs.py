@@ -1,39 +1,30 @@
 import os
-import difflib
+import subprocess
 
 def compare_folders(folder1, folder2, output_file):
-    # Get the list of files in each folder
-    files1 = os.listdir(folder1)
-    files2 = os.listdir(folder2)
-
-    # Sort the files to ensure they are in the same order
-    files1.sort()
-    files2.sort()
+    files1 = sorted(os.listdir(folder1))
+    files2 = sorted(os.listdir(folder2))
 
     with open(output_file, 'w') as output:
         for file1, file2 in zip(files1, files2):
             path1 = os.path.join(folder1, file1)
             path2 = os.path.join(folder2, file2)
+            
+            # Ensure both paths are files (you can add more checks as needed)
+            if os.path.isfile(path1) and os.path.isfile(path2):
+                # Perform diff comparison using subprocess and -w option
+                result = subprocess.run(['diff', '-w', path1, path2], capture_output=True, text=True)
+                diff_output = result.stdout
 
-            # Read the contents of each file
-            with open(path1, 'r') as f1, open(path2, 'r') as f2:
-                lines1 = f1.readlines()
-                lines2 = f2.readlines()
-
-            # Perform diff comparison
-            diff = difflib.unified_diff(lines1, lines2, fromfile=path1, tofile=path2)
-            diff_str = ''.join(diff)
-
-            # Write the diff to the output file
-            output.write(diff_str)
-            output.write('\n')
+                # Write the diff to the output file
+                output.write(f"Diff for {file1} and {file2}:\n")
+                output.write(diff_output)
+                output.write('\n\n')
 
 # Define directories
 folder1 = 'Data_markup'
 folder2 = '../sources/SDT8'
-
-
-output_file = 'diff_output.txt'
+output_file = 'diff_space_output.txt'
 
 # Compare the folders and write the diff to the output file
 compare_folders(folder1, folder2, output_file)
